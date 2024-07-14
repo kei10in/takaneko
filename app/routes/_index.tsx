@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
+import { TradeCounter } from "~/components/TradeCounter";
 
 export const meta: MetaFunction = () => {
   return [
@@ -50,51 +51,18 @@ export default function Index() {
         <li key={item.id}>
           <div className="flex items-center gap-2 p-1">
             <p className="flex-1">
-              {item.id}. {item.name}
+              {item.id}. {item.name}: {item.count}
             </p>
 
-            <div className="flex gap-1 items-center">
-              <div>
-                <button
-                  className="block w-6 h-8"
-                  disabled={item.count === -1}
-                  onClick={() => {
-                    console.log("down");
-                    setState((prev) => ({
-                      ...prev,
-                      items: prev.items.map((i) => {
-                        if (i.id === item.id) {
-                          return { ...i, count: i.count - 1 };
-                        }
-                        return i;
-                      }),
-                    }));
-                  }}
-                >
-                  {item.count <= 0 ? "求" : "🔽"}
-                </button>
-              </div>
-              <div className="block w-6 h-8 text-right">{item.count}</div>
-              <div>
-                <button
-                  className="block w-6 h-8"
-                  onClick={() => {
-                    console.log("up");
-                    setState((prev) => ({
-                      ...prev,
-                      items: prev.items.map((i) => {
-                        if (i.id === item.id) {
-                          return { ...i, count: i.count + 1 };
-                        }
-                        return i;
-                      }),
-                    }));
-                  }}
-                >
-                  {item.count <= 0 ? "出" : "🔼"}
-                </button>
-              </div>
-            </div>
+            <TradeCounter
+              onChange={(i) => {
+                setState((state) => {
+                  const items = [...state.items];
+                  items[item.id - 1].count = i - 1;
+                  return { ...state, items };
+                });
+              }}
+            />
           </div>
         </li>
       ))}
