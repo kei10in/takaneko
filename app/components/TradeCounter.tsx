@@ -36,7 +36,7 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
   return (
     <div className="flex items-center gap-1">
       <button
-        className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 active:bg-gray-200 rounded-full"
+        className="flex h-6 w-6 items-center justify-center rounded-full hover:bg-gray-100 active:bg-gray-200"
         disabled={sel <= 0}
         onClick={() => {
           setSel(sel - 1);
@@ -46,7 +46,7 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
         <TbChevronLeft />
       </button>
 
-      <div className="overflow-hidden w-12 h-6">
+      <div className="h-6 w-12 overflow-hidden">
         <div
           className="flex transition-all"
           style={{
@@ -58,8 +58,8 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
               <span
                 key={i}
                 className={clsx(
-                  "w-6 h-6 flex-none flex items-center justify-center select-none",
-                  sel === i ? "text-gray-700" : "text-gray-300"
+                  "flex h-6 w-6 flex-none select-none items-center justify-center",
+                  sel === i ? "text-gray-700" : "text-gray-300",
                 )}
               >
                 {item.content}
@@ -70,7 +70,7 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
       </div>
 
       <button
-        className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 active:bg-gray-200 rounded-full"
+        className="flex h-6 w-6 items-center justify-center rounded-full hover:bg-gray-100 active:bg-gray-200"
         disabled={7 < sel}
         onClick={() => {
           setSel(sel + 1);

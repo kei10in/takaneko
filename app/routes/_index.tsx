@@ -74,12 +74,8 @@ export default function Index() {
       <div>
         {TAKANEKO_PHOTOS.map((productImage) =>
           productImage.positions.length != 0 ? (
-            <TradeImage
-              key={productImage.name}
-              productImage={productImage}
-              showRect
-            />
-          ) : null
+            <TradeImage key={productImage.name} productImage={productImage} showRect />
+          ) : null,
         )}
       </div>
     </div>
