@@ -6,13 +6,15 @@ export interface ProductImage {
     name: string;
     description?: string;
   }[];
-  positions: {
-    id: number;
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  }[];
+  positions: ImagePosition[];
+}
+
+export interface ImagePosition {
+  id: number;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
 }
 
 const REGULAR_PHOTO_SET = [

@@ -1,29 +1,36 @@
 import { Image, Layer, Rect, Stage } from "react-konva";
 import useImage from "use-image";
-import { ProductImage } from "~/features/productImages";
+import { ImagePosition } from "~/features/productImages";
+import { TradeState } from "~/features/TradeState";
+import { SrcImage } from "./SrcImage";
 
 interface Props {
-  productImage: ProductImage;
+  url: string;
+  positions: ImagePosition[];
+  tradeDescriptions: { id: number; state: TradeState }[];
   showRect?: boolean;
 }
 
 export const TradeImage: React.FC<Props> = (props: Props) => {
-  const { productImage, showRect = false } = props;
+  const { url, positions, tradeDescriptions, showRect = false } = props;
 
-  const [image] = useImage(productImage.url);
+  const [image] = useImage(url);
 
-  const height = image == undefined ? 0 : (image.height * 600) / image.width;
+  if (image == undefined) {
+    return null;
+  }
+  const width = 1024;
+  const height = (image.height * width) / image.width;
 
-  const scaleX = image == undefined ? 0 : 600 / image.width;
-  const scaleY = image == undefined ? 0 : 800 / image.height;
-  const scale = { x: Math.min(scaleX, scaleY), y: Math.min(scaleX, scaleY) };
+  const scaleF = width / image.width;
+  const scale = { x: scaleF, y: scaleF };
 
   return (
-    <Stage width={600} height={height}>
+    <Stage width={width} height={height}>
       <Layer scale={scale}>
         <Image image={image} />
         {showRect
-          ? productImage.positions.map((pos) => {
+          ? positions.map((pos) => {
               return (
                 <Rect
                   key={pos.id}
@@ -37,6 +44,48 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
             })
           : null}
       </Layer>
+      <Layer>
+        {tradeDescriptions.map((trade) => {
+          const pos = positions.find((pos) => pos.id == trade.id);
+          if (pos == undefined) {
+            return null;
+          }
+
+          const src = selectSrc(trade.state);
+          const width = (pos.width * scale.x) / 1.5;
+          const height = width;
+          const x = pos.x * scale.x + (pos.width * scale.x) / 2 - width / 2;
+          const y = pos.y * scale.y + pos.height * scale.y - height - 5 * scale.y;
+
+          return <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />;
+        })}
+      </Layer>
     </Stage>
   );
+};
+
+const selectSrc = (trade: TradeState): string | undefined => {
+  if (trade.tag == "want") {
+    return "/public/求.svg";
+  } else if (trade.tag == "have") {
+    if (trade.count == undefined) {
+      return "/public/譲.svg";
+    } else if (trade.count < 1) {
+      return "/public/譲.svg";
+    } else if (trade.count == 1) {
+      return "/public/1.svg";
+    } else if (trade.count == 2) {
+      return "/public/2.svg";
+    } else if (trade.count == 3) {
+      return "/public/3.svg";
+    } else if (trade.count == 4) {
+      return "/public/4.svg";
+    } else if (trade.count == 5) {
+      return "/public/5.svg";
+    } else if (trade.count >= 6) {
+      return "/public/6.svg";
+    }
+  }
+
+  return undefined;
 };

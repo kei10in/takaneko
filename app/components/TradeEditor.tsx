@@ -43,7 +43,16 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
       <div>
         {positions.length != 0 ? (
-          <TradeImage key={productImage.name} productImage={productImage} showRect />
+          <TradeImage
+            key={productImage.name}
+            url={productImage.url}
+            positions={productImage.positions}
+            tradeDescriptions={[
+              { id: 1, state: { tag: "want" } },
+              { id: 2, state: { tag: "have" } },
+              { id: 3, state: { tag: "have", count: 1 } },
+            ]}
+          />
         ) : null}
       </div>
     </div>
