@@ -1,6 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useState } from "react";
 import { TradeCounter } from "~/components/TradeCounter";
+import { TradeImage } from "~/components/TradeImage.client";
+import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
 export const meta: MetaFunction = () => {
   return [
@@ -46,26 +48,40 @@ export default function Index() {
   });
 
   return (
-    <ol className="p-4">
-      {state.items.map((item) => (
-        <li key={item.id}>
-          <div className="flex items-center gap-2 p-1">
-            <p className="flex-1">
-              {item.id}. {item.name}: {item.count}
-            </p>
+    <div>
+      <ol className="p-4">
+        {state.items.map((item) => (
+          <li key={item.id}>
+            <div className="flex items-center gap-2 p-1">
+              <p className="flex-1">
+                {item.id}. {item.name}: {item.count}
+              </p>
 
-            <TradeCounter
-              onChange={(i) => {
-                setState((state) => {
-                  const items = [...state.items];
-                  items[item.id - 1].count = i - 1;
-                  return { ...state, items };
-                });
-              }}
+              <TradeCounter
+                onChange={(i) => {
+                  setState((state) => {
+                    const items = [...state.items];
+                    items[item.id - 1].count = i - 1;
+                    return { ...state, items };
+                  });
+                }}
+              />
+            </div>
+          </li>
+        ))}
+      </ol>
+
+      <div>
+        {TAKANEKO_PHOTOS.map((productImage) =>
+          productImage.positions.length != 0 ? (
+            <TradeImage
+              key={productImage.name}
+              productImage={productImage}
+              showRect
             />
-          </div>
-        </li>
-      ))}
-    </ol>
+          ) : null
+        )}
+      </div>
+    </div>
   );
 }
