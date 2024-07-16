@@ -1,4 +1,4 @@
-import { Image, Layer, Rect, Stage } from "react-konva";
+import { Group, Image, Layer, Rect, Stage } from "react-konva";
 import useImage from "use-image";
 import { ImagePosition } from "~/features/productImages";
 import { TradeState } from "~/features/TradeState";
@@ -26,41 +26,50 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
   const scale = { x: scaleF, y: scaleF };
 
   return (
-    <Stage width={width} height={height}>
-      <Layer scale={scale}>
-        <Image image={image} />
-        {showRect
-          ? positions.map((pos) => {
+    <div>
+      <Stage width={width} height={height}>
+        <Layer>
+          <Group scale={scale}>
+            <Image image={image} />
+            {showRect
+              ? positions.map((pos) => {
+                  return (
+                    <Rect
+                      key={pos.id}
+                      x={pos.x}
+                      y={pos.y}
+                      width={pos.width}
+                      height={pos.height}
+                      fill={"rgba(0, 0, 0, 0.2)"}
+                    />
+                  );
+                })
+              : null}
+          </Group>
+          <Group>
+            {tradeDescriptions.map((trade) => {
+              const pos = positions.find((pos) => pos.id == trade.id);
+              if (pos == undefined) {
+                return null;
+              }
+
+              const src = selectSrc(trade.state);
+              const width = (pos.width * scale.x) / 1.5;
+              const height = width;
+              const x = pos.x * scale.x + (pos.width * scale.x) / 2 - width / 2;
+              const y = pos.y * scale.y + pos.height * scale.y - height - 5 * scale.y;
+
               return (
-                <Rect
-                  key={pos.id}
-                  x={pos.x}
-                  y={pos.y}
-                  width={pos.width}
-                  height={pos.height}
-                  fill={"rgba(0, 0, 0, 0.2)"}
-                />
+                <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />
               );
-            })
-          : null}
-      </Layer>
-      <Layer>
-        {tradeDescriptions.map((trade) => {
-          const pos = positions.find((pos) => pos.id == trade.id);
-          if (pos == undefined) {
-            return null;
-          }
-
-          const src = selectSrc(trade.state);
-          const width = (pos.width * scale.x) / 1.5;
-          const height = width;
-          const x = pos.x * scale.x + (pos.width * scale.x) / 2 - width / 2;
-          const y = pos.y * scale.y + pos.height * scale.y - height - 5 * scale.y;
-
-          return <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />;
-        })}
-      </Layer>
-    </Stage>
+            })}
+          </Group>
+        </Layer>
+      </Stage>
+      {/* Overlay to enable touch events. The <canvas> element disables default pan
+          behavior, so this overlay ensures touch events pass through. --> */}
+      <div style={{ width, height, transform: `translateY(-${height}px)` }} className="absolute" />
+    </div>
   );
 };
 
