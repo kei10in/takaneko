@@ -45,8 +45,7 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
                   );
                 })
               : null}
-          </Group>
-          <Group>
+
             {tradeDescriptions.map((trade) => {
               const pos = positions.find((pos) => pos.id == trade.id);
               if (pos == undefined) {
@@ -54,10 +53,10 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
               }
 
               const src = selectSrc(trade.state);
-              const width = (pos.width * scale.x) / 1.5;
+              const width = pos.width / 1.5;
               const height = width;
-              const x = pos.x * scale.x + (pos.width * scale.x) / 2 - width / 2;
-              const y = pos.y * scale.y + pos.height * scale.y - height - 5 * scale.y;
+              const x = pos.x + pos.width / 2 - width / 2;
+              const y = pos.y + pos.height - height - 5;
 
               return (
                 <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />
