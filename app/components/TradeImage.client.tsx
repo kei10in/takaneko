@@ -19,7 +19,7 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
   if (image == undefined) {
     return null;
   }
-  const width = 1024;
+  const width = 400;
   const height = (image.height * width) / image.width;
 
   const scaleF = width / image.width;

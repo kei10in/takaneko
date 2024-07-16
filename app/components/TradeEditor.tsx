@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ProductImage } from "~/features/productImages";
+import { TradeState } from "~/features/TradeState";
 import { TradeCounter } from "./TradeCounter";
 import { TradeImage } from "./TradeImage.client";
 
@@ -13,14 +14,14 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const photos = productImage.photos;
   const positions = productImage.positions;
 
-  const [, setCounts] = useState<number[]>(() => {
-    return Array(photos.length).fill(0);
-  });
+  const [tradeStates, setTraceStates] = useState<{ id: number; state: TradeState }[]>(() =>
+    photos.map((p) => ({ id: p.id, state: { tag: "none" } })),
+  );
 
   return (
     <div>
       <ol className="p-4">
-        {photos.map((item, i) => (
+        {photos.map((item) => (
           <li key={item.id}>
             <div className="flex items-center gap-2 p-1">
               <p className="flex-1">
@@ -29,9 +30,12 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
               <TradeCounter
                 onChange={(v) => {
-                  setCounts((state) => {
+                  setTraceStates((state) => {
+                    const i = state.findIndex((s) => s.id == item.id);
+
                     const items = [...state];
-                    items[i] = v;
+                    items[i] = { ...items[i], state: v };
+
                     return items;
                   });
                 }}
@@ -47,11 +51,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
             key={productImage.name}
             url={productImage.url}
             positions={productImage.positions}
-            tradeDescriptions={[
-              { id: 1, state: { tag: "want" } },
-              { id: 2, state: { tag: "have" } },
-              { id: 3, state: { tag: "have", count: 1 } },
-            ]}
+            tradeDescriptions={tradeStates}
           />
         ) : null}
       </div>

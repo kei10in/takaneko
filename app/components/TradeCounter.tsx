@@ -11,9 +11,10 @@ import {
   TbSquareNumber5Filled,
   TbSquareNumber6Filled,
 } from "react-icons/tb";
+import { TradeState } from "~/features/TradeState";
 
 interface Props {
-  onChange: (i: number) => void;
+  onChange: (ts: TradeState) => void;
 }
 
 export const TradeCounter: React.FC<Props> = (props: Props) => {
@@ -24,7 +25,7 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
   const items = [
     { content: "求" },
     { content: <TbCircleOff /> },
-    { content: "出" },
+    { content: "譲" },
     { content: <TbSquareNumber1Filled /> },
     { content: <TbSquareNumber2Filled /> },
     { content: <TbSquareNumber3Filled /> },
@@ -40,7 +41,7 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
         disabled={sel <= 0}
         onClick={() => {
           setSel(sel - 1);
-          onChange(sel - 1);
+          onChange(selToTradeState(sel - 1));
         }}
       >
         <TbChevronLeft />
@@ -74,11 +75,23 @@ export const TradeCounter: React.FC<Props> = (props: Props) => {
         disabled={7 < sel}
         onClick={() => {
           setSel(sel + 1);
-          onChange(sel - 1);
+          onChange(selToTradeState(sel + 1));
         }}
       >
         <TbChevronRight />
       </button>
     </div>
   );
+};
+
+const selToTradeState = (sel: number): TradeState => {
+  if (sel <= 0) {
+    return { tag: "want" };
+  } else if (sel == 1) {
+    return { tag: "none" };
+  } else if (sel == 2) {
+    return { tag: "have" };
+  } else {
+    return { tag: "have", count: sel - 2 };
+  }
 };
