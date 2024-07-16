@@ -66,24 +66,24 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
 
 const selectSrc = (trade: TradeState): string | undefined => {
   if (trade.tag == "want") {
-    return "/public/求.svg";
+    return "/求.svg";
   } else if (trade.tag == "have") {
     if (trade.count == undefined) {
-      return "/public/譲.svg";
+      return "/譲.svg";
     } else if (trade.count < 1) {
-      return "/public/譲.svg";
+      return "/譲.svg";
     } else if (trade.count == 1) {
-      return "/public/1.svg";
+      return "/1.svg";
     } else if (trade.count == 2) {
-      return "/public/2.svg";
+      return "/2.svg";
     } else if (trade.count == 3) {
-      return "/public/3.svg";
+      return "/3.svg";
     } else if (trade.count == 4) {
-      return "/public/4.svg";
+      return "/4.svg";
     } else if (trade.count == 5) {
-      return "/public/5.svg";
+      return "/5.svg";
     } else if (trade.count >= 6) {
-      return "/public/6.svg";
+      return "/6.svg";
     }
   }
 
