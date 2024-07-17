@@ -9,10 +9,11 @@ interface Props {
   positions: ImagePosition[];
   tradeDescriptions: { id: number; state: TradeState }[];
   showRect?: boolean;
+  children?: (scale: number) => React.ReactNode;
 }
 
 export const TradeImage: React.FC<Props> = (props: Props) => {
-  const { url, positions, tradeDescriptions, showRect = false } = props;
+  const { url, positions, tradeDescriptions, showRect = false, children } = props;
 
   const [image] = useImage(url);
 
@@ -68,7 +69,9 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
         </Stage>
         {/* Overlay to enable touch events. The <canvas> element disables default pan
           behavior, so this overlay ensures touch events pass through. --> */}
-        <div style={{ width, height }} className="z-0 col-start-1 row-start-1" />
+        <div style={{ width, height }} className="z-0 col-start-1 row-start-1">
+          {children?.(scaleF)}
+        </div>
       </div>
     </div>
   );
