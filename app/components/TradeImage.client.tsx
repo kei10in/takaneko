@@ -19,55 +19,57 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
   if (image == undefined) {
     return null;
   }
-  const width = 400;
+  const width = 390;
   const height = (image.height * width) / image.width;
 
   const scaleF = width / image.width;
   const scale = { x: scaleF, y: scaleF };
 
   return (
-    <div>
-      <Stage width={width} height={height}>
-        <Layer>
-          <Group scale={scale}>
-            <Image image={image} />
-            {showRect
-              ? positions.map((pos) => {
-                  return (
-                    <Rect
-                      key={pos.id}
-                      x={pos.x}
-                      y={pos.y}
-                      width={pos.width}
-                      height={pos.height}
-                      fill={"rgba(0, 0, 0, 0.2)"}
-                    />
-                  );
-                })
-              : null}
+    <div className="w-full overflow-hidden">
+      <div className="grid h-fit w-full grid-cols-1 grid-rows-1">
+        <Stage width={width} height={height} className="col-start-1 row-start-1">
+          <Layer>
+            <Group scale={scale}>
+              <Image image={image} />
+              {showRect
+                ? positions.map((pos) => {
+                    return (
+                      <Rect
+                        key={pos.id}
+                        x={pos.x}
+                        y={pos.y}
+                        width={pos.width}
+                        height={pos.height}
+                        fill={"rgba(0, 0, 0, 0.2)"}
+                      />
+                    );
+                  })
+                : null}
 
-            {tradeDescriptions.map((trade) => {
-              const pos = positions.find((pos) => pos.id == trade.id);
-              if (pos == undefined) {
-                return null;
-              }
+              {tradeDescriptions.map((trade) => {
+                const pos = positions.find((pos) => pos.id == trade.id);
+                if (pos == undefined) {
+                  return null;
+                }
 
-              const src = selectSrc(trade.state);
-              const width = pos.width / 1.5;
-              const height = width;
-              const x = pos.x + pos.width / 2 - width / 2;
-              const y = pos.y + pos.height - height - 5;
+                const src = selectSrc(trade.state);
+                const width = pos.width / 1.5;
+                const height = width;
+                const x = pos.x + pos.width / 2 - width / 2;
+                const y = pos.y + pos.height - height - 5;
 
-              return (
-                <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />
-              );
-            })}
-          </Group>
-        </Layer>
-      </Stage>
-      {/* Overlay to enable touch events. The <canvas> element disables default pan
+                return (
+                  <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />
+                );
+              })}
+            </Group>
+          </Layer>
+        </Stage>
+        {/* Overlay to enable touch events. The <canvas> element disables default pan
           behavior, so this overlay ensures touch events pass through. --> */}
-      <div style={{ width, height, transform: `translateY(-${height}px)` }} className="absolute" />
+        <div style={{ width, height }} className="z-0 col-start-1 row-start-1" />
+      </div>
     </div>
   );
 };
