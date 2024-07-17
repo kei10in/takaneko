@@ -10,5 +10,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return <TradeEditor productImage={TAKANEKO_PHOTOS[29]} />;
+  return (
+    <div>
+      <div className="sticky top-0 z-40 w-full border-b border-gray-300 bg-white p-4">
+        <h1 className="text-xl">トレード用の画像をつくるやつ。</h1>
+      </div>
+      <div className="container mx-auto">
+        <TradeEditor productImage={TAKANEKO_PHOTOS[29]} />
+      </div>
+    </div>
+  );
 }
