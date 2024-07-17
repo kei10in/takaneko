@@ -12,6 +12,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "clsx": "^2.1.1",
