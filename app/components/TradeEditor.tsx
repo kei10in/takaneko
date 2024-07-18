@@ -1,5 +1,6 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { useState } from "react";
+import Konva from "konva";
+import { useRef, useState } from "react";
 import { TbChevronLeft, TbChevronRight, TbCircleOff } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
 import { TradeState } from "~/features/TradeState";
@@ -13,12 +14,16 @@ interface Props {
 export const TradeEditor: React.FC<Props> = (props: Props) => {
   const { productImage } = props;
 
+  const stageRef = useRef<Konva.Stage>(null);
+
   const photos = productImage.photos;
   const positions = productImage.positions;
 
   const [tradeStates, setTradeStates] = useState<{ id: number; state: TradeState }[]>(() =>
     photos.map((p) => ({ id: p.id, state: { tag: "none" } })),
   );
+
+  const [preview, setPreview] = useState(false);
 
   const [selected, setSelected] = useState<number | undefined>(undefined);
   const selPosition =
@@ -51,6 +56,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
             url={productImage.url}
             positions={productImage.positions}
             tradeDescriptions={tradeStates}
+            ref={stageRef}
           >
             {(scale) => {
               return (
@@ -78,6 +84,18 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
           </TradeImage>
         ) : null}
       </div>
+      <button
+        className="mt-4 rounded-lg border border-gray-400 bg-gray-300 px-4 py-1"
+        onClick={() => {
+          if (stageRef.current == undefined) {
+            return;
+          }
+
+          setPreview(true);
+        }}
+      >
+        プレビュー
+      </button>
       <Dialog
         open={selected != undefined}
         className="relative z-50"
@@ -171,6 +189,15 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 <img src="/6.svg" alt="6" className="h-12 w-12" />
               </button>
             </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
+
+      {/* Preview Dialog */}
+      <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
+        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
+          <DialogPanel className="max-w-lg border bg-white p-4">
+            <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} />
           </DialogPanel>
         </div>
       </Dialog>

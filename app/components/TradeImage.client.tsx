@@ -1,3 +1,5 @@
+import Konva from "konva";
+import { forwardRef, Ref } from "react";
 import { Group, Image, Layer, Rect, Stage } from "react-konva";
 import useImage from "use-image";
 import { ImagePosition } from "~/features/productImages";
@@ -12,7 +14,7 @@ interface Props {
   children?: (scale: number) => React.ReactNode;
 }
 
-export const TradeImage: React.FC<Props> = (props: Props) => {
+export const TradeImage = forwardRef<Konva.Stage, Props>((props: Props, ref: Ref<Konva.Stage>) => {
   const { url, positions, tradeDescriptions, showRect = false, children } = props;
 
   const [image] = useImage(url);
@@ -29,7 +31,7 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
   return (
     <div className="w-full overflow-hidden">
       <div className="grid h-fit w-full grid-cols-1 grid-rows-1">
-        <Stage width={width} height={height} className="col-start-1 row-start-1">
+        <Stage width={width} height={height} className="col-start-1 row-start-1" ref={ref}>
           <Layer>
             <Group scale={scale}>
               <Image image={image} />
@@ -75,7 +77,9 @@ export const TradeImage: React.FC<Props> = (props: Props) => {
       </div>
     </div>
   );
-};
+});
+
+TradeImage.displayName = "TradeImage";
 
 const selectSrc = (trade: TradeState): string | undefined => {
   if (trade.tag == "want") {
