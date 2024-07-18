@@ -1,10 +1,9 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import Konva from "konva";
 import { useRef, useState } from "react";
-import { TbChevronLeft, TbChevronRight, TbCircleOff } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
 import { TradeState } from "~/features/TradeState";
-import { ClippedImage } from "./ClippedImage";
+import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImage } from "./TradeImage.client";
 
 interface Props {
@@ -24,15 +23,11 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   );
 
   const [preview, setPreview] = useState(false);
-
   const [index, setIndex] = useState<number | undefined>(undefined);
-  const selPosition = index != undefined ? positions[index] : undefined;
 
-  const prev = index != undefined && index != 0 ? index - 1 : undefined;
-  const next = index != undefined && index <= positions.length - 1 ? index + 1 : undefined;
-
-  const handleClickTradeState = (v: TradeState) => {
+  const handleClickTradeState = (id: number, v: TradeState) => {
     setTradeStates((state) => {
+      const index = state.findIndex((s) => s.id == id);
       if (index == undefined) {
         return state;
       }
@@ -100,92 +95,15 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
           <DialogPanel className="w-full max-w-lg border bg-white p-4">
-            <div className="flex w-full items-center justify-center gap-2">
-              <div className="flex-none">
-                <button
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300"
-                  disabled={prev == undefined}
-                  onClick={() => {
-                    if (prev != undefined) {
-                      setIndex(prev);
-                    }
-                  }}
-                >
-                  <TbChevronLeft className="text-xl text-gray-800" />
-                </button>
-              </div>
-              <ClippedImage
-                className="flex-none"
-                clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
-                src={productImage.url}
+            {index != undefined ? (
+              <TradeEditorDetail
+                productImage={productImage}
+                index={index}
+                onClickPrev={() => setIndex(index - 1)}
+                onClickNext={() => setIndex(index + 1)}
+                onChangeTradeState={handleClickTradeState}
               />
-              <div className="flex-none">
-                <button
-                  className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300"
-                  disabled={next == undefined}
-                  onClick={() => {
-                    if (next != undefined) {
-                      setIndex(next);
-                    }
-                  }}
-                >
-                  <TbChevronRight className="text-xl text-gray-800" />
-                </button>
-              </div>
-            </div>
-
-            <div className="mt-4 flex items-center justify-center">
-              <button
-                className="flex-none p-1"
-                onClick={() => handleClickTradeState({ tag: "none" })}
-              >
-                <TbCircleOff className="h-10 w-10 text-gray-300" />
-              </button>
-              <button className="flex-none" onClick={() => handleClickTradeState({ tag: "want" })}>
-                <img src="/求.svg" alt="求" className="h-12 w-12" />
-              </button>
-              <button className="flex-none" onClick={() => handleClickTradeState({ tag: "have" })}>
-                <img src="/譲.svg" alt="譲" className="h-12 w-12" />
-              </button>
-            </div>
-            <div className="flex items-center justify-center">
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 1 })}
-              >
-                <img src="/1.svg" alt="1" className="h-12 w-12" />
-              </button>
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 2 })}
-              >
-                <img src="/2.svg" alt="2" className="h-12 w-12" />
-              </button>
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 3 })}
-              >
-                <img src="/3.svg" alt="3" className="h-12 w-12" />
-              </button>
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 4 })}
-              >
-                <img src="/4.svg" alt="4" className="h-12 w-12" />
-              </button>
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 5 })}
-              >
-                <img src="/5.svg" alt="5" className="h-12 w-12" />
-              </button>
-              <button
-                className="flex-none"
-                onClick={() => handleClickTradeState({ tag: "have", count: 6 })}
-              >
-                <img src="/6.svg" alt="6" className="h-12 w-12" />
-              </button>
-            </div>
+            ) : null}
           </DialogPanel>
         </div>
       </Dialog>
