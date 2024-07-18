@@ -25,23 +25,20 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
   const [preview, setPreview] = useState(false);
 
-  const [selected, setSelected] = useState<number | undefined>(undefined);
-  const selPosition =
-    selected != undefined ? positions.find((pos) => pos.id == selected) : undefined;
+  const [index, setIndex] = useState<number | undefined>(undefined);
+  const selPosition = index != undefined ? positions[index] : undefined;
 
-  const current = positions.findIndex((pos) => pos.id == selected);
-  const prev = current != undefined && current != 0 ? current - 1 : undefined;
-  const next = current != undefined && current <= positions.length - 1 ? current + 1 : undefined;
+  const prev = index != undefined && index != 0 ? index - 1 : undefined;
+  const next = index != undefined && index <= positions.length - 1 ? index + 1 : undefined;
 
   const handleClickTradeState = (v: TradeState) => {
     setTradeStates((state) => {
-      const i = state.findIndex((s) => s.id == selected);
-      if (i == undefined) {
+      if (index == undefined) {
         return state;
       }
 
       const items = [...state];
-      items[i] = { ...items[i], state: v };
+      items[index] = { ...items[index], state: v };
 
       return items;
     });
@@ -61,7 +58,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
             {(scale) => {
               return (
                 <div className="relative">
-                  {positions.map((pos) => {
+                  {positions.map((pos, i) => {
                     return (
                       <button
                         key={pos.id}
@@ -73,7 +70,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                         }}
                         className="absolute border border-gray-400 bg-white opacity-30 hover:opacity-40 active:opacity-50"
                         onClick={() => {
-                          setSelected(pos.id);
+                          setIndex(i);
                         }}
                       />
                     );
@@ -97,9 +94,9 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
         プレビュー
       </button>
       <Dialog
-        open={selected != undefined}
+        open={index != undefined}
         className="relative z-50"
-        onClose={() => setSelected(undefined)}
+        onClose={() => setIndex(undefined)}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
           <DialogPanel className="w-full max-w-lg border bg-white p-4">
@@ -110,7 +107,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                   disabled={prev == undefined}
                   onClick={() => {
                     if (prev != undefined) {
-                      setSelected(positions[prev].id);
+                      setIndex(prev);
                     }
                   }}
                 >
@@ -128,7 +125,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                   disabled={next == undefined}
                   onClick={() => {
                     if (next != undefined) {
-                      setSelected(positions[next].id);
+                      setIndex(next);
                     }
                   }}
                 >
