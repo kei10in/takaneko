@@ -28,6 +28,9 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
     onChangeTradeState?.(selPosition.id, v);
   };
 
+  const width = 240;
+  const scale = width / selPosition.width;
+
   return (
     <div className="select-none">
       <div className="flex w-full items-stretch justify-center">
@@ -46,6 +49,8 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           <ClippedImage
             className="flex-none"
             clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
+            alt="Selected"
+            width={width}
             src={productImage.url}
           />
           {tradeStateImageSrc != undefined ? (
@@ -54,8 +59,8 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
               alt=""
               className="absolute bottom-0 left-1/2 -translate-x-1/2 transform"
               style={{
-                width: selPosition.width / 1.5,
-                height: selPosition.width / 1.5,
+                width: (scale * selPosition.width) / 1.5,
+                height: (scale * selPosition.width) / 1.5,
               }}
             />
           ) : null}
