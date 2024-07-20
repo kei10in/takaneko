@@ -1,10 +1,10 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import Konva from "konva";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { ProductImage } from "~/features/productImages";
 import { TradeState } from "~/features/TradeState";
+import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
-import { TradeImage } from "./TradeImage.client";
+import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
   productImage: ProductImage;
@@ -12,8 +12,6 @@ interface Props {
 
 export const TradeEditor: React.FC<Props> = (props: Props) => {
   const { productImage } = props;
-
-  const stageRef = useRef<Konva.Stage>(null);
 
   const photos = productImage.photos;
   const positions = productImage.positions;
@@ -24,6 +22,8 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
   const [preview, setPreview] = useState(false);
   const [index, setIndex] = useState<number | undefined>(undefined);
+
+  const scale = 390 / productImage.width;
 
   const handleClickTradeState = (id: number, v: TradeState) => {
     setTradeStates((state) => {
@@ -39,55 +39,52 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
     });
   };
 
+  console.log({ preview });
+
   return (
     <div>
       <div>
         {positions.length != 0 ? (
-          <TradeImage
-            key={productImage.name}
-            url={productImage.url}
-            positions={productImage.positions}
-            tradeDescriptions={tradeStates}
-            ref={stageRef}
-          >
-            {(scale) => {
+          <div className="relative">
+            <HtmlTradeImage
+              image={{
+                url: productImage.url,
+                width: productImage.width,
+                height: productImage.height,
+              }}
+              width={390}
+              positions={productImage.positions}
+              tradeDescriptions={tradeStates}
+            />
+            {positions.map((pos, i) => {
               return (
-                <div className="relative">
-                  {positions.map((pos, i) => {
-                    return (
-                      <button
-                        key={pos.id}
-                        style={{
-                          left: pos.x * scale,
-                          top: pos.y * scale,
-                          width: pos.width * scale,
-                          height: pos.height * scale,
-                        }}
-                        className="absolute border border-gray-400 bg-white opacity-30 hover:opacity-40 active:opacity-50"
-                        onClick={() => {
-                          setIndex(i);
-                        }}
-                      />
-                    );
-                  })}
-                </div>
+                <button
+                  key={pos.id}
+                  style={{
+                    left: pos.x * scale,
+                    top: pos.y * scale,
+                    width: pos.width * scale,
+                    height: pos.height * scale,
+                  }}
+                  className="absolute border border-gray-400 bg-white opacity-30 hover:opacity-40 active:opacity-50"
+                  onClick={() => {
+                    setIndex(i);
+                  }}
+                />
               );
-            }}
-          </TradeImage>
+            })}
+          </div>
         ) : null}
       </div>
       <button
         className="mt-4 rounded-lg border border-gray-400 bg-gray-300 px-4 py-1"
         onClick={() => {
-          if (stageRef.current == undefined) {
-            return;
-          }
-
           setPreview(true);
         }}
       >
         プレビュー
       </button>
+
       <Dialog
         open={index != undefined}
         className="relative z-50"
@@ -112,7 +109,8 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
           <DialogPanel className="max-w-lg border bg-white p-4">
-            <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} />
+            <TradeImagePreview productImage={productImage} tradeDescriptions={tradeStates} />
+            {/* <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} /> */}
           </DialogPanel>
         </div>
       </Dialog>
