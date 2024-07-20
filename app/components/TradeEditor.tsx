@@ -8,10 +8,11 @@ import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
   productImage: ProductImage;
+  width: number;
 }
 
 export const TradeEditor: React.FC<Props> = (props: Props) => {
-  const { productImage } = props;
+  const { productImage, width } = props;
 
   const photos = productImage.photos;
   const positions = productImage.positions;
@@ -23,7 +24,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const [preview, setPreview] = useState(false);
   const [index, setIndex] = useState<number | undefined>(undefined);
 
-  const scale = 390 / productImage.width;
+  const scale = width / productImage.width;
 
   const handleClickTradeState = (id: number, v: TradeState) => {
     setTradeDescriptions((state) => {
@@ -39,20 +40,18 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
     });
   };
 
-  console.log({ preview });
-
   return (
-    <div>
-      <div>
+    <div className="w-full">
+      <div className="w-full">
         {positions.length != 0 ? (
-          <div className="relative">
+          <div className="relative mx-auto">
             <HtmlTradeImage
               image={{
                 url: productImage.url,
                 width: productImage.width,
                 height: productImage.height,
               }}
-              width={390}
+              width={width}
               positions={productImage.positions}
               tradeDescriptions={tradeDescriptions}
             />
@@ -66,7 +65,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                     width: pos.width * scale,
                     height: pos.height * scale,
                   }}
-                  className="absolute border border-gray-400 bg-white opacity-30 hover:opacity-40 active:opacity-50"
+                  className="absolute border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
                   onClick={() => {
                     setIndex(i);
                   }}
@@ -76,14 +75,21 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
           </div>
         ) : null}
       </div>
-      <button
-        className="mt-4 rounded-lg border border-gray-400 bg-gray-300 px-4 py-1"
-        onClick={() => {
-          setPreview(true);
-        }}
+      <div
+        className="fixed h-20 w-full border-t border-gray-300 bg-white"
+        style={{ bottom: 0, left: 0 }}
       >
-        プレビュー
-      </button>
+        <div className="mx-4 flex h-full items-center justify-end">
+          <button
+            className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
+            onClick={() => {
+              setPreview(true);
+            }}
+          >
+            保存用画像
+          </button>
+        </div>
+      </div>
 
       <Dialog
         open={index != undefined}

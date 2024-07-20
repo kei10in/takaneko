@@ -12,11 +12,15 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <div className="sticky top-0 z-40 w-full border-b border-gray-300 bg-white p-4">
-        <h1 className="text-xl">トレード用の画像をつくるやつ。</h1>
+      <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
+        <div className="container mx-auto flex h-full items-center">
+          <h1 className="text-2xl font-bold text-gray-600">トレード画像をつくるやつ。</h1>
+        </div>
       </div>
-      <div className="container mx-auto">
-        <TradeEditor productImage={TAKANEKO_PHOTOS[29]} />
+      <div className="container mx-auto mt-4">
+        <div className="mx-auto w-[22.5rem]">
+          <TradeEditor productImage={TAKANEKO_PHOTOS[29]} width={360} />
+        </div>
       </div>
     </div>
   );

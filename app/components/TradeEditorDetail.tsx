@@ -29,14 +29,16 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
 
   return (
     <>
-      <div className="flex w-full items-center justify-center gap-2">
+      <div className="flex w-full items-stretch justify-center">
         <div className="flex-none">
           <button
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300"
+            className="group h-full p-2 hover:bg-gray-100 active:bg-gray-200"
             disabled={index == 0}
             onClick={(e) => onClickPrev?.(e)}
           >
-            <TbChevronLeft className="text-xl text-gray-800" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200 group-active:bg-gray-300">
+              <TbChevronLeft className="text-xl text-gray-800" />
+            </div>
           </button>
         </div>
         <ClippedImage
@@ -46,11 +48,13 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
         />
         <div className="flex-none">
           <button
-            className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300"
+            className="group h-full p-2 hover:bg-gray-100 active:bg-gray-200"
             disabled={positions.length <= index + 1}
             onClick={(e) => onClickNext?.(e)}
           >
-            <TbChevronRight className="text-xl text-gray-800" />
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200 group-active:bg-gray-300">
+              <TbChevronRight className="text-xl text-gray-800" />
+            </div>
           </button>
         </div>
       </div>
