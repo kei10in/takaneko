@@ -29,7 +29,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <>
+    <div className="select-none">
       <div className="flex w-full items-stretch justify-center">
         <div className="flex-none">
           <button
@@ -142,6 +142,6 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           <img src="/6.svg" alt="6" className="h-10 w-10" />
         </TradeStateButton>
       </div>
-    </>
+    </div>
   );
 };

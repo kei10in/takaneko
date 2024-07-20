@@ -44,7 +44,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
     <div className="w-full">
       <div className="w-full">
         {positions.length != 0 ? (
-          <div className="relative mx-auto">
+          <div className="relative mx-auto select-none">
             <HtmlTradeImage
               image={{
                 url: productImage.url,
@@ -65,7 +65,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                     width: pos.width * scale,
                     height: pos.height * scale,
                   }}
-                  className="absolute border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
+                  className="absolute select-none border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
                   onClick={() => {
                     setIndex(i);
                   }}

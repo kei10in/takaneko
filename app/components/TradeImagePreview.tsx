@@ -28,7 +28,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      <img alt="Preview" className="mx-auto" src={dataUrl} width={1280} />
+      <img alt="Preview" className="mx-auto select-none" src={dataUrl} width={1280} />
     </div>
   );
 };
