@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { ProductImage } from "~/features/productImages";
-import { TradeState } from "~/features/TradeState";
+import { TradeDescription } from "~/features/TradeState";
 import { drawTradeImage } from "./drawTradeImage";
 
 interface Props {
   productImage: ProductImage;
-  tradeDescriptions: { id: number; state: TradeState }[];
+  tradeDescriptions: TradeDescription[];
 }
 
 export const TradeImagePreview: React.FC<Props> = (props: Props) => {

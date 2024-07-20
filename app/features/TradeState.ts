@@ -3,6 +3,8 @@ export type TradeState =
   | { tag: "want" }
   | { tag: "have"; count?: number | undefined };
 
+export type TradeDescription = { id: number; state: TradeState };
+
 export const tradeStateToImageSrc = (trade: TradeState): string | undefined => {
   if (trade.tag == "want") {
     return "/求.svg";

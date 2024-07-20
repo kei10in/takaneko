@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { ProductImage } from "~/features/productImages";
-import { TradeState } from "~/features/TradeState";
+import { TradeDescription, TradeState } from "~/features/TradeState";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
@@ -16,7 +16,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const photos = productImage.photos;
   const positions = productImage.positions;
 
-  const [tradeStates, setTradeStates] = useState<{ id: number; state: TradeState }[]>(() =>
+  const [tradeDescriptions, setTradeDescriptions] = useState<TradeDescription[]>(() =>
     photos.map((p) => ({ id: p.id, state: { tag: "none" } })),
   );
 
@@ -26,7 +26,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const scale = 390 / productImage.width;
 
   const handleClickTradeState = (id: number, v: TradeState) => {
-    setTradeStates((state) => {
+    setTradeDescriptions((state) => {
       const index = state.findIndex((s) => s.id == id);
       if (index == undefined) {
         return state;
@@ -54,7 +54,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
               }}
               width={390}
               positions={productImage.positions}
-              tradeDescriptions={tradeStates}
+              tradeDescriptions={tradeDescriptions}
             />
             {positions.map((pos, i) => {
               return (
@@ -95,6 +95,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
             {index != undefined ? (
               <TradeEditorDetail
                 productImage={productImage}
+                tradeDescriptions={tradeDescriptions}
                 index={index}
                 onClickPrev={() => setIndex(index - 1)}
                 onClickNext={() => setIndex(index + 1)}
@@ -109,7 +110,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
           <DialogPanel className="max-w-lg border bg-white p-4">
-            <TradeImagePreview productImage={productImage} tradeDescriptions={tradeStates} />
+            <TradeImagePreview productImage={productImage} tradeDescriptions={tradeDescriptions} />
             {/* <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} /> */}
           </DialogPanel>
         </div>
