@@ -31,7 +31,7 @@ export const drawTradeImage = async (
     const width = pos.width / 1.5;
     const height = width;
     const x = pos.x + pos.width / 2 - width / 2;
-    const y = pos.y + pos.height - height - 5;
+    const y = pos.y + pos.height - height;
 
     const icon = new Image();
     await loadImage(icon, src);

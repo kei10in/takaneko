@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
 import { TbChevronLeft, TbChevronRight, TbCircleOff } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
-import { TradeDescription, TradeState } from "~/features/TradeState";
+import { TradeDescription, TradeState, tradeStateToImageSrc } from "~/features/TradeState";
 import { ClippedImage } from "./ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
 
@@ -22,6 +22,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const selPosition = positions[index];
   const tradeDescription = tradeDescriptions.find((td) => td.id == selPosition.id);
   const tradeState = tradeDescription?.state;
+  const tradeStateImageSrc = tradeState != undefined ? tradeStateToImageSrc(tradeState) : undefined;
 
   const handleClickTradeState = (v: TradeState) => {
     onChangeTradeState?.(selPosition.id, v);
@@ -41,11 +42,24 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             </div>
           </button>
         </div>
-        <ClippedImage
-          className="flex-none"
-          clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
-          src={productImage.url}
-        />
+        <div className="relative">
+          <ClippedImage
+            className="flex-none"
+            clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
+            src={productImage.url}
+          />
+          {tradeStateImageSrc != undefined ? (
+            <img
+              src={tradeStateImageSrc}
+              alt=""
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 transform"
+              style={{
+                width: selPosition.width / 1.5,
+                height: selPosition.width / 1.5,
+              }}
+            />
+          ) : null}
+        </div>
         <div className="flex-none">
           <button
             className="group h-full p-2 hover:bg-gray-100 active:bg-gray-200"
