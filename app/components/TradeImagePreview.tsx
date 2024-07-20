@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { TbProgress } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription } from "~/features/TradeState";
 import { drawTradeImage } from "./drawTradeImage";
@@ -28,7 +29,13 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      <img alt="Preview" className="mx-auto select-none" src={dataUrl} width={1280} />
+      {dataUrl == undefined ? (
+        <div className="flex items-center justify-center p-4">
+          <TbProgress size="1.75rem" className="animate-spin text-gray-700" />
+        </div>
+      ) : (
+        <img alt="Preview" className="mx-auto select-none" src={dataUrl} width={1280} />
+      )}
     </div>
   );
 };
