@@ -20,7 +20,7 @@ export const TradeStateButton: React.FC<Props> = (props: Props) => {
   return (
     <button
       className={clsx(
-        "group flex-none rounded-2xl p-1 hover:bg-gray-200 active:bg-gray-300",
+        "group flex-none rounded-2xl p-1 hover:bg-gray-200",
         selected && "bg-gray-200",
       )}
       onClick={handleClick}
@@ -28,7 +28,6 @@ export const TradeStateButton: React.FC<Props> = (props: Props) => {
     >
       <div
         className={clsx(
-          "active:brightness-90",
           !selected && "brightness-50 hover:brightness-75",
           selected && "brightness-100",
         )}

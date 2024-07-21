@@ -61,7 +61,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                       width: pos.width * scale,
                       height: pos.height * scale,
                     }}
-                    className="absolute select-none border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
+                    className="absolute select-none border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20"
                     onClick={() => {
                       setIndex(i);
                     }}

@@ -57,7 +57,7 @@ export default function Index() {
           <h1 className="text-2xl font-bold text-gray-600">トレード画像をつくるやつ。</h1>
           <div className="flex-none">
             <button
-              className="rounded-full p-2 text-2xl hover:bg-gray-200 active:bg-gray-300"
+              className="rounded-full p-2 text-2xl hover:bg-gray-200"
               onClick={() => setShowMenu(true)}
             >
               <TbMenu2 />
@@ -87,7 +87,7 @@ export default function Index() {
             <div className="sticky top-0 flex h-20 items-center justify-end border-b border-gray-300 bg-white p-4">
               <div className="flex-none">
                 <button
-                  className="rounded-full p-2 text-2xl hover:bg-gray-200 active:bg-gray-300"
+                  className="rounded-full p-2 text-2xl hover:bg-gray-200"
                   onClick={() => setShowMenu(false)}
                 >
                   <TbX />

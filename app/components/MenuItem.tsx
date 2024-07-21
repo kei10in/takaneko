@@ -16,7 +16,7 @@ export const MenuItem: React.FC<Props> = (props: Props) => {
       className={clsx(
         "w-full py-4 pl-8 pr-4 text-left text-xl text-gray-700",
         disabled && !selected && "disabled:text-gray-300",
-        !disabled && "hover:bg-gray-200 active:bg-gray-300",
+        !disabled && "hover:bg-gray-200",
         selected && "bg-gray-100 font-bold",
       )}
       disabled={disabled || selected}

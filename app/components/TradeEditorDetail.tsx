@@ -36,11 +36,11 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
       <div className="flex w-full items-stretch justify-center">
         <div className="flex-none">
           <button
-            className="group h-full p-2 hover:bg-gray-100 active:bg-gray-200"
+            className="group h-full p-2 hover:bg-gray-100"
             disabled={index == 0}
             onClick={(e) => onClickPrev?.(e)}
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200 group-active:bg-gray-300">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
               <TbChevronLeft className="text-xl text-gray-800" />
             </div>
           </button>
@@ -67,11 +67,11 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
         </div>
         <div className="flex-none">
           <button
-            className="group h-full p-2 hover:bg-gray-100 active:bg-gray-200"
+            className="group h-full p-2 hover:bg-gray-100"
             disabled={positions.length <= index + 1}
             onClick={(e) => onClickNext?.(e)}
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200 group-active:bg-gray-300">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
               <TbChevronRight className="text-xl text-gray-800" />
             </div>
           </button>
