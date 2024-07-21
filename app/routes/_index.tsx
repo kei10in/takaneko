@@ -8,8 +8,11 @@ import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "トレード画像つくるやつ。- 高嶺のなでしこの" },
+    {
+      name: "description",
+      content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
+    },
   ];
 };
 
