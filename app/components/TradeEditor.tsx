@@ -84,7 +84,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
               setPreview(true);
             }}
           >
-            保存用画像
+            トレード画像
           </button>
         </div>
       </div>
