@@ -83,18 +83,16 @@ export default function Index() {
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50">
-          <DialogPanel className="w-80 overflow-y-auto border-l border-gray-200 bg-white">
-            <div className="sticky top-0 flex h-20 items-center justify-end border-b border-gray-300 bg-white p-4">
-              <div className="flex-none">
-                <button
-                  className="rounded-full p-2 text-2xl hover:bg-gray-200"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <TbX />
-                </button>
-              </div>
+          <DialogPanel className="relative w-80 overflow-y-auto border-l border-gray-200 bg-white">
+            <div className="absolute right-4 top-5 flex-none">
+              <button
+                className="rounded-full p-2 text-2xl hover:bg-gray-200"
+                onClick={() => setShowMenu(false)}
+              >
+                <TbX />
+              </button>
             </div>
-            <div>
+            <div className="mt-3">
               <h3 className="px-4 py-4 text-xl font-bold">2024 年</h3>
               <ul>
                 {in2024.map((photo) => (
