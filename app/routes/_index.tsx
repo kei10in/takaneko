@@ -4,7 +4,8 @@ import { useState } from "react";
 import { TbMenu2, TbX } from "react-icons/tb";
 import { MenuItem } from "~/components/MenuItem";
 import { TradeEditor } from "~/components/TradeEditor";
-import { TAKANEKO_PHOTOS } from "~/features/productImages";
+import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
+import { TradeDescription, TradeState } from "~/features/TradeState";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,8 +26,27 @@ export default function Index() {
 
   const [selectedProduct, setSelectedProduct] = useState(in2024[0]);
 
-  const handleClickMenuItem = (photo: ProductImage) => {
-    setSelectedProduct(photo);
+  const [allTradeDescriptions, setAllTradeDescriptions] = useState<
+    Record<string, TradeDescription[]>
+  >(() => {
+    const photos = selectedProduct.photos;
+    return { [selectedProduct.name]: photos.map((p) => ({ id: p.id, state: { tag: "none" } })) };
+  });
+  const selectedTradeDescriptions = allTradeDescriptions[selectedProduct.name];
+
+  const handleClickMenuItem = (product: ProductImage) => {
+    const photos = product.photos;
+
+    if (!(product.name in allTradeDescriptions)) {
+      const noneState: TradeState = { tag: "none" };
+      const newAllTradeDescriptions = {
+        ...allTradeDescriptions,
+        [product.name]: photos.map((p) => ({ id: p.id, state: noneState })),
+      };
+      setAllTradeDescriptions(newAllTradeDescriptions);
+    }
+
+    setSelectedProduct(product);
     setShowMenu(false);
   };
 
@@ -47,7 +67,17 @@ export default function Index() {
       </div>
       <div className="container mx-auto mt-4">
         <div className="mx-auto w-[22.5rem]">
-          <TradeEditor productImage={selectedProduct} width={360} />
+          <TradeEditor
+            productImage={selectedProduct}
+            tradeDescriptions={selectedTradeDescriptions}
+            onChangeTradeDescriptions={(v) => {
+              setAllTradeDescriptions({
+                ...allTradeDescriptions,
+                [selectedProduct.name]: v,
+              });
+            }}
+            width={360}
+          />
         </div>
       </div>
 
@@ -107,6 +137,10 @@ export default function Index() {
                   </li>
                 ))}
               </ul>
+            </div>
+            <div className="mt-8 p-4 text-sm text-gray-800">
+              <p>このサイトは非公式のファンコンテンツです。</p>
+              <p>使用されている高嶺のなでしこの画像は INCS・TP の所有物です。©INCS・TP</p>
             </div>
           </DialogPanel>
         </div>

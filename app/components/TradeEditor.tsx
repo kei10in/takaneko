@@ -8,18 +8,15 @@ import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
   productImage: ProductImage;
+  tradeDescriptions: TradeDescription[];
+  onChangeTradeDescriptions: (tradeDescriptions: TradeDescription[]) => void;
   width: number;
 }
 
 export const TradeEditor: React.FC<Props> = (props: Props) => {
-  const { productImage, width } = props;
+  const { productImage, tradeDescriptions, width, onChangeTradeDescriptions } = props;
 
-  const photos = productImage.photos;
   const positions = productImage.positions;
-
-  const [tradeDescriptions, setTradeDescriptions] = useState<TradeDescription[]>(() =>
-    photos.map((p) => ({ id: p.id, state: { tag: "none" } })),
-  );
 
   const [preview, setPreview] = useState(false);
   const [index, setIndex] = useState<number | undefined>(undefined);
@@ -27,51 +24,52 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const scale = width / productImage.width;
 
   const handleClickTradeState = (id: number, v: TradeState) => {
-    setTradeDescriptions((state) => {
-      const index = state.findIndex((s) => s.id == id);
-      if (index == undefined) {
-        return state;
-      }
+    const index = tradeDescriptions.findIndex((s) => s.id == id);
+    if (index == undefined) {
+      return tradeDescriptions;
+    }
 
-      const items = [...state];
-      items[index] = { ...items[index], state: v };
+    const items = [...tradeDescriptions];
+    items[index] = { ...items[index], state: v };
 
-      return items;
-    });
+    onChangeTradeDescriptions?.(items);
   };
 
   return (
     <div className="w-full">
       <div className="w-full">
         {positions.length != 0 ? (
-          <div className="relative mx-auto select-none">
-            <HtmlTradeImage
-              image={{
-                url: productImage.url,
-                width: productImage.width,
-                height: productImage.height,
-              }}
-              width={width}
-              positions={productImage.positions}
-              tradeDescriptions={tradeDescriptions}
-            />
-            {positions.map((pos, i) => {
-              return (
-                <button
-                  key={pos.id}
-                  style={{
-                    left: pos.x * scale,
-                    top: pos.y * scale,
-                    width: pos.width * scale,
-                    height: pos.height * scale,
-                  }}
-                  className="absolute select-none border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
-                  onClick={() => {
-                    setIndex(i);
-                  }}
-                />
-              );
-            })}
+          <div className="mx-auto">
+            <div className="relative select-none">
+              <HtmlTradeImage
+                image={{
+                  url: productImage.url,
+                  width: productImage.width,
+                  height: productImage.height,
+                }}
+                width={width}
+                positions={productImage.positions}
+                tradeDescriptions={tradeDescriptions}
+              />
+              {positions.map((pos, i) => {
+                return (
+                  <button
+                    key={pos.id}
+                    style={{
+                      left: pos.x * scale,
+                      top: pos.y * scale,
+                      width: pos.width * scale,
+                      height: pos.height * scale,
+                    }}
+                    className="absolute select-none border border-gray-500 bg-black bg-opacity-0 hover:bg-opacity-20 active:bg-opacity-40"
+                    onClick={() => {
+                      setIndex(i);
+                    }}
+                  />
+                );
+              })}
+            </div>
+            <p className="text-right">@INCS・TP</p>
           </div>
         ) : null}
       </div>
