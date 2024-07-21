@@ -25,6 +25,11 @@ export default function Index() {
 
   const [selectedProduct, setSelectedProduct] = useState(in2024[0]);
 
+  const handleClickMenuItem = (photo: ProductImage) => {
+    setSelectedProduct(photo);
+    setShowMenu(false);
+  };
+
   return (
     <div>
       <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
@@ -65,8 +70,9 @@ export default function Index() {
                 {in2024.map((photo) => (
                   <li key={photo.name}>
                     <MenuItem
+                      selected={selectedProduct.name == photo.name}
                       disabled={photo.positions.length == 0}
-                      onClick={() => setSelectedProduct(photo)}
+                      onClick={() => handleClickMenuItem(photo)}
                     >
                       {photo.name}
                     </MenuItem>
@@ -78,8 +84,9 @@ export default function Index() {
                 {in2023.map((photo) => (
                   <li key={photo.name}>
                     <MenuItem
+                      selected={selectedProduct.name == photo.name}
                       disabled={photo.positions.length == 0}
-                      onClick={() => setSelectedProduct(photo)}
+                      onClick={() => handleClickMenuItem(photo)}
                     >
                       {photo.name}
                     </MenuItem>
@@ -91,8 +98,9 @@ export default function Index() {
                 {in2022.map((photo) => (
                   <li key={photo.name}>
                     <MenuItem
+                      selected={selectedProduct.name == photo.name}
                       disabled={photo.positions.length == 0}
-                      onClick={() => setSelectedProduct(photo)}
+                      onClick={() => handleClickMenuItem(photo)}
                     >
                       {photo.name}
                     </MenuItem>
