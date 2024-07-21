@@ -37,7 +37,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="w-full">
-      <div className="w-full">
+      <div className="my-4 w-full pb-20">
         {positions.length != 0 ? (
           <div className="mx-auto">
             <div className="relative select-none">

@@ -65,7 +65,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-4">
+      <div className="container mx-auto">
         <div className="mx-auto w-[22.5rem]">
           <TradeEditor
             productImage={selectedProduct}
