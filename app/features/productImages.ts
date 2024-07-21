@@ -138,7 +138,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
   {
     year: 2023,
     name: "たかねこ全国お招きツアー2023衣装",
-    url: "/takaneko/photos/2023-04_たかねこ全国お招きツアー2023衣装.jpg",
+    url: "/takaneko/photos/2023-04_たかねこ全国お招きツアー2023衣装.png",
     width: 0,
     height: 0,
     photos: REGULAR_PHOTO_SET,
