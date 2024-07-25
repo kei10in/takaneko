@@ -30,7 +30,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
     onChangeTradeState?.(selPosition.id, v);
   };
 
-  const width = 240;
+  const width = 180;
   const scale = width / selPosition.width;
 
   return (
