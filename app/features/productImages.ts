@@ -1,7 +1,12 @@
+import { 恋を知った世界_ミニフォト } from "./products/2024/2024-03_恋を知った世界_ミニフォト";
 import { 恋を知った世界_生写真 } from "./products/2024/2024-03_恋を知った世界_生写真";
+import { Beginning_ミニフォト } from "./products/2024/2024-04_Beginning_ミニフォト";
 import { Beginning_生写真 } from "./products/2024/2024-04_Beginning_生写真";
+import { わたし色に染まれ_ミニフォト } from "./products/2024/2024-05_わたし色に染まれ_ミニフォト";
 import { わたし色に染まれ_生写真 } from "./products/2024/2024-05_わたし色に染まれ_生写真";
+import { ワンピース_ミニフォト } from "./products/2024/2024-05_ワンピース_ミニフォト copy";
 import { ワンピース_生写真 } from "./products/2024/2024-05_ワンピース_生写真";
+import { メイド至上主義_ミニフォト } from "./products/2024/2024-06_メイド☆至上主義_ミニフォト";
 import { メイド至上主義_生写真 } from "./products/2024/2024-06_メイド☆至上主義_生写真";
 import { 浴衣2024_ミニフォト } from "./products/2024/2024-07_浴衣2024_ミニフォト";
 import { 浴衣2024_生写真 } from "./products/2024/2024-07_浴衣2024_生写真";
@@ -307,10 +312,15 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
+  恋を知った世界_ミニフォト,
   恋を知った世界_生写真,
+  Beginning_ミニフォト,
   Beginning_生写真,
+  わたし色に染まれ_ミニフォト,
   わたし色に染まれ_生写真,
+  ワンピース_ミニフォト,
   ワンピース_生写真,
+  メイド至上主義_ミニフォト,
   メイド至上主義_生写真,
   浴衣2024_ミニフォト,
   浴衣2024_生写真,
