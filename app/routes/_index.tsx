@@ -142,8 +142,8 @@ export default function Index() {
               </ul>
             </div>
             <div className="mt-8 p-4 text-sm text-gray-800">
-              <p>このサイトは非公式のファンコンテンツです。</p>
-              <p>使用されている高嶺のなでしこの画像は INCS・TP の所有物です。©INCS・TP</p>
+              <p>「トレード画像をつくるやつ。」は非公式のファンコンテンツです。</p>
+              <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
             </div>
           </DialogPanel>
         </div>
