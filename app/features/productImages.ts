@@ -7,8 +7,10 @@ import { 浴衣2024_生写真 } from "./products/2024/2024-07_浴衣2024_生写�
 import { REGULAR_PHOTO_SET } from "./products/utils";
 
 export interface ProductImage {
+  id: string;
   year: number;
   name: string;
+  kind: "生写真" | "ミニフォト";
   url: string;
   width: number;
   height: number;
@@ -30,8 +32,10 @@ export interface ImagePosition {
 
 export const TAKANEKO_PHOTOS: ProductImage[] = [
   {
+    id: "アンチファン衣装",
     year: 2022,
     name: "アンチファン衣装",
+    kind: "生写真",
     url: "/takaneko/photos/2022-08_アンチファン衣装.webp",
     width: 1280,
     height: 1280,
@@ -39,8 +43,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "うぶごえ",
     year: 2022,
     name: "うぶごえ",
+    kind: "生写真",
     url: "/takaneko/photos/2022-09_うぶごえ.jpg",
     width: 1280,
     height: 1300,
@@ -48,8 +54,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2022秋服",
     year: 2022,
     name: "2022秋服",
+    kind: "生写真",
     url: "/takaneko/photos/2022-10_2022秋服.webp",
     width: 1280,
     height: 1300,
@@ -57,8 +65,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "ハロウィン",
     year: 2022,
     name: "ハロウィン",
+    kind: "生写真",
     url: "/takaneko/photos/2022-10_ハロウィン.jpg",
     width: 1280,
     height: 1300,
@@ -66,8 +76,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "昭和レトロ",
     year: 2022,
     name: "昭和レトロ",
+    kind: "生写真",
     url: "/takaneko/photos/2022-11_昭和レトロ.webp",
     width: 1300,
     height: 1300,
@@ -75,8 +87,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2022サンタ",
     year: 2022,
     name: "2022サンタ",
+    kind: "生写真",
     url: "/takaneko/photos/2022-12_2022サンタ.webp",
     width: 1300,
     height: 1300,
@@ -84,8 +98,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2023年振袖",
     year: 2023,
     name: "2023年振袖",
+    kind: "生写真",
     url: "/takaneko/photos/2023-01_2023年振袖.webp",
     width: 1300,
     height: 1300,
@@ -93,8 +109,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "バレンタイン",
     year: 2023,
     name: "バレンタイン",
+    kind: "生写真",
     url: "/takaneko/photos/2023-02_バレンタイン.webp",
     width: 1300,
     height: 1300,
@@ -102,8 +120,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2023年制服卒業シーズン",
     year: 2023,
     name: "2023年制服卒業シーズン",
+    kind: "生写真",
     url: "/takaneko/photos/2023-03_2023年制服卒業シーズン.webp",
     width: 1500,
     height: 2027,
@@ -111,8 +131,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "たかねこ全国お招きツアー2023衣装 (生写真)",
     year: 2023,
     name: "たかねこ全国お招きツアー2023衣装",
+    kind: "生写真",
     url: "/takaneko/photos/2023-04_たかねこ全国お招きツアー2023衣装.png",
     width: 0,
     height: 0,
@@ -120,8 +142,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "イースター",
     year: 2023,
     name: "イースター",
+    kind: "生写真",
     url: "/takaneko/photos/2023-05_イースター.webp",
     width: 1188,
     height: 1381,
@@ -129,8 +153,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "スーツ",
     year: 2023,
     name: "スーツ",
+    kind: "生写真",
     url: "/takaneko/photos/2023-06_スーツ.webp",
     width: 1066,
     height: 1256,
@@ -138,8 +164,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "スーツメガネ",
     year: 2023,
     name: "スーツメガネ",
+    kind: "生写真",
     url: "/takaneko/photos/2023-06_スーツメガネ.webp",
     width: 1064,
     height: 1257,
@@ -147,8 +175,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "梅雨",
     year: 2023,
     name: "梅雨",
+    kind: "生写真",
     url: "/takaneko/photos/2023-06_梅雨.webp",
     width: 1179,
     height: 1391,
@@ -156,8 +186,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "マリン",
     year: 2023,
     name: "マリン",
+    kind: "生写真",
     url: "/takaneko/photos/2023-07_マリン.webp",
     width: 1144,
     height: 1395,
@@ -165,17 +197,21 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "浴衣 (生写真)",
     year: 2023,
     name: "浴衣",
-    url: "/puic/takaneko/photos/2023-08_浴衣.webp",
+    kind: "生写真",
+    url: "/takaneko/photos/2023-08_浴衣.webp",
     width: 1180,
     height: 1388,
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
   {
+    id: "僕は君になれない衣装 (生写真)",
     year: 2023,
     name: "僕は君になれない衣装",
+    kind: "生写真",
     url: "/takaneko/photos/2023-09_僕は君になれない衣装.png",
     width: 720,
     height: 974,
@@ -183,8 +219,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "初恋のひと",
     year: 2023,
     name: "初恋のひと",
+    kind: "生写真",
     url: "/takaneko/photos/2023-09_初恋のひと.webp",
     width: 1181,
     height: 1387,
@@ -192,8 +230,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "povo2.0",
     year: 2023,
     name: "povo2.0",
+    kind: "生写真",
     url: "/takaneko/photos/2023-10_povo2.0.jpg",
     width: 1182,
     height: 1387,
@@ -201,8 +241,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2023ハロウィン (生写真)",
     year: 2023,
     name: "2023ハロウィン",
+    kind: "生写真",
     url: "/takaneko/photos/2023-10_2023ハロウィン.webp",
     width: 1180,
     height: 1388,
@@ -210,8 +252,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "海の妖精 (生写真)",
     year: 2023,
     name: "海の妖精",
+    kind: "生写真",
     url: "/takaneko/photos/2023-11_海の妖精.jpg",
     width: 1181,
     height: 1389,
@@ -219,8 +263,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "ウィンター",
     year: 2023,
     name: "ウィンター",
+    kind: "生写真",
     url: "/takaneko/photos/2023-12_ウィンター.jpg",
     width: 1180,
     height: 1389,
@@ -228,8 +274,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "ホワイトサンタ2023 (生写真)",
     year: 2023,
     name: "ホワイトサンタ2023",
+    kind: "生写真",
     url: "/takaneko/photos/2023-12_ホワイトサンタ2023.png",
     width: 200,
     height: 235,
@@ -237,8 +285,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2024振袖 (生写真)",
     year: 2024,
     name: "2024振袖",
+    kind: "生写真",
     url: "/takaneko/photos/2024-01_2024振袖.webp",
     width: 1180,
     height: 1388,
@@ -246,8 +296,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     positions: [],
   },
   {
+    id: "2024年バレンタイン (生写真)",
     year: 2024,
     name: "2024年バレンタイン",
+    kind: "生写真",
     url: "/takaneko/photos/2024-02_2024年バレンタイン.webp",
     width: 1178,
     height: 1390,

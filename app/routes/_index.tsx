@@ -34,11 +34,11 @@ export default function Index() {
   const handleClickMenuItem = (product: ProductImage) => {
     const photos = product.photos;
 
-    if (!(product.name in allTradeDescriptions)) {
+    if (!(product.id in allTradeDescriptions)) {
       const noneState: TradeState = { tag: "none" };
       const newAllTradeDescriptions = {
         ...allTradeDescriptions,
-        [product.name]: photos.map((p) => ({ id: p.id, state: noneState })),
+        [product.id]: photos.map((p) => ({ id: p.id, state: noneState })),
       };
       setAllTradeDescriptions(newAllTradeDescriptions);
     }
@@ -73,11 +73,11 @@ export default function Index() {
           <div className="mx-auto w-[22.5rem]">
             <TradeEditor
               productImage={selectedProduct}
-              tradeDescriptions={allTradeDescriptions[selectedProduct.name]}
+              tradeDescriptions={allTradeDescriptions[selectedProduct.id]}
               onChangeTradeDescriptions={(v) => {
                 setAllTradeDescriptions({
                   ...allTradeDescriptions,
-                  [selectedProduct.name]: v,
+                  [selectedProduct.id]: v,
                 });
               }}
               width={360}
@@ -101,9 +101,9 @@ export default function Index() {
               <h3 className="px-4 py-4 text-xl font-bold">2024 年</h3>
               <ul>
                 {in2024.map((photo) => (
-                  <li key={photo.name}>
+                  <li key={photo.id}>
                     <MenuItem
-                      selected={selectedProduct?.name == photo.name}
+                      selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
                     >
@@ -115,9 +115,9 @@ export default function Index() {
               <h3 className="px-4 py-4 text-xl font-bold">2023 年</h3>
               <ul>
                 {in2023.map((photo) => (
-                  <li key={photo.name}>
+                  <li key={photo.id}>
                     <MenuItem
-                      selected={selectedProduct?.name == photo.name}
+                      selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
                     >
@@ -129,9 +129,9 @@ export default function Index() {
               <h3 className="px-4 py-4 text-xl font-bold">2022 年</h3>
               <ul>
                 {in2022.map((photo) => (
-                  <li key={photo.name}>
+                  <li key={photo.id}>
                     <MenuItem
-                      selected={selectedProduct?.name == photo.name}
+                      selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
                     >

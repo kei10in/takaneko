@@ -2,8 +2,10 @@ import { ProductImage } from "~/features/productImages";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const メイド至上主義_生写真: ProductImage = {
+  id: "メイド☆至上主義 (生写真)",
   year: 2024,
   name: "メイド☆至上主義",
+  kind: "生写真",
   url: "/takaneko/photos/2024-06_メイド☆至上主義.webp",
   width: 1680,
   height: 2128,

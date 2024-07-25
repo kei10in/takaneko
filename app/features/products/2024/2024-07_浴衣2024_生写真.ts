@@ -2,8 +2,10 @@ import { ProductImage } from "~/features/productImages";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 浴衣2024_生写真: ProductImage = {
+  id: "浴衣2024 (生写真)",
   year: 2024,
   name: "浴衣2024",
+  kind: "生写真",
   url: "/takaneko/photos/2024-07_浴衣2024.png",
   width: 681,
   height: 290,

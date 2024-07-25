@@ -2,8 +2,10 @@ import { ProductImage } from "~/features/productImages";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const わたし色に染まれ_生写真: ProductImage = {
+  id: "わたし色に染まれ (生写真)",
   year: 2024,
   name: "わたし色に染まれ",
+  kind: "生写真",
   url: "/takaneko/photos/2024-05_わたし色に染まれ.png",
   width: 413,
   height: 548,
