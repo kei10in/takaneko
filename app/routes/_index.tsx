@@ -103,12 +103,12 @@ export default function Index() {
                 {in2024.map((photo) => (
                   <li key={photo.id}>
                     <MenuItem
+                      content={photo.name}
+                      description={photo.kind}
                       selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
-                    >
-                      {photo.name}
-                    </MenuItem>
+                    />
                   </li>
                 ))}
               </ul>
@@ -117,12 +117,12 @@ export default function Index() {
                 {in2023.map((photo) => (
                   <li key={photo.id}>
                     <MenuItem
+                      content={photo.name}
+                      description={photo.kind}
                       selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
-                    >
-                      {photo.name}
-                    </MenuItem>
+                    />
                   </li>
                 ))}
               </ul>
@@ -131,12 +131,12 @@ export default function Index() {
                 {in2022.map((photo) => (
                   <li key={photo.id}>
                     <MenuItem
+                      content={photo.name}
+                      description={photo.kind}
                       selected={selectedProduct?.id == photo.id}
                       disabled={photo.positions.length == 0}
                       onClick={() => handleClickMenuItem(photo)}
-                    >
-                      {photo.name}
-                    </MenuItem>
+                    />
                   </li>
                 ))}
               </ul>

@@ -3,6 +3,7 @@ import { Beginning_生写真 } from "./products/2024/2024-04_Beginning_生写真
 import { わたし色に染まれ_生写真 } from "./products/2024/2024-05_わたし色に染まれ_生写真";
 import { ワンピース_生写真 } from "./products/2024/2024-05_ワンピース_生写真";
 import { メイド至上主義_生写真 } from "./products/2024/2024-06_メイド☆至上主義_生写真";
+import { 浴衣2024_ミニフォト } from "./products/2024/2024-07_浴衣2024_ミニフォト";
 import { 浴衣2024_生写真 } from "./products/2024/2024-07_浴衣2024_生写真";
 import { REGULAR_PHOTO_SET } from "./products/utils";
 
@@ -311,5 +312,6 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
   わたし色に染まれ_生写真,
   ワンピース_生写真,
   メイド至上主義_生写真,
+  浴衣2024_ミニフォト,
   浴衣2024_生写真,
 ];
