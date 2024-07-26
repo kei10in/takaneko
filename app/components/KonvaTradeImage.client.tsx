@@ -2,7 +2,7 @@ import Konva from "konva";
 import { forwardRef, Ref } from "react";
 import { Group, Layer, Rect, Stage } from "react-konva";
 import { ImagePosition } from "~/features/productImages";
-import { TradeState, tradeStateToImageSrc } from "~/features/TradeState";
+import { tradeStateToImageSrc, TradeStatus } from "~/features/TradeStatus";
 import { SrcImage } from "./SrcImage";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
   width: number;
   height?: number;
   positions: ImagePosition[];
-  tradeDescriptions: { id: number; state: TradeState }[];
+  tradeDescriptions: { id: number; state: TradeStatus }[];
   showRect?: boolean;
 }
 

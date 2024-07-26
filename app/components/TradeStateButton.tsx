@@ -1,11 +1,11 @@
 import clsx from "clsx";
 import equal from "fast-deep-equal";
-import { TradeState } from "~/features/TradeState";
+import { TradeStatus } from "~/features/TradeStatus";
 
 type Props = Omit<React.ComponentProps<"button">, "value" | "onClick"> & {
-  value: TradeState | undefined;
-  forValue: TradeState;
-  onClick?: (v: TradeState) => void;
+  value: TradeStatus | undefined;
+  forValue: TradeStatus;
+  onClick?: (v: TradeStatus) => void;
 };
 
 export const TradeStateButton: React.FC<Props> = (props: Props) => {

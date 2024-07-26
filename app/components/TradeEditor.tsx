@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { ProductImage } from "~/features/productImages";
-import { TradeDescription, TradeState } from "~/features/TradeState";
+import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
@@ -23,14 +23,14 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
 
   const scale = width / productImage.width;
 
-  const handleClickTradeState = (id: number, v: TradeState) => {
+  const handleClickTradeState = (id: number, v: TradeStatus) => {
     const index = tradeDescriptions.findIndex((s) => s.id == id);
     if (index == undefined) {
       return tradeDescriptions;
     }
 
     const items = [...tradeDescriptions];
-    items[index] = { ...items[index], state: v };
+    items[index] = { ...items[index], status: v };
 
     onChangeTradeDescriptions?.(items);
   };

@@ -1,11 +1,11 @@
 import { ProductImage } from "~/features/productImages";
-import { TradeState, tradeStateToImageSrc } from "~/features/TradeState";
+import { TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { loadImage } from "~/utils/loadImage";
 
 export const drawTradeImage = async (
   canvas: HTMLCanvasElement,
   productImage: ProductImage,
-  tradeDescriptions: { id: number; state: TradeState }[],
+  tradeDescriptions: { id: number; status: TradeStatus }[],
 ): Promise<void> => {
   const ctx = canvas.getContext("2d");
   if (ctx == undefined) {
@@ -23,7 +23,7 @@ export const drawTradeImage = async (
       return;
     }
 
-    const src = tradeStateToImageSrc(trade.state);
+    const src = tradeStateToImageSrc(trade.status);
     if (src == undefined) {
       return;
     }

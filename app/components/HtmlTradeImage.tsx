@@ -1,13 +1,13 @@
 import { forwardRef, Ref } from "react";
 import { ImagePosition } from "~/features/productImages";
-import { TradeState, tradeStateToImageSrc } from "~/features/TradeState";
+import { tradeStateToImageSrc, TradeStatus } from "~/features/TradeStatus";
 
 interface Props {
   image: { url: string; width: number; height: number };
   width: number;
   height?: number;
   positions: ImagePosition[];
-  tradeDescriptions: { id: number; state: TradeState }[];
+  tradeDescriptions: { id: number; status: TradeStatus }[];
   showRect?: boolean;
 }
 
@@ -44,7 +44,7 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
           return null;
         }
 
-        const src = tradeStateToImageSrc(trade.state);
+        const src = tradeStateToImageSrc(trade.status);
         if (src == undefined) {
           return null;
         }

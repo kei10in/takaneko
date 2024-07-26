@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TbProgress } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
-import { TradeDescription } from "~/features/TradeState";
+import { TradeDescription } from "~/features/TradeStatus";
 import { drawTradeImage } from "./drawTradeImage";
 
 interface Props {

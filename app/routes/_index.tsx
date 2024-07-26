@@ -6,7 +6,7 @@ import { MenuItem } from "~/components/MenuItem";
 import { ReadMe } from "~/components/ReadMe";
 import { TradeEditor } from "~/components/TradeEditor";
 import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
-import { TradeDescription, TradeState } from "~/features/TradeState";
+import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 
 export const meta: MetaFunction = () => {
   return [
@@ -35,10 +35,10 @@ export default function Index() {
     const photos = product.photos;
 
     if (!(product.id in allTradeDescriptions)) {
-      const noneState: TradeState = { tag: "none" };
+      const noneState: TradeStatus = { tag: "none" };
       const newAllTradeDescriptions = {
         ...allTradeDescriptions,
-        [product.id]: photos.map((p) => ({ id: p.id, state: noneState })),
+        [product.id]: photos.map((p) => ({ id: p.id, status: noneState })),
       };
       setAllTradeDescriptions(newAllTradeDescriptions);
     }

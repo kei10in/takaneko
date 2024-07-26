@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
 import { TbChevronLeft, TbChevronRight, TbCircleOff } from "react-icons/tb";
 import { ProductImage } from "~/features/productImages";
-import { TradeDescription, TradeState, tradeStateToImageSrc } from "~/features/TradeState";
+import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
 
@@ -11,7 +11,7 @@ interface Props {
   index: number;
   onClickPrev?: MouseEventHandler<HTMLButtonElement>;
   onClickNext?: MouseEventHandler<HTMLButtonElement>;
-  onChangeTradeState?: (id: number, ts: TradeState) => void;
+  onChangeTradeState?: (id: number, ts: TradeStatus) => void;
 }
 
 export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
@@ -23,10 +23,10 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const positions = productImage.positions;
   const selPosition = positions[index];
   const tradeDescription = tradeDescriptions.find((td) => td.id == selPosition.id);
-  const tradeState = tradeDescription?.state;
+  const tradeState = tradeDescription?.status;
   const tradeStateImageSrc = tradeState != undefined ? tradeStateToImageSrc(tradeState) : undefined;
 
-  const handleClickTradeState = (v: TradeState) => {
+  const handleClickTradeState = (v: TradeStatus) => {
     onChangeTradeState?.(selPosition.id, v);
   };
 
