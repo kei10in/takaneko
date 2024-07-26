@@ -9,12 +9,12 @@ import { TradeImagePreview } from "./TradeImagePreview";
 interface Props {
   productImage: ProductImage;
   tradeDescriptions: TradeDescription[];
-  onChangeTradeDescriptions: (tradeDescriptions: TradeDescription[]) => void;
+  onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
   width: number;
 }
 
 export const TradeEditor: React.FC<Props> = (props: Props) => {
-  const { productImage, tradeDescriptions, width, onChangeTradeDescriptions } = props;
+  const { productImage, tradeDescriptions, width, onChangeTradeDescription } = props;
 
   const positions = productImage.positions;
 
@@ -32,7 +32,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
     const items = [...tradeDescriptions];
     items[index] = { ...items[index], status: v };
 
-    onChangeTradeDescriptions?.(items);
+    onChangeTradeDescription?.(id, v);
   };
 
   return (

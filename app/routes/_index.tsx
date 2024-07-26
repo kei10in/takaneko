@@ -6,7 +6,7 @@ import { MenuItem } from "~/components/MenuItem";
 import { ReadMe } from "~/components/ReadMe";
 import { TradeEditor } from "~/components/TradeEditor";
 import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
-import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
+import { useTradeStore } from "~/features/trade/store";
 
 export const meta: MetaFunction = () => {
   return [
@@ -21,29 +21,17 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const [showMenu, setShowMenu] = useState(false);
 
+  const selectedProduct = useTradeStore((state) => state.selectedProduct);
+  const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
+  const selectProduct = useTradeStore((state) => state.selectProduct);
+  const updateTradeDescriptions = useTradeStore((state) => state.updateTradeDescriptions);
+
   const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022).toReversed();
   const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023).toReversed();
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024).toReversed();
 
-  const [selectedProduct, setSelectedProduct] = useState<ProductImage | undefined>(undefined);
-
-  const [allTradeDescriptions, setAllTradeDescriptions] = useState<
-    Record<string, TradeDescription[]>
-  >({});
-
   const handleClickMenuItem = (product: ProductImage) => {
-    const photos = product.photos;
-
-    if (!(product.id in allTradeDescriptions)) {
-      const noneState: TradeStatus = { tag: "none" };
-      const newAllTradeDescriptions = {
-        ...allTradeDescriptions,
-        [product.id]: photos.map((p) => ({ id: p.id, status: noneState })),
-      };
-      setAllTradeDescriptions(newAllTradeDescriptions);
-    }
-
-    setSelectedProduct(product);
+    selectProduct(product);
     setShowMenu(false);
   };
 
@@ -52,9 +40,7 @@ export default function Index() {
       <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
         <div className="container mx-auto flex h-full items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-600">
-            <button onClick={() => setSelectedProduct(undefined)}>
-              トレード画像をつくるやつ。
-            </button>
+            <button onClick={() => selectProduct(undefined)}>トレード画像をつくるやつ。</button>
           </h1>
           <div className="flex-none">
             <button
@@ -74,11 +60,8 @@ export default function Index() {
             <TradeEditor
               productImage={selectedProduct}
               tradeDescriptions={allTradeDescriptions[selectedProduct.id]}
-              onChangeTradeDescriptions={(v) => {
-                setAllTradeDescriptions({
-                  ...allTradeDescriptions,
-                  [selectedProduct.id]: v,
-                });
+              onChangeTradeDescription={(photoId, status) => {
+                updateTradeDescriptions({ id: selectedProduct.id, photoId, status });
               }}
               width={360}
             />
