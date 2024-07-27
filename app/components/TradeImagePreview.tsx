@@ -19,7 +19,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
     canvas.width = productImage.width;
     canvas.height = productImage.height;
 
-    drawTradeImage(canvas, productImage, Object.values(tradeDescriptions)).then(() => {
+    drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
       const dataUrl = canvas.toDataURL();
       setDataUrl(dataUrl);
     });

@@ -1,5 +1,6 @@
-import type { MetaFunction } from "@remix-run/node";
-import { ReadMe } from "~/components/ReadMe";
+import { type MetaFunction } from "@remix-run/node";
+import { useNavigate } from "@remix-run/react";
+import { useEffect } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -12,9 +13,11 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  return (
-    <div className="container mx-auto">
-      <ReadMe />
-    </div>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/", { replace: true });
+  });
+
+  return null;
 }

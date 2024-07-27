@@ -1,12 +1,11 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import type { MetaFunction } from "@remix-run/node";
-import { NavLink, Outlet, useNavigate, useNavigation } from "@remix-run/react";
+import { NavLink, Outlet, useNavigate } from "@remix-run/react";
 import clsx from "clsx";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { TbMenu2, TbX } from "react-icons/tb";
 import { MenuItem } from "~/components/MenuItem";
-import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
-import { useTradeStore } from "~/features/trade/store";
+import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,39 +19,24 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const navigate = useNavigate();
-  const navigation = useNavigation();
 
   const [showMenu, setShowMenu] = useState(false);
-
-  const selectedProduct = useTradeStore((state) => state.selectedProduct);
-  const selectProduct = useTradeStore((state) => state.selectProduct);
 
   const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022).toReversed();
   const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023).toReversed();
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024).toReversed();
-
-  const handleClickMenuItem = (product: ProductImage) => {
-    if (navigation.location?.pathname != "/") {
-      navigate("/");
-    }
-
-    selectProduct(product);
-    setShowMenu(false);
-  };
+  const allPhotos = [
+    { name: "2024 年", photos: in2024 },
+    { name: "2023 年", photos: in2023 },
+    { name: "2022 年", photos: in2022 },
+  ];
 
   return (
     <div>
       <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
         <div className="container mx-auto flex h-full items-center justify-between">
           <p className="text-2xl font-bold text-gray-600">
-            <button
-              onClick={() => {
-                navigate("/");
-                selectProduct(undefined);
-              }}
-            >
-              トレード画像をつくるやつ。
-            </button>
+            <button onClick={() => navigate("/")}>トレード画像をつくるやつ。</button>
           </p>
           <div className="flex-none">
             <button
@@ -79,48 +63,28 @@ export default function Index() {
               </button>
             </div>
             <div className="mt-3">
-              <h3 className="px-4 py-4 text-xl font-bold">2024 年</h3>
-              <ul>
-                {in2024.map((photo) => (
-                  <li key={photo.id}>
-                    <MenuItem
-                      content={photo.name}
-                      description={photo.kind}
-                      selected={selectedProduct?.id == photo.id}
-                      disabled={photo.positions.length == 0}
-                      onClick={() => handleClickMenuItem(photo)}
-                    />
-                  </li>
-                ))}
-              </ul>
-              <h3 className="px-4 py-4 text-xl font-bold">2023 年</h3>
-              <ul>
-                {in2023.map((photo) => (
-                  <li key={photo.id}>
-                    <MenuItem
-                      content={photo.name}
-                      description={photo.kind}
-                      selected={selectedProduct?.id == photo.id}
-                      disabled={photo.positions.length == 0}
-                      onClick={() => handleClickMenuItem(photo)}
-                    />
-                  </li>
-                ))}
-              </ul>
-              <h3 className="px-4 py-4 text-xl font-bold">2022 年</h3>
-              <ul>
-                {in2022.map((photo) => (
-                  <li key={photo.id}>
-                    <MenuItem
-                      content={photo.name}
-                      description={photo.kind}
-                      selected={selectedProduct?.id == photo.id}
-                      disabled={photo.positions.length == 0}
-                      onClick={() => handleClickMenuItem(photo)}
-                    />
-                  </li>
-                ))}
-              </ul>
+              {allPhotos.map((item) => (
+                <Fragment key={item.name}>
+                  <h3 className="px-4 py-4 text-xl font-bold">{item.name}</h3>
+                  <ul>
+                    {item.photos.map((photo) => (
+                      <li key={photo.id}>
+                        <NavLink to={`/trade/${photo.id}`}>
+                          {({ isActive }) => (
+                            <MenuItem
+                              content={photo.name}
+                              description={photo.kind}
+                              selected={isActive}
+                              disabled={photo.positions.length == 0}
+                              onClick={() => setShowMenu(false)}
+                            />
+                          )}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                </Fragment>
+              ))}
             </div>
 
             <hr className="my-2" />
@@ -133,7 +97,6 @@ export default function Index() {
                 )
               }
               to="/releases"
-              onClick={() => selectProduct(undefined)}
             >
               リリース ノート
             </NavLink>
