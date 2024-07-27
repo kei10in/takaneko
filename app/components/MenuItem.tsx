@@ -15,7 +15,7 @@ export const MenuItem: React.FC<Props> = (props: Props) => {
   return (
     <button
       className={clsx(
-        "group w-full pl-8 pr-4 pt-2 text-left text-xl text-gray-700",
+        "group w-full py-2 pl-8 pr-4 text-left text-gray-700",
         disabled && !selected && "disabled:text-gray-300",
         !disabled && "hover:bg-gray-200",
         selected && "bg-gray-100 font-bold",
@@ -23,7 +23,7 @@ export const MenuItem: React.FC<Props> = (props: Props) => {
       disabled={disabled || selected}
       onClick={onClick}
     >
-      <p>{content}</p>
+      <p className="text-xl">{content}</p>
       {description == undefined ? null : (
         <p
           className={clsx(
