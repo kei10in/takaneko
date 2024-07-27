@@ -13,7 +13,7 @@ export const meta: MetaFunction = () => {
 
 export default function Releases() {
   return (
-    <article className="prose container mx-auto my-8">
+    <article className="prose container mx-auto my-8 px-4">
       <ReleaseNotes />
     </article>
   );
