@@ -34,6 +34,7 @@ export default function TradeImageEditor() {
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const tradeDescriptions = allTradeDescriptions[selectedProduct?.id] ?? {};
   const updateTradeDescriptions = useTradeStore((state) => state.updateTradeDescriptions);
+  const clearTradeDescriptions = useTradeStore((state) => state.clearTradeDescriptions);
 
   return (
     <div className="container mx-auto">
@@ -41,10 +42,11 @@ export default function TradeImageEditor() {
         <TradeEditor
           productImage={selectedProduct}
           tradeDescriptions={tradeDescriptions}
-          onChangeTradeDescription={(photoId, status) => {
-            updateTradeDescriptions({ id: selectedProduct.id, photoId, status });
-          }}
           width={360}
+          onChangeTradeDescription={(photoId, status) =>
+            updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
+          }
+          onClearTradeDescriptions={(id) => clearTradeDescriptions(id)}
         />
       </div>
     </div>

@@ -7,6 +7,7 @@ interface TradeState {
 }
 
 interface TradeAction {
+  clearTradeDescriptions: (id: string) => void;
   updateTradeDescriptions: (props: { id: string; photoId: number; status: TradeStatus }) => void;
 }
 
@@ -33,6 +34,16 @@ export const useTradeStore = create<TradeState & TradeAction>()(
             allTradeDescriptions: {
               ...state.allTradeDescriptions,
               [id]: items,
+            },
+          };
+        }),
+
+      clearTradeDescriptions: (id: string) =>
+        set((state) => {
+          return {
+            allTradeDescriptions: {
+              ...state.allTradeDescriptions,
+              [id]: {},
             },
           };
         }),

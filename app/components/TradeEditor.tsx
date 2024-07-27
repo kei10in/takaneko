@@ -1,4 +1,4 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
@@ -9,15 +9,23 @@ import { TradeImagePreview } from "./TradeImagePreview";
 interface Props {
   productImage: ProductImage;
   tradeDescriptions: Record<number, TradeDescription>;
-  onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
   width: number;
+  onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
+  onClearTradeDescriptions?: (id: string) => void;
 }
 
 export const TradeEditor: React.FC<Props> = (props: Props) => {
-  const { productImage, tradeDescriptions, width, onChangeTradeDescription } = props;
+  const {
+    productImage,
+    tradeDescriptions,
+    width,
+    onClearTradeDescriptions,
+    onChangeTradeDescription,
+  } = props;
 
   const positions = productImage.positions;
 
+  const [showConfirmClear, setShowConfirmClear] = useState(false);
   const [preview, setPreview] = useState(false);
   const [index, setIndex] = useState<number | undefined>(undefined);
 
@@ -69,15 +77,23 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
         className="fixed h-20 w-full border-t border-gray-300 bg-white"
         style={{ bottom: 0, left: 0 }}
       >
-        <div className="mx-4 flex h-full items-center justify-end">
-          <button
-            className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
-            onClick={() => {
-              setPreview(true);
-            }}
-          >
-            トレード画像
-          </button>
+        <div className="container mx-auto h-full w-full">
+          <div className="mx-4 flex h-full items-center justify-between">
+            <button
+              className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
+              onClick={() => setShowConfirmClear(true)}
+            >
+              クリア
+            </button>
+            <button
+              className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
+              onClick={() => {
+                setPreview(true);
+              }}
+            >
+              トレード画像
+            </button>
+          </div>
         </div>
       </div>
 
@@ -98,6 +114,36 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 onChangeTradeState={handleClickTradeState}
               />
             ) : null}
+          </DialogPanel>
+        </div>
+      </Dialog>
+
+      {/* Confirm to clear */}
+      <Dialog
+        open={showConfirmClear}
+        className="relative z-50"
+        onClose={() => setShowConfirmClear(false)}
+      >
+        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
+          <DialogPanel className="min-w-64 max-w-lg border bg-white text-lg text-gray-700">
+            <div className="flex w-full items-center justify-between p-4">
+              <p className="text-center">トレード設定をクリアしますか？</p>
+            </div>
+
+            <hr />
+
+            <CloseButton
+              className="block w-full p-2 text-center font-bold text-red-500 hover:bg-gray-100"
+              onClick={() => onClearTradeDescriptions?.(productImage.id)}
+            >
+              クリアする
+            </CloseButton>
+
+            <hr />
+
+            <CloseButton className="block w-full p-2 text-center font-bold text-blue-500 hover:bg-gray-100">
+              キャンセル
+            </CloseButton>
           </DialogPanel>
         </div>
       </Dialog>
