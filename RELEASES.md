@@ -1,5 +1,5 @@
-# Release notes
+# リリース ノート
 
 ## 2024-07-26
 
-- First release
+- 最初のリリース。
