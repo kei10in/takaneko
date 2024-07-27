@@ -1,3 +1,4 @@
+import { PhotoDescription } from "./Photo";
 import { 恋を知った世界_ミニフォト } from "./products/2024/2024-03_恋を知った世界_ミニフォト";
 import { 恋を知った世界_生写真 } from "./products/2024/2024-03_恋を知った世界_生写真";
 import { Beginning_ミニフォト } from "./products/2024/2024-04_Beginning_ミニフォト";
@@ -20,11 +21,7 @@ export interface ProductImage {
   url: string;
   width: number;
   height: number;
-  photos: {
-    id: number;
-    name: string;
-    description?: string;
-  }[];
+  photos: PhotoDescription[];
   positions: ImagePosition[];
 }
 
