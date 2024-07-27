@@ -4,7 +4,7 @@ import { TradeDescription, TradeStatus } from "../TradeStatus";
 
 interface TradeState {
   selectedProduct: ProductImage | undefined;
-  allTradeDescriptions: Record<string, TradeDescription[]>;
+  allTradeDescriptions: Record<string, Record<number, TradeDescription>>;
 }
 
 interface TradeAction {
@@ -42,13 +42,13 @@ export const useTradeStore = create<TradeState & TradeAction>()((set) => ({
       const { id, photoId, status } = props;
       const tradeDescriptions = state.allTradeDescriptions[id];
 
-      const index = tradeDescriptions.findIndex((s) => s.id == photoId);
-      if (index == undefined) {
-        return {};
-      }
-
-      const items = [...tradeDescriptions];
-      items[index] = { ...items[index], status };
+      const items = {
+        ...tradeDescriptions,
+        [photoId]: {
+          ...tradeDescriptions[photoId],
+          status,
+        },
+      };
 
       return {
         allTradeDescriptions: {

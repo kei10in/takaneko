@@ -6,7 +6,7 @@ import { drawTradeImage } from "./drawTradeImage";
 
 interface Props {
   productImage: ProductImage;
-  tradeDescriptions: TradeDescription[];
+  tradeDescriptions: Record<number, TradeDescription>;
 }
 
 export const TradeImagePreview: React.FC<Props> = (props: Props) => {
@@ -19,7 +19,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
     canvas.width = productImage.width;
     canvas.height = productImage.height;
 
-    drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
+    drawTradeImage(canvas, productImage, Object.values(tradeDescriptions)).then(() => {
       const dataUrl = canvas.toDataURL();
       setDataUrl(dataUrl);
     });

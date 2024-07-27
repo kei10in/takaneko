@@ -8,7 +8,7 @@ import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
   productImage: ProductImage;
-  tradeDescriptions: TradeDescription[];
+  tradeDescriptions: Record<number, TradeDescription>;
   onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
   width: number;
 }
@@ -24,14 +24,6 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const scale = width / productImage.width;
 
   const handleClickTradeState = (id: number, v: TradeStatus) => {
-    const index = tradeDescriptions.findIndex((s) => s.id == id);
-    if (index == undefined) {
-      return tradeDescriptions;
-    }
-
-    const items = [...tradeDescriptions];
-    items[index] = { ...items[index], status: v };
-
     onChangeTradeDescription?.(id, v);
   };
 

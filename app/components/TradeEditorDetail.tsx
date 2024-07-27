@@ -7,7 +7,7 @@ import { TradeStateButton } from "./TradeStateButton";
 
 interface Props {
   productImage: ProductImage;
-  tradeDescriptions: TradeDescription[];
+  tradeDescriptions: Record<number, TradeDescription>;
   index: number;
   onClickPrev?: MouseEventHandler<HTMLButtonElement>;
   onClickNext?: MouseEventHandler<HTMLButtonElement>;
@@ -22,7 +22,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const selPhoto = photos[index];
   const positions = productImage.positions;
   const selPosition = positions[index];
-  const tradeDescription = tradeDescriptions.find((td) => td.id == selPosition.id);
+  const tradeDescription = tradeDescriptions[selPosition.id];
   const tradeState = tradeDescription?.status;
   const tradeStateImageSrc = tradeState != undefined ? tradeStateToImageSrc(tradeState) : undefined;
 
