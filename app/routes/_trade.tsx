@@ -1,10 +1,10 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import type { MetaFunction } from "@remix-run/node";
+import { NavLink, Outlet, useNavigate, useNavigation } from "@remix-run/react";
+import clsx from "clsx";
 import { useState } from "react";
 import { TbMenu2, TbX } from "react-icons/tb";
 import { MenuItem } from "~/components/MenuItem";
-import { ReadMe } from "~/components/ReadMe";
-import { TradeEditor } from "~/components/TradeEditor";
 import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
 import { useTradeStore } from "~/features/trade/store";
 
@@ -19,18 +19,23 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const navigate = useNavigate();
+  const navigation = useNavigation();
+
   const [showMenu, setShowMenu] = useState(false);
 
   const selectedProduct = useTradeStore((state) => state.selectedProduct);
-  const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const selectProduct = useTradeStore((state) => state.selectProduct);
-  const updateTradeDescriptions = useTradeStore((state) => state.updateTradeDescriptions);
 
   const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022).toReversed();
   const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023).toReversed();
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024).toReversed();
 
   const handleClickMenuItem = (product: ProductImage) => {
+    if (navigation.location?.pathname != "/") {
+      navigate("/");
+    }
+
     selectProduct(product);
     setShowMenu(false);
   };
@@ -39,9 +44,16 @@ export default function Index() {
     <div>
       <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
         <div className="container mx-auto flex h-full items-center justify-between">
-          <h1 className="text-2xl font-bold text-gray-600">
-            <button onClick={() => selectProduct(undefined)}>トレード画像をつくるやつ。</button>
-          </h1>
+          <p className="text-2xl font-bold text-gray-600">
+            <button
+              onClick={() => {
+                navigate("/");
+                selectProduct(undefined);
+              }}
+            >
+              トレード画像をつくるやつ。
+            </button>
+          </p>
           <div className="flex-none">
             <button
               className="rounded-full p-2 text-2xl hover:bg-gray-200"
@@ -52,22 +64,8 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
-        {selectedProduct == undefined ? (
-          <ReadMe />
-        ) : (
-          <div className="mx-auto w-[22.5rem]">
-            <TradeEditor
-              productImage={selectedProduct}
-              tradeDescriptions={allTradeDescriptions[selectedProduct.id]}
-              onChangeTradeDescription={(photoId, status) => {
-                updateTradeDescriptions({ id: selectedProduct.id, photoId, status });
-              }}
-              width={360}
-            />
-          </div>
-        )}
-      </div>
+
+      <Outlet />
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50">
@@ -124,6 +122,22 @@ export default function Index() {
                 ))}
               </ul>
             </div>
+
+            <hr className="my-2" />
+
+            <NavLink
+              className={({ isActive }) =>
+                clsx(
+                  "block w-full px-4 py-2 text-xl hover:bg-gray-200",
+                  isActive && "bg-gray-100 font-bold",
+                )
+              }
+              to="/releases"
+              onClick={() => selectProduct(undefined)}
+            >
+              リリース ノート
+            </NavLink>
+
             <div className="mt-8 p-4 text-sm text-gray-800">
               <p>「トレード画像をつくるやつ。」は非公式のファンコンテンツです。</p>
               <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
