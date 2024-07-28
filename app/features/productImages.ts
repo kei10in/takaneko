@@ -1,4 +1,7 @@
 import { PhotoDescription } from "./Photo";
+import { ウインター_生写真 } from "./products/2023/2023-12_ウインター_生写真";
+import { ホワイトサンタ2023_ミニフォト } from "./products/2023/2023-12_ホワイトサンタ2023_ミニフォト";
+import { ホワイトサンタ2023_生写真 } from "./products/2023/2023-12_ホワイトサンタ2023_生写真";
 import { _2024年振袖_ミニフォト } from "./products/2024/2024-01_2024年振袖_ミニフォト";
 import { _2024年振袖_生写真 } from "./products/2024/2024-01_2024年振袖_生写真";
 import { _2024年バレンタイン_ミニフォト } from "./products/2024/2024-02_2024年バレンタイン_ミニフォト";
@@ -270,28 +273,9 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "ウィンター",
-    year: 2023,
-    name: "ウィンター",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-12_ウィンター.jpg",
-    width: 1180,
-    height: 1389,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
-  {
-    id: "ホワイトサンタ2023 (生写真)",
-    year: 2023,
-    name: "ホワイトサンタ2023",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-12_ホワイトサンタ2023.png",
-    width: 200,
-    height: 235,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  ウインター_生写真,
+  ホワイトサンタ2023_ミニフォト,
+  ホワイトサンタ2023_生写真,
   _2024年振袖_ミニフォト,
   _2024年振袖_生写真,
   _2024年バレンタイン_ミニフォト,
