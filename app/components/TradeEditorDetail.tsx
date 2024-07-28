@@ -1,5 +1,5 @@
 import { MouseEventHandler } from "react";
-import { TbChevronLeft, TbChevronRight, TbCircleOff } from "react-icons/tb";
+import { HiChevronLeft, HiChevronRight, HiNoSymbol } from "react-icons/hi2";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";
@@ -44,7 +44,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={(e) => onClickPrev?.(e)}
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
-              <TbChevronLeft className="text-xl text-gray-800" />
+              <HiChevronLeft className="text-xl text-gray-800" />
             </div>
           </button>
         </div>
@@ -75,7 +75,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={(e) => onClickNext?.(e)}
           >
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
-              <TbChevronRight className="text-xl text-gray-800" />
+              <HiChevronRight className="text-xl text-gray-800" />
             </div>
           </button>
         </div>
@@ -106,7 +106,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={handleClickTradeState}
           >
             <div className="flex h-10 w-10 items-center justify-center">
-              <TbCircleOff className="h-8 w-8 text-gray-400" />
+              <HiNoSymbol className="h-8 w-8 text-gray-400" />
             </div>
           </TradeStateButton>
           <TradeStateButton

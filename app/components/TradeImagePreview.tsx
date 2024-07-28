@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TbProgress } from "react-icons/tb";
+import { HiArrowPath } from "react-icons/hi2";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription } from "~/features/TradeStatus";
 import { drawTradeImage } from "./drawTradeImage";
@@ -31,7 +31,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
     <div>
       {dataUrl == undefined ? (
         <div className="flex items-center justify-center p-4">
-          <TbProgress size="1.75rem" className="animate-spin text-gray-700" />
+          <HiArrowPath size="1.75rem" className="animate-spin text-gray-700" />
         </div>
       ) : (
         <img alt="Preview" className="mx-auto select-none" src={dataUrl} width={1280} />

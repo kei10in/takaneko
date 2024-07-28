@@ -3,7 +3,7 @@ import type { MetaFunction } from "@remix-run/node";
 import { Link, NavLink, Outlet } from "@remix-run/react";
 import clsx from "clsx";
 import { Fragment, useState } from "react";
-import { TbMenu2, TbX } from "react-icons/tb";
+import { HiBars3, HiXMark } from "react-icons/hi2";
 import { MenuItem } from "~/components/MenuItem";
 import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
@@ -41,7 +41,7 @@ export default function Index() {
               className="rounded-full p-2 text-2xl hover:bg-gray-200"
               onClick={() => setShowMenu(true)}
             >
-              <TbMenu2 />
+              <HiBars3 />
             </button>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function Index() {
                 className="rounded-full p-2 text-2xl hover:bg-gray-200"
                 onClick={() => setShowMenu(false)}
               >
-                <TbX />
+                <HiXMark />
               </button>
             </div>
             <div className="mt-3">
