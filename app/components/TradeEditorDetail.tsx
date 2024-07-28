@@ -38,11 +38,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
       {/* Image and image selector */}
       <div className="flex w-full select-none items-stretch justify-center">
         <div className="flex-none">
-          <button
-            className="group h-full p-2 hover:bg-gray-100"
-            disabled={index == 0}
-            onClick={(e) => onClickPrev?.(e)}
-          >
+          <button className="group h-full p-2 hover:bg-gray-100" onClick={(e) => onClickPrev?.(e)}>
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
               <HiChevronLeft className="text-xl text-gray-800" />
             </div>
@@ -69,11 +65,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           ) : null}
         </div>
         <div className="flex-none">
-          <button
-            className="group h-full p-2 hover:bg-gray-100"
-            disabled={positions.length <= index + 1}
-            onClick={(e) => onClickNext?.(e)}
-          >
+          <button className="group h-full p-2 hover:bg-gray-100" onClick={(e) => onClickNext?.(e)}>
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
               <HiChevronRight className="text-xl text-gray-800" />
             </div>

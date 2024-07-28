@@ -28,6 +28,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const [showConfirmClear, setShowConfirmClear] = useState(false);
   const [preview, setPreview] = useState(false);
   const [index, setIndex] = useState<number | undefined>(undefined);
+  const lastIndex = positions.length - 1;
 
   const scale = width / productImage.width;
 
@@ -109,8 +110,8 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 productImage={productImage}
                 tradeDescriptions={tradeDescriptions}
                 index={index}
-                onClickPrev={() => setIndex(index - 1)}
-                onClickNext={() => setIndex(index + 1)}
+                onClickPrev={() => setIndex(index <= 0 ? lastIndex : index - 1)}
+                onClickNext={() => setIndex(lastIndex <= index ? 0 : index + 1)}
                 onChangeTradeState={handleClickTradeState}
               />
             ) : null}
