@@ -23,8 +23,8 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const positions = productImage.positions;
   const selPosition = positions[index];
   const tradeDescription = tradeDescriptions[selPosition.id];
-  const tradeState = tradeDescription?.status;
-  const tradeStateImageSrc = tradeState != undefined ? tradeStateToImageSrc(tradeState) : undefined;
+  const tradeStatus = tradeDescription?.status ?? { tag: "none" };
+  const tradeStateImageSrc = tradeStateToImageSrc(tradeStatus);
 
   const handleClickTradeState = (v: TradeStatus) => {
     onChangeTradeState?.(selPosition.id, v);
@@ -101,7 +101,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
       <div className="select-none">
         <div className="mt-4 flex items-center justify-center gap-0.5">
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "none" }}
             onClick={handleClickTradeState}
           >
@@ -110,14 +110,14 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             </div>
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "want" }}
             onClick={handleClickTradeState}
           >
             <img src="/求.svg" alt="求" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have" }}
             onClick={handleClickTradeState}
           >
@@ -126,42 +126,42 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
         </div>
         <div className="mt-0.5 flex items-center justify-center gap-0.5">
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 1 }}
             onClick={handleClickTradeState}
           >
             <img src="/1.svg" alt="1" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 2 }}
             onClick={handleClickTradeState}
           >
             <img src="/2.svg" alt="2" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 3 }}
             onClick={handleClickTradeState}
           >
             <img src="/3.svg" alt="3" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 4 }}
             onClick={handleClickTradeState}
           >
             <img src="/4.svg" alt="4" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 5 }}
             onClick={handleClickTradeState}
           >
             <img src="/5.svg" alt="5" className="h-10 w-10" />
           </TradeStateButton>
           <TradeStateButton
-            value={tradeState}
+            value={tradeStatus}
             forValue={{ tag: "have", count: 6 }}
             onClick={handleClickTradeState}
           >
