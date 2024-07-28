@@ -1,4 +1,5 @@
-import { forwardRef, Ref } from "react";
+import clsx from "clsx";
+import { forwardRef, Ref, useEffect, useState } from "react";
 import { ImagePosition } from "~/features/productImages";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 
@@ -17,9 +18,27 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
   const scaleX = width / image.width;
   const scaleY = height == undefined ? scaleX : height / image.height;
 
+  const [loading, setLoading] = useState(true);
+
+  console.log({ loading });
+
+  useEffect(() => {
+    setLoading(true);
+  }, [image.url]);
+
   return (
-    <div className="relative" ref={ref}>
-      <img src={image.url} alt="Product set" width={width} height={height} className="max-w-none" />
+    <div key={image.url} className="relative" ref={ref}>
+      <div>
+        <p className={clsx(!loading && "hidden")}>Loading</p>
+        <img
+          src={image.url}
+          alt="Product set"
+          width={width}
+          height={height}
+          className={clsx("max-w-none", loading && "hidden")}
+          onLoad={() => setLoading(false)}
+        />
+      </div>
 
       {showRect
         ? positions.map((pos) => {

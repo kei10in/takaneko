@@ -31,18 +31,20 @@ export default function Index() {
 
   return (
     <div>
-      <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
-        <div className="container mx-auto flex h-full items-center justify-between">
-          <p className="text-2xl font-bold text-gray-600">
-            <Link to="/">トレード画像をつくるやつ。</Link>
-          </p>
-          <div className="flex-none">
-            <button
-              className="rounded-full p-2 text-2xl hover:bg-gray-200"
-              onClick={() => setShowMenu(true)}
-            >
-              <HiBars3 />
-            </button>
+      <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white">
+        <div className="container mx-auto h-full">
+          <div className="mx-4 flex h-full items-center justify-between">
+            <p className="text-2xl font-bold text-gray-600">
+              <Link to="/">トレード画像をつくるやつ。</Link>
+            </p>
+            <div className="flex-none">
+              <button
+                className="rounded-full p-2 text-2xl hover:bg-gray-200"
+                onClick={() => setShowMenu(true)}
+              >
+                <HiBars3 />
+              </button>
+            </div>
           </div>
         </div>
       </div>
