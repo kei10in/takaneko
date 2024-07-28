@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import type { MetaFunction } from "@remix-run/node";
-import { NavLink, Outlet, useNavigate } from "@remix-run/react";
+import { Link, NavLink, Outlet } from "@remix-run/react";
 import clsx from "clsx";
 import { Fragment, useState } from "react";
 import { TbMenu2, TbX } from "react-icons/tb";
@@ -18,8 +18,6 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const navigate = useNavigate();
-
   const [showMenu, setShowMenu] = useState(false);
 
   const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022).toReversed();
@@ -36,7 +34,7 @@ export default function Index() {
       <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white p-4">
         <div className="container mx-auto flex h-full items-center justify-between">
           <p className="text-2xl font-bold text-gray-600">
-            <button onClick={() => navigate("/")}>トレード画像をつくるやつ。</button>
+            <Link to="/">トレード画像をつくるやつ。</Link>
           </p>
           <div className="flex-none">
             <button
