@@ -12,6 +12,10 @@ export const drawTradeImage = async (
     return;
   }
 
+  // Fit the image to the canvas
+  const scale = canvas.width / productImage.width;
+  ctx.scale(scale, scale);
+
   const img = new Image();
   await loadImage(img, productImage.url);
 

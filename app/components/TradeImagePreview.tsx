@@ -17,8 +17,8 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   useEffect(() => {
     const canvas = document.createElement("canvas");
-    canvas.width = productImage.width;
-    canvas.height = productImage.height;
+    canvas.width = 1280;
+    canvas.height = (1280 / productImage.width) * productImage.height;
 
     drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
       const dataUrl = canvas.toDataURL();
