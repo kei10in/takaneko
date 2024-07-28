@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { HiArrowPath } from "react-icons/hi2";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { drawTradeImage } from "./drawTradeImage";
+import { TradeImagePreviewLoader } from "./TradeImagePreviewLoader.client";
 
 interface Props {
   productImage: ProductImage;
@@ -15,10 +15,15 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   const [dataUrl, setDataUrl] = useState<string | undefined>(undefined);
 
+  const imageWidth = 1280;
+  const imageHeight = (imageWidth / productImage.width) * productImage.height;
+  const previewWidth = 320;
+  const previewHeight = imageHeight * (previewWidth / imageWidth);
+
   useEffect(() => {
     const canvas = document.createElement("canvas");
-    canvas.width = 1280;
-    canvas.height = (1280 / productImage.width) * productImage.height;
+    canvas.width = imageWidth;
+    canvas.height = imageHeight;
 
     drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
       const dataUrl = canvas.toDataURL();
@@ -26,7 +31,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
     });
 
     return;
-  }, [productImage, tradeDescriptions]);
+  }, [imageHeight, productImage, tradeDescriptions]);
 
   const descForIOS = '画像を長押しして「"写真" に保存」を選択します。';
   const descForAndroid = "画像を長押しして「画像を保存」を選択します。";
@@ -41,18 +46,20 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      {dataUrl == undefined ? (
-        <div className="flex items-center justify-center p-4">
-          <HiArrowPath size="1.75rem" className="animate-spin text-gray-700" />
-        </div>
-      ) : (
-        <div>
-          <figure className="mx-auto">
-            <img alt="Preview" className="select-none" src={dataUrl} width={1280} />
-          </figure>
-          <p className="mt-2 text-center text-sm text-gray-500">{desc}</p>
-        </div>
-      )}
+      <figure className="mx-auto" style={{ width: previewWidth, height: previewHeight }}>
+        {dataUrl == undefined ? (
+          <TradeImagePreviewLoader width={previewWidth} height={previewHeight} />
+        ) : (
+          <img
+            alt="Preview"
+            className="select-none"
+            src={dataUrl}
+            width={previewWidth}
+            height={previewHeight}
+          />
+        )}
+      </figure>
+      <p className="mt-2 text-center text-sm text-gray-500">{desc}</p>
     </div>
   );
 };
