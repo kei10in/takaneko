@@ -1,0 +1,35 @@
+import { ProductImage } from "~/features/productImages";
+
+export const アイトーク_フォトカード: ProductImage = {
+  id: "アイトーク (フォトカード)",
+  year: 2024,
+  name: "アイトーク",
+  kind: "フォトカード",
+  url: "/takaneko/others/2024-07-15_アイトーク.webp",
+  width: 1950,
+  height: 1148,
+  photos: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 49, y: 57, width: 280, height: 500 },
+    { id: 2, x: 440, y: 57, width: 280, height: 500 },
+    { id: 3, x: 831, y: 57, width: 280, height: 500 },
+    { id: 4, x: 1222, y: 57, width: 280, height: 500 },
+    { id: 5, x: 1613, y: 57, width: 280, height: 500 },
+    { id: 6, x: 49, y: 595, width: 280, height: 500 },
+    { id: 7, x: 440, y: 595, width: 280, height: 500 },
+    { id: 8, x: 831, y: 595, width: 280, height: 500 },
+    { id: 9, x: 1222, y: 595, width: 280, height: 500 },
+    { id: 10, x: 1613, y: 595, width: 280, height: 500 },
+  ],
+};
