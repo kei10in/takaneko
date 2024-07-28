@@ -1,4 +1,8 @@
 import { PhotoDescription } from "./Photo";
+import { _2024年振袖_ミニフォト } from "./products/2024/2024-01_2024年振袖_ミニフォト";
+import { _2024年振袖_生写真 } from "./products/2024/2024-01_2024年振袖_生写真";
+import { _2024年バレンタイン_ミニフォト } from "./products/2024/2024-02_2024年バレンタイン_ミニフォト";
+import { _2024年バレンタイン_生写真 } from "./products/2024/2024-02_2024年バレンタイン_生写真";
 import { 恋を知った世界_ミニフォト } from "./products/2024/2024-03_恋を知った世界_ミニフォト";
 import { 恋を知った世界_生写真 } from "./products/2024/2024-03_恋を知った世界_生写真";
 import { Beginning_ミニフォト } from "./products/2024/2024-04_Beginning_ミニフォト";
@@ -287,28 +291,10 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "2024振袖 (生写真)",
-    year: 2024,
-    name: "2024振袖",
-    kind: "生写真",
-    url: "/takaneko/photos/2024-01_2024振袖.webp",
-    width: 1180,
-    height: 1388,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
-  {
-    id: "2024年バレンタイン (生写真)",
-    year: 2024,
-    name: "2024年バレンタイン",
-    kind: "生写真",
-    url: "/takaneko/photos/2024-02_2024年バレンタイン.webp",
-    width: 1178,
-    height: 1390,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  _2024年振袖_ミニフォト,
+  _2024年振袖_生写真,
+  _2024年バレンタイン_ミニフォト,
+  _2024年バレンタイン_生写真,
   恋を知った世界_ミニフォト,
   恋を知った世界_生写真,
   Beginning_ミニフォト,
