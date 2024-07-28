@@ -70,7 +70,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 );
               })}
             </div>
-            <p className="text-right">@INCS・TP</p>
+            <p className="text-right">©︎INCS・TP</p>
           </div>
         ) : null}
       </div>
