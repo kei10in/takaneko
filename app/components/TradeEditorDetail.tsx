@@ -37,16 +37,16 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
     <div>
       {/* Image and image selector */}
       <div className="flex w-full select-none items-stretch justify-center">
-        <div className="flex-none">
-          <button className="group h-full p-2 hover:bg-gray-100" onClick={(e) => onClickPrev?.(e)}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
-              <HiChevronLeft className="text-xl text-gray-800" />
-            </div>
+        <div className="flex-1">
+          <button
+            className="group flex h-full w-full items-center justify-center p-2 active:bg-gray-100"
+            onClick={(e) => onClickPrev?.(e)}
+          >
+            <HiChevronLeft className="text-xl text-gray-800" />
           </button>
         </div>
-        <div className="relative">
+        <div className="relative flex-none">
           <ClippedImage
-            className="flex-none"
             clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
             alt="Selected"
             width={width}
@@ -55,7 +55,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           {tradeStateImageSrc != undefined ? (
             <img
               src={tradeStateImageSrc}
-              alt=""
+              alt="トレード設定"
               className="absolute bottom-0 left-1/2 -translate-x-1/2 transform"
               style={{
                 width: (scale * selPosition.width) / 1.5,
@@ -64,11 +64,12 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             />
           ) : null}
         </div>
-        <div className="flex-none">
-          <button className="group h-full p-2 hover:bg-gray-100" onClick={(e) => onClickNext?.(e)}>
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 group-hover:bg-gray-200">
-              <HiChevronRight className="text-xl text-gray-800" />
-            </div>
+        <div className="flex-1">
+          <button
+            className="group flex h-full w-full items-center justify-center p-2 hover:bg-gray-100 active:bg-gray-50"
+            onClick={(e) => onClickNext?.(e)}
+          >
+            <HiChevronRight className="text-xl text-gray-800" />
           </button>
         </div>
       </div>
