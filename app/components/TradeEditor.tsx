@@ -1,10 +1,12 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import { useState } from "react";
+import clsx from "clsx";
+import { useEffect, useState } from "react";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
+import { TradeImagePreviewLoader } from "./TradeImagePreviewLoader.client";
 
 interface Props {
   productImage: ProductImage;
@@ -31,9 +33,20 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const lastIndex = positions.length - 1;
 
   const scale = width / productImage.width;
+  const height = productImage.height * scale;
 
   const handleClickTradeState = (id: number, v: TradeStatus) => {
     onChangeTradeDescription?.(id, v);
+  };
+
+  const [imageLoading, setImageLoading] = useState(true);
+
+  useEffect(() => {
+    setImageLoading(true);
+  }, [productImage.url]);
+
+  const handleLoad = () => {
+    setImageLoading(false);
   };
 
   return (
@@ -41,7 +54,8 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       <div className="my-4 w-full pb-20">
         {positions.length != 0 ? (
           <div className="mx-auto">
-            <div className="relative select-none">
+            {imageLoading ? <TradeImagePreviewLoader width={width} height={height} /> : null}
+            <div className={clsx("relative select-none", imageLoading && "hidden")}>
               <HtmlTradeImage
                 image={{
                   url: productImage.url,
@@ -51,6 +65,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 width={width}
                 positions={productImage.positions}
                 tradeDescriptions={tradeDescriptions}
+                onLoad={handleLoad}
               />
               {positions.map((pos, i) => {
                 return (
