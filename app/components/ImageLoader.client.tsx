@@ -5,7 +5,7 @@ interface Props {
   height: number;
 }
 
-export const TradeImagePreviewLoader: React.FC<Props> = (props: Props) => {
+export const ImageLoader: React.FC<Props> = (props: Props) => {
   const { width, height } = props;
 
   return (

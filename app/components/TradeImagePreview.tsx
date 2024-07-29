@@ -3,7 +3,7 @@ import { ProductImage } from "~/features/productImages";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { drawTradeImage } from "./drawTradeImage";
-import { TradeImagePreviewLoader } from "./TradeImagePreviewLoader.client";
+import { ImageLoader } from "./ImageLoader.client";
 
 interface Props {
   productImage: ProductImage;
@@ -48,7 +48,7 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
     <div>
       <figure className="mx-auto" style={{ width: previewWidth, height: previewHeight }}>
         {dataUrl == undefined ? (
-          <TradeImagePreviewLoader width={previewWidth} height={previewHeight} />
+          <ImageLoader width={previewWidth} height={previewHeight} />
         ) : (
           <img
             alt="Preview"

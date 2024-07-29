@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ProductImage } from "~/features/productImages";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
+import { ImageLoader } from "./ImageLoader.client";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
-import { TradeImagePreviewLoader } from "./TradeImagePreviewLoader.client";
 
 interface Props {
   productImage: ProductImage;
@@ -54,7 +54,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       <div className="my-4 w-full pb-20">
         {positions.length != 0 ? (
           <div className="mx-auto">
-            {imageLoading ? <TradeImagePreviewLoader width={width} height={height} /> : null}
+            {imageLoading ? <ImageLoader width={width} height={height} /> : null}
             <div className={clsx("relative select-none", imageLoading && "hidden")}>
               <HtmlTradeImage
                 image={{
