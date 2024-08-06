@@ -10,6 +10,8 @@ import { 恋を知った世界_ミニフォト } from "./products/2024/2024-03_�
 import { 恋を知った世界_生写真 } from "./products/2024/2024-03_恋を知った世界_生写真";
 import { Beginning_ミニフォト } from "./products/2024/2024-04_Beginning_ミニフォト";
 import { Beginning_生写真 } from "./products/2024/2024-04_Beginning_生写真";
+import { ハニフェス_生写真 } from "./products/2024/2024-04_ハニフェス_生写真";
+import { ハニフェス_缶バッジ } from "./products/2024/2024-04_ハニフェス_缶バッジ";
 import { にゃでしこ_アクリルキーホルダー } from "./products/2024/2024-05_にゃでしこ_ランダムアクリルキーホルダー";
 import { にゃでしこ_前髪クリップ } from "./products/2024/2024-05_にゃでしこ_ランダム前髪クリップ";
 import { わたし色に染まれ_ミニフォト } from "./products/2024/2024-05_わたし色に染まれ_ミニフォト";
@@ -285,6 +287,8 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
   _2024年振袖_生写真,
   _2024年バレンタイン_ミニフォト,
   _2024年バレンタイン_生写真,
+  ハニフェス_缶バッジ,
+  ハニフェス_生写真,
   恋を知った世界_ミニフォト,
   恋を知った世界_生写真,
   Beginning_ミニフォト,
