@@ -21,8 +21,8 @@ import { メイド至上主義_生写真 } from "./products/2024/2024-06_メイ�
 import { アイトーク_フォトカード } from "./products/2024/2024-07_アイトーク_フォトカード";
 import { 浴衣2024_ミニフォト } from "./products/2024/2024-07_浴衣2024_ミニフォト";
 import { 浴衣2024_生写真 } from "./products/2024/2024-07_浴衣2024_生写真";
-import { _2ndファンミ_ランダムにゃでしこステッカー } from "./products/2024/2024-08_2ndファンミ_ランダムにゃでしこステッカー copy";
-import { _2ndファンミ_ランダム缶バッジ } from "./products/2024/2024-08_2ndファンミ_ランダム缶バッジ";
+import { _2ndファンミ_にゃでしこステッカー } from "./products/2024/2024-08_にゃでしこ2ndファンミ_ステッカー";
+import { _2ndファンミ_缶バッジ } from "./products/2024/2024-08_にゃでしこ2ndファンミ_缶バッジ";
 import { 白ワンピース_生写真 } from "./products/2024/2024-08_白ワンピース_生写真";
 import { REGULAR_PHOTO_SET } from "./products/utils";
 
@@ -300,7 +300,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
   アイトーク_フォトカード,
   浴衣2024_ミニフォト,
   浴衣2024_生写真,
-  _2ndファンミ_ランダムにゃでしこステッカー,
-  _2ndファンミ_ランダム缶バッジ,
+  _2ndファンミ_にゃでしこステッカー,
+  _2ndファンミ_缶バッジ,
   白ワンピース_生写真,
 ];

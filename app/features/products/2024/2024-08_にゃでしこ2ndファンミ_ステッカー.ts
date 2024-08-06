@@ -1,11 +1,11 @@
 import { ProductImage } from "~/features/productImages";
 
-export const _2ndファンミ_ランダムにゃでしこステッカー: ProductImage = {
-  id: "2ndファンミ (ランダムにゃでしこステッカー)",
+export const _2ndファンミ_にゃでしこステッカー: ProductImage = {
+  id: "2ndファンミ (にゃでしこステッカー)",
   year: 2024,
-  name: "ランダムにゃでしこステッカー 2ndファンミ",
+  name: "2nd ファンミ にゃでしこステッカー",
   kind: "ステッカー",
-  url: "/takaneko/others/2024-08-07_2ndファンミ_ランダムにゃでしこステッカー.png",
+  url: "/takaneko/others/2024-08-07_2ndファンミ_にゃでしこステッカー.png",
   width: 290,
   height: 177,
   photos: [
