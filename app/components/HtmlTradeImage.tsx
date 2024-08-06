@@ -1,5 +1,6 @@
 import { forwardRef, Ref } from "react";
 import { ImagePosition } from "~/features/productImages";
+import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 
 interface Props {
@@ -57,10 +58,7 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
           return null;
         }
 
-        const width = pos.width / 1.5;
-        const height = width;
-        const x = pos.x + pos.width / 2 - width / 2;
-        const y = pos.y + pos.height - height;
+        const { x, y, width, height } = stampPosition(pos);
 
         return (
           <img

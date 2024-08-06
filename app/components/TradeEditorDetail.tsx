@@ -1,6 +1,7 @@
 import { MouseEventHandler } from "react";
 import { HiChevronLeft, HiChevronRight, HiNoSymbol } from "react-icons/hi2";
 import { ProductImage } from "~/features/productImages";
+import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
@@ -33,6 +34,13 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const width = 180;
   const scale = width / selPosition.width;
 
+  const stampPos = stampPosition({
+    x: 0,
+    y: 0,
+    width: selPosition.width,
+    height: selPosition.height,
+  });
+
   return (
     <div>
       {/* Image and image selector */}
@@ -56,10 +64,12 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             <img
               src={tradeStateImageSrc}
               alt="トレード設定"
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 transform"
+              className="absolute"
               style={{
-                width: (scale * selPosition.width) / 1.5,
-                height: (scale * selPosition.width) / 1.5,
+                left: stampPos.x * scale,
+                top: stampPos.y * scale,
+                width: stampPos.width * scale,
+                height: stampPos.height * scale,
               }}
             />
           ) : null}

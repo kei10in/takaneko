@@ -1,4 +1,5 @@
 import { ProductImage } from "~/features/productImages";
+import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { loadImage } from "~/utils/loadImage";
 
@@ -33,10 +34,7 @@ export const drawTradeImage = async (
       return;
     }
 
-    const width = pos.width / 1.5;
-    const height = width;
-    const x = pos.x + pos.width / 2 - width / 2;
-    const y = pos.y + pos.height - height;
+    const { x, y, width, height } = stampPosition(pos);
 
     const icon = new Image();
     await loadImage(icon, src);

@@ -2,6 +2,7 @@ import Konva from "konva";
 import { forwardRef, Ref } from "react";
 import { Group, Layer, Rect, Stage } from "react-konva";
 import { ImagePosition } from "~/features/productImages";
+import { stampPosition } from "~/features/trade/stampPosition";
 import { tradeStateToImageSrc, TradeStatus } from "~/features/TradeStatus";
 import { SrcImage } from "./SrcImage";
 
@@ -49,10 +50,7 @@ export const KonvaTradeImage = forwardRef<Konva.Stage, Props>(
               }
 
               const src = tradeStateToImageSrc(trade.state);
-              const width = pos.width / 1.5;
-              const height = width;
-              const x = pos.x + pos.width / 2 - width / 2;
-              const y = pos.y + pos.height - height;
+              const { x, y, width, height } = stampPosition(pos);
 
               return (
                 <SrcImage key={trade.id} src={src} x={x} y={y} width={width} height={height} />
