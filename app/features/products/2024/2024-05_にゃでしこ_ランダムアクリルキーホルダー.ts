@@ -1,0 +1,37 @@
+import { ProductImage } from "~/features/productImages";
+
+export const にゃでしこ_アクリルキーホルダー: ProductImage = {
+  id: "にゃでしこ (アクリルキーホルダー)",
+  year: 2024,
+  name: "にゃでしこ",
+  kind: "アクリルキーホルダー",
+  url: "/takaneko/others/2024-05-12_にゃでしこ_アクリルキーホルダー.png",
+  width: 282,
+  height: 310,
+  photos: [
+    { id: 1, name: "てんにゃ", description: "" },
+    { id: 2, name: "ルニャ・コーチ", description: "" },
+    { id: 3, name: "すうにゃろう", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "ルノリスくん", description: "" },
+    { id: 6, name: "にゃーさ", description: "" },
+    { id: 7, name: "らあら", description: "" },
+    { id: 8, name: "たま", description: "" },
+    { id: 9, name: "ちゃーみー", description: "" },
+    { id: 10, name: "ぽにゃん🎀", description: "" },
+    { id: 11, name: "もみさん。", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 32, y: 19, width: 43, height: 89 },
+    { id: 2, x: 75, y: 19, width: 43, height: 89 },
+    { id: 3, x: 119, y: 19, width: 43, height: 89 },
+    { id: 4, x: 163, y: 19, width: 43, height: 89 },
+    { id: 5, x: 206, y: 19, width: 43, height: 89 },
+    { id: 6, x: 12, y: 108, width: 43, height: 89 },
+    { id: 7, x: 55, y: 108, width: 43, height: 89 },
+    { id: 8, x: 98, y: 108, width: 43, height: 89 },
+    { id: 9, x: 142, y: 108, width: 43, height: 89 },
+    { id: 10, x: 186, y: 108, width: 43, height: 89 },
+    { id: 11, x: 229, y: 108, width: 43, height: 89 },
+  ],
+};
