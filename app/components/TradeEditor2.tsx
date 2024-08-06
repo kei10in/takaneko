@@ -71,7 +71,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="w-full">
-      <div className="my-4 w-full pb-[7.5rem]">
+      <div className="my-4 w-full pb-[6.5rem]">
         {positions.length != 0 ? (
           <div className="mx-auto">
             {imageLoading ? <ImageLoader width={width} height={height} /> : null}
@@ -117,54 +117,54 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           <div className="my-2">
             <div className="flex items-center justify-center gap-0.5">
               <Switch
-                className="group rounded-2xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
                 checked={selectedStamp == "wanted"}
                 onClick={() => setSelectedStamp("wanted")}
               >
                 <img
                   src="/求.svg"
                   alt="求"
-                  className="h-10 w-10 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-2xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
                 checked={selectedStamp == "+1"}
                 onClick={() => setSelectedStamp("+1")}
               >
                 <img
                   src="/increment.svg"
                   alt="+1"
-                  className="h-10 w-10 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-2xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
                 checked={selectedStamp == "-1"}
                 onClick={() => setSelectedStamp("-1")}
               >
                 <img
                   src="/decrement.svg"
                   alt="-1"
-                  className="h-10 w-10 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-2xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
                 checked={selectedStamp == "clear"}
                 onClick={() => setSelectedStamp("clear")}
               >
-                <div className="flex h-10 w-10 items-center justify-center">
-                  <HiNoSymbol className="h-8 w-8 text-gray-400 group-data-[checked]:text-gray-600" />
+                <div className="flex h-8 w-8 items-center justify-center">
+                  <HiNoSymbol className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
               <Switch
-                className="group rounded-2xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
                 checked={selectedStamp == "cog"}
                 onClick={() => setSelectedStamp("cog")}
               >
-                <div className="flex h-10 w-10 items-center justify-center">
-                  <HiCog className="h-8 w-8 text-gray-400 group-data-[checked]:text-gray-600" />
+                <div className="flex h-8 w-8 items-center justify-center">
+                  <HiCog className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
             </div>
@@ -172,13 +172,13 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
           <div className="mx-4 my-2 flex items-center justify-between">
             <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
+              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-1 text-lg font-bold text-white"
               onClick={() => setShowConfirmClear(true)}
             >
               クリア
             </button>
             <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-6 py-2 text-lg font-bold text-white"
+              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-1 text-lg font-bold text-white"
               onClick={() => {
                 setPreview(true);
               }}
