@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
-import { TradeEditor } from "~/components/TradeEditor";
+import { TradeEditor2 } from "~/components/TradeEditor2";
 import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
 import { useTradeStore } from "~/features/trade/store";
 
@@ -39,7 +39,7 @@ export default function TradeImageEditor() {
   return (
     <div className="container mx-auto">
       <div className="mx-auto w-[22.5rem]">
-        <TradeEditor
+        <TradeEditor2
           productImage={selectedProduct}
           tradeDescriptions={tradeDescriptions}
           width={360}

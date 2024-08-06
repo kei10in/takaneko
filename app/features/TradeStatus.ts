@@ -30,3 +30,38 @@ export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => 
 
   return undefined;
 };
+
+export const Stamp = {
+  clear: (status: TradeStatus | undefined): TradeStatus => ({ tag: "none" }),
+
+  wanted: (status: TradeStatus | undefined): TradeStatus => {
+    if (status?.tag == "want") {
+      return { tag: "none" };
+    } else {
+      return { tag: "want" };
+    }
+  },
+
+  increment: (status: TradeStatus | undefined): TradeStatus => {
+    if (status?.tag == "have") {
+      let count = (status.count ?? 0) + 1;
+      count = count > 6 ? 6 : count;
+      return { tag: "have", count };
+    } else {
+      return { tag: "have", count: 1 };
+    }
+  },
+
+  decrement: (status: TradeStatus | undefined): TradeStatus => {
+    if (status?.tag == "have") {
+      let count = (status.count ?? 0) - 1;
+      if (count <= 0) {
+        return { tag: "none" };
+      } else {
+        return { tag: "have", count };
+      }
+    } else {
+      return status ?? { tag: "none" };
+    }
+  },
+} as const;
