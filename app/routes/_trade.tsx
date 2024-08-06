@@ -31,15 +31,15 @@ export default function Index() {
 
   return (
     <div>
-      <div className="sticky top-0 z-40 h-20 w-full border-b border-gray-300 bg-white">
+      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
-            <p className="text-2xl font-bold text-gray-600">
+            <p className="text-xl font-bold text-gray-600">
               <Link to="/">トレード画像をつくるやつ。</Link>
             </p>
             <div className="flex-none">
               <button
-                className="rounded-full p-2 text-2xl hover:bg-gray-200"
+                className="rounded-full p-2 text-xl hover:bg-gray-200"
                 onClick={() => setShowMenu(true)}
               >
                 <HiBars3 />
@@ -54,19 +54,19 @@ export default function Index() {
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50">
           <DialogPanel className="relative w-80 overflow-y-auto border-l border-gray-200 bg-white">
-            <div className="absolute right-4 top-5 flex-none">
+            <div className="absolute right-4 top-1.5 flex-none">
               <button
-                className="rounded-full p-2 text-2xl hover:bg-gray-200"
+                className="rounded-full p-2 text-xl hover:bg-gray-200"
                 onClick={() => setShowMenu(false)}
               >
                 <HiXMark />
               </button>
             </div>
-            <div className="mt-3">
+            <div className="">
               {allPhotos.map((item) => (
                 <Fragment key={item.name}>
-                  <h3 className="px-4 py-4 text-xl font-bold">{item.name}</h3>
-                  <ul>
+                  <h3 className="px-4 pb-4 pt-2.5 text-xl font-bold">{item.name}</h3>
+                  <ul className="pb-1.5">
                     {item.photos.map((photo) => (
                       <li key={photo.id}>
                         <NavLink to={`/trade/${photo.id}`}>
