@@ -1,5 +1,9 @@
 # リリース ノート
 
+## 2024-08-06
+
+- [全国ツアー2024 わたし色に染まれ のグッズ](https://twitter.com/takanenofficial/status/1788886780433052055)に対応しました。
+
 ## 2024-08-05
 
 - [2nd ファンミーティング～成長発表会～ のグッズ](https://twitter.com/takanenofficial/status/1820437183922327624)に対応しました。
