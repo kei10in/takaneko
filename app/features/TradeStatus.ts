@@ -54,7 +54,7 @@ export const Stamp = {
 
   decrement: (status: TradeStatus | undefined): TradeStatus => {
     if (status?.tag == "have") {
-      let count = (status.count ?? 0) - 1;
+      const count = (status.count ?? 0) - 1;
       if (count <= 0) {
         return { tag: "none" };
       } else {
