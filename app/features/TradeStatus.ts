@@ -32,7 +32,7 @@ export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => 
 };
 
 export const Stamp = {
-  clear: (status: TradeStatus | undefined): TradeStatus => ({ tag: "none" }),
+  clear: (_status: TradeStatus | undefined): TradeStatus => ({ tag: "none" }),
 
   wanted: (status: TradeStatus | undefined): TradeStatus => {
     if (status?.tag == "want") {
