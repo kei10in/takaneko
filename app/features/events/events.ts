@@ -5,6 +5,11 @@ export interface EventModule {
   filename: string;
 }
 
+export interface EventContent {
+  meta: EventMeta;
+  Content: () => JSX.Element;
+}
+
 export const loadEvents = async (params: {
   year: string | number;
   month: string | number;
@@ -27,4 +32,22 @@ export const loadEvents = async (params: {
     });
 
   return (await Promise.all(promises)).filter((x) => x != undefined);
+};
+
+export const loadEventContent = async (eventId: string): Promise<EventContent | undefined> => {
+  const [year, month] = eventId.split("_")[0].split("-");
+  const path = `./${year}/${month}/${eventId}.mdx`;
+
+  try {
+    const event = await import(path);
+    const meta = validateEventMeta(event.meta);
+
+    if (meta == undefined) {
+      return undefined;
+    }
+
+    return { meta, Content: event.default };
+  } catch {
+    return undefined;
+  }
 };
