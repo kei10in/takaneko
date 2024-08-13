@@ -1,15 +1,15 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import type { MetaFunction } from "@remix-run/node";
 import { Link, NavLink, Outlet } from "@remix-run/react";
-import clsx from "clsx";
 import { Fragment, useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { MenuItem } from "~/components/MenuItem";
+import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "トレード画像つくるやつ。- 高嶺のなでしこの" },
+    { title: `トレード画像つくるやつ。- ${SITE_TITLE}` },
     {
       name: "description",
       content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
@@ -31,15 +31,15 @@ export default function Index() {
 
   return (
     <div>
-      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white">
+      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white bg-opacity-90">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
-            <p className="text-xl font-bold text-gray-600">
-              <Link to="/">トレード画像をつくるやつ。</Link>
+            <p className="text-base font-bold text-gray-600">
+              <Link to="/trade">トレード画像をつくるやつ。</Link>
             </p>
             <div className="flex-none">
               <button
-                className="rounded-full p-2 text-xl hover:bg-gray-200"
+                className="rounded-full p-2 text-lg hover:bg-gray-200"
                 onClick={() => setShowMenu(true)}
               >
                 <HiBars3 />
@@ -52,7 +52,7 @@ export default function Index() {
       <Outlet />
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
-        <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50">
+        <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
           <DialogPanel className="relative w-80 overflow-y-auto border-l border-gray-200 bg-white">
             <div className="absolute right-4 top-1.5 flex-none">
               <button
@@ -85,25 +85,6 @@ export default function Index() {
                   </ul>
                 </Fragment>
               ))}
-            </div>
-
-            <hr className="my-2" />
-
-            <NavLink
-              className={({ isActive }) =>
-                clsx(
-                  "block w-full px-4 py-2 text-xl hover:bg-gray-200",
-                  isActive && "bg-gray-100 font-bold",
-                )
-              }
-              to="/releases"
-            >
-              リリース ノート
-            </NavLink>
-
-            <div className="mt-8 p-4 text-sm text-gray-800">
-              <p>「トレード画像をつくるやつ。」は非公式のファンコンテンツです。</p>
-              <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
             </div>
           </DialogPanel>
         </div>

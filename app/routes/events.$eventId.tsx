@@ -1,10 +1,11 @@
 import type { MetaFunction } from "@remix-run/node";
 import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
+import { SITE_TITLE } from "~/constants";
 import { EventContent, loadEventContent } from "~/features/events/events";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "トレード画像つくるやつ。- 高嶺のなでしこの" },
+    { title: `トレード画像つくるやつ。- ${SITE_TITLE}` },
     {
       name: "description",
       content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",

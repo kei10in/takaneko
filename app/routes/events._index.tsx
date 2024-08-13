@@ -2,11 +2,12 @@ import type { MetaFunction } from "@remix-run/node";
 import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
 import { Calendar } from "~/components/calendar/Calendar";
 import { EventType } from "~/components/calendar/event";
+import { SITE_TITLE } from "~/constants";
 import { EventModule, loadEvents } from "~/features/events/events";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "トレード画像つくるやつ。- 高嶺のなでしこの" },
+    { title: `トレード画像つくるやつ。- ${SITE_TITLE}` },
     {
       name: "description",
       content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
@@ -29,8 +30,7 @@ export default function Index() {
   }));
 
   return (
-    <div className="container mx-auto">
-      <h1>カレンダー</h1>
+    <div className="container mx-auto mt-4">
       <Calendar events={calendarEvents} year={2024} month={8} date={11} />
     </div>
   );
