@@ -1,6 +1,8 @@
+import { stem } from "~/utils/string";
 import { EventMeta, validateEventMeta } from "./meta";
 
 export interface EventModule {
+  id: string;
   meta: EventMeta;
   filename: string;
 }
@@ -13,7 +15,7 @@ export interface EventContent {
 export const loadEvents = async (params: {
   year: string | number;
   month: string | number;
-}): Promise<{ filename: string; meta: EventMeta }[]> => {
+}): Promise<EventModule[]> => {
   const { year, month } = params;
 
   const events = import.meta.glob("./**/*.mdx", { import: "meta" });
@@ -28,7 +30,9 @@ export const loadEvents = async (params: {
       if (meta == undefined) {
         return undefined;
       }
-      return { filename, meta };
+      const id = stem(filename);
+
+      return { id, filename, meta };
     });
 
   return (await Promise.all(promises)).filter((x) => x != undefined);

@@ -139,19 +139,21 @@ export const Calendar: React.FC<Props> = (props: Props) => {
                 {date}
               </div>
               <div>
-                {events.map((event, i) => (
-                  <div key={i} className="flex items-stretch gap-2 p-2">
-                    <div className="w-1 rounded-full bg-blue-500" />
-                    <div>
-                      <p>{event.summary}</p>
-                      <p className="text-gray-400">
-                        <span className="mr-1">
-                          <HiCalendar className="inline" />
-                        </span>
-                        {date}
-                      </p>
+                {events.map((event) => (
+                  <Link key={event.id} to={`/events/${event.id}`}>
+                    <div className="flex items-stretch gap-2 p-2">
+                      <div className="w-1 rounded-full bg-blue-500" />
+                      <div>
+                        <p>{event.summary}</p>
+                        <p className="text-gray-400">
+                          <span className="mr-1">
+                            <HiCalendar className="inline" />
+                          </span>
+                          {date}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>

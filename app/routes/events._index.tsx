@@ -23,6 +23,7 @@ export const clientLoader = defineClientLoader(async (): Promise<EventModule[]> 
 export default function Index() {
   const events = useLoaderData<EventModule[]>();
   const calendarEvents = events.map((event) => ({
+    id: event.id,
     category: EventType.LIVE,
     summary: event.meta.summary,
     date: Date.parse(event.meta.date),

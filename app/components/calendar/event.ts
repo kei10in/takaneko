@@ -9,6 +9,7 @@ export const EventType = {
 export type EventType = (typeof EventType)[keyof typeof EventType];
 
 export interface CalendarEvent {
+  id: string;
   category: EventType;
   summary: string;
   date: number;
