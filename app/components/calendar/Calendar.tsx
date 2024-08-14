@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { useRef } from "react";
-import { HiCalendar, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { HiCalendar, HiChevronLeft, HiChevronRight, HiMapPin } from "react-icons/hi2";
 import { CalendarCell } from "./CalendarCell";
 import { CalendarEvent, groupEventsByDate } from "./event";
 import { getCalendarDatesOfMonth, toISODateString, toJapaneseDateString } from "./utils";
@@ -124,12 +124,20 @@ export const Calendar: React.FC<Props> = (props: Props) => {
                       <div className="w-1 rounded-full bg-blue-500" />
                       <div>
                         <p>{event.summary}</p>
-                        <p className="text-gray-400">
+                        <p className="flex items-center px-0.5 text-sm text-gray-400">
                           <span className="mr-1">
-                            <HiCalendar className="inline" />
+                            <HiCalendar />
                           </span>
-                          {date}
+                          <span>{date}</span>
                         </p>
+                        {event.location && (
+                          <p className="flex items-center px-0.5 text-sm text-gray-400">
+                            <span className="mr-1">
+                              <HiMapPin />
+                            </span>
+                            <span>{event.location}</span>
+                          </p>
+                        )}
                       </div>
                     </div>
                   </Link>

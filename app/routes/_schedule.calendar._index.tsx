@@ -1,9 +1,13 @@
 import type { MetaFunction } from "@remix-run/node";
 import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
 import { Calendar } from "~/components/calendar/Calendar";
-import { EventType } from "~/components/calendar/event";
 import { SITE_TITLE } from "~/constants";
-import { nextMonthHref, previousMonthHref, todayHref } from "~/features/calendars/utils";
+import {
+  convertEventModuleToCalendarEvent,
+  nextMonthHref,
+  previousMonthHref,
+  todayHref,
+} from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
 
 export const meta: MetaFunction = () => {
@@ -29,13 +33,7 @@ export const clientLoader = defineClientLoader(
 
 export default function Index() {
   const { year, month, events } = useLoaderData<typeof clientLoader>();
-  const calendarEvents = events.map((event) => ({
-    id: event.id,
-    category: EventType.LIVE,
-    summary: event.meta.summary,
-    date: Date.parse(event.meta.date),
-    region: event.meta.region,
-  }));
+  const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   return (
     <div className="container mx-auto mt-4">
