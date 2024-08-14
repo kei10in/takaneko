@@ -59,7 +59,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/events" onClick={close}>
+                    <Link to="/calendar" onClick={close}>
                       スケジュール
                     </Link>
                   </li>
