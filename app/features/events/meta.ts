@@ -1,9 +1,11 @@
 import { z } from "zod";
-import { CalendarEvent, EventType } from "~/components/calendar/event";
+import { CalendarEvent } from "~/components/calendar/event";
 import { EventModule } from "./events";
+import { EventTypeEnum } from "./EventType";
 
 const EventMeta = z.object({
   summary: z.string(),
+  category: EventTypeEnum,
   date: z.string(),
   region: z.string().optional(),
   location: z.string().optional(),
@@ -26,7 +28,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
 export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
   return {
     id: event.id,
-    category: EventType.LIVE,
+    category: event.meta.category,
     summary: event.meta.summary,
     date: Date.parse(event.meta.date),
     location: event.meta.location,
