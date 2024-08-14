@@ -4,6 +4,9 @@ const EventMeta = z.object({
   summary: z.string(),
   date: z.string(),
   region: z.string().optional(),
+  location: z.string().optional(),
+  url: z.string().optional(),
+  image: z.string().optional(),
 });
 
 export type EventMeta = z.infer<typeof EventMeta>;
