@@ -32,19 +32,17 @@ export const Calendar: React.FC<Props> = (props: Props) => {
     <div>
       <div className="sticky top-0 bg-white" ref={stickyRef}>
         <div className="mx-4 flex items-center justify-between py-2">
-          <div>
-            <Link className="rounded border border-gray-200 px-2" to={hrefToday}>
-              今日
-            </Link>
-          </div>
+          <Link className="flex items-center rounded border border-gray-200 px-2" to={hrefToday}>
+            <p className="h-6">今日</p>
+          </Link>
           <p className="text-gray-800">
             {year}年{month}月
           </p>
           <div className="flex items-center justify-center divide-x overflow-hidden rounded border border-gray-200">
-            <Link className="block px-2" to={hrefPreviousMonth}>
+            <Link className="px-2" to={hrefPreviousMonth}>
               <HiChevronLeft className="h-6" />
             </Link>
-            <Link className="block px-2" to={hrefNextMonth}>
+            <Link className="px-2" to={hrefNextMonth}>
               <HiChevronRight className="h-6" />
             </Link>
           </div>
