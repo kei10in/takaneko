@@ -19,7 +19,7 @@ export default function Index() {
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
-              <Link to="/events">スケジュール</Link>
+              <Link to="/calendar">スケジュール</Link>
             </p>
           </div>
         </div>

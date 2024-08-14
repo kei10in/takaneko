@@ -1,43 +1,22 @@
 import { Link } from "@remix-run/react";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { HiCalendar, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { CalendarCell } from "./CalendarCell";
 import { CalendarEvent, groupEventsByDate } from "./event";
-import {
-  dateToYearMonth,
-  getCalendarDatesOfMonth,
-  toISODateString,
-  toJapaneseDateString,
-} from "./utils";
+import { getCalendarDatesOfMonth, toISODateString, toJapaneseDateString } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
   year: number;
   month: number;
-  date: number;
+  hrefToday: string;
+  hrefPreviousMonth: string;
+  hrefNextMonth: string;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, year: y, month: m } = props;
-  const [current, setCurrent] = useState({ year: y, month: m });
+  const { events, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
-  const handleClickToday = () => {
-    const date = new Date();
-    setCurrent(dateToYearMonth(date));
-  };
-
-  const handleNextMonth = () => {
-    const date = new Date(Date.UTC(current.year, current.month - 1 + 1, 1));
-    setCurrent(dateToYearMonth(date));
-  };
-
-  const handlePrevMonth = () => {
-    const date = new Date(Date.UTC(current.year, current.month - 1 - 1, 1));
-    setCurrent(dateToYearMonth(date));
-  };
-
-  const year = current.year;
-  const month = current.month;
   const dates = getCalendarDatesOfMonth(year, month);
 
   const eventsInCurrentMonth = events.filter((event) => {
@@ -54,20 +33,20 @@ export const Calendar: React.FC<Props> = (props: Props) => {
       <div className="sticky top-0 bg-white" ref={stickyRef}>
         <div className="mx-4 flex items-center justify-between py-2">
           <div>
-            <button className="rounded border border-gray-200 px-2" onClick={handleClickToday}>
+            <Link className="rounded border border-gray-200 px-2" to={hrefToday}>
               今日
-            </button>
+            </Link>
           </div>
           <p className="text-gray-800">
             {year}年{month}月
           </p>
           <div className="flex items-center justify-center divide-x overflow-hidden rounded border border-gray-200">
-            <button className="block px-2" onClick={handlePrevMonth}>
+            <Link className="block px-2" to={hrefPreviousMonth}>
               <HiChevronLeft className="h-6" />
-            </button>
-            <button className="block px-2" onClick={handleNextMonth}>
+            </Link>
+            <Link className="block px-2" to={hrefNextMonth}>
               <HiChevronRight className="h-6" />
-            </button>
+            </Link>
           </div>
         </div>
         <table className="w-full max-w-full table-fixed border-collapse border-none">
