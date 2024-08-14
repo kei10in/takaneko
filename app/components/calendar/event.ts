@@ -4,6 +4,9 @@ export const EventType = {
   BIRTHDAY: "BIRTHDAY",
   TV: "TV",
   RADIO: "RADIO",
+  MAGAZINE: "MAGAZINE",
+  WEB: "WEB",
+  OTHER: "OTHER",
 } as const;
 
 export type EventType = (typeof EventType)[keyof typeof EventType];
