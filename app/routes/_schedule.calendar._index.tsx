@@ -2,13 +2,9 @@ import type { MetaFunction } from "@remix-run/node";
 import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
 import { Calendar } from "~/components/calendar/Calendar";
 import { SITE_TITLE } from "~/constants";
-import {
-  convertEventModuleToCalendarEvent,
-  nextMonthHref,
-  previousMonthHref,
-  todayHref,
-} from "~/features/calendars/utils";
+import { nextMonthHref, previousMonthHref, todayHref } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
+import { convertEventModuleToCalendarEvent } from "~/features/events/meta";
 
 export const meta: MetaFunction = () => {
   return [

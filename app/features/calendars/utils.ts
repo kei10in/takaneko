@@ -1,6 +1,3 @@
-import { CalendarEvent, EventType } from "~/components/calendar/event";
-import { EventModule } from "../events/events";
-
 export const validateYearMonth = (args: {
   year: string | undefined;
   month: string | undefined;
@@ -40,15 +37,4 @@ export const nextMonthHref = (year: number, month: number): string => {
   const m = (d.getUTCMonth() + 1).toString().padStart(2, "0");
 
   return `/calendar/${y}/${m}`;
-};
-
-export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
-  return {
-    id: event.id,
-    category: EventType.LIVE,
-    summary: event.meta.summary,
-    date: Date.parse(event.meta.date),
-    location: event.meta.location,
-    region: event.meta.region,
-  };
 };

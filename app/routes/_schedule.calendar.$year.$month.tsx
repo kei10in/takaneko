@@ -3,13 +3,13 @@ import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from
 import { Calendar } from "~/components/calendar/Calendar";
 import { SITE_TITLE } from "~/constants";
 import {
-  convertEventModuleToCalendarEvent,
   nextMonthHref,
   previousMonthHref,
   todayHref,
   validateYearMonth,
 } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
+import { convertEventModuleToCalendarEvent } from "~/features/events/meta";
 
 export const meta: MetaFunction = () => {
   return [
