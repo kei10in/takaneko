@@ -19,7 +19,7 @@ export default function Index() {
       <div className="container mx-auto mt-4">
         <div className="mx-auto h-56 w-full max-w-md bg-gray-200">
           <div className="flex h-full w-full items-center justify-center">
-            <p className="text-xl">🚧かわらしいヒーロー画像 (工事中)🚧</p>
+            <p className="text-xl">🚧かわいらしいヒーロー画像 (工事中)🚧</p>
           </div>
         </div>
         <section className="mx-auto mt-4 w-full max-w-md">
