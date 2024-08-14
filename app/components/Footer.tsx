@@ -29,8 +29,13 @@ export const Footer: React.FC<Props> = (props: Props) => {
 
         <div>MIT © 2024</div>
 
-        <div className="text-center">
-          <Link to="https://github.com/kei10in/takaneko" target="_blank" rel="noreferrer">
+        <div>
+          <Link
+            className="inline-block"
+            to="https://github.com/kei10in/takaneko"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaGithub className="h-6 w-6" />
           </Link>
         </div>
