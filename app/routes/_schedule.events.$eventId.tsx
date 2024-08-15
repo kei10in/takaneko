@@ -43,8 +43,8 @@ export default function EventPage() {
     <div className="container mx-auto">
       <div className="space-y-2">
         {meta.image && (
-          <div>
-            <img src={meta.image} alt="アイキャッチ" className="w-full" />
+          <div className="h-64 bg-gray-200">
+            <img src={meta.image} alt="アイキャッチ" className="mx-auto h-full text-center" />
           </div>
         )}
         <div className="mt-4 px-4 text-lg font-bold">
