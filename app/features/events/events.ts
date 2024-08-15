@@ -49,18 +49,22 @@ export const loadEvents = async (params: {
 
 export const loadEventContent = async (eventId: string): Promise<EventContent | undefined> => {
   const [year, month] = eventId.split("_")[0].split("-");
+
   const path = `./${year}/${month}/${eventId}.mdx`;
+  const events = import.meta.glob("./**/*.mdx");
 
-  try {
-    const event = await import(path);
-    const meta = validateEventMeta(event.meta);
+  const loadEvent = events[path];
 
-    if (meta == undefined) {
-      return undefined;
-    }
-
-    return { meta, Content: event.default };
-  } catch {
+  if (loadEvent == undefined) {
     return undefined;
   }
+
+  const event = (await loadEvent()) as Record<string, unknown>;
+  const meta = validateEventMeta(event.meta);
+
+  if (meta == undefined) {
+    return undefined;
+  }
+
+  return { meta, Content: event.default as () => JSX.Element };
 };
