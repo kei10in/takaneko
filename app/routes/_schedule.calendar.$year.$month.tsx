@@ -16,7 +16,7 @@ import { EventModule, loadEvents } from "~/features/events/events";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `スケジュール - ${SITE_TITLE}` },
+    { title: `スケジュール (β) - ${SITE_TITLE}` },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
