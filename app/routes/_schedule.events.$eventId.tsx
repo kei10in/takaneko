@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { HiArrowTopRightOnSquare, HiCalendar, HiMapPin } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { EventContent, loadEventContent } from "~/features/events/events";
+import { categoryToEmoji } from "~/features/events/EventType";
 
 export const meta: MetaFunction = () => {
   return [
@@ -46,9 +47,12 @@ export default function EventPage() {
             <img src={meta.image} alt="アイキャッチ" className="w-full" />
           </div>
         )}
-        <div className="mt-4 px-4 text-lg font-bold">{meta.summary}</div>
-        <div className="flex items-center gap-1 px-4">
-          <HiCalendar />
+        <div className="mt-4 px-4 text-lg font-bold">
+          <span>{categoryToEmoji(meta.category)}</span>
+          <span>{meta.summary}</span>
+        </div>
+        <div className="flex items-center gap-1 px-5">
+          <HiCalendar className="text-gray-400" />
           <p>{meta.date}</p>
         </div>
         {meta.location && (
@@ -57,8 +61,8 @@ export default function EventPage() {
             target="_blank"
             rel="noreferrer"
           >
-            <div className="flex items-center gap-1 px-4">
-              <HiMapPin />
+            <div className="flex items-center gap-1 px-5">
+              <HiMapPin className="text-gray-400" />
               <div>{meta.location}</div>
               <HiArrowTopRightOnSquare />
             </div>
