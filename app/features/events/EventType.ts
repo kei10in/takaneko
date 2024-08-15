@@ -38,20 +38,20 @@ export const categoryToEmoji = (category: EventType): string => {
 export const categoryToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
-      return "bg-emerald-500";
+      return "bg-zinc-500";
     case EventType.EVENT:
-      return "bg-zinc-800";
+      return "bg-pink-400";
     case EventType.RELEASE:
       return "bg-fuchsia-500";
     case EventType.BIRTHDAY:
       return "bg-red-600";
     case EventType.TV:
-      return "bg-sky-600";
+      return "bg-emerald-400";
     case EventType.RADIO:
       return "bg-sky-400";
     case EventType.MAGAZINE:
       return "bg-ember-400";
     case EventType.OTHER:
-      return "bg-pink-300";
+      return "bg-amber-900";
   }
 };
