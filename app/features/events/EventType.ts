@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const EventTypeEnum = z.enum([
   "LIVE",
+  "EVENT",
   "RELEASE",
   "BIRTHDAY",
   "TV",
