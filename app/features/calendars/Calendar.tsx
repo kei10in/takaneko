@@ -124,6 +124,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
                       category={event.category}
                       summary={event.summary}
                       location={event.location}
+                      region={event.region}
                     />
                   </Link>
                 ))}

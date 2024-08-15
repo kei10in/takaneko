@@ -6,11 +6,14 @@ interface Props {
   category: EventType;
   summary: string;
   location?: string;
+  region?: string;
 }
 
 export const CalendarEventItem: React.FC<Props> = (props: Props) => {
-  const { category, summary, location } = props;
+  const { category, summary, location, region } = props;
   const color = categoryToColor(category);
+
+  const place = location || region;
 
   return (
     <div className="flex min-h-12 items-center gap-2 p-2">
@@ -20,12 +23,12 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
           <span>{categoryToEmoji(category)}</span>
           <span>{summary}</span>
         </p>
-        {location && (
+        {place && (
           <p className="flex items-center px-0.5 text-sm text-gray-400">
             <span className="mr-1">
               <HiMapPin />
             </span>
-            <span>{location}</span>
+            <span>{place}</span>
           </p>
         )}
       </div>
