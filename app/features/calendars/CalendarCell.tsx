@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { CalendarEvent } from "./event";
+import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
   date: number;
