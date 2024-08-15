@@ -55,7 +55,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 <ul className="space-y-6 font-bold">
                   <li>
                     <Link to="/trade" onClick={close}>
-                      トレード画像をつくるやつ。
+                      トレード画像をつくるやつ
                     </Link>
                   </li>
                   <li>

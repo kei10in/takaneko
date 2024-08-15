@@ -9,7 +9,7 @@ import { TAKANEKO_PHOTOS } from "~/features/productImages";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `トレード画像つくるやつ。- ${SITE_TITLE}` },
+    { title: `トレード画像つくるやつ - ${SITE_TITLE}` },
     {
       name: "description",
       content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
@@ -35,7 +35,7 @@ export default function Index() {
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
-              <Link to="/trade">トレード画像をつくるやつ。</Link>
+              <Link to="/trade">トレード画像をつくるやつ</Link>
             </p>
             <div className="flex-none">
               <button
