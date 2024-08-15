@@ -32,7 +32,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
       >
         {date}
       </div>
-      <div className="text-center text-sm">{region}</div>
+      <div className={clsx("text-center text-sm", !currentMonth && "text-gray-300")}>{region}</div>
     </div>
   );
 };

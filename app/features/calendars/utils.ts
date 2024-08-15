@@ -24,17 +24,23 @@ export const todayHref = (): string => {
 };
 
 export const previousMonthHref = (year: number, month: number): string => {
-  const d = new Date(Date.UTC(year, month - 2, 1));
-  const y = d.getUTCFullYear();
-  const m = (d.getUTCMonth() + 1).toString().padStart(2, "0");
+  const { year: y, month: m } = previousMonth(year, month);
 
   return `/calendar/${y}/${m}`;
 };
 
 export const nextMonthHref = (year: number, month: number): string => {
-  const d = new Date(Date.UTC(year, month, 1));
-  const y = d.getUTCFullYear();
-  const m = (d.getUTCMonth() + 1).toString().padStart(2, "0");
+  const { year: y, month: m } = nextMonth(year, month);
 
   return `/calendar/${y}/${m}`;
+};
+
+export const previousMonth = (year: number, month: number): { year: number; month: number } => {
+  const d = new Date(Date.UTC(year, month - 2, 1));
+  return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1 };
+};
+
+export const nextMonth = (year: number, month: number): { year: number; month: number } => {
+  const d = new Date(Date.UTC(year, month, 1));
+  return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1 };
 };

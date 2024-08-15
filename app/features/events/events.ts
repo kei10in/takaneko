@@ -1,4 +1,5 @@
 import { stem } from "~/utils/string";
+import { nextMonth, previousMonth } from "../calendars/utils";
 import { EventMeta, validateEventMeta } from "./meta";
 
 export interface EventModule {
@@ -13,17 +14,25 @@ export interface EventContent {
 }
 
 export const loadEvents = async (params: {
-  year: string | number;
-  month: string | number;
+  year: number;
+  month: number;
 }): Promise<EventModule[]> => {
   const { year, month } = params;
 
+  const prev = previousMonth(year, month);
+  const next = nextMonth(year, month);
+
   const events = import.meta.glob("./**/*.mdx", { import: "meta" });
 
-  const prefix = `./${year}/${month.toString().padStart(2, "0")}/`;
+  const prefixes = [
+    `./${prev.year}/${prev.month.toString().padStart(2, "0")}/`,
+    `./${year}/${month.toString().padStart(2, "0")}/`,
+    `./${next.year}/${next.month.toString().padStart(2, "0")}/`,
+  ];
+
   const promises = Object.entries(events)
     .filter(([filename]) => {
-      return filename.startsWith(prefix);
+      return prefixes.some((prefix) => filename.startsWith(prefix));
     })
     .map(async ([filename, event]) => {
       const meta = validateEventMeta(await event());

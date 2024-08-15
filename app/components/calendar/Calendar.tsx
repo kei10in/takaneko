@@ -20,8 +20,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const dates = getCalendarDatesOfMonth(year, month);
 
   const eventsInCurrentMonth = events.filter((event) => {
-    const date = new Date(event.date);
-    return date.getUTCFullYear() == year && date.getUTCMonth() + 1 == month;
+    const start = dates[0][0].getTime();
+    const end = dates[dates.length - 1][dates[dates.length - 1].length - 1].getTime();
+    return start <= event.date && event.date <= end;
   });
   const groupedEvents = groupEventsByDate(eventsInCurrentMonth);
   const keys = [...groupedEvents.keys()].toSorted();
