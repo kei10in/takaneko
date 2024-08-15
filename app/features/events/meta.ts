@@ -8,7 +8,7 @@ const EventMeta = z.object({
   region: z.string().optional(),
   location: z.string().optional(),
   url: z.string().optional(),
-  image: z.string().optional(),
+  image: z.object({ path: z.string(), ref: z.string() }).optional(),
 });
 
 export type EventMeta = z.infer<typeof EventMeta>;

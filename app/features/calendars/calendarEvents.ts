@@ -8,6 +8,7 @@ export interface CalendarEvent {
   date: number;
   region?: string;
   location?: string;
+  image?: { path: string; ref: string };
 }
 
 export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
@@ -31,5 +32,6 @@ export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarE
     date: Date.parse(event.meta.date),
     location: event.meta.location,
     region: event.meta.region,
+    image: event.meta.image,
   };
 };

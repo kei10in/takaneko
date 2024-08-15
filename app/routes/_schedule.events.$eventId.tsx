@@ -44,7 +44,7 @@ export default function EventPage() {
       <div className="space-y-2">
         {meta.image && (
           <div className="h-64 bg-gray-200">
-            <img src={meta.image} alt="アイキャッチ" className="mx-auto h-full text-center" />
+            <img src={meta.image.path} alt="アイキャッチ" className="mx-auto h-full text-center" />
           </div>
         )}
         <div className="mt-4 px-4 text-lg font-bold">
@@ -80,6 +80,19 @@ export default function EventPage() {
       >
         <Content />
       </article>
+      {meta.image && (
+        <p className="px-4 text-right text-xs text-gray-400">
+          <Link
+            to={meta.image?.ref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1"
+          >
+            <span>画像の引用元</span>
+            <HiArrowTopRightOnSquare />
+          </Link>
+        </p>
+      )}
     </div>
   );
 }
