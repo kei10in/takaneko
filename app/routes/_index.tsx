@@ -16,11 +16,9 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div>
-      <div className="container mx-auto mt-4">
-        <div className="mx-auto h-56 w-full max-w-md bg-gray-200">
-          <div className="flex h-full w-full items-center justify-center">
-            <p className="text-xl">🚧かわいらしいヒーロー画像 (工事中)🚧</p>
-          </div>
+      <div className="container mx-auto">
+        <div className="mx-auto w-full max-w-md bg-gray-200">
+          <img src="/takaneko/hero.webp" alt="ヒーロー画像" className="w-full" />
         </div>
         <section className="mx-auto mt-4 w-full max-w-md">
           <h2 className="mx-4 text-lg font-semibold">コンテンツ</h2>
