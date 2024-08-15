@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
     { title: `スケジュール - ${SITE_TITLE}` },
     {
       name: "description",
-      content: "高嶺のなでしこのスケジュール",
+      content: "高嶺のなでしこの非公式スケジュールです。",
     },
   ];
 };

@@ -1,5 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
-import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
+import {
+  unstable_defineClientLoader as defineClientLoader,
+  MetaFunction,
+  useLoaderData,
+} from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";

@@ -1,7 +1,7 @@
-import type { MetaFunction } from "@remix-run/node";
 import {
   unstable_defineClientLoader as defineClientLoader,
   Link,
+  MetaFunction,
   useLoaderData,
 } from "@remix-run/react";
 import clsx from "clsx";
@@ -12,10 +12,10 @@ import { categoryToEmoji } from "~/features/events/EventType";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `トレード画像つくるやつ。- ${SITE_TITLE}` },
+    { title: `スケジュール - ${SITE_TITLE}` },
     {
       name: "description",
-      content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
+      content: "高嶺のなでしこの非公式スケジュールです。",
     },
   ];
 };

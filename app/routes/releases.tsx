@@ -7,7 +7,7 @@ export const meta: MetaFunction = () => {
     { title: `リリース ノート - ${SITE_TITLE}` },
     {
       name: "description",
-      content: "「トレード画像つくるやつ。」のリリース ノートです。",
+      content: `「${SITE_TITLE}」のリリース ノートです。`,
     },
   ];
 };
