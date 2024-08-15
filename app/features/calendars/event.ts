@@ -1,4 +1,5 @@
 import { EventType } from "~/features/events/EventType";
+import { EventModule } from "../events/events";
 
 export interface CalendarEvent {
   id: string;
@@ -20,4 +21,15 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<number, Calendar
     map.get(key)!.push(event);
   }
   return map;
+};
+
+export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
+  return {
+    id: event.id,
+    category: event.meta.category,
+    summary: event.meta.summary,
+    date: Date.parse(event.meta.date),
+    location: event.meta.location,
+    region: event.meta.region,
+  };
 };

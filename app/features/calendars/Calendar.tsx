@@ -2,8 +2,8 @@ import { Link } from "@remix-run/react";
 import { useRef } from "react";
 import { HiCalendar, HiChevronLeft, HiChevronRight, HiMapPin } from "react-icons/hi2";
 import { CalendarCell } from "./CalendarCell";
+import { getCalendarDatesOfMonth, toISODateString, toJapaneseDateString } from "./calendarDate";
 import { CalendarEvent, groupEventsByDate } from "./event";
-import { getCalendarDatesOfMonth, toISODateString, toJapaneseDateString } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
