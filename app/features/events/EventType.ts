@@ -7,6 +7,7 @@ export const EventTypeEnum = z.enum([
   "BIRTHDAY",
   "TV",
   "RADIO",
+  "WEB",
   "MAGAZINE",
   "OTHER",
 ]);
@@ -28,6 +29,8 @@ export const categoryToEmoji = (category: EventType): string => {
       return "📺";
     case EventType.RADIO:
       return "📻";
+    case EventType.WEB:
+      return "📱";
     case EventType.MAGAZINE:
       return "📰";
     case EventType.OTHER:
@@ -49,6 +52,8 @@ export const categoryToColor = (category: EventType): string => {
       return "bg-emerald-400";
     case EventType.RADIO:
       return "bg-sky-400";
+    case EventType.WEB:
+      return "bg-orange-400";
     case EventType.MAGAZINE:
       return "bg-ember-400";
     case EventType.OTHER:
