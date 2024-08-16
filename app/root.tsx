@@ -1,7 +1,15 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { useState } from "react";
+import { HiEllipsisVertical, HiXMark } from "react-icons/hi2";
+import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const close = () => setShowMenu(false);
+
   return (
     <html lang="en">
       <head>
@@ -13,8 +21,54 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon180x180.png" />
         <Links />
       </head>
-      <body>
+      <body className="text-gray-800">
+        <div className="container mx-auto">
+          <div className="mx-4 flex h-12 items-center border-b border-gray-300">
+            <div className="text-base font-bold text-gray-600">
+              <Link to="/">{SITE_TITLE}</Link>
+            </div>
+            <div className="ml-auto">
+              <button
+                className="inline-flex rounded-full p-2 text-lg hover:bg-gray-200"
+                onClick={() => setShowMenu(true)}
+              >
+                <HiEllipsisVertical />
+              </button>
+            </div>
+          </div>
+        </div>
+
         {children}
+
+        <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
+          <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
+            <DialogPanel className="relative right-4 top-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
+              <div className="absolute right-4 top-4 flex-none">
+                <button
+                  className="rounded-full p-2 text-lg hover:bg-gray-200"
+                  onClick={() => setShowMenu(false)}
+                >
+                  <HiXMark />
+                </button>
+              </div>
+              <div className="p-6">
+                <ul className="space-y-6 font-bold">
+                  <li>
+                    <Link to="/trade" onClick={close}>
+                      トレード画像をつくるやつ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/calendar" onClick={close}>
+                      スケジュール
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </DialogPanel>
+          </div>
+        </Dialog>
+
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -27,5 +81,5 @@ export default function App() {
 }
 
 export function HydrateFallback() {
-  return <p>Loading...</p>;
+  return null;
 }

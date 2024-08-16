@@ -1,6 +1,6 @@
-# Takaneko
+# たかねこの (仮)
 
-This template leverages [Remix SPA Mode](https://remix.run/docs/en/main/guides/spa-mode) to build your app as a Single-Page Application using [Client Data](https://remix.run/docs/en/main/guides/client-data) for all of your data loads and mutations.
+[高嶺のなでしこ](http://takanenonadeshiko.jp/)の非公式ファンサイトです。
 
 ## Technologies
 

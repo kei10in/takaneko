@@ -194,7 +194,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         className="relative z-50"
         onClose={() => setIndex(undefined)}
       >
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
+        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
           <DialogPanel className="w-full max-w-lg border bg-white p-4">
             {index != undefined ? (
               <TradeEditorDetail
