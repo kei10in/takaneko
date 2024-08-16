@@ -1,4 +1,6 @@
 import { PhotoDescription } from "./Photo";
+import { 海の妖精_ミニフォト } from "./products/2023/2023-11_海の妖精_ミニフォト";
+import { 海の妖精_生写真 } from "./products/2023/2023-11_海の妖精_生写真";
 import { ウインター_生写真 } from "./products/2023/2023-12_ウインター_生写真";
 import { ホワイトサンタ2023_ミニフォト } from "./products/2023/2023-12_ホワイトサンタ2023_ミニフォト";
 import { ホワイトサンタ2023_生写真 } from "./products/2023/2023-12_ホワイトサンタ2023_生写真";
@@ -270,17 +272,8 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "海の妖精 (生写真)",
-    year: 2023,
-    name: "海の妖精",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-11_海の妖精.jpg",
-    width: 1181,
-    height: 1389,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  海の妖精_ミニフォト,
+  海の妖精_生写真,
   ウインター_生写真,
   ホワイトサンタ2023_ミニフォト,
   ホワイトサンタ2023_生写真,
