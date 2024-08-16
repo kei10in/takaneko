@@ -1,5 +1,6 @@
 import { PhotoDescription } from "./Photo";
 import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_ミニフォト";
+import { スーツメガネ_生写真 } from "./products/2023/2023-06_スーツメガネ_生写真";
 import { 梅雨_生写真 } from "./products/2023/2023-06_梅雨_生写真";
 import { マリン_生写真 } from "./products/2023/2023-07_マリン_生写真";
 import { 浴衣_ミニフォト } from "./products/2023/2023-08_浴衣_ミニフォト";
@@ -195,17 +196,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "スーツメガネ",
-    year: 2023,
-    name: "スーツメガネ",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-06_スーツメガネ.webp",
-    width: 1064,
-    height: 1257,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  スーツメガネ_生写真,
   梅雨_生写真,
   マリン_生写真,
   たかねこ全国お招きツアー2023衣装_ミニフォト,
