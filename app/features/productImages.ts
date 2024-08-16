@@ -1,8 +1,8 @@
 import { PhotoDescription } from "./Photo";
+import { 初恋のひと_生写真 } from "./products/2023/2023-09_初恋のひと_生写真";
 import { _2023ハロウィン_ミニフォト } from "./products/2023/2023-10_2023ハロウィン_ミニフォト";
 import { _2023ハロウィン_生写真 } from "./products/2023/2023-10_2023ハロウィン_生写真";
 import { povo20_生写真 } from "./products/2023/2023-10_povo2.0_生写真";
-import { 初恋のひと_生写真 } from "./products/2023/2023-10_初恋のひと_生写真";
 import { 海の妖精_ミニフォト } from "./products/2023/2023-11_海の妖精_ミニフォト";
 import { 海の妖精_生写真 } from "./products/2023/2023-11_海の妖精_生写真";
 import { ウインター_生写真 } from "./products/2023/2023-12_ウインター_生写真";
