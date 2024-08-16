@@ -38,6 +38,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
               <li>
                 <Link to="/releases">リリース ノート</Link>
               </li>
+              <li>
+                <Link to="/terms">利用規約</Link>
+              </li>
             </ul>
           </section>
         </div>
