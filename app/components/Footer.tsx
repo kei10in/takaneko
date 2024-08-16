@@ -17,7 +17,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
           <h2 className="text-base font-bold">{SITE_TITLE}</h2>
           <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>
           <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
-          <p>使用されているイベントの画像は各イベントの主催者に帰属します。</p>
+          <p>使用されているイベントの画像は各イベントの主催者などの第三者に帰属します。</p>
         </div>
 
         <div className="space-y-4">
