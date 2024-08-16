@@ -216,7 +216,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         className="relative z-50"
         onClose={() => setShowConfirmClear(false)}
       >
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
+        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
           <DialogPanel className="min-w-64 max-w-lg border bg-white text-lg text-gray-700">
             <div className="flex w-full items-center justify-between p-4">
               <p className="text-center">トレード設定をクリアしますか？</p>
@@ -242,7 +242,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
       {/* Preview Dialog */}
       <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4">
+        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
           <DialogPanel className="max-w-lg border bg-white p-4">
             <TradeImagePreview productImage={productImage} tradeDescriptions={tradeDescriptions} />
             {/* <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} /> */}
