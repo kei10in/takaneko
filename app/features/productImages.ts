@@ -1,4 +1,6 @@
 import { PhotoDescription } from "./Photo";
+import { _2023ハロウィン_ミニフォト } from "./products/2023/2023-10_2023ハロウィン_ミニフォト";
+import { _2023ハロウィン_生写真 } from "./products/2023/2023-10_2023ハロウィン_生写真";
 import { 海の妖精_ミニフォト } from "./products/2023/2023-11_海の妖精_ミニフォト";
 import { 海の妖精_生写真 } from "./products/2023/2023-11_海の妖精_生写真";
 import { ウインター_生写真 } from "./products/2023/2023-12_ウインター_生写真";
@@ -261,17 +263,8 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "2023ハロウィン (生写真)",
-    year: 2023,
-    name: "2023ハロウィン",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-10_2023ハロウィン.webp",
-    width: 1180,
-    height: 1388,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  _2023ハロウィン_ミニフォト,
+  _2023ハロウィン_生写真,
   海の妖精_ミニフォト,
   海の妖精_生写真,
   ウインター_生写真,
