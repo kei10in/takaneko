@@ -1,8 +1,11 @@
+import { Dialog, DialogPanel } from "@headlessui/react";
 import {
   unstable_defineClientLoader as defineClientLoader,
   Link,
   MetaFunction,
   useLoaderData,
+  useLocation,
+  useNavigate,
 } from "@remix-run/react";
 import clsx from "clsx";
 import { HiArrowTopRightOnSquare, HiCalendar, HiMapPin } from "react-icons/hi2";
@@ -39,13 +42,24 @@ export default function EventPage() {
   const event = useLoaderData<typeof clientLoader>();
   const { meta, Content } = event;
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div className="container mx-auto">
       <div className="space-y-2">
         {meta.image && (
-          <div className="h-64 bg-gray-200">
-            <img src={meta.image.path} alt="アイキャッチ" className="mx-auto h-full text-center" />
-          </div>
+          <Link to="#photo" replace={true}>
+            <div
+              className="relative h-64 bg-cover bg-center"
+              style={{
+                backgroundImage: `url("${meta.image.path}")`,
+              }}
+            >
+              <div className="absolute inset-0 bg-opacity-20 backdrop-blur-xl" />
+              <img src={meta.image.path} alt="アイキャッチ" className="relative mx-auto h-full" />
+            </div>
+          </Link>
         )}
         <div className="mt-4 px-4 text-lg font-bold">
           <span>{categoryToEmoji(meta.category)}</span>
@@ -92,6 +106,27 @@ export default function EventPage() {
             <HiArrowTopRightOnSquare />
           </Link>
         </p>
+      )}
+
+      {meta.image && (
+        <Dialog
+          open={location.hash == "#photo"}
+          className="relative z-50"
+          onClose={() => navigate(".", { replace: true })}
+        >
+          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+            <DialogPanel
+              className="h-fit w-fit overflow-hidden"
+              onClick={() => navigate(".", { replace: true })}
+            >
+              <img
+                alt="プレビュー"
+                className="h-full max-h-[80svh] w-full object-contain"
+                src={meta.image.path}
+              />
+            </DialogPanel>
+          </div>
+        </Dialog>
       )}
     </div>
   );
