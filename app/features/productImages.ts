@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_ミニフォト";
 import { 浴衣_ミニフォト } from "./products/2023/2023-08_浴衣_ミニフォト";
 import { 僕は君になれない衣装_ミニフォト } from "./products/2023/2023-09_僕は君になれない衣装_ミニフォト";
 import { 僕は君になれない衣装_生写真 } from "./products/2023/2023-09_僕は君になれない衣装_生写真";
@@ -235,6 +236,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
+  たかねこ全国お招きツアー2023衣装_ミニフォト,
   浴衣_ミニフォト,
   初恋のひと_生写真,
   僕は君になれない衣装_ミニフォト,
