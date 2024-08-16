@@ -1,4 +1,6 @@
 import { PhotoDescription } from "./Photo";
+import { 僕は君になれない衣装_ミニフォト } from "./products/2023/2023-09_僕は君になれない衣装_ミニフォト";
+import { 僕は君になれない衣装_生写真 } from "./products/2023/2023-09_僕は君になれない衣装_生写真";
 import { 初恋のひと_生写真 } from "./products/2023/2023-09_初恋のひと_生写真";
 import { _2023ハロウィン_ミニフォト } from "./products/2023/2023-10_2023ハロウィン_ミニフォト";
 import { _2023ハロウィン_生写真 } from "./products/2023/2023-10_2023ハロウィン_生写真";
@@ -232,18 +234,9 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "僕は君になれない衣装 (生写真)",
-    year: 2023,
-    name: "僕は君になれない衣装",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-09_僕は君になれない衣装.png",
-    width: 720,
-    height: 974,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
   初恋のひと_生写真,
+  僕は君になれない衣装_ミニフォト,
+  僕は君になれない衣装_生写真,
   povo20_生写真,
   _2023ハロウィン_ミニフォト,
   _2023ハロウィン_生写真,
