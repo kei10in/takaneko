@@ -8,7 +8,7 @@ import {
   useNavigate,
 } from "@remix-run/react";
 import clsx from "clsx";
-import { HiArrowTopRightOnSquare, HiCalendar, HiMapPin } from "react-icons/hi2";
+import { HiArrowTopRightOnSquare, HiCalendar, HiLink, HiMapPin } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { EventContent, loadEventContent } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
@@ -79,6 +79,20 @@ export default function EventPage() {
               <HiMapPin className="text-gray-400" />
               <div>{meta.location}</div>
               <HiArrowTopRightOnSquare />
+            </div>
+          </Link>
+        )}
+
+        {meta.link && (
+          <Link to={meta.link.url} target="_blank" rel="noreferrer">
+            <div className="flex items-center gap-1 px-5">
+              <span>
+                <HiLink className="text-gray-400" />
+              </span>
+              <span>{meta.link.text}</span>
+              <span>
+                <HiArrowTopRightOnSquare />
+              </span>
             </div>
           </Link>
         )}

@@ -8,6 +8,7 @@ export interface CalendarEvent {
   date: number;
   region?: string;
   location?: string;
+  link?: { text: string; url: string };
   image?: { path: string; ref: string };
 }
 
@@ -32,6 +33,7 @@ export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarE
     date: Date.parse(event.meta.date),
     location: event.meta.location,
     region: event.meta.region,
+    link: event.meta.link,
     image: event.meta.image,
   };
 };

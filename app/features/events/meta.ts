@@ -7,7 +7,7 @@ const EventMeta = z.object({
   date: z.string(),
   region: z.string().optional(),
   location: z.string().optional(),
-  url: z.string().optional(),
+  link: z.object({ text: z.string(), url: z.string() }).optional(),
   image: z.object({ path: z.string(), ref: z.string() }).optional(),
 });
 
