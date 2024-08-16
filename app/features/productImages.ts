@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { 浴衣_ミニフォト } from "./products/2023/2023-08_浴衣_ミニフォト";
 import { 僕は君になれない衣装_ミニフォト } from "./products/2023/2023-09_僕は君になれない衣装_ミニフォト";
 import { 僕は君になれない衣装_生写真 } from "./products/2023/2023-09_僕は君になれない衣装_生写真";
 import { 初恋のひと_生写真 } from "./products/2023/2023-09_初恋のひと_生写真";
@@ -234,6 +235,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
+  浴衣_ミニフォト,
   初恋のひと_生写真,
   僕は君になれない衣装_ミニフォト,
   僕は君になれない衣装_生写真,
