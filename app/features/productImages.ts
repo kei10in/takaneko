@@ -1,6 +1,7 @@
 import { PhotoDescription } from "./Photo";
 import { _2023ハロウィン_ミニフォト } from "./products/2023/2023-10_2023ハロウィン_ミニフォト";
 import { _2023ハロウィン_生写真 } from "./products/2023/2023-10_2023ハロウィン_生写真";
+import { povo20_生写真 } from "./products/2023/2023-10_povo2.0_生写真";
 import { 海の妖精_ミニフォト } from "./products/2023/2023-11_海の妖精_ミニフォト";
 import { 海の妖精_生写真 } from "./products/2023/2023-11_海の妖精_生写真";
 import { ウインター_生写真 } from "./products/2023/2023-12_ウインター_生写真";
@@ -252,17 +253,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "povo2.0",
-    year: 2023,
-    name: "povo2.0",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-10_povo2.0.jpg",
-    width: 1182,
-    height: 1387,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  povo20_生写真,
   _2023ハロウィン_ミニフォト,
   _2023ハロウィン_生写真,
   海の妖精_ミニフォト,
