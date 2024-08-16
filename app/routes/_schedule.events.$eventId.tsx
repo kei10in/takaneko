@@ -76,9 +76,13 @@ export default function EventPage() {
             rel="noreferrer"
           >
             <div className="flex items-center gap-1 px-5">
-              <HiMapPin className="text-gray-400" />
-              <div>{meta.location}</div>
-              <HiArrowTopRightOnSquare />
+              <span>
+                <HiMapPin className="text-gray-400" />
+              </span>
+              <span>{meta.location}</span>
+              <span>
+                <HiArrowTopRightOnSquare />
+              </span>
             </div>
           </Link>
         )}
