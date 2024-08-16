@@ -36,10 +36,6 @@ export default function Releases() {
       <section>
         <h2>第1条 適用範囲</h2>
         <p>
-          「{SITE_TITLE}」利用規約 (以下、「本規約」といいます。) は、「{SITE_TITLE}」
-          (以下、「当サイト」といいます。) の利用条件を定めるものです。
-        </p>
-        <p>
           本規約は、当サイトを利用するすべてのユーザーに適用されます。
           当サイトを利用することにより、ユーザーは本規約に同意したものとみなされます。
         </p>
@@ -76,8 +72,8 @@ export default function Releases() {
         <p>当サイト上の「高嶺のなでしこ」の画像は、INCS・TP に帰属します。</p>
         <p>当サイト上のイベント画像は、各イベントの主催者などの第三者に帰属します。</p>
         <p>
-          それ以外のコンテンツは、 [MIT
-          ライセンス](https://github.com/kei10in/takaneko?tab=MIT-1-ov-file#readme)
+          それ以外のコンテンツは、
+          <a href="https://github.com/kei10in/takaneko?tab=MIT-1-ov-file#readme">MIT ライセンス</a>
           に基づいて提供されています。 このコンテンツを再配布する際には、元の著作権表示および MIT
           ライセンスのコピーを含める必要があります。
         </p>
