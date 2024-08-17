@@ -22,9 +22,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="text-gray-800">
-        <div className="border-b border-gray-300">
-          <div className="container mx-auto">
-            <div className="mx-4 flex h-12 items-center">
+        <div className="h-12 border-b border-gray-300 bg-white lg:sticky lg:top-0">
+          <div className="container mx-auto h-full">
+            <div className="mx-4 flex h-full items-center">
               <div className="text-base font-bold text-gray-900">
                 <Link to="/">🐈‍⬛🌸{SITE_TITLE}</Link>
               </div>
