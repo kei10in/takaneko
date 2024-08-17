@@ -1,5 +1,6 @@
 import { PhotoDescription } from "./Photo";
 import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_ミニフォト";
+import { たかねこ全国お招きツアー2023衣装_生写真 } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_生写真";
 import { イースター_生写真 } from "./products/2023/2023-05_イースター_生写真";
 import { スーツ_生写真 } from "./products/2023/2023-06_スーツ_生写真";
 import { スーツメガネ_生写真 } from "./products/2023/2023-06_スーツメガネ_生写真";
@@ -165,23 +166,13 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "たかねこ全国お招きツアー2023衣装 (生写真)",
-    year: 2023,
-    name: "たかねこ全国お招きツアー2023衣装",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-04_たかねこ全国お招きツアー2023衣装.png",
-    width: 0,
-    height: 0,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  たかねこ全国お招きツアー2023衣装_ミニフォト,
+  たかねこ全国お招きツアー2023衣装_生写真,
   イースター_生写真,
   スーツメガネ_生写真,
   スーツ_生写真,
   梅雨_生写真,
   マリン_生写真,
-  たかねこ全国お招きツアー2023衣装_ミニフォト,
   浴衣_ミニフォト,
   浴衣_生写真,
   初恋のひと_生写真,
