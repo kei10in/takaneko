@@ -76,7 +76,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
         </div>
         <div className="flex-1">
           <button
-            className="group flex h-full w-full items-center justify-center p-2 hover:bg-gray-100 active:bg-gray-50"
+            className="group flex h-full w-full items-center justify-center p-2 active:bg-gray-50"
             onClick={(e) => onClickNext?.(e)}
           >
             <HiChevronRight className="text-xl text-gray-800" />
