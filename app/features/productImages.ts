@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { ハロウィン_生写真 } from "./products/2022/2022-10_ハロウィン_生写真";
 import { 昭和レトロ_生写真 } from "./products/2022/2022-11_昭和レトロ_生写真";
 import { _2022サンタ_生写真 } from "./products/2022/2022-12_2022サンタ_生写真";
 import { _2023年振袖_生写真 } from "./products/2023/2023-01_2023年振袖_生写真";
@@ -105,17 +106,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "ハロウィン",
-    year: 2022,
-    name: "ハロウィン",
-    kind: "生写真",
-    url: "/takaneko/photos/2022-10_ハロウィン.jpg",
-    width: 1280,
-    height: 1300,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  ハロウィン_生写真,
   昭和レトロ_生写真,
   _2022サンタ_生写真,
   _2023年振袖_生写真,
