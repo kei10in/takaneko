@@ -32,19 +32,23 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      <div className="sticky top-0 bg-white" ref={stickyRef}>
+      <div className="sticky top-12 bg-white" ref={stickyRef}>
         <div className="mx-4 flex items-center justify-between py-2">
-          <Link className="flex items-center rounded border border-gray-200 px-2" to={hrefToday}>
+          <Link
+            className="flex items-center rounded border border-gray-200 px-2"
+            to={hrefToday}
+            preventScrollReset={true}
+          >
             <p className="h-6">今日</p>
           </Link>
           <p className="text-gray-800">
             {year}年{month}月
           </p>
           <div className="flex items-center justify-center divide-x overflow-hidden rounded border border-gray-200">
-            <Link className="px-2" to={hrefPreviousMonth}>
+            <Link className="px-2" to={hrefPreviousMonth} preventScrollReset={true}>
               <HiChevronLeft className="h-6" />
             </Link>
-            <Link className="px-2" to={hrefNextMonth}>
+            <Link className="px-2" to={hrefNextMonth} preventScrollReset={true}>
               <HiChevronRight className="h-6" />
             </Link>
           </div>
@@ -113,7 +117,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
               <div
                 className="px-2 pt-2"
                 id={anchor}
-                style={{ scrollMarginTop: stickyRef.current?.clientHeight }}
+                style={{
+                  scrollMarginTop: stickyRef.current?.getBoundingClientRect().bottom,
+                }}
               >
                 {date}
               </div>
