@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { _2022サンタ_生写真 } from "./products/2022/2022-12_2022サンタ_生写真";
 import { _2023年振袖_生写真 } from "./products/2023/2023-01_2023年振袖_生写真";
 import { バレンタイン_生写真 } from "./products/2023/2023-02_バレンタイン_生写真";
 import { _2023年制服卒業シーズン_生写真 } from "./products/2023/2023-03_2023年制服卒業シーズン_生写真";
@@ -125,17 +126,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "2022サンタ",
-    year: 2022,
-    name: "2022サンタ",
-    kind: "生写真",
-    url: "/takaneko/photos/2022-12_2022サンタ.webp",
-    width: 1300,
-    height: 1300,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  _2022サンタ_生写真,
   _2023年振袖_生写真,
   バレンタイン_生写真,
   _2023年制服卒業シーズン_生写真,
