@@ -35,23 +35,31 @@ export const Calendar: React.FC<Props> = (props: Props) => {
       <div className="sticky top-12 bg-white" ref={stickyRef}>
         <div className="mx-4 flex items-center justify-between py-2">
           <Link
-            className="flex items-center rounded border border-gray-200 px-2"
+            className="inline-flex h-8 w-24 items-center rounded-md border border-gray-200"
             to={hrefToday}
             preventScrollReset={true}
           >
-            <p className="h-6">今日</p>
+            <span className="mx-auto">今日</span>
           </Link>
-          <p className="text-gray-800">
+          <span className="text-gray-800">
             {year}年{month}月
-          </p>
-          <div className="flex items-center justify-center divide-x overflow-hidden rounded border border-gray-200">
-            <Link className="px-2" to={hrefPreviousMonth} preventScrollReset={true}>
-              <HiChevronLeft className="h-6" />
+          </span>
+          <span className="inline-flex h-8 w-24 divide-x overflow-hidden rounded-md border border-gray-200">
+            <Link
+              className="inline-flex h-full flex-grow items-center justify-center"
+              to={hrefPreviousMonth}
+              preventScrollReset={true}
+            >
+              <HiChevronLeft />
             </Link>
-            <Link className="px-2" to={hrefNextMonth} preventScrollReset={true}>
-              <HiChevronRight className="h-6" />
+            <Link
+              className="inline-flex h-full flex-grow items-center justify-center"
+              to={hrefNextMonth}
+              preventScrollReset={true}
+            >
+              <HiChevronRight />
             </Link>
-          </div>
+          </span>
         </div>
         <table className="w-full max-w-full table-fixed border-collapse border-none">
           <thead>
