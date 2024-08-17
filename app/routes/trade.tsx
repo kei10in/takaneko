@@ -1,11 +1,11 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import type { MetaFunction } from "@remix-run/node";
-import { Link, NavLink, Outlet } from "@remix-run/react";
-import { Fragment, useState } from "react";
+import { Link, Outlet } from "@remix-run/react";
+import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
-import { MenuItem } from "~/components/MenuItem";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/productImages";
+import { ProductList } from "~/features/trade/ProductList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -62,30 +62,8 @@ export default function Index() {
                 <HiXMark />
               </button>
             </div>
-            <div className="">
-              {allPhotos.map((item) => (
-                <Fragment key={item.name}>
-                  <h3 className="px-4 pb-4 pt-2.5 text-xl font-bold">{item.name}</h3>
-                  <ul className="pb-1.5">
-                    {item.photos.map((photo) => (
-                      <li key={photo.id}>
-                        <NavLink to={`/trade/${photo.id}`}>
-                          {({ isActive }) => (
-                            <MenuItem
-                              content={photo.name}
-                              description={photo.kind}
-                              selected={isActive}
-                              disabled={photo.positions.length == 0}
-                              onClick={() => setShowMenu(false)}
-                            />
-                          )}
-                        </NavLink>
-                      </li>
-                    ))}
-                  </ul>
-                </Fragment>
-              ))}
-            </div>
+
+            <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </DialogPanel>
         </div>
       </Dialog>
