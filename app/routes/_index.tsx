@@ -17,8 +17,8 @@ export default function Index() {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="mx-auto w-full max-w-md bg-gray-200">
-          <img src="/takaneko/hero.webp" alt="ヒーロー画像" className="w-full" />
+        <div className="w-full">
+          <img className="mx-auto w-full max-w-3xl" src="/takaneko/hero.webp" alt="ヒーロー画像" />
         </div>
         <section className="mx-auto mt-4 w-full max-w-md">
           <h2 className="mx-4 text-lg font-semibold">コンテンツ</h2>
