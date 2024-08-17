@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { バレンタイン_生写真 } from "./products/2023/2023-02_バレンタイン_生写真";
 import { _2023年制服卒業シーズン_生写真 } from "./products/2023/2023-03_2023年制服卒業シーズン_生写真";
 import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_ミニフォト";
 import { たかねこ全国お招きツアー2023衣装_生写真 } from "./products/2023/2023-04_たかねこ全国お招きツアー2023衣装_生写真";
@@ -145,17 +146,7 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
     photos: REGULAR_PHOTO_SET,
     positions: [],
   },
-  {
-    id: "バレンタイン",
-    year: 2023,
-    name: "バレンタイン",
-    kind: "生写真",
-    url: "/takaneko/photos/2023-02_バレンタイン.webp",
-    width: 1300,
-    height: 1300,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  バレンタイン_生写真,
   _2023年制服卒業シーズン_生写真,
   たかねこ全国お招きツアー2023衣装_ミニフォト,
   たかねこ全国お招きツアー2023衣装_生写真,
