@@ -22,18 +22,24 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="text-gray-800">
-        <div className="container mx-auto">
-          <div className="mx-4 flex h-12 items-center border-b border-gray-300">
-            <div className="text-base font-bold text-gray-600">
-              <Link to="/">{SITE_TITLE}</Link>
-            </div>
-            <div className="ml-auto">
-              <button
-                className="inline-flex rounded-full p-2 text-lg hover:bg-gray-200"
-                onClick={() => setShowMenu(true)}
-              >
-                <HiEllipsisVertical />
-              </button>
+        <div className="border-b border-gray-300">
+          <div className="container mx-auto">
+            <div className="mx-4 flex h-12 items-center">
+              <div className="text-base font-bold text-gray-900">
+                <Link to="/">🐈‍⬛🌸{SITE_TITLE}</Link>
+              </div>
+              <div className="ml-auto">
+                <div className="hidden items-center gap-8 text-sm font-bold text-gray-600 lg:flex">
+                  <Link to="/trade">トレード画像をつくるやつ</Link>
+                  <Link to="/calendar">スケジュール</Link>
+                </div>
+                <button
+                  className="inline-flex rounded-full p-2 text-lg hover:bg-gray-200 lg:hidden"
+                  onClick={() => setShowMenu(true)}
+                >
+                  <HiEllipsisVertical />
+                </button>
+              </div>
             </div>
           </div>
         </div>
