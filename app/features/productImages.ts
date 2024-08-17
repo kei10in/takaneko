@@ -1,4 +1,5 @@
 import { PhotoDescription } from "./Photo";
+import { アンチファン衣装_生写真 } from "./products/2022/2022-08_アンチファン衣装_生写真";
 import { うぶごえ_生写真 } from "./products/2022/2022-09_うぶごえ_生写真";
 import { _2022秋服_生写真 } from "./products/2022/2022-10_2022秋服_生写真";
 import { ハロウィン_生写真 } from "./products/2022/2022-10_ハロウィン_生写真";
@@ -52,7 +53,6 @@ import { _2ndファンミ_にゃでしこステッカー } from "./products/2024
 import { _2ndファンミ_缶バッジ } from "./products/2024/2024-08_にゃでしこ2ndファンミ_缶バッジ";
 import { 白ワンピース_ミニフォト } from "./products/2024/2024-08_白ワンピース_ミニフォト";
 import { 白ワンピース_生写真 } from "./products/2024/2024-08_白ワンピース_生写真";
-import { REGULAR_PHOTO_SET } from "./products/utils";
 
 export interface ProductImage {
   id: string;
@@ -75,17 +75,7 @@ export interface ImagePosition {
 }
 
 export const TAKANEKO_PHOTOS: ProductImage[] = [
-  {
-    id: "アンチファン衣装",
-    year: 2022,
-    name: "アンチファン衣装",
-    kind: "生写真",
-    url: "/takaneko/photos/2022-08_アンチファン衣装.webp",
-    width: 1280,
-    height: 1280,
-    photos: REGULAR_PHOTO_SET,
-    positions: [],
-  },
+  アンチファン衣装_生写真,
   うぶごえ_生写真,
   _2022秋服_生写真,
   ハロウィン_生写真,
