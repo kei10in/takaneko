@@ -51,11 +51,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="">
-      {/* 
-        フィルターを切り替えたときにスクロールバーより上に描画される問題
-        への対応 iOS にあるため w-fit がついています。
-      */}
-      <div className="sticky top-0 z-50 w-fit bg-white px-4 py-4">
+      <div className="sticky top-0 z-10 bg-white px-4 py-4">
         <RadioGroup
           className="flex select-none items-center gap-2"
           value={filter}

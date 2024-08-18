@@ -65,7 +65,12 @@ export default function Index() {
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
-          <DialogPanel className="relative w-80 overflow-y-auto border-l border-gray-200 bg-white">
+          <DialogPanel
+            className="fix-scrollbar relative w-80 overflow-y-auto border-l border-gray-200 bg-white"
+            // iOS でスクロールバーが sticky な要素に隠れる問題の対応
+            // https://stackoverflow.com/questions/67076468/why-scrollbar-is-behind-sticky-elements-in-ios-safari
+            style={{ transform: "translateZ(0)" }}
+          >
             <div className="absolute right-4 top-1.5 flex-none">
               <button
                 className="rounded-full p-2 text-xl hover:bg-gray-200"
@@ -75,7 +80,7 @@ export default function Index() {
               </button>
             </div>
 
-            <div className="pt-10">
+            <div className="pt-12">
               <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
             </div>
           </DialogPanel>
