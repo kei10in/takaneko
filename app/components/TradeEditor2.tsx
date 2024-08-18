@@ -71,11 +71,17 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="w-full">
-      <div className="my-4 w-full pb-[6.5rem]">
+      {/* 
+        アートボード 
+        パネルが画面の一番下に固定されるように最小の高さを指定しています。
+        画面全体 (100svh) からヘッダーとパネル を引いた高さです。
+        ヘッダーやパネルはモバイルとデスクトップで異なります。
+      */}
+      <div className="min-h-[calc(100svh-6rem-6.4375rem)] w-full lg:min-h-[calc(100vh-3rem-7.4375rem)]">
         {positions.length != 0 ? (
-          <div className="mx-auto">
+          <div className="mx-auto w-fit py-4">
             {imageLoading ? <ImageLoader width={width} height={height} /> : null}
-            <div className={clsx("relative select-none", imageLoading && "hidden")}>
+            <div className={clsx("relative mx-auto select-none", imageLoading && "hidden")}>
               <HtmlTradeImage
                 image={{
                   url: productImage.url,
@@ -109,12 +115,11 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           </div>
         ) : null}
       </div>
-      <div
-        className="fixed h-fit w-full border-t border-gray-300 bg-white"
-        style={{ bottom: 0, left: 0 }}
-      >
-        <div className="container mx-auto h-fit w-full">
-          <div className="my-2">
+
+      {/* パネル */}
+      <div className="sticky h-fit" style={{ bottom: 0 }}>
+        <div className="h-fit space-y-2 border-t border-gray-300 bg-white px-4 py-2 lg:mx-4 lg:px-0 lg:py-4">
+          <div>
             <div className="flex items-center justify-center gap-0.5">
               <Switch
                 className="group rounded-xl p-1 data-[checked]:bg-gray-200"
@@ -170,7 +175,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
             </div>
           </div>
 
-          <div className="mx-4 my-2 flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4 lg:justify-end">
             <button
               className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-1 text-lg font-bold text-white"
               onClick={() => setShowConfirmClear(true)}

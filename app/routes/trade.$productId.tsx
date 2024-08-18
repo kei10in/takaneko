@@ -38,18 +38,16 @@ export default function TradeImageEditor() {
   const clearTradeDescriptions = useTradeStore((state) => state.clearTradeDescriptions);
 
   return (
-    <div className="container mx-auto">
-      <div className="mx-auto w-[22.5rem]">
-        <TradeEditor2
-          productImage={selectedProduct}
-          tradeDescriptions={tradeDescriptions}
-          width={360}
-          onChangeTradeDescription={(photoId, status) =>
-            updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
-          }
-          onClearTradeDescriptions={(id) => clearTradeDescriptions(id)}
-        />
-      </div>
+    <div className="overflow-x-clip">
+      <TradeEditor2
+        productImage={selectedProduct}
+        tradeDescriptions={tradeDescriptions}
+        width={360}
+        onChangeTradeDescription={(photoId, status) =>
+          updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
+        }
+        onClearTradeDescriptions={(id) => clearTradeDescriptions(id)}
+      />
     </div>
   );
 }

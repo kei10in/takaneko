@@ -31,7 +31,8 @@ export default function Index() {
 
   return (
     <div>
-      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white bg-opacity-90">
+      {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
+      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white bg-opacity-90 lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
@@ -49,7 +50,18 @@ export default function Index() {
         </div>
       </div>
 
-      <Outlet />
+      <div className="container mx-auto">
+        <div className="w-full">
+          {/* サイドバー。モバイルでは非表示 */}
+          <nav className="fixed bottom-0 top-12 hidden w-80 overflow-y-auto lg:block">
+            <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
+          </nav>
+
+          <main className="lg:ml-80">
+            <Outlet />
+          </main>
+        </div>
+      </div>
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
