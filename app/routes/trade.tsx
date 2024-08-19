@@ -32,7 +32,7 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="sticky top-0 z-40 h-12 w-full border-b border-nadeshiko-400 bg-nadeshiko-200 bg-opacity-90 backdrop-blur lg:hidden">
+      <div className="sticky top-0 z-40 h-12 w-full border-b border-nadeshiko-200 bg-nadeshiko-200 bg-opacity-90 backdrop-blur lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-800">
