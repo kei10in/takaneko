@@ -32,15 +32,15 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="sticky top-0 z-40 h-12 w-full border-b border-gray-300 bg-white bg-opacity-90 lg:hidden">
+      <div className="sticky top-0 z-40 h-12 w-full border-b border-nadeshiko-400 bg-nadeshiko-200 bg-opacity-90 backdrop-blur lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
-            <p className="text-base font-bold text-gray-600">
+            <p className="text-base font-bold text-gray-800">
               <Link to="/trade">トレード画像をつくるやつ</Link>
             </p>
             <div className="flex-none">
               <button
-                className="rounded-full p-2 text-lg hover:bg-gray-200"
+                className="hover:text-nadeshiko-950 p-2 text-lg text-nadeshiko-800"
                 onClick={() => setShowMenu(true)}
               >
                 <HiBars3 />

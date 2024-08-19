@@ -61,9 +61,9 @@ export const ProductList: React.FC<Props> = (props: Props) => {
             <Field key={item.id}>
               <Radio
                 className={clsx(
-                  "rounded bg-gray-200 px-2 py-px",
-                  "text-center text-sm text-gray-600",
-                  "data-[checked]:bg-blue-500 data-[checked]:text-white",
+                  "rounded bg-gray-100 px-2 py-px",
+                  "text-center text-sm text-gray-500",
+                  "data-[checked]:bg-nadeshiko-800 data-[checked]:text-white",
                 )}
                 as="button"
                 value={item.id}

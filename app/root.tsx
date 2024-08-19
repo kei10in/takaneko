@@ -15,6 +15,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#fffcfd" />
         <Meta />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.png" type="image/png" />
@@ -22,19 +23,23 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="text-gray-800">
-        <div className="z-50 h-12 border-b border-gray-300 bg-white lg:sticky lg:top-0">
+        <div className="bg-nadeshiko-50 z-50 h-12 border-b border-b-nadeshiko-400 bg-opacity-90 backdrop-blur lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
-            <div className="mx-4 flex h-full items-center">
+            <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">
                 <Link to="/">🐈‍⬛🌸{SITE_TITLE}</Link>
               </div>
               <div className="ml-auto">
-                <div className="hidden items-center gap-8 text-sm font-bold text-gray-600 lg:flex">
-                  <Link to="/trade">トレード画像をつくるやつ</Link>
-                  <Link to="/calendar">スケジュール</Link>
+                <div className="hidden items-center gap-8 text-sm font-bold text-gray-500 lg:flex">
+                  <Link className="hover:text-nadeshiko-700" to="/trade">
+                    トレード画像をつくるやつ
+                  </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/calendar">
+                    スケジュール
+                  </Link>
                 </div>
                 <button
-                  className="inline-flex rounded-full p-2 text-lg hover:bg-gray-200 lg:hidden"
+                  className="inline-flex rounded-full p-2 text-lg text-nadeshiko-600 lg:hidden"
                   onClick={() => setShowMenu(true)}
                 >
                   <HiEllipsisVertical />
@@ -51,21 +56,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <DialogPanel className="relative right-4 top-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
               <div className="absolute right-4 top-4 flex-none">
                 <button
-                  className="rounded-full p-2 text-lg hover:bg-gray-200"
+                  className="rounded-full p-2 text-lg hover:text-nadeshiko-700"
                   onClick={() => setShowMenu(false)}
                 >
                   <HiXMark />
                 </button>
               </div>
               <div className="p-6">
-                <ul className="space-y-6 font-bold">
+                <ul className="space-y-6 font-bold text-gray-800">
                   <li>
-                    <Link to="/trade" onClick={close}>
+                    <Link className="hover:text-nadeshiko-700" to="/trade" onClick={close}>
                       トレード画像をつくるやつ
                     </Link>
                   </li>
                   <li>
-                    <Link to="/calendar" onClick={close}>
+                    <Link className="hover:text-nadeshiko-700" to="/calendar" onClick={close}>
                       スケジュール
                     </Link>
                   </li>
