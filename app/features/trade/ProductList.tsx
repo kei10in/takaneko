@@ -10,8 +10,8 @@ import { NavLink, useLocation } from "@remix-run/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
-import { MenuItem } from "~/components/MenuItem";
 import { ProductImage } from "../productImages";
+import { ProductItem } from "./ProductItem";
 
 interface Props {
   allPhotos: {
@@ -82,24 +82,22 @@ export const ProductList: React.FC<Props> = (props: Props) => {
 
         return (
           <Disclosure key={item.name} defaultOpen={open}>
-            <DisclosureButton className="group flex h-12 w-full items-center gap-1 px-4 hover:bg-gray-100">
+            <DisclosureButton className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
+              <h3 className="text-lg font-bold">{item.name}</h3>
               <div>
                 <HiChevronRight className="transition-transform group-data-[open]:rotate-90" />
               </div>
-              <h3 className="text-lg font-bold">{item.name}</h3>
             </DisclosureButton>
             <DisclosurePanel>
               <ul className="pb-1.5">
                 {item.photos.map((photo) => (
                   <li key={photo.id}>
-                    <NavLink to={`/trade/${photo.id}`}>
+                    <NavLink to={`/trade/${photo.id}`} onClick={onClickMenuItem}>
                       {({ isActive }) => (
-                        <MenuItem
+                        <ProductItem
                           content={photo.name}
                           description={photo.kind}
                           selected={isActive}
-                          disabled={photo.positions.length == 0}
-                          onClick={onClickMenuItem}
                         />
                       )}
                     </NavLink>
