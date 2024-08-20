@@ -177,13 +177,13 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
           <div className="flex items-center justify-between gap-4 lg:justify-end">
             <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-1 text-lg font-bold text-white"
+              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-0.5 text-lg font-bold text-white"
               onClick={() => setShowConfirmClear(true)}
             >
               クリア
             </button>
             <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-1 text-lg font-bold text-white"
+              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-0.5 text-lg font-bold text-white"
               onClick={() => {
                 setPreview(true);
               }}
