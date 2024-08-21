@@ -53,7 +53,7 @@ export default function Index() {
       <div className="container mx-auto">
         <div className="w-full">
           {/* サイドバー。モバイルでは非表示 */}
-          <nav className="fixed bottom-0 top-12 hidden w-80 overflow-y-auto px-4 lg:block">
+          <nav className="fixed bottom-0 top-[var(--header-height)] hidden w-80 overflow-y-auto px-4 lg:block">
             <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 
