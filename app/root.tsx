@@ -23,7 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="text-gray-800">
-        <div className="bg-nadeshiko-50 z-50 h-[--header-height] border-b border-b-nadeshiko-200 bg-opacity-90 backdrop-blur lg:sticky lg:top-0">
+        <div className="bg-nadeshiko-50 z-10 h-[--header-height] border-b border-b-nadeshiko-200 bg-opacity-90 backdrop-blur lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">

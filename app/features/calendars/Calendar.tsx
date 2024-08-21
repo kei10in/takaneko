@@ -32,7 +32,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      <div className="sticky top-12 bg-white" ref={stickyRef}>
+      <div className="sticky top-12 z-20 bg-white" ref={stickyRef}>
         <div className="mx-4 flex items-center justify-between py-2">
           <Link
             className="inline-flex h-8 w-24 items-center rounded-md border border-gray-200"
