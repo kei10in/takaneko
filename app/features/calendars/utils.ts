@@ -26,13 +26,13 @@ export const todayHref = (): string => {
 export const previousMonthHref = (year: number, month: number): string => {
   const { year: y, month: m } = previousMonth(year, month);
 
-  return `/calendar/${y}/${m}`;
+  return `/calendar/${y}/${m.toString().padStart(2, "0")}`;
 };
 
 export const nextMonthHref = (year: number, month: number): string => {
   const { year: y, month: m } = nextMonth(year, month);
 
-  return `/calendar/${y}/${m}`;
+  return `/calendar/${y}/${m.toString().padStart(2, "0")}`;
 };
 
 export const previousMonth = (year: number, month: number): { year: number; month: number } => {
