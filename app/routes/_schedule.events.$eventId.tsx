@@ -46,12 +46,12 @@ export default function EventPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto">
-      <div className="space-y-2">
+    <div className="container mx-auto pb-12 lg:max-w-4xl">
+      <div className="space-y-8">
         {meta.image && (
           <Link to="#photo" replace={true}>
             <div
-              className="relative h-64 bg-cover bg-center"
+              className="relative h-64 bg-cover bg-center lg:h-[30rem]"
               style={{
                 backgroundImage: `url("${meta.image.path}")`,
               }}
@@ -61,49 +61,53 @@ export default function EventPage() {
             </div>
           </Link>
         )}
-        <div className="mt-4 px-4 text-lg font-bold">
-          <span>{categoryToEmoji(meta.category)}</span>
-          <span>{meta.summary}</span>
-        </div>
-        <div className="flex items-center gap-1 px-5">
-          <HiCalendar className="text-gray-400" />
-          <p>{meta.date}</p>
-        </div>
-        {meta.location && (
-          <Link
-            to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="flex items-center gap-1 px-5">
-              <span>
-                <HiMapPin className="text-gray-400" />
-              </span>
-              <span>{meta.location}</span>
-              <span>
-                <HiArrowTopRightOnSquare />
-              </span>
-            </div>
-          </Link>
-        )}
+        <div className="space-y-2">
+          <div className="px-4 text-lg font-bold">
+            <span>{categoryToEmoji(meta.category)}</span>
+            <span>{meta.summary}</span>
+          </div>
+          <div className="flex items-center gap-1 px-5">
+            <HiCalendar className="text-gray-400" />
+            <p>{meta.date}</p>
+          </div>
+          {meta.location && (
+            <Link
+              to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <HiMapPin className="text-gray-400" />
+                </span>
+                <span>{meta.location}</span>
+                <span>
+                  <HiArrowTopRightOnSquare />
+                </span>
+              </div>
+            </Link>
+          )}
 
-        {meta.link && (
-          <Link to={meta.link.url} target="_blank" rel="noreferrer">
-            <div className="flex items-center gap-1 px-5">
-              <span>
-                <HiLink className="text-gray-400" />
-              </span>
-              <span>{meta.link.text}</span>
-              <span>
-                <HiArrowTopRightOnSquare />
-              </span>
-            </div>
-          </Link>
-        )}
+          {meta.link && (
+            <Link to={meta.link.url} target="_blank" rel="noreferrer">
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <HiLink className="text-gray-400" />
+                </span>
+                <span>{meta.link.text}</span>
+                <span>
+                  <HiArrowTopRightOnSquare />
+                </span>
+              </div>
+            </Link>
+          )}
+        </div>
       </div>
+
       <article
         className={clsx(
-          "prose mt-4 px-4 py-4",
+          "max-w-none",
+          "pay-4 prose px-4",
           "prose-h1:my-2 prose-h1:text-center prose-h1:text-lg",
           "prose-h2:my-2 prose-h2:text-lg",
           "prose-p:text-base",
