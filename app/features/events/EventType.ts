@@ -15,6 +15,22 @@ export const EventTypeEnum = z.enum([
 export const EventType = EventTypeEnum.enum;
 export type EventType = z.infer<typeof EventTypeEnum>;
 
+export const compareEventType = (a: EventType, b: EventType): number => {
+  const order = [
+    EventType.LIVE,
+    EventType.EVENT,
+    EventType.RELEASE,
+    EventType.BIRTHDAY,
+    EventType.TV,
+    EventType.RADIO,
+    EventType.WEB,
+    EventType.MAGAZINE,
+    EventType.OTHER,
+  ];
+
+  return order.indexOf(a) - order.indexOf(b);
+};
+
 export const categoryToEmoji = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:

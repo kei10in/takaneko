@@ -1,4 +1,4 @@
-import { EventType } from "~/features/events/EventType";
+import { compareEventType, EventType } from "~/features/events/EventType";
 import { EventModule } from "../events/events";
 
 export interface CalendarEvent {
@@ -12,6 +12,27 @@ export interface CalendarEvent {
   image?: { path: string; ref: string };
 }
 
+/**
+ * Zip calendar dates and events.
+ */
+export const zipCalendarDatesAndEvents = (
+  dates: Date[][],
+  events: CalendarEvent[],
+): { date: Date; events: CalendarEvent[] }[][] => {
+  const groupedEvents = groupEventsByDate(events);
+
+  return dates.map((week) =>
+    week.map((date) => {
+      const utcDate = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+      const eventsInDate = sortedCalendarEventsByCategory(groupedEvents.get(utcDate) ?? []);
+      return { date, events: eventsInDate };
+    }),
+  );
+};
+
+/**
+ * Group events by date.
+ */
 export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
   const map = new Map<number, CalendarEvent[]>();
   for (const event of events) {
@@ -36,4 +57,26 @@ export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarE
     link: event.meta.link,
     image: event.meta.image,
   };
+};
+
+export const sortedCalendarEventsByCategory = (events: CalendarEvent[]): CalendarEvent[] => {
+  return events.toSorted((a, b) => {
+    return compareEventType(a.category, b.category);
+  });
+};
+
+export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
+  const regions = events
+    .filter((event) => event.region != undefined)
+    .map((event) => event.region ?? "");
+
+  const result: string[] = [];
+
+  for (const region of regions) {
+    if (!result.includes(region)) {
+      result.push(region);
+    }
+  }
+
+  return result;
 };

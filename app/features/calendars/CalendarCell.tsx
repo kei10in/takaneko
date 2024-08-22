@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { CalendarEvent } from "./calendarEvents";
+import { CalendarEvent, uniqueEventRegions } from "./calendarEvents";
 
 interface Props {
   date: number;
@@ -12,14 +12,14 @@ interface Props {
 export const CalendarCell: React.FC<Props> = (props: Props) => {
   const { date, day, events, currentMonth, selected = false } = props;
 
-  const region = events.find((event) => event.region != undefined)?.region;
+  const regions = uniqueEventRegions(events);
 
   const isSunday = day == 0;
   const isSaturday = day == 6;
   const isWeekday = !isSunday && !isSaturday;
 
   return (
-    <div className={clsx("h-11 w-full", selected && "bg-blue-500 text-white")}>
+    <div className={clsx("h-11 w-full lg:h-16", selected && "bg-blue-500 text-white")}>
       <div
         className={clsx(
           "text-center text-sm",
@@ -32,7 +32,18 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
       >
         {date}
       </div>
-      <div className={clsx("text-center text-sm", !currentMonth && "text-gray-300")}>{region}</div>
+      {regions[0] && (
+        <div className={clsx("text-center text-sm", !currentMonth && "text-gray-300")}>
+          {regions[0]}
+        </div>
+      )}
+      {regions[1] && (
+        <div
+          className={clsx("hidden text-center text-sm lg:block", !currentMonth && "text-gray-300")}
+        >
+          {regions[1]}
+        </div>
+      )}
     </div>
   );
 };
