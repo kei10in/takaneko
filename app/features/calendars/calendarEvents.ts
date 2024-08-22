@@ -12,6 +12,27 @@ export interface CalendarEvent {
   image?: { path: string; ref: string };
 }
 
+/**
+ * Zip calendar dates and events.
+ */
+export const zipCalendarDatesAndEvents = (
+  dates: Date[][],
+  events: CalendarEvent[],
+): { date: Date; events: CalendarEvent[] }[][] => {
+  const groupedEvents = groupEventsByDate(events);
+
+  return dates.map((week) =>
+    week.map((date) => {
+      const utcDate = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+      const eventsInDate = groupedEvents.get(utcDate) ?? [];
+      return { date, events: eventsInDate };
+    }),
+  );
+};
+
+/**
+ * Group events by date.
+ */
 export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
   const map = new Map<number, CalendarEvent[]>();
   for (const event of events) {

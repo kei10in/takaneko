@@ -4,24 +4,25 @@ import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
-  events: Map<number, CalendarEvent[]>;
+  calendarEvents: { date: Date; events: CalendarEvent[] }[];
   scrollMargin?: number;
 }
 
 export const EventList: React.FC<Props> = (props: Props) => {
-  const { events, scrollMargin } = props;
-
-  const keys = [...events.keys()].toSorted();
+  const { calendarEvents: events, scrollMargin } = props;
 
   return (
     <div>
-      {keys.map((d) => {
-        const dt = new Date(d);
+      {events.map(({ date: dt, events: eventsInDate }) => {
         const anchor = toISODateString(dt);
         const date = toJapaneseDateString(dt);
-        const eventsInDate = events.get(d) ?? [];
+
+        if (eventsInDate.length == 0) {
+          return null;
+        }
+
         return (
-          <div key={d}>
+          <div key={dt.getTime()}>
             <div
               className="px-2 pt-2"
               id={anchor}

@@ -1,9 +1,9 @@
 import { Link } from "@remix-run/react";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { CalendarCell } from "./CalendarCell";
 import { getCalendarDatesOfMonth, toISODateString } from "./calendarDate";
-import { CalendarEvent, groupEventsByDate } from "./calendarEvents";
+import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 import { EventList } from "./EventList";
 
 interface Props {
@@ -18,15 +18,9 @@ interface Props {
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
-  const dates = getCalendarDatesOfMonth(year, month);
-
-  // const eventsInCurrentMonth = events.filter((event) => {
-  //   const start = dates[0][0].getTime();
-  //   const end = dates[dates.length - 1][dates[dates.length - 1].length - 1].getTime();
-  //   return start <= event.date && event.date <= end;
-  // });
-  // const groupedEvents = groupEventsByDate(eventsInCurrentMonth);
-  const groupedEvents = groupEventsByDate(events);
+  const dates = useMemo(() => getCalendarDatesOfMonth(year, month), [month, year]);
+  const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
+  const calendarEvents = useMemo(() => calendarMonth.flatMap((week) => week), [calendarMonth]);
 
   const stickyRef = useRef<HTMLDivElement>(null);
 
@@ -77,16 +71,10 @@ export const Calendar: React.FC<Props> = (props: Props) => {
             </tr>
           </thead>
           <tbody>
-            {dates.map((week, i) => (
+            {calendarMonth.map((week, i) => (
               <tr key={i} className="border-y border-gray-300">
-                {week.map((date, j) => {
+                {week.map(({ date, events }, j) => {
                   const dateString = toISODateString(date);
-                  const utcDate = Date.UTC(
-                    date.getUTCFullYear(),
-                    date.getUTCMonth(),
-                    date.getUTCDate(),
-                  );
-                  const events = groupedEvents.get(utcDate) ?? [];
                   return (
                     <td key={j} className="p-0">
                       {events.length == 0 ? (
@@ -118,7 +106,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
       </div>
 
       <EventList
-        events={groupedEvents}
+        calendarEvents={calendarEvents}
         scrollMargin={stickyRef.current?.getBoundingClientRect().bottom}
       />
     </div>
