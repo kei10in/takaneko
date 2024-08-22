@@ -57,7 +57,11 @@ export default function EventPage() {
               }}
             >
               <div className="absolute inset-0 bg-opacity-20 backdrop-blur-xl" />
-              <img src={meta.image.path} alt="アイキャッチ" className="relative mx-auto h-full" />
+              <img
+                src={meta.image.path}
+                alt="アイキャッチ"
+                className="relative mx-auto h-full w-full object-contain"
+              />
             </div>
           </Link>
         )}
