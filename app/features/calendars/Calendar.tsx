@@ -2,9 +2,9 @@ import { Link } from "@remix-run/react";
 import { useRef } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { CalendarCell } from "./CalendarCell";
-import { getCalendarDatesOfMonth, toISODateString, toJapaneseDateString } from "./calendarDate";
-import { CalendarEventItem } from "./CalendarEventItem";
+import { getCalendarDatesOfMonth, toISODateString } from "./calendarDate";
 import { CalendarEvent, groupEventsByDate } from "./calendarEvents";
+import { EventList } from "./EventList";
 
 interface Props {
   events: CalendarEvent[];
@@ -20,13 +20,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   const dates = getCalendarDatesOfMonth(year, month);
 
-  const eventsInCurrentMonth = events.filter((event) => {
-    const start = dates[0][0].getTime();
-    const end = dates[dates.length - 1][dates[dates.length - 1].length - 1].getTime();
-    return start <= event.date && event.date <= end;
-  });
-  const groupedEvents = groupEventsByDate(eventsInCurrentMonth);
-  const keys = [...groupedEvents.keys()].toSorted();
+  // const eventsInCurrentMonth = events.filter((event) => {
+  //   const start = dates[0][0].getTime();
+  //   const end = dates[dates.length - 1][dates[dates.length - 1].length - 1].getTime();
+  //   return start <= event.date && event.date <= end;
+  // });
+  // const groupedEvents = groupEventsByDate(eventsInCurrentMonth);
+  const groupedEvents = groupEventsByDate(events);
 
   const stickyRef = useRef<HTMLDivElement>(null);
 
@@ -117,39 +117,10 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         </table>
       </div>
 
-      <div>
-        {keys.map((d) => {
-          const dt = new Date(d);
-          const anchor = toISODateString(dt);
-          const date = toJapaneseDateString(dt);
-          const events = groupedEvents.get(d) ?? [];
-          return (
-            <div key={d}>
-              <div
-                className="px-2 pt-2"
-                id={anchor}
-                style={{
-                  scrollMarginTop: stickyRef.current?.getBoundingClientRect().bottom,
-                }}
-              >
-                {date}
-              </div>
-              <div>
-                {events.map((event) => (
-                  <Link key={event.id} to={`/events/${event.id}`}>
-                    <CalendarEventItem
-                      category={event.category}
-                      summary={event.summary}
-                      location={event.location}
-                      region={event.region}
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <EventList
+        events={groupedEvents}
+        scrollMargin={stickyRef.current?.getBoundingClientRect().bottom}
+      />
     </div>
   );
 };
