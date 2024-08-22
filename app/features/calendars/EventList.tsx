@@ -5,6 +5,9 @@ import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
   calendarEvents: { date: Date; events: CalendarEvent[] }[];
+
+  // カレンダーの下に配置されるとき用のスクロールマージン。
+  // サイドに配置されるときの値はこのコンポーネント内で設定されています。
   scrollMargin?: number;
 }
 
@@ -24,7 +27,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
         return (
           <div key={dt.getTime()}>
             <div
-              className="px-2 pt-2"
+              className="px-2 pt-2 lg:!scroll-mt-0"
               id={anchor}
               style={{
                 scrollMarginTop: scrollMargin,

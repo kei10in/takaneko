@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { useMemo, useRef } from "react";
 import { useRem } from "~/hooks/useRem";
 import { getCalendarDatesOfMonth } from "./calendarDate";
@@ -25,12 +26,11 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   const rem = useRem();
 
+  const scrollMargin = stickyRef.current ? stickyRef.current.clientHeight + 3 * rem : undefined;
+
   return (
-    <div className="bg-white">
-      <div
-        className="sticky top-12 bg-white lg:top-[calc(var(--header-height)+3rem)]"
-        ref={stickyRef}
-      >
+    <div className="bg-white lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
+      <div className="sticky top-12 bg-white lg:static lg:top-auto lg:mr-96" ref={stickyRef}>
         <MonthlyCalendar
           calendarMonth={calendarMonth}
           year={year}
@@ -41,10 +41,15 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         />
       </div>
 
-      <EventList
-        calendarEvents={calendarEvents}
-        scrollMargin={stickyRef.current ? stickyRef.current.clientHeight + 3 * rem : undefined}
-      />
+      <div
+        className={clsx(
+          "lg:fixed lg:bottom-0 lg:block lg:w-96 lg:overflow-y-auto lg:px-4",
+          "lg:right-[max(0px,calc(50%-32rem))] lg:top-[calc(var(--header-height)+3rem)]",
+          "xl:right-[max(0px,calc(50%-40rem))] 2xl:right-[max(0px,calc(50%-48rem))]",
+        )}
+      >
+        <EventList calendarEvents={calendarEvents} scrollMargin={scrollMargin} />
+      </div>
     </div>
   );
 };
