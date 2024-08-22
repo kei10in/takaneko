@@ -47,7 +47,7 @@ export default function EventPage() {
 
   return (
     <div className="container mx-auto pb-12 lg:max-w-4xl">
-      <div className="space-y-8">
+      <div className="space-y-2">
         {meta.image && (
           <Link to="#photo" replace={true}>
             <div
@@ -62,7 +62,7 @@ export default function EventPage() {
           </Link>
         )}
         <div className="space-y-2">
-          <div className="px-4 text-lg font-bold">
+          <div className="px-4 pt-4 text-lg font-bold">
             <span>{categoryToEmoji(meta.category)}</span>
             <span>{meta.summary}</span>
           </div>
