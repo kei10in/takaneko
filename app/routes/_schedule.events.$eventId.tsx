@@ -10,6 +10,7 @@ import {
 import clsx from "clsx";
 import { HiArrowTopRightOnSquare, HiCalendar, HiLink, HiMapPin } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
+import { convertISODateStringToJapaneseDateString } from "~/features/calendars/calendarDate";
 import { EventContent, loadEventContent } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 
@@ -72,7 +73,7 @@ export default function EventPage() {
           </div>
           <div className="flex items-center gap-1 px-5">
             <HiCalendar className="text-gray-400" />
-            <p>{meta.date}</p>
+            <p>{convertISODateStringToJapaneseDateString(meta.date)}</p>
           </div>
           {meta.location && (
             <Link

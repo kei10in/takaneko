@@ -30,6 +30,11 @@ export const toJapaneseDateString = (date: Date): string => {
   return `${date.getUTCFullYear()}年${m}月${d}日`;
 };
 
+export const convertISODateStringToJapaneseDateString = (date: string): string => {
+  const [year, month, day] = date.split("-");
+  return `${year}年${month}月${day}日`;
+};
+
 export const dateToYearMonth = (date: Date): { year: number; month: number } => {
   return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1 };
 };
