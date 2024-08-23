@@ -111,7 +111,7 @@ export default function EventPage() {
       <article
         className={clsx(
           "max-w-none",
-          "pay-4 prose px-4",
+          "prose px-4 py-4",
           "prose-h1:my-2 prose-h1:text-center prose-h1:text-lg",
           "prose-h2:my-2 prose-h2:text-lg",
           "prose-p:text-base",
