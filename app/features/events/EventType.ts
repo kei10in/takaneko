@@ -71,7 +71,7 @@ export const categoryToColor = (category: EventType): string => {
     case EventType.WEB:
       return "bg-orange-400";
     case EventType.MAGAZINE:
-      return "bg-ember-400";
+      return "bg-indigo-400";
     case EventType.OTHER:
       return "bg-amber-900";
   }
