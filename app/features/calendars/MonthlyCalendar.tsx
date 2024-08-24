@@ -16,6 +16,8 @@ interface Props {
 export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const { calendarMonth, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
+  const today = toISODateString(new Date());
+
   return (
     <div>
       <div className="mx-4 flex items-center justify-between py-2">
@@ -81,6 +83,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                           day={date.getUTCDay()}
                           events={events}
                           currentMonth={date.getUTCMonth() + 1 == month}
+                          today={dateString == today}
                         />
                       </Link>
                     )}

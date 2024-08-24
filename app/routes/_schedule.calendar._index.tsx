@@ -2,9 +2,13 @@ import {
   unstable_defineClientLoader as defineClientLoader,
   MetaFunction,
   useLoaderData,
+  useLocation,
+  useNavigate,
 } from "@remix-run/react";
+import { useEffect } from "react";
 import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
+import { toISODateString } from "~/features/calendars/calendarDate";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { nextMonthHref, previousMonthHref, todayHref } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
@@ -31,6 +35,16 @@ export const clientLoader = defineClientLoader(
 );
 
 export default function Index() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.hash === "") {
+      const anchor = toISODateString(new Date());
+      navigate(`#${anchor}`);
+    }
+  }, [location.hash, navigate]);
+
   const { year, month, events } = useLoaderData<typeof clientLoader>();
   const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 

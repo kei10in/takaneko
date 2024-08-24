@@ -6,11 +6,12 @@ interface Props {
   day: number;
   events: CalendarEvent[];
   currentMonth: boolean;
+  today?: boolean;
   selected?: boolean;
 }
 
 export const CalendarCell: React.FC<Props> = (props: Props) => {
-  const { date, day, events, currentMonth, selected = false } = props;
+  const { date, day, events, currentMonth, today = false, selected = false } = props;
 
   const regions = uniqueEventRegions(events);
 
@@ -19,10 +20,12 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
   const isWeekday = !isSunday && !isSaturday;
 
   return (
-    <div className={clsx("h-11 w-full lg:h-16", selected && "bg-blue-500 text-white")}>
+    <div
+      className={clsx("h-11 w-full lg:h-16", selected && "overflow-hidden bg-blue-500 text-white")}
+    >
       <div
         className={clsx(
-          "text-center text-sm",
+          "pt-px",
           currentMonth && isWeekday && "text-gray-800",
           currentMonth && isSunday && "text-red-500",
           currentMonth && isSaturday && "text-gray-800",
@@ -30,7 +33,15 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
           selected && "bg-blue-500 text-white",
         )}
       >
-        {date}
+        <div
+          data-today={today ? true : undefined}
+          className={clsx(
+            "mx-auto flex h-[1.375rem] w-[1.375rem] items-center justify-center rounded-full text-sm",
+            "data-[today]:bg-nadeshiko-900 data-[today]:text-white",
+          )}
+        >
+          {date}
+        </div>
       </div>
       {regions[0] && (
         <div className={clsx("text-center text-sm", !currentMonth && "text-gray-300")}>
