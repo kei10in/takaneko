@@ -1,6 +1,5 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import type { MetaFunction } from "@remix-run/node";
-import { Link, Outlet } from "@remix-run/react";
+import { Link, MetaFunction, Outlet } from "@remix-run/react";
 import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
