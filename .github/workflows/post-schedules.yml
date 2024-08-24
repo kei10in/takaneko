@@ -2,7 +2,7 @@
 name: Post Today's Takaneko
 
 on:
-  # 毎朝 日本時間の 7 時に実行
+  # 日本時間の毎朝 7 時に実行
   schedule:
     - cron: "0 22 * * *"
 
