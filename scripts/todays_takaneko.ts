@@ -70,7 +70,10 @@ const loadEventMetaInDate = async (date: Date): Promise<EventMeta[]> => {
 const findEventFiles = async (date: Date) => {
   const year = date.getFullYear().toString();
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const prefix = date.toISOString().split("T")[0];
+  const d = date.getDate().toString().padStart(2, "0");
+  // ここではローカルタイムで日付を判断する。
+  // `Date.toISOString()` は UTC ベースなので使えない。
+  const prefix = `${year}-${month}-${d}`;
 
   const scriptDir = import.meta.dirname;
   const files = await glob(`${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.mdx`);
