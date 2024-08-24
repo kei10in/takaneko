@@ -4,9 +4,9 @@
 
 ## Technologies
 
-- [Remix SPA Mode](https://remix.run/docs/en/main/guides/spa-mode)
+- [Remix](https://remix.run/docs/en/main/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- GitHub Pages
+- [Cloudflare Pages](https://developers.cloudflare.com/pages/)
 
 ## Development
 
