@@ -39,7 +39,7 @@ export default function Index() {
             </p>
             <div className="flex-none">
               <button
-                className="hover:text-nadeshiko-950 p-2 text-lg text-nadeshiko-800"
+                className="p-2 text-lg text-nadeshiko-800 hover:text-nadeshiko-950"
                 onClick={() => setShowMenu(true)}
               >
                 <HiBars3 />
