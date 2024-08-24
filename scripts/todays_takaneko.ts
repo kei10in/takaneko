@@ -1,7 +1,6 @@
 import { glob } from "glob";
 import Handlebars from "handlebars";
 import { register } from "node:module";
-import { toJapaneseDateString } from "~/features/calendars/calendarDate";
 import { categoryToEmoji, compareEventType } from "~/features/events/EventType";
 import { EventMeta, validateEventMeta } from "~/features/events/meta";
 
@@ -45,7 +44,10 @@ const createRequestBody = async () => {
 
   const items = events.map((event) => `${categoryToEmoji(event.category)}${event.summary}`);
 
-  const date = toJapaneseDateString(today);
+  const y = today.getFullYear();
+  const m = (today.getMonth() + 1).toString().padStart(2, "0");
+  const d = today.getDate().toString().padStart(2, "0");
+  const date = `${y}年${m}月${d}日`;
   const content = template({ date, items });
 
   const body = JSON.stringify({ value1: content });
