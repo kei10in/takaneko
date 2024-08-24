@@ -5,7 +5,7 @@ export const ReadMe: React.FC = () => {
     <div className="m-4 text-lg">
       <p>生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。</p>
       <figure className="m-4 flex justify-center">
-        <img src="/takaneko/sample.png" alt="サンプル" className="w-72 text-center" />
+        <img src="/takaneko/sample.png" alt="サンプル" className="w-72 text-center shadow-md" />
       </figure>
 
       <h2 className="mt-6 text-xl font-bold">スタンプ モード:</h2>
