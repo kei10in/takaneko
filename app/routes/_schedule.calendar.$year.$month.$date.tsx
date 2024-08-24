@@ -6,7 +6,7 @@ import {
 } from "@remix-run/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
-import { toJapaneseDateString } from "~/features/calendars/calendarDate";
+import { toJapaneseDateStringWithDayOfWeek } from "~/features/calendars/calendarDate";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { nextDayHref, previousDayHref, validateYearMonthDate } from "~/features/calendars/utils";
@@ -39,10 +39,10 @@ export default function Index() {
   const d = new Date(Date.UTC(year, month - 1, date));
 
   return (
-    <div className="container mx-auto py-4">
+    <div className="container mx-auto p-4">
       <div className="mx-auto max-w-2xl space-y-2">
         <div className="flex items-center justify-between">
-          <h1 className="px-2 text-xl font-bold">{toJapaneseDateString(d)}</h1>
+          <h1 className="px-2 text-lg font-bold">{toJapaneseDateStringWithDayOfWeek(d)}</h1>
           <div className="flex h-8 w-36 items-stretch divide-x overflow-hidden rounded-md border border-gray-200">
             <Link
               className="inline-flex h-full flex-grow items-center justify-center"
