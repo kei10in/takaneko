@@ -1,4 +1,5 @@
 import { Link } from "@remix-run/react";
+import clsx from "clsx";
 import { toISODateString, toJapaneseDateString } from "./calendarDate";
 import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
@@ -6,14 +7,11 @@ import { dateHref } from "./utils";
 
 interface Props {
   calendarEvents: { date: Date; events: CalendarEvent[] }[];
-
-  // カレンダーの下に配置されるとき用のスクロールマージン。
-  // サイドに配置されるときの値はこのコンポーネント内で設定されています。
-  scrollMargin?: number;
+  classNameForDate?: string;
 }
 
 export const EventList: React.FC<Props> = (props: Props) => {
-  const { calendarEvents: events, scrollMargin } = props;
+  const { calendarEvents: events, classNameForDate } = props;
 
   return (
     <div className="pb-4">
@@ -27,13 +25,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
 
         return (
           <div key={dt.getTime()}>
-            <div
-              className="px-2 pt-4 text-lg font-bold lg:!scroll-mt-0"
-              id={anchor}
-              style={{
-                scrollMarginTop: scrollMargin,
-              }}
-            >
+            <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)} id={anchor}>
               <Link to={dateHref(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate())}>
                 {date}
               </Link>
