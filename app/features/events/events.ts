@@ -1,11 +1,12 @@
 import { stem } from "~/utils/string";
 import { nextMonth, previousMonth } from "../calendars/utils";
+import { compareEventType } from "./EventType";
 import { EventMeta, validateEventMeta } from "./meta";
 
 export interface EventModule {
   id: string;
-  meta: EventMeta;
   filename: string;
+  meta: EventMeta;
 }
 
 export interface EventContent {
@@ -45,6 +46,40 @@ export const loadEvents = async (params: {
     });
 
   return (await Promise.all(promises)).filter((x) => x != undefined);
+};
+
+export const loadEventsInDay = async (params: {
+  year: number;
+  month: number;
+  date: number;
+}): Promise<EventModule[]> => {
+  const { year, month, date } = params;
+
+  const modules = import.meta.glob("./**/*.mdx", { import: "meta" });
+  const y = year.toString();
+  const m = month.toString().padStart(2, "0");
+  const d = date.toString().padStart(2, "0");
+
+  const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
+
+  const promises = Object.entries(modules)
+    .filter(([filename]) => {
+      return prefixes.some((prefix) => filename.startsWith(prefix));
+    })
+    .map(async ([filename, event]) => {
+      const meta = validateEventMeta(await event());
+      if (meta == undefined) {
+        return undefined;
+      }
+      const id = stem(filename);
+
+      return { id, filename, meta };
+    });
+
+  const events = (await Promise.all(promises)).filter((x): x is EventModule => x != undefined);
+  events.sort((a, b) => compareEventType(a.meta.category, b.meta.category));
+
+  return events;
 };
 
 export const loadEventContent = async (eventId: string): Promise<EventContent | undefined> => {

@@ -7,9 +7,9 @@ import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import {
+  currentMonthHref,
   nextMonthHref,
   previousMonthHref,
-  todayHref,
   validateYearMonth,
 } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
@@ -47,7 +47,7 @@ export default function Index() {
         events={calendarEvents}
         year={year}
         month={month}
-        hrefToday={todayHref()}
+        hrefToday={currentMonthHref()}
         hrefPreviousMonth={previousMonthHref(year, month)}
         hrefNextMonth={nextMonthHref(year, month)}
       />

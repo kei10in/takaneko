@@ -10,7 +10,7 @@ import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { toISODateString } from "~/features/calendars/calendarDate";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
-import { nextMonthHref, previousMonthHref, todayHref } from "~/features/calendars/utils";
+import { currentMonthHref, nextMonthHref, previousMonthHref } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
 
 export const meta: MetaFunction = () => {
@@ -54,7 +54,7 @@ export default function Index() {
         events={calendarEvents}
         year={year}
         month={month}
-        hrefToday={todayHref()}
+        hrefToday={currentMonthHref()}
         hrefPreviousMonth={previousMonthHref(year, month)}
         hrefNextMonth={nextMonthHref(year, month)}
       />

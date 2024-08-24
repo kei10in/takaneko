@@ -2,6 +2,7 @@ import { Link } from "@remix-run/react";
 import { toISODateString, toJapaneseDateString } from "./calendarDate";
 import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
+import { dateHref } from "./utils";
 
 interface Props {
   calendarEvents: { date: Date; events: CalendarEvent[] }[];
@@ -15,7 +16,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
   const { calendarEvents: events, scrollMargin } = props;
 
   return (
-    <div>
+    <div className="pb-4">
       {events.map(({ date: dt, events: eventsInDate }) => {
         const anchor = toISODateString(dt);
         const date = toJapaneseDateString(dt);
@@ -27,13 +28,15 @@ export const EventList: React.FC<Props> = (props: Props) => {
         return (
           <div key={dt.getTime()}>
             <div
-              className="px-2 pt-2 lg:!scroll-mt-0"
+              className="px-2 pt-4 text-lg font-bold lg:!scroll-mt-0"
               id={anchor}
               style={{
                 scrollMarginTop: scrollMargin,
               }}
             >
-              {date}
+              <Link to={dateHref(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate())}>
+                {date}
+              </Link>
             </div>
             <div>
               {eventsInDate.map((event) => (
