@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import { MetaFunction } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import ReleaseNotes from "../../RELEASES.md";
 

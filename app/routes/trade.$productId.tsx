@@ -1,5 +1,8 @@
-import type { MetaFunction } from "@remix-run/node";
-import { unstable_defineClientLoader as defineClientLoader, useLoaderData } from "@remix-run/react";
+import {
+  unstable_defineClientLoader as defineClientLoader,
+  MetaFunction,
+  useLoaderData,
+} from "@remix-run/react";
 import { TradeEditor2 } from "~/components/TradeEditor2";
 import { SITE_TITLE } from "~/constants";
 import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";

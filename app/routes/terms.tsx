@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import { MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
 import { SITE_TITLE } from "~/constants";
 
