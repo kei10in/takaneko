@@ -7,7 +7,7 @@ import { EventMeta, validateEventMeta } from "~/features/events/meta";
 register("@mdx-js/node-loader", import.meta.url);
 
 const template = Handlebars.compile(
-  "{{date}}の #たかねこスケジュール\n\n" +
+  "{{date}}の #たかねこの予定\n\n" +
     "{{#each items}}{{this}}\n{{/each}}\n\n" +
     "👇詳しくはこちら👇\n" +
     "https://takanekofan.app/calendar/today\n\n" +
