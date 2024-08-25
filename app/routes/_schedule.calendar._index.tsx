@@ -8,10 +8,10 @@ import {
 import { useEffect } from "react";
 import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
-import { toISODateString } from "~/features/calendars/calendarDate";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { currentMonthHref, nextMonthHref, previousMonthHref } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 export const meta: MetaFunction = () => {
   return [
@@ -40,7 +40,7 @@ export default function Index() {
 
   useEffect(() => {
     if (location.hash === "") {
-      const anchor = toISODateString(new Date());
+      const anchor = NaiveDate.today().toString();
       navigate(`#${anchor}`);
     }
   }, [location.hash, navigate]);

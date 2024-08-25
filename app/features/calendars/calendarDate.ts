@@ -1,4 +1,6 @@
-export const getCalendarDatesOfMonth = (year: number, month: number): Date[][] => {
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
+
+export const getCalendarDatesOfMonth = (year: number, month: number): NaiveDate[][] => {
   const firstDateOfMonth = new Date(Date.UTC(year, month - 1, 1));
   const firstDayOfMonth = firstDateOfMonth.getUTCDay();
   const startDate = new Date(firstDateOfMonth);
@@ -9,25 +11,15 @@ export const getCalendarDatesOfMonth = (year: number, month: number): Date[][] =
   const endDate = new Date(lastDateOfMonth);
   endDate.setUTCDate(lastDateOfMonth.getUTCDate() + (6 - lastDayOfMonth));
 
-  const weeks: Date[][] = [];
+  const weeks: NaiveDate[][] = [];
   for (let d = new Date(startDate); d <= endDate; d.setUTCDate(d.getUTCDate() + 1)) {
     if (weeks.length === 0 || weeks[weeks.length - 1].length === 7) {
       weeks.push([]);
     }
-    weeks[weeks.length - 1].push(new Date(d));
+    weeks[weeks.length - 1].push(NaiveDate.fromTimeAsUTC(d.getTime()));
   }
 
   return weeks;
-};
-
-export const toISODateString = (date: Date): string => {
-  return date.toISOString().split("T")[0];
-};
-
-export const toJapaneseDateString = (date: Date): string => {
-  const m = (date.getUTCMonth() + 1).toString().padStart(2, "0");
-  const d = date.getUTCDate().toString().padStart(2, "0");
-  return `${date.getUTCFullYear()}年${m}月${d}日`;
 };
 
 export const toJapaneseDateStringWithDayOfWeek = (date: Date): string => {

@@ -1,11 +1,11 @@
 import { Link } from "@remix-run/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { CalendarCell } from "./CalendarCell";
-import { toISODateString } from "./calendarDate";
 import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
-  calendarMonth: { date: Date; events: CalendarEvent[] }[][];
+  calendarMonth: { date: NaiveDate; events: CalendarEvent[] }[][];
   year: number;
   month: number;
   hrefToday: string;
@@ -15,8 +15,6 @@ interface Props {
 
 export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const { calendarMonth, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
-
-  const today = toISODateString(new Date());
 
   return (
     <div>
@@ -64,26 +62,26 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
           {calendarMonth.map((week, i) => (
             <tr key={i} className="border-y border-gray-300">
               {week.map(({ date, events }, j) => {
-                const dateString = toISODateString(date);
+                const dateString = date.toString();
                 return (
                   <td key={j} className="p-0">
                     {events.length == 0 ? (
                       <div className="w-full">
                         <CalendarCell
-                          date={date.getUTCDate()}
-                          day={date.getUTCDay()}
+                          date={date.day}
+                          day={date.dayOfWeek}
                           events={events}
-                          currentMonth={date.getUTCMonth() + 1 == month}
+                          currentMonth={date.month == month}
                         />
                       </div>
                     ) : (
                       <Link className="block w-full" to={`#${dateString}`}>
                         <CalendarCell
-                          date={date.getUTCDate()}
-                          day={date.getUTCDay()}
+                          date={date.day}
+                          day={date.dayOfWeek}
                           events={events}
-                          currentMonth={date.getUTCMonth() + 1 == month}
-                          today={dateString == today}
+                          currentMonth={date.month == month}
+                          today={date.equals(NaiveDate.today())}
                         />
                       </Link>
                     )}

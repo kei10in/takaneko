@@ -1,11 +1,12 @@
 import { compareEventType, EventType } from "~/features/events/EventType";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventModule } from "../events/events";
 
 export interface CalendarEvent {
   id: string;
   category: EventType;
   summary: string;
-  date: number;
+  date: NaiveDate;
   region?: string;
   location?: string;
   link?: { text: string; url: string };
@@ -16,14 +17,14 @@ export interface CalendarEvent {
  * Zip calendar dates and events.
  */
 export const zipCalendarDatesAndEvents = (
-  dates: Date[][],
+  dates: NaiveDate[][],
   events: CalendarEvent[],
-): { date: Date; events: CalendarEvent[] }[][] => {
+): { date: NaiveDate; events: CalendarEvent[] }[][] => {
   const groupedEvents = groupEventsByDate(events);
 
   return dates.map((week) =>
     week.map((date) => {
-      const utcDate = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate());
+      const utcDate = date.getTimeAsUTC();
       const eventsInDate = sortedCalendarEventsByCategory(groupedEvents.get(utcDate) ?? []);
       return { date, events: eventsInDate };
     }),
@@ -36,8 +37,7 @@ export const zipCalendarDatesAndEvents = (
 export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
   const map = new Map<number, CalendarEvent[]>();
   for (const event of events) {
-    const date = new Date(event.date);
-    const key = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+    const key = event.date.getTimeAsUTC();
     if (!map.has(key)) {
       map.set(key, []);
     }
@@ -51,7 +51,7 @@ export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarE
     id: event.id,
     category: event.meta.category,
     summary: event.meta.summary,
-    date: Date.parse(event.meta.date),
+    date: NaiveDate.parseUnsafe(event.meta.date),
     location: event.meta.location,
     region: event.meta.region,
     link: event.meta.link,
