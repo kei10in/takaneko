@@ -52,7 +52,8 @@ export class NaiveDate {
 
   static today(): NaiveDate {
     const now = new Date();
-    return NaiveDate.fromTimeAsUTC(now.getTime());
+    // Use local time zone
+    return new NaiveDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
   }
 
   static parseUnsafe(date: string): NaiveDate {
