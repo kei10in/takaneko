@@ -1,5 +1,6 @@
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { stem } from "~/utils/string";
-import { nextMonth, previousMonth } from "../calendars/utils";
 import { compareEventType } from "./EventType";
 import { EventMeta, validateEventMeta } from "./meta";
 
@@ -14,20 +15,15 @@ export interface EventContent {
   Content: () => JSX.Element;
 }
 
-export const loadEvents = async (params: {
-  year: number;
-  month: number;
-}): Promise<EventModule[]> => {
-  const { year, month } = params;
-
-  const prev = previousMonth(year, month);
-  const next = nextMonth(year, month);
+export const loadEvents = async (month: NaiveMonth): Promise<EventModule[]> => {
+  const prev = month.previousMonth();
+  const next = month.nextMonth();
 
   const events = import.meta.glob("./**/*.mdx", { import: "meta" });
 
   const prefixes = [
     `./${prev.year}/${prev.month.toString().padStart(2, "0")}/`,
-    `./${year}/${month.toString().padStart(2, "0")}/`,
+    `./${month.year}/${month.month.toString().padStart(2, "0")}/`,
     `./${next.year}/${next.month.toString().padStart(2, "0")}/`,
   ];
 
@@ -48,17 +44,11 @@ export const loadEvents = async (params: {
   return (await Promise.all(promises)).filter((x) => x != undefined);
 };
 
-export const loadEventsInDay = async (params: {
-  year: number;
-  month: number;
-  date: number;
-}): Promise<EventModule[]> => {
-  const { year, month, date } = params;
-
+export const loadEventsInDay = async (date: NaiveDate): Promise<EventModule[]> => {
   const modules = import.meta.glob("./**/*.mdx", { import: "meta" });
-  const y = year.toString();
-  const m = month.toString().padStart(2, "0");
-  const d = date.toString().padStart(2, "0");
+  const y = date.year.toString();
+  const m = date.month.toString().padStart(2, "0");
+  const d = date.day.toString().padStart(2, "0");
 
   const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
 

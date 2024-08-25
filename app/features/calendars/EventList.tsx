@@ -1,12 +1,13 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
-import { toISODateString, toJapaneseDateString } from "./calendarDate";
+import { displayDate } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
 import { dateHref } from "./utils";
 
 interface Props {
-  calendarEvents: { date: Date; events: CalendarEvent[] }[];
+  calendarEvents: { date: NaiveDate; events: CalendarEvent[] }[];
   classNameForDate?: string;
 }
 
@@ -16,19 +17,17 @@ export const EventList: React.FC<Props> = (props: Props) => {
   return (
     <div className="pb-4">
       {events.map(({ date: dt, events: eventsInDate }) => {
-        const anchor = toISODateString(dt);
-        const date = toJapaneseDateString(dt);
+        const anchor = dt.toString();
+        const date = displayDate(dt);
 
         if (eventsInDate.length == 0) {
           return null;
         }
 
         return (
-          <div key={dt.getTime()}>
+          <div key={dt.getTimeAsUTC()}>
             <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)} id={anchor}>
-              <Link to={dateHref(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate())}>
-                {date}
-              </Link>
+              <Link to={dateHref(dt)}>{date}</Link>
             </div>
             <div>
               {eventsInDate.map((event) => (

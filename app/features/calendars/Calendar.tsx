@@ -3,36 +3,38 @@ import clsx from "clsx";
 import { useMemo } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { displayMonth } from "~/utils/dateDisplay";
-import { getCalendarDatesOfMonth } from "./calendarDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
+import { getCalendarDatesOfMonth } from "../../utils/calendar/calendarDate";
 import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
 
 interface Props {
   events: CalendarEvent[];
-  year: number;
-  month: number;
+  month: NaiveMonth;
   hrefToday: string;
   hrefPreviousMonth: string;
   hrefNextMonth: string;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const { events, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
-  const dates = useMemo(() => getCalendarDatesOfMonth(year, month), [month, year]);
+  const dates = useMemo(
+    () => getCalendarDatesOfMonth(month.year, month.month),
+    [month.year, month.month],
+  );
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
   const calendarEvents = useMemo(() => calendarMonth.flatMap((week) => week), [calendarMonth]);
 
-  const prevMonth = new Date(Date.UTC(year, month - 2, 1));
-  const nextMonth = new Date(Date.UTC(year, month, 1));
+  const prevMonth = month.previousMonth();
+  const nextMonth = month.nextMonth();
 
   return (
     <div className="bg-white lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
       <div className="sticky top-12 bg-white lg:static lg:top-auto lg:mr-96">
         <MonthlyCalendar
           calendarMonth={calendarMonth}
-          year={year}
           month={month}
           hrefToday={hrefToday}
           hrefPreviousMonth={`${hrefPreviousMonth}#events-list`}
@@ -86,13 +88,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
               <span>
                 <HiChevronLeft />
               </span>
-              <span>{displayMonth(prevMonth.getUTCFullYear(), prevMonth.getUTCMonth() + 1)}</span>
+              <span>{displayMonth(prevMonth)}</span>
             </Link>
             <Link
               className="flex items-center font-bold text-gray-500"
               to={`${hrefNextMonth}#events-list`}
             >
-              <span>{displayMonth(nextMonth.getUTCFullYear(), nextMonth.getUTCMonth() + 1)}</span>
+              <span>{displayMonth(nextMonth)}</span>
               <span>
                 <HiChevronRight />
               </span>
