@@ -8,7 +8,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
-import { nextDayHref, previousDayHref, validateYearMonthDate } from "~/features/calendars/utils";
+import { dateHref, validateYearMonthDate } from "~/features/calendars/utils";
 import { loadEventsInDay } from "~/features/events/events";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -30,7 +30,7 @@ export const clientLoader = defineClientLoader(async ({ params }) => {
   }
 
   const { year, month, date } = r;
-  const events = await loadEventsInDay({ year, month, date });
+  const events = await loadEventsInDay(new NaiveDate(year, month, date));
   return { year, month, date, events };
 });
 
@@ -47,7 +47,7 @@ export default function Index() {
           <div className="flex h-8 w-36 items-stretch divide-x overflow-hidden rounded-md border border-gray-200">
             <Link
               className="inline-flex h-full flex-grow items-center justify-center"
-              to={previousDayHref(year, month, date)}
+              to={dateHref(d.previousDate())}
               preventScrollReset={true}
             >
               <HiChevronLeft />
@@ -61,7 +61,7 @@ export default function Index() {
             </Link>
             <Link
               className="inline-flex h-full flex-grow items-center justify-center"
-              to={nextDayHref(year, month, date)}
+              to={dateHref(d.nextDate())}
               preventScrollReset={true}
             >
               <HiChevronRight />

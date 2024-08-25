@@ -1,3 +1,4 @@
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { stem } from "~/utils/string";
 import { compareEventType } from "./EventType";
@@ -43,17 +44,11 @@ export const loadEvents = async (month: NaiveMonth): Promise<EventModule[]> => {
   return (await Promise.all(promises)).filter((x) => x != undefined);
 };
 
-export const loadEventsInDay = async (params: {
-  year: number;
-  month: number;
-  date: number;
-}): Promise<EventModule[]> => {
-  const { year, month, date } = params;
-
+export const loadEventsInDay = async (date: NaiveDate): Promise<EventModule[]> => {
   const modules = import.meta.glob("./**/*.mdx", { import: "meta" });
-  const y = year.toString();
-  const m = month.toString().padStart(2, "0");
-  const d = date.toString().padStart(2, "0");
+  const y = date.year.toString();
+  const m = date.month.toString().padStart(2, "0");
+  const d = date.day.toString().padStart(2, "0");
 
   const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
 

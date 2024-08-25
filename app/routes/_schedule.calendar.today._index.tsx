@@ -5,6 +5,7 @@ import {
 } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { dateHref } from "~/features/calendars/utils";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,12 +18,8 @@ export const meta: MetaFunction = () => {
 };
 
 export const clientLoader = defineClientLoader(async () => {
-  const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth() + 1;
-  const date = today.getDate();
-
-  return redirect(dateHref(year, month, date));
+  const today = NaiveDate.today();
+  return redirect(dateHref(today));
 });
 
 export default function Index() {

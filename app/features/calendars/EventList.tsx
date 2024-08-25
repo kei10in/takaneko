@@ -27,7 +27,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
         return (
           <div key={dt.getTimeAsUTC()}>
             <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)} id={anchor}>
-              <Link to={dateHref(dt.year, dt.month, dt.day)}>{date}</Link>
+              <Link to={dateHref(dt)}>{date}</Link>
             </div>
             <div>
               {eventsInDate.map((event) => (
