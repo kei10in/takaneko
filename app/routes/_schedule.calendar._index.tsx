@@ -30,7 +30,7 @@ export const clientLoader = defineClientLoader(
     const year = today.getFullYear();
     const month = today.getMonth() + 1;
 
-    const events = await loadEvents({ year, month });
+    const events = await loadEvents(new NaiveMonth(year, month));
     return { year, month, events };
   },
 );
