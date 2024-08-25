@@ -29,4 +29,9 @@ export class NaiveMonth {
   equals = (other: NaiveMonth): boolean => {
     return this.year === other.year && this.month === other.month;
   };
+
+  static current(): NaiveMonth {
+    const date = new Date();
+    return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
+  }
 }

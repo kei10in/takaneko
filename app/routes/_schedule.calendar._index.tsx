@@ -26,12 +26,10 @@ export const meta: MetaFunction = () => {
 
 export const clientLoader = defineClientLoader(
   async (): Promise<{ year: number; month: number; events: EventModule[] }> => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth() + 1;
+    const currentMonth = NaiveMonth.current();
 
-    const events = await loadEvents(new NaiveMonth(year, month));
-    return { year, month, events };
+    const events = await loadEvents(currentMonth);
+    return { year: currentMonth.year, month: currentMonth.month, events };
   },
 );
 
