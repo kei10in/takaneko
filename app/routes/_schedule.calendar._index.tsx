@@ -9,9 +9,10 @@ import { useEffect } from "react";
 import { SITE_TITLE } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
-import { currentMonthHref, nextMonthHref, previousMonthHref } from "~/features/calendars/utils";
+import { calendarMonthHref, currentMonthHref } from "~/features/calendars/utils";
 import { EventModule, loadEvents } from "~/features/events/events";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 
 export const meta: MetaFunction = () => {
   return [
@@ -46,17 +47,17 @@ export default function Index() {
   }, [location.hash, navigate]);
 
   const { year, month, events } = useLoaderData<typeof clientLoader>();
+  const m = new NaiveMonth(year, month);
   const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   return (
     <div className="container mx-auto">
       <Calendar
         events={calendarEvents}
-        year={year}
-        month={month}
+        month={m}
         hrefToday={currentMonthHref()}
-        hrefPreviousMonth={previousMonthHref(year, month)}
-        hrefNextMonth={nextMonthHref(year, month)}
+        hrefPreviousMonth={calendarMonthHref(m.previousMonth())}
+        hrefNextMonth={calendarMonthHref(m.nextMonth())}
       />
     </div>
   );

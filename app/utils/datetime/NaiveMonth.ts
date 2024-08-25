@@ -25,4 +25,8 @@ export class NaiveMonth {
     const date = new Date(Date.UTC(this.year, this.month - 2, 1));
     return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
   };
+
+  equals = (other: NaiveMonth): boolean => {
+    return this.year === other.year && this.month === other.month;
+  };
 }

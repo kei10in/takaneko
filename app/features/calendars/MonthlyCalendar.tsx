@@ -1,20 +1,21 @@
 import { Link } from "@remix-run/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarCell } from "./CalendarCell";
 import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
   calendarMonth: { date: NaiveDate; events: CalendarEvent[] }[][];
-  year: number;
-  month: number;
+  month: NaiveMonth;
   hrefToday: string;
   hrefPreviousMonth: string;
   hrefNextMonth: string;
 }
 
 export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
-  const { calendarMonth, year, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const { calendarMonth, month, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
   return (
     <div>
@@ -26,9 +27,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
         >
           <span className="mx-auto">今日</span>
         </Link>
-        <span className="text-gray-800">
-          {year}年{month}月
-        </span>
+        <span className="text-gray-800">{displayMonth(month)}</span>
         <span className="inline-flex h-8 w-24 divide-x overflow-hidden rounded-md border border-gray-200">
           <Link
             className="inline-flex h-full flex-grow items-center justify-center"
@@ -71,7 +70,8 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                           date={date.day}
                           day={date.dayOfWeek}
                           events={events}
-                          currentMonth={date.month == month}
+                          currentMonth={date.naiveMonth().equals(month)}
+                          today={date.equals(NaiveDate.today())}
                         />
                       </div>
                     ) : (
@@ -80,7 +80,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                           date={date.day}
                           day={date.dayOfWeek}
                           events={events}
-                          currentMonth={date.month == month}
+                          currentMonth={date.naiveMonth().equals(month)}
                           today={date.equals(NaiveDate.today())}
                         />
                       </Link>
