@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { getCalendarDatesOfMonth } from "./calendarDate";
+import { getCalendarDatesOfMonth } from "../../utils/calendar/calendarDate";
 import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";

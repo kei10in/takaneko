@@ -6,9 +6,10 @@ export class NaiveDate {
   readonly day: number;
 
   constructor(year: number, month: number, day: number) {
-    this.year = year;
-    this.month = month;
-    this.day = day;
+    const date = new Date(Date.UTC(year, month - 1, day));
+    this.year = date.getUTCFullYear();
+    this.month = date.getUTCMonth() + 1;
+    this.day = date.getUTCDate();
   }
 
   get dayOfWeek(): number {
