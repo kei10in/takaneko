@@ -21,27 +21,3 @@ export const getCalendarDatesOfMonth = (year: number, month: number): NaiveDate[
 
   return weeks;
 };
-
-export const toJapaneseDateStringWithDayOfWeek = (date: Date): string => {
-  const m = (date.getUTCMonth() + 1).toString().padStart(2, "0");
-  const d = date.getUTCDate().toString().padStart(2, "0");
-  const dayOfWeek = ["日", "月", "火", "水", "木", "金", "土"][date.getUTCDay()];
-  return `${date.getUTCFullYear()}年${m}月${d}日 (${dayOfWeek})`;
-};
-
-export const convertISODateStringToJapaneseDateString = (date: string): string => {
-  const [year, month, day] = date.split("-");
-  return `${year}年${month}月${day}日`;
-};
-
-export const dateToYearMonth = (date: Date): { year: number; month: number } => {
-  return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1 };
-};
-
-export const isEqualDate = (a: Date, b: Date): boolean => {
-  return (
-    a.getUTCFullYear() == b.getUTCFullYear() &&
-    a.getUTCMonth() == b.getUTCMonth() &&
-    a.getUTCDate() == b.getUTCDate()
-  );
-};
