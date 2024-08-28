@@ -6,6 +6,7 @@
 - スケジュールに「キャイ～ンのWANIWANIさせて」への出演を追加しました。
 - スケジュールの「Japan Trans Nations 2024 Presented by WOWOW PLUS」を中止にしました。
 - スケジュールに「UtaTen presents SHIGA IDOL COLLECTION 2024」を追加しました。
+- Favicon を変更しました。
 
 ## 2024-08-26
 
