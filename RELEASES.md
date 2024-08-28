@@ -5,6 +5,7 @@
 - スケジュールに「高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演記念 エリア別サイン会」を追加しました。
 - スケジュールに「キャイ～ンのWANIWANIさせて」への出演を追加しました。
 - スケジュールの「Japan Trans Nations 2024 Presented by WOWOW PLUS」を中止にしました。
+- スケジュールに「UtaTen presents SHIGA IDOL COLLECTION 2024」を追加しました。
 
 ## 2024-08-26
 
