@@ -17,7 +17,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="flex min-h-12 items-center gap-2 p-2">
-      <div className={clsx("w-1 self-stretch rounded-full", color)} />
+      <div className={clsx("w-1 flex-none self-stretch rounded-full", color)} />
       <div>
         <p className="space-x-1">
           <span>{categoryToEmoji(category)}</span>
