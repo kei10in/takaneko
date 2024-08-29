@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { SITE_TITLE } from "~/constants";
 
 interface Props {
@@ -46,10 +46,20 @@ export const Footer: React.FC<Props> = (props: Props) => {
             </section>
           </div>
 
-          <div className="flex items-center">
-            <div>MIT © 2024</div>
+          <div className="flex items-center gap-4">
+            <div className="flex-1">MIT © 2024</div>
 
-            <div className="ml-auto">
+            <div className="flex-0">
+              <Link
+                className="inline-block"
+                to="https://twitter.com/takanekofan"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaXTwitter className="h-6 w-6" />
+              </Link>
+            </div>
+            <div className="flex-0">
               <Link
                 className="inline-block"
                 to="https://github.com/kei10in/takaneko"
