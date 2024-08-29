@@ -1,17 +1,10 @@
 import {
   unstable_defineClientLoader as defineClientLoader,
   MetaFunction,
-  useLoaderData,
-  useLocation,
-  useNavigate,
+  redirect,
 } from "@remix-run/react";
-import { useEffect } from "react";
 import { SITE_TITLE } from "~/constants";
-import { Calendar } from "~/features/calendars/Calendar";
-import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
-import { calendarMonthHref, currentMonthHref } from "~/features/calendars/utils";
-import { EventModule, loadEvents } from "~/features/events/events";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { calendarMonthHref } from "~/features/calendars/utils";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 
 export const meta: MetaFunction = () => {
@@ -24,39 +17,11 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(
-  async (): Promise<{ year: number; month: number; events: EventModule[] }> => {
-    const currentMonth = NaiveMonth.current();
-
-    const events = await loadEvents(currentMonth);
-    return { year: currentMonth.year, month: currentMonth.month, events };
-  },
-);
+export const clientLoader = defineClientLoader(async () => {
+  const currentMonth = NaiveMonth.current();
+  return redirect(calendarMonthHref(currentMonth));
+});
 
 export default function Index() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (location.hash === "") {
-      const anchor = NaiveDate.today().toString();
-      navigate(`#${anchor}`);
-    }
-  }, [location.hash, navigate]);
-
-  const { year, month, events } = useLoaderData<typeof clientLoader>();
-  const m = new NaiveMonth(year, month);
-  const calendarEvents = events.map(convertEventModuleToCalendarEvent);
-
-  return (
-    <div className="container mx-auto">
-      <Calendar
-        events={calendarEvents}
-        month={m}
-        hrefToday={currentMonthHref()}
-        hrefPreviousMonth={calendarMonthHref(m.previousMonth())}
-        hrefNextMonth={calendarMonthHref(m.nextMonth())}
-      />
-    </div>
-  );
+  return null;
 }
