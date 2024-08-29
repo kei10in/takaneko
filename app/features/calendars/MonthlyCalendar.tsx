@@ -32,14 +32,12 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
           <Link
             className="inline-flex h-full flex-grow items-center justify-center"
             to={hrefPreviousMonth}
-            preventScrollReset={true}
           >
             <HiChevronLeft />
           </Link>
           <Link
             className="inline-flex h-full flex-grow items-center justify-center"
             to={hrefNextMonth}
-            preventScrollReset={true}
           >
             <HiChevronRight />
           </Link>

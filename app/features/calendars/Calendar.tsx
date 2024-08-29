@@ -31,30 +31,24 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const nextMonth = month.nextMonth();
 
   return (
-    <div className="bg-white lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
-      <div className="sticky top-12 bg-white lg:static lg:top-auto lg:mr-96">
+    <div className="bg-white lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
+      <div className="sticky top-12 h-fit bg-white lg:top-[calc(var(--header-height)+3rem)] lg:flex-1 lg:pb-8">
         <MonthlyCalendar
           calendarMonth={calendarMonth}
           month={month}
           hrefToday={hrefToday}
-          hrefPreviousMonth={`${hrefPreviousMonth}#events-list`}
-          hrefNextMonth={`${hrefNextMonth}#events-list`}
+          hrefPreviousMonth={hrefPreviousMonth}
+          hrefNextMonth={hrefNextMonth}
         />
       </div>
 
-      <div
-        className={clsx(
-          "px-4 lg:fixed lg:bottom-0 lg:block lg:w-96 lg:overflow-y-auto",
-          "lg:right-[max(0px,calc(50%-32rem))] lg:top-[calc(var(--header-height)+3rem)]",
-          "xl:right-[max(0px,calc(50%-40rem))] 2xl:right-[max(0px,calc(50%-48rem))]",
-        )}
-      >
+      <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
         <div
           id="events-list"
           className={clsx(
             calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
             calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
-            "lg:!scroll-mt-0",
+            "lg:flex-1 lg:!scroll-mt-[calc(var(--header-height)+3rem)]",
           )}
         >
           <EventList
@@ -62,12 +56,12 @@ export const Calendar: React.FC<Props> = (props: Props) => {
             classNameForDate={clsx(
               calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
               calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
-              "lg:!scroll-mt-0",
+              "lg:!scroll-mt-[calc(var(--header-height)+3rem)]",
             )}
           />
         </div>
 
-        <div className="ml-auto w-fit">
+        <div className="lg:flex-0 ml-auto w-fit">
           <Link
             to="#events-list"
             className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
@@ -81,19 +75,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
         <div className="pb-12">
           <div className="flex items-center justify-between">
-            <Link
-              className="flex items-center font-bold text-gray-500"
-              to={`${hrefPreviousMonth}#events-list`}
-            >
+            <Link className="flex items-center font-bold text-gray-500" to={`${hrefPreviousMonth}`}>
               <span>
                 <HiChevronLeft />
               </span>
               <span>{displayMonth(prevMonth)}</span>
             </Link>
-            <Link
-              className="flex items-center font-bold text-gray-500"
-              to={`${hrefNextMonth}#events-list`}
-            >
+            <Link className="flex items-center font-bold text-gray-500" to={`${hrefNextMonth}`}>
               <span>{displayMonth(nextMonth)}</span>
               <span>
                 <HiChevronRight />
