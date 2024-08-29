@@ -2,6 +2,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { useState } from "react";
 import { HiEllipsisVertical, HiXMark } from "react-icons/hi2";
+import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
@@ -23,7 +24,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <Links />
       </head>
-      <body className="text-gray-800">
+      <body className="flex min-h-svh flex-col text-gray-800">
         <div className="z-10 h-[--header-height] border-b border-b-nadeshiko-200 bg-nadeshiko-50 bg-opacity-90 backdrop-blur lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
@@ -50,7 +51,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        {children}
+        <div className="flex-1">{children}</div>
+
+        <Footer className="flex-none" />
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
           <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
