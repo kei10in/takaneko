@@ -77,7 +77,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         画面全体 (100svh) からヘッダーとパネル を引いた高さです。
         ヘッダーやパネルはモバイルとデスクトップで異なります。
       */}
-      <div className="min-h-[calc(100svh-var(--header-height)-3rem-7.1875rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-7.1875rem)]">
+      <div className="min-h-[calc(100lvh-3rem-7.1875rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-7.1875rem)]">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
             {imageLoading ? <ImageLoader width={width} height={height} /> : null}
