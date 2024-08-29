@@ -15,7 +15,10 @@ export const Footer: React.FC<Props> = (props: Props) => {
       <div className={"container mx-auto bg-gray-100 text-sm"}>
         <div className="mx-4 space-y-8 py-8">
           <div className="space-y-2">
-            <h2 className="text-base font-bold">{SITE_TITLE}</h2>
+            <h2 className="flex items-center text-base font-bold">
+              <img src="/icon.svg" alt="ロゴ" width={36} />
+              <p>{SITE_TITLE}</p>
+            </h2>
             <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>
             <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
             <p>使用されているイベントの画像は各イベントの主催者などの第三者に帰属します。</p>

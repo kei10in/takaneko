@@ -29,7 +29,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">
-                <Link to="/">🐈‍⬛🌸{SITE_TITLE}</Link>
+                <Link className="flex items-center" to="/">
+                  <img src="/icon.svg" alt="アイコン" width={36} />
+                  <p>{SITE_TITLE}</p>
+                </Link>
               </div>
               <div className="ml-auto">
                 <div className="hidden items-center gap-8 text-sm font-bold text-gray-500 lg:flex">
