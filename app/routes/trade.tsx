@@ -50,13 +50,13 @@ export default function Index() {
       </div>
 
       <div className="container mx-auto">
-        <div className="w-full">
+        <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
-          <nav className="fixed bottom-0 top-[var(--header-height)] hidden w-80 overflow-y-auto px-4 lg:block">
+          <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-80 flex-none overflow-y-auto px-4 lg:block">
             <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 
-          <main className="lg:ml-80">
+          <main className="flex-1">
             <Outlet />
           </main>
         </div>
