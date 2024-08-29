@@ -40,7 +40,7 @@ export default function Index() {
   const d = new NaiveDate(year, month, date);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto min-h-[calc(100svh-var(--header-height)-3rem)] p-4">
       <div className="mx-auto max-w-2xl space-y-2">
         <div className="flex items-center justify-between">
           <h1 className="px-2 text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
