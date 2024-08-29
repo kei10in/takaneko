@@ -1,6 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
 import { HiArrowsRightLeft, HiCalendar } from "react-icons/hi2";
-import { Footer } from "~/components/Footer";
 import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {
@@ -20,7 +19,7 @@ export default function Index() {
         <div className="w-full">
           <img className="mx-auto w-full max-w-3xl" src="/takaneko/hero.webp" alt="ヒーロー画像" />
         </div>
-        <section className="mx-auto mt-4 w-full max-w-md">
+        <section className="mx-auto mt-4 w-full max-w-md pb-12">
           <h2 className="mx-4 text-lg font-semibold text-gray-500">コンテンツ</h2>
           <ul className="mx-4 my-4 space-y-2">
             <li>
@@ -42,8 +41,6 @@ export default function Index() {
           </ul>
         </section>
       </div>
-
-      <Footer className="mt-24" />
     </div>
   );
 }
