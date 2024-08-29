@@ -10,8 +10,7 @@ const template = Handlebars.compile(
   "{{date}}の #たかねこの予定\n\n" +
     "{{#each items}}{{this}}\n{{/each}}\n\n" +
     "👇詳しくはこちら👇\n" +
-    "https://takanekofan.app/calendar/today\n\n" +
-    "#高嶺のなでしこ",
+    "https://takanekofan.app/calendar/today"
 );
 
 export const main = async () => {
