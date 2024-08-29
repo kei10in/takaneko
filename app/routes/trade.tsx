@@ -50,7 +50,7 @@ export default function Index() {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex w-full">
+        <div className="flex w-full pb-4">
           {/* サイドバー。モバイルでは非表示 */}
           <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-80 flex-none overflow-y-auto px-4 lg:block">
             <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
