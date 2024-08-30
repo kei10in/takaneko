@@ -16,8 +16,20 @@ export default function Index() {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="w-full">
-          <img className="mx-auto w-full max-w-3xl" src="/takaneko/hero.webp" alt="ヒーロー画像" />
+        <div className="relative mx-auto w-fit">
+          <img
+            className="w-full min-w-96 max-w-md md:max-w-3xl"
+            src="/takaneko/hero.jpg"
+            alt="ヒーロー画像"
+          />
+          <div className="absolute bottom-0 w-full bg-nadeshiko-100 bg-opacity-90 px-6 py-4 md:px-10 md:py-8">
+            <h1 className="text-right font-serif text-2xl font-bold leading-tight text-gray-500 md:text-5xl">
+              <span className="text-nadeshiko-900">高嶺のなでしこの</span>
+              <br />
+              ファンサイト
+              <span className="text-nadeshiko-900"></span>
+            </h1>
+          </div>
         </div>
         <section className="mx-auto mt-4 w-full max-w-md pb-12">
           <h2 className="mx-4 text-lg font-semibold text-gray-500">コンテンツ</h2>
