@@ -4,10 +4,11 @@ import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: SITE_TITLE },
+    { title: `${SITE_TITLE} - 高嶺のなでしこのファンサイト` },
     {
       name: "description",
-      content: "高嶺のなでしこ、たかねこのファンサイトです。",
+      content:
+        "高嶺のなでしこの非公式ファンサイト。トレード画像をつくるやつでは、これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。スケジュールでは、高嶺のなでしこのライブやイベント、テレビ出演などのスケジュールを確認することができます。",
     },
   ];
 };
