@@ -1,5 +1,4 @@
 import { MetaFunction } from "@remix-run/react";
-import clsx from "clsx";
 import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {
@@ -14,15 +13,7 @@ export const meta: MetaFunction = () => {
 
 export default function Releases() {
   return (
-    <article
-      className={clsx(
-        "container prose mx-auto my-8 space-y-4 px-4",
-        "prose-h1:text-xl",
-        "prose-h2:mb-2 prose-h2:mt-4 prose-h2:text-lg",
-        "prose-p:my-2 prose-p:text-sm",
-        "prose-li:my-1 prose-li:text-sm",
-      )}
-    >
+    <article className="markdown container mx-auto my-8 max-w-xl space-y-4 px-4">
       <h1>「{SITE_TITLE}」利用規約</h1>
       <p>
         「{SITE_TITLE}」利用規約 (以下、「本規約」といいます。) は、「{SITE_TITLE}」

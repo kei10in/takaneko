@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
 
 export default function Releases() {
   return (
-    <article className="container prose mx-auto my-8 px-4">
+    <article className="markdown container mx-auto my-8 max-w-xl px-4">
       <ReleaseNotes />
     </article>
   );

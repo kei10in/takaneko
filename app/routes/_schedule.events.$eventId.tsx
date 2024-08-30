@@ -7,7 +7,6 @@ import {
   useLocation,
   useNavigate,
 } from "@remix-run/react";
-import clsx from "clsx";
 import { HiArrowTopRightOnSquare, HiCalendar, HiLink, HiMapPin } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { EventContent, loadEventContent } from "~/features/events/events";
@@ -70,7 +69,7 @@ export default function EventPage() {
           </Link>
         )}
         <div className="space-y-2">
-          <div className="px-4 pt-4 text-lg font-bold">
+          <div className="px-4 pt-4 text-2xl font-bold">
             <span>{categoryToEmoji(meta.category)}</span>
             <span>{meta.summary}</span>
           </div>
@@ -112,16 +111,7 @@ export default function EventPage() {
         </div>
       </div>
 
-      <article
-        className={clsx(
-          "max-w-none",
-          "prose px-4 py-4",
-          "prose-h1:my-2 prose-h1:text-center prose-h1:text-lg",
-          "prose-h2:my-2 prose-h2:text-lg",
-          "prose-p:text-base",
-          "prose-li:my-0 prose-li:text-base",
-        )}
-      >
+      <article className="markdown max-w-none px-4 py-4">
         <Content />
       </article>
       {meta.image && (

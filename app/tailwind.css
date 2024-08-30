@@ -5,3 +5,101 @@
 :root {
   --header-height: 3.5rem;
 }
+
+@layer components {
+  .markdown {
+    @apply break-words leading-normal;
+
+    h1 {
+      @apply mb-4 mt-6 border-b pb-1 text-2xl font-semibold leading-tight;
+    }
+
+    h2 {
+      @apply mb-4 mt-6 border-b pb-1 text-xl font-semibold leading-tight;
+    }
+
+    h3 {
+      @apply mb-4 mt-6 text-lg font-semibold leading-snug;
+    }
+
+    h4 {
+      @apply mb-4 mt-6 text-base font-semibold leading-none;
+    }
+
+    h5 {
+      @apply mb-4 mt-6 text-sm font-semibold leading-tight;
+    }
+
+    h6 {
+      @apply mb-4 mt-6 text-sm font-semibold leading-tight text-gray-600;
+    }
+
+    p {
+      @apply mb-2 mt-0 text-base leading-snug;
+    }
+
+    ul {
+      @apply my-2 list-disc space-y-1 pl-8 text-base leading-snug;
+    }
+
+    ol {
+      @apply list-decimal space-y-1 pl-8 text-base leading-snug;
+    }
+
+    ol ol,
+    ul ol {
+      @apply list-[lower-roman];
+    }
+
+    ul ul ol,
+    ul ol ol,
+    ol ul ol,
+    ol ol ol {
+      @apply list-[lower-alpha];
+    }
+
+    li {
+      @apply my-0 marker:text-gray-400;
+    }
+
+    table {
+      @apply border-gray-600 text-base;
+    }
+
+    th {
+      @apply border px-3 py-1 font-semibold;
+    }
+
+    td {
+      @apply border px-3 py-1;
+    }
+
+    blockquote {
+      @apply border-l-4 border-gray-300 pl-4 pr-4 text-base text-gray-600;
+    }
+
+    code {
+      @apply inline rounded bg-gray-100 px-1 py-0.5 font-mono text-sm;
+    }
+
+    kbd {
+      @apply inline-block rounded border px-1 py-0.5 align-middle font-mono text-xs font-normal shadow;
+    }
+
+    pre {
+      @apply rounded bg-gray-100 p-4;
+    }
+
+    pre code {
+      @apply block overflow-visible rounded-none bg-transparent p-0;
+    }
+
+    a {
+      @apply text-nadeshiko-950;
+    }
+
+    strong {
+      @apply font-semibold;
+    }
+  }
+}
