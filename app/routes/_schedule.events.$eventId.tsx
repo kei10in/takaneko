@@ -69,10 +69,10 @@ export default function EventPage() {
           </Link>
         )}
         <div className="space-y-2">
-          <div className="px-4 pt-4 text-2xl font-bold">
+          <h1 className="px-4 pt-4 text-2xl font-bold">
             <span>{categoryToEmoji(meta.category)}</span>
             <span>{meta.summary}</span>
-          </div>
+          </h1>
           <div className="flex items-center gap-1 px-5">
             <HiCalendar className="text-gray-400" />
             <p>{displayDateWithDayOfWeek(d)}</p>
