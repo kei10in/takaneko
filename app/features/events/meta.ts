@@ -3,6 +3,7 @@ import { EventTypeEnum } from "./EventType";
 
 const EventMeta = z.object({
   summary: z.string(),
+  title: z.string().optional(),
   category: EventTypeEnum,
   date: z.string(),
   region: z.string().optional(),
