@@ -47,7 +47,7 @@ export default function Index() {
               <Link to="/calendar">
                 <div className="flex h-16 w-full items-center gap-4 rounded-lg border border-nadeshiko-500 bg-nadeshiko-100 px-4 text-nadeshiko-700">
                   <HiCalendar className="h-8 w-8" />
-                  <div className="text-lg font-bold">スケジュール (β)</div>
+                  <div className="text-lg font-bold">スケジュール</div>
                 </div>
               </Link>
             </li>

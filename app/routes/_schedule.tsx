@@ -3,7 +3,7 @@ import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `スケジュール (β) - ${SITE_TITLE}` },
+    { title: `スケジュール - ${SITE_TITLE}` },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
@@ -18,7 +18,7 @@ export default function Index() {
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
-              <Link to="/calendar">スケジュール (β)</Link>
+              <Link to="/calendar">スケジュール</Link>
             </p>
           </div>
         </div>

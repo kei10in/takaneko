@@ -16,7 +16,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `スケジュール (β) - ${SITE_TITLE}` },
+    { title: `スケジュール - ${SITE_TITLE}` },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",

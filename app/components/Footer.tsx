@@ -32,7 +32,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
                   <Link to="/trade">トレード画像つくるやつ</Link>
                 </li>
                 <li>
-                  <Link to="/calendar">スケジュール (β)</Link>
+                  <Link to="/calendar">スケジュール</Link>
                 </li>
               </ul>
             </section>
