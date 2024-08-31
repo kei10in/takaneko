@@ -20,6 +20,17 @@ export default {
           950: "#d63668",
         },
       },
+      fontFamily: {
+        sans: [
+          "ui-sans-serif",
+          // "system-ui" は使わない Windows 11 で Meiryo UI になるため。
+          "sans-serif",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol",
+          "Noto Color Emoji",
+        ],
+      },
     },
   },
   plugins: [typography()],
