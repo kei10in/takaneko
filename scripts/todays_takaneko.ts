@@ -56,8 +56,6 @@ const createRequestBody = async () => {
   const day = today.day.toString().padStart(2, "0");
   const content = template({ date, items, year, month, day });
 
-  console.log(content);
-
   const body = JSON.stringify({ value1: content });
 
   return body;
