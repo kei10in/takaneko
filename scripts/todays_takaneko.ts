@@ -1,17 +1,24 @@
 import { glob } from "glob";
 import Handlebars from "handlebars";
 import { register } from "node:module";
+import { dedent } from "ts-dedent";
 import { categoryToEmoji, compareEventType } from "~/features/events/EventType";
 import { EventMeta, validateEventMeta } from "~/features/events/meta";
+import { displayDate } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 register("@mdx-js/node-loader", import.meta.url);
 
-const template = Handlebars.compile(
-  "{{date}}の #たかねこの予定\n\n" +
-    "{{#each items}}{{this}}\n{{/each}}\n\n" +
-    "👇詳しくはこちら👇\n" +
-    "https://takanekofan.app/calendar/today"
-);
+const template = Handlebars.compile(dedent`
+  {{date}}の #たかねこの予定
+
+  {{#each items}}
+  {{this}}
+  {{/each}}
+
+  👇詳しくはこちら👇
+  https://takanekofan.app/calendar/{{year}}/{{month}}/{{day}}
+`);
 
 export const main = async () => {
   const url = generateUrl();
@@ -33,7 +40,7 @@ const generateUrl = () => {
 };
 
 const createRequestBody = async () => {
-  const today = new Date();
+  const today = NaiveDate.today();
   const events = await loadEventMetaInDate(today);
   if (events.length === 0) {
     return undefined;
@@ -43,18 +50,20 @@ const createRequestBody = async () => {
 
   const items = events.map((event) => `${categoryToEmoji(event.category)}${event.summary}`);
 
-  const y = today.getFullYear();
-  const m = (today.getMonth() + 1).toString().padStart(2, "0");
-  const d = today.getDate().toString().padStart(2, "0");
-  const date = `${y}年${m}月${d}日`;
-  const content = template({ date, items });
+  const date = displayDate(today);
+  const year = today.year.toString().padStart(4, "0");
+  const month = today.month.toString().padStart(2, "0");
+  const day = today.day.toString().padStart(2, "0");
+  const content = template({ date, items, year, month, day });
+
+  console.log(content);
 
   const body = JSON.stringify({ value1: content });
 
   return body;
 };
 
-const loadEventMetaInDate = async (date: Date): Promise<EventMeta[]> => {
+const loadEventMetaInDate = async (date: NaiveDate): Promise<EventMeta[]> => {
   const files = await findEventFiles(date);
   const meta = await Promise.all(
     files.map(async (file) => {
@@ -66,13 +75,10 @@ const loadEventMetaInDate = async (date: Date): Promise<EventMeta[]> => {
   return meta.map((m) => validateEventMeta(m)).filter((x): x is EventMeta => x != undefined);
 };
 
-const findEventFiles = async (date: Date) => {
-  const year = date.getFullYear().toString();
-  const month = (date.getMonth() + 1).toString().padStart(2, "0");
-  const d = date.getDate().toString().padStart(2, "0");
-  // ここではローカルタイムで日付を判断する。
-  // `Date.toISOString()` は UTC ベースなので使えない。
-  const prefix = `${year}-${month}-${d}`;
+const findEventFiles = async (date: NaiveDate) => {
+  const prefix = date.toString();
+  const year = date.year.toString().padStart(4, "0");
+  const month = date.month.toString().padStart(2, "0");
 
   const scriptDir = import.meta.dirname;
   const files = await glob(`${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.mdx`);
