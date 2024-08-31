@@ -78,27 +78,26 @@ export default function EventPage() {
             <p>{displayDateWithDayOfWeek(d)}</p>
           </div>
           {meta.location && (
-            <div>
-              <Link
-                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="flex items-center gap-1 px-5">
-                  <span>
-                    <HiMapPin className="text-gray-400" />
-                  </span>
-                  <span>{meta.location}</span>
-                  <span>
-                    <HiArrowTopRightOnSquare />
-                  </span>
-                </div>
-              </Link>
-            </div>
+            <Link
+              className="block"
+              to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <HiMapPin className="text-gray-400" />
+                </span>
+                <span>{meta.location}</span>
+                <span>
+                  <HiArrowTopRightOnSquare />
+                </span>
+              </div>
+            </Link>
           )}
 
           {meta.link && (
-            <Link to={meta.link.url} target="_blank" rel="noreferrer">
+            <Link className="block" to={meta.link.url} target="_blank" rel="noreferrer">
               <div className="flex items-center gap-1 px-5">
                 <span>
                   <HiLink className="text-gray-400" />
