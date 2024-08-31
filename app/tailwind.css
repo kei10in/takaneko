@@ -39,11 +39,11 @@
     }
 
     ul {
-      @apply my-2 list-disc space-y-1 pl-8 text-base leading-snug;
+      @apply mb-3 mt-1 list-disc space-y-1 pl-8 text-base leading-snug;
     }
 
     ol {
-      @apply list-decimal space-y-1 pl-8 text-base leading-snug;
+      @apply mb-3 mt-1 list-decimal space-y-1 pl-8 text-base leading-snug;
     }
 
     ol ol,
@@ -76,6 +76,10 @@
 
     blockquote {
       @apply border-l-4 border-gray-300 pl-4 pr-4 text-base text-gray-600;
+    }
+
+    img {
+      @apply inline max-w-xs;
     }
 
     code {
