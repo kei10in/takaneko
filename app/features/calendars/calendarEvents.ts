@@ -1,17 +1,9 @@
-import { compareEventType, EventType } from "~/features/events/EventType";
+import { compareEventType } from "~/features/events/EventType";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventModule } from "../events/events";
+import { EventMeta } from "../events/meta";
 
-export interface CalendarEvent {
-  id: string;
-  category: EventType;
-  summary: string;
-  date: NaiveDate;
-  region?: string;
-  location?: string;
-  link?: { text: string; url: string };
-  image?: { path: string; ref: string };
-}
+export type CalendarEvent = EventMeta & { id: string };
 
 /**
  * Zip calendar dates and events.
@@ -49,13 +41,7 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<number, Calendar
 export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
   return {
     id: event.id,
-    category: event.meta.category,
-    summary: event.meta.summary,
-    date: NaiveDate.parseUnsafe(event.meta.date),
-    location: event.meta.location,
-    region: event.meta.region,
-    link: event.meta.link,
-    image: event.meta.image,
+    ...event.meta,
   };
 };
 
@@ -67,6 +53,7 @@ export const sortedCalendarEventsByCategory = (events: CalendarEvent[]): Calenda
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
   const regions = events
+    .filter((events) => events.status != "CANCELED")
     .filter((event) => event.region != undefined)
     .map((event) => event.region ?? "");
 

@@ -1,5 +1,4 @@
 import { createEvent, EventAttributes } from "ics";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventMeta } from "./meta";
 
 export const generateCalendarEventDataUrl = (e: EventMeta): string | undefined => {
@@ -13,7 +12,7 @@ export const generateCalendarEventDataUrl = (e: EventMeta): string | undefined =
 };
 
 export const convertToIcsEvent = (e: EventMeta): string | undefined => {
-  const d = NaiveDate.parseUnsafe(e.date);
+  const d = e.date;
 
   const ea: EventAttributes = {
     start: [d.year, d.month, d.day],

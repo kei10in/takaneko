@@ -19,7 +19,6 @@ import { loadEventContent } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { generateCalendarEventDataUrl } from "~/features/events/ical";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 export const meta: MetaFunction = () => {
   return [
@@ -61,7 +60,7 @@ export default function EventPage() {
   const { event, ics } = useLoaderData<typeof clientLoader>();
   const { meta, Content } = event;
 
-  const d = NaiveDate.parseUnsafe(meta.date);
+  const d = meta.date;
 
   const location = useLocation();
   const navigate = useNavigate();
