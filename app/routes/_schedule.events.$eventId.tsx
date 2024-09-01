@@ -7,10 +7,17 @@ import {
   useLocation,
   useNavigate,
 } from "@remix-run/react";
-import { HiArrowTopRightOnSquare, HiCalendar, HiLink, HiMapPin } from "react-icons/hi2";
+import {
+  HiArrowTopRightOnSquare,
+  HiCalendar,
+  HiCalendarDays,
+  HiLink,
+  HiMapPin,
+} from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
-import { EventContent, loadEventContent } from "~/features/events/events";
+import { loadEventContent } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
+import { generateCalendarEventDataUrl } from "~/features/events/ical";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
@@ -24,7 +31,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(async ({ params }): Promise<EventContent> => {
+export const clientLoader = defineClientLoader(async ({ params }) => {
   const { eventId } = params;
 
   if (eventId == undefined) {
@@ -36,11 +43,22 @@ export const clientLoader = defineClientLoader(async ({ params }): Promise<Event
     throw new Response("", { status: 404 });
   }
 
-  return event;
+  const icsDataUrl = generateCalendarEventDataUrl(event.meta);
+  if (icsDataUrl == undefined) {
+    return { event };
+  }
+
+  return {
+    event,
+    ics: {
+      filename: `${event.meta.date}_${event.meta.summary}.ics`,
+      dataUrl: icsDataUrl,
+    },
+  };
 });
 
 export default function EventPage() {
-  const event = useLoaderData<typeof clientLoader>();
+  const { event, ics } = useLoaderData<typeof clientLoader>();
   const { meta, Content } = event;
 
   const d = NaiveDate.parseUnsafe(meta.date);
@@ -49,8 +67,8 @@ export default function EventPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="container mx-auto pb-12 lg:max-w-4xl">
-      <div className="space-y-2">
+    <div className="container mx-auto lg:max-w-4xl">
+      <div>
         {meta.image && (
           <Link to="#photo" replace={true}>
             <div
@@ -68,7 +86,7 @@ export default function EventPage() {
             </div>
           </Link>
         )}
-        <div className="space-y-2">
+        <div className="space-y-2 pb-4">
           <h1 className="px-4 pb-1.5 pt-8 text-2xl font-bold">
             <span>{categoryToEmoji(meta.category)}</span>
             <span>{meta.title ?? meta.summary}</span>
@@ -112,11 +130,27 @@ export default function EventPage() {
         </div>
       </div>
 
-      <article className="markdown max-w-none px-4 py-4">
+      <article className="markdown mb-4 max-w-none px-4">
         <Content />
       </article>
+
+      {ics && (
+        <Link
+          className="mx-auto my-10 block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+          to={ics.dataUrl}
+          download={ics.filename}
+        >
+          <div className="flex items-center gap-1 text-nadeshiko-800">
+            <span>
+              <HiCalendarDays className="h-5 w-5" />
+            </span>
+            <span>カレンダーに登録</span>
+          </div>
+        </Link>
+      )}
+
       {meta.image && (
-        <p className="px-4 text-right text-xs text-gray-400">
+        <p className="my-4 px-4 text-right text-xs text-gray-400">
           <Link
             to={meta.image?.ref}
             target="_blank"
