@@ -1,1 +1,1 @@
-export const SITE_TITLE = "たかねこの (仮)";
+export const SITE_TITLE = "たかねこの";
