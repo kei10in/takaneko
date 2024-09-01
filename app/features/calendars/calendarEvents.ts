@@ -1,7 +1,6 @@
-import { compareEventType } from "~/features/events/EventType";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventModule } from "../events/events";
-import { EventMeta } from "../events/meta";
+import { compareEventMeta, EventMeta } from "../events/meta";
 
 export type CalendarEvent = EventMeta & { id: string };
 
@@ -17,7 +16,7 @@ export const zipCalendarDatesAndEvents = (
   return dates.map((week) =>
     week.map((date) => {
       const utcDate = date.getTimeAsUTC();
-      const eventsInDate = sortedCalendarEventsByCategory(groupedEvents.get(utcDate) ?? []);
+      const eventsInDate = sortedCalendarEvents(groupedEvents.get(utcDate) ?? []);
       return { date, events: eventsInDate };
     }),
   );
@@ -45,10 +44,8 @@ export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarE
   };
 };
 
-export const sortedCalendarEventsByCategory = (events: CalendarEvent[]): CalendarEvent[] => {
-  return events.toSorted((a, b) => {
-    return compareEventType(a.category, b.category);
-  });
+export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] => {
+  return events.toSorted(compareEventMeta);
 };
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {

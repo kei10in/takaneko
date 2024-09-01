@@ -2,8 +2,8 @@ import { glob } from "glob";
 import Handlebars from "handlebars";
 import { register } from "node:module";
 import { dedent } from "ts-dedent";
-import { categoryToEmoji, compareEventType } from "~/features/events/EventType";
-import { EventMeta, validateEventMeta } from "~/features/events/meta";
+import { categoryToEmoji } from "~/features/events/EventType";
+import { compareEventMeta, EventMeta, validateEventMeta } from "~/features/events/meta";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
@@ -46,7 +46,7 @@ const createRequestBody = async () => {
     return undefined;
   }
 
-  events.sort((a, b) => compareEventType(a.category, b.category));
+  events.sort(compareEventMeta);
 
   const items = events.map((event) => `${categoryToEmoji(event.category)}${event.summary}`);
 

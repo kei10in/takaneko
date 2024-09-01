@@ -1,8 +1,7 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { stem } from "~/utils/string";
-import { compareEventType } from "./EventType";
-import { EventMeta, validateEventMeta } from "./meta";
+import { compareEventMeta, EventMeta, validateEventMeta } from "./meta";
 
 export interface EventModule {
   id: string;
@@ -67,7 +66,7 @@ export const loadEventsInDay = async (date: NaiveDate): Promise<EventModule[]> =
     });
 
   const events = (await Promise.all(promises)).filter((x): x is EventModule => x != undefined);
-  events.sort((a, b) => compareEventType(a.meta.category, b.meta.category));
+  events.sort((a, b) => compareEventMeta(a.meta, b.meta));
 
   return events;
 };

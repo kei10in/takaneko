@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventType, EventTypeEnum } from "./EventType";
+import { compareEventType, EventType, EventTypeEnum } from "./EventType";
 
 const EventMetaDescriptor = z.object({
   summary: z.string(),
@@ -51,4 +51,17 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   } else {
     return undefined;
   }
+};
+
+export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
+  const d = a.date.getTimeAsUTC() - b.date.getTimeAsUTC();
+  if (d != 0) {
+    return d;
+  }
+
+  if (a.status != b.status) {
+    return a.status === "CANCELED" ? 1 : -1;
+  }
+
+  return compareEventType(a.category, b.category);
 };
