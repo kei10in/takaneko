@@ -41,7 +41,7 @@ const generateUrl = () => {
 
 const createRequestBody = async () => {
   const today = NaiveDate.today();
-  const events = await loadEventMetaInDate(today);
+  const events = (await loadEventMetaInDate(today)).filter((e) => e.status !== "CANCELED");
   if (events.length === 0) {
     return undefined;
   }
