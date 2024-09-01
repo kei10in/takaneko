@@ -1,8 +1,4 @@
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  MetaFunction,
-  redirect,
-} from "@remix-run/react";
+import { MetaFunction, redirect } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { calendarMonthHref } from "~/features/calendars/utils";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -17,10 +13,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(async () => {
+export const loader = async () => {
   const currentMonth = NaiveMonth.current();
   return redirect(calendarMonthHref(currentMonth));
-});
+};
 
 export default function Index() {
   return null;

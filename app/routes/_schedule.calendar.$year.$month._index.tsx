@@ -50,7 +50,7 @@ export default function Index() {
     const currentMonth = NaiveMonth.current();
     if (location.hash === "" && m.equals(currentMonth)) {
       const anchor = NaiveDate.today().toString();
-      navigate(`#${anchor}`);
+      navigate(`#${anchor}`, { replace: true });
     }
   }, [location.hash, month, navigate, year]);
 

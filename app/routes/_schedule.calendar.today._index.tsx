@@ -1,8 +1,4 @@
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  MetaFunction,
-  redirect,
-} from "@remix-run/react";
+import { MetaFunction, redirect } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { dateHref } from "~/features/calendars/utils";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -17,10 +13,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(async () => {
+export const loader = async () => {
   const today = NaiveDate.today();
   return redirect(dateHref(today));
-});
+};
 
 export default function Index() {
   return null;
