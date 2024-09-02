@@ -40,9 +40,9 @@ export default function Index() {
   return (
     <div>
       <div className="container mx-auto text-gray-600">
-        <div className="relative mx-auto w-fit lg:static lg:mx-4 lg:flex lg:w-full lg:max-w-5xl">
+        <div className="relative mx-auto w-fit lg:static lg:flex lg:w-full lg:max-w-5xl">
           <img
-            className="max-h-96 w-full min-w-96 lg:h-96 lg:w-auto lg:max-w-none lg:flex-none lg:object-contain"
+            className="max-h-96 min-w-96 lg:h-96 lg:w-auto lg:flex-none"
             src="/takaneko/hero.jpg"
             alt="ヒーロー画像"
           />
