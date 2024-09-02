@@ -73,7 +73,15 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                         />
                       </div>
                     ) : (
-                      <Link className="block w-full" to={`#${dateString}`}>
+                      <Link
+                        className="block w-full"
+                        to={`#${dateString}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const elem = document.getElementById(`${dateString}`);
+                          elem?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                      >
                         <CalendarCell
                           date={date.day}
                           day={date.dayOfWeek}
