@@ -40,7 +40,7 @@ const generateUrl = () => {
 };
 
 const createRequestBody = async () => {
-  const today = NaiveDate.today();
+  const today = NaiveDate.todayInJapan();
   const events = (await loadEventMetaInDate(today)).filter((e) => e.status !== "CANCELED");
   if (events.length === 0) {
     return undefined;

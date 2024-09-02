@@ -11,7 +11,8 @@ import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/productImages";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { getActiveDateInJapan } from "~/utils/japanTime";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,14 +26,13 @@ export const meta: MetaFunction = () => {
 };
 
 export const clientLoader = defineClientLoader(async (_args) => {
-  const d = NaiveDate.today();
-
-  const events = await loadEventsInDay(d);
-  return { events };
+  const date = getActiveDateInJapan(new Date());
+  const events = await loadEventsInDay(date);
+  return { date, events };
 });
 
 export default function Index() {
-  const { events } = useLoaderData<typeof clientLoader>();
+  const { date, events } = useLoaderData<typeof clientLoader>();
   const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   const recentProducts = TAKANEKO_PHOTOS.slice(-6).toReversed();
@@ -92,7 +92,7 @@ export default function Index() {
               </a>
               や X での告知を確認してください。
             </p>
-            <p className="font-semibold text-gray-400">今日の予定:</p>
+            <p className="font-semibold text-gray-400">{displayDateWithDayOfWeek(date)} の予定:</p>
 
             <div className="rounded-lg border bg-white px-2 py-4">
               {calendarEvents.length !== 0 ? (

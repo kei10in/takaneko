@@ -78,7 +78,7 @@ describe("NaiveDate", () => {
   });
 
   it("should correctly create a NaiveDate representing today", () => {
-    const today = NaiveDate.today();
+    const today = NaiveDate.todayInJapan();
     const now = new Date();
     expect(today.year).toEqual(now.getUTCFullYear());
     expect(today.month).toEqual(now.getUTCMonth() + 1);

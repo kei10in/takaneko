@@ -56,6 +56,21 @@ export class NaiveDate {
     return new NaiveDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
   }
 
+  static todayInJapan(): NaiveDate {
+    const now = new Date();
+
+    // UTC 上で 9 時間進めれば、日本時間になる。うるう秒などは考慮しない。
+    const nowInJapan = new Date(
+      Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours() + 9),
+    );
+
+    return new NaiveDate(
+      nowInJapan.getUTCFullYear(),
+      nowInJapan.getUTCMonth() + 1,
+      nowInJapan.getUTCDate(),
+    );
+  }
+
   static parseUnsafe(date: string): NaiveDate {
     const d = Date.parse(date);
     return NaiveDate.fromTimeAsUTC(d);

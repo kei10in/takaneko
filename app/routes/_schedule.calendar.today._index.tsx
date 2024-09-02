@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async () => {
-  const today = NaiveDate.today();
+  const today = NaiveDate.todayInJapan();
   return redirect(dateHref(today));
 };
 

@@ -69,7 +69,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                           day={date.dayOfWeek}
                           events={events}
                           currentMonth={date.naiveMonth().equals(month)}
-                          today={date.equals(NaiveDate.today())}
+                          today={date.equals(NaiveDate.todayInJapan())}
                         />
                       </div>
                     ) : (
@@ -87,7 +87,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                           day={date.dayOfWeek}
                           events={events}
                           currentMonth={date.naiveMonth().equals(month)}
-                          today={date.equals(NaiveDate.today())}
+                          today={date.equals(NaiveDate.todayInJapan())}
                         />
                       </Link>
                     )}
