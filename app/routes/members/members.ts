@@ -29,7 +29,7 @@ export const NaoKizuki: MemberDescription = {
   birthplace: "埼玉県",
   color: "#fde047",
   memberColor: "黄色",
-  fanName: "監督",
+  fanName: "城月菜央の監督",
   hashTags: "#気づいて城月",
   officialProfile: "https://takanenonadeshiko.jp/nao_kizuki/",
   twitter: "https://twitter.com/nao_kizuki",
