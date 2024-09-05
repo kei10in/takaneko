@@ -71,7 +71,10 @@ export default function Index() {
                   className="flex h-44 w-80 flex-none flex-col overflow-hidden rounded-xl bg-white shadow-md"
                   to={`/members/${member.slug}`}
                 >
-                  <div className="flex h-6 flex-none items-center justify-center bg-nadeshiko-500 font-serif text-white">
+                  <div
+                    className="flex h-6 flex-none items-center justify-center font-serif text-white"
+                    style={{ backgroundColor: member.color }}
+                  >
                     高嶺のなでしこ
                   </div>
                   <div className="flex flex-1 items-stretch justify-stretch">
@@ -125,7 +128,7 @@ export default function Index() {
                 className="flex h-44 w-80 flex-none flex-col overflow-hidden rounded-xl bg-white shadow-md"
                 to={`/members/manager`}
               >
-                <div className="flex h-6 flex-none items-center justify-center bg-nadeshiko-500 font-serif text-white">
+                <div className="flex h-6 flex-none items-center justify-center bg-zinc-700 font-serif text-white">
                   高嶺のなでしこ
                 </div>
                 <div className="flex flex-1 items-stretch justify-stretch">

@@ -7,6 +7,7 @@ export interface MemberDescription {
   birthday: string;
   constellation: string;
   birthplace: string;
+  color: string;
   memberColor: string;
   fanName: string;
   hashTags: string | string[];
@@ -26,6 +27,7 @@ export const NaoKizuki: MemberDescription = {
   birthday: "2003年12月25日",
   constellation: "やぎ座",
   birthplace: "埼玉県",
+  color: "#fde047",
   memberColor: "黄色",
   fanName: "監督",
   hashTags: "#気づいて城月",
@@ -45,6 +47,7 @@ export const SuSuzumi: MemberDescription = {
   birthday: "2007年8月22日",
   constellation: "しし座",
   birthplace: "大阪府",
+  color: "#7dd3fc",
   memberColor: "水色",
   fanName: "破壊され隊っすぅ",
   hashTags: ["#すうですぅ", "#すうだより"],
@@ -64,6 +67,7 @@ export const MomokoHashimoto: MemberDescription = {
   birthday: "2003年6月28日",
   constellation: "かに座",
   birthplace: "山口県",
+  color: "#f26894",
   memberColor: "濃いピンク、ヴィヴィッド ピンク",
   fanName: "もふとん🛌🍑",
   hashTags: "#桃呼ちゅわん",
@@ -83,6 +87,7 @@ export const SaaraHazuki: MemberDescription = {
   birthday: "2007年3月3日",
   constellation: "うお座",
   birthplace: "三重県",
+  color: "#d1d5db",
   memberColor: "白",
   fanName: "は組",
   hashTags: "#さあらいふ",
@@ -102,6 +107,7 @@ export const RiriHaruno: MemberDescription = {
   birthday: "2004年1月16日",
   constellation: "やぎ座",
   birthplace: "長野県",
+  color: "#22c55e",
   memberColor: "緑",
   fanName: "すぷりんがー",
   hashTags: "#ねぇねぇはるりん",
@@ -121,6 +127,7 @@ export const ErisaHigashiyama: MemberDescription = {
   birthday: "2006年5月28日",
   constellation: "ふたご座",
   birthplace: "岐阜県",
+  color: "#f97316",
   memberColor: "オレンジ色",
   fanName: "半熟たまご",
   hashTags: "#えりさーち",
@@ -140,6 +147,7 @@ export const HinaHinahata: MemberDescription = {
   birthday: "2002年10月30日",
   constellation: "さそり座",
   birthplace: "神奈川県",
+  color: "#7e22ce",
   memberColor: "紫",
   fanName: "ひなたまにあ",
   hashTags: "#ひなたましか勝たん",
@@ -159,6 +167,7 @@ export const MikuruHoshitani: MemberDescription = {
   birthday: "2003年11月6日",
   constellation: "さそり座",
   birthplace: "東京都",
+  color: "#dc2626",
   memberColor: "赤",
   fanName: "みけるん隊",
   hashTags: "#まいにちみくるん",
@@ -178,6 +187,7 @@ export const MomonaMatsumoto: MemberDescription = {
   birthday: "2002年10月12日",
   constellation: "てんびん座",
   birthplace: "神奈川県",
+  color: "#fcb9ce",
   memberColor: "薄ピンク",
   fanName: "ももぐみ",
   hashTags: [
@@ -202,6 +212,7 @@ export const HimeriMomiyama: MemberDescription = {
   birthday: "2004年3月22日",
   constellation: "おひつじ座",
   birthplace: "栃木県",
+  color: "#1d4ed8",
   memberColor: "青",
   fanName: "ひめりんち。",
   hashTags: "#ひめんしょん。",
