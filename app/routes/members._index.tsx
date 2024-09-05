@@ -118,8 +118,8 @@ export default function Index() {
                         <HiCamera className="h-12 w-12 text-gray-400" />
                       </div>
                     </div>
-                    <div>
-                      <dl className="grid grid-cols-5 grid-rows-6 items-end gap-2 py-2">
+                    <div className="flex-1 bg-white bg-opacity-90 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
+                      <dl className="grid grid-cols-5 items-end gap-3 py-2">
                         <dt className="col-span-2 text-xs leading-none">氏名</dt>
                         <dd className="col-span-3 text-base leading-none">{member.name}</dd>
                         <dt className="col-span-2 text-xs leading-none">生年月日</dt>
@@ -151,15 +151,15 @@ export default function Index() {
                 <div className="flex h-6 flex-none items-center justify-center bg-zinc-700 font-serif text-white">
                   高嶺のなでしこ
                 </div>
-                <div className="flex flex-1 items-stretch justify-stretch">
-                  <div className="flex-none p-3">
+                <div className="flex flex-1 items-stretch justify-stretch gap-4 p-3">
+                  <div className="flex-none">
                     <img
                       className="mx-auto block h-32 w-24 object-contain"
                       src="/takaneko/tennya.png"
                       alt="てんにゃ"
                     />
                   </div>
-                  <div className="p-4">
+                  <div className="flex-1 bg-white bg-opacity-90 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                     <p>たかねこまねーじゃー</p>
                     <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
