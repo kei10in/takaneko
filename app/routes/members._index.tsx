@@ -77,40 +77,25 @@ export default function Index() {
                   >
                     高嶺のなでしこ
                   </div>
-                  <div className="flex flex-1 items-stretch justify-stretch">
-                    <div className="flex-none p-3">
+                  <div className="flex flex-1 items-stretch justify-stretch gap-4 p-3">
+                    <div className="flex-none">
                       <div className="flex h-32 w-24 items-center justify-center bg-gray-100">
                         <HiCamera className="h-12 w-12 text-gray-400" />
                       </div>
                     </div>
-                    <div className="p-4">
-                      <p>{member.name}</p>
-                      <ul className="mt-2 flex gap-2 text-nadeshiko-700">
-                        <li>
-                          <Link to={member.twitter} target="_blank" rel="noreferrer">
-                            <FaXTwitter className="h-4 w-4" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={member.instagram} target="_blank" rel="noreferrer">
-                            <FaInstagram className="h-4 w-4" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={member.tiktok} target="_blank" rel="noreferrer">
-                            <FaTiktok className="h-4 w-4" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={member.showroom} target="_blank" rel="noreferrer">
-                            <img
-                              className="block h-4 w-4"
-                              src="/showroom/showroom-icon.png"
-                              alt="SHOWROOM"
-                            />
-                          </Link>
-                        </li>
-                      </ul>
+                    <div>
+                      <dl className="grid grid-cols-5 grid-rows-6 items-end gap-2 py-2">
+                        <dt className="col-span-2 text-xs leading-none">氏名</dt>
+                        <dd className="col-span-3 text-base leading-none">{member.name}</dd>
+                        <dt className="col-span-2 text-xs leading-none">生年月日</dt>
+                        <dd className="col-span-3 text-xs leading-none">{member.birthday}</dd>
+                        <dt className="col-span-2 text-xs leading-none">血液型</dt>
+                        <dd className="col-span-3 text-xs leading-none">{member.bloodType}</dd>
+                        <dt className="col-span-2 text-xs leading-none">ファンネーム</dt>
+                        <dd className="col-span-3 text-xs leading-none">{member.fanName}</dd>
+                        <dt className="col-span-2 text-xs leading-none">発行日</dt>
+                        <dd className="col-span-3 text-xs leading-none">2022年8月7日</dd>
+                      </dl>
                     </div>
                   </div>
                 </Link>
@@ -141,22 +126,7 @@ export default function Index() {
                   </div>
                   <div className="p-4">
                     <p>たかねこまねーじゃー</p>
-                    <ul className="mt-2 flex gap-2 text-nadeshiko-700">
-                      <li>
-                        <Link to="https://x.com/takanekomanager" target="_blank" rel="noreferrer">
-                          <FaXTwitter className="h-4 w-4" />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to="https://www.tiktok.com/@takanenokawachiofficial"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaTiktok className="h-4 w-4" />
-                        </Link>
-                      </li>
-                    </ul>
+                    <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
                 </div>
               </Link>
