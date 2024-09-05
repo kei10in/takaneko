@@ -18,45 +18,80 @@ export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-nadeshiko-900">高嶺のなでしこ</h1>
+        <h1 className="my-4 text-3xl font-semibold text-gray-600">高嶺のなでしこ</h1>
 
-        <ul className="space-y-2">
+        <ul className="list-disc space-y-2 pl-6 marker:text-gray-300">
           <li>
-            <Link to="https://takanenonadeshiko.jp/" target="_blank" rel="noreferrer">
+            <Link
+              className="text-nadeshiko-700"
+              to="https://takanenonadeshiko.jp/"
+              target="_blank"
+              rel="noreferrer"
+            >
               オフィシャル ウェブサイト
             </Link>
           </li>
           <li>
-            <Link to="https://takanekofc.com" target="_blank" rel="noreferrer">
+            <Link
+              className="text-nadeshiko-700"
+              to="https://takanekofc.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               オフィシャル ファン クラブ
             </Link>
           </li>
           <li>
-            <Link to="https://takanenonadeshiko-ec.com/" target="_blank" rel="noreferrer">
+            <Link
+              className="text-nadeshiko-700"
+              to="https://takanenonadeshiko-ec.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
               オフィシャル ショップ
             </Link>
           </li>
         </ul>
 
-        <ul className="my-2 flex gap-1.5">
+        <ul className="my-4 flex gap-2 px-2">
           <li>
-            <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
-              <FaYoutube className="h-4 w-4" />
+            <Link
+              className="text-gray-700"
+              to="https://www.youtube.com/@official6743"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaYoutube className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
-              <FaXTwitter className="h-4 w-4" />
+            <Link
+              className="text-gray-700"
+              to="https://x.com/takanenofficial"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaXTwitter className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link to="https://www.instagram.com/takanenofficial/" target="_blank" rel="noreferrer">
-              <FaInstagram className="h-4 w-4" />
+            <Link
+              className="text-gray-700"
+              to="https://www.instagram.com/takanenofficial/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link to="https://www.tiktok.com/@takanenofficial" target="_blank" rel="noreferrer">
-              <FaTiktok className="h-4 w-4" />
+            <Link
+              className="text-gray-700"
+              to="https://www.tiktok.com/@takanenofficial"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaTiktok className="h-5 w-5" />
             </Link>
           </li>
         </ul>
