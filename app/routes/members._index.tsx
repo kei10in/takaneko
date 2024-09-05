@@ -85,23 +85,23 @@ export default function Index() {
                     </div>
                     <div className="p-4">
                       <p>{member.name}</p>
-                      <li className="mt-2 flex gap-2 text-nadeshiko-700">
-                        <ul>
+                      <ul className="mt-2 flex gap-2 text-nadeshiko-700">
+                        <li>
                           <Link to={member.twitter} target="_blank" rel="noreferrer">
                             <FaXTwitter className="h-4 w-4" />
                           </Link>
-                        </ul>
-                        <ul>
+                        </li>
+                        <li>
                           <Link to={member.instagram} target="_blank" rel="noreferrer">
                             <FaInstagram className="h-4 w-4" />
                           </Link>
-                        </ul>
-                        <ul>
+                        </li>
+                        <li>
                           <Link to={member.tiktok} target="_blank" rel="noreferrer">
                             <FaTiktok className="h-4 w-4" />
                           </Link>
-                        </ul>
-                        <ul>
+                        </li>
+                        <li>
                           <Link to={member.showroom} target="_blank" rel="noreferrer">
                             <img
                               className="block h-4 w-4"
@@ -109,8 +109,8 @@ export default function Index() {
                               alt="SHOWROOM"
                             />
                           </Link>
-                        </ul>
-                      </li>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </Link>
@@ -141,13 +141,13 @@ export default function Index() {
                   </div>
                   <div className="p-4">
                     <p>たかねこまねーじゃー</p>
-                    <li className="mt-2 flex gap-2 text-nadeshiko-700">
-                      <ul>
+                    <ul className="mt-2 flex gap-2 text-nadeshiko-700">
+                      <li>
                         <Link to="https://x.com/takanekomanager" target="_blank" rel="noreferrer">
                           <FaXTwitter className="h-4 w-4" />
                         </Link>
-                      </ul>
-                      <ul>
+                      </li>
+                      <li>
                         <Link
                           to="https://www.tiktok.com/@takanenokawachiofficial"
                           target="_blank"
@@ -155,8 +155,8 @@ export default function Index() {
                         >
                           <FaTiktok className="h-4 w-4" />
                         </Link>
-                      </ul>
-                    </li>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </Link>
