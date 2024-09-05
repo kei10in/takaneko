@@ -27,8 +27,6 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     showroom,
   } = profile;
 
-  console.log({ officialProfile });
-
   return (
     <div className="mx-auto max-w-5xl py-8 lg:grid lg:grid-cols-2">
       <div className="mx-8 h-[30rem] bg-gray-100">
