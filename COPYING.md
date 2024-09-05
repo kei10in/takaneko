@@ -10,6 +10,11 @@ For more detailed information, please refer to the `/public/takaneko/COPYRIGHT.m
 All files within the `/public/events` directory are the property of each event organizers.
 For more detailed information, please refer to the `/public/events/COPYRIGHT.md` file.
 
+## `/public/showroom`
+
+All files within the `/public/showroom` directory are the property of SHOWROOM Inc..
+For more detailed information, please refer to the `/public/showroom/COPYRIGHT.md` file.
+
 ## Other Files
 
 All other files in this repository are licensed under the MIT License. For complete licensing information, please consult the [LICENSE](LICENSE) file.
