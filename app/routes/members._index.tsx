@@ -114,22 +114,28 @@ export default function Index() {
                   </div>
                   <div className="flex flex-1 items-stretch justify-stretch gap-4 p-3">
                     <div className="flex-none">
-                      <div className="flex h-32 w-24 items-center justify-center bg-gray-100">
+                      <div className="h- flex h-32 w-20 items-center justify-center bg-gray-100">
                         <HiCamera className="h-12 w-12 text-gray-400" />
                       </div>
                     </div>
-                    <div className="flex-1 bg-white bg-opacity-90 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
-                      <dl className="grid grid-cols-5 items-end gap-3 py-2">
-                        <dt className="col-span-2 text-xs leading-none">氏名</dt>
-                        <dd className="col-span-3 text-base leading-none">{member.name}</dd>
-                        <dt className="col-span-2 text-xs leading-none">生年月日</dt>
-                        <dd className="col-span-3 text-xs leading-none">{member.birthday}</dd>
-                        <dt className="col-span-2 text-xs leading-none">血液型</dt>
-                        <dd className="col-span-3 text-xs leading-none">{member.bloodType}</dd>
-                        <dt className="col-span-2 text-xs leading-none">ファンネーム</dt>
-                        <dd className="col-span-3 text-xs leading-none">{member.fanName}</dd>
-                        <dt className="col-span-2 text-xs leading-none">発行日</dt>
-                        <dd className="col-span-3 text-xs leading-none">2022年8月7日</dd>
+                    <div className="flex-1 bg-white bg-opacity-95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
+                      <dl className="grid grid-cols-3 items-end gap-2 py-1">
+                        <dt className="col-span-1 text-xs leading-none">学籍番号</dt>
+                        <dd className="col-span-2 text-xs leading-none">
+                          20220807{member.number.toString().padStart(2, "0")}
+                        </dd>
+                        <dt className="col-span-1 text-xs leading-none">学科</dt>
+                        <dd className="col-span-2 text-xs leading-none">{member.fanName}</dd>
+                        <dt className="col-span-1 text-xs leading-none">氏名</dt>
+                        <dd className="col-span-2 text-lg font-semibold leading-none">
+                          {member.name}
+                        </dd>
+                        <dt className="col-span-1 text-xs leading-none"></dt>
+                        <dd className="col-span-2 text-xs leading-none">{member.romaji}</dd>
+                        <dt className="col-span-1 text-xs leading-none">生年月日</dt>
+                        <dd className="col-span-2 text-xs leading-none">{member.birthday}</dd>
+                        <dt className="col-span-1 text-xs leading-none">血液型</dt>
+                        <dd className="col-span-2 text-xs leading-none">{member.bloodType}</dd>
                       </dl>
                     </div>
                   </div>

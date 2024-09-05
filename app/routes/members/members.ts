@@ -1,5 +1,6 @@
 export interface MemberDescription {
   slug: string;
+  number: number;
   name: string;
   kana: string;
   romaji: string;
@@ -22,6 +23,7 @@ export interface MemberDescription {
 
 export const NaoKizuki: MemberDescription = {
   slug: "nao-kizuki",
+  number: 7,
   name: "城月 菜央",
   kana: "きづき なお",
   romaji: "Kizuki Nao",
@@ -43,6 +45,7 @@ export const NaoKizuki: MemberDescription = {
 
 export const SuSuzumi: MemberDescription = {
   slug: "su-suzumi",
+  number: 8,
   name: "涼海 すう",
   kana: "すずみ すう",
   romaji: "Suzumi Su",
@@ -65,6 +68,7 @@ export const SuSuzumi: MemberDescription = {
 
 export const MomokoHashimoto: MemberDescription = {
   slug: "momoko-hashimoto",
+  number: 6,
   name: "橋本 桃呼",
   kana: "はしもと ももこ",
   romaji: "Hashimoto Momoko",
@@ -86,6 +90,7 @@ export const MomokoHashimoto: MemberDescription = {
 
 export const SaaraHazuki: MemberDescription = {
   slug: "saara-hazuki",
+  number: 9,
   name: "葉月 紗蘭",
   kana: "はづき さあら",
   romaji: "Hazuki Saara",
@@ -107,6 +112,7 @@ export const SaaraHazuki: MemberDescription = {
 
 export const RiriHaruno: MemberDescription = {
   slug: "riri-haruno",
+  number: 10,
   name: "春野 莉々",
   kana: "はるの りり",
   romaji: "Haruno Riri",
@@ -128,6 +134,7 @@ export const RiriHaruno: MemberDescription = {
 
 export const ErisaHigashiyama: MemberDescription = {
   slug: "erisa-higashiyama",
+  number: 1,
   name: "東山 恵理沙",
   kana: "ひがしやま えりさ",
   romaji: "Higashiyama Erisa",
@@ -149,6 +156,7 @@ export const ErisaHigashiyama: MemberDescription = {
 
 export const HinaHinahata: MemberDescription = {
   slug: "hina-hinahata",
+  number: 3,
   name: "日向端 ひな",
   kana: "ひなはた ひな",
   romaji: "Hinahata Hina",
@@ -170,6 +178,7 @@ export const HinaHinahata: MemberDescription = {
 
 export const MikuruHoshitani: MemberDescription = {
   slug: "mikuru-hoshitani",
+  number: 5,
   name: "星谷 美来",
   kana: "ほしたに みくる",
   romaji: "Hoshitani Mikuru",
@@ -191,6 +200,7 @@ export const MikuruHoshitani: MemberDescription = {
 
 export const MomonaMatsumoto: MemberDescription = {
   slug: "momona-matsumoto",
+  number: 2,
   name: "松本 ももな",
   kana: "まつもと ももな",
   romaji: "Matsumoto Momona",
@@ -213,6 +223,7 @@ export const MomonaMatsumoto: MemberDescription = {
 
 export const HimeriMomiyama: MemberDescription = {
   slug: "himeri-momiyama",
+  number: 4,
   name: "籾山 ひめり",
   kana: "もみやま ひめり",
   romaji: "Momiyama Himeri",
