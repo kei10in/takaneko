@@ -115,6 +115,51 @@ export default function Index() {
             ))}
           </ul>
         </section>
+
+        <section>
+          <h2 className="mb-4 mt-12 text-2xl font-semibold text-gray-400">マネージャー</h2>
+
+          <ul className="flex flex-wrap justify-center gap-4">
+            <li className="flex-none">
+              <Link
+                className="flex h-44 w-80 flex-none flex-col overflow-hidden rounded-xl bg-white shadow-md"
+                to={`/members/manager`}
+              >
+                <div className="flex h-6 flex-none items-center justify-center bg-nadeshiko-500 font-serif text-white">
+                  高嶺のなでしこ
+                </div>
+                <div className="flex flex-1 items-stretch justify-stretch">
+                  <div className="flex-none p-3">
+                    <img
+                      className="mx-auto block h-32 w-24 object-contain"
+                      src="/takaneko/tennya.png"
+                      alt="てんにゃ"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p>たかねこまねーじゃー</p>
+                    <li className="mt-2 flex gap-2 text-nadeshiko-700">
+                      <ul>
+                        <Link to="https://x.com/takanekomanager" target="_blank" rel="noreferrer">
+                          <FaXTwitter className="h-4 w-4" />
+                        </Link>
+                      </ul>
+                      <ul>
+                        <Link
+                          to="https://www.tiktok.com/@takanenokawachiofficial"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <FaTiktok className="h-4 w-4" />
+                        </Link>
+                      </ul>
+                    </li>
+                  </div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
   );
