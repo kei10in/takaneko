@@ -19,7 +19,8 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     birthplace,
     memberColor,
     fanName,
-    hashTags,
+    nyadeshiko,
+    hashTag,
     officialProfile,
     twitter,
     instagram,
@@ -55,8 +56,19 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           <dd className="col-span-2">{memberColor}</dd>
           <dt className="text-gray-400">ファンネーム</dt>
           <dd className="col-span-2">{fanName}</dd>
+          <dt className="text-gray-400">にゃでしこ</dt>
+          <dd className="col-span-2">{nyadeshiko}</dd>
           <dt className="text-gray-400">ハッシュタグ</dt>
-          <dd className="col-span-2">{hashTags}</dd>
+          <dd className="col-span-2">
+            <Link
+              className="text-nadeshiko-800"
+              to={`https://x.com/search?q=${encodeURIComponent(hashTag)}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {hashTag}
+            </Link>
+          </dd>
         </dl>
         <li className="mt-8 flex gap-4 text-black">
           <ul>
