@@ -1,6 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
 import { FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
-import { HiCamera } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "./members/members";
 
@@ -113,10 +112,8 @@ export default function Index() {
                     高嶺のなでしこ
                   </div>
                   <div className="flex flex-1 items-stretch justify-stretch gap-3 p-3">
-                    <div className="flex-none">
-                      <div className="h- flex h-32 w-24 items-center justify-center bg-gray-100">
-                        <HiCamera className="h-12 w-12 text-gray-400" />
-                      </div>
+                    <div className="h-32 w-24 flex-none">
+                      <img className="block h-32 w-24" src={member.idPhoto.path} alt="証明写真" />
                     </div>
                     <div className="flex-1 bg-white bg-opacity-95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                       <dl className="grid grid-cols-3 items-end gap-2 py-1">
@@ -157,8 +154,8 @@ export default function Index() {
                 <div className="flex h-6 flex-none items-center justify-center bg-zinc-700 font-serif text-white">
                   高嶺のなでしこ
                 </div>
-                <div className="flex flex-1 items-stretch justify-stretch gap-4 p-3">
-                  <div className="flex-none">
+                <div className="flex flex-1 items-stretch justify-stretch gap-3 p-3">
+                  <div className="h-32 w-24 flex-none bg-gray-200">
                     <img
                       className="mx-auto block h-32 w-24 object-contain"
                       src="/takaneko/tennya.png"
