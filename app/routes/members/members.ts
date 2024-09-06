@@ -14,7 +14,9 @@ export interface MemberDescription {
   fanName: string;
   nyadeshiko: string;
   hashTag: string;
+  hashTagForReply: string;
   hashTags?: string[];
+  hashTagsForAnnouncement?: string[];
   idPhoto: {
     path: string;
     ref: string;
@@ -46,6 +48,9 @@ export const NaoKizuki: MemberDescription = {
   fanName: "城月菜央の監督",
   nyadeshiko: "ルニャ・コーチ",
   hashTag: "#気づいて城月",
+  hashTagForReply: "#城月選手へ",
+  hashTags: ["#城月と飯"],
+  hashTagsForAnnouncement: ["#たかねこ入場なり"],
   idPhoto: {
     path: "/takaneko/members/nao-kizuki_id-photo.webp",
     ref: "https://x.com/nao_kizuki/status/1789251575963414765",
@@ -77,6 +82,7 @@ export const SuSuzumi: MemberDescription = {
   fanName: "破壊され隊っすぅ",
   nyadeshiko: "すうにゃろう",
   hashTag: "#すうですぅ",
+  hashTagForReply: "#すうだより",
   hashTags: ["#すうだより"],
   idPhoto: {
     path: "/takaneko/members/su-suzumi_id-photo.webp",
@@ -109,6 +115,7 @@ export const MomokoHashimoto: MemberDescription = {
   fanName: "もふとん🛌🍑",
   nyadeshiko: "はしもと もふ呼",
   hashTag: "#桃呼ちゅわん",
+  hashTagForReply: "#桃呼ちゅわん",
   idPhoto: {
     path: "/takaneko/members/momoko-hashimoto_id-photo.webp",
     ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
@@ -140,6 +147,7 @@ export const SaaraHazuki: MemberDescription = {
   fanName: "は組",
   nyadeshiko: "らあら",
   hashTag: "#さあらいふ",
+  hashTagForReply: "#さあらにお手紙",
   idPhoto: {
     path: "/takaneko/members/saara-hazuki_id-photo.webp",
     ref: "https://x.com/saara_hazuki/status/1820988363425640598",
@@ -171,6 +179,7 @@ export const RiriHaruno: MemberDescription = {
   fanName: "すぷりんがー",
   nyadeshiko: "ルノリスくん",
   hashTag: "#ねぇねぇはるりん",
+  hashTagForReply: "#はるりんに届け",
   idPhoto: {
     path: "/takaneko/members/riri-haruno_id-photo.webp",
     ref: "https://x.com/riri_haruno/status/1802461772424806777",
@@ -202,6 +211,8 @@ export const ErisaHigashiyama: MemberDescription = {
   fanName: "半熟たまご",
   nyadeshiko: "にゃーさ",
   hashTag: "#えりさーち",
+  hashTagForReply: "#えりさーち",
+  hashTagsForAnnouncement: ["#たかねこスケジュール", "#たかねこVLOG", "#ねこカメ"],
   idPhoto: {
     path: "/takaneko/members/erisa-higashiyama_id-photo.webp",
     ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
@@ -233,6 +244,8 @@ export const HinaHinahata: MemberDescription = {
   fanName: "ひなたまにあ",
   nyadeshiko: "たま",
   hashTag: "#ひなたましか勝たん",
+  hashTagForReply: "#ひなにリプ",
+  hashTags: ["#ひなたまごはん", "#ひなたまのすゝめ"],
   idPhoto: {
     path: "/takaneko/members/hina-hinahata_id-photo.webp",
     ref: "https://x.com/hina_hinahata/status/1830193741627605281",
@@ -264,6 +277,9 @@ export const MikuruHoshitani: MemberDescription = {
   fanName: "みけるん隊",
   nyadeshiko: "ちゃーみー",
   hashTag: "#まいにちみくるん",
+  hashTagForReply: "#ガチ恋みくる",
+  hashTags: ["みくるんとたべるん"],
+  hashTagsForAnnouncement: ["#たかねこセトリ"],
   idPhoto: {
     path: "/takaneko/members/mikuru-hoshitani_id-photo.webp",
     ref: "https://x.com/Mikuru_hositani/status/1819560982420783221",
@@ -295,7 +311,16 @@ export const MomonaMatsumoto: MemberDescription = {
   fanName: "ももぐみ",
   nyadeshiko: "ぽにゃん🎀",
   hashTag: "#ももなんにおくりもも",
-  hashTags: ["#ぽしとぽはん", "#ぽしとぽでーと", "#ももなだいしゅきくらぶ "],
+  hashTagForReply: "#もにゃめ",
+  hashTags: ["#ぽしとぽはん", "#ぽしとぽでーと", "#ももなだいしゅきくらぶ"],
+  hashTagsForAnnouncement: [
+    "#ももぐみもも部",
+    "#ももなとお話会",
+    "#ももなと握手会",
+    "#たかねこちゃん情報",
+    "#てくと更新しました",
+    "#ぽしのおしらせ",
+  ],
   idPhoto: {
     path: "/takaneko/members/momona-matsumoto_id-photo.webp",
     ref: "https://x.com/momonamatsumoto/status/1802142860449620097",
@@ -327,6 +352,7 @@ export const HimeriMomiyama: MemberDescription = {
   fanName: "ひめりんち。",
   nyadeshiko: "もみさん。",
   hashTag: "#ひめんしょん。",
+  hashTagForReply: "#ひめ連絡網。",
   idPhoto: {
     path: "/takaneko/members/himeri-momiyama_id-photo.webp",
     ref: "https://x.com/himeri_momiyama/status/1806331460787601907",

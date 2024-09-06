@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { MemberDescription } from "./members";
 
 interface Props {
@@ -22,6 +23,8 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     fanName,
     nyadeshiko,
     hashTag,
+    hashTagForReply,
+    hashTagsForAnnouncement,
     image,
     officialProfile,
     twitter,
@@ -74,15 +77,27 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           <dd className="col-span-2">{nyadeshiko}</dd>
           <dt className="text-gray-400">ハッシュタグ</dt>
           <dd className="col-span-2">
-            <Link
-              className="text-nadeshiko-800"
-              to={`https://x.com/search?q=${encodeURIComponent(hashTag)}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {hashTag}
-            </Link>
+            <TwitterHashTag className="text-nadeshiko-800" hashTag={hashTag} />
           </dd>
+          <dt className="text-gray-400">モバメ返信</dt>
+          <dd className="col-span-2">
+            <TwitterHashTag className="text-nadeshiko-800" hashTag={hashTagForReply} />
+          </dd>
+
+          {hashTagsForAnnouncement != undefined && hashTagsForAnnouncement.length > 0 && (
+            <>
+              <dt className="text-gray-400">メンバーからの告知</dt>
+              <dd className="col-span-2">
+                <ul>
+                  {hashTagsForAnnouncement.map((hashTag) => (
+                    <li key={hashTag}>
+                      <TwitterHashTag className="text-nadeshiko-800" hashTag={hashTag} />
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </>
+          )}
         </dl>
         <li className="mt-8 flex gap-4 text-black">
           <ul>
