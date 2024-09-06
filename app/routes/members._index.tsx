@@ -112,9 +112,9 @@ export default function Index() {
                   >
                     高嶺のなでしこ
                   </div>
-                  <div className="flex flex-1 items-stretch justify-stretch gap-4 p-3">
+                  <div className="flex flex-1 items-stretch justify-stretch gap-3 p-3">
                     <div className="flex-none">
-                      <div className="h- flex h-32 w-20 items-center justify-center bg-gray-100">
+                      <div className="h- flex h-32 w-24 items-center justify-center bg-gray-100">
                         <HiCamera className="h-12 w-12 text-gray-400" />
                       </div>
                     </div>
