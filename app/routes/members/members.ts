@@ -4,6 +4,7 @@ export interface MemberDescription {
   name: string;
   kana: string;
   romaji: string;
+  nickname: string;
   bloodType: string;
   birthday: string;
   constellation: string;
@@ -35,6 +36,7 @@ export const NaoKizuki: MemberDescription = {
   name: "城月 菜央",
   kana: "きづき なお",
   romaji: "Kizuki Nao",
+  nickname: "なおちゃん",
   bloodType: "B 型",
   birthday: "2003年12月25日",
   constellation: "やぎ座",
@@ -65,6 +67,7 @@ export const SuSuzumi: MemberDescription = {
   name: "涼海 すう",
   kana: "すずみ すう",
   romaji: "Suzumi Su",
+  nickname: "すうちゃん",
   bloodType: "AB 型",
   birthday: "2007年8月22日",
   constellation: "しし座",
@@ -96,6 +99,7 @@ export const MomokoHashimoto: MemberDescription = {
   name: "橋本 桃呼",
   kana: "はしもと ももこ",
   romaji: "Hashimoto Momoko",
+  nickname: "ももこ",
   bloodType: "AB 型",
   birthday: "2003年6月28日",
   constellation: "かに座",
@@ -126,6 +130,7 @@ export const SaaraHazuki: MemberDescription = {
   name: "葉月 紗蘭",
   kana: "はづき さあら",
   romaji: "Hazuki Saara",
+  nickname: "さあちゃん",
   bloodType: "-",
   birthday: "2007年3月3日",
   constellation: "うお座",
@@ -156,6 +161,7 @@ export const RiriHaruno: MemberDescription = {
   name: "春野 莉々",
   kana: "はるの りり",
   romaji: "Haruno Riri",
+  nickname: "はるりん",
   bloodType: "A 型",
   birthday: "2004年1月16日",
   constellation: "やぎ座",
@@ -186,6 +192,7 @@ export const ErisaHigashiyama: MemberDescription = {
   name: "東山 恵理沙",
   kana: "ひがしやま えりさ",
   romaji: "Higashiyama Erisa",
+  nickname: "りちゃん",
   bloodType: "AB 型",
   birthday: "2006年5月28日",
   constellation: "ふたご座",
@@ -216,6 +223,7 @@ export const HinaHinahata: MemberDescription = {
   name: "日向端 ひな",
   kana: "ひなはた ひな",
   romaji: "Hinahata Hina",
+  nickname: "ひなたま",
   bloodType: "O 型",
   birthday: "2002年10月30日",
   constellation: "さそり座",
@@ -246,6 +254,7 @@ export const MikuruHoshitani: MemberDescription = {
   name: "星谷 美来",
   kana: "ほしたに みくる",
   romaji: "Hoshitani Mikuru",
+  nickname: "みくるん",
   bloodType: "O 型",
   birthday: "2003年11月6日",
   constellation: "さそり座",
@@ -276,6 +285,7 @@ export const MomonaMatsumoto: MemberDescription = {
   name: "松本 ももな",
   kana: "まつもと ももな",
   romaji: "Matsumoto Momona",
+  nickname: "ももなん",
   bloodType: "B 型",
   birthday: "2002年10月12日",
   constellation: "てんびん座",
@@ -307,6 +317,7 @@ export const HimeriMomiyama: MemberDescription = {
   name: "籾山 ひめり",
   kana: "もみやま ひめり",
   romaji: "Momiyama Himeri",
+  nickname: "ひめりん",
   bloodType: "B 型",
   birthday: "2004年3月22日",
   constellation: "おひつじ座",

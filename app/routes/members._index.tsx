@@ -113,7 +113,7 @@ export default function Index() {
                           {member.name}
                         </dd>
                         <dt className="col-span-1 text-xs leading-none"></dt>
-                        <dd className="col-span-2 text-xs leading-none">{member.romaji}</dd>
+                        <dd className="col-span-2 text-xs leading-none">{member.nickname}</dd>
                         <dt className="col-span-1 text-xs leading-none">生年月日</dt>
                         <dd className="col-span-2 text-xs leading-none">{member.birthday}</dd>
                         <dt className="col-span-1 text-xs leading-none">血液型</dt>

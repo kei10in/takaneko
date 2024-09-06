@@ -13,6 +13,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     name,
     kana,
     romaji,
+    nickname,
     birthday,
     bloodType,
     constellation,
@@ -65,6 +66,8 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           <dd className="col-span-2">{birthplace}</dd>
           <dt className="text-gray-400">メンバーカラー</dt>
           <dd className="col-span-2">{memberColor}</dd>
+          <dt className="text-gray-400">ニックネーム</dt>
+          <dd className="col-span-2">{nickname}</dd>
           <dt className="text-gray-400">ファンネーム</dt>
           <dd className="col-span-2">{fanName}</dd>
           <dt className="text-gray-400">にゃでしこ</dt>
