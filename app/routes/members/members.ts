@@ -197,11 +197,11 @@ export const ErisaHigashiyama: MemberDescription = {
   hashTag: "#えりさーち",
   idPhoto: {
     path: "/takaneko/members/erisa-higashiyama_id-photo.webp",
-    ref: "https://x.com/erisahigasiyama/status/1826242975569252380",
+    ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
   },
   image: {
     path: "/takaneko/members/erisa-higashiyama.webp",
-    ref: "https://x.com/erisahigasiyama/status/1826242975569252380",
+    ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
   },
   officialProfile: "https://takanenonadeshiko.jp/erisa_higashiyama/",
   twitter: "https://x.com/erisahigasiyama",
