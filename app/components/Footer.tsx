@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
-import { FaGithub, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { SITE_TITLE } from "~/constants";
 
 interface Props {
@@ -96,6 +96,11 @@ export const Footer: React.FC<Props> = (props: Props) => {
                     rel="noreferrer"
                   >
                     <FaTiktok className="h-4 w-4" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
+                    <FaDiscord className="h-4 w-4" />
                   </Link>
                 </li>
               </ul>

@@ -1,5 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
-import { FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { FaDiscord, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "./members/members";
 
@@ -52,45 +52,30 @@ export default function Index() {
           </li>
         </ul>
 
-        <ul className="my-4 flex gap-2 px-2">
+        <ul className="my-4 flex gap-2 px-2 text-gray-700">
           <li>
-            <Link
-              className="text-gray-700"
-              to="https://www.youtube.com/@official6743"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
               <FaYoutube className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link
-              className="text-gray-700"
-              to="https://x.com/takanenofficial"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
               <FaXTwitter className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link
-              className="text-gray-700"
-              to="https://www.instagram.com/takanenofficial/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link to="https://www.instagram.com/takanenofficial/" target="_blank" rel="noreferrer">
               <FaInstagram className="h-5 w-5" />
             </Link>
           </li>
           <li>
-            <Link
-              className="text-gray-700"
-              to="https://www.tiktok.com/@takanenofficial"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link to="https://www.tiktok.com/@takanenofficial" target="_blank" rel="noreferrer">
               <FaTiktok className="h-5 w-5" />
+            </Link>
+          </li>
+          <li>
+            <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
+              <FaDiscord className="h-5 w-5" />
             </Link>
           </li>
         </ul>
