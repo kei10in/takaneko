@@ -147,7 +147,7 @@ export default function Index() {
                       alt="てんにゃ"
                     />
                   </div>
-                  <div className="flex-1 bg-white bg-opacity-90 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
+                  <div className="flex-1 bg-white bg-opacity-95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                     <p>たかねこまねーじゃー</p>
                     <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
