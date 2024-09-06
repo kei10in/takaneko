@@ -14,6 +14,10 @@ export interface MemberDescription {
   nyadeshiko: string;
   hashTag: string;
   hashTags?: string[];
+  image: {
+    path: string;
+    ref: string;
+  };
   officialProfile: string;
   twitter: string;
   instagram: string;
@@ -36,6 +40,10 @@ export const NaoKizuki: MemberDescription = {
   fanName: "城月菜央の監督",
   nyadeshiko: "ルニャ・コーチ",
   hashTag: "#気づいて城月",
+  image: {
+    path: "/takaneko/members/nao-kizuki.webp",
+    ref: "https://x.com/nao_kizuki/status/1807933301099012227",
+  },
   officialProfile: "https://takanenonadeshiko.jp/nao_kizuki/",
   twitter: "https://twitter.com/nao_kizuki",
   instagram: "https://www.instagram.com/nao_kizuki_/",
@@ -59,6 +67,10 @@ export const SuSuzumi: MemberDescription = {
   nyadeshiko: "すうにゃろう",
   hashTag: "#すうですぅ",
   hashTags: ["#すうだより"],
+  image: {
+    path: "/takaneko/members/su-suzumi.webp",
+    ref: "https://x.com/su_suzumi_/status/1826409216082673981",
+  },
   officialProfile: "https://takanenonadeshiko.jp/suu_suzumi/",
   twitter: "https://x.com/su_suzumi_",
   instagram: "https://www.instagram.com/su_suzumi_/",
@@ -81,6 +93,10 @@ export const MomokoHashimoto: MemberDescription = {
   fanName: "もふとん🛌🍑",
   nyadeshiko: "はしもと もふ呼",
   hashTag: "#桃呼ちゅわん",
+  image: {
+    path: "/takaneko/members/momoko-hashimoto.webp",
+    ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
+  },
   officialProfile: "https://takanenonadeshiko.jp/momoko_hashimoto/",
   twitter: "https://x.com/MomokoHashimoto",
   instagram: "https://www.instagram.com/momoko__3628/",
@@ -103,6 +119,10 @@ export const SaaraHazuki: MemberDescription = {
   fanName: "は組",
   nyadeshiko: "らあら",
   hashTag: "#さあらいふ",
+  image: {
+    path: "/takaneko/members/saara-hazuki.webp",
+    ref: "https://x.com/saara_hazuki/status/1820988363425640598",
+  },
   officialProfile: "https://takanenonadeshiko.jp/saara_hazuki/",
   twitter: "https://twitter.com/saara_hazuki",
   instagram: "https://www.instagram.com/saara_hazuki/",
@@ -125,6 +145,10 @@ export const RiriHaruno: MemberDescription = {
   fanName: "すぷりんがー",
   nyadeshiko: "ルノリスくん",
   hashTag: "#ねぇねぇはるりん",
+  image: {
+    path: "/takaneko/members/riri-haruno.webp",
+    ref: "https://x.com/riri_haruno/status/1802461772424806777",
+  },
   officialProfile: "https://takanenonadeshiko.jp/riri_haruno/",
   twitter: "https://x.com/riri_haruno",
   instagram: "https://www.instagram.com/haruno_riri/",
@@ -147,6 +171,10 @@ export const ErisaHigashiyama: MemberDescription = {
   fanName: "半熟たまご",
   nyadeshiko: "にゃーさ",
   hashTag: "#えりさーち",
+  image: {
+    path: "/takaneko/members/erisa-higashiyama.webp",
+    ref: "https://x.com/erisahigasiyama/status/1826242975569252380",
+  },
   officialProfile: "https://takanenonadeshiko.jp/erisa_higashiyama/",
   twitter: "https://x.com/erisahigasiyama",
   instagram: "https://www.instagram.com/erisa_higashiyama/",
@@ -169,6 +197,10 @@ export const HinaHinahata: MemberDescription = {
   fanName: "ひなたまにあ",
   nyadeshiko: "たま",
   hashTag: "#ひなたましか勝たん",
+  image: {
+    path: "/takaneko/members/hina-hinahata.webp",
+    ref: "https://x.com/hina_hinahata/status/1830193741627605281",
+  },
   officialProfile: "https://takanenonadeshiko.jp/hina_hinahata/",
   twitter: "https://x.com/hina_hinahata",
   instagram: "https://www.instagram.com/hinatama18",
@@ -191,6 +223,10 @@ export const MikuruHoshitani: MemberDescription = {
   fanName: "みけるん隊",
   nyadeshiko: "ちゃーみー",
   hashTag: "#まいにちみくるん",
+  image: {
+    path: "/takaneko/members/mikuru-hoshitani.webp",
+    ref: "https://x.com/Mikuru_hositani/status/1819560982420783221",
+  },
   officialProfile: "https://takanenonadeshiko.jp/mikuru_hoshitani/",
   twitter: "https://x.com/mikuru_hositani",
   instagram: "https://www.instagram.com/mikuru_1106/",
@@ -214,6 +250,10 @@ export const MomonaMatsumoto: MemberDescription = {
   nyadeshiko: "ぽにゃん🎀",
   hashTag: "#ももなんにおくりもも",
   hashTags: ["#ぽしとぽはん", "#ぽしとぽでーと", "#ももなだいしゅきくらぶ "],
+  image: {
+    path: "/takaneko/members/momona-matsumoto.webp",
+    ref: "https://x.com/momonamatsumoto/status/1802142860449620097",
+  },
   officialProfile: "https://takanenonadeshiko.jp/momona_matsumoto/",
   twitter: "https://x.com/momonamatsumoto",
   instagram: "https://www.instagram.com/momona.1012/",
@@ -236,6 +276,10 @@ export const HimeriMomiyama: MemberDescription = {
   fanName: "ひめりんち。",
   nyadeshiko: "もみさん。",
   hashTag: "#ひめんしょん。",
+  image: {
+    path: "/takaneko/members/himeri-momiyama.webp",
+    ref: "https://x.com/himeri_momiyama/status/1806331460787601907",
+  },
   officialProfile: "https://takanenonadeshiko.jp/himeri_momiyama/",
   twitter: "https://x.com/himeri_momiyama",
   instagram: "https://www.instagram.com/momichan_hime/",

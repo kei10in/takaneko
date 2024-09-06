@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
-import { HiCamera } from "react-icons/hi2";
+import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { MemberDescription } from "./members";
 
 interface Props {
@@ -21,6 +21,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     fanName,
     nyadeshiko,
     hashTag,
+    image,
     officialProfile,
     twitter,
     instagram,
@@ -29,14 +30,24 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
   } = profile;
 
   return (
-    <div className="mx-auto max-w-5xl py-8 lg:grid lg:grid-cols-2">
-      <div className="mx-8 h-[30rem] bg-gray-100">
-        <div className="flex h-full w-full items-center justify-center">
-          <HiCamera className="h-24 w-24 text-gray-400" />
+    <div className="mx-auto pb-12 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-4 lg:py-12">
+      <div className="w-full">
+        <div className="mx-auto w-fit">
+          <img
+            className="block h-[28rem] object-cover object-center lg:h-[36rem]"
+            src={image.path}
+            alt="プロフィール"
+          />
+          <Link className="text-sm text-gray-400" to={image.ref} target="_blank" rel="noreferrer">
+            <p className="text-right">
+              引用元 <HiArrowTopRightOnSquare className="inline" />
+            </p>
+          </Link>
         </div>
       </div>
-      <section className="px-4">
-        <h1 className="mb-2 mt-8 text-3xl font-semibold text-nadeshiko-800">{name}</h1>
+
+      <section className="p-4">
+        <h1 className="my-2 text-3xl font-semibold text-nadeshiko-800 lg:mt-12">{name}</h1>
 
         <div className="flex gap-4 text-gray-500">
           <p>{kana}</p>
@@ -74,7 +85,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           <ul>
             <Link to={officialProfile} target="_blank" rel="noreferrer">
               <img
-                className="block h-8 w-8 rounded-md"
+                className="block h-6 w-6 rounded-md"
                 src="/takaneko/logo.jpg"
                 alt="オフィシャル ウェブサイト"
               />
@@ -82,22 +93,22 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </ul>
           <ul>
             <Link to={twitter} target="_blank" rel="noreferrer">
-              <FaXTwitter className="h-8 w-8" />
+              <FaXTwitter className="h-6 w-6" />
             </Link>
           </ul>
           <ul>
             <Link to={instagram} target="_blank" rel="noreferrer">
-              <FaInstagram className="h-8 w-8" />
+              <FaInstagram className="h-6 w-6" />
             </Link>
           </ul>
           <ul>
             <Link to={tiktok} target="_blank" rel="noreferrer">
-              <FaTiktok className="h-8 w-8" />
+              <FaTiktok className="h-6 w-6" />
             </Link>
           </ul>
           <ul>
             <Link to={showroom} target="_blank" rel="noreferrer">
-              <img className="block h-8 w-8" src="/showroom/showroom-icon.png" alt="SHOWROOM" />
+              <img className="block h-6 w-6" src="/showroom/showroom-icon.png" alt="SHOWROOM" />
             </Link>
           </ul>
         </li>
