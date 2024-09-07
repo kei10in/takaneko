@@ -1,26 +1,43 @@
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
   unstable_defineClientLoader as defineClientLoader,
   Link,
   MetaFunction,
   useLoaderData,
 } from "@remix-run/react";
+import { useMemo } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { dateHref, validateYearMonthDate } from "~/features/calendars/utils";
 import { loadEventsInDay } from "~/features/events/events";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const title =
+    data == undefined
+      ? "スケジュール"
+      : `${displayDateWithDayOfWeek(data.year, data.month, data.date)} のスケジュール`;
+
   return [
-    { title: `スケジュール - ${SITE_TITLE}` },
+    { title: formatTitle(title) },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
     },
   ];
+};
+
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+  const r = validateYearMonthDate({ year: params.year, month: params.month, date: params.date });
+  if (r == undefined) {
+    throw new Response("", { status: 404 });
+  }
+
+  const { year, month, date } = r;
+  return { year, month, date };
 };
 
 export const clientLoader = defineClientLoader(async ({ params }) => {
@@ -30,13 +47,18 @@ export const clientLoader = defineClientLoader(async ({ params }) => {
   }
 
   const { year, month, date } = r;
-  const events = loadEventsInDay(new NaiveDate(year, month, date));
-  return { year, month, date, events };
+  return { year, month, date };
 });
 
 export default function Index() {
-  const { year, month, date, events } = useLoaderData<typeof clientLoader>();
-  const calendarEvents = events.map(convertEventModuleToCalendarEvent);
+  const { year, month, date } = useLoaderData<typeof clientLoader>();
+
+  const calendarEvents = useMemo(() => {
+    const events = loadEventsInDay(new NaiveDate(year, month, date));
+    const calendarEvents = events.map(convertEventModuleToCalendarEvent);
+    return calendarEvents;
+  }, [date, month, year]);
+
   const d = new NaiveDate(year, month, date);
 
   return (
