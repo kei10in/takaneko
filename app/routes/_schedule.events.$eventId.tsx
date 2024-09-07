@@ -9,15 +9,18 @@ import {
   HiLink,
   HiMapPin,
 } from "react-icons/hi2";
-import { SITE_TITLE } from "~/constants";
-import { isEventExists, loadEventContent } from "~/features/events/events";
+import { isEventExists, loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const event = data == undefined ? undefined : loadEventModule(data.eventId);
+  const title = event?.meta.title ?? event?.meta.summary ?? "スケジュール";
+
   return [
-    { title: `スケジュール - ${SITE_TITLE}` },
+    { title: formatTitle(title) },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
