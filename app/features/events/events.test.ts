@@ -4,9 +4,9 @@ import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { loadEventModule, loadEvents, loadEventsInDay } from "./events";
 
 describe("loadEvents", () => {
-  it("should load events for the given month", async () => {
+  it("should load events for the given month", () => {
     const month: NaiveMonth = new NaiveMonth(2024, 8);
-    const events = await loadEvents(month);
+    const events = loadEvents(month);
 
     expect(events.length).toBeGreaterThan(0);
 
@@ -25,9 +25,9 @@ describe("loadEvents", () => {
 });
 
 describe("loadEventsInDay", () => {
-  it("should load events for the given date", async () => {
+  it("should load events for the given date", () => {
     const date = new NaiveDate(2024, 8, 15);
-    const events = await loadEventsInDay(date);
+    const events = loadEventsInDay(date);
 
     expect(events.length).toBeGreaterThan(0);
 
@@ -50,10 +50,10 @@ describe("loadEventsInDay", () => {
 });
 
 describe("loadEventModule", () => {
-  it("should load event module for the given event id", async () => {
+  it("should load event module for the given event id", () => {
     const eventId =
       "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会";
-    const event = await loadEventModule(eventId);
+    const event = loadEventModule(eventId);
 
     expect(event).toMatchObject({
       id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",

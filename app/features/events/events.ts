@@ -28,7 +28,7 @@ const ALL_EVENTS = Object.fromEntries(
   }),
 );
 
-export const loadEvents = async (month: NaiveMonth): Promise<EventModule[]> => {
+export const loadEvents = (month: NaiveMonth): EventModule[] => {
   const prev = month.previousMonth();
   const next = month.nextMonth();
   const prefixes = [
@@ -43,10 +43,10 @@ export const loadEvents = async (month: NaiveMonth): Promise<EventModule[]> => {
     })
     .map(([filename, { meta }]) => ({ id: stem(filename), filename, meta }));
 
-  return Promise.resolve(events);
+  return events;
 };
 
-export const loadEventsInDay = async (date: NaiveDate): Promise<EventModule[]> => {
+export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
   const y = date.year.toString();
   const m = date.month.toString().padStart(2, "0");
   const d = date.day.toString().padStart(2, "0");
@@ -64,7 +64,7 @@ export const loadEventsInDay = async (date: NaiveDate): Promise<EventModule[]> =
   return events;
 };
 
-export const loadEventModule = async (eventId: string): Promise<EventModule | undefined> => {
+export const loadEventModule = (eventId: string): EventModule | undefined => {
   const [year, month] = eventId.split("_")[0].split("-");
 
   const path = `./${year}/${month}/${eventId}.mdx`;
@@ -77,7 +77,7 @@ export const loadEventModule = async (eventId: string): Promise<EventModule | un
   return { id: eventId, filename: path, meta: loadEvent.meta };
 };
 
-export const loadEventContent = async (eventId: string): Promise<EventContent | undefined> => {
+export const loadEventContent = (eventId: string): EventContent | undefined => {
   const [year, month] = eventId.split("_")[0].split("-");
 
   const path = `./${year}/${month}/${eventId}.mdx`;

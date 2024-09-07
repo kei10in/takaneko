@@ -37,7 +37,7 @@ export const clientLoader = defineClientLoader(async ({ params }) => {
     throw new Response("", { status: 404 });
   }
 
-  const event = await loadEventContent(eventId);
+  const event = loadEventContent(eventId);
   if (event == undefined) {
     throw new Response("", { status: 404 });
   }
@@ -173,11 +173,11 @@ export default function EventPage() {
               className="h-fit w-fit overflow-hidden"
               onClick={() => navigate(".", { replace: true })}
             >
-              <img
-                alt="プレビュー"
-                className="h-full max-h-[80svh] w-full object-contain"
-                src={meta.image.path}
-              />
+                <img
+                  alt="プレビュー"
+                  className="h-full max-h-[80svh] w-full object-contain"
+                  src={meta.image.path}
+                />
             </DialogPanel>
           </div>
         </Dialog>

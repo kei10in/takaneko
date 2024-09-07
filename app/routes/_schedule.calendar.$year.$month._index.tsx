@@ -32,7 +32,7 @@ export const clientLoader = defineClientLoader(
     }
 
     const { year, month } = r;
-    const events = await loadEvents(new NaiveMonth(year, month));
+    const events = loadEvents(new NaiveMonth(year, month));
     return { year, month, events };
   },
 );

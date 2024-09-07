@@ -30,7 +30,7 @@ export const clientLoader = defineClientLoader(async ({ params }) => {
   }
 
   const { year, month, date } = r;
-  const events = await loadEventsInDay(new NaiveDate(year, month, date));
+  const events = loadEventsInDay(new NaiveDate(year, month, date));
   return { year, month, date, events };
 });
 
