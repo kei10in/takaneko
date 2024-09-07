@@ -1,12 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  Link,
-  MetaFunction,
-  useLoaderData,
-  useLocation,
-  useNavigate,
-} from "@remix-run/react";
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { Link, MetaFunction, useLoaderData, useLocation, useNavigate } from "@remix-run/react";
+import { useMemo } from "react";
 import {
   HiArrowTopRightOnSquare,
   HiCalendar,
@@ -15,9 +10,9 @@ import {
   HiMapPin,
 } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
-import { loadEventContent } from "~/features/events/events";
+import { isEventExists, loadEventContent } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
-import { generateCalendarEventDataUrl } from "~/features/events/ical";
+import { makeIcs } from "~/features/events/ical";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 
 export const meta: MetaFunction = () => {
@@ -30,40 +25,36 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(async ({ params }) => {
+export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { eventId } = params;
 
   if (eventId == undefined) {
     throw new Response("", { status: 404 });
   }
 
-  const event = loadEventContent(eventId);
-  if (event == undefined) {
+  if (!isEventExists(eventId)) {
     throw new Response("", { status: 404 });
   }
 
-  const icsDataUrl = generateCalendarEventDataUrl(event.meta);
-  if (icsDataUrl == undefined) {
-    return { event };
-  }
-
-  return {
-    event,
-    ics: {
-      filename: `${event.meta.date}_${event.meta.summary}.ics`,
-      dataUrl: icsDataUrl,
-    },
-  };
-});
+  return { eventId };
+};
 
 export default function EventPage() {
-  const { event, ics } = useLoaderData<typeof clientLoader>();
-  const { meta, Content } = event;
-
-  const d = meta.date;
+  const data = useLoaderData<typeof loader>();
+  const eventId = data.eventId;
+  const event = useMemo(() => loadEventContent(eventId), [eventId]);
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  if (event == undefined) {
+    return null;
+  }
+
+  const ics = makeIcs(event.meta);
+  const Content = event.Content;
+  const meta = event.meta;
+  const d = meta.date;
 
   return (
     <div className="container mx-auto lg:max-w-4xl">
@@ -173,11 +164,11 @@ export default function EventPage() {
               className="h-fit w-fit overflow-hidden"
               onClick={() => navigate(".", { replace: true })}
             >
-                <img
-                  alt="プレビュー"
-                  className="h-full max-h-[80svh] w-full object-contain"
-                  src={meta.image.path}
-                />
+              <img
+                alt="プレビュー"
+                className="h-full max-h-[80svh] w-full object-contain"
+                src={meta.image.path}
+              />
             </DialogPanel>
           </div>
         </Dialog>

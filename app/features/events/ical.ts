@@ -1,6 +1,20 @@
 import { createEvent, EventAttributes } from "ics";
 import { EventMeta } from "./meta";
 
+export const makeIcs = (meta: EventMeta): { filename: string; dataUrl: string } | undefined => {
+  const icsDataUrl = generateCalendarEventDataUrl(meta);
+
+  const ics =
+    icsDataUrl == undefined
+      ? undefined
+      : {
+          filename: `${meta.date}_${meta.summary}.ics`,
+          dataUrl: icsDataUrl,
+        };
+
+  return ics;
+};
+
 export const generateCalendarEventDataUrl = (e: EventMeta): string | undefined => {
   const icsString = convertToIcsEvent(e);
   if (icsString == undefined) {

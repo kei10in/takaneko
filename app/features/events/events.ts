@@ -28,6 +28,12 @@ const ALL_EVENTS = Object.fromEntries(
   }),
 );
 
+export const isEventExists = (eventId: string): boolean => {
+  const [year, month] = eventId.split("_")[0].split("-");
+  const path = `./${year}/${month}/${eventId}.mdx`;
+  return path in ALL_EVENTS;
+};
+
 export const loadEvents = (month: NaiveMonth): EventModule[] => {
   const prev = month.previousMonth();
   const next = month.nextMonth();
