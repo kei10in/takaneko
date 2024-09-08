@@ -1,3 +1,4 @@
+import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
   unstable_defineClientLoader as defineClientLoader,
   MetaFunction,
@@ -5,18 +6,22 @@ import {
   useLocation,
   useNavigate,
 } from "@remix-run/react";
-import { useEffect } from "react";
-import { SITE_TITLE } from "~/constants";
+import { useEffect, useMemo } from "react";
 import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
-import { EventModule, loadEvents } from "~/features/events/events";
+import { loadEvents } from "~/features/events/events";
+import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
+import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const title =
+    data == undefined ? "スケジュール" : `${displayMonth(data.year, data.month)} のスケジュール`;
+
   return [
-    { title: `スケジュール - ${SITE_TITLE}` },
+    { title: formatTitle(title) },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
@@ -24,23 +29,37 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(
-  async ({ params }): Promise<{ year: number; month: number; events: EventModule[] }> => {
-    const r = validateYearMonth({ year: params.year, month: params.month });
-    if (r == undefined) {
-      throw new Response("", { status: 404 });
-    }
+export const loader = async ({ params }: LoaderFunctionArgs) => {
+  const r = validateYearMonth({ year: params.year, month: params.month });
+  if (r == undefined) {
+    throw new Response("", { status: 404 });
+  }
 
-    const { year, month } = r;
-    const events = await loadEvents(new NaiveMonth(year, month));
-    return { year, month, events };
-  },
-);
+  const { year, month } = r;
+  return json({ year, month });
+};
+
+export const clientLoader = defineClientLoader(async ({ params }) => {
+  const r = validateYearMonth({ year: params.year, month: params.month });
+  if (r == undefined) {
+    throw new Response("", { status: 404 });
+  }
+
+  const { year, month } = r;
+  return json({ year, month });
+});
 
 export default function Index() {
-  const { year, month, events } = useLoaderData<typeof clientLoader>();
+  const { year, month } = useLoaderData<typeof loader>();
+
+  const calendarEvents = useMemo(() => {
+    const m = new NaiveMonth(year, month);
+    const events = loadEvents(m);
+    const calendarEvents = events.map(convertEventModuleToCalendarEvent);
+    return calendarEvents;
+  }, [month, year]);
+
   const m = new NaiveMonth(year, month);
-  const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   const location = useLocation();
   const navigate = useNavigate();

@@ -27,7 +27,7 @@ export const meta: MetaFunction = () => {
 
 export const clientLoader = defineClientLoader(async (_args) => {
   const date = getActiveDateInJapan(new Date());
-  const events = await loadEventsInDay(date);
+  const events = loadEventsInDay(date);
   return { date, events };
 });
 

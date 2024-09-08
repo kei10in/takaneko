@@ -1,15 +1,4 @@
-import { Link, MetaFunction, Outlet } from "@remix-run/react";
-import { SITE_TITLE } from "~/constants";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: `スケジュール - ${SITE_TITLE}` },
-    {
-      name: "description",
-      content: "高嶺のなでしこの非公式スケジュールです。",
-    },
-  ];
-};
+import { Link, Outlet } from "@remix-run/react";
 
 export default function Index() {
   return (
