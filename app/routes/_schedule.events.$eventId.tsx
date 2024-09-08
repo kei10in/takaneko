@@ -1,5 +1,5 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { Link, MetaFunction, useLoaderData, useLocation, useNavigate } from "@remix-run/react";
 import { useMemo } from "react";
 import {
@@ -9,7 +9,7 @@ import {
   HiLink,
   HiMapPin,
 } from "react-icons/hi2";
-import { isEventExists, loadEventContent, loadEventModule } from "~/features/events/events";
+import { loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -35,16 +35,20 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  if (!isEventExists(eventId)) {
+  const event = loadEventModule(eventId);
+  if (event == undefined) {
     throw new Response("", { status: 404 });
   }
 
-  return { eventId };
+  const ics = await makeIcs(eventId, event.meta);
+
+  return json({ eventId, ics });
 };
 
 export default function EventPage() {
   const data = useLoaderData<typeof loader>();
   const eventId = data.eventId;
+  const ics = data.ics;
   const event = useMemo(() => loadEventContent(eventId), [eventId]);
 
   const location = useLocation();
@@ -54,7 +58,6 @@ export default function EventPage() {
     return null;
   }
 
-  const ics = makeIcs(event.meta);
   const Content = event.Content;
   const meta = event.meta;
   const d = meta.date;
@@ -127,11 +130,12 @@ export default function EventPage() {
         <Content />
       </article>
 
-      {ics && (
+      {ics != undefined && (
         <Link
           className="mx-auto my-10 block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
           to={ics.dataUrl}
           download={ics.filename}
+          discover="none"
         >
           <div className="flex items-center gap-1 text-nadeshiko-800">
             <span>

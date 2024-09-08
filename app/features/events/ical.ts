@@ -1,8 +1,12 @@
 import { createEvent, EventAttributes } from "ics";
+import { DOMAIN } from "~/constants";
 import { EventMeta } from "./meta";
 
-export const makeIcs = (meta: EventMeta): { filename: string; dataUrl: string } | undefined => {
-  const icsDataUrl = generateCalendarEventDataUrl(meta);
+export const makeIcs = async (
+  id: string,
+  meta: EventMeta,
+): Promise<{ filename: string; dataUrl: string } | undefined> => {
+  const icsDataUrl = await generateCalendarEventDataUrl(id, meta);
 
   const ics =
     icsDataUrl == undefined
@@ -15,8 +19,11 @@ export const makeIcs = (meta: EventMeta): { filename: string; dataUrl: string } 
   return ics;
 };
 
-export const generateCalendarEventDataUrl = (e: EventMeta): string | undefined => {
-  const icsString = convertToIcsEvent(e);
+export const generateCalendarEventDataUrl = async (
+  id: string,
+  e: EventMeta,
+): Promise<string | undefined> => {
+  const icsString = await convertToIcsEvent(id, e);
   if (icsString == undefined) {
     return undefined;
   }
@@ -25,8 +32,9 @@ export const generateCalendarEventDataUrl = (e: EventMeta): string | undefined =
   return `data:text/calendar;charset=utf-8,${encodedData}`;
 };
 
-export const convertToIcsEvent = (e: EventMeta): string | undefined => {
+export const convertToIcsEvent = async (id: string, e: EventMeta): Promise<string | undefined> => {
   const d = e.date;
+  const uid = await icsEventId(id);
 
   const ea: EventAttributes = {
     start: [d.year, d.month, d.day],
@@ -39,6 +47,8 @@ export const convertToIcsEvent = (e: EventMeta): string | undefined => {
     title: e.title ?? e.summary,
     location: e.location,
     url: e.link?.url,
+
+    uid,
   };
 
   const r = createEvent(ea);
@@ -48,4 +58,20 @@ export const convertToIcsEvent = (e: EventMeta): string | undefined => {
   }
 
   return r.value;
+};
+
+const icsEventId = async (id: string): Promise<string> => {
+  const [dateString, idBody] = id.split("_");
+  const hash = (await sha1Hash(idBody)).slice(0, 8);
+
+  return `${dateString}_${hash}@${DOMAIN}`;
+};
+
+const sha1Hash = async (s: string): Promise<string> => {
+  const data = new TextEncoder().encode(s);
+
+  const b = await crypto.subtle.digest("SHA-1", data);
+  const hashArray = Array.from(new Uint8Array(b));
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  return hashHex;
 };
