@@ -25,7 +25,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.date });
+  const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.day });
   if (r == undefined) {
     throw new Response("", { status: 404 });
   }
@@ -35,7 +35,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 };
 
 export const clientLoader = defineClientLoader(async ({ params }) => {
-  const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.date });
+  const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.day });
   if (r == undefined) {
     throw new Response("", { status: 404 });
   }
