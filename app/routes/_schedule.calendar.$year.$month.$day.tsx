@@ -19,7 +19,9 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { title: formatTitle(title) },
     {
       name: "description",
-      content: "高嶺のなでしこの非公式スケジュールです。",
+      content:
+        "高嶺のなでしこの出演予定やリリース情報をまとめた非公式スケジュールです。" +
+        "気になるイベント・ライブ・テレビ・ラジオの出演日や雑誌・CDの発売日などを確認しましょう。",
     },
   ];
 };
