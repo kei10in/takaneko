@@ -25,29 +25,29 @@ export const validateYearMonth = (args: {
 export const validateYearMonthDate = (args: {
   year: string | undefined;
   month: string | undefined;
-  date: string | undefined;
-}): { year: number; month: number; date: number } | undefined => {
+  day: string | undefined;
+}): { year: number; month: number; day: number } | undefined => {
   const year = Number(args.year);
   const month = Number(args.month);
-  const date = Number(args.date);
+  const day = Number(args.day);
   if (
     Number.isNaN(year) ||
     Number.isNaN(month) ||
-    Number.isNaN(date) ||
+    Number.isNaN(day) ||
     !Number.isSafeInteger(year) ||
     !Number.isSafeInteger(month) ||
-    !Number.isSafeInteger(date) ||
+    !Number.isSafeInteger(day) ||
     year < 2000 ||
     month < 1 ||
     month > 12 ||
-    date < 1
+    day < 1
   ) {
     return undefined;
   }
 
-  const d = new Date(Date.UTC(year, month - 1, date));
+  const d = new Date(Date.UTC(year, month - 1, day));
 
-  return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, date: d.getUTCDate() };
+  return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate() };
 };
 
 export const currentMonthHref = (): string => {
