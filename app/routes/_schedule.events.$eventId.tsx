@@ -1,6 +1,13 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { Link, MetaFunction, useLoaderData, useLocation, useNavigate } from "@remix-run/react";
+import {
+  Link,
+  MetaDescriptor,
+  MetaFunction,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "@remix-run/react";
 import { useMemo } from "react";
 import {
   HiArrowTopRightOnSquare,
@@ -12,6 +19,7 @@ import {
 import { loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
+import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -19,13 +27,19 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const event = data == undefined ? undefined : loadEventModule(data.eventId);
   const title = event?.meta.title ?? event?.meta.summary ?? "スケジュール";
 
-  return [
+  const result: MetaDescriptor[] = [
     { title: formatTitle(title) },
     {
       name: "description",
       content: "高嶺のなでしこの非公式スケジュールです。",
     },
   ];
+
+  if (event != undefined) {
+    result.push(...twitterCard(event.meta));
+  }
+
+  return result;
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
