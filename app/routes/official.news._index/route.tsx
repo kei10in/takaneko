@@ -50,7 +50,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <section className="mx-auto max-w-3xl px-4 py-8">
+      <section className="mx-auto max-w-3xl px-8 py-8">
         <h1 className="text-3xl">公式ニュース</h1>
         <div className="mt-8 px-4 text-sm">
           <p>高嶺のなでしこの公式ニュースへのリンクです。</p>
@@ -72,13 +72,16 @@ export default function Index() {
               <li key={p.id}>
                 <Link to={p.link}>
                   <div className="flex gap-4 py-4">
-                    <div className="flex h-28 w-28 flex-none items-center justify-center rounded border-8 border-nadeshiko-200">
-                      <p className="text-2xl text-nadeshiko-500">NEW</p>
+                    <div className="flex h-20 w-20 flex-none items-center justify-center rounded border-[0.375rem] border-nadeshiko-200">
+                      <p className="text-xl text-nadeshiko-500">NEW</p>
                     </div>
                     <div className="flex-1 space-y-2">
-                      <p className="text-xl">{p.title.rendered}</p>
+                      <p
+                        className="text-xl"
+                        dangerouslySetInnerHTML={{ __html: p.title.rendered }}
+                      />
                       <div className="flex items-center gap-4">
-                        <p className="border border-nadeshiko-500 px-4 py-0.5 text-sm leading-none text-nadeshiko-500">
+                        <p className="border border-nadeshiko-500 px-4 py-0.5 text-xs leading-none text-nadeshiko-500">
                           お知らせ
                         </p>
                         <p className="text-sm">{ds}</p>
