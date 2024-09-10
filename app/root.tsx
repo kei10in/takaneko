@@ -45,6 +45,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/members">
                     メンバー
                   </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/official/news">
+                    公式ニュース
+                  </Link>
                 </div>
                 <button
                   className="inline-flex rounded-full p-2 text-lg text-nadeshiko-600 lg:hidden"
@@ -87,6 +90,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/members" onClick={close}>
                       メンバー
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:text-nadeshiko-700" to="/official/news" onClick={close}>
+                      公式ニュース
                     </Link>
                   </li>
                 </ul>
