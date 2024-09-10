@@ -34,6 +34,12 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 <li>
                   <Link to="/calendar">スケジュール</Link>
                 </li>
+                <li>
+                  <Link to="/members">メンバー</Link>
+                </li>
+                <li>
+                  <Link to="/official/news">公式ニュース</Link>
+                </li>
               </ul>
             </section>
 
