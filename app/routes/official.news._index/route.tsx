@@ -67,9 +67,9 @@ export default function Index() {
   const totalPages = data.totalPages;
 
   return (
-    <div className="container mx-auto">
-      <section className="mx-auto max-w-3xl px-8 py-8">
-        <h1 className="text-3xl">公式ニュース</h1>
+    <div className="container mx-auto max-w-5xl">
+      <section className="px-4 py-8">
+        <h1 className="my-4 text-3xl font-semibold text-gray-600">公式ニュース</h1>
         <div className="mt-8 px-4 text-sm">
           <p>高嶺のなでしこの公式ニュースへのリンクです。</p>
           <p>
