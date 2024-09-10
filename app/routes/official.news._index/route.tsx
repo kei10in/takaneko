@@ -5,6 +5,7 @@ import {
   unstable_defineClientLoader,
   useLoaderData,
 } from "@remix-run/react";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 import { validateNewsPostsList } from "./NewsPost";
@@ -19,9 +20,25 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = unstable_defineClientLoader(async () => {
+const getPage = (s: string | null) => {
+  if (s == undefined) {
+    return 1;
+  }
+
+  const p = parseInt(s);
+  if (Number.isNaN(p)) {
+    return 1;
+  }
+
+  return p;
+};
+
+export const clientLoader = unstable_defineClientLoader(async ({ request }) => {
+  const url = new URL(request.url);
+  const page = getPage(url.searchParams.get("page"));
+
   const result = await fetch(
-    "https://takanenonadeshiko.jp/wp-json/wp/v2/posts?categories=2&context=embed",
+    `https://takanenonadeshiko.jp/wp-json/wp/v2/posts?categories=2&context=embed&page=${page}`,
   );
   const posts = await result.json();
   const total = result.headers.get("X-WP-Total");
@@ -37,16 +54,17 @@ export const clientLoader = unstable_defineClientLoader(async () => {
     Number.isNaN(parsedTotalPages) ||
     !Number.isInteger(parsedTotal)
   ) {
-    return undefined;
+    throw new Response("", { status: 500 });
   }
 
-  return json({ posts: validatedPosts, total: parsedTotal, totalPages: parsedTotalPages });
+  return json({ posts: validatedPosts, page, total: parsedTotal, totalPages: parsedTotalPages });
 });
 
 export default function Index() {
   const data = useLoaderData<typeof clientLoader>();
   const posts = data.posts;
-  // const totalPages = data.totalPages;
+  const page = data.page;
+  const totalPages = data.totalPages;
 
   return (
     <div className="container mx-auto">
@@ -97,6 +115,34 @@ export default function Index() {
             );
           })}
         </ul>
+
+        <div className="mt-8 flex items-center justify-center gap-6 text-gray-600">
+          {page == 1 ? (
+            <div className="rounded border p-2">
+              <HiChevronLeft />
+            </div>
+          ) : (
+            <Link className="block" to={`/official/news?page=${page - 1}`}>
+              <div className="flex items-center justify-center rounded border p-2">
+                <HiChevronLeft />
+              </div>
+            </Link>
+          )}
+          <div>
+            {page} of {totalPages}
+          </div>
+          {page == totalPages ? (
+            <div className="rounded border p-2">
+              <HiChevronRight />
+            </div>
+          ) : (
+            <Link className="block" to={`/official/news?page=${page + 1}`}>
+              <div className="flex items-center justify-center rounded border p-2">
+                <HiChevronRight />
+              </div>
+            </Link>
+          )}
+        </div>
       </section>
     </div>
   );
