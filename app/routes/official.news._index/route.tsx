@@ -10,9 +10,13 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 import { validateNewsPostsList } from "./NewsPost";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction = ({ location }) => {
+  const p = new URLSearchParams(location.search).get("page");
+  const page = getPage(p);
+  const title = page == 1 ? "公式ニュース" : `公式ニュース - ページ ${page}`;
+
   return [
-    { title: formatTitle("公式ニュース") },
+    { title: formatTitle(title) },
     {
       name: "description",
       content: "高嶺のなでしこの公式サイトに掲載されているニュースです。",
