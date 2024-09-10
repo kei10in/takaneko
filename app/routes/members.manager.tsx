@@ -6,10 +6,10 @@ import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `葉月 紗蘭 プロフィール - ${SITE_TITLE}` },
+    { title: `たかねこまねーじゃー プロフィール - ${SITE_TITLE}` },
     {
       name: "description",
-      content: "高嶺のなでしこのメンバー 葉月 紗蘭 のプロフィールです。",
+      content: "高嶺のなでしこのマネージャーのプロフィールです。",
     },
   ];
 };
