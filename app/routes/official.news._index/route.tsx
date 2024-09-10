@@ -71,18 +71,23 @@ export default function Index() {
             return (
               <li key={p.id}>
                 <Link to={p.link}>
-                  <div className="space-y-2 py-4">
-                    <p className="text-xl">{p.title.rendered}</p>
-                    <div className="flex items-center gap-4">
-                      <p className="border border-nadeshiko-500 px-4 py-0.5 text-sm leading-none text-nadeshiko-500">
-                        お知らせ
-                      </p>
-                      <p className="text-sm">{ds}</p>
+                  <div className="flex gap-4 py-4">
+                    <div className="flex h-28 w-28 flex-none items-center justify-center rounded border-8 border-nadeshiko-200">
+                      <p className="text-2xl text-nadeshiko-500">NEW</p>
                     </div>
-                    <div
-                      className="text-xs"
-                      dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
-                    ></div>
+                    <div className="flex-1 space-y-2">
+                      <p className="text-xl">{p.title.rendered}</p>
+                      <div className="flex items-center gap-4">
+                        <p className="border border-nadeshiko-500 px-4 py-0.5 text-sm leading-none text-nadeshiko-500">
+                          お知らせ
+                        </p>
+                        <p className="text-sm">{ds}</p>
+                      </div>
+                      <div
+                        className="text-xs"
+                        dangerouslySetInnerHTML={{ __html: p.excerpt.rendered }}
+                      ></div>
+                    </div>
                   </div>
                 </Link>
               </li>
