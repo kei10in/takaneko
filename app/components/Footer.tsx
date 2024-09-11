@@ -16,8 +16,8 @@ export const Footer: React.FC<Props> = (props: Props) => {
         <div className="mx-4 space-y-8 py-8">
           <div className="grid gap-8 lg:grid-cols-5">
             <section className="col-span-2 space-y-2 pb-4">
-              <h3 className="flex items-center text-base font-bold">
-                <img src="/icon.svg" alt="ロゴ" width={36} />
+              <h3 className="flex items-center gap-1 text-base font-bold">
+                <img className="w-7" src="/icon.svg" alt="ロゴ" />
                 <p>{SITE_TITLE}</p>
               </h3>
               <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>

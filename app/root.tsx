@@ -29,8 +29,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">
-                <Link className="flex items-center" to="/">
-                  <img src="/icon.svg" alt="アイコン" width={36} />
+                <Link className="flex items-center gap-1" to="/">
+                  <img className="w-7" src="/icon.svg" alt="アイコン" />
                   <p>{SITE_TITLE}</p>
                 </Link>
               </div>
