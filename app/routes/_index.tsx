@@ -52,7 +52,7 @@ export default function Index() {
               "lg:static lg:flex-1 lg:px-10 lg:py-8",
             )}
           >
-            <h1 className="text-right font-serif text-2xl font-bold leading-tight text-gray-500 lg:text-5xl">
+            <h1 className="text-right font-serif text-2xl italic leading-tight text-gray-500 lg:text-5xl">
               <span className="text-nadeshiko-900">高嶺のなでしこの</span>
               <br />
               ファンサイト
