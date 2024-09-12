@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const にゃでしこ_前髪クリップ: ProductImage = {
   id: "にゃでしこ (前髪クリップ)",

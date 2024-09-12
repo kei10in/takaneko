@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const にゃでしこ_アクリルキーホルダー: ProductImage = {
   id: "にゃでしこ (アクリルキーホルダー)",

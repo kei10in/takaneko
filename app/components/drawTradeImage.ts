@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { loadImage } from "~/utils/loadImage";

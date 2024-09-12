@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_生写真: ProductImage = {

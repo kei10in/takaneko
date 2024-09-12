@@ -5,7 +5,8 @@ import {
 } from "@remix-run/react";
 import { TradeEditor2 } from "~/components/TradeEditor2";
 import { SITE_TITLE } from "~/constants";
-import { ProductImage, TAKANEKO_PHOTOS } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
+import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
 
 export const meta: MetaFunction = () => {

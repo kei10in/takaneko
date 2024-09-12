@@ -2,7 +2,7 @@ import { CloseButton, Dialog, DialogPanel, Switch } from "@headlessui/react";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { HiCog, HiNoSymbol } from "react-icons/hi2";
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { ImageLoader } from "./ImageLoader.client";

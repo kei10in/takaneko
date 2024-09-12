@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const アイトーク_フォトカード: ProductImage = {
   id: "アイトーク (フォトカード)",

@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const Beginning_生写真: ProductImage = {
   id: "Beginning (生写真)",

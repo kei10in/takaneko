@@ -10,7 +10,7 @@ import { SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { loadEventsInDay } from "~/features/events/events";
-import { TAKANEKO_PHOTOS } from "~/features/productImages";
+import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 

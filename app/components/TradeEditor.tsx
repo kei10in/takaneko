@@ -1,7 +1,7 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { ImageLoader } from "./ImageLoader.client";

@@ -1,4 +1,4 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const _2ndファンミ_缶バッジ: ProductImage = {
   id: "2ndファンミ (缶バッジ)",

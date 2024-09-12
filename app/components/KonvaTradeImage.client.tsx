@@ -1,7 +1,7 @@
 import Konva from "konva";
 import { forwardRef, Ref } from "react";
 import { Group, Layer, Rect, Stage } from "react-konva";
-import { ImagePosition } from "~/features/productImages";
+import { ImagePosition } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { tradeStateToImageSrc, TradeStatus } from "~/features/TradeStatus";
 import { SrcImage } from "./SrcImage";
