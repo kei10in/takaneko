@@ -5,6 +5,7 @@ import {
 } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { loadEventsInDay } from "~/features/events/events";
+import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import Content from "./memo.mdx";
 
@@ -45,6 +46,56 @@ export default function Index() {
             までご連絡いただけると助かります。
           </p>
         </div>
+
+        <section className="mt-12">
+          <h2 className="mb-4 text-2xl">生写真</h2>
+          <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+            {PHOTOS.map((photo) => (
+              <li key={photo.id} className="overflow-hidden">
+                <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
+                  <div className="flex-0 flex items-center justify-center bg-gray-50">
+                    <img
+                      src={photo.url}
+                      alt={photo.name ?? photo.id}
+                      className="aspect-square max-h-72 object-contain object-center"
+                    />
+                  </div>
+                  <div className="space-y-1 px-1 py-2">
+                    <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
+                      {photo.year}
+                    </div>
+                    <p className="text-sm">{photo.name ?? photo.id}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="mb-4 text-2xl">ミニフォトカード</h2>
+          <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+            {MINI_PHOTO_CARDS.map((photo) => (
+              <li key={photo.id} className="overflow-hidden">
+                <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
+                  <div className="flex-0 flex items-center justify-center bg-gray-50">
+                    <img
+                      src={photo.url}
+                      alt={photo.name ?? photo.id}
+                      className="aspect-square max-h-72 object-contain object-center"
+                    />
+                  </div>
+                  <div className="space-y-1 px-1 py-2">
+                    <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
+                      {photo.year}
+                    </div>
+                    <p className="text-sm">{photo.name ?? photo.id}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section className="mt-12">
           <h2 id="organizing" className="text-2xl">

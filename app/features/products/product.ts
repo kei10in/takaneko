@@ -1,8 +1,4 @@
-export interface PhotoDescription {
-  id: number;
-  name: string;
-  description?: string;
-}
+export type ProductDescription = ProductImage;
 
 export interface ProductImage {
   id: string;
@@ -14,6 +10,12 @@ export interface ProductImage {
   height: number;
   photos: PhotoDescription[];
   positions: ImagePosition[];
+}
+
+export interface PhotoDescription {
+  id: number;
+  name: string;
+  description?: string;
 }
 
 export interface ImagePosition {
