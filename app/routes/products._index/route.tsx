@@ -53,11 +53,11 @@ export default function Index() {
             {PHOTOS.map((photo) => (
               <li key={photo.id} className="overflow-hidden">
                 <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
-                  <div className="flex-0 flex items-center justify-center bg-gray-50">
+                  <div className="flex-0 aspect-square w-full bg-gray-50">
                     <img
                       src={photo.url}
                       alt={photo.name ?? photo.id}
-                      className="aspect-square max-h-72 object-contain object-center"
+                      className="h-full w-full object-contain object-center"
                     />
                   </div>
                   <div className="space-y-1 px-1 py-2">
@@ -78,11 +78,11 @@ export default function Index() {
             {MINI_PHOTO_CARDS.map((photo) => (
               <li key={photo.id} className="overflow-hidden">
                 <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
-                  <div className="flex-0 flex items-center justify-center bg-gray-50">
+                  <div className="flex-0 aspect-square w-full bg-gray-50">
                     <img
                       src={photo.url}
                       alt={photo.name ?? photo.id}
-                      className="aspect-square max-h-72 object-contain object-center"
+                      className="h-full w-full object-contain object-center"
                     />
                   </div>
                   <div className="space-y-1 px-1 py-2">
