@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const スーツメガネ_生写真: ProductImage = {
-  id: "スーツメガネ (生写真)",
+  id: "生写真 (スーツメガネ ver)",
+  name: "生写真 (スーツメガネ ver)",
   year: 2023,
-  name: "スーツメガネ",
+  series: "スーツメガネ",
   kind: "生写真",
   url: "/takaneko/photos/2023-06_スーツメガネ.webp",
   width: 1064,

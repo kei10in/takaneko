@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const _2023ハロウィン_ミニフォト: ProductImage = {
-  id: "2023ハロウィン (ミニフォト)",
+  id: "ミニフォトカード (2023ハロウィン ver)",
+  name: "ミニフォトカード (2023ハロウィン ver)",
   year: 2023,
-  name: "2023ハロウィン",
+  series: "2023ハロウィン",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-10-09_2023ハロウィン.jpg",
   width: 1078,

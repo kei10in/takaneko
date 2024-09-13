@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2023年制服卒業シーズン_生写真: ProductImage = {
-  id: "2023年制服卒業シーズン (生写真)",
+  id: "生写真 (2023年制服卒業シーズン ver)",
+  name: "生写真 (2023年制服卒業シーズン ver)",
   year: 2023,
-  name: "2023年制服卒業シーズン",
+  series: "2023年制服卒業シーズン",
   kind: "生写真",
   url: "/takaneko/photos/2023-03_2023年制服卒業シーズン.webp",
   width: 1500,

@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ワンピース_生写真: ProductImage = {
-  id: "ワンピース (生写真)",
+  id: "生写真 (ワンピース ver)",
+  name: "生写真 (ワンピース ver)",
   year: 2024,
-  name: "ワンピース",
+  series: "ワンピース",
   kind: "生写真",
   url: "/takaneko/photos/2024-05_ワンピース.webp",
   width: 1579,

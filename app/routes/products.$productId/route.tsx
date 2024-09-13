@@ -5,7 +5,7 @@ import { formatTitle } from "~/utils/htmlHeader";
 export const meta: MetaFunction = ({ params }) => {
   const productId = params.productId;
   const fineProduct = findProduct(productId);
-  const title = formatTitle(fineProduct.name ?? fineProduct.id);
+  const title = formatTitle(fineProduct.name);
 
   return [
     { title },
@@ -57,7 +57,7 @@ export default function Index() {
 
         <section className="p-4">
           <h1 className="my-2 text-3xl font-semibold text-nadeshiko-800 lg:mt-12">
-            {product.name ?? product.id}
+            {product.name}
           </h1>
 
           <dl className="mt-8 grid grid-cols-3 gap-2">

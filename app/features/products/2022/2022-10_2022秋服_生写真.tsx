@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2022秋服_生写真: ProductImage = {
-  id: "2022秋服 (生写真)",
+  id: "生写真 (2022秋服 ver)",
+  name: "生写真 (2022秋服 ver)",
   year: 2022,
-  name: "2022秋服",
+  series: "2022秋服",
   kind: "生写真",
   url: "/takaneko/photos/2022-10_2022秋服.webp",
   width: 1280,

@@ -141,11 +141,11 @@ export default function Index() {
                     <img
                       className="h-full w-full object-contain object-top"
                       src={product.url}
-                      alt={product.name}
+                      alt={product.series}
                     />
                   </div>
                   <div className="h-18 flex-1 overflow-hidden bg-gray-50 px-4 py-2">
-                    <p className="truncate font-semibold text-nadeshiko-800">{product.name}</p>
+                    <p className="truncate font-semibold text-nadeshiko-800">{product.series}</p>
                     <p className="text-gray-500">{product.kind}</p>
                   </div>
                 </Link>

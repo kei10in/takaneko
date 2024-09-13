@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 海の妖精_生写真: ProductImage = {
-  id: "海の妖精 (生写真)",
+  id: "生写真 (海の妖精 ver)",
+  name: "生写真 (海の妖精 ver)",
   year: 2023,
-  name: "海の妖精",
+  series: "海の妖精",
   kind: "生写真",
   url: "/takaneko/photos/2023-11_海の妖精.jpg",
   width: 1181,

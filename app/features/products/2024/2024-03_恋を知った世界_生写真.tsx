@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_生写真: ProductImage = {
-  id: "恋を知った世界 (生写真)",
+  id: "生写真 (恋を知った世界 ver)",
+  name: "生写真 (恋を知った世界 ver)",
   year: 2024,
-  name: "恋を知った世界",
+  series: "恋を知った世界",
   kind: "生写真",
   url: "/takaneko/photos/2024-03_恋を知った世界.webp",
   width: 720,

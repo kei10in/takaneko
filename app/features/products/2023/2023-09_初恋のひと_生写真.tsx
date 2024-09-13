@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 初恋のひと_生写真: ProductImage = {
-  id: "初恋のひと (生写真)",
+  id: "生写真 (初恋のひと ver)",
+  name: "生写真 (初恋のひと ver)",
   year: 2023,
-  name: "初恋のひと",
+  series: "初恋のひと",
   kind: "生写真",
   url: "/takaneko/photos/2023-09_初恋のひと.webp",
   width: 1181,

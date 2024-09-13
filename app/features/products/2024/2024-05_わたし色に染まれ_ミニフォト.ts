@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const わたし色に染まれ_ミニフォト: ProductImage = {
-  id: "わたし色に染まれ (ミニフォト)",
+  id: "ミニフォトカード (わたし色に染まれ ver)",
+  name: "ミニフォトカード (わたし色に染まれ ver)",
   year: 2024,
-  name: "わたし色に染まれ",
+  series: "わたし色に染まれ",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-05-12_わたし色に染まれ.png",
   width: 413,

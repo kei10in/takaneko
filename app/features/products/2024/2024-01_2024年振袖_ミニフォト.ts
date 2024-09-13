@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const _2024年振袖_ミニフォト: ProductImage = {
-  id: "2024年振袖 (ミニフォト)",
+  id: "ミニフォトカード (2024年振袖 ver)",
+  name: "ミニフォトカード (2024年振袖 ver)",
   year: 2024,
-  name: "2024年振袖",
+  series: "2024年振袖",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-01-03_2024年振袖.jpg",
   width: 1079,

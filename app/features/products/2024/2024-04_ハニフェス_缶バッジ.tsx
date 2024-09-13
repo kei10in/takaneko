@@ -1,9 +1,10 @@
 import { ProductImage } from "~/features/products/product";
 
 export const ハニフェス_缶バッジ: ProductImage = {
-  id: "ハニフェス (缶バッジ)",
+  id: "高嶺のなでしこ らんだむ缶バッジ",
+  name: "高嶺のなでしこ らんだむ缶バッジ",
   year: 2024,
-  name: "ハニフェス",
+  series: "ハニフェス",
   kind: "缶バッジ",
   url: "/takaneko/others/2024-04-29_ハニフェス_缶バッジ.webp",
   width: 1680,

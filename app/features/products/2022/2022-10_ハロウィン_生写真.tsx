@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ハロウィン_生写真: ProductImage = {
-  id: "ハロウィン (生写真)",
+  id: "生写真 (ハロウィン ver)",
+  name: "生写真 (ハロウィン ver)",
   year: 2022,
-  name: "ハロウィン",
+  series: "ハロウィン",
   kind: "生写真",
   url: "/takaneko/photos/2022-10_ハロウィン.jpg",
   width: 1280,

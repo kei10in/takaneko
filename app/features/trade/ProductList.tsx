@@ -95,7 +95,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                     <NavLink to={`/trade/${photo.id}`} onClick={onClickMenuItem}>
                       {({ isActive }) => (
                         <ProductItem
-                          content={photo.name}
+                          content={photo.series}
                           description={photo.kind}
                           selected={isActive}
                         />

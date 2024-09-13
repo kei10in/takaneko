@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ホワイトサンタ2023_ミニフォト: ProductImage = {
-  id: "ホワイトサンタ2023 (ミニフォト)",
+  id: "ミニフォトカード (ホワイトサンタ2023 ver)",
+  name: "ミニフォトカード (ホワイトサンタ2023 ver)",
   year: 2023,
-  name: "ホワイトサンタ2023",
+  series: "ホワイトサンタ2023",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-12_ホワイトサンタ2023.png",
   width: 184,

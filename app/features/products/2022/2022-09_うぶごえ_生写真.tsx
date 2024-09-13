@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const うぶごえ_生写真: ProductImage = {
-  id: "うぶごえ (生写真)",
+  id: "生写真 (うぶごえ ver)",
+  name: "生写真 (うぶごえ ver)",
   year: 2022,
-  name: "うぶごえ",
+  series: "うぶごえ",
   kind: "生写真",
   url: "/takaneko/photos/2022-09_うぶごえ.jpg",
   width: 1280,

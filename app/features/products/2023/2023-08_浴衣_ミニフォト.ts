@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 浴衣_ミニフォト: ProductImage = {
-  id: "浴衣 (ミニフォト)",
+  id: "ミニフォトカード (浴衣 ver)",
+  name: "ミニフォトカード (浴衣 ver)",
   year: 2023,
-  name: "浴衣",
+  series: "浴衣",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-08-14_浴衣.jpg",
   width: 1065,

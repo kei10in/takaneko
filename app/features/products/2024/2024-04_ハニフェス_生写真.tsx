@@ -1,9 +1,10 @@
 import { ProductImage } from "~/features/products/product";
 
 export const ハニフェス_生写真: ProductImage = {
-  id: "ハニフェス (生写真)",
+  id: "らんだむブロマイド (ハニフェス ver)",
+  name: "らんだむブロマイド (ハニフェス ver)",
   year: 2024,
-  name: "ハニフェス",
+  series: "ハニフェス",
   kind: "生写真",
   url: "/takaneko/photos/2024-04_ハニフェス.webp",
   width: 1440,

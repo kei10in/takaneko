@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 僕は君になれない衣装_生写真: ProductImage = {
-  id: "僕は君になれない衣装 (生写真)",
+  id: "生写真 (僕は君になれない衣装 ver)",
+  name: "生写真 (僕は君になれない衣装 ver)",
   year: 2023,
-  name: "僕は君になれない衣装",
+  series: "僕は君になれない衣装",
   kind: "生写真",
   url: "/takaneko/photos/2023-09_僕は君になれない衣装.jpg",
   width: 720,

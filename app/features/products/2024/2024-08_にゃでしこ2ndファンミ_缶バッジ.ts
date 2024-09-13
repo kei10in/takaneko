@@ -1,9 +1,10 @@
 import { ProductImage } from "~/features/products/product";
 
 export const _2ndファンミ_缶バッジ: ProductImage = {
-  id: "2ndファンミ (缶バッジ)",
+  id: "ランダム缶バッジ (2ndファンミ ver)",
+  name: "ランダム缶バッジ (2ndファンミ ver)",
   year: 2024,
-  name: "2nd ファンミ 缶バッジ",
+  series: "2nd ファンミ 缶バッジ",
   kind: "缶バッジ",
   url: "/takaneko/others/2024-08-07_2ndファンミ_缶バッジ.webp",
   width: 1181,

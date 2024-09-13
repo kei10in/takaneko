@@ -1,9 +1,10 @@
 import { ProductImage } from "~/features/products/product";
 
 export const アイトーク_フォトカード: ProductImage = {
-  id: "アイトーク (フォトカード)",
+  id: "フォトカード (アイトーク ver)",
+  name: "フォトカード (アイトーク ver)",
   year: 2024,
-  name: "アイトーク",
+  series: "アイトーク",
   kind: "フォトカード",
   url: "/takaneko/others/2024-07-15_アイトーク.webp",
   width: 1950,

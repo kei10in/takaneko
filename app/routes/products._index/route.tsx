@@ -56,7 +56,7 @@ export default function Index() {
                   <div className="flex-0 aspect-square w-full bg-gray-50">
                     <img
                       src={photo.url}
-                      alt={photo.name ?? photo.id}
+                      alt={photo.series ?? photo.id}
                       className="h-full w-full object-contain object-center"
                     />
                   </div>
@@ -64,7 +64,7 @@ export default function Index() {
                     <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
                       {photo.year}
                     </div>
-                    <p className="text-sm">{photo.name ?? photo.id}</p>
+                    <p className="text-sm">{photo.name}</p>
                   </div>
                 </Link>
               </li>
@@ -81,7 +81,7 @@ export default function Index() {
                   <div className="flex-0 aspect-square w-full bg-gray-50">
                     <img
                       src={photo.url}
-                      alt={photo.name ?? photo.id}
+                      alt={photo.series ?? photo.id}
                       className="h-full w-full object-contain object-center"
                     />
                   </div>
@@ -89,7 +89,7 @@ export default function Index() {
                     <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
                       {photo.year}
                     </div>
-                    <p className="text-sm">{photo.name ?? photo.id}</p>
+                    <p className="text-sm">{photo.name}</p>
                   </div>
                 </Link>
               </li>

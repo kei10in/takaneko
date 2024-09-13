@@ -2,8 +2,9 @@ export type ProductDescription = ProductImage;
 
 export interface ProductImage {
   id: string;
-  year: number;
   name: string;
+  year: number;
+  series: string;
   kind: string;
   url: string;
   width: number;

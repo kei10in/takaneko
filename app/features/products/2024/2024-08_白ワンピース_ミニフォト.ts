@@ -2,9 +2,10 @@ import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 白ワンピース_ミニフォト: ProductImage = {
-  id: "白ワンピース (ミニフォト)",
+  id: "ミニフォト (白ワンピース ver)",
+  name: "ミニフォト (白ワンピース ver)",
   year: 2024,
-  name: "白ワンピース",
+  series: "白ワンピース",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-08-12_白ワンピース.jpg",
   width: 720,
