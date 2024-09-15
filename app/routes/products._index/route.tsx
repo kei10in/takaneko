@@ -49,39 +49,41 @@ export default function Index() {
         </div>
 
         <section className="mt-12">
-          <h2 className="mb-4 text-2xl">ライブグッズ</h2>
-          {LiveGoods.map((live) => {
-            return (
-              <section key={live.id}>
-                <h3 className="text-xl">{live.name}</h3>
-                <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
-                  <figure>
-                    <img src={live.image.path} alt={live.name} />
-                  </figure>
-                  <div className="pt-4">
-                    {live.goods.map((goods) => (
-                      <section key={goods.type}>
-                        <h4>{goods.type}</h4>
-                        <ul className="list-inside list-disc pl-2 marker:text-gray-300">
-                          {goods.items.map((item) =>
-                            typeof item === "string" ? (
-                              <li key={item}>{item}</li>
-                            ) : (
-                              <li key={item.id}>
-                                <Link className="text-nadeshiko-800" to={`/products/${item.id}`}>
-                                  {item.name}
-                                </Link>
+          <h2 className="mb-8 text-2xl">ライブグッズ</h2>
+          <div className="space-y-8">
+            {LiveGoods.map((live) => {
+              return (
+                <section key={live.id}>
+                  <h3 className="text-xl">{live.name}</h3>
+                  <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
+                    <figure>
+                      <img src={live.image.path} alt={live.name} />
+                    </figure>
+                    <div className="space-y-4 pt-4">
+                      {live.goods.map((goods) => (
+                        <section key={goods.type}>
+                          <h4>{goods.type}</h4>
+                          <ul className="list-outside list-disc pl-6 marker:text-gray-300">
+                            {goods.items.map((item) => (
+                              <li key={typeof item === "string" ? item : item.id}>
+                                {typeof item === "string" ? (
+                                  item
+                                ) : (
+                                  <Link className="text-nadeshiko-800" to={`/products/${item.id}`}>
+                                    {item.name}
+                                  </Link>
+                                )}
                               </li>
-                            ),
-                          )}
-                        </ul>
-                      </section>
-                    ))}
+                            ))}
+                          </ul>
+                        </section>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </section>
-            );
-          })}
+                </section>
+              );
+            })}
+          </div>
         </section>
 
         <section className="mt-12">
