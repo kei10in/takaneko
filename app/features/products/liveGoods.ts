@@ -5,6 +5,7 @@ import {
 } from "./lives/1周年記念ライブ 〜美しく生きろ〜";
 import { たかねこクリスマスパーティー2023 } from "./lives/たかねこクリスマスパーティー2023";
 import { たかねこクリスマスパーティ2022 } from "./lives/たかねこクリスマスパーティ－2022";
+import { メジャーデビュー記念ライブBeginning } from "./lives/メジャーデビュー記念ライブ〜Beginning〜";
 import {
   全国お招きツアー2023_First_trip,
   全国お招きツアー2023_First_trip_ツアーファイナル,
@@ -12,6 +13,7 @@ import {
 import { LiveGoodsDescription } from "./product";
 
 export const LiveGoods: LiveGoodsDescription[] = [
+  メジャーデビュー記念ライブBeginning,
   たかねこクリスマスパーティー2023,
   _1周年記念ライブ美しく生きろ大阪公演,
   _1周年記念ライブ美しく生きろ,
