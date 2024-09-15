@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 import { HiChevronLeft, HiChevronRight, HiNoSymbol } from "react-icons/hi2";
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";

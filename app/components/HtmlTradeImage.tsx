@@ -1,5 +1,5 @@
 import { forwardRef, Ref } from "react";
-import { ImagePosition } from "~/features/productImages";
+import { ImagePosition } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 

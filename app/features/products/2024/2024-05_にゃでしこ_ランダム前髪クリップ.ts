@@ -1,9 +1,10 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const にゃでしこ_前髪クリップ: ProductImage = {
-  id: "にゃでしこ (前髪クリップ)",
+  id: "ランダム前髪クリップ (にゃでしこ ver)",
+  name: "ランダム前髪クリップ (にゃでしこ ver)",
   year: 2024,
-  name: "にゃでしこ",
+  series: "にゃでしこ",
   kind: "前髪クリップ",
   url: "/takaneko/others/2024-05-12_にゃでしこ_前髪クリップ.webp",
   width: 1680,

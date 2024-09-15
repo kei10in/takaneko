@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const _2024年バレンタイン_ミニフォト: ProductImage = {
-  id: "2024年バレンタイン (ミニフォト)",
+  id: "ミニフォトカード (2024年バレンタイン ver)",
+  name: "ミニフォトカード (2024年バレンタイン ver)",
   year: 2024,
-  name: "2024年バレンタイン",
+  series: "2024年バレンタイン",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-02_2024年バレンタイン.webp",
   width: 1116,

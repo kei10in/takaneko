@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const povo20_生写真: ProductImage = {
-  id: "povo2.0 (生写真)",
+  id: "生写真 (povo2.0 ver)",
+  name: "生写真 (povo2.0 ver)",
   year: 2023,
-  name: "povo2.0",
+  series: "povo2.0",
   kind: "生写真",
   url: "/takaneko/photos/2023-10_povo2.0.jpg",
   width: 1182,

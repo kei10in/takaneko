@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2023年振袖_生写真: ProductImage = {
-  id: "2023年振袖 (生写真)",
+  id: "生写真 (2023年振袖 ver)",
+  name: "生写真 (2023年振袖 ver)",
   year: 2023,
-  name: "2023年振袖",
+  series: "2023年振袖",
   kind: "生写真",
   url: "/takaneko/photos/2023-01_2023年振袖.webp",
   width: 1300,

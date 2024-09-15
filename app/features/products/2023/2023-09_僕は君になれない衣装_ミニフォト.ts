@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 僕は君になれない衣装_ミニフォト: ProductImage = {
-  id: "僕は君になれない衣装 (ミニフォト)",
+  id: "ミニフォトカード (僕は君になれない衣装 ver)",
+  name: "ミニフォトカード (僕は君になれない衣装 ver)",
   year: 2023,
-  name: "僕は君になれない衣装",
+  series: "僕は君になれない衣装",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-09_僕は君になれない衣装.jpg",
   width: 720,

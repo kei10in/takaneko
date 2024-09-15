@@ -42,6 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/calendar">
                     スケジュール
                   </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/products">
+                    グッズ
+                  </Link>
                   <Link className="hover:text-nadeshiko-700" to="/members">
                     メンバー
                   </Link>
@@ -76,25 +79,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </button>
               </div>
               <div className="p-6">
-                <ul className="space-y-6 font-bold text-gray-800">
+                <ul className="space-y-6 pr-5 font-bold text-gray-800">
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/trade" onClick={close}>
-                      トレード画像をつくるやつ
+                      <p>トレード画像をつくるやつ</p>
                     </Link>
                   </li>
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/calendar" onClick={close}>
-                      スケジュール
+                      <p>スケジュール</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:text-nadeshiko-700" to="/products" onClick={close}>
+                      <p>グッズ</p>
                     </Link>
                   </li>
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/members" onClick={close}>
-                      メンバー
+                      <p>メンバー</p>
                     </Link>
                   </li>
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/official/news" onClick={close}>
-                      公式ニュース
+                      <p>公式ニュース</p>
                     </Link>
                   </li>
                 </ul>

@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const アンチファン衣装_生写真: ProductImage = {
-  id: "アンチファン衣装 (生写真)",
+  id: "生写真 (アンチファン衣装 ver)",
+  name: "生写真 (アンチファン衣装 ver)",
   year: 2022,
-  name: "アンチファン衣装",
+  series: "アンチファン衣装",
   kind: "生写真",
   url: "/takaneko/photos/2022-08_アンチファン衣装.webp",
   width: 1280,

@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const たかねこ全国お招きツアー2023衣装_ミニフォト: ProductImage = {
-  id: "たかねこ全国お招きツアー2023衣装 (ミニフォト)",
+  id: "ミニフォトカード (たかねこ全国お招きツアー 2023 ver)",
+  name: "ミニフォトカード (たかねこ全国お招きツアー 2023 ver)",
   year: 2023,
-  name: "たかねこ全国お招きツアー2023衣装",
+  series: "たかねこ全国お招きツアー2023衣装",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-04_たかねこ全国お招きツアー2023衣装.png",
   width: 266,

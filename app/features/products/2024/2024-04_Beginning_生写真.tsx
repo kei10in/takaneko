@@ -1,9 +1,10 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const Beginning_生写真: ProductImage = {
-  id: "Beginning (生写真)",
+  id: "生写真 (Beginning ver)",
+  name: "生写真 (Beginning ver)",
   year: 2024,
-  name: "Beginning",
+  series: "Beginning",
   kind: "生写真",
   url: "/takaneko/photos/2024-04_Beginning.png",
   width: 542,

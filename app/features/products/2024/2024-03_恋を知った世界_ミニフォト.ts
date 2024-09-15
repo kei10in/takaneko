@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_ミニフォト: ProductImage = {
-  id: "恋を知った世界 (ミニフォト)",
+  id: "ミニフォトカード (恋を知った世界 ver)",
+  name: "ミニフォトカード (恋を知った世界 ver)",
   year: 2024,
-  name: "恋を知った世界",
+  series: "恋を知った世界",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-03_恋を知った世界.jpg",
   width: 720,

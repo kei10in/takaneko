@@ -10,7 +10,7 @@ import { NavLink, useLocation } from "@remix-run/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
-import { ProductImage } from "../productImages";
+import { ProductImage } from "../products/product";
 import { ProductItem } from "./ProductItem";
 
 interface Props {
@@ -95,7 +95,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                     <NavLink to={`/trade/${photo.id}`} onClick={onClickMenuItem}>
                       {({ isActive }) => (
                         <ProductItem
-                          content={photo.name}
+                          content={photo.series}
                           description={photo.kind}
                           selected={isActive}
                         />

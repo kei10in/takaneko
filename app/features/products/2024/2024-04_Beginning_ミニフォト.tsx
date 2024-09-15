@@ -1,9 +1,10 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 
 export const Beginning_ミニフォト: ProductImage = {
-  id: "Beginning (ミニフォト)",
+  id: "ミニフォトカード (Beginning ver)",
+  name: "ミニフォトカード (Beginning ver)",
   year: 2024,
-  name: "Beginning",
+  series: "Beginning",
   kind: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-04_Beginning.png",
   width: 542,

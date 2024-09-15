@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { drawTradeImage } from "./drawTradeImage";

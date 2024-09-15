@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const マリン_生写真: ProductImage = {
-  id: "マリン (生写真)",
+  id: "生写真 (マリン ver)",
+  name: "生写真 (マリン ver)",
   year: 2023,
-  name: "マリン",
+  series: "マリン",
   kind: "生写真",
   url: "/takaneko/photos/2023-07_マリン.webp",
   width: 1144,

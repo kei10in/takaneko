@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2022サンタ_生写真: ProductImage = {
-  id: "2022サンタ (生写真)",
+  id: "生写真 (2022サンタ ver)",
+  name: "生写真 (2022サンタ ver)",
   year: 2022,
-  name: "2022サンタ",
+  series: "2022サンタ",
   kind: "生写真",
   url: "/takaneko/photos/2022-12_2022サンタ.webp",
   width: 1300,

@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 昭和レトロ_生写真: ProductImage = {
-  id: "昭和レトロ (生写真)",
+  id: "生写真 (昭和レトロ ver)",
+  name: "生写真 (昭和レトロ ver)",
   year: 2022,
-  name: "昭和レトロ",
+  series: "昭和レトロ",
   kind: "生写真",
   url: "/takaneko/photos/2022-11_昭和レトロ.webp",
   width: 1300,

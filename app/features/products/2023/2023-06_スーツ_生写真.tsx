@@ -1,10 +1,11 @@
-import { ProductImage } from "~/features/productImages";
+import { ProductImage } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const スーツ_生写真: ProductImage = {
-  id: "スーツ (生写真)",
+  id: "生写真 (スーツ ver)",
+  name: "生写真 (スーツ ver)",
   year: 2023,
-  name: "スーツ",
+  series: "スーツ",
   kind: "生写真",
   url: "/takaneko/photos/2023-06_スーツ.webp",
   width: 1066,
