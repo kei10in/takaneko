@@ -58,7 +58,13 @@ export default function Index() {
                   <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
                     <div className="space-y-2">
                       {live.images.map((image) => (
-                        <img key={image.path} src={image.path} alt={live.name} />
+                        <div key={image.path} className="w-full bg-gray-50">
+                          <img
+                            className="aspect-square w-full object-contain"
+                            src={image.path}
+                            alt={live.name}
+                          />
+                        </div>
                       ))}
                     </div>
                     <div className="space-y-4 pt-4 md:pt-0">
