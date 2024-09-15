@@ -10,9 +10,15 @@ import {
   全国お招きツアー2023_First_trip,
   全国お招きツアー2023_First_trip_ツアーファイナル,
 } from "./lives/全国お招きツアー2023 〜First trip〜";
+import {
+  全国ツアー2024_わたし色に染まれ,
+  全国ツアー2024_わたし色に染まれ_ファイナル東京公演,
+} from "./lives/全国ツアー2024“わたし色に染まれ”";
 import { LiveGoodsDescription } from "./product";
 
 export const LiveGoods: LiveGoodsDescription[] = [
+  全国ツアー2024_わたし色に染まれ_ファイナル東京公演,
+  全国ツアー2024_わたし色に染まれ,
   メジャーデビュー記念ライブBeginning,
   たかねこクリスマスパーティー2023,
   _1周年記念ライブ美しく生きろ大阪公演,
