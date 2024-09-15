@@ -63,9 +63,17 @@ export default function Index() {
                       <section key={goods.type}>
                         <h4>{goods.type}</h4>
                         <ul className="list-inside list-disc pl-2 marker:text-gray-300">
-                          {goods.items.map((item) => (
-                            <li key={item}>{item}</li>
-                          ))}
+                          {goods.items.map((item) =>
+                            typeof item === "string" ? (
+                              <li key={item}>{item}</li>
+                            ) : (
+                              <li key={item.id}>
+                                <Link className="text-nadeshiko-800" to={`/products/${item.id}`}>
+                                  {item.name}
+                                </Link>
+                              </li>
+                            ),
+                          )}
                         </ul>
                       </section>
                     ))}

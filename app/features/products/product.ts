@@ -34,5 +34,5 @@ export interface LiveGoodsDescription {
     path: string;
     ref: string;
   };
-  goods: { type: string; items: string[] }[];
+  goods: { type: string; items: (string | ProductImage)[] }[];
 }
