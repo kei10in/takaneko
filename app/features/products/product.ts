@@ -30,9 +30,11 @@ export interface ImagePosition {
 export interface LiveGoodsDescription {
   id: string;
   name: string;
-  image: {
-    path: string;
-    ref: string;
-  };
+  images: ImageDescription[];
   goods: { type: string; items: (string | ProductImage)[] }[];
+}
+
+export interface ImageDescription {
+  path: string;
+  ref: string;
 }

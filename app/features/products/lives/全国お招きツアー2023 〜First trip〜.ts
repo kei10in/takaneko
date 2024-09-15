@@ -6,10 +6,39 @@ import { LiveGoodsDescription } from "../product";
 export const 全国お招きツアー2023_First_trip: LiveGoodsDescription = {
   id: "全国お招きツアー2023 〜First trip〜",
   name: "全国お招きツアー2023 〜First trip〜",
-  image: {
-    path: "/takaneko/live-goods/2023-04-23_高嶺のなでしこ 全国お招きツアー2023〜First trip〜_グッズメニュー.jpg",
-    ref: "https://x.com/takanenofficial/status/1647883911584960513",
-  },
+  images: [
+    {
+      path: "/takaneko/live-goods/2023-04-23_高嶺のなでしこ 全国お招きツアー2023〜First trip〜_グッズメニュー.jpg",
+      ref: "https://x.com/takanenofficial/status/1647883911584960513",
+    },
+  ],
+  goods: [
+    {
+      type: "物販",
+      items: [
+        "たかねこ全国お招きツアー 2023 Tシャツ",
+        "たかねこ全国お招きツアー 2023 ペンライト",
+        "ご当地ラバーバンド",
+        "ツアー衣装ステッカーシート",
+        "TikTok 風個別アクリルキーホルダー",
+        "たかねこ全国お招きツアー 2023 個別アクリルスタンド",
+        たかねこ全国お招きツアー2023衣装_生写真,
+        たかねこ全国お招きツアー2023衣装_ミニフォト,
+        "ミニフォトカードアルバム たかねこ全国お招きツアー 2023",
+      ],
+    },
+  ],
+};
+
+export const 全国お招きツアー2023_First_trip_ツアーファイナル: LiveGoodsDescription = {
+  id: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
+  name: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
+  images: [
+    {
+      path: "/takaneko/live-goods/2023-06-23_高嶺のなでしこ 全国お招きツアー2023〜First trip〜 ツアーファイナル_グッズメニュー.jpg",
+      ref: "https://x.com/takanenofficial/status/1671503433030074371",
+    },
+  ],
   goods: [
     {
       type: "物販",
@@ -32,6 +61,10 @@ export const 全国お招きツアー2023_First_trip: LiveGoodsDescription = {
     {
       type: "ツアーファイナル限定 物販",
       items: [
+        "高嶺のなでしこパーカー",
+        "高嶺のなでしこトートバッグ",
+        "グループタオル",
+        "アクリルペンライト",
         "ツアーファイナルタオル",
         "お招きねこアクリルキーホルダー",
         梅雨_生写真,
