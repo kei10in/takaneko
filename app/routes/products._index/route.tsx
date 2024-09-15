@@ -59,7 +59,7 @@ export default function Index() {
                     <figure>
                       <img src={live.image.path} alt={live.name} />
                     </figure>
-                    <div className="space-y-4 pt-4">
+                    <div className="space-y-4 pt-4 md:pt-0">
                       {live.goods.map((goods) => (
                         <section key={goods.type}>
                           <h4>{goods.type}</h4>
