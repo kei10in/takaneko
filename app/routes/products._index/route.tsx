@@ -54,11 +54,11 @@ export default function Index() {
             return (
               <section key={live.id}>
                 <h3 className="text-xl">{live.name}</h3>
-                <div className="py-4">
+                <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
                   <figure>
                     <img src={live.image.path} alt={live.name} />
                   </figure>
-                  <div className="pt-8">
+                  <div className="pt-4">
                     {live.goods.map((goods) => (
                       <section key={goods.type}>
                         <h4>{goods.type}</h4>
