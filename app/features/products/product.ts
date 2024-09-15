@@ -26,3 +26,13 @@ export interface ImagePosition {
   width: number;
   height: number;
 }
+
+export interface LiveGoodsDescription {
+  id: string;
+  name: string;
+  image: {
+    path: string;
+    ref: string;
+  };
+  goods: { type: string; items: string[] }[];
+}

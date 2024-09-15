@@ -5,6 +5,7 @@ import {
 } from "@remix-run/react";
 import { SITE_TITLE } from "~/constants";
 import { loadEventsInDay } from "~/features/events/events";
+import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import Content from "./memo.mdx";
@@ -46,6 +47,34 @@ export default function Index() {
             までご連絡いただけると助かります。
           </p>
         </div>
+
+        <section className="mt-12">
+          <h2 className="mb-4 text-2xl">ライブグッズ</h2>
+          {LiveGoods.map((live) => {
+            return (
+              <section key={live.id}>
+                <h3 className="text-xl">{live.name}</h3>
+                <div className="py-4">
+                  <figure>
+                    <img src={live.image.path} alt={live.name} />
+                  </figure>
+                  <div className="pt-8">
+                    {live.goods.map((goods) => (
+                      <section key={goods.type}>
+                        <h4>{goods.type}</h4>
+                        <ul className="list-inside list-disc pl-2 marker:text-gray-300">
+                          {goods.items.map((item) => (
+                            <li key={item}>{item}</li>
+                          ))}
+                        </ul>
+                      </section>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            );
+          })}
+        </section>
 
         <section className="mt-12">
           <h2 className="mb-4 text-2xl">生写真</h2>
