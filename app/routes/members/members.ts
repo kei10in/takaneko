@@ -239,7 +239,7 @@ export const HinaHinahata: MemberDescription = {
   birthday: "2002年10月30日",
   constellation: "さそり座",
   birthplace: "神奈川県",
-  color: "#7e22ce",
+  color: "#c084fc",
   memberColor: "紫",
   fanName: "ひなたまにあ",
   nyadeshiko: "たま",
