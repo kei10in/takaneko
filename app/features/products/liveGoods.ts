@@ -3,6 +3,7 @@ import {
   _1周年記念ライブ美しく生きろ,
   _1周年記念ライブ美しく生きろ大阪公演,
 } from "./lives/1周年記念ライブ 〜美しく生きろ〜";
+import { _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる } from "./lives/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」";
 import { _2ndファンミーティング成長発表会 } from "./lives/2nd ファンミーティング〜成長発表会〜";
 import { たかねこクリスマスパーティー2023 } from "./lives/たかねこクリスマスパーティー2023";
 import { たかねこクリスマスパーティ2022 } from "./lives/たかねこクリスマスパーティ－2022";
@@ -18,6 +19,7 @@ import {
 import { LiveGoodsDescription } from "./product";
 
 export const LiveGoods: LiveGoodsDescription[] = [
+  _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる,
   _2ndファンミーティング成長発表会,
   全国ツアー2024_わたし色に染まれ_ファイナル東京公演,
   全国ツアー2024_わたし色に染まれ,
