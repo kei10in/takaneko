@@ -36,7 +36,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 </li>
                 <li>
                   <Link className="hover:text-nadeshiko-700" to="/products">
-                    グッズ
+                    🚧グッズ🚧
                   </Link>
                 </li>
                 <li>
