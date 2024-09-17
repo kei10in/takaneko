@@ -17,71 +17,8 @@ export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">高嶺のなでしこ</h1>
-
-        <ul className="list-disc space-y-2 pl-6 marker:text-gray-300">
-          <li>
-            <Link
-              className="text-nadeshiko-700"
-              to="https://takanenonadeshiko.jp/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              オフィシャル ウェブサイト
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="text-nadeshiko-700"
-              to="https://takanekofc.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              オフィシャル ファン クラブ
-            </Link>
-          </li>
-          <li>
-            <Link
-              className="text-nadeshiko-700"
-              to="https://takanenonadeshiko-ec.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              オフィシャル ショップ
-            </Link>
-          </li>
-        </ul>
-
-        <ul className="my-4 flex gap-2 px-2 text-gray-700">
-          <li>
-            <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
-              <FaYoutube className="h-5 w-5" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
-              <FaXTwitter className="h-5 w-5" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.instagram.com/takanenofficial/" target="_blank" rel="noreferrer">
-              <FaInstagram className="h-5 w-5" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://www.tiktok.com/@takanenofficial" target="_blank" rel="noreferrer">
-              <FaTiktok className="h-5 w-5" />
-            </Link>
-          </li>
-          <li>
-            <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
-              <FaDiscord className="h-5 w-5" />
-            </Link>
-          </li>
-        </ul>
-
         <section>
-          <h2 className="mb-4 mt-12 text-2xl font-semibold text-gray-400">メンバー</h2>
+          <h2 className="my-4 text-3xl font-semibold text-gray-600">メンバー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
             {AllMembers.map((member) => (
@@ -152,6 +89,75 @@ export default function Index() {
                     <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
                 </div>
+              </Link>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="mb-4 mt-12 text-2xl font-semibold text-gray-400">高嶺のなでしこ</h2>
+
+          <ul className="list-disc space-y-2 pl-6 marker:text-gray-300">
+            <li>
+              <Link
+                className="text-nadeshiko-700"
+                to="https://takanenonadeshiko.jp/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                オフィシャル ウェブサイト
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-nadeshiko-700"
+                to="https://takanekofc.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                オフィシャル ファン クラブ
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-nadeshiko-700"
+                to="https://takanenonadeshiko-ec.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                オフィシャル ショップ
+              </Link>
+            </li>
+          </ul>
+
+          <ul className="my-4 flex gap-2 px-2 text-gray-700">
+            <li>
+              <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
+                <FaYoutube className="h-5 w-5" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
+                <FaXTwitter className="h-5 w-5" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="https://www.instagram.com/takanenofficial/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram className="h-5 w-5" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://www.tiktok.com/@takanenofficial" target="_blank" rel="noreferrer">
+                <FaTiktok className="h-5 w-5" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
+                <FaDiscord className="h-5 w-5" />
               </Link>
             </li>
           </ul>
