@@ -1,5 +1,5 @@
 import { MetaFunction } from "@remix-run/react";
-import { LinkCard } from "~/components/LinkCard";
+import { LinkCard } from "~/components/link-card/LinkCard";
 import { SITE_TITLE } from "~/constants";
 import { MemberProfile } from "~/routes/members/MemberProfile";
 import { HinaHinahata } from "./members/members";

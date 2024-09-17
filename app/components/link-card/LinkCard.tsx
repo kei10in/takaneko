@@ -88,7 +88,7 @@ const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
             />
           </div>
           <div className="flex flex-1 flex-col justify-center space-y-1 p-2">
-            <p className="line-clamp-1 flex-none text-xs text-gray-400">{displayUrl}</p>{" "}
+            <p className="line-clamp-1 flex-none text-xs text-gray-400">{displayUrl}</p>
             <p className="flex-none text-sm font-bold text-gray-600">{data.ogp.title}</p>
             <p className="line-clamp-2 h-[2rem] text-xs text-gray-400">{data.ogp.description}</p>
           </div>
