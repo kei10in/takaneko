@@ -1,77 +1,38 @@
-import ogs from "open-graph-scraper";
-import { OgObject } from "open-graph-scraper/types";
+import urlMetadata from "url-metadata";
 import { OpenGraph, SocialCards, TwitterCard } from "./metaData";
 
 export const ogp = async (url: string): Promise<SocialCards> => {
-  const { error, result } = await ogs({ url: url });
-  if (error) {
+  try {
+    const response = await fetch(url);
+    const metadata = await urlMetadata(null, { parseResponseObject: response });
+    const result = convertOgObjectToSocialCards(metadata);
+    return result;
+  } catch (e) {
     return {};
   }
-
-  return convertOgObjectToSocialCards(result);
 };
 
-const convertOgObjectToSocialCards = (og: OgObject): SocialCards => {
-  const ogp = convertOgObjectToOgp(og);
-  const twitter = convertOgObjectToTwitterCard(og);
+const convertOgObjectToSocialCards = (metadata: urlMetadata.Result): SocialCards => {
+  const ogp = convertMetadataToOgp(metadata);
+  const twitter = convertMetadataToTwitterCard(metadata);
 
   return { ogp, twitter };
 };
 
-const convertOgObjectToOgp = (og: OgObject): OpenGraph | undefined => {
-  if (og.ogTitle === undefined) {
-    return;
-  }
-
-  if (og.ogDescription === undefined) {
-    return;
-  }
-
-  if (og.ogImage === undefined) {
-    return;
-  }
-
-  if (og.ogImage?.length === 0) {
-    return;
-  }
-
-  if (og.requestUrl === undefined) {
-    return;
-  }
-
+const convertMetadataToOgp = (metadata: urlMetadata.Result): OpenGraph | undefined => {
   return {
-    title: og.ogTitle,
-    description: og.ogDescription,
-    image: og.ogImage[0].url,
-    url: og.requestUrl,
+    title: metadata["og:title"],
+    description: metadata["og:description"],
+    image: metadata["og:image"],
+    url: metadata["og:url"],
   };
 };
 
-const convertOgObjectToTwitterCard = (og: OgObject): TwitterCard | undefined => {
-  if (og.twitterTitle === undefined) {
-    return;
-  }
-
-  if (og.twitterDescription === undefined) {
-    return;
-  }
-
-  if (og.twitterImage === undefined) {
-    return;
-  }
-
-  if (og.twitterImage?.length === 0) {
-    return;
-  }
-
-  if (og.requestUrl === undefined) {
-    return;
-  }
-
+const convertMetadataToTwitterCard = (metadata: urlMetadata.Result): TwitterCard | undefined => {
   return {
-    title: og.twitterTitle,
-    description: og.twitterDescription,
-    image: og.twitterImage[0].url,
-    url: og.requestUrl,
+    title: metadata["twitter:title"],
+    description: metadata["twitter:description"],
+    image: metadata["twitter:image"],
+    url: metadata["twitter:url"],
   };
 };
