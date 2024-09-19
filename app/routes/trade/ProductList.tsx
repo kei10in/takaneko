@@ -10,7 +10,7 @@ import { NavLink, useLocation } from "@remix-run/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
-import { ProductImage } from "../products/product";
+import { ProductImage } from "../../features/products/product";
 import { ProductItem } from "./ProductItem";
 
 interface Props {

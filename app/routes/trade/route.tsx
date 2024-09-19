@@ -4,7 +4,7 @@ import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
-import { ProductList } from "~/features/trade/ProductList";
+import { ProductList } from "./ProductList";
 
 export const meta: MetaFunction = () => {
   return [
