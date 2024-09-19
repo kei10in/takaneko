@@ -1,10 +1,9 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ProductImage } from "~/features/products/product";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
-import { ImageLoader } from "./ImageLoader.client";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
 
@@ -33,20 +32,9 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
   const lastIndex = positions.length - 1;
 
   const scale = width / productImage.width;
-  const height = productImage.height * scale;
 
   const handleClickTradeState = (id: number, v: TradeStatus) => {
     onChangeTradeDescription?.(id, v);
-  };
-
-  const [imageLoading, setImageLoading] = useState(true);
-
-  useEffect(() => {
-    setImageLoading(true);
-  }, [productImage.url]);
-
-  const handleLoad = () => {
-    setImageLoading(false);
   };
 
   return (
@@ -54,8 +42,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
       <div className="my-4 w-full pb-20">
         {positions.length != 0 ? (
           <div className="mx-auto">
-            {imageLoading ? <ImageLoader width={width} height={height} /> : null}
-            <div className={clsx("relative select-none", imageLoading && "hidden")}>
+            <div className={clsx("relative select-none")}>
               <HtmlTradeImage
                 image={{
                   url: productImage.url,
@@ -65,7 +52,6 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                 width={width}
                 positions={productImage.positions}
                 tradeDescriptions={tradeDescriptions}
-                onLoad={handleLoad}
               />
               {positions.map((pos, i) => {
                 return (

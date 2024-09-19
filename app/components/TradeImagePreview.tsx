@@ -3,7 +3,7 @@ import { ProductImage } from "~/features/products/product";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { drawTradeImage } from "./drawTradeImage";
-import { ImageLoader } from "./ImageLoader.client";
+import { ImageLoader } from "./ImageLoader";
 
 interface Props {
   productImage: ProductImage;

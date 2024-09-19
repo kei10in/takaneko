@@ -1,11 +1,12 @@
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
   unstable_defineClientLoader as defineClientLoader,
+  json,
   MetaFunction,
   useLoaderData,
 } from "@remix-run/react";
 import { TradeEditor2 } from "~/components/TradeEditor2";
 import { SITE_TITLE } from "~/constants";
-import { ProductImage } from "~/features/products/product";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
 
@@ -19,7 +20,7 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(({ params }): ProductImage => {
+export const loader = ({ params }: LoaderFunctionArgs) => {
   const productId = params.productId;
   if (productId == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
@@ -30,11 +31,25 @@ export const clientLoader = defineClientLoader(({ params }): ProductImage => {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  return productImage;
+  return json(productImage);
+};
+
+export const clientLoader = defineClientLoader(({ params }) => {
+  const productId = params.productId;
+  if (productId == undefined) {
+    throw new Response(null, { status: 404, statusText: "Not Found" });
+  }
+
+  const productImage = TAKANEKO_PHOTOS.find((p) => p.id == productId);
+  if (productImage == undefined) {
+    throw new Response(null, { status: 404, statusText: "Not Found" });
+  }
+
+  return json(productImage);
 });
 
 export default function TradeImageEditor() {
-  const selectedProduct = useLoaderData<ProductImage>();
+  const selectedProduct = useLoaderData<typeof loader>();
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const tradeDescriptions = allTradeDescriptions[selectedProduct?.id] ?? {};

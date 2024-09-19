@@ -1,11 +1,10 @@
 import { CloseButton, Dialog, DialogPanel, Switch } from "@headlessui/react";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HiCog, HiNoSymbol } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
-import { ImageLoader } from "./ImageLoader.client";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
 
@@ -37,20 +36,9 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
   const lastIndex = positions.length - 1;
 
   const scale = width / productImage.width;
-  const height = productImage.height * scale;
 
   const handleClickTradeState = (id: number, v: TradeStatus) => {
     onChangeTradeDescription?.(id, v);
-  };
-
-  const [imageLoading, setImageLoading] = useState(true);
-
-  useEffect(() => {
-    setImageLoading(true);
-  }, [productImage.url]);
-
-  const handleLoad = () => {
-    setImageLoading(false);
   };
 
   const handleStamp = (id: number, i: number) => {
@@ -80,8 +68,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       <div className="min-h-[calc(100lvh-3rem-7.1875rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-7.1875rem)]">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
-            {imageLoading ? <ImageLoader width={width} height={height} /> : null}
-            <div className={clsx("relative mx-auto select-none", imageLoading && "hidden")}>
+            <div className={clsx("relative mx-auto select-none")}>
               <HtmlTradeImage
                 image={{
                   url: productImage.url,
@@ -91,7 +78,6 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 width={width}
                 positions={productImage.positions}
                 tradeDescriptions={tradeDescriptions}
-                onLoad={handleLoad}
               />
               {positions.map((pos, i) => {
                 return (
