@@ -1,24 +1,29 @@
 import clsx from "clsx";
 
 interface Props {
+  image: string;
   content: string;
   description: string;
   selected?: boolean;
 }
 
 export const ProductItem: React.FC<Props> = (props: Props) => {
-  const { content, description, selected = false } = props;
+  const { image, content, description, selected = false } = props;
 
   return (
     <div
       className={clsx(
-        "group w-full border-l-2 border-transparent py-1 pl-3.5 pr-4 text-left text-gray-900",
-        "hover:border-gray-300 data-[selected]:border-nadeshiko-800",
+        "w-40 divide-y overflow-hidden rounded-xl border bg-white outline-nadeshiko-800 data-[selected]:outline",
       )}
       data-selected={selected ? "true" : undefined}
     >
-      <p className="text-sm leading-tight">{content}</p>
-      <p className="text-xs text-gray-400">{description}</p>
+      <div className="h-32 w-full">
+        <img src={image} alt="product" className="h-full w-full object-contain" />
+      </div>
+      <div className="flex h-16 flex-col justify-center bg-gray-50 px-2">
+        <p className="line-clamp-2 text-sm leading-tight">{content}</p>
+        <p className="line-clamp-1 text-xs text-gray-400">{description}</p>
+      </div>
     </div>
   );
 };

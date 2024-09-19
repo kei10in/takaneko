@@ -52,7 +52,7 @@ export default function Index() {
       <div className="container mx-auto">
         <div className="flex w-full pb-4">
           {/* サイドバー。モバイルでは非表示 */}
-          <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-80 flex-none overflow-y-auto px-4 lg:block">
+          <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
             <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 
@@ -65,7 +65,7 @@ export default function Index() {
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
           <DialogPanel
-            className="fix-scrollbar relative w-80 overflow-y-auto bg-white"
+            className="fix-scrollbar relative w-96 overflow-y-auto bg-white"
             // iOS でスクロールバーが sticky な要素に隠れる問題の対応
             // https://stackoverflow.com/questions/67076468/why-scrollbar-is-behind-sticky-elements-in-ios-safari
             style={{ transform: "translateZ(0)" }}

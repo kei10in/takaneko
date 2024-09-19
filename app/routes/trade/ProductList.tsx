@@ -89,12 +89,13 @@ export const ProductList: React.FC<Props> = (props: Props) => {
               </div>
             </DisclosureButton>
             <DisclosurePanel>
-              <ul className="pb-1.5">
+              <ul className="flex flex-wrap justify-center gap-4 px-4 pb-1.5">
                 {item.photos.map((photo) => (
                   <li key={photo.id}>
                     <NavLink to={`/trade/${photo.id}`} onClick={onClickMenuItem}>
                       {({ isActive }) => (
                         <ProductItem
+                          image={photo.url}
                           content={photo.series}
                           description={photo.kind}
                           selected={isActive}
