@@ -59,7 +59,7 @@ export default function Index() {
               <span className="text-nadeshiko-900"></span>
             </h1>
 
-            <div className="mt-2 flex select-none justify-end gap-1 text-sm font-semibold">
+            <div className="mt-2 flex select-none justify-end gap-2 text-sm font-semibold">
               <Link to="/trade">
                 <div className="flex h-7 items-center gap-1 rounded-md bg-nadeshiko-800 px-2 text-white">
                   <HiArrowsRightLeft className="h-4 w-4" />
