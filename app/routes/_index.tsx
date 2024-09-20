@@ -1,10 +1,6 @@
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  Link,
-  MetaFunction,
-  useLoaderData,
-} from "@remix-run/react";
+import { Link, MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
+import { useMemo } from "react";
 import { HiArrowsRightLeft, HiArrowTopRightOnSquare, HiCalendar } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
@@ -13,6 +9,7 @@ import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { getActiveDateInJapan } from "~/utils/japanTime";
+import { ProductItem } from "./trade/ProductItem";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,14 +22,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const clientLoader = defineClientLoader(async (_args) => {
-  const date = getActiveDateInJapan(new Date());
-  const events = loadEventsInDay(date);
-  return { date, events };
-});
-
 export default function Index() {
-  const { date, events } = useLoaderData<typeof clientLoader>();
+  const date = useMemo(() => getActiveDateInJapan(new Date()), []); // eslint-disable-line react-hooks/exhaustive-deps
+  const events = useMemo(() => loadEventsInDay(date), [date]);
+
   const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   const recentProducts = TAKANEKO_PHOTOS.slice(-6).toReversed();
@@ -137,7 +130,7 @@ export default function Index() {
                     image={product.url}
                     content={product.series}
                     description={product.kind}
-                    />
+                  />
                 </Link>
               ))}
             </div>
