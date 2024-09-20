@@ -130,24 +130,14 @@ export default function Index() {
               これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
             </p>
             <p className="font-semibold text-gray-400">最近のグッズ:</p>
-            <div className="flex flex-wrap justify-center gap-2">
+            <div className="flex flex-wrap justify-center gap-4">
               {recentProducts.map((product) => (
-                <Link
-                  className="w-40 divide-y overflow-hidden rounded-lg border"
-                  to={`/trade/${product.id}`}
-                  key={product.id}
-                >
-                  <div className="h-40 flex-none bg-white">
-                    <img
-                      className="h-full w-full object-contain object-top"
-                      src={product.url}
-                      alt={product.series}
+                <Link to={`/trade/${product.id}`} key={product.id}>
+                  <ProductItem
+                    image={product.url}
+                    content={product.series}
+                    description={product.kind}
                     />
-                  </div>
-                  <div className="h-18 flex-1 overflow-hidden bg-gray-50 px-4 py-2">
-                    <p className="truncate font-semibold text-nadeshiko-800">{product.series}</p>
-                    <p className="text-gray-500">{product.kind}</p>
-                  </div>
                 </Link>
               ))}
             </div>
