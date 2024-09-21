@@ -10,11 +10,11 @@ export const ProductCard: React.FC<Props> = (props: Props) => {
   const { id, name, series, year, url } = props;
 
   return (
-    <div className="overflow-hidden bg-white">
-      <div className="flex-0 aspect-square w-full bg-gray-50">
+    <div className="w-full bg-white shadow">
+      <div className="flex-0 aspect-square w-full">
         <img src={url} alt={series ?? id} className="h-full w-full object-contain object-center" />
       </div>
-      <div className="space-y-1 px-1 py-2">
+      <div className="space-y-1 bg-gray-50 px-4 py-2">
         <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
           {year}
         </div>
