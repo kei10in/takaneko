@@ -10,6 +10,7 @@ import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import Content from "./memo.mdx";
+import { ProductCard } from "./ProductCard";
 
 export const meta: MetaFunction = () => {
   return [
@@ -92,20 +93,8 @@ export default function Index() {
           <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
             {PHOTOS.map((photo) => (
               <li key={photo.id} className="overflow-hidden">
-                <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
-                  <div className="flex-0 aspect-square w-full bg-gray-50">
-                    <img
-                      src={photo.url}
-                      alt={photo.series ?? photo.id}
-                      className="h-full w-full object-contain object-center"
-                    />
-                  </div>
-                  <div className="space-y-1 px-1 py-2">
-                    <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
-                      {photo.year}
-                    </div>
-                    <p className="text-sm">{photo.name}</p>
-                  </div>
+                <Link to={`/products/${photo.id}`}>
+                  <ProductCard {...photo} />
                 </Link>
               </li>
             ))}
@@ -117,20 +106,8 @@ export default function Index() {
           <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
             {MINI_PHOTO_CARDS.map((photo) => (
               <li key={photo.id} className="overflow-hidden">
-                <Link className="overflow-hidden bg-white" to={`/products/${photo.id}`}>
-                  <div className="flex-0 aspect-square w-full bg-gray-50">
-                    <img
-                      src={photo.url}
-                      alt={photo.series ?? photo.id}
-                      className="h-full w-full object-contain object-center"
-                    />
-                  </div>
-                  <div className="space-y-1 px-1 py-2">
-                    <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
-                      {photo.year}
-                    </div>
-                    <p className="text-sm">{photo.name}</p>
-                  </div>
+                <Link to={`/products/${photo.id}`}>
+                  <ProductCard {...photo} />
                 </Link>
               </li>
             ))}
