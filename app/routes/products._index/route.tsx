@@ -9,7 +9,6 @@ import { loadEventsInDay } from "~/features/events/events";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import Content from "./memo.mdx";
 import { ProductCard } from "./ProductCard";
 
 export const meta: MetaFunction = () => {
@@ -38,15 +37,11 @@ export default function Index() {
           <p className="mb-2 font-bold">🚧工事中🚧</p>
           <p>たかねこのグッズのページは現在作成中です。</p>
           <p>
-            「
-            <Link className="text-nadeshiko-800" to="#organizing">
-              整理中
+            このページに記載のないものは「
+            <Link className="text-nadeshiko-800" to="/memo">
+              メモ
             </Link>
-            」のところに記載のないグッズをご存じの場合は{" "}
-            <Link className="text-nadeshiko-800" to="https://x.com/takanekofan">
-              @takanekofan
-            </Link>{" "}
-            までご連絡いただけると助かります。
+            」ページに記載されているかもしれません。
           </p>
         </div>
 
@@ -112,15 +107,6 @@ export default function Index() {
               </li>
             ))}
           </ul>
-        </section>
-
-        <section className="mt-12">
-          <h2 id="organizing" className="text-2xl">
-            整理中
-          </h2>
-          <article className="markdown">
-            <Content />
-          </article>
         </section>
       </section>
     </div>
