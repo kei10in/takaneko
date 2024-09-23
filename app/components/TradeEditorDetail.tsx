@@ -1,5 +1,6 @@
 import { MouseEventHandler } from "react";
-import { HiChevronLeft, HiChevronRight, HiNoSymbol } from "react-icons/hi2";
+import { BsBan } from "react-icons/bs";
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
@@ -109,7 +110,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={handleClickTradeState}
           >
             <div className="flex h-10 w-10 items-center justify-center">
-              <HiNoSymbol className="h-8 w-8 text-gray-400" />
+              <BsBan className="h-8 w-8 text-gray-400" />
             </div>
           </TradeStateButton>
           <TradeStateButton

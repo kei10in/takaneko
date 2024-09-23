@@ -1,7 +1,7 @@
 import { CloseButton, Dialog, DialogPanel, Switch } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { HiCog, HiNoSymbol } from "react-icons/hi2";
+import { BsEraserFill, BsImage, BsPencilSquare, BsTrash } from "react-icons/bs";
 import { ProductImage } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
@@ -65,7 +65,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         画面全体 (100svh) からヘッダーとパネル を引いた高さです。
         ヘッダーやパネルはモバイルとデスクトップで異なります。
       */}
-      <div className="min-h-[calc(100lvh-3rem-7.1875rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-7.1875rem)]">
+      <div className="min-h-[calc(100lvh-3rem-4.5625rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4.5625rem)]">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
             <div className={clsx("relative mx-auto select-none")}>
@@ -105,7 +105,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       {/* パネル */}
       <div className="sticky h-fit" style={{ bottom: 0 }}>
         <div className="h-fit space-y-2 border-t border-gray-300 bg-white px-4 py-2 lg:mx-4 lg:px-0 lg:py-4">
-          <div>
+          <div className="flex items-center justify-center gap-8">
             <div className="flex items-center justify-center gap-0.5">
               <Switch
                 className="group rounded-xl p-1 data-[checked]:bg-gray-200"
@@ -146,7 +146,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 onClick={() => setSelectedStamp("clear")}
               >
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <HiNoSymbol className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsEraserFill className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
               <Switch
@@ -155,27 +155,30 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 onClick={() => setSelectedStamp("cog")}
               >
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <HiCog className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsPencilSquare className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
             </div>
-          </div>
 
-          <div className="flex items-center justify-between gap-4 lg:justify-end">
-            <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-0.5 text-lg font-bold text-white"
-              onClick={() => setShowConfirmClear(true)}
-            >
-              クリア
-            </button>
-            <button
-              className="rounded-lg border border-blue-700 bg-blue-600 px-4 py-0.5 text-lg font-bold text-white"
-              onClick={() => {
-                setPreview(true);
-              }}
-            >
-              トレード画像
-            </button>
+            <div className="flex items-center justify-center gap-0.5">
+              <button
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                onClick={() => setPreview(true)}
+              >
+                <div className="flex h-8 w-8 items-center justify-center">
+                  <BsImage className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                </div>
+              </button>
+
+              <button
+                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                onClick={() => setShowConfirmClear(true)}
+              >
+                <div className="flex h-8 w-8 items-center justify-center">
+                  <BsTrash className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
