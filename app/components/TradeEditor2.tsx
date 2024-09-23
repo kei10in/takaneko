@@ -108,54 +108,54 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           <div className="flex items-center justify-center gap-8">
             <div className="flex items-center justify-center gap-0.5">
               <Switch
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
                 checked={selectedStamp == "wanted"}
                 onClick={() => setSelectedStamp("wanted")}
               >
                 <img
                   src="/求.svg"
                   alt="求"
-                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
                 checked={selectedStamp == "+1"}
                 onClick={() => setSelectedStamp("+1")}
               >
                 <img
                   src="/increment.svg"
                   alt="+1"
-                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
                 checked={selectedStamp == "-1"}
                 onClick={() => setSelectedStamp("-1")}
               >
                 <img
                   src="/decrement.svg"
                   alt="-1"
-                  className="h-8 w-8 opacity-50 group-data-[checked]:opacity-100"
+                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
                 />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
                 checked={selectedStamp == "clear"}
                 onClick={() => setSelectedStamp("clear")}
               >
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <BsEraserFill className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsEraserFill className="h-6 w-6 text-gray-400 transition-colors group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
               <Switch
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
+                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
                 checked={selectedStamp == "cog"}
                 onClick={() => setSelectedStamp("cog")}
               >
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <BsPencilSquare className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsPencilSquare className="h-6 w-6 text-gray-400 transition-colors group-data-[checked]:text-gray-600" />
                 </div>
               </Switch>
             </div>
