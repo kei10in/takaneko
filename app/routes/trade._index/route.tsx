@@ -1,6 +1,6 @@
 import { MetaFunction } from "@remix-run/react";
-import { ReadMe } from "~/components/ReadMe";
 import { SITE_TITLE } from "~/constants";
+import { ReadMe } from "./ReadMe";
 
 export const meta: MetaFunction = () => {
   return [
