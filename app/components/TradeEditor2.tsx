@@ -65,7 +65,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         画面全体 (100svh) からヘッダーとパネル を引いた高さです。
         ヘッダーやパネルはモバイルとデスクトップで異なります。
       */}
-      <div className="min-h-[calc(100lvh-3rem-4.5625rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4.5625rem)]">
+      <div className="min-h-[calc(100lvh-3rem-3.5rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4rem)]">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
             <div className={clsx("relative mx-auto select-none")}>
@@ -103,79 +103,61 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       </div>
 
       {/* パネル */}
-      <div className="sticky h-fit" style={{ bottom: 0 }}>
-        <div className="h-fit space-y-2 border-t border-gray-300 bg-white px-4 py-2 lg:mx-4 lg:px-0 lg:py-4">
-          <div className="flex items-center justify-center gap-8">
+      <div className="sticky h-14 lg:h-16" style={{ bottom: 0 }}>
+        <div className="h-full border-t border-gray-300 bg-white px-4 lg:mx-4 lg:px-0">
+          <div className="flex h-full items-center justify-center gap-8">
             <div className="flex items-center justify-center gap-0.5">
               <Switch
-                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
+                className={toolButton()}
                 checked={selectedStamp == "wanted"}
                 onClick={() => setSelectedStamp("wanted")}
               >
-                <img
-                  src="/求.svg"
-                  alt="求"
-                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
-                />
+                <img src="/求.svg" alt="求" className={stamp()} />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
+                className={toolButton()}
                 checked={selectedStamp == "+1"}
                 onClick={() => setSelectedStamp("+1")}
               >
-                <img
-                  src="/increment.svg"
-                  alt="+1"
-                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
-                />
+                <img src="/increment.svg" alt="+1" className={stamp()} />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
+                className={toolButton()}
                 checked={selectedStamp == "-1"}
                 onClick={() => setSelectedStamp("-1")}
               >
-                <img
-                  src="/decrement.svg"
-                  alt="-1"
-                  className="h-8 w-8 opacity-50 transition-opacity group-data-[checked]:opacity-100"
-                />
+                <img src="/decrement.svg" alt="-1" className={stamp()} />
               </Switch>
               <Switch
-                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
+                className={toolButton()}
                 checked={selectedStamp == "clear"}
                 onClick={() => setSelectedStamp("clear")}
               >
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsEraserFill className="h-6 w-6 text-gray-400 transition-colors group-data-[checked]:text-gray-600" />
+                <div className="flex items-center justify-center">
+                  <BsEraserFill className={toolIcon()} />
                 </div>
               </Switch>
               <Switch
-                className="group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200"
+                className={toolButton()}
                 checked={selectedStamp == "cog"}
                 onClick={() => setSelectedStamp("cog")}
               >
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsPencilSquare className="h-6 w-6 text-gray-400 transition-colors group-data-[checked]:text-gray-600" />
+                <div className="flex items-center justify-center">
+                  <BsPencilSquare className={toolIcon()} />
                 </div>
               </Switch>
             </div>
 
             <div className="flex items-center justify-center gap-0.5">
-              <button
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
-                onClick={() => setPreview(true)}
-              >
+              <button className={toolButton()} onClick={() => setPreview(true)}>
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <BsImage className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsImage className={toolIcon()} />
                 </div>
               </button>
 
-              <button
-                className="group rounded-xl p-1 data-[checked]:bg-gray-200"
-                onClick={() => setShowConfirmClear(true)}
-              >
+              <button className={toolButton()} onClick={() => setShowConfirmClear(true)}>
                 <div className="flex h-8 w-8 items-center justify-center">
-                  <BsTrash className="h-6 w-6 text-gray-400 group-data-[checked]:text-gray-600" />
+                  <BsTrash className={toolIcon()} />
                 </div>
               </button>
             </div>
@@ -246,3 +228,9 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
     </div>
   );
 };
+
+const toolButton = () =>
+  clsx("h-10 w-10 group rounded-xl p-1 transition-colors data-[checked]:bg-gray-200");
+const stamp = () => clsx("opacity-50 transition-opacity group-data-[checked]:opacity-100");
+const toolIcon = () =>
+  clsx("h-6 w-6 text-gray-400 transition-colors group-data-[checked]:text-gray-600");
