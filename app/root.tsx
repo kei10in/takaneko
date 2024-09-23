@@ -1,7 +1,8 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { useState } from "react";
-import { HiEllipsisVertical, HiXMark } from "react-icons/hi2";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiXMark } from "react-icons/hi2";
 import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
@@ -53,10 +54,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 </div>
                 <button
-                  className="inline-flex rounded-full p-2 text-lg text-nadeshiko-600 lg:hidden"
+                  className="inline-flex rounded-full p-2 text-nadeshiko-800 lg:hidden"
                   onClick={() => setShowMenu(true)}
                 >
-                  <HiEllipsisVertical />
+                  <BsThreeDotsVertical className="h-6 w-6" />
                 </button>
               </div>
             </div>

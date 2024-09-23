@@ -1,7 +1,8 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Link, MetaFunction, Outlet } from "@remix-run/react";
 import { useState } from "react";
-import { HiBars3, HiXMark } from "react-icons/hi2";
+import { BsList } from "react-icons/bs";
+import { HiXMark } from "react-icons/hi2";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { ProductList } from "./ProductList";
@@ -39,10 +40,10 @@ export default function Index() {
             </p>
             <div className="flex-none">
               <button
-                className="p-2 text-lg text-nadeshiko-800 hover:text-nadeshiko-950"
+                className="p-2 text-nadeshiko-800 hover:text-nadeshiko-950"
                 onClick={() => setShowMenu(true)}
               >
-                <HiBars3 />
+                <BsList className="h-6 w-6" />
               </button>
             </div>
           </div>
