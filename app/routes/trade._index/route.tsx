@@ -78,7 +78,12 @@ export default function Index() {
           {TAKANEKO_PHOTOS.toReversed().map((photo) => (
             <li key={photo.id}>
               <Link to={`/trade/${photo.id}`}>
-                <ProductItem image={photo.url} content={photo.series} description={photo.kind} />
+                <ProductItem
+                  image={photo.url}
+                  year={photo.year}
+                  content={photo.series}
+                  description={photo.kind}
+                />
               </Link>
             </li>
           ))}

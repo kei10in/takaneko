@@ -96,6 +96,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                       {({ isActive }) => (
                         <ProductItem
                           image={photo.url}
+                          year={photo.year}
                           content={photo.series}
                           description={photo.kind}
                           selected={isActive}
