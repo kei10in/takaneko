@@ -69,7 +69,7 @@ export default function Index() {
       <p>ランダムグッズのトレード画像が作成できます。</p>
 
       <figure className="m-4 flex justify-center">
-        <img src="/takaneko/sample.png" alt="サンプル" className="w-72 text-center shadow-md" />
+        <img src="/takaneko/sample.png" alt="サンプル" className="h-96 text-center shadow-md" />
       </figure>
 
       <section className="mt-12">
