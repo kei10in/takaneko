@@ -1,0 +1,38 @@
+import { ProductImage } from "~/features/products/product";
+
+export const 瞬きさえ忘れる_にゃでしこステッカー: ProductImage = {
+  id: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
+  name: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
+  year: 2024,
+  series: "瞬きさえ忘れる。にゃでしこステッカー",
+  kind: "ステッカー",
+  url: "/takaneko/others/2024-09-15_瞬きさえ忘れる_にゃでしこステッカー.webp",
+  width: 362,
+  height: 147,
+  photos: [
+    { id: 1, name: "てんにゃ", description: "" },
+    { id: 2, name: "ルニャ・コーチ", description: "" },
+    { id: 3, name: "すうにゃろう", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "らあら", description: "" },
+    { id: 6, name: "ルノリスくん", description: "" },
+    { id: 7, name: "にゃーさ", description: "" },
+    { id: 8, name: "たま", description: "" },
+    { id: 9, name: "ちゃーみー", description: "" },
+    { id: 10, name: "ぽにゃん🎀", description: "" },
+    { id: 11, name: "もみさん。", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 29, y: 7, width: 48, height: 63 },
+    { id: 2, x: 80, y: 7, width: 48, height: 63 },
+    { id: 3, x: 131, y: 7, width: 48, height: 63 },
+    { id: 4, x: 183, y: 7, width: 48, height: 63 },
+    { id: 5, x: 234, y: 7, width: 48, height: 63 },
+    { id: 6, x: 286, y: 7, width: 48, height: 63 },
+    { id: 7, x: 55, y: 77, width: 48, height: 63 },
+    { id: 8, x: 106, y: 77, width: 48, height: 63 },
+    { id: 9, x: 157, y: 77, width: 48, height: 63 },
+    { id: 10, x: 209, y: 77, width: 48, height: 63 },
+    { id: 11, x: 260, y: 77, width: 48, height: 63 },
+  ],
+};
