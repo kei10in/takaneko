@@ -128,6 +128,7 @@ export default function Index() {
                 <Link to={`/trade/${product.id}`} key={product.id}>
                   <ProductItem
                     image={product.url}
+                    year={product.year}
                     content={product.series}
                     description={product.kind}
                   />
