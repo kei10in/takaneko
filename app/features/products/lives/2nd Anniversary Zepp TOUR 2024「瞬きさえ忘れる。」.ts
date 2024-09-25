@@ -5,6 +5,14 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsDescript
   name: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」",
   images: [
     {
+      path: "/takaneko/live-goods/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」_グッズメニュー3.jpg",
+      ref: "https://x.com/takanenofficial/status/1838929060669669817",
+    },
+    {
+      path: "/takaneko/live-goods/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」_グッズメニュー4.jpg",
+      ref: "https://x.com/takanenofficial/status/1838929060669669817",
+    },
+    {
       path: "/takaneko/live-goods/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」_グッズメニュー1.jpg",
       ref: "https://x.com/takanenofficial/status/1834562709700149594",
     },
