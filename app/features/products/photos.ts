@@ -46,6 +46,8 @@ import { 浴衣2024_ミニフォト } from "./2024/2024-07_浴衣2024_ミニフ�
 import { 浴衣2024_生写真 } from "./2024/2024-07_浴衣2024_生写真";
 import { 白ワンピース_ミニフォト } from "./2024/2024-08_白ワンピース_ミニフォト";
 import { 白ワンピース_生写真 } from "./2024/2024-08_白ワンピース_生写真";
+import { 瞬きさえ忘れる_ミニフォト } from "./2024/2024-09-15_瞬きさえ忘れる_ミニフォト";
+import { 瞬きさえ忘れる_生写真 } from "./2024/2024-09-15_瞬きさえ忘れる_生写真";
 import { ProductDescription } from "./product";
 
 export const PHOTOS: ProductDescription[] = [
@@ -81,6 +83,7 @@ export const PHOTOS: ProductDescription[] = [
   メイド至上主義_生写真,
   浴衣2024_生写真,
   白ワンピース_生写真,
+  瞬きさえ忘れる_生写真,
 ];
 
 export const MINI_PHOTO_CARDS: ProductDescription[] = [
@@ -99,6 +102,7 @@ export const MINI_PHOTO_CARDS: ProductDescription[] = [
   メイド至上主義_ミニフォト,
   浴衣2024_ミニフォト,
   白ワンピース_ミニフォト,
+  瞬きさえ忘れる_ミニフォト,
 ];
 
 export const OTHER_PHOTOS: ProductDescription[] = [ハニフェス_生写真];
