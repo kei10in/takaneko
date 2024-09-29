@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { BsEraserFill, BsImage, BsPencilSquare, BsTrash } from "react-icons/bs";
+import { BsEraserFill, BsImageFill, BsPencilSquare, BsTrashFill } from "react-icons/bs";
 import { ProductImage } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
@@ -146,7 +146,9 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                   data-checked={selectedStamp == "emoji" ? "true" : undefined}
                   onClick={() => setSelectedStamp("emoji")}
                 >
-                  <div className="flex items-center justify-center text-2xl">{selectedEmoji}</div>
+                  <div className={clsx("flex items-center justify-center text-2xl", stamp())}>
+                    {selectedEmoji}
+                  </div>
                 </PopoverButton>
                 <PopoverPanel
                   anchor={{ to: "top", gap: "1.5rem" }}
@@ -185,14 +187,14 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
             <div className="flex items-center justify-center gap-0.5">
               <button className={toolButton()} onClick={() => setPreview(true)}>
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsImage className={toolIcon()} />
+                <div className="flex items-center justify-center">
+                  <BsImageFill className="h-6 w-6 text-gray-600" />
                 </div>
               </button>
 
               <button className={toolButton()} onClick={() => setShowConfirmClear(true)}>
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsTrash className={toolIcon()} />
+                <div className="flex items-center justify-center">
+                  <BsTrashFill className="h-6 w-6 text-gray-600" />
                 </div>
               </button>
             </div>
