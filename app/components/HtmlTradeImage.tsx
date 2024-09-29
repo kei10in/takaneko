@@ -53,27 +53,43 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
           return null;
         }
 
-        const src = tradeStateToImageSrc(trade.status);
-        if (src == undefined) {
-          return null;
-        }
-
         const { x, y, width, height } = stampPosition(pos);
 
-        return (
-          <img
-            key={trade.id}
-            src={src}
-            alt=""
-            className="absolute"
-            style={{
-              left: x * scaleX,
-              top: y * scaleY,
-              width: width * scaleX,
-              height: height * scaleY,
-            }}
-          />
-        );
+        const src = tradeStateToImageSrc(trade.status);
+        if (src != undefined) {
+          return (
+            <img
+              key={trade.id}
+              src={src}
+              alt=""
+              className="absolute"
+              style={{
+                left: x * scaleX,
+                top: y * scaleY,
+                width: width * scaleX,
+                height: height * scaleY,
+              }}
+            />
+          );
+        } else if (trade.status.tag === "emoji") {
+          return (
+            <div
+              key={trade.id}
+              className="absolute flex items-center justify-center text-center leading-none"
+              style={{
+                left: x * scaleX,
+                top: y * scaleY,
+                width: width * scaleX,
+                height: height * scaleY,
+                fontSize: height * scaleY * 0.9,
+              }}
+            >
+              <div>{trade.status.emoji}</div>
+            </div>
+          );
+        } else {
+          return null;
+        }
       })}
     </div>
   );

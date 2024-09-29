@@ -29,16 +29,19 @@ export const drawTradeImage = async (
       return;
     }
 
-    const src = tradeStateToImageSrc(trade.status);
-    if (src == undefined) {
-      return;
-    }
-
     const { x, y, width, height } = stampPosition(pos);
 
-    const icon = new Image();
-    await loadImage(icon, src);
-    ctx.drawImage(icon, x, y, width, height);
+    const src = tradeStateToImageSrc(trade.status);
+    if (src != undefined) {
+      const icon = new Image();
+      await loadImage(icon, src);
+      ctx.drawImage(icon, x, y, width, height);
+    } else if (trade.status.tag === "emoji") {
+      ctx.font = `${height * 0.9}px sans-serif`;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.strokeText(trade.status.emoji, x + width / 2, y);
+    }
   });
 
   await Promise.all(promises);
