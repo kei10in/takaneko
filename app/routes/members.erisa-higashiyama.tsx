@@ -5,10 +5,10 @@ import { ErisaHigashiyama } from "./members/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `東山 恵理沙 プロフィール - ${SITE_TITLE}` },
+    { title: `東山 恵里沙 プロフィール - ${SITE_TITLE}` },
     {
       name: "description",
-      content: "高嶺のなでしこのメンバー 東山 恵理沙 のプロフィールです。",
+      content: "高嶺のなでしこのメンバー 東山 恵里沙 のプロフィールです。",
     },
   ];
 };

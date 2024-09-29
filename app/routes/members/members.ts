@@ -198,7 +198,7 @@ export const RiriHaruno: MemberDescription = {
 export const ErisaHigashiyama: MemberDescription = {
   slug: "erisa-higashiyama",
   number: 1,
-  name: "東山 恵理沙",
+  name: "東山 恵里沙",
   kana: "ひがしやま えりさ",
   romaji: "Higashiyama Erisa",
   nickname: "りちゃん",
