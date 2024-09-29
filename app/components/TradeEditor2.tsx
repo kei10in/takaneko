@@ -1,9 +1,18 @@
-import { CloseButton, Dialog, DialogPanel, Switch } from "@headlessui/react";
+import {
+  CloseButton,
+  Dialog,
+  DialogPanel,
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  Switch,
+} from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { BsEraserFill, BsImage, BsPencilSquare, BsTrash } from "react-icons/bs";
+import { BsEraserFill, BsImageFill, BsPencilSquare, BsTrashFill } from "react-icons/bs";
 import { ProductImage } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
+import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
@@ -16,7 +25,7 @@ interface Props {
   onClearTradeDescriptions?: (id: string) => void;
 }
 
-type StampType = "clear" | "wanted" | "+1" | "-1" | "cog";
+type StampType = "clear" | "wanted" | "+1" | "-1" | "cog" | "emoji";
 
 export const TradeEditor2: React.FC<Props> = (props: Props) => {
   const {
@@ -32,6 +41,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
   const [showConfirmClear, setShowConfirmClear] = useState(false);
   const [preview, setPreview] = useState(false);
   const [selectedStamp, setSelectedStamp] = useState<StampType>("cog");
+  const [selectedEmoji, setSelectedEmoji] = useState<string>(SelectableEmojis[0]);
   const [index, setIndex] = useState<number | undefined>(undefined);
   const lastIndex = positions.length - 1;
 
@@ -52,6 +62,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       onChangeTradeDescription?.(id, Stamp.increment(status));
     } else if (selectedStamp == "-1") {
       onChangeTradeDescription?.(id, Stamp.decrement(status));
+    } else if (selectedStamp == "emoji") {
+      onChangeTradeDescription?.(id, Stamp.emoji(status, selectedEmoji));
     } else if (selectedStamp == "cog") {
       setIndex(i);
     }
@@ -105,8 +117,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       {/* パネル */}
       <div className="sticky h-14 lg:h-16" style={{ bottom: 0 }}>
         <div className="h-full border-t border-gray-300 bg-white px-4 lg:mx-4 lg:px-0">
-          <div className="flex h-full items-center justify-center gap-8">
-            <div className="flex items-center justify-center gap-0.5">
+          <div className="flex h-full items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
               <Switch
                 className={toolButton()}
                 checked={selectedStamp == "wanted"}
@@ -128,6 +140,31 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
               >
                 <img src="/decrement.svg" alt="-1" className={stamp()} />
               </Switch>
+              <Popover className="relative">
+                <PopoverButton
+                  className={clsx(toolButton())}
+                  data-checked={selectedStamp == "emoji" ? "true" : undefined}
+                  onClick={() => setSelectedStamp("emoji")}
+                >
+                  <div className={clsx("flex items-center justify-center text-2xl", stamp())}>
+                    {selectedEmoji}
+                  </div>
+                </PopoverButton>
+                <PopoverPanel
+                  anchor={{ to: "top", gap: "1.5rem" }}
+                  className="overflow-hidden rounded-xl bg-white shadow-md"
+                >
+                  {({ close }) => (
+                    <EmojiPanel
+                      selected={selectedEmoji}
+                      onChange={(e) => {
+                        setSelectedEmoji(e);
+                        close();
+                      }}
+                    />
+                  )}
+                </PopoverPanel>
+              </Popover>
               <Switch
                 className={toolButton()}
                 checked={selectedStamp == "clear"}
@@ -150,14 +187,14 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
             <div className="flex items-center justify-center gap-0.5">
               <button className={toolButton()} onClick={() => setPreview(true)}>
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsImage className={toolIcon()} />
+                <div className="flex items-center justify-center">
+                  <BsImageFill className="h-6 w-6 text-gray-600" />
                 </div>
               </button>
 
               <button className={toolButton()} onClick={() => setShowConfirmClear(true)}>
-                <div className="flex h-8 w-8 items-center justify-center">
-                  <BsTrash className={toolIcon()} />
+                <div className="flex items-center justify-center">
+                  <BsTrashFill className="h-6 w-6 text-gray-600" />
                 </div>
               </button>
             </div>

@@ -1,10 +1,13 @@
-import { MouseEventHandler } from "react";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import clsx from "clsx";
+import { MouseEventHandler, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
 import { stampPosition } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";
+import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
 
 interface Props {
@@ -27,6 +30,13 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const tradeDescription = tradeDescriptions[selPosition.id];
   const tradeStatus = tradeDescription?.status ?? { tag: "none" };
   const tradeStateImageSrc = tradeStateToImageSrc(tradeStatus);
+
+  const [selectedEmoji, setSelectedEmoji] = useState<string>(() => {
+    if (tradeStatus.tag === "emoji") {
+      return tradeStatus.emoji;
+    }
+    return SelectableEmojis[0];
+  });
 
   const handleClickTradeState = (v: TradeStatus) => {
     onChangeTradeState?.(selPosition.id, v);
@@ -73,6 +83,19 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
                 height: stampPos.height * scale,
               }}
             />
+          ) : tradeStatus.tag === "emoji" ? (
+            <div
+              className="absolute flex items-center justify-center text-center leading-none"
+              style={{
+                left: stampPos.x * scale,
+                top: stampPos.y * scale,
+                width: stampPos.width * scale,
+                height: stampPos.height * scale,
+                fontSize: stampPos.height * scale * 0.9,
+              }}
+            >
+              {tradeStatus.emoji}
+            </div>
           ) : null}
         </div>
         <div className="flex-1">
@@ -110,7 +133,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={handleClickTradeState}
           >
             <div className="flex h-10 w-10 items-center justify-center">
-              <BsBan className="h-8 w-8 text-gray-400" />
+              <BsBan className="h-8 w-8" />
             </div>
           </TradeStateButton>
           <TradeStateButton
@@ -127,6 +150,46 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           >
             <img src="/譲.svg" alt="譲" className="h-10 w-10" />
           </TradeStateButton>
+
+          {/* Emoji */}
+          <Popover className="relative">
+            <PopoverButton
+              className={clsx(
+                "group w-fit flex-none rounded-2xl p-1 opacity-50 hover:bg-gray-200",
+                "data-[selected]:bg-gray-200 data-[selected]:opacity-100",
+              )}
+              data-selected={tradeStatus.tag == "emoji" || undefined}
+            >
+              <div className="flex h-10 w-10 items-center justify-center text-3xl leading-none">
+                {selectedEmoji}
+              </div>
+            </PopoverButton>
+
+            <PopoverPanel anchor={{ to: "bottom", gap: "1rem", padding: "2rem" }}>
+              {({ close }) => (
+                <div className="rounded-xl border bg-white p-2">
+                  <div className="mx-auto mt-0.5 grid w-64 grid-cols-5 place-items-center items-center justify-center gap-0.5">
+                    {SelectableEmojis.map((emoji) => (
+                      <TradeStateButton
+                        key={emoji}
+                        value={tradeStatus}
+                        forValue={{ tag: "emoji", emoji }}
+                        onClick={(v) => {
+                          setSelectedEmoji(emoji);
+                          handleClickTradeState(v);
+                          close();
+                        }}
+                      >
+                        <div className="flex h-10 w-10 items-center justify-center text-3xl leading-none">
+                          {emoji}
+                        </div>
+                      </TradeStateButton>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </PopoverPanel>
+          </Popover>
         </div>
         <div className="mt-0.5 flex items-center justify-center gap-0.5">
           <TradeStateButton

@@ -1,7 +1,8 @@
 export type TradeStatus =
   | { tag: "none" }
   | { tag: "want" }
-  | { tag: "have"; count?: number | undefined };
+  | { tag: "have"; count?: number | undefined }
+  | { tag: "emoji"; emoji: string };
 
 export type TradeDescription = { id: number; status: TradeStatus };
 
@@ -62,6 +63,14 @@ export const Stamp = {
       }
     } else {
       return status ?? { tag: "none" };
+    }
+  },
+
+  emoji: (status: TradeStatus | undefined, emoji: string): TradeStatus => {
+    if (status?.tag == "emoji" && status?.emoji == emoji) {
+      return { tag: "none" };
+    } else {
+      return { tag: "emoji", emoji };
     }
   },
 } as const;
