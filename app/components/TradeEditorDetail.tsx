@@ -1,4 +1,5 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import clsx from "clsx";
 import { MouseEventHandler, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
@@ -132,7 +133,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
             onClick={handleClickTradeState}
           >
             <div className="flex h-10 w-10 items-center justify-center">
-              <BsBan className="h-8 w-8 text-gray-400" />
+              <BsBan className="h-8 w-8" />
             </div>
           </TradeStateButton>
           <TradeStateButton
@@ -153,7 +154,10 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           {/* Emoji */}
           <Popover className="relative">
             <PopoverButton
-              className="group w-fit flex-none rounded-2xl p-1 hover:bg-gray-200 data-[selected]:bg-gray-200"
+              className={clsx(
+                "group w-fit flex-none rounded-2xl p-1 opacity-50 hover:bg-gray-200",
+                "data-[selected]:bg-gray-200 data-[selected]:opacity-100",
+              )}
               data-selected={tradeStatus.tag == "emoji" || undefined}
             >
               <div className="flex h-10 w-10 items-center justify-center text-3xl leading-none">

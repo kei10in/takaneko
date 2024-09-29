@@ -1,3 +1,4 @@
+import { Switch } from "@headlessui/react";
 import clsx from "clsx";
 import equal from "fast-deep-equal";
 import { TradeStatus } from "~/features/TradeStatus";
@@ -9,7 +10,7 @@ type Props = Omit<React.ComponentProps<"button">, "value" | "onClick"> & {
 };
 
 export const TradeStateButton: React.FC<Props> = (props: Props) => {
-  const { children, value, forValue, onClick, ...rest } = props;
+  const { children, value, forValue, onClick, ref: _, ...rest } = props;
 
   const selected = equal(value, forValue);
 
@@ -18,22 +19,16 @@ export const TradeStateButton: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <button
+    <Switch
       className={clsx(
-        "group flex-none rounded-2xl p-1 hover:bg-gray-200",
-        selected && "bg-gray-200",
+        "group flex-none rounded-2xl p-1 opacity-50 hover:bg-gray-200",
+        "text-gray-600 data-[checked]:bg-gray-200 data-[checked]:opacity-100",
       )}
-      onClick={handleClick}
+      checked={selected}
       {...rest}
+      onChange={handleClick}
     >
-      <div
-        className={clsx(
-          !selected && "brightness-50 hover:brightness-75",
-          selected && "brightness-100",
-        )}
-      >
-        {children}
-      </div>
-    </button>
+      {children}
+    </Switch>
   );
 };
