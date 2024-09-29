@@ -117,8 +117,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       {/* パネル */}
       <div className="sticky h-14 lg:h-16" style={{ bottom: 0 }}>
         <div className="h-full border-t border-gray-300 bg-white px-4 lg:mx-4 lg:px-0">
-          <div className="flex h-full items-center justify-center gap-6">
-            <div className="flex items-center justify-center gap-0.5">
+          <div className="flex h-full items-center justify-center gap-4">
+            <div className="flex items-center justify-center">
               <Switch
                 className={toolButton()}
                 checked={selectedStamp == "wanted"}
