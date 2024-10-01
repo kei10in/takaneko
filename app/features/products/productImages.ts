@@ -57,6 +57,7 @@ import { 瞬きさえ忘れる_ミニフォト } from "./2024/2024-09-15_瞬き�
 import { 瞬きさえ忘れる_生写真 } from "./2024/2024-09-15_瞬きさえ忘れる_生写真";
 import { 瞬きさえ忘れる_缶バッジ } from "./2024/2024-09-15_瞬きさえ忘れる_缶バッジ";
 import { 瞬きさえ忘れる_アクリルブロック } from "./2024/2024-09-15_瞬きさえ忘れる_落書きアクリルブロック";
+import { 大青春祭2024_メッセージカード } from "./2024/2024-10-02_大青春祭2024_メッセージカード";
 import { ProductImage } from "./product";
 
 export const TAKANEKO_PHOTOS: ProductImage[] = [
@@ -119,4 +120,5 @@ export const TAKANEKO_PHOTOS: ProductImage[] = [
   瞬きさえ忘れる_缶バッジ,
   瞬きさえ忘れる_ミニフォト,
   瞬きさえ忘れる_生写真,
+  大青春祭2024_メッセージカード,
 ];
