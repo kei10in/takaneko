@@ -53,7 +53,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   });
 
   return (
-    <div>
+    <div className="bg-nadeshiko-50 p-4">
       {/* Image and image selector */}
       <div className="flex w-full select-none items-stretch justify-center">
         <div className="flex-1">
@@ -109,18 +109,19 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
       </div>
 
       {/* Caption */}
-      <div className="mx-auto mt-4 flex w-60 items-center gap-4">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-400">
-          <div>
-            <p className="text-[0.625rem] leading-none text-white">No.</p>
-            <p className="text-lg leading-none text-white">
-              {selPhoto.id.toString().padStart(3, "0")}
-            </p>
-          </div>
+      <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-bl-[2rem] rounded-tr-[2rem] bg-white shadow">
+        <div className="absolute -left-5 -top-9 h-20 w-20 rounded-full bg-nadeshiko-500" />
+        <div className="absolute rounded-full p-2">
+          <p className="text-[0.625rem] leading-none text-white">No.</p>
+          <p className="px-1 text-sm leading-none text-white">
+            {selPhoto.id.toString().padStart(3, "0")}
+          </p>
         </div>
-        <div>
-          <p className="text-xl">{selPhoto.name}</p>
-          <p className="text-md text-gray-500">{selPhoto.description}</p>
+        <div className="flex h-full items-center justify-center">
+          <div>
+            <p className="text-center text-xl text-gray-800">{selPhoto.name}</p>
+            <p className="text-md text-center text-nadeshiko-800">{selPhoto.description}</p>
+          </div>
         </div>
       </div>
 
@@ -155,8 +156,8 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           <Popover className="relative">
             <PopoverButton
               className={clsx(
-                "group w-fit flex-none rounded-2xl p-1 opacity-50 hover:bg-gray-200",
-                "data-[selected]:bg-gray-200 data-[selected]:opacity-100",
+                "group w-fit flex-none rounded-2xl p-1 opacity-50",
+                "data-[selected]:bg-gray-800 data-[selected]:bg-opacity-10 data-[selected]:opacity-100",
               )}
               data-selected={tradeStatus.tag == "emoji" || undefined}
             >

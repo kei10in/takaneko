@@ -208,7 +208,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         onClose={() => setIndex(undefined)}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
-          <DialogPanel className="w-full max-w-lg border bg-white p-4">
+          <DialogPanel className="w-full max-w-lg border bg-white">
             {index != undefined ? (
               <TradeEditorDetail
                 productImage={productImage}
