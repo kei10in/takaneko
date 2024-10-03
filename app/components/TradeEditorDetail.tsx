@@ -1,6 +1,6 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import clsx from "clsx";
-import { MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
@@ -26,6 +26,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const photos = productImage.photos;
   const selPhoto = photos[index];
   const positions = productImage.positions;
+  const maxWidth = useMemo(() => Math.max(...positions.map((p) => p.width)), [positions]);
   const selPosition = positions[index];
   const tradeDescription = tradeDescriptions[selPosition.id];
   const tradeStatus = tradeDescription?.status ?? { tag: "none" };
@@ -67,9 +68,10 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
         <div className="relative flex-none">
           <ClippedImage
             clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
-            alt="Selected"
-            width={width}
+            className="object-contain"
+            style={{ width: width, height: (selPosition.height * width) / maxWidth }}
             src={productImage.url}
+            alt="Selected"
           />
           {tradeStateImageSrc != undefined ? (
             <img
