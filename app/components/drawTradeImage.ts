@@ -1,5 +1,5 @@
 import { ProductImage } from "~/features/products/product";
-import { stampPosition } from "~/features/trade/stampPosition";
+import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { loadImage } from "~/utils/loadImage";
 
@@ -23,13 +23,14 @@ export const drawTradeImage = async (
   ctx.drawImage(img, 0, 0);
 
   const positions = productImage.positions;
-  const promises = positions.map(async (pos) => {
+  const stamps = stampPositions(positions);
+  const promises = stamps.map(async (pos) => {
     const trade = tradeDescriptions[pos.id];
     if (trade == undefined) {
       return;
     }
 
-    const { x, y, width, height } = stampPosition(pos);
+    const { x, y, width, height } = pos;
 
     const src = tradeStateToImageSrc(trade.status);
     if (src != undefined) {

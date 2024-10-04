@@ -4,7 +4,7 @@ import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
-import { stampPosition } from "~/features/trade/stampPosition";
+import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "./ClippedImage";
 import { SelectableEmojis } from "./EmojiPanel";
@@ -44,14 +44,18 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   };
 
   const width = 180;
-  const scale = width / selPosition.width;
+  const scale = width / maxWidth;
+  const height = selPosition.height * scale;
 
-  const stampPos = stampPosition({
-    x: 0,
-    y: 0,
-    width: selPosition.width,
-    height: selPosition.height,
-  });
+  const stamps = useMemo(() => stampPositions(positions), [positions]);
+  const stamp = stamps[index];
+  // TradeEditorDetails では画像をクリップした部分だけで表示するため、クリップ部分の座標系に合わせる。
+  const stampPos = {
+    left: (stamp.x - selPosition.x + (maxWidth - selPosition.width) / 2) * scale,
+    top: (stamp.y - selPosition.y) * scale,
+    width: stamp.width * scale,
+    height: stamp.height * scale,
+  };
 
   return (
     <div className="bg-nadeshiko-50 p-4">
@@ -69,7 +73,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
           <ClippedImage
             clip={selPosition ?? { x: 0, y: 0, width: 0, height: 0 }}
             className="object-contain"
-            style={{ width: width, height: (selPosition.height * width) / maxWidth }}
+            style={{ width, height }}
             src={productImage.url}
             alt="Selected"
           />
@@ -78,23 +82,12 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
               src={tradeStateImageSrc}
               alt="トレード設定"
               className="absolute"
-              style={{
-                left: stampPos.x * scale,
-                top: stampPos.y * scale,
-                width: stampPos.width * scale,
-                height: stampPos.height * scale,
-              }}
+              style={{ ...stampPos }}
             />
           ) : tradeStatus.tag === "emoji" ? (
             <div
               className="absolute flex items-center justify-center text-center leading-none"
-              style={{
-                left: stampPos.x * scale,
-                top: stampPos.y * scale,
-                width: stampPos.width * scale,
-                height: stampPos.height * scale,
-                fontSize: stampPos.height * scale * 0.9,
-              }}
+              style={{ ...stampPos, fontSize: stampPos.height * 0.9 }}
             >
               {tradeStatus.emoji}
             </div>

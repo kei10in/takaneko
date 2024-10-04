@@ -1,6 +1,6 @@
-import { forwardRef, Ref } from "react";
+import { forwardRef, Ref, useMemo } from "react";
 import { ImagePosition } from "~/features/products/product";
-import { stampPosition } from "~/features/trade/stampPosition";
+import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 
 interface Props {
@@ -18,6 +18,8 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
 
   const scaleX = width / image.width;
   const scaleY = height == undefined ? scaleX : height / image.height;
+
+  const stamps = useMemo(() => stampPositions(positions), [positions]);
 
   return (
     <div key={image.url} className="relative" ref={ref}>
@@ -47,13 +49,13 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
           })
         : null}
 
-      {positions.map((pos) => {
+      {stamps.map((pos) => {
         const trade = tradeDescriptions[pos.id];
         if (trade == undefined) {
           return null;
         }
 
-        const { x, y, width, height } = stampPosition(pos);
+        const { x, y, width, height } = pos;
 
         const src = tradeStateToImageSrc(trade.status);
         if (src != undefined) {
