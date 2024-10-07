@@ -24,11 +24,11 @@ export default defineConfig({
           return;
         }
 
-        const outputPath = path.resolve(__dirname, "public/takanekofan.app.ics");
+        const outputPath = path.resolve(__dirname, "public/calendar.ics");
         fs.writeFileSync(outputPath, content, "utf-8");
 
         const buildPath = args.viteConfig.build.outDir;
-        fs.copyFileSync(outputPath, path.join(buildPath, "takanekofan.app.ics"));
+        fs.copyFileSync(outputPath, path.join(buildPath, "calendar.ics"));
       },
     }),
     tsconfigPaths(),
