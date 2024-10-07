@@ -22,7 +22,6 @@ export default function Index() {
   const copyToClipboard = () => {
     navigator.clipboard.writeText(url);
     setCopied(true);
-    window.alert("クリップボードにコピーしました。");
     setTimeout(() => {
       setCopied(false);
     }, 3000);
