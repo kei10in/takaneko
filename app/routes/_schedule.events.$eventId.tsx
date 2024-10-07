@@ -116,7 +116,7 @@ export default function EventPage() {
                 <span>
                   <HiMapPin className="text-gray-400" />
                 </span>
-                <span>{meta.location}</span>
+                <span className="text-nadeshiko-900">{meta.location}</span>
                 <span>
                   <HiArrowTopRightOnSquare />
                 </span>
@@ -130,7 +130,7 @@ export default function EventPage() {
                 <span>
                   <HiLink className="text-gray-400" />
                 </span>
-                <span>{meta.link.text}</span>
+                <span className="text-nadeshiko-900">{meta.link.text}</span>
                 <span>
                   <HiArrowTopRightOnSquare />
                 </span>
