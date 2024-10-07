@@ -51,7 +51,7 @@ export default function Index() {
           <h2 className="mb-8 text-2xl text-gray-800">iPhone で登録する方法</h2>
 
           <div className="space-y-4">
-            <p>下記のリンク先を参考に「紹介カレンダー」として追加してください。</p>
+            <p>下記のリンク先を参考に「照会カレンダー」として追加してください。</p>
             <p>
               <a
                 className="text-nadeshiko-800"
