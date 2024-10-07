@@ -1,5 +1,8 @@
 import mdx from "@mdx-js/rollup";
 import { vitePlugin as remix } from "@remix-run/dev";
+import { execSync } from "node:child_process";
+import fs from "node:fs";
+import path from "node:path";
 import gfm from "remark-gfm";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -14,6 +17,15 @@ export default defineConfig({
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
+      },
+      buildEnd() {
+        const content = execSync("pnpm tsx ./scripts/build-calendar.ts").toString();
+        if (content == "") {
+          return;
+        }
+
+        const outputPath = path.resolve(__dirname, "public/takanekofan.app.ics");
+        fs.writeFileSync(outputPath, content, "utf-8");
       },
     }),
     tsconfigPaths(),

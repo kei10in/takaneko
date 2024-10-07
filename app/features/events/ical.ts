@@ -33,6 +33,20 @@ export const generateCalendarEventDataUrl = async (
 };
 
 export const convertToIcsEvent = async (id: string, e: EventMeta): Promise<string | undefined> => {
+  const ea = await convertEventMetaToEventAttributes(id, e);
+  const r = createEvent(ea);
+
+  if (r.value == undefined) {
+    return undefined;
+  }
+
+  return r.value;
+};
+
+export const convertEventMetaToEventAttributes = async (
+  id: string,
+  e: EventMeta,
+): Promise<EventAttributes> => {
   const d = e.date;
   const uid = await icsEventId(id);
 
@@ -51,13 +65,7 @@ export const convertToIcsEvent = async (id: string, e: EventMeta): Promise<strin
     uid,
   };
 
-  const r = createEvent(ea);
-
-  if (r.value == undefined) {
-    return undefined;
-  }
-
-  return r.value;
+  return ea;
 };
 
 const icsEventId = async (id: string): Promise<string> => {
