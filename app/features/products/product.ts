@@ -1,3 +1,8 @@
+export interface ImageDescription {
+  path: string;
+  ref: string;
+}
+
 export type ProductDescription = ProductImage;
 
 export interface ProductImage {
@@ -34,7 +39,13 @@ export interface LiveGoodsDescription {
   goods: { type: string; items: (string | ProductImage)[] }[];
 }
 
-export interface ImageDescription {
-  path: string;
-  ref: string;
+export interface PublicationDescription {
+  id: string;
+  name: string;
+  date: string;
+  kind: "magazines" | "books";
+  publisher: string;
+  url: string;
+  cover_images: ImageDescription[];
+  featured_members: string[];
 }
