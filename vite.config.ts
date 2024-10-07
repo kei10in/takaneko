@@ -18,7 +18,7 @@ export default defineConfig({
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
       },
-      buildEnd() {
+      buildEnd(args) {
         const content = execSync("pnpm tsx ./scripts/build-calendar.ts").toString();
         if (content == "") {
           return;
@@ -26,6 +26,9 @@ export default defineConfig({
 
         const outputPath = path.resolve(__dirname, "public/takanekofan.app.ics");
         fs.writeFileSync(outputPath, content, "utf-8");
+
+        const buildPath = args.viteConfig.build.outDir;
+        fs.copyFileSync(outputPath, path.join(buildPath, "takanekofan.app.ics"));
       },
     }),
     tsconfigPaths(),
