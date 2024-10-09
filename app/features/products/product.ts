@@ -54,6 +54,6 @@ export interface PublicationDescription {
   code?: { kind: string; value: string }[];
   url: string;
   cover_images: ImageDescription[];
-  links?: LinkDescription[];
   featured_members: string[];
+  links?: LinkDescription[];
 }

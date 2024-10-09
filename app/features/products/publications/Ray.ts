@@ -22,6 +22,7 @@ export const Ray_2024年11月号: PublicationDescription = {
       ref: "https://books.shufunotomo.co.jp/book/b10092441.html",
     },
   ],
+  featured_members: ["星谷美来"],
   links: [
     {
       text: "Ray2024年11月号増刊 特別版",
@@ -32,5 +33,4 @@ export const Ray_2024年11月号: PublicationDescription = {
       url: "https://ray-web.jp/",
     },
   ],
-  featured_members: ["星谷美来"],
 };
