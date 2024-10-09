@@ -3,6 +3,11 @@ export interface ImageDescription {
   ref: string;
 }
 
+export interface LinkDescription {
+  text: string;
+  url: string;
+}
+
 export type ProductDescription = ProductImage;
 
 export interface ProductImage {
@@ -45,7 +50,10 @@ export interface PublicationDescription {
   date: string;
   kind: "magazines" | "books";
   publisher: string;
+  list_price?: number;
+  code?: { kind: string; value: string }[];
   url: string;
   cover_images: ImageDescription[];
+  links?: LinkDescription[];
   featured_members: string[];
 }
