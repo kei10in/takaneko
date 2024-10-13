@@ -64,7 +64,7 @@ export default function Index() {
             <p>次のボタンを押して登録します。</p>
             <Link
               className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
-              to={`https://calendar.google.com/calendar?cid=${encodeURIComponent(webcalUrl)}`}
+              to={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(webcalUrl)}`}
               discover="none"
               target="_blank"
               rel="noreferrer"
