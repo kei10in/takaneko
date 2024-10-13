@@ -1,6 +1,6 @@
-import { MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "@remix-run/react";
 import { useState } from "react";
-import { BsCheck2, BsCopy } from "react-icons/bs";
+import { BsCalendar3, BsCheck2, BsCopy } from "react-icons/bs";
 import { DOMAIN } from "~/constants";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -34,54 +34,72 @@ export default function Index() {
 
         <div className="space-y-4">
           <p>カレンダーの登録には次の URL を使用します。</p>
-
-          <p className="flex items-center justify-between gap-2 bg-gray-100 px-4 py-2 font-mono text-gray-800">
-            <span className="flex-1 break-words break-all">{url}</span>
-            <button className="h-9 w-9 flex-none" onClick={copyToClipboard}>
-              {copied ? (
-                <BsCheck2 className="inline text-green-700" />
-              ) : (
-                <BsCopy className="inline text-gray-500" />
-              )}
-            </button>
-          </p>
         </div>
 
         <section className="mt-12">
-          <h2 className="mb-8 text-2xl text-gray-800">iPhone で登録する方法</h2>
+          <h2 className="mb-8 text-2xl text-gray-800">iPhone のカレンダーに登録する</h2>
 
           <div className="space-y-4">
-            <p>下記のリンク先を参考に「照会カレンダー」として追加してください。</p>
+            <p>次のボタンを押して登録します。</p>
             <p>
-              <a
-                className="text-nadeshiko-800"
-                href="https://support.apple.com/ja-jp/guide/iphone/iph3d1110d4/ios"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+                to={`webcal://${DOMAIN}/calendar.ics`}
+                discover="none"
               >
-                iPhoneで複数のカレンダーを設定する - Apple サポート (日本)
-              </a>
+                <div className="flex items-center gap-2 text-nadeshiko-800">
+                  <span>
+                    <BsCalendar3 className="h-5 w-5" />
+                  </span>
+                  <span>iPhone のカレンダーに登録する</span>
+                </div>
+              </Link>
             </p>
           </div>
         </section>
 
         <section className="mt-12">
-          <h2 className="mb-8 text-2xl text-gray-800">Google カレンダーで登録する方法</h2>
+          <h2 className="mb-8 text-2xl text-gray-800">URL でカレンダーに登録する</h2>
 
           <div className="space-y-4">
-            <p>
-              下記のリンク先の「リンクを使用して一般公開カレンダーを追加する」を参考に登録してください。
+            <p>次の URL を使います。</p>
+            <p className="flex items-center justify-between gap-2 bg-gray-100 px-4 py-2 font-mono text-gray-800">
+              <span className="flex-1 break-words break-all">{url}</span>
+              <button className="h-9 w-9 flex-none" onClick={copyToClipboard}>
+                {copied ? (
+                  <BsCheck2 className="inline text-green-700" />
+                ) : (
+                  <BsCopy className="inline text-gray-500" />
+                )}
+              </button>
             </p>
-            <p>
-              <a
-                className="text-nadeshiko-800"
-                href="https://support.google.com/calendar/answer/37100"
-                target="_blank"
-                rel="noreferrer"
-              >
-                他のユーザーの Google カレンダーに登録する - パソコン - Google カレンダー ヘルプ
-              </a>
-            </p>
+
+            <p>カレンダーへの登録方法は、使っているカレンダーアプリの使い方を見てください。</p>
+            <ul className="list-disc pl-8 marker:text-gray-300">
+              <li>
+                <Link
+                  className="text-nadeshiko-800"
+                  to="https://support.google.com/calendar/answer/37100"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Google カレンダー
+                </Link>{" "}
+                - Google カレンダーのウェブサイトからカレンダーを追加します。
+              </li>
+              <li>
+                <Link
+                  className="text-nadeshiko-800"
+                  to="https://support.timetreeapp.com/hc/ja/articles/360000639682-他のカレンダーを表示したい-Google-カレンダーなど"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TimeTree
+                </Link>{" "}
+                - iPhone のカレンダーや Google カレンダーに追加したあとで TimeTree
+                アプリ上で操作します。
+              </li>
+            </ul>
           </div>
         </section>
       </section>
