@@ -16,7 +16,18 @@ export default function Index() {
             <p className="text-base font-bold text-gray-600">
               <Link to="/calendar">スケジュール</Link>
             </p>
-            <div className="flex-none">
+
+            <div className="hidden lg:block">
+              <ul className="flex items-center gap-8 text-sm font-bold text-gray-500">
+                <li>
+                  <Link to="/calendar/registration" onClick={close}>
+                    アプリに登録
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-none lg:hidden">
               <button
                 className="p-2 text-nadeshiko-800 hover:text-nadeshiko-950"
                 onClick={() => setShowMenu(true)}
