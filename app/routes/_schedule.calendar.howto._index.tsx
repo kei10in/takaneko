@@ -41,20 +41,18 @@ export default function Index() {
 
           <div className="space-y-4">
             <p>次のボタンを押して登録します。</p>
-            <p>
-              <Link
-                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
-                to={`webcal://${DOMAIN}/calendar.ics`}
-                discover="none"
-              >
-                <div className="flex items-center gap-2 text-nadeshiko-800">
-                  <span>
-                    <BsCalendar3 className="h-5 w-5" />
-                  </span>
-                  <span>iPhone のカレンダーに登録する</span>
-                </div>
-              </Link>
-            </p>
+            <Link
+              className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+              to={`webcal://${DOMAIN}/calendar.ics`}
+              discover="none"
+            >
+              <div className="flex items-center gap-2 text-nadeshiko-800">
+                <span>
+                  <BsCalendar3 className="h-5 w-5" />
+                </span>
+                <span>iPhone のカレンダーに登録する</span>
+              </div>
+            </Link>
           </div>
         </section>
 
