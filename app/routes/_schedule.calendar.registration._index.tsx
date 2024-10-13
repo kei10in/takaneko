@@ -17,9 +17,21 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const domain = DOMAIN;
   const cals = [
-    { name: "すべてのたかねこの予定", url: `${domain}/calendar.ics` },
-    { name: "たかねこに会える予定", url: `${domain}/calendar-meets.ics` },
-    { name: "たかねこの供給", url: `${domain}/calendar-updates.ics` },
+    {
+      name: "すべてのたかねこの予定",
+      url: `${domain}/calendar.ics`,
+      description: "すべての高嶺のなでしこの予定をひとつのカレンダーにまとめました。",
+    },
+    {
+      name: "たかねこに会える予定",
+      url: `${domain}/calendar-meets.ics`,
+      description: "ライブやリリースイベントなど高嶺のなでしこに会えるイベントの予定です。",
+    },
+    {
+      name: "たかねこの供給",
+      url: `${domain}/calendar-updates.ics`,
+      description: "テレビの出演や発売日などの予定です。",
+    },
   ];
 
   const [copied, setCopied] = useState(false);
@@ -34,37 +46,17 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <section className="my-12 px-4">
+      <section className="my-12 px-4 text-gray-800">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">アプリに登録</h1>
 
-        <div className="space-y-4">
-          <p>たかねこの予定をカレンダー アプリに登録できます。</p>
-          <p>3 種類の予定から選んで登録してください。</p>
+        {cals.map((cal, i) => (
+          <section key={i} className="my-12">
+            <h2 className="mb-6 text-2xl font-bold text-gray-500">{cal.name}</h2>
 
-          <ul className="list-disc pl-8 marker:text-gray-300">
-            <li>
-              <strong>すべてのたかねこの予定</strong> -
-              すべての高嶺のなでしこの予定をひとつのカレンダーにまとめました。
-            </li>
-            <li>
-              <strong>たかねこに会える予定</strong> -
-              ライブやリリースイベントなど高嶺のなでしこに会えるイベントの予定です。
-            </li>
-            <li>
-              <strong>たかねこの供給</strong> - テレビの出演や発売日などの予定です
-            </li>
-          </ul>
-        </div>
+            <div className="space-y-4">
+              <p>{cal.description}</p>
 
-        <section className="mt-12">
-          <h2 className="mb-8 text-2xl text-gray-800">iPhone のカレンダーに登録する</h2>
-
-          <div className="space-y-4">
-            <p>次のボタンを押して登録します。カレンダー アプリが開きます。</p>
-
-            {cals.map((cal, i) => (
               <Link
-                key={i}
                 className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
                 to={`webcal://${cal.url}`}
                 discover="none"
@@ -73,25 +65,11 @@ export default function Index() {
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>
-                  <span>{cal.name}</span>
+                  <span>iPhone のカレンダーに登録</span>
                 </div>
               </Link>
-            ))}
-          </div>
-        </section>
 
-        <section className="mt-12">
-          <h2 className="mb-8 text-2xl text-gray-800">Google カレンダーに登録する</h2>
-
-          <div className="space-y-4">
-            <p>
-              次のボタンを押して登録します。スマートフォンでも Google カレンダーの PC
-              サイトを開いてカレンダー登録ができます。
-            </p>
-
-            {cals.map((cal, i) => (
               <Link
-                key={i}
                 className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
                 to={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(`webcal://${cal.url}`)}`}
                 discover="none"
@@ -102,22 +80,12 @@ export default function Index() {
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>
-                  <span>{cal.name}</span>
+                  <span>Google カレンダーに登録</span>
                 </div>
               </Link>
-            ))}
-          </div>
-        </section>
 
-        <section className="mt-12">
-          <h2 className="mb-8 text-2xl text-gray-800">URL でカレンダーに登録する</h2>
-
-          <div className="space-y-4">
-            <p>次の URL を使います。</p>
-
-            {cals.map((cal, i) => (
-              <div key={i} className="space-y-2">
-                <p>{cal.name}:</p>
+              <div className="space-y-2">
+                <p className="font-bold">カレンダーの URL:</p>
                 <p className="flex items-center justify-between gap-2 bg-gray-100 px-4 py-2 font-mono text-gray-800">
                   <span className="flex-1 break-words break-all">{cal.url}</span>
                   <button className="h-9 w-9 flex-none" onClick={() => copyToClipboard(cal.url)}>
@@ -129,8 +97,14 @@ export default function Index() {
                   </button>
                 </p>
               </div>
-            ))}
+            </div>
+          </section>
+        ))}
 
+        <section className="mt-12">
+          <h2 className="mb-8 text-2xl font-bold text-gray-500">URL でカレンダーに登録する</h2>
+
+          <div className="space-y-4">
             <p>カレンダーへの登録方法は、使っているカレンダーアプリの使い方を見てください。</p>
             <ul className="list-disc pl-8 marker:text-gray-300">
               <li>
