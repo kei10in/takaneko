@@ -16,6 +16,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const url = `https://${DOMAIN}/calendar.ics`;
+  const webcalUrl = `webcal://${DOMAIN}/calendar.ics`;
 
   const [copied, setCopied] = useState(false);
 
@@ -43,14 +44,36 @@ export default function Index() {
             <p>次のボタンを押して登録します。</p>
             <Link
               className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
-              to={`webcal://${DOMAIN}/calendar.ics`}
+              to={webcalUrl}
               discover="none"
             >
               <div className="flex items-center gap-2 text-nadeshiko-800">
                 <span>
                   <BsCalendar3 className="h-5 w-5" />
                 </span>
-                <span>iPhone のカレンダーに登録する</span>
+                <span>iPhone のカレンダーに登録</span>
+              </div>
+            </Link>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="mb-8 text-2xl text-gray-800">Google カレンダーに登録する</h2>
+
+          <div className="space-y-4">
+            <p>次のボタンを押して登録します。</p>
+            <Link
+              className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+              to={`https://calendar.google.com/calendar?cid=${encodeURIComponent(webcalUrl)}`}
+              discover="none"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="flex items-center gap-2 text-nadeshiko-800">
+                <span>
+                  <BsCalendar3 className="h-5 w-5" />
+                </span>
+                <span>Google カレンダーに登録</span>
               </div>
             </Link>
           </div>
