@@ -1,5 +1,5 @@
 import { glob } from "glob";
-import { createEvents } from "ics";
+import { createEvents, HeaderAttributes } from "ics";
 import { register } from "node:module";
 import { basename } from "node:path";
 import { convertEventMetaToEventAttributes } from "~/features/events/ical";
@@ -19,7 +19,11 @@ const buildCalendar = async () => {
     events.map(async ([id, meta]) => convertEventMetaToEventAttributes(id, meta)),
   );
 
-  const ics = createEvents(eventAttributesList);
+  const header: HeaderAttributes = {
+    calName: "たかねこの予定",
+  };
+
+  const ics = createEvents(eventAttributesList, header);
 
   return ics.value;
 };
