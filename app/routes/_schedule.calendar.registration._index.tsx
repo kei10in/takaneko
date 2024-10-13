@@ -6,10 +6,10 @@ import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: formatTitle("カレンダーの登録方法") },
+    { title: formatTitle("アプリに登録") },
     {
       name: "description",
-      content: "高嶺のなでしこの出演予定やリリース情報をカレンダーに登録する方法を説明します。",
+      content: "高嶺のなでしこの出演予定やリリース情報をカレンダーに登録します。",
     },
   ];
 };
@@ -31,10 +31,10 @@ export default function Index() {
   return (
     <div className="container mx-auto">
       <section className="my-12 px-4">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">カレンダーの登録方法</h1>
+        <h1 className="my-4 text-3xl font-semibold text-gray-600">アプリに登録</h1>
 
         <div className="space-y-4">
-          <p>カレンダーの登録には次の URL を使用します。</p>
+          <p>たかねこの予定をカレンダー アプリに登録できます。</p>
         </div>
 
         <section className="mt-12">
