@@ -19,18 +19,18 @@ export default defineConfig({
         v3_throwAbortReason: true,
       },
       buildEnd(args) {
-        const content = execSync("pnpm tsx ./scripts/build-calendar.ts").toString();
-        if (content == "") {
-          return;
-        }
-
-        const outputPath = path.resolve(__dirname, "public/calendar.ics");
-        fs.writeFileSync(outputPath, content, "utf-8");
-
         const buildPath = args.viteConfig.build.outDir;
-        fs.copyFileSync(outputPath, path.join(buildPath, "calendar.ics"));
+        buildCalendar("all", "calendar.ics", buildPath);
+        buildCalendar("meets", "calendar-meets.ics", buildPath);
+        buildCalendar("updates", "calendar-updates.ics", buildPath);
       },
     }),
     tsconfigPaths(),
   ],
 });
+
+const buildCalendar = async (kind: string, filename: string, buildPath: string) => {
+  const output = path.resolve(__dirname, path.join("public", filename));
+  execSync(`pnpm tsx ./scripts/build-calendar.ts ${kind} ${output}`).toString();
+  fs.copyFileSync(output, path.join(buildPath, filename));
+};
