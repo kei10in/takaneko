@@ -41,7 +41,7 @@ export default function Index() {
           <h2 className="mb-8 text-2xl text-gray-800">iPhone のカレンダーに登録する</h2>
 
           <div className="space-y-4">
-            <p>次のボタンを押して登録します。</p>
+            <p>次のボタンを押して登録します。カレンダー アプリが開きます。</p>
             <Link
               className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
               to={webcalUrl}
@@ -61,7 +61,10 @@ export default function Index() {
           <h2 className="mb-8 text-2xl text-gray-800">Google カレンダーに登録する</h2>
 
           <div className="space-y-4">
-            <p>次のボタンを押して登録します。</p>
+            <p>
+              次のボタンを押して登録します。スマートフォンでも Google カレンダーの PC
+              サイトを開いてカレンダー登録ができます。
+            </p>
             <Link
               className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
               to={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(webcalUrl)}`}
