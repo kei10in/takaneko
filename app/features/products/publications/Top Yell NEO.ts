@@ -18,6 +18,10 @@ export const TopYellNeo2024Autumn: PublicationDescription = {
       path: "/publications/2024-09-30_Top Yell NEO 2024 AUTUMN_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10085561.html",
     },
+    {
+      path: "/publications/2024-09-30_Top Yell NEO 2024 AUTUMN_X.jpg",
+      ref: "https://x.com/TopYell/status/1840355974076567716",
+    },
   ],
   featured_members: ["涼海すう", "葉月紗蘭", "東山恵里沙"],
   links: [{ text: "掲載内容紹介", url: "https://x.com/TopYell/status/1840355974076567716" }],
@@ -40,6 +44,10 @@ export const TopYellNeo2024Spring: PublicationDescription = {
     {
       path: "/publications/2024-04-01_Top Yell NEO 2024 AUTUMN_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10080549.html",
+    },
+    {
+      path: "/publications/2024-04-01_Top Yell NEO 2024 AUTUMN_X.jpg",
+      ref: "https://x.com/TopYell/status/1774628432770670755",
     },
   ],
   featured_members: [
@@ -75,6 +83,10 @@ export const TopYellNeo2022AUTUMN: PublicationDescription = {
     {
       path: "/publications/2022-09-30_Top Yell NEO 2022 AUTUMN_表紙.png",
       ref: "https://www.takeshobo.co.jp/book/b10072493.html",
+    },
+    {
+      path: "/publications/2022-09-30_Top Yell NEO 2022 AUTUMN_X.png",
+      ref: "https://x.com/TopYell/status/1575339199481274368",
     },
   ],
   featured_members: ["東山恵里沙", "日向端ひな", "松本ももな", "籾山ひめり"],
