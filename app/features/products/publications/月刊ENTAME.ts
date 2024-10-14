@@ -1,5 +1,30 @@
 import { PublicationDescription } from "../product";
 
+export const 月刊ENTAME_2024年8月号: PublicationDescription = {
+  id: "月刊ENTAME 2024年8月号",
+  name: "月刊ENTAME 2024年8月号",
+  date: "2024-06-28",
+  kind: "magazines", // "books"
+  publisher: "徳間書店",
+  list_price: 1080,
+  code: [],
+  url: "https://x.com/gekkan_entame/status/1805874857256927518",
+  cover_images: [
+    {
+      path: "/publications/2024-06-28_月刊ENTAME_2024年8月号.jpg",
+      ref: "https://x.com/gekkan_entame/status/1805874857256927518",
+    },
+  ],
+  featured_members: ["松本ももな"],
+  official_x: "https://x.com/takanenofficial/status/1806591559888212460",
+  links: [
+    {
+      text: "掲載内容紹介",
+      url: "https://x.com/gekkan_entame/status/1808698116545388597",
+    },
+  ],
+};
+
 export const 月刊ENTAME_2023年3・4月合併号: PublicationDescription = {
   id: "月刊ENTAME 2023年3・4月合併号",
   name: "月刊ENTAME 2023年3・4月合併号",
