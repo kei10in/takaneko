@@ -54,7 +54,12 @@ export const TopYellNeo2024Spring: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  links: [],
+  links: [
+    {
+      text: "掲載内容紹介",
+      url: "https://x.com/TopYell/status/1774628432770670755",
+    },
+  ],
 };
 
 export const TopYellNeo2022AUTUMN: PublicationDescription = {
@@ -73,10 +78,6 @@ export const TopYellNeo2022AUTUMN: PublicationDescription = {
     },
   ],
   featured_members: ["東山恵里沙", "日向端ひな", "松本ももな", "籾山ひめり"],
-  links: [
-    {
-      text: "公式 X 告知",
-      url: "https://x.com/takanenofficial/status/1575410142719266817",
-    },
-  ],
+  official_x: "https://x.com/takanenofficial/status/1575410142719266817",
+  links: [{ text: "掲載内容紹介", url: "https://x.com/TopYell/status/1575339199481274368" }],
 };

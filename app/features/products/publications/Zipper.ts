@@ -15,16 +15,6 @@ export const Zipper_2024年秋号: PublicationDescription = {
       ref: "https://www.zipper.jp/news/news-20240928-01",
     },
   ],
-  links: [
-    {
-      text: "公式 X 告知 籾山ひめり掲載",
-      url: "https://x.com/takanenofficial/status/1839892835648340436",
-    },
-    {
-      text: "公式 X 告知 高嶺のなでしこ掲載",
-      url: "https://x.com/takanenofficial/status/1839892810696405084",
-    },
-  ],
   featured_members: [
     "城月菜央",
     "涼海すう",
@@ -36,5 +26,16 @@ export const Zipper_2024年秋号: PublicationDescription = {
     "星谷美来",
     "松本ももな",
     "籾山ひめり",
+  ],
+  official_x: "https://x.com/takanenofficial/status/1839892835648340436",
+  links: [
+    {
+      text: "公式 X 告知 籾山ひめり掲載",
+      url: "https://x.com/takanenofficial/status/1839892835648340436",
+    },
+    {
+      text: "公式 X 告知 高嶺のなでしこ掲載",
+      url: "https://x.com/takanenofficial/status/1839892810696405084",
+    },
   ],
 };

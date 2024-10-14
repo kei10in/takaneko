@@ -16,11 +16,8 @@ export const _20SWEET_2023_JANUARY: PublicationDescription = {
     },
   ],
   featured_members: ["松本ももな"],
+  official_x: "https://x.com/takanenofficial/status/1607740609045106689",
   links: [
-    {
-      text: "公式 X 告知",
-      url: "https://x.com/takanenofficial/status/1607740609045106689",
-    },
     {
       text: "PR TIMES",
       url: "https://prtimes.jp/main/html/rd/p/000002000.000006568.html",

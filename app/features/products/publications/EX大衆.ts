@@ -16,10 +16,6 @@ export const EX大衆_2022年10月号: PublicationDescription = {
     },
   ],
   featured_members: ["東山恵里沙", "松本ももな"],
-  links: [
-    {
-      text: "公式 X 告知",
-      url: "https://x.com/takanenofficial/status/1567850564612141058",
-    },
-  ],
+  official_x: "https://x.com/takanenofficial/status/1567850564612141058",
+  links: [],
 };

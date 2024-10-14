@@ -14,12 +14,6 @@ export const 明星2024年9月号: PublicationDescription = {
       ref: "https://x.com/Myojo_henshu/status/1811639771971878948",
     },
   ],
-  links: [
-    {
-      text: "明星公式 X 表紙公開",
-      url: "https://x.com/Myojo_henshu/status/1811639771971878948",
-    },
-  ],
   featured_members: [
     "城月菜央",
     "涼海すう",
@@ -31,5 +25,12 @@ export const 明星2024年9月号: PublicationDescription = {
     "星谷美来",
     "松本ももな",
     "籾山ひめり",
+  ],
+  official_x: "https://x.com/takanenofficial/status/1822437811200594144",
+  links: [
+    {
+      text: "明星公式 X 表紙公開",
+      url: "https://x.com/Myojo_henshu/status/1811639771971878948",
+    },
   ],
 };
