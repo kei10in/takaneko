@@ -55,5 +55,6 @@ export interface PublicationDescription {
   url: string;
   cover_images: ImageDescription[];
   featured_members: string[];
+  official_x?: string;
   links?: LinkDescription[];
 }

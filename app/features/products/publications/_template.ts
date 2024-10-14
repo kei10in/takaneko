@@ -27,6 +27,7 @@ export const a: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
+  official_x: "",
   links: [
     {
       text: "",
