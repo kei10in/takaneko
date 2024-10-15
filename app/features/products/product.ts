@@ -48,7 +48,7 @@ export interface PublicationDescription {
   id: string;
   name: string;
   date: string;
-  kind: "magazines" | "books" | "newspaper";
+  kind: "magazines" | "books";
   publisher: string;
   list_price?: number;
   code?: { kind: string; value: string }[];
