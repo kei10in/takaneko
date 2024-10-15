@@ -8,7 +8,7 @@ export interface LinkDescription {
   url: string;
 }
 
-export type ProductDescription = ProductImage;
+export type ProductDescription = ProductImage | PublicationDescription;
 
 export interface ProductImage {
   id: string;
@@ -63,6 +63,7 @@ export interface NewspaperDescription {
   id: string;
   name: string;
   date: string;
+  kind: "newspapers";
   publisher: string;
   notes?: string;
   featured_members: string[];
