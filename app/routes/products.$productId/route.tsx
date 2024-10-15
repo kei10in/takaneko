@@ -1,12 +1,15 @@
 import { MetaFunction, useParams } from "@remix-run/react";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
+import { ProductDescription } from "~/features/products/product";
+import { PUBLICATIONS } from "~/features/products/publications";
 import { formatTitle } from "~/utils/htmlHeader";
 import { PhotoProduct } from "./PhotoProduct";
+import PublicationProduct from "./PublicationProduct";
 
 export const meta: MetaFunction = ({ params }) => {
   const productId = params.productId;
   const fineProduct = findProduct(productId);
-  const title = formatTitle(fineProduct.name);
+  const title = formatTitle(fineProduct.description.name);
 
   return [
     { title },
@@ -17,18 +20,22 @@ export const meta: MetaFunction = ({ params }) => {
   ];
 };
 
-const findProduct = (productId: string | undefined) => {
+const findProduct = (productId: string | undefined): ProductDescription => {
   if (productId == undefined) {
     throw new Response("", { status: 404 });
   }
 
   const photo = PHOTOS.find((p) => p.id === productId);
   if (photo != undefined) {
-    return photo;
+    return { kind: "images", description: photo };
   }
   const miniPhoto = MINI_PHOTO_CARDS.find((p) => p.id === productId);
   if (miniPhoto != undefined) {
-    return miniPhoto;
+    return { kind: "images", description: miniPhoto };
+  }
+  const publication = PUBLICATIONS.find((p) => p.id === productId);
+  if (publication != undefined) {
+    return { kind: "publications", description: publication };
   }
 
   throw new Response("", { status: 404 });
@@ -46,7 +53,11 @@ export default function Index() {
       </div>
 
       <div className="min-h-[calc(100svh-var(--header-height))]">
-        <PhotoProduct product={product} />
+        {product.kind === "images" ? (
+          <PhotoProduct product={product.description} />
+        ) : (
+          <PublicationProduct product={product.description} />
+        )}
       </div>
     </div>
   );

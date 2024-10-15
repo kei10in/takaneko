@@ -8,7 +8,15 @@ export interface LinkDescription {
   url: string;
 }
 
-export type ProductDescription = ProductImage | PublicationDescription;
+export type ProductDescription =
+  | {
+      kind: "images";
+      description: ProductImage;
+    }
+  | {
+      kind: "publications";
+      description: PublicationDescription;
+    };
 
 export interface ProductImage {
   id: string;
