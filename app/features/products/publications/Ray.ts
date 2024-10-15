@@ -23,6 +23,7 @@ export const Ray_2024年11月号: PublicationDescription = {
     },
   ],
   featured_members: ["星谷美来"],
+  official_x: "https://x.com/takanenofficial/status/1837424060562919917",
   links: [
     {
       text: "Ray2024年11月号増刊 特別版",
