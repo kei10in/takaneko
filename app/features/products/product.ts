@@ -48,12 +48,23 @@ export interface PublicationDescription {
   id: string;
   name: string;
   date: string;
-  kind: "magazines" | "books";
+  kind: "magazines" | "books" | "newspaper";
   publisher: string;
   list_price?: number;
   code?: { kind: string; value: string }[];
   url: string;
   cover_images: ImageDescription[];
+  featured_members: string[];
+  official_x?: string;
+  links?: LinkDescription[];
+}
+
+export interface NewspaperDescription {
+  id: string;
+  name: string;
+  date: string;
+  publisher: string;
+  notes?: string;
   featured_members: string[];
   official_x?: string;
   links?: LinkDescription[];
