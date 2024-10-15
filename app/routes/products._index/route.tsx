@@ -8,8 +8,11 @@ import { SITE_TITLE } from "~/constants";
 import { loadEventsInDay } from "~/features/events/events";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
+import { PUBLICATIONS } from "~/features/products/publications";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import { ProductCard } from "./ProductCard";
+import { PublicationCard } from "./PublicationCard";
 
 export const meta: MetaFunction = () => {
   return [
@@ -103,6 +106,23 @@ export default function Index() {
               <li key={photo.id}>
                 <Link to={`/products/${photo.id}`}>
                   <ProductCard {...photo} />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="mb-4 text-2xl">書籍・雑誌</h2>
+          <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+            {PUBLICATIONS.map((publication) => (
+              <li key={publication.id}>
+                <Link to={`/products/${publication.id}`}>
+                  <PublicationCard
+                    name={publication.name}
+                    date={NaiveDate.parseUnsafe(publication.date)}
+                    image={publication.cover_images[0].path}
+                  />
                 </Link>
               </li>
             ))}
