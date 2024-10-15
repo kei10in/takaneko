@@ -1,6 +1,6 @@
 import { PublicationDescription } from "../product";
 
-export const a: PublicationDescription = {
+export const OutOfMusic_86: PublicationDescription = {
   id: "Out of MUSIC 86",
   name: "Out of MUSIC 86",
   date: "2024-07-24",

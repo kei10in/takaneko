@@ -25,7 +25,7 @@ export const 月刊ENTAME_2024年8月号: PublicationDescription = {
   ],
 };
 
-export const 月刊ENTAME_2023年3・4月合併号: PublicationDescription = {
+export const 月刊ENTAME_2023年3_4月合併号: PublicationDescription = {
   id: "月刊ENTAME 2023年3・4月合併号",
   name: "月刊ENTAME 2023年3・4月合併号",
   date: "2023-01-30",

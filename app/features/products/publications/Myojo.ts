@@ -1,6 +1,6 @@
 import { PublicationDescription } from "../product";
 
-export const 明星2024年9月号: PublicationDescription = {
+export const Myojo_2024年9月号: PublicationDescription = {
   id: "Myojo 2024年9月号",
   name: "Myojo 2024年9月号",
   date: "2024-07-22",
