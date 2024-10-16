@@ -42,11 +42,11 @@ export const TopYellNeo2024Spring: PublicationDescription = {
       ref: "https://www.takeshobo.co.jp/book/b10080549.html",
     },
     {
-      path: "/publications/2024-04-01_Top Yell NEO 2024 AUTUMN_裏表紙.jpg",
+      path: "/publications/2024-04-01_Top Yell NEO 2024 SPRING_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10080549.html",
     },
     {
-      path: "/publications/2024-04-01_Top Yell NEO 2024 AUTUMN_X.jpg",
+      path: "/publications/2024-04-01_Top Yell NEO 2024 SPRING_X.jpg",
       ref: "https://x.com/TopYell/status/1774628432770670755",
     },
   ],
@@ -85,7 +85,7 @@ export const TopYellNeo2022AUTUMN: PublicationDescription = {
       ref: "https://www.takeshobo.co.jp/book/b10072493.html",
     },
     {
-      path: "/publications/2022-09-30_Top Yell NEO 2022 AUTUMN_X.png",
+      path: "/publications/2022-09-30_Top Yell NEO 2022 AUTUMN_X.jpg",
       ref: "https://x.com/TopYell/status/1575339199481274368",
     },
   ],
