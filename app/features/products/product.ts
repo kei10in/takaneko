@@ -54,6 +54,14 @@ export interface LiveGoodsDescription {
   goods: { type: string; items: (string | ProductImage)[] }[];
 }
 
+export interface BirthdayGoodsDescription {
+  id: string;
+  name: string;
+  memberName: MemberName;
+  goods: string[];
+  images: ImageDescription[];
+}
+
 export interface PublicationDescription {
   id: string;
   name: string;
@@ -79,4 +87,12 @@ export interface NewspaperDescription {
   featuredMembers: string[];
   officialTwitter?: string;
   links?: LinkDescription[];
+}
+
+export interface OfficialGoodsDescription {
+  id: string;
+  name: string;
+  date: string;
+  listPrice: number;
+  images: ImageDescription[];
 }
