@@ -1,5 +1,7 @@
+import { Link } from "@remix-run/react";
 import { ImageSlide } from "~/components/ImageSlide";
 import { PublicationDescription } from "~/features/products/product";
+import { findMemberDescription } from "../members/members";
 
 interface Props {
   product: PublicationDescription;
@@ -15,13 +17,30 @@ export default function PublicationProduct(props: Props) {
       />
 
       <section className="p-4">
-        <h1 className="my-2 text-3xl font-semibold text-nadeshiko-800 lg:mt-12">{product.name}</h1>
-        <div>掲載メンバー</div>
-        <ul className="list-disc pl-6 marker:text-gray-300">
-          {product.featured_members.map((member) => (
-            <li key={member}>{member}</li>
-          ))}
-        </ul>
+        <h1 className="my-4 text-3xl font-semibold text-nadeshiko-800">{product.name}</h1>
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-500">掲載メンバー</h2>
+          <ul>
+            {product.featured_members.map((member) => {
+              const m = findMemberDescription(member);
+
+              return (
+                <li key={m.slug}>
+                  <Link className="block" to={`/members/${m.slug}`}>
+                    <div className="flex items-center gap-2 p-1">
+                      <img
+                        src={m.idPhoto.path}
+                        alt={m.name}
+                        className="h-12 w-12 rounded-full object-cover"
+                      />
+                      <p className="text-gray-600">{m.name}</p>
+                    </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       </section>
     </div>
   );

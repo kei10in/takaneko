@@ -1,3 +1,15 @@
+export type MemberName =
+  | "城月菜央"
+  | "涼海すう"
+  | "橋本桃呼"
+  | "葉月紗蘭"
+  | "春野莉々"
+  | "東山恵里沙"
+  | "日向端ひな"
+  | "星谷美来"
+  | "松本ももな"
+  | "籾山ひめり";
+
 export interface MemberDescription {
   slug: string;
   number: number;
@@ -380,3 +392,29 @@ export const AllMembers: MemberDescription[] = [
   MomonaMatsumoto,
   HimeriMomiyama,
 ] as const;
+
+export const findMemberDescription = (name: MemberName): MemberDescription => {
+  if (name === "城月菜央") {
+    return NaoKizuki;
+  } else if (name === "涼海すう") {
+    return SuSuzumi;
+  } else if (name === "橋本桃呼") {
+    return MomokoHashimoto;
+  } else if (name === "葉月紗蘭") {
+    return SaaraHazuki;
+  } else if (name === "春野莉々") {
+    return RiriHaruno;
+  } else if (name === "東山恵里沙") {
+    return ErisaHigashiyama;
+  } else if (name === "日向端ひな") {
+    return HinaHinahata;
+  } else if (name === "星谷美来") {
+    return MikuruHoshitani;
+  } else if (name === "松本ももな") {
+    return MomonaMatsumoto;
+  } else if (name === "籾山ひめり") {
+    return HimeriMomiyama;
+  }
+
+  throw new Error(`Member not found: ${name}`);
+};
