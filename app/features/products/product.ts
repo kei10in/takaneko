@@ -1,3 +1,5 @@
+import { MemberName } from "~/routes/members/members";
+
 export interface ImageDescription {
   path: string;
   ref: string;
@@ -8,7 +10,15 @@ export interface LinkDescription {
   url: string;
 }
 
-export type ProductDescription = ProductImage;
+export type ProductDescription =
+  | {
+      kind: "images";
+      description: ProductImage;
+    }
+  | {
+      kind: "publications";
+      description: PublicationDescription;
+    };
 
 export interface ProductImage {
   id: string;
@@ -50,10 +60,23 @@ export interface PublicationDescription {
   date: string;
   kind: "magazines" | "books";
   publisher: string;
-  list_price?: number;
+  listPrice?: number;
   code?: { kind: string; value: string }[];
   url: string;
-  cover_images: ImageDescription[];
-  featured_members: string[];
+  coverImages: ImageDescription[];
+  featuredMembers: MemberName[];
+  officialTwitter?: string;
+  links?: LinkDescription[];
+}
+
+export interface NewspaperDescription {
+  id: string;
+  name: string;
+  date: string;
+  kind: "newspapers";
+  publisher: string;
+  notes?: string;
+  featuredMembers: string[];
+  officialTwitter?: string;
   links?: LinkDescription[];
 }
