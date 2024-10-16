@@ -1,3 +1,5 @@
+import { MemberName } from "~/routes/members/members";
+
 export interface ImageDescription {
   path: string;
   ref: string;
