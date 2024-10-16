@@ -13,7 +13,7 @@ export default function PublicationProduct(props: Props) {
   return (
     <div className="mx-auto pb-12 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-4 lg:py-12">
       <ImageSlide
-        images={product.cover_images.map((img) => ({ src: img.path, alt: product.name }))}
+        images={product.coverImages.map((img) => ({ src: img.path, alt: product.name }))}
       />
 
       <section className="p-4">
@@ -21,7 +21,7 @@ export default function PublicationProduct(props: Props) {
         <section className="space-y-2">
           <h2 className="text-lg font-semibold text-gray-500">掲載メンバー</h2>
           <ul>
-            {product.featured_members.map((member) => {
+            {product.featuredMembers.map((member) => {
               const m = findMemberDescription(member);
 
               return (

@@ -6,16 +6,16 @@ export const a: PublicationDescription = {
   date: "",
   kind: "magazines", // "books"
   publisher: "",
-  list_price: 0,
+  listPrice: 0,
   code: [{ kind: "", value: "" }],
   url: "",
-  cover_images: [
+  coverImages: [
     {
       path: "",
       ref: "",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -27,7 +27,7 @@ export const a: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "",
+  officialTwitter: "",
   links: [
     {
       text: "",

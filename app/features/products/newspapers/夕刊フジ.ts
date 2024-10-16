@@ -7,8 +7,8 @@ export const 夕刊フジ_2024年6月6日: NewspaperDescription = {
   kind: "newspapers",
   publisher: "産経新聞社",
   notes: "旬✿アイドル",
-  featured_members: ["松本ももな"],
-  official_x: "https://x.com/takanenofficial/status/1798584484218241497",
+  featuredMembers: ["松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1798584484218241497",
   links: [],
 };
 
@@ -19,8 +19,8 @@ export const 夕刊フジ_2024年1月17日: NewspaperDescription = {
   kind: "newspapers",
   publisher: "産経新聞社",
   notes: "旬✿アイドル",
-  featured_members: ["城月菜央"],
-  official_x: "https://x.com/takanenofficial/status/1747486105765839103",
+  featuredMembers: ["城月菜央"],
+  officialTwitter: "https://x.com/takanenofficial/status/1747486105765839103",
   links: [],
 };
 
@@ -31,8 +31,8 @@ export const 夕刊フジ_2023年9月10日: NewspaperDescription = {
   kind: "newspapers",
   publisher: "産経新聞社",
   notes: "旬✿アイドル",
-  featured_members: ["籾山ひめり"],
-  official_x: "https://x.com/takanenofficial/status/1704382422497014147",
+  featuredMembers: ["籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1704382422497014147",
   links: [],
 };
 
@@ -43,8 +43,8 @@ export const 夕刊フジ_2023年1月12日: NewspaperDescription = {
   publisher: "産経新聞社",
   kind: "newspapers",
   notes: "旬✿アイドル",
-  featured_members: ["日向端ひな"],
-  official_x: "https://x.com/takanenofficial/status/1613400444331773953",
+  featuredMembers: ["日向端ひな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1613400444331773953",
   links: [],
 };
 
@@ -55,7 +55,7 @@ export const 夕刊フジ_2022年8月18日: NewspaperDescription = {
   kind: "newspapers",
   publisher: "産経新聞社",
   notes: "旬✿アイドル",
-  featured_members: ["東山恵里沙"],
-  official_x: "https://x.com/takanenofficial/status/1560128400001445889",
+  featuredMembers: ["東山恵里沙"],
+  officialTwitter: "https://x.com/takanenofficial/status/1560128400001445889",
   links: [],
 };

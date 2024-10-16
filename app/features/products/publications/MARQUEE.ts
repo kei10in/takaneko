@@ -6,10 +6,10 @@ export const MARQUEE_Vol155: PublicationDescription = {
   date: "2024-08-23",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-34309-4" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol155a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -19,8 +19,8 @@ export const MARQUEE_Vol155: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["星谷美来", "松本ももな", "籾山ひめり"],
-  official_x: "",
+  featuredMembers: ["星谷美来", "松本ももな", "籾山ひめり"],
+  officialTwitter: "",
   links: [
     {
       text: "フォトグラファー",
@@ -35,10 +35,10 @@ export const MARQUEE_Vol154: PublicationDescription = {
   date: "2024-05-24",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-33832-8" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol154a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -48,8 +48,8 @@ export const MARQUEE_Vol154: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["城月菜央"],
-  official_x: "https://x.com/takanenofficial/status/1788773840019157424",
+  featuredMembers: ["城月菜央"],
+  officialTwitter: "https://x.com/takanenofficial/status/1788773840019157424",
   links: [],
 };
 
@@ -59,10 +59,10 @@ export const MARQUEE_Vol153: PublicationDescription = {
   date: "2024-02-22",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-33402-3" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol153a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -72,7 +72,7 @@ export const MARQUEE_Vol153: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -84,7 +84,7 @@ export const MARQUEE_Vol153: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "https://x.com/takanenofficial/status/1755079000106635483",
+  officialTwitter: "https://x.com/takanenofficial/status/1755079000106635483",
   links: [],
 };
 
@@ -94,10 +94,10 @@ export const MARQUEE_Vol152: PublicationDescription = {
   date: "2023-11-24",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-32987-6" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol152a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -107,8 +107,8 @@ export const MARQUEE_Vol152: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["星谷美来"],
-  official_x: "https://x.com/takanenofficial/status/1722184839473107076",
+  featuredMembers: ["星谷美来"],
+  officialTwitter: "https://x.com/takanenofficial/status/1722184839473107076",
   links: [],
 };
 
@@ -118,10 +118,10 @@ export const MARQUEE_Vol151: PublicationDescription = {
   date: "2023-08-22",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-32530-4" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol151a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -131,8 +131,8 @@ export const MARQUEE_Vol151: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["籾山ひめり"],
-  official_x: "https://x.com/takanenofficial/status/1693820508603891965",
+  featuredMembers: ["籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1693820508603891965",
   links: [],
 };
 
@@ -142,10 +142,10 @@ export const MARQUEE_Vol150: PublicationDescription = {
   date: "2023-05-25",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1375,
+  listPrice: 1375,
   code: [{ kind: "isbn", value: "978-4-434-32067-5" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol150a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -155,8 +155,8 @@ export const MARQUEE_Vol150: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["日向端ひな"],
-  official_x: "https://x.com/takanenofficial/status/1656237867562307584",
+  featuredMembers: ["日向端ひな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1656237867562307584",
   links: [],
 };
 
@@ -166,10 +166,10 @@ export const MARQUEE_Vol149: PublicationDescription = {
   date: "2023-02-22",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1265,
+  listPrice: 1265,
   code: [{ kind: "isbn", value: "978-4-434-31582-4" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol149a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -179,8 +179,8 @@ export const MARQUEE_Vol149: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["松本ももな"],
-  official_x: "https://x.com/takanenofficial/status/1623158546358767617",
+  featuredMembers: ["松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1623158546358767617",
   links: [],
 };
 
@@ -190,10 +190,10 @@ export const MARQUEE_Vol148: PublicationDescription = {
   date: "2022-11-22",
   kind: "magazines",
   publisher: "星雲社",
-  list_price: 1265,
+  listPrice: 1265,
   code: [{ kind: "isbn", value: "978-4-434-31259-5" }],
   url: "http://www.marquee-mag.com/backnumber.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/marquee/vol148a.jpg",
       ref: "http://www.marquee-mag.com/backnumber.html",
@@ -203,7 +203,7 @@ export const MARQUEE_Vol148: PublicationDescription = {
       ref: "http://www.marquee-mag.com/backnumber.html",
     },
   ],
-  featured_members: ["東山恵里沙", "星谷美来", "松本ももな", "籾山ひめり"],
-  official_x: "https://x.com/takanenofficial/status/1594903579168362496",
+  featuredMembers: ["東山恵里沙", "星谷美来", "松本ももな", "籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1594903579168362496",
   links: [],
 };

@@ -7,7 +7,7 @@ export const 山梨日日新聞_2023年7月11日: NewspaperDescription = {
   kind: "newspapers",
   publisher: "山梨日日新聞社",
   notes: "SPARK2023",
-  featured_members: ["松本ももな"],
-  official_x: "https://x.com/takanenofficial/status/1678698233101684736",
+  featuredMembers: ["松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1678698233101684736",
   links: [],
 };

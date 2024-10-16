@@ -6,10 +6,10 @@ export const nonno_2024年10月号: PublicationDescription = {
   date: "2024-08-20",
   kind: "magazines",
   publisher: "集英社",
-  list_price: 0,
+  listPrice: 0,
   code: [{ kind: "", value: "" }],
   url: "https://nonno.hpplus.jp/magazine/163787/",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-08-20_non-no_2024年10月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0DBQ3WYRT",
@@ -23,7 +23,7 @@ export const nonno_2024年10月号: PublicationDescription = {
       ref: "https://www.amazon.co.jp/dp/B00MBUXKEA",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -35,6 +35,6 @@ export const nonno_2024年10月号: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "https://x.com/takanenofficial/status/1823661181468647554",
+  officialTwitter: "https://x.com/takanenofficial/status/1823661181468647554",
   links: [],
 };

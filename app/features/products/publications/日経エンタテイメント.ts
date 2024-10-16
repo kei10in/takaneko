@@ -6,16 +6,16 @@ export const 日経エンタテインメント_2024年2月号: PublicationDescri
   date: "2024-01-04",
   kind: "magazines",
   publisher: "日経BP",
-  list_price: 890,
+  listPrice: 890,
   code: [],
   url: "https://project.nikkeibp.co.jp/ent/monthly/2024/02/",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-01-04_日経エンタテインメント！_2024年2月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0CQ8TSWV8",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -27,5 +27,5 @@ export const 日経エンタテインメント_2024年2月号: PublicationDescri
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "https://x.com/takanenofficial/status/1742652054664028446",
+  officialTwitter: "https://x.com/takanenofficial/status/1742652054664028446",
 };

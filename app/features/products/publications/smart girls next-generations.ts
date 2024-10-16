@@ -6,16 +6,16 @@ export const SmartGirlsNextGenerations: PublicationDescription = {
   date: "2024-07-29",
   kind: "books",
   publisher: "宝島社",
-  list_price: 2800,
+  listPrice: 2800,
   code: [{ kind: "isbn", value: "978-4-299-05685-6" }],
   url: "https://tkj.jp/book/?cd=TD056856",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-07-29_smart girls next-generations.jpg",
       ref: "https://tkj.jp/book/?cd=TD056856",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -27,7 +27,7 @@ export const SmartGirlsNextGenerations: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "https://x.com/takanenofficial/status/1803729587526090946",
+  officialTwitter: "https://x.com/takanenofficial/status/1803729587526090946",
   links: [
     {
       text: "宝島社の通販",

@@ -6,17 +6,17 @@ export const 月刊ENTAME_2024年8月号: PublicationDescription = {
   date: "2024-06-28",
   kind: "magazines", // "books"
   publisher: "徳間書店",
-  list_price: 1080,
+  listPrice: 1080,
   code: [],
   url: "https://x.com/gekkan_entame/status/1805874857256927518",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-06-28_月刊ENTAME_2024年8月号.jpg",
       ref: "https://x.com/gekkan_entame/status/1805874857256927518",
     },
   ],
-  featured_members: ["松本ももな"],
-  official_x: "https://x.com/takanenofficial/status/1806591559888212460",
+  featuredMembers: ["松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1806591559888212460",
   links: [
     {
       text: "掲載内容紹介",
@@ -31,16 +31,16 @@ export const 月刊ENTAME_2023年3_4月合併号: PublicationDescription = {
   date: "2023-01-30",
   kind: "magazines", // "books"
   publisher: "徳間書店",
-  list_price: 950,
+  listPrice: 950,
   code: [],
   url: "https://entamenext.com/magazines/detail/54",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2023-01-30_月刊ENTAME_2023年3・4月合併号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0BRT758YT",
     },
   ],
-  featured_members: [
+  featuredMembers: [
     "城月菜央",
     "涼海すう",
     "橋本桃呼",
@@ -52,6 +52,6 @@ export const 月刊ENTAME_2023年3_4月合併号: PublicationDescription = {
     "松本ももな",
     "籾山ひめり",
   ],
-  official_x: "https://x.com/takanenofficial/status/1620014080630358017",
+  officialTwitter: "https://x.com/takanenofficial/status/1620014080630358017",
   links: [],
 };

@@ -121,7 +121,7 @@ export default function Index() {
                   <PublicationCard
                     name={publication.name}
                     date={NaiveDate.parseUnsafe(publication.date)}
-                    image={publication.cover_images[0].path}
+                    image={publication.coverImages[0].path}
                   />
                 </Link>
               </li>

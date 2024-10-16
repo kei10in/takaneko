@@ -6,17 +6,17 @@ export const nicola_2024年5月号: PublicationDescription = {
   date: "2024-04-01",
   kind: "magazines",
   publisher: "新潮社",
-  list_price: 690,
+  listPrice: 690,
   code: [],
   url: "https://nicola.jp/article/article-18973/",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-04-01_nicola 2024年5月号.jpg",
       ref: "https://nicola.jp/article/article-18973/",
     },
   ],
-  featured_members: ["東山恵里沙"],
-  official_x: "https://x.com/takanenofficial/status/1773183264485683552",
+  featuredMembers: ["東山恵里沙"],
+  officialTwitter: "https://x.com/takanenofficial/status/1773183264485683552",
   links: [
     {
       text: "新潮社",

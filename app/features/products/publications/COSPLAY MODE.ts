@@ -6,16 +6,16 @@ export const COSPLAY_MODE_2024年9月号: PublicationDescription = {
   date: "2024-08-02",
   kind: "magazines",
   publisher: "シムサム・メディア",
-  list_price: 1320,
+  listPrice: 1320,
   code: [],
   url: "https://cosplaymode.net/feature/29392/",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-08-02_COSPLAY MODE 2024年9月号.jpg",
       ref: "https://x.com/cosplay_mode/status/1819161195418693695",
     },
   ],
-  featured_members: ["春野莉々"],
-  official_x: "https://x.com/takanenofficial/status/1819161381738107081",
+  featuredMembers: ["春野莉々"],
+  officialTwitter: "https://x.com/takanenofficial/status/1819161381738107081",
   links: [],
 };

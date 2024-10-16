@@ -60,12 +60,12 @@ export interface PublicationDescription {
   date: string;
   kind: "magazines" | "books";
   publisher: string;
-  list_price?: number;
+  listPrice?: number;
   code?: { kind: string; value: string }[];
   url: string;
-  cover_images: ImageDescription[];
-  featured_members: MemberName[];
-  official_x?: string;
+  coverImages: ImageDescription[];
+  featuredMembers: MemberName[];
+  officialTwitter?: string;
   links?: LinkDescription[];
 }
 
@@ -76,7 +76,7 @@ export interface NewspaperDescription {
   kind: "newspapers";
   publisher: string;
   notes?: string;
-  featured_members: string[];
-  official_x?: string;
+  featuredMembers: string[];
+  officialTwitter?: string;
   links?: LinkDescription[];
 }

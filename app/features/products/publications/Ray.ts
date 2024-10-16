@@ -6,13 +6,13 @@ export const Ray_2024年11月号: PublicationDescription = {
   date: "2024-09-21",
   kind: "magazines",
   publisher: "主婦の友社",
-  list_price: 890,
+  listPrice: 890,
   code: [
     { kind: "雑誌コード", value: "09695-11" },
     { kind: "雑誌コード", value: "09696-11" },
   ],
   url: "https://books.shufunotomo.co.jp/book/b10092440.html",
-  cover_images: [
+  coverImages: [
     {
       path: "/publications/2024-09-21_Ray_2024年11月号_表紙.jpg",
       ref: "https://books.shufunotomo.co.jp/book/b10092440.html",
@@ -22,8 +22,8 @@ export const Ray_2024年11月号: PublicationDescription = {
       ref: "https://books.shufunotomo.co.jp/book/b10092441.html",
     },
   ],
-  featured_members: ["星谷美来"],
-  official_x: "https://x.com/takanenofficial/status/1837424060562919917",
+  featuredMembers: ["星谷美来"],
+  officialTwitter: "https://x.com/takanenofficial/status/1837424060562919917",
   links: [
     {
       text: "Ray2024年11月号増刊 特別版",
