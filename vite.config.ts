@@ -31,6 +31,7 @@ export default defineConfig({
 
 const buildCalendar = async (kind: string, filename: string, buildPath: string) => {
   const output = path.resolve(__dirname, path.join("public", filename));
-  execSync(`pnpm tsx ./scripts/build-calendar.ts ${kind} ${output}`).toString();
+  const buildCalendarScript = path.resolve(__dirname, "scripts", "build-calendar.ts");
+  execSync(`pnpm tsx ${buildCalendarScript} ${kind} ${output}`).toString();
   fs.copyFileSync(output, path.join(buildPath, filename));
 };
