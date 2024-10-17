@@ -1,6 +1,6 @@
 import mdx from "@mdx-js/rollup";
 import { vitePlugin as remix } from "@remix-run/dev";
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import gfm from "remark-gfm";
@@ -30,8 +30,10 @@ export default defineConfig({
 });
 
 const buildCalendar = async (kind: string, filename: string, buildPath: string) => {
-  const output = path.resolve(__dirname, path.join("public", filename));
+  const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
   const buildCalendarScript = path.resolve(__dirname, "scripts", "build-calendar.ts");
-  execSync(`pnpm tsx ${buildCalendarScript} ${kind} ${output}`).toString();
+  const output = path.resolve(__dirname, path.join("public", filename));
+
+  execFileSync(cmd, ["tsx", buildCalendarScript, kind, output]).toString();
   fs.copyFileSync(output, path.join(buildPath, filename));
 };
