@@ -6,7 +6,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { ProductImage } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
-import { ClippedImage } from "./ClippedImage";
+import { ClippedImage } from "../ClippedImage";
 import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
 

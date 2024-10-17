@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { ProductImage } from "~/features/products/product";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
+import { ImageLoader } from "../ImageLoader";
 import { drawTradeImage } from "./drawTradeImage";
-import { ImageLoader } from "./ImageLoader";
 
 interface Props {
   productImage: ProductImage;
