@@ -1,9 +1,9 @@
 import { わたし色に染まれ_ミニフォト } from "../2024/2024-05_わたし色に染まれ_ミニフォト";
 import { わたし色に染まれ_生写真 } from "../2024/2024-05_わたし色に染まれ_生写真";
 import { 浴衣2024_生写真 } from "../2024/2024-07_浴衣2024_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const 全国ツアー2024_わたし色に染まれ: LiveGoodsDescription = {
+export const 全国ツアー2024_わたし色に染まれ: LiveGoodsCollection = {
   id: "全国ツアー2024“わたし色に染まれ”",
   name: "全国ツアー2024“わたし色に染まれ”",
   images: [
@@ -15,7 +15,7 @@ export const 全国ツアー2024_わたし色に染まれ: LiveGoodsDescription 
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ (わたし色に染まれver.)",
         "ペンライト (わたし色に染まれver.)",
         "ペンライトフィルム (わたし色に染まれver.)",
@@ -41,7 +41,7 @@ export const 全国ツアー2024_わたし色に染まれ: LiveGoodsDescription 
   ],
 };
 
-export const 全国ツアー2024_わたし色に染まれ_ファイナル東京公演: LiveGoodsDescription = {
+export const 全国ツアー2024_わたし色に染まれ_ファイナル東京公演: LiveGoodsCollection = {
   id: "全国ツアー2024“わたし色に染まれ”ファイナル東京公演",
   name: "全国ツアー2024“わたし色に染まれ”ファイナル東京公演",
   images: [
@@ -57,7 +57,7 @@ export const 全国ツアー2024_わたし色に染まれ_ファイナル東京�
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ (わたし色に染まれver.)",
         "ペンライト (わたし色に染まれver.)",
         "ペンライトフィルム (わたし色に染まれver.)",

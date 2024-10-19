@@ -64,7 +64,7 @@ export default function Index() {
                         <section key={goods.type}>
                           <h4>{goods.type}</h4>
                           <ul className="list-outside list-disc pl-6 marker:text-gray-300">
-                            {goods.items.map((item) => (
+                            {goods.lineup.map((item) => (
                               <li key={typeof item === "string" ? item : item.id}>
                                 {typeof item === "string" ? (
                                   item

@@ -39,21 +39,6 @@ export interface ImagePosition {
   height: number;
 }
 
-export interface LiveGoodsDescription {
-  id: string;
-  name: string;
-  images: ImageDescription[];
-  goods: { type: string; items: (string | ProductImage)[] }[];
-}
-
-export interface BirthdayGoodsDescription {
-  id: string;
-  name: string;
-  memberName: MemberName;
-  goods: string[];
-  images: ImageDescription[];
-}
-
 export interface PublicationDescription {
   id: string;
   name: string;
@@ -87,4 +72,26 @@ export interface OfficialGoodsDescription {
   date: string;
   listPrice: number;
   images: ImageDescription[];
+}
+
+/**
+ * ライブグッズ。
+ * 物販だけでなく抽選会やライブ中にプレゼントされたものを含みます。
+ */
+export interface LiveGoodsCollection {
+  id: string;
+  name: string;
+  images: ImageDescription[];
+  goods: { type: string; lineup: (string | ProductImage)[] }[];
+}
+
+/**
+ * 誕生日記念グッズ。
+ */
+export interface BirthdayGoodsCollection {
+  id: string;
+  name: string;
+  memberName: MemberName;
+  images: ImageDescription[];
+  lineup: string[];
 }

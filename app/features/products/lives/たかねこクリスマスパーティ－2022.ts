@@ -1,7 +1,7 @@
 import { _2022サンタ_生写真 } from "../2022/2022-12_2022サンタ_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const たかねこクリスマスパーティ2022: LiveGoodsDescription = {
+export const たかねこクリスマスパーティ2022: LiveGoodsCollection = {
   id: "たかねこクリスマスパーティー2022",
   name: "たかねこクリスマスパーティー2022",
   images: [
@@ -13,7 +13,7 @@ export const たかねこクリスマスパーティ2022: LiveGoodsDescription =
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "高嶺のなでしこパーカー",
         "高嶺のなでしこトートバッグ",
         "グループペンライト",
@@ -24,7 +24,7 @@ export const たかねこクリスマスパーティ2022: LiveGoodsDescription =
     },
     {
       type: "グッズ購入特典",
-      items: ["ステッカー (2022サンタ ver)"],
+      lineup: ["ステッカー (2022サンタ ver)"],
     },
   ],
 };

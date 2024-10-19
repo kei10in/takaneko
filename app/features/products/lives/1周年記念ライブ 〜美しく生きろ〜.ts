@@ -2,9 +2,9 @@ import { 僕は君になれない衣装_ミニフォト } from "../2023/2023-09_
 import { 僕は君になれない衣装_生写真 } from "../2023/2023-09_僕は君になれない衣装_生写真";
 import { 海の妖精_ミニフォト } from "../2023/2023-11_海の妖精_ミニフォト";
 import { 海の妖精_生写真 } from "../2023/2023-11_海の妖精_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const _1周年記念ライブ美しく生きろ: LiveGoodsDescription = {
+export const _1周年記念ライブ美しく生きろ: LiveGoodsCollection = {
   id: "1 周年記念ライブ 〜美しく生きろ〜",
   name: "1 周年記念ライブ 〜美しく生きろ〜",
   images: [
@@ -16,7 +16,7 @@ export const _1周年記念ライブ美しく生きろ: LiveGoodsDescription = {
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "1周年記念ライブTシャツ (たかねこちゃん集合デザイン)",
         "1周年記念ライブTシャツ (たかねこちゃん個別デザイン)",
         "グループペンライト",
@@ -32,7 +32,7 @@ export const _1周年記念ライブ美しく生きろ: LiveGoodsDescription = {
   ],
 };
 
-export const _1周年記念ライブ美しく生きろ大阪公演: LiveGoodsDescription = {
+export const _1周年記念ライブ美しく生きろ大阪公演: LiveGoodsCollection = {
   id: "1 周年記念ライブ 〜美しく生きろ〜 大阪公演",
   name: "1 周年記念ライブ 〜美しく生きろ〜 大阪公演",
   images: [
@@ -44,7 +44,7 @@ export const _1周年記念ライブ美しく生きろ大阪公演: LiveGoodsDes
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "1周年記念ライブTシャツ (たかねこちゃん集合デザイン)",
         "1周年記念ライブTシャツ (たかねこちゃん個別デザイン)",
         "グループペンライト",

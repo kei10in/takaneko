@@ -1,7 +1,7 @@
 import { ハロウィン_生写真 } from "../2022/2022-10_ハロウィン_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const _1st_ファンミーティング_お披露目式: LiveGoodsDescription = {
+export const _1st_ファンミーティング_お披露目式: LiveGoodsCollection = {
   id: "1st ファンミーティング ～お披露目式～",
   name: "1st ファンミーティング ～お披露目式～",
   images: [
@@ -13,7 +13,7 @@ export const _1st_ファンミーティング_お披露目式: LiveGoodsDescript
   goods: [
     {
       type: "物販",
-      items: ["グループタオル", "グループTシャツ", "グループペンライト", ハロウィン_生写真],
+      lineup: ["グループタオル", "グループTシャツ", "グループペンライト", ハロウィン_生写真],
     },
   ],
 };

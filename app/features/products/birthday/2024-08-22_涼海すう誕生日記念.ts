@@ -1,10 +1,10 @@
-import { BirthdayGoodsDescription, OfficialGoodsDescription } from "../product";
+import { BirthdayGoodsCollection, OfficialGoodsDescription } from "../product";
 
-export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsDescription = {
+export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollection = {
   id: "涼海すう誕生日記念 2024年8月22日",
   name: "涼海すう誕生日記念 2024年8月22日",
   memberName: "涼海すう",
-  goods: ["いらすぅとTシャツ", "あくすぅた", "だんぼーる"],
+  lineup: ["いらすぅとTシャツ", "あくすぅた", "だんぼーる"],
   images: [
     {
       path: "/takaneko/birthday-goods/2024-08-22_涼海すう誕生日記念グッズ.jpg",

@@ -1,8 +1,8 @@
 import { 瞬きさえ忘れる_ミニフォト } from "../2024/2024-09-15_瞬きさえ忘れる_ミニフォト";
 import { 瞬きさえ忘れる_生写真 } from "../2024/2024-09-15_瞬きさえ忘れる_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsDescription = {
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollection = {
   id: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」",
   name: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」",
   images: [
@@ -26,7 +26,7 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsDescript
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ「瞬きさえ忘れる。」ver.",
         "コーチジャケット「瞬きさえ忘れる。」ver.",
         "高嶺のなでしこパーカー",
@@ -50,7 +50,7 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsDescript
   ],
 };
 
-export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGoodsDescription = {
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGoodsCollection = {
   id: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」TOUR FINAL",
   name: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」 TOUR FINAL",
   images: [
@@ -66,7 +66,7 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGood
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ「瞬きさえ忘れる。」ver.",
         "コーチジャケット「瞬きさえ忘れる。」ver.",
         "高嶺のなでしこパーカー",

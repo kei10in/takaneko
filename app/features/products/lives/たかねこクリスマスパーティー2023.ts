@@ -1,8 +1,8 @@
 import { ホワイトサンタ2023_ミニフォト } from "../2023/2023-12_ホワイトサンタ2023_ミニフォト";
 import { ホワイトサンタ2023_生写真 } from "../2023/2023-12_ホワイトサンタ2023_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const たかねこクリスマスパーティー2023: LiveGoodsDescription = {
+export const たかねこクリスマスパーティー2023: LiveGoodsCollection = {
   id: "たかねこクリスマスパーティー2023",
   name: "たかねこクリスマスパーティー2023",
   images: [
@@ -14,7 +14,7 @@ export const たかねこクリスマスパーティー2023: LiveGoodsDescriptio
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "グループペンライト",
         ホワイトサンタ2023_生写真,
         ホワイトサンタ2023_ミニフォト,

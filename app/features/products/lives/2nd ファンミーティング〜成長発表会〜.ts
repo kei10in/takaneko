@@ -1,7 +1,7 @@
 import { 白ワンピース_生写真 } from "../2024/2024-08_白ワンピース_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const _2ndファンミーティング成長発表会: LiveGoodsDescription = {
+export const _2ndファンミーティング成長発表会: LiveGoodsCollection = {
   id: "2nd ファンミーティング〜成長発表会〜",
   name: "2nd ファンミーティング〜成長発表会〜",
   images: [
@@ -13,7 +13,7 @@ export const _2ndファンミーティング成長発表会: LiveGoodsDescriptio
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ「2ndファンミver.」",
         "にゃでしこ個別マスコットキーホルダー",
         "個別マフラータオル「2ndファンミver.」",

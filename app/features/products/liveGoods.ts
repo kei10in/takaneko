@@ -19,9 +19,9 @@ import {
   全国ツアー2024_わたし色に染まれ,
   全国ツアー2024_わたし色に染まれ_ファイナル東京公演,
 } from "./lives/全国ツアー2024“わたし色に染まれ”";
-import { LiveGoodsDescription } from "./product";
+import { LiveGoodsCollection } from "./product";
 
-export const LiveGoods: LiveGoodsDescription[] = [
+export const LiveGoods: LiveGoodsCollection[] = [
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal,
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる,
   _2ndファンミーティング成長発表会,

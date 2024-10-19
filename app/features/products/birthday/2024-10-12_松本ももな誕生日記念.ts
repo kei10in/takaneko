@@ -1,10 +1,10 @@
-import { BirthdayGoodsDescription, OfficialGoodsDescription } from "../product";
+import { BirthdayGoodsCollection, OfficialGoodsDescription } from "../product";
 
-export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsDescription = {
+export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
   id: "松本ももな誕生日記念 2024年10月12日",
   name: "松本ももな誕生日記念 2024年10月12日",
   memberName: "松本ももな",
-  goods: ["ももぽにゃんT", "ももにゃくすた", "おりぼんの擬人化なりきりアイテム"],
+  lineup: ["ももぽにゃんT", "ももにゃくすた", "おりぼんの擬人化なりきりアイテム"],
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-12_松本ももな誕生日記念グッズ.jpg",

@@ -1,9 +1,9 @@
 import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "../2023/2023-04_たかねこ全国お招きツアー2023衣装_ミニフォト";
 import { たかねこ全国お招きツアー2023衣装_生写真 } from "../2023/2023-04_たかねこ全国お招きツアー2023衣装_生写真";
 import { 梅雨_生写真 } from "../2023/2023-06_梅雨_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const 全国お招きツアー2023_First_trip: LiveGoodsDescription = {
+export const 全国お招きツアー2023_First_trip: LiveGoodsCollection = {
   id: "全国お招きツアー2023 〜First trip〜",
   name: "全国お招きツアー2023 〜First trip〜",
   images: [
@@ -15,7 +15,7 @@ export const 全国お招きツアー2023_First_trip: LiveGoodsDescription = {
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "たかねこ全国お招きツアー 2023 Tシャツ",
         "たかねこ全国お招きツアー 2023 ペンライト",
         "ご当地ラバーバンド",
@@ -30,7 +30,7 @@ export const 全国お招きツアー2023_First_trip: LiveGoodsDescription = {
   ],
 };
 
-export const 全国お招きツアー2023_First_trip_ツアーファイナル: LiveGoodsDescription = {
+export const 全国お招きツアー2023_First_trip_ツアーファイナル: LiveGoodsCollection = {
   id: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
   name: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
   images: [
@@ -42,7 +42,7 @@ export const 全国お招きツアー2023_First_trip_ツアーファイナル: L
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "たかねこ全国お招きツアー 2023 Tシャツ",
         "たかねこ全国お招きツアー 2023 ペンライト",
         "高嶺のなでしこパーカー",
@@ -60,7 +60,7 @@ export const 全国お招きツアー2023_First_trip_ツアーファイナル: L
     },
     {
       type: "ツアーファイナル限定 物販",
-      items: [
+      lineup: [
         "高嶺のなでしこパーカー",
         "高嶺のなでしこトートバッグ",
         "グループタオル",

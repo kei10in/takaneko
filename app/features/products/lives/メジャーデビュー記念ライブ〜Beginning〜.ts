@@ -1,8 +1,8 @@
 import { Beginning_ミニフォト } from "../2024/2024-04_Beginning_ミニフォト";
 import { Beginning_生写真 } from "../2024/2024-04_Beginning_生写真";
-import { LiveGoodsDescription } from "../product";
+import { LiveGoodsCollection } from "../product";
 
-export const メジャーデビュー記念ライブBeginning: LiveGoodsDescription = {
+export const メジャーデビュー記念ライブBeginning: LiveGoodsCollection = {
   id: "メジャーデビュー記念ライブ〜Beginning〜",
   name: "メジャーデビュー記念ライブ〜Beginning〜",
   images: [
@@ -14,7 +14,7 @@ export const メジャーデビュー記念ライブBeginning: LiveGoodsDescript
   goods: [
     {
       type: "物販",
-      items: [
+      lineup: [
         "Tシャツ (Beginning ver.)",
         "アクリルペンライト",
         "マフラータオル (美しく生きろver.)",
