@@ -1,14 +1,6 @@
 import { MemberName } from "~/routes/members/members";
-
-export interface ImageDescription {
-  path: string;
-  ref: string;
-}
-
-export interface LinkDescription {
-  text: string;
-  url: string;
-}
+import { ImageDescription } from "~/utils/types/ImageDescription";
+import { LinkDescription } from "~/utils/types/LinkDescription";
 
 export type ProductDescription =
   | {
