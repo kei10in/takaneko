@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const VDCMagazine030: PublicationDescription = {
+export const VDCMagazine030: Publication = {
   id: "VDC Magazine 030",
   name: "VDC Magazine 030",
   date: "2024-03-22",
@@ -36,7 +36,7 @@ export const VDCMagazine030: PublicationDescription = {
   ],
 };
 
-export const VDCMagazine029: PublicationDescription = {
+export const VDCMagazine029: Publication = {
   id: "VDC Magazine 029",
   name: "VDC Magazine 029",
   date: "2023-12-22",

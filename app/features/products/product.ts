@@ -2,14 +2,14 @@ import { MemberName } from "~/routes/members/members";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 
-export type ProductDescription =
+export type Product =
   | {
       kind: "images";
       description: RandomGoods;
     }
   | {
       kind: "publications";
-      description: PublicationDescription;
+      description: Publication;
     };
 
 export interface OfficialGoods {
@@ -50,7 +50,7 @@ export interface ImagePosition {
   height: number;
 }
 
-export interface PublicationDescription {
+export interface Publication {
   id: string;
   name: string;
   date: string;
@@ -65,7 +65,7 @@ export interface PublicationDescription {
   links?: LinkDescription[];
 }
 
-export interface NewspaperDescription {
+export interface Newspaper {
   id: string;
   name: string;
   date: string;

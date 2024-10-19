@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const LARME_062: PublicationDescription = {
+export const LARME_062: Publication = {
   id: "LARME 062 Autumn 2024",
   name: "LARME 062 Autumn 2024",
   date: "2024-09-17",
@@ -20,7 +20,7 @@ export const LARME_062: PublicationDescription = {
   links: [],
 };
 
-export const LARME_061: PublicationDescription = {
+export const LARME_061: Publication = {
   id: "LARME 061 Summer 2024",
   name: "LARME 061 Summer 2024",
   date: "2024-06-17",
@@ -40,7 +40,7 @@ export const LARME_061: PublicationDescription = {
   links: [],
 };
 
-export const LARME_060: PublicationDescription = {
+export const LARME_060: Publication = {
   id: "LARME 060 Spring 2024",
   name: "LARME 060 Spring 2024",
   date: "2024-03-18",
@@ -60,7 +60,7 @@ export const LARME_060: PublicationDescription = {
   links: [],
 };
 
-export const LARME_059: PublicationDescription = {
+export const LARME_059: Publication = {
   id: "LARME 059 Winter 2023",
   name: "LARME 059 Winter 2023",
   date: "2023-12-15",
@@ -80,7 +80,7 @@ export const LARME_059: PublicationDescription = {
   links: [],
 };
 
-export const LARME_058: PublicationDescription = {
+export const LARME_058: Publication = {
   id: "LARME 058 Autumn 2023",
   name: "LARME 058 Autumn 2023",
   date: "2023-09-15",
@@ -100,7 +100,7 @@ export const LARME_058: PublicationDescription = {
   links: [],
 };
 
-export const LARME_056: PublicationDescription = {
+export const LARME_056: Publication = {
   id: "LARME 056 Spring 2023",
   name: "LARME 056 Spring 2023",
   date: "2023-03-17",
@@ -120,7 +120,7 @@ export const LARME_056: PublicationDescription = {
   links: [],
 };
 
-export const LARME_054: PublicationDescription = {
+export const LARME_054: Publication = {
   id: "LARME 054 Autumn 2022",
   name: "LARME 054 Autumn 2022",
   date: "2022-09-16",

@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const MARQUEE_Vol155: PublicationDescription = {
+export const MARQUEE_Vol155: Publication = {
   id: "MARQUEE Vol.155",
   name: "MARQUEE Vol.155",
   date: "2024-08-23",
@@ -29,7 +29,7 @@ export const MARQUEE_Vol155: PublicationDescription = {
   ],
 };
 
-export const MARQUEE_Vol154: PublicationDescription = {
+export const MARQUEE_Vol154: Publication = {
   id: "MARQUEE Vol.154",
   name: "MARQUEE Vol.154",
   date: "2024-05-24",
@@ -53,7 +53,7 @@ export const MARQUEE_Vol154: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol153: PublicationDescription = {
+export const MARQUEE_Vol153: Publication = {
   id: "MARQUEE Vol.153",
   name: "MARQUEE Vol.153",
   date: "2024-02-22",
@@ -88,7 +88,7 @@ export const MARQUEE_Vol153: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol152: PublicationDescription = {
+export const MARQUEE_Vol152: Publication = {
   id: "MARQUEE Vol.152",
   name: "MARQUEE Vol.152",
   date: "2023-11-24",
@@ -112,7 +112,7 @@ export const MARQUEE_Vol152: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol151: PublicationDescription = {
+export const MARQUEE_Vol151: Publication = {
   id: "MARQUEE Vol.151",
   name: "MARQUEE Vol.151",
   date: "2023-08-22",
@@ -136,7 +136,7 @@ export const MARQUEE_Vol151: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol150: PublicationDescription = {
+export const MARQUEE_Vol150: Publication = {
   id: "MARQUEE Vol.150",
   name: "MARQUEE Vol.150",
   date: "2023-05-25",
@@ -160,7 +160,7 @@ export const MARQUEE_Vol150: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol149: PublicationDescription = {
+export const MARQUEE_Vol149: Publication = {
   id: "MARQUEE Vol.149",
   name: "MARQUEE Vol.149",
   date: "2023-02-22",
@@ -184,7 +184,7 @@ export const MARQUEE_Vol149: PublicationDescription = {
   links: [],
 };
 
-export const MARQUEE_Vol148: PublicationDescription = {
+export const MARQUEE_Vol148: Publication = {
   id: "MARQUEE Vol.148",
   name: "MARQUEE Vol.148",
   date: "2022-11-22",

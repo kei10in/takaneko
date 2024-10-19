@@ -1,13 +1,13 @@
 import { Link } from "@remix-run/react";
 import React from "react";
 import { ImageSlide } from "~/components/ImageSlide";
-import { PublicationDescription } from "~/features/products/product";
+import { Publication } from "~/features/products/product";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findMemberDescription } from "../members/members";
 
 interface Props {
-  product: PublicationDescription;
+  product: Publication;
 }
 
 export default function PublicationProduct(props: Props) {

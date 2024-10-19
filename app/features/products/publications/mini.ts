@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const mini_2023年2月号: PublicationDescription = {
+export const mini_2023年2月号: Publication = {
   id: "mini 2023年2月号",
   name: "mini 2023年2月号",
   date: "2023-01-12",
@@ -25,7 +25,7 @@ export const mini_2023年2月号: PublicationDescription = {
   ],
 };
 
-export const mini_2022年10月号: PublicationDescription = {
+export const mini_2022年10月号: Publication = {
   id: "mini 2022年10月号",
   name: "mini 2022年10月号",
   date: "2022-09-01",

@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const TOKYO_RESIDENT_Issue002: PublicationDescription = {
+export const TOKYO_RESIDENT_Issue002: Publication = {
   id: "TOKYO RESIDENT Issue:002",
   name: "TOKYO RESIDENT Issue:002",
   date: "2024-09-24",

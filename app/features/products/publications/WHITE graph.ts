@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const WHITE_graph_011: PublicationDescription = {
+export const WHITE_graph_011: Publication = {
   id: "WHITE graph 011",
   name: "WHITE graph 011",
   date: "2024-05-29",
@@ -20,7 +20,7 @@ export const WHITE_graph_011: PublicationDescription = {
   links: [],
 };
 
-export const 松本ももな_WHITE_graph_デジタル写真集: PublicationDescription = {
+export const 松本ももな_WHITE_graph_デジタル写真集: Publication = {
   id: "松本ももな WHITE graph デジタル写真集",
   name: "松本ももな WHITE graph デジタル写真集",
   date: "2024-05-29",

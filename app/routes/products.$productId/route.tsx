@@ -1,6 +1,6 @@
 import { MetaFunction, useParams } from "@remix-run/react";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
-import { ProductDescription } from "~/features/products/product";
+import { Product } from "~/features/products/product";
 import { PUBLICATIONS } from "~/features/products/publications";
 import { formatTitle } from "~/utils/htmlHeader";
 import { PhotoProduct } from "./PhotoProduct";
@@ -20,7 +20,7 @@ export const meta: MetaFunction = ({ params }) => {
   ];
 };
 
-const findProduct = (productId: string | undefined): ProductDescription => {
+const findProduct = (productId: string | undefined): Product => {
   if (productId == undefined) {
     throw new Response("", { status: 404 });
   }

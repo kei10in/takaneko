@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const 松本ももな_LAST_20_MOMONA: PublicationDescription = {
+export const 松本ももな_LAST_20_MOMONA: Publication = {
   id: "松本ももな LAST 20 MOMONA",
   name: "松本ももな LAST 20 MOMONA",
   date: "2023-12-14",

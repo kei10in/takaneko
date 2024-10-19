@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const Zipper_2024年秋号: PublicationDescription = {
+export const Zipper_2024年秋号: Publication = {
   id: "Zipper 2024年秋号",
   name: "Zipper 2024年秋号",
   date: "2024-09-28",

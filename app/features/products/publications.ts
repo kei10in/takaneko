@@ -1,4 +1,4 @@
-import { PublicationDescription } from "./product";
+import { Publication } from "./product";
 import { _20SWEET_2023_JANUARY } from "./publications/20±SWEET";
 import { BLT_2023年2月号, BLT_2024年9月号 } from "./publications/B.L.T";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
@@ -46,7 +46,7 @@ import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from
 import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA";
 import { 橋本桃呼_MOMOKO_ISM } from "./publications/橋本桃呼_MOMOKO_ISM";
 
-const publications: PublicationDescription[] = [
+const publications: Publication[] = [
   _20SWEET_2023_JANUARY,
   BLT_2023年2月号,
   BLT_2024年9月号,

@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const a: PublicationDescription = {
+export const a: Publication = {
   id: "",
   name: "",
   date: "",

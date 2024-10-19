@@ -1,6 +1,6 @@
-import { PublicationDescription } from "../product";
+import { Publication } from "../product";
 
-export const TopYellNeo2024Autumn: PublicationDescription = {
+export const TopYellNeo2024Autumn: Publication = {
   id: "Top Yell NEO 2024 AUTUMN",
   name: "Top Yell NEO 2024 AUTUMN",
   date: "2024-09-30",
@@ -27,7 +27,7 @@ export const TopYellNeo2024Autumn: PublicationDescription = {
   links: [{ text: "掲載内容紹介", url: "https://x.com/TopYell/status/1840355974076567716" }],
 };
 
-export const TopYellNeo2024Spring: PublicationDescription = {
+export const TopYellNeo2024Spring: Publication = {
   id: "Top Yell NEO 2024 SPRING",
   name: "Top Yell NEO 2024 SPRING",
   date: "2024-04-01",
@@ -70,7 +70,7 @@ export const TopYellNeo2024Spring: PublicationDescription = {
   ],
 };
 
-export const TopYellNeo2022AUTUMN: PublicationDescription = {
+export const TopYellNeo2022AUTUMN: Publication = {
   id: "Top Yell NEO 2022 AUTUMN",
   name: "Top Yell NEO 2022 AUTUMN",
   date: "2022-09-30",
