@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const メイド至上主義_生写真: ProductImage = {
+export const メイド至上主義_生写真: RandomGoods = {
   id: "生写真 (メイド☆至上主義 ver)",
   name: "生写真 (メイド☆至上主義 ver)",
   year: 2024,
   series: "メイド☆至上主義",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2024-06_メイド☆至上主義.webp",
   width: 1680,
   height: 2128,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 45, y: 240, width: 235, height: 335 },
     { id: 2, x: 316, y: 240, width: 235, height: 335 },

@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const アンチファン衣装_生写真: ProductImage = {
+export const アンチファン衣装_生写真: RandomGoods = {
   id: "生写真 (アンチファン衣装 ver)",
   name: "生写真 (アンチファン衣装 ver)",
   year: 2022,
   series: "アンチファン衣装",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2022-08_アンチファン衣装.webp",
   width: 1280,
   height: 1280,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 100, y: 239, width: 127, height: 180 },
     { id: 2, x: 290, y: 239, width: 127, height: 180 },

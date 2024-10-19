@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const わたし色に染まれ_ミニフォト: ProductImage = {
+export const わたし色に染まれ_ミニフォト: RandomGoods = {
   id: "ミニフォトカード (わたし色に染まれ ver)",
   name: "ミニフォトカード (わたし色に染まれ ver)",
   year: 2024,
   series: "わたし色に染まれ",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-05-12_わたし色に染まれ.png",
   width: 413,
   height: 548,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 50, y: 21, width: 48, height: 78 },
     { id: 2, x: 102, y: 21, width: 48, height: 78 },

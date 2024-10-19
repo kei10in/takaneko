@@ -1,8 +1,8 @@
 import { Link } from "@remix-run/react";
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
 interface Props {
-  product: ProductImage;
+  product: RandomGoods;
 }
 
 export function PhotoProduct(props: Props) {

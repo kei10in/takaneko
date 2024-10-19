@@ -10,13 +10,13 @@ import { NavLink, useLocation } from "@remix-run/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
-import { ProductImage } from "../../features/products/product";
+import { RandomGoods } from "../../features/products/product";
 import { ProductItem } from "./ProductItem";
 
 interface Props {
   allPhotos: {
     name: string;
-    photos: ProductImage[];
+    photos: RandomGoods[];
   }[];
   onClickMenuItem?: () => void;
 }
@@ -36,13 +36,15 @@ export const ProductList: React.FC<Props> = (props: Props) => {
   const location = useLocation();
   const filteredAllPhotos = allPhotos.map((item) => {
     if (filter == "photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.kind == "生写真") };
+      return { ...item, photos: item.photos.filter((photo) => photo.category == "生写真") };
     } else if (filter == "mini-photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.kind == "ミニフォト") };
+      return { ...item, photos: item.photos.filter((photo) => photo.category == "ミニフォト") };
     } else if (filter == "other") {
       return {
         ...item,
-        photos: item.photos.filter((photo) => photo.kind != "生写真" && photo.kind != "ミニフォト"),
+        photos: item.photos.filter(
+          (photo) => photo.category != "生写真" && photo.category != "ミニフォト",
+        ),
       };
     } else {
       return item;
@@ -98,7 +100,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                           image={photo.url}
                           year={photo.year}
                           content={photo.series}
-                          description={photo.kind}
+                          description={photo.category}
                           selected={isActive}
                         />
                       )}

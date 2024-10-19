@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const ハニフェス_生写真: ProductImage = {
+export const ハニフェス_生写真: RandomGoods = {
   id: "らんだむブロマイド (ハニフェス ver)",
   name: "らんだむブロマイド (ハニフェス ver)",
   year: 2024,
   series: "ハニフェス",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2024-04_ハニフェス.webp",
   width: 1440,
   height: 1820,
-  photos: [
+  lineup: [
     { id: 1, name: "橋本桃呼", description: "" },
     { id: 2, name: "松本ももな", description: "" },
     { id: 3, name: "春野莉々", description: "" },

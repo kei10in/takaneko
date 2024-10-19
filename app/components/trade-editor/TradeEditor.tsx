@@ -1,14 +1,14 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
-  productImage: ProductImage;
+  productImage: RandomGoods;
   tradeDescriptions: Record<number, TradeDescription>;
   width: number;
   onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;

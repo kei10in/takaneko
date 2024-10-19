@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const 僕は君になれない衣装_生写真: ProductImage = {
+export const 僕は君になれない衣装_生写真: RandomGoods = {
   id: "生写真 (僕は君になれない衣装 ver)",
   name: "生写真 (僕は君になれない衣装 ver)",
   year: 2023,
   series: "僕は君になれない衣装",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2023-09_僕は君になれない衣装.jpg",
   width: 720,
   height: 974,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 12, y: 112, width: 109, height: 156 },
     { id: 2, x: 130, y: 112, width: 109, height: 156 },

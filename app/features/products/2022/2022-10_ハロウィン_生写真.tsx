@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const ハロウィン_生写真: ProductImage = {
+export const ハロウィン_生写真: RandomGoods = {
   id: "生写真 (ハロウィン ver)",
   name: "生写真 (ハロウィン ver)",
   year: 2022,
   series: "ハロウィン",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2022-10_ハロウィン.jpg",
   width: 1280,
   height: 1300,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 51, y: 155, width: 138, height: 196 },
     { id: 2, x: 260, y: 155, width: 138, height: 196 },

@@ -1,11 +1,11 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { loadImage } from "~/utils/loadImage";
 
 export const drawTradeImage = async (
   canvas: HTMLCanvasElement,
-  productImage: ProductImage,
+  productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): Promise<void> => {
   const ctx = canvas.getContext("2d");

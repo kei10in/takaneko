@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const ハニフェス_缶バッジ: ProductImage = {
+export const ハニフェス_缶バッジ: RandomGoods = {
   id: "高嶺のなでしこ らんだむ缶バッジ",
   name: "高嶺のなでしこ らんだむ缶バッジ",
   year: 2024,
   series: "ハニフェス",
-  kind: "缶バッジ",
+  category: "缶バッジ",
   url: "/takaneko/others/2024-04-29_ハニフェス_缶バッジ.webp",
   width: 1680,
   height: 1485,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "春野莉々", description: "" },
     { id: 3, name: "星谷美来", description: "" },

@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const 大青春祭2024_メッセージカード: ProductImage = {
+export const 大青春祭2024_メッセージカード: RandomGoods = {
   id: "大青春祭 2024 限定販売 メッセージカード",
   name: "大青春祭 2024 限定販売 メッセージカード",
   year: 2024,
   series: "大青春祭 2024",
-  kind: "メッセージカード",
+  category: "メッセージカード",
   url: "/takaneko/others/2024-10-02_大青春祭2024_メッセージカード.webp",
   width: 610,
   height: 362,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

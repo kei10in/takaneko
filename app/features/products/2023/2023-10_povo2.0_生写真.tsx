@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const povo20_生写真: ProductImage = {
+export const povo20_生写真: RandomGoods = {
   id: "生写真 (povo2.0 ver)",
   name: "生写真 (povo2.0 ver)",
   year: 2023,
   series: "povo2.0",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2023-10_povo2.0.jpg",
   width: 1182,
   height: 1387,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 22, y: 156, width: 161, height: 230 },
     { id: 2, x: 217, y: 156, width: 161, height: 230 },

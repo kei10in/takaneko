@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const 瞬きさえ忘れる_生写真: ProductImage = {
+export const 瞬きさえ忘れる_生写真: RandomGoods = {
   id: "生写真「瞬きさえ忘れる。」ver.",
   name: "生写真「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2024-09-15_瞬きさえ忘れる.webp",
   width: 827,
   height: 518,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 149, y: 14, width: 80, height: 115 },
     { id: 2, x: 239, y: 14, width: 80, height: 115 },

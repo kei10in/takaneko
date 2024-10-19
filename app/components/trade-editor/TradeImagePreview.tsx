@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { ImageLoader } from "../ImageLoader";
 import { drawTradeImage } from "./drawTradeImage";
 
 interface Props {
-  productImage: ProductImage;
+  productImage: RandomGoods;
   tradeDescriptions: Record<number, TradeDescription>;
 }
 

@@ -10,7 +10,7 @@ import {
 import clsx from "clsx";
 import { useState } from "react";
 import { BsEraserFill, BsImageFill, BsPencilSquare, BsTrashFill } from "react-icons/bs";
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
@@ -18,7 +18,7 @@ import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
-  productImage: ProductImage;
+  productImage: RandomGoods;
   tradeDescriptions: Record<number, TradeDescription>;
   width: number;
   onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;

@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const にゃでしこ_アクリルキーホルダー: ProductImage = {
+export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   id: "ランダムアクリルキーホルダー (にゃでしこ ver)",
   name: "ランダムアクリルキーホルダー (にゃでしこ ver)",
   year: 2024,
   series: "にゃでしこ",
-  kind: "アクリルキーホルダー",
+  category: "アクリルキーホルダー",
   url: "/takaneko/others/2024-05-12_にゃでしこ_アクリルキーホルダー.webp",
   width: 1500,
   height: 1200,
-  photos: [
+  lineup: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

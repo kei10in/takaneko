@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const 瞬きさえ忘れる_ミニフォト: ProductImage = {
+export const 瞬きさえ忘れる_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「瞬きさえ忘れる。」ver.",
   name: "ミニフォトカード「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-09-15_瞬きさえ忘れる.webp",
   width: 827,
   height: 553,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 149, y: 15, width: 79, height: 125 },
     { id: 2, x: 239, y: 15, width: 79, height: 125 },

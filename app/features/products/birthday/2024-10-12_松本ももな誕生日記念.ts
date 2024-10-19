@@ -1,4 +1,4 @@
-import { BirthdayGoodsCollection, OfficialGoodsDescription } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
   id: "松本ももな誕生日記念 2024年10月12日",
@@ -13,7 +13,7 @@ export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsColl
   ],
 };
 
-export const ももぽにゃんT: OfficialGoodsDescription = {
+export const ももぽにゃんT: OfficialGoods = {
   id: "ももぽにゃんT",
   name: "ももぽにゃんT",
   date: "2024-10-12",
@@ -34,7 +34,7 @@ export const ももぽにゃんT: OfficialGoodsDescription = {
   ],
 };
 
-export const ももにゃくすた: OfficialGoodsDescription = {
+export const ももにゃくすた: OfficialGoods = {
   id: "ももにゃくすた",
   name: "ももにゃくすた",
   date: "2024-10-12",
@@ -47,7 +47,7 @@ export const ももにゃくすた: OfficialGoodsDescription = {
   ],
 };
 
-export const おりぼんの擬人化なりきりアイテム: OfficialGoodsDescription = {
+export const おりぼんの擬人化なりきりアイテム: OfficialGoods = {
   id: "おりぼんの擬人化なりきりアイテム",
   name: "おりぼんの擬人化なりきりアイテム",
   date: "2024-10-12",

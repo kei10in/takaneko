@@ -48,9 +48,9 @@ import { 白ワンピース_ミニフォト } from "./2024/2024-08_白ワンピ�
 import { 白ワンピース_生写真 } from "./2024/2024-08_白ワンピース_生写真";
 import { 瞬きさえ忘れる_ミニフォト } from "./2024/2024-09-15_瞬きさえ忘れる_ミニフォト";
 import { 瞬きさえ忘れる_生写真 } from "./2024/2024-09-15_瞬きさえ忘れる_生写真";
-import { ProductImage } from "./product";
+import { RandomGoods } from "./product";
 
-export const PHOTOS: ProductImage[] = [
+export const PHOTOS: RandomGoods[] = [
   アンチファン衣装_生写真,
   うぶごえ_生写真,
   _2022秋服_生写真,
@@ -86,7 +86,7 @@ export const PHOTOS: ProductImage[] = [
   瞬きさえ忘れる_生写真,
 ];
 
-export const MINI_PHOTO_CARDS: ProductImage[] = [
+export const MINI_PHOTO_CARDS: RandomGoods[] = [
   たかねこ全国お招きツアー2023衣装_ミニフォト,
   浴衣_ミニフォト,
   僕は君になれない衣装_ミニフォト,
@@ -105,4 +105,4 @@ export const MINI_PHOTO_CARDS: ProductImage[] = [
   瞬きさえ忘れる_ミニフォト,
 ];
 
-export const OTHER_PHOTOS: ProductImage[] = [ハニフェス_生写真];
+export const OTHER_PHOTOS: RandomGoods[] = [ハニフェス_生写真];

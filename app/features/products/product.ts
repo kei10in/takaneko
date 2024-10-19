@@ -5,27 +5,38 @@ import { LinkDescription } from "~/utils/types/LinkDescription";
 export type ProductDescription =
   | {
       kind: "images";
-      description: ProductImage;
+      description: RandomGoods;
     }
   | {
       kind: "publications";
       description: PublicationDescription;
     };
 
-export interface ProductImage {
+export interface OfficialGoods {
   id: string;
   name: string;
+  date?: string;
+  listPrice?: number;
+  images?: ImageDescription[];
+}
+
+export interface RandomGoods {
+  id: string;
+  name: string;
+  date?: string;
+  listPrice?: number;
+  images?: ImageDescription[];
   year: number;
   series: string;
-  kind: string;
+  category: string;
   url: string;
   width: number;
   height: number;
-  photos: PhotoDescription[];
+  lineup: ItemDescription[];
   positions: ImagePosition[];
 }
 
-export interface PhotoDescription {
+export interface ItemDescription {
   id: number;
   name: string;
   description?: string;
@@ -66,14 +77,6 @@ export interface NewspaperDescription {
   links?: LinkDescription[];
 }
 
-export interface OfficialGoodsDescription {
-  id: string;
-  name: string;
-  date: string;
-  listPrice: number;
-  images: ImageDescription[];
-}
-
 /**
  * ライブグッズ。
  * 物販だけでなく抽選会やライブ中にプレゼントされたものを含みます。
@@ -82,7 +85,7 @@ export interface LiveGoodsCollection {
   id: string;
   name: string;
   images: ImageDescription[];
-  goods: { type: string; lineup: (string | ProductImage)[] }[];
+  goods: { type: string; lineup: (string | RandomGoods)[] }[];
 }
 
 /**

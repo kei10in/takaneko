@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const 瞬きさえ忘れる_にゃでしこステッカー: ProductImage = {
+export const 瞬きさえ忘れる_にゃでしこステッカー: RandomGoods = {
   id: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
   name: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。にゃでしこステッカー",
-  kind: "ステッカー",
+  category: "ステッカー",
   url: "/takaneko/others/2024-09-15_瞬きさえ忘れる_にゃでしこステッカー.webp",
   width: 362,
   height: 147,
-  photos: [
+  lineup: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

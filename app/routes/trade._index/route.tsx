@@ -82,7 +82,7 @@ export default function Index() {
                   image={photo.url}
                   year={photo.year}
                   content={photo.series}
-                  description={photo.kind}
+                  description={photo.category}
                 />
               </Link>
             </li>

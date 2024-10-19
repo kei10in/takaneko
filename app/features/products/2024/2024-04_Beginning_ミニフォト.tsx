@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const Beginning_ミニフォト: ProductImage = {
+export const Beginning_ミニフォト: RandomGoods = {
   id: "ミニフォトカード (Beginning ver)",
   name: "ミニフォトカード (Beginning ver)",
   year: 2024,
   series: "Beginning",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-04_Beginning.png",
   width: 542,
   height: 347,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "美しく生きろ" },
     { id: 2, name: "城月菜央", description: "アンチファン" },
     { id: 3, name: "城月菜央", description: "全国お招きツアー" },

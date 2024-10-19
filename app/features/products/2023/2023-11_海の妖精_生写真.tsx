@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const 海の妖精_生写真: ProductImage = {
+export const 海の妖精_生写真: RandomGoods = {
   id: "生写真 (海の妖精 ver)",
   name: "生写真 (海の妖精 ver)",
   year: 2023,
   series: "海の妖精",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2023-11_海の妖精.jpg",
   width: 1181,
   height: 1389,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 156, width: 161, height: 230 },
     { id: 2, x: 216, y: 156, width: 161, height: 230 },

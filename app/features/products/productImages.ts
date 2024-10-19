@@ -58,9 +58,9 @@ import { 瞬きさえ忘れる_生写真 } from "./2024/2024-09-15_瞬きさえ�
 import { 瞬きさえ忘れる_缶バッジ } from "./2024/2024-09-15_瞬きさえ忘れる_缶バッジ";
 import { 瞬きさえ忘れる_アクリルブロック } from "./2024/2024-09-15_瞬きさえ忘れる_落書きアクリルブロック";
 import { 大青春祭2024_メッセージカード } from "./2024/2024-10-02_大青春祭2024_メッセージカード";
-import { ProductImage } from "./product";
+import { RandomGoods } from "./product";
 
-export const TAKANEKO_PHOTOS: ProductImage[] = [
+export const TAKANEKO_PHOTOS: RandomGoods[] = [
   アンチファン衣装_生写真,
   うぶごえ_生写真,
   _2022秋服_生写真,

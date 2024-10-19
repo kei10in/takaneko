@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const _2023ハロウィン_ミニフォト: ProductImage = {
+export const _2023ハロウィン_ミニフォト: RandomGoods = {
   id: "ミニフォトカード (2023ハロウィン ver)",
   name: "ミニフォトカード (2023ハロウィン ver)",
   year: 2023,
   series: "2023ハロウィン",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-10-09_2023ハロウィン.jpg",
   width: 1078,
   height: 1522,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 262, width: 149, height: 237 },
     { id: 2, x: 197, y: 262, width: 149, height: 237 },

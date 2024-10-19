@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const 瞬きさえ忘れる_缶バッジ: ProductImage = {
+export const 瞬きさえ忘れる_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ「瞬きさえ忘れる。」ver.",
   name: "ランダム缶バッジ「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。アクリルブロック",
-  kind: "アクリルブロック",
+  category: "アクリルブロック",
   url: "/takaneko/others/2024-09-15_瞬きさえ忘れる_缶バッジ.webp",
   width: 362,
   height: 147,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

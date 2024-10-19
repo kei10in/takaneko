@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const 海の妖精_ミニフォト: ProductImage = {
+export const 海の妖精_ミニフォト: RandomGoods = {
   id: "ミニフォトカード (海の妖精 ver)",
   name: "ミニフォトカード (海の妖精 ver)",
   year: 2023,
   series: "海の妖精",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2023-11-29_海の妖精.webp",
   width: 1118,
   height: 1468,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 152, width: 154, height: 245 },
     { id: 2, x: 204, y: 152, width: 154, height: 245 },

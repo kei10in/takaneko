@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const Beginning_生写真: ProductImage = {
+export const Beginning_生写真: RandomGoods = {
   id: "生写真 (Beginning ver)",
   name: "生写真 (Beginning ver)",
   year: 2024,
   series: "Beginning",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2024-04_Beginning.png",
   width: 542,
   height: 347,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "美しく生きろ" },
     { id: 2, name: "城月菜央", description: "アンチファン" },
     { id: 3, name: "城月菜央", description: "全国お招きツアー" },

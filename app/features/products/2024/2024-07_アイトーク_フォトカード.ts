@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const アイトーク_フォトカード: ProductImage = {
+export const アイトーク_フォトカード: RandomGoods = {
   id: "フォトカード (アイトーク ver)",
   name: "フォトカード (アイトーク ver)",
   year: 2024,
   series: "アイトーク",
-  kind: "フォトカード",
+  category: "フォトカード",
   url: "/takaneko/others/2024-07-15_アイトーク.webp",
   width: 1950,
   height: 1148,
-  photos: [
+  lineup: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

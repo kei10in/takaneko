@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const _2ndファンミ_缶バッジ: ProductImage = {
+export const _2ndファンミ_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ (2ndファンミ ver)",
   name: "ランダム缶バッジ (2ndファンミ ver)",
   year: 2024,
   series: "2nd ファンミ 缶バッジ",
-  kind: "缶バッジ",
+  category: "缶バッジ",
   url: "/takaneko/others/2024-08-07_2ndファンミ_缶バッジ.webp",
   width: 1181,
   height: 1181,
-  photos: [
+  lineup: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "城月菜央", description: "" },

@@ -1,15 +1,15 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 
-export const _2ndファンミ_にゃでしこステッカー: ProductImage = {
+export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
   id: "ランダムにゃでしこステッカー (2ndファンミ ver)",
   name: "ランダムにゃでしこステッカー (2ndファンミ ver)",
   year: 2024,
   series: "2nd ファンミ にゃでしこステッカー",
-  kind: "ステッカー",
+  category: "ステッカー",
   url: "/takaneko/others/2024-08-07_2ndファンミ_にゃでしこステッカー.webp",
   width: 1181,
   height: 1181,
-  photos: [
+  lineup: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

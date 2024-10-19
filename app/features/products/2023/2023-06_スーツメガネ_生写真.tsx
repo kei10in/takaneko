@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const スーツメガネ_生写真: ProductImage = {
+export const スーツメガネ_生写真: RandomGoods = {
   id: "生写真 (スーツメガネ ver)",
   name: "生写真 (スーツメガネ ver)",
   year: 2023,
   series: "スーツメガネ",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2023-06_スーツメガネ.webp",
   width: 1064,
   height: 1257,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 143, width: 144, height: 207 },
     { id: 2, x: 197, y: 143, width: 144, height: 207 },

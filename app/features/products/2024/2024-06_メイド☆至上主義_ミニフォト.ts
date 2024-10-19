@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const メイド至上主義_ミニフォト: ProductImage = {
+export const メイド至上主義_ミニフォト: RandomGoods = {
   id: "ミニフォトカード (メイド☆至上主義 ver)",
   name: "ミニフォトカード (メイド☆至上主義 ver)",
   year: 2024,
   series: "メイド☆至上主義",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-06-21_メイド☆至上主義.webp",
   width: 1680,
   height: 2128,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 75, y: 239, width: 210, height: 336 },
     { id: 2, x: 339, y: 239, width: 210, height: 336 },

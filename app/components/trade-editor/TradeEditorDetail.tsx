@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
@@ -11,7 +11,7 @@ import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
 
 interface Props {
-  productImage: ProductImage;
+  productImage: RandomGoods;
   tradeDescriptions: Record<number, TradeDescription>;
   index: number;
   onClickPrev?: MouseEventHandler<HTMLButtonElement>;
@@ -23,7 +23,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const { productImage, tradeDescriptions, index, onClickPrev, onClickNext, onChangeTradeState } =
     props;
 
-  const photos = productImage.photos;
+  const photos = productImage.lineup;
   const selPhoto = photos[index];
   const positions = productImage.positions;
   const maxWidth = useMemo(() => Math.max(...positions.map((p) => p.width)), [positions]);

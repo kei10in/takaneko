@@ -1,4 +1,4 @@
-import { BirthdayGoodsCollection, OfficialGoodsDescription } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollection = {
   id: "涼海すう誕生日記念 2024年8月22日",
@@ -13,7 +13,7 @@ export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollecti
   ],
 };
 
-export const いらすぅとTシャツ: OfficialGoodsDescription = {
+export const いらすぅとTシャツ: OfficialGoods = {
   id: "いらすぅとTシャツ",
   name: "いらすぅとTシャツ",
   date: "2024-08-22",
@@ -34,7 +34,7 @@ export const いらすぅとTシャツ: OfficialGoodsDescription = {
   ],
 };
 
-export const あくすぅた: OfficialGoodsDescription = {
+export const あくすぅた: OfficialGoods = {
   id: "あくすぅた",
   name: "あくすぅた",
   date: "2024-08-22",
@@ -47,7 +47,7 @@ export const あくすぅた: OfficialGoodsDescription = {
   ],
 };
 
-export const だんぼーる: OfficialGoodsDescription = {
+export const だんぼーる: OfficialGoods = {
   id: "だんぼーる",
   name: "だんぼーる",
   date: "2024-08-22",

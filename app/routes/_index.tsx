@@ -130,7 +130,7 @@ export default function Index() {
                     image={product.url}
                     year={product.year}
                     content={product.series}
-                    description={product.kind}
+                    description={product.category}
                   />
                 </Link>
               ))}

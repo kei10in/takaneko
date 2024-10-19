@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const _2023年振袖_生写真: ProductImage = {
+export const _2023年振袖_生写真: RandomGoods = {
   id: "生写真 (2023年振袖 ver)",
   name: "生写真 (2023年振袖 ver)",
   year: 2023,
   series: "2023年振袖",
-  kind: "生写真",
+  category: "生写真",
   url: "/takaneko/photos/2023-01_2023年振袖.webp",
   width: 1300,
   height: 1300,
-  photos: REGULAR_PHOTO_SET,
+  lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 49, y: 162, width: 146, height: 208 },
     { id: 2, x: 256, y: 162, width: 146, height: 208 },

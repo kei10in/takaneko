@@ -1,16 +1,16 @@
-import { ProductImage } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
-export const 白ワンピース_ミニフォト: ProductImage = {
+export const 白ワンピース_ミニフォト: RandomGoods = {
   id: "ミニフォト (白ワンピース ver)",
   name: "ミニフォト (白ワンピース ver)",
   year: 2024,
   series: "白ワンピース",
-  kind: "ミニフォト",
+  category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-08-12_白ワンピース.jpg",
   width: 720,
   height: 1040,
-  photos: REGULAR_MINI_PHOTO_SET,
+  lineup: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 24, y: 176, width: 102, height: 162 },
     { id: 2, x: 137, y: 176, width: 102, height: 162 },
