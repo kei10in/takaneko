@@ -4,8 +4,8 @@ import { Prize, PrizeDrawing } from "../prizes";
 import { LiveGoodsCollection } from "../product";
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollection = {
-  id: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」",
-  name: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」",
+  id: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",
+  name: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",
   images: [
     {
       path: "/takaneko/live-goods/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」_グッズメニュー3.jpg",
@@ -52,8 +52,8 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollecti
 };
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGoodsCollection = {
-  id: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」TOUR FINAL",
-  name: "2nd Anniversary Zepp TOUR 2024「#瞬きさえ忘れる。」 TOUR FINAL",
+  id: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」TOUR FINAL",
+  name: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」 TOUR FINAL",
   images: [
     {
       path: "/takaneko/live-goods/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」TOUR FINAL_グッズメニュー1.jpg",
