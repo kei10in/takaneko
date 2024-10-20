@@ -20,9 +20,9 @@ export const WHITE_graph_011: Publication = {
   links: [],
 };
 
-export const 松本ももな_WHITE_graph_デジタル写真集: Publication = {
-  id: "松本ももな WHITE graph デジタル写真集",
-  name: "松本ももな WHITE graph デジタル写真集",
+export const 松本ももな_SweetDateTime: Publication = {
+  id: "松本ももな SWEET DATE TIME",
+  name: "松本ももな「SWEET DATE TIME」WHITE graph デジタル写真集",
   date: "2024-05-29",
   kind: "books",
   publisher: "講談社",
@@ -31,10 +31,11 @@ export const 松本ももな_WHITE_graph_デジタル写真集: Publication = {
   url: "https://bookclub.kodansha.co.jp/product?item=0000393751",
   coverImages: [
     {
-      path: "/publications/2024-05-29_松本ももな WHITE graph デジタル写真集.jpg",
+      path: "/publications/2024-05-29_松本ももな SWEET DATE TIME.jpg",
       ref: "https://bookclub.kodansha.co.jp/product?item=0000393751",
     },
   ],
+  ebooks: [{ text: "Kindle", url: "https://www.amazon.co.jp/dp/B0D59NKP4X" }],
   featuredMembers: ["松本ももな"],
   officialTwitter: "https://x.com/takanenofficial/status/1785944849981804988",
   links: [],

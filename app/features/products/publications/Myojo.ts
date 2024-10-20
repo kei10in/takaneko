@@ -7,13 +7,14 @@ export const Myojo_2024年9月号: Publication = {
   kind: "magazines",
   publisher: "集英社",
   listPrice: 800,
-  url: "",
+  url: "https://x.com/Myojo_henshu/status/1815234938788249892",
   coverImages: [
     {
       path: "/publications/2024-07-22_Myojo_2024年9月号_表紙.jpg",
       ref: "https://x.com/Myojo_henshu/status/1811639771971878948",
     },
   ],
+  ebooks: [{ text: "Kindle", url: "https://www.amazon.co.jp/dp/B0D9NCVCC5/" }],
   featuredMembers: [
     "城月菜央",
     "涼海すう",

@@ -68,7 +68,7 @@ export const LARME_059: Publication = {
   publisher: "LARME",
   listPrice: 800,
   code: [],
-  url: "https://x.com/takanenofficial/status/1735255943808754136",
+  url: "https://www.larme.co/",
   coverImages: [
     {
       path: "/publications/larme/LARME059.jpg",
@@ -76,7 +76,7 @@ export const LARME_059: Publication = {
     },
   ],
   featuredMembers: ["松本ももな"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1735255943808754136",
   links: [],
 };
 
@@ -88,7 +88,7 @@ export const LARME_058: Publication = {
   publisher: "LARME",
   listPrice: 800,
   code: [],
-  url: "https://x.com/takanenofficial/status/1702291127641206861",
+  url: "https://www.larme.co/",
   coverImages: [
     {
       path: "/publications/larme/LARME058.jpg",
@@ -96,7 +96,7 @@ export const LARME_058: Publication = {
     },
   ],
   featuredMembers: ["松本ももな"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1702291127641206861",
   links: [],
 };
 

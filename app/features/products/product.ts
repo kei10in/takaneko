@@ -60,6 +60,14 @@ export interface Publication {
   code?: { kind: string; value: string }[];
   url: string;
   coverImages: ImageDescription[];
+  ebooks?: boolean | LinkDescription[];
+  bonuses?: [
+    {
+      name: string;
+      category?: string;
+      store?: string;
+    },
+  ];
   featuredMembers: MemberName[];
   officialTwitter?: string;
   links?: LinkDescription[];

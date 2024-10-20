@@ -15,6 +15,13 @@ export const BLT_2024年9月号: Publication = {
       ref: "https://bltweb.jp/2024/07/22/blt2409_cover/",
     },
   ],
+  bonuses: [
+    {
+      name: "籾山ひめり (高嶺のなでしこ) ポストカード",
+      category: "セブンネット限定特典",
+      store: "https://7net.omni7.jp/detail/1107519345",
+    },
+  ],
   featuredMembers: ["籾山ひめり"],
   officialTwitter: "https://x.com/takanenofficial/status/1810260128601387254",
   links: [],

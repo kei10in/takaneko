@@ -15,6 +15,7 @@ export const 橋本桃呼_MOMOKO_ISM: Publication = {
       ref: "https://x.com/takanenofficial/status/1804107216229740825",
     },
   ],
+  ebooks: [{ text: "Kindle", url: "https://www.amazon.co.jp/dp/B0D7CVZZC4/" }],
   featuredMembers: ["橋本桃呼"],
   officialTwitter: "https://x.com/takanenofficial/status/1804107216229740825",
   links: [],

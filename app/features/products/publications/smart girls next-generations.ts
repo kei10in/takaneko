@@ -15,6 +15,7 @@ export const SmartGirlsNextGenerations: Publication = {
       ref: "https://tkj.jp/book/?cd=TD056856",
     },
   ],
+  ebooks: [{ text: "Kindle", url: "https://www.amazon.co.jp/dp/B0D7M817P6/" }],
   featuredMembers: [
     "城月菜央",
     "涼海すう",
@@ -32,6 +33,10 @@ export const SmartGirlsNextGenerations: Publication = {
     {
       text: "宝島社の通販",
       url: "https://store.tkj.jp/shopdetail/000000018177/",
+    },
+    {
+      text: "宝島社 X 告知",
+      url: "https://x.com/book_tkj/status/1803700011886322111",
     },
   ],
 };
