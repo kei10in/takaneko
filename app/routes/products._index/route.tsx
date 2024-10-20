@@ -6,6 +6,7 @@ import {
 import { ImageSlide } from "~/components/ImageSlide";
 import { SITE_TITLE } from "~/constants";
 import { loadEventsInDay } from "~/features/events/events";
+import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { PUBLICATIONS } from "~/features/products/publications";
@@ -78,6 +79,31 @@ export default function Index() {
                           </ul>
                         </section>
                       ))}
+                    </div>
+                  </div>
+                </section>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h2 className="mb-8 text-2xl">誕生日記念グッズ</h2>
+          <div className="space-y-8">
+            {BirthdayGoods.map((bg) => {
+              return (
+                <section key={bg.id}>
+                  <h3 className="text-xl">{bg.name}</h3>
+                  <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
+                    <ImageSlide
+                      images={bg.images.map((img) => ({ src: img.path, alt: bg.name }))}
+                    />
+                    <div className="space-y-4 pt-4 md:pt-0">
+                      <ul className="list-outside list-disc pl-6 marker:text-gray-300">
+                        {bg.lineup.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </section>
