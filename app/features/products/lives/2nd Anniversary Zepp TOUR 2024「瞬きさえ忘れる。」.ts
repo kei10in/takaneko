@@ -1,5 +1,6 @@
 import { 瞬きさえ忘れる_ミニフォト } from "../2024/2024-09-15_瞬きさえ忘れる_ミニフォト";
 import { 瞬きさえ忘れる_生写真 } from "../2024/2024-09-15_瞬きさえ忘れる_生写真";
+import { Prize, PrizeDrawing } from "../prizes";
 import { LiveGoodsCollection } from "../product";
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollection = {
@@ -90,4 +91,459 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGood
       ],
     },
   ],
+};
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-15@札幌公演 会場限定受付",
+    name: "9/15@札幌公演(会場限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "当日撮影サイン入りチェキ 1 枚",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り新曲①モチーフカード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り新曲②モチーフカード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画① (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-15@札幌公演 一般受付",
+    name: "9/15@札幌公演(一般限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "当日撮影サイン入りチェキ 1 枚",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り新曲①モチーフカード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り新曲②モチーフカード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画② (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-26@名古屋公演 会場受付",
+    name: "9/26@名古屋公演(会場限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "サイン入り A4 パネル 1 枚",
+        prizeId: "I'M YOUR IDOL A4 パネル",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画① (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-26@名古屋公演 一般受付",
+    name: "9/26@名古屋公演(一般限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "サイン入り A4 パネル 1 枚",
+        prizeId: "I'M YOUR IDOL A4 パネル",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚 ",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画② (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-27@大阪公演 会場受付",
+    name: "9/27@大阪公演(会場限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "サイン入り A4 パネル 1 枚",
+        prizeId: "I'M YOUR IDOL A4 パネル",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画① (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-27@大阪公演 一般受付",
+    name: "9/27@大阪公演(一般限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "サイン入り A4 パネル 1 枚",
+        prizeId: "I'M YOUR IDOL A4 パネル",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画② (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-29@福岡公演 会場受付",
+    name: "9/29@福岡公演(会場限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      { rank: "SP賞", name: "サイン入り A4 パネル 1 枚", quantity: "各メンバー 1 枚 / 合計 10 枚" },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画① (1 種)" },
+    ],
+  };
+
+export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付: PrizeDrawing =
+  {
+    id: "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」公演 開催記念 CD 抽選会 - 2024-09-29@福岡公演 一般受付",
+    name: "9/29@福岡公演(一般限定受付)】高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演 開催記念CD抽選会",
+    images: [],
+    prizes: [
+      {
+        rank: "SP賞",
+        name: "サイン入り A4 パネル 1 枚",
+        prizeId: "I'M YOUR IDOL A4 パネル",
+        quantity: "各メンバー 1 枚 / 合計 10 枚",
+      },
+      {
+        rank: "A賞",
+        name: "サイン入り IʼM YOUR IDOL カード 1 枚",
+        prizeId: "I'M YOUR IDOL カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "B賞",
+        name: "サイン入り アドレナリンゲーム カード 1 枚",
+        prizeId: "アドレナリンゲーム カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "C賞",
+        name: "サイン入り新曲③モチーフカード 1 枚",
+        prizeId: "新曲③モチーフカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "D賞",
+        name: "サイン入り私より好きでいてクリアカード 1 枚",
+        prizeId: "私より好きでいて クリアカード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      {
+        rank: "E賞",
+        name: "サイン入りモテチェンカード 1 枚",
+        prizeId: "モテチェン カード",
+        quantity: "各メンバー 2 枚 / 合計 20 枚",
+      },
+      { rank: "参加賞", name: "メンバー全員によるコメント動画② (1 種)" },
+    ],
+  };
+
+export const IM_YOUR_IDOL_A4パネル: Prize = {
+  id: "I'M YOUR IDOL A4 パネル",
+  name: "I'M YOUR IDOL A4 パネル",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
+};
+
+export const IM_YOUR_IDOL_カード: Prize = {
+  id: "I'M YOUR IDOL カード",
+  name: "I'M YOUR IDOL カード",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
+};
+
+export const アドレナリンゲーム_カード: Prize = {
+  id: "アドレナリンゲーム カード",
+  name: "アドレナリンゲーム カード",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
+};
+
+export const 新曲3_モチーフカード: Prize = {
+  id: "新曲③モチーフカード",
+  name: "新曲③モチーフカード",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
+};
+
+export const 私より好きでいて_クリアカード: Prize = {
+  id: "私より好きでいて クリアカード",
+  name: "私より好きでいて クリアカード",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
+};
+
+export const モテチェン_カード: Prize = {
+  id: "モテチェン カード",
+  name: "モテチェン カード",
+  prizeDrawings: [
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_札幌公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_名古屋公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_大阪公演_開催記念CD抽選会_一般受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_会場受付.id,
+    _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる_福岡公演_開催記念CD抽選会_一般受付.id,
+  ],
+  signed: true,
 };
