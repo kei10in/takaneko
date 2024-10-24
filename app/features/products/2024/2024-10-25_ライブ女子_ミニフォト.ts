@@ -2,7 +2,7 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ライブ女子_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード ライブ女子 Ver.",
+  id: "ミニフォトカード ライブ女子 Ver",
   name: "ミニフォトカード ライブ女子 Ver.",
   year: 2024,
   series: "ライブ女子",

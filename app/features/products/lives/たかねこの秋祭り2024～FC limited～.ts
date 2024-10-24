@@ -1,4 +1,4 @@
-import { ライブ女子_ミニフォト } from "../2024/2024-09-15_ライブ女子_ミニフォト";
+import { ライブ女子_ミニフォト } from "../2024/2024-10-25_ライブ女子_ミニフォト";
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこの秋祭り2024_FC_limited: LiveGoodsCollection = {
