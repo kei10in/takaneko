@@ -12,6 +12,13 @@ const EventMetaDescriptor = z.object({
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
   image: z.object({ path: z.string(), ref: z.string() }).optional(),
+  costume: z.union([z.string(), z.array(z.string())]).optional(),
+  setlist: z
+    .object({
+      items: z.array(z.string()),
+      url: z.string().optional(),
+    })
+    .optional(),
 });
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
@@ -26,6 +33,8 @@ export interface EventMeta {
   location?: string | undefined;
   link?: { text: string; url: string } | undefined;
   image?: { path: string; ref: string } | undefined;
+  costume?: string | string[] | undefined;
+  setlist?: { items: string[]; url?: string | undefined };
 
   descriptor: EventMetaDescriptor;
 }

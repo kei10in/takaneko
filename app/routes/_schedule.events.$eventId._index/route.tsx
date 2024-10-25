@@ -22,6 +22,7 @@ import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
+import { EventRecap } from "./EventRecap";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const event = data == undefined ? undefined : loadEventModule(data.eventId);
@@ -141,6 +142,7 @@ export default function EventPage() {
       </div>
 
       <article className="markdown mb-4 max-w-none px-4">
+        <EventRecap costume={meta.costume} setlist={meta.setlist} />
         <Content />
       </article>
 
