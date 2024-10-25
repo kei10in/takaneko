@@ -142,7 +142,7 @@ export default function EventPage() {
       </div>
 
       <article className="markdown mb-4 max-w-none px-4">
-        <EventRecap costume={meta.costume} setlist={meta.setlist} />
+        <EventRecap recaps={meta.recaps} />
         <Content />
       </article>
 

@@ -2,6 +2,15 @@ import { z } from "zod";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { compareEventType, EventType, EventTypeEnum } from "./EventType";
 
+const EventRecap = z.object({
+  title: z.string().optional(),
+  costume: z.union([z.string(), z.array(z.string())]).optional(),
+  setlist: z.array(z.string()).optional(),
+  url: z.string().optional(),
+});
+
+export type EventRecap = z.infer<typeof EventRecap>;
+
 const EventMetaDescriptor = z.object({
   summary: z.string(),
   title: z.string().optional(),
@@ -12,13 +21,7 @@ const EventMetaDescriptor = z.object({
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
   image: z.object({ path: z.string(), ref: z.string() }).optional(),
-  costume: z.union([z.string(), z.array(z.string())]).optional(),
-  setlist: z
-    .object({
-      items: z.array(z.string()),
-      url: z.string().optional(),
-    })
-    .optional(),
+  recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
 });
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
@@ -33,8 +36,7 @@ export interface EventMeta {
   location?: string | undefined;
   link?: { text: string; url: string } | undefined;
   image?: { path: string; ref: string } | undefined;
-  costume?: string | string[] | undefined;
-  setlist?: { items: string[]; url?: string | undefined };
+  recaps?: EventRecap[] | undefined;
 
   descriptor: EventMetaDescriptor;
 }
@@ -50,11 +52,17 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         : r.data.status == "CANCELED"
           ? `【中止】${r.data.title}`
           : r.data.title;
+    const recaps = Array.isArray(r.data.recaps)
+      ? r.data.recaps
+      : r.data.recaps != undefined
+        ? [r.data.recaps]
+        : undefined;
     return {
       ...r.data,
       summary,
       title,
       date: NaiveDate.parseUnsafe(r.data.date),
+      recaps,
       descriptor: r.data,
     };
   } else {
