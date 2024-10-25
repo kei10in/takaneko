@@ -147,7 +147,14 @@ export default function EventPage() {
                 <BsPersonFill className="text-gray-400" />
               </span>
               <span className="text-gray-600">
-                {meta.present.map((n) => findMemberDescription(n).name).join(" / ")}
+                {meta.present
+                  .map((n) => {
+                    if (n == "高嶺のなでしこ") {
+                      return n;
+                    }
+                    return findMemberDescription(n).name;
+                  })
+                  .join(" / ")}
               </span>
             </div>
           )}

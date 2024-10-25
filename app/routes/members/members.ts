@@ -15,6 +15,9 @@ export const MemberName = z.union([
 
 export type MemberName = z.infer<typeof MemberName>;
 
+export const MemberNameOrGroup = z.union([z.literal("高嶺のなでしこ"), MemberName]);
+export type MemberNameOrGroup = z.infer<typeof MemberNameOrGroup>;
+
 export interface MemberDescription {
   slug: string;
   number: number;

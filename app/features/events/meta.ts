@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MemberName } from "~/routes/members/members";
+import { MemberName, MemberNameOrGroup } from "~/routes/members/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { compareEventType, EventType, EventTypeEnum } from "./EventType";
 
@@ -22,7 +22,7 @@ const EventMetaDescriptor = z.object({
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
   image: z.object({ path: z.string(), ref: z.string() }).optional(),
-  present: z.array(MemberName).optional(),
+  present: z.array(MemberNameOrGroup).optional(),
   absent: z.array(MemberName).optional(),
   recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
 });
@@ -39,7 +39,7 @@ export interface EventMeta {
   location?: string | undefined;
   link?: { text: string; url: string } | undefined;
   image?: { path: string; ref: string } | undefined;
-  present?: MemberName[] | undefined;
+  present?: MemberNameOrGroup[] | undefined;
   absent?: MemberName[] | undefined;
   recaps?: EventRecap[] | undefined;
 
