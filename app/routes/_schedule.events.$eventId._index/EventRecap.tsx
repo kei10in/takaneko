@@ -57,9 +57,11 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
             )}
 
             {url != undefined && (
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                #たかねこセトリ
-              </a>
+              <p>
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  #たかねこセトリ
+                </a>
+              </p>
             )}
           </div>
         );
