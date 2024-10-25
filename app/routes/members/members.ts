@@ -1,14 +1,19 @@
-export type MemberName =
-  | "城月菜央"
-  | "涼海すう"
-  | "橋本桃呼"
-  | "葉月紗蘭"
-  | "春野莉々"
-  | "東山恵里沙"
-  | "日向端ひな"
-  | "星谷美来"
-  | "松本ももな"
-  | "籾山ひめり";
+import { z } from "zod";
+
+export const MemberName = z.union([
+  z.literal("城月菜央"),
+  z.literal("涼海すう"),
+  z.literal("橋本桃呼"),
+  z.literal("葉月紗蘭"),
+  z.literal("春野莉々"),
+  z.literal("東山恵里沙"),
+  z.literal("日向端ひな"),
+  z.literal("星谷美来"),
+  z.literal("松本ももな"),
+  z.literal("籾山ひめり"),
+]);
+
+export type MemberName = z.infer<typeof MemberName>;
 
 export interface MemberDescription {
   slug: string;

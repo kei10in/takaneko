@@ -9,6 +9,7 @@ import {
   useNavigate,
 } from "@remix-run/react";
 import { useMemo } from "react";
+import { BsPersonFill, BsPersonFillSlash } from "react-icons/bs";
 import {
   HiArrowTopRightOnSquare,
   HiCalendar,
@@ -22,6 +23,7 @@ import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
+import { findMemberDescription } from "../members/members";
 import { EventRecap } from "./EventRecap";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -137,6 +139,28 @@ export default function EventPage() {
                 </span>
               </div>
             </Link>
+          )}
+
+          {meta.present != undefined && meta.present.length != 0 && (
+            <div className="flex items-center gap-1 px-5">
+              <span>
+                <BsPersonFill className="text-gray-400" />
+              </span>
+              <span className="text-gray-600">
+                {meta.present.map((n) => findMemberDescription(n).name).join(" / ")}
+              </span>
+            </div>
+          )}
+
+          {meta.absent != undefined && meta.absent.length != 0 && (
+            <div className="flex items-center gap-1 px-5">
+              <span>
+                <BsPersonFillSlash className="text-gray-400" />
+              </span>
+              <span className="text-gray-600">
+                {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
+              </span>
+            </div>
           )}
         </div>
       </div>
