@@ -6,6 +6,7 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { DOMAIN } from "~/constants";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 import { validateNewsPostsList } from "./NewsPost";
@@ -20,6 +21,11 @@ export const meta: MetaFunction = ({ location }) => {
     {
       name: "description",
       content: "高嶺のなでしこの公式サイトに掲載されているニュースです。",
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: `https://${DOMAIN}/official/news`,
     },
   ];
 };
