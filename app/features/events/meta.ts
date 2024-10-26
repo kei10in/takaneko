@@ -13,8 +13,15 @@ const EventRecap = z.object({
 export type EventRecap = z.infer<typeof EventRecap>;
 
 const EventMetaDescriptor = z.object({
+  // 長くなる場合は `title` を使うことができます。
   summary: z.string(),
+
+  // イベントの完全なタイトルを指定します。
   title: z.string().optional(),
+
+  // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
+  description: z.string().optional(),
+
   status: z.literal("CANCELED").optional(),
   category: EventTypeEnum,
   date: z.string(),
@@ -32,6 +39,7 @@ export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 export interface EventMeta {
   summary: string;
   title?: string | undefined;
+  description?: string | undefined;
   status?: "CANCELED" | undefined;
   category: EventType;
   date: NaiveDate;

@@ -33,7 +33,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const description =
     event == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
-      : makePageDescription(event.meta);
+      : (event.meta.description ?? makePageDescription(event.meta));
 
   const result: MetaDescriptor[] = [
     { title: formatTitle(title) },
