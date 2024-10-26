@@ -51,7 +51,7 @@ export const makeEventDescription = (meta: EventMeta) => {
   const absent = meta.absent?.map((m) => findMemberDescription(m).id).join("・");
   const absentText = absent == undefined ? "" : `${absent}は欠席。`;
 
-  return `${date} に高嶺のなでしこ ${title} が開催。${presentText}。${absentText}`;
+  return `${date} に高嶺のなでしこ ${title} が開催。${presentText}${absentText}`;
 };
 
 /**
