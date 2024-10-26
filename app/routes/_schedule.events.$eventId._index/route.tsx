@@ -25,17 +25,19 @@ import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../members/members";
 import { EventRecap } from "./EventRecap";
+import { makePageDescription } from "./makePageDescription";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const event = data == undefined ? undefined : loadEventModule(data.eventId);
   const title = event?.meta.title ?? event?.meta.summary ?? "スケジュール";
+  const description =
+    event == undefined
+      ? "高嶺のなでしこの非公式スケジュールです。"
+      : makePageDescription(event.meta);
 
   const result: MetaDescriptor[] = [
     { title: formatTitle(title) },
-    {
-      name: "description",
-      content: "高嶺のなでしこの非公式スケジュールです。",
-    },
+    { name: "description", content: description },
   ];
 
   if (event != undefined) {
