@@ -2,7 +2,7 @@ import { Link, MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
 import { useMemo } from "react";
 import { HiArrowsRightLeft, HiArrowTopRightOnSquare, HiCalendar } from "react-icons/hi2";
-import { SITE_TITLE } from "~/constants";
+import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { loadEventsInDay } from "~/features/events/events";
@@ -18,6 +18,14 @@ export const meta: MetaFunction = () => {
       name: "description",
       content:
         "高嶺のなでしこの非公式ファンサイト。トレード画像をつくるやつでは、これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。スケジュールでは、高嶺のなでしこのライブやイベント、テレビ出演などのスケジュールを確認することができます。",
+    },
+    {
+      "script:ld+json": {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: SITE_TITLE,
+        url: `https://${DOMAIN}/`,
+      },
     },
   ];
 };
