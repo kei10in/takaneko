@@ -19,6 +19,7 @@ export const MemberNameOrGroup = z.union([z.literal("高嶺のなでしこ"), Me
 export type MemberNameOrGroup = z.infer<typeof MemberNameOrGroup>;
 
 export interface MemberDescription {
+  id: MemberName;
   slug: string;
   number: number;
   name: string;
@@ -53,6 +54,7 @@ export interface MemberDescription {
 }
 
 export const NaoKizuki: MemberDescription = {
+  id: "城月菜央",
   slug: "nao-kizuki",
   number: 7,
   name: "城月 菜央",
@@ -87,6 +89,7 @@ export const NaoKizuki: MemberDescription = {
 } as const;
 
 export const SuSuzumi: MemberDescription = {
+  id: "涼海すう",
   slug: "su-suzumi",
   number: 8,
   name: "涼海 すう",
@@ -120,6 +123,7 @@ export const SuSuzumi: MemberDescription = {
 } as const;
 
 export const MomokoHashimoto: MemberDescription = {
+  id: "橋本桃呼",
   slug: "momoko-hashimoto",
   number: 6,
   name: "橋本 桃呼",
@@ -152,6 +156,7 @@ export const MomokoHashimoto: MemberDescription = {
 } as const;
 
 export const SaaraHazuki: MemberDescription = {
+  id: "葉月紗蘭",
   slug: "saara-hazuki",
   number: 9,
   name: "葉月 紗蘭",
@@ -184,6 +189,7 @@ export const SaaraHazuki: MemberDescription = {
 } as const;
 
 export const RiriHaruno: MemberDescription = {
+  id: "春野莉々",
   slug: "riri-haruno",
   number: 10,
   name: "春野 莉々",
@@ -216,6 +222,7 @@ export const RiriHaruno: MemberDescription = {
 } as const;
 
 export const ErisaHigashiyama: MemberDescription = {
+  id: "東山恵里沙",
   slug: "erisa-higashiyama",
   number: 1,
   name: "東山 恵里沙",
@@ -249,6 +256,7 @@ export const ErisaHigashiyama: MemberDescription = {
 } as const;
 
 export const HinaHinahata: MemberDescription = {
+  id: "日向端ひな",
   slug: "hina-hinahata",
   number: 3,
   name: "日向端 ひな",
@@ -282,6 +290,7 @@ export const HinaHinahata: MemberDescription = {
 } as const;
 
 export const MikuruHoshitani: MemberDescription = {
+  id: "星谷美来",
   slug: "mikuru-hoshitani",
   number: 5,
   name: "星谷 美来",
@@ -316,6 +325,7 @@ export const MikuruHoshitani: MemberDescription = {
 } as const;
 
 export const MomonaMatsumoto: MemberDescription = {
+  id: "松本ももな",
   slug: "momona-matsumoto",
   number: 2,
   name: "松本 ももな",
@@ -357,6 +367,7 @@ export const MomonaMatsumoto: MemberDescription = {
 } as const;
 
 export const HimeriMomiyama: MemberDescription = {
+  id: "籾山ひめり",
   slug: "himeri-momiyama",
   number: 4,
   name: "籾山 ひめり",
