@@ -61,7 +61,7 @@ export const makeMagazineDescription = (meta: EventMeta) => {
   const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
-  const presentText = ` ${present.map((m) => m.id).join("・")}`;
+  const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
 
   return `${date} に発売される ${title} に、高嶺のなでしこ${presentText}が掲載されています。`;
 };
@@ -73,9 +73,9 @@ export const makeTvDescription = (meta: EventMeta) => {
   const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
-  const presentText = present.map((m) => m.id).join("・");
+  const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
 
-  return `${date} に放送される ${title} に、高嶺のなでしこ ${presentText}が出演します。`;
+  return `${date} に放送される ${title} に、高嶺のなでしこ${presentText}が出演します。`;
 };
 
 /**
@@ -85,9 +85,9 @@ export const makerRadioDescription = (meta: EventMeta) => {
   const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
-  const presentText = present.map((m) => m.id).join("・");
+  const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
 
-  return `${date} に放送される ${title} に、高嶺のなでしこ ${presentText}が出演します。`;
+  return `${date} に放送される ${title} に、高嶺のなでしこ${presentText}が出演します。`;
 };
 
 /**
