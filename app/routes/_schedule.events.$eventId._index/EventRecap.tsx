@@ -30,7 +30,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
                 <p>
                   <strong>衣装: </strong>
                   {typeof costume == "string" || (Array.isArray(costume) && costume.length == 1)
-                    ? `${costume}衣装`
+                    ? `${costume}`
                     : null}
                 </p>
                 {Array.isArray(costume) && (
