@@ -6,18 +6,18 @@ import {
   useLoaderData,
 } from "@remix-run/react";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
-import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
+import {
+  descriptionForTradeImagesTool,
+  titleForTradeImagesTool,
+} from "~/routes/trade.$productId._index/metaData";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: `トレード画像つくるやつ - ${SITE_TITLE}` },
-    {
-      name: "description",
-      content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
-    },
-  ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const title = titleForTradeImagesTool(data);
+  const description = descriptionForTradeImagesTool(data);
+
+  return [{ title }, { name: "description", content: description }];
 };
 
 export const loader = ({ params }: LoaderFunctionArgs) => {

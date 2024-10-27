@@ -1,3 +1,5 @@
+import { ItemDescription } from "./product";
+
 export const REGULAR_PHOTO_SET = [
   { id: 1, name: "城月菜央", description: "ヨリ" },
   { id: 2, name: "城月菜央", description: "チュウ" },
@@ -63,3 +65,33 @@ export const REGULAR_MINI_PHOTO_SET = [
   { id: 29, name: "籾山ひめり", description: "" },
   { id: 30, name: "籾山ひめり", description: "" },
 ];
+
+const ALL_LINEUP_CHARACTERS = [
+  "城月菜央",
+  "涼海すう",
+  "橋本桃呼",
+  "葉月紗蘭",
+  "春野莉々",
+  "東山恵里沙",
+  "日向端ひな",
+  "星谷美来",
+  "松本ももな",
+  "籾山ひめり",
+  "てんにゃ",
+  "ルニャ・コーチ",
+  "すうにゃろう",
+  "はしもと もふ呼",
+  "らあら",
+  "ルノリスくん",
+  "にゃーさ",
+  "たま",
+  "ちゃーみー",
+  "ぽにゃん🎀",
+  "もみさん。",
+];
+
+export const flattenLineup = (lineup: ItemDescription[]): string[] => {
+  return ALL_LINEUP_CHARACTERS.filter((character) =>
+    lineup.some((item) => item.name === character),
+  );
+};
