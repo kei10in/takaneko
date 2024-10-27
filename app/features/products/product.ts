@@ -20,6 +20,11 @@ export interface OfficialGoods {
   images?: ImageDescription[];
 }
 
+/**
+ * ランダムグッズを表します。
+ *
+ * シリアライズ可能である必要があります。
+ */
 export interface RandomGoods {
   id: string;
   name: string;
