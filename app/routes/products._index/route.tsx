@@ -38,8 +38,6 @@ export default function Index() {
       <section className="px-4 py-8">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">グッズ</h1>
         <div className="rounded-lg border border-yellow-500 bg-yellow-50 p-4">
-          <p className="mb-2 font-bold">🚧工事中🚧</p>
-          <p>たかねこのグッズのページは現在作成中です。</p>
           <p>
             このページに記載のないものは「
             <Link className="text-nadeshiko-800" to="/memo">

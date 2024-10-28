@@ -47,11 +47,6 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <div className="mx-4 my-8 rounded-lg border border-yellow-500 bg-yellow-50 p-4">
-        <p className="mb-2 font-bold">🚧工事中🚧</p>
-        <p>たかねこのグッズのページは現在作成中です。</p>
-      </div>
-
       <div className="min-h-[calc(100svh-var(--header-height))]">
         {product.kind === "images" ? (
           <PhotoProduct product={product.description} />
