@@ -1,0 +1,36 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const 成長発表会_FC抽選会_メンバー個別デザインステッカー: RandomGoods = {
+  id: "2nd ファンミーティング〜成長発表会〜 FC抽選会 メンバー個別デザインステッカー",
+  name: "2nd ファンミーティング〜成長発表会〜 FC抽選会 メンバー個別デザインステッカー",
+  year: 2024,
+  series: "2nd ファンミーティング〜成長発表会〜 FC抽選会",
+  category: "ステッカー",
+  url: "/takaneko/others/2024-08-07_成長発表会_FC抽選会_メンバー個別デザインステッカー.png",
+  width: 1200,
+  height: 637,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 7, y: 4, width: 226, height: 303 },
+    { id: 2, x: 247, y: 4, width: 226, height: 303 },
+    { id: 3, x: 486, y: 4, width: 226, height: 303 },
+    { id: 4, x: 725, y: 4, width: 226, height: 303 },
+    { id: 5, x: 964, y: 4, width: 226, height: 303 },
+    { id: 6, x: 7, y: 323, width: 226, height: 303 },
+    { id: 7, x: 247, y: 325, width: 226, height: 303 },
+    { id: 8, x: 487, y: 325, width: 226, height: 303 },
+    { id: 9, x: 726, y: 327, width: 226, height: 303 },
+    { id: 10, x: 967, y: 327, width: 226, height: 303 },
+  ],
+};
