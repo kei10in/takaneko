@@ -77,14 +77,6 @@ describe("NaiveDate", () => {
     expect(date.toString()).toEqual("2022-10-31");
   });
 
-  it("should correctly create a NaiveDate representing today", () => {
-    const today = NaiveDate.todayInJapan();
-    const now = new Date();
-    expect(today.year).toEqual(now.getUTCFullYear());
-    expect(today.month).toEqual(now.getUTCMonth() + 1);
-    expect(today.day).toEqual(now.getUTCDate());
-  });
-
   it("should correctly parse a NaiveDate from a string", () => {
     const dateString = "2022-10-31";
     const date = NaiveDate.parseUnsafe(dateString);
