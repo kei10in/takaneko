@@ -1,4 +1,6 @@
+## 自動生成ファイル
 public/calendar*.ics
+public/sitemap.xml
 
 .vscode/
 

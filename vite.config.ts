@@ -20,9 +20,12 @@ export default defineConfig({
       },
       buildEnd(args) {
         const buildPath = args.viteConfig.build.outDir;
+
         buildCalendar("all", "calendar.ics", buildPath);
         buildCalendar("meets", "calendar-meets.ics", buildPath);
         buildCalendar("updates", "calendar-updates.ics", buildPath);
+
+        buildSitemap(buildPath);
       },
     }),
     tsconfigPaths(),
@@ -36,4 +39,14 @@ const buildCalendar = async (kind: string, filename: string, buildPath: string) 
 
   execFileSync(cmd, ["tsx", buildCalendarScript, kind, output]).toString();
   fs.copyFileSync(output, path.join(buildPath, filename));
+};
+
+const buildSitemap = async (buildPath: string) => {
+  const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
+  const buildSitemapScript = path.resolve(__dirname, "scripts", "build-sitemap.ts");
+  const output = path.resolve(__dirname, path.join("public", "sitemap.xml"));
+
+  const content = execFileSync(cmd, ["tsx", buildSitemapScript]).toString();
+  fs.writeFileSync(output, content);
+  fs.copyFileSync(output, path.join(buildPath, "sitemap.xml"));
 };

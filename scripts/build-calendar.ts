@@ -1,12 +1,10 @@
-import { glob } from "glob";
 import { createEvents, HeaderAttributes } from "ics";
 import * as fs from "node:fs";
 import { register } from "node:module";
-import { basename } from "node:path";
 import { EventType } from "~/features/events/EventType";
 import { convertEventMetaToEventAttributes } from "~/features/events/ical";
-import { EventMeta, validateEventMeta } from "~/features/events/meta";
-import { stem } from "~/utils/string";
+import { EventMeta } from "~/features/events/meta";
+import { loadAllEventMeta } from "./events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
@@ -60,25 +58,6 @@ const buildCalendar = async (
   const ics = createEvents(eventAttributesList, header);
 
   return ics.value;
-};
-
-const loadAllEventMeta = async (): Promise<[string, EventMeta][]> => {
-  const files = await listAllEventFiles();
-  const all = await Promise.all(
-    files.map(async (f) => [basename(stem(f)), await loadEventMeta(f)]),
-  );
-  return all.filter((x): x is [string, EventMeta] => x[1] != undefined);
-};
-
-const listAllEventFiles = async () => {
-  const scriptDir = import.meta.dirname;
-  const files = await glob(`${scriptDir}/../app/features/events/**/*.mdx`);
-  return files;
-};
-
-const loadEventMeta = async (file: string): Promise<EventMeta | undefined> => {
-  const module = await import(file);
-  return validateEventMeta(module.meta);
 };
 
 main();
