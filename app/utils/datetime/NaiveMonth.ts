@@ -3,8 +3,9 @@ export class NaiveMonth {
   readonly month: number;
 
   constructor(year: number, month: number) {
-    this.year = year;
-    this.month = month;
+    const date = new Date(Date.UTC(year, month - 1, 1));
+    this.year = date.getUTCFullYear();
+    this.month = date.getUTCMonth() + 1;
   }
 
   getTimeAsUTC = (): number => {
