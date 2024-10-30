@@ -27,6 +27,11 @@ export const meta: MetaFunction = () => {
         url: `https://${DOMAIN}/`,
       },
     },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: `https://${DOMAIN}`,
+    },
   ];
 };
 
