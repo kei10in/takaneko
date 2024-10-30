@@ -16,7 +16,10 @@ const template = Handlebars.compile(dedent`
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {{#each pages}}
     <url>
-      <loc>https://takanekofan.app{{this}}</loc>
+      <loc>{{loc}}</loc>
+      {{#if lastmod}}
+      <lastmod>{{lastmod}}</lastmod>
+      {{/if}}
     </url>
     {{/each}}
   </urlset>
@@ -27,6 +30,11 @@ const TODAY = NaiveDate.todayInJapan();
 const DATE_RANGE = [new NaiveDate(2022, 8, 1), new NaiveDate(TODAY.year, TODAY.month + 6, 1)];
 const MONTH_RANGE = [new NaiveMonth(2022, 8), new NaiveMonth(TODAY.year, TODAY.month + 6)];
 
+interface SitemapUrl {
+  loc: string;
+  lastmod?: string;
+}
+
 const main = async () => {
   const pages = [
     ...buildStaticPages(),
@@ -36,70 +44,70 @@ const main = async () => {
     ...(await buildEventPages()),
     ...buildTradeImagePages(),
     ...buildProductPages(),
-  ].map(encodeURI);
+  ].map((url) => ({ ...url, loc: encodeURI(`https://takanekofan.app${url.loc}`) }));
 
   const content = template({ pages });
   console.log(content);
 };
 
-const buildDailyPages = () => {
+const buildDailyPages = (): SitemapUrl[] => {
   const result = [];
   const [start, end] = DATE_RANGE;
   let current = start;
 
   while ([current.year, current.month, current.day] < [end.year, end.month, end.day]) {
-    result.push(dateHref(current));
+    result.push({ loc: dateHref(current) });
     current = current.nextDate();
   }
 
   return result;
 };
 
-const buildMonthlyPages = () => {
+const buildMonthlyPages = (): SitemapUrl[] => {
   const result = [];
   const [start, end] = MONTH_RANGE;
   let current = start;
 
   while ([current.year, current.month] < [end.year, end.month]) {
-    result.push(calendarMonthHref(current));
+    result.push({ loc: calendarMonthHref(current) });
     current = current.nextMonth();
   }
 
   return result;
 };
 
-const buildEventPages = async () => {
+const buildEventPages = async (): Promise<SitemapUrl[]> => {
   const events = await loadAllEventMeta();
-  return events.map(([id]) => `/events/${id}`);
+  return events.map(([id, event]) => ({ loc: `/events/${id}`, lastmod: event.updatedAt }));
 };
 
 const buildTradeImagePages = () => {
-  return TAKANEKO_PHOTOS.map((photo) => `/trade/${photo.id}`);
+  return TAKANEKO_PHOTOS.map((photo) => ({ loc: `/trade/${photo.id}` }));
 };
 
-const buildProductPages = () => {
+const buildProductPages = (): SitemapUrl[] => {
   return [
-    PHOTOS.map((x) => `/products/${x.id}`),
-    MINI_PHOTO_CARDS.map((x) => `/products/${x.id}`),
-    PUBLICATIONS.map((x) => `/products/${x.id}`),
-  ].flat();
+    ...PHOTOS.map((x) => ({ loc: `/products/${x.id}` })),
+    ...MINI_PHOTO_CARDS.map((x) => ({ loc: `/products/${x.id}` })),
+    ...PUBLICATIONS.map((x) => ({ loc: `/products/${x.id}` })),
+  ];
 };
 
-const buildMemberPages = () => {
-  return AllMembers.map((x) => `/members/${x.slug}`);
+const buildMemberPages = (): SitemapUrl[] => {
+  return AllMembers.map((x) => ({ loc: `/members/${x.slug}` }));
 };
 
 const buildStaticPages = () => {
   return [
-    "/",
-    "/trade",
-    "/calendar",
-    "/calendar/registration",
-    "/products",
-    "/members",
-    "/official/news",
-    "/releases",
-    "/terms",
+    { loc: "/" },
+    { loc: "/trade" },
+    { loc: "/calendar" },
+    { loc: "/calendar/registration" },
+    { loc: "/products" },
+    { loc: "/members" },
+    { loc: "/official/news" },
+    { loc: "/releases" },
+    { loc: "/terms" },
   ];
 };
 

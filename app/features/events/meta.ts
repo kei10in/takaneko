@@ -32,6 +32,7 @@ const EventMetaDescriptor = z.object({
   present: z.array(MemberNameOrGroup).optional(),
   absent: z.array(MemberName).optional(),
   recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
+  updatedAt: z.string().optional(),
 });
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
@@ -50,6 +51,7 @@ export interface EventMeta {
   present?: MemberNameOrGroup[] | undefined;
   absent?: MemberName[] | undefined;
   recaps?: EventRecap[] | undefined;
+  updatedAt?: string | undefined;
 
   descriptor: EventMetaDescriptor;
 }
