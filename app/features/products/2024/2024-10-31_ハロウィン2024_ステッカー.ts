@@ -4,7 +4,7 @@ export const ハロウィン2024_ステッカー: RandomGoods = {
   id: "ランダムステッカー「ハロウィン2024」ver",
   name: "ランダムステッカー「ハロウィン2024」ver.",
   year: 2024,
-  series: "ハロウィン2024",
+  series: "ハロウィン 2024",
   category: "ステッカー",
   url: "/takaneko/others/2024-10-31_ランダムステッカー「ハロウィン2024」ver.webp",
   width: 615,

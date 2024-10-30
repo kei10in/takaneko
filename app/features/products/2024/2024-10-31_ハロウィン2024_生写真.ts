@@ -5,7 +5,7 @@ export const ハロウィン2024_生写真: RandomGoods = {
   id: "生写真「ハロウィン2024」ver",
   name: "生写真「ハロウィン2024」ver.",
   year: 2024,
-  series: "ハロウィン2024",
+  series: "ハロウィン 2024",
   category: "生写真",
   url: "/takaneko/photos/2024-10-31_ハロウィン2024.webp",
   width: 1118,

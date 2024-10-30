@@ -5,7 +5,7 @@ export const ハロウィン2024_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「ハロウィン2024」ver",
   name: "ミニフォトカード「ハロウィン2024」ver.",
   year: 2024,
-  series: "ライブ女子",
+  series: "ハロウィン 2024",
   category: "ミニフォト",
   url: "/takaneko/mini-photo-cards/2024-10-31_ハロウィン2024.webp",
   width: 1118,
