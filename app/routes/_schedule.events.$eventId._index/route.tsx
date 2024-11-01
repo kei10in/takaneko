@@ -84,7 +84,7 @@ export default function EventPage() {
   return (
     <div className="container mx-auto lg:max-w-4xl">
       <div>
-        {meta.image && (
+        {meta.image && meta.image.path != "" && (
           <Link to="#photo" replace={true}>
             <div
               className="relative h-64 bg-cover bg-center lg:h-[30rem]"

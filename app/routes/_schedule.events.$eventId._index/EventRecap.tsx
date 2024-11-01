@@ -6,7 +6,14 @@ interface Props {
 }
 
 export const EventRecap: React.FC<Props> = (props: Props) => {
-  const { recaps } = props;
+  const recaps =
+    props.recaps?.filter((recap) => {
+      return (
+        (recap.costume != undefined && recap.costume != "") ||
+        (recap.setlist != undefined && recap.setlist.length != 0) ||
+        (recap.url != undefined && recap.url != "")
+      );
+    }) ?? [];
 
   if (recaps == undefined || recaps.length == 0) {
     return null;
@@ -25,7 +32,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
           <div key={i}>
             {title != undefined ? <h3>{title}</h3> : null}
 
-            {costume != undefined && (
+            {costume != undefined && costume != "" && (
               <div>
                 <p>
                   <strong>衣装: </strong>
@@ -43,7 +50,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
               </div>
             )}
 
-            {setlist != undefined && (
+            {setlist != undefined && setlist.length != 0 && (
               <div>
                 <p>
                   <strong>セトリ:</strong>
@@ -56,7 +63,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
               </div>
             )}
 
-            {url != undefined && (
+            {url != undefined && url != "" && (
               <p>
                 <a href={url} target="_blank" rel="noopener noreferrer">
                   #たかねこセトリ
