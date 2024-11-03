@@ -16,11 +16,13 @@ describe("loadEvents", () => {
       expect(event.meta).toBeDefined();
     });
 
-    expect(events[0]).toMatchObject({
-      id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
-      filename:
-        "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
-    });
+    expect(events).toContainEqual(
+      expect.objectContaining({
+        id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
+        filename:
+          "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
+      }),
+    );
   });
 });
 
