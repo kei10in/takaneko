@@ -43,7 +43,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
                 {Array.isArray(costume) && (
                   <ul>
                     {costume.map((c, i) => (
-                      <li key={i}>{c}衣装</li>
+                      <li key={i}>{c}</li>
                     ))}
                   </ul>
                 )}
