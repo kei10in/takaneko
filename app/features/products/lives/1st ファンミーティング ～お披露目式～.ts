@@ -2,8 +2,8 @@ import { ハロウィン_生写真 } from "../2022/2022-10_ハロウィン_生�
 import { LiveGoodsCollection } from "../product";
 
 export const _1st_ファンミーティング_お披露目式: LiveGoodsCollection = {
-  id: "1st ファンミーティング ～お披露目式～",
-  name: "1st ファンミーティング ～お披露目式～",
+  id: "1st ファンミーティング 〜お披露目式〜",
+  name: "1st ファンミーティング 〜お披露目式〜",
   images: [
     {
       path: "/takaneko/live-goods/2022-10-31_1st ファンミーティング 〜お披露目式〜_グッズメニュー.jpg",

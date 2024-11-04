@@ -100,3 +100,5 @@ const isAbsoluteURL = (url: string): boolean => {
     return false;
   }
 };
+
+export const a = "〜 〜";
