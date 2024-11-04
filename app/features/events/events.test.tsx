@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { loadEventModule, loadEvents, loadEventsInDay } from "./events";
+import { allAssetFiles } from "~/utils/tests/asset";
+import { extractURLsFromComponent } from "~/utils/tests/react";
+import { ALL_EVENTS, loadEventModule, loadEvents, loadEventsInDay } from "./events";
 
 describe("loadEvents", () => {
   it("should load events for the given month", () => {
@@ -64,3 +66,37 @@ describe("loadEventModule", () => {
     });
   });
 });
+
+describe("event module", () => {
+  const AllAssets = allAssetFiles();
+
+  describe.each(Object.entries(ALL_EVENTS))("Event: %s", (filename, event) => {
+    it("should contains valid image reference in meta", () => {
+      const path = event.meta.image?.path;
+      if (path == undefined || path == "") {
+        return;
+      }
+      expect(AllAssets).toContain(path);
+    });
+
+    it("should contains valid image reference in content", () => {
+      const Content = event.Content;
+      const urls = extractURLsFromComponent(<Content />)
+        .filter((url) => !isAbsoluteURL(url))
+        .map((url) => decodeURIComponent(url));
+
+      urls.forEach((url) => {
+        expect(AllAssets).toContain(url);
+      });
+    });
+  });
+});
+
+const isAbsoluteURL = (url: string): boolean => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};

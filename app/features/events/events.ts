@@ -15,7 +15,7 @@ export interface EventContent {
   Content: () => JSX.Element;
 }
 
-const ALL_EVENTS = Object.fromEntries(
+export const ALL_EVENTS = Object.fromEntries(
   importEventFiles().flatMap(({ filename, module }) => {
     const m = module as Record<string, unknown>;
     const meta = validateEventMeta(m.meta);
