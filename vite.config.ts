@@ -12,24 +12,28 @@ export default defineConfig({
     mdx({
       remarkPlugins: [gfm],
     }),
-    remix({
-      future: {
-        v3_fetcherPersist: true,
-        v3_relativeSplatPath: true,
-        v3_throwAbortReason: true,
-      },
-      buildEnd(args) {
-        const buildPath = args.viteConfig.build.outDir;
+    !process.env.VITEST &&
+      remix({
+        future: {
+          v3_fetcherPersist: true,
+          v3_relativeSplatPath: true,
+          v3_throwAbortReason: true,
+        },
+        buildEnd(args) {
+          const buildPath = args.viteConfig.build.outDir;
 
-        buildCalendar("all", "calendar.ics", buildPath);
-        buildCalendar("meets", "calendar-meets.ics", buildPath);
-        buildCalendar("updates", "calendar-updates.ics", buildPath);
+          buildCalendar("all", "calendar.ics", buildPath);
+          buildCalendar("meets", "calendar-meets.ics", buildPath);
+          buildCalendar("updates", "calendar-updates.ics", buildPath);
 
-        buildSitemap(buildPath);
-      },
-    }),
+          buildSitemap(buildPath);
+        },
+      }),
     tsconfigPaths(),
   ],
+  test: {
+    environment: "happy-dom",
+  },
 });
 
 const buildCalendar = async (kind: string, filename: string, buildPath: string) => {
