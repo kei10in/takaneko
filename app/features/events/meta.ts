@@ -22,7 +22,7 @@ const EventMetaDescriptor = z.object({
   // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
   description: z.string().optional(),
 
-  status: z.literal("CANCELED").optional(),
+  status: z.union([z.literal("PENDING"), z.literal("CANCELED")]).optional(),
   category: EventTypeEnum,
   date: z.string(),
   region: z.string().optional(),
@@ -41,7 +41,7 @@ export interface EventMeta {
   summary: string;
   title?: string | undefined;
   description?: string | undefined;
-  status?: "CANCELED" | undefined;
+  status?: "PENDING" | "CANCELED" | undefined;
   category: EventType;
   date: NaiveDate;
   region?: string | undefined;
@@ -60,13 +60,20 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
 
   if (r.success) {
-    const summary = r.data.status == "CANCELED" ? `【中止】${r.data.summary}` : r.data.summary;
+    const summary =
+      r.data.status == "CANCELED"
+        ? `【中止】${r.data.summary}`
+        : r.data.status == "PENDING"
+          ? `【延期】${r.data.summary}`
+          : r.data.summary;
     const title =
       r.data.title == undefined
         ? summary
         : r.data.status == "CANCELED"
           ? `【中止】${r.data.title}`
-          : r.data.title;
+          : r.data.status == "PENDING"
+            ? `【延期】${r.data.title}`
+            : r.data.title;
     const recaps = Array.isArray(r.data.recaps)
       ? r.data.recaps
       : r.data.recaps != undefined
@@ -92,7 +99,13 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
   }
 
   if (a.status != b.status) {
-    return a.status === "CANCELED" ? 1 : -1;
+    if (a.status == "PENDING") {
+      return 1;
+    } else if (b.status == "PENDING") {
+      return -1;
+    } else {
+      return a.status === "CANCELED" ? 1 : -1;
+    }
   }
 
   return compareEventType(a.category, b.category);
