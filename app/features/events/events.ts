@@ -1,6 +1,7 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { stem } from "~/utils/string";
+import { importEventFiles } from "./eventFiles";
 import { compareEventMeta, EventMeta, validateEventMeta } from "./meta";
 
 export interface EventModule {
@@ -15,7 +16,7 @@ export interface EventContent {
 }
 
 const ALL_EVENTS = Object.fromEntries(
-  Object.entries(import.meta.glob("./**/*.mdx", { eager: true })).flatMap(([filename, module]) => {
+  importEventFiles().flatMap(({ filename, module }) => {
     const m = module as Record<string, unknown>;
     const meta = validateEventMeta(m.meta);
     if (meta == undefined) {
