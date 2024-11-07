@@ -41,7 +41,7 @@ export default function Index() {
 
   const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
-  const recentProducts = TAKANEKO_PHOTOS.slice(-6).toReversed();
+  const recentProducts = TAKANEKO_PHOTOS.slice(-12).toReversed();
 
   return (
     <div>
