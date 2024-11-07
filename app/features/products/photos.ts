@@ -48,6 +48,8 @@ import { 白ワンピース_ミニフォト } from "./2024/2024-08_白ワンピ�
 import { 白ワンピース_生写真 } from "./2024/2024-08_白ワンピース_生写真";
 import { 瞬きさえ忘れる_ミニフォト } from "./2024/2024-09-15_瞬きさえ忘れる_ミニフォト";
 import { 瞬きさえ忘れる_生写真 } from "./2024/2024-09-15_瞬きさえ忘れる_生写真";
+import { 高嶺のなでしこ2024衣装_ミニフォト } from "./2024/2024-09-15_高嶺のなでしこ2024衣装_ミニフォト";
+import { 高嶺のなでしこ2024衣装_生写真 } from "./2024/2024-09-15_高嶺のなでしこ2024衣装_生写真";
 import { ライブ女子_ミニフォト } from "./2024/2024-10-25_ライブ女子_ミニフォト";
 import { RandomGoods } from "./product";
 
@@ -85,6 +87,7 @@ export const PHOTOS: RandomGoods[] = [
   浴衣2024_生写真,
   白ワンピース_生写真,
   瞬きさえ忘れる_生写真,
+  高嶺のなでしこ2024衣装_生写真,
 ];
 
 export const MINI_PHOTO_CARDS: RandomGoods[] = [
@@ -105,6 +108,7 @@ export const MINI_PHOTO_CARDS: RandomGoods[] = [
   白ワンピース_ミニフォト,
   瞬きさえ忘れる_ミニフォト,
   ライブ女子_ミニフォト,
+  高嶺のなでしこ2024衣装_ミニフォト,
 ];
 
 export const OTHER_PHOTOS: RandomGoods[] = [ハニフェス_生写真];
