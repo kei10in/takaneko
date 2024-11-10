@@ -18,7 +18,7 @@ import {
 } from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
-import { PARSED_UA } from "~/utils/ua";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { shareTradeImage } from "./shareTradeImage";
@@ -77,13 +77,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
     }
   };
 
-  const showShareButton =
-    typeof window === "undefined"
-      ? false
-      : window?.navigator?.share != undefined &&
-        (PARSED_UA.os.name == "iOS" ||
-          PARSED_UA.os.name == "Android" ||
-          ["mobile", "tablet"].includes(PARSED_UA.device.type ?? ""));
+  const showShareButton = shouldUseWebShareApi();
 
   return (
     <div className="w-full">
