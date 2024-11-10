@@ -115,7 +115,7 @@ export default function Index() {
         <p>ツールを選んで、アイテムをタップします。</p>
         <ul className="my-4 list-disc space-y-1 pl-6 marker:text-gray-300">
           {tools.map((tool, i) => (
-            <li key={i} className="flex items-center gap-2">
+            <li key={i} className="items-top flex gap-2">
               {tool.component()}
               <span> - </span>
               <span>{tool.description()}</span>
