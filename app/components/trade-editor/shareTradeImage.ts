@@ -16,6 +16,8 @@ export const shareTradeImage = async (
   const file = await canvasToFile(canvas, "trade.webp", "image/webp", 0.95);
 
   await window.navigator.share({
+    title: productImage.name,
+    text: `${productImage.name} のトレード画像`,
     files: [file],
   });
 };
