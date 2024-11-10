@@ -1,7 +1,15 @@
 import { Link, MetaFunction } from "@remix-run/react";
-import { BsBan, BsEraserFill, BsImage, BsPencilSquare, BsTrash } from "react-icons/bs";
+import {
+  BsBan,
+  BsBoxArrowUp,
+  BsEraserFill,
+  BsImage,
+  BsPencilSquare,
+  BsTrash,
+} from "react-icons/bs";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { ProductItem } from "../trade/ProductItem";
 
 export const meta: MetaFunction = () => {
@@ -13,6 +21,8 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
+
+const showShareButton = shouldUseWebShareApi();
 
 const tools = [
   {
@@ -43,14 +53,23 @@ const tools = [
     ),
     description: () => "選択したアイテムの詳細を開きます。",
   },
-  {
-    component: () => (
-      <span className="flex h-6 w-6 items-center justify-center">
-        <BsImage className="inline-block h-5 w-5 text-gray-600" />
-      </span>
-    ),
-    description: () => "作成した画像を表示します。",
-  },
+  showShareButton
+    ? {
+        component: () => (
+          <span className="flex h-6 w-6 items-center justify-center">
+            <BsBoxArrowUp className="inline-block h-5 w-5 text-gray-600" />
+          </span>
+        ),
+        description: () => "作成した画像を共有するメニューを表示します。",
+      }
+    : {
+        component: () => (
+          <span className="flex h-6 w-6 items-center justify-center">
+            <BsImage className="inline-block h-5 w-5 text-gray-600" />
+          </span>
+        ),
+        description: () => "作成した画像を表示します。",
+      },
   {
     component: () => (
       <span className="flex h-6 w-6 items-center justify-center">
