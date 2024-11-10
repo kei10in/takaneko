@@ -9,11 +9,19 @@ import {
 } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { BsEraserFill, BsImageFill, BsPencilSquare, BsTrashFill } from "react-icons/bs";
+import {
+  BsBoxArrowUp,
+  BsEraserFill,
+  BsImageFill,
+  BsPencilSquare,
+  BsTrashFill,
+} from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
 import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
+import { shareTradeImage } from "./shareTradeImage";
 import { TradeEditorDetail } from "./TradeEditorDetail";
 import { TradeImagePreview } from "./TradeImagePreview";
 
@@ -68,6 +76,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       setIndex(i);
     }
   };
+
+  const showShareButton = shouldUseWebShareApi();
 
   return (
     <div className="w-full">
@@ -186,11 +196,24 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
             </div>
 
             <div className="flex items-center justify-center gap-0.5">
-              <button className={toolButton()} onClick={() => setPreview(true)}>
-                <div className="flex items-center justify-center">
-                  <BsImageFill className="h-6 w-6 text-gray-600" />
-                </div>
-              </button>
+              {!showShareButton && (
+                <button className={toolButton()} onClick={async () => setPreview(true)}>
+                  <div className="flex items-center justify-center">
+                    <BsImageFill className="h-6 w-6 text-gray-600" />
+                  </div>
+                </button>
+              )}
+
+              {showShareButton && (
+                <button
+                  className={toolButton()}
+                  onClick={() => shareTradeImage(productImage, tradeDescriptions)}
+                >
+                  <div className="flex items-center justify-center">
+                    <BsBoxArrowUp className="h-6 w-6 text-gray-600" />
+                  </div>
+                </button>
+              )}
 
               <button className={toolButton()} onClick={() => setShowConfirmClear(true)}>
                 <div className="flex items-center justify-center">

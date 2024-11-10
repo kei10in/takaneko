@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { BsBoxArrowUp } from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
 import { TradeDescription } from "~/features/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { ImageLoader } from "../ImageLoader";
 import { drawTradeImage } from "./drawTradeImage";
+import { shareTradeImage } from "./shareTradeImage";
 
 interface Props {
   productImage: RandomGoods;
@@ -15,23 +17,20 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
   const [dataUrl, setDataUrl] = useState<string | undefined>(undefined);
 
-  const imageWidth = 1280;
-  const imageHeight = (imageWidth / productImage.width) * productImage.height;
   const previewWidth = 320;
-  const previewHeight = imageHeight * (previewWidth / imageWidth);
+  const previewHeight = productImage.height * (previewWidth / productImage.width);
 
   useEffect(() => {
     const canvas = document.createElement("canvas");
-    canvas.width = imageWidth;
-    canvas.height = imageHeight;
 
     drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
-      const dataUrl = canvas.toDataURL();
+      // Safari では WebP がサポートされていないため、PNG に変換されます。
+      const dataUrl = canvas.toDataURL("image/webp", 0.95);
       setDataUrl(dataUrl);
     });
 
     return;
-  }, [imageHeight, productImage, tradeDescriptions]);
+  }, [productImage, tradeDescriptions]);
 
   const descForIOS = '画像を長押しして「"写真" に保存」を選択します。';
   const descForAndroid = "画像を長押しして「画像を保存」を選択します。";
@@ -59,6 +58,20 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
           />
         )}
       </figure>
+
+      {window?.navigator?.share != undefined && (
+        <div className="mx-auto" style={{ width: previewWidth }}>
+          <button
+            className="group ml-auto block h-10 w-10 rounded-xl p-1 transition-colors"
+            onClick={() => shareTradeImage(productImage, tradeDescriptions)}
+          >
+            <div className="flex items-center justify-center">
+              <BsBoxArrowUp className="h-6 w-6 text-gray-600" />
+            </div>
+          </button>
+        </div>
+      )}
+
       <p className="mt-2 text-center text-sm text-gray-500">{desc}</p>
     </div>
   );

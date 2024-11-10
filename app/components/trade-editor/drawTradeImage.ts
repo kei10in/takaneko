@@ -13,6 +13,13 @@ export const drawTradeImage = async (
     return;
   }
 
+  // 今のところは一種類しかないので固定値
+  const imageWidth = 1280;
+  const imageHeight = (imageWidth / productImage.width) * productImage.height;
+
+  canvas.width = imageWidth;
+  canvas.height = imageHeight;
+
   // Fit the image to the canvas
   const scale = canvas.width / productImage.width;
   ctx.scale(scale, scale);
