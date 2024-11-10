@@ -13,6 +13,8 @@ export const shareTradeImage = async (
 
   const canvas = document.createElement("canvas");
   await drawTradeImage(canvas, productImage, tradeDescriptions);
+
+  // Safari では WebP がサポートされていないため、PNG に変換されます。
   const file = await canvasToFile(canvas, "trade.webp", "image/webp", 0.95);
 
   await window.navigator.share({
