@@ -60,7 +60,7 @@ const tools = [
             <BsBoxArrowUp className="inline-block h-5 w-5 text-gray-600" />
           </span>
         ),
-        description: () => "作成した画像を共有するメニューを表示します。",
+        description: () => "作成した画像の共有メニューを開きます。",
       }
     : {
         component: () => (
