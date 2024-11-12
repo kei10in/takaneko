@@ -17,7 +17,13 @@ import {
   BsTrashFill,
 } from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
-import { Stamp, TradeDescription, TradeStatus } from "~/features/TradeStatus";
+import {
+  Stamp,
+  totalHaveCount,
+  totalWant,
+  TradeDescription,
+  TradeStatus,
+} from "~/features/TradeStatus";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
@@ -119,7 +125,24 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 );
               })}
             </div>
-            <p className="text-right">©INCS・TP</p>
+
+            <p className="px-1 text-right">©INCS・TP</p>
+
+            <div className="mt-4 px-1 py-2">
+              <p className="text-2xl text-gray-800">{productImage.series}</p>
+              <p className="text-lg text-gray-400">{productImage.category}</p>
+
+              <div className="mt-2">
+                <p className="flex items-center gap-1">
+                  <img src="/譲.svg" alt="譲" className="inline w-6" />
+                  <span>{totalHaveCount(tradeDescriptions)}</span>
+                </p>
+                <p className="flex items-center gap-1">
+                  <img src="/求.svg" alt="求" className="inline w-6" />
+                  <span>{totalWant(tradeDescriptions)}</span>
+                </p>
+              </div>
+            </div>
           </div>
         ) : null}
       </div>

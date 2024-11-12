@@ -32,6 +32,16 @@ export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => 
   return undefined;
 };
 
+export const totalWant = (tradeDescriptions: Record<number, TradeDescription>): number => {
+  return Object.values(tradeDescriptions).filter((td) => td.status.tag === "want").length;
+};
+
+export const totalHaveCount = (tradeDescriptions: Record<number, TradeDescription>): number => {
+  return Object.values(tradeDescriptions)
+    .map((td) => (td.status.tag === "have" ? (td.status.count ?? 0) : 0))
+    .reduce((a, b) => a + b, 0);
+};
+
 export const Stamp = {
   clear: (_status: TradeStatus | undefined): TradeStatus => ({ tag: "none" }),
 
