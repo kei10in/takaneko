@@ -6,6 +6,7 @@ import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOT
 import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
 import { EX大衆_2022年10月号 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
+import { IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
 import {
   LARME_054,
   LARME_056,
@@ -56,6 +57,7 @@ const publications: Publication[] = [
   COSPLAY_MODE_2024年9月号,
   EX大衆_2022年10月号,
   FINEBOYS_2024年7月号,
+  IDOL_AND_READ_高田メタルSpecial,
   LARME_054,
   LARME_056,
   LARME_058,
