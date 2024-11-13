@@ -74,7 +74,7 @@ export interface Publication {
     },
   ];
   featuredMembers: MemberName[];
-  officialTwitter?: string;
+  officialTwitter?: string | string[];
   links?: LinkDescription[];
 }
 

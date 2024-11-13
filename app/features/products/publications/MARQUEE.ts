@@ -1,5 +1,30 @@
 import { Publication } from "../product";
 
+export const MARQUEE_Vol156: Publication = {
+  id: "MARQUEE Vol.156",
+  name: "MARQUEE Vol.156",
+  date: "2024-11-23",
+  kind: "magazines",
+  publisher: "星雲社",
+  listPrice: 1375,
+  code: [{ kind: "isbn", value: "978-4-434-34720-7" }],
+  url: "http://www.marquee-mag.com/backnumber.html",
+  coverImages: [
+    {
+      path: "/publications/marquee/vol156a.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol156b.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+  ],
+  featuredMembers: ["涼海すう", "日向端ひな", "星谷美来", "松本ももな"],
+  officialTwitter: [
+    "https://x.com/takanenofficial/status/1855890718096806391",
+    "https://x.com/takanenofficial/status/1855890751894471105",
+  ],
+};
 export const MARQUEE_Vol155: Publication = {
   id: "MARQUEE Vol.155",
   name: "MARQUEE Vol.155",
