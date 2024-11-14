@@ -4,7 +4,7 @@ import { BLT_2023年2月号, BLT_2024年9月号 } from "./publications/B.L.T";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
 import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO";
 import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
-import { EX大衆_2022年10月号 } from "./publications/EX大衆";
+import { EX大衆_2022年10月号, EX大衆_2024年12月号 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
 import { IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
 import {
@@ -56,6 +56,7 @@ const publications: Publication[] = [
   COMMERCIAL_PHOTO_2023年10月号,
   COSPLAY_MODE_2024年9月号,
   EX大衆_2022年10月号,
+  EX大衆_2024年12月号,
   FINEBOYS_2024年7月号,
   IDOL_AND_READ_高田メタルSpecial,
   LARME_054,
