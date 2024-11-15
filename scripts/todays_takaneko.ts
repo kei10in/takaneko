@@ -10,7 +10,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 register("@mdx-js/node-loader", import.meta.url);
 
 const template = Handlebars.compile(dedent`
-  {{date}}のたかねこの予定
+  {{date}}の #たかねこの予定
 
   {{#each items}}
   {{this}}
