@@ -16,7 +16,7 @@ export const EX大衆_2024年12月号: Publication = {
     },
   ],
   featuredMembers: ["松本ももな"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1857287425195974974",
   links: [{ text: "EX大衆 X 告知", url: "https://x.com/EXtaishu/status/1856991240849699129" }],
 };
 
