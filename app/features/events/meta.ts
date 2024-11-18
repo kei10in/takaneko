@@ -1,7 +1,9 @@
 import { z } from "zod";
 import { MemberName, MemberNameOrGroup } from "~/routes/members/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { compareEventType, EventType, EventTypeEnum } from "./EventType";
+import { ImageDescription } from "~/utils/types/ImageDescription";
+import { LinkDescription } from "~/utils/types/LinkDescription";
+import { compareEventType, EventTypeEnum } from "./EventType";
 
 const EventRecap = z.object({
   title: z.string().optional(),
@@ -25,36 +27,40 @@ const EventMetaDescriptor = z.object({
   status: z.union([z.literal("PENDING"), z.literal("CANCELED")]).optional(),
   category: EventTypeEnum,
   date: z.string(),
+  open: z.string().optional(),
+  start: z.string().optional(),
+  end: z.string().optional(),
   region: z.string().optional(),
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
-  image: z.object({ path: z.string(), ref: z.string() }).optional(),
+  image: ImageDescription.optional(),
   present: z.array(MemberNameOrGroup).optional(),
   absent: z.array(MemberName).optional(),
+
+  // チケット販売サイトの URL を指定します。
+  ticket: z.string().optional(),
+
+  timeSlot: z.tuple([z.string(), z.string()]).optional(),
+  timetable: ImageDescription.optional(),
+  goods: z
+    .object({
+      time: z.tuple([z.string(), z.string()]),
+      lineup: z.string(),
+      url: z.string(),
+    })
+    .optional(),
+  streaming: LinkDescription.optional(),
   recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
   updatedAt: z.string().optional(),
 });
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
-export interface EventMeta {
-  summary: string;
-  title?: string | undefined;
-  description?: string | undefined;
-  status?: "PENDING" | "CANCELED" | undefined;
-  category: EventType;
+export type EventMeta = Omit<EventMetaDescriptor, "date" | "recaps"> & {
   date: NaiveDate;
-  region?: string | undefined;
-  location?: string | undefined;
-  link?: { text: string; url: string } | undefined;
-  image?: { path: string; ref: string } | undefined;
-  present?: MemberNameOrGroup[] | undefined;
-  absent?: MemberName[] | undefined;
-  recaps?: EventRecap[] | undefined;
-  updatedAt?: string | undefined;
-
+  recaps: EventRecap[];
   descriptor: EventMetaDescriptor;
-}
+};
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
@@ -78,7 +84,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       ? r.data.recaps
       : r.data.recaps != undefined
         ? [r.data.recaps]
-        : undefined;
+        : [];
     return {
       ...r.data,
       summary,
