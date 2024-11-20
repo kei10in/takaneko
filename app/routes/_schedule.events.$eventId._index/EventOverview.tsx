@@ -55,9 +55,9 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
             <p>
               <strong>タイムテーブル:</strong>
               <br />
-              <Link to={timetable.path}>
+              <a href={timetable.path}>
                 <img src={timetable.path} alt="タイムテーブル" />
-              </Link>
+              </a>
               <br />
               <Link to={timetable.ref}>{timetable.ref}</Link>
             </p>
