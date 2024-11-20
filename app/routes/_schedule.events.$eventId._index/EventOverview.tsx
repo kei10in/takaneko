@@ -9,7 +9,7 @@ interface Props {
   goods?: { time: [string, string]; lineup: string; url: string } | undefined;
 }
 
-export const EventOverview: React.FC<Props> = (props: Props) => {
+export const EventDetails: React.FC<Props> = (props: Props) => {
   const { ticket, timeSlot, timetable, streaming, goods } = props;
   if (
     ticket == undefined &&

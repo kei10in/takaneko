@@ -5,6 +5,24 @@ import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { compareEventType, EventTypeEnum } from "./EventType";
 
+const EventOverview = z.object({
+  // チケット販売サイトの URL を指定します。
+  ticket: z.string().optional(),
+
+  timeSlot: z.tuple([z.string(), z.string()]).optional(),
+  timetable: ImageDescription.optional(),
+  goods: z
+    .object({
+      time: z.tuple([z.string(), z.string()]),
+      lineup: z.string(),
+      url: z.string(),
+    })
+    .optional(),
+  streaming: LinkDescription.optional(),
+});
+
+export type EventOverview = z.infer<typeof EventOverview>;
+
 const EventRecap = z.object({
   title: z.string().optional(),
   costume: z.union([z.string(), z.array(z.string())]).optional(),
@@ -37,19 +55,7 @@ const EventMetaDescriptor = z.object({
   present: z.array(MemberNameOrGroup).optional(),
   absent: z.array(MemberName).optional(),
 
-  // チケット販売サイトの URL を指定します。
-  ticket: z.string().optional(),
-
-  timeSlot: z.tuple([z.string(), z.string()]).optional(),
-  timetable: ImageDescription.optional(),
-  goods: z
-    .object({
-      time: z.tuple([z.string(), z.string()]),
-      lineup: z.string(),
-      url: z.string(),
-    })
-    .optional(),
-  streaming: LinkDescription.optional(),
+  overview: EventOverview.optional(),
   recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
   updatedAt: z.string().optional(),
 });
