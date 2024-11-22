@@ -47,6 +47,7 @@ import { 日経エンタテインメント_2024年2月号 } from "./publications
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
 import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA";
 import { 橋本桃呼_MOMOKO_ISM } from "./publications/橋本桃呼_MOMOKO_ISM";
+import { 週刊少年チャンピオン_2024年No51 } from "./publications/週刊少年チャンピオン";
 
 const publications: Publication[] = [
   _20SWEET_2023_JANUARY,
@@ -91,6 +92,7 @@ const publications: Publication[] = [
   VDCMagazine030,
   WHITE_graph_011,
   Zipper_2024年秋号,
+  週刊少年チャンピオン_2024年No51,
   日経エンタテインメント_2024年2月号,
   月刊ENTAME_2023年3_4月合併号,
   月刊ENTAME_2024年8月号,
