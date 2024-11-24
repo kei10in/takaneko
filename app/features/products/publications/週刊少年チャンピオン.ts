@@ -16,7 +16,7 @@ export const 週刊少年チャンピオン_2024年No51: Publication = {
     },
   ],
   featuredMembers: ["橋本桃呼", "葉月紗蘭", "星谷美来"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1860246923002925221",
   links: [
     {
       text: "週刊少年チャンピオン編集部 X 告知",
