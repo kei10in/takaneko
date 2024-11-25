@@ -110,6 +110,7 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
     return d;
   }
 
+  // キャンセルされてるのは時間を無視して後ろに。
   if (a.status != b.status) {
     if (a.status == "PENDING") {
       return 1;
@@ -118,6 +119,11 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
     } else {
       return a.status === "CANCELED" ? 1 : -1;
     }
+  }
+
+  const t = (a.start ?? "00:00").localeCompare(b.start ?? "00:00");
+  if (t != 0) {
+    return t;
   }
 
   return compareEventType(a.category, b.category);
