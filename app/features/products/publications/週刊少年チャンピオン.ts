@@ -11,7 +11,7 @@ export const 週刊少年チャンピオン_2024年No51: Publication = {
   url: "https://www.akitashoten.co.jp/w-champion",
   coverImages: [
     {
-      path: "/publications/2024/週刊少年チャンピオン2024年No.51.jpg",
+      path: "/publications/2024/2024-11-21_週刊少年チャンピオン2024年No.51.jpg",
       ref: "https://x.com/Weekly_Champion/status/1859144650126217559",
     },
   ],
