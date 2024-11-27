@@ -31,6 +31,7 @@ import { mini_2022年10月号, mini_2023年2月号 } from "./publications/mini";
 import { Myojo_2024年9月号 } from "./publications/Myojo";
 import { nicola_2024年5月号 } from "./publications/nicola";
 import { nonno_2024年10月号 } from "./publications/non-no";
+import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN";
 import { OutOfMusic_86 } from "./publications/Out of Music";
 import { Ray_2024年11月号 } from "./publications/Ray";
 import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations";
@@ -81,6 +82,7 @@ const publications: Publication[] = [
   Myojo_2024年9月号,
   nicola_2024年5月号,
   nonno_2024年10月号,
+  NYLON_JAPAN_2025年01月号,
   OutOfMusic_86,
   Ray_2024年11月号,
   SmartGirlsNextGenerations,
