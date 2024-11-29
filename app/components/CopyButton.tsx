@@ -16,10 +16,13 @@ export const CopyButton: React.FC<Props> = (props: Props) => {
     <button
       className={clsx(
         className,
-        "group flex h-9 w-9 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100",
+        "group flex h-8 w-8 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100",
       )}
       onClick={async () => {
-        await navigator.clipboard.writeText(data);
+        if (navigator?.clipboard?.writeText != undefined) {
+          await navigator.clipboard.writeText(data);
+        }
+
         setState("copied");
         setTimeout(() => {
           setState("ready");
@@ -27,10 +30,10 @@ export const CopyButton: React.FC<Props> = (props: Props) => {
       }}
       disabled={state == "copied"}
     >
-      <BsCopy data-state={state} className="h-5 w-5 text-gray-600 data-[state=copied]:hidden" />
+      <BsCopy data-state={state} className="h-4 w-4 text-gray-600 data-[state=copied]:hidden" />
       <BsCheck2
         data-state={state}
-        className="hidden h-5 w-5 text-nadeshiko-800 data-[state=copied]:block"
+        className="hidden h-4 w-4 text-nadeshiko-800 data-[state=copied]:block"
       />
     </button>
   );
