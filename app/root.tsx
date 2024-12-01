@@ -66,7 +66,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                             </Link>
                           </li>
                           <li>
-                            <Link className="hover:text-nadeshiko-700" to="/takaneko-feed">
+                            <Link className="hover:text-nadeshiko-700" to="/takaneko-feeds">
                               RSS フィード
                             </Link>
                           </li>
@@ -144,7 +144,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       <li>
                         <Link
                           className="hover:text-nadeshiko-700"
-                          to="/takaneko-feed"
+                          to="/takaneko-feeds"
                           onClick={close}
                         >
                           <p>RSS フィード</p>
