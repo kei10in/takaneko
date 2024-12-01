@@ -14,8 +14,8 @@ export const Footer: React.FC<Props> = (props: Props) => {
     <footer className={clsx(className, "bg-gray-100")}>
       <div className={"container mx-auto bg-gray-100 text-sm text-gray-600"}>
         <div className="mx-4 space-y-8 py-8">
-          <div className="grid gap-8 lg:grid-cols-5">
-            <section className="col-span-2 space-y-2 pb-4">
+          <div className="space-y-6 lg:grid lg:grid-cols-5 lg:gap-8 lg:space-y-0">
+            <section className="space-y-2 pb-4 lg:col-span-2">
               <h3 className="flex items-center gap-1 text-base font-bold">
                 <img className="w-7" src="/icon.svg" alt="ロゴ" />
                 <p>{SITE_TITLE}</p>
@@ -51,17 +51,31 @@ export const Footer: React.FC<Props> = (props: Props) => {
               </ul>
             </section>
 
-            <section className="space-y-2">
-              <h3 className="font-semibold">About</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/releases">リリース ノート</Link>
-                </li>
-                <li>
-                  <Link to="/terms">利用規約</Link>
-                </li>
-              </ul>
-            </section>
+            <div className="space-y-6">
+              <section className="space-y-2">
+                <h3 className="font-semibold">ツール</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/shortlink">短い URL を作るやつ</Link>
+                  </li>
+                  <li>
+                    <Link to="/takaneko-feeds">RSS フィード</Link>
+                  </li>
+                </ul>
+              </section>
+
+              <section className="space-y-2">
+                <h3 className="font-semibold">About</h3>
+                <ul className="space-y-2">
+                  <li>
+                    <Link to="/releases">リリース ノート</Link>
+                  </li>
+                  <li>
+                    <Link to="/terms">利用規約</Link>
+                  </li>
+                </ul>
+              </section>
+            </div>
 
             <section className="space-y-2">
               <h3 className="font-semibold">高嶺のなでしこ公式</h3>

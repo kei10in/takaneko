@@ -1,4 +1,4 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { Dialog, DialogPanel, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -52,6 +52,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/official/news">
                     公式ニュース
                   </Link>
+                  <Popover className="relative">
+                    <PopoverButton className="hover:text-nadeshiko-700">ツール</PopoverButton>
+                    <PopoverPanel
+                      anchor={{ to: "top end", gap: "1.5rem" }}
+                      className="overflow-hidden rounded-xl bg-white shadow-md"
+                    >
+                      <div className="px-8 py-4 text-sm font-bold text-gray-500">
+                        <ul className="space-y-4">
+                          <li>
+                            <Link className="hover:text-nadeshiko-700" to="/shortlink">
+                              短い URL を作るやつ
+                            </Link>
+                          </li>
+                          <li>
+                            <Link className="hover:text-nadeshiko-700" to="/takaneko-feeds">
+                              RSS フィード
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </PopoverPanel>
+                  </Popover>
                 </div>
                 <button
                   className="inline-flex rounded-full p-2 text-nadeshiko-800 lg:hidden"
@@ -80,7 +102,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 </button>
               </div>
               <div className="p-6">
-                <ul className="space-y-6 pr-5 font-bold text-gray-800">
+                <ul className="space-y-6 pr-5 font-bold text-gray-700">
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/trade" onClick={close}>
                       <p>トレード画像をつくるやつ</p>
@@ -105,6 +127,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <Link className="hover:text-nadeshiko-700" to="/official/news" onClick={close}>
                       <p>公式ニュース</p>
                     </Link>
+                  </li>
+                </ul>
+
+                <hr className="my-6" />
+
+                <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <li>
+                    <p className="text-gray-400">ツール</p>
+                    <ul className="mt-4 space-y-4">
+                      <li>
+                        <Link className="hover:text-nadeshiko-700" to="/shortlink" onClick={close}>
+                          <p>短い URL を作るやつ</p>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          className="hover:text-nadeshiko-700"
+                          to="/takaneko-feeds"
+                          onClick={close}
+                        >
+                          <p>RSS フィード</p>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </div>
