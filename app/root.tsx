@@ -56,7 +56,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <PopoverButton className="hover:text-nadeshiko-700">ツール</PopoverButton>
                     <PopoverPanel
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="overflow-hidden rounded-xl bg-white shadow-md"
+                      className="z-50 overflow-hidden rounded-xl bg-white shadow-md"
                     >
                       <div className="px-8 py-4 text-sm font-bold text-gray-500">
                         <ul className="space-y-4">
