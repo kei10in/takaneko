@@ -6,7 +6,14 @@ export type ShortLinkResult = {
 };
 
 export const shortlink = async (url: string): Promise<ShortLinkResult> => {
-  if (!url.startsWith("https://takanenonadeshiko.jp")) {
+  let host = "";
+  try {
+    host = new URL(url).host;
+  } catch (e) {
+    return { error: "Invalid URL" };
+  }
+
+  if (host != "takanenonadeshiko.jp") {
     return { error: "Invalid URL" };
   }
 
