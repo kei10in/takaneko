@@ -1,4 +1,4 @@
-import { Dialog, DialogPanel, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -52,28 +52,30 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/official/news">
                     公式ニュース
                   </Link>
-                  <Popover className="relative">
-                    <PopoverButton className="hover:text-nadeshiko-700">ツール</PopoverButton>
-                    <PopoverPanel
+                  <Menu>
+                    <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
+                    <MenuItems
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="z-50 overflow-hidden rounded-xl bg-white shadow-md"
+                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
-                      <div className="px-8 py-4 text-sm font-bold text-gray-500">
-                        <ul className="space-y-4">
-                          <li>
+                      <ul className="space-y-4 text-sm font-bold text-gray-500">
+                        <li>
+                          <MenuItem>
                             <Link className="hover:text-nadeshiko-700" to="/shortlink">
                               短い URL を作るやつ
                             </Link>
-                          </li>
-                          <li>
+                          </MenuItem>
+                        </li>
+                        <li>
+                          <MenuItem>
                             <Link className="hover:text-nadeshiko-700" to="/takaneko-feeds">
                               RSS フィード
                             </Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </PopoverPanel>
-                  </Popover>
+                          </MenuItem>
+                        </li>
+                      </ul>
+                    </MenuItems>
+                  </Menu>
                 </div>
                 <button
                   className="inline-flex rounded-full p-2 text-nadeshiko-800 lg:hidden"
