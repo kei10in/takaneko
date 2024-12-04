@@ -17,6 +17,7 @@ import {
   HiLink,
   HiMapPin,
 } from "react-icons/hi2";
+import { ImageCarousel } from "~/components/ImageCarousel";
 import { loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
@@ -86,21 +87,14 @@ export default function EventPage() {
     <div className="container mx-auto lg:max-w-4xl">
       <div>
         {meta.image && meta.image.path != "" && (
-          <Link to="#photo" replace={true}>
-            <div
-              className="relative h-64 bg-cover bg-center lg:h-[30rem]"
-              style={{
-                backgroundImage: `url("${meta.image.path}")`,
-              }}
-            >
-              <div className="absolute inset-0 bg-opacity-20 backdrop-blur-xl" />
-              <img
-                src={meta.image.path}
-                alt="アイキャッチ"
-                className="relative mx-auto h-full w-full object-contain"
-              />
-            </div>
-          </Link>
+          <ImageCarousel
+            images={meta.images.map((img, i) => ({
+              src: img.path,
+              alt: "hoge",
+              to: `#photo-${i}`,
+              replace: true,
+            }))}
+          />
         )}
         <div className="space-y-2 pb-4">
           <h1 className="px-4 pb-1.5 pt-8 text-2xl font-bold">
@@ -219,9 +213,10 @@ export default function EventPage() {
         </p>
       )}
 
-      {meta.image && (
+      {meta.images.map((img, i) => (
         <Dialog
-          open={location.hash == "#photo"}
+          key={i}
+          open={location.hash == `#photo-${i}`}
           className="relative z-50"
           onClose={() => navigate(".", { replace: true })}
         >
@@ -232,13 +227,19 @@ export default function EventPage() {
             >
               <img
                 alt="プレビュー"
-                className="h-full max-h-[80svh] w-full object-contain"
-                src={meta.image.path}
+                className="block h-full max-h-[80svh] w-full object-contain"
+                src={img.path}
               />
+              <p className="p-1 text-right text-xs font-semibold text-white/80">
+                画像の引用元:{" "}
+                <a href={img.ref} target="_blank" rel="noreferrer">
+                  {img.ref}
+                </a>
+              </p>
             </DialogPanel>
           </div>
         </Dialog>
-      )}
+      ))}
     </div>
   );
 }
