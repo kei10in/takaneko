@@ -49,12 +49,14 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="w-full">
-      <div className="relative flex h-64 w-full overflow-hidden lg:h-[30rem]">
-        <button className="h-full w-1/6 flex-none p-2 hover:bg-gray-100" onClick={handlePrev}>
-          <HiChevronLeft className="h-8 w-full text-gray-500" />
-        </button>
+      <div className="flex h-64 w-full items-center overflow-hidden lg:h-[30rem]">
+        <div className="flex-none text-center lg:w-32">
+          <button className="rounded-full p-2 lg:hover:bg-gray-100" onClick={handlePrev}>
+            <HiChevronLeft className="h-8 w-full text-gray-600" />
+          </button>
+        </div>
 
-        <div className="relative flex-1 overflow-hidden">
+        <div className="relative h-full flex-1 overflow-hidden">
           <div
             className={clsx(
               "flex h-full w-full flex-none bg-gray-200 ease-in",
@@ -106,9 +108,11 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
           </div>
         </div>
 
-        <button className="h-full w-1/6 flex-none p-2 hover:bg-gray-100" onClick={handleNext}>
-          <HiChevronRight className="h-8 w-full text-gray-500" />
-        </button>
+        <div className="flex-none text-center lg:w-32">
+          <button className="rounded-full p-2 lg:hover:bg-gray-100" onClick={handleNext}>
+            <HiChevronRight className="h-8 w-full text-gray-600" />
+          </button>
+        </div>
       </div>
 
       <div className="mx-auto flex w-fit items-center py-2">
@@ -122,7 +126,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
               className="group flex h-4 w-4 items-center justify-center rounded-full"
               onClick={() => handleDirectJump(i)}
             >
-              <div className="h-2 w-2 rounded-full bg-gray-200 group-data-[selected]:bg-gray-300" />
+              <div className="h-2 w-2 rounded-full bg-gray-300 group-data-[selected]:bg-nadeshiko-800" />
             </button>
           );
         })}
