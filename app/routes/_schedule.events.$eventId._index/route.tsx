@@ -86,7 +86,7 @@ export default function EventPage() {
   return (
     <div className="container mx-auto lg:max-w-4xl">
       <div>
-        {meta.image && meta.image.path != "" && (
+        {meta.images.length > 0 && (
           <ImageCarousel
             images={meta.images.map((img, i) => ({
               src: img.path,
