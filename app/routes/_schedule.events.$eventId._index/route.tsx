@@ -230,11 +230,17 @@ export default function EventPage() {
                 className="block h-full max-h-[80svh] w-full object-contain"
                 src={img.path}
               />
+
               <p className="p-1 text-right text-xs font-semibold text-white/80">
-                画像の引用元:{" "}
-                <a href={img.ref} target="_blank" rel="noreferrer">
-                  {img.ref}
-                </a>
+                <Link
+                  to={img.ref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1"
+                >
+                  <span>画像の引用元</span>
+                  <HiArrowTopRightOnSquare />
+                </Link>
               </p>
             </DialogPanel>
           </div>
