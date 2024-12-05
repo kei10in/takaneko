@@ -199,20 +199,6 @@ export default function EventPage() {
         </Link>
       )}
 
-      {meta.image && (
-        <p className="my-4 px-4 text-right text-xs text-gray-400">
-          <Link
-            to={meta.image?.ref}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-1"
-          >
-            <span>画像の引用元</span>
-            <HiArrowTopRightOnSquare />
-          </Link>
-        </p>
-      )}
-
       {meta.images.map((img, i) => (
         <Dialog
           key={i}
