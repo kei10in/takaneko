@@ -15,13 +15,13 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
       <div className="h-64 w-full lg:h-[30rem]">
         <Swiper
           className={clsx(
-            "[&_.swiper-button-next]:invisible",
-            "[&_.swiper-button-prev]:invisible",
+            "[&_.swiper-button-next]:opacity-0",
+            "[&_.swiper-button-prev]:opacity-0",
             "[&_.swiper-pagination]:bottom-0",
             "[&_.swiper-pagination-bullet]:bg-black",
             "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
-            "lg:[&_.swiper-button-next]:visible",
-            "lg:[&_.swiper-button-prev]:visible",
+            "lg:[&_.swiper-button-next]:opacity-100",
+            "lg:[&_.swiper-button-prev]:opacity-100",
             "lg:[&_.swiper-button-next]:text-white",
             "lg:[&_.swiper-button-prev]:text-white",
           )}
