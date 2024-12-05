@@ -98,10 +98,9 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       summary,
       title,
       date: NaiveDate.parseUnsafe(r.data.date),
-      images:
-        r.data.image == undefined
-          ? (r.data.images ?? [])
-          : [r.data.image, ...(r.data.images ?? [])],
+      images: [r.data.image, ...(r.data.images ?? [])].filter(
+        (img): img is ImageDescription => img != undefined && img.path != "",
+      ),
       recaps,
       descriptor: r.data,
     };
