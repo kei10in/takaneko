@@ -163,8 +163,19 @@ export default function Index() {
             <h3 className="text-bold text-lg">使い方:</h3>
 
             <ol className="list-decimal space-y-2 px-10">
-              <li>短縮 URL を作りたい、高嶺のなでしこ公式サイトのページをブラウザで開きます</li>
-              <li>共有メニューを開き「たかねこの短縮 URL」を選択します。</li>
+              <li>短縮 URL を作りたい、高嶺のなでしこ公式サイトのページをブラウザで開きます。</li>
+              <li>
+                <p>共有ボタンをタップしてメニューを開きます。</p>
+                <p className="text-center">
+                  <img
+                    className="inline w-60 shadow"
+                    src="/shortlink/share-button.webp"
+                    alt="共有ボタン"
+                  />
+                </p>
+              </li>
+
+              <li>共有メニューから「たかねこの短縮 URL」を選択します。</li>
               <li>短縮された URL がクリップボードにコピーされます。</li>
             </ol>
           </section>
