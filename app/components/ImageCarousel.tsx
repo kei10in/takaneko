@@ -4,7 +4,13 @@ import { A11y, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Props {
-  images: { src: string; alt: string; to?: string | undefined; replace?: boolean | undefined }[];
+  images: {
+    src: string;
+    alt: string;
+    to?: string | undefined;
+    replace?: boolean | undefined;
+    preventScrollReset?: boolean;
+  }[];
 }
 
 export const ImageCarousel: React.FC<Props> = (props: Props) => {
@@ -62,6 +68,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
                     key={i}
                     to={image.to}
                     replace={image.replace}
+                    preventScrollReset={image.preventScrollReset}
                     className="block h-full w-full flex-none"
                   >
                     {imageComponent}

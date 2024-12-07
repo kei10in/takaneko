@@ -83,6 +83,8 @@ export default function EventPage() {
   const meta = event.meta;
   const d = meta.date;
 
+  const close = () => navigate(".", { replace: true, preventScrollReset: true });
+
   return (
     <div className="container mx-auto lg:max-w-4xl">
       <div>
@@ -90,9 +92,10 @@ export default function EventPage() {
           <ImageCarousel
             images={meta.images.map((img, i) => ({
               src: img.path,
-              alt: "hoge",
+              alt: `アイキャッチ ${i + 1}`,
               to: `#photo-${i}`,
               replace: true,
+              preventScrollReset: true,
             }))}
           />
         )}
@@ -204,13 +207,10 @@ export default function EventPage() {
           key={i}
           open={location.hash == `#photo-${i}`}
           className="relative z-50"
-          onClose={() => navigate(".", { replace: true })}
+          onClose={close}
         >
           <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-            <DialogPanel
-              className="h-fit w-fit overflow-hidden"
-              onClick={() => navigate(".", { replace: true })}
-            >
+            <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
               <img
                 alt="プレビュー"
                 className="block h-full max-h-[80svh] w-full object-contain"
@@ -232,6 +232,32 @@ export default function EventPage() {
           </div>
         </Dialog>
       ))}
+
+      {meta.overview?.timetable != undefined && (
+        <Dialog open={location.hash == `#timetable`} className="relative z-50" onClose={close}>
+          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+            <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
+              <img
+                alt="プレビュー"
+                className="block h-full max-h-[80svh] w-full object-contain"
+                src={meta.overview.timetable.path}
+              />
+
+              <p className="p-1 text-right text-xs font-semibold text-white/80">
+                <Link
+                  to={meta.overview.timetable.ref}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1"
+                >
+                  <span>画像の引用元</span>
+                  <HiArrowTopRightOnSquare />
+                </Link>
+              </p>
+            </DialogPanel>
+          </div>
+        </Dialog>
+      )}
     </div>
   );
 }

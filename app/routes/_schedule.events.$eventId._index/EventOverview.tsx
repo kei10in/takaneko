@@ -54,12 +54,11 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
           <li>
             <p>
               <strong>タイムテーブル:</strong>
-              <br />
-              <a href={timetable.path}>
+            </p>
+            <p className="text-center">
+              <Link to="#timetable" preventScrollReset>
                 <img src={timetable.path} alt="タイムテーブル" />
-              </a>
-              <br />
-              <Link to={timetable.ref}>{timetable.ref}</Link>
+              </Link>
             </p>
           </li>
         )}
