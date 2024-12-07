@@ -118,9 +118,9 @@ export default function Index() {
         )}
 
         <section className="space-y-4">
-          <h2 className="mt-16 text-2xl">iOS の共有メニューに機能を追加する</h2>
+          <h2 className="mt-16 text-2xl">iPhone に追加する</h2>
           <p>
-            Siri ショートカットを使って iOS の共有メニューに、短い URL
+            Siri ショートカットを使って iPhone の共有メニューに、短い URL
             を作る機能を追加することができます。
           </p>
 
@@ -132,19 +132,29 @@ export default function Index() {
               手順に従ってスクリプトの実行を許可してください。
             </p>
 
-            <ol className="list-decimal px-10">
+            <ol className="list-decimal space-y-2 px-10">
               <li>設定アプリを開きます。</li>
               <li>アプリ &gt; ショートカット &gt; 詳細 を開きます。</li>
               <li>
-                <p>
-                  「スクリプトの実行を許可」をオンにします。
-                  <br />
+                <p>「スクリプトの実行を許可」をオンにします。</p>
+                <p className="mb-4 mt-2 text-center">
                   <img
-                    className="w-60 shadow"
+                    className="inline w-60 shadow"
                     src="/shortlink/allow-exec-shortcut.webp"
                     alt="設定画面"
                   />
                 </p>
+              </li>
+              <li>
+                <p>👇のボタンをタップしてショートカットを追加します。</p>
+                <Link
+                  className="mx-auto mb-4 mt-2 flex h-8 w-fit items-center justify-center rounded-md bg-nadeshiko-800 px-6 font-bold text-white"
+                  to="https://www.icloud.com/shortcuts/a69485f588084ac5841ef1c808bd2283"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ショートカットを追加
+                </Link>
               </li>
             </ol>
           </section>
@@ -153,17 +163,6 @@ export default function Index() {
             <h3 className="text-bold text-lg">使い方:</h3>
 
             <ol className="list-decimal space-y-2 px-10">
-              <li>
-                <p>ショートカットを追加します。</p>
-                <Link
-                  className="inline-flex h-8 items-center justify-center rounded-md bg-nadeshiko-800 px-6 font-bold text-white"
-                  to="https://www.icloud.com/shortcuts/a69485f588084ac5841ef1c808bd2283"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  ショートカットを追加
-                </Link>
-              </li>
               <li>短縮 URL を作りたい、高嶺のなでしこ公式サイトのページをブラウザで開きます</li>
               <li>共有メニューを開き「たかねこの短縮 URL」を選択します。</li>
               <li>短縮された URL がクリップボードにコピーされます。</li>
