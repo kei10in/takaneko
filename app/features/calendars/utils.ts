@@ -50,20 +50,24 @@ export const validateYearMonthDate = (args: {
   return { year: d.getUTCFullYear(), month: d.getUTCMonth() + 1, day: d.getUTCDate() };
 };
 
-export const currentMonthHref = (): string => {
-  return "/calendar";
+export const currentMonthHref = (param: { search?: string } = {}): string => {
+  const { search = "" } = param;
+  return `/calendar${search}`;
 };
 
-export const calendarMonthHref = (month: NaiveMonth): string => {
+export const calendarMonthHref = (month: NaiveMonth, param: { search?: string } = {}): string => {
   const y = month.year.toString().padStart(4, "0");
   const m = month.month.toString().padStart(2, "0");
+  const { search = "" } = param;
 
-  return `/calendar/${y}/${m}`;
+  return `/calendar/${y}/${m}${search}`;
 };
 
-export const dateHref = (date: NaiveDate): string => {
+export const dateHref = (date: NaiveDate, param: { search?: string } = {}): string => {
   const y = date.year.toString().padStart(4, "0");
   const m = date.month.toString().padStart(2, "0");
   const d = date.day.toString().padStart(2, "0");
-  return `/calendar/${y}/${m}/${d}`;
+  const { search = "" } = param;
+
+  return `/calendar/${y}/${m}/${d}${search}`;
 };

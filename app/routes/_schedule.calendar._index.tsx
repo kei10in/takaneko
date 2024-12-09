@@ -64,18 +64,22 @@ export default function Index() {
     const currentMonth = NaiveMonth.current();
     if (location.hash === "" && m.equals(currentMonth)) {
       const anchor = NaiveDate.todayInJapan().toString();
-      navigate(`#${anchor}`, { replace: true });
+      navigate(`${location.search}#${anchor}`, { replace: true });
     }
-  }, [location.hash, month, navigate, year]);
+  }, [location.hash, location.search, month, navigate, year]);
+
+  const urlParam = { search: location.search };
 
   return (
     <div className="container mx-auto">
       <Calendar
         events={calendarEvents}
         month={m}
-        hrefToday={currentMonthHref()}
-        hrefPreviousMonth={calendarMonthHref(m.previousMonth())}
-        hrefNextMonth={calendarMonthHref(m.nextMonth())}
+        category={category}
+        hash={location.hash}
+        hrefToday={currentMonthHref(urlParam)}
+        hrefPreviousMonth={calendarMonthHref(m.previousMonth(), urlParam)}
+        hrefNextMonth={calendarMonthHref(m.nextMonth(), urlParam)}
       />
     </div>
   );
