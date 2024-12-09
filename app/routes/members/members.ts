@@ -206,6 +206,7 @@ export const RiriHaruno: MemberDescription = {
   nyadeshiko: "ルノリスくん",
   hashTag: "#ねぇねぇはるりん",
   hashTagForReply: "#はるりんに届け",
+  hashTagsForAnnouncement: ["#はるぷれふぉと", "#はるのてくと"],
   idPhoto: {
     path: "/takaneko/members/riri-haruno_id-photo.webp",
     ref: "https://x.com/riri_haruno/status/1802461772424806777",
