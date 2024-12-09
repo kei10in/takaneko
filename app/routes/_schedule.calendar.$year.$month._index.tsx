@@ -11,6 +11,7 @@ import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
+import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -31,35 +32,45 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   ];
 };
 
-export const loader = async ({ params }: LoaderFunctionArgs) => {
+export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const r = validateYearMonth({ year: params.year, month: params.month });
   if (r == undefined) {
     throw new Response("", { status: 404 });
   }
 
+  const url = new URL(request.url);
+  const t = url.searchParams.get("t");
+  const category = parseCategory(t);
+
   const { year, month } = r;
-  return json({ year, month });
+  return json({ year, month, category });
 };
 
-export const clientLoader = defineClientLoader(async ({ params }) => {
+export const clientLoader = defineClientLoader(async ({ params, request }) => {
   const r = validateYearMonth({ year: params.year, month: params.month });
   if (r == undefined) {
     throw new Response("", { status: 404 });
   }
 
+  const url = new URL(request.url);
+  const t = url.searchParams.get("t");
+  const category = parseCategory(t);
+
   const { year, month } = r;
-  return json({ year, month });
+  return json({ year, month, category });
 });
 
 export default function Index() {
-  const { year, month } = useLoaderData<typeof loader>();
+  const { year, month, category } = useLoaderData<typeof loader>();
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
     const events = loadEvents(m);
-    const calendarEvents = events.map(convertEventModuleToCalendarEvent);
+    const calendarEvents = events
+      .map(convertEventModuleToCalendarEvent)
+      .filter((e) => (category == undefined ? true : e.category === category));
     return calendarEvents;
-  }, [month, year]);
+  }, [month, year, category]);
 
   const m = new NaiveMonth(year, month);
 

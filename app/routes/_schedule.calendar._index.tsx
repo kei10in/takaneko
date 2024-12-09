@@ -1,3 +1,4 @@
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { json, MetaFunction, useLoaderData, useLocation, useNavigate } from "@remix-run/react";
 import { useEffect, useMemo } from "react";
 import { DOMAIN } from "~/constants";
@@ -5,6 +6,7 @@ import { Calendar } from "~/features/calendars/Calendar";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { calendarMonthHref, currentMonthHref } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
+import { parseCategory } from "~/features/events/EventType";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -31,20 +33,26 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
   ];
 };
 
-export const loader = async () => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const t = url.searchParams.get("t");
+  const category = parseCategory(t);
+
   const currentMonth = NaiveMonth.current();
-  return json({ year: currentMonth.year, month: currentMonth.month });
+  return json({ year: currentMonth.year, month: currentMonth.month, category });
 };
 
 export default function Index() {
-  const { year, month } = useLoaderData<typeof loader>();
+  const { year, month, category } = useLoaderData<typeof loader>();
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
     const events = loadEvents(m);
-    const calendarEvents = events.map(convertEventModuleToCalendarEvent);
+    const calendarEvents = events
+      .map(convertEventModuleToCalendarEvent)
+      .filter((e) => (category == undefined ? true : e.category === category));
     return calendarEvents;
-  }, [month, year]);
+  }, [month, year, category]);
 
   const m = new NaiveMonth(year, month);
 
