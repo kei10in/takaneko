@@ -20,20 +20,6 @@ interface Props {
   hrefNextMonth: string;
 }
 
-const Categories = [
-  { display: "All", query: undefined, value: undefined },
-  { display: "Live", query: "live", value: EventType.LIVE },
-  { display: "Event", query: "event", value: EventType.EVENT },
-  { display: "Streaming", query: "streaming", value: EventType.STREAMING },
-  { display: "TV", query: "tv", value: EventType.TV },
-  { display: "Radio", query: "radio", value: EventType.RADIO },
-  { display: "Web", query: "web", value: EventType.WEB },
-  { display: "Birthday", query: "birthday", value: EventType.BIRTHDAY },
-  { display: "Release", query: "release", value: EventType.RELEASE },
-  { display: "Magazine", query: "magazine", value: EventType.MAGAZINE },
-  { display: "Other", query: "other", value: EventType.OTHER },
-];
-
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, month, category, hash = "", hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
@@ -57,22 +43,6 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           "lg:flex-1 lg:overflow-y-auto lg:pb-8",
         )}
       >
-        <div className="hidden flex-wrap items-center justify-center gap-2 py-2 lg:flex">
-          {Categories.map((c) => (
-            <Link
-              key={c.query}
-              data-current={category == c.value ? "" : undefined}
-              className={clsx(
-                "block rounded bg-gray-100 px-2 py-px text-center text-sm text-gray-500",
-                "data-[current]:bg-nadeshiko-800 data-[current]:text-white",
-              )}
-              to={c.query == undefined ? `${hash}` : `?t=${c.query}${hash}`}
-            >
-              {c.display}
-            </Link>
-          ))}
-        </div>
-
         <MonthlyCalendar
           calendarMonth={calendarMonth}
           month={month}
