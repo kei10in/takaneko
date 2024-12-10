@@ -76,6 +76,8 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <MonthlyCalendar
           calendarMonth={calendarMonth}
           month={month}
+          category={category}
+          hash={hash}
           hrefToday={hrefToday}
           hrefPreviousMonth={hrefPreviousMonth}
           hrefNextMonth={hrefNextMonth}
