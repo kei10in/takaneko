@@ -1,0 +1,36 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const ミニアクリルスタンドキーホルダーメンバーソロ写真: RandomGoods = {
+  id: "ミニアクリルスタンドキーホルダー メンバーソロ写真",
+  name: "セカンドシングル_セブンネット限定特典",
+  year: 2024,
+  series: "セカンドシングル特典",
+  category: "ミニアクリルスタンド キーホルダー",
+  url: "/takaneko/others/2024-12-11_ミニアクリルスタンドキーホルダーメンバーソロ写真.jpg",
+  width: 1980,
+  height: 1606,
+  lineup: [
+    { id: 1, name: "橋本桃呼", description: "" },
+    { id: 2, name: "春野莉々", description: "" },
+    { id: 3, name: "松本ももな", description: "" },
+    { id: 4, name: "城月菜央", description: "" },
+    { id: 5, name: "星谷美来", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "籾山ひめり", description: "" },
+    { id: 9, name: "葉月紗蘭", description: "" },
+    { id: 10, name: "涼海すう", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 82, y: 627, width: 309, height: 405 },
+    { id: 2, x: 426, y: 630, width: 309, height: 405 },
+    { id: 3, x: 775, y: 633, width: 309, height: 405 },
+    { id: 4, x: 1125, y: 633, width: 309, height: 405 },
+    { id: 5, x: 1470, y: 636, width: 309, height: 405 },
+    { id: 6, x: 168, y: 1111, width: 309, height: 405 },
+    { id: 7, x: 510, y: 1113, width: 309, height: 405 },
+    { id: 8, x: 858, y: 1116, width: 309, height: 405 },
+    { id: 9, x: 1209, y: 1116, width: 309, height: 405 },
+    { id: 10, x: 1553, y: 1119, width: 309, height: 405 },
+  ],
+};
