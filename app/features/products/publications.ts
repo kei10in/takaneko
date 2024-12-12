@@ -44,6 +44,7 @@ import {
 import { VDCMagazine029, VDCMagazine030 } from "./publications/VDC Magazine";
 import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph";
 import { Zipper_2024年秋号 } from "./publications/Zipper";
+import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
 import { 日経エンタテインメント_2024年2月号 } from "./publications/日経エンタテイメント";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
 import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA";
@@ -101,6 +102,7 @@ const publications: Publication[] = [
   橋本桃呼_MOMOKO_ISM,
   松本ももな_LAST_20_MOMONA,
   松本ももな_SweetDateTime,
+  モデルプレスカウントダウンマガジン_vol10,
 ];
 
 export const PUBLICATIONS = publications.toSorted((p0, p1) => p0.date.localeCompare(p1.date));
