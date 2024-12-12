@@ -1,8 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ミニアクリルスタンドキーホルダーメンバーソロ写真: RandomGoods = {
-  id: "ミニアクリルスタンドキーホルダー メンバーソロ写真",
-  name: "セカンドシングル_セブンネット限定特典",
+  id: "セカンドシングル セブンネット限定特典",
+  name: "セカンドシングル セブンネット限定特典 ミニアクリルスタンド キーホルダー メンバーソロ写真",
   year: 2024,
   series: "セカンドシングル特典",
   category: "ミニアクリルスタンド キーホルダー",
