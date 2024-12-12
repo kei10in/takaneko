@@ -26,7 +26,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       <h2>イベント概要</h2>
 
       <ul>
-        {ticket != undefined && (
+        {ticket != undefined && ticket != "" && (
           <li>
             <p>
               <Link to={ticket}>🎫チケット</Link>
