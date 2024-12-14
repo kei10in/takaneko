@@ -70,8 +70,13 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
 export const loadEventModule = (eventId: string): EventModule | undefined => {
   const [year, month] = eventId.split("_")[0].split("-");
 
-  const path = `./${year}/${month}/${eventId}.mdx`;
+  return (
+    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.mdx`) ??
+    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.tsx`)
+  );
+};
 
+const loadEventModuleByPath = (eventId: string, path: string): EventModule | undefined => {
   const loadEvent = ALL_EVENTS[path];
   if (loadEvent == undefined) {
     return undefined;
