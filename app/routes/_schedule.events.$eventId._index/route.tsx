@@ -133,7 +133,7 @@ export default function EventPage() {
                 </span>
                 <span className="text-nadeshiko-900">{meta.location}</span>
                 <span>
-                  <BsBoxArrowUpRight className="text-gray-500" />
+                  <BsBoxArrowUpRight className="text-gray-400" />
                 </span>
               </div>
             </Link>
@@ -147,7 +147,7 @@ export default function EventPage() {
                 </span>
                 <span className="text-nadeshiko-900">{meta.link.text}</span>
                 <span>
-                  <BsBoxArrowUpRight />
+                  <BsBoxArrowUpRight className="text-gray-400" />
                 </span>
               </div>
             </Link>

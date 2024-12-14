@@ -12,7 +12,7 @@ interface Props {
 export const EventDetails: React.FC<Props> = (props: Props) => {
   const { ticket, timeSlot, timetable, streaming, goods } = props;
   if (
-    ticket == undefined &&
+    (ticket == undefined || ticket == "") &&
     timeSlot == undefined &&
     timetable == undefined &&
     streaming == undefined &&
