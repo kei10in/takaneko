@@ -18,6 +18,25 @@ export type MemberName = z.infer<typeof MemberName>;
 export const MemberNameOrGroup = z.union([z.literal("高嶺のなでしこ"), MemberName]);
 export type MemberNameOrGroup = z.infer<typeof MemberNameOrGroup>;
 
+export const convertToGroupIfAllMembersPresent = (members: MemberName[]): MemberNameOrGroup[] => {
+  if (
+    members.includes("城月菜央") &&
+    members.includes("涼海すう") &&
+    members.includes("橋本桃呼") &&
+    members.includes("葉月紗蘭") &&
+    members.includes("春野莉々") &&
+    members.includes("東山恵里沙") &&
+    members.includes("日向端ひな") &&
+    members.includes("星谷美来") &&
+    members.includes("松本ももな") &&
+    members.includes("籾山ひめり")
+  ) {
+    return ["高嶺のなでしこ"];
+  }
+
+  return members;
+};
+
 export interface MemberDescription {
   id: MemberName;
   slug: string;
