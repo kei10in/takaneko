@@ -20,7 +20,7 @@ import {
   BsPinMap,
 } from "react-icons/bs";
 import { ImageCarousel } from "~/components/ImageCarousel";
-import { loadEventContent, loadEventModule } from "~/features/events/events";
+import { loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
@@ -72,7 +72,7 @@ export default function EventPage() {
   const data = useLoaderData<typeof loader>();
   const eventId = data.eventId;
   const ics = data.ics;
-  const event = useMemo(() => loadEventContent(eventId), [eventId]);
+  const event = useMemo(() => loadEventModule(eventId), [eventId]);
 
   const location = useLocation();
   const navigate = useNavigate();
