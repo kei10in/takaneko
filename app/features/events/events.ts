@@ -8,10 +8,6 @@ export interface EventModule {
   id: string;
   filename: string;
   meta: EventMeta;
-}
-
-export interface EventContent {
-  meta: EventMeta;
   Content: () => JSX.Element;
 }
 
@@ -48,7 +44,7 @@ export const loadEvents = (month: NaiveMonth): EventModule[] => {
     .filter(([filename]) => {
       return prefixes.some((prefix) => filename.startsWith(prefix));
     })
-    .map(([filename, { meta }]) => ({ id: stem(filename), filename, meta }));
+    .map(([filename, event]) => ({ id: stem(filename), filename, ...event }));
 
   return events;
 };
@@ -64,7 +60,7 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
     .filter(([filename]) => {
       return prefixes.some((prefix) => filename.startsWith(prefix));
     })
-    .map(([filename, { meta }]) => ({ id: stem(filename), filename, meta }));
+    .map(([filename, event]) => ({ id: stem(filename), filename, ...event }));
 
   events.sort((a, b) => compareEventMeta(a.meta, b.meta));
 
@@ -74,21 +70,17 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
 export const loadEventModule = (eventId: string): EventModule | undefined => {
   const [year, month] = eventId.split("_")[0].split("-");
 
-  const path = `./${year}/${month}/${eventId}.mdx`;
+  return (
+    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.mdx`) ??
+    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.tsx`)
+  );
+};
 
+const loadEventModuleByPath = (eventId: string, path: string): EventModule | undefined => {
   const loadEvent = ALL_EVENTS[path];
   if (loadEvent == undefined) {
     return undefined;
   }
 
-  return { id: eventId, filename: path, meta: loadEvent.meta };
-};
-
-export const loadEventContent = (eventId: string): EventContent | undefined => {
-  const [year, month] = eventId.split("_")[0].split("-");
-
-  const path = `./${year}/${month}/${eventId}.mdx`;
-  const loadEvent = ALL_EVENTS[path];
-
-  return loadEvent;
+  return { id: eventId, filename: path, ...loadEvent };
 };

@@ -54,7 +54,7 @@ describe("loadEventsInDay", () => {
 });
 
 describe("loadEventModule", () => {
-  it("should load event module for the given event id", () => {
+  it("should load mdx event module for the given event id", () => {
     const eventId =
       "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会";
     const event = loadEventModule(eventId);
@@ -63,6 +63,16 @@ describe("loadEventModule", () => {
       id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
       filename:
         "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
+    });
+  });
+
+  it("should load tsx event module for the given event id", () => {
+    const eventId = "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」";
+    const event = loadEventModule(eventId);
+
+    expect(event).toMatchObject({
+      id: "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」",
+      filename: "./2024/12/2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」.tsx",
     });
   });
 });

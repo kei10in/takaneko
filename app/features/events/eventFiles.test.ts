@@ -11,7 +11,7 @@ describe("event files", () => {
       const importedEvents = importEventFiles()
         .map((e) => e.filename.split("/").pop() as string)
         .toSorted();
-      const eventFiles = (await glob(`${__dirname}/*/*/*.mdx`))
+      const eventFiles = (await glob(`${__dirname}/*/*/*.{mdx,tsx}`))
         .map((s) => s.split(path.sep).pop() as string)
         .toSorted();
 
