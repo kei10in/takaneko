@@ -9,8 +9,16 @@ import {
   useNavigate,
 } from "@remix-run/react";
 import { useMemo } from "react";
-import { BsCalendar, BsDoorOpen, BsPersonFill, BsPersonFillSlash, BsPinMap } from "react-icons/bs";
-import { HiArrowTopRightOnSquare, HiCalendarDays, HiLink } from "react-icons/hi2";
+import {
+  BsBoxArrowUpRight,
+  BsCalendar,
+  BsCalendar3,
+  BsDoorOpen,
+  BsLink45Deg,
+  BsPersonFill,
+  BsPersonFillSlash,
+  BsPinMap,
+} from "react-icons/bs";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
@@ -125,7 +133,7 @@ export default function EventPage() {
                 </span>
                 <span className="text-nadeshiko-900">{meta.location}</span>
                 <span>
-                  <HiArrowTopRightOnSquare />
+                  <BsBoxArrowUpRight className="text-gray-500" />
                 </span>
               </div>
             </Link>
@@ -135,11 +143,11 @@ export default function EventPage() {
             <Link className="block" to={meta.link.url} target="_blank" rel="noreferrer">
               <div className="flex items-center gap-1 px-5">
                 <span>
-                  <HiLink className="text-gray-400" />
+                  <BsLink45Deg className="text-gray-400" />
                 </span>
                 <span className="text-nadeshiko-900">{meta.link.text}</span>
                 <span>
-                  <HiArrowTopRightOnSquare />
+                  <BsBoxArrowUpRight />
                 </span>
               </div>
             </Link>
@@ -199,7 +207,7 @@ export default function EventPage() {
         >
           <div className="flex items-center gap-1 text-nadeshiko-800">
             <span>
-              <HiCalendarDays className="h-5 w-5" />
+              <BsCalendar3 className="h-5 w-5" />
             </span>
             <span>カレンダーに登録</span>
           </div>
@@ -229,7 +237,7 @@ export default function EventPage() {
                   className="inline-flex items-center gap-1"
                 >
                   <span>画像の引用元</span>
-                  <HiArrowTopRightOnSquare />
+                  <BsBoxArrowUpRight />
                 </Link>
               </p>
             </DialogPanel>
@@ -255,7 +263,7 @@ export default function EventPage() {
                   className="inline-flex items-center gap-1"
                 >
                   <span>画像の引用元</span>
-                  <HiArrowTopRightOnSquare />
+                  <BsBoxArrowUpRight />
                 </Link>
               </p>
             </DialogPanel>
