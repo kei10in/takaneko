@@ -9,14 +9,8 @@ import {
   useNavigate,
 } from "@remix-run/react";
 import { useMemo } from "react";
-import { BsPersonFill, BsPersonFillSlash } from "react-icons/bs";
-import {
-  HiArrowTopRightOnSquare,
-  HiCalendar,
-  HiCalendarDays,
-  HiLink,
-  HiMapPin,
-} from "react-icons/hi2";
+import { BsCalendar, BsDoorOpen, BsPersonFill, BsPersonFillSlash, BsPinMap } from "react-icons/bs";
+import { HiArrowTopRightOnSquare, HiCalendarDays, HiLink } from "react-icons/hi2";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { loadEventContent, loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
@@ -105,9 +99,19 @@ export default function EventPage() {
             <span>{meta.title ?? meta.summary}</span>
           </h1>
           <div className="flex items-center gap-1 px-5">
-            <HiCalendar className="text-gray-400" />
-            <p>{displayDateWithDayOfWeek(d)}</p>
+            <BsCalendar className="text-gray-400" />
+            <p>
+              {displayDateWithDayOfWeek(d)}
+              {meta.start != undefined && ` ${meta.start} 〜`}
+              {meta.end != undefined && ` ${meta.end}`}
+            </p>
           </div>
+          {meta.open && (
+            <div className="flex items-center gap-1 px-5">
+              <BsDoorOpen className="text-gray-400" />
+              <p>開場 {meta.open} 〜</p>
+            </div>
+          )}
           {meta.location && (
             <Link
               className="block"
@@ -117,7 +121,7 @@ export default function EventPage() {
             >
               <div className="flex items-center gap-1 px-5">
                 <span>
-                  <HiMapPin className="text-gray-400" />
+                  <BsPinMap className="text-gray-400" />
                 </span>
                 <span className="text-nadeshiko-900">{meta.location}</span>
                 <span>
