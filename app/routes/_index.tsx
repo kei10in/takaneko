@@ -1,7 +1,7 @@
 import { Link, MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
 import { useMemo } from "react";
-import { HiArrowsRightLeft, HiArrowTopRightOnSquare, HiCalendar } from "react-icons/hi2";
+import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar } from "react-icons/bs";
 import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
@@ -68,13 +68,13 @@ export default function Index() {
             <div className="mt-2 flex select-none justify-end gap-2 text-sm font-semibold">
               <Link to="/trade">
                 <div className="flex h-7 items-center gap-1 rounded-md bg-nadeshiko-800 px-2 text-white">
-                  <HiArrowsRightLeft className="h-4 w-4" />
+                  <BsArrowLeftRight className="h-4 w-4" />
                   <div>トレード画像つくるやつ</div>
                 </div>
               </Link>
               <Link to="/calendar">
                 <div className="flex h-7 w-full items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-nadeshiko-100">
-                  <HiCalendar className="h-4 w-4" />
+                  <BsCalendar className="h-4 w-4" />
                   <div>スケジュール</div>
                 </div>
               </Link>
@@ -86,15 +86,15 @@ export default function Index() {
           <p>「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-1 text-lg font-semibold leading-tight text-gray-800">
-              <HiCalendar className="h-6 w-6" />
+            <h2 className="flex items-center gap-2 text-lg font-semibold leading-tight text-gray-800">
+              <BsCalendar className="h-6 w-6" />
               <span>スケジュール</span>
             </h2>
             <p>
               ライブやイベント、テレビ出演などのスケジュールを確認することができます。スケジュールは必ず
               <a href="https://takanenonadeshiko.jp/schedule/">
                 公式のスケジュール
-                <HiArrowTopRightOnSquare className="mx-1 inline-block" />
+                <BsBoxArrowUpRight className="mx-1 inline-block text-gray-500" />
               </a>
               や X での告知を確認してください。
             </p>
@@ -128,8 +128,8 @@ export default function Index() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-1 text-lg font-semibold leading-tight text-gray-800">
-              <HiArrowsRightLeft className="h-6 w-6" />
+            <h2 className="flex items-center gap-2 text-lg font-semibold leading-tight text-gray-800">
+              <BsArrowLeftRight className="h-6 w-6" />
               <span>トレード画像つくるやつ</span>
             </h2>
             <p>
