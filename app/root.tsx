@@ -43,6 +43,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/calendar">
                     スケジュール
                   </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/songs">
+                    楽曲
+                  </Link>
                   <Link className="hover:text-nadeshiko-700" to="/products">
                     グッズ
                   </Link>
@@ -110,6 +113,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/calendar" onClick={close}>
                       <p>スケジュール</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:text-nadeshiko-700" to="/songs" onClick={close}>
+                      <p>楽曲</p>
                     </Link>
                   </li>
                   <li>

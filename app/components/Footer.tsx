@@ -35,9 +35,10 @@ export const Footer: React.FC<Props> = (props: Props) => {
                   <Link to="/calendar">スケジュール</Link>
                 </li>
                 <li>
-                  <Link className="hover:text-nadeshiko-700" to="/products">
-                    グッズ
-                  </Link>
+                  <Link to="/songs">楽曲</Link>
+                </li>
+                <li>
+                  <Link to="/products">グッズ</Link>
                 </li>
                 <li>
                   <Link to="/members">メンバー</Link>
