@@ -1,10 +1,10 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ミニアクリルスタンドキーホルダーメンバーソロ写真: RandomGoods = {
-  id: "セカンドシングル セブンネット限定特典",
-  name: "セカンドシングル セブンネット限定特典 ミニアクリルスタンド キーホルダー メンバーソロ写真",
+  id: "2nd シングル セブンネット限定特典",
+  name: "2nd シングル セブンネット限定特典 ミニアクリルスタンド キーホルダー メンバーソロ写真",
   year: 2024,
-  series: "セカンドシングル特典",
+  series: "2nd シングル特典",
   category: "ミニアクリルスタンド キーホルダー",
   url: "/takaneko/others/2024-12-11_ミニアクリルスタンドキーホルダーメンバーソロ写真.jpg",
   width: 1980,
