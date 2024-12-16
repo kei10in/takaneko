@@ -1,10 +1,9 @@
 import { MemberName } from "~/routes/members/members";
 
-export interface TrackMetaDescriptor {
+export interface SongMetaDescriptor {
   slug: string;
   name: string;
   featuredMembers?: MemberName[] | undefined;
   officialSite?: string | undefined;
-  youtube?: string | undefined;
-  dancePractices?: string | string[] | undefined;
+  youtube?: { text: string; videoId: string }[] | undefined;
 }
