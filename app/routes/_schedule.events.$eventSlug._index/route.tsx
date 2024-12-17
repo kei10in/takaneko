@@ -32,7 +32,7 @@ import { EventRecap } from "./EventRecap";
 import { makePageDescription } from "./makePageDescription";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const event = data == undefined ? undefined : loadEventModule(data.eventId);
+  const event = data == undefined ? undefined : loadEventModule(data.slug);
   const title = event?.meta.title ?? event?.meta.summary ?? "スケジュール";
   const description =
     event == undefined
@@ -52,25 +52,25 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
-  const { eventId } = params;
+  const { eventSlug } = params;
 
-  if (eventId == undefined) {
+  if (eventSlug == undefined) {
     throw new Response("", { status: 404 });
   }
 
-  const event = loadEventModule(eventId);
+  const event = loadEventModule(eventSlug);
   if (event == undefined) {
     throw new Response("", { status: 404 });
   }
 
-  const ics = await makeIcs(eventId, event.meta);
+  const ics = await makeIcs(eventSlug, event.meta);
 
-  return json({ eventId, ics });
+  return json({ slug: eventSlug, ics });
 };
 
 export default function EventPage() {
   const data = useLoaderData<typeof loader>();
-  const eventId = data.eventId;
+  const eventId = data.slug;
   const ics = data.ics;
   const event = useMemo(() => loadEventModule(eventId), [eventId]);
 

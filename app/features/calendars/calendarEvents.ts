@@ -1,5 +1,5 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventModule } from "../events/events";
+import { EventModule } from "../events/eventModule";
 import { compareEventMeta, EventMeta } from "../events/meta";
 
 export type CalendarEvent = EventMeta & { id: string };
@@ -39,7 +39,7 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<number, Calendar
 
 export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
   return {
-    id: event.id,
+    id: event.slug,
     ...event.meta,
   };
 };

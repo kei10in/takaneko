@@ -1,7 +1,7 @@
 import { EventMeta } from "./meta";
 
 export interface EventModule {
-  id: string;
+  slug: string;
   filename: string;
   meta: EventMeta;
   Content: () => JSX.Element;

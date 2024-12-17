@@ -13,14 +13,14 @@ describe("loadEvents", () => {
     expect(events.length).toBeGreaterThan(0);
 
     events.forEach((event) => {
-      expect(event.id).toBeDefined();
+      expect(event.slug).toBeDefined();
       expect(event.filename).toBeDefined();
       expect(event.meta).toBeDefined();
     });
 
     expect(events).toContainEqual(
       expect.objectContaining({
-        id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
+        slug: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
         filename:
           "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
       }),
@@ -36,42 +36,42 @@ describe("loadEventsInDay", () => {
     expect(events.length).toBeGreaterThan(0);
 
     events.forEach((event) => {
-      expect(event.id).toBeDefined();
+      expect(event.slug).toBeDefined();
       expect(event.filename).toBeDefined();
       expect(event.meta).toBeDefined();
     });
 
     expect(events[0]).toMatchObject({
       filename: "./2024/08/2024-08-15_NEO KASSEN 2024.mdx",
-      id: "2024-08-15_NEO KASSEN 2024",
+      slug: "2024-08-15_NEO KASSEN 2024",
     });
 
     expect(events[1]).toMatchObject({
       filename: "./2024/08/2024-08-15_まいにちフェス2024 produced by au.mdx",
-      id: "2024-08-15_まいにちフェス2024 produced by au",
+      slug: "2024-08-15_まいにちフェス2024 produced by au",
     });
   });
 });
 
 describe("loadEventModule", () => {
   it("should load mdx event module for the given event id", () => {
-    const eventId =
+    const slug =
       "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会";
-    const event = loadEventModule(eventId);
+    const event = loadEventModule(slug);
 
     expect(event).toMatchObject({
-      id: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
+      slug: "2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会",
       filename:
         "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
     });
   });
 
   it("should load tsx event module for the given event id", () => {
-    const eventId = "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」";
-    const event = loadEventModule(eventId);
+    const slug = "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」";
+    const event = loadEventModule(slug);
 
     expect(event).toMatchObject({
-      id: "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」",
+      slug: "2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」",
       filename: "./2024/12/2024-12-10_雑誌「モデルプレスカウントダウンマガジン vol.10」.tsx",
     });
   });
@@ -82,17 +82,17 @@ describe("event module", () => {
 
   describe.each(Object.entries(ALL_EVENTS))("Event: %s", (filename, event) => {
     it("should have filename compliant with year, month and date", () => {
-      const [year, month, id] = filename.split("/").slice(-3);
-      const idDate = NaiveDate.parseUnsafe(id.split("_")[0]);
+      const [year, month, slug] = filename.split("/").slice(-3);
+      const idDate = NaiveDate.parseUnsafe(slug.split("_")[0]);
 
       expect(year).toEqual(idDate.year.toString());
       expect(month).toEqual(idDate.month.toString().padStart(2, "0"));
     });
 
     it("should have matching date in filename and event meta data", () => {
-      const id = filename.split("/").pop();
-      assert(id != undefined);
-      const idDate = NaiveDate.parseUnsafe(id.split("_")[0]);
+      const slug = filename.split("/").pop();
+      assert(slug != undefined);
+      const idDate = NaiveDate.parseUnsafe(slug.split("_")[0]);
       const metaDate = event.meta.date;
 
       expect(idDate.year).toEqual(metaDate.year);
@@ -129,5 +129,3 @@ const isAbsoluteURL = (url: string): boolean => {
     return false;
   }
 };
-
-export const a = "〜 〜";

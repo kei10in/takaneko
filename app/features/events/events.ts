@@ -44,11 +44,10 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
   return events;
 };
 
-export const loadEventModule = (eventId: string): EventModule | undefined => {
-  const [year, month] = eventId.split("_")[0].split("-");
+export const loadEventModule = (slug: string): EventModule | undefined => {
+  const [year, month] = slug.split("_")[0].split("-");
 
   return (
-    ALL_EVENTS[`./${year}/${month}/${eventId}.mdx`] ??
-    ALL_EVENTS[`./${year}/${month}/${eventId}.tsx`]
+    ALL_EVENTS[`./${year}/${month}/${slug}.mdx`] ?? ALL_EVENTS[`./${year}/${month}/${slug}.tsx`]
   );
 };

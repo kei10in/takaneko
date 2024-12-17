@@ -4,8 +4,8 @@ import { validateEventMeta } from "./meta";
 
 export const importEventFilesAsEventModule = (): Record<string, EventModule> => {
   return Object.fromEntries(
-    Object.entries(import.meta.glob("./*/*/*.{mdx,tsx}", { eager: true })).map(
-      ([filename, module]) => {
+    Object.entries(import.meta.glob("./*/*/*.{mdx,tsx}", { eager: true })).flatMap(
+      ([filename, module]): Array<[string, EventModule]> => {
         const m = module as Record<string, unknown>;
         const meta = validateEventMeta(m.meta);
         if (meta == undefined) {
@@ -14,7 +14,7 @@ export const importEventFilesAsEventModule = (): Record<string, EventModule> => 
 
         const Content = m.default as () => JSX.Element;
 
-        return [filename, { id: stem(filename), filename, meta, Content }];
+        return [[filename, { slug: stem(filename), filename, meta, Content }]];
       },
     ),
   );
