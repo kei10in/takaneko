@@ -21,11 +21,9 @@ export const loadEvents = (month: NaiveMonth): EventModule[] => {
     `./${next.year}/${next.month.toString().padStart(2, "0")}/`,
   ];
 
-  const events = Object.entries(ALL_EVENTS)
-    .filter(([filename]) => {
-      return prefixes.some((prefix) => filename.startsWith(prefix));
-    })
-    .map(([, module]) => module);
+  const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
+    return prefixes.some((prefix) => filename.startsWith(prefix));
+  });
 
   return events;
 };
@@ -37,11 +35,9 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
 
   const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
 
-  const events = Object.entries(ALL_EVENTS)
-    .filter(([filename]) => {
-      return prefixes.some((prefix) => filename.startsWith(prefix));
-    })
-    .map(([, module]) => module);
+  const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
+    return prefixes.some((prefix) => filename.startsWith(prefix));
+  });
 
   events.sort((a, b) => compareEventMeta(a.meta, b.meta));
 
