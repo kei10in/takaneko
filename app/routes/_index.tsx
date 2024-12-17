@@ -4,7 +4,6 @@ import { useMemo } from "react";
 import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar } from "react-icons/bs";
 import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
-import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -38,8 +37,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const date = useMemo(() => getActiveDateInJapan(new Date()), []); // eslint-disable-line react-hooks/exhaustive-deps
   const events = useMemo(() => loadEventsInDay(date), [date]);
-
-  const calendarEvents = events.map(convertEventModuleToCalendarEvent);
 
   const recentProducts = TAKANEKO_PHOTOS.slice(-12).toReversed();
 
@@ -101,14 +98,14 @@ export default function Index() {
             <p className="font-semibold text-gray-400">{displayDateWithDayOfWeek(date)} の予定:</p>
 
             <div className="rounded-lg border bg-white px-2 py-4">
-              {calendarEvents.length !== 0 ? (
-                calendarEvents.map((event) => (
-                  <Link key={event.id} to={`/events/${event.id}`}>
+              {events.length !== 0 ? (
+                events.map((event) => (
+                  <Link key={event.slug} to={`/events/${event.slug}`}>
                     <CalendarEventItem
-                      category={event.category}
-                      summary={event.summary}
-                      location={event.location}
-                      region={event.region}
+                      category={event.meta.category}
+                      summary={event.meta.summary}
+                      location={event.meta.location}
+                      region={event.meta.region}
                     />
                   </Link>
                 ))

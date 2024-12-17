@@ -3,7 +3,6 @@ import { json, MetaFunction, useLoaderData, useLocation, useNavigate } from "@re
 import { useEffect, useMemo } from "react";
 import { DOMAIN } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
-import { convertEventModuleToCalendarEvent } from "~/features/calendars/calendarEvents";
 import { calendarMonthHref, currentMonthHref } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
 import { parseCategory } from "~/features/events/EventType";
@@ -48,9 +47,9 @@ export default function Index() {
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
     const events = loadEvents(m);
-    const calendarEvents = events
-      .map(convertEventModuleToCalendarEvent)
-      .filter((e) => (category == undefined ? true : e.category === category));
+    const calendarEvents = events.filter((e) =>
+      category == undefined ? true : e.meta.category === category,
+    );
     return calendarEvents;
   }, [month, year, category]);
 

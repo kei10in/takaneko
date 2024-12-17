@@ -1,8 +1,8 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventModule } from "../events/eventModule";
-import { compareEventMeta, EventMeta } from "../events/meta";
+import { compareEventMeta } from "../events/meta";
 
-export type CalendarEvent = EventMeta & { id: string };
+export type CalendarEvent = Omit<EventModule, "Content">;
 
 /**
  * Zip calendar dates and events.
@@ -28,7 +28,7 @@ export const zipCalendarDatesAndEvents = (
 export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
   const map = new Map<number, CalendarEvent[]>();
   for (const event of events) {
-    const key = event.date.getTimeAsUTC();
+    const key = event.meta.date.getTimeAsUTC();
     if (!map.has(key)) {
       map.set(key, []);
     }
@@ -37,22 +37,15 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<number, Calendar
   return map;
 };
 
-export const convertEventModuleToCalendarEvent = (event: EventModule): CalendarEvent => {
-  return {
-    id: event.slug,
-    ...event.meta,
-  };
-};
-
 export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] => {
-  return events.toSorted(compareEventMeta);
+  return events.toSorted((a, b) => compareEventMeta(a.meta, b.meta));
 };
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
   const regions = events
-    .filter((events) => events.status != "CANCELED")
-    .filter((event) => event.region != undefined)
-    .map((event) => event.region ?? "");
+    .filter((event) => event.meta.status != "CANCELED")
+    .filter((event) => event.meta.region != undefined)
+    .map((event) => event.meta.region ?? "");
 
   const result: string[] = [];
 
