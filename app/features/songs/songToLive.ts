@@ -1,8 +1,8 @@
+import { EventModule } from "../events/eventModule";
 import { ALL_EVENTS } from "../events/events";
-import { EventMeta } from "../events/meta";
 
 export const makeSongToLiveMapFromAllEvents = () => {
-  const result: Record<string, EventMeta[]> = {};
+  const result: Record<string, EventModule[]> = {};
 
   Object.values(ALL_EVENTS).forEach((event) => {
     const { meta } = event;
@@ -16,7 +16,7 @@ export const makeSongToLiveMapFromAllEvents = () => {
           result[song] = [];
         }
 
-        result[song].push(event.meta);
+        result[song].push(event);
       });
     });
   });

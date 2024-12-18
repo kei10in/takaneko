@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { json, MetaFunction, useLoaderData } from "@remix-run/react";
+import { json, Link, MetaFunction, useLoaderData } from "@remix-run/react";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -50,7 +50,9 @@ export default function Component() {
           <ul className="space-y-1">
             {lives.map((e, i) => (
               <li key={i}>
-                {displayDateWithDayOfWeek(e.date)} {e.title}
+                <Link to={`/events/${e.slug}`}>
+                  {displayDateWithDayOfWeek(e.meta.date)} {e.meta.title}
+                </Link>
               </li>
             ))}
           </ul>
