@@ -32,6 +32,14 @@ const EventRecap = z.object({
 
 export type EventRecap = z.infer<typeof EventRecap>;
 
+const EventStatus = z.union([
+  z.literal("RESCHEDULED"),
+  z.literal("CANCELED"),
+  z.literal("WITHDRAWN"),
+]);
+
+export type EventStatus = z.infer<typeof EventStatus>;
+
 const EventMetaDescriptor = z.object({
   // 長くなる場合は `title` を使うことができます。
   summary: z.string(),
@@ -42,7 +50,7 @@ const EventMetaDescriptor = z.object({
   // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
   description: z.string().optional(),
 
-  status: z.union([z.literal("RESCHEDULED"), z.literal("CANCELED")]).optional(),
+  status: EventStatus.optional(),
   category: EventTypeEnum,
   date: z.string(),
   open: z.string().optional(),
@@ -74,20 +82,12 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
 
   if (r.success) {
-    const summary =
-      r.data.status == "CANCELED"
-        ? `【中止】${r.data.summary}`
-        : r.data.status == "RESCHEDULED"
-          ? `【延期】${r.data.summary}`
-          : r.data.summary;
+    const status = r.data.status != undefined ? prefixOfEventStatus(r.data.status) : undefined;
+
+    const summary = `${prefixOfEventStatus(r.data.status)}${r.data.summary}`;
     const title =
-      r.data.title == undefined
-        ? summary
-        : r.data.status == "CANCELED"
-          ? `【中止】${r.data.title}`
-          : r.data.status == "RESCHEDULED"
-            ? `【延期】${r.data.title}`
-            : r.data.title;
+      r.data.title == undefined ? summary : `${prefixOfEventStatus(r.data.status)}${r.data.title}`;
+
     const recaps = Array.isArray(r.data.recaps)
       ? r.data.recaps
       : r.data.recaps != undefined
@@ -109,6 +109,19 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   }
 };
 
+const prefixOfEventStatus = (status: EventStatus | undefined): string => {
+  switch (status) {
+    case "RESCHEDULED":
+      return "【延期】 ";
+    case "CANCELED":
+      return "【中止】 ";
+    case "WITHDRAWN":
+      return "【辞退】 ";
+    default:
+      return "";
+  }
+};
+
 export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
   const d = a.date.getTimeAsUTC() - b.date.getTimeAsUTC();
   if (d != 0) {
@@ -116,14 +129,9 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
   }
 
   // キャンセルされてるのは時間を無視して後ろに。
-  if (a.status != b.status) {
-    if (a.status == "RESCHEDULED") {
-      return 1;
-    } else if (b.status == "RESCHEDULED") {
-      return -1;
-    } else {
-      return a.status === "CANCELED" ? 1 : -1;
-    }
+  const s = compareEventStatus(a.status, b.status);
+  if (s != 0) {
+    return s;
   }
 
   const t = (a.start ?? "00:00").localeCompare(b.start ?? "00:00");
@@ -132,4 +140,12 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
   }
 
   return compareEventType(a.category, b.category);
+};
+
+const compareEventStatus = (a: EventStatus | undefined, b: EventStatus | undefined): number => {
+  const order = [undefined, "RESCHEDULED", "WITHDRAWN", "CANCELED"];
+  const ai = order.indexOf(a);
+  const bi = order.indexOf(b);
+
+  return ai - bi;
 };
