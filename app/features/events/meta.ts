@@ -42,7 +42,7 @@ const EventMetaDescriptor = z.object({
   // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
   description: z.string().optional(),
 
-  status: z.union([z.literal("PENDING"), z.literal("CANCELED")]).optional(),
+  status: z.union([z.literal("RESCHEDULED"), z.literal("CANCELED")]).optional(),
   category: EventTypeEnum,
   date: z.string(),
   open: z.string().optional(),
@@ -77,7 +77,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
     const summary =
       r.data.status == "CANCELED"
         ? `【中止】${r.data.summary}`
-        : r.data.status == "PENDING"
+        : r.data.status == "RESCHEDULED"
           ? `【延期】${r.data.summary}`
           : r.data.summary;
     const title =
@@ -85,7 +85,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         ? summary
         : r.data.status == "CANCELED"
           ? `【中止】${r.data.title}`
-          : r.data.status == "PENDING"
+          : r.data.status == "RESCHEDULED"
             ? `【延期】${r.data.title}`
             : r.data.title;
     const recaps = Array.isArray(r.data.recaps)
@@ -117,9 +117,9 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
 
   // キャンセルされてるのは時間を無視して後ろに。
   if (a.status != b.status) {
-    if (a.status == "PENDING") {
+    if (a.status == "RESCHEDULED") {
       return 1;
-    } else if (b.status == "PENDING") {
+    } else if (b.status == "RESCHEDULED") {
       return -1;
     } else {
       return a.status === "CANCELED" ? 1 : -1;
