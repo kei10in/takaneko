@@ -39,3 +39,23 @@ export const Zipper_2024年秋号: Publication = {
     },
   ],
 };
+
+export const Zipper_2024_2025年冬号: Publication = {
+  id: "Zipper 2024-2025年秋号",
+  name: "Zipper 2024-2025年秋号",
+  date: "2024-12-26",
+  kind: "magazines",
+  publisher: "祥伝社",
+  listPrice: 700,
+  code: [{ kind: "", value: "" }],
+  url: "https://www.zipper.jp/news/news-20241218",
+  coverImages: [
+    {
+      path: "/publications/2024/2024-12-26_Zipper 2024-2025年秋号.webp",
+      ref: "https://www.zipper.jp/news/news-20241218",
+    },
+  ],
+  featuredMembers: ["籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1869261320169869632",
+  links: [],
+};
