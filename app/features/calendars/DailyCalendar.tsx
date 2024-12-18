@@ -5,7 +5,6 @@ import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { loadEventsInDay } from "../events/events";
 import { CalendarEventItem } from "./CalendarEventItem";
-import { convertEventModuleToCalendarEvent } from "./calendarEvents";
 import { dateHref } from "./utils";
 
 interface Props {
@@ -19,8 +18,7 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
 
   const calendarEvents = useMemo(() => {
     const events = loadEventsInDay(new NaiveDate(year, month, day));
-    const calendarEvents = events.map(convertEventModuleToCalendarEvent);
-    return calendarEvents;
+    return events;
   }, [day, month, year]);
 
   const d = new NaiveDate(year, month, day);
@@ -57,12 +55,12 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
         <div>
           {calendarEvents.length !== 0 ? (
             calendarEvents.map((event) => (
-              <Link key={event.id} to={`/events/${event.id}`}>
+              <Link key={event.slug} to={`/events/${event.slug}`}>
                 <CalendarEventItem
-                  category={event.category}
-                  summary={event.summary}
-                  location={event.location}
-                  region={event.region}
+                  category={event.meta.category}
+                  summary={event.meta.summary}
+                  location={event.meta.location}
+                  region={event.meta.region}
                 />
               </Link>
             ))

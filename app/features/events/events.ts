@@ -1,29 +1,10 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { stem } from "~/utils/string";
-import { importEventFiles } from "./eventFiles";
-import { compareEventMeta, EventMeta, validateEventMeta } from "./meta";
+import { importEventFilesAsEventModule } from "./eventFiles";
+import { EventModule } from "./eventModule";
+import { compareEventMeta } from "./meta";
 
-export interface EventModule {
-  id: string;
-  filename: string;
-  meta: EventMeta;
-  Content: () => JSX.Element;
-}
-
-export const ALL_EVENTS = Object.fromEntries(
-  importEventFiles().flatMap(({ filename, module }) => {
-    const m = module as Record<string, unknown>;
-    const meta = validateEventMeta(m.meta);
-    if (meta == undefined) {
-      return [];
-    }
-
-    const Content = m.default as () => JSX.Element;
-
-    return [[filename, { meta, Content }]];
-  }),
-);
+export const ALL_EVENTS = importEventFilesAsEventModule();
 
 export const isEventExists = (eventId: string): boolean => {
   const [year, month] = eventId.split("_")[0].split("-");
@@ -40,11 +21,9 @@ export const loadEvents = (month: NaiveMonth): EventModule[] => {
     `./${next.year}/${next.month.toString().padStart(2, "0")}/`,
   ];
 
-  const events = Object.entries(ALL_EVENTS)
-    .filter(([filename]) => {
-      return prefixes.some((prefix) => filename.startsWith(prefix));
-    })
-    .map(([filename, event]) => ({ id: stem(filename), filename, ...event }));
+  const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
+    return prefixes.some((prefix) => filename.startsWith(prefix));
+  });
 
   return events;
 };
@@ -56,31 +35,19 @@ export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
 
   const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
 
-  const events = Object.entries(ALL_EVENTS)
-    .filter(([filename]) => {
-      return prefixes.some((prefix) => filename.startsWith(prefix));
-    })
-    .map(([filename, event]) => ({ id: stem(filename), filename, ...event }));
+  const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
+    return prefixes.some((prefix) => filename.startsWith(prefix));
+  });
 
   events.sort((a, b) => compareEventMeta(a.meta, b.meta));
 
   return events;
 };
 
-export const loadEventModule = (eventId: string): EventModule | undefined => {
-  const [year, month] = eventId.split("_")[0].split("-");
+export const loadEventModule = (slug: string): EventModule | undefined => {
+  const [year, month] = slug.split("_")[0].split("-");
 
   return (
-    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.mdx`) ??
-    loadEventModuleByPath(eventId, `./${year}/${month}/${eventId}.tsx`)
+    ALL_EVENTS[`./${year}/${month}/${slug}.mdx`] ?? ALL_EVENTS[`./${year}/${month}/${slug}.tsx`]
   );
-};
-
-const loadEventModuleByPath = (eventId: string, path: string): EventModule | undefined => {
-  const loadEvent = ALL_EVENTS[path];
-  if (loadEvent == undefined) {
-    return undefined;
-  }
-
-  return { id: eventId, filename: path, ...loadEvent };
 };

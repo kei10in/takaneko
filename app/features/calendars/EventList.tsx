@@ -31,12 +31,12 @@ export const EventList: React.FC<Props> = (props: Props) => {
             </div>
             <div>
               {eventsInDate.map((event) => (
-                <Link key={event.id} to={`/events/${event.id}`}>
+                <Link key={event.slug} to={`/events/${event.slug}`}>
                   <CalendarEventItem
-                    category={event.category}
-                    summary={event.summary}
-                    location={event.location}
-                    region={event.region}
+                    category={event.meta.category}
+                    summary={event.meta.summary}
+                    location={event.meta.location}
+                    region={event.meta.region}
                   />
                 </Link>
               ))}
