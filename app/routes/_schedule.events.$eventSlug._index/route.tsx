@@ -196,6 +196,21 @@ export default function EventPage() {
         />
 
         <Content />
+
+        {meta.links.length > 0 && (
+          <section>
+            <h2>リンク</h2>
+            <ul>
+              {meta.links.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.url} target="_blank" rel="noreferrer">
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
       </article>
 
       {ics != undefined && (

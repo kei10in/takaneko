@@ -59,6 +59,7 @@ const EventMetaDescriptor = z.object({
   region: z.string().optional(),
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
+  links: z.array(LinkDescription).optional(),
   image: ImageDescription.optional(),
   images: z.array(ImageDescription).optional(),
   present: z.array(MemberNameOrGroup).optional(),
@@ -71,9 +72,10 @@ const EventMetaDescriptor = z.object({
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptor, "date" | "recaps" | "images"> & {
+export type EventMeta = Omit<EventMetaDescriptor, "date" | "recaps" | "images" | "links"> & {
   date: NaiveDate;
   images: ImageDescription[];
+  links: LinkDescription[];
   recaps: EventRecap[];
   descriptor: EventMetaDescriptor;
 };
@@ -101,6 +103,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
+      links: r.data.links ?? [],
       recaps,
       descriptor: r.data,
     };
