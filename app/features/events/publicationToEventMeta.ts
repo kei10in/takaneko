@@ -14,5 +14,6 @@ export const convertPublicationToEventMeta = (publication: Publication): EventMe
       text: "商品ページ",
       url: publication.url,
     },
+    links: publication.links,
   };
 };

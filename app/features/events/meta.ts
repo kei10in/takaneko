@@ -103,7 +103,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
-      links: r.data.links ?? [],
+      links: (r.data.links ?? []).filter((link) => link.text != "" && link.url != ""),
       recaps,
       descriptor: r.data,
     };
