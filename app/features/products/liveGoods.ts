@@ -11,6 +11,7 @@ import {
 import { _2ndファンミーティング成長発表会 } from "./lives/2nd ファンミーティング〜成長発表会〜";
 import { たかねこの秋祭り2024_FC_limited } from "./lives/たかねこの秋祭り2024〜FC limited〜";
 import { たかねこクリスマスパーティー2023 } from "./lives/たかねこクリスマスパーティー2023";
+import { たかねこクリスマスパーティー2024 } from "./lives/たかねこクリスマスパーティー2024";
 import { たかねこクリスマスパーティ2022 } from "./lives/たかねこクリスマスパーティ－2022";
 import { たかねこフェス_オータムセッション_たかねこLiFE } from "./lives/たかねこフェス〜オータムセッション〜 たかねこLiFE!";
 import { メジャーデビュー記念ライブBeginning } from "./lives/メジャーデビュー記念ライブ〜Beginning〜";
@@ -25,6 +26,7 @@ import {
 import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
+  たかねこクリスマスパーティー2024,
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる後夜祭,
   たかねこフェス_オータムセッション_たかねこLiFE,
   たかねこの秋祭り2024_FC_limited,
