@@ -4,6 +4,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { compareEventType, EventTypeEnum } from "./EventType";
+import { normalizeLink } from "./normalizeLink";
 
 const EventOverview = z.object({
   // チケット販売サイトの URL を指定します。
@@ -59,7 +60,7 @@ const EventMetaDescriptor = z.object({
   region: z.string().optional(),
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
-  links: z.array(LinkDescription).optional(),
+  links: z.array(z.union([LinkDescription, z.string()])).optional(),
   image: ImageDescription.optional(),
   images: z.array(ImageDescription).optional(),
   present: z.array(MemberNameOrGroup).optional(),
@@ -103,7 +104,11 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
-      links: (r.data.links ?? []).filter((link) => link.text != "" && link.url != ""),
+      links: (r.data.links ?? [])
+        .map((link) => normalizeLink(link))
+        .filter(
+          (link): link is LinkDescription => link != undefined && link.text != "" && link.url != "",
+        ),
       recaps,
       descriptor: r.data,
     };
