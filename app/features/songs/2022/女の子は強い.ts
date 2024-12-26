@@ -3,7 +3,10 @@ import { SongMetaDescriptor } from "../types";
 export const 女の子は強い: SongMetaDescriptor = {
   slug: "女の子は強い",
   name: "女の子は強い",
-  image: "/takaneko/songs/2022/女の子は強い.webp",
+  image: {
+    path: "/takaneko/songs/2022/女の子は強い.webp",
+    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kMpY4ZBQDnp1oUuNK2c8ihEOqUeWyjG0U",
+  },
   officialSite: "https://takanenonadeshiko.jp/?p=1133",
   youtube: [
     {

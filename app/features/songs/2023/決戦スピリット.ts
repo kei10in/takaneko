@@ -3,7 +3,10 @@ import { SongMetaDescriptor } from "../types";
 export const 決戦スピリット: SongMetaDescriptor = {
   slug: "決戦スピリット",
   name: "決戦スピリット",
-  image: "/takaneko/songs/2023/決戦スピリット.webp",
+  image: {
+    path: "/takaneko/songs/2023/決戦スピリット.webp",
+    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kDbb60uPjNKahdGdJYCIjvob6ecA0Twfc",
+  },
   officialSite: "https://takanenonadeshiko.jp/?p=1365",
   youtube: [
     {

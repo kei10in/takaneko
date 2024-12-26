@@ -3,7 +3,10 @@ import { SongMetaDescriptor } from "../types";
 export const すきっちゅーの: SongMetaDescriptor = {
   slug: "すきっちゅーの！",
   name: "すきっちゅーの！",
-  image: "/takaneko/songs/2023/すきっちゅーの！.webp",
+  image: {
+    path: "/takaneko/songs/2023/すきっちゅーの！.webp",
+    ref: "https://music.youtube.com/playlist?list=OLAK5uy_ld4B65ieA0OmuUrGuSReS8pOr0WmL0vhE",
+  },
   officialSite: "https://takanenonadeshiko.jp/?p=1370",
   youtube: [
     {

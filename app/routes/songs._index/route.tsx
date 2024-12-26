@@ -34,7 +34,11 @@ export default function Component() {
                         <BsMusicNoteBeamed className="h-20 w-20 text-gray-300" />
                       </div>
                     ) : (
-                      <img src={track.image} alt={track.name} className="h-40 w-40 object-cover" />
+                      <img
+                        src={track.image.path}
+                        alt={track.name}
+                        className="h-40 w-40 object-cover"
+                      />
                     )}
                   </div>
                 </Link>
