@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 初恋のひと: SongMetaDescriptor = {
   slug: "初恋のひと",
   name: "初恋のひと。",
+  image: "/takaneko/songs/2023/初恋のひと。.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1160",
   youtube: [
     {
@@ -18,4 +19,5 @@ export const 初恋のひと: SongMetaDescriptor = {
       videoId: "f7kbw7_dWEA",
     },
   ],
+  linkcore: "https://linkco.re/sVvChtxX",
 };

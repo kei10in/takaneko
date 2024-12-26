@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const _17歳: SongMetaDescriptor = {
   slug: "17歳",
   name: "17歳",
+  image: "/takaneko/songs/2023/17歳.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {
@@ -18,4 +19,5 @@ export const _17歳: SongMetaDescriptor = {
       videoId: "_KDcZgugOsY",
     },
   ],
+  linkcore: "https://linkco.re/Nzfyynp7",
 };

@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const アイのウイルス: SongMetaDescriptor = {
   slug: "アイのウイルス",
   name: "アイのウイルス",
+  image: "/takaneko/songs/2024/アイのウイルス.webp",
   officialSite: "",
   youtube: [
     {
@@ -10,4 +11,5 @@ export const アイのウイルス: SongMetaDescriptor = {
       videoId: "Bsq2ZKelIqQ",
     },
   ],
+  linkfire: "https://jvcmusic.lnk.to/takaneko_2ndsingle",
 };

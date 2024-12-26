@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const アンチファン: SongMetaDescriptor = {
   slug: "アンチファン",
   name: "アンチファン",
+  image: "/takaneko/songs/2022/アンチファン.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1127",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const アンチファン: SongMetaDescriptor = {
       videoId: "i6KUZQ243ls",
     },
   ],
+  linkcore: "https://linkco.re/8NCaQgFT",
 };

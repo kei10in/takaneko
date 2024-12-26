@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 月曜日の憂鬱: SongMetaDescriptor = {
   slug: "月曜日の憂鬱",
   name: "月曜日の憂鬱",
+  image: "/takaneko/songs/2023/月曜日の憂鬱.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1367",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
       videoId: "FXX0gckKnQA",
     },
   ],
+  linkcore: "https://linkco.re/vPangYRN",
 };

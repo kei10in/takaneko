@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 私は怪物: SongMetaDescriptor = {
   slug: "私は怪物",
   name: "私は怪物",
+  image: "/takaneko/songs/2024/私は怪物.webp",
   officialSite: "",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const 私は怪物: SongMetaDescriptor = {
       videoId: "EokERvrVY6k",
     },
   ],
+  linkcore: "https://linkco.re/eUmuFaRt",
 };

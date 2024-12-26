@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const アドレナリンゲーム: SongMetaDescriptor = {
   slug: "アドレナリンゲーム",
   name: "アドレナリンゲーム",
+  image: "/takaneko/songs/2024/アドレナリンゲーム.webp",
   officialSite: "",
   youtube: [
     {
@@ -18,4 +19,5 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
       videoId: "Bn6rTXTooXg",
     },
   ],
+  linkfire: "https://jvcmusic.lnk.to/adrenalinegame",
 };

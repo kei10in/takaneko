@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 僕は君になれない: SongMetaDescriptor = {
   slug: "僕は君になれない",
   name: "僕は君になれない",
+  image: "/takaneko/songs/2023/僕は君になれない.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1157",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const 僕は君になれない: SongMetaDescriptor = {
       videoId: "IU_tFAq0Q4E",
     },
   ],
+  linkcore: "https://linkco.re/mmANYVTN",
 };

@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 恋を知った世界: SongMetaDescriptor = {
   slug: "恋を知った世界",
   name: "恋を知った世界",
+  image: "/takaneko/songs/2024/恋を知った世界.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1748",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const 恋を知った世界: SongMetaDescriptor = {
       videoId: "07kCyxvrY1U",
     },
   ],
+  linkfire: "https://jvcmusic.lnk.to/koiwoshittasekai",
 };

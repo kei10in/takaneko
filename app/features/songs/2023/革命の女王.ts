@@ -3,6 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const 革命の女王: SongMetaDescriptor = {
   slug: "革命の女王",
   name: "革命の女王",
+  image: "/takaneko/songs/2023/革命の女王.webp",
   officialSite: "https://takanenonadeshiko.jp/?p=1154",
   youtube: [
     {
@@ -14,4 +15,5 @@ export const 革命の女王: SongMetaDescriptor = {
       videoId: "tgtkGQM_yHU",
     },
   ],
+  linkcore: "https://linkco.re/SMRG5Z34",
 };
