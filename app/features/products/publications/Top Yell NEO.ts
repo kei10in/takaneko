@@ -1,5 +1,28 @@
 import { Publication } from "../product";
 
+export const TopYellNeo2024_2025: Publication = {
+  id: "Top Yell NEO 2024〜2025",
+  name: "Top Yell NEO 2024〜2025",
+  date: "2024-12-27",
+  kind: "books",
+  publisher: "竹書房",
+  listPrice: 1760,
+  code: [{ kind: "isbn", value: "9784801942790" }],
+  url: "https://www.takeshobo.co.jp/book/b10088817.html",
+  coverImages: [
+    {
+      path: "/publications/2024/2024-12-27_Top Yell NEO 2024〜2025_表紙.jpg",
+      ref: "https://www.takeshobo.co.jp/book/b10088817.html",
+    },
+    {
+      path: "/publications/2024/2024-12-27_Top Yell NEO 2024〜2025_裏表紙.jpg",
+      ref: "https://www.takeshobo.co.jp/book/b10088817.html",
+    },
+  ],
+  featuredMembers: ["城月菜央", "日向端ひな"],
+  links: [],
+};
+
 export const TopYellNeo2024Autumn: Publication = {
   id: "Top Yell NEO 2024 AUTUMN",
   name: "Top Yell NEO 2024 AUTUMN",

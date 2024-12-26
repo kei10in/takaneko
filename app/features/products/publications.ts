@@ -38,6 +38,7 @@ import { SmartGirlsNextGenerations } from "./publications/smart girls next-gener
 import { TOKYO_RESIDENT_Issue002 } from "./publications/TOKYO RESIDENT";
 import {
   TopYellNeo2022AUTUMN as TopYellNeo2022Autumn,
+  TopYellNeo2024_2025,
   TopYellNeo2024Autumn,
   TopYellNeo2024Spring,
 } from "./publications/Top Yell NEO";
@@ -91,6 +92,7 @@ const publications: Publication[] = [
   TopYellNeo2022Autumn,
   TopYellNeo2024Spring,
   TopYellNeo2024Autumn,
+  TopYellNeo2024_2025,
   VDCMagazine029,
   VDCMagazine030,
   WHITE_graph_011,
