@@ -1,4 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
+import { BsMusicNoteBeamed } from "react-icons/bs";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -22,10 +23,25 @@ export default function Component() {
 
         <p>楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
-        <ul className="mt-4">
+        <ul className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-8">
           {ALL_SONGS.map((track) => (
             <li key={track.slug}>
-              <Link to={`/songs/${track.slug}`}>{track.name}</Link>
+              <div className="w-40">
+                <Link to={`/songs/${track.slug}`}>
+                  <div className="overflow-hidden rounded-lg drop-shadow">
+                    {track.image == undefined ? (
+                      <div className="flex h-40 w-40 items-center justify-center bg-gray-100">
+                        <BsMusicNoteBeamed className="h-20 w-20 text-gray-300" />
+                      </div>
+                    ) : (
+                      <img src={track.image} alt={track.name} className="h-40 w-40 object-cover" />
+                    )}
+                  </div>
+                </Link>
+                <div className="mt-2 text-sm">
+                  <Link to={`/songs/${track.slug}`}>{track.name}</Link>
+                </div>
+              </div>
             </li>
           ))}
         </ul>
