@@ -18,9 +18,16 @@ export const TopYellNeo2024_2025: Publication = {
       path: "/publications/2024/2024-12-27_Top Yell NEO 2024〜2025_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10088817.html",
     },
+    {
+      path: "/publications/2024/2024-12-27_Top Yell NEO 2024〜2025_X.jpg",
+      ref: "https://x.com/TopYell/status/1872461664223989790",
+    },
   ],
   featuredMembers: ["城月菜央", "日向端ひな"],
-  links: [],
+  links: [
+    { text: "掲載内容紹介", url: "https://x.com/TopYell/status/1872461664223989790" },
+    { text: "公式 X 告知", url: "https://x.com/takanenofficial/status/1872500184070213813" },
+  ],
 };
 
 export const TopYellNeo2024Autumn: Publication = {
