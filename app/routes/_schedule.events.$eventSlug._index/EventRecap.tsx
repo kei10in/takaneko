@@ -1,5 +1,7 @@
+import { Link } from "@remix-run/react";
 import React from "react";
 import { EventRecap as Recap } from "~/features/events/meta";
+import { findSong } from "~/features/songs/songs";
 
 interface Props {
   recaps?: Recap[] | undefined;
@@ -56,9 +58,17 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
                   <strong>セトリ:</strong>
                 </p>
                 <ul>
-                  {setlist.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
+                  {setlist.map((item, i) => {
+                    const song = findSong(item);
+                    if (song == undefined) {
+                      return <li key={i}>{item}</li>;
+                    }
+                    return (
+                      <li key={i}>
+                        <Link to={`/songs/${song.slug}`}>{item}</Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             )}

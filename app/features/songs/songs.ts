@@ -65,3 +65,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   ユメムスビ,
   アンチファン,
 ];
+
+export const findSong = (title: string): SongMetaDescriptor | undefined => {
+  return ALL_SONGS.find((song) => song.name === title);
+};
