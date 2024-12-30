@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハロウィン2024_ステッカー: RandomGoods = {
-  id: "ランダムステッカー「ハロウィン2024」ver",
+  id: "ステッカー「ハロウィン2024」",
   name: "ランダムステッカー「ハロウィン2024」ver.",
   year: 2024,
   series: "ハロウィン 2024",
   category: "ステッカー",
-  url: "/takaneko/goods/2024/2024-10-31_ランダムステッカー「ハロウィン2024」ver.webp",
+  url: "/takaneko/goods/2024/2024-10-31_ステッカー「ハロウィン2024」.webp",
   width: 1260,
   height: 1260,
   lineup: [
