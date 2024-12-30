@@ -1,0 +1,36 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const 瞬きさえ忘れる_缶バッジ: RandomGoods = {
+  id: "缶バッジ「瞬きさえ忘れる。」",
+  name: "ランダム缶バッジ「瞬きさえ忘れる。」ver.",
+  year: 2024,
+  series: "瞬きさえ忘れる。",
+  category: "缶バッジ",
+  url: "/takaneko/goods/2024/2024-09-15_缶バッジ「瞬きさえ忘れる。」.webp",
+  width: 1680,
+  height: 1680,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 374, y: 350, width: 314, height: 314 },
+    { id: 2, x: 689, y: 350, width: 314, height: 314 },
+    { id: 3, x: 1004, y: 350, width: 314, height: 314 },
+    { id: 4, x: 216, y: 698, width: 314, height: 314 },
+    { id: 5, x: 530, y: 698, width: 314, height: 314 },
+    { id: 6, x: 845, y: 693, width: 314, height: 314 },
+    { id: 7, x: 1160, y: 693, width: 314, height: 314 },
+    { id: 8, x: 373, y: 1027, width: 314, height: 314 },
+    { id: 9, x: 688, y: 1027, width: 314, height: 314 },
+    { id: 10, x: 1003, y: 1027, width: 314, height: 314 },
+  ],
+};

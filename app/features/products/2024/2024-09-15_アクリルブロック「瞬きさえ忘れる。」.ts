@@ -1,0 +1,36 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
+  id: "アクリルブロック「瞬きさえ忘れる。」",
+  name: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver.",
+  year: 2024,
+  series: "瞬きさえ忘れる。アクリルブロック",
+  category: "アクリルブロック",
+  url: "/takaneko/goods/2024/2024-09-15_アクリルブロック「瞬きさえ忘れる。」.webp",
+  width: 1680,
+  height: 1680,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 334, y: 319, width: 317, height: 317 },
+    { id: 2, x: 682, y: 319, width: 317, height: 317 },
+    { id: 3, x: 1030, y: 319, width: 317, height: 317 },
+    { id: 4, x: 160, y: 682, width: 317, height: 317 },
+    { id: 5, x: 508, y: 682, width: 317, height: 317 },
+    { id: 6, x: 856, y: 682, width: 317, height: 317 },
+    { id: 7, x: 1203, y: 682, width: 317, height: 317 },
+    { id: 8, x: 334, y: 1044, width: 317, height: 317 },
+    { id: 9, x: 681, y: 1044, width: 317, height: 317 },
+    { id: 10, x: 1030, y: 1044, width: 317, height: 317 },
+  ],
+};

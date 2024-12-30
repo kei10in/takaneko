@@ -1,4 +1,4 @@
-import { ハロウィン_生写真 } from "../2022/2022-10_ハロウィン_生写真";
+import { ハロウィン_生写真 } from "../2022/2022-10-31_生写真「ハロウィン」";
 import { LiveGoodsCollection } from "../product";
 
 export const _1st_ファンミーティング_お披露目式: LiveGoodsCollection = {

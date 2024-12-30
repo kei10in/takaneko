@@ -1,0 +1,38 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const クリスマス2024_目印チャーム: RandomGoods = {
+  id: "目印チャーム「クリスマス2024」",
+  name: "ランダム目印チャーム「クリスマス2024」ver.",
+  year: 2024,
+  series: "クリスマス2024",
+  category: "目印チャーム",
+  url: "/takaneko/goods/2024/2024-12-25_目印チャーム「クリスマス2024」.webp",
+  width: 1181,
+  height: 1181,
+  lineup: [
+    { id: 1, name: "てんにゃ", description: "" },
+    { id: 2, name: "ルニャ・コーチ", description: "" },
+    { id: 3, name: "すうにゃろう", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "らあら", description: "" },
+    { id: 6, name: "ルノリスくん", description: "" },
+    { id: 7, name: "にゃーさ", description: "" },
+    { id: 8, name: "たま", description: "" },
+    { id: 9, name: "ちゃーみー", description: "" },
+    { id: 10, name: "ぽにゃん🎀", description: "" },
+    { id: 11, name: "もみさん。", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 268, y: 264, width: 166, height: 192 },
+    { id: 2, x: 427, y: 264, width: 166, height: 192 },
+    { id: 3, x: 585, y: 264, width: 166, height: 192 },
+    { id: 4, x: 750, y: 264, width: 166, height: 192 },
+    { id: 5, x: 357, y: 555, width: 166, height: 192 },
+    { id: 6, x: 517, y: 555, width: 166, height: 192 },
+    { id: 7, x: 673, y: 555, width: 166, height: 192 },
+    { id: 8, x: 273, y: 829, width: 166, height: 192 },
+    { id: 9, x: 438, y: 829, width: 166, height: 192 },
+    { id: 10, x: 584, y: 829, width: 166, height: 192 },
+    { id: 11, x: 755, y: 829, width: 166, height: 192 },
+  ],
+};

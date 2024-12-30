@@ -1,0 +1,36 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const 大青春祭2024_メッセージカード: RandomGoods = {
+  id: "メッセージカード「大青春祭 2024 限定販売」",
+  name: "大青春祭 2024 限定販売 メッセージカード",
+  year: 2024,
+  series: "大青春祭 2024",
+  category: "メッセージカード",
+  url: "/takaneko/goods/2024/2024-10-02_メッセージカード「大青春祭 2024 限定販売」.webp",
+  width: 610,
+  height: 362,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 14, y: 22, width: 105, height: 154 },
+    { id: 2, x: 133, y: 22, width: 105, height: 154 },
+    { id: 3, x: 252, y: 22, width: 105, height: 154 },
+    { id: 4, x: 371, y: 22, width: 105, height: 154 },
+    { id: 5, x: 490, y: 22, width: 105, height: 154 },
+    { id: 6, x: 14, y: 188, width: 105, height: 154 },
+    { id: 7, x: 133, y: 188, width: 105, height: 154 },
+    { id: 8, x: 252, y: 188, width: 105, height: 154 },
+    { id: 9, x: 371, y: 188, width: 105, height: 154 },
+    { id: 10, x: 490, y: 188, width: 105, height: 154 },
+  ],
+};

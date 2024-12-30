@@ -1,0 +1,38 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const にゃでしこ_前髪クリップ: RandomGoods = {
+  id: "前髪クリップ「にゃでしこ」",
+  name: "ランダム前髪クリップ (にゃでしこver.)",
+  year: 2024,
+  series: "にゃでしこ",
+  category: "前髪クリップ",
+  url: "/takaneko/goods/2024/2024-05-12_前髪クリップ「にゃでしこ」.webp",
+  width: 1680,
+  height: 1680,
+  lineup: [
+    { id: 1, name: "てんにゃ", description: "" },
+    { id: 2, name: "ルニャ・コーチ", description: "" },
+    { id: 3, name: "すうにゃろう", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "らあら", description: "" },
+    { id: 6, name: "ルノリスくん", description: "" },
+    { id: 7, name: "にゃーさ", description: "" },
+    { id: 8, name: "たま", description: "" },
+    { id: 9, name: "ちゃーみー", description: "" },
+    { id: 10, name: "ぽにゃん🎀", description: "" },
+    { id: 11, name: "もみさん。", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 250, y: 450, width: 296, height: 259 },
+    { id: 2, x: 547, y: 450, width: 296, height: 259 },
+    { id: 3, x: 844, y: 450, width: 296, height: 259 },
+    { id: 4, x: 1141, y: 450, width: 296, height: 259 },
+    { id: 5, x: 250, y: 724, width: 296, height: 259 },
+    { id: 6, x: 547, y: 724, width: 296, height: 259 },
+    { id: 7, x: 844, y: 724, width: 296, height: 259 },
+    { id: 8, x: 1141, y: 724, width: 296, height: 259 },
+    { id: 9, x: 380, y: 988, width: 296, height: 259 },
+    { id: 10, x: 677, y: 988, width: 296, height: 259 },
+    { id: 11, x: 974, y: 988, width: 296, height: 259 },
+  ],
+};

@@ -1,0 +1,86 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const ハニフェス_生写真: RandomGoods = {
+  id: "生写真「ハニフェス」",
+  name: "らんだむブロマイド (ハニフェス Ver.)",
+  year: 2024,
+  series: "ハニフェス",
+  category: "生写真",
+  url: "/takaneko/goods/2024/2024-04-29_生写真「ハニフェス」.webp",
+  width: 1440,
+  height: 1820,
+  lineup: [
+    { id: 1, name: "橋本桃呼", description: "" },
+    { id: 2, name: "松本ももな", description: "" },
+    { id: 3, name: "春野莉々", description: "" },
+    { id: 4, name: "星谷美来", description: "" },
+    { id: 5, name: "日向端ひな", description: "" },
+    { id: 6, name: "籾山ひめり", description: "" },
+    { id: 7, name: "涼海すう", description: "" },
+    { id: 8, name: "東山恵里沙", description: "" },
+    { id: 9, name: "葉月紗蘭", description: "" },
+    { id: 10, name: "城月菜央", description: "" },
+    { id: 11, name: "永尾梨央", description: "" },
+    { id: 12, name: "高澤百合愛", description: "" },
+    { id: 13, name: "波左間美晴", description: "" },
+    { id: 14, name: "福田ひなた", description: "" },
+    { id: 15, name: "小田桐ななさ", description: "" },
+    { id: 16, name: "土屋玲実", description: "" },
+    { id: 17, name: "寺本理絵", description: "" },
+    { id: 18, name: "柴咲あかり", description: "" },
+    { id: 19, name: "ハコニワリリィ", description: "" },
+    { id: 20, name: "ハコニワリリィ", description: "" },
+    { id: 21, name: "ハコニワリリィ", description: "" },
+    { id: 22, name: "高嶺のなでしこ", description: "" },
+    { id: 23, name: "可憐なアイボリー", description: "" },
+    { id: 24, name: "集合写真", description: "" },
+    { id: 25, name: "Kotoha", description: "" },
+    { id: 26, name: "Kotoha", description: "" },
+    { id: 27, name: "Kotoha", description: "" },
+    { id: 28, name: "Hanon", description: "" },
+    { id: 29, name: "Hanon", description: "" },
+    { id: 30, name: "Hanon", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 52, y: 228, width: 186, height: 279 },
+    { id: 2, x: 285, y: 228, width: 186, height: 279 },
+    { id: 3, x: 517, y: 228, width: 186, height: 279 },
+
+    { id: 4, x: 52, y: 539, width: 186, height: 279 },
+    { id: 5, x: 285, y: 539, width: 186, height: 279 },
+    { id: 6, x: 517, y: 539, width: 186, height: 279 },
+
+    { id: 7, x: 52, y: 851, width: 186, height: 279 },
+    { id: 8, x: 285, y: 851, width: 186, height: 279 },
+    { id: 9, x: 517, y: 851, width: 186, height: 279 },
+
+    { id: 10, x: 750, y: 851, width: 186, height: 279 },
+
+    { id: 11, x: 750, y: 228, width: 186, height: 279 },
+    { id: 12, x: 982, y: 228, width: 186, height: 279 },
+    { id: 13, x: 1214, y: 228, width: 186, height: 279 },
+
+    { id: 14, x: 750, y: 539, width: 186, height: 279 },
+    { id: 15, x: 982, y: 539, width: 186, height: 279 },
+    { id: 16, x: 1214, y: 539, width: 186, height: 279 },
+
+    { id: 17, x: 982, y: 851, width: 186, height: 279 },
+    { id: 18, x: 1214, y: 851, width: 186, height: 279 },
+
+    { id: 19, x: 52, y: 1162, width: 288, height: 192 },
+    { id: 20, x: 52, y: 1362, width: 288, height: 192 },
+    { id: 21, x: 52, y: 1561, width: 288, height: 192 },
+
+    { id: 22, x: 398, y: 1162, width: 288, height: 192 },
+    { id: 23, x: 398, y: 1362, width: 288, height: 192 },
+    { id: 24, x: 398, y: 1561, width: 288, height: 192 },
+
+    { id: 25, x: 750, y: 1162, width: 186, height: 279 },
+    { id: 26, x: 982, y: 1162, width: 186, height: 279 },
+    { id: 27, x: 1214, y: 1162, width: 186, height: 279 },
+
+    { id: 28, x: 750, y: 1474, width: 186, height: 279 },
+    { id: 29, x: 982, y: 1474, width: 186, height: 279 },
+    { id: 30, x: 1214, y: 1474, width: 186, height: 279 },
+  ],
+};

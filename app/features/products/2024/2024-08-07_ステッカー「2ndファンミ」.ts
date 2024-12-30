@@ -1,0 +1,38 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
+  id: "ステッカー「2ndファンミ」",
+  name: "ランダムにゃでしこステッカー (2ndファンミver.)",
+  year: 2024,
+  series: "2nd ファンミ にゃでしこステッカー",
+  category: "ステッカー",
+  url: "/takaneko/goods/2024/2024-08-07_ステッカー「2ndファンミ」.webp",
+  width: 1181,
+  height: 1181,
+  lineup: [
+    { id: 1, name: "てんにゃ", description: "" },
+    { id: 2, name: "ルニャ・コーチ", description: "" },
+    { id: 3, name: "すうにゃろう", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "らあら", description: "" },
+    { id: 6, name: "ルノリスくん", description: "" },
+    { id: 7, name: "にゃーさ", description: "" },
+    { id: 8, name: "たま", description: "" },
+    { id: 9, name: "ちゃーみー", description: "" },
+    { id: 10, name: "ぽにゃん🎀", description: "" },
+    { id: 11, name: "もみさん。", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 197, y: 209, width: 179, height: 238 },
+    { id: 2, x: 400, y: 209, width: 179, height: 238 },
+    { id: 3, x: 602, y: 209, width: 179, height: 238 },
+    { id: 4, x: 805, y: 209, width: 179, height: 238 },
+    { id: 5, x: 299, y: 473, width: 179, height: 238 },
+    { id: 6, x: 501, y: 473, width: 179, height: 238 },
+    { id: 7, x: 703, y: 473, width: 179, height: 238 },
+    { id: 8, x: 198, y: 734, width: 179, height: 238 },
+    { id: 9, x: 400, y: 734, width: 179, height: 238 },
+    { id: 10, x: 602, y: 734, width: 179, height: 238 },
+    { id: 11, x: 804, y: 734, width: 179, height: 238 },
+  ],
+};
