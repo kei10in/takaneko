@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハニフェス_缶バッジ: RandomGoods = {
-  id: "高嶺のなでしこ らんだむ缶バッジ",
+  id: "缶バッジ「ハニフェス」",
   name: "高嶺のなでしこ らんだむ缶バッジ",
   year: 2024,
   series: "ハニフェス",
   category: "缶バッジ",
-  url: "/takaneko/goods/2024/2024-04-29_ハニフェス_缶バッジ.webp",
+  url: "/takaneko/goods/2024/2024-04-29_缶バッジ「ハニフェス」.webp",
   width: 1680,
   height: 1485,
   lineup: [

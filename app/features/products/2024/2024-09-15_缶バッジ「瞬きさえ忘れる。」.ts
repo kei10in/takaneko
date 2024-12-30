@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_缶バッジ: RandomGoods = {
-  id: "ランダム缶バッジ「瞬きさえ忘れる。」ver",
+  id: "缶バッジ「瞬きさえ忘れる。」",
   name: "ランダム缶バッジ「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。",
   category: "缶バッジ",
-  url: "/takaneko/goods/2024/2024-09-15_瞬きさえ忘れる_缶バッジ.webp",
+  url: "/takaneko/goods/2024/2024-09-15_缶バッジ「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 1680,
   lineup: [

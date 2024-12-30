@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const クリスマス2024_目印チャーム: RandomGoods = {
-  id: "ランダム目印チャーム「クリスマス2024」ver",
+  id: "目印チャーム「クリスマス2024」",
   name: "ランダム目印チャーム「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",
   category: "目印チャーム",
-  url: "/takaneko/goods/2024/2024-12-25_ランダム目印チャーム「クリスマス2024」ver.webp",
+  url: "/takaneko/goods/2024/2024-12-25_目印チャーム「クリスマス2024」.webp",
   width: 1181,
   height: 1181,
   lineup: [

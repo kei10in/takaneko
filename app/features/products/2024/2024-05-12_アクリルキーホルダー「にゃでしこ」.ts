@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
-  id: "ランダムアクリルキーホルダー (にゃでしこ ver)",
+  id: "アクリルキーホルダー「にゃでしこ」",
   name: "ランダムアクリルキーホルダー (にゃでしこ ver)",
   year: 2024,
   series: "にゃでしこ",
   category: "アクリルキーホルダー",
-  url: "/takaneko/goods/2024/2024-05-12_にゃでしこ_アクリルキーホルダー.webp",
+  url: "/takaneko/goods/2024/2024-05-12_アクリルキーホルダー「にゃでしこ」.webp",
   width: 1500,
   height: 1200,
   lineup: [

@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const アイトーク_フォトカード: RandomGoods = {
-  id: "フォトカード (アイトーク ver)",
+  id: "フォトカード「アイトーク」",
   name: "フォトカード (アイトーク ver)",
   year: 2024,
   series: "アイトーク",
   category: "フォトカード",
-  url: "/takaneko/goods/2024/2024-07-15_アイトーク.webp",
+  url: "/takaneko/goods/2024/2024-07-15_フォトカード「アイトーク」.webp",
   width: 1950,
   height: 1148,
   lineup: [

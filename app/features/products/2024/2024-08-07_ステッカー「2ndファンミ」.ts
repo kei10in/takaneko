@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
-  id: "ランダムにゃでしこステッカー (2ndファンミ ver)",
+  id: "ステッカー「2ndファンミ」",
   name: "ランダムにゃでしこステッカー (2ndファンミ ver)",
   year: 2024,
   series: "2nd ファンミ にゃでしこステッカー",
   category: "ステッカー",
-  url: "/takaneko/goods/2024/2024-08-07_2ndファンミ_にゃでしこステッカー.webp",
+  url: "/takaneko/goods/2024/2024-08-07_ステッカー「2ndファンミ」.webp",
   width: 1181,
   height: 1181,
   lineup: [

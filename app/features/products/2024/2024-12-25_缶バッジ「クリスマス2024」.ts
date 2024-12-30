@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const クリスマス2024_缶バッジ: RandomGoods = {
-  id: "ランダム缶バッジ「クリスマス2024」ver",
+  id: "缶バッジ「クリスマス2024」",
   name: "ランダム缶バッジ「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",
   category: "缶バッジ",
-  url: "/takaneko/goods/2024/2024-12-25_ランダム缶バッジ「クリスマス2024」ver.webp",
+  url: "/takaneko/goods/2024/2024-12-25_缶バッジ「クリスマス2024」.webp",
   width: 1181,
   height: 1181,
   lineup: [

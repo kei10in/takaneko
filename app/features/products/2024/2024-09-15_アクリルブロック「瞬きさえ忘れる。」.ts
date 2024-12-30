@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
-  id: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver",
+  id: "アクリルブロック「瞬きさえ忘れる。」",
   name: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。アクリルブロック",
   category: "アクリルブロック",
-  url: "/takaneko/goods/2024/2024-09-15_瞬きさえ忘れる_落書きアクリルブロック.webp",
+  url: "/takaneko/goods/2024/2024-09-15_アクリルブロック「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 1680,
   lineup: [

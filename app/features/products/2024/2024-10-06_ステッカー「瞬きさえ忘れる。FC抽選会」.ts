@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_FC抽選会_メンバー個別デザインステッカー: RandomGoods = {
-  id: "瞬きさえ忘れる。FC抽選会 メンバー個別デザインステッカー",
+  id: "ステッカー「瞬きさえ忘れる。FC抽選会」",
   name: "瞬きさえ忘れる。FC抽選会 メンバー個別デザインステッカー",
   year: 2024,
   series: "瞬きさえ忘れる。FC抽選会",
   category: "ステッカー",
-  url: "/takaneko/goods/2024/2024-10-06_瞬きさえ忘れる_FC抽選会_メンバー個別デザインステッカー.png",
+  url: "/takaneko/goods/2024/2024-10-06_ステッカー「瞬きさえ忘れる。FC抽選会」.png",
   width: 1200,
   height: 637,
   lineup: [

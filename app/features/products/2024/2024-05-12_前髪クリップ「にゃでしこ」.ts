@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const にゃでしこ_前髪クリップ: RandomGoods = {
-  id: "ランダム前髪クリップ (にゃでしこ ver)",
+  id: "前髪クリップ「にゃでしこ」",
   name: "ランダム前髪クリップ (にゃでしこ ver)",
   year: 2024,
   series: "にゃでしこ",
   category: "前髪クリップ",
-  url: "/takaneko/goods/2024/2024-05-12_にゃでしこ_前髪クリップ.webp",
+  url: "/takaneko/goods/2024/2024-05-12_前髪クリップ「にゃでしこ」.webp",
   width: 1680,
   height: 1680,
   lineup: [

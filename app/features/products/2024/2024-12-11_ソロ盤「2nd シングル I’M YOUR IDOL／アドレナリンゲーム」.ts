@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const セカンドシングル_ソロ盤: RandomGoods = {
-  id: "2nd シングル ソロ盤",
+  id: "ソロ盤「2nd シングル I’M YOUR IDOL／アドレナリンゲーム」",
   name: "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」 ソロ盤",
   year: 2024,
   series: "2nd シングル",
   category: "ソロ盤",
-  url: "/takaneko/others/2024-12-11_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」_ソロ盤.jpg",
+  url: "/takaneko/goods/2024/2024-12-11_ソロ盤「2nd シングル I’M YOUR IDOL／アドレナリンゲーム」.jpg",
   width: 800,
   height: 621,
   lineup: [
