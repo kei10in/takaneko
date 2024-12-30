@@ -6,7 +6,7 @@ export const _2ndファンミ_缶バッジ: RandomGoods = {
   year: 2024,
   series: "2nd ファンミ 缶バッジ",
   category: "缶バッジ",
-  url: "/takaneko/others/2024-08-07_2ndファンミ_缶バッジ.webp",
+  url: "/takaneko/goods/2024/2024-08-07_2ndファンミ_缶バッジ.webp",
   width: 1181,
   height: 1181,
   lineup: [

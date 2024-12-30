@@ -7,7 +7,7 @@ export const _2024年振袖_生写真: RandomGoods = {
   year: 2024,
   series: "2024年振袖",
   category: "生写真",
-  url: "/takaneko/photos/2024-01_2024年振袖.webp",
+  url: "/takaneko/goods/2024/2024-01_2024年振袖.webp",
   width: 1180,
   height: 1388,
   lineup: REGULAR_PHOTO_SET,

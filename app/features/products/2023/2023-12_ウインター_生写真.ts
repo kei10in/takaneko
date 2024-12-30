@@ -7,7 +7,7 @@ export const ウインター_生写真: RandomGoods = {
   year: 2023,
   series: "ウインター",
   category: "生写真",
-  url: "/takaneko/photos/2023-12_ウインター.jpg",
+  url: "/takaneko/goods/2023/2023-12_ウインター.jpg",
   width: 1180,
   height: 1389,
   lineup: REGULAR_PHOTO_SET,

@@ -6,7 +6,7 @@ export const 大青春祭2024_メッセージカード: RandomGoods = {
   year: 2024,
   series: "大青春祭 2024",
   category: "メッセージカード",
-  url: "/takaneko/others/2024-10-02_大青春祭2024_メッセージカード.webp",
+  url: "/takaneko/goods/2024/2024-10-02_大青春祭2024_メッセージカード.webp",
   width: 610,
   height: 362,
   lineup: [

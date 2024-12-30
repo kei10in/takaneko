@@ -7,7 +7,7 @@ export const わたし色に染まれ_生写真: RandomGoods = {
   year: 2024,
   series: "わたし色に染まれ",
   category: "生写真",
-  url: "/takaneko/photos/2024-05_わたし色に染まれ.png",
+  url: "/takaneko/goods/2024/2024-05_わたし色に染まれ.png",
   width: 413,
   height: 548,
   lineup: REGULAR_PHOTO_SET,

@@ -7,7 +7,7 @@ export const 白ワンピース_ミニフォト: RandomGoods = {
   year: 2024,
   series: "白ワンピース",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2024-08-12_白ワンピース.jpg",
+  url: "/takaneko/goods/2024/2024-08-12_白ワンピース.jpg",
   width: 720,
   height: 1040,
   lineup: REGULAR_MINI_PHOTO_SET,

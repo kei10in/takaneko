@@ -7,7 +7,7 @@ export const povo20_生写真: RandomGoods = {
   year: 2023,
   series: "povo2.0",
   category: "生写真",
-  url: "/takaneko/photos/2023-10_povo2.0.jpg",
+  url: "/takaneko/goods/2023/2023-10_povo2.0.jpg",
   width: 1182,
   height: 1387,
   lineup: REGULAR_PHOTO_SET,

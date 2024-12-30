@@ -7,7 +7,7 @@ export const _2023ハロウィン_生写真: RandomGoods = {
   year: 2023,
   series: "2023ハロウィン",
   category: "生写真",
-  url: "/takaneko/photos/2023-10_2023ハロウィン.webp",
+  url: "/takaneko/goods/2023/2023-10_2023ハロウィン.webp",
   width: 1180,
   height: 1388,
   lineup: REGULAR_PHOTO_SET,

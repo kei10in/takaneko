@@ -7,7 +7,7 @@ export const 僕は君になれない衣装_ミニフォト: RandomGoods = {
   year: 2023,
   series: "僕は君になれない衣装",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2023-09_僕は君になれない衣装.jpg",
+  url: "/takaneko/goods/2023/2023-09_僕は君になれない衣装.jpg",
   width: 720,
   height: 990,
   lineup: REGULAR_MINI_PHOTO_SET,

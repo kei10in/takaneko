@@ -7,7 +7,7 @@ export const たかねこ全国お招きツアー2023衣装_ミニフォト: Ran
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2023-04_たかねこ全国お招きツアー2023衣装.png",
+  url: "/takaneko/goods/2023/2023-04_たかねこ全国お招きツアー2023衣装.png",
   width: 266,
   height: 266,
   lineup: REGULAR_MINI_PHOTO_SET,

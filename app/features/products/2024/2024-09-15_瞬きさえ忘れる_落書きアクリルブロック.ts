@@ -6,7 +6,7 @@ export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
   year: 2024,
   series: "瞬きさえ忘れる。アクリルブロック",
   category: "アクリルブロック",
-  url: "/takaneko/others/2024-09-15_瞬きさえ忘れる_落書きアクリルブロック.webp",
+  url: "/takaneko/goods/2024/2024-09-15_瞬きさえ忘れる_落書きアクリルブロック.webp",
   width: 1680,
   height: 1680,
   lineup: [

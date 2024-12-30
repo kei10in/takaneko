@@ -7,7 +7,7 @@ export const 昭和レトロ_生写真: RandomGoods = {
   year: 2022,
   series: "昭和レトロ",
   category: "生写真",
-  url: "/takaneko/photos/2022-11_昭和レトロ.webp",
+  url: "/takaneko/goods/2022/2022-11_昭和レトロ.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

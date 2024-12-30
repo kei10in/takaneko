@@ -7,7 +7,7 @@ export const 海の妖精_ミニフォト: RandomGoods = {
   year: 2023,
   series: "海の妖精",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2023-11-29_海の妖精.webp",
+  url: "/takaneko/goods/2023/2023-11-29_海の妖精.webp",
   width: 1118,
   height: 1468,
   lineup: REGULAR_MINI_PHOTO_SET,

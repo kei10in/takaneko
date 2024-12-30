@@ -6,7 +6,7 @@ export const にゃでしこ_前髪クリップ: RandomGoods = {
   year: 2024,
   series: "にゃでしこ",
   category: "前髪クリップ",
-  url: "/takaneko/others/2024-05-12_にゃでしこ_前髪クリップ.webp",
+  url: "/takaneko/goods/2024/2024-05-12_にゃでしこ_前髪クリップ.webp",
   width: 1680,
   height: 1680,
   lineup: [

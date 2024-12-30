@@ -6,7 +6,7 @@ export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   year: 2024,
   series: "にゃでしこ",
   category: "アクリルキーホルダー",
-  url: "/takaneko/others/2024-05-12_にゃでしこ_アクリルキーホルダー.webp",
+  url: "/takaneko/goods/2024/2024-05-12_にゃでしこ_アクリルキーホルダー.webp",
   width: 1500,
   height: 1200,
   lineup: [

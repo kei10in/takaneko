@@ -7,7 +7,7 @@ export const スーツ_生写真: RandomGoods = {
   year: 2023,
   series: "スーツ",
   category: "生写真",
-  url: "/takaneko/photos/2023-06_スーツ.webp",
+  url: "/takaneko/goods/2023/2023-06_スーツ.webp",
   width: 1066,
   height: 1256,
   lineup: REGULAR_PHOTO_SET,

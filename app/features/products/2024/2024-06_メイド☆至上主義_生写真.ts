@@ -7,7 +7,7 @@ export const メイド至上主義_生写真: RandomGoods = {
   year: 2024,
   series: "メイド☆至上主義",
   category: "生写真",
-  url: "/takaneko/photos/2024-06_メイド☆至上主義.webp",
+  url: "/takaneko/goods/2024/2024-06_メイド☆至上主義.webp",
   width: 1680,
   height: 2128,
   lineup: REGULAR_PHOTO_SET,

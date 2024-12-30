@@ -7,7 +7,7 @@ export const マリン_生写真: RandomGoods = {
   year: 2023,
   series: "マリン",
   category: "生写真",
-  url: "/takaneko/photos/2023-07_マリン.webp",
+  url: "/takaneko/goods/2023/2023-07_マリン.webp",
   width: 1144,
   height: 1395,
   lineup: REGULAR_PHOTO_SET,

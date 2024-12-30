@@ -6,7 +6,7 @@ export const Beginning_ミニフォト: RandomGoods = {
   year: 2024,
   series: "Beginning",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2024-04_Beginning.png",
+  url: "/takaneko/goods/2024/2024-04_Beginning.png",
   width: 542,
   height: 347,
   lineup: [

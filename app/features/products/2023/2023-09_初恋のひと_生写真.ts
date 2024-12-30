@@ -7,7 +7,7 @@ export const 初恋のひと_生写真: RandomGoods = {
   year: 2023,
   series: "初恋のひと",
   category: "生写真",
-  url: "/takaneko/photos/2023-09_初恋のひと.webp",
+  url: "/takaneko/goods/2023/2023-09_初恋のひと.webp",
   width: 1181,
   height: 1387,
   lineup: REGULAR_PHOTO_SET,

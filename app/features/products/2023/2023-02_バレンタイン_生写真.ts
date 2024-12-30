@@ -7,7 +7,7 @@ export const バレンタイン_生写真: RandomGoods = {
   year: 2023,
   series: "バレンタイン",
   category: "生写真",
-  url: "/takaneko/photos/2023-02_バレンタイン.webp",
+  url: "/takaneko/goods/2023/2023-02_バレンタイン.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

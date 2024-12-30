@@ -6,7 +6,7 @@ export const ミニアクリルスタンドキーホルダーメンバーソロ�
   year: 2024,
   series: "2nd シングル特典",
   category: "ミニアクリルスタンド キーホルダー",
-  url: "/takaneko/others/2024-12-11_ミニアクリルスタンドキーホルダーメンバーソロ写真.jpg",
+  url: "/takaneko/goods/2024/2024-12-11_ミニアクリルスタンドキーホルダーメンバーソロ写真.jpg",
   width: 1980,
   height: 1606,
   lineup: [

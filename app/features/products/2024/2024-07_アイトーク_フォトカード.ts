@@ -6,7 +6,7 @@ export const アイトーク_フォトカード: RandomGoods = {
   year: 2024,
   series: "アイトーク",
   category: "フォトカード",
-  url: "/takaneko/others/2024-07-15_アイトーク.webp",
+  url: "/takaneko/goods/2024/2024-07-15_アイトーク.webp",
   width: 1950,
   height: 1148,
   lineup: [

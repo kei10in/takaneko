@@ -6,7 +6,7 @@ export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
   year: 2024,
   series: "2nd ファンミ にゃでしこステッカー",
   category: "ステッカー",
-  url: "/takaneko/others/2024-08-07_2ndファンミ_にゃでしこステッカー.webp",
+  url: "/takaneko/goods/2024/2024-08-07_2ndファンミ_にゃでしこステッカー.webp",
   width: 1181,
   height: 1181,
   lineup: [

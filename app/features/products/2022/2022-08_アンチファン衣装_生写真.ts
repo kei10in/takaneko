@@ -7,7 +7,7 @@ export const アンチファン衣装_生写真: RandomGoods = {
   year: 2022,
   series: "アンチファン衣装",
   category: "生写真",
-  url: "/takaneko/photos/2022-08_アンチファン衣装.webp",
+  url: "/takaneko/goods/2022/2022-08_アンチファン衣装.webp",
   width: 1280,
   height: 1280,
   lineup: REGULAR_PHOTO_SET,

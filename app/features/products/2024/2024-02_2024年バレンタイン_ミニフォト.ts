@@ -7,7 +7,7 @@ export const _2024年バレンタイン_ミニフォト: RandomGoods = {
   year: 2024,
   series: "2024年バレンタイン",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2024-02_2024年バレンタイン.webp",
+  url: "/takaneko/goods/2024/2024-02_2024年バレンタイン.webp",
   width: 1116,
   height: 1468,
   lineup: REGULAR_MINI_PHOTO_SET,

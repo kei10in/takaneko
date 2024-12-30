@@ -7,7 +7,7 @@ export const わたし色に染まれ_ミニフォト: RandomGoods = {
   year: 2024,
   series: "わたし色に染まれ",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2024-05-12_わたし色に染まれ.png",
+  url: "/takaneko/goods/2024/2024-05-12_わたし色に染まれ.png",
   width: 413,
   height: 548,
   lineup: REGULAR_MINI_PHOTO_SET,

@@ -7,7 +7,7 @@ export const _2022サンタ_生写真: RandomGoods = {
   year: 2022,
   series: "2022サンタ",
   category: "生写真",
-  url: "/takaneko/photos/2022-12_2022サンタ.webp",
+  url: "/takaneko/goods/2022/2022-12_2022サンタ.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

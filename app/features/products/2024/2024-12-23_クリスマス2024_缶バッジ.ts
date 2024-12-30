@@ -6,7 +6,7 @@ export const クリスマス2024_缶バッジ: RandomGoods = {
   year: 2024,
   series: "クリスマス2024",
   category: "缶バッジ",
-  url: "/takaneko/others/2024-12-25_ランダム缶バッジ「クリスマス2024」ver.webp",
+  url: "/takaneko/goods/2024/2024-12-25_ランダム缶バッジ「クリスマス2024」ver.webp",
   width: 1181,
   height: 1181,
   lineup: [

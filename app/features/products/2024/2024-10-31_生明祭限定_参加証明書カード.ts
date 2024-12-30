@@ -6,7 +6,7 @@ export const 生明祭限定_参加証明書カード: RandomGoods = {
   year: 2024,
   series: "生明祭",
   category: "カード",
-  url: "/takaneko/others/2024-11-03_生明祭限定_参加証明書カード.webp",
+  url: "/takaneko/goods/2024/2024-11-03_生明祭限定_参加証明書カード.webp",
   width: 1015,
   height: 428,
   lineup: [

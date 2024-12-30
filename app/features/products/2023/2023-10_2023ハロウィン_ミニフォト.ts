@@ -7,7 +7,7 @@ export const _2023ハロウィン_ミニフォト: RandomGoods = {
   year: 2023,
   series: "2023ハロウィン",
   category: "ミニフォト",
-  url: "/takaneko/mini-photo-cards/2023-10-09_2023ハロウィン.jpg",
+  url: "/takaneko/goods/2023/2023-10-09_2023ハロウィン.jpg",
   width: 1078,
   height: 1522,
   lineup: REGULAR_MINI_PHOTO_SET,

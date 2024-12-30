@@ -7,7 +7,7 @@ export const ホワイトサンタ2023_生写真: RandomGoods = {
   year: 2023,
   series: "ホワイトサンタ2023",
   category: "生写真",
-  url: "/takaneko/photos/2023-12_ホワイトサンタ2023.png",
+  url: "/takaneko/goods/2023/2023-12_ホワイトサンタ2023.png",
   width: 200,
   height: 235,
   lineup: REGULAR_PHOTO_SET,

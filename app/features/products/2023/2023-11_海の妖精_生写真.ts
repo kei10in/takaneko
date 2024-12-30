@@ -7,7 +7,7 @@ export const 海の妖精_生写真: RandomGoods = {
   year: 2023,
   series: "海の妖精",
   category: "生写真",
-  url: "/takaneko/photos/2023-11_海の妖精.jpg",
+  url: "/takaneko/goods/2023/2023-11_海の妖精.jpg",
   width: 1181,
   height: 1389,
   lineup: REGULAR_PHOTO_SET,

@@ -7,7 +7,7 @@ export const ワンピース_生写真: RandomGoods = {
   year: 2024,
   series: "ワンピース",
   category: "生写真",
-  url: "/takaneko/photos/2024-05_ワンピース.webp",
+  url: "/takaneko/goods/2024/2024-05_ワンピース.webp",
   width: 1579,
   height: 2000,
   lineup: REGULAR_PHOTO_SET,

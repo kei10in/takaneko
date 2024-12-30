@@ -7,7 +7,7 @@ export const スーツメガネ_生写真: RandomGoods = {
   year: 2023,
   series: "スーツメガネ",
   category: "生写真",
-  url: "/takaneko/photos/2023-06_スーツメガネ.webp",
+  url: "/takaneko/goods/2023/2023-06_スーツメガネ.webp",
   width: 1064,
   height: 1257,
   lineup: REGULAR_PHOTO_SET,

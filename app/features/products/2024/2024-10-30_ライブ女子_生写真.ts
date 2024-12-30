@@ -7,7 +7,7 @@ export const ライブ女子_生写真: RandomGoods = {
   year: 2024,
   series: "ライブ女子",
   category: "生写真",
-  url: "/takaneko/photos/2024-10-30_ライブ女子.webp",
+  url: "/takaneko/goods/2024/2024-10-30_ライブ女子.webp",
   width: 1680,
   height: 2128,
   lineup: REGULAR_PHOTO_SET,

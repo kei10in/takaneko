@@ -7,7 +7,7 @@ export const 梅雨_生写真: RandomGoods = {
   year: 2023,
   series: "梅雨",
   category: "生写真",
-  url: "/takaneko/photos/2023-06_梅雨.webp",
+  url: "/takaneko/goods/2023/2023-06_梅雨.webp",
   width: 1179,
   height: 1391,
   lineup: REGULAR_PHOTO_SET,

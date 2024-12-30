@@ -7,7 +7,7 @@ export const 恋を知った世界_生写真: RandomGoods = {
   year: 2024,
   series: "恋を知った世界",
   category: "生写真",
-  url: "/takaneko/photos/2024-03_恋を知った世界.webp",
+  url: "/takaneko/goods/2024/2024-03_恋を知った世界.webp",
   width: 720,
   height: 910,
   lineup: REGULAR_PHOTO_SET,
