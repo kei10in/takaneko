@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 初恋のひと_生写真: RandomGoods = {
-  id: "生写真「初恋のひと。」",
+  id: "生写真 (初恋のひと ver)",
+  slug: "生写真「初恋のひと。」",
   name: "生写真セット (初恋のひと。ver.)",
   year: 2023,
   series: "初恋のひと",

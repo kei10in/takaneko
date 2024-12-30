@@ -1,7 +1,7 @@
 import { Newspaper } from "../product";
 
 export const 山梨日日新聞_2023年7月11日: Newspaper = {
-  id: "山梨日日新聞 2023年7月11日",
+  slug: "山梨日日新聞 2023年7月11日",
   name: "山梨日日新聞 2023年7月11日",
   date: "2023-07-11",
   kind: "newspapers",

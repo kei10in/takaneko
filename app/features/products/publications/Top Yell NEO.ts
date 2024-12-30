@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const TopYellNeo2024_2025: Publication = {
-  id: "Top Yell NEO 2024〜2025",
+  slug: "Top Yell NEO 2024〜2025",
   name: "Top Yell NEO 2024〜2025",
   date: "2024-12-27",
   kind: "books",
@@ -31,7 +31,7 @@ export const TopYellNeo2024_2025: Publication = {
 };
 
 export const TopYellNeo2024Autumn: Publication = {
-  id: "Top Yell NEO 2024 AUTUMN",
+  slug: "Top Yell NEO 2024 AUTUMN",
   name: "Top Yell NEO 2024 AUTUMN",
   date: "2024-09-30",
   kind: "books",
@@ -58,7 +58,7 @@ export const TopYellNeo2024Autumn: Publication = {
 };
 
 export const TopYellNeo2024Spring: Publication = {
-  id: "Top Yell NEO 2024 SPRING",
+  slug: "Top Yell NEO 2024 SPRING",
   name: "Top Yell NEO 2024 SPRING",
   date: "2024-04-01",
   kind: "books",
@@ -101,7 +101,7 @@ export const TopYellNeo2024Spring: Publication = {
 };
 
 export const TopYellNeo2022AUTUMN: Publication = {
-  id: "Top Yell NEO 2022 AUTUMN",
+  slug: "Top Yell NEO 2022 AUTUMN",
   name: "Top Yell NEO 2022 AUTUMN",
   date: "2022-09-30",
   kind: "books",

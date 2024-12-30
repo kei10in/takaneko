@@ -1,7 +1,7 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 日向端ひな誕生日記念_2024年10月30日: BirthdayGoodsCollection = {
-  id: "日向端ひな誕生日記念 2024年10月30日",
+  slug: "日向端ひな誕生日記念 2024年10月30日",
   name: "日向端ひな誕生日記念 2024年10月30日",
   memberName: "日向端ひな",
   lineup: [
@@ -18,7 +18,7 @@ export const 日向端ひな誕生日記念_2024年10月30日: BirthdayGoodsColl
 };
 
 export const _18センチのひにゃねこアクスタ: OfficialGoods = {
-  id: "18㌢のひにゃねこアクスタ",
+  slug: "18㌢のひにゃねこアクスタ",
   name: "18㌢のひにゃねこアクスタ🐈‍⬛",
   date: "2024-10-30",
   listPrice: 1900,
@@ -31,7 +31,7 @@ export const _18センチのひにゃねこアクスタ: OfficialGoods = {
 };
 
 export const ひにゃねこかがみ: OfficialGoods = {
-  id: "ひにゃねこかがみ(=^H×H^=)",
+  slug: "ひにゃねこかがみ(=^H×H^=)",
   name: "ひにゃねこかがみ(=^H×H^=)",
   date: "2024-10-30",
   listPrice: 2000,
@@ -44,7 +44,7 @@ export const ひにゃねこかがみ: OfficialGoods = {
 };
 
 export const がんばってかいた3連キンホルダー: OfficialGoods = {
-  id: "がんばってかいた3連キンホルダー！",
+  slug: "がんばってかいた3連キンホルダー！",
   name: "がんばってかいた3連キンホルダー！",
   date: "2024-10-30",
   listPrice: 1800,

@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const Beginning_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「Beginning」",
+  id: "ミニフォトカード (Beginning ver)",
+  slug: "ミニフォトカード「Beginning」",
   name: "ミニフォトカードセット (Beginning ver.)",
   year: 2024,
   series: "Beginning",

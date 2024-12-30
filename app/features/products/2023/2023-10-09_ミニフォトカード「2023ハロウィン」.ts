@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const _2023ハロウィン_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「2023ハロウィン」",
+  id: "ミニフォトカード (2023ハロウィン ver)",
+  slug: "ミニフォトカード「2023ハロウィン」",
   name: "ミニフォトカードセット (2023ハロウィン ver.)",
   year: 2023,
   series: "2023ハロウィン",

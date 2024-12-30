@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const クリスマス2024_目印チャーム: RandomGoods = {
-  id: "目印チャーム「クリスマス2024」",
+  id: "ランダム目印チャーム「クリスマス2024」ver",
+  slug: "目印チャーム「クリスマス2024」",
   name: "ランダム目印チャーム「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",

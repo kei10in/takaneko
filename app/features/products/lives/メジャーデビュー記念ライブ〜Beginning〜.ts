@@ -3,7 +3,7 @@ import { Beginning_生写真 } from "../2024/2024-04-08_生写真「Beginning」
 import { LiveGoodsCollection } from "../product";
 
 export const メジャーデビュー記念ライブBeginning: LiveGoodsCollection = {
-  id: "メジャーデビュー記念ライブ〜Beginning〜",
+  slug: "メジャーデビュー記念ライブ〜Beginning〜",
   name: "メジャーデビュー記念ライブ〜Beginning〜",
   images: [
     {

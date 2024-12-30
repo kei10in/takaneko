@@ -4,7 +4,7 @@ import { 梅雨_生写真 } from "../2023/2023-06-29_生写真「梅雨」";
 import { LiveGoodsCollection } from "../product";
 
 export const 全国お招きツアー2023_First_trip: LiveGoodsCollection = {
-  id: "全国お招きツアー2023 〜First trip〜",
+  slug: "全国お招きツアー2023 〜First trip〜",
   name: "全国お招きツアー2023 〜First trip〜",
   images: [
     {
@@ -31,7 +31,7 @@ export const 全国お招きツアー2023_First_trip: LiveGoodsCollection = {
 };
 
 export const 全国お招きツアー2023_First_trip_ツアーファイナル: LiveGoodsCollection = {
-  id: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
+  slug: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
   name: "全国お招きツアー2023 〜First trip〜 ツアーファイナル",
   images: [
     {

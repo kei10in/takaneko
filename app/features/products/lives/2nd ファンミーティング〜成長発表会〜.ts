@@ -3,7 +3,7 @@ import { 白ワンピース_生写真 } from "../2024/2024-08-07_生写真「白
 import { LiveGoodsCollection } from "../product";
 
 export const _2ndファンミーティング成長発表会: LiveGoodsCollection = {
-  id: "2nd ファンミーティング〜成長発表会〜",
+  slug: "2nd ファンミーティング〜成長発表会〜",
   name: "2nd ファンミーティング〜成長発表会〜",
   images: [
     {

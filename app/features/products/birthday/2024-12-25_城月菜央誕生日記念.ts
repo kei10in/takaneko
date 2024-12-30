@@ -1,7 +1,7 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 城月菜央誕生日記念_2024年12月25日: BirthdayGoodsCollection = {
-  id: "城月菜央誕生日記念 2024年12月25日",
+  slug: "城月菜央誕生日記念 2024年12月25日",
   name: "城月菜央誕生日記念 2024年12月25日",
   memberName: "城月菜央",
   lineup: ["誰でも着やすいTシャツ", "かっこいいおしゃれなグラス", "サイズ的にも使いやすいポーチ"],
@@ -14,7 +14,7 @@ export const 城月菜央誕生日記念_2024年12月25日: BirthdayGoodsCollect
 };
 
 export const 誰でも着やすいTシャツ: OfficialGoods = {
-  id: "誰でも着やすいTシャツ",
+  slug: "誰でも着やすいTシャツ",
   name: "誰でも着やすいTシャツ",
   date: "2024-12-25",
   listPrice: 4500,
@@ -35,7 +35,7 @@ export const 誰でも着やすいTシャツ: OfficialGoods = {
 };
 
 export const かっこいいおしゃれなグラス: OfficialGoods = {
-  id: "かっこいいおしゃれなグラス",
+  slug: "かっこいいおしゃれなグラス",
   name: "かっこいいおしゃれなグラス",
   date: "2024-12-25",
   listPrice: 4000,
@@ -52,7 +52,7 @@ export const かっこいいおしゃれなグラス: OfficialGoods = {
 };
 
 export const サイズ的にも使いやすいポーチ: OfficialGoods = {
-  id: "サイズ的にも使いやすいポーチ",
+  slug: "サイズ的にも使いやすいポーチ",
   name: "サイズ的にも使いやすいポーチ",
   date: "2024-12-25",
   listPrice: 2000,

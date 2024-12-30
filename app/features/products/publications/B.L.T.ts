@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const BLT_2024年9月号: Publication = {
-  id: "B.L.T 2024年9月号",
+  slug: "B.L.T 2024年9月号",
   name: "B.L.T 2024年9月号",
   date: "2024-07-26",
   kind: "magazines",
@@ -28,7 +28,7 @@ export const BLT_2024年9月号: Publication = {
 };
 
 export const BLT_2023年2月号: Publication = {
-  id: "B.L.T 2023年2月号",
+  slug: "B.L.T 2023年2月号",
   name: "B.L.T 2023年2月号",
   date: "2022-12-26",
   kind: "magazines",

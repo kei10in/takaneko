@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const SmartGirlsNextGenerations: Publication = {
-  id: "smart girls next-generations",
+  slug: "smart girls next-generations",
   name: "smart girls next-generations",
   date: "2024-07-29",
   kind: "books",

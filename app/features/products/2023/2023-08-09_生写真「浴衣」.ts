@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 浴衣_生写真: RandomGoods = {
-  id: "生写真「浴衣」",
+  id: "生写真 (浴衣 ver)",
+  slug: "生写真「浴衣」",
   name: "生写真セット (浴衣ver.)",
   year: 2023,
   series: "浴衣",

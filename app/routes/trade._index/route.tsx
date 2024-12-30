@@ -95,8 +95,8 @@ export default function Index() {
         <h2 className="my-4 text-center text-2xl font-semibold text-gray-600">ランダムグッズ</h2>
         <ul className="flex flex-wrap justify-center gap-4">
           {TAKANEKO_PHOTOS.toReversed().map((photo) => (
-            <li key={photo.id}>
-              <Link to={`/trade/${photo.id}`}>
+            <li key={photo.slug}>
+              <Link to={`/trade/${photo.slug}`}>
                 <ProductItem
                   image={photo.url}
                   year={photo.year}

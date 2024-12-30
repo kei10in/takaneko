@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_にゃでしこステッカー: RandomGoods = {
-  id: "ステッカー「瞬きさえ忘れる。」",
+  id: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver",
+  slug: "ステッカー「瞬きさえ忘れる。」",
   name: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。にゃでしこステッカー",

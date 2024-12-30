@@ -2,8 +2,9 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 僕は君になれない衣装_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「僕は君になれない衣装」",
-  name: "ミニフォトカード (僕は君になれない衣装 ver)",
+  id: "ミニフォトカード (僕は君になれない衣装 ver)",
+  slug: "ミニフォトカード「僕は君になれない衣装」",
+  name: "ミニフォトカードセット (僕は君になれない衣装 ver.)",
   year: 2023,
   series: "僕は君になれない衣装",
   category: "ミニフォト",

@@ -8,10 +8,7 @@ import {
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
-import {
-  descriptionForTradeImagesTool,
-  titleForTradeImagesTool,
-} from "~/routes/trade.$productId._index/metaData";
+import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const title = titleForTradeImagesTool(data);
@@ -21,12 +18,12 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const loader = ({ params }: LoaderFunctionArgs) => {
-  const productId = params.productId;
-  if (productId == undefined) {
+  const productSlug = params.productSlug;
+  if (productSlug == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  const productImage = TAKANEKO_PHOTOS.find((p) => p.id == productId);
+  const productImage = TAKANEKO_PHOTOS.find((p) => p.slug == productSlug);
   if (productImage == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
@@ -35,12 +32,12 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
 };
 
 export const clientLoader = defineClientLoader(({ params }) => {
-  const productId = params.productId;
-  if (productId == undefined) {
+  const productSlug = params.productSlug;
+  if (productSlug == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  const productImage = TAKANEKO_PHOTOS.find((p) => p.id == productId);
+  const productImage = TAKANEKO_PHOTOS.find((p) => p.slug == productSlug);
   if (productImage == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }

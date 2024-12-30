@@ -2,7 +2,7 @@ import { ライブ女子_ミニフォト } from "../2024/2024-10-25_ミニフォ
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこの秋祭り2024_FC_limited: LiveGoodsCollection = {
-  id: "たかねこの秋祭り 2024 〜FC limited〜",
+  slug: "たかねこの秋祭り 2024 〜FC limited〜",
   name: "たかねこの秋祭り 2024 〜FC limited〜",
   images: [
     {

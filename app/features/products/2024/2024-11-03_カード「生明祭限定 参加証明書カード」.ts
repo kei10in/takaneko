@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 生明祭限定_参加証明書カード: RandomGoods = {
-  id: "カード「生明祭限定 参加証明書カード」",
+  id: "生明祭限定 参加証明書カード",
+  slug: "カード「生明祭限定 参加証明書カード」",
   name: "生明祭限定 参加証明書カード",
   year: 2024,
   series: "生明祭",

@@ -1,7 +1,7 @@
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこフェス_オータムセッション_たかねこLiFE: LiveGoodsCollection = {
-  id: "たかねこフェス 〜オータムセッション〜 たかねこ LiFE!",
+  slug: "たかねこフェス 〜オータムセッション〜 たかねこ LiFE!",
   name: "たかねこフェス 〜オータムセッション〜 たかねこ LiFE!",
   images: [
     {

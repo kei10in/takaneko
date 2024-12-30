@@ -5,7 +5,7 @@ import { クリスマス2024_缶バッジ } from "../2024/2024-12-25_缶バッ�
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこクリスマスパーティー2024: LiveGoodsCollection = {
-  id: "たかねこクリスマスパーティー2024",
+  slug: "たかねこクリスマスパーティー2024",
   name: "たかねこクリスマスパーティー2024",
   images: [
     {

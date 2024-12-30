@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoods = {
-  id: "生写真「たかねこ全国お招きツアー 2023」",
+  id: "生写真 (たかねこ全国お招きツアー 2023 ver)",
+  slug: "生写真「たかねこ全国お招きツアー 2023」",
   name: "生写真セット (「たかねこ全国お招きツアー 2023」)",
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",

@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 大青春祭2024_メッセージカード: RandomGoods = {
-  id: "メッセージカード「大青春祭 2024 限定販売」",
+  id: "大青春祭 2024 限定販売 メッセージカード",
+  slug: "メッセージカード「大青春祭 2024 限定販売」",
   name: "大青春祭 2024 限定販売 メッセージカード",
   year: 2024,
   series: "大青春祭 2024",

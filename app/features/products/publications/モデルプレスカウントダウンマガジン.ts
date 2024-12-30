@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const モデルプレスカウントダウンマガジン_vol10: Publication = {
-  id: "モデルプレスカウントダウンマガジン vol.10",
+  slug: "モデルプレスカウントダウンマガジン vol.10",
   name: "モデルプレスカウントダウンマガジン vol.10",
   date: "2024-12-10",
   kind: "magazines", // "books"

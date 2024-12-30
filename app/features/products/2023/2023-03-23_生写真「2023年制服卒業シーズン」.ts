@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2023年制服卒業シーズン_生写真: RandomGoods = {
-  id: "生写真「2023年制服卒業シーズン」",
+  id: "生写真 (バレンタイン ver)",
+  slug: "生写真「2023年制服卒業シーズン」",
   name: "生写真セット (2023年制服卒業シーズンver.)",
   year: 2023,
   series: "2023年制服卒業シーズン",

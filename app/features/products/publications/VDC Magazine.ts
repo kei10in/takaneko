@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const VDCMagazine030: Publication = {
-  id: "VDC Magazine 030",
+  slug: "VDC Magazine 030",
   name: "VDC Magazine 030",
   date: "2024-03-22",
   kind: "magazines",
@@ -37,7 +37,7 @@ export const VDCMagazine030: Publication = {
 };
 
 export const VDCMagazine029: Publication = {
-  id: "VDC Magazine 029",
+  slug: "VDC Magazine 029",
   name: "VDC Magazine 029",
   date: "2023-12-22",
   kind: "magazines",

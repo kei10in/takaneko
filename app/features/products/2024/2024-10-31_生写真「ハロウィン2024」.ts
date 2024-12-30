@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { CENTERED_PHOTO_SET } from "../utils";
 
 export const ハロウィン2024_生写真: RandomGoods = {
-  id: "生写真「ハロウィン2024」",
+  id: "生写真「ハロウィン2024」ver",
+  slug: "生写真「ハロウィン2024」",
   name: "生写真セット「ハロウィン2024」ver.",
   year: 2024,
   series: "ハロウィン 2024",

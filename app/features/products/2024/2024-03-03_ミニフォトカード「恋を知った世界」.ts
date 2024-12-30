@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「恋を知った世界」",
+  id: "ミニフォトカード (恋を知った世界 ver)",
+  slug: "ミニフォトカード「恋を知った世界」",
   name: "ミニフォトカードセット(恋を知った世界ver.)",
   year: 2024,
   series: "恋を知った世界",

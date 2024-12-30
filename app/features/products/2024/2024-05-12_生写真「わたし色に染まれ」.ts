@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const わたし色に染まれ_生写真: RandomGoods = {
-  id: "生写真「わたし色に染まれ」",
+  id: "生写真 (わたし色に染まれ ver)",
+  slug: "生写真「わたし色に染まれ」",
   name: "生写真セット (わたし色に染まれver.)",
   year: 2024,
   series: "わたし色に染まれ",

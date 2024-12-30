@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハロウィン2024_ステッカー: RandomGoods = {
-  id: "ステッカー「ハロウィン2024」",
+  id: "ランダムステッカー「ハロウィン2024」ver",
+  slug: "ステッカー「ハロウィン2024」",
   name: "ランダムステッカー「ハロウィン2024」ver.",
   year: 2024,
   series: "ハロウィン 2024",

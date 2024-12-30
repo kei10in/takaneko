@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2022サンタ_生写真: RandomGoods = {
-  id: "生写真「2022サンタ」",
+  id: "生写真 (2022サンタ ver)",
+  slug: "生写真「2022サンタ」",
   name: "生写真セット (2022サンタver.)",
   year: 2022,
   series: "2022サンタ",

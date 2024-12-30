@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const CMNOW_vol220_2023年1_2月号: Publication = {
-  id: "CM NOW vol.220 2023年1-2月号",
+  slug: "CM NOW vol.220 2023年1-2月号",
   name: "CM NOW vol.220 2023年1-2月号",
   date: "2022-12-09",
   kind: "magazines",

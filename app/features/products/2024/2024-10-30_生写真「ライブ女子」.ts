@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ライブ女子_生写真: RandomGoods = {
-  id: "生写真「ライブ女子」",
+  id: "生写真「ライブ女子」ver",
+  slug: "生写真「ライブ女子」",
   name: "生写真セット (ライブ女子ver.)",
   year: 2024,
   series: "ライブ女子",

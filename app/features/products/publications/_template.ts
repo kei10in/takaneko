@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const a: Publication = {
-  id: "",
+  slug: "",
   name: "",
   date: "",
   kind: "magazines", // "books"
