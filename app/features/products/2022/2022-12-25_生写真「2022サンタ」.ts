@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2022サンタ_生写真: RandomGoods = {
-  id: "生写真 (2022サンタ ver)",
-  name: "生写真 (2022サンタ ver)",
+  id: "生写真「2022サンタ」",
+  name: "生写真セット (2022サンタver.)",
   year: 2022,
   series: "2022サンタ",
   category: "生写真",
-  url: "/takaneko/goods/2022/2022-12_2022サンタ.webp",
+  url: "/takaneko/goods/2022/2022-12-25_生写真「2022サンタ」.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

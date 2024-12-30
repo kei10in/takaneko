@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const バレンタイン_生写真: RandomGoods = {
-  id: "生写真 (バレンタイン ver)",
-  name: "生写真 (バレンタイン ver)",
+  id: "生写真「バレンタイン」",
+  name: "生写真 (バレンタインver.)",
   year: 2023,
   series: "バレンタイン",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-02_バレンタイン.webp",
+  url: "/takaneko/goods/2023/2023-02-14_生写真「バレンタイン」.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

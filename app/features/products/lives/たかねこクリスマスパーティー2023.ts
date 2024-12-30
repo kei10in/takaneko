@@ -1,5 +1,5 @@
+import { ホワイトサンタ2023_生写真 } from "../2023/2023-12-24_生写真「ホワイトサンタ2023」";
 import { ホワイトサンタ2023_ミニフォト } from "../2023/2023-12_ホワイトサンタ2023_ミニフォト";
-import { ホワイトサンタ2023_生写真 } from "../2023/2023-12_ホワイトサンタ2023_生写真";
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこクリスマスパーティー2023: LiveGoodsCollection = {

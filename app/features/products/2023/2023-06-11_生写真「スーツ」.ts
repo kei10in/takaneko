@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const スーツ_生写真: RandomGoods = {
-  id: "生写真 (スーツ ver)",
-  name: "生写真 (スーツ ver)",
+  id: "生写真「スーツ」",
+  name: "生写真 (スーツver.)",
   year: 2023,
   series: "スーツ",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-06_スーツ.webp",
+  url: "/takaneko/goods/2023/2023-06-11_生写真「スーツ」.webp",
   width: 1066,
   height: 1256,
   lineup: REGULAR_PHOTO_SET,

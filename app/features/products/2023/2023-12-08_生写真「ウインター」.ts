@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ウインター_生写真: RandomGoods = {
-  id: "生写真 (ウインター ver)",
-  name: "生写真 (ウインター ver)",
+  id: "生写真「ウインター」",
+  name: "生写真 (ウインターver.)",
   year: 2023,
   series: "ウインター",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-12_ウインター.jpg",
+  url: "/takaneko/goods/2023/2023-12-08_生写真「ウインター」.jpg",
   width: 1180,
   height: 1389,
   lineup: REGULAR_PHOTO_SET,

@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoods = {
-  id: "生写真 (たかねこ全国お招きツアー 2023 ver)",
-  name: "生写真 (たかねこ全国お招きツアー 2023 ver)",
+  id: "生写真「たかねこ全国お招きツアー 2023」",
+  name: "生写真 (たかねこ全国お招きツアー 2023ver.)",
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-04_たかねこ全国お招きツアー2023衣装.png",
+  url: "/takaneko/goods/2023/2023-04-23_生写真「たかねこ全国お招きツアー 2023」.png",
   width: 266,
   height: 266,
   lineup: REGULAR_MINI_PHOTO_SET,

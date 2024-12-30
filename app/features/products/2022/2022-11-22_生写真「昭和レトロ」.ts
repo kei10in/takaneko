@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 昭和レトロ_生写真: RandomGoods = {
-  id: "生写真 (昭和レトロ ver)",
-  name: "生写真 (昭和レトロ ver)",
+  id: "生写真「昭和レトロ」",
+  name: "生写真セット (昭和レトロver.)",
   year: 2022,
   series: "昭和レトロ",
   category: "生写真",
-  url: "/takaneko/goods/2022/2022-11_昭和レトロ.webp",
+  url: "/takaneko/goods/2022/2022-11-22_生写真「昭和レトロ」.webp",
   width: 1300,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

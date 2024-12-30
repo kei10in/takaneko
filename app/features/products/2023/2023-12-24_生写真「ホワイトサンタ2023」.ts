@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ホワイトサンタ2023_生写真: RandomGoods = {
-  id: "生写真 (ホワイトサンタ2023 ver)",
-  name: "生写真 (ホワイトサンタ2023 ver)",
+  id: "生写真「ホワイトサンタ2023」",
+  name: "生写真 (ホワイトサンタ2023ver.)",
   year: 2023,
   series: "ホワイトサンタ2023",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-12_ホワイトサンタ2023.png",
+  url: "/takaneko/goods/2023/2023-12-24_生写真「ホワイトサンタ2023」.png",
   width: 200,
   height: 235,
   lineup: REGULAR_PHOTO_SET,

@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const うぶごえ_生写真: RandomGoods = {
-  id: "生写真 (うぶごえ ver)",
-  name: "生写真 (うぶごえ ver)",
+  id: "生写真「うぶごえ限定」",
+  name: "うぶごえ限定生写真セット",
   year: 2022,
   series: "うぶごえ",
   category: "生写真",
-  url: "/takaneko/goods/2022/2022-09_うぶごえ.jpg",
+  url: "/takaneko/goods/2022/2022-08-29_生写真「うぶごえ限定」.jpg",
   width: 1280,
   height: 1300,
   lineup: REGULAR_PHOTO_SET,

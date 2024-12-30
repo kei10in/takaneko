@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 僕は君になれない衣装_生写真: RandomGoods = {
-  id: "生写真 (僕は君になれない衣装 ver)",
-  name: "生写真 (僕は君になれない衣装 ver)",
+  id: "生写真「僕は君になれない衣装」",
+  name: "生写真 (僕は君になれない衣装ver.)",
   year: 2023,
   series: "僕は君になれない衣装",
   category: "生写真",
-  url: "/takaneko/goods/2023/2023-09_僕は君になれない衣装.jpg",
+  url: "/takaneko/goods/2023/2023-09-03_生写真「僕は君になれない衣装」.jpg",
   width: 720,
   height: 974,
   lineup: REGULAR_PHOTO_SET,
