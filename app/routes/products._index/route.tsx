@@ -64,11 +64,14 @@ export default function Index() {
                           <h4>{goods.type}</h4>
                           <ul className="list-outside list-disc pl-6 marker:text-gray-300">
                             {goods.lineup.map((item) => (
-                              <li key={typeof item === "string" ? item : item.id}>
+                              <li key={typeof item === "string" ? item : item.slug}>
                                 {typeof item === "string" ? (
                                   item
                                 ) : (
-                                  <Link className="text-nadeshiko-800" to={`/products/${item.id}`}>
+                                  <Link
+                                    className="text-nadeshiko-800"
+                                    to={`/products/${item.slug}`}
+                                  >
                                     {item.name}
                                   </Link>
                                 )}
@@ -114,8 +117,8 @@ export default function Index() {
           <h2 className="mb-4 text-2xl">生写真</h2>
           <ul className="grid grid-cols-2 place-content-center gap-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
             {PHOTOS.map((photo) => (
-              <li key={photo.id}>
-                <Link to={`/products/${photo.id}`}>
+              <li key={photo.slug}>
+                <Link to={`/products/${photo.slug}`}>
                   <ProductCard {...photo} />
                 </Link>
               </li>
@@ -127,8 +130,8 @@ export default function Index() {
           <h2 className="mb-4 text-2xl">ミニフォトカード</h2>
           <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
             {MINI_PHOTO_CARDS.map((photo) => (
-              <li key={photo.id}>
-                <Link to={`/products/${photo.id}`}>
+              <li key={photo.slug}>
+                <Link to={`/products/${photo.slug}`}>
                   <ProductCard {...photo} />
                 </Link>
               </li>

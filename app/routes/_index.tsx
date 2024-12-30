@@ -135,7 +135,7 @@ export default function Index() {
             <p className="font-semibold text-gray-400">最近のグッズ:</p>
             <div className="flex flex-wrap justify-center gap-4">
               {recentProducts.map((product) => (
-                <Link to={`/trade/${product.id}`} key={product.id}>
+                <Link to={`/trade/${product.slug}`} key={product.slug}>
                   <ProductItem
                     image={product.url}
                     year={product.year}

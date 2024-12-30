@@ -82,13 +82,13 @@ const buildEventPages = async (): Promise<SitemapUrl[]> => {
 };
 
 const buildTradeImagePages = () => {
-  return TAKANEKO_PHOTOS.map((photo) => ({ loc: `/trade/${photo.id}` }));
+  return TAKANEKO_PHOTOS.map((photo) => ({ loc: `/trade/${photo.slug}` }));
 };
 
 const buildProductPages = (): SitemapUrl[] => {
   return [
-    ...PHOTOS.map((x) => ({ loc: `/products/${x.id}` })),
-    ...MINI_PHOTO_CARDS.map((x) => ({ loc: `/products/${x.id}` })),
+    ...PHOTOS.map((x) => ({ loc: `/products/${x.slug}` })),
+    ...MINI_PHOTO_CARDS.map((x) => ({ loc: `/products/${x.slug}` })),
     ...PUBLICATIONS.map((x) => ({ loc: `/products/${x.id}` })),
   ];
 };

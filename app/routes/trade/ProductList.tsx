@@ -79,7 +79,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
 
       {filteredAllPhotos.map((item) => {
         const open = item.photos.some(
-          (photo) => `/trade/${encodeURIComponent(photo.id)}` == location.pathname,
+          (photo) => `/trade/${encodeURIComponent(photo.slug)}` == location.pathname,
         );
 
         return (
@@ -93,8 +93,8 @@ export const ProductList: React.FC<Props> = (props: Props) => {
             <DisclosurePanel>
               <ul className="flex flex-wrap justify-center gap-3 px-4 pb-1.5">
                 {item.photos.map((photo) => (
-                  <li key={photo.id}>
-                    <NavLink to={`/trade/${photo.id}`} onClick={onClickMenuItem}>
+                  <li key={photo.slug}>
+                    <NavLink to={`/trade/${photo.slug}`} onClick={onClickMenuItem}>
                       {({ isActive }) => (
                         <ProductItem
                           image={photo.url}

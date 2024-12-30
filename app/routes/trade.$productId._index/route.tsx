@@ -26,7 +26,7 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  const productImage = TAKANEKO_PHOTOS.find((p) => p.id == productId);
+  const productImage = TAKANEKO_PHOTOS.find((p) => p.slug == productId);
   if (productImage == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
@@ -40,7 +40,7 @@ export const clientLoader = defineClientLoader(({ params }) => {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  const productImage = TAKANEKO_PHOTOS.find((p) => p.id == productId);
+  const productImage = TAKANEKO_PHOTOS.find((p) => p.slug == productId);
   if (productImage == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
