@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 昭和レトロ_生写真: RandomGoods = {
-  id: "生写真「昭和レトロ」",
+  id: "生写真 (2022秋服 ver)",
+  slug: "生写真「昭和レトロ」",
   name: "生写真セット (昭和レトロver.)",
   year: 2022,
   series: "昭和レトロ",

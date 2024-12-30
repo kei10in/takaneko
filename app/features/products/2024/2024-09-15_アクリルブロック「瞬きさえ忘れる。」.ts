@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
-  id: "アクリルブロック「瞬きさえ忘れる。」",
+  id: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver",
+  slug: "アクリルブロック「瞬きさえ忘れる。」",
   name: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。アクリルブロック",

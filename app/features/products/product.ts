@@ -27,6 +27,7 @@ export interface OfficialGoods {
  */
 export interface RandomGoods {
   id: string;
+  slug: string;
   name: string;
   date?: string;
   listPrice?: number;

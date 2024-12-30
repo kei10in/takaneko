@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const クリスマス2024_生写真: RandomGoods = {
-  id: "生写真「クリスマス2024」",
+  id: "生写真「クリスマス2024」ver",
+  slug: "生写真「クリスマス2024」",
   name: "生写真セット「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",

@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const _2ndファンミ_缶バッジ: RandomGoods = {
-  id: "缶バッジ「2ndファンミ」",
+  id: "ランダム缶バッジ (2ndファンミ ver)",
+  slug: "缶バッジ「2ndファンミ」",
   name: "ランダム缶バッジ (2ndファンミver.)",
   year: 2024,
   series: "2nd ファンミ 缶バッジ",

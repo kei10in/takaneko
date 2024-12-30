@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_FC抽選会_メンバー個別デザインステッカー: RandomGoods = {
-  id: "ステッカー「瞬きさえ忘れる。FC抽選会」",
+  id: "瞬きさえ忘れる。FC抽選会 メンバー個別デザインステッカー",
+  slug: "ステッカー「瞬きさえ忘れる。FC抽選会」",
   name: "瞬きさえ忘れる。FC抽選会 メンバー個別デザインステッカー",
   year: 2024,
   series: "瞬きさえ忘れる。FC抽選会",

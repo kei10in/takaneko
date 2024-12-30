@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const セカンドシングル_ソロ盤: RandomGoods = {
-  id: "ソロ盤「2nd シングル I’M YOUR IDOL／アドレナリンゲーム」",
+  id: "2nd シングル ソロ盤",
+  slug: "ソロ盤「2nd シングル I’M YOUR IDOL／アドレナリンゲーム」",
   name: "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」 ソロ盤",
   year: 2024,
   series: "2nd シングル",

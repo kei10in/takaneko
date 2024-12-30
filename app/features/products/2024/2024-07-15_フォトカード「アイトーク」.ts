@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const アイトーク_フォトカード: RandomGoods = {
-  id: "フォトカード「アイトーク」",
+  id: "フォトカード (アイトーク ver)",
+  slug: "フォトカード「アイトーク」",
   name: "フォトカード (アイトークver.)",
   year: 2024,
   series: "アイトーク",

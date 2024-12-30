@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハニフェス_生写真: RandomGoods = {
-  id: "生写真「ハニフェス」",
+  id: "らんだむブロマイド (ハニフェス ver)",
+  slug: "生写真「ハニフェス」",
   name: "らんだむブロマイド (ハニフェス Ver.)",
   year: 2024,
   series: "ハニフェス",

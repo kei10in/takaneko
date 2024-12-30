@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const にゃでしこ_前髪クリップ: RandomGoods = {
-  id: "前髪クリップ「にゃでしこ」",
+  id: "ランダム前髪クリップ (にゃでしこ ver)",
+  slug: "前髪クリップ「にゃでしこ」",
   name: "ランダム前髪クリップ (にゃでしこver.)",
   year: 2024,
   series: "にゃでしこ",

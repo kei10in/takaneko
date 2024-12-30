@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 瞬きさえ忘れる_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「瞬きさえ忘れる。」",
+  id: "ミニフォトカード「瞬きさえ忘れる。」ver",
+  slug: "ミニフォトカード「瞬きさえ忘れる。」",
   name: "ミニフォトカードセット「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。",

@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const povo20_生写真: RandomGoods = {
-  id: "生写真「povo」",
+  id: "生写真 (povo2.0 ver)",
+  slug: "生写真「povo」",
   name: "生写真セット (povo ver.)",
   year: 2023,
   series: "povo",

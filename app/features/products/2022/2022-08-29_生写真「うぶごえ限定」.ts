@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const うぶごえ_生写真: RandomGoods = {
-  id: "生写真「うぶごえ限定」",
+  id: "生写真 (うぶごえ ver)",
+  slug: "生写真「うぶごえ限定」",
   name: "うぶごえ限定生写真セット",
   year: 2022,
   series: "うぶごえ",

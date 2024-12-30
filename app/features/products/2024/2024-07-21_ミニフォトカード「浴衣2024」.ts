@@ -2,7 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 浴衣2024_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「浴衣2024」",
+  id: "ミニフォトカード (浴衣2024 ver)",
+  slug: "ミニフォトカード「浴衣2024」",
   name: "ミニフォトカードセット (浴衣2024ver.)",
   year: 2024,
   series: "浴衣2024",

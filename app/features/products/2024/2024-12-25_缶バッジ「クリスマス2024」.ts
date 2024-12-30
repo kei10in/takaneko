@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const クリスマス2024_缶バッジ: RandomGoods = {
-  id: "缶バッジ「クリスマス2024」",
+  id: "ランダム缶バッジ「クリスマス2024」ver",
+  slug: "缶バッジ「クリスマス2024」",
   name: "ランダム缶バッジ「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",

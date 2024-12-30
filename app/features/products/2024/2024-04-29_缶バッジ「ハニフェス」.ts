@@ -1,7 +1,8 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハニフェス_缶バッジ: RandomGoods = {
-  id: "缶バッジ「ハニフェス」",
+  id: "高嶺のなでしこ らんだむ缶バッジ",
+  slug: "缶バッジ「ハニフェス」",
   name: "高嶺のなでしこ らんだむ缶バッジ",
   year: 2024,
   series: "ハニフェス",
