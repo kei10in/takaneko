@@ -5,7 +5,7 @@ import { 海の妖精_生写真 } from "../2023/2023-11-29_生写真「海の妖
 import { LiveGoodsCollection } from "../product";
 
 export const _1周年記念ライブ美しく生きろ: LiveGoodsCollection = {
-  id: "1 周年記念ライブ 〜美しく生きろ〜",
+  slug: "1 周年記念ライブ 〜美しく生きろ〜",
   name: "1 周年記念ライブ 〜美しく生きろ〜",
   images: [
     {
@@ -33,7 +33,7 @@ export const _1周年記念ライブ美しく生きろ: LiveGoodsCollection = {
 };
 
 export const _1周年記念ライブ美しく生きろ大阪公演: LiveGoodsCollection = {
-  id: "1 周年記念ライブ 〜美しく生きろ〜 大阪公演",
+  slug: "1 周年記念ライブ 〜美しく生きろ〜 大阪公演",
   name: "1 周年記念ライブ 〜美しく生きろ〜 大阪公演",
   images: [
     {

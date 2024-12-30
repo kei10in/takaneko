@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const MARQUEE_Vol156: Publication = {
-  id: "MARQUEE Vol.156",
+  slug: "MARQUEE Vol.156",
   name: "MARQUEE Vol.156",
   date: "2024-11-23",
   kind: "magazines",
@@ -26,7 +26,7 @@ export const MARQUEE_Vol156: Publication = {
   ],
 };
 export const MARQUEE_Vol155: Publication = {
-  id: "MARQUEE Vol.155",
+  slug: "MARQUEE Vol.155",
   name: "MARQUEE Vol.155",
   date: "2024-08-23",
   kind: "magazines",
@@ -55,7 +55,7 @@ export const MARQUEE_Vol155: Publication = {
 };
 
 export const MARQUEE_Vol154: Publication = {
-  id: "MARQUEE Vol.154",
+  slug: "MARQUEE Vol.154",
   name: "MARQUEE Vol.154",
   date: "2024-05-24",
   kind: "magazines",
@@ -79,7 +79,7 @@ export const MARQUEE_Vol154: Publication = {
 };
 
 export const MARQUEE_Vol153: Publication = {
-  id: "MARQUEE Vol.153",
+  slug: "MARQUEE Vol.153",
   name: "MARQUEE Vol.153",
   date: "2024-02-22",
   kind: "magazines",
@@ -114,7 +114,7 @@ export const MARQUEE_Vol153: Publication = {
 };
 
 export const MARQUEE_Vol152: Publication = {
-  id: "MARQUEE Vol.152",
+  slug: "MARQUEE Vol.152",
   name: "MARQUEE Vol.152",
   date: "2023-11-24",
   kind: "magazines",
@@ -138,7 +138,7 @@ export const MARQUEE_Vol152: Publication = {
 };
 
 export const MARQUEE_Vol151: Publication = {
-  id: "MARQUEE Vol.151",
+  slug: "MARQUEE Vol.151",
   name: "MARQUEE Vol.151",
   date: "2023-08-22",
   kind: "magazines",
@@ -162,7 +162,7 @@ export const MARQUEE_Vol151: Publication = {
 };
 
 export const MARQUEE_Vol150: Publication = {
-  id: "MARQUEE Vol.150",
+  slug: "MARQUEE Vol.150",
   name: "MARQUEE Vol.150",
   date: "2023-05-25",
   kind: "magazines",
@@ -186,7 +186,7 @@ export const MARQUEE_Vol150: Publication = {
 };
 
 export const MARQUEE_Vol149: Publication = {
-  id: "MARQUEE Vol.149",
+  slug: "MARQUEE Vol.149",
   name: "MARQUEE Vol.149",
   date: "2023-02-22",
   kind: "magazines",
@@ -210,7 +210,7 @@ export const MARQUEE_Vol149: Publication = {
 };
 
 export const MARQUEE_Vol148: Publication = {
-  id: "MARQUEE Vol.148",
+  slug: "MARQUEE Vol.148",
   name: "MARQUEE Vol.148",
   date: "2022-11-22",
   kind: "magazines",

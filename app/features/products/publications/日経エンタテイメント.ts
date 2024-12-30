@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const 日経エンタテインメント_2024年2月号: Publication = {
-  id: "日経エンタテインメント！ 2024年2月号",
+  slug: "日経エンタテインメント！ 2024年2月号",
   name: "日経エンタテインメント！ 2024年2月号",
   date: "2024-01-04",
   kind: "magazines",

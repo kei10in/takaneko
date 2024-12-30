@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const EX大衆_2024年12月号: Publication = {
-  id: "EX大衆 2024年12月号",
+  slug: "EX大衆 2024年12月号",
   name: "EX大衆 2024年12月号",
   date: "2024-11-15",
   kind: "magazines", // "books"
@@ -21,7 +21,7 @@ export const EX大衆_2024年12月号: Publication = {
 };
 
 export const EX大衆_2022年10月号: Publication = {
-  id: "EX大衆 2022年10月号",
+  slug: "EX大衆 2022年10月号",
   name: "EX大衆 2022年10月号",
   date: "2022-09-14",
   kind: "magazines", // "books"

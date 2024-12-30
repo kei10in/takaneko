@@ -52,7 +52,7 @@ export default function Index() {
           <div className="space-y-8">
             {LiveGoods.map((live) => {
               return (
-                <section key={live.id}>
+                <section key={live.slug}>
                   <h3 className="text-xl">{live.name}</h3>
                   <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
                     <ImageSlide
@@ -93,7 +93,7 @@ export default function Index() {
           <div className="space-y-8">
             {BirthdayGoods.map((bg) => {
               return (
-                <section key={bg.id}>
+                <section key={bg.slug}>
                   <h3 className="text-xl">{bg.name}</h3>
                   <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
                     <ImageSlide
@@ -143,8 +143,8 @@ export default function Index() {
           <h2 className="mb-4 text-2xl">書籍・雑誌</h2>
           <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
             {PUBLICATIONS.map((publication) => (
-              <li key={publication.id}>
-                <Link to={`/products/${publication.id}`}>
+              <li key={publication.slug}>
+                <Link to={`/products/${publication.slug}`}>
                   <PublicationCard
                     name={publication.name}
                     date={NaiveDate.parseUnsafe(publication.date)}

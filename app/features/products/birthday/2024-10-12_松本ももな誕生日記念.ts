@@ -1,7 +1,7 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
-  id: "松本ももな誕生日記念 2024年10月12日",
+  slug: "松本ももな誕生日記念 2024年10月12日",
   name: "松本ももな誕生日記念 2024年10月12日",
   memberName: "松本ももな",
   lineup: ["ももぽにゃんT", "ももにゃくすた", "おりぼんの擬人化なりきりアイテム"],
@@ -14,7 +14,7 @@ export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsColl
 };
 
 export const ももぽにゃんT: OfficialGoods = {
-  id: "ももぽにゃんT",
+  slug: "ももぽにゃんT",
   name: "ももぽにゃんT",
   date: "2024-10-12",
   listPrice: 4500,
@@ -35,7 +35,7 @@ export const ももぽにゃんT: OfficialGoods = {
 };
 
 export const ももにゃくすた: OfficialGoods = {
-  id: "ももにゃくすた",
+  slug: "ももにゃくすた",
   name: "ももにゃくすた",
   date: "2024-10-12",
   listPrice: 1500,
@@ -48,7 +48,7 @@ export const ももにゃくすた: OfficialGoods = {
 };
 
 export const おりぼんの擬人化なりきりアイテム: OfficialGoods = {
-  id: "おりぼんの擬人化なりきりアイテム",
+  slug: "おりぼんの擬人化なりきりアイテム",
   name: "おりぼんの擬人化なりきりアイテム",
   date: "2024-10-12",
   listPrice: 2222,

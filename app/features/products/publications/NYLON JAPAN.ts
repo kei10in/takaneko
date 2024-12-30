@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const NYLON_JAPAN_2025年01月号: Publication = {
-  id: "NYLON JAPAN 2025年1月号",
+  slug: "NYLON JAPAN 2025年1月号",
   name: "NYLON JAPAN 2025年1月号",
   date: "2024-11-28",
   kind: "magazines",

@@ -1,7 +1,7 @@
 import { Newspaper } from "../product";
 
 export const 夕刊フジ_2024年6月6日: Newspaper = {
-  id: "夕刊フジ 2024年6月6日",
+  slug: "夕刊フジ 2024年6月6日",
   name: "夕刊フジ 2024年6月6日",
   date: "2024-06-06",
   kind: "newspapers",
@@ -13,7 +13,7 @@ export const 夕刊フジ_2024年6月6日: Newspaper = {
 };
 
 export const 夕刊フジ_2024年1月17日: Newspaper = {
-  id: "夕刊フジ 2024年1月17日",
+  slug: "夕刊フジ 2024年1月17日",
   name: "夕刊フジ 2024年1月17日",
   date: "2024-01-17",
   kind: "newspapers",
@@ -25,7 +25,7 @@ export const 夕刊フジ_2024年1月17日: Newspaper = {
 };
 
 export const 夕刊フジ_2023年9月10日: Newspaper = {
-  id: "夕刊フジ 2023年9月10日",
+  slug: "夕刊フジ 2023年9月10日",
   name: "夕刊フジ 2023年9月10日",
   date: "2023-09-10",
   kind: "newspapers",
@@ -37,7 +37,7 @@ export const 夕刊フジ_2023年9月10日: Newspaper = {
 };
 
 export const 夕刊フジ_2023年1月12日: Newspaper = {
-  id: "夕刊フジ 2023年1月12日",
+  slug: "夕刊フジ 2023年1月12日",
   name: "夕刊フジ 2023年1月12日",
   date: "2023-01-12",
   publisher: "産経新聞社",
@@ -49,7 +49,7 @@ export const 夕刊フジ_2023年1月12日: Newspaper = {
 };
 
 export const 夕刊フジ_2022年8月18日: Newspaper = {
-  id: "夕刊フジ 2022年8月18日",
+  slug: "夕刊フジ 2022年8月18日",
   name: "夕刊フジ 2022年8月18日",
   date: "2022-08-18",
   kind: "newspapers",

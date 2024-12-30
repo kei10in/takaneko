@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const IDOL_AND_READ_高田メタルSpecial: Publication = {
-  id: "IDOL AND READ 高田メタルSpecial!",
+  slug: "IDOL AND READ 高田メタルSpecial!",
   name: "IDOL AND READ 高田メタルSpecial!",
   date: "2024-12-06",
   kind: "magazines", // "books"

@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const LARME_062: Publication = {
-  id: "LARME 062 Autumn 2024",
+  slug: "LARME 062 Autumn 2024",
   name: "LARME 062 Autumn 2024",
   date: "2024-09-17",
   kind: "magazines",
@@ -21,7 +21,7 @@ export const LARME_062: Publication = {
 };
 
 export const LARME_061: Publication = {
-  id: "LARME 061 Summer 2024",
+  slug: "LARME 061 Summer 2024",
   name: "LARME 061 Summer 2024",
   date: "2024-06-17",
   kind: "magazines",
@@ -41,7 +41,7 @@ export const LARME_061: Publication = {
 };
 
 export const LARME_060: Publication = {
-  id: "LARME 060 Spring 2024",
+  slug: "LARME 060 Spring 2024",
   name: "LARME 060 Spring 2024",
   date: "2024-03-18",
   kind: "magazines",
@@ -61,7 +61,7 @@ export const LARME_060: Publication = {
 };
 
 export const LARME_059: Publication = {
-  id: "LARME 059 Winter 2023",
+  slug: "LARME 059 Winter 2023",
   name: "LARME 059 Winter 2023",
   date: "2023-12-15",
   kind: "magazines",
@@ -81,7 +81,7 @@ export const LARME_059: Publication = {
 };
 
 export const LARME_058: Publication = {
-  id: "LARME 058 Autumn 2023",
+  slug: "LARME 058 Autumn 2023",
   name: "LARME 058 Autumn 2023",
   date: "2023-09-15",
   kind: "magazines",
@@ -101,7 +101,7 @@ export const LARME_058: Publication = {
 };
 
 export const LARME_056: Publication = {
-  id: "LARME 056 Spring 2023",
+  slug: "LARME 056 Spring 2023",
   name: "LARME 056 Spring 2023",
   date: "2023-03-17",
   kind: "magazines",
@@ -121,7 +121,7 @@ export const LARME_056: Publication = {
 };
 
 export const LARME_054: Publication = {
-  id: "LARME 054 Autumn 2022",
+  slug: "LARME 054 Autumn 2022",
   name: "LARME 054 Autumn 2022",
   date: "2022-09-16",
   kind: "magazines",

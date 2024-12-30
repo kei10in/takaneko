@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const 松本ももな_LAST_20_MOMONA: Publication = {
-  id: "松本ももな LAST 20 MOMONA",
+  slug: "松本ももな LAST 20 MOMONA",
   name: "松本ももな LAST 20 MOMONA",
   date: "2023-12-14",
   kind: "books",

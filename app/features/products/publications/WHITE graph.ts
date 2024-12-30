@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const WHITE_graph_011: Publication = {
-  id: "WHITE graph 011",
+  slug: "WHITE graph 011",
   name: "WHITE graph 011",
   date: "2024-05-29",
   kind: "magazines",
@@ -21,7 +21,7 @@ export const WHITE_graph_011: Publication = {
 };
 
 export const 松本ももな_SweetDateTime: Publication = {
-  id: "松本ももな SWEET DATE TIME",
+  slug: "松本ももな SWEET DATE TIME",
   name: "松本ももな「SWEET DATE TIME」WHITE graph デジタル写真集",
   date: "2024-05-29",
   kind: "books",

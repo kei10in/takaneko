@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const _20SWEET_2023_JANUARY: Publication = {
-  id: "20±SWEET 2023 JANUARY",
+  slug: "20±SWEET 2023 JANUARY",
   name: "20±SWEET 2023 JANUARY",
   date: "2023-01-13",
   kind: "magazines", // "books"

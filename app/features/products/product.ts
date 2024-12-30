@@ -13,7 +13,7 @@ export type Product =
     };
 
 export interface OfficialGoods {
-  id: string;
+  slug: string;
   name: string;
   date?: string;
   listPrice?: number;
@@ -57,7 +57,7 @@ export interface ImagePosition {
 }
 
 export interface Publication {
-  id: string;
+  slug: string;
   name: string;
   date: string;
   kind: "magazines" | "books";
@@ -80,7 +80,7 @@ export interface Publication {
 }
 
 export interface Newspaper {
-  id: string;
+  slug: string;
   name: string;
   date: string;
   kind: "newspapers";
@@ -96,7 +96,7 @@ export interface Newspaper {
  * 物販だけでなく抽選会やライブ中にプレゼントされたものを含みます。
  */
 export interface LiveGoodsCollection {
-  id: string;
+  slug: string;
   name: string;
   images: ImageDescription[];
   goods: { type: string; lineup: (string | RandomGoods)[] }[];
@@ -106,7 +106,7 @@ export interface LiveGoodsCollection {
  * 誕生日記念グッズ。
  */
 export interface BirthdayGoodsCollection {
-  id: string;
+  slug: string;
   name: string;
   memberName: MemberName;
   images: ImageDescription[];

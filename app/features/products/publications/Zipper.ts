@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const Zipper_2024_2025年冬号: Publication = {
-  id: "Zipper 2024-2025年秋号",
+  slug: "Zipper 2024-2025年秋号",
   name: "Zipper 2024-2025年秋号",
   date: "2024-12-26",
   kind: "magazines",
@@ -26,7 +26,7 @@ export const Zipper_2024_2025年冬号: Publication = {
 };
 
 export const Zipper_2024年秋号: Publication = {
-  id: "Zipper 2024年秋号",
+  slug: "Zipper 2024年秋号",
   name: "Zipper 2024年秋号",
   date: "2024-09-28",
   kind: "magazines",

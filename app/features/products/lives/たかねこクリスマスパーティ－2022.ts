@@ -2,7 +2,7 @@ import { _2022サンタ_生写真 } from "../2022/2022-12-25_生写真「2022サ
 import { LiveGoodsCollection } from "../product";
 
 export const たかねこクリスマスパーティ2022: LiveGoodsCollection = {
-  id: "たかねこクリスマスパーティー2022",
+  slug: "たかねこクリスマスパーティー2022",
   name: "たかねこクリスマスパーティー2022",
   images: [
     {

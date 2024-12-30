@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const 月刊ENTAME_2024年8月号: Publication = {
-  id: "月刊ENTAME 2024年8月号",
+  slug: "月刊ENTAME 2024年8月号",
   name: "月刊ENTAME 2024年8月号",
   date: "2024-06-28",
   kind: "magazines", // "books"
@@ -26,7 +26,7 @@ export const 月刊ENTAME_2024年8月号: Publication = {
 };
 
 export const 月刊ENTAME_2023年3_4月合併号: Publication = {
-  id: "月刊ENTAME 2023年3・4月合併号",
+  slug: "月刊ENTAME 2023年3・4月合併号",
   name: "月刊ENTAME 2023年3・4月合併号",
   date: "2023-01-30",
   kind: "magazines", // "books"

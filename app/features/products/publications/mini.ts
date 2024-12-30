@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const mini_2023年2月号: Publication = {
-  id: "mini 2023年2月号",
+  slug: "mini 2023年2月号",
   name: "mini 2023年2月号",
   date: "2023-01-12",
   kind: "magazines", // "books"
@@ -26,7 +26,7 @@ export const mini_2023年2月号: Publication = {
 };
 
 export const mini_2022年10月号: Publication = {
-  id: "mini 2022年10月号",
+  slug: "mini 2022年10月号",
   name: "mini 2022年10月号",
   date: "2022-09-01",
   kind: "magazines", // "books"

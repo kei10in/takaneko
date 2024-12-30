@@ -6,7 +6,7 @@ import { Prize, PrizeDrawing } from "../prizes";
 import { LiveGoodsCollection } from "../product";
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollection = {
-  id: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",
+  slug: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",
   name: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",
   images: [
     {
@@ -54,7 +54,7 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollecti
 };
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGoodsCollection = {
-  id: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」TOUR FINAL",
+  slug: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」TOUR FINAL",
   name: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」 TOUR FINAL",
   images: [
     {
@@ -96,7 +96,7 @@ export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal: LiveGood
 };
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる後夜祭: LiveGoodsCollection = {
-  id: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」後夜祭",
+  slug: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」後夜祭",
   name: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」 後夜祭",
   images: [
     {

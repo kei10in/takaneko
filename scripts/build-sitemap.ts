@@ -89,7 +89,7 @@ const buildProductPages = (): SitemapUrl[] => {
   return [
     ...PHOTOS.map((x) => ({ loc: `/products/${x.slug}` })),
     ...MINI_PHOTO_CARDS.map((x) => ({ loc: `/products/${x.slug}` })),
-    ...PUBLICATIONS.map((x) => ({ loc: `/products/${x.id}` })),
+    ...PUBLICATIONS.map((x) => ({ loc: `/products/${x.slug}` })),
   ];
 };
 

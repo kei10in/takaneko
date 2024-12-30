@@ -1,7 +1,7 @@
 import { Publication } from "../product";
 
 export const COSPLAY_MODE_2024年9月号: Publication = {
-  id: "COSPLAY MODE 2024年9月号",
+  slug: "COSPLAY MODE 2024年9月号",
   name: "COSPLAY MODE 2024年9月号",
   date: "2024-08-02",
   kind: "magazines",
