@@ -2,8 +2,8 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 白ワンピース_ミニフォト: RandomGoods = {
-  id: "ミニフォト「白ワンピース」",
-  name: "ミニフォト (白ワンピース ver)",
+  id: "ミニフォトカード「白ワンピース」",
+  name: "ミニフォトカードセット (白ワンピースver.)",
   year: 2024,
   series: "白ワンピース",
   category: "ミニフォト",

@@ -3,7 +3,7 @@ import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ウインター_生写真: RandomGoods = {
   id: "生写真「ウインター」",
-  name: "生写真 (ウインターver.)",
+  name: "生写真セット (ウインターver.)",
   year: 2023,
   series: "ウインター",
   category: "生写真",

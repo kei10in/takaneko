@@ -3,7 +3,7 @@ import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 浴衣2024_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「浴衣2024」",
-  name: "ミニフォトカード (浴衣2024 ver)",
+  name: "ミニフォトカードセット (浴衣2024ver.)",
   year: 2024,
   series: "浴衣2024",
   category: "ミニフォト",

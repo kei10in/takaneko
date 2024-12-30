@@ -2,7 +2,7 @@ import { RandomGoods } from "~/features/products/product";
 
 export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
   id: "ステッカー「2ndファンミ」",
-  name: "ランダムにゃでしこステッカー (2ndファンミ ver)",
+  name: "ランダムにゃでしこステッカー (2ndファンミver.)",
   year: 2024,
   series: "2nd ファンミ にゃでしこステッカー",
   category: "ステッカー",

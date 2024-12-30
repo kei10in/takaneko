@@ -3,7 +3,7 @@ import { REGULAR_PHOTO_SET } from "../utils";
 
 export const _2024年バレンタイン_生写真: RandomGoods = {
   id: "生写真「2024年バレンタイン」",
-  name: "生写真 (2024年バレンタイン ver)",
+  name: "生写真セット (2024年バレンタインver.)",
   year: 2024,
   series: "2024年バレンタイン",
   category: "生写真",

@@ -3,7 +3,7 @@ import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 高嶺のなでしこ2024衣装_生写真: RandomGoods = {
   id: "生写真「高嶺のなでしこ2024衣装」",
-  name: "生写真「高嶺のなでしこ2024衣装」ver.",
+  name: "生写真セット「高嶺のなでしこ2024衣装」ver.",
   year: 2024,
   series: "高嶺のなでしこ2024衣装",
   category: "生写真",

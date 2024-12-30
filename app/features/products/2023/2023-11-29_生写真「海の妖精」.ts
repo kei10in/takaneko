@@ -3,7 +3,7 @@ import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 海の妖精_生写真: RandomGoods = {
   id: "生写真「海の妖精」",
-  name: "生写真 (海の妖精ver.)",
+  name: "生写真セット (海の妖精ver.)",
   year: 2023,
   series: "海の妖精",
   category: "生写真",

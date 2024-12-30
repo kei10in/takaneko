@@ -2,7 +2,7 @@ import { RandomGoods } from "~/features/products/product";
 
 export const Beginning_生写真: RandomGoods = {
   id: "生写真「Beginning」",
-  name: "生写真 (Beginning ver)",
+  name: "生写真セット (Beginning ver.)",
   year: 2024,
   series: "Beginning",
   category: "生写真",

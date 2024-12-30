@@ -3,7 +3,7 @@ import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 高嶺のなでしこ2024衣装_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「高嶺のなでしこ2024衣装」",
-  name: "ミニフォトカード「高嶺のなでしこ2024衣装」ver.",
+  name: "ミニフォトカードセット「高嶺のなでしこ2024衣装」ver.",
   year: 2024,
   series: "高嶺のなでしこ2024衣装",
   category: "ミニフォト",

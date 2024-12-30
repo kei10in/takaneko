@@ -3,7 +3,7 @@ import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const メイド至上主義_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「メイド☆至上主義」",
-  name: "ミニフォトカード (メイド☆至上主義 ver)",
+  name: "ミニフォトカードセット (メイド☆至上主義ver.)",
   year: 2024,
   series: "メイド☆至上主義",
   category: "ミニフォト",

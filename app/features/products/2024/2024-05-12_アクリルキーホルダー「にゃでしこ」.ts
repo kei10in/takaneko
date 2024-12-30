@@ -2,7 +2,7 @@ import { RandomGoods } from "~/features/products/product";
 
 export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   id: "アクリルキーホルダー「にゃでしこ」",
-  name: "ランダムアクリルキーホルダー (にゃでしこ ver)",
+  name: "ランダムアクリルキーホルダー (にゃでしこver.)",
   year: 2024,
   series: "にゃでしこ",
   category: "アクリルキーホルダー",
