@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const Beginning_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード (Beginning ver)",
+  id: "ミニフォトカード「Beginning」",
   name: "ミニフォトカード (Beginning ver)",
   year: 2024,
   series: "Beginning",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-04_Beginning.png",
+  url: "/takaneko/goods/2024/2024-04-08_ミニフォトカード「Beginning」.png",
   width: 542,
   height: 347,
   lineup: [

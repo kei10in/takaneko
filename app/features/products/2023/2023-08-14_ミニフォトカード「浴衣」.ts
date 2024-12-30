@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 浴衣_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード (浴衣 ver)",
+  id: "ミニフォトカード「浴衣」",
   name: "ミニフォトカード (浴衣 ver)",
   year: 2023,
   series: "浴衣",
   category: "ミニフォト",
-  url: "/takaneko/goods/2023/2023-08-14_浴衣.jpg",
+  url: "/takaneko/goods/2023/2023-08-14_ミニフォトカード「浴衣」.jpg",
   width: 1065,
   height: 1539,
   lineup: REGULAR_MINI_PHOTO_SET,

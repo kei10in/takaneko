@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード (恋を知った世界 ver)",
+  id: "ミニフォトカード「恋を知った世界」",
   name: "ミニフォトカード (恋を知った世界 ver)",
   year: 2024,
   series: "恋を知った世界",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-03_恋を知った世界.jpg",
+  url: "/takaneko/goods/2024/2024-03-03_ミニフォトカード「恋を知った世界」.jpg",
   width: 720,
   height: 1040,
   lineup: REGULAR_MINI_PHOTO_SET,

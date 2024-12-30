@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const メイド至上主義_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード (メイド☆至上主義 ver)",
+  id: "ミニフォトカード「メイド☆至上主義」",
   name: "ミニフォトカード (メイド☆至上主義 ver)",
   year: 2024,
   series: "メイド☆至上主義",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-06-21_メイド☆至上主義.webp",
+  url: "/takaneko/goods/2024/2024-06-21_ミニフォトカード「メイド☆至上主義」.webp",
   width: 1680,
   height: 2128,
   lineup: REGULAR_MINI_PHOTO_SET,

@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ワンピース_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード (ワンピース ver)",
+  id: "ミニフォトカード「ワンピース」",
   name: "ミニフォトカード (ワンピース ver)",
   year: 2024,
   series: "ワンピース",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-05-27_ワンピース.jpg",
+  url: "/takaneko/goods/2024/2024-05-27_ミニフォトカード「ワンピース」.jpg",
   width: 1579,
   height: 2000,
   lineup: REGULAR_MINI_PHOTO_SET,

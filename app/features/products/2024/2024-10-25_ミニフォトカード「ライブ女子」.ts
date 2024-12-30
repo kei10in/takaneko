@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ライブ女子_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード ライブ女子 Ver",
+  id: "ミニフォトカード「ライブ女子」",
   name: "ミニフォトカード ライブ女子 Ver.",
   year: 2024,
   series: "ライブ女子",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-10-25_ライブ女子.webp",
+  url: "/takaneko/goods/2024/2024-10-25_ミニフォトカード「ライブ女子」.webp",
   width: 1865,
   height: 2362,
   lineup: REGULAR_MINI_PHOTO_SET,

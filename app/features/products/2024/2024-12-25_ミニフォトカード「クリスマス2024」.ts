@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const クリスマス2024_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「クリスマス2024」ver",
+  id: "ミニフォトカード「クリスマス2024」",
   name: "ミニフォトカード「クリスマス2024」ver.",
   year: 2024,
   series: "クリスマス2024",
   category: "ミニフォト",
-  url: "/takaneko/goods/2024/2024-12-25_ミニフォトカード「クリスマス2024」ver.webp",
+  url: "/takaneko/goods/2024/2024-12-25_ミニフォトカード「クリスマス2024」.webp",
   width: 1680,
   height: 2127,
   lineup: REGULAR_MINI_PHOTO_SET,
