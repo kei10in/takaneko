@@ -1,15 +1,15 @@
 import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const _2024年振袖_生写真: RandomGoods = {
-  id: "生写真 (2024年振袖 ver)",
-  name: "生写真 (2024年振袖 ver)",
+export const _2024年バレンタイン_生写真: RandomGoods = {
+  id: "生写真「2024年バレンタイン」",
+  name: "生写真 (2024年バレンタイン ver)",
   year: 2024,
-  series: "2024年振袖",
+  series: "2024年バレンタイン",
   category: "生写真",
-  url: "/takaneko/goods/2024/2024-01_2024年振袖.webp",
-  width: 1180,
-  height: 1388,
+  url: "/takaneko/goods/2024/2024-02-14_生写真「2024年バレンタイン」.webp",
+  width: 1178,
+  height: 1390,
   lineup: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 20, y: 154, width: 161, height: 230 },

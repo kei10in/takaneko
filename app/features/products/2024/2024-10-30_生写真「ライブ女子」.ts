@@ -1,13 +1,13 @@
 import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
-export const 瞬きさえ忘れる_生写真: RandomGoods = {
-  id: "生写真「瞬きさえ忘れる。」ver",
-  name: "生写真「瞬きさえ忘れる。」ver.",
+export const ライブ女子_生写真: RandomGoods = {
+  id: "生写真「ライブ女子」",
+  name: "生写真「ライブ女子」ver.",
   year: 2024,
-  series: "瞬きさえ忘れる。",
+  series: "ライブ女子",
   category: "生写真",
-  url: "/takaneko/goods/2024/2024-09-15_瞬きさえ忘れる.webp",
+  url: "/takaneko/goods/2024/2024-10-30_生写真「ライブ女子」.webp",
   width: 1680,
   height: 2128,
   lineup: REGULAR_PHOTO_SET,

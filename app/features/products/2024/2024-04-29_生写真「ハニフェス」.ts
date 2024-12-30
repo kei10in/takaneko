@@ -1,12 +1,12 @@
 import { RandomGoods } from "~/features/products/product";
 
 export const ハニフェス_生写真: RandomGoods = {
-  id: "らんだむブロマイド (ハニフェス ver)",
-  name: "らんだむブロマイド (ハニフェス ver)",
+  id: "生写真「ハニフェス」",
+  name: "らんだむブロマイド (ハニフェス Ver.)",
   year: 2024,
   series: "ハニフェス",
   category: "生写真",
-  url: "/takaneko/goods/2024/2024-04_ハニフェス.webp",
+  url: "/takaneko/goods/2024/2024-04-29_生写真「ハニフェス」.webp",
   width: 1440,
   height: 1820,
   lineup: [

@@ -1,5 +1,5 @@
 import { 成長発表会_FC抽選会_メンバー個別デザインステッカー } from "../2024/2024-08-07_成長発表会_FC抽選会参加賞メンバー個別デザインステッカー";
-import { 白ワンピース_生写真 } from "../2024/2024-08_白ワンピース_生写真";
+import { 白ワンピース_生写真 } from "../2024/2024-08-07_生写真「白ワンピース」";
 import { LiveGoodsCollection } from "../product";
 
 export const _2ndファンミーティング成長発表会: LiveGoodsCollection = {

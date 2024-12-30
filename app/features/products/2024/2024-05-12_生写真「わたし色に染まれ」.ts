@@ -2,12 +2,12 @@ import { RandomGoods } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const わたし色に染まれ_生写真: RandomGoods = {
-  id: "生写真 (わたし色に染まれ ver)",
+  id: "生写真「わたし色に染まれ」",
   name: "生写真 (わたし色に染まれ ver)",
   year: 2024,
   series: "わたし色に染まれ",
   category: "生写真",
-  url: "/takaneko/goods/2024/2024-05_わたし色に染まれ.png",
+  url: "/takaneko/goods/2024/2024-05-12_生写真「わたし色に染まれ」.png",
   width: 413,
   height: 548,
   lineup: REGULAR_PHOTO_SET,
