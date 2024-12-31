@@ -1,7 +1,8 @@
 import { Link, MetaFunction } from "@remix-run/react";
-import { useState } from "react";
-import { BsCalendar3, BsCheck2, BsCopy } from "react-icons/bs";
+import { BsBoxArrowUp, BsCalendar3 } from "react-icons/bs";
+import { CopyButton } from "~/components/CopyButton";
 import { DOMAIN } from "~/constants";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
@@ -34,15 +35,7 @@ export default function Index() {
     },
   ];
 
-  const [copied, setCopied] = useState(false);
-
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 3000);
-  };
+  const showShareButton = shouldUseWebShareApi();
 
   return (
     <div className="container mx-auto">
@@ -86,16 +79,36 @@ export default function Index() {
 
               <div className="space-y-2">
                 <p className="font-bold">カレンダーの URL:</p>
-                <p className="flex items-center justify-between gap-2 bg-gray-100 px-4 py-2 font-mono text-gray-800">
-                  <span className="flex-1 break-words break-all">{cal.url}</span>
-                  <button className="h-9 w-9 flex-none" onClick={() => copyToClipboard(cal.url)}>
-                    {copied ? (
-                      <BsCheck2 className="inline text-green-700" />
-                    ) : (
-                      <BsCopy className="inline text-gray-500" />
+                <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
+                  <div className="h-8 flex-1">
+                    <input
+                      className="h-full w-full rounded-md border px-2 font-mono text-sm"
+                      readOnly
+                      value={cal.url}
+                    />
+                  </div>
+                  <div className="flex flex-none items-center justify-end">
+                    {showShareButton && (
+                      <button
+                        className="group flex h-8 w-8 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100"
+                        onClick={async () => {
+                          if (window?.navigator?.share == undefined) {
+                            return;
+                          }
+
+                          await window.navigator.share({
+                            title: "すべてのたかねこの予定",
+                            text: "",
+                            url: cal.url,
+                          });
+                        }}
+                      >
+                        <BsBoxArrowUp className="h-4 w-4 text-gray-600" />
+                      </button>
                     )}
-                  </button>
-                </p>
+                    <CopyButton className="flex-none" data={cal.url} />
+                  </div>
+                </div>
               </div>
             </div>
           </section>
