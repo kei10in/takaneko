@@ -54,6 +54,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 <h3 className="font-semibold">ツール</h3>
                 <ul className="space-y-2">
                   <li>
+                    <Link to="/calendar/registration">カレンダーをアプリに登録</Link>
+                  </li>
+                  <li>
                     <Link to="/shortlink">短い URL を作るやつ</Link>
                   </li>
                   <li>
