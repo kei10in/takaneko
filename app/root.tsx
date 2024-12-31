@@ -7,6 +7,21 @@ import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
+const UTILS = [
+  {
+    name: "カレンダーをアプリに登録",
+    url: "/calendar/registration",
+  },
+  {
+    name: "短い URL を作るやつ",
+    url: "/shortlink",
+  },
+  {
+    name: "RSS フィード",
+    url: "/takaneko-feeds",
+  },
+];
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -59,20 +74,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
                       <ul className="space-y-4 text-sm font-bold text-gray-500">
-                        <li>
-                          <MenuItem>
-                            <Link className="hover:text-nadeshiko-700" to="/shortlink">
-                              短い URL を作るやつ
-                            </Link>
-                          </MenuItem>
-                        </li>
-                        <li>
-                          <MenuItem>
-                            <Link className="hover:text-nadeshiko-700" to="/takaneko-feeds">
-                              RSS フィード
-                            </Link>
-                          </MenuItem>
-                        </li>
+                        {UTILS.map((util) => (
+                          <li key={util.url}>
+                            <MenuItem>
+                              <Link className="hover:text-nadeshiko-700" to={util.url}>
+                                {util.name}
+                              </Link>
+                            </MenuItem>
+                          </li>
+                        ))}
                       </ul>
                     </MenuItems>
                   </Menu>
@@ -138,20 +148,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <p className="text-gray-400">ツール</p>
                     <ul className="mt-4 space-y-4">
-                      <li>
-                        <Link className="hover:text-nadeshiko-700" to="/shortlink" onClick={close}>
-                          <p>短い URL を作るやつ</p>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          className="hover:text-nadeshiko-700"
-                          to="/takaneko-feeds"
-                          onClick={close}
-                        >
-                          <p>RSS フィード</p>
-                        </Link>
-                      </li>
+                      {UTILS.map((util) => (
+                        <li key={util.url}>
+                          <Link className="hover:text-nadeshiko-700" to={util.url} onClick={close}>
+                            <p>{util.name}</p>
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </li>
                 </ul>
