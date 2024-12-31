@@ -1,7 +1,7 @@
 import { Link, MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
 import { useMemo } from "react";
-import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar } from "react-icons/bs";
+import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from "react-icons/bs";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { DOMAIN, SITE_TITLE } from "~/constants";
@@ -93,10 +93,11 @@ export default function Index() {
           <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-2 px-4 text-lg font-semibold leading-tight text-gray-800">
+            <h2 className="flex items-center gap-2 px-4 text-xl font-semibold leading-tight text-gray-500">
               <BsCalendar className="h-6 w-6" />
               <span>スケジュール</span>
             </h2>
+
             <p className="px-4">
               ライブやイベント、テレビ出演などのスケジュールを確認することができます。スケジュールは必ず
               <a href="https://takanenonadeshiko.jp/schedule/">
@@ -106,13 +107,20 @@ export default function Index() {
               や X での告知を確認してください。
             </p>
 
+            <Link
+              className="!mt-2 ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
+              to="/calendar"
+            >
+              <span>すべてのスケジュール</span>
+              <BsChevronRight className="ml-1 inline-block" />
+            </Link>
+
             <Swiper
               className={clsx(
                 "[&_.swiper-pagination-bullet]:bg-black",
                 "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
               )}
               modules={[A11y]}
-              // spaceBetween={16}
               slidesPerView={1.15}
             >
               {events.map(({ date, events }, i) => (
@@ -143,26 +151,23 @@ export default function Index() {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            <div className="!mt-4 w-full">
-              <Link
-                className="mx-auto block w-fit rounded-lg bg-nadeshiko-800 px-4 py-1 font-semibold text-nadeshiko-50"
-                to="/calendar"
-              >
-                すべてのスケジュール
-              </Link>
-            </div>
           </section>
 
           <section className="space-y-4 px-4">
-            <h2 className="flex items-center gap-2 text-lg font-semibold leading-tight text-gray-800">
+            <h2 className="flex items-center gap-2 text-xl font-semibold leading-tight text-gray-500">
               <BsArrowLeftRight className="h-6 w-6" />
               <span>トレード画像つくるやつ</span>
             </h2>
             <p>
               これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
             </p>
-            <p className="font-semibold text-gray-400">最近のグッズ:</p>
+            <div className="items-bottom flex justify-between">
+              <p className="font-semibold text-gray-400">最近のグッズ:</p>
+              <Link className="block text-sm text-nadeshiko-800" to="/trade">
+                <span>すべてのグッズ</span>
+                <BsChevronRight className="ml-1 inline-block" />
+              </Link>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               {recentProducts.map((product) => (
                 <Link to={`/trade/${product.slug}`} key={product.slug}>
@@ -177,10 +182,10 @@ export default function Index() {
             </div>
             <div className="w-full">
               <Link
-                className="mx-auto block w-fit rounded-lg bg-nadeshiko-800 px-4 py-1 font-semibold text-nadeshiko-50"
+                className="mx-auto block w-fit rounded-full bg-nadeshiko-800 px-8 py-2 font-semibold text-nadeshiko-50"
                 to="/trade"
               >
-                使い方とその他のグッズ
+                すべてのグッズ
               </Link>
             </div>
           </section>
