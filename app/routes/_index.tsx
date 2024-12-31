@@ -51,9 +51,9 @@ export default function Index() {
   const recentProducts = TAKANEKO_PHOTOS.slice(-12).toReversed();
 
   return (
-    <div>
-      <div className="container mx-auto text-gray-600">
-        <div className="relative mx-auto w-fit lg:static lg:flex lg:w-full lg:max-w-5xl">
+    <div className="bg-gray-50">
+      <div className="container mx-auto bg-white text-gray-600 shadow-lg lg:max-w-5xl">
+        <div className="relative mx-auto w-fit lg:static lg:flex lg:w-full">
           <img
             className="aspect-[4/3] max-h-96 w-full min-w-96 lg:h-96 lg:w-auto lg:flex-none"
             src="/takaneko/hero.jpg"
