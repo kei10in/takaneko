@@ -62,11 +62,11 @@ export default function Index() {
           になるの？という疑問にお応えします。
         </p>
         <Form
-          className="mt-8 items-center space-y-2 lg:flex lg:space-x-2 lg:space-y-0"
+          className="mt-4 items-center space-y-2 lg:flex lg:space-x-2 lg:space-y-0"
           method="get"
         >
           <input
-            className="block h-8 w-full rounded-md border px-2 font-mono text-sm outline-none lg:flex-1"
+            className="block w-full rounded-md border px-2 py-1 font-mono outline-none lg:flex-1"
             type="text"
             placeholder="高嶺のなでしこ公式サイト内のページの URL"
             name="url"
@@ -82,12 +82,12 @@ export default function Index() {
         {error != undefined && <p className="mx-2 my-2 text-nadeshiko-900">{error}</p>}
 
         {data.url != undefined && (
-          <section className="mt-12">
-            <h3 className="text-bold mb-2 mt-12 text-xl text-gray-700">結果</h3>
+          <section className="mt-4">
+            <h3 className="text-bold mb-2 text-xl text-gray-700">結果</h3>
             <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
-              <div className="h-8 flex-1">
+              <div className="flex-1">
                 <input
-                  className="h-full w-full rounded-md border px-2 font-mono text-sm"
+                  className="h-full w-full rounded-md border px-2 py-2 font-mono text-sm"
                   readOnly
                   value={data.url}
                 />
