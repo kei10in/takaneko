@@ -89,15 +89,15 @@ export default function Index() {
           </div>
         </div>
 
-        <section className="mx-auto w-full max-w-md space-y-16 px-4 pb-12 pt-8 lg:max-w-3xl">
-          <p>「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
+        <section className="mx-auto w-full max-w-md space-y-16 pb-12 pt-8 lg:max-w-3xl">
+          <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-2 text-lg font-semibold leading-tight text-gray-800">
+            <h2 className="flex items-center gap-2 px-4 text-lg font-semibold leading-tight text-gray-800">
               <BsCalendar className="h-6 w-6" />
               <span>スケジュール</span>
             </h2>
-            <p>
+            <p className="px-4">
               ライブやイベント、テレビ出演などのスケジュールを確認することができます。スケジュールは必ず
               <a href="https://takanenonadeshiko.jp/schedule/">
                 公式のスケジュール
@@ -108,17 +108,16 @@ export default function Index() {
 
             <Swiper
               className={clsx(
-                "px-1",
                 "[&_.swiper-pagination-bullet]:bg-black",
                 "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
               )}
               modules={[A11y]}
-              spaceBetween={16}
+              // spaceBetween={16}
               slidesPerView={1.15}
             >
               {events.map(({ date, events }, i) => (
                 <SwiperSlide key={i}>
-                  <div>
+                  <div className="pl-4">
                     <p className="mb-4 font-semibold text-gray-400">
                       <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                     </p>
@@ -155,7 +154,7 @@ export default function Index() {
             </div>
           </section>
 
-          <section className="space-y-4">
+          <section className="space-y-4 px-4">
             <h2 className="flex items-center gap-2 text-lg font-semibold leading-tight text-gray-800">
               <BsArrowLeftRight className="h-6 w-6" />
               <span>トレード画像つくるやつ</span>
