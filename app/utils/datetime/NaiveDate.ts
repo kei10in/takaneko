@@ -30,6 +30,11 @@ export class NaiveDate {
     return new NaiveDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
   };
 
+  addDays = (days: number): NaiveDate => {
+    const date = new Date(Date.UTC(this.year, this.month - 1, this.day + days));
+    return new NaiveDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
+  };
+
   previousDate = (): NaiveDate => {
     const date = new Date(Date.UTC(this.year, this.month - 1, this.day - 1));
     return new NaiveDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());

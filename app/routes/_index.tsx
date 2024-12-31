@@ -2,8 +2,11 @@ import { Link, MetaFunction } from "@remix-run/react";
 import clsx from "clsx";
 import { useMemo } from "react";
 import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar } from "react-icons/bs";
+import { A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
+import { dateHref } from "~/features/calendars/utils";
 import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -35,8 +38,15 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const date = useMemo(() => getActiveDateInJapan(new Date()), []); // eslint-disable-line react-hooks/exhaustive-deps
-  const events = useMemo(() => loadEventsInDay(date), [date]);
+  const date = useMemo(() => getActiveDateInJapan(new Date()), []);
+  const events = useMemo(
+    () =>
+      [0, 1, 2, 3, 4, 5, 6].map((i) => {
+        const d = date.addDays(i);
+        return { date: d, events: loadEventsInDay(d) };
+      }),
+    [date],
+  );
 
   const recentProducts = TAKANEKO_PHOTOS.slice(-12).toReversed();
 
@@ -95,24 +105,45 @@ export default function Index() {
               </a>
               や X での告知を確認してください。
             </p>
-            <p className="font-semibold text-gray-400">{displayDateWithDayOfWeek(date)} の予定:</p>
 
-            <div className="rounded-lg border bg-white px-2 py-4">
-              {events.length !== 0 ? (
-                events.map((event) => (
-                  <Link key={event.slug} to={`/events/${event.slug}`}>
-                    <CalendarEventItem
-                      category={event.meta.category}
-                      summary={event.meta.summary}
-                      location={event.meta.location}
-                      region={event.meta.region}
-                    />
-                  </Link>
-                ))
-              ) : (
-                <div className="mx-auto w-fit px-2 py-4 text-gray-600">予定はありません。</div>
+            <Swiper
+              className={clsx(
+                "px-1",
+                "[&_.swiper-pagination-bullet]:bg-black",
+                "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
               )}
-            </div>
+              modules={[A11y]}
+              spaceBetween={16}
+              slidesPerView={1.15}
+            >
+              {events.map(({ date, events }, i) => (
+                <SwiperSlide key={i}>
+                  <div>
+                    <p className="mb-4 font-semibold text-gray-400">
+                      <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
+                    </p>
+                    <div className="h-56 overflow-y-auto rounded-lg border px-2 py-4">
+                      {events.length !== 0 ? (
+                        events.map((event) => (
+                          <Link key={event.slug} to={`/events/${event.slug}`}>
+                            <CalendarEventItem
+                              category={event.meta.category}
+                              summary={event.meta.summary}
+                              location={event.meta.location}
+                              region={event.meta.region}
+                            />
+                          </Link>
+                        ))
+                      ) : (
+                        <div className="flex h-full items-center justify-center text-gray-600">
+                          予定はありません。
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
 
             <div className="!mt-4 w-full">
               <Link
