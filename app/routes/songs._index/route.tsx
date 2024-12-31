@@ -28,7 +28,7 @@ export default function Component() {
             <li key={track.slug}>
               <div className="w-40">
                 <Link to={`/songs/${track.slug}`}>
-                  <div className="overflow-hidden rounded-lg drop-shadow">
+                  <div className="overflow-hidden rounded-lg shadow-lg">
                     {track.image == undefined ? (
                       <div className="flex h-40 w-40 items-center justify-center bg-gray-100">
                         <BsMusicNoteBeamed className="h-20 w-20 text-gray-300" />
