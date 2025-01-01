@@ -21,7 +21,10 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={clsx("h-11 w-full lg:h-16", selected && "overflow-hidden bg-blue-500 text-white")}
+      className={clsx(
+        "h-11 w-full lg:h-[6.5rem]",
+        selected && "overflow-hidden bg-blue-500 text-white",
+      )}
     >
       <div
         className={clsx(
@@ -53,6 +56,20 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
           className={clsx("hidden text-center text-sm lg:block", !currentMonth && "text-gray-300")}
         >
           {regions[1]}
+        </div>
+      )}
+      {regions[2] && (
+        <div
+          className={clsx("hidden text-center text-sm lg:block", !currentMonth && "text-gray-300")}
+        >
+          {regions[2]}
+        </div>
+      )}
+      {regions[3] && (
+        <div
+          className={clsx("hidden text-center text-sm lg:block", !currentMonth && "text-gray-300")}
+        >
+          {regions[3]}
         </div>
       )}
     </div>
