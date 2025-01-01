@@ -85,11 +85,10 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
 
   if (r.success) {
-    const status = r.data.status != undefined ? prefixOfEventStatus(r.data.status) : undefined;
+    const statusPrefix = prefixOfEventStatus(r.data.status);
 
-    const summary = `${prefixOfEventStatus(r.data.status)}${r.data.summary}`;
-    const title =
-      r.data.title == undefined ? summary : `${prefixOfEventStatus(r.data.status)}${r.data.title}`;
+    const summary = `${statusPrefix}${r.data.summary}`;
+    const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
 
     const recaps = Array.isArray(r.data.recaps)
       ? r.data.recaps
