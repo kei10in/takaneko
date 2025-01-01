@@ -43,7 +43,7 @@ export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] =
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
   const regions = events
-    .filter((event) => event.meta.status != "CANCELED")
+    .filter((event) => event.meta.status == undefined)
     .filter((event) => event.meta.region != undefined)
     .map((event) => event.meta.region ?? "");
 
@@ -54,6 +54,18 @@ export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
       result.push(region);
     }
   }
+
+  result.sort((a, b) => {
+    // 物理的な地域指定のものは先に、それ以外は地域指定のあとに並べる。
+    const virtual = ["ラジオ", "テレビ", "Web", "雑誌", "書籍", "発売日", "💿", "🎂"];
+    if (virtual.includes(a) && !virtual.includes(b)) {
+      return 1;
+    } else if (!virtual.includes(a) && virtual.includes(b)) {
+      return -1;
+    } else {
+      return a.localeCompare(b);
+    }
+  });
 
   return result;
 };
