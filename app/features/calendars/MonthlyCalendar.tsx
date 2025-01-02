@@ -100,7 +100,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
       </div>
       <table className="w-full max-w-full table-fixed border-collapse border-none">
         <thead>
-          <tr className="text-sm text-gray-500">
+          <tr className="text-xs text-gray-500 lg:text-sm">
             <th className="w-[1/7] p-0">日</th>
             <th className="w-[1/7] p-0">月</th>
             <th className="w-[1/7] p-0">火</th>
