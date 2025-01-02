@@ -40,7 +40,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           "sticky top-12 bg-white",
           "lg:top-[calc(var(--header-height)+3rem)]",
           "lg:h-fit lg:max-h-[calc(100svh-var(--header-height)-3rem)]",
-          "lg:flex-1 lg:overflow-y-auto",
+          "lg:flex-1 lg:overflow-y-auto lg:pb-8",
         )}
       >
         <MonthlyCalendar
@@ -83,9 +83,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           </Link>
         </div>
 
-        <hr className="my-2" />
+        <hr className="my-2 border-gray-300" />
 
-        <div className="pb-12">
+        <div className="">
           <div className="flex items-center justify-between">
             <Link className="flex items-center font-bold text-gray-500" to={`${hrefPreviousMonth}`}>
               <span>
