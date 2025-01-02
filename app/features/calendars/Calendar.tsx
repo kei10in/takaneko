@@ -34,13 +34,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const nextMonth = month.nextMonth();
 
   return (
-    <div className="bg-white lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
+    <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
       <div
         className={clsx(
           "sticky top-12 bg-white",
           "lg:top-[calc(var(--header-height)+3rem)]",
           "lg:h-fit lg:max-h-[calc(100svh-var(--header-height)-3rem)]",
-          "lg:flex-1 lg:overflow-y-auto lg:pb-8",
+          "lg:flex-1 lg:overflow-y-auto",
         )}
       >
         <MonthlyCalendar
