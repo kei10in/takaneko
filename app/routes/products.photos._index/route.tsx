@@ -19,15 +19,6 @@ export default function Index() {
     <div className="container mx-auto text-gray-600">
       <section className="px-4 py-8">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">生写真セット</h1>
-        <div className="my-12 rounded-lg border border-yellow-500 bg-yellow-50 p-4">
-          <p>
-            このページに記載のないものは「
-            <Link className="text-nadeshiko-800" to="/memo">
-              メモ
-            </Link>
-            」ページに記載されているかもしれません。
-          </p>
-        </div>
 
         <ul className="grid grid-cols-2 place-content-center gap-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {PHOTOS.map((photo) => (

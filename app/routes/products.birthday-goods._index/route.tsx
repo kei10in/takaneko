@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "@remix-run/react";
 import { ImageSlide } from "~/components/ImageSlide";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -19,15 +19,6 @@ export default function Index() {
     <div className="container mx-auto text-gray-600">
       <section className="px-4 py-8">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">誕生日記念グッズ</h1>
-        <div className="my-12 rounded-lg border border-yellow-500 bg-yellow-50 p-4">
-          <p>
-            このページに記載のないものは「
-            <Link className="text-nadeshiko-800" to="/memo">
-              メモ
-            </Link>
-            」ページに記載されているかもしれません。
-          </p>
-        </div>
 
         <div className="space-y-8">
           {BirthdayGoods.map((bg) => {
