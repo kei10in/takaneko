@@ -48,7 +48,7 @@ export default function Index() {
     [date],
   );
 
-  const recentProducts = TAKANEKO_PHOTOS.slice(-12).toReversed();
+  const recentProducts = TAKANEKO_PHOTOS.slice(0, 12);
 
   return (
     <div className="bg-gray-50">

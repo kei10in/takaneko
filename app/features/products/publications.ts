@@ -108,4 +108,4 @@ const publications: Publication[] = [
   モデルプレスカウントダウンマガジン_vol10,
 ];
 
-export const PUBLICATIONS = publications.toSorted((p0, p1) => p0.date.localeCompare(p1.date));
+export const PUBLICATIONS = publications.toSorted((p0, p1) => -p0.date.localeCompare(p1.date));
