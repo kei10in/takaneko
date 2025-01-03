@@ -23,7 +23,9 @@ export default function Index() {
   const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022).toReversed();
   const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023).toReversed();
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024).toReversed();
+  const in2025 = TAKANEKO_PHOTOS.filter((p) => p.year == 2025).toReversed();
   const allPhotos = [
+    { name: "2025 年", photos: in2025 },
     { name: "2024 年", photos: in2024 },
     { name: "2023 年", photos: in2023 },
     { name: "2022 年", photos: in2022 },
