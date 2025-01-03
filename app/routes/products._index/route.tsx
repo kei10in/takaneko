@@ -12,7 +12,7 @@ import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { PUBLICATIONS } from "~/features/products/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "../../components/ProductCard";
 import { PublicationCard } from "./PublicationCard";
 
 export const meta: MetaFunction = () => {
