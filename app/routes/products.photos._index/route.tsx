@@ -20,7 +20,7 @@ export default function Index() {
   return (
     <div className="container mx-auto text-gray-600">
       <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">生写真セット</h1>
+        <h1 className="my-4 text-3xl font-semibold text-gray-600">生写真</h1>
 
         <ul className="grid grid-cols-2 place-content-center gap-8 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {PHOTOS.map((photo) => (

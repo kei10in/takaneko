@@ -41,7 +41,7 @@ export default function Index() {
       })),
     },
     {
-      title: "生写真セット",
+      title: "生写真",
       slug: "photos",
       items: PHOTOS.slice(0, 10).map((photo) => ({
         slug: photo.slug,
@@ -50,7 +50,7 @@ export default function Index() {
       })),
     },
     {
-      title: "ミニフォトカードセット",
+      title: "ミニフォトカード",
       slug: "mini-photo-cards",
       items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
         slug: photo.slug,
