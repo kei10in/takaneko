@@ -1,4 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
+import { BsChevronRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -22,7 +23,7 @@ export default function Index() {
     {
       title: "ライブ グッズ",
       slug: "live-goods",
-      items: LiveGoods.map((live) => ({
+      items: LiveGoods.slice(0, 10).map((live) => ({
         slug: live.slug,
         image: live.images[0].path,
         name: live.name,
@@ -31,7 +32,7 @@ export default function Index() {
     {
       title: "誕生日記念グッズ",
       slug: "birthday-goods",
-      items: BirthdayGoods.map((item) => ({
+      items: BirthdayGoods.slice(0, 10).map((item) => ({
         slug: item.slug,
         image: item.images[0].path,
         name: item.name,
@@ -40,7 +41,7 @@ export default function Index() {
     {
       title: "生写真セット",
       slug: "photos",
-      items: PHOTOS.map((photo) => ({
+      items: PHOTOS.slice(0, 10).map((photo) => ({
         slug: photo.slug,
         image: photo.url,
         name: photo.name,
@@ -49,7 +50,7 @@ export default function Index() {
     {
       title: "ミニフォトカードセット",
       slug: "mini-photo-cards",
-      items: MINI_PHOTO_CARDS.map((photo) => ({
+      items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
         slug: photo.slug,
         image: photo.url,
         name: photo.name,
@@ -58,7 +59,7 @@ export default function Index() {
     {
       title: "書籍・雑誌",
       slug: "publications",
-      items: PUBLICATIONS.map((publication) => ({
+      items: PUBLICATIONS.slice(0, 10).map((publication) => ({
         slug: publication.slug,
         image: publication.coverImages[0].path,
         name: publication.name,
@@ -86,7 +87,10 @@ export default function Index() {
             <section className="mt-12" key={slug}>
               <Link className="mb-8 flex items-end justify-between" to={`/products/${slug}`}>
                 <h2 className="text-2xl">{title}</h2>
-                <p>すべて表示</p>
+                <p className="flex w-fit items-center text-sm text-nadeshiko-800">
+                  <span>すべて表示</span>
+                  <BsChevronRight className="ml-1 inline-block" />
+                </p>
               </Link>
               <div>
                 <Swiper slidesPerView="auto">
