@@ -5,7 +5,7 @@ import { LiveGoods } from "~/features/products/liveGoods";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `${SITE_TITLE} - 高嶺のなでしこのファンサイト` },
+    { title: `ライブ グッズ - ${SITE_TITLE}` },
     {
       name: "description",
       content:
