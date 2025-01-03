@@ -94,11 +94,11 @@ export const NaoKizuki: MemberDescription = {
   hashTagsForAnnouncement: ["#たかねこ入場なり"],
   idPhoto: {
     path: "/takaneko/members/nao-kizuki_id-photo.webp",
-    ref: "https://x.com/nao_kizuki/status/1789251575963414765",
+    ref: "https://x.com/nao_kizuki/status/1871571549926625283",
   },
   image: {
     path: "/takaneko/members/nao-kizuki.webp",
-    ref: "https://x.com/nao_kizuki/status/1807933301099012227",
+    ref: "https://x.com/nao_kizuki/status/1871571549926625283",
   },
   officialProfile: "https://takanenonadeshiko.jp/nao_kizuki/",
   twitter: "https://twitter.com/nao_kizuki",
