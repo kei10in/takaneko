@@ -28,7 +28,7 @@ import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { shareTradeImage } from "./shareTradeImage";
-import { TradeEditorDetail } from "./TradeEditorDetail";
+import { TradeEditorDetail2 } from "./TradeEditorDetail2";
 import { TradeImagePreview } from "./TradeImagePreview";
 
 interface Props {
@@ -56,8 +56,10 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
   const [preview, setPreview] = useState(false);
   const [selectedStamp, setSelectedStamp] = useState<StampType>("cog");
   const [selectedEmoji, setSelectedEmoji] = useState<string>(SelectableEmojis[0]);
-  const [index, setIndex] = useState<number | undefined>(undefined);
-  const lastIndex = positions.length - 1;
+  const [detailDialogState, setDetailDialogState] = useState<{ open: boolean; index: number }>({
+    open: false,
+    index: 0,
+  });
 
   const scale = width / productImage.width;
 
@@ -79,7 +81,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
     } else if (selectedStamp == "emoji") {
       onChangeTradeDescription?.(id, Stamp.emoji(status, selectedEmoji));
     } else if (selectedStamp == "cog") {
-      setIndex(i);
+      setDetailDialogState({ open: true, index: i });
     }
   };
 
@@ -249,22 +251,24 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       </div>
 
       <Dialog
-        open={index != undefined}
+        open={detailDialogState.open}
         className="relative z-50"
-        onClose={() => setIndex(undefined)}
+        onClose={() => {
+          console.log("on close");
+          setDetailDialogState({ ...detailDialogState, open: false });
+        }}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 p-4 backdrop-blur-sm">
-          <DialogPanel className="w-full max-w-lg border bg-white">
-            {index != undefined ? (
-              <TradeEditorDetail
-                productImage={productImage}
-                tradeDescriptions={tradeDescriptions}
-                index={index}
-                onClickPrev={() => setIndex(index <= 0 ? lastIndex : index - 1)}
-                onClickNext={() => setIndex(lastIndex <= index ? 0 : index + 1)}
-                onChangeTradeState={handleClickTradeState}
-              />
-            ) : null}
+          <DialogPanel className="w-full max-w-lg bg-white">
+            <TradeEditorDetail2
+              productImage={productImage}
+              tradeDescriptions={tradeDescriptions}
+              index={detailDialogState.index}
+              onChangeItem={(newIndex) =>
+                setDetailDialogState({ ...detailDialogState, index: newIndex })
+              }
+              onChangeTradeState={handleClickTradeState}
+            />
           </DialogPanel>
         </div>
       </Dialog>
