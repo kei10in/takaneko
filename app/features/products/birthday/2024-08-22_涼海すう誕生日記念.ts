@@ -20,15 +20,15 @@ export const いらすぅとTシャツ: OfficialGoods = {
   listPrice: 4500,
   images: [
     {
-      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_1.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_1.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
     {
-      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_2.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_2.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
     {
-      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_3.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_3.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
   ],
@@ -41,7 +41,7 @@ export const あくすぅた: OfficialGoods = {
   listPrice: 1500,
   images: [
     {
-      path: "/takaneko/birthday-goods/2024-08-22_あくすぅた.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_あくすぅた.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
   ],
@@ -54,15 +54,15 @@ export const だんぼーる: OfficialGoods = {
   listPrice: 999,
   images: [
     {
-      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_1.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_1.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
     {
-      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_2.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_2.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
     {
-      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_3.jpg",
+      path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_3.webp",
       ref: "https://takanenonadeshiko-ec.com/",
     },
   ],
