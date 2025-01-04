@@ -24,45 +24,45 @@ export default function Index() {
   const sections = [
     {
       title: "ライブ グッズ",
-      slug: "live-goods",
+      slug: "/products/live-goods",
       items: LiveGoods.slice(0, 10).map((live) => ({
-        slug: live.slug,
+        slug: `/products/live-goods/${live.slug}`,
         image: live.images[0].path,
         name: live.name,
       })),
     },
     {
       title: "誕生日記念グッズ",
-      slug: "birthday-goods",
+      slug: "/products/birthday-goods",
       items: BirthdayGoods.slice(0, 10).map((item) => ({
-        slug: item.slug,
+        slug: `/products/birthday-goods/${item.slug}`,
         image: item.images[0].path,
         name: item.name,
       })),
     },
     {
       title: "生写真",
-      slug: "photos",
+      slug: "/products/photos",
       items: PHOTOS.slice(0, 10).map((photo) => ({
-        slug: photo.slug,
+        slug: `/products/${photo.slug}`,
         image: photo.url,
         name: photo.name,
       })),
     },
     {
       title: "ミニフォトカード",
-      slug: "mini-photo-cards",
+      slug: "/products/mini-photo-cards",
       items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
-        slug: photo.slug,
+        slug: `/products/${photo.slug}`,
         image: photo.url,
         name: photo.name,
       })),
     },
     {
       title: "書籍・雑誌",
-      slug: "publications",
+      slug: "/products/publications",
       items: PUBLICATIONS.slice(0, 10).map((publication) => ({
-        slug: publication.slug,
+        slug: `/products/${publication.slug}`,
         image: publication.coverImages[0].path,
         name: publication.name,
       })),
@@ -87,7 +87,7 @@ export default function Index() {
           const { title, slug, items } = section;
           return (
             <section className="mt-12" key={slug}>
-              <Link className="mb-8 flex items-end justify-between" to={`/products/${slug}`}>
+              <Link className="mb-8 flex items-end justify-between" to={slug}>
                 <h2 className="text-2xl">{title}</h2>
                 <p className="flex w-fit items-center text-sm text-nadeshiko-800">
                   <span>すべて表示</span>
@@ -101,16 +101,18 @@ export default function Index() {
 
                     return (
                       <SwiperSlide key={slug} className="w-fit px-1">
-                        <div className="w-44 overflow-hidden">
-                          <img
-                            className="aspect-square w-full bg-gray-50 object-contain"
-                            src={image}
-                            alt={name}
-                          />
-                          <div className="px-2 py-2">
-                            <p className="mx-auto line-clamp-4 w-fit text-sm">{name}</p>
+                        <Link to={slug}>
+                          <div className="w-44 overflow-hidden">
+                            <img
+                              className="aspect-square w-full bg-gray-50 object-contain"
+                              src={image}
+                              alt={name}
+                            />
+                            <div className="px-2 py-2">
+                              <p className="mx-auto line-clamp-4 w-fit text-sm">{name}</p>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </SwiperSlide>
                     );
                   })}
