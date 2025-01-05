@@ -16,6 +16,7 @@ export interface OfficialGoods {
   slug: string;
   name: string;
   date?: string;
+  description?: string;
   listPrice?: number;
   images?: ImageDescription[];
 }

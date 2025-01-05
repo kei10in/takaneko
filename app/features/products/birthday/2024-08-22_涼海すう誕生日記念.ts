@@ -17,6 +17,8 @@ export const いらすぅとTシャツ: OfficialGoods = {
   slug: "いらすぅとTシャツ",
   name: "いらすぅとTシャツ",
   date: "2024-08-22",
+  description:
+    "涼海すう誕生日記念限定Tシャツです。描き下ろしイラストをTシャツの両面にプリントしたデザインとなっています。※サイズはXLのみの販売となります。",
   listPrice: 4500,
   images: [
     {
@@ -38,6 +40,8 @@ export const あくすぅた: OfficialGoods = {
   slug: "あくすぅた",
   name: "あくすぅた",
   date: "2024-08-22",
+  description:
+    "涼海すう誕生日記念限定握リススタンドです。今回のために撮影した写真と描き下ろしイラストを使用したデザインとなっています。",
   listPrice: 1500,
   images: [
     {
@@ -51,6 +55,8 @@ export const だんぼーる: OfficialGoods = {
   slug: "だんぼーる",
   name: "だんぼーる",
   date: "2024-08-22",
+  description:
+    "涼海すう誕生日記念限定ダンボールです。描き下ろしイラストや涼海すう監修のシークレットデザインが入った限定ダンボールです。",
   listPrice: 999,
   images: [
     {
