@@ -1,5 +1,8 @@
-import { MetaFunction, useParams } from "@remix-run/react";
-import { Navigation, Pagination, Thumbs } from "swiper/modules";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Link, MetaFunction, useLocation, useNavigate, useParams } from "@remix-run/react";
+import clsx from "clsx";
+import { BsBoxArrowUpRight } from "react-icons/bs";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -31,40 +34,87 @@ export default function Index() {
   const params = useParams<"slug">();
   const collection = findBirthdayGoods(params.slug);
 
+  const images = [...collection.images, ...collection.lineup.flatMap((item) => item.images ?? [])];
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const close = () => navigate(".", { replace: true, preventScrollReset: true });
+
   return (
     <div className="container mx-auto min-h-[calc(100svh-var(--header-height))]">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">{collection.name}</h1>
+      <section className="pb-12 pt-8">
+        <h1 className="my-4 px-4 text-3xl font-semibold text-gray-600">{collection.name}</h1>
 
         <div className="mt-8">
           <Swiper
+            className={clsx(
+              "[&_.swiper-button-next]:text-nadeshiko-800",
+              "[&_.swiper-button-prev]:text-nadeshiko-800",
+            )}
             loop={true}
-            slidesPerView="auto"
             navigation={true}
-            pagination={true}
-            thumbs={{}}
-            modules={[Navigation, Pagination, Thumbs]}
+            modules={[Navigation]}
           >
-            {collection.images.map((image) => (
-              <SwiperSlide key={image.path} className="w-fit">
-                <img
-                  key={image.path}
-                  src={image.path}
-                  alt={collection.name}
-                  className="aspect-square w-full bg-gray-100 object-contain lg:w-96"
-                />
+            {images.map((image, i) => (
+              <SwiperSlide className="w-full bg-gray-50" key={image.path}>
+                <Link
+                  className="mx-auto block w-fit outline-none"
+                  to={`#photo-${i}`}
+                  replace={true}
+                  preventScrollReset={true}
+                >
+                  <img
+                    src={image.path}
+                    alt={collection.name}
+                    className="aspect-square w-72 object-contain lg:w-96"
+                  />
+                </Link>
+
+                <Dialog
+                  open={location.hash == `#photo-${i}`}
+                  onClose={close}
+                  className="relative z-50"
+                >
+                  <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4">
+                    <DialogPanel className="max-w-lg">
+                      <img
+                        src={image.path}
+                        alt={collection.name}
+                        className="block w-full object-contain"
+                      />
+                      <p className="text-right text-xs font-semibold text-white/80">
+                        <Link
+                          to={image.ref}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1"
+                        >
+                          <span>画像の引用元</span>
+                          <BsBoxArrowUpRight />
+                        </Link>
+                      </p>
+                    </DialogPanel>
+                  </div>
+                </Dialog>
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
 
-        <div className="mt-12">
-          <ul className="mt-4 list-outside list-disc pl-6 marker:text-gray-300">
-            {collection.lineup.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
+        <section className="mt-12 px-4">
+          <h2 className="text-2xl font-semibold text-gray-500">ラインナップ</h2>
+          <ul className="mt-8 space-y-8">
+            {collection.lineup.map((item, i) => {
+              return (
+                <li key={i} className="w-full">
+                  <p className="text-lg font-semibold text-gray-400">{item.name}</p>
+                  <p className="mt-1 text-sm">{item.description}</p>
+                </li>
+              );
+            })}
           </ul>
-        </div>
+        </section>
       </section>
     </div>
   );
