@@ -1,18 +1,5 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
-export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
-  slug: "松本ももな誕生日記念 2024年10月12日",
-  name: "松本ももな誕生日記念 2024年10月12日",
-  memberName: "松本ももな",
-  lineup: ["ももぽにゃんT", "ももにゃくすた", "おりぼんの擬人化なりきりアイテム"],
-  images: [
-    {
-      path: "/takaneko/birthday-goods/2024-10-12_松本ももな誕生日記念グッズ.jpg",
-      ref: "https://takanenonadeshiko-ec.com/",
-    },
-  ],
-};
-
 export const ももぽにゃんT: OfficialGoods = {
   slug: "ももぽにゃんT",
   name: "ももぽにゃんT",
@@ -61,6 +48,19 @@ export const おりぼんの擬人化なりきりアイテム: OfficialGoods = {
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-12_おりぼんの擬人化なりきりアイテム.webp",
+      ref: "https://takanenonadeshiko-ec.com/",
+    },
+  ],
+};
+
+export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
+  slug: "松本ももな誕生日記念 2024年10月12日",
+  name: "松本ももな誕生日記念 2024年10月12日",
+  memberName: "松本ももな",
+  lineup: [ももぽにゃんT, ももにゃくすた, おりぼんの擬人化なりきりアイテム],
+  images: [
+    {
+      path: "/takaneko/birthday-goods/2024-10-12_松本ももな誕生日記念グッズ.jpg",
       ref: "https://takanenonadeshiko-ec.com/",
     },
   ],

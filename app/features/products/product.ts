@@ -111,5 +111,5 @@ export interface BirthdayGoodsCollection {
   name: string;
   memberName: MemberName;
   images: ImageDescription[];
-  lineup: string[];
+  lineup: OfficialGoods[];
 }

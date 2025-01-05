@@ -1,18 +1,5 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
-export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollection = {
-  slug: "涼海すう誕生日記念 2024年8月22日",
-  name: "涼海すう誕生日記念 2024年8月22日",
-  memberName: "涼海すう",
-  lineup: ["いらすぅとTシャツ", "あくすぅた", "だんぼーる"],
-  images: [
-    {
-      path: "/takaneko/birthday-goods/2024-08-22_涼海すう誕生日記念グッズ.jpg",
-      ref: "https://takanenonadeshiko-ec.com/",
-    },
-  ],
-};
-
 export const いらすぅとTシャツ: OfficialGoods = {
   slug: "いらすぅとTシャツ",
   name: "いらすぅとTシャツ",
@@ -69,6 +56,19 @@ export const だんぼーる: OfficialGoods = {
     },
     {
       path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_3.webp",
+      ref: "https://takanenonadeshiko-ec.com/",
+    },
+  ],
+};
+
+export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollection = {
+  slug: "涼海すう誕生日記念 2024年8月22日",
+  name: "涼海すう誕生日記念 2024年8月22日",
+  memberName: "涼海すう",
+  lineup: [いらすぅとTシャツ, あくすぅた, だんぼーる],
+  images: [
+    {
+      path: "/takaneko/birthday-goods/2024-08-22_涼海すう誕生日記念グッズ.jpg",
       ref: "https://takanenonadeshiko-ec.com/",
     },
   ],

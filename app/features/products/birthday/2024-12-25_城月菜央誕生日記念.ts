@@ -1,18 +1,5 @@
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
-export const 城月菜央誕生日記念_2024年12月25日: BirthdayGoodsCollection = {
-  slug: "城月菜央誕生日記念 2024年12月25日",
-  name: "城月菜央誕生日記念 2024年12月25日",
-  memberName: "城月菜央",
-  lineup: ["誰でも着やすいTシャツ", "かっこいいおしゃれなグラス", "サイズ的にも使いやすいポーチ"],
-  images: [
-    {
-      path: "/takaneko/birthday-goods/2024-12-25_城月菜央誕生日記念グッズ.jpg",
-      ref: "https://x.com/takanenofficial/status/1871888632954708367",
-    },
-  ],
-};
-
 export const 誰でも着やすいTシャツ: OfficialGoods = {
   slug: "誰でも着やすいTシャツ",
   name: "誰でも着やすいTシャツ",
@@ -66,6 +53,19 @@ export const サイズ的にも使いやすいポーチ: OfficialGoods = {
     {
       path: "/takaneko/birthday-goods/2024-12-25_サイズ的にも使いやすいポーチ.webp",
       ref: "https://takanenonadeshiko-ec.com/",
+    },
+  ],
+};
+
+export const 城月菜央誕生日記念_2024年12月25日: BirthdayGoodsCollection = {
+  slug: "城月菜央誕生日記念 2024年12月25日",
+  name: "城月菜央誕生日記念 2024年12月25日",
+  memberName: "城月菜央",
+  lineup: [誰でも着やすいTシャツ, かっこいいおしゃれなグラス, サイズ的にも使いやすいポーチ],
+  images: [
+    {
+      path: "/takaneko/birthday-goods/2024-12-25_城月菜央誕生日記念グッズ.jpg",
+      ref: "https://x.com/takanenofficial/status/1871888632954708367",
     },
   ],
 };
