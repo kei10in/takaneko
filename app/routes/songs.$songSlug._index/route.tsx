@@ -33,14 +33,16 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <iframe
-        className="aspect-video w-full"
-        src={`https://www.youtube-nocookie.com/embed/${(data.youtube ?? [])[0].videoId}`}
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-      />
+      {data.youtube?.[0] == undefined ? null : (
+        <iframe
+          className="aspect-video w-full"
+          src={`https://www.youtube-nocookie.com/embed/${data.youtube[0].videoId}`}
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      )}
 
       <section className="px-4 py-8">
         <h1 className="my-2 text-5xl font-semibold text-nadeshiko-800 lg:mt-12">{data.name}</h1>

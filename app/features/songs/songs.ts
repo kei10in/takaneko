@@ -1,8 +1,10 @@
 import { アンチファン } from "./2022/アンチファン";
+import { ファンサ } from "./2022/ファンサ";
 import { ユメムスビ } from "./2022/ユメムスビ";
 import { 乙女どもよ } from "./2022/乙女どもよ。";
 import { 可愛くてごめん } from "./2022/可愛くてごめん";
 import { 女の子は強い } from "./2022/女の子は強い";
+import { 誇り高きアイドル } from "./2022/誇り高きアイドル";
 import { _17歳 } from "./2023/17歳";
 import { いつか私がママになったら } from "./2023/いつか私がママになったら";
 import { すきっちゅーの } from "./2023/すきっちゅーの！";
@@ -13,6 +15,7 @@ import { 初恋のひと } from "./2023/初恋のひと。";
 import { 月曜日の憂鬱 } from "./2023/月曜日の憂鬱";
 import { 決戦スピリット } from "./2023/決戦スピリット";
 import { 男の子の目的は何 } from "./2023/男の子の目的は何？";
+import { 超絶かわいい } from "./2023/超絶かわいい";
 import { 革命の女王 } from "./2023/革命の女王";
 import { IM_YOUR_IDOL } from "./2024/I’M YOUR IDOL";
 import { LOVE_ANTHEM } from "./2024/LOVE ANTHEM";
@@ -55,6 +58,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   初恋のひと,
   決戦スピリット,
   ヒロインは平均以下,
+  超絶かわいい,
   革命の女王,
   僕は君になれない,
   男の子の目的は何,
@@ -62,6 +66,8 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   女の子は強い,
   可愛くてごめん,
   乙女どもよ,
+  ファンサ,
+  誇り高きアイドル,
   ユメムスビ,
   アンチファン,
 ];
