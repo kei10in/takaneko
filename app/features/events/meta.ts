@@ -14,7 +14,7 @@ const EventOverview = z.object({
   timetable: ImageDescription.optional(),
   goods: z
     .object({
-      time: z.tuple([z.string(), z.string()]),
+      time: z.tuple([z.string(), z.string()]).optional(),
       lineup: z.string(),
       url: z.string(),
     })

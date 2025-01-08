@@ -66,7 +66,8 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
         {goods != undefined && (
           <li>
             <p>
-              <strong>物販:</strong> {goods.time[0]} 〜 {goods.time[1]}
+              <strong>物販:</strong>
+              {goods.time != undefined && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
               <br />
               {goods.lineup}
               <br />
