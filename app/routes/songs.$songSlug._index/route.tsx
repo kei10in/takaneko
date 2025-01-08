@@ -1,5 +1,6 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import { json, Link, MetaFunction, useLoaderData } from "@remix-run/react";
+import { useMemo } from "react";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -29,7 +30,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function Component() {
   const data = useLoaderData<typeof loader>();
-  const lives = SongToLiveMap[data.name] ?? [];
+  const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), []);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
