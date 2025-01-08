@@ -6,7 +6,9 @@ interface Props {
   timeSlot?: [string, string] | undefined;
   timetable?: { path: string; ref: string } | undefined;
   streaming?: { text: string; url: string } | undefined;
-  goods?: { time: [string, string]; lineup: string; url: string } | undefined;
+  goods?:
+    | { time?: [string] | [string, string]; lineup: string | string[]; url: string }
+    | undefined;
 }
 
 export const EventDetails: React.FC<Props> = (props: Props) => {
@@ -67,10 +69,19 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
           <li>
             <p>
               <strong>物販:</strong>
-              {goods.time != undefined && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
-              <br />
-              {goods.lineup}
-              <br />
+              {goods.time?.length == 1 && ` ${goods.time[0]} 〜`}
+              {goods.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
+            </p>
+
+            {goods.lineup instanceof Array && (
+              <ul>
+                {goods.lineup.map((lineup, i) => (
+                  <li key={i}>{lineup}</li>
+                ))}
+              </ul>
+            )}
+
+            <p>
               <Link to={goods.url}>{goods.url}</Link>
             </p>
           </li>
