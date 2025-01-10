@@ -3,7 +3,7 @@ import React from "react";
 
 interface Props {
   ticket?: string | undefined;
-  timeSlot?: [string, string] | undefined;
+  timeSlot?: [string] | [string, string] | undefined;
   timetable?: { path: string; ref: string } | undefined;
   streaming?: { text: string; url: string } | undefined;
   goods?:
@@ -47,7 +47,9 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
         {timeSlot != undefined && (
           <li>
             <p>
-              <strong>出演時間:</strong> {timeSlot[0]} 〜 {timeSlot[1]}
+              <strong>出演時間:</strong>
+              {timeSlot.length == 1 && ` ${timeSlot[0]} 〜`}
+              {timeSlot.length == 2 && ` ${timeSlot[0]} 〜 ${timeSlot[1]}`}
             </p>
           </li>
         )}
