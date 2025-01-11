@@ -110,5 +110,9 @@
     strong {
       @apply font-semibold;
     }
+
+    table {
+      @apply mb-2 mt-0 text-sm;
+    }
   }
 }
