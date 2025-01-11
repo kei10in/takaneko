@@ -30,7 +30,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function Component() {
   const data = useLoaderData<typeof loader>();
-  const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), []);
+  const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), [data.name]);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
