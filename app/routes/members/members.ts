@@ -167,7 +167,7 @@ export const MomokoHashimoto: MemberDescription = {
     path: "/takaneko/members/momoko-hashimoto.webp",
     ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
   },
-  officialProfile: "https://takanenonadeshiko.jp/momoko_hashimoto/",
+  officialProfile: "https://takanenonadeshiko.jp/橋本桃呼/",
   twitter: "https://x.com/MomokoHashimoto",
   instagram: "https://www.instagram.com/momoko__3628/",
   tiktok: "https://www.tiktok.com/@momoko_hashimoto",
