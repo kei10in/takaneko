@@ -1,5 +1,37 @@
 import { Publication } from "../product";
 
+export const LARME_063: Publication = {
+  slug: "LARME 063 Winter 2024",
+  name: "LARME 063 Winter 2024",
+  date: "2024-12-17",
+  kind: "magazines",
+  publisher: "LARME",
+  listPrice: 891,
+  priceWithTax: 980,
+  code: [],
+  url: "https://www.larme.co/",
+  coverImages: [
+    {
+      path: "/publications/larme/2024-12-17_LARME063.jpg",
+      ref: "https://www.larme.co/",
+    },
+  ],
+  featuredMembers: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "春野莉々",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+  officialTwitter: "https://x.com/takanenofficial/status/1868830985040937283",
+  links: [],
+};
+
 export const LARME_062: Publication = {
   slug: "LARME 062 Autumn 2024",
   name: "LARME 062 Autumn 2024",
