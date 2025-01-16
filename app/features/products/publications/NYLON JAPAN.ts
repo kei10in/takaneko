@@ -6,7 +6,8 @@ export const NYLON_JAPAN_2025年01月号: Publication = {
   date: "2024-11-28",
   kind: "magazines",
   publisher: "カエルム",
-  listPrice: 1000,
+  listPrice: 909,
+  priceWithTax: 1000,
   code: [{ kind: "", value: "" }],
   url: "https://www.nylon.jp/NYLON248",
   coverImages: [

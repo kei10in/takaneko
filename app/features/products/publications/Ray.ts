@@ -6,7 +6,8 @@ export const Ray_2024年11月号: Publication = {
   date: "2024-09-21",
   kind: "magazines",
   publisher: "主婦の友社",
-  listPrice: 890,
+  listPrice: 809,
+  priceWithTax: 890,
   code: [
     { kind: "雑誌コード", value: "09695-11" },
     { kind: "雑誌コード", value: "09696-11" },

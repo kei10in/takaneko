@@ -6,7 +6,8 @@ export const 月刊ENTAME_2024年8月号: Publication = {
   date: "2024-06-28",
   kind: "magazines", // "books"
   publisher: "徳間書店",
-  listPrice: 1080,
+  listPrice: 982,
+  priceWithTax: 1080,
   code: [],
   url: "https://x.com/gekkan_entame/status/1805874857256927518",
   coverImages: [
@@ -31,7 +32,8 @@ export const 月刊ENTAME_2023年3_4月合併号: Publication = {
   date: "2023-01-30",
   kind: "magazines", // "books"
   publisher: "徳間書店",
-  listPrice: 950,
+  listPrice: 864,
+  priceWithTax: 950,
   code: [],
   url: "https://entamenext.com/magazines/detail/54",
   coverImages: [

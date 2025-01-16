@@ -6,7 +6,8 @@ export const 週刊少年チャンピオン_2024年No51: Publication = {
   date: "2024-11-21",
   kind: "magazines",
   publisher: "秋田書店",
-  listPrice: 360,
+  listPrice: 327,
+  priceWithTax: 360,
   code: [],
   url: "https://www.akitashoten.co.jp/w-champion",
   coverImages: [

@@ -6,7 +6,8 @@ export const TopYellNeo2024_2025: Publication = {
   date: "2024-12-27",
   kind: "books",
   publisher: "竹書房",
-  listPrice: 1760,
+  listPrice: 1600,
+  priceWithTax: 1760,
   code: [{ kind: "isbn", value: "9784801942790" }],
   url: "https://www.takeshobo.co.jp/book/b10088817.html",
   coverImages: [
@@ -36,7 +37,8 @@ export const TopYellNeo2024Autumn: Publication = {
   date: "2024-09-30",
   kind: "books",
   publisher: "竹書房",
-  listPrice: 1760,
+  listPrice: 1600,
+  priceWithTax: 1760,
   code: [{ kind: "isbn", value: "9784801941557" }],
   url: "https://www.takeshobo.co.jp/book/b10085561.html",
   coverImages: [
@@ -63,7 +65,8 @@ export const TopYellNeo2024Spring: Publication = {
   date: "2024-04-01",
   kind: "books",
   publisher: "竹書房",
-  listPrice: 1760,
+  listPrice: 1600,
+  priceWithTax: 1760,
   code: [{ kind: "isbn", value: "9784801939349" }],
   url: "https://www.takeshobo.co.jp/book/b10080549.html",
   coverImages: [
@@ -106,7 +109,8 @@ export const TopYellNeo2022AUTUMN: Publication = {
   date: "2022-09-30",
   kind: "books",
   publisher: "竹書房",
-  listPrice: 1650,
+  listPrice: 1500,
+  priceWithTax: 1650,
   code: [{ kind: "isbn", value: "9784801932685" }],
   url: "https://www.takeshobo.co.jp/book/b10072493.html",
   coverImages: [

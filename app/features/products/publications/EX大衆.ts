@@ -6,7 +6,8 @@ export const EX大衆_2024年12月号: Publication = {
   date: "2024-11-15",
   kind: "magazines", // "books"
   publisher: "双葉社",
-  listPrice: 1000,
+  listPrice: 909,
+  priceWithTax: 1000,
   code: [{ kind: "JAN", value: "4910117711248" }],
   url: "https://www.futabasha.co.jp/book/magazine/49101177112480000000",
   coverImages: [
@@ -26,7 +27,8 @@ export const EX大衆_2022年10月号: Publication = {
   date: "2022-09-14",
   kind: "magazines", // "books"
   publisher: "双葉社",
-  listPrice: 730,
+  listPrice: 664,
+  priceWithTax: 730,
   code: [{ kind: "JAN", value: "4910117711026" }],
   url: "https://www.futabasha.co.jp/book/magazine/49101177110260000000",
   coverImages: [

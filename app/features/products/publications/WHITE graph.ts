@@ -6,7 +6,8 @@ export const WHITE_graph_011: Publication = {
   date: "2024-05-29",
   kind: "magazines",
   publisher: "講談社",
-  listPrice: 1980,
+  listPrice: 1800,
+  priceWithTax: 1980,
   code: [{ kind: "isbn", value: "978-4-06-535853-5" }],
   url: "https://bookclub.kodansha.co.jp/product?item=0000386988",
   coverImages: [
@@ -26,7 +27,8 @@ export const 松本ももな_SweetDateTime: Publication = {
   date: "2024-05-29",
   kind: "books",
   publisher: "講談社",
-  listPrice: 2200,
+  listPrice: 2000,
+  priceWithTax: 2200,
   code: [],
   url: "https://bookclub.kodansha.co.jp/product?item=0000393751",
   coverImages: [

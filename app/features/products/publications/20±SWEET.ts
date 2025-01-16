@@ -4,9 +4,10 @@ export const _20SWEET_2023_JANUARY: Publication = {
   slug: "20±SWEET 2023 JANUARY",
   name: "20±SWEET 2023 JANUARY",
   date: "2023-01-13",
-  kind: "magazines", // "books"
+  kind: "mooks", // "books"
   publisher: "東京ニュース通信社",
-  listPrice: 2310,
+  listPrice: 2100,
+  priceWithTax: 2310,
   code: [],
   url: "https://bltweb.jp/tag/20%C2%B1sweet/",
   coverImages: [

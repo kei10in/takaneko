@@ -4,9 +4,10 @@ export const 橋本桃呼_MOMOKO_ISM: Publication = {
   slug: "橋本桃呼 MOMOKO ISM",
   name: "橋本桃呼 MOMOKO ISM",
   date: "2024-06-22",
-  kind: "magazines", // "books"
+  kind: "books", // "books"
   publisher: "LARME",
-  listPrice: 980,
+  listPrice: 891,
+  priceWithTax: 980,
   code: [],
   url: "",
   coverImages: [

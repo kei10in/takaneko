@@ -6,7 +6,8 @@ export const FINEBOYS_2024年7月号: Publication = {
   date: "2024-06-07",
   kind: "magazines",
   publisher: "日之出出版",
-  listPrice: 820,
+  listPrice: 745,
+  priceWithTax: 820,
   code: [],
   url: "https://hinode-publishing.jp/?newmag=fineboys-2024年7月号",
   coverImages: [

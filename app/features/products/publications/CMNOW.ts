@@ -6,7 +6,8 @@ export const CMNOW_vol220_2023年1_2月号: Publication = {
   date: "2022-12-09",
   kind: "magazines",
   publisher: "玄光社",
-  listPrice: 1320,
+  listPrice: 1200,
+  priceWithTax: 1320,
   code: [],
   url: "http://www.genkosha.co.jp/cm/backnumber/2400.html",
   coverImages: [

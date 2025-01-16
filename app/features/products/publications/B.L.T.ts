@@ -6,7 +6,8 @@ export const BLT_2024年9月号: Publication = {
   date: "2024-07-26",
   kind: "magazines",
   publisher: "東京ニュース通信社",
-  listPrice: 1210,
+  listPrice: 1100,
+  priceWithTax: 1210,
   code: [],
   url: "https://bltweb.jp/2024/07/22/blt2409_cover/",
   coverImages: [
@@ -33,7 +34,8 @@ export const BLT_2023年2月号: Publication = {
   date: "2022-12-26",
   kind: "magazines",
   publisher: "東京ニュース通信社",
-  listPrice: 1300,
+  listPrice: 1182,
+  priceWithTax: 1300,
   code: [],
   url: "https://bltweb.jp/2022/12/19/blt2302-h46-4_store/",
   coverImages: [

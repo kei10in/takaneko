@@ -6,7 +6,8 @@ export const nonno_2024年10月号: Publication = {
   date: "2024-08-20",
   kind: "magazines",
   publisher: "集英社",
-  listPrice: 0,
+  listPrice: 745,
+  priceWithTax: 820,
   code: [{ kind: "", value: "" }],
   url: "https://nonno.hpplus.jp/magazine/163787/",
   coverImages: [

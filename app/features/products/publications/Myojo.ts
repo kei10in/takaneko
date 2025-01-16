@@ -6,7 +6,8 @@ export const Myojo_2024年9月号: Publication = {
   date: "2024-07-22",
   kind: "magazines",
   publisher: "集英社",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   url: "https://x.com/Myojo_henshu/status/1815234938788249892",
   coverImages: [
     {

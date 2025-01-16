@@ -6,7 +6,8 @@ export const LARME_062: Publication = {
   date: "2024-09-17",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 980,
+  listPrice: 891,
+  priceWithTax: 980,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -26,7 +27,8 @@ export const LARME_061: Publication = {
   date: "2024-06-17",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 980,
+  listPrice: 891,
+  priceWithTax: 980,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -46,7 +48,8 @@ export const LARME_060: Publication = {
   date: "2024-03-18",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 980,
+  listPrice: 891,
+  priceWithTax: 980,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -66,7 +69,8 @@ export const LARME_059: Publication = {
   date: "2023-12-15",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -86,7 +90,8 @@ export const LARME_058: Publication = {
   date: "2023-09-15",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -106,7 +111,8 @@ export const LARME_056: Publication = {
   date: "2023-03-17",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [
@@ -126,7 +132,8 @@ export const LARME_054: Publication = {
   date: "2022-09-16",
   kind: "magazines",
   publisher: "LARME",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   code: [],
   url: "https://www.larme.co/",
   coverImages: [

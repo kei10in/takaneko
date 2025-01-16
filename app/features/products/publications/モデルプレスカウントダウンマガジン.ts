@@ -4,10 +4,11 @@ export const モデルプレスカウントダウンマガジン_vol10: Publicat
   slug: "モデルプレスカウントダウンマガジン vol.10",
   name: "モデルプレスカウントダウンマガジン vol.10",
   date: "2024-12-10",
-  kind: "magazines", // "books"
+  kind: "mooks", // "books"
   publisher: "東京ニュース通信社",
-  listPrice: 1300,
-  code: [{ kind: "", value: "" }],
+  listPrice: 1182,
+  priceWithTax: 1300,
+  code: [{ kind: "ISBN", value: "9784867019429" }],
   url: "https://www.fujisan.co.jp/product/1281703688/new/",
   coverImages: [
     {

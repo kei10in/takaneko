@@ -4,9 +4,10 @@ export const TOKYO_RESIDENT_Issue002: Publication = {
   slug: "TOKYO RESIDENT Issue:002",
   name: "TOKYO RESIDENT Issue:002",
   date: "2024-09-24",
-  kind: "magazines",
+  kind: "books",
   publisher: "LAND",
-  listPrice: 1500,
+  listPrice: 1364,
+  priceWithTax: 1500,
   code: [{ kind: "isbn", value: "978-4-9912640-5-4" }],
   url: "https://land.inc/products/tokyo-resident-issue-002-power-of-music-通常版-madein表紙",
   coverImages: [

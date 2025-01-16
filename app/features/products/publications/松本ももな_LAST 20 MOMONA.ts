@@ -6,7 +6,8 @@ export const 松本ももな_LAST_20_MOMONA: Publication = {
   date: "2023-12-14",
   kind: "books",
   publisher: "LARME",
-  listPrice: 800,
+  listPrice: 727,
+  priceWithTax: 800,
   code: [],
   url: "https://www.amazon.co.jp/dp/B0CQDB23C9",
   coverImages: [

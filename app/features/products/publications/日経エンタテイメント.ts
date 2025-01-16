@@ -6,7 +6,8 @@ export const 日経エンタテインメント_2024年2月号: Publication = {
   date: "2024-01-04",
   kind: "magazines",
   publisher: "日経BP",
-  listPrice: 890,
+  listPrice: 809,
+  priceWithTax: 890,
   code: [],
   url: "https://project.nikkeibp.co.jp/ent/monthly/2024/02/",
   coverImages: [

@@ -6,7 +6,8 @@ export const COMMERCIAL_PHOTO_2023年10月号: Publication = {
   date: "2023-09-14",
   kind: "magazines",
   publisher: "玄光社",
-  listPrice: 1760,
+  listPrice: 1600,
+  priceWithTax: 1760,
   code: [],
   url: "http://www.genkosha.co.jp/cp/backnumber/5249.html",
   coverImages: [

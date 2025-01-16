@@ -6,7 +6,8 @@ export const OutOfMusic_87: Publication = {
   date: "2025-01-30",
   kind: "magazines", // "books"
   publisher: "シンコーミュージック",
-  listPrice: 1080,
+  listPrice: 982,
+  priceWithTax: 1080,
   code: [],
   url: "https://outofmusic.net/?p=1385",
   coverImages: [
@@ -50,7 +51,8 @@ export const OutOfMusic_86: Publication = {
   date: "2024-07-24",
   kind: "magazines", // "books"
   publisher: "シンコーミュージック",
-  listPrice: 1080,
+  listPrice: 982,
+  priceWithTax: 1080,
   code: [],
   url: "https://outofmusic.net/2024/07/29/20/45/58/717/表紙巻頭-the-rampage-バックカバー巻末-dxteen-7-24-発売-out-of-music-86/bn/outofmusic/",
   coverImages: [

@@ -6,7 +6,8 @@ export const SmartGirlsNextGenerations: Publication = {
   date: "2024-07-29",
   kind: "books",
   publisher: "宝島社",
-  listPrice: 2800,
+  listPrice: 2545,
+  priceWithTax: 2800,
   code: [{ kind: "isbn", value: "978-4-299-05685-6" }],
   url: "https://tkj.jp/book/?cd=TD056856",
   coverImages: [

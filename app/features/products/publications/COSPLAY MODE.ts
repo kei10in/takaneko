@@ -6,7 +6,8 @@ export const COSPLAY_MODE_2024年9月号: Publication = {
   date: "2024-08-02",
   kind: "magazines",
   publisher: "シムサム・メディア",
-  listPrice: 1320,
+  listPrice: 1200,
+  priceWithTax: 1320,
   code: [],
   url: "https://cosplaymode.net/feature/29392/",
   coverImages: [

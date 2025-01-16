@@ -6,7 +6,8 @@ export const mini_2023年2月号: Publication = {
   date: "2023-01-12",
   kind: "magazines", // "books"
   publisher: "宝島社",
-  listPrice: 820,
+  listPrice: 745,
+  priceWithTax: 820,
   code: [{ kind: "JAN", value: "4910084210232" }],
   url: "https://tkj.jp/mini/202302",
   coverImages: [
@@ -31,7 +32,8 @@ export const mini_2022年10月号: Publication = {
   date: "2022-09-01",
   kind: "magazines", // "books"
   publisher: "宝島社",
-  listPrice: 950,
+  listPrice: 864,
+  priceWithTax: 950,
   code: [{ kind: "JAN", value: "4910084211024" }],
   url: "https://tkj.jp/mini/202210",
   coverImages: [

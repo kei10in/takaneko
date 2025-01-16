@@ -4,10 +4,10 @@ export const Zipper_2024_2025年冬号: Publication = {
   slug: "Zipper 2024-2025年秋号",
   name: "Zipper 2024-2025年秋号",
   date: "2024-12-26",
-  kind: "magazines",
+  kind: "mooks",
   publisher: "祥伝社",
-  listPrice: 700,
-  code: [{ kind: "", value: "" }],
+  listPrice: 636,
+  code: [{ kind: "ISBN", value: "9784396880217" }],
   url: "https://www.zipper.jp/news/news-20241218",
   coverImages: [
     {
@@ -31,7 +31,7 @@ export const Zipper_2024年秋号: Publication = {
   date: "2024-09-28",
   kind: "magazines",
   publisher: "祥伝社",
-  listPrice: 700,
+  listPrice: 636,
   code: [{ kind: "ISBN", value: "9784396880200" }],
   url: "https://www.zipper.jp/news/news-20240928-01",
   coverImages: [

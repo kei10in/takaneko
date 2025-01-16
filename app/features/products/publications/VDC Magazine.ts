@@ -6,7 +6,8 @@ export const VDCMagazine030: Publication = {
   date: "2024-03-22",
   kind: "magazines",
   publisher: "VDC 事務局",
-  listPrice: 1430,
+  listPrice: 1300,
+  priceWithTax: 1430,
   code: [],
   url: "https://wp.vdc.tokyo/article/11065",
   coverImages: [
@@ -42,7 +43,8 @@ export const VDCMagazine029: Publication = {
   date: "2023-12-22",
   kind: "magazines",
   publisher: "VDC 事務局",
-  listPrice: 1430,
+  listPrice: 1300,
+  priceWithTax: 1430,
   code: [],
   url: "https://wp.vdc.tokyo/article/10847",
   coverImages: [
