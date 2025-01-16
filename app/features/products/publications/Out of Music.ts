@@ -1,8 +1,8 @@
 import { Publication } from "../product";
 
 export const OutOfMusic_87: Publication = {
-  slug: "Out of MUSIC 87",
-  name: "Out of MUSIC 87",
+  slug: "OUT of MUSIC 87",
+  name: "MUSIQ? SPECIAL OUT of MUSIC 87",
   date: "2025-01-30",
   kind: "magazines", // "books"
   publisher: "シンコーミュージック",
@@ -45,8 +45,8 @@ export const OutOfMusic_87: Publication = {
 };
 
 export const OutOfMusic_86: Publication = {
-  slug: "Out of MUSIC 86",
-  name: "Out of MUSIC 86",
+  slug: "OUT of MUSIC 86",
+  name: "MUSIQ? OUT of MUSIC 86",
   date: "2024-07-24",
   kind: "magazines", // "books"
   publisher: "シンコーミュージック",
