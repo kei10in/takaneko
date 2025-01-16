@@ -10,13 +10,35 @@ interface Props {
   product: Publication;
 }
 
+const price = (product: Publication) => {
+  const TAX_RATE = 0.1;
+
+  const p = (() => {
+    if (product.listPrice != undefined && product.priceWithTax != undefined) {
+      return [product.listPrice, product.priceWithTax];
+    } else if (product.listPrice != undefined) {
+      return [product.listPrice, Math.round(product.listPrice * (1 + TAX_RATE))];
+    } else if (product.priceWithTax != undefined) {
+      return [Math.round(product.priceWithTax / (1 + TAX_RATE)), product.priceWithTax];
+    } else {
+      return undefined;
+    }
+  })();
+
+  if (p == undefined) {
+    return "不明";
+  }
+
+  return `税込 ${p[1].toLocaleString()} 円 (本体 ${p[0].toLocaleString()} 円)`;
+};
+
 export default function PublicationProduct(props: Props) {
   const { product } = props;
 
   const keyValues = [
     { key: "発売日", value: displayDate(NaiveDate.parseUnsafe(product.date)) },
     { key: "出版社", value: product.publisher },
-    { key: "定価", value: `${product.listPrice?.toLocaleString()} 円` },
+    { key: "価格", value: price(product) },
   ];
 
   return (
