@@ -63,7 +63,7 @@ export interface Publication {
   slug: string;
   name: string;
   date: string;
-  kind: "magazines" | "books";
+  kind: "magazines" | "books" | "mooks";
   publisher: string;
   listPrice?: number;
   priceWithTax?: number;
