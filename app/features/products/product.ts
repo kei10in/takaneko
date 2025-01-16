@@ -18,6 +18,7 @@ export interface OfficialGoods {
   date?: string;
   description?: string;
   listPrice?: number;
+  priceWithTax?: number;
   images?: ImageDescription[];
 }
 
@@ -32,6 +33,7 @@ export interface RandomGoods {
   name: string;
   date?: string;
   listPrice?: number;
+  priceWithTax?: number;
   images?: ImageDescription[];
   year: number;
   series: string;
@@ -64,6 +66,7 @@ export interface Publication {
   kind: "magazines" | "books";
   publisher: string;
   listPrice?: number;
+  priceWithTax?: number;
   code?: { kind: string; value: string }[];
   url: string;
   coverImages: ImageDescription[];
