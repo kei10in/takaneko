@@ -49,6 +49,17 @@ export default function Index() {
                 <li key={i} className="w-full">
                   <p className="text-lg font-semibold text-gray-400">{item.name}</p>
                   <p className="mt-1 text-sm">{item.description}</p>
+                  {item.priceWithTax != undefined && (
+                    <p className="mt-2 flex items-end gap-1 text-gray-500">
+                      <span className="flex items-center">
+                        <span className="text-md leading-none">￥</span>
+                        <span className="text-lg leading-none">
+                          {item.priceWithTax.toLocaleString()}
+                        </span>
+                      </span>
+                      <span className="text-xs leading-tight">(税込)</span>
+                    </p>
+                  )}
                 </li>
               );
             })}
