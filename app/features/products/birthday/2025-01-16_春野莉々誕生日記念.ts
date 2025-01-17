@@ -1,3 +1,4 @@
+import { dedent } from "ts-dedent";
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const 契約結べるアクスタ: OfficialGoods = {
@@ -5,7 +6,11 @@ export const 契約結べるアクスタ: OfficialGoods = {
   name: "契約結べるアクスタ",
   date: "2025-01-16",
   priceWithTax: 1500,
-  description: "王様になりたいので、従者募集中です。募集条件: すぷりんにゃーの部下になれる方",
+  description: dedent`
+    王様になりたいので、従者募集中です。
+    
+    募集条件: すぷりんにゃーの部下になれる方
+    `,
   images: [
     {
       path: "/takaneko/birthday-goods/2025-01-16_契約結べるアクスタ.webp",
@@ -18,8 +23,17 @@ export const 本気出したTシャツ: OfficialGoods = {
   slug: "本気出したTシャツ",
   name: "本気出したTシャツ",
   date: "2025-01-16",
-  description:
-    "春野が描いた本気の絵です。裏にはたかねこちゃんが描かれています！どの子が誰か当ててみてね。表もちゃんと自分で書いてるんだよ！！頑張りました",
+  description: dedent`
+    春野が描いた本気の絵です。
+
+    裏にはたかねこちゃんが描かれています！
+
+    どの子が誰か当ててみてね
+
+    表もちゃんと自分で書いてるんだよ！！
+
+    頑張りました
+    `,
   priceWithTax: 4000,
   images: [
     {
@@ -41,8 +55,13 @@ export const 生写真: OfficialGoods = {
   slug: "生写真",
   name: "生写真 (ランダム10種)",
   date: "2025-01-16",
-  description:
-    "ここでしか見れない写真が10種類も！中にはTシャツの絵とリンクしている写真もあります！ランダムでサイン入り生写真も封入するよー！推し活にぜひ",
+  description: dedent`
+    ここでしか見れない写真が10種類も！
+
+    中にはTシャツの絵とリンクしている写真もあります！
+
+    ランダムでサイン入り生写真も封入するよー！推し活にぜひ
+    `,
   priceWithTax: 2000,
   images: [
     {

@@ -1,10 +1,17 @@
+import { dedent } from "ts-dedent";
 import { BirthdayGoodsCollection, OfficialGoods } from "../product";
 
 export const まいにちエコるん: OfficialGoods = {
   slug: "♡まいにちエコるん",
   name: "♡まいにちエコるん",
   date: "2024-11-06",
-  description: "生まれて初めてロゴ作成したの✨愛情いっぱいの MK💘R うちわも入る大容量！",
+  description: dedent`
+    生まれて初めてロゴ作成したの✨
+    
+    愛情いっぱいの MK💘R
+    
+    うちわも入る大容量！
+    `,
   priceWithTax: 3000,
   images: [
     {
@@ -18,7 +25,11 @@ export const みくるんお守り写真: OfficialGoods = {
   slug: "☆みくるんお守り写真",
   name: "☆みくるんお守り写真",
   date: "2024-11-06",
-  description: "恋愛成就・金運 up・健康運 up 幸せ運びます❤",
+  description: dedent`
+    恋愛成就・金運 up・健康運 up
+    
+    幸せ運びます❤
+    `,
   priceWithTax: 1000,
   images: [
     {
@@ -32,8 +43,15 @@ export const シュシュるん: OfficialGoods = {
   slug: "◇シュシュるん",
   name: "◇シュシュるん",
   date: "2024-11-06",
-  description:
-    " みけるん隊の証✨ペンライトにうちわにも！ヘアゴムでも好きなところに使ってね❤ライブ中に見つけたらファンサしちゃうぞ🥰",
+  description: dedent`
+    みけるん隊の証✨
+    
+    ペンライトにうちわにも！
+    
+    ヘアゴムでも好きなところに使ってね❤
+    
+    ライブ中に見つけたらファンサしちゃうぞ🥰
+    `,
   priceWithTax: 1800,
   images: [
     {

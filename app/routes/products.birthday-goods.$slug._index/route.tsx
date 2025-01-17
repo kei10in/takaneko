@@ -1,5 +1,6 @@
 import { MetaFunction, useParams } from "@remix-run/react";
 import { ImageSlide2 } from "~/components/ImageSlide2";
+import { Markdown } from "~/components/Markdown";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
@@ -48,7 +49,7 @@ export default function Index() {
               return (
                 <li key={i} className="w-full">
                   <p className="text-lg font-semibold text-gray-400">{item.name}</p>
-                  <p className="mt-1 text-sm">{item.description}</p>
+                  <Markdown>{item.description}</Markdown>
                   {item.priceWithTax != undefined && (
                     <p className="mt-2 flex items-end gap-1 text-gray-500">
                       <span className="flex items-center">
