@@ -4,7 +4,7 @@ export const 契約結べるアクスタ: OfficialGoods = {
   slug: "契約結べるアクスタ",
   name: "契約結べるアクスタ",
   date: "2025-01-16",
-  listPrice: 1500,
+  priceWithTax: 1500,
   description: "王様になりたいので、従者募集中です。募集条件: すぷりんにゃーの部下になれる方",
   images: [
     {
@@ -20,7 +20,7 @@ export const 本気出したTシャツ: OfficialGoods = {
   date: "2025-01-16",
   description:
     "春野が描いた本気の絵です。裏にはたかねこちゃんが描かれています！どの子が誰か当ててみてね。表もちゃんと自分で書いてるんだよ！！頑張りました",
-  listPrice: 4000,
+  priceWithTax: 4000,
   images: [
     {
       path: "/takaneko/birthday-goods/2025-01-16_本気出したTシャツ_1.webp",
@@ -43,7 +43,7 @@ export const 生写真: OfficialGoods = {
   date: "2025-01-16",
   description:
     "ここでしか見れない写真が10種類も！中にはTシャツの絵とリンクしている写真もあります！ランダムでサイン入り生写真も封入するよー！推し活にぜひ",
-  listPrice: 2000,
+  priceWithTax: 2000,
   images: [
     {
       path: "/takaneko/birthday-goods/2025-01-16_生写真.webp",

@@ -6,7 +6,7 @@ export const _18センチのひにゃねこアクスタ: OfficialGoods = {
   date: "2024-10-30",
   description:
     "18㌢にこだわった、いつもよりちょっとだけかなり大きいアクリルスタンドですっ！♡寝っ転がってるのもたかねこ初だと思うんでぜひお隣においてくだしゃい！",
-  listPrice: 1900,
+  priceWithTax: 1900,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-30_18㌢のにひにゃねこアクスタ.webp",
@@ -21,7 +21,7 @@ export const ひにゃねこかがみ: OfficialGoods = {
   date: "2024-10-30",
   description:
     "ひにゃねこさんの鏡です！「前髪気になるな～」「目いたい！」などなどそんな時に大活躍！持ち運びしやすい大きさなのでぜひ男の子も女の子にもオヌヌメです！",
-  listPrice: 2000,
+  priceWithTax: 2000,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-30_ひにゃねこかがみ(=^H×H^=).webp",
@@ -36,7 +36,7 @@ export const がんばってかいた3連キンホルダー: OfficialGoods = {
   date: "2024-10-30",
   description:
     "ひなたまが頑張って書いたキンホルダーです！♡ひなたまごとひにゃねこさんと18！！ひなの好きが詰まってます！大好きなきみにつけて欲しぃな🫶🏻✧",
-  listPrice: 1800,
+  priceWithTax: 1800,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-30_がんばってかいた3連キンホルダー！.webp",

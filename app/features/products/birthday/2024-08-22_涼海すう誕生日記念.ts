@@ -6,7 +6,7 @@ export const いらすぅとTシャツ: OfficialGoods = {
   date: "2024-08-22",
   description:
     "涼海すう誕生日記念限定Tシャツです。描き下ろしイラストをTシャツの両面にプリントしたデザインとなっています。※サイズはXLのみの販売となります。",
-  listPrice: 4500,
+  priceWithTax: 4500,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-08-22_いらすぅとTシャツ_1.webp",
@@ -29,7 +29,7 @@ export const あくすぅた: OfficialGoods = {
   date: "2024-08-22",
   description:
     "涼海すう誕生日記念限定握リススタンドです。今回のために撮影した写真と描き下ろしイラストを使用したデザインとなっています。",
-  listPrice: 1500,
+  priceWithTax: 1500,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-08-22_あくすぅた.webp",
@@ -44,7 +44,7 @@ export const だんぼーる: OfficialGoods = {
   date: "2024-08-22",
   description:
     "涼海すう誕生日記念限定ダンボールです。描き下ろしイラストや涼海すう監修のシークレットデザインが入った限定ダンボールです。",
-  listPrice: 999,
+  priceWithTax: 999,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-08-22_だんぼーる_1.webp",

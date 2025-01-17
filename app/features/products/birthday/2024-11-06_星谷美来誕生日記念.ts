@@ -5,7 +5,7 @@ export const まいにちエコるん: OfficialGoods = {
   name: "♡まいにちエコるん",
   date: "2024-11-06",
   description: "生まれて初めてロゴ作成したの✨愛情いっぱいの MK💘R うちわも入る大容量！",
-  listPrice: 3000,
+  priceWithTax: 3000,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-11-06_♡まいにちエコるん.webp",
@@ -19,7 +19,7 @@ export const みくるんお守り写真: OfficialGoods = {
   name: "☆みくるんお守り写真",
   date: "2024-11-06",
   description: "恋愛成就・金運 up・健康運 up 幸せ運びます❤",
-  listPrice: 1000,
+  priceWithTax: 1000,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-11-06_☆みくるんお守り写真.webp",
@@ -34,7 +34,7 @@ export const シュシュるん: OfficialGoods = {
   date: "2024-11-06",
   description:
     " みけるん隊の証✨ペンライトにうちわにも！ヘアゴムでも好きなところに使ってね❤ライブ中に見つけたらファンサしちゃうぞ🥰",
-  listPrice: 1800,
+  priceWithTax: 1800,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-11-06_◇シュシュるん.webp",

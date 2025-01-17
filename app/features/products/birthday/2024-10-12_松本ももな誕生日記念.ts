@@ -6,7 +6,7 @@ export const ももぽにゃんT: OfficialGoods = {
   date: "2024-10-12",
   description:
     "松本ももな誕生日記念限定Tシャツです。こだわりのももにゃとぽにゃんデザインをTシャツの前面に！背面はロゴがプリントしております！※サイズはXLのみの販売となります。",
-  listPrice: 4500,
+  priceWithTax: 4500,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-12_ももぽにゃんT_1.webp",
@@ -29,7 +29,7 @@ export const ももにゃくすた: OfficialGoods = {
   date: "2024-10-12",
   description:
     "松本ももな誕生日記念限定アクリルスタンドです。今回のために撮影した写真とこだわりのデザインを使用しております。お迎えして、いつもそばに置いて色々連れ回してね！",
-  listPrice: 1500,
+  priceWithTax: 1500,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-12_ももにゃくすた.webp",
@@ -44,7 +44,7 @@ export const おりぼんの擬人化なりきりアイテム: OfficialGoods = {
   date: "2024-10-12",
   description:
     "松本ももな誕生日記念限定リボンクリップです。こだわりのデザインに仕上げました。これであなたもおりぼんの擬人化に変身しちゃお♡",
-  listPrice: 2222,
+  priceWithTax: 2222,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-10-12_おりぼんの擬人化なりきりアイテム.webp",

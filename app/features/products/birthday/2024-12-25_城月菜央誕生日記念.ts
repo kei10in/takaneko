@@ -4,7 +4,7 @@ export const 誰でも着やすいTシャツ: OfficialGoods = {
   slug: "誰でも着やすいTシャツ",
   name: "誰でも着やすいTシャツ",
   date: "2024-12-25",
-  listPrice: 4500,
+  priceWithTax: 4500,
   description:
     "せんしゅが親鳥に土下座しつつ、めちゃくちゃこだわりをもって作成したTシャツ。まるでどこかのライブTシャツって感じだから、日常生活でも使えちゃう!!のがポイント☆",
   images: [
@@ -29,7 +29,7 @@ export const かっこいいおしゃれなグラス: OfficialGoods = {
   date: "2024-12-25",
   description:
     "とにかくかっこよくとにかくおしゃれにという思いがつまりにつまった作品。使ってもよし！飾ってもよし！1番汗水たらして作りました。よろしくお願いします。",
-  listPrice: 4000,
+  priceWithTax: 4000,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-12-25_かっこいいおしゃれなグラス_1.webp",
@@ -48,7 +48,7 @@ export const サイズ的にも使いやすいポーチ: OfficialGoods = {
   date: "2024-12-25",
   description:
     "あの!!みんな大好きなせんしゅの横顔を使ってめっちゃ一生懸命親鳥と作ったデザインのポーチ。せんしゅのこと知らんくても使えるぐらいおしゃれな感じなのがポイント☆",
-  listPrice: 2000,
+  priceWithTax: 2000,
   images: [
     {
       path: "/takaneko/birthday-goods/2024-12-25_サイズ的にも使いやすいポーチ.webp",
