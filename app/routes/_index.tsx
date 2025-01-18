@@ -14,19 +14,27 @@ import { getActiveDateInJapan } from "~/utils/japanTime";
 import { ProductItem } from "./trade/ProductItem";
 
 export const meta: MetaFunction = () => {
+  const title = `${SITE_TITLE} - 高嶺のなでしこのファンサイト`;
+  const description =
+    "高嶺のなでしこの非公式ファンサイト。トレード画像をつくるやつでは、これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。スケジュールでは、高嶺のなでしこのライブやイベント、テレビ出演などのスケジュールを確認することができます。";
+  const url = `https://${DOMAIN}/`;
+
   return [
-    { title: `${SITE_TITLE} - 高嶺のなでしこのファンサイト` },
-    {
-      name: "description",
-      content:
-        "高嶺のなでしこの非公式ファンサイト。トレード画像をつくるやつでは、これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。スケジュールでは、高嶺のなでしこのライブやイベント、テレビ出演などのスケジュールを確認することができます。",
-    },
+    { title },
+    { name: "description", content: description },
+    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: `${url}/takaneko/site-image.webp` },
+    { property: "og:url", content: url },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
     {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: SITE_TITLE,
-        url: `https://${DOMAIN}/`,
+        url,
       },
     },
     {
