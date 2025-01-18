@@ -29,12 +29,14 @@ const main = async () => {
   const output = process.argv[3];
   const filter = EventFilters[kind ?? "all"];
   if (filter == undefined) {
-    return;
+    console.error("Error: invalid event kind: " + kind);
+    process.exit(1);
   }
 
   const ics = await buildCalendar(filter.name, { pred: filter.pred });
   if (ics == undefined) {
-    return;
+    console.error("Error: no ics generated");
+    process.exit(1);
   }
 
   fs.writeFileSync(output, ics, "utf-8");

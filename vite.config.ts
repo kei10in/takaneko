@@ -19,7 +19,7 @@ export default defineConfig({
           v3_relativeSplatPath: true,
           v3_throwAbortReason: true,
         },
-        buildEnd(args) {
+        buildEnd: (args) => {
           const buildPath = args.viteConfig.build.outDir;
 
           buildCalendar("all", "calendar.ics", buildPath);
@@ -36,7 +36,7 @@ export default defineConfig({
   },
 });
 
-const buildCalendar = async (kind: string, filename: string, buildPath: string) => {
+const buildCalendar = (kind: string, filename: string, buildPath: string) => {
   const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
   const buildCalendarScript = path.resolve(__dirname, "scripts", "build-calendar.ts");
   const output = path.resolve(__dirname, path.join("public", filename));
@@ -45,7 +45,7 @@ const buildCalendar = async (kind: string, filename: string, buildPath: string) 
   fs.copyFileSync(output, path.join(buildPath, filename));
 };
 
-const buildSitemap = async (buildPath: string) => {
+const buildSitemap = (buildPath: string) => {
   const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
   const buildSitemapScript = path.resolve(__dirname, "scripts", "build-sitemap.ts");
   const output = path.resolve(__dirname, path.join("public", "sitemap.xml"));
