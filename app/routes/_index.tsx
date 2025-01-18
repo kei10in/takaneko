@@ -34,7 +34,7 @@ export const meta: MetaFunction = () => {
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
-    { name: "twitter:image", content: `${url}/takaneko/icon-512.png` },
+    { name: "twitter:image", content: `${url}icon-512.png` },
     {
       "script:ld+json": {
         "@context": "https://schema.org",
