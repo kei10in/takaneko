@@ -14,7 +14,7 @@ import { getActiveDateInJapan } from "~/utils/japanTime";
 import { ProductItem } from "./trade/ProductItem";
 
 export const meta: MetaFunction = () => {
-  const title = `${SITE_TITLE} - 高嶺のなでしこのファンサイト`;
+  const title = SITE_TITLE;
   const description =
     "高嶺のなでしこの非公式ファンサイト。トレード画像をつくるやつでは、これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。スケジュールでは、高嶺のなでしこのライブやイベント、テレビ出演などのスケジュールを確認することができます。";
   const url = `https://${DOMAIN}/`;
