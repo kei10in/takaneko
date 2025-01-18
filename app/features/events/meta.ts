@@ -102,6 +102,9 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
+      // link の URL が空文字列の場合は無視します。
+      // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
+      link: r.data.link?.url == "" ? undefined : r.data.link,
       links: (r.data.links ?? [])
         .map((link) => normalizeLink(link))
         .filter(
