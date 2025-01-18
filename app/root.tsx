@@ -1,5 +1,14 @@
 import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
-import { Link, Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import {
+  isRouteErrorResponse,
+  Link,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+  useRouteError,
+} from "@remix-run/react";
 import { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";
@@ -176,4 +185,25 @@ export default function App() {
 
 export function HydrateFallback() {
   return null;
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+
+  const [title, description] = isRouteErrorResponse(error)
+    ? [error.status.toString(), error.status == 404 ? "ページが見つかりません。" : error.statusText]
+    : ["不明なエラー", "不明なエラーが発生しました。"];
+
+  if (isRouteErrorResponse(error)) {
+    return (
+      <div className="container mx-auto lg:max-w-5xl">
+        <section className="py-16 text-center">
+          <h1 className="text-5xl text-gray-400">{title}</h1>
+          <p className="tet-gray-800 mt-4">{description}</p>
+        </section>
+      </div>
+    );
+  } else {
+    return <h1>Unknown Error</h1>;
+  }
 }
