@@ -6,14 +6,10 @@ import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: formatTitle("楽曲一覧") },
-    {
-      name: "description",
-      content: "高嶺のなでしこの楽曲の一覧です。",
-    },
-  ];
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const title = formatTitle(data?.name ?? "楽曲が見つかりません");
+
+  return [{ title }, { name: "description", content: "高嶺のなでしこの楽曲" }];
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
@@ -24,6 +20,10 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   }
 
   const meta = ALL_SONGS.find((x) => x.slug === songSlug);
+
+  if (meta == undefined) {
+    throw new Response("", { status: 404 });
+  }
 
   return json(meta);
 };
