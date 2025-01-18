@@ -29,6 +29,12 @@ export const meta: MetaFunction = () => {
     { property: "og:url", content: url },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "ja_JP" },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: `${url}/takaneko/icon-512.png` },
     {
       "script:ld+json": {
         "@context": "https://schema.org",
