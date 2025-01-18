@@ -15,6 +15,10 @@ export const LARME_063: Publication = {
       path: "/publications/larme/2024-12-17_LARME063.jpg",
       ref: "https://www.larme.co/",
     },
+    {
+      path: "/publications/larme/2024-12-17_LARME063_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1868830985040937283",
+    },
   ],
   featuredMembers: [
     "城月菜央",
