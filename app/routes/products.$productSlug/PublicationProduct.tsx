@@ -48,7 +48,15 @@ export default function PublicationProduct(props: Props) {
       />
 
       <section className="mt-4 space-y-8 p-4">
-        <h1 className="text-3xl font-semibold text-nadeshiko-800">{product.name}</h1>
+        <h1 className="text-3xl font-semibold text-nadeshiko-800">
+          {product.url == undefined ? (
+            product.name
+          ) : (
+            <Link to={product.url} target="_blank" rel="noreferrer">
+              {product.name}
+            </Link>
+          )}
+        </h1>
 
         <dl className="mt-8 grid grid-cols-3 gap-2">
           {keyValues.map(({ key, value }) => (
@@ -61,12 +69,12 @@ export default function PublicationProduct(props: Props) {
 
         <section className="space-y-2">
           <h2 className="text-lg font-semibold text-gray-500">掲載メンバー</h2>
-          <ul>
+          <ul className="flex flex-wrap gap-2">
             {product.featuredMembers.map((member) => {
               const m = findMemberDescription(member);
 
               return (
-                <li key={m.slug}>
+                <li key={m.slug} className="w-40 flex-none">
                   <Link className="block" to={`/members/${m.slug}`}>
                     <div className="flex items-center gap-2 p-1">
                       <img
@@ -76,6 +84,26 @@ export default function PublicationProduct(props: Props) {
                       />
                       <p className="text-gray-600">{m.name}</p>
                     </div>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+
+        <section className="space-y-2">
+          <h2 className="text-lg font-semibold text-gray-500">リンク</h2>
+          <ul className="list-disc pl-6">
+            {product.links?.map((link, i) => {
+              return (
+                <li key={i} className="w-40 flex-none marker:text-gray-400">
+                  <Link
+                    className="block text-nadeshiko-800"
+                    to={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.text}
                   </Link>
                 </li>
               );
