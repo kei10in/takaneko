@@ -91,25 +91,27 @@ export default function PublicationProduct(props: Props) {
           </ul>
         </section>
 
-        <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-500">リンク</h2>
-          <ul className="list-disc pl-6">
-            {product.links?.map((link, i) => {
-              return (
-                <li key={i} className="w-40 flex-none marker:text-gray-400">
-                  <Link
-                    className="block text-nadeshiko-800"
-                    to={link.url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.text}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
+        {product.links != undefined && product.links.length > 0 && (
+          <section className="space-y-2">
+            <h2 className="text-lg font-semibold text-gray-500">リンク</h2>
+            <ul className="list-disc pl-6">
+              {product.links?.map((link, i) => {
+                return (
+                  <li key={i} className="flex-none marker:text-gray-400">
+                    <Link
+                      className="block text-nadeshiko-800"
+                      to={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
+        )}
       </section>
     </div>
   );
