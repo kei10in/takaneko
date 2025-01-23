@@ -14,8 +14,8 @@ const EventOverview = z.object({
   goods: z
     .object({
       time: z.union([z.tuple([z.string()]), z.tuple([z.string(), z.string()])]).optional(),
-      lineup: z.union([z.string(), z.array(z.string())]),
-      url: z.string(),
+      lineup: z.union([z.string(), z.array(z.string())]).optional(),
+      url: z.string().optional(),
     })
     .optional(),
   streaming: LinkDescription.optional(),

@@ -83,9 +83,11 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
               </ul>
             )}
 
-            <p>
-              <Link to={goods.url}>{goods.url}</Link>
-            </p>
+            {goods.url && (
+              <p>
+                <Link to={goods.url}>{goods.url}</Link>
+              </p>
+            )}
           </li>
         )}
       </ul>
