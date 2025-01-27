@@ -19,7 +19,13 @@ export default function Index() {
   const kana = "マネージャー";
   const romaji = "Manager";
   const nyadeshiko = "てんにゃ";
-  const hashTags = ["#高嶺のなでしこ", "#たかねこ", "#カメねこ", "#あしたのたかねこ"];
+  const hashTags = [
+    "#高嶺のなでしこ",
+    "#たかねこ",
+    "#カメねこ",
+    "#あしたのたかねこ",
+    "#たかねこだいじぇすと",
+  ];
 
   const image = {
     path: "/takaneko/tennya.png",
