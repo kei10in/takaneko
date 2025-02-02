@@ -44,6 +44,7 @@
     "@cloudflare/workers-types": "^4.20240909.0",
     "@mdx-js/node-loader": "^3.0.1",
     "@remix-run/dev": "^2.11.1",
+    "@remix-run/testing": "^2.11.1",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "^16.0.1",
     "@types/mdast": "^4.0.4",
