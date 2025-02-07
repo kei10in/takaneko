@@ -1,0 +1,35 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const コージー本舗第2弾アイトーク_フォトカード: RandomGoods = {
+  id: "コージー本舗コラボレーション第2弾 フォトカード (アイトーク)",
+  slug: "フォトカード「コージー本舗コラボレーション第2弾 アイトーク」",
+  name: "コージー本舗コラボレーション第2弾 フォトカード (アイトーク)",
+  year: 2025,
+  series: "コージー本舗コラボレーション第2弾",
+  category: "フォトカード",
+  url: "/takaneko/goods/2025/2025-02-07_フォトカード「コージー本舗コラボレーション第2弾 アイトーク」.webp",
+  width: 2480,
+  height: 1754,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "春野莉々", description: "" },
+    { id: 4, name: "籾山ひめり", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "葉月紗蘭", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 82, y: 94, width: 424, height: 758 },
+    { id: 2, x: 560, y: 94, width: 424, height: 758 },
+    { id: 3, x: 1038, y: 94, width: 424, height: 758 },
+    { id: 4, x: 1516, y: 94, width: 424, height: 758 },
+    { id: 5, x: 1994, y: 94, width: 424, height: 758 },
+    { id: 6, x: 82, y: 902, width: 424, height: 758 },
+    { id: 7, x: 564, y: 902, width: 424, height: 758 },
+    { id: 8, x: 1042, y: 902, width: 424, height: 758 },
+    { id: 9, x: 1519, y: 902, width: 424, height: 758 },
+  ],
+};
