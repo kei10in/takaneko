@@ -76,9 +76,13 @@ import { クリスマス2024_目印チャーム } from "./2024/2024-12-25_目印
 import { クリスマス2024_缶バッジ } from "./2024/2024-12-25_缶バッジ「クリスマス2024」";
 import { 晴れ着2025_ミニフォト } from "./2025/2025-01-02_ミニフォトカード「晴れ着2025」";
 import { 晴れ着2025_生写真 } from "./2025/2025-01-02_生写真「晴れ着2025」";
+import { CuteForLife_アクリルキーホルダー } from "./2025/2025-02-14_アクリルキーホルダー「Cute for life FC抽選会」";
+import { CuteForLife_ステッカー } from "./2025/2025-02-14_ステッカー「Cute for life FC抽選会」";
 import { RandomGoods } from "./product";
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  CuteForLife_アクリルキーホルダー,
+  CuteForLife_ステッカー,
   晴れ着2025_生写真,
   晴れ着2025_ミニフォト,
   クリスマス2024_生写真,

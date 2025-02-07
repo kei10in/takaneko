@@ -1,0 +1,37 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const CuteForLife_アクリルキーホルダー: RandomGoods = {
+  id: "Cute for life FC抽選会 メンバー個別バレンタインデザイン アクリルキーホルダー",
+  slug: "アクリルキーホルダー「Cute for life FC抽選会」",
+  name: "Cute for life FC抽選会 メンバー個別バレンタインデザイン アクリルキーホルダー",
+  year: 2025,
+  series: "Cute for life FC抽選会",
+  category: "アクリルキーホルダー",
+  url: "/takaneko/goods/2025/2025-02-14_メンバー個別バレンタインデザイン アクリルキーホルダー.png",
+  width: 1166,
+  height: 467,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "春野莉々", description: "" },
+    { id: 6, name: "東山恵里沙", description: "" },
+    { id: 7, name: "日向端ひな", description: "" },
+    { id: 8, name: "星谷美来", description: "" },
+    { id: 9, name: "松本ももな", description: "" },
+    { id: 10, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 12, y: 9, width: 227, height: 220 },
+    { id: 2, x: 241, y: 9, width: 227, height: 220 },
+    { id: 3, x: 471, y: 9, width: 227, height: 220 },
+    { id: 4, x: 703, y: 9, width: 227, height: 220 },
+    { id: 5, x: 931, y: 9, width: 227, height: 220 },
+    { id: 6, x: 12, y: 240, width: 227, height: 220 },
+    { id: 7, x: 241, y: 240, width: 227, height: 220 },
+    { id: 8, x: 471, y: 240, width: 227, height: 220 },
+    { id: 9, x: 703, y: 240, width: 227, height: 220 },
+    { id: 10, x: 931, y: 240, width: 227, height: 220 },
+  ],
+};
