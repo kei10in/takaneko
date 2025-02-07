@@ -1,0 +1,9 @@
+import { IDOL_AND_READ_041 } from "~/features/products/publications/IDOL AND READ";
+import { EventMetaDescriptor } from "../../meta";
+import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
+
+export const meta: EventMetaDescriptor = convertPublicationToEventMeta(IDOL_AND_READ_041);
+
+export const Content = () => {};
+
+export default Content;
