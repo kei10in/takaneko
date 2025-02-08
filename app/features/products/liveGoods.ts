@@ -9,6 +9,7 @@ import {
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる後夜祭,
 } from "./lives/2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」";
 import { _2ndファンミーティング成長発表会 } from "./lives/2nd ファンミーティング〜成長発表会〜";
+import { CuteForLife } from "./lives/Cute for life";
 import { たかねこの秋祭り2024_FC_limited } from "./lives/たかねこの秋祭り2024〜FC limited〜";
 import { たかねこクリスマスパーティー2023 } from "./lives/たかねこクリスマスパーティー2023";
 import { たかねこクリスマスパーティー2024 } from "./lives/たかねこクリスマスパーティー2024";
@@ -26,6 +27,7 @@ import {
 import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
+  CuteForLife,
   たかねこクリスマスパーティー2024,
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる後夜祭,
   たかねこフェス_オータムセッション_たかねこLiFE,
