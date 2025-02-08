@@ -80,9 +80,15 @@ import { コージー本舗第2弾アイトーク_フォトカード } from "./2
 import { コージー本舗第2弾アイラッシュカーラー_フォトカード } from "./2025/2025-02-07_フォトカード「コージー本舗コラボレーション第2弾アイラッシュカーラー」";
 import { CuteForLife_アクリルキーホルダー } from "./2025/2025-02-14_アクリルキーホルダー「Cute for life FC抽選会」";
 import { CuteForLife_ステッカー } from "./2025/2025-02-14_ステッカー「Cute for life FC抽選会」";
+import { バレンタイン2025_ミニフォト } from "./2025/2025-02-14_ミニフォトカード「バレンタイン2025」";
+import { ラブレターカード } from "./2025/2025-02-14_ラブレターカード";
+import { バレンタイン2025_生写真 } from "./2025/2025-02-14_生写真「バレンタイン2025」";
 import { RandomGoods } from "./product";
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  バレンタイン2025_生写真,
+  バレンタイン2025_ミニフォト,
+  ラブレターカード,
   CuteForLife_アクリルキーホルダー,
   CuteForLife_ステッカー,
   コージー本舗第2弾アイトーク_フォトカード,
