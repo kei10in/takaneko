@@ -31,9 +31,12 @@ import { 死ぬまでダーリン } from "./2024/死ぬまでダーリン";
 import { 私は怪物 } from "./2024/私は怪物";
 import { 私より好きでいて } from "./2024/私より好きでいて";
 import { 美しく生きろ } from "./2024/美しく生きろ";
+import { 小悪魔だってかまわない } from "./2025/美しく生きろ";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
+  // 2025
+  小悪魔だってかまわない,
   // 2024
   アイのウイルス,
   IM_YOUR_IDOL,
