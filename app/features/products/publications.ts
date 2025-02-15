@@ -27,6 +27,7 @@ import {
   MARQUEE_Vol154,
   MARQUEE_Vol155,
   MARQUEE_Vol156,
+  MARQUEE_Vol157,
 } from "./publications/MARQUEE";
 import { mini_2022年10月号, mini_2023年2月号 } from "./publications/mini";
 import { Myojo_2024年9月号 } from "./publications/Myojo";
@@ -82,6 +83,7 @@ const publications: Publication[] = [
   MARQUEE_Vol154,
   MARQUEE_Vol155,
   MARQUEE_Vol156,
+  MARQUEE_Vol157,
   mini_2022年10月号,
   mini_2023年2月号,
   Myojo_2024年9月号,

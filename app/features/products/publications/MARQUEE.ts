@@ -1,5 +1,51 @@
 import { Publication } from "../product";
 
+export const MARQUEE_Vol157: Publication = {
+  slug: "MARQUEE Vol.157",
+  name: "MARQUEE Vol.157",
+  date: "2025-02-25",
+  kind: "mooks",
+  publisher: "星雲社",
+  listPrice: 1375,
+  priceWithTax: 1513,
+  code: [{ kind: "isbn", value: "978-4-434-35273-7" }],
+  url: "http://www.marquee-mag.com/backnumber.html",
+  coverImages: [
+    {
+      path: "/publications/marquee/vol157a.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol157b.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol157_1.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1888785883098489081",
+    },
+    {
+      path: "/publications/marquee/vol157_2.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1888785883098489081",
+    },
+    {
+      path: "/publications/marquee/vol157_3.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1888785883098489081",
+    },
+    {
+      path: "/publications/marquee/vol157_4.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1888785883098489081",
+    },
+  ],
+  featuredMembers: ["春野莉々"],
+  officialTwitter: ["https://x.com/takanenofficial/status/1888800076157608075"],
+  links: [
+    {
+      text: "MARQUEE 公式 X 告知",
+      url: "https://x.com/MARQUEE_info/status/1888785844699546013",
+    },
+  ],
+};
+
 export const MARQUEE_Vol156: Publication = {
   slug: "MARQUEE Vol.156",
   name: "MARQUEE Vol.156",
@@ -26,6 +72,7 @@ export const MARQUEE_Vol156: Publication = {
     "https://x.com/takanenofficial/status/1855890751894471105",
   ],
 };
+
 export const MARQUEE_Vol155: Publication = {
   slug: "MARQUEE Vol.155",
   name: "MARQUEE Vol.155",
