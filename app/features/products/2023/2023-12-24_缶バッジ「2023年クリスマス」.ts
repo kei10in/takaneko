@@ -1,0 +1,37 @@
+import { RandomGoods } from "~/features/products/product";
+
+export const クリスマス2023_缶バッジ: RandomGoods = {
+  id: "ランダム缶バッジ「2023年クリスマス」",
+  slug: "缶バッジ「2023年クリスマス」",
+  name: "ランダム缶バッジ「2023年クリスマス」ver.",
+  year: 2023,
+  series: "2023年クリスマス",
+  category: "缶バッジ",
+  url: "/takaneko/goods/2023/2023-12-24_缶バッジ「2023年クリスマス」.webp",
+  width: 595,
+  height: 595,
+  lineup: [
+    { id: 1, name: "星谷美来", description: "通常" },
+    { id: 2, name: "春野莉々", description: "通常" },
+    { id: 3, name: "橋本桃呼", description: "通常" },
+    { id: 4, name: "東山恵里沙", description: "通常" },
+    { id: 5, name: "籾山ひめり", description: "通常" },
+    { id: 6, name: "日向端ひな", description: "通常" },
+    { id: 7, name: "松本ももな", description: "通常" },
+    { id: 8, name: "城月菜央", description: "通常" },
+    { id: 9, name: "涼海すう", description: "通常" },
+    { id: 10, name: "葉月紗蘭", description: "通常" },
+  ],
+  positions: [
+    { id: 1, x: 108, y: 106, width: 114, height: 114 },
+    { id: 2, x: 242, y: 106, width: 114, height: 114 },
+    { id: 3, x: 372, y: 106, width: 114, height: 114 },
+    { id: 4, x: 108, y: 254, width: 114, height: 114 },
+    { id: 5, x: 242, y: 254, width: 114, height: 114 },
+    { id: 6, x: 372, y: 254, width: 114, height: 114 },
+    { id: 7, x: 44, y: 384, width: 114, height: 114 },
+    { id: 8, x: 178, y: 384, width: 114, height: 114 },
+    { id: 9, x: 305, y: 384, width: 114, height: 114 },
+    { id: 10, x: 439, y: 384, width: 114, height: 114 },
+  ],
+};
