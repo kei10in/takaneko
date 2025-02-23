@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const ラブレターカード: RandomGoods = {
   id: "ラブレターカード",
@@ -7,6 +7,7 @@ export const ラブレターカード: RandomGoods = {
   year: 2025,
   series: "Cute for life",
   category: "ラブレターカード",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-02-14_ラブレターカード.webp",
   width: 430,
   height: 162,

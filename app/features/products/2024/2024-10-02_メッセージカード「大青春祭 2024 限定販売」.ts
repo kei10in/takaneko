@@ -1,12 +1,14 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const 大青春祭2024_メッセージカード: RandomGoods = {
   id: "大青春祭 2024 限定販売 メッセージカード",
   slug: "メッセージカード「大青春祭 2024 限定販売」",
   name: "大青春祭 2024 限定販売 メッセージカード",
+  abbrev: "大青春祭2024 メッセージカード",
   year: 2024,
   series: "大青春祭 2024",
   category: "メッセージカード",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-10-02_メッセージカード「大青春祭 2024 限定販売」.webp",
   width: 610,
   height: 362,

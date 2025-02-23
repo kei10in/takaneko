@@ -1,12 +1,13 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
   id: "ランダムにゃでしこステッカー (2ndファンミ ver)",
   slug: "ステッカー「2ndファンミ」",
   name: "ランダムにゃでしこステッカー (2ndファンミver.)",
   year: 2024,
-  series: "2nd ファンミ にゃでしこステッカー",
+  series: "2nd ファンミ",
   category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-08-07_ステッカー「2ndファンミ」.webp",
   width: 1181,
   height: 1181,

@@ -1,12 +1,14 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const 生明祭限定_参加証明書カード: RandomGoods = {
   id: "生明祭限定 参加証明書カード",
   slug: "カード「生明祭限定 参加証明書カード」",
   name: "生明祭限定 参加証明書カード",
+  abbrev: "生明祭限定 参加証明書カード",
   year: 2024,
   series: "生明祭",
   category: "カード",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-11-03_カード「生明祭限定 参加証明書カード」.webp",
   width: 1015,
   height: 428,

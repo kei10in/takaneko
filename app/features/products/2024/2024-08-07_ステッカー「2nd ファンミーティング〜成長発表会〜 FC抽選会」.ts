@@ -1,12 +1,13 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const 成長発表会_FC抽選会_メンバー個別デザインステッカー: RandomGoods = {
   id: "2nd ファンミーティング〜成長発表会〜 FC抽選会 メンバー個別デザインステッカー",
   slug: "ステッカー「2nd ファンミーティング〜成長発表会〜 FC抽選会」",
   name: "2nd ファンミーティング〜成長発表会〜 FC抽選会 メンバー個別デザインステッカー",
   year: 2024,
-  series: "2nd ファンミーティング〜成長発表会〜 FC抽選会",
+  series: "2nd ファンミ FC抽選会",
   category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-08-07_ステッカー「2nd ファンミーティング〜成長発表会〜 FC抽選会」.png",
   width: 1200,
   height: 637,

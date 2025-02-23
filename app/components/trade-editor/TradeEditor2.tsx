@@ -24,7 +24,9 @@ import {
   TradeDescription,
   TradeStatus,
 } from "~/features/trade/TradeStatus";
+import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
+import { CopyButton } from "../CopyButton";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { shareTradeImage } from "./shareTradeImage";
@@ -60,6 +62,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
     open: false,
     index: 0,
   });
+  const tradeText = convertToTradeText(productImage, tradeDescriptions);
 
   const scale = width / productImage.width;
 
@@ -129,24 +132,43 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
             </div>
 
             <p className="px-1 text-right">©INCS・TP</p>
-
-            <div className="mt-4 px-1 py-2">
-              <p className="text-2xl text-gray-800">{productImage.series}</p>
-              <p className="text-lg text-gray-400">{productImage.category}</p>
-
-              <div className="mt-2">
-                <p className="flex items-center gap-1">
-                  <img src="/譲.svg" alt="譲" className="inline w-6" />
-                  <span>{totalHaveCount(tradeDescriptions)}</span>
-                </p>
-                <p className="flex items-center gap-1">
-                  <img src="/求.svg" alt="求" className="inline w-6" />
-                  <span>{totalWant(tradeDescriptions)}</span>
-                </p>
-              </div>
-            </div>
           </div>
         ) : null}
+
+        <div className="mx-auto max-w-lg px-4">
+          <section className="my-4 px-1 py-2">
+            <h1>
+              <span className="block text-2xl text-gray-800">{productImage.series}</span>
+              <span className="block text-lg text-gray-400">{productImage.category}</span>
+            </h1>
+
+            <div className="mt-2">
+              <p className="flex items-center gap-1">
+                <img src="/譲.svg" alt="譲" className="inline w-6" />
+                <span>{totalHaveCount(tradeDescriptions)}</span>
+              </p>
+              <p className="flex items-center gap-1">
+                <img src="/求.svg" alt="求" className="inline w-6" />
+                <span>{totalWant(tradeDescriptions)}</span>
+              </p>
+            </div>
+
+            {tradeText != undefined && tradeText.length != 0 && (
+              <section className="my-8">
+                <h2 className="text-lg font-semibold text-gray-800">トレード用テキスト</h2>
+                <p className="my-1 text-sm text-gray-500">
+                  トレード用のテキストです。右側のボタンでコピーできます。
+                </p>
+                <div className="my-4 rounded-lg border bg-gray-50">
+                  <div className="ml-auto w-fit p-1">
+                    <CopyButton data={tradeText} />
+                  </div>
+                  <pre className="text-wrap px-2 pb-2 font-sans">{tradeText}</pre>
+                </div>
+              </section>
+            )}
+          </section>
+        </div>
       </div>
 
       {/* パネル */}
