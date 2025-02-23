@@ -17,6 +17,9 @@ export const convertToTradeText = (
   return undefined;
 };
 
+/**
+ * `TradeTextType.Numbering` 用のトレード用テキストを生成します。
+ */
 const generateNumberingTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -74,6 +77,9 @@ const generateNumberingTradeText = (
   return `${result}${wantsText}${haveText}`;
 };
 
+/**
+ * `TradeTextType.NameOnly` 用のトレード用テキストを生成します。
+ */
 const generateNameOnlyTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
