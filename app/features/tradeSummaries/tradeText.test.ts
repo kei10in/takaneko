@@ -1,6 +1,7 @@
 import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
 import { アンチファン衣装_生写真 } from "../products/2022/2022-08-08_生写真「アンチファン衣装」";
+import { ラブレターカード } from "../products/2025/2025-02-14_ラブレターカード";
 import { convertToTradeText } from "./tradeText";
 
 describe("convertToTradeText", () => {
@@ -65,6 +66,25 @@ describe("convertToTradeText", () => {
     });
     expect(result).toBe(dedent`
       生写真 アンチファン衣装
+
+      `);
+  });
+
+  it("should return formatted trade text for ラブレターカード with 'nameOnly' trade text type", () => {
+    const result = convertToTradeText(ラブレターカード, {
+      1: { id: 1, status: { tag: "want" } },
+      2: { id: 2, status: { tag: "have" } },
+      3: { id: 3, status: { tag: "want" } },
+      4: { id: 4, status: { tag: "have" } },
+    });
+    expect(result).toBe(dedent`
+      ラブレターカード Cute for life
+
+      💖求
+      城月菜央、橋本桃呼
+
+      🎁譲
+      涼海すう、葉月紗蘭
 
       `);
   });

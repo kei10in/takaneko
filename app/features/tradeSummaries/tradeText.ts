@@ -6,11 +6,15 @@ export const convertToTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string | undefined => {
-  if (productImage.tradeText !== "numbering") {
-    return undefined;
+  if (productImage.tradeText === "numbering") {
+    return generateNumberingTradeText(productImage, tradeDescriptions);
   }
 
-  return generateNumberingTradeText(productImage, tradeDescriptions);
+  if (productImage.tradeText === "nameOnly") {
+    return generateNameOnlyTradeText(productImage, tradeDescriptions);
+  }
+
+  return undefined;
 };
 
 const generateNumberingTradeText = (
@@ -62,6 +66,37 @@ const generateNumberingTradeText = (
       return `${familyName} ${have.join(", ")}`;
     })
     .join("\n");
+
+  const result = `${productImage.category} ${productImage.series}\n`;
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+
+  return `${result}${wantsText}${haveText}`;
+};
+
+const generateNameOnlyTradeText = (
+  productImage: RandomGoods,
+  tradeDescriptions: Record<number, TradeDescription>,
+): string => {
+  const wants = productImage.lineup
+    .flatMap((item) => {
+      if (tradeDescriptions[item.id]?.status.tag === "want") {
+        return [item.name];
+      } else {
+        return [];
+      }
+    })
+    .join("、");
+
+  const have = productImage.lineup
+    .flatMap((item) => {
+      if (tradeDescriptions[item.id]?.status.tag === "have") {
+        return [item.name];
+      } else {
+        return [];
+      }
+    })
+    .join("、");
 
   const result = `${productImage.category} ${productImage.series}\n`;
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";

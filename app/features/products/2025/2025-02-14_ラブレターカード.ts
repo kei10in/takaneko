@@ -7,6 +7,7 @@ export const ラブレターカード: RandomGoods = {
   year: 2025,
   series: "Cute for life",
   category: "ラブレターカード",
+  tradeText: "nameOnly",
   url: "/takaneko/goods/2025/2025-02-14_ラブレターカード.webp",
   width: 430,
   height: 162,
