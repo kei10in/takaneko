@@ -1,7 +1,7 @@
 import { forwardRef, Ref, useMemo } from "react";
 import { ImagePosition } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
+import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 
 interface Props {
   image: { url: string; width: number; height: number };

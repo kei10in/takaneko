@@ -23,7 +23,7 @@ import {
   totalWant,
   TradeDescription,
   TradeStatus,
-} from "~/features/TradeStatus";
+} from "~/features/trade/TradeStatus";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";

@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { TradeDescription, TradeStatus } from "../TradeStatus";
+import { TradeDescription, TradeStatus } from "./TradeStatus";
 
 interface TradeState {
   allTradeDescriptions: Record<string, Record<number, TradeDescription>>;

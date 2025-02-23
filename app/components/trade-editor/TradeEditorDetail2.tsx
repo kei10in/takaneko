@@ -6,7 +6,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { RandomGoods } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
+import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
 import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";

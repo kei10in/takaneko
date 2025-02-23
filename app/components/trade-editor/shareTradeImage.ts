@@ -1,5 +1,5 @@
 import { RandomGoods } from "~/features/products/product";
-import { TradeDescription } from "~/features/TradeStatus";
+import { TradeDescription } from "~/features/trade/TradeStatus";
 import { canvasToFile } from "~/utils/html/canvasToFile";
 import { drawTradeImage } from "./drawTradeImage";
 

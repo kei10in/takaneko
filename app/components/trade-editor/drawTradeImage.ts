@@ -1,6 +1,6 @@
 import { RandomGoods } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, tradeStateToImageSrc } from "~/features/TradeStatus";
+import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { loadImage } from "~/utils/loadImage";
 
 export const drawTradeImage = async (

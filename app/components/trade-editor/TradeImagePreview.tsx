@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BsBoxArrowUp } from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
-import { TradeDescription } from "~/features/TradeStatus";
+import { TradeDescription } from "~/features/trade/TradeStatus";
 import { PARSED_UA } from "~/utils/ua";
 import { ImageLoader } from "../ImageLoader";
 import { drawTradeImage } from "./drawTradeImage";

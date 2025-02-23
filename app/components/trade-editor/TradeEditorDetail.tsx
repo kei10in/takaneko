@@ -5,7 +5,7 @@ import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { RandomGoods } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/TradeStatus";
+import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
 import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
