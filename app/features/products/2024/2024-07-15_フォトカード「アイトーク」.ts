@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const アイトーク_フォトカード: RandomGoods = {
   id: "フォトカード (アイトーク ver)",
@@ -7,6 +7,7 @@ export const アイトーク_フォトカード: RandomGoods = {
   year: 2024,
   series: "アイトーク",
   category: "フォトカード",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-07-15_フォトカード「アイトーク」.webp",
   width: 1950,
   height: 1148,

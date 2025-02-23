@@ -7,7 +7,7 @@ export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   year: 2024,
   series: "にゃでしこ",
   category: "アクリルキーホルダー",
-  tradeText: TradeTextType.Numbering,
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-05-12_アクリルキーホルダー「にゃでしこ」.webp",
   width: 1500,
   height: 1200,

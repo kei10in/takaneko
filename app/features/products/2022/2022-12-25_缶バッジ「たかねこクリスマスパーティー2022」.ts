@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const クリスマス2022_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ「たかねこクリスマスパーティー2022」ver.",
@@ -7,6 +7,7 @@ export const クリスマス2022_缶バッジ: RandomGoods = {
   year: 2022,
   series: "たかねこクリスマスパーティー2022",
   category: "缶バッジ",
+  tradeText: TradeTextType.Description,
   url: "/takaneko/goods/2022/2022-12-25_缶バッジ「たかねこクリスマスパーティー2022」.webp",
   width: 1280,
   height: 1280,

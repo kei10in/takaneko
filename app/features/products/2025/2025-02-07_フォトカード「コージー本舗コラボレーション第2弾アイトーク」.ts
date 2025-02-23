@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const コージー本舗第2弾アイトーク_フォトカード: RandomGoods = {
   id: "コージー本舗コラボレーション第2弾 フォトカード (アイトーク)",
@@ -7,6 +7,7 @@ export const コージー本舗第2弾アイトーク_フォトカード: Random
   year: 2025,
   series: "コージー本舗コラボレーション第2弾",
   category: "フォトカード",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-02-07_フォトカード「コージー本舗コラボレーション第2弾 アイトーク」.webp",
   width: 2480,
   height: 1754,

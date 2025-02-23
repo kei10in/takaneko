@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const CuteForLife_アクリルキーホルダー: RandomGoods = {
   id: "Cute for life FC抽選会 メンバー個別バレンタインデザイン アクリルキーホルダー",
@@ -7,6 +7,7 @@ export const CuteForLife_アクリルキーホルダー: RandomGoods = {
   year: 2025,
   series: "Cute for life FC抽選会",
   category: "アクリルキーホルダー",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-02-14_メンバー個別バレンタインデザイン アクリルキーホルダー.png",
   width: 1166,
   height: 467,

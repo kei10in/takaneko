@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const ハニフェス_缶バッジ: RandomGoods = {
   id: "高嶺のなでしこ らんだむ缶バッジ",
@@ -7,6 +7,7 @@ export const ハニフェス_缶バッジ: RandomGoods = {
   year: 2024,
   series: "ハニフェス",
   category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-04-29_缶バッジ「ハニフェス」.webp",
   width: 1680,
   height: 1485,

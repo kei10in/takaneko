@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const クリスマス2024_目印チャーム: RandomGoods = {
   id: "ランダム目印チャーム「クリスマス2024」ver",
@@ -7,6 +7,7 @@ export const クリスマス2024_目印チャーム: RandomGoods = {
   year: 2024,
   series: "クリスマス2024",
   category: "目印チャーム",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-12-25_目印チャーム「クリスマス2024」.webp",
   width: 1181,
   height: 1181,

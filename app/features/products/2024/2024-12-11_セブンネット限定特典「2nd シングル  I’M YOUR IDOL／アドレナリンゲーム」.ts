@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const ミニアクリルスタンドキーホルダーメンバーソロ写真: RandomGoods = {
   id: "2nd シングル セブンネット限定特典",
@@ -7,6 +7,7 @@ export const ミニアクリルスタンドキーホルダーメンバーソロ�
   year: 2024,
   series: "2nd シングル特典",
   category: "ミニアクリルスタンド キーホルダー",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-12-11_セブンネット限定特典「2nd シングル  I’M YOUR IDOL／アドレナリンゲーム」.jpg",
   width: 1980,
   height: 1606,

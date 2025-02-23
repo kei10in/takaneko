@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const CuteForLife_ステッカー: RandomGoods = {
   id: "Cute for life FC抽選会 メンバー個別デザイン イベントPASS風ステッカー",
@@ -7,6 +7,7 @@ export const CuteForLife_ステッカー: RandomGoods = {
   year: 2025,
   series: "Cute for life FC抽選会",
   category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-02-14_メンバー個別デザイン イベントPASS風ステッカー.png",
   width: 1075,
   height: 615,

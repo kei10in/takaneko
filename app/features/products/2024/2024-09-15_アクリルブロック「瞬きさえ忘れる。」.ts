@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
   id: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver",
@@ -7,6 +7,7 @@ export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
   year: 2024,
   series: "瞬きさえ忘れる。アクリルブロック",
   category: "アクリルブロック",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-09-15_アクリルブロック「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 1680,
