@@ -163,9 +163,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                   <div className="ml-auto w-fit p-1">
                     <CopyButton data={tradeText} />
                   </div>
-                  <pre className="max-w-sm overflow-x-hidden rounded px-2 pb-2 font-sans">
-                    {tradeText}
-                  </pre>
+                  <pre className="text-wrap px-2 pb-2 font-sans">{tradeText}</pre>
                 </div>
               </section>
             )}
