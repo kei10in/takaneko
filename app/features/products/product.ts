@@ -22,6 +22,14 @@ export interface OfficialGoods {
   images?: ImageDescription[];
 }
 
+export const TradeTextType = {
+  Description: "description",
+  NameOnly: "nameOnly",
+  Numbering: "numbering",
+} as const;
+
+export type TradeTextType = (typeof TradeTextType)[keyof typeof TradeTextType];
+
 /**
  * ランダムグッズを表します。
  *
@@ -38,6 +46,7 @@ export interface RandomGoods {
   year: number;
   series: string;
   category: string;
+  tradeText?: TradeTextType;
   url: string;
   width: number;
   height: number;

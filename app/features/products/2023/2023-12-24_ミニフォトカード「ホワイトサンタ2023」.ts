@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ホワイトサンタ2023_ミニフォト: RandomGoods = {
@@ -8,6 +8,7 @@ export const ホワイトサンタ2023_ミニフォト: RandomGoods = {
   year: 2023,
   series: "ホワイトサンタ2023",
   category: "ミニフォト",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-12-24_ミニフォトカード「ホワイトサンタ2023」.png",
   width: 184,
   height: 241,

@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   id: "ランダムアクリルキーホルダー (にゃでしこ ver)",
@@ -7,6 +7,7 @@ export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   year: 2024,
   series: "にゃでしこ",
   category: "アクリルキーホルダー",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-05-12_アクリルキーホルダー「にゃでしこ」.webp",
   width: 1500,
   height: 1200,

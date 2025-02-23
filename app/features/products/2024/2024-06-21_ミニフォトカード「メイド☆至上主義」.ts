@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const メイド至上主義_ミニフォト: RandomGoods = {
@@ -8,6 +8,7 @@ export const メイド至上主義_ミニフォト: RandomGoods = {
   year: 2024,
   series: "メイド☆至上主義",
   category: "ミニフォト",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-06-21_ミニフォトカード「メイド☆至上主義」.webp",
   width: 1680,
   height: 2128,

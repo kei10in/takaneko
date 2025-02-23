@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const ハロウィン_生写真: RandomGoods = {
@@ -8,6 +8,7 @@ export const ハロウィン_生写真: RandomGoods = {
   year: 2022,
   series: "ハロウィン",
   category: "生写真",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2022/2022-10-31_生写真「ハロウィン」.jpg",
   width: 1280,
   height: 1300,

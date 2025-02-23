@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const povo20_生写真: RandomGoods = {
@@ -8,6 +8,7 @@ export const povo20_生写真: RandomGoods = {
   year: 2023,
   series: "povo",
   category: "生写真",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-10-02_生写真「povo」.jpg",
   width: 1182,
   height: 1387,

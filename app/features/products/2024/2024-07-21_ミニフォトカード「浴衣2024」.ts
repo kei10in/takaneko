@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 浴衣2024_ミニフォト: RandomGoods = {
@@ -8,6 +8,7 @@ export const 浴衣2024_ミニフォト: RandomGoods = {
   year: 2024,
   series: "浴衣2024",
   category: "ミニフォト",
+  tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-07-21_ミニフォトカード「浴衣2024」.jpg",
   width: 720,
   height: 1040,
