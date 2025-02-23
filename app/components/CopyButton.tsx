@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BsCheck2, BsCopy } from "react-icons/bs";
 
 interface Props {
-  className: string;
+  className?: string;
   data: string;
 }
 
