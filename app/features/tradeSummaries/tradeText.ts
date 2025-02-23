@@ -5,7 +5,11 @@ import { TradeDescription } from "../trade/TradeStatus";
 export const convertToTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
-): string => {
+): string | undefined => {
+  if (productImage.tradeText !== "numbering") {
+    return undefined;
+  }
+
   const members: { name: string; items: ItemDescription[] }[] = [];
   productImage.lineup.forEach((item) => {
     const member = members.find((m) => m.name === item.name);

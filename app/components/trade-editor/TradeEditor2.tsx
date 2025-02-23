@@ -153,20 +153,22 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
               </p>
             </div>
 
-            <section className="my-8">
-              <h2 className="text-lg font-semibold text-gray-800">トレード用テキスト</h2>
-              <p className="my-1 text-sm text-gray-500">
-                トレード用のテキストです。右側のボタンでコピーできます。
-              </p>
-              <div className="my-4 rounded-lg border bg-gray-50">
-                <div className="ml-auto w-fit p-1">
-                  <CopyButton data={tradeText} />
+            {tradeText != undefined && tradeText.length != 0 && (
+              <section className="my-8">
+                <h2 className="text-lg font-semibold text-gray-800">トレード用テキスト</h2>
+                <p className="my-1 text-sm text-gray-500">
+                  トレード用のテキストです。右側のボタンでコピーできます。
+                </p>
+                <div className="my-4 rounded-lg border bg-gray-50">
+                  <div className="ml-auto w-fit p-1">
+                    <CopyButton data={tradeText} />
+                  </div>
+                  <pre className="max-w-sm overflow-x-hidden rounded px-2 pb-2 font-sans">
+                    {tradeText}
+                  </pre>
                 </div>
-                <pre className="max-w-sm overflow-x-hidden rounded px-2 pb-2 font-sans">
-                  {convertToTradeText(productImage, tradeDescriptions)}
-                </pre>
-              </div>
-            </section>
+              </section>
+            )}
           </section>
         </div>
       </div>
