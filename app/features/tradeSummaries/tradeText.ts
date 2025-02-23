@@ -10,6 +10,13 @@ export const convertToTradeText = (
     return undefined;
   }
 
+  return generateNumberingTradeText(productImage, tradeDescriptions);
+};
+
+const generateNumberingTradeText = (
+  productImage: RandomGoods,
+  tradeDescriptions: Record<number, TradeDescription>,
+): string => {
   const members: { name: string; items: ItemDescription[] }[] = [];
   productImage.lineup.forEach((item) => {
     const member = members.find((m) => m.name === item.name);
