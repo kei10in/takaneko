@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const 学生証風_ステッカー: RandomGoods = {
   id: "ランダム学生証風ステッカー",
@@ -7,6 +7,7 @@ export const 学生証風_ステッカー: RandomGoods = {
   year: 2024,
   series: "学生証風",
   category: "ステッカー",
+  tradeText: TradeTextType.Description,
   url: "/takaneko/goods/2024/2024-04-08_ステッカー「学生証風」.webp",
   width: 2000,
   height: 2000,

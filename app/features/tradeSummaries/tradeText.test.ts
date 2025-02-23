@@ -1,6 +1,7 @@
 import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
 import { アンチファン衣装_生写真 } from "../products/2022/2022-08-08_生写真「アンチファン衣装」";
+import { 学生証風_ステッカー } from "../products/2024/2024-04-08_ステッカー「学生証風」";
 import { ラブレターカード } from "../products/2025/2025-02-14_ラブレターカード";
 import { convertToTradeText } from "./tradeText";
 
@@ -85,6 +86,29 @@ describe("convertToTradeText", () => {
 
       🎁譲
       涼海すう、葉月紗蘭
+
+      `);
+  });
+
+  it("should return formatted trade text for 学生証風_ステッカー with 'description' trade text type", () => {
+    const result = convertToTradeText(学生証風_ステッカー, {
+      1: { id: 1, status: { tag: "want" } },
+      2: { id: 2, status: { tag: "have" } },
+      3: { id: 3, status: { tag: "want" } },
+      11: { id: 11, status: { tag: "want" } },
+      12: { id: 12, status: { tag: "have" } },
+      14: { id: 14, status: { tag: "have" } },
+    });
+    expect(result).toBe(dedent`
+      ステッカー 学生証風
+
+      💖求
+      城月 真顔, 笑顔
+      橋本 真顔
+
+      🎁譲
+      涼海 真顔, 笑顔
+      葉月 笑顔
 
       `);
   });
