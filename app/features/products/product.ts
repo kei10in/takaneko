@@ -36,8 +36,16 @@ export type TradeTextType = (typeof TradeTextType)[keyof typeof TradeTextType];
  * シリアライズ可能である必要があります。
  */
 export interface RandomGoods {
+  // 複数の `RandomGoods の中から一意に識別するために使用します。
   id: string;
+  // URL の path part に使用します。
+  // 歴史的には `id` が path part に使われていましたが、`id` には path path には
+  // 適さない文字が含まれていまいした。しかし `id` は変更しては問題が起きる使わ
+  // れ方をしていたため `slug` が導入されました。
+  // 新たに `RandomGoods` のオブジェクトを定義する場合は `id` は `slug` と同じ
+  // 値にします。
   slug: string;
+
   name: string;
   abbrev?: string;
   date?: string;
