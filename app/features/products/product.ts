@@ -39,6 +39,7 @@ export interface RandomGoods {
   id: string;
   slug: string;
   name: string;
+  abbrev?: string;
   date?: string;
   listPrice?: number;
   priceWithTax?: number;

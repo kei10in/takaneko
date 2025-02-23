@@ -74,11 +74,11 @@ const generateNumberingTradeText = (
     })
     .join("\n");
 
-  const result = `${productImage.category} ${productImage.series}\n`;
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
 
-  return `${result}${wantsText}${haveText}`;
+  return `${name}\n${wantsText}${haveText}`;
 };
 
 /**
@@ -108,11 +108,11 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const result = `${productImage.category} ${productImage.series}\n`;
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
 
-  return `${result}${wantsText}${haveText}`;
+  return `${name}\n${wantsText}${haveText}`;
 };
 
 /**
@@ -168,9 +168,9 @@ const generateDescriptionTradeText = (
     })
     .join("\n");
 
-  const result = `${productImage.category} ${productImage.series}\n`;
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
 
-  return `${result}${wantsText}${haveText}`;
+  return `${name}\n${wantsText}${haveText}`;
 };

@@ -5,7 +5,7 @@ export const 瞬きさえ忘れる_にゃでしこステッカー: RandomGoods =
   slug: "ステッカー「瞬きさえ忘れる。」",
   name: "ランダムにゃでしこステッカー「瞬きさえ忘れる。」ver.",
   year: 2024,
-  series: "瞬きさえ忘れる。にゃでしこステッカー",
+  series: "瞬きさえ忘れる。",
   category: "ステッカー",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-09-15_ステッカー「瞬きさえ忘れる。」.webp",

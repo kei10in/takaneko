@@ -5,7 +5,7 @@ export const アイトーク_フォトカード: RandomGoods = {
   slug: "フォトカード「アイトーク」",
   name: "フォトカード (アイトークver.)",
   year: 2024,
-  series: "アイトーク",
+  series: "アイトーク 第1弾",
   category: "フォトカード",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-07-15_フォトカード「アイトーク」.webp",

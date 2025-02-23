@@ -4,6 +4,7 @@ export const 生明祭限定_参加証明書カード: RandomGoods = {
   id: "生明祭限定 参加証明書カード",
   slug: "カード「生明祭限定 参加証明書カード」",
   name: "生明祭限定 参加証明書カード",
+  abbrev: "生明祭限定 参加証明書カード",
   year: 2024,
   series: "生明祭",
   category: "カード",

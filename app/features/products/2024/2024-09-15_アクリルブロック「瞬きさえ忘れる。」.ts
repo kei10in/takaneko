@@ -5,7 +5,7 @@ export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
   slug: "アクリルブロック「瞬きさえ忘れる。」",
   name: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver.",
   year: 2024,
-  series: "瞬きさえ忘れる。アクリルブロック",
+  series: "瞬きさえ忘れる。",
   category: "アクリルブロック",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-09-15_アクリルブロック「瞬きさえ忘れる。」.webp",
