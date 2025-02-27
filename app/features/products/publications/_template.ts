@@ -7,6 +7,7 @@ export const a: Publication = {
   kind: "magazines", // "books"
   publisher: "",
   listPrice: 0,
+  priceWithTax: 0,
   code: [{ kind: "", value: "" }],
   url: "",
   coverImages: [
