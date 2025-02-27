@@ -19,7 +19,7 @@ export const meta = {
     url: "https://x.com/fmosaka851/status/1872386654398279819",
   },
   links: [
-    "[radiko 放送会](https://radiko.jp/#!/ts/FMO/20241228060000)",
+    "[radiko 放送会](https://radiko.jp/share?sid=FMO&t=20241228060000)",
     "[FM 大阪 X 告知](https://x.com/fmosaka851/status/1872386654398279819)",
   ],
 };
@@ -33,7 +33,7 @@ const Content: React.FC = () => {
         <summary>
           涼海すう -{" "}
           <Link
-            to="https://radiko.jp/#!/ts/FMO/20241228060040"
+            to="https://radiko.jp/share?sid=FMO&t=20241228060040"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -93,7 +93,7 @@ const Content: React.FC = () => {
         <summary>
           東山恵里沙 -{" "}
           <Link
-            to="https://radiko.jp/#!/ts/FMO/20241228061555"
+            to="https://radiko.jp/share?sid=FMO&t=20241228061555"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -153,7 +153,7 @@ const Content: React.FC = () => {
         <summary>
           籾山ひめり -{" "}
           <Link
-            to="https://radiko.jp/#!/ts/FMO/20241228063300"
+            to="https://radiko.jp/share?sid=FMO&t=20241228063300"
             target="_blank"
             rel="noopener noreferrer"
           >
