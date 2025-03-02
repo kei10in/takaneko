@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { ClientLoaderFunctionArgs, json, MetaFunction, useLoaderData } from "@remix-run/react";
+import { ClientLoaderFunctionArgs, MetaFunction, useLoaderData } from "@remix-run/react";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
@@ -23,7 +23,7 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  return json(productImage);
+  return productImage;
 };
 
 export const clientLoader = ({ params }: ClientLoaderFunctionArgs) => {
@@ -37,7 +37,7 @@ export const clientLoader = ({ params }: ClientLoaderFunctionArgs) => {
     throw new Response(null, { status: 404, statusText: "Not Found" });
   }
 
-  return json(productImage);
+  return productImage;
 };
 
 export default function TradeImageEditor() {

@@ -1,4 +1,4 @@
-import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
   ClientLoaderFunctionArgs,
   MetaFunction,
@@ -42,7 +42,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const category = parseCategory(t);
 
   const { year, month } = r;
-  return json({ year, month, category });
+  return { year, month, category };
 };
 
 export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
@@ -56,7 +56,7 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
   const category = parseCategory(t);
 
   const { year, month } = r;
-  return json({ year, month, category });
+  return { year, month, category };
 };
 
 export default function Index() {

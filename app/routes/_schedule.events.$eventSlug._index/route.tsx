@@ -1,5 +1,5 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
   Link,
   MetaDescriptor,
@@ -65,7 +65,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
   const ics = await makeIcs(eventSlug, event.meta);
 
-  return json({ slug: eventSlug, ics });
+  return { slug: eventSlug, ics };
 };
 
 export default function EventPage() {

@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { json, Link, MetaFunction, useLoaderData } from "@remix-run/react";
+import { Link, MetaFunction, useLoaderData } from "@remix-run/react";
 import { useMemo } from "react";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
@@ -25,7 +25,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  return json(meta);
+  return meta;
 };
 
 export default function Component() {
