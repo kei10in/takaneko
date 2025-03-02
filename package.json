@@ -17,9 +17,9 @@
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@mdx-js/rollup": "^3.0.1",
-    "@remix-run/cloudflare": "^2.11.1",
-    "@remix-run/cloudflare-pages": "^2.11.1",
-    "@remix-run/react": "^2.11.2",
+    "@remix-run/cloudflare": "^2.16.0",
+    "@remix-run/cloudflare-pages": "^2.16.0",
+    "@remix-run/react": "^2.16.0",
     "cheerio": "^1.0.0",
     "clsx": "^2.1.1",
     "dedent": "^1.5.3",
@@ -44,8 +44,8 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240909.0",
     "@mdx-js/node-loader": "^3.0.1",
-    "@remix-run/dev": "^2.11.1",
-    "@remix-run/testing": "^2.11.1",
+    "@remix-run/dev": "^2.16.0",
+    "@remix-run/testing": "^2.16.0",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "^16.0.1",
     "@types/mdast": "^4.0.4",
