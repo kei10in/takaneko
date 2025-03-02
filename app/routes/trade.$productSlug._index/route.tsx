@@ -1,10 +1,5 @@
 import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  json,
-  MetaFunction,
-  useLoaderData,
-} from "@remix-run/react";
+import { ClientLoaderFunctionArgs, json, MetaFunction, useLoaderData } from "@remix-run/react";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
@@ -31,7 +26,7 @@ export const loader = ({ params }: LoaderFunctionArgs) => {
   return json(productImage);
 };
 
-export const clientLoader = defineClientLoader(({ params }) => {
+export const clientLoader = ({ params }: ClientLoaderFunctionArgs) => {
   const productSlug = params.productSlug;
   if (productSlug == undefined) {
     throw new Response(null, { status: 404, statusText: "Not Found" });
@@ -43,7 +38,7 @@ export const clientLoader = defineClientLoader(({ params }) => {
   }
 
   return json(productImage);
-});
+};
 
 export default function TradeImageEditor() {
   const selectedProduct = useLoaderData<typeof loader>();
