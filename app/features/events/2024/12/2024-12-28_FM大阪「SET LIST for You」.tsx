@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 export const meta = {
   summary: "FM大阪「SET LIST for You」",

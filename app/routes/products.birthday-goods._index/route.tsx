@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -31,7 +31,7 @@ export default function Index() {
                   <div className="space-y-4 pt-4 md:pt-0">
                     <ul className="list-outside list-disc pl-6 marker:text-gray-300">
                       {bg.lineup.map((item) => (
-                        <li key={item}>{item}</li>
+                        <li key={item.name}>{item.name}</li>
                       ))}
                     </ul>
                   </div>

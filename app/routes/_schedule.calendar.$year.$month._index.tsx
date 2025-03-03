@@ -1,12 +1,12 @@
-import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { useEffect, useMemo } from "react";
 import {
-  unstable_defineClientLoader as defineClientLoader,
+  ClientLoaderFunctionArgs,
+  LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
   useLocation,
   useNavigate,
-} from "@remix-run/react";
-import { useEffect, useMemo } from "react";
+} from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
@@ -42,10 +42,10 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const category = parseCategory(t);
 
   const { year, month } = r;
-  return json({ year, month, category });
+  return { year, month, category };
 };
 
-export const clientLoader = defineClientLoader(async ({ params, request }) => {
+export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
   const r = validateYearMonth({ year: params.year, month: params.month });
   if (r == undefined) {
     throw new Response("", { status: 404 });
@@ -56,8 +56,8 @@ export const clientLoader = defineClientLoader(async ({ params, request }) => {
   const category = parseCategory(t);
 
   const { year, month } = r;
-  return json({ year, month, category });
-});
+  return { year, month, category };
+};
 
 export default function Index() {
   const { year, month, category } = useLoaderData<typeof loader>();

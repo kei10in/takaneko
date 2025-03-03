@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { PHOTOS } from "~/features/products/photos";
 import { ProductCard } from "../../components/ProductCard";

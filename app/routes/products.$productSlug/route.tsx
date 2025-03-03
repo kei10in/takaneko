@@ -1,4 +1,4 @@
-import { MetaFunction, useParams } from "@remix-run/react";
+import { MetaFunction, useParams } from "react-router";
 import { MINI_PHOTO_CARDS, OTHER_PHOTOS, PHOTOS } from "~/features/products/photos";
 import { Product } from "~/features/products/product";
 import { PUBLICATIONS } from "~/features/products/publications";

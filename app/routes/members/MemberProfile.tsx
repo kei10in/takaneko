@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { TwitterHashTag } from "~/components/TwitterHashTag";

@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
 import { SITE_TITLE } from "~/constants";
 import { LiveGoods } from "~/features/products/liveGoods";

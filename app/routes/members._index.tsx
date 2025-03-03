@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import { BsDiscord, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa6";
 import { SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";

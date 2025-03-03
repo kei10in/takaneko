@@ -1,9 +1,9 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
 import {
-  unstable_defineClientLoader as defineClientLoader,
+  ClientLoaderFunctionArgs,
+  LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
-} from "@remix-run/react";
+} from "react-router";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { validateYearMonthDate } from "~/features/calendars/utils";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -36,7 +36,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   return { year, month, day };
 };
 
-export const clientLoader = defineClientLoader(async ({ params }) => {
+export const clientLoader = async ({ params }: ClientLoaderFunctionArgs) => {
   const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.day });
   if (r == undefined) {
     throw new Response("", { status: 404 });
@@ -44,7 +44,7 @@ export const clientLoader = defineClientLoader(async ({ params }) => {
 
   const { year, month, day } = r;
   return { year, month, day };
-});
+};
 
 export default function Index() {
   const { year, month, day } = useLoaderData<typeof clientLoader>();

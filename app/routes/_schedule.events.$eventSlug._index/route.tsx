@@ -1,13 +1,4 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { json, LoaderFunctionArgs } from "@remix-run/cloudflare";
-import {
-  Link,
-  MetaDescriptor,
-  MetaFunction,
-  useLoaderData,
-  useLocation,
-  useNavigate,
-} from "@remix-run/react";
 import { useMemo } from "react";
 import {
   BsBoxArrowUpRight,
@@ -19,6 +10,15 @@ import {
   BsPersonFillSlash,
   BsPinMap,
 } from "react-icons/bs";
+import {
+  Link,
+  LoaderFunctionArgs,
+  MetaDescriptor,
+  MetaFunction,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
@@ -65,7 +65,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
   const ics = await makeIcs(eventSlug, event.meta);
 
-  return json({ slug: eventSlug, ics });
+  return { slug: eventSlug, ics };
 };
 
 export default function EventPage() {

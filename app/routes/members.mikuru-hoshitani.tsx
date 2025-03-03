@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import { FaInstagram } from "react-icons/fa6";
 import { SITE_TITLE } from "~/constants";
 import { MemberProfile } from "~/routes/members/MemberProfile";

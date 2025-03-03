@@ -1,5 +1,5 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import clsx from "clsx";
 import { BsChevronDown } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";

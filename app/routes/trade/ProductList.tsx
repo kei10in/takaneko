@@ -6,7 +6,7 @@ import {
   Radio,
   RadioGroup,
 } from "@headlessui/react";
-import { NavLink, useLocation } from "@remix-run/react";
+import { NavLink, useLocation } from "react-router";
 import clsx from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";

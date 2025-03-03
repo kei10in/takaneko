@@ -1,11 +1,5 @@
-import {
-  unstable_defineClientLoader as defineClientLoader,
-  MetaFunction,
-  Outlet,
-} from "@remix-run/react";
+import { MetaFunction, Outlet } from "react-router";
 import { SITE_TITLE } from "~/constants";
-import { loadEventsInDay } from "~/features/events/events";
-import { getActiveDateInJapan } from "~/utils/japanTime";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,12 +10,6 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
-
-export const clientLoader = defineClientLoader(async (_args) => {
-  const date = getActiveDateInJapan(new Date());
-  const events = loadEventsInDay(date);
-  return { date, events };
-});
 
 export default function Index() {
   return (

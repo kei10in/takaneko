@@ -1,5 +1,5 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import { Link, Outlet } from "@remix-run/react";
+import { Link, Outlet } from "react-router";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";

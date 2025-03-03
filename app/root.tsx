@@ -8,7 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
   useRouteError,
-} from "@remix-run/react";
+} from "react-router";
 import { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";

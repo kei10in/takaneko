@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import { useMemo } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";

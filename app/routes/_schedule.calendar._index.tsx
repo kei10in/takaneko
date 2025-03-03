@@ -1,6 +1,11 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { json, MetaFunction, useLoaderData, useLocation, useNavigate } from "@remix-run/react";
 import { useEffect, useMemo } from "react";
+import {
+  LoaderFunctionArgs,
+  MetaFunction,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router";
 import { DOMAIN } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarMonthHref, currentMonthHref } from "~/features/calendars/utils";
@@ -38,7 +43,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const category = parseCategory(t);
 
   const currentMonth = NaiveMonth.current();
-  return json({ year: currentMonth.year, month: currentMonth.month, category });
+  return { year: currentMonth.year, month: currentMonth.month, category };
 };
 
 export default function Index() {

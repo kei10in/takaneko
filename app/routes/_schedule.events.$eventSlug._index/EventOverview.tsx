@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 import React from "react";
 
 interface Props {
@@ -7,7 +7,11 @@ interface Props {
   timetable?: { path: string; ref: string } | undefined;
   streaming?: { text: string; url: string } | undefined;
   goods?:
-    | { time?: [string] | [string, string]; lineup: string | string[]; url: string }
+    | {
+        time?: [string] | [string, string] | undefined;
+        lineup?: string | string[] | undefined;
+        url?: string | undefined;
+      }
     | undefined;
 }
 
