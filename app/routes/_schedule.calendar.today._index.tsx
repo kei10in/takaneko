@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "react-router";
 import { DOMAIN } from "~/constants";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { dateHref } from "~/features/calendars/utils";

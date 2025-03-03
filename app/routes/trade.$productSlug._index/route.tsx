@@ -1,5 +1,9 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { ClientLoaderFunctionArgs, MetaFunction, useLoaderData } from "@remix-run/react";
+import {
+  ClientLoaderFunctionArgs,
+  LoaderFunctionArgs,
+  MetaFunction,
+  useLoaderData,
+} from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";

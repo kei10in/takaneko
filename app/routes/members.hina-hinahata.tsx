@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { SITE_TITLE } from "~/constants";
 import { MemberProfile } from "~/routes/members/MemberProfile";

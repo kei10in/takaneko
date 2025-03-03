@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import clsx from "clsx";
 import { useMemo } from "react";
 import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from "react-icons/bs";

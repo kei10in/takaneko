@@ -1,4 +1,4 @@
-import { createRemixStub } from "@remix-run/testing";
+import { createRoutesStub } from "react-router";
 import { assert, describe, expect, it } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -111,7 +111,7 @@ describe("event module", () => {
 
     it("should contains valid image reference in content", () => {
       const Content = event.Content;
-      const RemixStub = createRemixStub([{ Component: Content }]);
+      const RemixStub = createRoutesStub([{ Component: Content }]);
 
       const urls = extractURLsFromComponent(<RemixStub />)
         .filter((url) => !isAbsoluteURL(url))

@@ -1,13 +1,4 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import {
-  Link,
-  MetaDescriptor,
-  MetaFunction,
-  useLoaderData,
-  useLocation,
-  useNavigate,
-} from "@remix-run/react";
 import { useMemo } from "react";
 import {
   BsBoxArrowUpRight,
@@ -19,6 +10,15 @@ import {
   BsPersonFillSlash,
   BsPinMap,
 } from "react-icons/bs";
+import {
+  Link,
+  LoaderFunctionArgs,
+  MetaDescriptor,
+  MetaFunction,
+  useLoaderData,
+  useLocation,
+  useNavigate,
+} from "react-router";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";

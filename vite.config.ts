@@ -1,5 +1,5 @@
 import mdx from "@mdx-js/rollup";
-import { vitePlugin as remix } from "@remix-run/dev";
+import { reactRouter } from "@react-router/dev/vite";
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
@@ -22,7 +22,7 @@ export default defineConfig({
       remarkPlugins: [gfm],
     }),
     !process.env.VITEST &&
-      remix({
+      reactRouter({
         future: {
           v3_fetcherPersist: true,
           v3_relativeSplatPath: true,

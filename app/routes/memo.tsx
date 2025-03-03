@@ -1,4 +1,4 @@
-import { MetaFunction, Outlet } from "@remix-run/react";
+import { MetaFunction, Outlet } from "react-router";
 import { SITE_TITLE } from "~/constants";
 
 export const meta: MetaFunction = () => {

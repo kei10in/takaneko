@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { MemberProfile } from "~/routes/members/MemberProfile";
 import { MomokoHashimoto } from "./members/members";

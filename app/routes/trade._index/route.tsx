@@ -1,4 +1,4 @@
-import { Link, MetaFunction } from "@remix-run/react";
+import { Link, MetaFunction } from "react-router";
 import {
   BsBan,
   BsBoxArrowUp,

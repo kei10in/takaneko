@@ -1,5 +1,5 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, MetaFunction, Outlet } from "@remix-run/react";
+import { Link, MetaFunction, Outlet } from "react-router";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";

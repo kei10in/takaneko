@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { LoaderFunctionArgs } from "react-router";
 import { ogp } from "~/utils/ogp/ogp";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {

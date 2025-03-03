@@ -1,4 +1,4 @@
-import { MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "react-router";
 import { BsBoxArrowUp } from "react-icons/bs";
 import { CopyButton } from "~/components/CopyButton";
 import { SITE_TITLE } from "~/constants";

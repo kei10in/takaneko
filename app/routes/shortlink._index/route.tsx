@@ -1,6 +1,12 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
-import { Form, Link, MetaFunction, useLoaderData, useSearchParams } from "@remix-run/react";
 import { BsBoxArrowUp } from "react-icons/bs";
+import {
+  Form,
+  Link,
+  LoaderFunctionArgs,
+  MetaFunction,
+  useLoaderData,
+  useSearchParams,
+} from "react-router";
 import { CopyButton } from "~/components/CopyButton";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";

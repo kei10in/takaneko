@@ -1,5 +1,5 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, useLocation, useNavigate } from "@remix-run/react";
+import { Link, useLocation, useNavigate } from "react-router";
 import clsx from "clsx";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { Navigation } from "swiper/modules";

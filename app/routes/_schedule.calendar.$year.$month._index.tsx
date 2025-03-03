@@ -1,12 +1,12 @@
-import { LoaderFunctionArgs } from "@remix-run/cloudflare";
+import { useEffect, useMemo } from "react";
 import {
   ClientLoaderFunctionArgs,
+  LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
   useLocation,
   useNavigate,
-} from "@remix-run/react";
-import { useEffect, useMemo } from "react";
+} from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";

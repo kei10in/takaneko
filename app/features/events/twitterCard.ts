@@ -1,4 +1,4 @@
-import { MetaDescriptor } from "@remix-run/react";
+import { MetaDescriptor } from "react-router";
 import { DOMAIN } from "~/constants";
 import { displayDate } from "~/utils/dateDisplay";
 import { EventMeta } from "./meta";

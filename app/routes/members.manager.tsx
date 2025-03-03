@@ -1,6 +1,6 @@
-import { Link, MetaFunction } from "@remix-run/react";
 import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { Link, MetaFunction } from "react-router";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { SITE_TITLE } from "~/constants";
 
