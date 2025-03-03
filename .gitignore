@@ -2,6 +2,9 @@
 public/calendar*.ics
 public/sitemap.xml
 
+## React router
+.react-router/
+
 .vscode/
 
 node_modules
