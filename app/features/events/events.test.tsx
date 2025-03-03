@@ -111,9 +111,10 @@ describe("event module", () => {
 
     it("should contains valid image reference in content", () => {
       const Content = event.Content;
-      const RemixStub = createRoutesStub([{ Component: Content }]);
+      const path = `/events/${event.slug}`;
+      const Stub = createRoutesStub([{ path, Component: Content }]);
 
-      const urls = extractURLsFromComponent(<RemixStub />)
+      const urls = extractURLsFromComponent(<Stub initialEntries={[path]} />)
         .filter((url) => !isAbsoluteURL(url))
         .map((url) => decodeURIComponent(url));
 
