@@ -16,9 +16,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
-    "@mdx-js/rollup": "^3.0.1",
     "@react-router/cloudflare": "^7.0.0",
-    "@types/mdx": "^2.0.13",
     "cheerio": "^1.0.0",
     "clsx": "^2.1.1",
     "dedent": "^1.5.3",
@@ -44,11 +42,13 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240909.0",
     "@mdx-js/node-loader": "^3.0.1",
+    "@mdx-js/rollup": "^3.0.1",
     "@react-router/dev": "^7.0.0",
     "@react-router/fs-routes": "^7.0.0",
     "@tailwindcss/typography": "^0.5.13",
     "@testing-library/react": "^16.0.1",
     "@types/mdast": "^4.0.4",
+    "@types/mdx": "^2.0.13",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/react-scroll": "^1.8.10",

@@ -11,15 +11,9 @@ importers:
       '@headlessui/react':
         specifier: ^2.1.2
         version: 2.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@mdx-js/rollup':
-        specifier: ^3.0.1
-        version: 3.0.1(acorn@8.12.0)(rollup@4.34.9)
       '@react-router/cloudflare':
         specifier: ^7.0.0
         version: 7.2.0(@cloudflare/workers-types@4.20240909.0)(react-router@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(tsup@8.4.0(jiti@1.21.6)(postcss@8.4.38)(tsx@4.17.0)(typescript@5.5.2)(yaml@2.4.5))(typescript@5.5.2)
-      '@types/mdx':
-        specifier: ^2.0.13
-        version: 2.0.13
       cheerio:
         specifier: ^1.0.0
         version: 1.0.0
@@ -90,6 +84,9 @@ importers:
       '@mdx-js/node-loader':
         specifier: ^3.0.1
         version: 3.0.1(acorn@8.12.0)
+      '@mdx-js/rollup':
+        specifier: ^3.0.1
+        version: 3.0.1(acorn@8.12.0)(rollup@4.34.9)
       '@react-router/dev':
         specifier: ^7.0.0
         version: 7.2.0(@types/node@22.5.5)(react-router@7.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(typescript@5.5.2)(vite@5.4.12(@types/node@22.5.5))(wrangler@3.78.4(@cloudflare/workers-types@4.20240909.0))
@@ -105,6 +102,9 @@ importers:
       '@types/mdast':
         specifier: ^4.0.4
         version: 4.0.4
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
       '@types/react':
         specifier: ^18.2.20
         version: 18.3.3
