@@ -50,15 +50,13 @@ export default [
         { name: "Link", linkAttribute: "to" },
         { name: "NavLink", linkAttribute: "to" },
       ],
-      "import/resolver": {
-        typescript: {},
-      },
     },
   },
 
   // Typescript
   ...tseslint.configs.recommended,
   importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   {
     files: ["**/*.{ts,tsx}"],
     settings: {
@@ -77,7 +75,11 @@ export default [
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
-        { argsIgnorePattern: "^_", varsIgnorePattern: "^_", caughtErrors: "none" },
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrors: "none",
+        },
       ],
     },
   },
