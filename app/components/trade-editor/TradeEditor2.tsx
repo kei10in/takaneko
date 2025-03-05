@@ -7,7 +7,7 @@ import {
   PopoverPanel,
   Switch,
 } from "@headlessui/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import {
   BsBoxArrowUp,

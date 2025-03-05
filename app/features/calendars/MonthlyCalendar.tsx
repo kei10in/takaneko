@@ -1,8 +1,8 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Link } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { BsChevronDown } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { Link } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";

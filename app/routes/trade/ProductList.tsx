@@ -6,10 +6,10 @@ import {
   Radio,
   RadioGroup,
 } from "@headlessui/react";
-import { NavLink, useLocation } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
+import { NavLink, useLocation } from "react-router";
 import { RandomGoods } from "../../features/products/product";
 import { ProductItem } from "./ProductItem";
 

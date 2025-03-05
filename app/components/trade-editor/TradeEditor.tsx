@@ -1,5 +1,5 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import { RandomGoods } from "~/features/products/product";
 import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
