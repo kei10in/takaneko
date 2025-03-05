@@ -1,4 +1,5 @@
 import pluginJs from "@eslint/js";
+import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -19,10 +20,55 @@ export default [
       globals: { ...globals.browser, ...globals.node },
     },
   },
+
+  // Base config
   pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+
+  // React
   pluginReact.configs.flat.recommended,
   pluginReact.configs.flat["jsx-runtime"],
   reactHooks.configs["recommended-latest"],
   jsxA11y.flatConfigs.recommended,
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    settings: {
+      react: {
+        version: "detect",
+      },
+      formComponents: ["Form"],
+      linkComponents: [
+        { name: "Link", linkAttribute: "to" },
+        { name: "NavLink", linkAttribute: "to" },
+      ],
+      "import/resolver": {
+        typescript: {},
+      },
+    },
+  },
+
+  // Typescript
+  ...tseslint.configs.recommended,
+  importPlugin.flatConfigs.recommended,
+  {
+    files: ["**/*.{ts,tsx}"],
+    settings: {
+      "import/internal-regex": "^~/",
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+    },
+  },
+
+  // Custom
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+      ],
+    },
+  },
 ];
