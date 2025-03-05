@@ -14,6 +14,7 @@ export default [
       ".wrangler/",
       "build/",
       "images/",
+      "eslint.config.js",
       "worker-configuration.d.ts",
       "!**/.server",
       "!**/.client",
