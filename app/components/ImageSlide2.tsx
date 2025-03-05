@@ -1,7 +1,7 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, useLocation, useNavigate } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { BsBoxArrowUpRight } from "react-icons/bs";
+import { Link, useLocation, useNavigate } from "react-router";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 

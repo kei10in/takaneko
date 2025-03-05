@@ -1,5 +1,5 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";

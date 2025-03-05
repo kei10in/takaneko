@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { HiMapPin } from "react-icons/hi2";
 import { categoryToColor, categoryToEmoji, EventType } from "../events/EventType";
 

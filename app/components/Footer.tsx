@@ -1,6 +1,6 @@
-import { Link } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { FaDiscord, FaGithub, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { Link } from "react-router";
 import { SITE_TITLE } from "~/constants";
 
 interface Props {

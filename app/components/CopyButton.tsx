@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useState } from "react";
 import { BsCheck2, BsCopy } from "react-icons/bs";
 

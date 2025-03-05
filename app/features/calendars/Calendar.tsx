@@ -1,7 +1,7 @@
-import { Link } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useMemo } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { Link } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { getCalendarDatesOfMonth } from "../../utils/calendar/calendarDate";

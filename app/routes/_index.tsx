@@ -1,7 +1,7 @@
-import { Link, MetaFunction } from "react-router";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { useMemo } from "react";
 import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from "react-icons/bs";
+import { Link, MetaFunction } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { DOMAIN, SITE_TITLE } from "~/constants";

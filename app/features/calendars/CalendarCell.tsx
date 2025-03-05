@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { categoryToColor } from "../events/EventType";
 import { CalendarEvent, uniqueEventRegions } from "./calendarEvents";
 
