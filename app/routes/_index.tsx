@@ -69,7 +69,7 @@ export default function Index() {
       <div className="container mx-auto bg-white text-gray-600 shadow-lg lg:max-w-5xl">
         <div className="relative mx-auto w-fit lg:static lg:flex lg:w-full">
           <img
-            className="aspect-[4/3] max-h-96 w-full min-w-96 lg:h-96 lg:w-auto lg:flex-none"
+            className="aspect-4/3 max-h-96 w-full min-w-96 lg:h-96 lg:w-auto lg:flex-none"
             src="/takaneko/hero.jpg"
             alt="ヒーロー画像"
           />
@@ -122,7 +122,7 @@ export default function Index() {
             </p>
 
             <Link
-              className="!mt-2 ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
+              className="mt-2! ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
               to="/calendar"
             >
               <span>すべてのスケジュール</span>
@@ -132,7 +132,7 @@ export default function Index() {
             <Swiper
               className={clsx(
                 "[&_.swiper-pagination-bullet]:bg-black",
-                "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
+                "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
               )}
               modules={[A11y]}
               slidesPerView={1.15}

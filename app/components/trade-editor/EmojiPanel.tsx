@@ -39,7 +39,7 @@ export const EmojiPanel: React.FC<Props> = (props: Props) => {
           <Switch
             key={emoji}
             className={clsx(
-              "group h-10 w-10 rounded-xl p-1 transition-colors data-[checked]:bg-gray-200",
+              "group h-10 w-10 rounded-xl p-1 transition-colors data-checked:bg-gray-200",
               "text-2xl",
             )}
             checked={selected === emoji}

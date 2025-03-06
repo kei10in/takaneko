@@ -25,7 +25,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
             "[&_.swiper-button-prev]:opacity-0",
             "[&_.swiper-pagination]:bottom-0",
             "[&_.swiper-pagination-bullet]:bg-black",
-            "[&_.swiper-pagination-bullet-active]:!bg-nadeshiko-800",
+            "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
             "lg:[&_.swiper-button-next]:opacity-100",
             "lg:[&_.swiper-button-prev]:opacity-100",
             "lg:[&_.swiper-button-next]:text-white",

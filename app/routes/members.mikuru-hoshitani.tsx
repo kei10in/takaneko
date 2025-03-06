@@ -22,7 +22,7 @@ export default function Index() {
           <h2 className="mb-4 text-center text-3xl font-bold text-gray-400">Link</h2>
           <div>
             <Link className="block" to="https://www.instagram.com/min.0o6/">
-              <div className="flex h-28 gap-2 bg-white shadow">
+              <div className="flex h-28 gap-2 bg-white shadow-sm">
                 <div className="aspect-square h-28 flex-none">
                   <div className="h-full w-full bg-nadeshiko-700 p-3">
                     <FaInstagram className="h-full w-full text-white" />

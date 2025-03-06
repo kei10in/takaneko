@@ -72,7 +72,7 @@ export default function Index() {
           method="get"
         >
           <input
-            className="block w-full rounded-md border px-2 py-1 font-mono outline-none lg:flex-1"
+            className="block w-full rounded-md border px-2 py-1 font-mono outline-hidden lg:flex-1"
             type="text"
             placeholder="高嶺のなでしこ公式サイト内のページの URL"
             name="url"
@@ -145,7 +145,7 @@ export default function Index() {
                 <p>「スクリプトの実行を許可」をオンにします。</p>
                 <p className="mb-4 mt-2 text-center">
                   <img
-                    className="inline w-60 shadow"
+                    className="inline w-60 shadow-sm"
                     src="/shortlink/allow-exec-shortcut.webp"
                     alt="設定画面"
                   />
@@ -174,7 +174,7 @@ export default function Index() {
                 <p>共有ボタンをタップしてメニューを開きます。</p>
                 <p className="text-center">
                   <img
-                    className="inline w-60 shadow"
+                    className="inline w-60 shadow-sm"
                     src="/shortlink/share-button.webp"
                     alt="共有ボタン"
                   />

@@ -30,21 +30,21 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
           <h1 className="px-2 text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
           <div className="flex h-8 w-36 items-stretch divide-x overflow-hidden rounded-md border border-gray-200">
             <Link
-              className="inline-flex h-full flex-grow items-center justify-center"
+              className="inline-flex h-full grow items-center justify-center"
               to={dateHref(d.previousDate())}
               preventScrollReset={true}
             >
               <HiChevronLeft />
             </Link>
             <Link
-              className="inline-flex h-full flex-grow items-center justify-center"
+              className="inline-flex h-full grow items-center justify-center"
               to="/calendar/today"
               preventScrollReset={true}
             >
               今日
             </Link>
             <Link
-              className="inline-flex h-full flex-grow items-center justify-center"
+              className="inline-flex h-full grow items-center justify-center"
               to={dateHref(d.nextDate())}
               preventScrollReset={true}
             >
