@@ -1,4 +1,7 @@
 import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { useState } from "react";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { HiXMark } from "react-icons/hi2";
 import {
   isRouteErrorResponse,
   Link,
@@ -9,9 +12,6 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
-import { useState } from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { HiXMark } from "react-icons/hi2";
 import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
@@ -50,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex min-h-svh flex-col text-gray-800">
-        <div className="z-10 h-[--header-height] border-b border-b-nadeshiko-200 bg-nadeshiko-50 bg-opacity-90 backdrop-blur lg:sticky lg:top-0">
+        <div className="z-10 h-(--header-height) border-b border-b-nadeshiko-200 bg-nadeshiko-50/90 backdrop-blur-sm lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">
@@ -112,7 +112,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Footer className="flex-none" />
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
-          <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
             <DialogPanel className="relative right-4 top-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
               <div className="absolute right-4 top-4 flex-none">
                 <button

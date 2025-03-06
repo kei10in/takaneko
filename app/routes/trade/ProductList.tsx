@@ -63,9 +63,9 @@ export const ProductList: React.FC<Props> = (props: Props) => {
             <Field key={item.id}>
               <Radio
                 className={clsx(
-                  "rounded bg-gray-100 px-2 py-px",
+                  "rounded-sm bg-gray-100 px-2 py-px",
                   "text-center text-sm text-gray-500",
-                  "data-[checked]:bg-nadeshiko-800 data-[checked]:text-white",
+                  "data-checked:bg-nadeshiko-800 data-checked:text-white",
                 )}
                 as="button"
                 value={item.id}
@@ -87,7 +87,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
             <DisclosureButton className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
               <h3 className="text-lg font-bold">{item.name}</h3>
               <div>
-                <HiChevronRight className="transition-transform group-data-[open]:rotate-90" />
+                <HiChevronRight className="transition-transform group-data-open:rotate-90" />
               </div>
             </DisclosureButton>
             <DisclosurePanel>

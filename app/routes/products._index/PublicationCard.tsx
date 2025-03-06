@@ -11,7 +11,7 @@ export const PublicationCard: React.FC<Props> = (props: Props) => {
   const { name, date, image } = props;
 
   return (
-    <div className="w-full bg-white shadow">
+    <div className="w-full bg-white shadow-sm">
       <div className="flex-0 aspect-square w-full">
         <img src={image} alt={name} className="h-full w-full object-contain object-center" />
       </div>

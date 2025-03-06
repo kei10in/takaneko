@@ -10,7 +10,7 @@ export const ProductCard: React.FC<Props> = (props: Props) => {
   const { id, name, series, year, url } = props;
 
   return (
-    <div className="w-full bg-white shadow">
+    <div className="w-full bg-white shadow-sm">
       <div className="flex-0 aspect-square w-full">
         <img src={url} alt={series ?? id} className="h-full w-full object-contain object-center" />
       </div>

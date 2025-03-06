@@ -61,7 +61,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
             </PopoverButton>
             <PopoverPanel
               anchor={{ to: "bottom", gap: "0.5rem" }}
-              className="overflow-hidden rounded border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
+              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
             >
               <ul className="space-y-1">
                 {Categories.map((c) => (
@@ -71,7 +71,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                       data-current={category == c.value ? "" : undefined}
                       className={clsx(
                         "block w-24 px-3 text-center text-sm text-gray-600",
-                        "data-[current]:bg-nadeshiko-700 data-[current]:text-white",
+                        "data-current:bg-nadeshiko-700 data-current:text-white",
                       )}
                       to={c.query == undefined ? `${hash}` : `?t=${c.query}${hash}`}
                     >
@@ -84,13 +84,13 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
           </Popover>
           <div className="inline-flex h-8 w-20 divide-x overflow-hidden rounded-md border border-gray-200">
             <Link
-              className="inline-flex h-full flex-grow items-center justify-center text-sm"
+              className="inline-flex h-full grow items-center justify-center text-sm"
               to={hrefPreviousMonth}
             >
               <HiChevronLeft />
             </Link>
             <Link
-              className="inline-flex h-full flex-grow items-center justify-center text-sm"
+              className="inline-flex h-full grow items-center justify-center text-sm"
               to={hrefNextMonth}
             >
               <HiChevronRight />
@@ -101,13 +101,13 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
       <table className="w-full max-w-full table-fixed border-collapse border-none">
         <thead>
           <tr className="text-xs text-gray-500 lg:text-sm">
-            <th className="w-[1/7] p-0">日</th>
-            <th className="w-[1/7] p-0">月</th>
-            <th className="w-[1/7] p-0">火</th>
-            <th className="w-[1/7] p-0">水</th>
-            <th className="w-[1/7] p-0">木</th>
-            <th className="w-[1/7] p-0">金</th>
-            <th className="w-[1/7] p-0">土</th>
+            <th className="w-1/7 p-0">日</th>
+            <th className="w-1/7 p-0">月</th>
+            <th className="w-1/7 p-0">火</th>
+            <th className="w-1/7 p-0">水</th>
+            <th className="w-1/7 p-0">木</th>
+            <th className="w-1/7 p-0">金</th>
+            <th className="w-1/7 p-0">土</th>
           </tr>
         </thead>
         <tbody>

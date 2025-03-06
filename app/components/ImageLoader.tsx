@@ -6,5 +6,5 @@ interface Props {
 export const ImageLoader: React.FC<Props> = (props: Props) => {
   const { width, height } = props;
 
-  return <div className="animate-pulse rounded bg-gray-200" style={{ width, height }} />;
+  return <div className="animate-pulse rounded-sm bg-gray-200" style={{ width, height }} />;
 };

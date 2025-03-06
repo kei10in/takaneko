@@ -57,8 +57,8 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
           "w-full",
           "[&_.swiper-button-next]:text-nadeshiko-800",
           "[&_.swiper-button-prev]:text-nadeshiko-800",
-          "[&_.swiper-button-next]:drop-shadow",
-          "[&_.swiper-button-prev]:drop-shadow",
+          "[&_.swiper-button-next]:drop-shadow-sm",
+          "[&_.swiper-button-prev]:drop-shadow-sm",
         )}
         modules={[Navigation]}
         centeredSlides={true}
@@ -106,7 +106,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
       </Swiper>
 
       {/* Caption */}
-      <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-bl-[2rem] rounded-tr-[2rem] bg-white shadow">
+      <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-bl-[2rem] rounded-tr-[2rem] bg-white shadow-sm">
         <div className="absolute -left-5 -top-9 h-20 w-20 rounded-full bg-nadeshiko-500" />
         <div className="absolute rounded-full p-2">
           <p className="text-[0.625rem] leading-none text-white">No.</p>
@@ -154,7 +154,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
             <PopoverButton
               className={clsx(
                 "group w-fit flex-none rounded-2xl p-1 opacity-50",
-                "data-[selected]:bg-gray-800 data-[selected]:bg-opacity-10 data-[selected]:opacity-100",
+                "data-selected:bg-gray-800/10 data-selected:opacity-100",
               )}
               data-selected={tradeStatus.tag == "emoji" || undefined}
             >

@@ -13,7 +13,7 @@ export const LargeLinkCard: React.FC<Props> = (props: Props) => {
 
   return (
     <Link className="inline-block" to={to}>
-      <div className="overflow-hidden shadow">
+      <div className="overflow-hidden shadow-sm">
         <div className="flex flex-col">
           <div className="flex-none">
             <img className="object-cover" src={image} alt="ogp" />

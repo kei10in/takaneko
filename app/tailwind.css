@@ -1,118 +1,154 @@
-@import "swiper/css";
-@import "swiper/css/navigation";
-@import "swiper/css/pagination";
-@import "swiper/css/a11y";
+@import 'swiper/css' layer(base);
+@import 'swiper/css/navigation' layer(base);
+@import 'swiper/css/pagination' layer(base);
+@import 'swiper/css/a11y' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  --header-height: 3.5rem;
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-nadeshiko-50: #fffcfd;
+  --color-nadeshiko-100: #fff7fa;
+  --color-nadeshiko-200: #fff0f5;
+  --color-nadeshiko-300: #fddce6;
+  --color-nadeshiko-400: #fccada;
+  --color-nadeshiko-500: #fcb9ce;
+  --color-nadeshiko-600: #fa9dbb;
+  --color-nadeshiko-700: #f783aa;
+  --color-nadeshiko-800: #f26894;
+  --color-nadeshiko-900: #ed4f81;
+  --color-nadeshiko-950: #d63668;
+
+  --font-sans:
+    ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
 }
 
-@layer components {
-  .markdown {
-    @apply break-words leading-normal;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-    h1 {
-      @apply mb-4 mt-6 border-b pb-1 text-2xl font-semibold leading-tight;
-    }
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
-    h2 {
-      @apply mb-4 mt-6 border-b pb-1 text-xl font-semibold leading-tight;
-    }
+@utility markdown {
+  @apply break-words leading-normal;
 
-    h3 {
-      @apply mb-4 mt-6 text-lg font-semibold leading-snug;
-    }
+  h1 {
+    @apply mb-4 mt-6 border-b pb-1 text-2xl font-semibold leading-tight;
+  }
 
-    h4 {
-      @apply mb-4 mt-6 text-base font-semibold leading-none;
-    }
+  h2 {
+    @apply mb-4 mt-6 border-b pb-1 text-xl font-semibold leading-tight;
+  }
 
-    h5 {
-      @apply mb-4 mt-6 text-sm font-semibold leading-tight;
-    }
+  h3 {
+    @apply mb-4 mt-6 text-lg font-semibold leading-snug;
+  }
 
-    h6 {
-      @apply mb-4 mt-6 text-sm font-semibold leading-tight text-gray-600;
-    }
+  h4 {
+    @apply mb-4 mt-6 text-base font-semibold leading-none;
+  }
 
-    p {
-      @apply mb-2 mt-0 text-base leading-snug;
-    }
+  h5 {
+    @apply mb-4 mt-6 text-sm font-semibold leading-tight;
+  }
 
-    ul {
-      @apply mb-3 mt-1 list-disc space-y-1 pl-8 text-base leading-snug;
-    }
+  h6 {
+    @apply mb-4 mt-6 text-sm font-semibold leading-tight text-gray-600;
+  }
 
-    ol {
-      @apply mb-3 mt-1 list-decimal space-y-1 pl-8 text-base leading-snug;
-    }
+  p {
+    @apply mb-2 mt-0 text-base leading-snug;
+  }
 
-    ol ol,
-    ul ol {
-      @apply list-[lower-roman];
-    }
+  ul {
+    @apply mb-3 mt-1 list-disc space-y-1 pl-8 text-base leading-snug;
+  }
 
-    ul ul ol,
-    ul ol ol,
-    ol ul ol,
-    ol ol ol {
-      @apply list-[lower-alpha];
-    }
+  ol {
+    @apply mb-3 mt-1 list-decimal space-y-1 pl-8 text-base leading-snug;
+  }
 
-    li {
-      @apply my-0 marker:text-gray-400;
-    }
+  ol ol,
+  ul ol {
+    @apply list-[lower-roman];
+  }
 
-    table {
-      @apply border-gray-600 text-base;
-    }
+  ul ul ol,
+  ul ol ol,
+  ol ul ol,
+  ol ol ol {
+    @apply list-[lower-alpha];
+  }
 
-    th {
-      @apply border px-3 py-1 font-semibold;
-    }
+  li {
+    @apply my-0 marker:text-gray-400;
+  }
 
-    td {
-      @apply border px-3 py-1;
-    }
+  table {
+    @apply border-gray-600 text-base;
+  }
 
-    blockquote {
-      @apply border-l-4 border-gray-300 pl-4 pr-4 text-base text-gray-600;
-    }
+  th {
+    @apply border px-3 py-1 font-semibold;
+  }
 
-    img {
-      @apply inline max-w-xs;
-    }
+  td {
+    @apply border px-3 py-1;
+  }
 
-    code {
-      @apply inline rounded bg-gray-100 px-1 py-0.5 font-mono text-sm;
-    }
+  blockquote {
+    @apply border-l-4 border-gray-300 pl-4 pr-4 text-base text-gray-600;
+  }
 
-    kbd {
-      @apply inline-block rounded border px-1 py-0.5 align-middle font-mono text-xs font-normal shadow;
-    }
+  img {
+    @apply inline max-w-xs;
+  }
 
-    pre {
-      @apply rounded bg-gray-100 p-4;
-    }
+  code {
+    @apply inline rounded-sm bg-gray-100 px-1 py-0.5 font-mono text-sm;
+  }
 
-    pre code {
-      @apply block overflow-visible rounded-none bg-transparent p-0;
-    }
+  kbd {
+    @apply inline-block rounded-sm border px-1 py-0.5 align-middle font-mono text-xs font-normal shadow-sm;
+  }
 
-    a {
-      @apply text-nadeshiko-950;
-    }
+  pre {
+    @apply rounded-sm bg-gray-100 p-4;
+  }
 
-    strong {
-      @apply font-semibold;
-    }
+  pre code {
+    @apply block overflow-visible rounded-none bg-transparent p-0;
+  }
 
-    table {
-      @apply mb-2 mt-0 text-sm;
-    }
+  a {
+    @apply text-nadeshiko-950;
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+
+  table {
+    @apply mb-2 mt-0 text-sm;
+  }
+}
+
+@layer utilities {
+  :root {
+    --header-height: 3.5rem;
   }
 }

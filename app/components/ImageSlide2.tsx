@@ -29,7 +29,7 @@ export const ImageSlide2: React.FC<Props> = (props: Props) => {
       {images.map((image, i) => (
         <SwiperSlide className="w-full bg-gray-50" key={image.path}>
           <Link
-            className="mx-auto block w-fit outline-none"
+            className="mx-auto block w-fit outline-hidden"
             to={`#photo-${i}`}
             replace={true}
             preventScrollReset={true}

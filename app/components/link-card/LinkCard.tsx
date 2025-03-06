@@ -62,14 +62,14 @@ const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
   if (error) return <div>failed to load</div>;
   if (isLoading) {
     return (
-      <div className="flex h-28 bg-white p-4 shadow">
+      <div className="flex h-28 bg-white p-4 shadow-sm">
         <div className="aspect-square h-20 flex-none">
-          <div className="h-full flex-none animate-pulse rounded bg-gray-200" />
+          <div className="h-full flex-none animate-pulse rounded-sm bg-gray-200" />
         </div>
         <div className="my-auto h-fit flex-1 space-y-4 p-4">
-          <div className="h-2 w-24 animate-pulse rounded bg-gray-200"></div>
-          <div className="h-2 w-full animate-pulse rounded bg-gray-200"></div>
-          <div className="h-2 w-52 animate-pulse rounded bg-gray-200"></div>
+          <div className="h-2 w-24 animate-pulse rounded-sm bg-gray-200"></div>
+          <div className="h-2 w-full animate-pulse rounded-sm bg-gray-200"></div>
+          <div className="h-2 w-52 animate-pulse rounded-sm bg-gray-200"></div>
         </div>
       </div>
     );
@@ -78,7 +78,7 @@ const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
 
   return (
     <Link className="inline-block" to={to}>
-      <div className="h-28 shadow">
+      <div className="h-28 shadow-sm">
         <div className="flex h-full">
           <div className="aspect-square h-full flex-none">
             <img
@@ -109,7 +109,7 @@ const LargeLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
 
   return (
     <Link className="inline-block" to={to}>
-      <div className="overflow-hidden shadow">
+      <div className="overflow-hidden shadow-sm">
         <div className="flex flex-col">
           <div className="flex-none">
             <img className="object-cover" src={data.ogp.image} alt="ogp" />

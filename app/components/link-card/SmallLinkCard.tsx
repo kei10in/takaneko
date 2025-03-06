@@ -13,7 +13,7 @@ export const SmallLinkCard: React.FC<Props> = (props: Props) => {
 
   return (
     <Link className="inline-block" to={to}>
-      <div className="h-28 shadow">
+      <div className="h-28 shadow-sm">
         <div className="flex h-full">
           <div className="aspect-square h-full flex-none">
             <img className="h-full w-full object-cover object-center" src={image} alt="ogp" />
@@ -31,14 +31,14 @@ export const SmallLinkCard: React.FC<Props> = (props: Props) => {
 
 export const LoadingSmallLinkCard = () => {
   return (
-    <div className="flex h-28 bg-white p-4 shadow">
+    <div className="flex h-28 bg-white p-4 shadow-sm">
       <div className="aspect-square h-20 flex-none">
-        <div className="h-full flex-none animate-pulse rounded bg-gray-200" />
+        <div className="h-full flex-none animate-pulse rounded-sm bg-gray-200" />
       </div>
       <div className="my-auto h-fit flex-1 space-y-4 p-4">
-        <div className="h-2 w-24 animate-pulse rounded bg-gray-200"></div>
-        <div className="h-2 w-full animate-pulse rounded bg-gray-200"></div>
-        <div className="h-2 w-52 animate-pulse rounded bg-gray-200"></div>
+        <div className="h-2 w-24 animate-pulse rounded-sm bg-gray-200"></div>
+        <div className="h-2 w-full animate-pulse rounded-sm bg-gray-200"></div>
+        <div className="h-2 w-52 animate-pulse rounded-sm bg-gray-200"></div>
       </div>
     </div>
   );

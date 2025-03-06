@@ -37,7 +37,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
           className={clsx(
             "mx-auto flex h-[1.125rem] w-[1.125rem] items-center justify-center rounded-full text-xs",
             "lg:h-[1.25rem] lg:w-[1.25rem] lg:text-sm",
-            "data-[today]:bg-nadeshiko-900 data-[today]:text-white",
+            "data-today:bg-nadeshiko-900 data-today:text-white",
           )}
         >
           {date}
@@ -72,7 +72,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
             })}
           </div>
         ) : (
-          <div className="mx-auto h-1 w-7 rounded bg-nadeshiko-700" />
+          <div className="mx-auto h-1 w-7 rounded-sm bg-nadeshiko-700" />
         )}
       </div>
     </div>
