@@ -236,7 +236,7 @@ export default function EventPage() {
           className="relative z-50"
           onClose={close}
         >
-          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-sm">
             <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
               <img
                 alt="プレビュー"
@@ -262,7 +262,7 @@ export default function EventPage() {
 
       {meta.overview?.timetable != undefined && (
         <Dialog open={location.hash == `#timetable`} className="relative z-50" onClose={close}>
-          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-sm">
             <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
               <img
                 alt="プレビュー"

@@ -75,7 +75,7 @@ export default function Index() {
           />
           <div
             className={clsx(
-              "absolute bottom-0 w-full bg-nadeshiko-100 bg-opacity-90 px-6 py-4",
+              "absolute bottom-0 w-full bg-nadeshiko-100/90 px-6 py-4",
               "lg:static lg:flex-1 lg:px-10 lg:py-8",
             )}
           >

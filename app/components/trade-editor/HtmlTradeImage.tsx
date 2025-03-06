@@ -37,7 +37,7 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
             return (
               <div
                 key={pos.id}
-                className="absolute bg-black bg-opacity-20"
+                className="absolute bg-black/20"
                 style={{
                   left: pos.x * scaleX,
                   top: pos.y * scaleY,

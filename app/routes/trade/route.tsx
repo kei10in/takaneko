@@ -1,8 +1,8 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Link, MetaFunction, Outlet } from "react-router";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";
+import { Link, MetaFunction, Outlet } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { ProductList } from "./ProductList";
@@ -34,7 +34,7 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="sticky top-0 z-10 h-12 w-full border-b border-nadeshiko-200 bg-nadeshiko-200 bg-opacity-90 backdrop-blur lg:hidden">
+      <div className="sticky top-0 z-10 h-12 w-full border-b border-nadeshiko-200 bg-nadeshiko-200/90 backdrop-blur lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-800">
@@ -66,7 +66,7 @@ export default function Index() {
       </div>
 
       <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
-        <div className="items-top fixed inset-0 z-50 flex justify-end bg-black bg-opacity-50 backdrop-blur-sm">
+        <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-sm">
           <DialogPanel
             className="fix-scrollbar relative w-96 overflow-y-auto bg-white"
             // iOS でスクロールバーが sticky な要素に隠れる問題の対応

@@ -48,7 +48,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
                     backgroundImage: `url("${image.src}")`,
                   }}
                 >
-                  <div className="absolute inset-0 bg-opacity-20 backdrop-blur-xl" />
+                  <div className="absolute inset-0 backdrop-blur-xl" />
                   <img
                     src={image.src}
                     alt="アイキャッチ"

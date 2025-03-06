@@ -1,7 +1,7 @@
-import { Link, MetaFunction } from "react-router";
 import { BsDiscord, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa6";
 import { SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
+import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "./members/members";
 
@@ -39,7 +39,7 @@ export default function Index() {
                     <div className="h-32 w-24 flex-none">
                       <img className="block h-32 w-24" src={member.idPhoto.path} alt="証明写真" />
                     </div>
-                    <div className="flex-1 bg-white bg-opacity-95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
+                    <div className="flex-1 bg-white/95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                       <dl className="grid grid-cols-3 items-end gap-2 py-1">
                         <dt className="col-span-1 text-xs leading-none">学籍番号</dt>
                         <dd className="col-span-2 text-xs leading-none">
@@ -86,7 +86,7 @@ export default function Index() {
                       alt="てんにゃ"
                     />
                   </div>
-                  <div className="flex-1 bg-white bg-opacity-95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
+                  <div className="flex-1 bg-white/95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                     <p>たかねこまねーじゃー</p>
                     <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
