@@ -151,8 +151,8 @@ importers:
         specifier: ^4.7.8
         version: 4.7.8
       happy-dom:
-        specifier: ^15.10.2
-        version: 15.10.2
+        specifier: ^17.2.2
+        version: 17.2.2
       icon-gen:
         specifier: ^5.0.0
         version: 5.0.0
@@ -194,7 +194,7 @@ importers:
         version: 4.3.2(typescript@5.5.2)(vite@5.4.12(@types/node@22.5.5))
       vitest:
         specifier: ^2.1.9
-        version: 2.1.9(@types/node@22.5.5)(happy-dom@15.10.2)
+        version: 2.1.9(@types/node@22.5.5)(happy-dom@17.2.2)
       wrangler:
         specifier: 3.78.4
         version: 3.78.4(@cloudflare/workers-types@4.20240909.0)
@@ -2574,8 +2574,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@15.10.2:
-    resolution: {integrity: sha512-NbA5XrSovenJIIcfixCREX3ZnV7yHP4phhbfuxxf4CPn+LZpz/jIM9EqJ2DrPwgVDSMoAKH3pZwQvkbsSiCrUw==}
+  happy-dom@17.2.2:
+    resolution: {integrity: sha512-3I1/CrNi780sdOhuhUnFtgTWhloSc3quSZwsylI41jycx8o97M6Y4aQAu0phSexGusT7+59BxATh4L4xiY0HcA==}
     engines: {node: '>=18.0.0'}
 
   has-bigints@1.1.0:
@@ -3357,8 +3357,8 @@ packages:
     resolution: {integrity: sha512-gXah6aZrcUxjWg2zR2MwouP2eHlCBzdV4pygudehaKXSGW4v2AsRQUK+lwwXhii6KFZcunEnmSUoYp5CXibxtA==}
     engines: {node: '>= 0.4'}
 
-  ohash@1.1.5:
-    resolution: {integrity: sha512-AtXrG/lMFjPBWj3uhWYFwYVZQqutPYRsv6nnPLTipnC+gJuMFc+WFzf/jx+94Ebray1vxfQfEFDtpIpppOe4xQ==}
+  ohash@1.1.6:
+    resolution: {integrity: sha512-TBu7PtV8YkAZn0tSxobKY2n2aAQva936lhRrj6957aDaCf9IEtqsKbgMzXE/F/sjqYOwmrukeORHNLe5glk7Cg==}
 
   once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
@@ -7010,9 +7010,8 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.2
 
-  happy-dom@15.10.2:
+  happy-dom@17.2.2:
     dependencies:
-      entities: 4.5.0
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
 
@@ -8209,7 +8208,7 @@ snapshots:
       define-properties: 1.2.1
       es-object-atoms: 1.1.1
 
-  ohash@1.1.5: {}
+  ohash@1.1.6: {}
 
   once@1.4.0:
     dependencies:
@@ -9239,7 +9238,7 @@ snapshots:
   unenv-nightly@2.0.0-1724863496.70db6f1:
     dependencies:
       defu: 6.1.4
-      ohash: 1.1.5
+      ohash: 1.1.6
       pathe: 1.1.2
       ufo: 1.5.4
 
@@ -9406,7 +9405,7 @@ snapshots:
       '@types/node': 22.5.5
       fsevents: 2.3.3
 
-  vitest@2.1.9(@types/node@22.5.5)(happy-dom@15.10.2):
+  vitest@2.1.9(@types/node@22.5.5)(happy-dom@17.2.2):
     dependencies:
       '@vitest/expect': 2.1.9
       '@vitest/mocker': 2.1.9(vite@5.4.12(@types/node@22.5.5))
@@ -9430,7 +9429,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.5.5
-      happy-dom: 15.10.2
+      happy-dom: 17.2.2
     transitivePeerDependencies:
       - less
       - lightningcss
