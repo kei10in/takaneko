@@ -1,9 +1,9 @@
 import { Link, MetaFunction } from "react-router";
-import { ClippedImage } from "~/components/ClippedImage";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
 import { mapProductToTradingItemDetails } from "~/features/tradeSummaries/tradingItemDetails";
+import { ProductItems } from "./ProductItems";
 
 export const meta: MetaFunction = () => {
   return [
@@ -63,23 +63,7 @@ export default function Index() {
                 <h3 className="font-semibold text-gray-600">
                   <Link to={`/trade/${productImage.slug}`}>{productImage.name}</Link>
                 </h3>
-                <ul className="mt-2 space-y-2">
-                  {tradingItemDetails.map((detail) => (
-                    <li key={detail.item.id} className="flex gap-2">
-                      <ClippedImage
-                        className="h-24 w-24 flex-none object-contain drop-shadow-lg"
-                        src={detail.product.url}
-                        clip={detail.position}
-                      />
-                      <div className="py-2">
-                        <p>
-                          {detail.item.name} {detail.item.id}
-                        </p>
-                        <p className="text-gray-400">{detail.product.series}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                <ProductItems tradingItemDetails={tradingItemDetails} />
               </div>
             );
           })}
@@ -93,23 +77,7 @@ export default function Index() {
                 <h3 className="font-semibold text-gray-600">
                   <Link to={`/trade/${productImage.slug}`}>{productImage.name}</Link>
                 </h3>
-                <ul className="space-y-2">
-                  {tradingItemDetails.map((detail) => (
-                    <li key={detail.item.id} className="flex gap-2">
-                      <ClippedImage
-                        className="h-24 w-24 flex-none object-contain drop-shadow-lg"
-                        src={detail.product.url}
-                        clip={detail.position}
-                      />
-                      <div className="py-2">
-                        <p>
-                          {detail.item.name} {detail.item.id}
-                        </p>
-                        <p className="text-gray-400">{detail.product.series}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
+                <ProductItems tradingItemDetails={tradingItemDetails} />
               </div>
             );
           })}
