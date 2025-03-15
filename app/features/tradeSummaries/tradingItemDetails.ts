@@ -3,17 +3,19 @@ import { TradeDescription, TradeStatus } from "../trade/TradeStatus";
 
 export type TradingItemDetail = {
   item: ItemDescription;
+  product: RandomGoods;
   position: ImagePosition;
   status: TradeStatus;
 };
 
-export const combineToTradingItemDetails = (
+export const mapProductToTradingItemDetails = (
   productImage: RandomGoods,
   tradeDescriptions: Record<string, TradeDescription>,
 ): TradingItemDetail[] => {
   return productImage.lineup.map((item, i) => {
     return {
       item,
+      product: productImage,
       position: productImage.positions[i],
       status: tradeDescriptions[item.id]?.status ?? { tag: "none" },
     };
