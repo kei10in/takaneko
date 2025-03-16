@@ -78,8 +78,8 @@ export const ProductList: React.FC<Props> = (props: Props) => {
       </div>
 
       <div className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
-        <Link to="/trade/summary" onClick={onClickMenuItem}>
-          <p className="py-2 text-lg font-bold">サマリー</p>
+        <Link to="/trade/wishlist" onClick={onClickMenuItem}>
+          <p className="py-2 text-lg font-bold">欲しいやつ</p>
         </Link>
       </div>
 

@@ -8,10 +8,11 @@ import { TradingItemList } from "./TradingItemList";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `トレードしたいやつのサマリー - ${SITE_TITLE}` },
+    { title: `欲しいやつ -  ${SITE_TITLE}` },
     {
       name: "description",
-      content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
+      content:
+        "生写真やミニフォトカードなどのトレード用画像を作ったついでに欲しいやつをリストアップできます。",
     },
   ];
 };
@@ -79,7 +80,7 @@ export default function Index() {
   return (
     <div className="mx-auto min-h-[calc(100lvh-3rem-3.5rem)] w-full max-w-lg lg:min-h-[calc(100vh-var(--header-height)-4rem)] lg:max-w-3xl">
       <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">トレードしたいやつのサマリー</h1>
+        <h1 className="my-4 text-3xl font-semibold text-gray-600">欲しいやつ</h1>
 
         <section className="my-12">
           <h2 className="text-2xl font-semibold text-gray-600">
