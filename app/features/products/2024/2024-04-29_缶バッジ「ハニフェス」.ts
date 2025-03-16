@@ -23,6 +23,7 @@ export const ハニフェス_缶バッジ: RandomGoods = {
     { id: 9, name: "涼海すう", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 138, y: 246, width: 350, height: 350 },
     { id: 2, x: 490, y: 246, width: 350, height: 350 },

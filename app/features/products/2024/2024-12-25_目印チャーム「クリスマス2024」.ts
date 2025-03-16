@@ -24,6 +24,7 @@ export const クリスマス2024_目印チャーム: RandomGoods = {
     { id: 10, name: "ぽにゃん🎀", description: "" },
     { id: 11, name: "もみさん。", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 268, y: 264, width: 166, height: 192 },
     { id: 2, x: 427, y: 264, width: 166, height: 192 },

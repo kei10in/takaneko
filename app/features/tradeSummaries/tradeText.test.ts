@@ -2,6 +2,7 @@ import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
 import { アンチファン衣装_生写真 } from "../products/2022/2022-08-08_生写真「アンチファン衣装」";
 import { 学生証風_ステッカー } from "../products/2024/2024-04-08_ステッカー「学生証風」";
+import { ハニフェス_生写真 } from "../products/2024/2024-04-29_生写真「ハニフェス」";
 import { ラブレターカード } from "../products/2025/2025-02-14_ラブレターカード";
 import { convertToTradeText } from "./tradeText";
 
@@ -111,5 +112,28 @@ describe("convertToTradeText", () => {
       葉月 笑顔
 
       `);
+  });
+
+  describe("with ハニフェス 生写真", () => {
+    it("should return formatted trade text", () => {
+      const result = convertToTradeText(ハニフェス_生写真, {
+        1: { id: 1, status: { tag: "want" } },
+        2: { id: 2, status: { tag: "have" } },
+        3: { id: 3, status: { tag: "want" } },
+        11: { id: 11, status: { tag: "want" } },
+        12: { id: 12, status: { tag: "have" } },
+        14: { id: 14, status: { tag: "have" } },
+      });
+      expect(result).toBe(dedent`
+        生写真 ハニフェス
+
+        💖求
+        橋本桃呼、春野莉々、永尾梨央
+
+        🎁譲
+        松本ももな、高澤百合愛、福田ひなた
+
+        `);
+    });
   });
 });

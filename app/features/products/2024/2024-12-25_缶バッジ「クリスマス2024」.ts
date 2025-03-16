@@ -23,6 +23,7 @@ export const クリスマス2024_缶バッジ: RandomGoods = {
     { id: 9, name: "松本ももな", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 271, y: 288, width: 201, height: 201 },
     { id: 2, x: 490, y: 288, width: 201, height: 201 },

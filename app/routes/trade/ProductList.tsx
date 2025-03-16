@@ -9,7 +9,7 @@ import {
 import { clsx } from "clsx";
 import { useState } from "react";
 import { HiChevronRight } from "react-icons/hi2";
-import { NavLink, useLocation } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import { RandomGoods } from "../../features/products/product";
 import { ProductItem } from "./ProductItem";
 
@@ -55,7 +55,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
     <div className="">
       <div className="sticky top-0 z-10 bg-white px-4 py-4">
         <RadioGroup
-          className="flex select-none items-center gap-2"
+          className="flex items-center gap-2 select-none"
           value={filter}
           onChange={setFilter}
         >
@@ -77,6 +77,12 @@ export const ProductList: React.FC<Props> = (props: Props) => {
         </RadioGroup>
       </div>
 
+      <div className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+        <Link to="/trade/wishlist" onClick={onClickMenuItem}>
+          <p className="py-2 text-lg font-bold">欲しいやつ</p>
+        </Link>
+      </div>
+
       {filteredAllPhotos.map((item) => {
         const open = item.photos.some(
           (photo) => `/trade/${encodeURIComponent(photo.slug)}` == location.pathname,
@@ -84,7 +90,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
 
         return (
           <Disclosure key={item.name} defaultOpen={open}>
-            <DisclosureButton className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
+            <DisclosureButton className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
               <h3 className="text-lg font-bold">{item.name}</h3>
               <div>
                 <HiChevronRight className="transition-transform group-data-open:rotate-90" />

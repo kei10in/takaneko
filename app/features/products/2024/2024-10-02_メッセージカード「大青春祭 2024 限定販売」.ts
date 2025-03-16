@@ -24,6 +24,7 @@ export const 大青春祭2024_メッセージカード: RandomGoods = {
     { id: 9, name: "松本ももな", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 14, y: 22, width: 105, height: 154 },
     { id: 2, x: 133, y: 22, width: 105, height: 154 },

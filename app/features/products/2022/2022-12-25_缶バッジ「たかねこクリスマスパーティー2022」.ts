@@ -33,6 +33,7 @@ export const クリスマス2022_缶バッジ: RandomGoods = {
     { id: 19, name: "葉月紗蘭", description: "当たり" },
     { id: 20, name: "涼海すう", description: "当たり" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 34, y: 170, width: 193, height: 193 },
     { id: 2, x: 285, y: 172, width: 193, height: 193 },

@@ -24,6 +24,7 @@ export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
     { id: 10, name: "ぽにゃん🎀", description: "" },
     { id: 11, name: "もみさん。", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 174, y: 127, width: 217, height: 476 },
     { id: 2, x: 404, y: 127, width: 217, height: 476 },
