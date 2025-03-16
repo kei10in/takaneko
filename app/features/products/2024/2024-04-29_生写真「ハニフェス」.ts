@@ -1,4 +1,4 @@
-import { RandomGoods } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const ハニフェス_生写真: RandomGoods = {
   id: "らんだむブロマイド (ハニフェス ver)",
@@ -7,6 +7,7 @@ export const ハニフェス_生写真: RandomGoods = {
   year: 2024,
   series: "ハニフェス",
   category: "生写真",
+  tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2024/2024-04-29_生写真「ハニフェス」.webp",
   width: 1440,
   height: 1820,
