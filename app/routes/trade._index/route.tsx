@@ -1,12 +1,13 @@
-import { Link, MetaFunction } from "react-router";
 import {
   BsBan,
   BsBoxArrowUp,
+  BsCardChecklist,
   BsEraserFill,
   BsImage,
   BsPencilSquare,
   BsTrash,
 } from "react-icons/bs";
+import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
@@ -82,18 +83,41 @@ const tools = [
 
 export default function Index() {
   return (
-    <section className="px-4 py-8">
+    <section className="mx-auto px-4 py-8 lg:max-w-4xl">
       <h1 className="my-4 text-3xl font-semibold text-gray-600">トレード画像をつくるやつ</h1>
 
-      <p>ランダムグッズのトレード画像が作成できます。</p>
-
-      <figure className="m-4 flex justify-center">
-        <img src="/takaneko/sample.png" alt="サンプル" className="h-96 text-center shadow-md" />
-      </figure>
+      <div className="my-4 flex justify-between">
+        <p>ランダムグッズのトレード画像が作成できます。</p>
+        <figure className="mx-4 flex flex-none justify-center">
+          <img
+            src="/takaneko/sample.png"
+            alt="トレード画像のサンプル"
+            className="h-36 text-center shadow-md lg:h-64"
+          />
+        </figure>
+      </div>
 
       <section className="mt-12">
-        <h2 className="my-4 text-center text-2xl font-semibold text-gray-600">ランダムグッズ</h2>
-        <ul className="flex flex-wrap justify-center gap-4">
+        <h2 className="mb-2 text-2xl font-semibold text-gray-600">サマリー</h2>
+
+        <ul className="space-y-4">
+          <li>
+            <Link className="group block" to="/trade/wishlist">
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <BsCardChecklist className="text-nadeshiko-900 group-hover:text-nadeshiko-950 inline-block" />
+                <span className="text-gray-600 group-hover:text-gray-800">欲しいやつ</span>
+              </h3>
+              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
+                トレード用画像を作ったついでに欲しいやつをリストアップできます。
+              </p>
+            </Link>
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="my-4 text-2xl font-semibold text-gray-600">ランダムグッズ</h2>
+        <ul className="flex flex-wrap gap-4">
           {TAKANEKO_PHOTOS.map((photo) => (
             <li key={photo.slug}>
               <Link to={`/trade/${photo.slug}`}>
@@ -110,7 +134,7 @@ export default function Index() {
       </section>
 
       <section className="mt-12">
-        <h2 className="my-4 text-center text-2xl font-semibold text-gray-600">使い方</h2>
+        <h2 className="my-4 text-2xl font-semibold text-gray-600">使い方</h2>
 
         <p>ツールを選んで、アイテムをタップします。</p>
         <ul className="my-4 list-disc space-y-1 pl-6 marker:text-gray-300">
