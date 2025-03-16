@@ -36,8 +36,6 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
           slidesPerView={1}
           navigation={{}}
           pagination={{ clickable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
         >
           {images.map((image, i) => {
             const imageComponent = (

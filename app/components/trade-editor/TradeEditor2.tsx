@@ -276,7 +276,6 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         open={detailDialogState.open}
         className="relative z-50"
         onClose={() => {
-          console.log("on close");
           setDetailDialogState({ ...detailDialogState, open: false });
         }}
       >

@@ -44,7 +44,6 @@ export default function Index() {
       <Dialog
         open={showMenu}
         onClose={() => {
-          console.log("closing");
           setShowMenu(false);
         }}
       >
