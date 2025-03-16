@@ -23,6 +23,7 @@ export const クリスマス2023_缶バッジ: RandomGoods = {
     { id: 9, name: "涼海すう", description: "通常" },
     { id: 10, name: "葉月紗蘭", description: "通常" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 108, y: 106, width: 114, height: 114 },
     { id: 2, x: 242, y: 106, width: 114, height: 114 },

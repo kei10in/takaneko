@@ -24,6 +24,7 @@ export const 生明祭限定_参加証明書カード: RandomGoods = {
     { id: 9, name: "松本ももな", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 70, y: 25, width: 168, height: 134 },
     { id: 2, x: 245, y: 24, width: 168, height: 134 },

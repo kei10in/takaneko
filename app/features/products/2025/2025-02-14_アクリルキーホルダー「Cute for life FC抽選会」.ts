@@ -23,6 +23,7 @@ export const CuteForLife_アクリルキーホルダー: RandomGoods = {
     { id: 9, name: "松本ももな", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 12, y: 9, width: 227, height: 220 },
     { id: 2, x: 241, y: 9, width: 227, height: 220 },

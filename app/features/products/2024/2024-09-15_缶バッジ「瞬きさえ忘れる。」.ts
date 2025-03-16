@@ -23,6 +23,7 @@ export const 瞬きさえ忘れる_缶バッジ: RandomGoods = {
     { id: 9, name: "松本ももな", description: "" },
     { id: 10, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 374, y: 350, width: 314, height: 314 },
     { id: 2, x: 689, y: 350, width: 314, height: 314 },

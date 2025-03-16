@@ -24,6 +24,7 @@ export const にゃでしこ_前髪クリップ: RandomGoods = {
     { id: 10, name: "ぽにゃん🎀", description: "" },
     { id: 11, name: "もみさん。", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 250, y: 450, width: 296, height: 259 },
     { id: 2, x: 547, y: 450, width: 296, height: 259 },

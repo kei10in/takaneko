@@ -24,6 +24,7 @@ export const ミニアクリルスタンドキーホルダーメンバーソロ�
     { id: 9, name: "葉月紗蘭", description: "" },
     { id: 10, name: "涼海すう", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 82, y: 627, width: 309, height: 405 },
     { id: 2, x: 426, y: 630, width: 309, height: 405 },

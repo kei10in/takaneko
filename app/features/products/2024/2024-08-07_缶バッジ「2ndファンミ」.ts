@@ -34,6 +34,7 @@ export const _2ndファンミ_缶バッジ: RandomGoods = {
     { id: 20, name: "もみさん。", description: "" },
     { id: 21, name: "籾山ひめり", description: "" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 201, y: 259, width: 150, height: 150 },
     { id: 2, x: 356, y: 259, width: 150, height: 150 },
