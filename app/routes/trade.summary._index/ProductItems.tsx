@@ -12,19 +12,20 @@ type ProductItemsProps = {
  */
 export function ProductItems({ tradingItemDetails }: ProductItemsProps) {
   return (
-    <ul className="mt-2 space-y-2">
+    <ul className="mx-auto mt-2 flex flex-wrap gap-2">
       {tradingItemDetails.map((detail) => (
-        <li key={detail.item.id} className="flex gap-2">
+        <li key={detail.item.id} className="flex w-28 flex-col overflow-hidden">
           <ClippedImage
-            className="h-24 w-24 flex-none object-contain drop-shadow-lg"
+            className="aspect-square w-full object-contain drop-shadow-sm"
             src={detail.product.url}
+            alt={`${detail.item.name} ${detail.item.id}`}
             clip={detail.position}
           />
-          <div className="py-2">
-            <p>
+          <div className="p-2 text-center text-sm">
+            <p className="line-clamp-2">
               {detail.item.name} {detail.item.id}
             </p>
-            <p className="text-gray-400">{detail.product.series}</p>
+            <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
           </div>
         </li>
       ))}
