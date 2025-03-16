@@ -50,7 +50,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="flex min-h-svh flex-col text-gray-800">
-        <div className="z-10 h-(--header-height) border-b border-b-nadeshiko-200 bg-nadeshiko-50/90 backdrop-blur-sm lg:sticky lg:top-0">
+        <div className="border-b-nadeshiko-200 bg-nadeshiko-50/90 z-10 h-(--header-height) border-b backdrop-blur-sm lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
               <div className="text-base font-bold text-gray-900">
@@ -97,7 +97,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </Menu>
                 </div>
                 <button
-                  className="inline-flex rounded-full p-2 text-nadeshiko-800 lg:hidden"
+                  className="text-nadeshiko-800 inline-flex rounded-full p-2 lg:hidden"
                   onClick={() => setShowMenu(true)}
                 >
                   <BsThreeDotsVertical className="h-6 w-6" />
@@ -113,10 +113,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
           <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
-            <DialogPanel className="relative right-4 top-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
-              <div className="absolute right-4 top-4 flex-none">
+            <DialogPanel className="relative top-4 right-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
+              <div className="absolute top-4 right-4 flex-none">
                 <button
-                  className="rounded-full p-2 text-lg hover:text-nadeshiko-700"
+                  className="hover:text-nadeshiko-700 rounded-full p-2 text-lg"
                   onClick={() => setShowMenu(false)}
                 >
                   <HiXMark />

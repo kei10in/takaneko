@@ -1,6 +1,6 @@
-import { Link } from "react-router";
 import { useMemo } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { Link } from "react-router";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { loadEventsInDay } from "../events/events";

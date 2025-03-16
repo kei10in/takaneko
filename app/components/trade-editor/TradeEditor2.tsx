@@ -163,7 +163,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                   <div className="ml-auto w-fit p-1">
                     <CopyButton data={tradeText} />
                   </div>
-                  <pre className="text-wrap px-2 pb-2 font-sans">{tradeText}</pre>
+                  <pre className="px-2 pb-2 font-sans text-wrap">{tradeText}</pre>
                 </div>
               </section>
             )}
@@ -301,7 +301,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         onClose={() => setShowConfirmClear(false)}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <DialogPanel className="min-w-64 max-w-lg border bg-white text-lg text-gray-700">
+          <DialogPanel className="max-w-lg min-w-64 border bg-white text-lg text-gray-700">
             <div className="flex w-full items-center justify-between p-4">
               <p className="text-center">トレード設定をクリアしますか？</p>
             </div>

@@ -48,7 +48,7 @@ export default function Index() {
                         <dt className="col-span-1 text-xs leading-none">学科</dt>
                         <dd className="col-span-2 text-xs leading-none">{member.fanName}</dd>
                         <dt className="col-span-1 text-xs leading-none">氏名</dt>
-                        <dd className="col-span-2 text-lg font-semibold leading-none">
+                        <dd className="col-span-2 text-lg leading-none font-semibold">
                           {member.name}
                         </dd>
                         <dt className="col-span-1 text-xs leading-none"></dt>
@@ -67,7 +67,7 @@ export default function Index() {
         </section>
 
         <section>
-          <h2 className="mb-4 mt-12 text-2xl font-semibold text-gray-400">マネージャー</h2>
+          <h2 className="mt-12 mb-4 text-2xl font-semibold text-gray-400">マネージャー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
             <li className="flex-none">
@@ -88,7 +88,7 @@ export default function Index() {
                   </div>
                   <div className="flex-1 bg-white/95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                     <p>たかねこまねーじゃー</p>
-                    <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
+                    <ul className="text-nadeshiko-700 mt-2 flex gap-2"></ul>
                   </div>
                 </div>
               </Link>
@@ -97,7 +97,7 @@ export default function Index() {
         </section>
 
         <section>
-          <h2 className="mb-4 mt-12 text-2xl font-semibold text-gray-400">高嶺のなでしこ</h2>
+          <h2 className="mt-12 mb-4 text-2xl font-semibold text-gray-400">高嶺のなでしこ</h2>
 
           <ul className="list-disc space-y-2 pl-6 marker:text-gray-300">
             <li>
@@ -165,7 +165,7 @@ export default function Index() {
           </ul>
 
           <section>
-            <h3 className="mb-4 mt-8 text-xl font-semibold text-gray-400">中国 SNS</h3>
+            <h3 className="mt-8 mb-4 text-xl font-semibold text-gray-400">中国 SNS</h3>
 
             <ul className="my-4 flex gap-2 px-2 text-gray-700">
               <li>

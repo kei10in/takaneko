@@ -63,7 +63,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
                       width: pos.width * scale,
                       height: pos.height * scale,
                     }}
-                    className="absolute select-none border border-gray-500 bg-black/0 hover:bg-black/20"
+                    className="absolute border border-gray-500 bg-black/0 select-none hover:bg-black/20"
                     onClick={() => {
                       setIndex(i);
                     }}
@@ -127,7 +127,7 @@ export const TradeEditor: React.FC<Props> = (props: Props) => {
         onClose={() => setShowConfirmClear(false)}
       >
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4">
-          <DialogPanel className="min-w-64 max-w-lg border bg-white text-lg text-gray-700">
+          <DialogPanel className="max-w-lg min-w-64 border bg-white text-lg text-gray-700">
             <div className="flex w-full items-center justify-between p-4">
               <p className="text-center">トレード設定をクリアしますか？</p>
             </div>

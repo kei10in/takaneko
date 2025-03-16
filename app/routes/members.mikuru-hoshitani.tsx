@@ -1,5 +1,5 @@
-import { Link, MetaFunction } from "react-router";
 import { FaInstagram } from "react-icons/fa6";
+import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { MemberProfile } from "~/routes/members/MemberProfile";
 import { MikuruHoshitani } from "./members/members";
@@ -24,7 +24,7 @@ export default function Index() {
             <Link className="block" to="https://www.instagram.com/min.0o6/">
               <div className="flex h-28 gap-2 bg-white shadow-sm">
                 <div className="aspect-square h-28 flex-none">
-                  <div className="h-full w-full bg-nadeshiko-700 p-3">
+                  <div className="bg-nadeshiko-700 h-full w-full p-3">
                     <FaInstagram className="h-full w-full text-white" />
                   </div>
                 </div>

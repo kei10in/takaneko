@@ -75,26 +75,26 @@ export default function Index() {
           />
           <div
             className={clsx(
-              "absolute bottom-0 w-full bg-nadeshiko-100/90 px-6 py-4",
+              "bg-nadeshiko-100/90 absolute bottom-0 w-full px-6 py-4",
               "lg:static lg:flex-1 lg:px-10 lg:py-8",
             )}
           >
-            <h1 className="text-right font-serif text-2xl italic leading-tight text-gray-500 lg:text-5xl">
+            <h1 className="text-right font-serif text-2xl leading-tight text-gray-500 italic lg:text-5xl">
               <span className="text-nadeshiko-900">高嶺のなでしこの</span>
               <br />
               ファンサイト
               <span className="text-nadeshiko-900"></span>
             </h1>
 
-            <div className="mt-2 flex select-none justify-end gap-2 text-sm font-semibold">
+            <div className="mt-2 flex justify-end gap-2 text-sm font-semibold select-none">
               <Link to="/trade">
-                <div className="flex h-7 items-center gap-1 rounded-md bg-nadeshiko-800 px-2 text-white">
+                <div className="bg-nadeshiko-800 flex h-7 items-center gap-1 rounded-md px-2 text-white">
                   <BsArrowLeftRight className="h-4 w-4" />
                   <div>トレード画像つくるやつ</div>
                 </div>
               </Link>
               <Link to="/calendar">
-                <div className="flex h-7 w-full items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-nadeshiko-100">
+                <div className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 w-full items-center gap-1 rounded-md px-4">
                   <BsCalendar className="h-4 w-4" />
                   <div>スケジュール</div>
                 </div>
@@ -103,11 +103,11 @@ export default function Index() {
           </div>
         </div>
 
-        <section className="mx-auto w-full max-w-md space-y-16 pb-12 pt-8 lg:max-w-3xl">
+        <section className="mx-auto w-full max-w-md space-y-16 pt-8 pb-12 lg:max-w-3xl">
           <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-2 px-4 text-xl font-semibold leading-tight text-gray-500">
+            <h2 className="flex items-center gap-2 px-4 text-xl leading-tight font-semibold text-gray-500">
               <BsCalendar className="h-6 w-6" />
               <span>スケジュール</span>
             </h2>
@@ -122,7 +122,7 @@ export default function Index() {
             </p>
 
             <Link
-              className="mt-2! ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
+              className="text-nadeshiko-800 mt-2! ml-auto block w-fit px-4 text-sm"
               to="/calendar"
             >
               <span>すべてのスケジュール</span>
@@ -168,7 +168,7 @@ export default function Index() {
           </section>
 
           <section className="space-y-4 px-4">
-            <h2 className="flex items-center gap-2 text-xl font-semibold leading-tight text-gray-500">
+            <h2 className="flex items-center gap-2 text-xl leading-tight font-semibold text-gray-500">
               <BsArrowLeftRight className="h-6 w-6" />
               <span>トレード画像つくるやつ</span>
             </h2>
@@ -177,7 +177,7 @@ export default function Index() {
             </p>
             <div className="items-bottom flex justify-between">
               <p className="font-semibold text-gray-400">最近のグッズ:</p>
-              <Link className="block text-sm text-nadeshiko-800" to="/trade">
+              <Link className="text-nadeshiko-800 block text-sm" to="/trade">
                 <span>すべてのグッズ</span>
                 <BsChevronRight className="ml-1 inline-block" />
               </Link>
@@ -196,7 +196,7 @@ export default function Index() {
             </div>
             <div className="w-full">
               <Link
-                className="mx-auto block w-fit rounded-full bg-nadeshiko-800 px-8 py-2 font-semibold text-nadeshiko-50"
+                className="bg-nadeshiko-800 text-nadeshiko-50 mx-auto block w-fit rounded-full px-8 py-2 font-semibold"
                 to="/trade"
               >
                 すべてのグッズ

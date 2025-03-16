@@ -1,5 +1,5 @@
-import { Link, MetaFunction } from "react-router";
 import { BsMusicNoteBeamed } from "react-icons/bs";
+import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -17,7 +17,7 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="my-2 text-5xl font-semibold text-nadeshiko-800 lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">
           楽曲一覧 (開発中)
         </h1>
 

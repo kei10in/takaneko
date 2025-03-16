@@ -35,7 +35,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto min-h-[calc(100svh-var(--header-height))]">
-      <section className="pb-12 pt-8">
+      <section className="pt-8 pb-12">
         <h1 className="my-4 px-4 text-3xl font-semibold text-gray-600">{collection.name}</h1>
 
         <div className="mt-8">

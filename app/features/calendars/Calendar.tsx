@@ -73,7 +73,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           />
         </div>
 
-        <div className="lg:flex-0 ml-auto w-fit">
+        <div className="ml-auto w-fit lg:flex-0">
           <Link
             to="#events-list"
             className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"

@@ -1,9 +1,9 @@
-@import 'swiper/css' layer(base);
-@import 'swiper/css/navigation' layer(base);
-@import 'swiper/css/pagination' layer(base);
-@import 'swiper/css/a11y' layer(base);
+@import "swiper/css" layer(base);
+@import "swiper/css/navigation" layer(base);
+@import "swiper/css/pagination" layer(base);
+@import "swiper/css/a11y" layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 
@@ -20,9 +20,8 @@
   --color-nadeshiko-900: #ed4f81;
   --color-nadeshiko-950: #d63668;
 
-  --font-sans:
-    ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
+  --font-sans: ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    Noto Color Emoji;
 }
 
 /*
@@ -44,42 +43,42 @@
 }
 
 @utility markdown {
-  @apply break-words leading-normal;
+  @apply leading-normal break-words;
 
   h1 {
-    @apply mb-4 mt-6 border-b pb-1 text-2xl font-semibold leading-tight;
+    @apply mt-6 mb-4 border-b pb-1 text-2xl leading-tight font-semibold;
   }
 
   h2 {
-    @apply mb-4 mt-6 border-b pb-1 text-xl font-semibold leading-tight;
+    @apply mt-6 mb-4 border-b pb-1 text-xl leading-tight font-semibold;
   }
 
   h3 {
-    @apply mb-4 mt-6 text-lg font-semibold leading-snug;
+    @apply mt-6 mb-4 text-lg leading-snug font-semibold;
   }
 
   h4 {
-    @apply mb-4 mt-6 text-base font-semibold leading-none;
+    @apply mt-6 mb-4 text-base leading-none font-semibold;
   }
 
   h5 {
-    @apply mb-4 mt-6 text-sm font-semibold leading-tight;
+    @apply mt-6 mb-4 text-sm leading-tight font-semibold;
   }
 
   h6 {
-    @apply mb-4 mt-6 text-sm font-semibold leading-tight text-gray-600;
+    @apply mt-6 mb-4 text-sm leading-tight font-semibold text-gray-600;
   }
 
   p {
-    @apply mb-2 mt-0 text-base leading-snug;
+    @apply mt-0 mb-2 text-base leading-snug;
   }
 
   ul {
-    @apply mb-3 mt-1 list-disc space-y-1 pl-8 text-base leading-snug;
+    @apply mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug;
   }
 
   ol {
-    @apply mb-3 mt-1 list-decimal space-y-1 pl-8 text-base leading-snug;
+    @apply mt-1 mb-3 list-decimal space-y-1 pl-8 text-base leading-snug;
   }
 
   ol ol,
@@ -111,7 +110,7 @@
   }
 
   blockquote {
-    @apply border-l-4 border-gray-300 pl-4 pr-4 text-base text-gray-600;
+    @apply border-l-4 border-gray-300 pr-4 pl-4 text-base text-gray-600;
   }
 
   img {
@@ -143,7 +142,7 @@
   }
 
   table {
-    @apply mb-2 mt-0 text-sm;
+    @apply mt-0 mb-2 text-sm;
   }
 }
 

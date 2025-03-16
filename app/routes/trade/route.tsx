@@ -34,7 +34,7 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="sticky top-0 z-10 h-12 w-full border-b border-nadeshiko-200 bg-nadeshiko-200/90 backdrop-blur-sm lg:hidden">
+      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-0 z-10 h-12 w-full border-b backdrop-blur-sm lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-800">
@@ -42,7 +42,7 @@ export default function Index() {
             </p>
             <div className="flex-none">
               <button
-                className="p-2 text-nadeshiko-800 hover:text-nadeshiko-950"
+                className="text-nadeshiko-800 hover:text-nadeshiko-950 p-2"
                 onClick={() => setShowMenu(true)}
               >
                 <BsList className="h-6 w-6" />
@@ -73,7 +73,7 @@ export default function Index() {
             // https://stackoverflow.com/questions/67076468/why-scrollbar-is-behind-sticky-elements-in-ios-safari
             style={{ transform: "translateZ(0)" }}
           >
-            <div className="absolute right-4 top-1.5 flex-none">
+            <div className="absolute top-1.5 right-4 flex-none">
               <button
                 className="rounded-full p-2 text-xl hover:bg-gray-200"
                 onClick={() => setShowMenu(false)}

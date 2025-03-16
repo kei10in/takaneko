@@ -114,7 +114,7 @@ const LargeLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
           <div className="flex-none">
             <img className="object-cover" src={data.ogp.image} alt="ogp" />
           </div>
-          <div className="flex h-20 flex-none flex-col justify-center space-y-1 overflow-hidden text-ellipsis p-2">
+          <div className="flex h-20 flex-none flex-col justify-center space-y-1 overflow-hidden p-2 text-ellipsis">
             <p className="line-clamp-1 flex-none text-xs text-gray-400">{displayUrl}</p>
             <p className="line-clamp-2 flex-none text-sm font-bold text-gray-600">
               {data.ogp.title}

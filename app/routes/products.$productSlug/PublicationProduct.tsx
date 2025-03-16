@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import React from "react";
+import { Link } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
 import { Publication } from "~/features/products/product";
 import { displayDate } from "~/utils/dateDisplay";
@@ -48,7 +48,7 @@ export default function PublicationProduct(props: Props) {
       />
 
       <section className="mt-4 space-y-8 p-4">
-        <h1 className="text-3xl font-semibold text-nadeshiko-800">
+        <h1 className="text-nadeshiko-800 text-3xl font-semibold">
           {product.url == undefined ? (
             product.name
           ) : (
@@ -99,7 +99,7 @@ export default function PublicationProduct(props: Props) {
                 return (
                   <li key={i} className="flex-none marker:text-gray-400">
                     <Link
-                      className="block text-nadeshiko-800"
+                      className="text-nadeshiko-800 block"
                       to={link.url}
                       target="_blank"
                       rel="noreferrer"

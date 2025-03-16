@@ -1,5 +1,5 @@
-import { MetaFunction } from "react-router";
 import { BsBoxArrowUp } from "react-icons/bs";
+import { MetaFunction } from "react-router";
 import { CopyButton } from "~/components/CopyButton";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";

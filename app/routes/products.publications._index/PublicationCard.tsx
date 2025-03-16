@@ -12,11 +12,11 @@ export const PublicationCard: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="w-full bg-white shadow-sm">
-      <div className="flex-0 aspect-square w-full">
+      <div className="aspect-square w-full flex-0">
         <img src={image} alt={name} className="h-full w-full object-contain object-center" />
       </div>
       <div className="space-y-1 bg-gray-50 px-4 py-2">
-        <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
+        <div className="border-nadeshiko-800 text-nadeshiko-800 w-fit border px-2 py-px text-sm leading-none">
           {displayDate(date)}
         </div>
         <p className="text-sm">{name}</p>

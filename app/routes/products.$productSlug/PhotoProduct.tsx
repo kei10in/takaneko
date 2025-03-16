@@ -21,7 +21,7 @@ export function PhotoProduct(props: Props) {
       </div>
 
       <section className="p-4">
-        <h1 className="my-2 text-3xl font-semibold text-nadeshiko-800 lg:mt-12">{product.name}</h1>
+        <h1 className="text-nadeshiko-800 my-2 text-3xl font-semibold lg:mt-12">{product.name}</h1>
 
         <dl className="mt-8 grid grid-cols-3 gap-2">
           <dt className="text-gray-400">発売年</dt>
@@ -30,7 +30,7 @@ export function PhotoProduct(props: Props) {
 
         <div className="mt-12">
           <Link
-            className="rounded-sm bg-nadeshiko-800 px-4 py-1 text-white"
+            className="bg-nadeshiko-800 rounded-sm px-4 py-1 text-white"
             to={`/trade/${product.slug}`}
           >
             トレード画像を作る

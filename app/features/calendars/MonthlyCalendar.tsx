@@ -61,7 +61,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
             </PopoverButton>
             <PopoverPanel
               anchor={{ to: "bottom", gap: "0.5rem" }}
-              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
+              className="border-nadeshiko-100 bg-nadeshiko-50 overflow-hidden rounded-sm border py-2 shadow-md"
             >
               <ul className="space-y-1">
                 {Categories.map((c) => (

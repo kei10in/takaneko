@@ -10,7 +10,7 @@ export default function Index() {
 
   return (
     <div>
-      <div className="sticky top-0 z-10 h-12 w-full border-b border-nadeshiko-200 bg-nadeshiko-200/90 backdrop-blur-sm lg:top-[var(--header-height)]">
+      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-0 z-10 h-12 w-full border-b backdrop-blur-sm lg:top-[var(--header-height)]">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
@@ -29,7 +29,7 @@ export default function Index() {
 
             <div className="flex-none lg:hidden">
               <button
-                className="p-2 text-nadeshiko-800 hover:text-nadeshiko-950"
+                className="text-nadeshiko-800 hover:text-nadeshiko-950 p-2"
                 onClick={() => setShowMenu(true)}
               >
                 <BsList className="h-6 w-6" />
@@ -48,8 +48,8 @@ export default function Index() {
         }}
       >
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
-          <DialogPanel className="relative right-4 top-4 h-fit w-80 overflow-y-auto rounded-xl bg-white">
-            <div className="absolute right-2 top-2 flex-none">
+          <DialogPanel className="relative top-4 right-4 h-fit w-80 overflow-y-auto rounded-xl bg-white">
+            <div className="absolute top-2 right-2 flex-none">
               <CloseButton className="rounded-full p-2 text-xl hover:bg-gray-200">
                 <HiXMark />
               </CloseButton>

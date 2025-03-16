@@ -1,5 +1,5 @@
-import { Link, MetaFunction } from "react-router";
 import { BsChevronRight } from "react-icons/bs";
+import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -89,7 +89,7 @@ export default function Index() {
             <section className="mt-12" key={slug}>
               <Link className="mb-8 flex items-end justify-between" to={slug}>
                 <h2 className="text-2xl">{title}</h2>
-                <p className="flex w-fit items-center text-sm text-nadeshiko-800">
+                <p className="text-nadeshiko-800 flex w-fit items-center text-sm">
                   <span>すべて表示</span>
                   <BsChevronRight className="ml-1 inline-block" />
                 </p>

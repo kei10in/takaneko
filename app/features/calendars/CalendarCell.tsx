@@ -58,7 +58,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
         </div>
       ))}
 
-      <div className="pb-1 pt-px lg:pb-1 lg:pt-1">
+      <div className="pt-px pb-1 lg:pt-1 lg:pb-1">
         {events.length <= 5 ? (
           <div className="flex h-1 items-center justify-center gap-0.5 lg:h-1.5 lg:gap-1">
             {events.map((event) => {
@@ -72,7 +72,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
             })}
           </div>
         ) : (
-          <div className="mx-auto h-1 w-7 rounded-sm bg-nadeshiko-700" />
+          <div className="bg-nadeshiko-700 mx-auto h-1 w-7 rounded-sm" />
         )}
       </div>
     </div>

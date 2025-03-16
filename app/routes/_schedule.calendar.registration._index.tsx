@@ -1,5 +1,5 @@
-import { Link, MetaFunction } from "react-router";
 import { BsBoxArrowUp, BsCalendar3 } from "react-icons/bs";
+import { Link, MetaFunction } from "react-router";
 import { CopyButton } from "~/components/CopyButton";
 import { DOMAIN } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
@@ -50,11 +50,11 @@ export default function Index() {
               <p>{cal.description}</p>
 
               <Link
-                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+                className="border-nadeshiko-500 bg-nadeshiko-100 block w-fit rounded-md border px-3 py-1"
                 to={`webcal://${cal.url}`}
                 discover="none"
               >
-                <div className="flex items-center gap-2 text-nadeshiko-800">
+                <div className="text-nadeshiko-800 flex items-center gap-2">
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>
@@ -63,13 +63,13 @@ export default function Index() {
               </Link>
 
               <Link
-                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
+                className="border-nadeshiko-500 bg-nadeshiko-100 block w-fit rounded-md border px-3 py-1"
                 to={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(`webcal://${cal.url}`)}`}
                 discover="none"
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="flex items-center gap-2 text-nadeshiko-800">
+                <div className="text-nadeshiko-800 flex items-center gap-2">
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>

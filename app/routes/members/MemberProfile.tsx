@@ -1,6 +1,6 @@
-import { Link } from "react-router";
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { Link } from "react-router";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { MemberDescription } from "./members";
 
@@ -53,7 +53,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
         </div>
 
         <section className="p-4">
-          <h1 className="my-2 text-5xl font-semibold text-nadeshiko-800 lg:mt-12">{name}</h1>
+          <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">{name}</h1>
 
           <div className="flex gap-4 text-gray-500">
             <p>{kana}</p>
@@ -115,7 +115,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
         <ul className="flex flex-wrap justify-center gap-4 text-black">
           <li>
             <Link
-              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
+              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
               to={twitter}
               target="_blank"
               rel="noreferrer"
@@ -125,7 +125,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </li>
           <li>
             <Link
-              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
+              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
               to={instagram}
               target="_blank"
               rel="noreferrer"
@@ -135,7 +135,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </li>
           <li>
             <Link
-              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
+              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
               to={tiktok}
               target="_blank"
               rel="noreferrer"

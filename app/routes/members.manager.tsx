@@ -52,7 +52,7 @@ export default function Index() {
       </div>
 
       <section className="p-4">
-        <h1 className="my-2 text-3xl font-semibold text-nadeshiko-800 lg:mt-12">{name}</h1>
+        <h1 className="text-nadeshiko-800 my-2 text-3xl font-semibold lg:mt-12">{name}</h1>
 
         <div className="flex gap-4 text-gray-500">
           <p>{kana}</p>

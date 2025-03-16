@@ -33,7 +33,7 @@ export const CopyButton: React.FC<Props> = (props: Props) => {
       <BsCopy data-state={state} className="h-4 w-4 text-gray-600 data-[state=copied]:hidden" />
       <BsCheck2
         data-state={state}
-        className="hidden h-4 w-4 text-nadeshiko-800 data-[state=copied]:block"
+        className="text-nadeshiko-800 hidden h-4 w-4 data-[state=copied]:block"
       />
     </button>
   );

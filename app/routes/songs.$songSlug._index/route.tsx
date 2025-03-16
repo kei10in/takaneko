@@ -45,10 +45,10 @@ export default function Component() {
       )}
 
       <section className="px-4 py-8">
-        <h1 className="my-2 text-5xl font-semibold text-nadeshiko-800 lg:mt-12">{data.name}</h1>
+        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">{data.name}</h1>
 
         <section>
-          <h2 className="mb-2 mt-4 text-2xl">ライブ</h2>
+          <h2 className="mt-4 mb-2 text-2xl">ライブ</h2>
           <ul className="space-y-1">
             {lives.map((e, i) => (
               <li key={i}>
