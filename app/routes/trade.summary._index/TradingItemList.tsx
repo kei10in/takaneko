@@ -17,6 +17,8 @@ type TradingItemListProps = {
 export function TradingItemList(props: TradingItemListProps) {
   const { productImage, tradingItemDetails } = props;
 
+  const shadow = (productImage.withFrame ?? false) ? undefined : true;
+
   return (
     <div className="my-4">
       <h3 className="font-semibold text-gray-600">
@@ -26,7 +28,8 @@ export function TradingItemList(props: TradingItemListProps) {
         {tradingItemDetails.map((detail) => (
           <li key={detail.item.id} className="flex w-28 flex-col overflow-hidden text-sm">
             <ClippedImage
-              className="aspect-square w-full object-contain drop-shadow-sm"
+              className="aspect-square w-full object-contain data-[shadow]:drop-shadow-sm"
+              data-shadow={shadow}
               src={detail.product.url}
               alt={`${detail.item.name} ${detail.item.id}`}
               clip={detail.position}
