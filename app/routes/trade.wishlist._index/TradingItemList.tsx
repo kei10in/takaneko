@@ -24,19 +24,24 @@ export function TradingItemList(props: TradingItemListProps) {
       <h3 className="font-semibold text-gray-600">
         <Link to={`/trade/${productImage.slug}`}>{productImage.name}</Link>
       </h3>
-      <ul className="mx-auto mt-2 flex flex-wrap gap-2">
+      <ul className="mt-2 grid grid-cols-3 justify-items-center gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {tradingItemDetails.map((detail) => (
-          <li key={detail.item.id} className="flex w-28 flex-col overflow-hidden text-sm">
-            <ClippedImage
-              className="aspect-square w-full object-contain data-[shadow]:drop-shadow-sm"
-              data-shadow={shadow}
-              src={detail.product.url}
-              alt={`${detail.item.name} ${detail.item.id}`}
-              clip={detail.position}
-            />
-            <div className="p-2 text-center">
-              <p className="line-clamp-2">{makeTitle(detail)}</p>
-              <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+          <li
+            key={detail.item.id}
+            className="flex w-28 items-center justify-center overflow-hidden text-sm"
+          >
+            <div>
+              <ClippedImage
+                className="block max-h-36 w-full object-contain data-[shadow]:drop-shadow-sm"
+                data-shadow={shadow}
+                src={detail.product.url}
+                alt={`${detail.item.name} ${detail.item.id}`}
+                clip={detail.position}
+              />
+              <div className="pt-1 text-center">
+                <p className="line-clamp-2">{makeTitle(detail)}</p>
+                <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+              </div>
             </div>
           </li>
         ))}
