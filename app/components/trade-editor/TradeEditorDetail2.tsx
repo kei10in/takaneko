@@ -35,19 +35,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
     onChangeTradeState?.(selPosition.id, v);
   };
 
-  const width = 180;
-  const scale = width / maxWidth;
-  const height = selPosition.height * scale;
-
   const stamps = useMemo(() => stampPositions(positions), [positions]);
-  const stamp = stamps[index];
-  // TradeEditorDetails では画像をクリップした部分だけで表示するため、クリップ部分の座標系に合わせる。
-  const stampPos = {
-    left: (stamp.x - selPosition.x + (maxWidth - selPosition.width) / 2) * scale,
-    top: (stamp.y - selPosition.y) * scale,
-    width: stamp.width * scale,
-    height: stamp.height * scale,
-  };
 
   return (
     <div className="bg-nadeshiko-50 py-4">
@@ -71,6 +59,19 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
         }}
       >
         {positions.map((pos, i) => {
+          const width = 180;
+          const scale = width / maxWidth;
+          const height = pos.height * scale;
+
+          const stamp = stamps[i];
+          // TradeEditorDetails では画像をクリップした部分だけで表示するため、クリップ部分の座標系に合わせる。
+          const stampPos = {
+            left: (stamp.x - pos.x + (maxWidth - pos.width) / 2) * scale,
+            top: (stamp.y - pos.y) * scale,
+            width: stamp.width * scale,
+            height: stamp.height * scale,
+          };
+
           const tradeStatus = tradeDescriptions[pos.id]?.status ?? { tag: "none" };
           const tradeStateImageSrc = tradeStateToImageSrc(tradeStatus);
 
