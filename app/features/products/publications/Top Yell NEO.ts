@@ -1,5 +1,30 @@
 import { Publication } from "../product";
 
+export const TopYellNeo2025Spring: Publication = {
+  slug: "Top Yell NEO 2025 SPRING",
+  name: "Top Yell NEO 2025 SPRING",
+  date: "2025-03-31",
+  kind: "books",
+  publisher: "竹書房",
+  listPrice: 1600,
+  priceWithTax: 1760,
+  code: [{ kind: "isbn", value: "9784801944039" }],
+  url: "https://www.takeshobo.co.jp/book/b10107376.html",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-03-31_Top Yell NEO 2025 SPRING_表紙.jpg",
+      ref: "https://www.takeshobo.co.jp/book/b10107376.html",
+    },
+    {
+      path: "/publications/2025/2025-03-31_Top Yell NEO 2025 SPRING_裏表紙.jpg",
+      ref: "https://www.takeshobo.co.jp/book/b10107376.html",
+    },
+  ],
+  featuredMembers: ["涼海すう"],
+  officialTwitter: undefined,
+  links: [],
+};
+
 export const TopYellNeo2024_2025: Publication = {
   slug: "Top Yell NEO 2024〜2025",
   name: "Top Yell NEO 2024〜2025",

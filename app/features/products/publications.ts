@@ -48,6 +48,7 @@ import {
   TopYellNeo2024_2025,
   TopYellNeo2024Autumn,
   TopYellNeo2024Spring,
+  TopYellNeo2025Spring,
 } from "./publications/Top Yell NEO";
 import { VDCMagazine029, VDCMagazine030 } from "./publications/VDC Magazine";
 import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph";
@@ -106,6 +107,7 @@ const publications: Publication[] = [
   TopYellNeo2024Spring,
   TopYellNeo2024Autumn,
   TopYellNeo2024_2025,
+  TopYellNeo2025Spring,
   VDCMagazine029,
   VDCMagazine030,
   WHITE_graph_011,
