@@ -25,7 +25,18 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   const photos = productImage.lineup;
   const selPhoto = photos[index];
   const positions = productImage.positions;
+
+  // 画像の限界サイズ。すべての画像に同じ拡縮率を適用したいため、絶対超えてはい
+  // けないサイズをもとに拡縮率が決まるようにする。
+  const limitWidth = 240;
+  const limitHeight = 240;
+
+  const stamps = useMemo(() => stampPositions(positions), [positions]);
   const maxWidth = useMemo(() => Math.max(...positions.map((p) => p.width)), [positions]);
+  const maxHeight = useMemo(() => Math.max(...positions.map((p) => p.height)), [positions]);
+
+  const scale = Math.min(limitWidth / maxWidth, limitHeight / maxHeight);
+
   const selPosition = positions[index];
   const tradeDescription = tradeDescriptions[selPosition.id];
   const tradeStatus = tradeDescription?.status ?? { tag: "none" };
@@ -34,8 +45,6 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   const handleClickTradeState = (v: TradeStatus) => {
     onChangeTradeState?.(selPosition.id, v);
   };
-
-  const stamps = useMemo(() => stampPositions(positions), [positions]);
 
   return (
     <div className="bg-nadeshiko-50 py-4">
@@ -59,14 +68,13 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
         }}
       >
         {positions.map((pos, i) => {
-          const width = 180;
-          const scale = width / maxWidth;
+          const width = pos.width * scale;
           const height = pos.height * scale;
 
           const stamp = stamps[i];
           // TradeEditorDetails では画像をクリップした部分だけで表示するため、クリップ部分の座標系に合わせる。
           const stampPos = {
-            left: (stamp.x - pos.x + (maxWidth - pos.width) / 2) * scale,
+            left: (stamp.x - pos.x) * scale,
             top: (stamp.y - pos.y) * scale,
             width: stamp.width * scale,
             height: stamp.height * scale,
@@ -77,29 +85,31 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
           return (
             <SwiperSlide key={i} className="w-fit px-4">
-              <div className="relative w-fit">
-                <ClippedImage
-                  clip={pos ?? { x: 0, y: 0, width: 0, height: 0 }}
-                  className="object-contain"
-                  style={{ width, height }}
-                  src={productImage.url}
-                  alt="Selected"
-                />
-                {tradeStateImageSrc != undefined ? (
-                  <img
-                    src={tradeStateImageSrc}
-                    alt="トレード設定"
-                    className="absolute"
-                    style={{ ...stampPos }}
+              <div className="flex h-60 items-center justify-center">
+                <div className="relative w-fit">
+                  <ClippedImage
+                    clip={pos ?? { x: 0, y: 0, width: 0, height: 0 }}
+                    className="object-contain"
+                    style={{ width, height }}
+                    src={productImage.url}
+                    alt="Selected"
                   />
-                ) : tradeStatus.tag === "emoji" ? (
-                  <div
-                    className="absolute flex items-center justify-center text-center leading-none"
-                    style={{ ...stampPos, fontSize: stampPos.height * 0.9 }}
-                  >
-                    {tradeStatus.emoji}
-                  </div>
-                ) : null}
+                  {tradeStateImageSrc != undefined ? (
+                    <img
+                      src={tradeStateImageSrc}
+                      alt="トレード設定"
+                      className="absolute"
+                      style={{ ...stampPos }}
+                    />
+                  ) : tradeStatus.tag === "emoji" ? (
+                    <div
+                      className="absolute flex items-center justify-center text-center leading-none"
+                      style={{ ...stampPos, fontSize: stampPos.height * 0.9 }}
+                    >
+                      {tradeStatus.emoji}
+                    </div>
+                  ) : null}
+                </div>
               </div>
             </SwiperSlide>
           );
