@@ -142,14 +142,14 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
               <span className="block text-lg text-gray-400">{productImage.category}</span>
             </h1>
 
-            <div className="mt-2">
-              <p className="flex items-center gap-1">
-                <img src="/譲.svg" alt="譲" className="inline w-6" />
-                <span>{totalHaveCount(tradeDescriptions)}</span>
-              </p>
-              <p className="flex items-center gap-1">
-                <img src="/求.svg" alt="求" className="inline w-6" />
+            <div className="mt-2 flex max-w-lg gap-12 text-2xl">
+              <p className="flex items-center gap-2">
+                <img src="/求.svg" alt="求" className="inline w-7" />
                 <span>{totalWant(tradeDescriptions)}</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <img src="/譲.svg" alt="譲" className="inline w-7" />
+                <span>{totalHaveCount(tradeDescriptions)}</span>
               </p>
             </div>
 
