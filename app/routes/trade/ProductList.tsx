@@ -52,7 +52,7 @@ export const ProductList: React.FC<Props> = (props: Props) => {
   });
 
   return (
-    <div className="">
+    <div className="pb-8">
       <div className="sticky top-0 z-10 bg-white px-4 py-4">
         <RadioGroup
           className="flex items-center gap-2 select-none"
