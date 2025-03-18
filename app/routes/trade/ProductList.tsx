@@ -85,7 +85,9 @@ export const ProductList: React.FC<Props> = (props: Props) => {
 
       {filteredAllPhotos.map((item) => {
         const open = item.photos.some(
-          (photo) => `/trade/${encodeURIComponent(photo.slug)}` == location.pathname,
+          (photo) =>
+            "/trade" == location.pathname ||
+            `/trade/${encodeURIComponent(photo.slug)}` == location.pathname,
         );
 
         return (
