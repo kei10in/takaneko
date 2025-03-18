@@ -73,16 +73,16 @@ export default function Index() {
             // https://stackoverflow.com/questions/67076468/why-scrollbar-is-behind-sticky-elements-in-ios-safari
             style={{ transform: "translateZ(0)" }}
           >
-            <div className="absolute top-1.5 right-4 flex-none">
+            <div className="sticky top-0 z-50 ml-auto h-14 w-fit flex-none p-2">
               <button
                 className="rounded-full p-2 text-xl hover:bg-gray-200"
                 onClick={() => setShowMenu(false)}
               >
-                <HiXMark />
+                <HiXMark className="h-6 w-6 text-gray-800" />
               </button>
             </div>
 
-            <div className="pt-12">
+            <div>
               <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
             </div>
           </DialogPanel>
