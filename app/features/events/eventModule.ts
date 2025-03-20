@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { EventMeta } from "./meta";
 
 export interface EventModule {

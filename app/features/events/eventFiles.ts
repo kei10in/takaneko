@@ -1,3 +1,4 @@
+import { JSX } from "react";
 import { stem } from "~/utils/string";
 import { EventModule } from "./eventModule";
 import { validateEventMeta } from "./meta";
