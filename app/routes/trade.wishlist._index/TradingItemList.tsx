@@ -25,26 +25,34 @@ export function TradingItemList(props: TradingItemListProps) {
         <Link to={`/trade/${productImage.slug}`}>{productImage.name}</Link>
       </h3>
       <ul className="mt-2 grid grid-cols-3 justify-items-center gap-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {tradingItemDetails.map((detail) => (
-          <li
-            key={detail.item.id}
-            className="flex w-28 items-center justify-center overflow-hidden text-sm"
-          >
-            <div>
-              <ClippedImage
-                className="block max-h-36 w-full object-contain data-[shadow]:drop-shadow-sm"
-                data-shadow={shadow}
-                src={detail.product.url}
-                alt={`${detail.item.name} ${detail.item.id}`}
-                clip={detail.position}
-              />
-              <div className="pt-1 text-center">
-                <p className="line-clamp-2">{makeTitle(detail)}</p>
-                <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+        {tradingItemDetails.map((detail) => {
+          const scale = Math.min(112 / detail.position.width, 144 / detail.position.height);
+          const width = detail.position.width * scale;
+          const height = detail.position.height * scale;
+
+          return (
+            <li
+              key={detail.item.id}
+              className="flex w-28 items-center justify-center overflow-hidden text-sm"
+            >
+              <div>
+                <ClippedImage
+                  className="block max-h-36 max-w-full object-contain data-[shadow]:drop-shadow-sm"
+                  data-shadow={shadow}
+                  src={detail.product.url}
+                  alt={`${detail.item.name} ${detail.item.id}`}
+                  clip={detail.position}
+                  width={width}
+                  height={height}
+                />
+                <div className="pt-1 text-center">
+                  <p className="line-clamp-2">{makeTitle(detail)}</p>
+                  <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
