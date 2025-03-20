@@ -69,8 +69,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       url-metadata:
-        specifier: ^4.1.4
-        version: 4.1.4
+        specifier: ^5.0.3
+        version: 5.0.3
       zod:
         specifier: ^3.24.2
         version: 3.24.2
@@ -2338,6 +2338,10 @@ packages:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
     engines: {node: '>= 0.4'}
 
+  ipaddr.js@2.2.0:
+    resolution: {integrity: sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==}
+    engines: {node: '>= 10'}
+
   is-alphabetical@2.0.1:
     resolution: {integrity: sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==}
 
@@ -3312,6 +3316,9 @@ packages:
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
+  request-filtering-agent@2.0.1:
+    resolution: {integrity: sha512-QvD3qwthEt9J+2hCdQ3wTn3Z/ZsgyiMECjY9yVJ0F8FtnGfNQG+dRz65eKayYRHIRQ6OGjH8Zuqr1lw7G6pz1Q==}
+
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -3816,8 +3823,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  url-metadata@4.1.4:
-    resolution: {integrity: sha512-iunwLKjnn6D44uUuY2XjT+BOk8GR3FcucHGICQD33U2Y3RMXd0uykmvxCKDONT5ywzkSQ/gd566VdEONvtfphg==}
+  url-metadata@5.0.3:
+    resolution: {integrity: sha512-8SNYsRg2tunHJkelMthaXjrKBH4pbMIOJmczJHqAEyFGNdTKG7C4K1kMIMXAzBzUx7MRkuGWbbmSegfxpm4Jrw==}
     engines: {node: '>=18.0.0'}
 
   use-sync-external-store@1.4.0:
@@ -6432,6 +6439,8 @@ snapshots:
       hasown: 2.0.2
       side-channel: 1.1.0
 
+  ipaddr.js@2.2.0: {}
+
   is-alphabetical@2.0.1: {}
 
   is-alphanumerical@2.0.1:
@@ -7640,6 +7649,10 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
       unified: 11.0.5
 
+  request-filtering-agent@2.0.1:
+    dependencies:
+      ipaddr.js: 2.2.0
+
   resolve-from@4.0.0: {}
 
   resolve-from@5.0.0: {}
@@ -8251,10 +8264,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-metadata@4.1.4:
+  url-metadata@5.0.3:
     dependencies:
       cheerio: 1.0.0
       node-fetch: 3.3.2
+      request-filtering-agent: 2.0.1
 
   use-sync-external-store@1.4.0(react@19.0.0):
     dependencies:
