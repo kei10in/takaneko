@@ -15,7 +15,7 @@ export const コージー本舗第2弾アイラッシュカーラー_フォト�
     { id: 1, name: "ホワイト", description: "" },
     { id: 2, name: "ブラウン", description: "" },
   ],
-  withFrame: true,
+  withFrame: false,
   positions: [
     { id: 1, x: 430, y: 77, width: 520, height: 929 },
     { id: 2, x: 1116, y: 290, width: 929, height: 520 },
