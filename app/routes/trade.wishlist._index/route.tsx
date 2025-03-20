@@ -6,8 +6,11 @@ import { SITE_TITLE } from "~/constants";
 import { TradeTextType } from "~/features/products/product";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
-import { mapProductToTradingItemDetails } from "~/features/tradeSummaries/tradingItemDetails";
-import { AllMembers } from "../members/members";
+import {
+  mapProductToTradingItemDetails,
+  TradingItemDetail,
+} from "~/features/tradeSummaries/tradingItemDetails";
+import { AllMembers, MemberDescription } from "../members/members";
 import { TradingItemList } from "./TradingItemList";
 
 export const meta: MetaFunction = () => {
@@ -23,7 +26,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const selected = searchParams.get("m");
+  const selected = AllMembers.find((x) => x.id == searchParams.get("m"));
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const photos = TAKANEKO_PHOTOS.filter(
@@ -46,7 +49,9 @@ export default function Index() {
     }
 
     const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
-    const wants = details.filter((i) => i.status.tag === "want");
+    const wants = details
+      .filter((i) => i.status.tag === "want")
+      .filter((x) => matchMember(x, selected));
     if (wants.length === 0) {
       return [];
     }
@@ -61,7 +66,9 @@ export default function Index() {
     }
 
     const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
-    const wants = details.filter((i) => i.status.tag === "want");
+    const wants = details
+      .filter((i) => i.status.tag === "want")
+      .filter((x) => matchMember(x, selected));
     if (wants.length === 0) {
       return [];
     }
@@ -76,7 +83,9 @@ export default function Index() {
     }
 
     const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
-    const wants = details.filter((i) => i.status.tag === "want");
+    const wants = details
+      .filter((i) => i.status.tag === "want")
+      .filter((x) => matchMember(x, selected));
     if (wants.length === 0) {
       return [];
     }
@@ -111,7 +120,7 @@ export default function Index() {
                     onClick={() => setSearchParams(undefined, { preventScrollReset: true })}
                   >
                     <div className="text-nadeshiko-800 h-6 w-6">
-                      {AllMembers.every((x) => x.id != selected) ? (
+                      {AllMembers.every((x) => x.id != selected?.id) ? (
                         <BsCheck className="h-full w-full" />
                       ) : null}
                     </div>
@@ -136,7 +145,7 @@ export default function Index() {
                       onClick={() => setSearchParams({ m: c.id }, { preventScrollReset: true })}
                     >
                       <div className="text-nadeshiko-800 h-6 w-6">
-                        {c.id == selected ? <BsCheck className="h-full w-full" /> : null}
+                        {c.id == selected?.id ? <BsCheck className="h-full w-full" /> : null}
                       </div>
                       <div className="flex items-center gap-2">
                         <img
@@ -195,3 +204,6 @@ export default function Index() {
     </div>
   );
 }
+
+const matchMember = (x: TradingItemDetail, selected: MemberDescription | undefined) =>
+  selected == undefined || x.item.name == selected.id || x.item.name == selected.nyadeshiko;
