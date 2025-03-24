@@ -7,4 +7,10 @@ describe("TAKANEKO_PHOTOS", () => {
     const uniqueIds = Array.from(new Set(ids)).toSorted();
     expect(ids).toEqual(uniqueIds);
   });
+
+  it("should have unique slugs for each items", () => {
+    const slugs = TAKANEKO_PHOTOS.map((x) => x.slug).toSorted();
+    const uniqueSlugs = Array.from(new Set(slugs)).toSorted();
+    expect(slugs).toEqual(uniqueSlugs);
+  });
 });
