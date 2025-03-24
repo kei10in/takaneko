@@ -3,7 +3,7 @@ import { ClippedImage } from "~/components/ClippedImage";
 import { RandomGoods, TradeTextType } from "~/features/products/product";
 import type { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
 
-type TradingItemListProps = {
+type WishItemListProps = {
   productImage: RandomGoods;
 
   /** トレード対象アイテムの詳細情報の配列です */
@@ -14,7 +14,7 @@ type TradingItemListProps = {
  * トレード希望アイテムの一覧を表示するコンポーネントです。
  * アイテムごとに切り抜かれた画像、アイテム名、ID、シリーズ名を表示します。
  */
-export function TradingItemList(props: TradingItemListProps) {
+export function WishItemList(props: WishItemListProps) {
   const { productImage, tradingItemDetails } = props;
 
   const shadow = (productImage.withFrame ?? false) ? undefined : true;

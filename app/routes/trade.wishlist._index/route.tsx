@@ -11,7 +11,7 @@ import {
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
 import { AllMembers, MemberDescription } from "../members/members";
-import { TradingItemList } from "./TradingItemList";
+import { WishItemList } from "./WishItemList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -167,7 +167,7 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> 生写真
           </h2>
           {photoWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
+            <WishItemList
               key={productImage.slug}
               productImage={productImage}
               tradingItemDetails={tradingItemDetails}
@@ -180,7 +180,7 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> ミニフォトカード
           </h2>
           {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
+            <WishItemList
               key={productImage.slug}
               productImage={productImage}
               tradingItemDetails={tradingItemDetails}
@@ -193,7 +193,7 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> その他
           </h2>
           {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
+            <WishItemList
               key={productImage.slug}
               productImage={productImage}
               tradingItemDetails={tradingItemDetails}
