@@ -37,7 +37,7 @@ export function TradingItemList(props: TradingItemListProps) {
             >
               <div>
                 <ClippedImage
-                  className="block max-h-36 max-w-full object-contain data-[shadow]:drop-shadow-sm"
+                  className="mx-auto block max-h-36 max-w-full object-contain data-[shadow]:drop-shadow-sm"
                   data-shadow={shadow}
                   src={detail.product.url}
                   alt={`${detail.item.name} ${detail.item.id}`}
