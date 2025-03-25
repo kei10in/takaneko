@@ -29,7 +29,7 @@ const buildCroppedImages = (buildPath: string) => {
 
   fs.readdirSync(croppedImageDir).forEach((file) => {
     const src = path.resolve(croppedImageDir, file);
-    const dst = path.resolve(destDir, path.basename(file));
+    const dst = path.resolve(destDir, file);
     fs.copyFileSync(src, dst);
   });
 };
