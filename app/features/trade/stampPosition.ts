@@ -1,6 +1,6 @@
 import { ImagePosition } from "../products/product";
 
-interface Xywh {
+export interface Xywh {
   x: number;
   y: number;
   width: number;
