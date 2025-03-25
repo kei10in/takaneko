@@ -120,7 +120,7 @@ export default function Index() {
                 <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
               </h3>
               <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
-                トレード用画像を作ったついでに譲れるをリストアップできます。
+                トレード用画像を作ったついでに譲れるやつをリストアップできます。
               </p>
             </Link>
           </li>
