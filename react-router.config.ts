@@ -7,12 +7,27 @@ export const config: Config = {
   buildEnd: (args) => {
     const buildPath = args.viteConfig.build.outDir;
 
+    buildCroppedImages(buildPath);
+
     buildCalendar("all", "calendar.ics", buildPath);
     buildCalendar("meets", "calendar-meets.ics", buildPath);
     buildCalendar("updates", "calendar-updates.ics", buildPath);
 
     buildSitemap(buildPath);
   },
+};
+
+const buildCroppedImages = (buildPath: string) => {
+  const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
+  const buildCroppedImagesScript = path.resolve(__dirname, "scripts", "crop-items.ts");
+
+  execFileSync(cmd, ["tsx", buildCroppedImagesScript]).toString();
+
+  fs.readdirSync(path.resolve(__dirname, "public", "takaneko", "cropped")).forEach((file) => {
+    const src = file;
+    const dst = path.resolve(buildPath, "takaneko", "cropped", path.basename(file));
+    fs.copyFileSync(src, dst);
+  });
 };
 
 const buildCalendar = (kind: string, filename: string, buildPath: string) => {
