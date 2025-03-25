@@ -8,6 +8,7 @@ import {
 } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useState } from "react";
+import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
 import { Link, NavLink, useLocation } from "react-router";
 import { RandomGoods } from "../../features/products/product";
@@ -77,17 +78,25 @@ export const ProductList: React.FC<Props> = (props: Props) => {
         </RadioGroup>
       </div>
 
-      <div className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
-        <Link to="/trade/wishlist" onClick={onClickMenuItem}>
-          <p className="py-2 text-lg font-bold">欲しいやつ</p>
-        </Link>
-      </div>
+      <ul>
+        <li className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+          <Link to="/trade/wishlist" onClick={onClickMenuItem}>
+            <p className="flex items-center gap-2 py-2 text-lg font-bold">
+              <BsCardChecklist className="text-nadeshiko-900 inline-block" />
+              <span>欲しいやつ</span>
+            </p>
+          </Link>
+        </li>
 
-      <div className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
-        <Link to="/trade/tradelist" onClick={onClickMenuItem}>
-          <p className="py-2 text-lg font-bold">譲れるやつ</p>
-        </Link>
-      </div>
+        <li className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+          <Link to="/trade/tradelist" onClick={onClickMenuItem}>
+            <p className="flex items-center gap-2 py-2 text-lg font-bold">
+              <BsGift className="text-nadeshiko-900 inline-block" />
+              <span>譲れるやつ</span>
+            </p>
+          </Link>
+        </li>
+      </ul>
 
       {filteredAllPhotos.map((item) => {
         const open = item.photos.some(

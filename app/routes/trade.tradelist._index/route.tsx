@@ -1,6 +1,6 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import clsx from "clsx";
-import { BsCheck, BsChevronDown } from "react-icons/bs";
+import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { TradeTextType } from "~/features/products/product";
@@ -96,7 +96,10 @@ export default function Index() {
   return (
     <div className="mx-auto min-h-[calc(100lvh-3rem-3.5rem)] w-full max-w-lg lg:min-h-[calc(100vh-var(--header-height)-4rem)] lg:max-w-3xl">
       <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">譲れるやつ</h1>
+        <h1 className="my-4 flex items-center gap-3 text-3xl font-semibold text-gray-600">
+          <BsGift className="text-nadeshiko-900 inline-block" />
+          <span>譲れるやつ</span>
+        </h1>
         <div className="flex justify-end">
           <Popover className="w-28">
             <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
