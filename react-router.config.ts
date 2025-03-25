@@ -22,9 +22,10 @@ const buildCroppedImages = (buildPath: string) => {
   const buildCroppedImagesScript = path.resolve(__dirname, "scripts", "crop-items.ts");
 
   execFileSync(cmd, ["tsx", buildCroppedImagesScript]).toString();
+  const croppedPath = path.resolve(__dirname, "public", "takaneko", "cropped");
 
-  fs.readdirSync(path.resolve(__dirname, "public", "takaneko", "cropped")).forEach((file) => {
-    const src = file;
+  fs.readdirSync(croppedPath).forEach((file) => {
+    const src = path.resolve(croppedPath, file);
     const dst = path.resolve(buildPath, "takaneko", "cropped", path.basename(file));
     fs.copyFileSync(src, dst);
   });
