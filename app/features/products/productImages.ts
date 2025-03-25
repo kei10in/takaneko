@@ -87,7 +87,7 @@ import { バレンタイン2025_ミニフォト } from "./2025/2025-02-14_ミニ
 import { ラブレターカード } from "./2025/2025-02-14_ラブレターカード";
 import { バレンタイン2025_生写真 } from "./2025/2025-02-14_生写真「バレンタイン2025」";
 import { ピンク衣装_ミニフォト } from "./2025/2025-03-05_ミニフォトカード「ピンク衣装」";
-import { RandomGoods } from "./product";
+import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   ピンク衣装_ミニフォト,
@@ -180,3 +180,19 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   うぶごえ_生写真,
   アンチファン衣装_生写真,
 ];
+
+export const regularTakanekoPhotos = () =>
+  TAKANEKO_PHOTOS.filter((x) => x.category == "生写真" && x.tradeText == TradeTextType.Numbering);
+
+export const regularTakanekoMiniPhotoCards = () =>
+  TAKANEKO_PHOTOS.filter(
+    (x) => x.category == "ミニフォト" && x.tradeText == TradeTextType.Numbering,
+  );
+
+export const otherTakanekoRandomGoods = () =>
+  TAKANEKO_PHOTOS.filter(
+    (x) =>
+      (x.category == "生写真" && x.tradeText != TradeTextType.Numbering) ||
+      (x.category == "ミニフォト" && x.tradeText != TradeTextType.Numbering) ||
+      (x.category != "生写真" && x.category != "ミニフォト"),
+  );

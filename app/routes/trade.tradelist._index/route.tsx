@@ -3,8 +3,11 @@ import clsx from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
 import { SITE_TITLE } from "~/constants";
-import { TradeTextType } from "~/features/products/product";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import {
+  otherTakanekoRandomGoods,
+  regularTakanekoMiniPhotoCards,
+  regularTakanekoPhotos,
+} from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
 import {
   mapProductToTradingItemDetails,
@@ -29,18 +32,9 @@ export default function Index() {
   const selected = AllMembers.find((x) => x.id == searchParams.get("m"));
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
-  const photos = TAKANEKO_PHOTOS.filter(
-    (x) => x.category == "生写真" && x.tradeText == TradeTextType.Numbering,
-  );
-  const miniPhotoCards = TAKANEKO_PHOTOS.filter(
-    (x) => x.category == "ミニフォト" && x.tradeText == TradeTextType.Numbering,
-  );
-  const otherGoods = TAKANEKO_PHOTOS.filter(
-    (x) =>
-      (x.category == "生写真" && x.tradeText != TradeTextType.Numbering) ||
-      (x.category == "ミニフォト" && x.tradeText != TradeTextType.Numbering) ||
-      (x.category != "生写真" && x.category != "ミニフォト"),
-  );
+  const photos = regularTakanekoPhotos();
+  const miniPhotoCards = regularTakanekoMiniPhotoCards();
+  const otherGoods = otherTakanekoRandomGoods();
 
   const photoWants = photos.flatMap((productImage) => {
     const tradeDescriptions = allTradeDescriptions[productImage.id];
