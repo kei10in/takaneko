@@ -3,6 +3,7 @@ import {
   BsBoxArrowUp,
   BsCardChecklist,
   BsEraserFill,
+  BsGift,
   BsImage,
   BsPencilSquare,
   BsTrash,
@@ -109,6 +110,17 @@ export default function Index() {
               </h3>
               <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
                 トレード用画像を作ったついでに欲しいやつをリストアップできます。
+              </p>
+            </Link>
+          </li>
+          <li>
+            <Link className="group block" to="/trade/wishlist">
+              <h3 className="flex items-center gap-2 text-lg font-semibold">
+                <BsGift className="text-nadeshiko-900 group-hover:text-nadeshiko-950 inline-block" />
+                <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
+              </h3>
+              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
+                トレード用画像を作ったついでに譲れるをリストアップできます。
               </p>
             </Link>
           </li>

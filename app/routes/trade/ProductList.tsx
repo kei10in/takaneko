@@ -83,6 +83,12 @@ export const ProductList: React.FC<Props> = (props: Props) => {
         </Link>
       </div>
 
+      <div className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+        <Link to="/trade/tradelist" onClick={onClickMenuItem}>
+          <p className="py-2 text-lg font-bold">譲れるやつ</p>
+        </Link>
+      </div>
+
       {filteredAllPhotos.map((item) => {
         const open = item.photos.some(
           (photo) =>
