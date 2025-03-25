@@ -114,7 +114,7 @@ export default function Index() {
             </Link>
           </li>
           <li>
-            <Link className="group block" to="/trade/wishlist">
+            <Link className="group block" to="/trade/tradelist">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
                 <BsGift className="text-nadeshiko-900 group-hover:text-nadeshiko-950 inline-block" />
                 <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
