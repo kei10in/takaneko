@@ -3,6 +3,7 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import gfm from "remark-gfm";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { takanekono } from "./app/vite/plugin";
 
 // vitest 用の property の型を導入するために vite ではなく vitest の`defineConfig` を使います。
 import { defineConfig } from "vitest/config";
@@ -18,6 +19,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    takanekono(),
     tailwindcss(),
     mdx({
       remarkPlugins: [gfm],
