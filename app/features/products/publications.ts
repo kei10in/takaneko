@@ -53,7 +53,11 @@ import {
 } from "./publications/Top Yell NEO";
 import { VDCMagazine029, VDCMagazine030 } from "./publications/VDC Magazine";
 import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph";
-import { Zipper_2024_2025年冬号, Zipper_2024年秋号 } from "./publications/Zipper";
+import {
+  Zipper_2024_2025年冬号,
+  Zipper_2024年秋号,
+  Zipper_2025年春号,
+} from "./publications/Zipper";
 import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
 import { 日経エンタテインメント_2024年2月号 } from "./publications/日経エンタテイメント";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
@@ -115,6 +119,7 @@ const publications: Publication[] = [
   WHITE_graph_011,
   Zipper_2024年秋号,
   Zipper_2024_2025年冬号,
+  Zipper_2025年春号,
   週刊少年チャンピオン_2024年No51,
   日経エンタテインメント_2024年2月号,
   月刊ENTAME_2023年3_4月合併号,

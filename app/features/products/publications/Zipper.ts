@@ -1,5 +1,55 @@
 import { Publication } from "../product";
 
+export const Zipper_2025年春号: Publication = {
+  slug: "Zipper 2025年春号",
+  name: "Zipper 2025年春号",
+  date: "2025-03-28",
+  kind: "mooks",
+  publisher: "祥伝社",
+  listPrice: 800,
+  priceWithTax: 880,
+  code: [{ kind: "ISBN", value: "9784396880217" }],
+  url: "https://www.zipper.jp/news/20250328_02",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-03-28_Zipper 2025年春号_表紙_通常版.jpg",
+      ref: "https://x.com/zipperjp/status/1902193368622624985",
+    },
+    {
+      path: "/publications/2025/2025-03-28_Zipper 2025年春号_表紙_FRUITS ZIPPER.jpg",
+      ref: "https://x.com/zipperjp/status/1902193357620965761",
+    },
+  ],
+  featuredMembers: ["籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1905500124278915562",
+  links: [
+    {
+      text: "公式 X 発売告知",
+      url: "https://x.com/takanenofficial/status/1905500124278915562",
+    },
+    {
+      text: "籾山ひめり X 発売告知",
+      url: "https://x.com/himeri_momiyama/status/1905624963954127076",
+    },
+    {
+      text: "Zipper X 表紙解禁 通常版",
+      url: "https://x.com/zipperjp/status/1902193368622624985",
+    },
+    {
+      text: "Zipper X 表紙解禁 FRUITS ZIPPER",
+      url: "https://x.com/zipperjp/status/1902193357620965761",
+    },
+    {
+      text: "Zipper 公式サイト ニュース (通常版)",
+      url: "https://www.zipper.jp/news/20250328_02",
+    },
+    {
+      text: "Zipper 公式サイト ニュース (FRUITS ZIPPER版)",
+      url: "https://www.zipper.jp/news/20250328_01",
+    },
+  ],
+};
+
 export const Zipper_2024_2025年冬号: Publication = {
   slug: "Zipper 2024-2025年秋号",
   name: "Zipper 2024-2025年秋号",
