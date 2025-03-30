@@ -181,18 +181,20 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   アンチファン衣装_生写真,
 ];
 
-export const regularTakanekoPhotos = () =>
-  TAKANEKO_PHOTOS.filter((x) => x.category == "生写真" && x.tradeText == TradeTextType.Numbering);
+export const regularTakanekoPhotos = () => TAKANEKO_PHOTOS.filter(isRegularTakanekoPhoto);
+
+export const isRegularTakanekoPhoto = (photo: RandomGoods) =>
+  photo.category == "生写真" && photo.tradeText == TradeTextType.Numbering;
 
 export const regularTakanekoMiniPhotoCards = () =>
-  TAKANEKO_PHOTOS.filter(
-    (x) => x.category == "ミニフォト" && x.tradeText == TradeTextType.Numbering,
-  );
+  TAKANEKO_PHOTOS.filter(isRegularTakanekoMiniPhotoCard);
 
-export const otherTakanekoRandomGoods = () =>
-  TAKANEKO_PHOTOS.filter(
-    (x) =>
-      (x.category == "生写真" && x.tradeText != TradeTextType.Numbering) ||
-      (x.category == "ミニフォト" && x.tradeText != TradeTextType.Numbering) ||
-      (x.category != "生写真" && x.category != "ミニフォト"),
-  );
+export const isRegularTakanekoMiniPhotoCard = (photo: RandomGoods) =>
+  photo.category == "ミニフォト" && photo.tradeText == TradeTextType.Numbering;
+
+export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTakanekoRandomGoods);
+
+export const isOtherTakanekoRandomGoods = (photo: RandomGoods) =>
+  (photo.category == "生写真" && photo.tradeText != TradeTextType.Numbering) ||
+  (photo.category == "ミニフォト" && photo.tradeText != TradeTextType.Numbering) ||
+  (photo.category != "生写真" && photo.category != "ミニフォト");
