@@ -19,10 +19,14 @@ export const TopYellNeo2025Spring: Publication = {
       path: "/publications/2025/2025-03-31_Top Yell NEO 2025 SPRING_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10107376.html",
     },
+    {
+      path: "/publications/2025/2025-03-31_Top Yell NEO 2025 SPRING_1.jpg",
+      ref: "https://x.com/TopYell/status/1906170796097314889",
+    },
   ],
   featuredMembers: ["涼海すう"],
   officialTwitter: undefined,
-  links: [],
+  links: [{ text: "掲載内容紹介", url: "https://x.com/TopYell/status/1906170796097314889" }],
 };
 
 export const TopYellNeo2024_2025: Publication = {
