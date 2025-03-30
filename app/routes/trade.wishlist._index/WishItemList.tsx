@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { ClippedImage } from "~/components/ClippedImage";
+import { croppedImagePath } from "~/features/products/croppedProductImage";
 import { RandomGoods, TradeTextType } from "~/features/products/product";
 import type { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
 
@@ -30,18 +30,19 @@ export function WishItemList(props: WishItemListProps) {
           const width = detail.position.width * scale;
           const height = detail.position.height * scale;
 
+          const imagePath = croppedImagePath(detail.product.url, detail.position.id);
+
           return (
             <li
               key={detail.item.id}
               className="flex w-28 items-center justify-center overflow-hidden text-sm"
             >
               <div>
-                <ClippedImage
+                <img
                   className="mx-auto block max-h-36 max-w-full object-contain data-[shadow]:drop-shadow-sm"
                   data-shadow={shadow}
-                  src={detail.product.url}
+                  src={imagePath}
                   alt={`${detail.item.name} ${detail.item.id}`}
-                  clip={detail.position}
                   width={width}
                   height={height}
                 />
