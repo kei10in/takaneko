@@ -80,7 +80,7 @@
     "vite-plugin-inspect": "^11.0.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.9",
-    "wrangler": "3.114.2"
+    "wrangler": "3.114.3"
   },
   "engines": {
     "node": ">=20.0.0"
