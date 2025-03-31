@@ -25,7 +25,7 @@ export const TopYellNeo2025Spring: Publication = {
     },
   ],
   featuredMembers: ["涼海すう"],
-  officialTwitter: undefined,
+  officialTwitter: "https://x.com/takanenofficial/status/1906557098252791827",
   links: [{ text: "掲載内容紹介", url: "https://x.com/TopYell/status/1906170796097314889" }],
 };
 
