@@ -7,21 +7,8 @@ export const config: Config = {
   buildEnd: (args) => {
     const buildPath = args.viteConfig.build.outDir;
 
-    buildCalendar("all", "calendar.ics", buildPath);
-    buildCalendar("meets", "calendar-meets.ics", buildPath);
-    buildCalendar("updates", "calendar-updates.ics", buildPath);
-
     buildSitemap(buildPath);
   },
-};
-
-const buildCalendar = (kind: string, filename: string, buildPath: string) => {
-  const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
-  const buildCalendarScript = path.resolve(__dirname, "scripts", "build-calendar.ts");
-  const output = path.resolve(__dirname, path.join("public", filename));
-
-  execFileSync(cmd, ["tsx", buildCalendarScript, kind, output]).toString();
-  fs.copyFileSync(output, path.join(buildPath, filename));
 };
 
 const buildSitemap = (buildPath: string) => {
