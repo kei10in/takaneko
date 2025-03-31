@@ -4,7 +4,7 @@ import path from "node:path";
 import { Readable, Writable } from "node:stream";
 import { Plugin, ViteDevServer } from "vite";
 
-export const takanekono = (): Plugin => {
+export const croppingProductImages = (): Plugin => {
   let worker: ChildProcessByStdio<Writable, Readable, null> | undefined;
   let server: ViteDevServer | undefined;
 
