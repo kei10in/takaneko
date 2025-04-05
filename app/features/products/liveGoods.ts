@@ -14,6 +14,7 @@ import { たかねこの秋祭り2024_FC_limited } from "./lives/たかねこの
 import { たかねこクリスマスパーティー2023 } from "./lives/たかねこクリスマスパーティー2023";
 import { たかねこクリスマスパーティー2024 } from "./lives/たかねこクリスマスパーティー2024";
 import { たかねこクリスマスパーティ2022 } from "./lives/たかねこクリスマスパーティ－2022";
+import { たかねこフェスvol4_出張編 } from "./lives/たかねこフェス vol.4 出張編";
 import { たかねこフェス_オータムセッション_たかねこLiFE } from "./lives/たかねこフェス〜オータムセッション〜 たかねこLiFE!";
 import { メジャーデビュー記念ライブBeginning } from "./lives/メジャーデビュー記念ライブ〜Beginning〜";
 import {
@@ -27,6 +28,7 @@ import {
 import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
+  たかねこフェスvol4_出張編,
   CuteForLife,
   たかねこクリスマスパーティー2024,
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる後夜祭,
