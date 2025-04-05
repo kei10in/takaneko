@@ -9,8 +9,16 @@ export const IDOL_FILE_Vol35: Publication = {
   listPrice: 1818,
   priceWithTax: 2000,
   code: [{ kind: "", value: "" }],
-  url: "",
+  url: "https://www.shinko-music.co.jp/item/pid0763246/",
   coverImages: [
+    {
+      path: "/publications/2025/2025-04-11_IDOL FILE Vol.35_表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/1908086065950577132",
+    },
+    {
+      path: "/publications/2025/2025-04-11_IDOL FILE Vol.35_裏表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/1908086065950577132",
+    },
     {
       path: "/publications/2025/2025-04-11_IDOL FILE Vol.35_籾山ひめり.jpg",
       ref: "https://x.com/idolfile_jp/status/1894984207992266860",
