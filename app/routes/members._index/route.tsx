@@ -3,7 +3,7 @@ import { FaTiktok } from "react-icons/fa6";
 import { SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
-import { AllMembers } from "./members/members";
+import { AllMembers } from "../../features/members/members";
 
 export const meta: MetaFunction = () => {
   return [

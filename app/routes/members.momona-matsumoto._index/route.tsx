@@ -1,8 +1,8 @@
 import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
+import { MemberProfile } from "~/components/MemberProfile";
 import { SITE_TITLE } from "~/constants";
-import { MemberProfile } from "~/routes/members/MemberProfile";
-import { MomonaMatsumoto } from "./members/members";
+import { MomonaMatsumoto } from "../../features/members/members";
 
 export const meta: MetaFunction = () => {
   return [

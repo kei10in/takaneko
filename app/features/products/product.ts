@@ -1,4 +1,4 @@
-import { MemberName } from "~/routes/members/members";
+import { MemberName } from "~/features/members/members";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 

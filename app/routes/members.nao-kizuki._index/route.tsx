@@ -1,7 +1,7 @@
 import { Link, MetaFunction } from "react-router";
+import { MemberProfile } from "~/components/MemberProfile";
 import { SITE_TITLE } from "~/constants";
-import { MemberProfile } from "~/routes/members/MemberProfile";
-import { NaoKizuki } from "./members/members";
+import { NaoKizuki } from "../../features/members/members";
 
 export const meta: MetaFunction = () => {
   return [

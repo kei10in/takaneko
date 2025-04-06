@@ -7,7 +7,7 @@ import {
   MemberDescription,
   MemberName,
   MemberNameOrGroup,
-} from "../members/members";
+} from "../../features/members/members";
 
 export const makePageDescription = (meta: EventMeta): string => {
   if (meta.category == EventType.LIVE) {

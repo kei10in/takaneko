@@ -1,4 +1,4 @@
-import { AllMembers } from "~/routes/members/members";
+import { AllMembers } from "~/features/members/members";
 import { ItemDescription, RandomGoods } from "../products/product";
 import { TradeDescription } from "../trade/TradeStatus";
 

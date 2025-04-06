@@ -1,6 +1,6 @@
 import { MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
-import ReleaseNotes from "../../RELEASES.md";
+import ReleaseNotes from "../../../RELEASES.md";
 
 export const meta: MetaFunction = () => {
   return [
