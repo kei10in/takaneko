@@ -1,0 +1,38 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const 春野莉々誕生日記念グッズ_生写真: RandomGoods = {
+  id: "生写真「春野莉々誕生日記念グッズ 2025」",
+  slug: "生写真「春野莉々誕生日記念グッズ 2025」",
+  name: "生写真「春野莉々誕生日記念グッズ 2025」",
+  year: 2025,
+  series: "春野莉々誕生日記念グッズ 2025",
+  category: "生写真",
+  tradeText: TradeTextType.Description,
+  url: "/takaneko/goods/2025/2025-01-16_生写真「春野莉々誕生日記念グッズ 2025」.webp",
+  width: 1600,
+  height: 1600,
+  lineup: [
+    { id: 1, name: "春野莉々", description: "狼耳 & 王冠 1" },
+    { id: 2, name: "春野莉々", description: "狼耳 & 王冠 2" },
+    { id: 3, name: "春野莉々", description: "狼耳 & 王冠 3" },
+    { id: 4, name: "春野莉々", description: "狼耳 & 王冠 4" },
+    { id: 5, name: "春野莉々", description: "王冠 1" },
+    { id: 6, name: "春野莉々", description: "王冠 2" },
+    { id: 7, name: "春野莉々", description: "狼耳 1" },
+    { id: 8, name: "春野莉々", description: "狼耳 2" },
+    { id: 9, name: "春野莉々", description: "狼耳 3" },
+    { id: 10, name: "春野莉々", description: "狼耳 4" },
+  ],
+  positions: [
+    { id: 1, x: 276, y: 96, width: 273, height: 417 },
+    { id: 2, x: 591, y: 96, width: 417, height: 273 },
+    { id: 3, x: 1052, y: 96, width: 273, height: 417 },
+    { id: 4, x: 263, y: 573, width: 273, height: 417 },
+    { id: 5, x: 591, y: 415, width: 417, height: 273 },
+    { id: 6, x: 1055, y: 573, width: 273, height: 417 },
+    { id: 7, x: 591, y: 718, width: 417, height: 273 },
+    { id: 8, x: 262, y: 1037, width: 273, height: 417 },
+    { id: 9, x: 662, y: 1037, width: 273, height: 417 },
+    { id: 10, x: 1058, y: 1037, width: 273, height: 417 },
+  ],
+};
