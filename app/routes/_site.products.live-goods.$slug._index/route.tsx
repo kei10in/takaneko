@@ -32,7 +32,7 @@ export default function Index() {
   const images = live.images;
 
   return (
-    <div className="container mx-auto min-h-[calc(100svh-var(--header-height))]">
+    <div className="container mx-auto">
       <section className="px-4 py-8">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">{live.name}</h1>
 

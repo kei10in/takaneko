@@ -12,7 +12,6 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
-import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
@@ -49,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <Links />
       </head>
-      <body className="flex min-h-svh flex-col text-gray-800">
+      <body className="text-gray-800">
         <div className="border-b-nadeshiko-200 bg-nadeshiko-50/90 z-10 h-(--header-height) border-b backdrop-blur-sm lg:sticky lg:top-0">
           <div className="container mx-auto h-full">
             <div className="flex h-full items-center px-4">
@@ -107,9 +106,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div className="flex-1">{children}</div>
-
-        <Footer className="flex-none" />
+        {children}
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
           <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">

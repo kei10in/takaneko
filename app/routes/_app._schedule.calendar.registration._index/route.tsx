@@ -1,6 +1,6 @@
-import { BsBoxArrowUp, BsCalendar3 } from "react-icons/bs";
+import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { CopyButton } from "~/components/CopyButton";
+import { SharableUrl } from "~/components/SharableUrl";
 import { DOMAIN } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -38,7 +38,7 @@ export default function Index() {
   const showShareButton = shouldUseWebShareApi();
 
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto max-w-3xl">
       <section className="my-12 px-4 text-gray-800">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">アプリに登録</h1>
 
@@ -79,36 +79,12 @@ export default function Index() {
 
               <div className="space-y-2">
                 <p className="font-bold">カレンダーの URL:</p>
-                <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
-                  <div className="h-8 flex-1">
-                    <input
-                      className="h-full w-full rounded-md border px-2 font-mono text-sm"
-                      readOnly
-                      value={cal.url}
-                    />
-                  </div>
-                  <div className="flex flex-none items-center justify-end">
-                    {showShareButton && (
-                      <button
-                        className="group flex h-8 w-8 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100"
-                        onClick={async () => {
-                          if (window?.navigator?.share == undefined) {
-                            return;
-                          }
-
-                          await window.navigator.share({
-                            title: "すべてのたかねこの予定",
-                            text: "",
-                            url: cal.url,
-                          });
-                        }}
-                      >
-                        <BsBoxArrowUp className="h-4 w-4 text-gray-600" />
-                      </button>
-                    )}
-                    <CopyButton className="flex-none" data={cal.url} />
-                  </div>
-                </div>
+                <SharableUrl
+                  url={cal.url}
+                  title="すべてのたかねこの予定"
+                  shareButton={showShareButton}
+                  className="mt-2"
+                />
               </div>
             </div>
           </section>

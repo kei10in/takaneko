@@ -88,7 +88,7 @@ export default function Index() {
   });
 
   return (
-    <div className="mx-auto min-h-[calc(100lvh-3rem-3.5rem)] w-full max-w-lg lg:min-h-[calc(100vh-var(--header-height)-4rem)] lg:max-w-3xl">
+    <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
       <section className="px-4 py-8">
         <h1 className="my-4 flex items-center gap-3 text-3xl font-semibold text-gray-600">
           <BsCardChecklist className="text-nadeshiko-900 inline-block" />
