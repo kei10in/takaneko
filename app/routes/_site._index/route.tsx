@@ -11,7 +11,7 @@ import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import { ProductItem } from "../trade/ProductItem";
+import { ProductItem } from "../_app.trade/ProductItem";
 
 export const meta: MetaFunction = () => {
   const title = SITE_TITLE;

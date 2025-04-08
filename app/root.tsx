@@ -12,7 +12,6 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
-import { Footer } from "./components/Footer";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
@@ -107,10 +106,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
 
-        <div>
-          <div className="min-h-[calc(100svh-var(--header-height))]">{children}</div>
-          <Footer />
-        </div>
+        {children}
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
           <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">

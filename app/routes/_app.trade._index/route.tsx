@@ -11,8 +11,8 @@ import {
 import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { ProductItem } from "~/routes/_app.trade/ProductItem";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { ProductItem } from "../trade/ProductItem";
 
 export const meta: MetaFunction = () => {
   return [
