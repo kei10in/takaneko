@@ -38,7 +38,7 @@ export default function Index() {
   const showShareButton = shouldUseWebShareApi();
 
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto max-w-3xl">
       <section className="my-12 px-4 text-gray-800">
         <h1 className="my-4 text-3xl font-semibold text-gray-600">アプリに登録</h1>
 
@@ -79,7 +79,7 @@ export default function Index() {
 
               <div className="space-y-2">
                 <p className="font-bold">カレンダーの URL:</p>
-                <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
+                <div className="mt-2 flex items-center gap-1 text-gray-600">
                   <div className="h-8 flex-1">
                     <input
                       className="h-full w-full rounded-md border px-2 font-mono text-sm"

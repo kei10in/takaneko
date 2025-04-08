@@ -29,7 +29,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="container mx-auto lg:max-w-5xl">
+    <div className="container mx-auto max-w-3xl">
       <section className="px-4 py-8">
         <section className="text-gray-700">
           <h2 className="center my-4 text-3xl font-semibold text-gray-600">
@@ -45,7 +45,7 @@ export default function Index() {
             {feeds.map((feed) => (
               <div key={feed.url} className="">
                 <h3>{feed.name}</h3>
-                <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
+                <div className="mt-2 flex items-center gap-2 text-gray-600">
                   <div className="h-8 flex-1">
                     <input
                       className="h-full w-full rounded-md border px-2 font-mono text-sm"

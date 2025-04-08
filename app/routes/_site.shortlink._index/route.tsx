@@ -56,7 +56,7 @@ export default function Index() {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="mx-auto max-w-3xl">
       <section className="px-4 py-8 text-gray-700">
         <h1 className="center my-4 text-3xl font-semibold text-gray-600">短い URL を作るやつ</h1>
         <p className="mt-8">
@@ -67,19 +67,16 @@ export default function Index() {
           高嶺のなでしこ公式サイトの URL を X にポストしたいんだけどどうやったら公式 X みたいな URL
           になるの？という疑問にお応えします。
         </p>
-        <Form
-          className="mt-4 items-center space-y-2 lg:flex lg:space-y-0 lg:space-x-2"
-          method="get"
-        >
+        <Form className="mt-4 items-center space-y-2 md:flex md:gap-2 md:space-y-0" method="get">
           <input
-            className="block w-full rounded-md border px-2 py-1 font-mono outline-hidden lg:flex-1"
+            className="block h-8 w-full rounded-md border px-2 font-mono text-sm outline-hidden md:flex-1"
             type="text"
             placeholder="高嶺のなでしこ公式サイト内のページの URL"
             name="url"
             defaultValue={urlInQuery ?? undefined}
           />
           <button
-            className="bg-nadeshiko-800 ml-auto block h-8 rounded-md px-6 font-bold text-white lg:ml-0 lg:flex-none"
+            className="bg-nadeshiko-800 ml-auto block h-8 rounded-md px-6 font-bold text-white md:ml-0 md:flex-none"
             type="submit"
           >
             短くする
@@ -90,10 +87,10 @@ export default function Index() {
         {data.url != undefined && (
           <section className="mt-4">
             <h3 className="text-bold mb-2 text-xl text-gray-700">結果</h3>
-            <div className="mt-2 items-center gap-2 space-y-1 text-gray-600 lg:flex lg:space-y-0">
-              <div className="flex-1">
+            <div className="mt-2 flex items-center gap-2 text-gray-600">
+              <div className="h-8 flex-1">
                 <input
-                  className="h-full w-full rounded-md border px-2 py-2 font-mono text-sm"
+                  className="h-full w-full rounded-md border px-2 font-mono text-sm"
                   readOnly
                   value={data.url}
                 />
