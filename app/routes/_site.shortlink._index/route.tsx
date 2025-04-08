@@ -1,4 +1,3 @@
-import { BsBoxArrowUp } from "react-icons/bs";
 import {
   Form,
   Link,
@@ -7,7 +6,7 @@ import {
   useLoaderData,
   useSearchParams,
 } from "react-router";
-import { CopyButton } from "~/components/CopyButton";
+import { SharableUrl } from "~/components/SharableUrl";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { shortlink, ShortLinkResult } from "~/utils/shortlink";
@@ -87,36 +86,12 @@ export default function Index() {
         {data.url != undefined && (
           <section className="mt-4">
             <h3 className="text-bold mb-2 text-xl text-gray-700">結果</h3>
-            <div className="mt-2 flex items-center gap-2 text-gray-600">
-              <div className="h-8 flex-1">
-                <input
-                  className="h-full w-full rounded-md border px-2 font-mono text-sm"
-                  readOnly
-                  value={data.url}
-                />
-              </div>
-              <div className="flex flex-none items-center justify-end">
-                {showShareButton && (
-                  <button
-                    className="group flex h-8 w-8 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100"
-                    onClick={async () => {
-                      if (window?.navigator?.share == undefined) {
-                        return;
-                      }
-
-                      await window.navigator.share({
-                        title: "高嶺のなでしこ公式サイトの URL",
-                        text: "",
-                        url: data.url,
-                      });
-                    }}
-                  >
-                    <BsBoxArrowUp className="h-4 w-4 text-gray-600" />
-                  </button>
-                )}
-                <CopyButton className="flex-none" data={data.url} />
-              </div>
-            </div>
+            <SharableUrl
+              url={data.url}
+              title="高嶺のなでしこ公式サイトの URL"
+              shareButton={showShareButton}
+              className="mt-2"
+            />
           </section>
         )}
 
