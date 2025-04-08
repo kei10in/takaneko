@@ -51,13 +51,11 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <div className="min-h-[calc(100svh-var(--header-height))]">
-        {product.kind === "images" ? (
-          <PhotoProduct product={product.description} />
-        ) : (
-          <PublicationProduct product={product.description} />
-        )}
-      </div>
+      {product.kind === "images" ? (
+        <PhotoProduct product={product.description} />
+      ) : (
+        <PublicationProduct product={product.description} />
+      )}
     </div>
   );
 }

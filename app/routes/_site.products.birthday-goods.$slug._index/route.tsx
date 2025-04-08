@@ -34,7 +34,7 @@ export default function Index() {
   const images = [...collection.images, ...collection.lineup.flatMap((item) => item.images ?? [])];
 
   return (
-    <div className="container mx-auto min-h-[calc(100svh-var(--header-height))]">
+    <div className="container mx-auto">
       <section className="pt-8 pb-12">
         <h1 className="my-4 px-4 text-3xl font-semibold text-gray-600">{collection.name}</h1>
 

@@ -29,7 +29,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="container mx-auto min-h-[calc(100svh-var(--header-height))] lg:max-w-5xl">
+    <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
         <section className="text-gray-700">
           <h2 className="center my-4 text-3xl font-semibold text-gray-600">

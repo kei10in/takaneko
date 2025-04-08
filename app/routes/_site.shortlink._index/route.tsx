@@ -56,7 +56,7 @@ export default function Index() {
   }
 
   return (
-    <div className="container mx-auto min-h-[calc(100svh-var(--header-height))] lg:max-w-5xl">
+    <div className="container mx-auto">
       <section className="px-4 py-8 text-gray-700">
         <h1 className="center my-4 text-3xl font-semibold text-gray-600">短い URL を作るやつ</h1>
         <p className="mt-8">
