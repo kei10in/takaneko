@@ -8,14 +8,19 @@ import { 誇り高きアイドル } from "./2022/誇り高きアイドル";
 import { _17歳 } from "./2023/17歳";
 import { いつか私がママになったら } from "./2023/いつか私がママになったら";
 import { すきっちゅーの } from "./2023/すきっちゅーの！";
+import { シス_ラブ } from "./2023/シス×ラブ";
+import { ハッピークリスマスパーティ } from "./2023/ハッピークリスマスパーティ";
 import { ヒロインは平均以下 } from "./2023/ヒロインは平均以下。";
+import { 世界は恋に落ちている } from "./2023/世界は恋に落ちている";
 import { 今好きになる } from "./2023/今好きになる。";
 import { 僕は君になれない } from "./2023/僕は君になれない";
 import { 初恋のひと } from "./2023/初恋のひと。";
 import { 月曜日の憂鬱 } from "./2023/月曜日の憂鬱";
 import { 決戦スピリット } from "./2023/決戦スピリット";
 import { 男の子の目的は何 } from "./2023/男の子の目的は何？";
+import { 私が恋を知る日 } from "./2023/私が恋を知る日";
 import { 超絶かわいい } from "./2023/超絶かわいい";
+import { 醜い生き物 } from "./2023/醜い生き物";
 import { 革命の女王 } from "./2023/革命の女王";
 import { IM_YOUR_IDOL } from "./2024/I’M YOUR IDOL";
 import { LOVE_ANTHEM } from "./2024/LOVE ANTHEM";
@@ -24,6 +29,7 @@ import { アイのウイルス } from "./2024/アイのウイルス";
 import { アドレナリンゲーム } from "./2024/アドレナリンゲーム";
 import { メイド至上主義 } from "./2024/メイド☆至上主義";
 import { モテチェン } from "./2024/モテチェン！";
+import { ラブホイッスル } from "./2024/ラブホイッスル";
 import { 初恋の絵本 } from "./2024/初恋の絵本";
 import { 可愛いって言われたい } from "./2024/可愛いって言われたい";
 import { 恋を知った世界 } from "./2024/恋を知った世界";
@@ -47,6 +53,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   アイのウイルス,
   IM_YOUR_IDOL,
   アドレナリンゲーム,
+  ラブホイッスル,
   死ぬまでダーリン,
   LOVE_ANTHEM,
   モテチェン,
@@ -59,7 +66,12 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   美しく生きろ,
   No1,
   // 2023
+  私が恋を知る日,
+  ハッピークリスマスパーティ,
   いつか私がママになったら,
+  醜い生き物,
+  シス_ラブ,
+  世界は恋に落ちている,
   今好きになる,
   すきっちゅーの,
   _17歳,
