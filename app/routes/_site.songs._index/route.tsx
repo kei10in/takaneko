@@ -37,7 +37,7 @@ export default function Component() {
                       <img
                         src={track.image.path}
                         alt={track.name}
-                        className="h-40 w-40 object-cover"
+                        className="bg-nadeshiko-300 h-40 w-40 object-contain"
                       />
                     )}
                   </div>

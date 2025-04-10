@@ -24,6 +24,7 @@ import { アイのウイルス } from "./2024/アイのウイルス";
 import { アドレナリンゲーム } from "./2024/アドレナリンゲーム";
 import { メイド至上主義 } from "./2024/メイド☆至上主義";
 import { モテチェン } from "./2024/モテチェン！";
+import { 初恋の絵本 } from "./2024/初恋の絵本";
 import { 可愛いって言われたい } from "./2024/可愛いって言われたい";
 import { 恋を知った世界 } from "./2024/恋を知った世界";
 import { 推しの魔法 } from "./2024/推しの魔法";
@@ -42,6 +43,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   CuteForLife,
   小悪魔だってかまわない,
   // 2024
+  初恋の絵本,
   アイのウイルス,
   IM_YOUR_IDOL,
   アドレナリンゲーム,
