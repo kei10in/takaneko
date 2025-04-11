@@ -27,6 +27,7 @@ import { LOVE_ANTHEM } from "./2024/LOVE ANTHEM";
 import { No1 } from "./2024/No.1";
 import { アイのウイルス } from "./2024/アイのウイルス";
 import { アドレナリンゲーム } from "./2024/アドレナリンゲーム";
+import { センパイ } from "./2024/センパイ";
 import { メイド至上主義 } from "./2024/メイド☆至上主義";
 import { モテチェン } from "./2024/モテチェン！";
 import { ラブホイッスル } from "./2024/ラブホイッスル";
@@ -58,6 +59,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   LOVE_ANTHEM,
   モテチェン,
   私より好きでいて,
+  センパイ,
   メイド至上主義,
   推しの魔法,
   恋を知った世界,
