@@ -1,9 +1,12 @@
+import { BsYoutube } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { YouTube2022 } from "~/features/media/2022/youtube";
 import { YouTube2023 } from "~/features/media/2023/youtube";
 import { YouTube2024 } from "~/features/media/2024/youtube";
 import { YouTube2025 } from "~/features/media/2025/youtube";
 import { YouTubeVideoMetadata } from "~/features/media/types";
+import { displayDate } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 import { validateYouTubeOEmbedResponse } from "~/utils/youtube/youtubeOEmbed";
 
@@ -74,7 +77,13 @@ export default function MediaIndex() {
                   <div className="flex w-full gap-4">
                     <div className="flex-1">
                       <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
-                      <p className="line-clamp-1 text-sm text-gray-600">{video.channelTitle}</p>
+                      <p className="line-clamp-1 text-sm text-gray-600">
+                        <BsYoutube className="mr-2 inline" />
+                        {video.channelTitle}
+                      </p>
+                      <p className="line-clamp-1 text-sm text-gray-600">
+                        {displayDate(NaiveDate.parseUnsafe(video.publishedAt))}
+                      </p>
                     </div>
                     <div className="max-h-32 w-32 flex-none">
                       <img src={video.thumbnailUrl} alt={video.title} className="object-contain" />
