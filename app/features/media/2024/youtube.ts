@@ -17,6 +17,31 @@ export const YouTube2024 = [
     presents: ["高嶺のなでしこ"],
   },
   {
+    videoId: "oTSf8zfMoAY",
+    publishedAt: "2024-11-12",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
+    videoId: "sm1Y8fQ0fqU",
+    publishedAt: "2024-11-11",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
+    videoId: "YALM6PgE1sQ",
+    publishedAt: "2024-11-10",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
+    videoId: "EpBnreI1nQY",
+    publishedAt: "2024-11-09",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
+    videoId: "CS0BTp4e1IA",
+    publishedAt: "2024-11-03",
+    presents: ["松本ももな"],
+  },
+  {
     videoId: "MjnzhkdtezY",
     publishedAt: "2024-10-16",
     presents: undefined,
