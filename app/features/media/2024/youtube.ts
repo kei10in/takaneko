@@ -2,9 +2,34 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2024 = [
   {
+    videoId: "69Kukwgz8R0",
+    publishedAt: "2024-12-28",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "bCM_vq0rScs",
+    publishedAt: "2024-12-22",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "rIANtpllshE",
+    publishedAt: "2024-12-08",
+    presents: ["高嶺のなでしこ"],
+  },
+  {
     videoId: "MjnzhkdtezY",
     publishedAt: "2024-10-16",
     presents: undefined,
+  },
+  {
+    videoId: "QdegLqwOZ9E",
+    publishedAt: "2024-09-28",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "Xy8rDxy6Hgs",
+    publishedAt: "2024-09-23",
+    presents: ["涼海すう"],
   },
   {
     videoId: "eSb_h9ohh6Q",
@@ -12,9 +37,24 @@ export const YouTube2024 = [
     presents: ["松本ももな"],
   },
   {
+    videoId: "BlutW1YWek8",
+    publishedAt: "2024-08-31",
+    presents: ["涼海すう"],
+  },
+  {
     videoId: "jmGEMZg45xc",
     publishedAt: "2024-08-30",
     presents: ["籾山ひめり"],
+  },
+  {
+    videoId: "s1ebJP17-TU",
+    publishedAt: "2024-08-25",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "B_pTpzsaObE",
+    publishedAt: "2024-08-04",
+    presents: ["高嶺のなでしこ"],
   },
   {
     videoId: "8sm8FpP8gQ8",
@@ -27,9 +67,19 @@ export const YouTube2024 = [
     presents: ["松本ももな"],
   },
   {
+    videoId: "aAE1tGG1iLg",
+    publishedAt: "2024-06-30",
+    presents: ["涼海すう"],
+  },
+  {
     videoId: "jKqtH-d6whg",
     publishedAt: "2024-06-28",
     presents: ["橋本桃呼"],
+  },
+  {
+    videoId: "qDWptqbPVDc",
+    publishedAt: "2024-06-22",
+    presents: ["涼海すう"],
   },
   {
     videoId: "dp7fYvkROYc",

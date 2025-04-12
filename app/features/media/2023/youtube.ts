@@ -37,6 +37,11 @@ export const YouTube2023 = [
     presents: ["涼海すう", "橋本桃呼", "春野莉々", "東山恵里沙", "日向端ひな"],
   },
   {
+    videoId: "dcE73pJT4rA",
+    publishedAt: "2023-09-19",
+    presents: ["高嶺のなでしこ"],
+  },
+  {
     videoId: "SZIHQHnKJIc",
     publishedAt: "2023-08-31",
     presents: ["春野莉々"],
@@ -50,6 +55,16 @@ export const YouTube2023 = [
     videoId: "AefOHYVIuHo",
     publishedAt: "2023-08-07",
     presents: undefined,
+  },
+  {
+    videoId: "_tU8lAPv684",
+    publishedAt: "2023-07-19",
+    presents: ["高嶺のなでしこ"],
+  },
+  {
+    videoId: "NQBiKzJY4gE",
+    publishedAt: "2023-06-14",
+    presents: ["高嶺のなでしこ"],
   },
   {
     videoId: "bwjBjaTIlBk",
