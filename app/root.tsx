@@ -70,6 +70,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/songs">
                     楽曲
                   </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/media">
+                    メディア
+                  </Link>
                   <Link className="hover:text-nadeshiko-700" to="/products">
                     グッズ
                   </Link>
@@ -135,6 +138,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/songs" onClick={close}>
                       <p>楽曲</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:text-nadeshiko-700" to="/media" onClick={close}>
+                      <p>メディア</p>
                     </Link>
                   </li>
                   <li>
