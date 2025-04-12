@@ -1,4 +1,4 @@
-import { MemberNameOrGroup } from "../members/members";
+import { MemberName, MemberNameOrGroup } from "../members/members";
 
 export interface YouTubeVideoDescriptor {
   videoId: string;
@@ -14,4 +14,5 @@ export interface YouTubeVideoMetadata {
   channelUrl: string;
   thumbnailUrl: string;
   publishedAt: string;
+  presents: MemberName[];
 }

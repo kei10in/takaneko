@@ -1,5 +1,6 @@
 import { BsYoutube } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
+import { MemberIcon } from "~/components/MemberIcon";
 import { YouTube2022 } from "~/features/media/2022/youtube";
 import { YouTube2023 } from "~/features/media/2023/youtube";
 import { YouTube2024 } from "~/features/media/2024/youtube";
@@ -39,6 +40,13 @@ export const loader = async () => {
         return [];
       }
 
+      const presents = (video.presents ?? []).flatMap((m) => {
+        if (m == "高嶺のなでしこ") {
+          return [];
+        }
+        return [m];
+      });
+
       return [
         {
           kind: "youtube",
@@ -48,6 +56,7 @@ export const loader = async () => {
           channelTitle: data.author_name,
           channelUrl: data.author_url,
           thumbnailUrl: data.thumbnail_url,
+          presents,
         } satisfies YouTubeVideoMetadata,
       ];
     },
@@ -78,12 +87,17 @@ export default function MediaIndex() {
                     <div className="flex-1">
                       <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
                       <p className="line-clamp-1 text-sm text-gray-600">
-                        <BsYoutube className="mr-2 inline" />
+                        <BsYoutube className="mr-1 inline" />
                         {video.channelTitle}
                       </p>
                       <p className="line-clamp-1 text-sm text-gray-600">
                         {displayDate(NaiveDate.parseUnsafe(video.publishedAt))}
                       </p>
+                      <div className="space-x-1">
+                        {video.presents.map((present) => (
+                          <MemberIcon member={present} key={present} size={24} />
+                        ))}
+                      </div>
                     </div>
                     <div className="max-h-32 w-32 flex-none">
                       <img src={video.thumbnailUrl} alt={video.title} className="object-contain" />
