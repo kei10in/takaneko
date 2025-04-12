@@ -11,7 +11,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   youtube: [
     {
       text: "アニソンでしょでしょ",
-      videoId: "https://www.youtube.com/watch?v=sFUJxqo6ye4",
+      videoId: "sFUJxqo6ye4",
     },
   ],
 };
