@@ -13,6 +13,10 @@ export const いつか私がママになったら: SongMetaDescriptor = {
       text: "MV",
       videoId: "B6ibZx9KcH4",
     },
+    {
+      text: "PV",
+      videoId: "IcnEOGUTv7I",
+    },
   ],
   linkcore: "https://linkco.re/RVByAaqA",
 };
