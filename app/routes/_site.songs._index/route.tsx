@@ -1,7 +1,7 @@
-import { BsMusicNoteBeamed } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { formatTitle } from "~/utils/htmlHeader";
+import { Thumbnail } from "./thumbnail";
 
 export const meta: MetaFunction = () => {
   return [
@@ -29,17 +29,7 @@ export default function Component() {
               <div className="w-40">
                 <Link to={`/songs/${track.slug}`}>
                   <div className="overflow-hidden rounded-lg shadow-lg">
-                    {track.image == undefined ? (
-                      <div className="flex h-40 w-40 items-center justify-center bg-gray-100">
-                        <BsMusicNoteBeamed className="h-20 w-20 text-gray-300" />
-                      </div>
-                    ) : (
-                      <img
-                        src={track.image.path}
-                        alt={track.name}
-                        className="bg-nadeshiko-300 h-40 w-40 object-contain"
-                      />
-                    )}
+                    <Thumbnail track={track} />
                   </div>
                 </Link>
                 <div className="mt-2 text-sm">
