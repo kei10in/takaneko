@@ -1,6 +1,6 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "takaneko"
-compatibility_date = "2024-08-21"
+compatibility_date = "2025-04-02"
 compatibility_flags = ["nodejs_compat_v2"]
 pages_build_output_dir = "./build/client"
 
