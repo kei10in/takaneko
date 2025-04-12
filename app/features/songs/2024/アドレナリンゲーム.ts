@@ -3,10 +3,7 @@ import { SongMetaDescriptor } from "../types";
 export const アドレナリンゲーム: SongMetaDescriptor = {
   slug: "アドレナリンゲーム",
   name: "アドレナリンゲーム",
-  image: {
-    path: "/takaneko/songs/2024/アドレナリンゲーム.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_l-oaE2fP5-2c7Z_fxwEoPVs0TpMBN2G3k",
-  },
+  image: undefined,
   officialSite: "",
   youtube: [
     {
