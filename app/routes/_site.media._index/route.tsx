@@ -1,11 +1,7 @@
 import { BsChevronLeft, BsChevronRight, BsYoutube } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
-import { YouTube2022 } from "~/features/media/2022/youtube";
-import { YouTube2023 } from "~/features/media/2023/youtube";
-import { YouTube2024 } from "~/features/media/2024/youtube";
-import { YouTube2025 } from "~/features/media/2025/youtube";
-import { YouTubeVideoMetadata } from "~/features/media/types";
+import { getAllMedia } from "~/features/media/allMedia";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -35,46 +31,61 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
   const oEmbedEndpoint = "https://www.youtube.com/oembed";
 
-  const allMedia = [...YouTube2025, ...YouTube2024, ...YouTube2023, ...YouTube2022];
+  const allMedia = getAllMedia();
   const total = Math.ceil(allMedia.length / PAGE_SIZE);
   const page = Math.max(0, Math.min(total, p));
 
   const metadataPromises = allMedia
     .slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
-    .map(async (video) => {
-      const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${video.videoId}&format=json`;
+    .map(async (media) => {
+      if (media.kind == "static") {
+        return [
+          {
+            kind: "static",
+            title: media.title,
+            authorName: media.authorName,
+            publishedAt: media.publishedAt,
+            mediaUrl: media.mediaUrl,
+            imageUrl: media.image.path,
+            presents: media.presents ?? [],
+          },
+        ];
+      } else if (media.kind == "youtube") {
+        const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${media.videoId}&format=json`;
 
-      const response = await fetch(url);
-      if (!response.ok) {
-        return [];
-      }
-      const jsonData = await response.json();
-
-      // Validate the response using the validate function
-      const data = validateYouTubeOEmbedResponse(jsonData);
-      if (!data) {
-        return [];
-      }
-
-      const presents = (video.presents ?? []).flatMap((m) => {
-        if (m == "高嶺のなでしこ") {
+        const response = await fetch(url);
+        if (!response.ok) {
           return [];
         }
-        return [m];
-      });
+        const jsonData = await response.json();
 
-      return [
-        {
-          kind: "youtube",
-          videoId: video.videoId,
-          title: data.title,
-          publishedAt: video.publishedAt,
-          channelTitle: data.author_name,
-          channelUrl: data.author_url,
-          thumbnailUrl: data.thumbnail_url,
-          presents,
-        } satisfies YouTubeVideoMetadata,
-      ];
+        // Validate the response using the validate function
+        const data = validateYouTubeOEmbedResponse(jsonData);
+        if (!data) {
+          return [];
+        }
+
+        const presents = (media.presents ?? []).flatMap((m) => {
+          if (m == "高嶺のなでしこ") {
+            return [];
+          }
+          return [m];
+        });
+
+        return [
+          {
+            kind: "youtube",
+            title: data.title,
+            authorName: data.author_name,
+            publishedAt: media.publishedAt,
+            mediaUrl: `https://youtu.be/${media.videoId}`,
+            imageUrl: data.thumbnail_url,
+            presents,
+          },
+        ];
+      } else {
+        return [];
+      }
     });
 
   const items = (await Promise.all(metadataPromises)).flatMap((x) => x);
@@ -92,9 +103,9 @@ export default function MediaIndex() {
         <ul className="max-w-2xl space-y-6 py-2">
           {items.map((video) => {
             return (
-              <li key={video.videoId}>
+              <li key={video.mediaUrl}>
                 <Link
-                  to={`https://youtu.be/${video.videoId}`}
+                  to={video.mediaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-gray-600"
@@ -103,8 +114,8 @@ export default function MediaIndex() {
                     <div className="flex-1">
                       <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
                       <p className="line-clamp-1 text-sm text-gray-600">
-                        <BsYoutube className="mr-1 inline" />
-                        {video.channelTitle}
+                        {video.kind == "youtube" && <BsYoutube className="mr-1 inline" />}
+                        {video.authorName}
                       </p>
                       <p className="line-clamp-1 text-sm text-gray-600">
                         {displayDate(NaiveDate.parseUnsafe(video.publishedAt))}
@@ -116,7 +127,7 @@ export default function MediaIndex() {
                       </div>
                     </div>
                     <div className="max-h-32 w-32 flex-none">
-                      <img src={video.thumbnailUrl} alt={video.title} className="object-contain" />
+                      <img src={video.imageUrl} alt={video.title} className="object-contain" />
                     </div>
                   </div>
                 </Link>
