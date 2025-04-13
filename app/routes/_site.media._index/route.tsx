@@ -18,10 +18,13 @@ import { validateYouTubeOEmbedResponse } from "~/utils/youtube/youtubeOEmbed";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: formatTitle("出演情報") },
+    { title: formatTitle("メディアへの出演情報") },
     {
       name: "description",
-      content: "高嶺のなでしこが出演しているメディアの一覧です。",
+      content:
+        "高嶺のなでしこ (たかねこ) メンバー、 " +
+        "涼海すう / 城月菜央 / 橋本桃呼 / 葉月紗蘭 / 春野莉々 / 東山恵里沙 / 日向端ひな / 星谷美来 / 松本ももな / 籾山ひめり、" +
+        "が出演している YouTube やウェブ記事を一覧にしました。",
     },
   ];
 };
@@ -133,7 +136,9 @@ export default function MediaIndex() {
   return (
     <div className="container mx-auto max-w-3xl">
       <section className="p-4">
-        <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">メディア</h1>
+        <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">
+          メディアへの出演情報
+        </h1>
         <ul className="max-w-2xl space-y-6 py-2">
           {items.map((video) => {
             return (
