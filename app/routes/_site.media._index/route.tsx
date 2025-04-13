@@ -22,10 +22,16 @@ export const meta: MetaFunction = () => {
 };
 
 export const loader = async () => {
+  // Cloudflare Workers ではサブリクエストの上限があるため、ページネーションが必要
+  // サブリクエストの上限はフリープランでは 50 リクエストになっているが、
+  // どこかにひとつ見えていないリクエストがあるため 50 では失敗する。
+  const PAGE_SIZE = 40;
+
   const oEmbedEndpoint = "https://www.youtube.com/oembed";
 
-  const metadataPromises = [...YouTube2025, ...YouTube2024, ...YouTube2023, ...YouTube2022].map(
-    async (video) => {
+  const metadataPromises = [...YouTube2025, ...YouTube2024, ...YouTube2023, ...YouTube2022]
+    .slice(0, PAGE_SIZE)
+    .map(async (video) => {
       const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${video.videoId}&format=json`;
 
       const response = await fetch(url);
@@ -59,8 +65,7 @@ export const loader = async () => {
           presents,
         } satisfies YouTubeVideoMetadata,
       ];
-    },
-  );
+    });
 
   const metadata = (await Promise.all(metadataPromises)).flatMap((x) => x);
   return metadata;
