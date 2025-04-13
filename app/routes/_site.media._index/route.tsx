@@ -1,7 +1,14 @@
-import { BsChevronLeft, BsChevronRight, BsYoutube } from "react-icons/bs";
+import {
+  BsChevronLeft,
+  BsChevronRight,
+  BsFillCameraReelsFill,
+  BsNewspaper,
+  BsYoutube,
+} from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMedia } from "~/features/media/allMedia";
+import { MediaDetails } from "~/features/media/types";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
@@ -39,7 +46,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
   const metadataPromises = allMedia
     .slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
-    .map(async (media) => {
+    .map(async (media): Promise<MediaDetails[]> => {
       if (media.kind == "static") {
         return [
           {
@@ -49,6 +56,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
             publishedAt: media.publishedAt,
             mediaUrl: media.mediaUrl,
             imageUrl: media.image.path,
+            category: media.category,
             presents: media.presents ?? [],
           },
         ];
@@ -71,6 +79,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
             publishedAt: media.publishedAt,
             mediaUrl: mediaUrl,
             imageUrl: imageUrl,
+            category: media.category,
             presents: media.presents ?? [],
           },
         ];
@@ -104,6 +113,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
             publishedAt: media.publishedAt,
             mediaUrl: `https://youtu.be/${media.videoId}`,
             imageUrl: data.thumbnail_url,
+            category: "youtube",
             presents,
           },
         ];
@@ -138,7 +148,11 @@ export default function MediaIndex() {
                     <div className="flex-1">
                       <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
                       <p className="line-clamp-1 text-sm text-gray-600">
-                        {video.kind == "youtube" && <BsYoutube className="mr-1 inline" />}
+                        {video.category == "youtube" && <BsYoutube className="mr-1 inline" />}
+                        {video.category == "video" && (
+                          <BsFillCameraReelsFill className="mr-1 inline" />
+                        )}
+                        {video.category == "article" && <BsNewspaper className="mr-1 inline" />}
                         {video.authorName}
                       </p>
                       <p className="line-clamp-1 text-sm text-gray-600">

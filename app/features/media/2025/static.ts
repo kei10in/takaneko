@@ -10,6 +10,7 @@ export const StaticMedia2025: StaticMediaDescriptor[] = [
       path: "/media/2025/2025-01-31_有野屋書店.webp",
       ref: "https://x.com/fujitvplus/status/1885252192040608110",
     },
+    category: "video",
     presents: ["涼海すう", "日向端ひな"],
   },
 ];
