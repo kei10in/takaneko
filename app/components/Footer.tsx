@@ -38,6 +38,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
                   <Link to="/songs">楽曲</Link>
                 </li>
                 <li>
+                  <Link to="/media">メディア</Link>
+                </li>
+                <li>
                   <Link to="/products">グッズ</Link>
                 </li>
                 <li>
