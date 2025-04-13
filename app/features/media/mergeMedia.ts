@@ -15,11 +15,11 @@ export const mergeMedia = (
     ...ogp.map((v) => ({ kind: "ogp", ...v }) satisfies MediaDescriptor),
     ...staticMedia.map((v) => ({ kind: "static", ...v }) satisfies MediaDescriptor),
   ];
-  xs.toSorted((a, b) => {
+  xs.sort((a, b) => {
     if (a.publishedAt < b.publishedAt) {
-      return -1;
-    } else if (a.publishedAt > b.publishedAt) {
       return 1;
+    } else if (a.publishedAt > b.publishedAt) {
+      return -1;
     } else {
       return 0;
     }

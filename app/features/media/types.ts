@@ -7,20 +7,14 @@ export interface YouTubeVideoDescriptor {
   presents?: MemberNameOrGroup[];
 }
 
-export interface YouTubeVideoMetadata {
-  kind: "youtube";
-  videoId: string;
-  title: string;
-  channelTitle: string;
-  channelUrl: string;
-  thumbnailUrl: string;
-  publishedAt: string;
-  presents: MemberName[];
-}
-
 export interface OgpMediaDescriptor {
-  siteUrl: string;
+  mediaUrl: string;
   publishedAt: string;
+
+  title?: string;
+  siteName?: string;
+  image?: ImageDescription;
+  presents?: MemberName[];
 }
 
 export interface StaticMediaDescriptor {

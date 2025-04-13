@@ -25,6 +25,7 @@ const convertMetadataToOgp = (metadata: urlMetadata.Result): OpenGraph | undefin
     description: metadata["og:description"],
     image: metadata["og:image"],
     url: metadata["og:url"],
+    siteName: metadata["og:site_name"],
   };
 };
 
@@ -34,5 +35,6 @@ const convertMetadataToTwitterCard = (metadata: urlMetadata.Result): TwitterCard
     description: metadata["twitter:description"],
     image: metadata["twitter:image"],
     url: metadata["twitter:url"],
+    site: metadata["twitter:site"],
   };
 };

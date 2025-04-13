@@ -4,7 +4,9 @@ import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMedia } from "~/features/media/allMedia";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
 import { formatTitle } from "~/utils/htmlHeader";
+import { ogp } from "~/utils/ogp/ogp";
 import { validateYouTubeOEmbedResponse } from "~/utils/youtube/youtubeOEmbed";
 
 export const meta: MetaFunction = () => {
@@ -47,6 +49,28 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
             publishedAt: media.publishedAt,
             mediaUrl: media.mediaUrl,
             imageUrl: media.image.path,
+            presents: media.presents ?? [],
+          },
+        ];
+      } else if (media.kind == "ogp") {
+        const metadata = await ogp(media.mediaUrl);
+
+        const title = findFirstNonEmpty([metadata?.ogp?.title, media.title]);
+        const authorName = findFirstNonEmpty([metadata?.ogp?.siteName, media.siteName]);
+        const imageUrl = findFirstNonEmpty([metadata?.ogp?.image, media.image?.path]);
+        const mediaUrl = findFirstNonEmpty([metadata?.ogp?.url, media.mediaUrl]);
+        if (!title || !authorName || !imageUrl || !mediaUrl) {
+          return [];
+        }
+
+        return [
+          {
+            kind: "ogp",
+            title: title,
+            authorName: authorName,
+            publishedAt: media.publishedAt,
+            mediaUrl: mediaUrl,
+            imageUrl: imageUrl,
             presents: media.presents ?? [],
           },
         ];

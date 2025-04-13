@@ -5,6 +5,7 @@ const OpenGraph = z.object({
   description: z.string(),
   image: z.string(),
   url: z.string(),
+  siteName: z.string().optional(),
 });
 
 export type OpenGraph = z.infer<typeof OpenGraph>;
@@ -23,6 +24,7 @@ const TwitterCard = z.object({
   description: z.string(),
   image: z.string(),
   url: z.string(),
+  site: z.string().optional(),
 });
 
 export type TwitterCard = z.infer<typeof TwitterCard>;
