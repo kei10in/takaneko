@@ -1,5 +1,5 @@
-import { BsYoutube } from "react-icons/bs";
-import { Link, MetaFunction, useLoaderData } from "react-router";
+import { BsChevronLeft, BsChevronRight, BsYoutube } from "react-icons/bs";
+import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
 import { YouTube2022 } from "~/features/media/2022/youtube";
 import { YouTube2023 } from "~/features/media/2023/youtube";
@@ -21,7 +21,13 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = async () => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  const url = new URL(request.url);
+  const ps = url.searchParams.get("p");
+  const pp = Number.parseInt(ps ?? "1", 10);
+  // ページネーションは 1 から始まるので、pp - 1 にしています。
+  const p = Number.isNaN(pp) ? 0 : pp - 1;
+
   // Cloudflare Workers ではサブリクエストの上限があるため、ページネーションが必要
   // サブリクエストの上限はフリープランでは 50 リクエストになっているが、
   // どこかにひとつ見えていないリクエストがあるため 50 では失敗する。
@@ -29,8 +35,12 @@ export const loader = async () => {
 
   const oEmbedEndpoint = "https://www.youtube.com/oembed";
 
-  const metadataPromises = [...YouTube2025, ...YouTube2024, ...YouTube2023, ...YouTube2022]
-    .slice(0, PAGE_SIZE)
+  const allMedia = [...YouTube2025, ...YouTube2024, ...YouTube2023, ...YouTube2022];
+  const total = Math.ceil(allMedia.length / PAGE_SIZE);
+  const page = Math.max(0, Math.min(total, p));
+
+  const metadataPromises = allMedia
+    .slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
     .map(async (video) => {
       const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${video.videoId}&format=json`;
 
@@ -67,19 +77,20 @@ export const loader = async () => {
       ];
     });
 
-  const metadata = (await Promise.all(metadataPromises)).flatMap((x) => x);
-  return metadata;
+  const items = (await Promise.all(metadataPromises)).flatMap((x) => x);
+  return { page: page + 1, total, items };
 };
 
 export default function MediaIndex() {
-  const metadata = useLoaderData<YouTubeVideoMetadata[]>();
+  const metadata = useLoaderData<typeof loader>();
+  const { page, total, items } = metadata;
 
   return (
     <div className="container mx-auto max-w-3xl">
       <section className="p-4">
         <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">メディア</h1>
-        <ul className="max-w-2xl space-y-6">
-          {metadata.map((video) => {
+        <ul className="max-w-2xl space-y-6 py-2">
+          {items.map((video) => {
             return (
               <li key={video.videoId}>
                 <Link
@@ -113,6 +124,36 @@ export default function MediaIndex() {
             );
           })}
         </ul>
+
+        <div className="mt-8 flex items-center justify-center gap-6">
+          {page == 1 ? (
+            <div className="rounded border p-2 text-gray-300">
+              <BsChevronLeft />
+            </div>
+          ) : (
+            <Link
+              className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
+              to={`/media?p=${Math.max(1, page - 1)}`}
+            >
+              <BsChevronLeft />
+            </Link>
+          )}
+          <div className="text-gray-600">
+            {page} / {total}
+          </div>
+          {page == total ? (
+            <div className="rounded border p-2 text-gray-300">
+              <BsChevronRight />
+            </div>
+          ) : (
+            <Link
+              className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
+              to={`/media?p=${Math.min(total, page + 1)}`}
+            >
+              <BsChevronRight />
+            </Link>
+          )}
+        </div>
       </section>
     </div>
   );
