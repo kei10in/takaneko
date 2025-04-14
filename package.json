@@ -15,7 +15,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
+    "@headlessui/react": "^2.2.1",
     "@react-router/cloudflare": "^7.4.0",
     "cheerio": "^1.0.0",
     "clsx": "^2.1.1",
