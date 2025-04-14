@@ -32,6 +32,30 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["橋本桃呼"],
   },
   {
+    mediaUrl: "https://nicola.jp/?p=22017",
+    publishedAt: "2024-07-23",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://nicola.jp/?p=19490",
+    publishedAt: "2024-04-07",
+    category: "article",
+    presents: ["東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://nicola.jp/?p=18655",
+    publishedAt: "2024-03-08",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://nicola.jp/?p=18495",
+    publishedAt: "2024-03-01",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.radionikkei.jp/toraken/3.html",
     publishedAt: "2024-02-29",
     category: "audio",
