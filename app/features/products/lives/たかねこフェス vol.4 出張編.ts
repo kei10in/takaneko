@@ -12,6 +12,10 @@ export const たかねこフェスvol4_出張編: LiveGoodsCollection = {
       path: "/takaneko/live-goods/2025-04-06_たかねこフェス vol.4 出張編_キラキラトレカ福岡限定.jpg",
       ref: "https://x.com/takanenofficial/status/1908452048510529713",
     },
+    {
+      path: "/takaneko/live-goods/2025-04-13_たかねこフェス vol.4 出張編_キラキラトレカ仙台限定.jpg",
+      ref: "https://x.com/takanenofficial/status/1911221590307881421",
+    },
   ],
   goods: [
     {
