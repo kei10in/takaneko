@@ -29,7 +29,7 @@ export const IDOL_FILE_Vol35: Publication = {
     },
   ],
   featuredMembers: ["城月菜央", "籾山ひめり"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1910528238545256761",
   links: [
     {
       text: "IDOL FILE X 城月菜央掲載告知",
