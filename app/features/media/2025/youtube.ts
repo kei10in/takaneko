@@ -17,6 +17,11 @@ export const YouTube2025 = [
     presents: ["城月菜央"],
   },
   {
+    videoId: "UIuRvdpud80",
+    publishedAt: "2025-04-11",
+    presents: ["高嶺のなでしこ"],
+  },
+  {
     videoId: "VVa7yYcWNFs",
     publishedAt: "2025-03-24",
     presents: ["日向端ひな", "籾山ひめり"],
