@@ -167,6 +167,11 @@ export const YouTube2024 = [
     presents: ["涼海すう", "星谷美来"],
   },
   {
+    videoId: "g2fJbed_0lY",
+    publishedAt: "2024-03-29",
+    presents: ["橋本桃呼"],
+  },
+  {
     videoId: "L117TxKbKfE",
     publishedAt: "2024-03-28",
     presents: ["城月菜央", "橋本桃呼"],
@@ -180,6 +185,16 @@ export const YouTube2024 = [
     videoId: "Dwwe9x-eYk8",
     publishedAt: "2024-03-20",
     presents: ["葉月紗蘭", "東山恵里沙", "星谷美来"],
+  },
+  {
+    videoId: "FYElLOWHNxg",
+    publishedAt: "2024-03-14",
+    presents: ["日向端ひな"],
+  },
+  {
+    videoId: "q6dVNOgjTik",
+    publishedAt: "2024-03-08",
+    presents: ["星谷美来"],
   },
   {
     videoId: "oo2BqViKCUc",
