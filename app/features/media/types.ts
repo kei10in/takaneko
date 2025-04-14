@@ -15,7 +15,7 @@ export interface OgpMediaDescriptor {
   siteName?: string;
   image?: ImageDescription;
 
-  category: "video" | "article";
+  category: "video" | "article" | "audio";
   presents?: MemberName[];
 }
 
@@ -25,7 +25,7 @@ export interface StaticMediaDescriptor {
   publishedAt: string;
   mediaUrl: string;
   image: ImageDescription;
-  category: "video" | "article";
+  category: "video" | "article" | "audio";
   presents?: MemberName[];
 }
 
@@ -41,6 +41,6 @@ export interface MediaDetails {
   publishedAt: string;
   mediaUrl: string;
   imageUrl: string;
-  category: "video" | "article" | "youtube";
+  category: "video" | "article" | "audio" | "youtube";
   presents: MemberName[];
 }

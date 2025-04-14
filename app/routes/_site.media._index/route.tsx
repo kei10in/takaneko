@@ -2,6 +2,7 @@ import {
   BsChevronLeft,
   BsChevronRight,
   BsFillCameraReelsFill,
+  BsMicFill,
   BsNewspaper,
   BsYoutube,
 } from "react-icons/bs";
@@ -156,6 +157,7 @@ export default function MediaIndex() {
                           <BsFillCameraReelsFill className="mr-1 inline" />
                         )}
                         {video.category == "article" && <BsNewspaper className="mr-1 inline" />}
+                        {video.category == "audio" && <BsMicFill className="mr-1 inline" />}
                         {video.authorName}
                       </p>
                       <p className="line-clamp-1 text-sm text-gray-600">
