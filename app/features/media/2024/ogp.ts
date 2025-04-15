@@ -14,6 +14,12 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["松本ももな", "籾山ひめり"],
   },
   {
+    mediaUrl: "https://www.walkerplus.com/article/1229695/",
+    publishedAt: "2024-12-11",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.radionikkei.jp/toraken/41nadeshiko.html",
     publishedAt: "2024-12-04",
     category: "audio",
@@ -62,9 +68,33 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["葉月紗蘭", "東山恵里沙"],
   },
   {
+    mediaUrl: "https://thetv.jp/news/detail/1182799/",
+    publishedAt: "2024-02-28",
+    category: "article",
+    presents: ["涼海すう", "葉月紗蘭", "春野莉々", "東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://thetv.jp/news/detail/1184512/",
+    publishedAt: "2024-02-28",
+    category: "article",
+    presents: ["城月菜央", "日向端ひな", "星谷美来"],
+  },
+  {
+    mediaUrl: "https://thetv.jp/news/detail/1184513/",
+    publishedAt: "2024-02-28",
+    category: "article",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://www.radionikkei.jp/toraken/2.html",
     publishedAt: "2024-02-22",
     category: "audio",
     presents: ["葉月紗蘭", "東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-2/",
+    publishedAt: "2024-02-21",
+    category: "article",
+    presents: [],
   },
 ];

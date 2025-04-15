@@ -5,6 +5,7 @@ export interface YouTubeVideoDescriptor {
   videoId: string;
   publishedAt: string;
   presents?: MemberNameOrGroup[];
+  officialTwitter?: string;
 }
 
 export interface OgpMediaDescriptor {
@@ -17,6 +18,7 @@ export interface OgpMediaDescriptor {
 
   category: "video" | "article" | "audio";
   presents?: MemberName[];
+  officialTwitter?: string;
 }
 
 export interface StaticMediaDescriptor {
@@ -27,6 +29,7 @@ export interface StaticMediaDescriptor {
   image: ImageDescription;
   category: "video" | "article" | "audio";
   presents?: MemberName[];
+  officialTwitter?: string;
 }
 
 export type MediaDescriptor =
