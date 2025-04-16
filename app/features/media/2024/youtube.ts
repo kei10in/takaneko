@@ -206,4 +206,10 @@ export const YouTube2024 = [
     publishedAt: "2024-02-01",
     presents: ["東山恵里沙"],
   },
+  {
+    videoId: "D8RlMD4MGiE",
+    publishedAt: "2024-01-19",
+    presents: [],
+    officialTwitter: "https://x.com/takanenofficial/status/1748141395469390066",
+  },
 ] satisfies YouTubeVideoDescriptor[];
