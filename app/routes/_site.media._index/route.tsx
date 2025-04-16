@@ -169,8 +169,12 @@ export default function MediaIndex() {
                         ))}
                       </div>
                     </div>
-                    <div className="max-h-32 w-32 flex-none">
-                      <img src={video.imageUrl} alt={video.title} className="object-contain" />
+                    <div className="w-32 flex-none">
+                      <img
+                        src={video.imageUrl}
+                        alt={video.title}
+                        className="max-h-32 w-32 object-cover"
+                      />
                     </div>
                   </div>
                 </Link>
