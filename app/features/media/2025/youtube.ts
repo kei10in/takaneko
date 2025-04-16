@@ -25,6 +25,7 @@ export const YouTube2025 = [
     videoId: "VVa7yYcWNFs",
     publishedAt: "2025-03-24",
     presents: ["日向端ひな", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/1642050981952035840",
   },
   {
     videoId: "Tfc3b3CMao4",
