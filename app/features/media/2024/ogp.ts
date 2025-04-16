@@ -8,11 +8,23 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["日向端ひな"],
   },
   {
+    mediaUrl: "https://popteen.co.jp/media/55859/",
+    publishedAt: "2025-12-24",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     mediaUrl: "https://strmweb.jp/?p=15750",
     publishedAt: "2024-12-13",
     category: "article",
     presents: ["城月菜央", "東山恵里沙", "籾山ひめり"],
     officialTwitter: "https://x.com/takanenofficial/status/1867502445129347186",
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/57339/",
+    publishedAt: "2025-12-12",
+    category: "article",
+    presents: ["涼海すう"],
   },
   {
     mediaUrl: "https://www.radionikkei.jp/toraken/42_takakneko.html",
@@ -79,10 +91,59 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["橋本桃呼"],
   },
   {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/autumn_uniformsnap/",
+    publishedAt: "2024-09-15",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/charactergoods_present/",
+    publishedAt: "2024-09-09",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/bachikawafes_part2/",
+    publishedAt: "2024-09-09",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/bachikawafes_part1/",
+    publishedAt: "2024-09-09",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_9_hyoushi/best_cosme/",
+    publishedAt: "2024-08-01",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     mediaUrl: "https://nicola.jp/?p=22017",
     publishedAt: "2024-07-23",
     category: "article",
     presents: [],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_8_hyoushi/2024summer_event_2/",
+    publishedAt: "2024-07-02",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl:
+      "https://popteen.co.jp/media/month_magazine/2024_7_hyoushi/summer_coordinate_schooluniform/",
+    publishedAt: "2024-06-17",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/month_magazine/2024_7_hyoushi/creatormodeldebut/",
+    publishedAt: "2024-06-03",
+    category: "article",
+    presents: ["涼海すう"],
   },
   {
     mediaUrl: "https://nicola.jp/?p=19490",
