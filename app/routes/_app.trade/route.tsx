@@ -1,8 +1,8 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
-import { HiXMark } from "react-icons/hi2";
 import { Link, MetaFunction, Outlet } from "react-router";
+import { XMarkButton } from "~/components/XMarkButton";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { ProductList } from "./ProductList";
@@ -74,12 +74,7 @@ export default function Index() {
             style={{ transform: "translateZ(0)" }}
           >
             <div className="sticky top-0 z-50 ml-auto h-14 w-fit flex-none p-2">
-              <button
-                className="rounded-full p-2 text-xl hover:bg-gray-200"
-                onClick={() => setShowMenu(false)}
-              >
-                <HiXMark className="h-6 w-6 text-gray-800" />
-              </button>
+              <CloseButton as={XMarkButton} />
             </div>
 
             <div>
