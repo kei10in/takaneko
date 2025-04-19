@@ -28,10 +28,7 @@ export default function Index() {
             </div>
 
             <div className="flex-none lg:hidden">
-              <button
-                className="text-nadeshiko-800 hover:text-nadeshiko-950 p-2"
-                onClick={() => setShowMenu(true)}
-              >
+              <button data-primary className="icon-btn" onClick={() => setShowMenu(true)}>
                 <BsList className="h-6 w-6" />
               </button>
             </div>

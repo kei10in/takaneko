@@ -108,7 +108,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </Menu>
                 </div>
                 <button
-                  className="text-nadeshiko-800 inline-flex rounded-full p-2 lg:hidden"
+                  data-primary
+                  className="icon-btn lg:hidden"
                   onClick={() => setShowMenu(true)}
                 >
                   <BsThreeDotsVertical className="h-6 w-6" />
