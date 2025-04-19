@@ -10,6 +10,7 @@ import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-rou
 import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMedia } from "~/features/media/allMedia";
 import { MediaDetails } from "~/features/media/types";
+import { AllMembers } from "~/features/members/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
@@ -32,6 +33,9 @@ export const meta: MetaFunction = () => {
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
+
+  const m = url.searchParams.get("m");
+  const selectedMember = AllMembers.find((member) => member.slug == m || member.id == m)?.id;
   const ps = url.searchParams.get("p");
   const pp = Number.parseInt(ps ?? "1", 10);
   // ページネーションは 1 から始まるので、pp - 1 にしています。
@@ -44,7 +48,12 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
   const oEmbedEndpoint = "https://www.youtube.com/oembed";
 
-  const allMedia = getAllMedia();
+  const allMedia = getAllMedia().filter((media) => {
+    if (selectedMember) {
+      return media.presents.includes(selectedMember);
+    }
+    return true;
+  });
   const total = Math.ceil(allMedia.length / PAGE_SIZE);
   const page = Math.max(0, Math.min(total, p));
 
