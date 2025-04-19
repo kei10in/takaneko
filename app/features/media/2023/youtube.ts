@@ -2,6 +2,8 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2023 = [
   {
+    // まいにち賞レース「オバケの出ない怖い話GP」
+    // https://x.com/takanenofficial/status/1730527198086574424
     videoId: "S9TwBrhf8Mc",
     publishedAt: "2023-12-01",
     presents: ["橋本桃呼"],
@@ -17,6 +19,8 @@ export const YouTube2023 = [
     presents: ["橋本桃呼", "日向端ひな", "松本ももな"],
   },
   {
+    // まいにち賞レース「ハモリ神声GP」
+    // https://x.com/douhaji_ex/status/1725431998305747453
     videoId: "9w95ortcu6A",
     publishedAt: "2023-11-17",
     presents: ["東山恵里沙"],
