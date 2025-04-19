@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title:
+      "【アイドルの本気】鈴木愛理が高嶺のなでしこと「可愛くてごめん」ダンスレッスン！「ざまあ顔」披露で大盛り上がり！バラエティで滑った時の可愛い挽回方法は？【でしょでしょ‼︎】",
+    authorName: "動画、はじめてみました【テレビ朝日公式】",
+    publishedAt: "2025-04-19",
+    mediaUrl: "https://youtu.be/1004tylNRQ8",
+    imageUrl: "https://i.ytimg.com/vi/1004tylNRQ8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     title: "【涼海すう編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2025-04-18",
