@@ -53,9 +53,14 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const oEmbedEndpoint = "https://www.youtube.com/oembed";
 
   const allMedia = getAllMedia().filter((media) => {
+    if (media.presents.length == 0) {
+      return true;
+    }
+
     if (selectedMember) {
       return media.presents.includes(selectedMember);
     }
+
     return true;
   });
   const total = Math.ceil(allMedia.length / PAGE_SIZE);
