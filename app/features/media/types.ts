@@ -1,10 +1,10 @@
 import { ImageDescription } from "~/utils/types/ImageDescription";
-import { MemberName, MemberNameOrGroup } from "../members/members";
+import { MemberName } from "../members/members";
 
 export interface YouTubeVideoDescriptor {
   videoId: string;
   publishedAt: string;
-  presents?: MemberNameOrGroup[];
+  presents: MemberName[];
   officialTwitter?: string;
 }
 
@@ -17,7 +17,7 @@ export interface OgpMediaDescriptor {
   image?: ImageDescription;
 
   category: "video" | "article" | "audio";
-  presents?: MemberName[];
+  presents: MemberName[];
   officialTwitter?: string;
 }
 
@@ -28,7 +28,7 @@ export interface StaticMediaDescriptor {
   mediaUrl: string;
   image: ImageDescription;
   category: "video" | "article" | "audio";
-  presents?: MemberName[];
+  presents: MemberName[];
   officialTwitter?: string;
 }
 

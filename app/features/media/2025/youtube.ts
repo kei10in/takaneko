@@ -14,7 +14,7 @@ export const YouTube2025 = [
   {
     videoId: "IO4heh_HROY",
     publishedAt: "2025-04-11",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "FBD8_in-9oU",
@@ -24,7 +24,7 @@ export const YouTube2025 = [
   {
     videoId: "UIuRvdpud80",
     publishedAt: "2025-04-11",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "VVa7yYcWNFs",
@@ -65,6 +65,7 @@ export const YouTube2025 = [
   {
     videoId: "_19fXNWKm9A",
     publishedAt: "2025-03-06",
+    presents: [],
   },
   {
     videoId: "_qposQVQviw",
@@ -109,11 +110,11 @@ export const YouTube2025 = [
   {
     videoId: "eSlN7odHbMY",
     publishedAt: "2025-01-22",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "ItE-wU39oVg",
     publishedAt: "2025-01-22",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
 ] satisfies YouTubeVideoDescriptor[];

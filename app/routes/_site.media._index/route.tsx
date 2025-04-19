@@ -102,13 +102,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
           return [];
         }
 
-        const presents = (media.presents ?? []).flatMap((m) => {
-          if (m == "高嶺のなでしこ") {
-            return [];
-          }
-          return [m];
-        });
-
         return [
           {
             kind: "youtube",
@@ -118,7 +111,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
             mediaUrl: `https://youtu.be/${media.videoId}`,
             imageUrl: data.thumbnail_url,
             category: "youtube",
-            presents,
+            presents: media.presents,
           },
         ];
       } else {

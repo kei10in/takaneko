@@ -24,7 +24,7 @@ export const YouTube2023 = [
   {
     videoId: "-aUWpjcSgKY",
     publishedAt: "2023-11-06",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "RbrtKRtNMpY",
@@ -39,7 +39,7 @@ export const YouTube2023 = [
   {
     videoId: "dcE73pJT4rA",
     publishedAt: "2023-09-19",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "SZIHQHnKJIc",
@@ -54,27 +54,27 @@ export const YouTube2023 = [
   {
     videoId: "AefOHYVIuHo",
     publishedAt: "2023-08-07",
-    presents: undefined,
+    presents: [],
   },
   {
     videoId: "_tU8lAPv684",
     publishedAt: "2023-07-19",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "NQBiKzJY4gE",
     publishedAt: "2023-06-14",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "bwjBjaTIlBk",
     publishedAt: "2023-05-19",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "35lxvC668Ek",
     publishedAt: "2023-04-17",
-    presents: undefined,
+    presents: [],
   },
   {
     videoId: "3tFd2i9UdFA",

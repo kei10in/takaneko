@@ -14,7 +14,7 @@ export const YouTube2024 = [
   {
     videoId: "rIANtpllshE",
     publishedAt: "2024-12-08",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "oTSf8zfMoAY",
@@ -44,7 +44,7 @@ export const YouTube2024 = [
   {
     videoId: "MjnzhkdtezY",
     publishedAt: "2024-10-16",
-    presents: undefined,
+    presents: [],
   },
   {
     videoId: "QdegLqwOZ9E",
@@ -79,7 +79,7 @@ export const YouTube2024 = [
   {
     videoId: "B_pTpzsaObE",
     publishedAt: "2024-08-04",
-    presents: ["高嶺のなでしこ"],
+    presents: [],
   },
   {
     videoId: "8sm8FpP8gQ8",
@@ -109,7 +109,7 @@ export const YouTube2024 = [
   {
     videoId: "dp7fYvkROYc",
     publishedAt: "2024-06-01",
-    presents: undefined,
+    presents: [],
   },
   {
     videoId: "eEseLWatYxc",
