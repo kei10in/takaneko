@@ -160,7 +160,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </li>
                 </ul>
 
-                <hr className="my-6" />
+                <hr className="my-6 border-gray-200" />
 
                 <ul className="space-y-6 pr-5 font-bold text-gray-700">
                   <li>

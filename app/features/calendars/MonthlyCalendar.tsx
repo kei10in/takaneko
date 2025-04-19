@@ -51,7 +51,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
         <div className="text-gray-800">{displayMonth(month)}</div>
         <div className="flex flex-none items-center gap-2">
           <Popover className="w-28">
-            <PopoverButton className="flex w-full items-center justify-between rounded-full border text-sm text-gray-600">
+            <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
               <div className="mx-auto flex-1 pl-2">
                 {Categories.find((x) => x.value == category)?.display ?? "All"}
               </div>
@@ -82,7 +82,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
               </ul>
             </PopoverPanel>
           </Popover>
-          <div className="inline-flex h-8 w-20 divide-x overflow-hidden rounded-md border border-gray-200">
+          <div className="inline-flex h-8 w-20 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
             <Link
               className="inline-flex h-full grow items-center justify-center text-sm"
               to={hrefPreviousMonth}

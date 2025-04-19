@@ -68,7 +68,7 @@ export default function Index() {
         </p>
         <Form className="mt-4 items-center space-y-2 md:flex md:gap-2 md:space-y-0" method="get">
           <input
-            className="block h-8 w-full rounded-md border px-2 font-mono text-sm outline-hidden md:flex-1"
+            className="block h-8 w-full rounded-md border border-gray-200 px-2 font-mono text-sm outline-hidden md:flex-1"
             type="text"
             placeholder="高嶺のなでしこ公式サイト内のページの URL"
             name="url"

@@ -20,8 +20,8 @@
   --color-nadeshiko-900: #ed4f81;
   --color-nadeshiko-950: #d63668;
 
-  --font-sans: ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
-    Noto Color Emoji;
+  --font-sans:
+    ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 /*
@@ -46,11 +46,11 @@
   @apply leading-normal break-words;
 
   h1 {
-    @apply mt-6 mb-4 border-b pb-1 text-2xl leading-tight font-semibold;
+    @apply mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold;
   }
 
   h2 {
-    @apply mt-6 mb-4 border-b pb-1 text-xl leading-tight font-semibold;
+    @apply mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold;
   }
 
   h3 {
@@ -102,11 +102,11 @@
   }
 
   th {
-    @apply border px-3 py-1 font-semibold;
+    @apply border border-gray-200 px-3 py-1 font-semibold;
   }
 
   td {
-    @apply border px-3 py-1;
+    @apply border border-gray-200 px-3 py-1;
   }
 
   blockquote {
@@ -122,7 +122,7 @@
   }
 
   kbd {
-    @apply inline-block rounded-sm border px-1 py-0.5 align-middle font-mono text-xs font-normal shadow-sm;
+    @apply inline-block rounded-sm border border-gray-200 px-1 py-0.5 align-middle font-mono text-xs font-normal shadow-sm;
   }
 
   pre {

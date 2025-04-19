@@ -14,7 +14,7 @@ export const ProductItem: React.FC<Props> = (props: Props) => {
   return (
     <div
       className={clsx(
-        "outline-nadeshiko-800 w-40 divide-y overflow-hidden rounded-xl border bg-white data-selected:outline",
+        "outline-nadeshiko-800 w-40 divide-y divide-gray-200 overflow-hidden rounded-xl border border-gray-200 bg-white data-selected:outline",
       )}
       data-selected={selected ? "true" : undefined}
     >

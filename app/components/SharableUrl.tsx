@@ -16,7 +16,7 @@ export const SharableUrl: React.FC<Props> = (props: Props) => {
     <div className={clsx(`flex items-center gap-1 text-gray-600`, className)}>
       <div className="h-8 flex-1">
         <input
-          className="h-full w-full rounded-md border px-2 font-mono text-sm"
+          className="h-full w-full rounded-md border border-gray-200 px-2 font-mono text-sm"
           readOnly
           value={url}
         />

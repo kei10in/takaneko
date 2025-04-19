@@ -143,7 +143,7 @@ export default function Index() {
                     <p className="mb-4 font-semibold text-gray-400">
                       <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                     </p>
-                    <div className="h-56 overflow-y-auto rounded-lg border px-2 py-4">
+                    <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
                       {events.length !== 0 ? (
                         events.map((event) => (
                           <Link key={event.slug} to={`/events/${event.slug}`}>

@@ -159,7 +159,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 <p className="my-1 text-sm text-gray-500">
                   トレード用のテキストです。右側のボタンでコピーできます。
                 </p>
-                <div className="my-4 rounded-lg border bg-gray-50">
+                <div className="my-4 rounded-lg border border-gray-200 bg-gray-50">
                   <div className="ml-auto w-fit p-1">
                     <CopyButton data={tradeText} />
                   </div>

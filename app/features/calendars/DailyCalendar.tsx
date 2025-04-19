@@ -28,7 +28,7 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
       <div className="mx-auto max-w-2xl space-y-2">
         <div className="flex items-center justify-between">
           <h1 className="px-2 text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
-          <div className="flex h-8 w-36 items-stretch divide-x overflow-hidden rounded-md border border-gray-200">
+          <div className="flex h-8 w-36 items-stretch divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
             <Link
               className="inline-flex h-full grow items-center justify-center"
               to={dateHref(d.previousDate())}
