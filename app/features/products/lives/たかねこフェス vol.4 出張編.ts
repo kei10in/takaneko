@@ -1,5 +1,11 @@
 import { LiveGoodsCollection } from "../product";
 
+//
+//  メモ:
+// 神戸会場限定キラキラトレカ 松本ももな に印刷不備があったため途中で販売を停止。
+// 裏面のメッセージが印刷されていない、というもの。
+// 一部のファンには販売された。
+// https://x.com/takanenofficial/status/1913422321840476257)
 export const たかねこフェスvol4_出張編: LiveGoodsCollection = {
   slug: "たかねこフェス vol.4 出張編",
   name: "たかねこフェス vol.4 出張編",
