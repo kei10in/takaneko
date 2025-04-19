@@ -1,7 +1,14 @@
-import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import {
+  CloseButton,
+  Dialog,
+  DialogPanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
 import { useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { HiXMark } from "react-icons/hi2";
 import {
   isRouteErrorResponse,
   Link,
@@ -12,6 +19,7 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
+import { XMarkButton } from "./components/XMarkButton";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
@@ -116,12 +124,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
             <DialogPanel className="relative top-4 right-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
               <div className="absolute top-4 right-4 flex-none">
-                <button
-                  className="hover:text-nadeshiko-700 rounded-full p-2 text-lg"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <HiXMark />
-                </button>
+                <CloseButton as={XMarkButton} />
               </div>
               <div className="p-6">
                 <ul className="space-y-6 pr-5 font-bold text-gray-700">
