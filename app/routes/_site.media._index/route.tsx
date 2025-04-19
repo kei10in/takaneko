@@ -14,7 +14,7 @@ import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-rou
 import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMedia } from "~/features/media/allMedia";
 import { MediaDetails } from "~/features/media/types";
-import { AllMembers, findMemberDescription } from "~/features/members/members";
+import { AllMembers, findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";

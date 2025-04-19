@@ -26,7 +26,7 @@ import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
-import { findMemberDescription } from "../../features/members/members";
+import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventOverview";
 import { EventRecap } from "./EventRecap";
 import { makePageDescription } from "./makePageDescription";

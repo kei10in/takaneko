@@ -4,7 +4,7 @@ import { ImageSlide } from "~/components/ImageSlide";
 import { Publication } from "~/features/products/product";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { findMemberDescription } from "../../features/members/members";
+import { findMemberDescription } from "../../features/profile/members";
 
 interface Props {
   product: Publication;

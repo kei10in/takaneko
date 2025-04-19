@@ -1,4 +1,4 @@
-import { MemberName } from "~/features/members/members";
+import { MemberName } from "~/features/profile/members";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
 export interface SongMetaDescriptor {

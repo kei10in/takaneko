@@ -1,7 +1,7 @@
 import { MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
 import { SITE_TITLE } from "~/constants";
-import { MomokoHashimoto } from "../../features/members/members";
+import { MomokoHashimoto } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [

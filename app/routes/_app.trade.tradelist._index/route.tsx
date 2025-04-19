@@ -13,7 +13,7 @@ import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
-import { AllMembers, MemberDescription } from "../../features/members/members";
+import { AllMembers, MemberDescription } from "../../features/profile/members";
 import { TradingItemList } from "./TradingItemList";
 
 export const meta: MetaFunction = () => {

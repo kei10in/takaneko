@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MemberName, MemberNameOrGroup } from "~/features/members/members";
+import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";

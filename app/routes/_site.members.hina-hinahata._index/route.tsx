@@ -2,7 +2,7 @@ import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { MemberProfile } from "~/components/MemberProfile";
 import { SITE_TITLE } from "~/constants";
-import { HinaHinahata } from "../../features/members/members";
+import { HinaHinahata } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [

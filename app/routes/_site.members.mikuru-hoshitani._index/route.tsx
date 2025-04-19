@@ -2,7 +2,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { Link, MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
 import { SITE_TITLE } from "~/constants";
-import { MikuruHoshitani } from "../../features/members/members";
+import { MikuruHoshitani } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [

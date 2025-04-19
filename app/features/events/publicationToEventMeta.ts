@@ -1,4 +1,4 @@
-import { convertToGroupIfAllMembersPresent } from "~/features/members/members";
+import { convertToGroupIfAllMembersPresent } from "~/features/profile/members";
 import { Publication } from "../products/product";
 import { EventMetaDescriptor } from "./meta";
 
