@@ -49,7 +49,7 @@ export default function Index() {
       >
         <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
           <DialogPanel className="relative top-4 right-4 h-fit w-80 overflow-y-auto rounded-xl bg-white">
-            <div className="absolute top-2 right-2 flex-none">
+            <div className="absolute top-4 right-4 flex-none">
               <CloseButton as={XMarkButton} />
             </div>
             <div className="p-6">
