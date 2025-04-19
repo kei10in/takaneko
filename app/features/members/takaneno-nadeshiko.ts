@@ -1,0 +1,25 @@
+export const TakanenoNadeshiko = {
+  id: "高嶺のなでしこ",
+  slug: "takaneno-nadeshiko",
+  name: "高嶺のなでしこ",
+  kana: "たかねのなでしこ",
+  romaji: "Takaneno Nadeshiko",
+  nickname: "たかねこ",
+  birthday: "2022年8月07日",
+  nyadeshiko: "てんにゃ",
+  hashTag: "#高嶺のなでしこ",
+  hashTagForReply: "#高嶺のなでしこ",
+  idPhoto: {
+    path: "/takaneko/tennya.png",
+    ref: "https://takanenonadeshiko.jp/",
+  },
+  image: {
+    path: "/takaneko/tennya.png",
+    ref: "https://takanenonadeshiko.jp/",
+  },
+  officialProfile: "https://takanenonadeshiko.jp/about/",
+  twitter: "https://x.com/takanenofficial",
+  instagram: "https://www.instagram.com/takanenofficial/",
+  tiktok: "https://www.tiktok.com/@takanenofficial",
+  showroom: "https://www.showroom-live.com/r/takanenonadeshiko_official",
+} as const;
