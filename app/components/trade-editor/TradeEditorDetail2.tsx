@@ -28,8 +28,8 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
   // 画像の限界サイズ。すべての画像に同じ拡縮率を適用したいため、絶対超えてはい
   // けないサイズをもとに拡縮率が決まるようにする。
-  const limitWidth = 240;
-  const limitHeight = 240;
+  const limitWidth = 320;
+  const limitHeight = 320;
 
   const stamps = useMemo(() => stampPositions(positions), [positions]);
   const maxWidth = useMemo(() => Math.max(...positions.map((p) => p.width)), [positions]);
@@ -47,7 +47,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="bg-nadeshiko-50 py-4">
+    <div className="py-4">
       {/* Image and image selector */}
       <Swiper
         className={clsx(
@@ -85,7 +85,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
           return (
             <SwiperSlide key={i} className="w-fit px-4">
-              <div className="flex h-60 items-center justify-center">
+              <div className="flex h-80 items-center justify-center">
                 <div className="relative w-fit">
                   <ClippedImage
                     clip={pos ?? { x: 0, y: 0, width: 0, height: 0 }}
