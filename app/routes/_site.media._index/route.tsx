@@ -12,15 +12,11 @@ import {
 } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
-import { getAllMedia } from "~/features/media/allMedia";
-import { MediaDetails } from "~/features/media/types";
+import { getAllMediaMetadata } from "~/features/media/metadata";
 import { AllMembers, findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
 import { formatTitle } from "~/utils/htmlHeader";
-import { ogp } from "~/utils/ogp/ogp";
-import { validateYouTubeOEmbedResponse } from "~/utils/youtube/youtubeOEmbed";
 
 export const meta: MetaFunction = () => {
   return [
@@ -50,9 +46,7 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   // どこかにひとつ見えていないリクエストがあるため 50 では失敗する。
   const PAGE_SIZE = 40;
 
-  const oEmbedEndpoint = "https://www.youtube.com/oembed";
-
-  const allMedia = getAllMedia().filter((media) => {
+  const allMediaMetadata = getAllMediaMetadata().filter((media) => {
     if (media.presents.length == 0) {
       return true;
     }
@@ -63,82 +57,12 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
     return true;
   });
-  const total = Math.ceil(allMedia.length / PAGE_SIZE);
+  const total = Math.ceil(allMediaMetadata.length / PAGE_SIZE);
   const page = Math.max(0, Math.min(total, p));
 
-  const metadataPromises = allMedia
-    .slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE)
-    .map(async (media): Promise<MediaDetails[]> => {
-      if (media.kind == "static") {
-        return [
-          {
-            kind: "static",
-            title: media.title,
-            authorName: media.authorName,
-            publishedAt: media.publishedAt,
-            mediaUrl: media.mediaUrl,
-            imageUrl: media.image.path,
-            category: media.category,
-            presents: media.presents ?? [],
-          },
-        ];
-      } else if (media.kind == "ogp") {
-        const metadata = await ogp(media.mediaUrl);
+  const pageData = allMediaMetadata.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
-        const title = findFirstNonEmpty([metadata?.ogp?.title, media.title]);
-        const authorName = findFirstNonEmpty([metadata?.ogp?.siteName, media.siteName]);
-        const imageUrl = findFirstNonEmpty([metadata?.ogp?.image, media.image?.path]);
-        const mediaUrl = findFirstNonEmpty([metadata?.ogp?.url, media.mediaUrl]);
-        if (!title || !authorName || !imageUrl || !mediaUrl) {
-          return [];
-        }
-
-        return [
-          {
-            kind: "ogp",
-            title: title,
-            authorName: authorName,
-            publishedAt: media.publishedAt,
-            mediaUrl: mediaUrl,
-            imageUrl: imageUrl,
-            category: media.category,
-            presents: media.presents ?? [],
-          },
-        ];
-      } else if (media.kind == "youtube") {
-        const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${media.videoId}&format=json`;
-
-        const response = await fetch(url);
-        if (!response.ok) {
-          return [];
-        }
-        const jsonData = await response.json();
-
-        // Validate the response using the validate function
-        const data = validateYouTubeOEmbedResponse(jsonData);
-        if (!data) {
-          return [];
-        }
-
-        return [
-          {
-            kind: "youtube",
-            title: data.title,
-            authorName: data.author_name,
-            publishedAt: media.publishedAt,
-            mediaUrl: `https://youtu.be/${media.videoId}`,
-            imageUrl: data.thumbnail_url,
-            category: "youtube",
-            presents: media.presents,
-          },
-        ];
-      } else {
-        return [];
-      }
-    });
-
-  const items = (await Promise.all(metadataPromises)).flatMap((x) => x);
-  return { page: page + 1, total, items, selected: selectedMember };
+  return { page: page + 1, total, items: pageData, selected: selectedMember };
 };
 
 export default function MediaIndex() {
