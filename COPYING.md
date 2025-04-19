@@ -10,6 +10,11 @@ For more detailed information, please refer to the `/public/takaneko/COPYRIGHT.m
 All files within the `/public/events` directory are the property of each event organizers.
 For more detailed information, please refer to the `/public/events/COPYRIGHT.md` file.
 
+## `/public/media`
+
+All files within the `/public/media` directory are the property of each media publishers.
+For more detailed information, please refer to the `/public/media/COPYRIGHT.md` file.
+
 ## `/public/publications`
 
 All files within the `/public/publication` directory are the property of each publishers.
