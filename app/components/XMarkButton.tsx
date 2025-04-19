@@ -8,8 +8,15 @@ export const XMarkButton = forwardRef<HTMLButtonElement, Props>((props, ref) => 
   const { className, ...rest } = props;
 
   return (
-    <button ref={ref} className={clsx("rounded-full p-2 hover:bg-gray-200", className)} {...rest}>
-      <BsX className="h-6 w-6 text-gray-800" />
+    <button
+      ref={ref}
+      className={clsx(
+        "group flex h-10 w-10 items-center justify-center rounded-full hover:bg-gray-100 active:bg-gray-200",
+        className,
+      )}
+      {...rest}
+    >
+      <BsX className="h-7 w-7 text-gray-700" />
     </button>
   );
 });
