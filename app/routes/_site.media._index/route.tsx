@@ -1,4 +1,8 @@
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import clsx from "clsx";
 import {
+  BsCheck,
+  BsChevronDown,
   BsChevronLeft,
   BsChevronRight,
   BsFillCameraReelsFill,
@@ -10,7 +14,7 @@ import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-rou
 import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMedia } from "~/features/media/allMedia";
 import { MediaDetails } from "~/features/media/types";
-import { AllMembers } from "~/features/members/members";
+import { AllMembers, findMemberDescription } from "~/features/members/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
@@ -129,18 +133,87 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
     });
 
   const items = (await Promise.all(metadataPromises)).flatMap((x) => x);
-  return { page: page + 1, total, items };
+  return { page: page + 1, total, items, selected: selectedMember };
 };
 
 export default function MediaIndex() {
   const metadata = useLoaderData<typeof loader>();
-  const { page, total, items } = metadata;
+  const { page, total, items, selected } = metadata;
 
   return (
     <div className="container mx-auto max-w-3xl">
       <section className="p-4">
         <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">メディア</h1>
-        <ul className="max-w-2xl space-y-6 py-2">
+
+        <div className="my-4 flex justify-end">
+          <Popover className="">
+            <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
+              {/* <div className="mx-auto flex-1 pl-2">メンバー</div> */}
+
+              <div className="flex items-center gap-2">
+                <MemberIcon member={selected ?? "高嶺のなでしこ"} size={24} />
+                <p>{selected ? findMemberDescription(selected).name : "全員"}</p>
+              </div>
+
+              <div className="flex-none px-1">
+                <BsChevronDown className="text-xs" />
+              </div>
+            </PopoverButton>
+            <PopoverPanel
+              anchor={{ to: "bottom end", gap: "0.5rem" }}
+              className="border-nadeshiko-100 bg-nadeshiko-50 overflow-hidden rounded-sm border py-2 shadow-md"
+            >
+              {({ close }) => (
+                <ul className="min-w-60">
+                  <li>
+                    <Link to="" className="block" onClick={() => close()}>
+                      <div
+                        className={clsx(
+                          "flex items-center gap-2",
+                          "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
+                          "data-current:bg-nadeshiko-700 data-current:text-white",
+                        )}
+                      >
+                        <div className="text-nadeshiko-800 h-6 w-6">
+                          {AllMembers.every((x) => x.id != selected) ? (
+                            <BsCheck className="h-full w-full" />
+                          ) : null}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <MemberIcon member="高嶺のなでしこ" size={24} />
+                          <p>全員</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  {AllMembers.map((c) => (
+                    <li key={c.id}>
+                      <Link to={`?m=${c.slug}`} onClick={() => close()}>
+                        <div
+                          className={clsx(
+                            "flex items-center gap-2",
+                            "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
+                            "data-current:bg-nadeshiko-700 data-current:text-white",
+                          )}
+                        >
+                          <div className="text-nadeshiko-800 h-6 w-6">
+                            {c.id == selected ? <BsCheck className="h-full w-full" /> : null}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <MemberIcon member={c.id} key={c.id} size={24} />
+                            <p>{c.name}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </PopoverPanel>
+          </Popover>
+        </div>
+
+        <ul className="w-full space-y-6 py-2">
           {items.map((video) => {
             return (
               <li key={video.mediaUrl}>
