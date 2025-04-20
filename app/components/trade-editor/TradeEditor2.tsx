@@ -17,6 +17,7 @@ import {
   BsTrashFill,
 } from "react-icons/bs";
 import { RandomGoods } from "~/features/products/product";
+import { useTradeEditorPanelStore } from "~/features/trade/store";
 import {
   Stamp,
   totalHaveCount,
@@ -28,7 +29,7 @@ import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { CopyButton } from "../CopyButton";
 import { XMarkButton } from "../XMarkButton";
-import { EmojiPanel, SelectableEmojis } from "./EmojiPanel";
+import { EmojiPanel } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
 import { shareTradeImage } from "./shareTradeImage";
 import { TradeEditorDetail2 } from "./TradeEditorDetail2";
@@ -41,8 +42,6 @@ interface Props {
   onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
   onClearTradeDescriptions?: (id: string) => void;
 }
-
-type StampType = "clear" | "wanted" | "+1" | "-1" | "cog" | "emoji";
 
 export const TradeEditor2: React.FC<Props> = (props: Props) => {
   const {
@@ -57,8 +56,12 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
   const [showConfirmClear, setShowConfirmClear] = useState(false);
   const [preview, setPreview] = useState(false);
-  const [selectedStamp, setSelectedStamp] = useState<StampType>("cog");
-  const [selectedEmoji, setSelectedEmoji] = useState<string>(SelectableEmojis[0]);
+
+  const selectedStamp = useTradeEditorPanelStore((state) => state.selectedStamp);
+  const setSelectedStamp = useTradeEditorPanelStore((state) => state.setSelectedStamp);
+  const selectedEmoji = useTradeEditorPanelStore((state) => state.selectedEmoji);
+  const setSelectedEmoji = useTradeEditorPanelStore((state) => state.setSelectedEmoji);
+
   const [detailDialogState, setDetailDialogState] = useState<{ open: boolean; index: number }>({
     open: false,
     index: 0,

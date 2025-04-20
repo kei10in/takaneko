@@ -1,33 +1,11 @@
 import { Switch } from "@headlessui/react";
 import { clsx } from "clsx";
+import { SelectableEmojis } from "~/features/trade/stamp";
 
 interface Props {
   selected?: string;
   onChange?: (emoji: string) => void;
 }
-
-export const SelectableEmojis = [
-  "🐥",
-  "🐬",
-  "🍑",
-  "🕊️",
-  "🍀",
-  "👶🏻",
-  "🐣",
-  "🏹",
-  "🎀",
-  "🛼",
-  "💛",
-  "🩵",
-  "🩷",
-  "🤍",
-  "💚",
-  "🧡",
-  "💜",
-  "❤️",
-  "💖",
-  "💙",
-];
 
 export const EmojiPanel: React.FC<Props> = (props: Props) => {
   const { selected, onChange } = props;

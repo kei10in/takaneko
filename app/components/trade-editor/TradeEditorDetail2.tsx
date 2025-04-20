@@ -5,10 +5,10 @@ import { BsBan } from "react-icons/bs";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { RandomGoods } from "~/features/products/product";
+import { SelectableEmojis } from "~/features/trade/stamp";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
-import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
 
 interface Props {

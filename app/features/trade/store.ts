@@ -1,6 +1,7 @@
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
-import { TradeDescription, TradeStatus } from "./TradeStatus";
+import { createJSONStorage, persist } from "zustand/middleware";
+import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
+import { SelectableEmojis, StampType } from "~/features/trade/stamp";
 
 interface TradeState {
   allTradeDescriptions: Record<string, Record<number, TradeDescription>>;
@@ -50,6 +51,39 @@ export const useTradeStore = create<TradeState & TradeAction>()(
     }),
     {
       name: "trade-image-editor",
+    },
+  ),
+);
+
+interface TradeEditorPanelState {
+  selectedStamp: StampType;
+  selectedEmoji: string;
+}
+
+interface TradeEditorPanelAction {
+  setSelectedStamp: (stamp: StampType) => void;
+  setSelectedEmoji: (emoji: string) => void;
+}
+
+/**
+ * TradeEditorPanelStore は、トレードエディターパネルの状態を管理するために使用されます。
+ * パネルで何が選択されているかを管理しています。
+ * 状態はセッションストレージに保存されます。
+ */
+export const useTradeEditorPanelStore = create<TradeEditorPanelState & TradeEditorPanelAction>()(
+  persist(
+    (set) => ({
+      // default values
+      selectedStamp: "cog",
+      selectedEmoji: SelectableEmojis[0],
+
+      // actions
+      setSelectedStamp: (stamp: StampType) => set({ selectedStamp: stamp }),
+      setSelectedEmoji: (emoji: string) => set({ selectedEmoji: emoji }),
+    }),
+    {
+      name: "trade-image-editor-panel",
+      storage: createJSONStorage(() => sessionStorage),
     },
   ),
 );
