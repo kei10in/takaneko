@@ -70,8 +70,7 @@ export const metadata2023: MediaDetails[] = [
     authorName:
       "WWSチャンネル,WWSチャンネル | ファッション・音楽・アイドルの総合情報サイト　無料ネット動画＆写真芸能ニュース",
     publishedAt: "2023-09-06",
-    mediaUrl:
-      "https://www.wws-channel.com/girls2/450073.html,https://www.wws-channel.com/girls2/450073.html",
+    mediaUrl: "https://www.wws-channel.com/girls2/450073.html",
     imageUrl: "https://www.wws-channel.com/wp-content/uploads/2023/09/00_1-13.jpg",
     category: "article",
     presents: ["東山恵里沙", "星谷美来", "松本ももな"],

@@ -40,7 +40,7 @@ export const metadata2024: MediaDetails[] = [
       "高嶺のなでしこ「この10人だからこそ出せる色がある。これからも1人1人が個性を出せるようなグループを作り続けたい」INTERVIEW",
     authorName: "STREAM（ストリーム）",
     publishedAt: "2024-12-13",
-    mediaUrl: "https://strmweb.jp/archives/15750/",
+    mediaUrl: "https://strmweb.jp/?p=15750",
     imageUrl: "https://strmweb.jp/home/wp-content/uploads/2024/12/A7S00074.jpg",
     category: "article",
     presents: ["城月菜央", "東山恵里沙", "籾山ひめり"],
@@ -96,7 +96,7 @@ export const metadata2024: MediaDetails[] = [
       "【インタビュー】高嶺のなでしこ“らしさ”とは？ メンバーが語るグループの方向性とそれぞれの個性 ",
     authorName: "ORICON NEWS",
     publishedAt: "2024-12-11",
-    mediaUrl: "https://www.oricon.co.jp/news/2358400/full/",
+    mediaUrl: "https://www.oricon.co.jp/news/2358400/",
     imageUrl:
       "https://contents.oricon.co.jp/upimg/news/2359000/2358400/20241210_131044_p_o_52657688.jpg",
     category: "article",
@@ -130,7 +130,7 @@ export const metadata2024: MediaDetails[] = [
       "高嶺のなでしこ、グループ結成から2年の現在地語る「家族みたいな存在」　新曲リリース&“過去最大規模”ワンマンに意気込み ",
     authorName: "ORICON NEWS",
     publishedAt: "2024-12-08",
-    mediaUrl: "https://www.oricon.co.jp/news/2357995/full/",
+    mediaUrl: "https://www.oricon.co.jp/news/2357995/",
     imageUrl:
       "https://contents.oricon.co.jp/upimg/news/2358000/2357995/20241208_110101_o_90679108.jpg",
     category: "article",
@@ -493,7 +493,7 @@ export const metadata2024: MediaDetails[] = [
     authorName:
       "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
     publishedAt: "2024-07-23",
-    mediaUrl: "https://nicola.jp/article/article-22017/,https://nicola.jp/article/article-22017",
+    mediaUrl: "https://nicola.jp/?p=22017",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/07/f116246827f34ec7becea912ac8a2af1.png",
     category: "article",
     presents: [],
@@ -693,7 +693,7 @@ export const metadata2024: MediaDetails[] = [
     authorName:
       "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
     publishedAt: "2024-04-07",
-    mediaUrl: "https://nicola.jp/article/article-19490/,https://nicola.jp/article/article-19490",
+    mediaUrl: "https://nicola.jp/?p=19490",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/04/higashiyamaerisa_nico305-116-1.jpg",
     category: "article",
     presents: ["東山恵里沙"],
@@ -815,7 +815,7 @@ export const metadata2024: MediaDetails[] = [
     authorName:
       "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
     publishedAt: "2024-03-08",
-    mediaUrl: "https://nicola.jp/article/article-18655/,https://nicola.jp/article/article-18655",
+    mediaUrl: "https://nicola.jp/?p=18655",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/03/takaneko_nicola.jpg",
     category: "article",
     presents: [],
@@ -837,7 +837,7 @@ export const metadata2024: MediaDetails[] = [
     authorName:
       "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
     publishedAt: "2024-03-01",
-    mediaUrl: "https://nicola.jp/article/article-18495/,https://nicola.jp/article/article-18495",
+    mediaUrl: "https://nicola.jp/?p=18495",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/03/takaneko.jpg",
     category: "article",
     presents: [],

@@ -3,8 +3,7 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
-    title:
-      "#310：美女13人がノブを翻弄！よく寝てなかったら死んでたSP - チャンスの時間 - シーズン (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
+    title: "#310：どうしても売れたい！第3回私が1番可愛いオーディション",
     authorName: "ABEMA",
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
