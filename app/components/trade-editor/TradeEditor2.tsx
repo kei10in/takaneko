@@ -327,9 +327,17 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       {/* Preview Dialog */}
       <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
         <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <DialogPanel className="max-w-lg border border-gray-200 bg-white p-4">
-            <TradeImagePreview productImage={productImage} tradeDescriptions={tradeDescriptions} />
-            {/* <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} /> */}
+          <DialogPanel className="max-w-lg border border-gray-200 bg-white">
+            <div className="ml-auto w-fit p-2">
+              <CloseButton as={XMarkButton} />
+            </div>
+            <div className="px-4 pb-4">
+              <TradeImagePreview
+                productImage={productImage}
+                tradeDescriptions={tradeDescriptions}
+              />
+              {/* <img alt="Preview" className="mx-auto" src={stageRef.current?.toDataURL()} /> */}
+            </div>
           </DialogPanel>
         </div>
       </Dialog>
