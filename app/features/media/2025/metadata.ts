@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title:
+      "#310：美女13人がノブを翻弄！よく寝てなかったら死んでたSP - チャンスの時間 - シーズン (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
+    authorName: "ABEMA",
+    publishedAt: "2025-04-20",
+    mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
+    imageUrl:
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1744878612&width=896",
+    category: "video",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "ogp",
     title: "【新連載】すぅにゃの推し活WORLD〜vol.1 「イチバン好きなのは魔界ノりりむチャン♡」",
     authorName: "Popteen Media",
     publishedAt: "2025-04-20",
