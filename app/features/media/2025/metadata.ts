@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title: "【新連載】すぅにゃの推し活WORLD〜vol.1 「イチバン好きなのは魔界ノりりむチャン♡」",
+    authorName: "Popteen Media",
+    publishedAt: "2025-04-20",
+    mediaUrl: "https://popteen.co.jp/media/66952/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/04/42a5088ec45b9b100b6da6f37d8328ed.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "youtube",
     title:
       "【アイドルの本気】鈴木愛理が高嶺のなでしこと「可愛くてごめん」ダンスレッスン！「ざまあ顔」披露で大盛り上がり！バラエティで滑った時の可愛い挽回方法は？【でしょでしょ‼︎】",
