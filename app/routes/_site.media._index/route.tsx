@@ -10,7 +10,13 @@ import {
   BsNewspaper,
   BsYoutube,
 } from "react-icons/bs";
-import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
+import {
+  Link,
+  LoaderFunctionArgs,
+  MetaFunction,
+  useLoaderData,
+  useSearchParams,
+} from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
 import { getAllMediaMetadata } from "~/features/media/metadata";
 import { AllMembers, findMemberDescription } from "~/features/profile/members";
@@ -67,7 +73,15 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export default function MediaIndex() {
   const metadata = useLoaderData<typeof loader>();
+  const [searchParams] = useSearchParams();
+  const m = searchParams.get("m");
   const { page, total, items, selected } = metadata;
+
+  const prev = Math.max(1, page - 1);
+  const next = Math.min(total, page + 1);
+
+  const prevTo = m ? `/media?p=${prev}&m=${m}` : `?p=${prev}`;
+  const nextTo = m ? `/media?p=${next}&m=${m}` : `?p=${next}`;
 
   return (
     <div className="container mx-auto max-w-3xl">
@@ -195,7 +209,7 @@ export default function MediaIndex() {
           ) : (
             <Link
               className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
-              to={`/media?p=${Math.max(1, page - 1)}`}
+              to={prevTo}
             >
               <BsChevronLeft />
             </Link>
@@ -210,7 +224,7 @@ export default function MediaIndex() {
           ) : (
             <Link
               className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
-              to={`/media?p=${Math.min(total, page + 1)}`}
+              to={nextTo}
             >
               <BsChevronRight />
             </Link>
