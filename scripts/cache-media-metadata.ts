@@ -32,10 +32,10 @@ const fetchAndCacheMediaMetadata = async () => {
     } else if (media.kind == "ogp") {
       const metadata = await ogp(media.mediaUrl);
 
-      const title = findFirstNonEmpty([metadata?.ogp?.title, media.title]);
-      const authorName = findFirstNonEmpty([metadata?.ogp?.siteName, media.siteName]);
-      const imageUrl = findFirstNonEmpty([metadata?.ogp?.image, media.image?.path]);
-      const mediaUrl = findFirstNonEmpty([metadata?.ogp?.url, media.mediaUrl]);
+      const title = findFirstNonEmpty([media.title, metadata?.ogp?.title]);
+      const authorName = findFirstNonEmpty([media.siteName, metadata?.ogp?.siteName]);
+      const imageUrl = findFirstNonEmpty([media.image?.path, metadata?.ogp?.image]);
+      const mediaUrl = findFirstNonEmpty([media.mediaUrl, metadata?.ogp?.url]);
       if (!title || !authorName || !imageUrl || !mediaUrl) {
         return [];
       }
