@@ -5,7 +5,6 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     publishedAt: "2025-04-20",
     category: "video",
-    title: "#310：どうしても売れたい！第3回私が1番可愛いオーディション",
     presents: ["日向端ひな"],
   },
   {
