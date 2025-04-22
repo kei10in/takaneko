@@ -7,6 +7,7 @@ import {
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { useTradeStore } from "~/features/trade/store";
+import { TradeDescription } from "~/features/trade/TradeStatus";
 import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -46,9 +47,17 @@ export const clientLoader = ({ params }: ClientLoaderFunctionArgs) => {
 
 export default function TradeImageEditor() {
   const selectedProduct = useLoaderData<typeof loader>();
+  const lineup = selectedProduct.lineup ?? [];
+  const lineupIds = lineup.map((p) => p.id);
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const tradeDescriptions = allTradeDescriptions[selectedProduct?.id] ?? {};
+  const tradeDescriptionsInLineup = Object.fromEntries(
+    lineupIds
+      .filter((id) => id in tradeDescriptions)
+      .map((id): [number, TradeDescription] => [id, tradeDescriptions[id]]),
+  );
+
   const updateTradeDescriptions = useTradeStore((state) => state.updateTradeDescriptions);
   const clearTradeDescriptions = useTradeStore((state) => state.clearTradeDescriptions);
 
@@ -56,7 +65,7 @@ export default function TradeImageEditor() {
     <div className="overflow-x-clip">
       <TradeEditor2
         productImage={selectedProduct}
-        tradeDescriptions={tradeDescriptions}
+        tradeDescriptions={tradeDescriptionsInLineup}
         width={360}
         onChangeTradeDescription={(photoId, status) =>
           updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
