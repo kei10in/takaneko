@@ -7,7 +7,7 @@ export const FAVE_IDOLS_オンラインくじE賞: RandomGoods = {
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "E賞 缶バッジ",
-  tradeText: TradeTextType.Description,
+  tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞.webp",
   width: 3050,
   height: 1250,

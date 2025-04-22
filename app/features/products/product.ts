@@ -24,6 +24,7 @@ export interface OfficialGoods {
 
 export const TradeTextType = {
   Description: "description",
+  GroupByDescription: "groupByDescription",
   NameOnly: "nameOnly",
   Numbering: "numbering",
 } as const;

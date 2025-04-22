@@ -18,6 +18,10 @@ export const convertToTradeText = (
     return generateDescriptionTradeText(productImage, tradeDescriptions);
   }
 
+  if (productImage.tradeText === "groupByDescription") {
+    return generateGroupByDescriptionTradeText(productImage, tradeDescriptions);
+  }
+
   return undefined;
 };
 
@@ -165,6 +169,84 @@ const generateDescriptionTradeText = (
       const familyName = name.split(" ")[0];
 
       return `${familyName} ${have.join(", ")}`;
+    })
+    .join("\n");
+
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+
+  return `${name}\n${wantsText}${haveText}`;
+};
+
+/**
+ * `TradeTextType.GroupByDescription` 用のトレード用テキストを生成します。
+ * Description のグループ化をして表示します。
+ *
+ * 例:
+ *   💖求
+ *   F賞 葉月, 春野
+ *
+ *   🎁譲
+ *   F賞 籾山
+ */
+const generateGroupByDescriptionTradeText = (
+  productImage: RandomGoods,
+  tradeDescriptions: Record<number, TradeDescription>,
+): string => {
+  const xs: { description: string; items: ItemDescription[] }[] = [];
+  productImage.lineup.forEach((item) => {
+    if (item.description == undefined) {
+      return;
+    }
+
+    const description = xs.find((m) => m.description === item.description);
+    if (description) {
+      description.items.push(item);
+    } else {
+      xs.push({ description: item.description, items: [item] });
+    }
+  });
+
+  const wants = xs
+    .flatMap((x) => {
+      const wants = x.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
+        .flatMap((i) => {
+          const name = AllMembers.find((m) => m.id == i.name)?.name;
+          if (name == undefined) {
+            return [];
+          }
+          const familyName = name.split(" ")[0];
+          return [familyName];
+        });
+
+      if (wants.length === 0) {
+        return [];
+      }
+
+      return `${x.description} ${wants.join(", ")}`;
+    })
+    .join("\n");
+
+  const have = xs
+    .flatMap((x) => {
+      const have = x.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
+        .flatMap((i) => {
+          const name = AllMembers.find((m) => m.id == i.name)?.name;
+          if (name == undefined) {
+            return [];
+          }
+          const familyName = name.split(" ")[0];
+          return [familyName];
+        });
+
+      if (have.length === 0) {
+        return [];
+      }
+
+      return `${x.description} ${have.join(", ")}`;
     })
     .join("\n");
 
