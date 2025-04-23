@@ -62,6 +62,11 @@ export const YouTube2024 = [
     presents: ["松本ももな"],
   },
   {
+    videoId: "spYkHfWCyd8",
+    publishedAt: "2024-08-31",
+    presents: [],
+  },
+  {
     videoId: "BlutW1YWek8",
     publishedAt: "2024-08-31",
     presents: ["涼海すう"],

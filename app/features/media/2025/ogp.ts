@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.oricon.co.jp/news/2380978/full/",
+    publishedAt: "2025-04-22",
+    category: "article",
+    presents: ["日向端ひな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     publishedAt: "2025-04-20",
     category: "video",

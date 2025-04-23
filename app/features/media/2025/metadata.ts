@@ -2,6 +2,39 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title: "【高嶺のなでしこ】ホールツアー名古屋公演に向けてコメント到着！",
+    authorName: "SUNDAY FOLK PROMOTION",
+    publishedAt: "2025-04-22",
+    mediaUrl: "https://youtu.be/0Y8UVokoj3Y",
+    imageUrl: "https://i.ytimg.com/vi/0Y8UVokoj3Y/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
+    title:
+      "高嶺のなでしこ・籾山ひめり&日向端ひな、ランウェイ出演でファッションポイントを明かす！十代の頃の思い出も赤裸々告白　『超十代2025』独占インタビュー",
+    authorName: "oricon",
+    publishedAt: "2025-04-22",
+    mediaUrl: "https://youtu.be/K_IuWutpyyE",
+    imageUrl: "https://i.ytimg.com/vi/K_IuWutpyyE/hqdefault.jpg",
+    category: "youtube",
+    presents: ["日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ・籾山ひめり、ティーン世代に金言「やっておきたいなっていう思い出は全部叶えた方がいい」　日向端ひなが“十代の思い出”明かす「今思うと勉強しなって感じなんですけど(笑)」【インタビュー】 ",
+    authorName: "ORICON NEWS",
+    publishedAt: "2025-04-22",
+    mediaUrl: "https://www.oricon.co.jp/news/2380978/full/",
+    imageUrl:
+      "https://contents.oricon.co.jp/upimg/news/2381000/2380978/20250422_161105_p_o_94356142.jpg",
+    category: "article",
+    presents: ["日向端ひな", "籾山ひめり"],
+  },
+  {
     kind: "ogp",
     title:
       "#310：美女13人がノブを翻弄！よく寝てなかったら死んでたSP - チャンスの時間 - シーズン (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
