@@ -10,7 +10,7 @@ export const FAVE_IDOLS_オンラインくじ: RandomGoods = {
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ.webp",
   width: 2800,
-  height: 6650,
+  height: 7750,
   lineup: [
     { id: 1, name: "城月菜央", description: "A賞" },
     { id: 2, name: "涼海すう", description: "A賞" },
