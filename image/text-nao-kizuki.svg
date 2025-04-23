@@ -1,0 +1,22 @@
+<svg viewBox="0 0 440 120" width="440" height="120" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    text {
+      font-family: Noto Sans JP;
+
+      stroke: #fde047;
+      fill: white;
+
+      font-size: 80px;
+      stroke-width: 24px;
+      font-weight: bold;
+
+      /* 枠線の角の形状 (round, miter, bevel) */
+      stroke-linejoin: round;
+
+      paint-order: stroke fill;
+      text-anchor: middle;
+    }
+  </style>
+
+  <text x="50%" y="75%">城月菜央</text>
+</svg>
