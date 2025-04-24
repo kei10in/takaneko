@@ -43,7 +43,7 @@ import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN";
 import { OutOfMusic_86, OutOfMusic_87 } from "./publications/Out of Music";
 import { Ray_2024年11月号 } from "./publications/Ray";
 import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations";
-import { TOKYO_RESIDENT_Issue002 } from "./publications/TOKYO RESIDENT";
+import { TOKYO_RESIDENT_Issue002, TOKYO_RESIDENT_Issue003 } from "./publications/TOKYO RESIDENT";
 import {
   TopYellNeo2022AUTUMN as TopYellNeo2022Autumn,
   TopYellNeo2024_2025,
@@ -109,6 +109,7 @@ const publications: Publication[] = [
   Ray_2024年11月号,
   SmartGirlsNextGenerations,
   TOKYO_RESIDENT_Issue002,
+  TOKYO_RESIDENT_Issue003,
   TopYellNeo2022Autumn,
   TopYellNeo2024Spring,
   TopYellNeo2024Autumn,
