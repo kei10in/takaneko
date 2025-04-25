@@ -6,6 +6,7 @@ import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { PUBLICATIONS } from "~/features/products/publications";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,6 +29,7 @@ export default function Index() {
       items: LiveGoods.slice(0, 10).map((live) => ({
         slug: `/products/live-goods/${live.slug}`,
         image: live.images[0].path,
+        imageSet: undefined,
         name: live.name,
       })),
     },
@@ -37,6 +39,7 @@ export default function Index() {
       items: BirthdayGoods.slice(0, 10).map((item) => ({
         slug: `/products/birthday-goods/${item.slug}`,
         image: item.images[0].path,
+        imageSet: undefined,
         name: item.name,
       })),
     },
@@ -46,6 +49,7 @@ export default function Index() {
       items: PHOTOS.slice(0, 10).map((photo) => ({
         slug: `/products/${photo.slug}`,
         image: photo.url,
+        imageSet: undefined,
         name: photo.name,
       })),
     },
@@ -55,17 +59,22 @@ export default function Index() {
       items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
         slug: `/products/${photo.slug}`,
         image: photo.url,
+        imageSet: undefined,
         name: photo.name,
       })),
     },
     {
       title: "書籍・雑誌",
       slug: "/products/publications",
-      items: PUBLICATIONS.slice(0, 10).map((publication) => ({
-        slug: `/products/${publication.slug}`,
-        image: publication.coverImages[0].path,
-        name: publication.name,
-      })),
+      items: PUBLICATIONS.slice(0, 10).map((publication) => {
+        const thumbs = thumbnailSrcSet(publication.coverImages[0].path);
+        return {
+          slug: `/products/${publication.slug}`,
+          image: thumbs.src,
+          imageSet: thumbs.srcset,
+          name: publication.name,
+        };
+      }),
     },
   ];
 
@@ -97,7 +106,7 @@ export default function Index() {
               <div>
                 <Swiper slidesPerView="auto">
                   {items.map((item) => {
-                    const { slug, image, name } = item;
+                    const { slug, image, imageSet, name } = item;
 
                     return (
                       <SwiperSlide key={slug} className="w-fit px-1">
@@ -106,6 +115,7 @@ export default function Index() {
                             <img
                               className="aspect-square w-full bg-gray-50 object-contain"
                               src={image}
+                              srcSet={imageSet}
                               alt={name}
                             />
                             <div className="px-2 py-2">
