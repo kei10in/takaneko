@@ -4,6 +4,17 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
     title:
+      "【鈴木愛理が完コピダンス】「可愛くてごめん」by高嶺のなでしこ30分で本気習得!!＜固定カメラVer.＞【でしょでしょ‼】",
+    authorName: "動画、はじめてみました【テレビ朝日公式】",
+    publishedAt: "2025-04-26",
+    mediaUrl: "https://youtu.be/x27ckzs7QM8",
+    imageUrl: "https://i.ytimg.com/vi/x27ckzs7QM8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
+    title:
       "【鈴木愛理が完コピダンス】「可愛くてごめん」by高嶺のなでしこ30分で本気習得!!＜カメラが動くVer.＞【でしょでしょ‼】",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
     publishedAt: "2025-04-26",
