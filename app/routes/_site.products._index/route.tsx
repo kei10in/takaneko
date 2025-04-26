@@ -26,42 +26,54 @@ export default function Index() {
     {
       title: "ライブ グッズ",
       slug: "/products/live-goods",
-      items: LiveGoods.slice(0, 10).map((live) => ({
-        slug: `/products/live-goods/${live.slug}`,
-        image: live.images[0].path,
-        imageSet: undefined,
-        name: live.name,
-      })),
+      items: LiveGoods.slice(0, 10).map((live) => {
+        const thumbs = thumbnailSrcSet(live.images[0].path);
+        return {
+          slug: `/products/live-goods/${live.slug}`,
+          image: thumbs.src,
+          imageSet: thumbs.srcset,
+          name: live.name,
+        };
+      }),
     },
     {
       title: "誕生日記念グッズ",
       slug: "/products/birthday-goods",
-      items: BirthdayGoods.slice(0, 10).map((item) => ({
-        slug: `/products/birthday-goods/${item.slug}`,
-        image: item.images[0].path,
-        imageSet: undefined,
-        name: item.name,
-      })),
+      items: BirthdayGoods.slice(0, 10).map((item) => {
+        const thumbs = thumbnailSrcSet(item.images[0].path);
+        return {
+          slug: `/products/birthday-goods/${item.slug}`,
+          image: thumbs.src,
+          imageSet: thumbs.srcset,
+          name: item.name,
+        };
+      }),
     },
     {
       title: "生写真",
       slug: "/products/photos",
-      items: PHOTOS.slice(0, 10).map((photo) => ({
-        slug: `/products/${photo.slug}`,
-        image: photo.url,
-        imageSet: undefined,
-        name: photo.name,
-      })),
+      items: PHOTOS.slice(0, 10).map((photo) => {
+        const thumbs = thumbnailSrcSet(photo.url);
+        return {
+          slug: `/products/${photo.slug}`,
+          image: thumbs.src,
+          imageSet: thumbs.srcset,
+          name: photo.name,
+        };
+      }),
     },
     {
       title: "ミニフォトカード",
       slug: "/products/mini-photo-cards",
-      items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
-        slug: `/products/${photo.slug}`,
-        image: photo.url,
-        imageSet: undefined,
-        name: photo.name,
-      })),
+      items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => {
+        const thumbs = thumbnailSrcSet(photo.url);
+        return {
+          slug: `/products/${photo.slug}`,
+          image: thumbs.src,
+          imageSet: thumbs.srcset,
+          name: photo.name,
+        };
+      }),
     },
     {
       title: "書籍・雑誌",

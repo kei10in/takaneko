@@ -46,7 +46,13 @@ const processFile = async (filepath: string) => {
 };
 
 const main = async () => {
-  const targetGlobs = ["./public/publications/**/*"];
+  const targetGlobs = [
+    "./public/publications/**/*",
+    "./public/takaneko/birthday-goods/**/*",
+    "./public/takaneko/goods/**/*",
+    "./public/takaneko/live-goods/**/*",
+    "./public/takaneko/media/**/*",
+  ];
   const matchFiles = globSync(targetGlobs, { nodir: true });
 
   const promises = matchFiles.map(async (filepath) => await processFile(filepath));
