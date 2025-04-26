@@ -5,18 +5,21 @@ import { BsCheck2, BsCopy } from "react-icons/bs";
 interface Props {
   className?: string;
   data: string;
+  text?: boolean;
 }
 
 export const CopyButton: React.FC<Props> = (props: Props) => {
-  const { className, data } = props;
+  const { className, data, text = false } = props;
 
   const [state, setState] = useState<"ready" | "copied">("ready");
 
   return (
     <button
+      data-state={state}
       className={clsx(
         className,
-        "group flex h-8 w-8 items-center justify-center overflow-hidden rounded-md p-2 hover:bg-gray-100",
+        "group flex h-8 items-center gap-2 overflow-hidden rounded-md p-2 text-gray-600 hover:bg-gray-100",
+        "data-[state=copied]:text-nadeshiko-800",
       )}
       onClick={async () => {
         if (navigator?.clipboard?.writeText != undefined) {
@@ -30,11 +33,16 @@ export const CopyButton: React.FC<Props> = (props: Props) => {
       }}
       disabled={state == "copied"}
     >
-      <BsCopy data-state={state} className="h-4 w-4 text-gray-600 data-[state=copied]:hidden" />
-      <BsCheck2
-        data-state={state}
-        className="text-nadeshiko-800 hidden h-4 w-4 data-[state=copied]:block"
-      />
+      <div className="flex flex-none items-center justify-center overflow-hidden">
+        <BsCopy className="h-4 w-4 text-gray-600 group-data-[state=copied]:hidden" />
+        <BsCheck2 className="text-nadeshiko-800 hidden h-4 w-4 group-data-[state=copied]:block" />
+      </div>
+      {text && (
+        <div className="text-gray-600">
+          <div className="group-data-[state=copied]:hidden">コピー</div>
+          <div className="text-nadeshiko-800 hidden group-data-[state=copied]:block">完了</div>
+        </div>
+      )}
     </button>
   );
 };
