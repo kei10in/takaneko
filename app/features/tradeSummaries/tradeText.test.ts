@@ -15,7 +15,8 @@ describe("convertToTradeText", () => {
       10: { id: 10, status: { tag: "want" } },
     });
     expect(result).toBe(dedent`
-      生写真 アンチファン衣装
+      高嶺のなでしこ たかねこ トレード 交換
+      アンチファン衣装 生写真
 
       💖求
       城月 1, 2, 3
@@ -32,7 +33,8 @@ describe("convertToTradeText", () => {
       10: { id: 10, status: { tag: "have" } },
     });
     expect(result).toBe(dedent`
-      生写真 アンチファン衣装
+      高嶺のなでしこ たかねこ トレード 交換
+      アンチファン衣装 生写真
 
       🎁譲
       城月 1, 2, 3
@@ -49,7 +51,8 @@ describe("convertToTradeText", () => {
       10: { id: 10, status: { tag: "have" } },
     });
     expect(result).toBe(dedent`
-      生写真 アンチファン衣装
+      高嶺のなでしこ たかねこ トレード 交換
+      アンチファン衣装 生写真
 
       🎁譲
       城月 2
@@ -67,7 +70,8 @@ describe("convertToTradeText", () => {
       200: { id: 200, status: { tag: "have" } },
     });
     expect(result).toBe(dedent`
-      生写真 アンチファン衣装
+      高嶺のなでしこ たかねこ トレード 交換
+      アンチファン衣装 生写真
 
       `);
   });
@@ -80,7 +84,8 @@ describe("convertToTradeText", () => {
       4: { id: 4, status: { tag: "have" } },
     });
     expect(result).toBe(dedent`
-      ラブレターカード Cute for life
+      高嶺のなでしこ たかねこ トレード 交換
+      Cute for life ラブレターカード
 
       🎁譲
       涼海すう、葉月紗蘭
@@ -101,7 +106,8 @@ describe("convertToTradeText", () => {
       14: { id: 14, status: { tag: "have" } },
     });
     expect(result).toBe(dedent`
-      ステッカー 学生証風
+      高嶺のなでしこ たかねこ トレード 交換
+      学生証風 ステッカー
 
       🎁譲
       涼海 真顔, 笑顔
@@ -125,7 +131,8 @@ describe("convertToTradeText", () => {
         14: { id: 14, status: { tag: "have" } },
       });
       expect(result).toBe(dedent`
-        生写真 ハニフェス
+        高嶺のなでしこ たかねこ トレード 交換
+        ハニフェス 生写真
 
         🎁譲
         松本ももな、高澤百合愛、福田ひなた

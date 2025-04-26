@@ -78,7 +78,7 @@ const generateNumberingTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
 
   return concatenateTradeText({ name, have, wants });
 };
@@ -110,7 +110,7 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
 
   return concatenateTradeText({ name, have, wants });
 };
@@ -168,7 +168,7 @@ const generateDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
 
   return concatenateTradeText({ name, have, wants });
 };
@@ -244,7 +244,7 @@ const generateGroupByDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
 
   return concatenateTradeText({ name, have, wants });
 };
@@ -254,5 +254,5 @@ const concatenateTradeText = (args: { name: string; have: string; wants: string 
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
 
-  return `${name}\n${haveText}${wantsText}`;
+  return `高嶺のなでしこ たかねこ トレード 交換\n${name}\n${haveText}${wantsText}`;
 };
