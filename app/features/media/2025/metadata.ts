@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title:
+      "【鈴木愛理が完コピダンス】「可愛くてごめん」by高嶺のなでしこ30分で本気習得!!＜カメラが動くVer.＞【でしょでしょ‼】",
+    authorName: "動画、はじめてみました【テレビ朝日公式】",
+    publishedAt: "2025-04-26",
+    mediaUrl: "https://youtu.be/O-YUVzuHzas",
+    imageUrl: "https://i.ytimg.com/vi/O-YUVzuHzas/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     title: "【葉月紗蘭編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2025-04-25",
