@@ -19,7 +19,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=504&quality=75&version=1745388416&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=504&quality=75&version=1745572429&width=896",
     category: "video",
     presents: ["日向端ひな"],
   },
@@ -243,7 +243,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=504&quality=75&version=1745388416&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=504&quality=75&version=1745572429&width=896",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -277,7 +277,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=504&quality=75&version=1745388416&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=504&quality=75&version=1745572429&width=896",
     category: "video",
     presents: ["橋本桃呼"],
   },

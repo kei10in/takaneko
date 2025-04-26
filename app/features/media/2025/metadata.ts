@@ -3,6 +3,26 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title: "【葉月紗蘭編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-04-25",
+    mediaUrl: "https://youtu.be/iOqKe2dx1LE",
+    imageUrl: "https://i.ytimg.com/vi/iOqKe2dx1LE/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    title: "【橋本桃呼編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-04-23",
+    mediaUrl: "https://youtu.be/tqokE_2JmMg",
+    imageUrl: "https://i.ytimg.com/vi/tqokE_2JmMg/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     title: "【高嶺のなでしこ】ホールツアー名古屋公演に向けてコメント到着！",
     authorName: "SUNDAY FOLK PROMOTION",
     publishedAt: "2025-04-22",
@@ -42,7 +62,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1745201060&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1745629704&width=896",
     category: "video",
     presents: ["日向端ひな"],
   },
