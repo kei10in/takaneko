@@ -40,9 +40,9 @@ const processFile = async (filepath: string) => {
 
   fs.mkdirSync(path.dirname(outputFilePaths[0]), { recursive: true });
 
-  await resizeImage(filepath, outputFilePaths[0], 200, 200);
-  await resizeImage(filepath, outputFilePaths[1], 400, 400);
-  await resizeImage(filepath, outputFilePaths[2], 600, 600);
+  await resizeImage(filepath, outputFilePaths[0], 240, 240);
+  await resizeImage(filepath, outputFilePaths[1], 480, 480);
+  await resizeImage(filepath, outputFilePaths[2], 720, 720);
 };
 
 const main = async () => {
