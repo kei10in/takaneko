@@ -51,12 +51,12 @@ describe("convertToTradeText", () => {
     expect(result).toBe(dedent`
       生写真 アンチファン衣装
 
-      💖求
-      城月 1, 3
-
       🎁譲
       城月 2
       葉月 10
+
+      💖求
+      城月 1, 3
 
       `);
   });
@@ -82,11 +82,11 @@ describe("convertToTradeText", () => {
     expect(result).toBe(dedent`
       ラブレターカード Cute for life
 
-      💖求
-      城月菜央、橋本桃呼
-
       🎁譲
       涼海すう、葉月紗蘭
+
+      💖求
+      城月菜央、橋本桃呼
 
       `);
   });
@@ -103,13 +103,13 @@ describe("convertToTradeText", () => {
     expect(result).toBe(dedent`
       ステッカー 学生証風
 
-      💖求
-      城月 真顔, 笑顔
-      橋本 真顔
-
       🎁譲
       涼海 真顔, 笑顔
       葉月 笑顔
+
+      💖求
+      城月 真顔, 笑顔
+      橋本 真顔
 
       `);
   });
@@ -127,11 +127,11 @@ describe("convertToTradeText", () => {
       expect(result).toBe(dedent`
         生写真 ハニフェス
 
-        💖求
-        橋本桃呼、春野莉々、永尾梨央
-
         🎁譲
         松本ももな、高澤百合愛、福田ひなた
+
+        💖求
+        橋本桃呼、春野莉々、永尾梨央
 
         `);
     });

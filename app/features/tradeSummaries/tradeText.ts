@@ -42,24 +42,6 @@ const generateNumberingTradeText = (
     }
   });
 
-  const wants = members
-    .flatMap((member) => {
-      const wants = member.items
-        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
-        .map((i) => i.id);
-      if (wants.length === 0) {
-        return [];
-      }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
-        return [];
-      }
-      const familyName = name.split(" ")[0];
-
-      return `${familyName} ${wants.join(", ")}`;
-    })
-    .join("\n");
-
   const have = members
     .flatMap((member) => {
       const have = member.items
@@ -78,11 +60,29 @@ const generateNumberingTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
-  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
-  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wants = members
+    .flatMap((member) => {
+      const wants = member.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
+        .map((i) => i.id);
+      if (wants.length === 0) {
+        return [];
+      }
+      const name = AllMembers.find((m) => m.id == member.name)?.name;
+      if (name == undefined) {
+        return [];
+      }
+      const familyName = name.split(" ")[0];
 
-  return `${name}\n${wantsText}${haveText}`;
+      return `${familyName} ${wants.join(", ")}`;
+    })
+    .join("\n");
+
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+
+  return `${name}\n${haveText}${wantsText}`;
 };
 
 /**
@@ -92,16 +92,6 @@ const generateNameOnlyTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
-  const wants = productImage.lineup
-    .flatMap((item) => {
-      if (tradeDescriptions[item.id]?.status.tag === "want") {
-        return [item.name];
-      } else {
-        return [];
-      }
-    })
-    .join("、");
-
   const have = productImage.lineup
     .flatMap((item) => {
       if (tradeDescriptions[item.id]?.status.tag === "have") {
@@ -112,11 +102,21 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
-  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
-  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wants = productImage.lineup
+    .flatMap((item) => {
+      if (tradeDescriptions[item.id]?.status.tag === "want") {
+        return [item.name];
+      } else {
+        return [];
+      }
+    })
+    .join("、");
 
-  return `${name}\n${wantsText}${haveText}`;
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+
+  return `${name}\n${haveText}${wantsText}`;
 };
 
 /**
@@ -136,24 +136,6 @@ const generateDescriptionTradeText = (
     }
   });
 
-  const wants = members
-    .flatMap((member) => {
-      const wants = member.items
-        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
-        .map((i) => i.description);
-      if (wants.length === 0) {
-        return [];
-      }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
-        return [];
-      }
-      const familyName = name.split(" ")[0];
-
-      return `${familyName} ${wants.join(", ")}`;
-    })
-    .join("\n");
-
   const have = members
     .flatMap((member) => {
       const have = member.items
@@ -172,11 +154,29 @@ const generateDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
-  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
-  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wants = members
+    .flatMap((member) => {
+      const wants = member.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
+        .map((i) => i.description);
+      if (wants.length === 0) {
+        return [];
+      }
+      const name = AllMembers.find((m) => m.id == member.name)?.name;
+      if (name == undefined) {
+        return [];
+      }
+      const familyName = name.split(" ")[0];
 
-  return `${name}\n${wantsText}${haveText}`;
+      return `${familyName} ${wants.join(", ")}`;
+    })
+    .join("\n");
+
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+
+  return `${name}\n${haveText}${wantsText}`;
 };
 
 /**
@@ -184,11 +184,11 @@ const generateDescriptionTradeText = (
  * Description のグループ化をして表示します。
  *
  * 例:
- *   💖求
- *   F賞 葉月, 春野
- *
  *   🎁譲
  *   F賞 籾山
+ *
+ *   💖求
+ *   F賞 葉月, 春野
  */
 const generateGroupByDescriptionTradeText = (
   productImage: RandomGoods,
@@ -207,27 +207,6 @@ const generateGroupByDescriptionTradeText = (
       xs.push({ description: item.description, items: [item] });
     }
   });
-
-  const wants = xs
-    .flatMap((x) => {
-      const wants = x.items
-        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
-        .flatMap((i) => {
-          const name = AllMembers.find((m) => m.id == i.name)?.name;
-          if (name == undefined) {
-            return [];
-          }
-          const familyName = name.split(" ")[0];
-          return [familyName];
-        });
-
-      if (wants.length === 0) {
-        return [];
-      }
-
-      return `${x.description} ${wants.join(", ")}`;
-    })
-    .join("\n");
 
   const have = xs
     .flatMap((x) => {
@@ -250,9 +229,30 @@ const generateGroupByDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
-  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
-  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wants = xs
+    .flatMap((x) => {
+      const wants = x.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
+        .flatMap((i) => {
+          const name = AllMembers.find((m) => m.id == i.name)?.name;
+          if (name == undefined) {
+            return [];
+          }
+          const familyName = name.split(" ")[0];
+          return [familyName];
+        });
 
-  return `${name}\n${wantsText}${haveText}`;
+      if (wants.length === 0) {
+        return [];
+      }
+
+      return `${x.description} ${wants.join(", ")}`;
+    })
+    .join("\n");
+
+  const name = productImage.abbrev ?? `${productImage.category} ${productImage.series}`;
+  const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
+  const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
+
+  return `${name}\n${haveText}${wantsText}`;
 };
