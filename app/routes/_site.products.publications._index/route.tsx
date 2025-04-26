@@ -2,6 +2,7 @@ import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { PUBLICATIONS } from "~/features/products/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { PublicationCard } from "./PublicationCard";
 
 export const meta: MetaFunction = () => {
@@ -22,17 +23,22 @@ export default function Index() {
         <h1 className="my-4 text-3xl font-semibold text-gray-600">書籍・雑誌</h1>
 
         <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-          {PUBLICATIONS.map((publication) => (
-            <li key={publication.slug}>
-              <Link to={`/products/${publication.slug}`}>
-                <PublicationCard
-                  name={publication.name}
-                  date={NaiveDate.parseUnsafe(publication.date)}
-                  image={publication.coverImages[0].path}
-                />
-              </Link>
-            </li>
-          ))}
+          {PUBLICATIONS.map((publication) => {
+            const thumbs = thumbnailSrcSet(publication.coverImages[0].path);
+
+            return (
+              <li key={publication.slug}>
+                <Link to={`/products/${publication.slug}`}>
+                  <PublicationCard
+                    name={publication.name}
+                    date={NaiveDate.parseUnsafe(publication.date)}
+                    image={thumbs.src}
+                    imageSet={thumbs.srcset}
+                  />
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </section>
     </div>
