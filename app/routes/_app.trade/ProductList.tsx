@@ -11,6 +11,7 @@ import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
 import { Link, NavLink, useLocation } from "react-router";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { RandomGoods } from "../../features/products/product";
 import { ProductItem } from "./ProductItem";
 
@@ -118,15 +119,19 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                 {item.photos.map((photo) => (
                   <li key={photo.slug}>
                     <NavLink to={`/trade/${photo.slug}`} onClick={onClickMenuItem}>
-                      {({ isActive }) => (
-                        <ProductItem
-                          image={photo.url}
-                          year={photo.year}
-                          content={photo.series}
-                          description={photo.category}
-                          selected={isActive}
-                        />
-                      )}
+                      {({ isActive }) => {
+                        const thumbs = thumbnailSrcSet(photo.url);
+                        return (
+                          <ProductItem
+                            image={thumbs.src}
+                            imageSet={thumbs.srcset}
+                            year={photo.year}
+                            content={photo.series}
+                            description={photo.category}
+                            selected={isActive}
+                          />
+                        );
+                      }}
                     </NavLink>
                   </li>
                 ))}

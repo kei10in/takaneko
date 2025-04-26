@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 
 interface Props {
   image: string;
+  imageSet?: string;
   year: number;
   content: string;
   description: string;
@@ -9,7 +10,7 @@ interface Props {
 }
 
 export const ProductItem: React.FC<Props> = (props: Props) => {
-  const { image, year, content, description, selected = false } = props;
+  const { image, imageSet, year, content, description, selected = false } = props;
 
   return (
     <div
@@ -19,7 +20,7 @@ export const ProductItem: React.FC<Props> = (props: Props) => {
       data-selected={selected ? "true" : undefined}
     >
       <div className="h-32 w-full">
-        <img src={image} alt="product" className="h-full w-full object-contain" />
+        <img src={image} srcSet={imageSet} alt="product" className="h-full w-full object-contain" />
       </div>
       <div className="flex h-20 flex-col justify-center space-y-0.5 bg-gray-50 px-2">
         <p className="border-nadeshiko-800 text-nadeshiko-800 w-fit border px-2 py-px text-xs leading-none">

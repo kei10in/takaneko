@@ -10,6 +10,7 @@ import { dateHref } from "~/features/calendars/utils";
 import { loadEventsInDay } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import { ProductItem } from "../_app.trade/ProductItem";
 
@@ -183,16 +184,20 @@ export default function Index() {
               </Link>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {recentProducts.map((product) => (
-                <Link to={`/trade/${product.slug}`} key={product.slug}>
-                  <ProductItem
-                    image={product.url}
-                    year={product.year}
-                    content={product.series}
-                    description={product.category}
-                  />
-                </Link>
-              ))}
+              {recentProducts.map((product) => {
+                const thumbs = thumbnailSrcSet(product.url);
+                return (
+                  <Link to={`/trade/${product.slug}`} key={product.slug}>
+                    <ProductItem
+                      image={thumbs.src}
+                      imageSet={thumbs.srcset}
+                      year={product.year}
+                      content={product.series}
+                      description={product.category}
+                    />
+                  </Link>
+                );
+              })}
             </div>
             <div className="w-full">
               <Link
