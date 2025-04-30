@@ -3,6 +3,26 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title: "【春野莉々編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-04-30",
+    mediaUrl: "https://youtu.be/xSME23C4vKA",
+    imageUrl: "https://i.ytimg.com/vi/xSME23C4vKA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["春野莉々"],
+  },
+  {
+    kind: "youtube",
+    title: 'TIF de Debut 2025 COMMENT MOVIE "高嶺のなでしこ"',
+    authorName: "TIF de Debut 2025",
+    publishedAt: "2025-04-28",
+    mediaUrl: "https://youtu.be/0OcDmwQdoqg",
+    imageUrl: "https://i.ytimg.com/vi/0OcDmwQdoqg/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     title:
       "【鈴木愛理が完コピダンス】「可愛くてごめん」by高嶺のなでしこ30分で本気習得!!＜固定カメラVer.＞【でしょでしょ‼】",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -84,7 +104,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1745629704&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1745827837&width=896",
     category: "video",
     presents: ["日向端ひな"],
   },
