@@ -40,12 +40,14 @@ import { 私は怪物 } from "./2024/私は怪物";
 import { 私より好きでいて } from "./2024/私より好きでいて";
 import { 美しく生きろ } from "./2024/美しく生きろ";
 import { CuteForLife } from "./2025/Cute for life";
+import { メランコリックハニー } from "./2025/メランコリックハニー";
 import { 小悪魔だってかまわない } from "./2025/小悪魔だってかまわない！";
 import { 東京サニーパーティー } from "./2025/東京サニーパーティー";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2025
+  メランコリックハニー,
   東京サニーパーティー,
   CuteForLife,
   小悪魔だってかまわない,
