@@ -2,6 +2,7 @@
 name = "takaneko"
 compatibility_date = "2025-04-02"
 compatibility_flags = ["nodejs_compat_v2"]
+main = "./workers/app.ts"
 
 [assets]
 directory = "./build/client/"
