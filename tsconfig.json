@@ -7,12 +7,12 @@
     "app/**/.server/**/*.tsx",
     "app/**/.client/**/*.ts",
     "app/**/.client/**/*.tsx",
+    "workers/**/*.ts",
     "env.d.ts",
     "react-router.config.ts",
     "scripts/**/*.ts",
     "vite.config.ts"
   ],
-  "exclude": ["functions/[[path]].ts"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
     "types": ["@react-router/cloudflare", "vite/client", "mdx", "./worker-configuration.d.ts"],
