@@ -13,12 +13,7 @@
   "exclude": ["functions/[[path]].ts"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
-    "types": [
-      "@react-router/cloudflare",
-      "vite/client",
-      "@cloudflare/workers-types/2023-07-01",
-      "mdx"
-    ],
+    "types": ["@react-router/cloudflare", "vite/client", "mdx"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
