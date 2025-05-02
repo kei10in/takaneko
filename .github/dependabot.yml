@@ -16,6 +16,12 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+      react-router:
+        patterns:
+          - "@react-router/cloudflare"
+          - "@react-router/dev"
+          - "@react-router/fs-routes"
+          - react-router
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
