@@ -23,7 +23,7 @@ const main = async () => {
  * 生写真の画像をひとつずつの画像に切り抜きます。
  */
 const cropPhotos = async () => {
-  const tasks = regularTakanekoPhotos().map(async (photo) => {
+  for (const photo of regularTakanekoPhotos()) {
     const src = `public${photo.url}`;
 
     const tasks = photo.positions.map(async (pos) => {
@@ -32,16 +32,14 @@ const cropPhotos = async () => {
     });
 
     await Promise.all(tasks);
-  });
-
-  await Promise.all(tasks);
+  }
 };
 
 /**
  * ミニフォトカードの画像をひとつずつの画像に切り抜きます。
  */
 const cropMiniPhotoCards = async () => {
-  const tasks = regularTakanekoMiniPhotoCards().map(async (photo) => {
+  for (const photo of regularTakanekoMiniPhotoCards()) {
     const src = `public${photo.url}`;
 
     const tasks = photo.positions.map(async (pos) => {
@@ -50,16 +48,14 @@ const cropMiniPhotoCards = async () => {
     });
 
     await Promise.all(tasks);
-  });
-
-  await Promise.all(tasks);
+  }
 };
 
 /**
  * その他のランダムグッズの画像をひとつずつの画像に切り抜きます。
  */
 const cropOtherRandomGoods = async () => {
-  const tasks = otherTakanekoRandomGoods().map(async (photo) => {
+  for (const photo of otherTakanekoRandomGoods()) {
     const src = `public${photo.url}`;
 
     const tasks = photo.positions.map(async (pos) => {
@@ -68,9 +64,7 @@ const cropOtherRandomGoods = async () => {
     });
 
     await Promise.all(tasks);
-  });
-
-  await Promise.all(tasks);
+  }
 };
 
 /**
