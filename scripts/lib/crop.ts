@@ -62,9 +62,12 @@ const cropImage = async (
     fs.mkdirSync(path.dirname(dst), { recursive: true });
   }
 
-  await sharp(src)
+  // Windows で toFile をすると Segmentation fault になるので、toBuffer と
+  // writeFile を使う
+  const buf = await sharp(src)
     .extract({ left: rect.x, top: rect.y, width: rect.width, height: rect.height })
     .resize(size.width, size.height, { fit: "cover" })
     .toFormat("webp")
-    .toFile(dst);
+    .toBuffer();
+  await fs.promises.writeFile(dst, buf);
 };

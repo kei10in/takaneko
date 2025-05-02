@@ -15,10 +15,11 @@ const isImage = async (filepath: string): Promise<boolean> => {
 
 const resizeImage = async (baseFile: string, thumbnail: string, width: number, height: number) => {
   try {
-    await sharp(baseFile)
+    const buf = await sharp(baseFile)
       .resize({ width, height, fit: "inside" })
       .webp({ quality: 80 })
-      .toFile(thumbnail);
+      .toBuffer();
+    await fs.promises.writeFile(thumbnail, buf);
   } catch (err) {
     console.error(`Error processing file ${baseFile}:`, err);
   }
