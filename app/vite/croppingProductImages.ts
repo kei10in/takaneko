@@ -21,7 +21,6 @@ export const croppingProductImages = (): Plugin => {
   // ランダムグッズの画像を切り抜くためのワーカーを起動する関数です。
   const startCroppingWorker = (server: ViteDevServer) => {
     // Windows の場合は pnpm ではなく pnpm.cmd です。
-    const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
     const cropWorkerScriptPath = path.resolve(
       __dirname,
       "..",
@@ -30,8 +29,9 @@ export const croppingProductImages = (): Plugin => {
       "crop-product-image-worker.ts",
     );
 
-    worker = spawn(cmd, ["tsx", cropWorkerScriptPath], {
+    worker = spawn("pnpm", ["tsx", cropWorkerScriptPath], {
       stdio: ["pipe", "pipe", "inherit"],
+      shell: true,
     });
 
     // 受信データのハンドリング
