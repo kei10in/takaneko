@@ -1,5 +1,5 @@
 import { minimatch } from "minimatch";
-import { ChildProcessByStdio, execFileSync, spawn } from "node:child_process";
+import { ChildProcessByStdio, spawn, spawnSync } from "node:child_process";
 import path from "node:path";
 import { Readable, Writable } from "node:stream";
 import { Plugin, ViteDevServer } from "vite";
@@ -74,7 +74,6 @@ export const croppingProductImages = (): Plugin => {
     },
 
     buildEnd: () => {
-      const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
       const buildCroppedImagesScript = path.resolve(
         __dirname,
         "..",
@@ -83,7 +82,13 @@ export const croppingProductImages = (): Plugin => {
         "crop-items.ts",
       );
 
-      execFileSync(cmd, ["tsx", buildCroppedImagesScript]).toString();
+      const result = spawnSync("pnpm", ["tsx", buildCroppedImagesScript], { shell: true });
+      if (result.error) {
+        throw result.error;
+      }
+      if (result.status != 0) {
+        throw new Error(result.stderr.toString());
+      }
     },
 
     async load(id) {

@@ -1,14 +1,19 @@
-import { execFileSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { Plugin } from "vite";
 
 export const calendarBuilder = (): Plugin => {
   const buildCalendar = (kind: string, filename: string) => {
-    const cmd = process.platform === "win32" ? "pnpm.cmd" : "pnpm";
     const buildCalendarScript = path.resolve(__dirname, "..", "..", "scripts", "build-calendar.ts");
     const output = path.resolve(__dirname, "..", "..", path.join("public", filename));
 
-    execFileSync(cmd, ["tsx", buildCalendarScript, kind, output]).toString();
+    const result = spawnSync("pnpm", ["tsx", buildCalendarScript, kind, output], { shell: true });
+    if (result.error) {
+      throw result.error;
+    }
+    if (result.status != 0) {
+      throw new Error(result.stderr.toString());
+    }
   };
 
   return {
