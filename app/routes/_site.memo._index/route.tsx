@@ -1,5 +1,6 @@
-import { MetaFunction, Outlet } from "react-router";
+import { MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
+import Memo from "./memo.mdx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -22,7 +23,7 @@ export default function Index() {
         <p>このページは今後まとめていく予定の情報をメモしたページです。</p>
 
         <article className="markdown">
-          <Outlet />
+          <Memo />
         </article>
       </section>
     </div>
