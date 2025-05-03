@@ -4,10 +4,10 @@ import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { RandomGoods } from "~/features/products/product";
+import { SelectableEmojis } from "~/features/trade/stamp";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
-import { SelectableEmojis } from "./EmojiPanel";
 import { TradeStateButton } from "./TradeStateButton";
 
 interface Props {
