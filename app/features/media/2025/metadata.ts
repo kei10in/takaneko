@@ -2,6 +2,37 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title:
+      "ホラー好きアイドル　高嶺のなでしこ・城月菜央インタビュー「好きな作品と恐怖を感じるポイント」「憧れの伊藤潤二先生」[ホラー通信]|ガジェット通信 GetNews",
+    authorName: "ガジェット通信 GetNews",
+    publishedAt: "2025-05-03",
+    mediaUrl: "https://getnews.jp/archives/3617691",
+    imageUrl: "https://horror2.jp/files/2025/05/A7T00253f1.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title: "【東山恵里沙編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-05-02",
+    mediaUrl: "https://youtu.be/mZEa6T8OZMA",
+    imageUrl: "https://i.ytimg.com/vi/mZEa6T8OZMA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["東山恵里沙"],
+  },
+  {
+    kind: "youtube",
+    title: "高嶺のなでしこ、新曲「メランコリックハニー」と過去最大規模の単独ライブ紹介映像を公開！",
+    authorName: "wowKorea FAN",
+    publishedAt: "2025-05-01",
+    mediaUrl: "https://youtu.be/qFp1I2tSi1o",
+    imageUrl: "https://i.ytimg.com/vi/qFp1I2tSi1o/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
     kind: "youtube",
     title: "【春野莉々編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
     authorName: "運転免許トロッカ!",
@@ -20,6 +51,16 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/0OcDmwQdoqg/hqdefault.jpg",
     category: "youtube",
     presents: [],
+  },
+  {
+    kind: "ogp",
+    title: "【TikTok】アイドルユニット誕生？AIで作った『POPFUL』を初披露♡",
+    authorName: "Popteen Media",
+    publishedAt: "2025-04-28",
+    mediaUrl: "https://popteen.co.jp/media/67181/",
+    imageUrl: "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/04/35.02-0214b.jpg",
+    category: "article",
+    presents: ["涼海すう"],
   },
   {
     kind: "youtube",
