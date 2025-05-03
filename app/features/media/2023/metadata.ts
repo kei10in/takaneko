@@ -25,6 +25,17 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    title:
+      "高嶺のなでしこ、新曲「いつか私がママになったら」初パフォーマンス　酪農応援アンバサダー就任に意気込み　『第 14 回 ALL JAPAN ナチュラルチーズコンテスト』 一般向け初ライブパフォーマンス",
+    authorName: "oricon",
+    publishedAt: "2023-11-06",
+    mediaUrl: "https://youtu.be/Mj95-zruHv0",
+    imageUrl: "https://i.ytimg.com/vi/Mj95-zruHv0/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     title: '高嶺のなでしこ がPR！春休みの合宿免許のご予約は"運転免許トロッカ！"',
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-11-06",
@@ -74,6 +85,17 @@ export const metadata2023: MediaDetails[] = [
     imageUrl: "https://www.wws-channel.com/wp-content/uploads/2023/09/00_1-13.jpg",
     category: "article",
     presents: ["東山恵里沙", "星谷美来", "松本ももな"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "松本かれん&松本ももな、記者の質問でまさかのハプニング！？　“W松本”が仲良くなったきっかけを明かす　FRUITS ZIPPER&高嶺のなでしこコラボインタビュー",
+    authorName: "oricon",
+    publishedAt: "2023-09-02",
+    mediaUrl: "https://youtu.be/e31JtCL8Hx0",
+    imageUrl: "https://i.ytimg.com/vi/e31JtCL8Hx0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["松本ももな"],
   },
   {
     kind: "youtube",

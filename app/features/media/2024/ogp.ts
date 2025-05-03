@@ -196,6 +196,13 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     officialTwitter: "https://x.com/takanenofficial/status/1813196952697467293",
   },
   {
+    mediaUrl: "https://www.walkerplus.com/article/1205174/",
+    publishedAt: "2024-07-14",
+    category: "article",
+    presents: ["松本ももな"],
+    officialTwitter: "https://x.com/takanenofficial/status/1812479721684545832",
+  },
+  {
     mediaUrl: "https://strmweb.jp/archives/13455/",
     publishedAt: "2024-07-14",
     category: "article",

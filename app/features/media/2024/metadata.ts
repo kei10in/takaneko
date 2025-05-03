@@ -534,6 +534,17 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "『高嶺のなでしこ』松本ももな「この曲を歌って可愛いを更新できるように頑張りたい」(1/2)｜ウォーカープラス",
+    authorName: "ウォーカープラス（Walkerplus）",
+    publishedAt: "2024-07-14",
+    mediaUrl: "https://www.walkerplus.com/article/1205174/",
+    imageUrl: "https://news.walkerplus.com/article/1205174/13231592_615.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
+    title:
       "高嶺のなでしこ「結成2周年 “橋本桃呼＆春野莉々＆日向端ひな”が笑顔で語ったステージへの熱意」INTERVIEW",
     authorName: "STREAM（ストリーム）",
     publishedAt: "2024-07-14",
