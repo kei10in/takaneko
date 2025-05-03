@@ -44,6 +44,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: ["涼海すう"],
   },
   {
+    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
+    publishedAt: "2025-04-07",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/66054/",
     publishedAt: "2025-04-01",
     category: "article",

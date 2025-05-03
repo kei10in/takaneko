@@ -247,6 +247,16 @@ export const metadata2025: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    title: "高嶺のなでしこ「この夏、好きになっちゃえばいいのに。」SPECIAL SITE",
+    authorName: "高嶺のなでしこ「この夏、好きになっちゃえばいいのに。」SPECIAL SITE",
+    publishedAt: "2025-04-07",
+    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
+    imageUrl: "https://www.jvcmusic.co.jp/takaneko/special/assets/images/common/ogp.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     title: "すぅにゃ、りんりん、せらぴーの束感まつげメイクレシピ",
     authorName: "Popteen Media",
     publishedAt: "2025-04-01",
