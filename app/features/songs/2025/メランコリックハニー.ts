@@ -7,7 +7,7 @@ export const メランコリックハニー: SongMetaDescriptor = {
     path: "",
     ref: "",
   },
-  officialSite: "",
+  officialSite: "https://takanenonadeshiko.jp/?p=3690",
   youtube: [
     {
       text: "MV",
