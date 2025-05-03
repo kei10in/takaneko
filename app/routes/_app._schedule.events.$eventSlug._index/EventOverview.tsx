@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 interface Props {
   ticket?: string | undefined;
-  timeSlot?: [string] | [string, string] | undefined;
+  timeSlot?: [string] | [string, string] | [string, string][] | undefined;
   timetable?: { path: string; ref: string } | undefined;
   streaming?: { text: string; url: string } | undefined;
   goods?:
@@ -27,6 +27,8 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
     return null;
   }
 
+  const parsedTimeSlot = parseTimeSlot(timeSlot);
+
   return (
     <section>
       <h2>イベント概要</h2>
@@ -48,12 +50,18 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
           </li>
         )}
 
-        {timeSlot != undefined && (
+        {parsedTimeSlot.length > 0 && (
           <li>
             <p>
               <strong>出演時間:</strong>
-              {timeSlot.length == 1 && ` ${timeSlot[0]} 〜`}
-              {timeSlot.length == 2 && ` ${timeSlot[0]} 〜 ${timeSlot[1]}`}
+              {parsedTimeSlot.length == 1 && parsedTimeSlot[0]}
+              {parsedTimeSlot.length == 2 && (
+                <ul>
+                  {parsedTimeSlot.map((slot, index) => (
+                    <li key={index}>{slot}</li>
+                  ))}
+                </ul>
+              )}
             </p>
           </li>
         )}
@@ -97,4 +105,25 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       </ul>
     </section>
   );
+};
+
+const parseTimeSlot = (
+  timeSlot: [string] | [string, string] | [string, string][] | undefined,
+): string[] => {
+  if (timeSlot == undefined) {
+    return [];
+  }
+  if (timeSlot.length == 0) {
+    return [];
+  } else if (timeSlot.length == 1 && typeof timeSlot[0] == "string") {
+    return [`timeSlot[0] 〜`];
+  } else if (
+    timeSlot.length == 2 &&
+    typeof timeSlot[0] == "string" &&
+    typeof timeSlot[1] == "string"
+  ) {
+    return [`${timeSlot[0]} 〜 ${timeSlot[1]}`];
+  } else {
+    return (timeSlot as [string, string][]).map((slot) => `${slot[0]} 〜 ${slot[1]}`);
+  }
 };
