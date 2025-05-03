@@ -1,19 +1,21 @@
 {
   "include": [
-    "env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/.server/**/*.ts",
-    "**/.server/**/*.tsx",
-    "**/.client/**/*.ts",
-    "**/.client/**/*.tsx",
     ".react-router/types/**/*",
-    "scripts/**/*.ts"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "app/**/.server/**/*.ts",
+    "app/**/.server/**/*.tsx",
+    "app/**/.client/**/*.ts",
+    "app/**/.client/**/*.tsx",
+    "env.d.ts",
+    "react-router.config.ts",
+    "scripts/**/*.ts",
+    "vite.config.ts"
   ],
   "exclude": ["functions/[[path]].ts"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
-    "types": ["@react-router/cloudflare", "vite/client", "mdx"],
+    "types": ["@react-router/cloudflare", "vite/client", "mdx", "./worker-configuration.d.ts"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
