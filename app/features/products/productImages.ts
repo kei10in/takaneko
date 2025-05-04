@@ -101,9 +101,11 @@ import { FAVE_IDOLS_オンラインくじC賞 } from "./2025/2025-04-22_『FAVE 
 import { FAVE_IDOLS_オンラインくじD賞 } from "./2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ D賞";
 import { FAVE_IDOLS_オンラインくじE賞 } from "./2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞";
 import { FAVE_IDOLS_オンラインくじF賞 } from "./2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ F賞";
+import { 歌舞伎町UP_GATE限定カード } from "./2025/2025-05-04_歌舞伎町UP GATE↑↑ 限定カード";
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  歌舞伎町UP_GATE限定カード,
   FAVE_IDOLS_オンラインくじ,
   FAVE_IDOLS_オンラインくじA賞,
   FAVE_IDOLS_オンラインくじB賞,
