@@ -6,6 +6,7 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-05-03",
     category: "article",
     presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1918878317899370792",
   },
   {
     mediaUrl: "https://popteen.co.jp/media/67181/",
