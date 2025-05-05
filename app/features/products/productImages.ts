@@ -102,9 +102,17 @@ import { FAVE_IDOLS_オンラインくじD賞 } from "./2025/2025-04-22_『FAVE 
 import { FAVE_IDOLS_オンラインくじE賞 } from "./2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞";
 import { FAVE_IDOLS_オンラインくじF賞 } from "./2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ F賞";
 import { 歌舞伎町UP_GATE限定カード } from "./2025/2025-05-04_歌舞伎町UP GATE↑↑ 限定カード";
+import { _2025春衣装_ミニフォト } from "./2025/2025-05-06_ミニフォトカード「2025 春衣装」";
+import { 前髪クリップ } from "./2025/2025-05-06_前髪クリップ";
+import { _2025春衣装_生写真 } from "./2025/2025-05-06_生写真「2025 春衣装」";
+import { SpringRide_缶バッジ } from "./2025/2025-05-06_缶バッジ「Spring Ride」";
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  _2025春衣装_生写真,
+  _2025春衣装_ミニフォト,
+  SpringRide_缶バッジ,
+  前髪クリップ,
   歌舞伎町UP_GATE限定カード,
   FAVE_IDOLS_オンラインくじ,
   FAVE_IDOLS_オンラインくじA賞,
