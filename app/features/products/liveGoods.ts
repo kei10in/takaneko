@@ -25,9 +25,11 @@ import {
   全国ツアー2024_わたし色に染まれ,
   全国ツアー2024_わたし色に染まれ_ファイナル東京公演,
 } from "./lives/全国ツアー2024“わたし色に染まれ”";
+import { 東名阪ツアー2025_SpringRide } from "./lives/東名阪ツアー2025 – Spring Ride –";
 import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
+  東名阪ツアー2025_SpringRide,
   たかねこフェスvol4_出張編,
   CuteForLife,
   たかねこクリスマスパーティー2024,
