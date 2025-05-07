@@ -2,6 +2,26 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title: "【日向端ひな編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-05-07",
+    mediaUrl: "https://youtu.be/d2Cl9Ls4HV4",
+    imageUrl: "https://i.ytimg.com/vi/d2Cl9Ls4HV4/hqdefault.jpg",
+    category: "youtube",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "youtube",
+    title: "【コーデ紹介】モデルたちのガチ私服！春のデニムコーデ大公開!!【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2025-05-05",
+    mediaUrl: "https://youtu.be/AYbP2wXl3K4",
+    imageUrl: "https://i.ytimg.com/vi/AYbP2wXl3K4/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     title:
       "ホラー好きアイドル　高嶺のなでしこ・城月菜央インタビュー「好きな作品と恐怖を感じるポイント」「憧れの伊藤潤二先生」[ホラー通信]|ガジェット通信 GetNews",
