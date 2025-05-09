@@ -19,7 +19,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=504&quality=75&version=1745995557&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=504&quality=75&version=1746615393&width=896",
     category: "video",
     presents: ["日向端ひな"],
   },
@@ -243,7 +243,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=504&quality=75&version=1745995557&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=504&quality=75&version=1746615392&width=896",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -277,7 +277,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=504&quality=75&version=1745995557&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=504&quality=75&version=1746615392&width=896",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -907,6 +907,16 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://thetv.jp/i/nw/1184513/12754905.jpg?w=1284",
     category: "article",
     presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    title: "高嶺のなでしこ　女性人気でMV再生1300万超えの注目アイドル",
+    authorName: "日経クロストレンド",
+    publishedAt: "2024-02-22",
+    mediaUrl: "https://xtrend.nikkei.com/atcl/contents/18/00962/00009/",
+    imageUrl: "https://xtrend.nikkei.com/atcl/contents/18/00962/00009/nxr_m.jpg",
+    category: "article",
+    presents: [],
   },
   {
     kind: "ogp",

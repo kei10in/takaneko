@@ -278,6 +278,12 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
   },
   {
+    mediaUrl: "https://xtrend.nikkei.com/atcl/contents/18/00962/00009/",
+    publishedAt: "2024-02-22",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.radionikkei.jp/toraken/2.html",
     publishedAt: "2024-02-22",
     category: "audio",

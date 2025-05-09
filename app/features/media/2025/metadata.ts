@@ -165,7 +165,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1745827837&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=504&quality=75&version=1746598641&width=896",
     category: "video",
     presents: ["日向端ひな"],
   },
