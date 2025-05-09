@@ -79,7 +79,7 @@ export const NaoKizuki: MemberDescription = {
   name: "城月 菜央",
   kana: "きづき なお",
   romaji: "Kizuki Nao",
-  nickname: "なおちゃん",
+  nickname: "選手・なおちゃん",
   bloodType: "B 型",
   birthday: "2003年12月25日",
   constellation: "やぎ座",
