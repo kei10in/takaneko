@@ -2,6 +2,28 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title:
+      "現役アイドルの推し活仲間の作り方は？気になるお財布事情もチェック♡【すぅにゃの推し活WORLD Vol.2】",
+    authorName: "Popteen Media",
+    publishedAt: "2025-05-12",
+    mediaUrl: "https://popteen.co.jp/media/69203/",
+    imageUrl: "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/05/2.png",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "シークエンスはやとも・Miyoshi・城月菜央（高嶺のなでしこ）インタビュー「霊って身近にたくさんいるものなんだ、という気付きを楽しんで」",
+    authorName: "ホラー通信",
+    publishedAt: "2025-05-12",
+    mediaUrl: "https://horror2.jp/72314",
+    imageUrl: "https://horror2.jp/files/2025/05/A7T00011f1.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     title: "【日向端ひな編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
     authorName: "運転免許トロッカ!",
@@ -24,10 +46,10 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "ホラー好きアイドル　高嶺のなでしこ・城月菜央インタビュー「好きな作品と恐怖を感じるポイント」「憧れの伊藤潤二先生」[ホラー通信]|ガジェット通信 GetNews",
-    authorName: "ガジェット通信 GetNews",
+      "ホラー好きアイドル　高嶺のなでしこ・城月菜央インタビュー「好きな作品と恐怖を感じるポイント」「憧れの伊藤潤二先生」",
+    authorName: "ホラー通信",
     publishedAt: "2025-05-03",
-    mediaUrl: "https://getnews.jp/archives/3617691",
+    mediaUrl: "https://horror2.jp/72300",
     imageUrl: "https://horror2.jp/files/2025/05/A7T00253f1.jpg",
     category: "article",
     presents: ["城月菜央"],
