@@ -77,9 +77,8 @@ export const metadata2023: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "【インタビュー】高嶺のなでしこ・松本ももな、星谷美来、東山恵里沙が『すきっちゅーの！』MVの可愛さを語る！,【インタビュー】高嶺のなでしこ・松本ももな、星谷美来、東山恵里沙が『すきっちゅーの！』MVの可愛さを語る！ | WWSチャンネル",
-    authorName:
-      "WWSチャンネル,WWSチャンネル | ファッション・音楽・アイドルの総合情報サイト　無料ネット動画＆写真芸能ニュース",
+      "【インタビュー】高嶺のなでしこ・松本ももな、星谷美来、東山恵里沙が『すきっちゅーの！』MVの可愛さを語る！",
+    authorName: "WWSチャンネル",
     publishedAt: "2023-09-06",
     mediaUrl: "https://www.wws-channel.com/girls2/450073.html",
     imageUrl: "https://www.wws-channel.com/wp-content/uploads/2023/09/00_1-13.jpg",

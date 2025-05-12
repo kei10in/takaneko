@@ -500,9 +500,8 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "【高嶺のなでしこ】最新曲『モテチェン！』インタビュー！ たかねこメンバーの「かわいいのための努力」とは？｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）,【高嶺のなでしこ】最新曲『モテチェン！』インタビュー！ たかねこメンバーの「かわいいのための努力」とは？ - ニコラネット｜nicola オフィシャルサイト",
-    authorName:
-      "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
+      "【高嶺のなでしこ】最新曲『モテチェン！』インタビュー！ たかねこメンバーの「かわいいのための努力」とは？｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
+    authorName: "ニコラネット｜nicola公式サイト（新潮社）",
     publishedAt: "2024-07-23",
     mediaUrl: "https://nicola.jp/?p=22017",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/07/f116246827f34ec7becea912ac8a2af1.png",
@@ -711,9 +710,8 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "【今気になる！ 令和最強ティーン】高嶺のなでしこ・東山恵里沙ちゃん｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）,【今気になる！ 令和最強ティーン】高嶺のなでしこ・東山恵里沙ちゃん - ニコラネット｜nicola オフィシャルサイト",
-    authorName:
-      "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
+      "【今気になる！ 令和最強ティーン】高嶺のなでしこ・東山恵里沙ちゃん｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
+    authorName: "ニコラネット｜nicola公式サイト（新潮社）",
     publishedAt: "2024-04-07",
     mediaUrl: "https://nicola.jp/?p=19490",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/04/higashiyamaerisa_nico305-116-1.jpg",
@@ -833,9 +831,8 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "【高嶺のなでしこ】メジャーデビューシングル『美しく生きろ／恋を知った世界』インタビュー！　新学年をむかえるティーンの読者へのメッセージも♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）,【高嶺のなでしこ】メジャーデビューシングル『美しく生きろ／恋を知った世界』インタビュー！ 新学年をむかえるティーンの読者へのメッセージも♡ - ニコラネット｜nicola オフィシャルサイト",
-    authorName:
-      "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
+      "【高嶺のなでしこ】メジャーデビューシングル『美しく生きろ／恋を知った世界』インタビュー！　新学年をむかえるティーンの読者へのメッセージも♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
+    authorName: "ニコラネット｜nicola公式サイト（新潮社）",
     publishedAt: "2024-03-08",
     mediaUrl: "https://nicola.jp/?p=18655",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/03/takaneko_nicola.jpg",
@@ -855,9 +852,8 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
-      "【高嶺のなでしこ】メンバー全員の個人プロフ帳♡　学生時代のお決まりヘアアレから今後の夢まで、ぜーんぶ手描きで大公開♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）,【高嶺のなでしこ】メンバー全員の個人プロフ帳♡ 学生時代のお決まりヘアアレから今後の夢まで、ぜーんぶ手描きで大公開♡ - ニコラネット｜nicola オフィシャルサイト",
-    authorName:
-      "ニコラネット｜nicola公式サイト（新潮社）,ニコラネット｜nicola オフィシャルサイト - ローティーン向けファッション雑誌「nicola（ニコラ）」の公式サイト。ここでしか読めないオリジナル記事も配信中！",
+      "【高嶺のなでしこ】メンバー全員の個人プロフ帳♡　学生時代のお決まりヘアアレから今後の夢まで、ぜーんぶ手描きで大公開♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
+    authorName: "ニコラネット｜nicola公式サイト（新潮社）",
     publishedAt: "2024-03-01",
     mediaUrl: "https://nicola.jp/?p=18495",
     imageUrl: "https://nicola.jp/wp-content/uploads/2024/03/takaneko.jpg",

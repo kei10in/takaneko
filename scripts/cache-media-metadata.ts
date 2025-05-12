@@ -43,11 +43,11 @@ const fetchAndCacheMediaMetadata = async () => {
       return [
         {
           kind: "ogp",
-          title: title,
-          authorName: authorName,
+          title: title.split(",")[0],
+          authorName: authorName.split(",")[0],
           publishedAt: media.publishedAt,
           mediaUrl: mediaUrl,
-          imageUrl: imageUrl,
+          imageUrl: imageUrl.split(",")[0],
           category: media.category,
           presents: media.presents ?? [],
         },
