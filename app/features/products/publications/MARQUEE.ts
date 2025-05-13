@@ -1,5 +1,51 @@
 import { Publication } from "../product";
 
+export const MARQUEE_Vol158: Publication = {
+  slug: "MARQUEE Vol.158",
+  name: "MARQUEE Vol.158",
+  date: "2025-05-27",
+  kind: "mooks",
+  publisher: "星雲社",
+  listPrice: 1375,
+  priceWithTax: 1513,
+  code: [{ kind: "isbn", value: "978-4-434-35718-3" }],
+  url: "http://www.marquee-mag.com/backnumber.html",
+  coverImages: [
+    {
+      path: "/publications/marquee/vol158a.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol158b.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol158_1.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1921399012755734647",
+    },
+    {
+      path: "/publications/marquee/vol158_2.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1921399012755734647",
+    },
+    {
+      path: "/publications/marquee/vol158_3.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1921399012755734647",
+    },
+    {
+      path: "/publications/marquee/vol158_4.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1921399012755734647",
+    },
+  ],
+  featuredMembers: ["葉月紗蘭"],
+  officialTwitter: [],
+  links: [
+    {
+      text: "MARQUEE 公式 X 告知",
+      url: "https://x.com/MARQUEE_info/status/1921404242524328145",
+    },
+  ],
+};
+
 export const MARQUEE_Vol157: Publication = {
   slug: "MARQUEE Vol.157",
   name: "MARQUEE Vol.157",
