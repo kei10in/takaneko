@@ -16,6 +16,14 @@ export const 東名阪ツアー2025_SpringRide: LiveGoodsCollection = {
       path: "/takaneko/live-goods/2025-05-11_東名阪ツアー2025 – Spring Ride –_キラキラトレカ大阪限定.jpg",
       ref: "https://x.com/takanenofficial/status/1921158281982001281",
     },
+    {
+      path: "/takaneko/live-goods/2025-05-14_東名阪ツアー2025 – Spring Ride –_キラキラトレカ東京限定.jpg",
+      ref: "https://x.com/takanenofficial/status/1922245438221988032",
+    },
+    {
+      path: "/takaneko/live-goods/2025-05-14_東名阪ツアー2025 – Spring Ride –_グッズメニュー_ツアーファイナル.jpg",
+      ref: "https://x.com/takanenofficial/status/1922245438221988032",
+    },
   ],
   goods: [
     {
@@ -37,6 +45,7 @@ export const 東名阪ツアー2025_SpringRide: LiveGoodsCollection = {
         "会場限定キラキラトレカ",
         "生写真 (2025 春衣装 ver.)",
         "ミニフォトカード (2025 春衣装 ver.)",
+        "個別ペンライトシート (Spring Ride ver.)",
       ],
     },
   ],
