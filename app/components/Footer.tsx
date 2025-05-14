@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { FaDiscord, FaGithub, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
+import { SiBereal } from "react-icons/si";
 import { Link } from "react-router";
 import { SITE_TITLE } from "~/constants";
 
@@ -133,6 +134,11 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 <li>
                   <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
                     <FaDiscord className="h-4 w-4" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="https://bere.al/takanenofficial" target="_blank" rel="noreferrer">
+                    <SiBereal className="h-4 w-4" />
                   </Link>
                 </li>
               </ul>

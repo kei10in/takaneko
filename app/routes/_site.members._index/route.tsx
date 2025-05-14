@@ -1,6 +1,6 @@
 import { BsDiscord, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa6";
-import { SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
+import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "../../features/profile/members";
@@ -160,6 +160,11 @@ export default function Index() {
             <li>
               <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
                 <BsDiscord className="h-5 w-5" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://bere.al/takanenofficial" target="_blank" rel="noreferrer">
+                <SiBereal className="h-5 w-5" />
               </Link>
             </li>
           </ul>
