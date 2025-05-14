@@ -2,6 +2,16 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2025 = [
   {
+    videoId: "4N2A7a9p_Bc",
+    publishedAt: "2025-05-14",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "oXUZQ7MdEfA",
+    publishedAt: "2025-05-10",
+    presents: ["涼海すう"],
+  },
+  {
     videoId: "d2Cl9Ls4HV4",
     publishedAt: "2025-05-07",
     presents: ["日向端ひな"],

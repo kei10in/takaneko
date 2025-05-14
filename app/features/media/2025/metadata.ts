@@ -2,6 +2,16 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title: "【メイク動画】束感まつげメイクレシピ【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2025-05-14",
+    mediaUrl: "https://youtu.be/4N2A7a9p_Bc",
+    imageUrl: "https://i.ytimg.com/vi/4N2A7a9p_Bc/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     title:
       "現役アイドルの推し活仲間の作り方は？気になるお財布事情もチェック♡【すぅにゃの推し活WORLD Vol.2】",
@@ -22,6 +32,16 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://horror2.jp/files/2025/05/A7T00011f1.jpg",
     category: "article",
     presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title: "【踊ってみた】おとP誕生！？AIで即興で1曲作って踊ってみた！【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2025-05-10",
+    mediaUrl: "https://youtu.be/oXUZQ7MdEfA",
+    imageUrl: "https://i.ytimg.com/vi/oXUZQ7MdEfA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
   },
   {
     kind: "youtube",
