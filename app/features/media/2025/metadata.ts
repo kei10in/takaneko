@@ -3,6 +3,26 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title: "【籾山ひめり編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-05-16",
+    mediaUrl: "https://youtu.be/3SPYAYpyMbo",
+    imageUrl: "https://i.ytimg.com/vi/3SPYAYpyMbo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "youtube",
+    title: "【松本ももな編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-05-14",
+    mediaUrl: "https://youtu.be/hZw36eSapvY",
+    imageUrl: "https://i.ytimg.com/vi/hZw36eSapvY/hqdefault.jpg",
+    category: "youtube",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "youtube",
     title: "【メイク動画】束感まつげメイクレシピ【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2025-05-14",
@@ -42,6 +62,16 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/oXUZQ7MdEfA/hqdefault.jpg",
     category: "youtube",
     presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    title: "【星谷美来編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2025-05-09",
+    mediaUrl: "https://youtu.be/ViVWPLA3F0o",
+    imageUrl: "https://i.ytimg.com/vi/ViVWPLA3F0o/hqdefault.jpg",
+    category: "youtube",
+    presents: ["星谷美来"],
   },
   {
     kind: "youtube",
