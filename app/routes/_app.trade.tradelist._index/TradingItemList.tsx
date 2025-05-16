@@ -70,6 +70,12 @@ const makeTitle = (detail: TradingItemDetail) => {
     } else {
       return `${detail.item.name} ${detail.item.description}`;
     }
+  } else if (detail.product.tradeText == TradeTextType.GroupByDescription) {
+    if (detail.item.description == undefined) {
+      return detail.item.name;
+    } else {
+      return `${detail.item.name} ${detail.item.description}`;
+    }
   } else {
     return detail.item.name;
   }
