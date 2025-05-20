@@ -151,8 +151,8 @@ importers:
         specifier: ^4.7.8
         version: 4.7.8
       happy-dom:
-        specifier: ^17.4.4
-        version: 17.4.4
+        specifier: ^17.4.7
+        version: 17.4.7
       icon-gen:
         specifier: ^5.0.0
         version: 5.0.0
@@ -197,7 +197,7 @@ importers:
         version: 5.1.4(typescript@5.8.3)(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5))
       vitest:
         specifier: ^3.1.2
-        version: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.3)(happy-dom@17.4.4)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5)
+        version: 3.1.2(@types/debug@4.1.12)(@types/node@22.15.3)(happy-dom@17.4.7)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5)
       wrangler:
         specifier: ^4.14.4
         version: 4.14.4(@cloudflare/workers-types@4.20250327.0)
@@ -2473,8 +2473,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@17.4.4:
-    resolution: {integrity: sha512-/Pb0ctk3HTZ5xEL3BZ0hK1AqDSAUuRQitOmROPHhfUYEWpmTImwfD8vFDGADmMAX0JYgbcgxWoLFKtsWhcpuVA==}
+  happy-dom@17.4.7:
+    resolution: {integrity: sha512-NZypxadhCiV5NT4A+Y86aQVVKQ05KDmueja3sz008uJfDRwz028wd0aTiJPwo4RQlvlz0fznkEEBBCHVNWc08g==}
     engines: {node: '>=18.0.0'}
 
   has-bigints@1.1.0:
@@ -6675,7 +6675,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.3
 
-  happy-dom@17.4.4:
+  happy-dom@17.4.7:
     dependencies:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
@@ -8790,7 +8790,7 @@ snapshots:
       tsx: 4.19.4
       yaml: 2.4.5
 
-  vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.3)(happy-dom@17.4.4)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5):
+  vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.15.3)(happy-dom@17.4.7)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5):
     dependencies:
       '@vitest/expect': 3.1.2
       '@vitest/mocker': 3.1.2(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.2)(tsx@4.19.4)(yaml@2.4.5))
@@ -8816,7 +8816,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 22.15.3
-      happy-dom: 17.4.4
+      happy-dom: 17.4.7
     transitivePeerDependencies:
       - jiti
       - less
