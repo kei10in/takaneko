@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { SITE_TITLE } from "~/constants";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { ProductItem } from "~/routes/_app.trade/ProductItem";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
@@ -127,6 +127,30 @@ export default function Index() {
           </li>
         </ul>
       </section>
+
+      {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
+        <section className="mt-12">
+          <h2 className="my-4 text-2xl font-semibold text-gray-600">ホットなやつ</h2>
+          <ul className="flex flex-wrap gap-4">
+            {TAKANEKO_PHOTOS_FEATURED.map((photo) => {
+              const thumbs = thumbnailSrcSet(photo.url);
+              return (
+                <li key={photo.slug}>
+                  <Link to={`/trade/${photo.slug}`}>
+                    <ProductItem
+                      image={thumbs.src}
+                      imageSet={thumbs.srcset}
+                      year={photo.year}
+                      content={photo.series}
+                      description={photo.category}
+                    />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
 
       <section className="mt-12">
         <h2 className="my-4 text-2xl font-semibold text-gray-600">ランダムグッズ</h2>
