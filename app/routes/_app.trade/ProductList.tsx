@@ -100,6 +100,10 @@ export const ProductList: React.FC<Props> = (props: Props) => {
       </ul>
 
       {filteredAllPhotos.map((item) => {
+        if (item.photos.length == 0) {
+          return null;
+        }
+
         const open = item.photos.some(
           (photo) =>
             "/trade" == location.pathname ||

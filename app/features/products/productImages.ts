@@ -111,6 +111,8 @@ import { ROUND1_コラボキャンペーン_オリジナルコースター } fro
 import { ROUND1_コラボキャンペーン_オリジナルステッカー } from "./2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルステッカー";
 import { RandomGoods, TradeTextType } from "./product";
 
+export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [ピンク衣装_生写真, ピンク衣装_ミニフォト];
+
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   ROUND1_コラボキャンペーン_オリジナルコースター,
   ROUND1_コラボキャンペーン_オリジナルステッカー,
@@ -119,7 +121,6 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   _2025春衣装_ミニフォト,
   SpringRide_缶バッジ,
   前髪クリップ,
-  たかねこフェスvol4_目印チャーム,
   歌舞伎町UP_GATE限定カード,
   FAVE_IDOLS_オンラインくじ,
   FAVE_IDOLS_オンラインくじA賞,
@@ -131,6 +132,7 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   FAVE_IDOLS_オンラインくじ10連特典,
   韓国風制服_生写真,
   韓国風制服_ミニフォト,
+  たかねこフェスvol4_目印チャーム,
   ピンク衣装_生写真,
   ピンク衣装_ミニフォト,
   バレンタイン2025_生写真,

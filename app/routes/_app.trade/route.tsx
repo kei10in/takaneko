@@ -4,7 +4,7 @@ import { BsList } from "react-icons/bs";
 import { Link, MetaFunction, Outlet } from "react-router";
 import { XMarkButton } from "~/components/XMarkButton";
 import { SITE_TITLE } from "~/constants";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { ProductList } from "./ProductList";
 
 export const meta: MetaFunction = () => {
@@ -25,6 +25,7 @@ export default function Index() {
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024);
   const in2025 = TAKANEKO_PHOTOS.filter((p) => p.year == 2025);
   const allPhotos = [
+    { name: "ホットなやつ", photos: TAKANEKO_PHOTOS_FEATURED },
     { name: "2025 年", photos: in2025 },
     { name: "2024 年", photos: in2024 },
     { name: "2023 年", photos: in2023 },
@@ -53,7 +54,11 @@ export default function Index() {
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
           <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
-            <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
+            <ProductList
+              featured={TAKANEKO_PHOTOS_FEATURED}
+              allPhotos={allPhotos}
+              onClickMenuItem={() => setShowMenu(false)}
+            />
           </nav>
 
           <main className="flex-1">
