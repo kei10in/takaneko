@@ -59,6 +59,7 @@ import {
   Zipper_2024年秋号,
   Zipper_2025年春号,
 } from "./publications/Zipper";
+import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
 import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
 import { 日経エンタテインメント_2024年2月号 } from "./publications/日経エンタテイメント";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
@@ -130,6 +131,7 @@ const publications: Publication[] = [
   橋本桃呼_MOMOKO_ISM,
   松本ももな_LAST_20_MOMONA,
   松本ももな_SweetDateTime,
+  グラビアンエイジ_VOL2,
   モデルプレスカウントダウンマガジン_vol10,
 ];
 
