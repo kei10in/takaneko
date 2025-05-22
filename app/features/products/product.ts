@@ -93,13 +93,11 @@ export interface Publication {
   url: string;
   coverImages: ImageDescription[];
   ebooks?: boolean | LinkDescription[];
-  bonuses?: [
-    {
-      name: string;
-      category?: string;
-      store?: string;
-    },
-  ];
+  bonuses?: {
+    name: string;
+    category?: string;
+    store?: string;
+  }[];
   featuredMembers: MemberName[];
   officialTwitter?: string | string[];
   links?: LinkDescription[];
