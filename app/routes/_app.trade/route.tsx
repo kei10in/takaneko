@@ -54,11 +54,7 @@ export default function Index() {
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
           <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
-            <ProductList
-              featured={TAKANEKO_PHOTOS_FEATURED}
-              allPhotos={allPhotos}
-              onClickMenuItem={() => setShowMenu(false)}
-            />
+            <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 
           <main className="flex-1">
