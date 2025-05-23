@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title: "高嶺のなでしこ・城月菜央さんが選ぶ2025年注目のホラー映画特集 | CinemaStyle",
+    authorName: "CinemaStyle",
+    publishedAt: "2025-05-23",
+    mediaUrl: "https://www.cinemastyle.jp/horror/20094/",
+    imageUrl:
+      "https://www.cinemastyle.jp/wp-content/uploads/2025/05/takane-no-nadeshiko-horror.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     title: "【籾山ひめり編】たかねこドライブ格言｜運転免許トロッカ！×高嶺のなでしこ",
     authorName: "運転免許トロッカ!",

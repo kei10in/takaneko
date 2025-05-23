@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.cinemastyle.jp/horror/20094/",
+    publishedAt: "2025-05-23",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1925719765252788356",
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/69203/",
     publishedAt: "2025-05-12",
     category: "article",
