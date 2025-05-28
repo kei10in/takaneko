@@ -52,7 +52,7 @@ import {
   TopYellNeo2024Spring,
   TopYellNeo2025Spring,
 } from "./publications/Top Yell NEO";
-import { VDCMagazine029, VDCMagazine030 } from "./publications/VDC Magazine";
+import { VDCMagazine029, VDCMagazine030, VDCMagazine035 } from "./publications/VDC Magazine";
 import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph";
 import {
   Zipper_2024_2025年冬号,
@@ -120,6 +120,7 @@ const publications: Publication[] = [
   TopYellNeo2025Spring,
   VDCMagazine029,
   VDCMagazine030,
+  VDCMagazine035,
   WHITE_graph_011,
   Zipper_2024年秋号,
   Zipper_2024_2025年冬号,

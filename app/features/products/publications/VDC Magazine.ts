@@ -1,5 +1,69 @@
 import { Publication } from "../product";
 
+export const VDCMagazine035: Publication = {
+  slug: "VDC Magazine 035",
+  name: "VDC Magazine 035",
+  date: "2025-06-27",
+  kind: "magazines",
+  publisher: "VDC 事務局",
+  listPrice: 1300,
+  priceWithTax: 1430,
+  code: [],
+  url: "https://wp.vdc.tokyo/article/11859",
+  coverImages: [],
+  bonuses: [
+    {
+      name: "VDCストアオリジナル生写真 L 判 5 枚 A セット",
+      category: "生写真",
+      store: "VDCストア",
+    },
+    {
+      name: "タワーレコード限定オリジナル生写真 L 判 5 枚 B セット",
+      category: "生写真",
+      store: "タワーレコード",
+    },
+  ],
+  featuredMembers: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "春野莉々",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+  officialTwitter: "https://x.com/takanenofficial/status/1926254965187567736",
+  links: [
+    {
+      text: "VDC ホームページ 予約開始告知",
+      url: "https://wp.vdc.tokyo/article/11859",
+    },
+    {
+      text: "VDC ストア",
+      url: "https://vdc.stores.jp/items/682d34d47e954010801a461e",
+    },
+    {
+      text: "TOWER RECORDS",
+      url: "https://tower.jp/item/6854293",
+    },
+    {
+      text: "メッセージ動画",
+      url: "https://x.com/VDC_tokyo/status/1926473304657072518",
+    },
+    {
+      text: "オフショット 1",
+      url: "https://x.com/VDC_tokyo/status/1927273568917762092",
+    },
+    {
+      text: "オフショット 2",
+      url: "https://x.com/VDC_tokyo/status/1927273755371253782",
+    },
+  ],
+};
+
 export const VDCMagazine030: Publication = {
   slug: "VDC Magazine 030",
   name: "VDC Magazine 030",
