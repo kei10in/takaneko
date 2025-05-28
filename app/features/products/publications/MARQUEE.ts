@@ -37,7 +37,7 @@ export const MARQUEE_Vol158: Publication = {
     },
   ],
   featuredMembers: ["葉月紗蘭"],
-  officialTwitter: [],
+  officialTwitter: ["https://x.com/takanenofficial/status/1927198077519020514"],
   links: [
     {
       text: "MARQUEE 公式 X 告知",
