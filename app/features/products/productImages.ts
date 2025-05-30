@@ -111,7 +111,11 @@ import { ROUND1_コラボキャンペーン_オリジナルコースター } fro
 import { ROUND1_コラボキャンペーン_オリジナルステッカー } from "./2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルステッカー";
 import { RandomGoods, TradeTextType } from "./product";
 
-export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [ピンク衣装_生写真, ピンク衣装_ミニフォト];
+export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  ROUND1_コラボキャンペーン_オリジナルコースター,
+  ROUND1_コラボキャンペーン_オリジナルステッカー,
+  ROUND1_コラボキャンペーン_オリジナルしおり,
+];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   ROUND1_コラボキャンペーン_オリジナルコースター,
