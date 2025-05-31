@@ -24,7 +24,10 @@ export default function Index() {
 
         <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {PUBLICATIONS.map((publication) => {
-            const thumbs = thumbnailSrcSet(publication.coverImages[0].path);
+            const thumbs =
+              publication.coverImages[0] == undefined
+                ? undefined
+                : thumbnailSrcSet(publication.coverImages[0].path);
 
             return (
               <li key={publication.slug}>
@@ -32,8 +35,8 @@ export default function Index() {
                   <PublicationCard
                     name={publication.name}
                     date={NaiveDate.parseUnsafe(publication.date)}
-                    image={thumbs.src}
-                    imageSet={thumbs.srcset}
+                    image={thumbs?.src}
+                    imageSet={thumbs?.srcset}
                   />
                 </Link>
               </li>

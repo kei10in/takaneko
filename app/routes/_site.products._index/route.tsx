@@ -79,11 +79,15 @@ export default function Index() {
       title: "書籍・雑誌",
       slug: "/products/publications",
       items: PUBLICATIONS.slice(0, 10).map((publication) => {
-        const thumbs = thumbnailSrcSet(publication.coverImages[0].path);
+        const thumbs =
+          publication.coverImages[0] == undefined
+            ? undefined
+            : thumbnailSrcSet(publication.coverImages[0].path);
+
         return {
           slug: `/products/${publication.slug}`,
-          image: thumbs.src,
-          imageSet: thumbs.srcset,
+          image: thumbs?.src,
+          imageSet: thumbs?.srcset,
           name: publication.name,
         };
       }),
