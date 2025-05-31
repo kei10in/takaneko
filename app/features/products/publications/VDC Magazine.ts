@@ -10,7 +10,16 @@ export const VDCMagazine035: Publication = {
   priceWithTax: 1430,
   code: [],
   url: "https://wp.vdc.tokyo/article/11859",
-  coverImages: [],
+  coverImages: [
+    {
+      path: "/publications/2025/2025-06-27_VDC Magazine 035_表紙.jpg",
+      ref: "https://x.com/VDC_tokyo/status/1928647626314141876",
+    },
+    {
+      path: "/publications/2025/2025-06-27_VDC Magazine 035_裏表紙.jpg",
+      ref: "https://x.com/VDC_tokyo/status/1928647626314141876",
+    },
+  ],
   bonuses: [
     {
       name: "VDCストアオリジナル生写真 L 判 5 枚 A セット",
