@@ -67,7 +67,7 @@ export const metadata2023: MediaDetails[] = [
   {
     kind: "youtube",
     title: "高嶺のなでしこ、新曲発表の感想と1周年記念ライブを終えた感想インタビュー実施！",
-    authorName: "wowKorea FAN",
+    authorName: "WowKorea FAN",
     publishedAt: "2023-09-19",
     mediaUrl: "https://youtu.be/dcE73pJT4rA",
     imageUrl: "https://i.ytimg.com/vi/dcE73pJT4rA/hqdefault.jpg",
@@ -131,7 +131,7 @@ export const metadata2023: MediaDetails[] = [
     kind: "youtube",
     title:
       "高嶺のなでしこ、「初恋のひと。」と1周年単独ライブを紹介するインタビュー実施！..「9月3日1周年単独ライブたくさん来てくださいね~」",
-    authorName: "wowKorea FAN",
+    authorName: "WowKorea FAN",
     publishedAt: "2023-07-19",
     mediaUrl: "https://youtu.be/_tU8lAPv684",
     imageUrl: "https://i.ytimg.com/vi/_tU8lAPv684/hqdefault.jpg",
@@ -142,7 +142,7 @@ export const metadata2023: MediaDetails[] = [
     kind: "youtube",
     title:
       "高嶺のなでしこ、「全国お招きツアー2023~First trip~」ツアーファイナル初単独公演インタビュー実施… 「ぜひ見に来てくださいますよね？」",
-    authorName: "wowKorea FAN",
+    authorName: "WowKorea FAN",
     publishedAt: "2023-06-14",
     mediaUrl: "https://youtu.be/NQBiKzJY4gE",
     imageUrl: "https://i.ytimg.com/vi/NQBiKzJY4gE/hqdefault.jpg",

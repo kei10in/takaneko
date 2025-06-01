@@ -2,6 +2,16 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title: "【抜き打ち】モデルのカバンの中身チェック！後編【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2025-05-31",
+    mediaUrl: "https://youtu.be/PvPKMtl6HQg",
+    imageUrl: "https://i.ytimg.com/vi/PvPKMtl6HQg/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     title: "高嶺のなでしこ・城月菜央さんが選ぶ2025年注目のホラー映画特集 | CinemaStyle",
     authorName: "CinemaStyle",
@@ -128,7 +138,7 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
     title: "高嶺のなでしこ、新曲「メランコリックハニー」と過去最大規模の単独ライブ紹介映像を公開！",
-    authorName: "wowKorea FAN",
+    authorName: "WowKorea FAN",
     publishedAt: "2025-05-01",
     mediaUrl: "https://youtu.be/qFp1I2tSi1o",
     imageUrl: "https://i.ytimg.com/vi/qFp1I2tSi1o/hqdefault.jpg",

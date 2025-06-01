@@ -960,7 +960,7 @@ export const metadata2024: MediaDetails[] = [
     kind: "youtube",
     title:
       "高嶺のなでしこ、「美しく生きろ」のM/V公開及びメジャーデビューを控えた感想インタビューを実施！",
-    authorName: "wowKorea FAN",
+    authorName: "WowKorea FAN",
     publishedAt: "2024-01-19",
     mediaUrl: "https://youtu.be/D8RlMD4MGiE",
     imageUrl: "https://i.ytimg.com/vi/D8RlMD4MGiE/hqdefault.jpg",
