@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title:
+      "【新作公開】『たっくーの震える怖い話』シーズン2配信開始！#たっくー #たっくーのふる怖 #怪談 #心霊",
+    authorName: "タテドラ【公式】",
+    publishedAt: "2025-06-05",
+    mediaUrl: "https://youtu.be/4QiodO_oM00",
+    imageUrl: "https://i.ytimg.com/vi/4QiodO_oM00/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     title: "【抜き打ち】モデルのカバンの中身チェック！後編【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2025-05-31",
