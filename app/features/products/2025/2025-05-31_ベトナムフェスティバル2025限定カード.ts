@@ -1,0 +1,38 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const ベトナムフェスティバル2025限定カード: RandomGoods = {
+  id: "ベトナムフェスティバル2025限定カード",
+  slug: "ベトナムフェスティバル2025限定カード",
+  name: "ベトナムフェスティバル2025限定カード",
+  year: 2025,
+  series: "ベトナムフェスティバル2025限定カード",
+  category: "カード",
+  abbrev: "ベトナムフェスティバル2025限定カード",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-05-31_ベトナムフェスティバル2025限定カード.jpg",
+  width: 1060,
+  height: 1500,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: false,
+  positions: [
+    { id: 1, x: 103, y: 359, width: 196, height: 324 },
+    { id: 2, x: 320, y: 359, width: 196, height: 324 },
+    { id: 3, x: 537, y: 359, width: 196, height: 324 },
+    { id: 4, x: 754, y: 359, width: 196, height: 324 },
+    { id: 5, x: 103, y: 711, width: 196, height: 324 },
+    { id: 6, x: 320, y: 711, width: 196, height: 324 },
+    { id: 7, x: 537, y: 711, width: 196, height: 324 },
+    { id: 8, x: 754, y: 711, width: 196, height: 324 },
+    { id: 9, x: 102, y: 1061, width: 196, height: 324 },
+  ],
+};

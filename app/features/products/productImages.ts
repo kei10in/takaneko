@@ -109,6 +109,7 @@ import { SpringRide_缶バッジ } from "./2025/2025-05-06_缶バッジ「Spring
 import { ROUND1_コラボキャンペーン_オリジナルしおり } from "./2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルしおり";
 import { ROUND1_コラボキャンペーン_オリジナルコースター } from "./2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルコースター";
 import { ROUND1_コラボキャンペーン_オリジナルステッカー } from "./2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルステッカー";
+import { ベトナムフェスティバル2025限定カード } from "./2025/2025-05-31_ベトナムフェスティバル2025限定カード";
 import { アイドル衣装衣装_ミニフォト } from "./2025/2025-06-01_ミニフォトカード「アイドル衣装衣装」";
 import { RandomGoods, TradeTextType } from "./product";
 
@@ -121,6 +122,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   アイドル衣装衣装_ミニフォト,
+  ベトナムフェスティバル2025限定カード,
   ROUND1_コラボキャンペーン_オリジナルコースター,
   ROUND1_コラボキャンペーン_オリジナルステッカー,
   ROUND1_コラボキャンペーン_オリジナルしおり,
