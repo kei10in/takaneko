@@ -22,7 +22,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
     timeSlot == undefined &&
     timetable == undefined &&
     streaming == undefined &&
-    goods == undefined
+    !showMerchandise(goods)
   ) {
     return null;
   }
@@ -79,7 +79,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
           </li>
         )}
 
-        {goods != undefined && (
+        {showMerchandise(goods) && (
           <li>
             <p>
               <strong>物販:</strong>
@@ -126,4 +126,22 @@ const parseTimeSlot = (
   } else {
     return (timeSlot as [string, string][]).map((slot) => `${slot[0]} 〜 ${slot[1]}`);
   }
+};
+
+const showMerchandise = (
+  goods?:
+    | {
+        time?: [string] | [string, string] | undefined;
+        lineup?: string | string[] | undefined;
+        url?: string | undefined;
+      }
+    | undefined,
+): boolean => {
+  if (goods == undefined) {
+    return false;
+  }
+  if (goods.time == undefined && goods.lineup == undefined && goods.url == undefined) {
+    return false;
+  }
+  return true;
 };
