@@ -19,6 +19,14 @@ export const VDCMagazine035: Publication = {
       path: "/publications/2025/2025-06-27_VDC Magazine 035_裏表紙.jpg",
       ref: "https://x.com/VDC_tokyo/status/1928647626314141876",
     },
+    {
+      path: "/publications/2025/2025-06-27_VDC Magazine 035_特典A.jpg",
+      ref: "https://x.com/VDC_tokyo/status/1931178554110460015",
+    },
+    {
+      path: "/publications/2025/2025-06-27_VDC Magazine 035_特典B.jpg",
+      ref: "https://x.com/VDC_tokyo/status/1931178554110460015",
+    },
   ],
   bonuses: [
     {
@@ -77,6 +85,10 @@ export const VDCMagazine035: Publication = {
     {
       text: "オフショット 4",
       url: "https://x.com/VDC_tokyo/status/1927998884913287210",
+    },
+    {
+      text: "特典「生写真」公開",
+      url: "https://x.com/VDC_tokyo/status/1931178554110460015",
     },
   ],
 };
