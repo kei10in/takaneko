@@ -3,6 +3,7 @@ import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { EventRecap, EventRecapDescription, validateEventRecapDescription } from "./eventRecap";
 import { compareEventType, EventTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 
@@ -28,15 +29,6 @@ const EventOverview = z.object({
 });
 
 export type EventOverview = z.infer<typeof EventOverview>;
-
-const EventRecap = z.object({
-  title: z.string().optional(),
-  costume: z.union([z.string(), z.array(z.string())]).optional(),
-  setlist: z.array(z.string()).optional(),
-  url: z.string().optional(),
-});
-
-export type EventRecap = z.infer<typeof EventRecap>;
 
 const EventStatus = z.union([
   z.literal("RESCHEDULED"),
@@ -72,7 +64,7 @@ const EventMetaDescriptor = z.object({
   absent: z.array(MemberName).optional(),
 
   overview: EventOverview.optional(),
-  recaps: z.union([EventRecap, z.array(EventRecap)]).optional(),
+  recaps: z.union([EventRecapDescription, z.array(EventRecapDescription)]).optional(),
   updatedAt: z.string().optional(),
 });
 
@@ -95,11 +87,16 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
     const summary = `${statusPrefix}${r.data.summary}`;
     const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
 
-    const recaps = Array.isArray(r.data.recaps)
+    const recapDescriptions = Array.isArray(r.data.recaps)
       ? r.data.recaps
       : r.data.recaps != undefined
         ? [r.data.recaps]
         : [];
+
+    const recaps = recapDescriptions
+      .map((recap) => validateEventRecapDescription(recap))
+      .filter((recap): recap is EventRecap => recap != undefined);
+
     return {
       ...r.data,
       summary,

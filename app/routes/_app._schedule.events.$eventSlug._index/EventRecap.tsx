@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import { EventRecap as Recap } from "~/features/events/meta";
+import { EventRecap as Recap } from "~/features/events/eventRecap";
 import { findSong } from "~/features/songs/songs";
 
 interface Props {
@@ -13,7 +13,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
       return (
         (recap.costume != undefined && recap.costume != "") ||
         (recap.setlist != undefined && recap.setlist.length != 0) ||
-        (recap.url != undefined && recap.url != "")
+        recap.links.length == 0
       );
     }) ?? [];
 
@@ -25,8 +25,8 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
     <section>
       <h2>開催内容</h2>
 
-      {recaps?.map(({ title, costume, setlist, url }, i) => {
-        if (costume == undefined && setlist == undefined && url == undefined) {
+      {recaps?.map(({ title, costume, setlist, links }, i) => {
+        if (costume == undefined && setlist == undefined && links.length == 0) {
           return null;
         }
 
@@ -73,13 +73,13 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
               </div>
             )}
 
-            {url != undefined && url != "" && (
-              <p>
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  #たかねこセトリ
+            {links.map((link, j) => (
+              <p key={j}>
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  {link.text || link.url}
                 </a>
               </p>
-            )}
+            ))}
           </div>
         );
       })}
