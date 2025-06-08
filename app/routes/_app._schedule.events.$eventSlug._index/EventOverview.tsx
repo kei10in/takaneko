@@ -83,11 +83,11 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
           <li>
             <p>
               <strong>物販:</strong>
-              {goods.time?.length == 1 && ` ${goods.time[0]} 〜`}
-              {goods.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
+              {goods?.time?.length == 1 && ` ${goods.time[0]} 〜`}
+              {goods?.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
             </p>
 
-            {goods.lineup instanceof Array && (
+            {goods?.lineup instanceof Array && (
               <ul>
                 {goods.lineup.map((lineup, i) => (
                   <li key={i}>{lineup}</li>
@@ -95,7 +95,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
               </ul>
             )}
 
-            {goods.url && (
+            {goods?.url && (
               <p>
                 <Link to={goods.url}>{goods.url}</Link>
               </p>
