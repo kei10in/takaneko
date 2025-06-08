@@ -4,7 +4,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { EventRecap, EventRecapDescription, validateEventRecapDescription } from "./eventRecap";
-import { compareEventType, EventTypeEnum } from "./EventType";
+import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 
 const EventOverview = z.object({
@@ -50,6 +50,7 @@ const EventMetaDescriptor = z.object({
 
   status: EventStatus.optional(),
   category: EventTypeEnum,
+  liveType: LiveTypeEnum.optional(),
   date: z.string(),
   open: z.string().optional(),
   start: z.string().optional(),

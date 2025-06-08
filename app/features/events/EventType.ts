@@ -113,3 +113,12 @@ export const parseCategory = (category: string | null): EventType | undefined =>
       return undefined;
   }
 };
+
+export const LiveTypeEnum = z.enum([
+  "SOLO", // ソロライブ
+  "HOSTED", // 主催ライブ
+  "GUEST", // ゲスト出演
+  "RELEASE_EVENT", // リリースイベント
+]);
+
+export type LiveType = z.infer<typeof LiveTypeEnum>;
