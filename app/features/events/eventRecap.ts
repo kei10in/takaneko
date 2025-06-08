@@ -14,7 +14,7 @@ export const EventRecapDescription = z.object({
 
 type EventRecapDescription = z.infer<typeof EventRecapDescription>;
 
-export type EventRecap = Omit<EventRecapDescription, "url"> & {
+export type EventRecap = Omit<EventRecapDescription, "url" | "links"> & {
   links: LinkDescription[];
 };
 
