@@ -121,4 +121,20 @@ export const LiveTypeEnum = z.enum([
   "RELEASE_EVENT", // リリースイベント
 ]);
 
+export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
+
+export const liveTypeColor = (liveType: LiveType | undefined): string => {
+  switch (liveType) {
+    case LiveType.SOLO:
+      return "bg-nadeshiko-700";
+    case LiveType.HOSTED:
+      return "bg-blue-300";
+    case LiveType.GUEST:
+      return "bg-amber-300";
+    case LiveType.RELEASE_EVENT:
+      return "bg-violet-400";
+    default:
+      return "bg-gray-300";
+  }
+};
