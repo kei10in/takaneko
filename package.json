@@ -17,7 +17,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.1",
     "@react-router/cloudflare": "^7.6.2",
-    "cheerio": "^1.0.0",
+    "cheerio": "^1.1.0",
     "clsx": "^2.1.1",
     "dedent": "^1.5.3",
     "fast-deep-equal": "^3.1.3",
