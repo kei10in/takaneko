@@ -89,7 +89,7 @@ export default function Index() {
 
             <div className="mt-2 flex justify-end gap-2 text-sm font-semibold select-none">
               <Link to="/trade">
-                <div className="bg-nadeshiko-800 flex h-7 items-center gap-1 rounded-md px-2 text-white">
+                <div className="bg-nadeshiko-800 flex h-7 items-center gap-1 rounded-md px-4 text-white">
                   <BsArrowLeftRight className="h-4 w-4" />
                   <div>トレード画像つくるやつ</div>
                 </div>
