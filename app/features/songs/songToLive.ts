@@ -11,13 +11,15 @@ export const makeSongToLiveMapFromAllEvents = () => {
     }
 
     meta.recaps.forEach((recap) => {
-      (recap.setlist ?? []).forEach((song) => {
-        if (!result[song]) {
-          result[song] = [];
-        }
+      recap.setlist
+        .flatMap((x) => x.songs)
+        .forEach((song) => {
+          if (!result[song]) {
+            result[song] = [];
+          }
 
-        result[song].push(event);
-      });
+          result[song].push(event);
+        });
     });
   });
 
