@@ -1,5 +1,8 @@
+import clsx from "clsx";
 import { useMemo } from "react";
+import { BsCalendar, BsGeo } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
+import { liveTypeColor } from "~/features/events/EventType";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -52,9 +55,26 @@ export default function Component() {
           <ul className="space-y-1">
             {lives.map((e, i) => (
               <li key={i}>
-                <Link to={`/events/${e.slug}`}>
-                  {displayDateWithDayOfWeek(e.meta.date)} {e.meta.title}
-                </Link>
+                <div className="flex items-stretch gap-2 p-1">
+                  <div
+                    className={clsx("w-1 flex-none rounded-full", liveTypeColor(e.meta.liveType))}
+                  />
+                  <div className="text-sm">
+                    <p>
+                      <Link to={`/events/${e.slug}`}>{e.meta.title}</Link>
+                    </p>
+                    <p className="flex items-center gap-1 text-gray-400">
+                      <BsCalendar className="inline flex-none text-xs" />
+                      <span className="line-clamp-1">{displayDateWithDayOfWeek(e.meta.date)}</span>
+                    </p>
+                    <p className="flex items-center gap-1 text-gray-400">
+                      <BsGeo className="inline flex-none text-xs" />
+                      <span className="line-clamp-1">
+                        {e.meta.region} {e.meta.location}
+                      </span>
+                    </p>
+                  </div>
+                </div>
               </li>
             ))}
           </ul>
