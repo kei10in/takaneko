@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title: "ルンルンになりきり！？推し概念コーデが超可愛い♡「すぅにゃの推し活WORLD」vol.3",
+    authorName: "Popteen Media",
+    publishedAt: "2025-06-10",
+    mediaUrl: "https://popteen.co.jp/media/71240/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/06/556c59760770b4d88cef733f18789189.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "youtube",
     title:
       "【新作公開】『たっくーの震える怖い話』シーズン2配信開始！#たっくー #たっくーのふる怖 #怪談 #心霊",
