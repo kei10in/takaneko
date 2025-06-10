@@ -6,6 +6,7 @@ import { LinkDescription } from "~/utils/types/LinkDescription";
 import { EventRecap, EventRecapDescription, validateEventRecapDescription } from "./eventRecap";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
+import { ShowNotes, ShowNotesDescription, validateShowNotes } from "./showNotes";
 
 const EventOverview = z.object({
   // チケット販売サイトの URL を指定します。
@@ -66,16 +67,21 @@ const EventMetaDescriptor = z.object({
 
   overview: EventOverview.optional(),
   recaps: z.union([EventRecapDescription, z.array(EventRecapDescription)]).optional(),
+  showNotes: ShowNotesDescription.optional(),
   updatedAt: z.string().optional(),
 });
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptor, "date" | "recaps" | "images" | "links"> & {
+export type EventMeta = Omit<
+  EventMetaDescriptor,
+  "date" | "recaps" | "showNotes" | "images" | "links"
+> & {
   date: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
   recaps: EventRecap[];
+  showNotes: ShowNotes;
   descriptor: EventMetaDescriptor;
 };
 
@@ -98,6 +104,8 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       .map((recap) => validateEventRecapDescription(recap))
       .filter((recap): recap is EventRecap => recap != undefined);
 
+    const showNotes = validateShowNotes(r.data.showNotes);
+
     return {
       ...r.data,
       summary,
@@ -115,6 +123,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
           (link): link is LinkDescription => link != undefined && link.text != "" && link.url != "",
         ),
       recaps,
+      showNotes,
       descriptor: r.data,
     };
   } else {
