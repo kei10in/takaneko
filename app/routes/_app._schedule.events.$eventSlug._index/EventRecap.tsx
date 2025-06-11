@@ -32,7 +32,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
           <div key={i}>
             {title != undefined ? <h3>{title}</h3> : null}
 
-            {costume != undefined && (
+            {costume != undefined && costume.length > 0 && (
               <div>
                 <p>
                   <strong>衣装: </strong>
