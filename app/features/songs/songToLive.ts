@@ -3,33 +3,6 @@ import { EventRecap } from "../events/eventRecap";
 import { ALL_EVENTS } from "../events/events";
 
 export const makeSongToLiveMapFromAllEvents = () => {
-  const result: Record<string, EventModule[]> = {};
-
-  Object.values(ALL_EVENTS).forEach((event) => {
-    const { meta } = event;
-    if (meta.recaps == undefined) {
-      return;
-    }
-
-    meta.recaps.forEach((recap) => {
-      recap.setlist
-        .flatMap((x) => x.songs)
-        .forEach((song) => {
-          if (!result[song]) {
-            result[song] = [];
-          }
-
-          result[song].push(event);
-        });
-    });
-  });
-
-  return result;
-};
-
-export const SongToLiveMap = makeSongToLiveMapFromAllEvents();
-
-export const makeSongToLiveMapFromAllEvents2 = () => {
   const result: Record<string, { recaps: EventRecap[]; event: EventModule }[]> = {};
 
   Object.values(ALL_EVENTS).forEach((event) => {
@@ -63,4 +36,4 @@ export const makeSongToLiveMapFromAllEvents2 = () => {
   return result;
 };
 
-export const SongToLiveMap2 = makeSongToLiveMapFromAllEvents2();
+export const SongToLiveMap = makeSongToLiveMapFromAllEvents();

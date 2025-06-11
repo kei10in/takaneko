@@ -4,7 +4,7 @@ import { BsCalendar, BsGeo } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { liveTypeColor } from "~/features/events/EventType";
 import { ALL_SONGS } from "~/features/songs/songs";
-import { SongToLiveMap2 } from "~/features/songs/songToLive";
+import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -32,7 +32,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function Component() {
   const data = useLoaderData<typeof loader>();
-  const lives = useMemo(() => (SongToLiveMap2[data.name] ?? []).toReversed(), [data.name]);
+  const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), [data.name]);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
