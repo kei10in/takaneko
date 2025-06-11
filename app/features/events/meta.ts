@@ -100,9 +100,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         ? [r.data.recaps]
         : [];
 
-    const recaps = recapDescriptions
-      .map((recap) => validateEventRecapDescription(recap))
-      .filter((recap): recap is EventRecap => recap != undefined);
+    const recaps = validateEventRecapDescription(recapDescriptions);
 
     const showNotes = validateShowNotes(r.data.showNotes);
 

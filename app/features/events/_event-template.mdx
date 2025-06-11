@@ -1,6 +1,7 @@
 export const meta = {
   summary: "",
   category: "LIVE",
+  liveType: undefined,
   date: "2025-",
   open: undefined,
   start: undefined,
@@ -30,8 +31,10 @@ export const meta = {
     streaming: undefined,
   },
   recaps: {
-    costume: "",
-    setlist: [],
+    setlist: {
+      costume: "",
+      songs: [],
+    },
     url: "",
   },
   updatedAt: "",

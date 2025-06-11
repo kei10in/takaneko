@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import { BsCalendar, BsGeo } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { liveTypeColor } from "~/features/events/EventType";
@@ -53,29 +53,40 @@ export default function Component() {
         <section>
           <h2 className="mt-4 mb-2 text-2xl">ライブ</h2>
           <ul className="space-y-1">
-            {lives.map((e, i) => (
-              <li key={i}>
-                <div className="flex items-stretch gap-2 p-1">
-                  <div
-                    className={clsx("w-1 flex-none rounded-full", liveTypeColor(e.meta.liveType))}
-                  />
-                  <div className="text-sm">
-                    <p>
-                      <Link to={`/events/${e.slug}`}>{e.meta.title}</Link>
-                    </p>
-                    <p className="flex items-center gap-1 text-gray-400">
-                      <BsCalendar className="inline flex-none text-xs" />
-                      <span className="line-clamp-1">{displayDateWithDayOfWeek(e.meta.date)}</span>
-                    </p>
-                    <p className="flex items-center gap-1 text-gray-400">
-                      <BsGeo className="inline flex-none text-xs" />
-                      <span className="line-clamp-1">
-                        {e.meta.region} {e.meta.location}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </li>
+            {lives.map(({ recaps, event: e }, i) => (
+              <Fragment key={i}>
+                {recaps.map((recap, j) => (
+                  <li key={j}>
+                    <div className="flex items-stretch gap-2 p-1">
+                      <div
+                        className={clsx(
+                          "w-1 flex-none rounded-full",
+                          liveTypeColor(e.meta.liveType),
+                        )}
+                      />
+                      <div className="text-sm">
+                        <p>
+                          <Link to={`/events/${e.slug}`}>
+                            {recap.title ? `${e.meta.title} - ${recap.title}` : e.meta.title}
+                          </Link>
+                        </p>
+                        <p className="flex items-center gap-1 text-gray-400">
+                          <BsCalendar className="inline flex-none text-xs" />
+                          <span className="line-clamp-1">
+                            {displayDateWithDayOfWeek(e.meta.date)}
+                          </span>
+                        </p>
+                        <p className="flex items-center gap-1 text-gray-400">
+                          <BsGeo className="inline flex-none text-xs" />
+                          <span className="line-clamp-1">
+                            {e.meta.region} {e.meta.location}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </Fragment>
             ))}
           </ul>
         </section>
