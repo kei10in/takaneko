@@ -44,6 +44,7 @@ import { アイドル衣装 } from "./2025/アイドル衣装";
 import { メランコリックハニー } from "./2025/メランコリックハニー";
 import { 小悪魔だってかまわない } from "./2025/小悪魔だってかまわない！";
 import { 東京サニーパーティー } from "./2025/東京サニーパーティー";
+import { 病名恋ワズライ } from "./2025/病名恋ワズライ";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
@@ -52,6 +53,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   メランコリックハニー,
   東京サニーパーティー,
   CuteForLife,
+  病名恋ワズライ,
   小悪魔だってかまわない,
   // 2024
   初恋の絵本,
