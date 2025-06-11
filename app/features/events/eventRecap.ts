@@ -11,7 +11,9 @@ export type PerformanceDescription = z.infer<typeof PerformanceDescription>;
 export const EventRecapDescription = z.object({
   title: z.string().optional(),
   costume: z.union([z.string(), z.array(z.string())]).optional(),
-  setlist: z.union([z.array(z.string()), z.array(PerformanceDescription)]).optional(),
+  setlist: z
+    .union([z.array(z.string()), z.array(PerformanceDescription), PerformanceDescription])
+    .optional(),
 
   // みくるんの #たかねこセトリを指定します。
   url: z.string().optional(),
@@ -45,20 +47,23 @@ export const validateEventRecapDescription = (
       if (setlist == undefined) {
         return [];
       }
-      if (setlist.length === 0) {
+
+      const sl = Array.isArray(setlist) ? setlist : [setlist];
+
+      if (sl.length === 0) {
         return [];
       }
 
-      if (typeof setlist[0] === "string") {
+      if (typeof sl[0] === "string") {
         const validatedCostumes =
           costume == undefined ? [] : Array.isArray(costume) ? costume : [costume];
         const validatedCostume = validatedCostumes[0];
         // setlist は string[] を期待していいが推論されない。
-        return [{ costume: validatedCostume, songs: setlist as string[] }];
+        return [{ costume: validatedCostume, songs: sl as string[] }];
       }
 
       // setlist は PerformanceDescription[] であると期待できるが推論が効かない。
-      return setlist as PerformanceDescription[];
+      return sl as PerformanceDescription[];
     })();
 
     //
