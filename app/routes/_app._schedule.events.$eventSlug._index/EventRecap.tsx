@@ -23,51 +23,37 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
           return null;
         }
 
-        const costume = setlist
-          .map((item) => item.costume)
-          .filter((c): c is string => c != undefined);
-        const allSongs = setlist.flatMap((item) => item.songs);
-
         return (
           <div key={i}>
             {title != undefined ? <h3>{title}</h3> : null}
 
-            {costume != undefined && costume.length > 0 && (
-              <div>
-                <p>
-                  <strong>衣装: </strong>
-                  {costume.length == 1 ? `${costume[0]}` : null}
-                </p>
-                {Array.isArray(costume) && costume.length > 1 && (
-                  <ul>
-                    {costume.map((c, i) => (
-                      <li key={i}>{c}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            )}
-
-            {allSongs.length != 0 && (
-              <div>
-                <p>
-                  <strong>セトリ:</strong>
-                </p>
-                <ul>
-                  {allSongs.map((item, i) => {
-                    const song = findSong(item);
-                    if (song == undefined) {
-                      return <li key={i}>{item}</li>;
-                    }
-                    return (
-                      <li key={i}>
-                        <Link to={`/songs/${song.slug}`}>{item}</Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            )}
+            <h4>衣装・セトリ</h4>
+            <ul>
+              {setlist.map((performance, j) => {
+                const costume = performance.costume;
+                const songs = performance.songs;
+                return (
+                  <li key={j}>
+                    <p>{costume ?? "衣装不明"}</p>
+                    {songs.length > 0 && (
+                      <ul>
+                        {songs.map((item, l) => {
+                          const song = findSong(item);
+                          if (song == undefined) {
+                            return <li key={l}>{item}</li>;
+                          }
+                          return (
+                            <li key={l}>
+                              <Link to={`/songs/${song.slug}`}>{item}</Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
 
             {links.map((link, j) => (
               <p key={j}>
