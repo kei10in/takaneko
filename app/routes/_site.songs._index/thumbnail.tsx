@@ -1,6 +1,6 @@
 import { BsMusicNoteBeamed } from "react-icons/bs";
+import { SongMeta } from "~/features/songs/SongMeta";
 import { SongMetaDescriptor } from "~/features/songs/types";
-import { youtubeImage } from "~/utils/youtubeImage";
 
 interface Props {
   track: SongMetaDescriptor;
@@ -9,10 +9,12 @@ interface Props {
 export const Thumbnail: React.FC<Props> = (props: Props) => {
   const { track } = props;
 
-  if (track.youtube?.[0] != undefined) {
+  const youtubeImage = SongMeta.youtubeImage(track);
+
+  if (youtubeImage != undefined) {
     return (
       <img
-        src={youtubeImage(track.youtube[0].videoId).mqDefault.url}
+        src={youtubeImage.mqDefault.url}
         alt={track.name}
         width={160}
         height={90}

@@ -3,6 +3,7 @@ import { Fragment, useMemo } from "react";
 import { BsCalendar, BsGeo } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { liveTypeColor } from "~/features/events/EventType";
+import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -34,12 +35,14 @@ export default function Component() {
   const data = useLoaderData<typeof loader>();
   const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), [data.name]);
 
+  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(data);
+
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      {data.youtube?.[0] == undefined ? null : (
+      {youtubeEmbedUrl == undefined ? null : (
         <iframe
           className="aspect-video w-full"
-          src={`https://www.youtube-nocookie.com/embed/${data.youtube[0].videoId}`}
+          src={youtubeEmbedUrl}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
