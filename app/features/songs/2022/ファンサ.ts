@@ -5,6 +5,11 @@ export const ファンサ: SongMetaDescriptor = {
   name: "ファンサ",
   image: undefined,
   officialSite: undefined,
-  youtube: [],
+  youtube: [
+    {
+      text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
+      videoId: "https://www.youtube.com/watch?v=lzyDD8bMDKs",
+    },
+  ],
   linkcore: undefined,
 };

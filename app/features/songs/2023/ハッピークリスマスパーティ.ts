@@ -5,5 +5,14 @@ export const ハッピークリスマスパーティ: SongMetaDescriptor = {
   name: "ハッピークリスマスパーティ",
   image: undefined,
   officialSite: "",
-  youtube: [],
+  youtube: [
+    {
+      text: "キャラクター バージョン / mona（CV：夏川椎菜）",
+      videoId: "https://www.youtube.com/watch?v=3GSmmtJ9prs",
+    },
+    {
+      text: "ハコニワリリィ バージョン",
+      videoId: "https://www.youtube.com/watch?v=snFzxdWiO_k",
+    },
+  ],
 };

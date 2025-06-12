@@ -5,5 +5,10 @@ export const 醜い生き物: SongMetaDescriptor = {
   name: "醜い生き物",
   image: undefined,
   officialSite: "",
-  youtube: [],
+  youtube: [
+    {
+      text: "CHiCO with HoneyWorks",
+      videoId: "https://www.youtube.com/watch?v=ey_9CIQQHXo",
+    },
+  ],
 };

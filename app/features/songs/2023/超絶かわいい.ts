@@ -5,6 +5,19 @@ export const 超絶かわいい: SongMetaDescriptor = {
   name: "#超絶かわいい",
   image: undefined,
   officialSite: undefined,
-  youtube: [],
+  youtube: [
+    {
+      text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
+      videoId: "https://www.youtube.com/watch?v=nxBjyiqVQa4",
+    },
+    {
+      text: "可憐なアイボリー バージョン",
+      videoId: "https://www.youtube.com/watch?v=8Xpa6KsGkAQ",
+    },
+    {
+      text: "【たかねこコラボ】可憐なアイボリー＆高嶺のなでしこ楽曲交換会！前編【HoneyWorks】",
+      videoId: "https://www.youtube.com/watch?v=toiKj_8ruuY",
+    },
+  ],
   linkcore: undefined,
 };

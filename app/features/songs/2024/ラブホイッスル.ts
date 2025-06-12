@@ -5,5 +5,10 @@ export const ラブホイッスル: SongMetaDescriptor = {
   name: "ラブホイッスル",
   image: undefined,
   officialSite: "",
-  youtube: [],
+  youtube: [
+    {
+      text: "CHiCO with HoneyWorks 音源",
+      videoId: "H36kjGG1dsI",
+    },
+  ],
 };
