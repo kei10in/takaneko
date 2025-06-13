@@ -90,6 +90,10 @@ export const VDCMagazine035: Publication = {
       text: "特典「生写真」公開",
       url: "https://x.com/VDC_tokyo/status/1931178554110460015",
     },
+    {
+      text: "特典生写真 絵柄紹介",
+      url: "https://x.com/VDC_tokyo/status/1932709386499285030",
+    },
   ],
 };
 
