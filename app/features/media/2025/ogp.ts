@@ -2,11 +2,29 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.idol-culture.jp/geinou/175577/",
+    publishedAt: "2025-06-13",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/756586",
+    publishedAt: "2025-06-13",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1933434438555480378",
+  },
+  {
+    mediaUrl: "https://popteen.co.jp/media/71575/",
+    publishedAt: "2025-06-13",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/71240/",
     publishedAt: "2025-06-10",
     category: "article",
     presents: ["涼海すう"],
-    officialTwitter: "https://x.com/takanenofficial/status/1925719765252788356",
   },
   {
     mediaUrl: "https://www.cinemastyle.jp/horror/20094/",

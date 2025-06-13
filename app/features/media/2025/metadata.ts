@@ -2,6 +2,48 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title: "特別番組「ミルクにモ～夢中！」メイキング映像",
+    authorName: "一般社団法人中央酪農会議",
+    publishedAt: "2025-06-13",
+    mediaUrl: "https://youtu.be/LHigAd63pfM",
+    imageUrl: "https://i.ytimg.com/vi/LHigAd63pfM/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    title: "「高嶺のなでしこ」日向端ひな初主演映画クランクアップ｜BUBKA Web（ブブカ ウェブ）",
+    authorName: "BUBKA Web（ブブカ ウェブ）",
+    publishedAt: "2025-06-13",
+    mediaUrl: "https://www.idol-culture.jp/geinou/175577/",
+    imageUrl:
+      "https://www.idol-culture.jp/wp-content/uploads/2025/06/7329ecbc7995b185409ce582518b1175-1.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "ogp",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第1回『パラドクス』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-06-13",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/756586",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/05/756586_05.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
+    title: "体型コンプレックスをカバーする♡POPモデルの初夏コーデ《ガーリー編》",
+    authorName: "Popteen Media",
+    publishedAt: "2025-06-13",
+    mediaUrl: "https://popteen.co.jp/media/71575/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/06/e4b0c1791ad46c4a718d7daa1fa15217.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     title: "ルンルンになりきり！？推し概念コーデが超可愛い♡「すぅにゃの推し活WORLD」vol.3",
     authorName: "Popteen Media",
