@@ -936,6 +936,18 @@ export const metadata2024: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "ogp",
+    title:
+      "【オフィシャルレポート】高嶺のなでしこ 初の海外公演！『CONTEMPO：マカオ・ジャパン・スプリング・フェスティバル』のトップバッターを飾る",
+    authorName: "プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES",
+    publishedAt: "2024-02-05",
+    mediaUrl: "https://prtimes.jp/main/html/rd/p/000000561.000025517.html",
+    imageUrl:
+      "https://prcdn.freetls.fastly.net/release_image/25517/561/25517-561-90cb30918cb9afc5ca2a4c69ca1bde43-3000x2000.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     title: "高嶺のなでしこ 東山 恵里沙ちゃん Ank Rougeカタログメイキング",
     authorName: "Ank Rouge チャンネル",
