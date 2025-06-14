@@ -1,4 +1,5 @@
 import { register } from "node:module";
+import { EventRecap } from "~/features/events/eventRecap";
 import { NaiveDate } from "../app/utils/datetime/NaiveDate";
 import { loadAllEventMeta } from "./events";
 
@@ -26,7 +27,7 @@ const main = async () => {
       }
 
       // 全ての Recap に setlist があれば、セットリストが設定済み。
-      if (meta.recaps?.length > 0 && meta.recaps.every((recap) => recap.setlist?.length > 0)) {
+      if (meta.recaps.length > 0 && meta.recaps.every(allSetListHasAnySongs)) {
         return false;
       }
 
@@ -39,6 +40,10 @@ const main = async () => {
   for (const slug of livesWithoutSetlist) {
     console.log(slug);
   }
+};
+
+const allSetListHasAnySongs = (recap: EventRecap): boolean => {
+  return recap.setlist.length > 0 && recap.setlist.every((item) => item.songs.length > 0);
 };
 
 main();
