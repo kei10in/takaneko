@@ -296,6 +296,12 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: [],
   },
   {
+    mediaUrl: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
+    publishedAt: "2024-02-13",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://prtimes.jp/main/html/rd/p/000000561.000025517.html",
     publishedAt: "2024-02-05",
     category: "article",

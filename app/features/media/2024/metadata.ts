@@ -938,6 +938,18 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "高嶺のなでしこ、２１日メジャーデビュー　シングル「美しく生きろ／恋を知った世界」バスらせる",
+    authorName: "サンスポ",
+    publishedAt: "2024-02-13",
+    mediaUrl: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
+    imageUrl:
+      "https://www.sanspo.com/resizer/v2/HEHZWGSFEVMZVFFSL42WL57U34.jpg?auth=2be87ebb5feadb183cb238d24204297ac527b5593da1a854fa8be9de4d9179db&quality=50&focal=2652%2C759&width=1200&height=630",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    title:
       "【オフィシャルレポート】高嶺のなでしこ 初の海外公演！『CONTEMPO：マカオ・ジャパン・スプリング・フェスティバル』のトップバッターを飾る",
     authorName: "プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES",
     publishedAt: "2024-02-05",
