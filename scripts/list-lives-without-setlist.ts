@@ -20,6 +20,11 @@ const main = async () => {
         return false;
       }
 
+      // 出演を取りやめたライブはリストしない。
+      if (meta.status == "WITHDRAWN") {
+        return false;
+      }
+
       // 全ての Recap に setlist があれば、セットリストが設定済み。
       if (meta.recaps?.length > 0 && meta.recaps.every((recap) => recap.setlist?.length > 0)) {
         return false;
