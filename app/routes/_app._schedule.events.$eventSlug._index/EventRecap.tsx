@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
-import { EventRecap as Recap } from "~/features/events/eventRecap";
+import { isEmptyEventRecap, EventRecap as Recap } from "~/features/events/eventRecap";
 import { findSong } from "~/features/songs/songs";
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 export const EventRecap: React.FC<Props> = (props: Props) => {
   const { recaps } = props;
 
-  if (recaps.length == 0) {
+  if (recaps.length == 0 || recaps.every((recap) => isEmptyEventRecap(recap))) {
     return null;
   }
 

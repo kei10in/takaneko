@@ -28,6 +28,17 @@ export interface EventRecap {
   links: LinkDescription[];
 }
 
+export const isEmptyEventRecap = (recap: EventRecap): boolean => {
+  const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
+  const isSetlistEmpty =
+    recap.setlist.length === 0 ||
+    recap.setlist.every((item) => {
+      return item.songs.length === 0 && (item.costume == undefined || item.costume.trim() == "");
+    });
+
+  return isTitleEmpty && isSetlistEmpty;
+};
+
 export const validateEventRecapDescription = (
   data: EventRecapDescription | EventRecapDescription[] | undefined,
 ): EventRecap[] => {
