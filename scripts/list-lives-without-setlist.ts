@@ -22,7 +22,7 @@ const main = async () => {
       }
 
       // 出演を取りやめたライブはリストしない。
-      if (meta.status == "WITHDRAWN") {
+      if (meta.status == "WITHDRAWN" || meta.status == "CANCELED" || meta.status == "RESCHEDULED") {
         return false;
       }
 
