@@ -118,6 +118,10 @@ export const LARME_060: Publication = {
       path: "/publications/larme/LARME060.jpg",
       ref: "https://www.larme.co/",
     },
+    {
+      path: "/publications/larme/2024-03-18_LARME060_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1768985738023252047",
+    },
   ],
   featuredMembers: ["松本ももな"],
   officialTwitter: "https://x.com/takanenofficial/status/1768985738023252047",
