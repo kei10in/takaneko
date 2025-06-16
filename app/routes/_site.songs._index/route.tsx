@@ -17,9 +17,7 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">
-          楽曲一覧 (開発中)
-        </h1>
+        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">楽曲一覧</h1>
 
         <p>楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
@@ -39,6 +37,17 @@ export default function Component() {
             </li>
           ))}
         </ul>
+
+        <section className="mt-12">
+          <h2 className="mb-2 text-2xl font-semibold text-gray-600">その他</h2>
+          <ul>
+            <li>
+              <Link to="/songs/stats" className="text-nadeshiko-800 hover:underline">
+                楽曲の統計情報
+              </Link>
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
   );
