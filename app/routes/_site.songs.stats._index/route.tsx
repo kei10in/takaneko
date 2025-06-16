@@ -40,6 +40,10 @@ export default function Component() {
             ライブでよくやるやつ 上位 20 曲
           </h2>
 
+          <p className="mb-4 text-gray-600">
+            数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
+          </p>
+
           <div className="h-[520px]">
             <Bar
               data={{
@@ -72,6 +76,37 @@ export default function Component() {
               }}
             />
           </div>
+        </section>
+
+        <section className="mt-8">
+          <h2 className="mb-2 text-2xl font-semibold text-gray-600">不明なセットリストについて</h2>
+
+          <p>現在下記のライブのセットリストが不明です。 </p>
+
+          <ul className="my-2 list-disc pl-6 marker:text-gray-400">
+            <li>
+              <p>高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 仙台darwin 第一部・第二部</p>
+            </li>
+            <li>
+              <p>
+                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 大阪バナナホール 第一部・第二部
+              </p>
+            </li>
+            <li>
+              <p>
+                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 名古屋 THE BOTTOM LINE
+                第一部・第二部
+              </p>
+            </li>
+            <li>
+              <p>
+                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 福岡 BEAT STATION 第一部・第二部
+              </p>
+            </li>
+            <li>
+              <p>たかねこの秋まつり2024 〜FC limited〜 第一部</p>
+            </li>
+          </ul>
         </section>
       </section>
     </div>
