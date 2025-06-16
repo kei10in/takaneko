@@ -33,7 +33,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function Component() {
   const data = useLoaderData<typeof loader>();
-  const lives = useMemo(() => (SongToLiveMap[data.name] ?? []).toReversed(), [data.name]);
+  const lives = useMemo(() => (SongToLiveMap[data.name]?.events ?? []).toReversed(), [data.name]);
 
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(data);
 
