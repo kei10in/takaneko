@@ -22,11 +22,13 @@ export const meta: MetaFunction = () => {
 export default function Component() {
   const { labels, data } = useMemo(() => {
     const allSongs = Object.values(SongToLiveMap);
-    const sortedAllSongs = allSongs.sort((a, b) => b.count - a.count).slice(0, 20);
+    const sortedAllSongs = allSongs.sort((a, b) => b.count - a.count);
     const labels = sortedAllSongs.map((x) => x.name);
     const data = sortedAllSongs.map((x) => x.count);
     return { labels, data };
   }, []);
+
+  const height = 20 * labels.length + 80;
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -36,15 +38,13 @@ export default function Component() {
         </h1>
 
         <section className="mt-8">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">
-            ライブでよくやるやつ 上位 20 曲
-          </h2>
+          <h2 className="mb-2 text-2xl font-semibold text-gray-600">ライブでよくやるやつ</h2>
 
           <p className="mb-4 text-gray-600">
             数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
           </p>
 
-          <div className="h-[520px]">
+          <div style={{ height: `${height}px` }}>
             <Bar
               data={{
                 labels,
