@@ -85,25 +85,6 @@ export default function Component() {
 
           <ul className="my-2 list-disc pl-6 marker:text-gray-400">
             <li>
-              <p>高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 仙台darwin 第一部・第二部</p>
-            </li>
-            <li>
-              <p>
-                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 大阪バナナホール 第一部・第二部
-              </p>
-            </li>
-            <li>
-              <p>
-                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 名古屋 THE BOTTOM LINE
-                第一部・第二部
-              </p>
-            </li>
-            <li>
-              <p>
-                高嶺のなでしこ 全国お招きツアー 2023 〜First Trip〜 福岡 BEAT STATION 第一部・第二部
-              </p>
-            </li>
-            <li>
               <p>たかねこの秋まつり2024 〜FC limited〜 第一部</p>
             </li>
           </ul>
