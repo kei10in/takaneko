@@ -23,6 +23,7 @@ import {
   LARME_062,
   LARME_063,
   LARME_064,
+  LARME_065,
 } from "./publications/LARME";
 import {
   MARQUEE_Vol148,
@@ -92,6 +93,7 @@ const publications: Publication[] = [
   LARME_062,
   LARME_063,
   LARME_064,
+  LARME_065,
   MARQUEE_Vol148,
   MARQUEE_Vol149,
   MARQUEE_Vol150,

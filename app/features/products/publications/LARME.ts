@@ -1,5 +1,47 @@
 import { Publication } from "../product";
 
+export const LARME_065: Publication = {
+  slug: "LARME 065",
+  name: "LARME 065",
+  date: "2025-06-17",
+  kind: "magazines",
+  publisher: "LARME",
+  listPrice: 891,
+  priceWithTax: 980,
+  code: [],
+  url: "https://larme.co/magazine/643/",
+  coverImages: [
+    {
+      path: "/publications/larme/2025-06-17_LARME065.jpg",
+      ref: "https://x.com/larmemagazine/status/1933102103440101439",
+    },
+    {
+      path: "/publications/larme/2025-06-17_LARME065_高嶺のなでしこ特装版.jpg",
+      ref: "https://x.com/takanenofficial/status/1934562896408948816",
+    },
+    {
+      path: "/publications/larme/2025-06-17_LARME065_城月菜央.jpg",
+      ref: "https://x.com/takanenofficial/status/1934562896408948816",
+    },
+    {
+      path: "/publications/larme/2025-06-17_LARME065_松本ももな.jpg",
+      ref: "https://x.com/takanenofficial/status/1934562896408948816",
+    },
+    {
+      path: "/publications/larme/2025-06-17_LARME065_橋本桃呼.jpg",
+      ref: "https://x.com/takanenofficial/status/1934562896408948816",
+    },
+  ],
+  featuredMembers: ["城月菜央", "橋本桃呼", "松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/1934562896408948816",
+  links: [
+    {
+      text: "公式ニュース 「高嶺のなでしこ LARME 065特装版book cover」受注販売スタート！",
+      url: "https://takanenonadeshiko.jp/?p=3759",
+    },
+  ],
+};
+
 export const LARME_064: Publication = {
   slug: "LARME 064",
   name: "LARME 064",
