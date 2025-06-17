@@ -1,5 +1,30 @@
 import { Publication } from "../product";
 
+export const EX大衆_2025年07月号: Publication = {
+  slug: "EX大衆 2025年7月号",
+  name: "EX大衆 2025年7月号",
+  date: "2025-06-16",
+  kind: "magazines", // "books"
+  publisher: "双葉社",
+  listPrice: 909,
+  priceWithTax: 1000,
+  code: [{ kind: "JAN", value: "4910117710753" }],
+  url: "https://www.futabasha.co.jp/book/magazine/49101177107530000000",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-06-16_EX大衆 2025年7月号.jpg",
+      ref: "https://x.com/EXtaishu/status/1932347592895295639",
+    },
+    {
+      path: "/publications/2025/2025-06-16_EX大衆 2025年7月号_Amazon限定表紙版.jpg",
+      ref: "https://x.com/EXtaishu/status/1927636937885851920",
+    },
+  ],
+  featuredMembers: ["涼海すう"],
+  officialTwitter: "",
+  links: [{ text: "ライター告知", url: "https://x.com/sato_762/status/1934824553999683675" }],
+};
+
 export const EX大衆_2025年03月号: Publication = {
   slug: "EX大衆 2025年3月号",
   name: "EX大衆 2025年3月号",
