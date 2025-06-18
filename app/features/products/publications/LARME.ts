@@ -33,7 +33,7 @@ export const LARME_065: Publication = {
     },
   ],
   featuredMembers: ["城月菜央", "橋本桃呼", "松本ももな"],
-  officialTwitter: "https://x.com/takanenofficial/status/1934562896408948816",
+  officialTwitter: "https://x.com/takanenofficial/status/1935264996986138889",
   links: [
     {
       text: "公式ニュース 「高嶺のなでしこ LARME 065特装版book cover」受注販売スタート！",
