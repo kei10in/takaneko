@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-5/",
+    publishedAt: "2025-06-18",
+    category: "article",
+    presents: ["葉月紗蘭", "東山恵里沙", "日向端ひな"],
+  },
+  {
     mediaUrl: "https://www.idol-culture.jp/geinou/175577/",
     publishedAt: "2025-06-13",
     category: "article",

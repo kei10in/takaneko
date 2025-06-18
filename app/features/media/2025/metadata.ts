@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
+    authorName: "VANITYMIX マガジン",
+    publishedAt: "2025-06-18",
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-5/",
+    imageUrl:
+      "https://www.vanitymix.jp/wp-content/uploads/2025/06/ff63052e1a743c56968f2d857d1e5124-e1750209860562.jpg",
+    category: "article",
+    presents: ["葉月紗蘭", "東山恵里沙", "日向端ひな"],
+  },
+  {
     kind: "youtube",
     title: "特別番組「ミルクにモ～夢中！」メイキング映像",
     authorName: "一般社団法人中央酪農会議",
