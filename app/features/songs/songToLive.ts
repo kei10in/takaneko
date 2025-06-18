@@ -2,6 +2,7 @@ import { EventModule } from "../events/eventModule";
 import { EventRecap } from "../events/eventRecap";
 import { ALL_EVENTS } from "../events/events";
 import { ALL_SONGS } from "./songs";
+import { SongMetaDescriptor } from "./types";
 
 export interface SongActivitySummary {
   name: string;
@@ -12,10 +13,7 @@ export interface SongActivitySummary {
   }[];
 }
 
-export const makeSongToLiveMapFromAllEvents = () => {
-  const events = Object.values(ALL_EVENTS);
-  const songs = ALL_SONGS;
-
+export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescriptor[]) => {
   const result: Record<string, SongActivitySummary> = {};
   songs.forEach((song) => {
     result[song.name] = { name: song.name, count: 0, events: [] };
@@ -59,4 +57,4 @@ export const makeSongToLiveMapFromAllEvents = () => {
   return result;
 };
 
-export const SongToLiveMap = makeSongToLiveMapFromAllEvents();
+export const SongToLiveMap = makeSongToLiveMap(Object.values(ALL_EVENTS), ALL_SONGS);
