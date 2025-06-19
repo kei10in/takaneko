@@ -87,6 +87,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <Link className="hover:text-nadeshiko-700" to="/members">
                     メンバー
                   </Link>
+                  <Link className="hover:text-nadeshiko-700" to="/stats">
+                    統計
+                  </Link>
                   <Menu>
                     <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
                     <MenuItems
@@ -157,6 +160,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <Link className="hover:text-nadeshiko-700" to="/members" onClick={close}>
                       <p>メンバー</p>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:text-nadeshiko-700" to="/stats" onClick={close}>
+                      <p>統計</p>
                     </Link>
                   </li>
                 </ul>
