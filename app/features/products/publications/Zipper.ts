@@ -1,5 +1,47 @@
 import { Publication } from "../product";
 
+export const Zipper_2025年夏号: Publication = {
+  slug: "Zipper 2025年夏号",
+  name: "Zipper 2025年夏号",
+  date: "2025-06-30",
+  kind: "mooks",
+  publisher: "祥伝社",
+  listPrice: 800,
+  priceWithTax: 880,
+  code: [{ kind: "ISBN", value: "9784396880248" }],
+  url: "https://www.zipper.jp/news/news-20250618/",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-05-30_Zipper 2025年夏号_表紙.jpg",
+      ref: "https://x.com/zipperjp/status/1935170662412468709",
+    },
+  ],
+  featuredMembers: ["葉月紗蘭", "籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1935570740952334543",
+  links: [
+    {
+      text: "公式 X 発売告知",
+      url: "https://x.com/takanenofficial/status/1935570740952334543",
+    },
+    {
+      text: "葉月紗蘭 X 発売告知",
+      url: "https://x.com/saara_hazuki/status/1935579596067663934",
+    },
+    {
+      text: "籾山ひめり X 発売告知",
+      url: "https://x.com/himeri_momiyama/status/1935590754577248471",
+    },
+    {
+      text: "Zipper X 表紙解禁 通常版",
+      url: "https://x.com/zipperjp/status/1935170662412468709",
+    },
+    {
+      text: "Zipper 公式サイト ニュース (通常版)",
+      url: "https://www.zipper.jp/news/news-20250618/",
+    },
+  ],
+};
+
 export const Zipper_2025年春号: Publication = {
   slug: "Zipper 2025年春号",
   name: "Zipper 2025年春号",
