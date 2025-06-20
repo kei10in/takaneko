@@ -42,13 +42,17 @@ import { 美しく生きろ } from "./2024/美しく生きろ";
 import { CuteForLife } from "./2025/Cute for life";
 import { アイドル衣装 } from "./2025/アイドル衣装";
 import { メランコリックハニー } from "./2025/メランコリックハニー";
+import { 初恋のこたえ } from "./2025/初恋のこたえ。";
 import { 小悪魔だってかまわない } from "./2025/小悪魔だってかまわない！";
 import { 東京サニーパーティー } from "./2025/東京サニーパーティー";
+import { 東京サマーセッション } from "./2025/東京サマーセッション";
 import { 病名恋ワズライ } from "./2025/病名恋ワズライ";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2025
+  東京サマーセッション,
+  初恋のこたえ,
   アイドル衣装,
   メランコリックハニー,
   東京サニーパーティー,
