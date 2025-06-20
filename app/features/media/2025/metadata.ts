@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title:
+      "高嶺のなでしこが社会科見学！「日本橋川に青空を」首都高速道路日本橋区間地下化事業を学ぶ - 音楽ナタリー 特集・インタビュー",
+    authorName: "音楽ナタリー",
+    publishedAt: "2025-06-20",
+    mediaUrl: "https://natalie.mu/music/pp/shutoko",
+    imageUrl: "https://ogre.natalie.mu/media/pp/shutoko/shutoko_thumb.jpg?imwidth=1280&imdensity=1",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
     publishedAt: "2025-06-18",

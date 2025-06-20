@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://natalie.mu/music/pp/shutoko",
+    publishedAt: "2025-06-20",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-5/",
     publishedAt: "2025-06-18",
     category: "article",
