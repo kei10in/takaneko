@@ -112,9 +112,11 @@ import { ROUND1_コラボキャンペーン_オリジナルステッカー } fro
 import { ベトナムフェスティバル2025限定カード } from "./2025/2025-05-31_ベトナムフェスティバル2025限定カード";
 import { アイドル衣装_ミニフォト } from "./2025/2025-06-01_ミニフォトカード「アイドル衣装」";
 import { アイドル衣装_生写真 } from "./2025/2025-06-17_生写真「アイドル衣装」";
+import { SpringRide広州上海_生写真 } from "./2025/2025-06-20_生写真「Spring Ride 広州&上海」";
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  SpringRide広州上海_生写真,
   アイドル衣装_ミニフォト,
   ROUND1_コラボキャンペーン_オリジナルコースター,
   ROUND1_コラボキャンペーン_オリジナルステッカー,
@@ -122,6 +124,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  SpringRide広州上海_生写真,
   アイドル衣装_生写真,
   アイドル衣装_ミニフォト,
   ベトナムフェスティバル2025限定カード,
