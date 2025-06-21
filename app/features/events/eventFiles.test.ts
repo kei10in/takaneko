@@ -5,12 +5,14 @@ import { isObject } from "~/utils/types/object";
 import { importEventFilesAsEventModule } from "./eventFiles";
 
 describe("event files", () => {
+  const dirname = import.meta.dirname.replace(/\\/g, "/");
+
   describe("importEventFiles", () => {
     it("should import all event files", async () => {
       const importedEvents = Object.keys(importEventFilesAsEventModule())
         .map((filename) => filename.split("/").pop() as string)
         .toSorted();
-      const eventFiles = (await glob(`${__dirname}/*/*/*.{mdx,tsx}`))
+      const eventFiles = (await glob(`${dirname}/*/*/*.{mdx,tsx}`))
         .map((s) => s.split(path.sep).pop() as string)
         .toSorted();
 
