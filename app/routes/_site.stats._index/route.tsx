@@ -61,9 +61,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               options={{
                 indexAxis: "y",
                 responsive: true,
-                scales: {
-                  y: {
-                    suggestedMin: 30,
+                layout: {
+                  padding: {
+                    right: 22,
                   },
                 },
                 plugins: {
