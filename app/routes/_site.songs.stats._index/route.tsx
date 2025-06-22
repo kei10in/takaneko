@@ -58,6 +58,11 @@ export default function Component() {
               options={{
                 indexAxis: "y",
                 responsive: true,
+                layout: {
+                  padding: {
+                    right: 22,
+                  },
+                },
                 plugins: {
                   legend: {
                     display: false,
