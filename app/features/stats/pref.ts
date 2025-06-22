@@ -68,7 +68,7 @@ export const aggregatePrefectureStats = (
       return;
     }
 
-    stats.count += event.meta.recaps.length;
+    stats.count += event.meta.recaps.length > 0 ? 1 : 0;
   });
 
   const stats = JAPAN_PREFECTURES.map(

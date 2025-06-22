@@ -46,6 +46,11 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <p className="text-sm">
             各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。
           </p>
+          <p className="text-sm">
+            同じ日のイベントで複数回ステージがあった場合や、一部と二部に分かれているライブであっても
+            1 回としてカウントしています。
+            同じ日に複数の場所でステージをしている場合は、それぞれにカウントしています。
+          </p>
 
           <div className="mt-4" style={{ height }}>
             <Bar
