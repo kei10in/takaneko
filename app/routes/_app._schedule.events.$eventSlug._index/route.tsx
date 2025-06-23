@@ -20,6 +20,7 @@ import {
   useNavigate,
 } from "react-router";
 import { ImageCarousel } from "~/components/ImageCarousel";
+import { Mdx } from "~/components/Mdx";
 import { loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
@@ -184,7 +185,7 @@ export default function EventPage() {
         </div>
       </div>
 
-      <article className="markdown mb-4 max-w-none px-4">
+      <article className="markdown max-w-none px-4">
         <EventRecap recaps={meta.recaps} />
 
         <EventDetails
@@ -194,9 +195,13 @@ export default function EventPage() {
           streaming={meta.overview?.streaming}
           goods={meta.overview?.goods}
         />
+      </article>
 
-        <Content />
+      <div className="px-4">
+        <Mdx Content={Content} />
+      </div>
 
+      <article className="markdown mb-4 max-w-none px-4">
         {meta.links.length > 0 && (
           <section>
             <h2>リンク</h2>
