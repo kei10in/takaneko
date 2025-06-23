@@ -185,7 +185,7 @@ export default function EventPage() {
         </div>
       </div>
 
-      <article className="markdown max-w-none px-4">
+      <article className="mb-4 max-w-none px-4">
         <EventRecap recaps={meta.recaps} />
 
         <EventDetails
@@ -195,20 +195,23 @@ export default function EventPage() {
           streaming={meta.overview?.streaming}
           goods={meta.overview?.goods}
         />
-      </article>
 
-      <div className="px-4">
         <Mdx Content={Content} />
-      </div>
 
-      <article className="markdown mb-4 max-w-none px-4">
         {meta.links.length > 0 && (
           <section>
-            <h2>リンク</h2>
-            <ul>
+            <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+              リンク
+            </h2>
+            <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
               {meta.links.map((link, i) => (
-                <li key={i}>
-                  <Link to={link.url} target="_blank" rel="noreferrer">
+                <li key={i} className="my-0 marker:text-gray-400">
+                  <Link
+                    className="text-nadeshiko-950"
+                    to={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {link.text}
                   </Link>
                 </li>

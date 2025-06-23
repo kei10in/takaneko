@@ -31,34 +31,38 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <h2>イベント概要</h2>
+      <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+        イベント概要
+      </h2>
 
-      <ul>
+      <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
         {ticket != undefined && ticket != "" && (
-          <li>
-            <p>
+          <li className="my-0 marker:text-gray-400">
+            <p className="mt-0 mb-2 text-base leading-snug">
               <Link to={ticket}>🎫チケット</Link>
             </p>
           </li>
         )}
 
         {streaming != undefined && (
-          <li>
-            <p>
+          <li className="my-0 marker:text-gray-400">
+            <p className="mt-0 mb-2 text-base leading-snug">
               <strong>配信:</strong> <Link to={streaming.url}>{streaming.text}</Link>
             </p>
           </li>
         )}
 
         {parsedTimeSlot.length > 0 && (
-          <li>
-            <p>
-              <strong>出演時間:</strong>
+          <li className="my-0 marker:text-gray-400">
+            <p className="mt-0 mb-2 text-base leading-snug">
+              <strong className="font-semibold">出演時間:</strong>
               {parsedTimeSlot.length == 1 && parsedTimeSlot[0]}
               {parsedTimeSlot.length == 2 && (
-                <ul>
+                <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
                   {parsedTimeSlot.map((slot, index) => (
-                    <li key={index}>{slot}</li>
+                    <li key={index} className="my-0 marker:text-gray-400">
+                      {slot}
+                    </li>
                   ))}
                 </ul>
               )}
@@ -67,37 +71,41 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
         )}
 
         {timetable != undefined && (
-          <li>
-            <p>
-              <strong>タイムテーブル:</strong>
+          <li className="my-0 marker:text-gray-400">
+            <p className="mt-0 mb-2 text-base leading-snug">
+              <strong className="font-semibold">タイムテーブル:</strong>
             </p>
-            <p className="text-center">
-              <Link to="#timetable" preventScrollReset>
-                <img className="w-60" src={timetable.path} alt="タイムテーブル" />
+            <p className="mt-0 mb-2 text-center text-base leading-snug">
+              <Link className="text-nadeshiko-950" to="#timetable" preventScrollReset>
+                <img className="inline w-60 max-w-xs" src={timetable.path} alt="タイムテーブル" />
               </Link>
             </p>
           </li>
         )}
 
         {showMerchandise(goods) && (
-          <li>
-            <p>
-              <strong>物販:</strong>
+          <li className="my-0 marker:text-gray-400">
+            <p className="mt-0 mb-2 text-base leading-snug">
+              <strong className="font-semibold">物販:</strong>
               {goods?.time?.length == 1 && ` ${goods.time[0]} 〜`}
               {goods?.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
             </p>
 
             {goods?.lineup instanceof Array && (
-              <ul>
+              <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
                 {goods.lineup.map((lineup, i) => (
-                  <li key={i}>{lineup}</li>
+                  <li key={i} className="my-0 marker:text-gray-400">
+                    {lineup}
+                  </li>
                 ))}
               </ul>
             )}
 
             {goods?.url && (
-              <p>
-                <Link to={goods.url}>{goods.url}</Link>
+              <p className="mt-0 mb-2 text-base leading-snug">
+                <Link className="text-nadeshiko-950" to={goods.url}>
+                  {goods.url}
+                </Link>
               </p>
             )}
           </li>
