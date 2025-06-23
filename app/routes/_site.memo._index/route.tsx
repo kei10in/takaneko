@@ -1,4 +1,5 @@
 import { MetaFunction } from "react-router";
+import { Mdx } from "~/components/Mdx";
 import { SITE_TITLE } from "~/constants";
 import Memo from "./memo.mdx";
 
@@ -22,8 +23,8 @@ export default function Index() {
 
         <p>このページは今後まとめていく予定の情報をメモしたページです。</p>
 
-        <article className="markdown">
-          <Memo />
+        <article>
+          <Mdx Content={Memo} />
         </article>
       </section>
     </div>
