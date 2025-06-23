@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { parseStagePlan, StagePart } from "./stagePlan";
 
 const PerformanceDescription = z.object({
   costume: z.string().optional(),
@@ -10,6 +11,7 @@ export type PerformanceDescription = z.infer<typeof PerformanceDescription>;
 
 export const EventRecapDescription = z.object({
   title: z.string().optional(),
+  stagePlan: z.array(z.string()).optional(),
   costume: z.union([z.string(), z.array(z.string())]).optional(),
   setlist: z
     .union([z.array(z.string()), z.array(PerformanceDescription), PerformanceDescription])
@@ -24,6 +26,7 @@ type EventRecapDescription = z.infer<typeof EventRecapDescription>;
 
 export interface EventRecap {
   title?: string | undefined;
+  stagePlan: StagePart[];
   setlist: PerformanceDescription[];
   links: LinkDescription[];
 }
@@ -50,6 +53,12 @@ export const validateEventRecapDescription = (
 
   return recaps.flatMap((recap) => {
     const { title, costume, setlist, url, links } = recap;
+
+    //
+    // Validate stagePlan field
+    //
+    const stagePlan = recap.stagePlan ?? [];
+    const validatedStagePlan = parseStagePlan(stagePlan);
 
     //
     // Validate setlist field
@@ -109,6 +118,7 @@ export const validateEventRecapDescription = (
     return [
       {
         title,
+        stagePlan: validatedStagePlan,
         setlist: validatedSetlist,
         links: [...linkDescriptionsForUrl, ...validatedLinks],
       },
