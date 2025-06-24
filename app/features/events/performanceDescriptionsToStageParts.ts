@@ -62,7 +62,7 @@ const parseSongsItem = (
   state: SetlistState,
   song: string,
 ): { nextState: SetlistState; stagePart: StagePart } => {
-  if (song === "MC" || song.startsWith("MC:")) {
+  if (song.toLowerCase() === "mc" || song.toLowerCase().startsWith("mc:")) {
     return {
       nextState: state,
       stagePart: { kind: "talk", costumeName: state.costumeName },

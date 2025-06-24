@@ -53,7 +53,7 @@ const parseStagePart = (
 ): { nextState: StageState; stagePart: StagePart } => {
   const p = part.trim();
 
-  if (p == "MC" || p.startsWith("MC:")) {
+  if (p.toLowerCase() == "mc" || p.toLowerCase().startsWith("mc:")) {
     return { nextState: state, stagePart: { kind: "talk", costumeName: state.costumeName } };
   }
 
