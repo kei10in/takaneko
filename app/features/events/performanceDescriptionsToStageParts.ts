@@ -18,11 +18,21 @@ export function performanceDescriptionsToStageParts(
       return songs.reduce(
         (acc2, song) => {
           const { nextState, stagePart } = parseSongsItem(acc2.state, song.trim());
-
-          return {
-            state: nextState,
-            result: [...acc2.result, stagePart],
-          };
+          if (
+            stagePart.kind === "encore" &&
+            acc2.result[acc2.result.length - 1]?.kind === "costume"
+          ) {
+            // アンコールの前の衣装は、アンコールのあとに配置する。
+            return {
+              state: nextState,
+              result: [...acc2.result.slice(0, -1), stagePart, acc2.result[acc2.result.length - 1]],
+            };
+          } else {
+            return {
+              state: nextState,
+              result: [...acc2.result, stagePart],
+            };
+          }
         },
         { state: nextState, result: nextResult },
       );
