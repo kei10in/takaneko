@@ -13,8 +13,8 @@ export const StagePlan: React.FC<Props> = (props: Props) => {
   const { title, stagePlan, links } = props;
 
   return (
-    <section>
-      {title && <h3 className="mt-6 mb-2 pb-1 text-lg leading-tight font-semibold">{title}</h3>}
+    <section className="m-6">
+      {title && <h3 className="m-2 pb-1 text-lg leading-tight font-semibold">{title}</h3>}
 
       <ul className="">
         {stagePlan.map((part, i) => {
