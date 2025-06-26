@@ -6,6 +6,7 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-06-20",
     category: "article",
     presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/1937850798853296142",
   },
   {
     mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-5/",
