@@ -16,12 +16,24 @@ export const グラビアンエイジ_VOL2: Publication = {
       ref: "https://prtimes.jp/main/html/rd/p/000016890.000007006.html",
     },
     {
+      path: "/publications/2025/2025-07-07_グラビアンエイジ VOL.2_裏表紙.jpg",
+      ref: "https://x.com/fj_dragonage/status/1937405333829288165",
+    },
+    {
       path: "/publications/2025/2025-07-07_グラビアンエイジ VOL.2_楽天ブックス特典.jpg",
       ref: "https://books.rakuten.co.jp/rb/18242128/",
     },
     {
       path: "/publications/2025/2025-07-07_グラビアンエイジ VOL.2_HMV特典.jpg",
       ref: "https://www.hmv.co.jp/product/detail/15916065",
+    },
+    {
+      path: "/publications/2025/2025-07-07_グラビアンエイジ VOL.2_城月菜央.jpg",
+      ref: "https://x.com/fj_dragonage/status/1937405333829288165",
+    },
+    {
+      path: "/publications/2025/2025-07-07_グラビアンエイジ VOL.2_橋本桃呼.jpg",
+      ref: "https://x.com/fj_dragonage/status/1938130106431770968",
     },
   ],
   bonuses: [
@@ -46,6 +58,14 @@ export const グラビアンエイジ_VOL2: Publication = {
     {
       text: "HMV",
       url: "https://www.hmv.co.jp/product/detail/15916065",
+    },
+    {
+      text: "ドラゴンエイジ編集部 X 告知 1",
+      url: "https://x.com/fj_dragonage/status/1937405333829288165",
+    },
+    {
+      text: "ドラゴンエイジ編集部 X 告知 2",
+      url: "https://x.com/fj_dragonage/status/1938130106431770968",
     },
   ],
 };
