@@ -90,6 +90,17 @@ export const metadata2025: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    title: "テツandトモ　トモ『矢口真里さん、籾山ひめりさん』",
+    authorName: "テツandトモ　トモオフィシャルブログ「人生・毎日 ♪なんでだろう〜」Powered by Ameba",
+    publishedAt: "2025-06-10",
+    mediaUrl: "https://ameblo.jp/tetsu-and-tomo-tomo/entry-12909586509.html",
+    imageUrl:
+      "https://stat.ameba.jp/user_images/20250610/15/tetsu-and-tomo-tomo/cc/c4/j/o0810108015613892612.jpg",
+    category: "article",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     title: "ルンルンになりきり！？推し概念コーデが超可愛い♡「すぅにゃの推し活WORLD」vol.3",
     authorName: "Popteen Media",
     publishedAt: "2025-06-10",

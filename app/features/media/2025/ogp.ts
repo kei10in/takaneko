@@ -47,6 +47,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: ["涼海すう"],
   },
   {
+    mediaUrl: "https://ameblo.jp/tetsu-and-tomo-tomo/entry-12909586509.html",
+    publishedAt: "2025-06-10",
+    category: "article",
+    presents: ["籾山ひめり"],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/71240/",
     publishedAt: "2025-06-10",
     category: "article",
