@@ -118,6 +118,8 @@ import { LARME高嶺のなでしこ_ミニフォト } from "./2025/2025-06-25_�
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  LARME高嶺のなでしこ_ミニフォト,
+  LARME高嶺のなでしこ_ステッカー,
   SpringRide広州上海_生写真,
   アイドル衣装_ミニフォト,
   ROUND1_コラボキャンペーン_オリジナルコースター,
@@ -126,8 +128,6 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
-  LARME高嶺のなでしこ_ミニフォト,
-  LARME高嶺のなでしこ_ステッカー,
   SpringRide広州上海_生写真,
   アイドル衣装_生写真,
   アイドル衣装_ミニフォト,
