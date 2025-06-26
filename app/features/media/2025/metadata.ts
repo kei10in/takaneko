@@ -15,6 +15,18 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "高嶺のなでしこ、気合爆上がり中！　22日グループ初の中国・上海単独ライブへ籾山ひめり＆城月菜央＆涼海すうが意気込み",
+    authorName: "サンスポ",
+    publishedAt: "2025-06-22",
+    mediaUrl: "https://www.sanspo.com/article/20250622-6HUUHVLQONISZL3HTM2GG2HM2A/",
+    imageUrl:
+      "https://www.sanspo.com/resizer/v2/KGZ3OTMTP5NS3AY3VSPLTB3WII.jpg?auth=1236eddc48027d0e6e679a68c5985ad456f834ceb8b38b059d6b2c1ffe96cea5&quality=50&focal=899%2C568&width=1200&height=630",
+    category: "article",
+    presents: ["涼海すう", "城月菜央", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    title:
       "高嶺のなでしこが社会科見学！「日本橋川に青空を」首都高速道路日本橋区間地下化事業を学ぶ - 音楽ナタリー 特集・インタビュー",
     authorName: "音楽ナタリー",
     publishedAt: "2025-06-20",

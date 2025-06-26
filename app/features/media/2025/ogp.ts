@@ -9,6 +9,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     officialTwitter: "https://x.com/takanenofficial/status/1937362795806519392",
   },
   {
+    mediaUrl: "https://www.sanspo.com/article/20250622-6HUUHVLQONISZL3HTM2GG2HM2A/",
+    publishedAt: "2025-06-22",
+    category: "article",
+    presents: ["涼海すう", "城月菜央", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://natalie.mu/music/pp/shutoko",
     publishedAt: "2025-06-20",
     category: "article",
