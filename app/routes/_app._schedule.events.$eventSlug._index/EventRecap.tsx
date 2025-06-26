@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router";
 import { isEmptyEventRecap, EventRecap as Recap } from "~/features/events/eventRecap";
 import { findSong } from "~/features/songs/songs";
+import { StagePlan } from "./StagePlan";
 
 interface Props {
   recaps: Recap[];
@@ -20,9 +21,13 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
         開催内容
       </h2>
 
-      {recaps?.map(({ title, setlist, links }, i) => {
+      {recaps?.map(({ title, stagePlan, setlist, links }, i) => {
         if (title == undefined && setlist.length == 0 && links.length == 0) {
           return null;
+        }
+
+        if (stagePlan.length > 0) {
+          return <StagePlan key={i} title={title} stagePlan={stagePlan} links={links} />;
         }
 
         return (
