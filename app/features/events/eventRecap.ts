@@ -33,11 +33,7 @@ export interface EventRecap {
 
 export const isEmptyEventRecap = (recap: EventRecap): boolean => {
   const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
-  const isSetlistEmpty =
-    recap.setlist.length === 0 ||
-    recap.setlist.every((item) => {
-      return item.songs.length === 0 && (item.costume == undefined || item.costume.trim() == "");
-    });
+  const isSetlistEmpty = recap.stagePlan.length === 0;
 
   return isTitleEmpty && isSetlistEmpty;
 };
