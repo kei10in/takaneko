@@ -51,7 +51,7 @@ export const StagePlan: React.FC<Props> = (props: Props) => {
 
       {links.length > 0 && (
         <p className="mt-4 pl-4 text-xs text-gray-400">
-          セトリ参照元:{" "}
+          出典:{" "}
           <Link
             className="text-nadeshiko-600"
             to={links[0].url}
