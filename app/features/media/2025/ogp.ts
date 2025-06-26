@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://encount.press/archives/815872/",
+    publishedAt: "2025-06-24",
+    category: "article",
+    presents: [],
+    officialTwitter: "https://x.com/takanenofficial/status/1937362795806519392",
+  },
+  {
     mediaUrl: "https://natalie.mu/music/pp/shutoko",
     publishedAt: "2025-06-20",
     category: "article",

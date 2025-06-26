@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title: "高嶺のなでしこ、大成功の中国2公演　想像を超えた現地ファンの熱気「愛をいっぱい感じた」",
+    authorName: "ENCOUNT",
+    publishedAt: "2025-06-24",
+    mediaUrl: "https://encount.press/archives/815872/",
+    imageUrl:
+      "https://encount.press/wp-content/uploads/2025/06/23175423/51a082b50124c82d356ebd1e3f03c26d.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     title:
       "高嶺のなでしこが社会科見学！「日本橋川に青空を」首都高速道路日本橋区間地下化事業を学ぶ - 音楽ナタリー 特集・インタビュー",
     authorName: "音楽ナタリー",
