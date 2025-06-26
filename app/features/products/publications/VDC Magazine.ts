@@ -87,6 +87,10 @@ export const VDCMagazine035: Publication = {
       url: "https://x.com/VDC_tokyo/status/1927998884913287210",
     },
     {
+      text: "オフショット 5",
+      url: "https://x.com/VDC_tokyo/status/1931546730534678937",
+    },
+    {
       text: "特典「生写真」公開",
       url: "https://x.com/VDC_tokyo/status/1931178554110460015",
     },
