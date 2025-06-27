@@ -29,7 +29,7 @@ interface StageState {
   index: number;
 }
 
-export const parseStagePlan = (startPlan: string[]): StagePart[] => {
+export const parseSetlist = (startPlan: string[]): StagePart[] => {
   const { result } = startPlan.reduce(
     (acc: { state: StageState; result: StagePart[] }, part: string) => {
       const { nextState, stagePart } = parseStagePart(part, acc.state);

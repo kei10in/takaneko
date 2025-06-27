@@ -1,10 +1,10 @@
 import { z } from "zod";
 import { LinkDescription } from "~/utils/types/LinkDescription";
-import { parseStagePlan, StagePart } from "./stagePlan";
+import { parseSetlist, StagePart } from "./setlist";
 
 export const EventRecapDescription = z.object({
   title: z.string().optional(),
-  stagePlan: z.array(z.string()).optional(),
+  setlist: z.array(z.string()).optional(),
 
   // みくるんの #たかねこセトリを指定します。
   url: z.string().optional(),
@@ -15,13 +15,13 @@ type EventRecapDescription = z.infer<typeof EventRecapDescription>;
 
 export interface EventRecap {
   title?: string | undefined;
-  stagePlan: StagePart[];
+  setlist: StagePart[];
   links: LinkDescription[];
 }
 
 export const isEmptyEventRecap = (recap: EventRecap): boolean => {
   const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
-  const isSetlistEmpty = recap.stagePlan.length === 0;
+  const isSetlistEmpty = recap.setlist.length === 0;
 
   return isTitleEmpty && isSetlistEmpty;
 };
@@ -39,10 +39,10 @@ export const validateEventRecapDescription = (
     const { title, url, links } = recap;
 
     //
-    // Validate stagePlan field
+    // Validate setlist field
     //
-    const stagePlan = recap.stagePlan ?? [];
-    const validatedStagePlan = parseStagePlan(stagePlan);
+    const setlist = recap.setlist ?? [];
+    const validatedSetlist = parseSetlist(setlist);
 
     //
     // Validate links field
@@ -66,7 +66,7 @@ export const validateEventRecapDescription = (
 
     if (
       title == undefined &&
-      validatedStagePlan.length === 0 &&
+      validatedSetlist.length === 0 &&
       linkDescriptionsForUrl.length === 0 &&
       validatedLinks.length === 0
     ) {
@@ -76,7 +76,7 @@ export const validateEventRecapDescription = (
     return [
       {
         title,
-        stagePlan: validatedStagePlan,
+        setlist: validatedSetlist,
         links: [...linkDescriptionsForUrl, ...validatedLinks],
       },
     ];

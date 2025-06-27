@@ -1,6 +1,6 @@
 import React from "react";
 import { isEmptyEventRecap, EventRecap as Recap } from "~/features/events/eventRecap";
-import { StagePlan } from "./StagePlan";
+import { Setlist } from "./Setlist";
 
 interface Props {
   recaps: Recap[];
@@ -19,12 +19,12 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
         開催内容
       </h2>
 
-      {recaps?.map(({ title, stagePlan, links }, i) => {
-        if (title == undefined && stagePlan.length == 0 && links.length == 0) {
+      {recaps?.map(({ title, setlist, links }, i) => {
+        if (title == undefined && setlist.length == 0 && links.length == 0) {
           return null;
         }
 
-        return <StagePlan key={i} title={title} stagePlan={stagePlan} links={links} />;
+        return <Setlist key={i} title={title} setlist={setlist} links={links} />;
       })}
     </section>
   );
