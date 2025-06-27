@@ -948,6 +948,16 @@ export const metadata2024: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "youtube",
+    title: "【柚姫の部屋 第237回】TEAM SHACHI大黒柚姫と瀬戸口俊介のほぼ月曜夜９時生配信",
+    authorName: "TEAM SHACHI【公式】",
+    publishedAt: "2024-02-05",
+    mediaUrl: "https://youtu.be/4Pyi7Gk2IXI",
+    imageUrl: "https://i.ytimg.com/vi/4Pyi7Gk2IXI/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "春野莉々"],
+  },
+  {
     kind: "ogp",
     title:
       "【オフィシャルレポート】高嶺のなでしこ 初の海外公演！『CONTEMPO：マカオ・ジャパン・スプリング・フェスティバル』のトップバッターを飾る",
@@ -971,7 +981,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
-    title: "女性アイドル / グループ編 | マイベストトラック2023 Vol. 1",
+    title: "女性アイドル / グループ編 | マイベストトラック2023 Vol. 1 - 音楽ナタリー コラム",
     authorName: "音楽ナタリー",
     publishedAt: "2024-01-24",
     mediaUrl: "https://natalie.mu/music/column/558076",

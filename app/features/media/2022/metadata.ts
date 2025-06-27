@@ -12,6 +12,16 @@ export const metadata2022: MediaDetails[] = [
     presents: ["籾山ひめり", "松本ももな"],
   },
   {
+    kind: "ogp",
+    title: "いま話題の「たかねこ」ちゃんとは!? 1stファンミーティング直前まとめ – CMNOW WEB",
+    authorName: "CMNOW WEB",
+    publishedAt: "2022-10-31",
+    mediaUrl: "https://cmnow.jp/entertainment/22102914413/",
+    imageUrl: "https://cmnow.jp/wp-content/uploads/2022/10/M7_0253-1600x1600.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     title: "#11【2022年大会参戦チームのリアル】東京農工大学③_学生フォーミュラ日本大会",
     authorName: "(公社)自動車技術会",

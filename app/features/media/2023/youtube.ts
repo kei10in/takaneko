@@ -76,6 +76,11 @@ export const YouTube2023 = [
     presents: [],
   },
   {
+    videoId: "yF9GyFkmM-U",
+    publishedAt: "2023-07-10",
+    presents: ["涼海すう", "橋本桃呼", "日向端ひな"],
+  },
+  {
     videoId: "NQBiKzJY4gE",
     publishedAt: "2023-06-14",
     presents: [],

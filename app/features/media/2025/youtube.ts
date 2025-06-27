@@ -225,4 +225,9 @@ export const YouTube2025 = [
     publishedAt: "2025-01-22",
     presents: [],
   },
+  {
+    videoId: "aKTCaOrm3F4",
+    publishedAt: "2025-01-13",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
 ] satisfies YouTubeVideoDescriptor[];

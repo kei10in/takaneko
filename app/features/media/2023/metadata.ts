@@ -141,6 +141,17 @@ export const metadata2023: MediaDetails[] = [
   {
     kind: "youtube",
     title:
+      "【高嶺のなでしこ】Vとリアルアイドルのゲーム桃太郎電鉄〜昭和 平成 令和も定番〜コラボ！#めたしっぷ",
+    authorName: "メタバースアイドル めたしっぷ【公式】",
+    publishedAt: "2023-07-10",
+    mediaUrl: "https://youtu.be/yF9GyFkmM-U",
+    imageUrl: "https://i.ytimg.com/vi/yF9GyFkmM-U/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼", "日向端ひな"],
+  },
+  {
+    kind: "youtube",
+    title:
       "高嶺のなでしこ、「全国お招きツアー2023~First trip~」ツアーファイナル初単独公演インタビュー実施… 「ぜひ見に来てくださいますよね？」",
     authorName: "WowKorea FAN",
     publishedAt: "2023-06-14",

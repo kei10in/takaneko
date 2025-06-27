@@ -160,6 +160,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     officialTwitter: "https://x.com/takanenofficial/status/1883722032577474891",
   },
   {
+    mediaUrl: "https://teamshachi.nagoya/contents/883149",
+    publishedAt: "2025-01-13",
+    category: "video",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/58588/",
     publishedAt: "2025-01-01",
     category: "article",

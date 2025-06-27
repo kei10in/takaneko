@@ -758,6 +758,27 @@ export const metadata2025: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "youtube",
+    title: "【柚姫の部屋】新春スペシャル2025 第2部！",
+    authorName: "TEAM SHACHI【公式】",
+    publishedAt: "2025-01-13",
+    mediaUrl: "https://youtu.be/aKTCaOrm3F4",
+    imageUrl: "https://i.ytimg.com/vi/aKTCaOrm3F4/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
+  {
+    kind: "ogp",
+    title: "YouTube「柚姫の部屋」新春12時間スペシャル生配信！",
+    authorName: "TEAM SHACHI オフィシャルサイト",
+    publishedAt: "2025-01-13",
+    mediaUrl: "https://teamshachi.nagoya/contents/883149",
+    imageUrl:
+      "https://teamshachi.nagoya/s3/skiyaki/uploads/ckeditor/pictures/687086/content_%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-01-10_19.16.56.png",
+    category: "video",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
+  {
     kind: "ogp",
     title: "なんでもRANKING スクール部門!",
     authorName: "Popteen Media",

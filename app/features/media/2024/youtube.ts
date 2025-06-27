@@ -207,6 +207,11 @@ export const YouTube2024 = [
     presents: ["春野莉々", "東山恵里沙", "松本ももな", "籾山ひめり"],
   },
   {
+    videoId: "4Pyi7Gk2IXI",
+    publishedAt: "2024-02-05",
+    presents: ["城月菜央", "春野莉々"],
+  },
+  {
     videoId: "mVaR9q39xYs",
     publishedAt: "2024-02-01",
     presents: ["東山恵里沙"],
