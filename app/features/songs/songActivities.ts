@@ -23,7 +23,8 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
     const recapMap: Record<string, EventRecap[]> = {};
     meta.recaps.flatMap((recap) => {
       recap.setlist
-        .flatMap((x) => x.songs)
+        .filter((p) => p.kind == "song")
+        .map((p) => p.songTitle)
         .forEach((song) => {
           if (recapMap[song] == undefined) {
             recapMap[song] = [];

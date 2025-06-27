@@ -1,23 +1,23 @@
 import { Fragment } from "react";
 import { Link } from "react-router";
-import { StagePart } from "~/features/events/stagePlan";
+import { StagePart } from "~/features/events/setlist";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 
 interface Props {
   title?: string | undefined;
-  stagePlan: StagePart[];
+  setlist: StagePart[];
   links: LinkDescription[];
 }
 
-export const StagePlan: React.FC<Props> = (props: Props) => {
-  const { title, stagePlan, links } = props;
+export const Setlist: React.FC<Props> = (props: Props) => {
+  const { title, setlist, links } = props;
 
   return (
     <section className="m-6">
       {title && <h3 className="m-2 pb-1 text-lg leading-tight font-semibold">{title}</h3>}
 
       <ul className="">
-        {stagePlan.map((part, i) => {
+        {setlist.map((part, i) => {
           if (part.kind == "costume") {
             return null;
           }

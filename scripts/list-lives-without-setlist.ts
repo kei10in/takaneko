@@ -43,7 +43,7 @@ const main = async () => {
 };
 
 const allSetListHasAnySongs = (recap: EventRecap): boolean => {
-  return recap.setlist.length > 0 && recap.setlist.every((item) => item.songs.length > 0);
+  return recap.setlist.filter((p) => p.kind == "song").length > 0;
 };
 
 main();

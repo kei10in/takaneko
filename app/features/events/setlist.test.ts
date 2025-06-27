@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { parseStagePlan } from "./stagePlan";
+import { parseSetlist } from "./setlist";
 
-describe("parseStagePlan", () => {
+describe("parseSetlist", () => {
   it("parses a simple stage plan with songs and MCs", () => {
     const input = ["Song A", "MC", "Song B", "アンコール", "Song C"];
-    const result = parseStagePlan(input);
+    const result = parseSetlist(input);
     expect(result).toEqual([
       { kind: "song", section: "main", index: 0, songTitle: "Song A" },
       { kind: "talk" },
@@ -16,7 +16,7 @@ describe("parseStagePlan", () => {
 
   it("parses costume changes and special segments with costumeName tracking", () => {
     const input = ["衣装: Red Dress", "MC", "Song X", "企画: Game", "Song Y"];
-    const result = parseStagePlan(input);
+    const result = parseSetlist(input);
     expect(result).toEqual([
       { kind: "costume", costumeName: "Red Dress" },
       { kind: "talk", costumeName: "Red Dress" },
@@ -28,7 +28,7 @@ describe("parseStagePlan", () => {
 
   it("parses MC with colon and encore in English", () => {
     const input = ["MC: intro", "encore", "Song D"];
-    const result = parseStagePlan(input);
+    const result = parseSetlist(input);
     expect(result).toEqual([
       { kind: "talk" },
       { kind: "encore" },
