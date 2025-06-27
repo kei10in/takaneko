@@ -91,7 +91,7 @@ export const NaoKizuki: MemberDescription = {
   hashTag: "#気づいて城月",
   hashTagForReply: "#城月選手へ",
   hashTags: ["#城月と飯"],
-  hashTagsForAnnouncement: ["#たかねこ入場なり"],
+  hashTagsForAnnouncement: ["#餌を入手", "#たかねこ入場なり"],
   idPhoto: {
     path: "/takaneko/members/nao-kizuki_id-photo.webp",
     ref: "https://x.com/nao_kizuki/status/1871571549926625283",
