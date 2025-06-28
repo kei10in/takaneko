@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export const StageCostumes = z.enum([
   "アイドル衣装衣装",

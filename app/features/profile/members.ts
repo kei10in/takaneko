@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export const MemberName = z.union([
   z.literal("城月菜央"),

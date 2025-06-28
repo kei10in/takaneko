@@ -1,4 +1,5 @@
-import { z } from "zod";
+import { z } from "zod/v4";
+
 import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";

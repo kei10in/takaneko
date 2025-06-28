@@ -1,4 +1,5 @@
-import { z } from "zod";
+import { z } from "zod/v4";
+
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist, StagePart } from "./setlist";
 
