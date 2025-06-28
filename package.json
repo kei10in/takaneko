@@ -68,7 +68,7 @@
     "glob": "^11.0.3",
     "globals": "^16.0.0",
     "handlebars": "^4.7.8",
-    "happy-dom": "^17.6.3",
+    "happy-dom": "^18.0.1",
     "icon-gen": "^5.0.0",
     "prettier": "^3.6.0",
     "prettier-plugin-organize-imports": "^4.1.0",
