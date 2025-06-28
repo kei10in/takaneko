@@ -1,5 +1,6 @@
 import path from "node:path";
 import { describe, it } from "vitest";
+import { MvCostumeNames, StageCostumeNames } from "../costumes/costumes";
 import { ALL_EVENTS } from "./events";
 
 describe("all setlist items", () => {
@@ -25,6 +26,29 @@ describe("all setlist items", () => {
     if (badItems.length > 0) {
       throw new Error(
         `Found ${badItems.length} non-song items incorrectly labeled as songs:\n${badItems
+          .map((slug) => `- ${slug}`)
+          .join("\n")}`,
+      );
+    }
+  });
+
+  it("should have known costume names", () => {
+    const badItems = allSetlistItems
+      .filter(({ item }) => {
+        if (item.kind !== "costume") {
+          return false;
+        }
+
+        const isKnown =
+          StageCostumeNames.includes(item.costumeName) || MvCostumeNames.includes(item.costumeName);
+
+        return !isKnown;
+      })
+      .map(({ slug }) => path.basename(slug, ".mdx"));
+
+    if (badItems.length > 0) {
+      throw new Error(
+        `Found ${badItems.length} costumes with unknown names:\n${badItems
           .map((slug) => `- ${slug}`)
           .join("\n")}`,
       );
