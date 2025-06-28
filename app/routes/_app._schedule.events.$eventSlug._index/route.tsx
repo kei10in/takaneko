@@ -4,6 +4,7 @@ import {
   BsBoxArrowUpRight,
   BsCalendar,
   BsCalendar3,
+  BsChevronRight,
   BsDoorOpen,
   BsLink45Deg,
   BsPersonFill,
@@ -21,11 +22,12 @@ import {
 } from "react-router";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { Mdx } from "~/components/Mdx";
+import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { loadEventModule } from "~/features/events/events";
 import { categoryToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventOverview";
@@ -85,6 +87,7 @@ export default function EventPage() {
   const Content = event.Content;
   const meta = event.meta;
   const d = meta.date;
+  const m = d.naiveMonth();
 
   const close = () => navigate(".", { replace: true, preventScrollReset: true });
 
@@ -102,8 +105,25 @@ export default function EventPage() {
             }))}
           />
         )}
-        <div className="space-y-2 pb-4">
-          <h1 className="px-4 pt-8 pb-1.5 text-2xl font-bold">
+
+        <div className="px-4 py-2">
+          <p className="flex items-center gap-2 text-sm">
+            <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
+              スケジュール
+            </Link>
+            <BsChevronRight className="inline-block" />
+            <Link className="text-nadeshiko-800 font-semibold" to={calendarMonthHref(m)}>
+              {displayMonth(m)}
+            </Link>
+            <BsChevronRight className="inline-block" />
+            <Link className="text-nadeshiko-800 font-semibold" to={dateHref(d)}>
+              {d.day.toString().padStart(2, "0")}日
+            </Link>
+          </p>
+        </div>
+
+        <div className="my-4 space-y-2">
+          <h1 className="px-4 pb-1.5 text-2xl font-bold">
             <span>{categoryToEmoji(meta.category)}</span>
             <span>{meta.title ?? meta.summary}</span>
           </h1>
