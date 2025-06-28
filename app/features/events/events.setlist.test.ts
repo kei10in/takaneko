@@ -31,3 +31,20 @@ describe("all setlist items", () => {
     }
   });
 });
+
+describe("all events with setlist", () => {
+  const eventsWithSetlist = Object.entries(ALL_EVENTS).filter(([, e]) => {
+    return e.meta.recaps.length > 0;
+  });
+
+  it("should have liveType", () => {
+    const badEvents = eventsWithSetlist.filter(([, e]) => e.meta.liveType === undefined);
+
+    if (badEvents.length > 0) {
+      const message = `Found ${badEvents.length} events without liveType:\n${badEvents
+        .map(([slug]) => `- ${path.basename(slug, ".mdx")}`)
+        .join("\n")}`;
+      throw new Error(message);
+    }
+  });
+});
