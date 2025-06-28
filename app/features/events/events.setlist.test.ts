@@ -1,6 +1,11 @@
 import path from "node:path";
 import { describe, it } from "vitest";
-import { MvCostumeNames, StageCostumeNames } from "../costumes/costumes";
+import {
+  MvCostumeNames,
+  SpecialCostumeNames,
+  StageCostumeNames,
+  TShirtCostumeNames,
+} from "../costumes/costumes";
 import { ALL_EVENTS } from "./events";
 
 describe("all setlist items", () => {
@@ -40,7 +45,10 @@ describe("all setlist items", () => {
         }
 
         const isKnown =
-          StageCostumeNames.includes(item.costumeName) || MvCostumeNames.includes(item.costumeName);
+          StageCostumeNames.includes(item.costumeName) ||
+          MvCostumeNames.includes(item.costumeName) ||
+          TShirtCostumeNames.includes(item.costumeName) ||
+          SpecialCostumeNames.includes(item.costumeName);
 
         return !isKnown;
       })
