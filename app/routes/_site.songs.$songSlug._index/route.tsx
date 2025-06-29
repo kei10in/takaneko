@@ -10,6 +10,7 @@ import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
 import { Route } from "./+types/route";
+import { Credit } from "./Credit";
 import { YouTubeCard } from "./YouTubeCard";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -57,8 +58,12 @@ export default function Component({ loaderData }: Route.ComponentProps) {
       <section className="my-8 px-4">
         <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">{track.name}</h1>
 
+        <div>
+          <Credit song={track} />
+        </div>
+
         <section>
-          <h2 className="sticky top-0 mt-2 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
+          <h2 className="sticky top-0 mt-4 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
             <span className="flex items-center gap-2">
               <BsPlayBtnFill className="inline-block text-gray-400" />
               <span>ビデオ</span>
