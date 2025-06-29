@@ -21,10 +21,10 @@ export default function Component() {
 
         <p>楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
-        <ul className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-8">
+        <ul className="mt-4 grid grid-cols-2 justify-center gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
           {ALL_SONGS.map((track) => (
             <li key={track.slug}>
-              <div className="w-40">
+              <div className="w-full">
                 <Link to={`/songs/${track.slug}`}>
                   <div className="overflow-hidden rounded-lg shadow-lg">
                     <Thumbnail track={track} />
