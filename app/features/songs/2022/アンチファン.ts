@@ -24,6 +24,10 @@ export const アンチファン: SongMetaDescriptor = {
       text: "Dance Practice Moving ver.",
       videoId: "i6KUZQ243ls",
     },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=YX6Ejr99T78",
+    },
   ],
   linkcore: "https://linkco.re/8NCaQgFT",
 };
