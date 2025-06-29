@@ -1,16 +1,19 @@
 import clsx from "clsx";
 import { Fragment, useMemo } from "react";
-import { BsCalendar, BsGeo } from "react-icons/bs";
-import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
+import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
+import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import { liveTypeColor } from "~/features/events/EventType";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
+import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
+import { Route } from "./+types/route";
+import { YouTubeCard } from "./YouTubeCard";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const title = formatTitle(data?.name ?? "楽曲が見つかりません");
+  const title = formatTitle(data?.track.name ?? "楽曲が見つかりません");
 
   return [{ title }, { name: "description", content: "高嶺のなでしこの楽曲" }];
 };
@@ -22,20 +25,21 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  const meta = ALL_SONGS.find((x) => x.slug === songSlug);
+  const track = ALL_SONGS.find((x) => x.slug === songSlug);
 
-  if (meta == undefined) {
+  if (track == undefined) {
     throw new Response("", { status: 404 });
   }
 
-  return meta;
+  return { track };
 };
 
-export default function Component() {
-  const data = useLoaderData<typeof loader>();
-  const lives = useMemo(() => (SongToLiveMap[data.name]?.events ?? []).toReversed(), [data.name]);
+export default function Component({ loaderData }: Route.ComponentProps) {
+  const { track } = loaderData;
 
-  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(data);
+  const lives = useMemo(() => (SongToLiveMap[track.name]?.events ?? []).toReversed(), [track.name]);
+
+  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -50,11 +54,39 @@ export default function Component() {
         />
       )}
 
-      <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">{data.name}</h1>
+      <section className="my-8 px-4">
+        <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">{track.name}</h1>
 
         <section>
-          <h2 className="mt-4 mb-2 text-2xl">ライブ</h2>
+          <h2 className="sticky top-0 mt-2 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
+            <span className="flex items-center gap-2">
+              <BsPlayBtnFill className="inline-block text-gray-400" />
+              <span>ビデオ</span>
+            </span>
+          </h2>
+          <ul className="grid grid-cols-1 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
+            {track.youtube?.map((yt) => {
+              const videoId = extractYouTubeVideoId(yt.videoId);
+              if (videoId == undefined) {
+                return null;
+              }
+
+              return (
+                <li key={videoId}>
+                  <YouTubeCard videoId={videoId} />
+                </li>
+              );
+            }) ?? null}
+          </ul>
+        </section>
+
+        <section>
+          <div className="sticky top-0 mt-2 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
+            <span className="flex items-center gap-2">
+              <BsMicFill className="inline-block text-gray-400" />
+              <span>ライブ</span>
+            </span>
+          </div>
           <ul className="space-y-1">
             {lives.map(({ recaps, event: e }, i) => (
               <Fragment key={i}>
