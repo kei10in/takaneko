@@ -20,6 +20,10 @@ export const 乙女どもよ: SongMetaDescriptor = {
       text: "MV",
       videoId: "JAA4CaJdXc8",
     },
+    {
+      text: "CHiCO with HoneyWorks",
+      videoId: "https://www.youtube.com/watch?v=FqCw7gCTZQs",
+    },
   ],
   linkcore: "https://linkco.re/XBZc4csE",
 };
