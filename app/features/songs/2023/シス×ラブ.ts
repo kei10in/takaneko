@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const シス_ラブ: SongMetaDescriptor = {
   slug: "シス×ラブ",
   name: "シス×ラブ",
+
+  lyricsBy: "shito, Gom",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: undefined,
+
   image: undefined,
   officialSite: "",
   youtube: [

@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const ハッピークリスマスパーティ: SongMetaDescriptor = {
   slug: "ハッピークリスマスパーティ",
   name: "ハッピークリスマスパーティ",
+
+  lyricsBy: "Gom, Kaoru (MARUMOCHI)",
+  composedBy: "Gom",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: undefined,
+
   image: undefined,
   officialSite: "",
   youtube: [

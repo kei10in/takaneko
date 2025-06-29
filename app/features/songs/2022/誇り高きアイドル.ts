@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const 誇り高きアイドル: SongMetaDescriptor = {
   slug: "誇り高きアイドル",
   name: "誇り高きアイドル",
+
+  lyricsBy: "shito, Gom",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "NaNa",
+
   image: undefined,
   officialSite: undefined,
   youtube: [

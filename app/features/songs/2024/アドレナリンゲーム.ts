@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const アドレナリンゲーム: SongMetaDescriptor = {
   slug: "アドレナリンゲーム",
   name: "アドレナリンゲーム",
+
+  lyricsBy: "shito, Gom",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "ZAZA (KAGARI & YUKI)",
+
   image: undefined,
   officialSite: "",
   youtube: [

@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const ファンサ: SongMetaDescriptor = {
   slug: "ファンサ",
   name: "ファンサ",
+
+  lyricsBy: "HoneyWorks",
+  composedBy: "HoneyWorks",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "NaNa",
+
   image: undefined,
   officialSite: undefined,
   youtube: [

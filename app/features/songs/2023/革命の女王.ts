@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const 革命の女王: SongMetaDescriptor = {
   slug: "革命の女王",
   name: "革命の女王",
+
+  lyricsBy: "shito, Gom",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "NaNa",
+
   image: {
     path: "/takaneko/songs/2023/革命の女王.webp",
     ref: "https://music.youtube.com/playlist?list=OLAK5uy_mGItdMe0NrxmmxQuO5dtAa_aHNzwA2R2A",

@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const 病名恋ワズライ: SongMetaDescriptor = {
   slug: "病名恋ワズライ",
   name: "病名恋ワズライ",
+
+  lyricsBy: "shito",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: undefined,
+
   image: undefined,
   youtube: [
     {

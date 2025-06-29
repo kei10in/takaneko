@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const ラブホイッスル: SongMetaDescriptor = {
   slug: "ラブホイッスル",
   name: "ラブホイッスル",
+
+  lyricsBy: "HoneyWorks",
+  composedBy: "HoneyWorks",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "籾山ひめり",
+
   image: undefined,
   officialSite: "",
   youtube: [

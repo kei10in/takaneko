@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const 超絶かわいい: SongMetaDescriptor = {
   slug: "超絶かわいい",
   name: "#超絶かわいい",
+
+  lyricsBy: "HoneyWorks",
+  composedBy: "HoneyWorks",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "SACO MAKITA",
+
   image: undefined,
   officialSite: undefined,
   youtube: [

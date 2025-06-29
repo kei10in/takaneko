@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const ヒロインは平均以下: SongMetaDescriptor = {
   slug: "ヒロインは平均以下",
   name: "ヒロインは平均以下。",
+
+  lyricsBy: "shito, Gom",
+  composedBy: "shito",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "SACO MAKITA",
+
   image: {
     path: "/takaneko/songs/2023/ヒロインは平均以下。.webp",
     ref: "https://music.youtube.com/playlist?list=OLAK5uy_l5od607_pYTfsL8pAtyBWD0_B2HQkMBQo",

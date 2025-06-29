@@ -3,6 +3,13 @@ import { SongMetaDescriptor } from "../types";
 export const モテチェン: SongMetaDescriptor = {
   slug: "モテチェン！",
   name: "モテチェン！",
+
+  lyricsBy: "shito, 中西",
+  composedBy: "shito, 中西",
+  arrangedBy: "HoneyWorks",
+
+  choreographedBy: "ローカルカンピオーネ, 籾山ひめり",
+
   image: {
     path: "/takaneko/songs/2024/モテチェン！.webp",
     ref: "https://music.youtube.com/playlist?list=OLAK5uy_l9ln5Wh9kbxHveqpKGQr10RSaMmI867B8",
