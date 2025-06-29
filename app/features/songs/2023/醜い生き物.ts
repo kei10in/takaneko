@@ -17,5 +17,13 @@ export const 醜い生き物: SongMetaDescriptor = {
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=ey_9CIQQHXo",
     },
+    {
+      text: "flower",
+      videoId: "https://www.youtube.com/watch?v=m8O4nV4LOxk",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=1Oxe9IZoOg0",
+    },
   ],
 };

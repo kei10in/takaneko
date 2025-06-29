@@ -24,6 +24,14 @@ export const 男の子の目的は何: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "KGWrZ9tnT4c",
     },
+    {
+      text: "高見沢アリサ",
+      videoId: "https://www.youtube.com/watch?v=W9ZQd_aaC5Q",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=EbrmNv9ol8s",
+    },
   ],
   linkcore: "https://linkco.re/ghHaAQp9",
 };

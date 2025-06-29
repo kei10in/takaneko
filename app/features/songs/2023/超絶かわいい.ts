@@ -25,6 +25,10 @@ export const 超絶かわいい: SongMetaDescriptor = {
       text: "【たかねこコラボ】可憐なアイボリー＆高嶺のなでしこ楽曲交換会！前編【HoneyWorks】",
       videoId: "https://www.youtube.com/watch?v=toiKj_8ruuY",
     },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=lNaWeAeHGPI",
+    },
   ],
   linkcore: undefined,
 };

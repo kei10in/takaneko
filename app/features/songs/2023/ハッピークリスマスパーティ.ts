@@ -21,5 +21,9 @@ export const ハッピークリスマスパーティ: SongMetaDescriptor = {
       text: "ハコニワリリィ バージョン",
       videoId: "https://www.youtube.com/watch?v=snFzxdWiO_k",
     },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=Vv895NT0jQ4",
+    },
   ],
 };

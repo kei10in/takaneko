@@ -28,6 +28,14 @@ export const _17歳: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "_KDcZgugOsY",
     },
+    {
+      text: "mona",
+      videoId: "https://www.youtube.com/watch?v=dvsp6rJRJiw",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=TcaB2BJPcXU",
+    },
   ],
   linkcore: "https://linkco.re/Nzfyynp7",
 };

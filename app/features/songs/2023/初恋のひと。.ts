@@ -28,6 +28,14 @@ export const 初恋のひと: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "f7kbw7_dWEA",
     },
+    {
+      text: "Live (Cute for lief)",
+      videoId: "https://www.youtube.com/watch?v=o5DsmYP5WA8",
+    },
+    {
+      text: "かぴ",
+      videoId: "https://www.youtube.com/watch?v=vQXE4FFbykE",
+    },
   ],
   linkcore: "https://linkco.re/sVvChtxX",
 };

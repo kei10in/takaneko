@@ -17,5 +17,17 @@ export const 今好きになる: SongMetaDescriptor = {
       text: "歌ってみた",
       videoId: "sM9Lowgbjww",
     },
+    {
+      text: "麻倉もも",
+      videoId: "https://www.youtube.com/watch?v=gVjXu_d5kcY",
+    },
+    {
+      text: "初音ミク",
+      videoId: "https://www.youtube.com/watch?v=WqlpuarOvq8",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=-PyU04IChDA",
+    },
   ],
 };

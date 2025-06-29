@@ -24,6 +24,18 @@ export const すきっちゅーの: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "GYCWpEiidF4",
     },
+    {
+      text: "ちゅーたん",
+      videoId: "https://www.youtube.com/watch?v=jOZSjMKuE1g",
+    },
+    {
+      text: "かぴ",
+      videoId: "https://www.youtube.com/watch?v=aHPvIGmgF_k",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=nutPPCdwNNg",
+    },
   ],
   linkcore: "https://linkco.re/hTG3R04a",
 };

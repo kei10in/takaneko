@@ -24,6 +24,10 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "FXX0gckKnQA",
     },
+    {
+      text: "天月",
+      videoId: "https://www.youtube.com/watch?v=E5Jy_h1eHzY",
+    },
   ],
   linkcore: "https://linkco.re/vPangYRN",
 };

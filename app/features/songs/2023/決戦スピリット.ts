@@ -28,6 +28,14 @@ export const 決戦スピリット: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "QXfgneto5wM",
     },
+    {
+      text: "CHiCO with HoneyWorks",
+      videoId: "https://www.youtube.com/watch?v=ErqUUYWfOBo",
+    },
+    {
+      text: "初音ミク",
+      videoId: "https://www.youtube.com/watch?v=3Y7a4bKDZEA",
+    },
   ],
   linkcore: "https://linkco.re/FDn2BX2a",
 };

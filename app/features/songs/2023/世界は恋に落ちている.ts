@@ -17,5 +17,13 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
       text: "アニソンでしょでしょ",
       videoId: "sFUJxqo6ye4",
     },
+    {
+      text: "CHiCO with HoneyWorks",
+      videoId: "https://www.youtube.com/watch?v=wM4laths4-Y",
+    },
+    {
+      text: "THE FIRST TAKE / CHiCO with HoneyWorks",
+      videoId: "https://www.youtube.com/watch?v=K2pCnvLXdks",
+    },
   ],
 };
