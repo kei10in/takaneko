@@ -20,5 +20,9 @@ export const アイドル衣装: SongMetaDescriptor = {
       text: "MV",
       videoId: "a7CAn_FIfSk",
     },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=Zy8zFOHL8_s",
+    },
   ],
 };

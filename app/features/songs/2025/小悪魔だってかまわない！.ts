@@ -20,5 +20,13 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
       text: "MV",
       videoId: "OZycs0TBwKY",
     },
+    {
+      text: "めいちゃん",
+      videoId: "https://www.youtube.com/watch?v=SMEyLYGGLKc",
+    },
+    {
+      text: "初音ミク",
+      videoId: "https://www.youtube.com/watch?v=Vsj8tzO1ONk",
+    },
   ],
 };

@@ -20,5 +20,9 @@ export const CuteForLife: SongMetaDescriptor = {
       text: "MV",
       videoId: "9tN1esSj2Tg",
     },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=xAiS9F-_Avk",
+    },
   ],
 };
