@@ -17,7 +17,7 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">楽曲一覧</h1>
+        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">楽曲</h1>
 
         <p>楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
