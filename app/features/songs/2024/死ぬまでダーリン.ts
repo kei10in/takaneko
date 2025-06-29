@@ -17,5 +17,13 @@ export const 死ぬまでダーリン: SongMetaDescriptor = {
       text: "MV",
       videoId: "SB-r8BmlMhI",
     },
+    {
+      text: "望月あかり",
+      videoId: "https://www.youtube.com/watch?v=1GguL5dZd3M",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=eKvlU1mJ6Dc",
+    },
   ],
 };

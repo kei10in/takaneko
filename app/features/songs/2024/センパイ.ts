@@ -21,5 +21,21 @@ export const センパイ: SongMetaDescriptor = {
       text: "MV",
       videoId: "rOZBjopRSv8",
     },
+    {
+      text: "TrySail",
+      videoId: "https://www.youtube.com/watch?v=RF_Lc6gMuI0",
+    },
+    {
+      text: "TrySail フルコーラス",
+      videoId: "https://www.youtube.com/watch?v=QpKIuhvl98Q",
+    },
+    {
+      text: "TrySail フルコーラス 2",
+      videoId: "https://www.youtube.com/watch?v=AhKFbx6ADGE",
+    },
+    {
+      text: "鎖那",
+      videoId: "https://www.youtube.com/watch?v=FG8ONKAuPx0",
+    },
   ],
 };

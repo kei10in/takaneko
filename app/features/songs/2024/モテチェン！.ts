@@ -24,6 +24,10 @@ export const モテチェン: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "frT2NgaVlrc",
     },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=hkcCpIJgta8",
+    },
   ],
   linkfire: "https://jvcmusic.lnk.to/motechen",
 };

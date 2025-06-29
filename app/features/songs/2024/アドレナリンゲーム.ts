@@ -25,6 +25,10 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
       text: "LIVE",
       videoId: "Bn6rTXTooXg",
     },
+    {
+      text: "エンディング映像",
+      videoId: "https://www.youtube.com/watch?v=sk19KXYkWCo",
+    },
   ],
   linkfire: "https://jvcmusic.lnk.to/adrenalinegame",
 };

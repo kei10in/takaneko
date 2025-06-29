@@ -17,5 +17,13 @@ export const No1: SongMetaDescriptor = {
       text: "歌ってみた",
       videoId: "jDQKzMDsu5A",
     },
+    {
+      text: "mona",
+      videoId: "https://www.youtube.com/watch?v=Zs1sHB6DNR4",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=nUynVbIHDmA",
+    },
   ],
 };

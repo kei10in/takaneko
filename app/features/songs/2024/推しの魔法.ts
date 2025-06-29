@@ -20,6 +20,14 @@ export const 推しの魔法: SongMetaDescriptor = {
       text: "Dance Performance Video",
       videoId: "pDC1ZgUDLZQ",
     },
+    {
+      text: "LIP×LIP",
+      videoId: "https://www.youtube.com/watch?v=lP2gYetRFIo",
+    },
+    {
+      text: "off vocal",
+      videoId: "https://www.youtube.com/watch?v=RAyUxTIAFIE",
+    },
   ],
   linkcore: "https://linkco.re/Mur9Um2Z",
 };
