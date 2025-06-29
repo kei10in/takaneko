@@ -5,7 +5,7 @@ export const 初恋の絵本: SongMetaDescriptor = {
   name: "初恋の絵本",
 
   lyricsBy: "HoneyWorks",
-  composedBy: "HHoneyWorks",
+  composedBy: "HoneyWorks",
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,

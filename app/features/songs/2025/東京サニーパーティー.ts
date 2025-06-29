@@ -5,7 +5,7 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
   name: "東京サニーパーティー",
 
   lyricsBy: "HoneyWorks",
-  composedBy: "HHoneyWorks",
+  composedBy: "HoneyWorks",
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
