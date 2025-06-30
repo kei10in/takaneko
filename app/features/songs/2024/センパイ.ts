@@ -18,7 +18,7 @@ export const センパイ: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
-      text: "MV",
+      text: "ハコニワリリィ, 可憐なアイボリー & 高嶺のなでしこ",
       videoId: "rOZBjopRSv8",
     },
     {

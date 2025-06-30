@@ -13,7 +13,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
   image: undefined,
   youtube: [
     {
-      text: "オリジナル MV",
+      text: "GUMI",
       videoId: "mwBGD2WT70I",
     },
     {

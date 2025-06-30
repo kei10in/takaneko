@@ -25,7 +25,7 @@ export const アンチファン: SongMetaDescriptor = {
       videoId: "i6KUZQ243ls",
     },
     {
-      text: "Making",
+      text: "Making Video",
       videoId: "https://www.youtube.com/watch?v=YX6Ejr99T78",
     },
   ],

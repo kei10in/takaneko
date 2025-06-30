@@ -17,7 +17,7 @@ export const _17歳: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {
-      text: "MV",
+      text: "Dance Performance Video",
       videoId: "puTujCvaRjA",
     },
     {

@@ -17,7 +17,7 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
-      text: "MV",
+      text: "Dance Performance Video",
       videoId: "8wwTjwjqQR0",
     },
     {
