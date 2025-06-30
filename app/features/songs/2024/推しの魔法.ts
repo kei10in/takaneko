@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 推しの魔法: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 推しの魔法: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "らん先生",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/推しの魔法.webp",

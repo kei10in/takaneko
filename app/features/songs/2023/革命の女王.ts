@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 革命の女王: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 革命の女王: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "NaNa",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/革命の女王.webp",

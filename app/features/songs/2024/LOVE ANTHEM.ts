@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const LOVE_ANTHEM: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "佐藤マリン",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/LOVE ANTHEM.webp",

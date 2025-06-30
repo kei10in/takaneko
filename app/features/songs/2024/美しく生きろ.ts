@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 美しく生きろ: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 美しく生きろ: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "akane",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/美しく生きろ.webp",

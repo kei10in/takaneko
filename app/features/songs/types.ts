@@ -11,6 +11,8 @@ export interface SongMetaDescriptor {
 
   choreographedBy?: string | undefined;
 
+  tags?: SongTag[] | undefined;
+
   image?: ImageDescription | undefined;
   featuredMembers?: MemberName[] | undefined;
   officialSite?: string | undefined;

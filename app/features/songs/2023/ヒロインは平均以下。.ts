@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const ヒロインは平均以下: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "SACO MAKITA",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/ヒロインは平均以下。.webp",

@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const アンチファン: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const アンチファン: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "日下このみ",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2022/アンチファン.webp",

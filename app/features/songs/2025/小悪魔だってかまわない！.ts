@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 小悪魔だってかまわない: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "RINO HONDA",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2025/小悪魔だってかまわない！.webp",

@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const _17歳: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const _17歳: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "SACO MAKITA",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/17歳.webp",

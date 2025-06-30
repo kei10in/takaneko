@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const アイのウイルス: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const アイのウイルス: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "RINO HONDA",
+
+  tags: [Original, Repertoire],
 
   image: undefined,
   officialSite: "",

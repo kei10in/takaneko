@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 僕は君になれない: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 僕は君になれない: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "沢口かなみ",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/僕は君になれない.webp",

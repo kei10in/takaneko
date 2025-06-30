@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const ユメムスビ: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const ユメムスビ: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "日下このみ",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2022/ユメムスビ.jpg",

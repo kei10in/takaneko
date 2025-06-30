@@ -10,6 +10,8 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  tags: [],
+
   image: undefined,
   youtube: [
     {

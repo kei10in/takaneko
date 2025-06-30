@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const センパイ: SongMetaDescriptor = {
@@ -10,6 +11,8 @@ export const センパイ: SongMetaDescriptor = {
 
   // https://x.com/Naaaa_7/status/1789663179204923570
   choreographedBy: "NaNa",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/センパイ.webp",

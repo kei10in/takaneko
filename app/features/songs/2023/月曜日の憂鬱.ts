@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 月曜日の憂鬱: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "SACO MAKITA",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/月曜日の憂鬱.webp",

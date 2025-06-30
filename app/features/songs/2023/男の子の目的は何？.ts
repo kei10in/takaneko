@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 男の子の目的は何: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 男の子の目的は何: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "SACO MAKITA",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/男の子の目的は何？.webp",

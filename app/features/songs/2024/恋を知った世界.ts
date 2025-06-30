@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 恋を知った世界: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 恋を知った世界: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "RINO HONDA",
+
+  tags: [Original, Repertoire],
 
   image: undefined,
   officialSite: "https://takanenonadeshiko.jp/?p=1748",

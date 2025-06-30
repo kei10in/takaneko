@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const モテチェン: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const モテチェン: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "ローカルカンピオーネ, 籾山ひめり",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/モテチェン！.webp",
