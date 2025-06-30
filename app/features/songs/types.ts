@@ -18,3 +18,9 @@ export interface SongMetaDescriptor {
   linkcore?: string;
   linkfire?: string;
 }
+
+export interface SongTag {
+  key: string;
+  name: string;
+  description: string;
+}
