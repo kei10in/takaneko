@@ -1,5 +1,49 @@
 import { Publication } from "../product";
 
+export const OutOfMusic_88: Publication = {
+  slug: "OUT of MUSIC 88",
+  name: "MUSIQ? SPECIAL OUT of MUSIC 88",
+  date: "2025-07-08",
+  kind: "magazines", // "books"
+  publisher: "シンコーミュージック",
+  listPrice: 982,
+  priceWithTax: 1080,
+  code: [],
+  url: "https://outofmusic.net/?p=2356",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_表紙.jpg",
+      ref: "https://outofmusic.net/?p=2356",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_裏表紙.jpg",
+      ref: "https://outofmusic.net/?p=2356",
+    },
+  ],
+  featuredMembers: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+  officialTwitter: "",
+  links: [
+    {
+      text: "OUT of MUSIC 公式 X",
+      url: "https://x.com/70914041/status/1938907160643281021",
+    },
+    {
+      text: "出版社商品ページ",
+      url: "https://www.shinko-music.co.jp/item/pid2175582508/",
+    },
+  ],
+};
+
 export const OutOfMusic_87: Publication = {
   slug: "OUT of MUSIC 87",
   name: "MUSIQ? SPECIAL OUT of MUSIC 87",
