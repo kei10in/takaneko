@@ -1,5 +1,7 @@
+import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs";
+import { Limited, Original, Repertoire, TakanekoVersion, Unperformed } from "~/features/songs/tags";
 import { formatTitle } from "~/utils/htmlHeader";
 import { Thumbnail } from "./thumbnail";
 
@@ -14,31 +16,62 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Component() {
+  const selectableTags = [Original, TakanekoVersion, Repertoire, Limited, Unperformed];
+
+  const tabs = [
+    { key: "all", link: "./", name: "すべて", content: ALL_SONGS },
+    ...selectableTags.map((tag) => ({
+      key: tag.key,
+      name: tag.name,
+      content: ALL_SONGS.filter((track) => track.tags?.some((t) => t.key === tag.key)),
+    })),
+  ];
+
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">楽曲</h1>
+      <section className="py-8">
+        <h1 className="text-nadeshiko-800 my-2 px-4 text-5xl font-semibold lg:mt-12">楽曲</h1>
 
-        <p>楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
+        <p className="px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
-        <ul className="mt-4 grid grid-cols-2 justify-center gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
-          {ALL_SONGS.map((track) => (
-            <li key={track.slug}>
-              <div className="w-full">
-                <Link to={`/songs/${track.slug}`}>
-                  <div className="overflow-hidden rounded-lg shadow-lg">
-                    <Thumbnail track={track} />
-                  </div>
-                </Link>
-                <div className="mt-2 text-sm">
-                  <Link to={`/songs/${track.slug}`}>{track.name}</Link>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <TabGroup className="mt-2">
+          <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">
+            {tabs.map((tab) => (
+              <Tab
+                as="li"
+                key={tab.key}
+                className="data-[selected]:bg-nadeshiko-800 flex-none overflow-hidden rounded-lg bg-gray-100 px-4 py-2 outline-none data-[selected]:text-white"
+              >
+                <p className="text-center text-sm">{tab.name}</p>
+              </Tab>
+            ))}
+          </TabList>
 
-        <section className="mt-12">
+          <TabPanels>
+            {tabs.map((tab) => (
+              <TabPanel key={tab.key}>
+                <ul className="mt-2 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
+                  {tab.content.map((track) => (
+                    <li key={track.slug}>
+                      <div className="w-full">
+                        <Link to={`/songs/${track.slug}`}>
+                          <div className="overflow-hidden rounded-lg shadow-lg">
+                            <Thumbnail track={track} />
+                          </div>
+                        </Link>
+                        <div className="mt-2 text-sm">
+                          <Link to={`/songs/${track.slug}`}>{track.name}</Link>
+                        </div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </TabPanel>
+            ))}
+          </TabPanels>
+        </TabGroup>
+
+        <section className="mt-12 px-4">
           <h2 className="mb-2 text-2xl font-semibold text-gray-600">その他</h2>
           <ul>
             <li>
