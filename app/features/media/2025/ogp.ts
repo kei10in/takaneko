@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://popteen.co.jp/media/73363/",
+    publishedAt: "2025-07-01",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     mediaUrl: "https://encount.press/archives/815872/",
     publishedAt: "2025-06-24",
     category: "article",

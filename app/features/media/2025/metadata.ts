@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title: "汗・風・湿気にもマケズ！前髪命JKの美バングキープ術",
+    authorName: "Popteen Media",
+    publishedAt: "2025-07-01",
+    mediaUrl: "https://popteen.co.jp/media/73363/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/07/e92512132610dd098d357f2155bf891a.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
     title: "高嶺のなでしこ、大成功の中国2公演　想像を超えた現地ファンの熱気「愛をいっぱい感じた」",
     authorName: "ENCOUNT",
     publishedAt: "2025-06-24",
