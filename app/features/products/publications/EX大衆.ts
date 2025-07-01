@@ -21,7 +21,7 @@ export const EX大衆_2025年07月号: Publication = {
     },
   ],
   featuredMembers: ["涼海すう"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1939655164266414092",
   links: [{ text: "ライター告知", url: "https://x.com/sato_762/status/1934824553999683675" }],
 };
 
