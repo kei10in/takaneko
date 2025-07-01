@@ -1,5 +1,5 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import {
   BsCheck,
   BsChevronDown,
