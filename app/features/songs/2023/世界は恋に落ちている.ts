@@ -1,3 +1,4 @@
+import { Limited } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 世界は恋に落ちている: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "籾山ひめり",
+
+  tags: [Limited],
 
   image: undefined,
   officialSite: "https://takanenonadeshiko.jp/?p=1373",

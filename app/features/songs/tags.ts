@@ -24,16 +24,22 @@ export const LiveOnly: SongTag = {
   description: "ライブでのみ披露され、高嶺のなでしこの音源配信がない楽曲です。",
 } as const;
 
+export const Unperformed: SongTag = {
+  key: "unperformed",
+  name: "ライブ未披露",
+  description: "動画のみでライブでは披露されていない楽曲です。",
+} as const;
+
+export const Limited: SongTag = {
+  key: "limited",
+  name: "限定披露",
+  description: "ライブツアーやクリスマスパーティーなど、一部のライブでのみ披露された楽曲です。",
+} as const;
+
 export const Repertoire: SongTag = {
   key: "repertoire",
   name: "持ち歌",
   description: "ライブで披露する楽曲です。",
-} as const;
-
-export const Special: SongTag = {
-  key: "special",
-  name: "スペシャル",
-  description: "ライブツアーやクリスマスパーティーなど、一部のライブでのみ披露された楽曲です。",
 } as const;
 
 export const MusicVideo: SongTag = {

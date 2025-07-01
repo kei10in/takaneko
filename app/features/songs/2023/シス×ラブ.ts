@@ -1,3 +1,4 @@
+import { Limited } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const シス_ラブ: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const シス_ラブ: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
+
+  tags: [Limited],
 
   image: undefined,
   officialSite: "",
