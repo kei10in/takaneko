@@ -6,9 +6,13 @@ import { 城月菜央誕生日記念_2024年12月25日 } from "./birthday/2024-1
 import { 春野莉々誕生日記念_2025年01月16日 } from "./birthday/2025-01-16_春野莉々誕生日記念";
 import { 葉月紗蘭誕生日記念_2025年03月03日 } from "./birthday/2025-03-03_葉月紗蘭誕生日記念";
 import { 籾山ひめり誕生日記念_2025年03月22日 } from "./birthday/2025-03-22_籾山ひめり誕生日記念";
+import { 東山恵里沙誕生日記念_2025年05月28日 } from "./birthday/2025-05-28_東山恵里沙誕生日記念";
+import { 橋本桃呼誕生日記念_2025年05月28日 } from "./birthday/2025-06-28_橋本桃呼誕生日記念";
 import { BirthdayGoodsCollection } from "./product";
 
 export const BirthdayGoods: BirthdayGoodsCollection[] = [
+  橋本桃呼誕生日記念_2025年05月28日,
+  東山恵里沙誕生日記念_2025年05月28日,
   籾山ひめり誕生日記念_2025年03月22日,
   葉月紗蘭誕生日記念_2025年03月03日,
   春野莉々誕生日記念_2025年01月16日,
