@@ -31,6 +31,10 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
         <div className="py-2">
           <p className="flex items-center gap-2 text-sm">
             <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
+              たかねこの
+            </Link>
+            <BsChevronRight className="inline-block" />
+            <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
               スケジュール
             </Link>
             <BsChevronRight className="inline-block" />

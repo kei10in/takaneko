@@ -108,6 +108,10 @@ export default function EventPage() {
 
         <div className="px-4 py-2">
           <p className="flex items-center gap-2 text-sm">
+            <Link className="text-nadeshiko-800 font-semibold" to="/">
+              たかねこの
+            </Link>
+            <BsChevronRight className="inline-block" />
             <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
               スケジュール
             </Link>
