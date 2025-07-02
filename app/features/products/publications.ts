@@ -1,4 +1,7 @@
 import { Publication } from "./product";
+import { 城月菜央_記憶の中 } from "./publications/2025-07-07_城月菜央_記憶の中";
+import { 橋本桃呼_優しい風 } from "./publications/2025-07-07_橋本桃呼_優しい風";
+import { 籾山ひめり_木漏れ日 } from "./publications/2025-07-07_籾山ひめり_木漏れ日";
 import { _20SWEET_2023_JANUARY } from "./publications/20±SWEET";
 import { BLT_2023年2月号, BLT_2024年9月号 } from "./publications/B.L.T";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
@@ -136,9 +139,12 @@ const publications: Publication[] = [
   日経エンタテインメント_2024年2月号,
   月刊ENTAME_2023年3_4月合併号,
   月刊ENTAME_2024年8月号,
+  城月菜央_記憶の中,
   橋本桃呼_MOMOKO_ISM,
+  橋本桃呼_優しい風,
   松本ももな_LAST_20_MOMONA,
   松本ももな_SweetDateTime,
+  籾山ひめり_木漏れ日,
   グラビアンエイジ_VOL2,
   モデルプレスカウントダウンマガジン_vol10,
 ];
