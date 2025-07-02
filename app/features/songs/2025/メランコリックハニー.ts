@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const メランコリックハニー: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const メランコリックハニー: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "RINO HONDA",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "",

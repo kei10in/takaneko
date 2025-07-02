@@ -83,7 +83,7 @@ export const YouTubeCard: React.FC<Props> = ({ videoId }: Props) => {
         </Link>
       </div>
       <div>
-        <div className="space-y-1 px-1 py-2">
+        <div className="space-y-0.5 px-1 py-2">
           <p className="line-clamp-2 text-base leading-snug text-gray-800">
             <Link
               className="hover:text-nadeshiko-800"

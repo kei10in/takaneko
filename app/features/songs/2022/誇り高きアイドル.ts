@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 誇り高きアイドル: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "NaNa",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: undefined,
   officialSite: undefined,

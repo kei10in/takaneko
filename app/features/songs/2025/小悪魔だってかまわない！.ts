@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 小悪魔だってかまわない: SongMetaDescriptor = {
@@ -10,6 +11,8 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  tags: [TakanekoVersion, Repertoire],
+
   image: {
     path: "/takaneko/songs/2025/小悪魔だってかまわない！.webp",
     ref: "https://www.youtube.com/watch?v=OZycs0TBwKY",
@@ -17,7 +20,7 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
-      text: "MV",
+      text: "Dance Performance Video",
       videoId: "OZycs0TBwKY",
     },
     {

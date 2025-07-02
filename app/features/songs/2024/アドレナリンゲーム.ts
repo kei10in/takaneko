@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const アドレナリンゲーム: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "ZAZA (KAGARI & YUKI)",
+
+  tags: [Original, Repertoire],
 
   image: undefined,
   officialSite: "",

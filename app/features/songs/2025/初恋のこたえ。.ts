@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 初恋のこたえ: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 初恋のこたえ: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "",

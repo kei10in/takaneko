@@ -1,3 +1,4 @@
+import { Original, Repertoire, UnitSong } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 私は怪物: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 私は怪物: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "ZAZA (KAGARI & YUKI)",
+
+  tags: [Original, Repertoire, UnitSong],
 
   image: {
     path: "/takaneko/songs/2024/私は怪物.webp",

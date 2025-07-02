@@ -1,3 +1,4 @@
+import { Unperformed } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 東京サニーパーティー: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
+
+  tags: [Unperformed],
 
   image: undefined,
   officialSite: "",

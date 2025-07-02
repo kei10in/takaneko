@@ -1,3 +1,4 @@
+import { Limited } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 私が恋を知る日: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 私が恋を知る日: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
+
+  tags: [Limited],
 
   image: undefined,
   officialSite: "",

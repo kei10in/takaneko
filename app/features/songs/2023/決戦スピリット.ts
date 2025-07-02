@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 決戦スピリット: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 決戦スピリット: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "akane",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2023/決戦スピリット.webp",

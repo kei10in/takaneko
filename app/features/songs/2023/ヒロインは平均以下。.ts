@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const ヒロインは平均以下: SongMetaDescriptor = {
@@ -10,6 +11,8 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  tags: [TakanekoVersion, Repertoire],
+
   image: {
     path: "/takaneko/songs/2023/ヒロインは平均以下。.webp",
     ref: "https://music.youtube.com/playlist?list=OLAK5uy_l5od607_pYTfsL8pAtyBWD0_B2HQkMBQo",
@@ -17,7 +20,7 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
-      text: "MV",
+      text: "Dance Performance Video",
       videoId: "8wwTjwjqQR0",
     },
     {

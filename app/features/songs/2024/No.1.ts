@@ -1,3 +1,4 @@
+import { Unperformed } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const No1: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const No1: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: undefined,
+
+  tags: [Unperformed],
 
   image: undefined,
   officialSite: "https://example.com", // Added official site

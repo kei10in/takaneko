@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 乙女どもよ: SongMetaDescriptor = {
@@ -10,6 +11,8 @@ export const 乙女どもよ: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
+  tags: [TakanekoVersion, Repertoire],
+
   image: {
     path: "/takaneko/songs/2022/乙女どもよ。.webp",
     ref: "https://music.youtube.com/playlist?list=OLAK5uy_kjp4x_1Tp8OLiQNMpFdPbOxwL3ZrBteBQ",
@@ -17,7 +20,7 @@ export const 乙女どもよ: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1147",
   youtube: [
     {
-      text: "MV",
+      text: "Dance Practice Video",
       videoId: "JAA4CaJdXc8",
     },
     {

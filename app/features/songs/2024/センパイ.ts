@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const センパイ: SongMetaDescriptor = {
@@ -11,6 +12,8 @@ export const センパイ: SongMetaDescriptor = {
   // https://x.com/Naaaa_7/status/1789663179204923570
   choreographedBy: "NaNa",
 
+  tags: [TakanekoVersion, Repertoire],
+
   image: {
     path: "/takaneko/songs/2024/センパイ.webp",
     ref: "https://music.youtube.com/watch?v=HwSVyD1Vs8M",
@@ -18,7 +21,7 @@ export const センパイ: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
-      text: "MV",
+      text: "ハコニワリリィ, 可憐なアイボリー & 高嶺のなでしこ",
       videoId: "rOZBjopRSv8",
     },
     {

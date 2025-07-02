@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const IM_YOUR_IDOL: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "akane",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/I’M YOUR IDOL.webp",

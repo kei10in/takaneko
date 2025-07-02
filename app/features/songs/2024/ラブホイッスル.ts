@@ -1,3 +1,4 @@
+import { Limited } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const ラブホイッスル: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const ラブホイッスル: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "籾山ひめり",
+
+  tags: [Limited],
 
   image: undefined,
   officialSite: "",

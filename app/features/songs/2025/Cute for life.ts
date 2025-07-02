@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const CuteForLife: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const CuteForLife: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "らん先生",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2025/Cute for life.webp",

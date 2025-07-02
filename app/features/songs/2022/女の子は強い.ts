@@ -1,3 +1,4 @@
+import { Original, Repertoire } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 女の子は強い: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const 女の子は強い: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "高良舞子",
+
+  tags: [Original, Repertoire],
 
   image: {
     path: "/takaneko/songs/2022/女の子は強い.webp",

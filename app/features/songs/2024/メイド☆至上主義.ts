@@ -1,3 +1,4 @@
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const メイド至上主義: SongMetaDescriptor = {
@@ -9,6 +10,8 @@ export const メイド至上主義: SongMetaDescriptor = {
   arrangedBy: "HoneyWorks",
 
   choreographedBy: "いどみん",
+
+  tags: [TakanekoVersion, Repertoire],
 
   image: {
     path: "/takaneko/songs/2024/メイド☆至上主義.webp",
