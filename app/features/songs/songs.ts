@@ -42,6 +42,7 @@ import { 美しく生きろ } from "./2024/美しく生きろ";
 import { CuteForLife } from "./2025/Cute for life";
 import { アイドル衣装 } from "./2025/アイドル衣装";
 import { メランコリックハニー } from "./2025/メランコリックハニー";
+import { ライフクエスト } from "./2025/ライフクエスト";
 import { 初恋のこたえ } from "./2025/初恋のこたえ。";
 import { 小悪魔だってかまわない } from "./2025/小悪魔だってかまわない！";
 import { 東京サニーパーティー } from "./2025/東京サニーパーティー";
@@ -51,6 +52,7 @@ import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2025
+  ライフクエスト,
   東京サマーセッション,
   初恋のこたえ,
   アイドル衣装,
