@@ -10,7 +10,8 @@ export const meta: MetaFunction = () => {
     { title: formatTitle("楽曲") },
     {
       name: "description",
-      content: "高嶺のなでしこの楽曲の一覧です。",
+      content:
+        "HoneyWorks サウンドプロデュース 高嶺のなでしこの全楽曲一覧です。オリジナル曲 / ハニワ曲のたかねこ ver. / 特定ライブ限定曲 / 未披露曲まで完全掲載。各楽曲の詳細とライブ披露履歴をチェック！",
     },
   ];
 };
