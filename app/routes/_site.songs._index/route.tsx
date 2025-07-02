@@ -7,7 +7,7 @@ import { Thumbnail } from "./thumbnail";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: formatTitle("楽曲一覧") },
+    { title: formatTitle("楽曲") },
     {
       name: "description",
       content: "高嶺のなでしこの楽曲の一覧です。",
@@ -70,17 +70,6 @@ export default function Component() {
             ))}
           </TabPanels>
         </TabGroup>
-
-        <section className="mt-12 px-4">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">その他</h2>
-          <ul>
-            <li>
-              <Link to="/songs/stats" className="text-nadeshiko-800 hover:underline">
-                楽曲の統計情報
-              </Link>
-            </li>
-          </ul>
-        </section>
       </section>
     </div>
   );
