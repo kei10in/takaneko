@@ -3,6 +3,30 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title:
+      "🍭 高嶺のなでしこ［インタビュー］『LARME』とのタイアップで花開く“新しい可愛い”のカタチ「メンバーがモデルさんをしている姿って本当に尊い」 - Pop'n'Roll(ポップンロール)",
+    authorName: "Pop'n'Roll",
+    publishedAt: "2025-07-02",
+    mediaUrl: "https://popnroll.tv/articles/43864",
+    imageUrl:
+      "https://img.popnroll.tv/uploads/news_item/og_image/43864/large_536A7886%E3%81%AE%E3%82%B3%E3%83%92%E3%82%9A%E3%83%BC.jpg",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "【インタビュー】高嶺のなでしこ、5曲連続配信リリース続行中　幕張メッセ単独ライブに向けた覚悟と決意 ",
+    authorName: "ORICON NEWS",
+    publishedAt: "2025-07-02",
+    mediaUrl: "https://www.oricon.co.jp/news/2393464/full/",
+    imageUrl:
+      "https://contents.oricon.co.jp/upimg/news/2394000/2393464/20250701_131838_p_o_16982842.jpg",
+    category: "article",
+    presents: ["涼海すう", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     title: "汗・風・湿気にもマケズ！前髪命JKの美バングキープ術",
     authorName: "Popteen Media",
     publishedAt: "2025-07-01",

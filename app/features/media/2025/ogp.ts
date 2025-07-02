@@ -2,6 +2,19 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://popnroll.tv/articles/43864",
+    publishedAt: "2025-07-02",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+    siteName: "Pop'n'Roll",
+  },
+  {
+    mediaUrl: "https://www.oricon.co.jp/news/2393464/full/",
+    publishedAt: "2025-07-02",
+    category: "article",
+    presents: ["涼海すう", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/73363/",
     publishedAt: "2025-07-01",
     category: "article",
