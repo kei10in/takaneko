@@ -1,7 +1,7 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import { Link } from "react-router";
 import useSWR from "swr";
-import { fetchYouTubeOEmbed } from "~/features/songs/youtubeOEmbed";
+import { fetchYouTubeOEmbed } from "~/utils/youtube/youtubeOEmbed";
 
 interface Props {
   videoId: string;
