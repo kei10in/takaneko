@@ -1,5 +1,5 @@
 import { extractYouTubeVideoId, youtubeEmbedUrl } from "~/utils/youtube/videoId";
-import { YouTubeImage, youtubeImage } from "~/utils/youtubeImage";
+import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
 import { SongMetaDescriptor } from "./types";
 
 export const SongMeta = {
