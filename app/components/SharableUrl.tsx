@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { BsBoxArrowUp } from "react-icons/bs";
 import { CopyButton } from "./CopyButton";
 

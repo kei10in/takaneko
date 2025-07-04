@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { Fragment, useMemo } from "react";
 import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";

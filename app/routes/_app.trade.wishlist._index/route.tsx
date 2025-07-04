@@ -1,5 +1,5 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
 import { SITE_TITLE } from "~/constants";

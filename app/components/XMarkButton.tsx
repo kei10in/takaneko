@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { clsx } from "clsx";
 import { ComponentPropsWithRef, forwardRef } from "react";
 import { BsX } from "react-icons/bs";
 
