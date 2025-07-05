@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 import { Fragment, useMemo } from "react";
 import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { liveTypeColor } from "~/features/events/EventType";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
@@ -55,6 +56,15 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           allowFullScreen
         />
       )}
+
+      <div className="px-4 py-4">
+        <Breadcrumb
+          items={[
+            { label: "たかねこの", to: "/" },
+            { label: "楽曲", to: "/songs" },
+          ]}
+        />
+      </div>
 
       <section className="my-8 px-4">
         <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">{track.name}</h1>
