@@ -17,9 +17,6 @@ export const fetchYouTubeVideoMetadata = async (
     title: oEmbed.title,
     authorName: oEmbed.author_name,
     authorUrl: oEmbed.author_url,
-    thumbnailHeight: oEmbed.thumbnail_height,
-    thumbnailWidth: oEmbed.thumbnail_width,
-    thumbnailUrl: oEmbed.thumbnail_url,
     thumbnails,
   };
 };

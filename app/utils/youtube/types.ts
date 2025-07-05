@@ -1,5 +1,4 @@
 import { z } from "zod/v4";
-import { YouTubeImage } from "./youtubeImage";
 
 export const YouTubeOEmbedResponseSchema = z.object({
   title: z.string(),
@@ -25,9 +24,6 @@ export interface YouTubeVideoMetadata {
   title: string;
   authorName: string;
   authorUrl: string;
-  thumbnailHeight: number;
-  thumbnailWidth: number;
-  thumbnailUrl: string;
 
-  thumbnails: Partial<YouTubeImage>;
+  thumbnails: string[];
 }
