@@ -9,7 +9,7 @@ import { SongToLiveMap } from "~/features/songs/songToLive";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
-import { Route } from "./+types/route";
+import type { Route } from "./+types/route";
 import { Credit } from "./Credit";
 import { YouTubeCard } from "./YouTubeCard";
 
