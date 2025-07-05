@@ -9,8 +9,8 @@ export const FAVE_IDOLS_オンラインくじD賞: RandomGoods = {
   category: "D賞 アクリルキーホルダー",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ D賞.webp",
-  width: 3050,
-  height: 1250,
+  width: 2800,
+  height: 1150,
   lineup: [
     { id: 31, name: "城月菜央", description: "D賞" },
     { id: 32, name: "涼海すう", description: "D賞" },

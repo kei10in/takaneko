@@ -9,8 +9,8 @@ export const FAVE_IDOLS_オンラインくじC賞: RandomGoods = {
   category: "C賞 アクリルパネル",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ C賞.webp",
-  width: 3050,
-  height: 1250,
+  width: 2800,
+  height: 1150,
   lineup: [
     { id: 21, name: "城月菜央", description: "C賞" },
     { id: 22, name: "涼海すう", description: "C賞" },
