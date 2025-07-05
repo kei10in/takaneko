@@ -15,20 +15,29 @@ const main = async () => {
       song.youtube?.flatMap((video) => {
         const videoId = extractYouTubeVideoId(video.videoId);
         if (videoId == undefined) {
+          console.warn(`Invalid YouTube video ID for song "${song.name}": ${video.videoId}`);
           return [];
         }
         return [videoId];
       }) ?? []
     );
-  });
+  }).toSorted();
 
   const promises = allVideos.map(async (videoId) => {
-    return await fetchYouTubeVideoMetadata(videoId);
+    const result = await fetchYouTubeVideoMetadata(videoId);
+    if (result == undefined) {
+      console.warn(`Failed to fetch metadata for YouTube video ID: ${videoId}`);
+      return undefined;
+    }
+    return result;
   });
 
   const results = await Promise.all(promises);
+  const map = Object.fromEntries(
+    results.flatMap((video) => (video == undefined ? [] : [[video.videoId, video]])),
+  );
 
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(map, null, 2));
 };
 
 main();
