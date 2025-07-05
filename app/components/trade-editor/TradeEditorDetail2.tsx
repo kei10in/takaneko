@@ -7,7 +7,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { RandomGoods } from "~/features/products/product";
 import { SelectableEmojis } from "~/features/trade/stamp";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
+import { getTradeItemTitle } from "~/features/trade/tradeItemTitle";
+import {
+  TradeDescription,
+  TradeStatus,
+  tradeStateToImageSrc,
+  tradeStatusToAlternativeText,
+} from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
 
@@ -82,6 +88,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
           const tradeStatus = tradeDescriptions[pos.id]?.status ?? { tag: "none" };
           const tradeStateImageSrc = tradeStateToImageSrc(tradeStatus);
+          const tradeStatusAlt = tradeStatusToAlternativeText(tradeStatus);
 
           return (
             <SwiperSlide key={i} className="w-fit px-4">
@@ -89,15 +96,15 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
                 <div className="relative w-fit">
                   <ClippedImage
                     clip={pos ?? { x: 0, y: 0, width: 0, height: 0 }}
-                    className="object-contain"
+                    className="bg-gray-50 object-contain text-sm text-gray-500"
                     style={{ width, height }}
                     src={productImage.url}
-                    alt="Selected"
+                    alt={getTradeItemTitle(productImage, i)}
                   />
                   {tradeStateImageSrc != undefined ? (
                     <img
                       src={tradeStateImageSrc}
-                      alt="トレード設定"
+                      alt={tradeStatusAlt}
                       className="absolute"
                       style={{ ...stampPos }}
                     />
