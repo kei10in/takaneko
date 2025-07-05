@@ -27,7 +27,7 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
         src={image.url}
         alt="Product set"
         width={width}
-        height={height}
+        height={height ?? scaleY * image.height}
         className="max-w-none"
         onLoad={onLoad}
       />
