@@ -133,7 +133,7 @@ export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
           rel="noopener noreferrer"
         >
           <img
-            className="aspect-video w-full rounded-xl object-cover"
+            className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full rounded-xl object-cover text-sm"
             src={yt.thumbnailUrl}
             alt={yt.title}
           />
