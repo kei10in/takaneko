@@ -15,7 +15,7 @@ export interface YouTubeImage {
 export const youtubeImage = (videoId: string): YouTubeImage => {
   return {
     default: {
-      url: `https://img.youtube.com/vi_webp/${videoId}/default.webp`,
+      url: `https://i.ytimg.com/vi_webp/${videoId}/default.webp`,
       width: 120,
       height: 90,
     },
@@ -40,4 +40,31 @@ export const youtubeImage = (videoId: string): YouTubeImage => {
       height: 720,
     },
   };
+};
+
+export const verifyYouTubeThumbnails = async (videoId: string): Promise<Partial<YouTubeImage>> => {
+  const images = youtubeImage(videoId);
+
+  return {
+    default: await verifyYouTubeThumbnail(images.default),
+    mqDefault: await verifyYouTubeThumbnail(images.mqDefault),
+    hqDefault: await verifyYouTubeThumbnail(images.hqDefault),
+    sdDefault: await verifyYouTubeThumbnail(images.sdDefault),
+    maxResDefault: await verifyYouTubeThumbnail(images.maxResDefault),
+  };
+};
+
+const verifyYouTubeThumbnail = async (
+  img: ImageUrlWithSize,
+): Promise<ImageUrlWithSize | undefined> => {
+  try {
+    const response = await fetch(img.url, { method: "HEAD" });
+    if (!response.ok) {
+      return undefined;
+    }
+  } catch (error) {
+    return undefined;
+  }
+
+  return img;
 };
