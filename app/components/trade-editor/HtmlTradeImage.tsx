@@ -5,6 +5,7 @@ import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeSt
 
 interface Props {
   image: { url: string; width: number; height: number };
+  alt: string;
   width: number;
   height?: number;
   positions: ImagePosition[];
@@ -14,7 +15,16 @@ interface Props {
 }
 
 export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>) => {
-  const { image, width, height, positions, tradeDescriptions, showRect = false, onLoad } = props;
+  const {
+    image,
+    alt,
+    width,
+    height,
+    positions,
+    tradeDescriptions,
+    showRect = false,
+    onLoad,
+  } = props;
 
   const scaleX = width / image.width;
   const scaleY = height == undefined ? scaleX : height / image.height;
@@ -25,10 +35,10 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
     <div key={image.url} className="relative" ref={ref}>
       <img
         src={image.url}
-        alt="Product set"
+        alt={alt}
         width={width}
         height={height ?? scaleY * image.height}
-        className="max-w-none"
+        className="max-w-none bg-gray-50 text-sm text-gray-500"
         onLoad={onLoad}
       />
 

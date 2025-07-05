@@ -112,6 +112,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                   width: productImage.width,
                   height: productImage.height,
                 }}
+                alt={productImage.name}
                 width={width}
                 positions={productImage.positions}
                 tradeDescriptions={tradeDescriptions}
