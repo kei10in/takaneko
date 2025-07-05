@@ -4,7 +4,6 @@ import {
   BsBoxArrowUpRight,
   BsCalendar,
   BsCalendar3,
-  BsChevronRight,
   BsDoorOpen,
   BsLink45Deg,
   BsPersonFill,
@@ -20,6 +19,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
@@ -107,23 +107,14 @@ export default function EventPage() {
         )}
 
         <div className="px-4 py-2">
-          <p className="flex items-center gap-2 text-sm">
-            <Link className="text-nadeshiko-800 font-semibold" to="/">
-              たかねこの
-            </Link>
-            <BsChevronRight className="inline-block" />
-            <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
-              スケジュール
-            </Link>
-            <BsChevronRight className="inline-block" />
-            <Link className="text-nadeshiko-800 font-semibold" to={calendarMonthHref(m)}>
-              {displayMonth(m)}
-            </Link>
-            <BsChevronRight className="inline-block" />
-            <Link className="text-nadeshiko-800 font-semibold" to={dateHref(d)}>
-              {d.day.toString().padStart(2, "0")}日
-            </Link>
-          </p>
+          <Breadcrumb
+            items={[
+              { label: "たかねこの", to: "/" },
+              { label: "スケジュール", to: "/calendar" },
+              { label: displayMonth(m), to: calendarMonthHref(m) },
+              { label: `${d.day.toString().padStart(2, "0")}日`, to: dateHref(d) },
+            ]}
+          />
         </div>
 
         <div className="my-4 space-y-2">

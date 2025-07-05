@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { BsChevronRight } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { loadEventsInDay } from "../events/events";
@@ -29,19 +29,13 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
     <div className="container mx-auto min-h-[calc(100svh-var(--header-height)-3rem)] px-4">
       <div className="mx-auto max-w-2xl space-y-4">
         <div className="py-2">
-          <p className="flex items-center gap-2 text-sm">
-            <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
-              たかねこの
-            </Link>
-            <BsChevronRight className="inline-block" />
-            <Link className="text-nadeshiko-800 font-semibold" to="/calendar">
-              スケジュール
-            </Link>
-            <BsChevronRight className="inline-block" />
-            <Link className="text-nadeshiko-800 font-semibold" to={calendarMonthHref(m)}>
-              {displayMonth(m)}
-            </Link>
-          </p>
+          <Breadcrumb
+            items={[
+              { label: "たかねこの", to: "/calendar" },
+              { label: "スケジュール", to: "/calendar" },
+              { label: displayMonth(m), to: calendarMonthHref(m) },
+            ]}
+          />
         </div>
 
         <div className="my-4 flex items-center justify-between">
