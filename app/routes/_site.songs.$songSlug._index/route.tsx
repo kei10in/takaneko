@@ -6,6 +6,7 @@ import { liveTypeColor } from "~/features/events/EventType";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { SongToLiveMap } from "~/features/songs/songToLive";
+import { AllYouTubeVideoMetadata } from "~/features/songs/youtubeVideoMetadata";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
@@ -78,7 +79,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
               return (
                 <li key={videoId}>
-                  <YouTubeCard videoId={videoId} />
+                  <YouTubeCard videoId={videoId} metadata={AllYouTubeVideoMetadata[videoId]} />
                 </li>
               );
             }) ?? null}

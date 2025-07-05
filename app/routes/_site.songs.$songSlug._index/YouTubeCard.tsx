@@ -1,16 +1,73 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import { Link } from "react-router";
 import useSWR from "swr";
+import { YouTubeVideoMetadata } from "~/utils/youtube/types";
+import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
 import { fetchYouTubeOEmbed } from "~/utils/youtube/youtubeOEmbed";
 
 interface Props {
   videoId: string;
+  metadata?: YouTubeVideoMetadata;
 }
 
-export const YouTubeCard: React.FC<Props> = ({ videoId }: Props) => {
-  const { data: yt, error, isLoading } = useSWR(videoId, fetchYouTubeOEmbed);
+interface CardProps {
+  videoId: string;
+  title: string;
+  authorName: string;
+  authorUrl: string;
+  thumbnailUrl: string;
+}
 
-  if (isLoading) {
+const metadataToCardProps = (videoId: string, metadata: YouTubeVideoMetadata): CardProps => {
+  const imgs = youtubeImage(videoId);
+  const priorities: (keyof YouTubeImage)[] = [
+    "maxResDefault",
+    "maxResDefaultJpeg",
+    "sdDefault",
+    "sdDefaultJpeg",
+    "hqDefault",
+    "hqDefaultJpeg",
+    "mqDefault",
+    "mqDefaultJpeg",
+    "default",
+    "defaultJpeg",
+  ];
+
+  const thumbnailType = priorities.find((x) => metadata.thumbnails.includes(x)) ?? "hqDefaultJpeg";
+  const thumbnailUrl = imgs[thumbnailType].url;
+
+  return {
+    videoId,
+    title: metadata.title,
+    authorName: metadata.authorName,
+    authorUrl: metadata.authorUrl,
+    thumbnailUrl: thumbnailUrl,
+  };
+};
+
+const fetchCardProps = async (videoId: string): Promise<CardProps> => {
+  console.log(videoId);
+
+  const oEmbed = await fetchYouTubeOEmbed(videoId);
+  if (oEmbed == undefined) {
+    throw new Error("Failed to fetch YouTube OEmbed data");
+  }
+
+  return {
+    videoId,
+    title: oEmbed.title,
+    authorName: oEmbed.author_name,
+    authorUrl: oEmbed.author_url,
+    thumbnailUrl: oEmbed.thumbnail_url,
+  };
+};
+
+export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
+  const { data, error, isLoading } = useSWR(metadata == undefined ? videoId : null, fetchCardProps);
+
+  const yt = metadata != undefined ? metadataToCardProps(videoId, metadata) : data;
+
+  if (yt == undefined && isLoading) {
     return (
       <div className="w-full animate-pulse p-1">
         <div>
@@ -26,7 +83,7 @@ export const YouTubeCard: React.FC<Props> = ({ videoId }: Props) => {
     );
   }
 
-  if (error) {
+  if (yt == undefined && error) {
     return (
       <div className="w-full p-1">
         <div>
@@ -77,7 +134,7 @@ export const YouTubeCard: React.FC<Props> = ({ videoId }: Props) => {
         >
           <img
             className="aspect-video w-full rounded-xl object-cover"
-            src={yt.thumbnail_url}
+            src={yt.thumbnailUrl}
             alt={yt.title}
           />
         </Link>
@@ -95,8 +152,8 @@ export const YouTubeCard: React.FC<Props> = ({ videoId }: Props) => {
             </Link>
           </p>
           <p className="line-clamp-1 text-xs text-gray-400">
-            <Link to={yt.author_url} target="_blank" rel="noopener noreferrer">
-              {yt.author_name}
+            <Link to={yt.authorUrl} target="_blank" rel="noopener noreferrer">
+              {yt.authorName}
             </Link>
           </p>
         </div>
