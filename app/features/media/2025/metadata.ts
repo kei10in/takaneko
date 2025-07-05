@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title:
+      "“高嶺のなでしこ”レッスン中を突撃取材 海外公演映像・プライベート写真を大公開！(2025年7月5日)",
+    authorName: "ANNnewsCH",
+    publishedAt: "2025-07-05",
+    mediaUrl: "https://youtu.be/Mk8RWBP3P2c",
+    imageUrl: "https://i.ytimg.com/vi/Mk8RWBP3P2c/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "東山恵里沙", "松本ももな", "籾山ひめり"],
+  },
+  {
     kind: "ogp",
     title:
       "🍭 高嶺のなでしこ［インタビュー］『LARME』とのタイアップで花開く“新しい可愛い”のカタチ「メンバーがモデルさんをしている姿って本当に尊い」 - Pop'n'Roll(ポップンロール)",
