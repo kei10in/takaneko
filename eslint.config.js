@@ -20,7 +20,6 @@ export default [
       "!**/.client",
     ],
   },
-  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
   {
     languageOptions: {
       parserOptions: {
@@ -41,7 +40,6 @@ export default [
   reactHooks.configs["recommended-latest"],
   jsxA11y.flatConfigs.recommended,
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
     settings: {
       react: {
         version: "detect",
@@ -73,7 +71,6 @@ export default [
 
   // Custom
   {
-    files: ["**/*.{js,jsx,ts,tsx}"],
     rules: {
       "@typescript-eslint/no-unused-vars": [
         "error",
