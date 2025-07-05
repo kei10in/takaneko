@@ -1,0 +1,38 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const 超NATSUZOME2025限定カード: RandomGoods = {
+  id: "超NATSUZOME2025限定カード",
+  slug: "超NATSUZOME2025限定カード",
+  name: "超NATSUZOME2025限定カード",
+  year: 2025,
+  series: "超NATSUZOME2025限定カード",
+  category: "カード",
+  abbrev: "超NATSUZOME2025限定カード",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-07-06_超NATSUZOME2025限定カード.jpg",
+  width: 1060,
+  height: 1500,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: false,
+  positions: [
+    { id: 1, x: 222, y: 306, width: 185, height: 307 },
+    { id: 2, x: 427, y: 306, width: 185, height: 307 },
+    { id: 3, x: 635, y: 306, width: 185, height: 307 },
+    { id: 4, x: 222, y: 632, width: 185, height: 307 },
+    { id: 5, x: 427, y: 632, width: 185, height: 307 },
+    { id: 6, x: 635, y: 632, width: 185, height: 307 },
+    { id: 7, x: 135, y: 966, width: 185, height: 307 },
+    { id: 8, x: 341, y: 966, width: 185, height: 307 },
+    { id: 9, x: 548, y: 966, width: 185, height: 307 },
+  ],
+};
