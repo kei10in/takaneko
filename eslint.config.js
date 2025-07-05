@@ -3,23 +3,22 @@ import importPlugin from "eslint-plugin-import";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import pluginReact from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
+import { globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {
-    ignores: [
-      ".react-router/",
-      ".wrangler/",
-      "build/",
-      "images/",
-      "eslint.config.js",
-      "worker-configuration.d.ts",
-      "!**/.server",
-      "!**/.client",
-    ],
-  },
+  globalIgnores([
+    ".react-router/",
+    ".wrangler/",
+    "build/",
+    "images/",
+    "eslint.config.js",
+    "worker-configuration.d.ts",
+    "!**/.server",
+    "!**/.client",
+  ]),
   {
     languageOptions: {
       parserOptions: {
