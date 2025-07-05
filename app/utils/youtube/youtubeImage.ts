@@ -89,7 +89,11 @@ export const verifyYouTubeThumbnails = async (videoId: string): Promise<string[]
     maxResDefaultJpeg: await verifyYouTubeThumbnail(images.maxResDefaultJpeg),
   };
 
-  return Object.keys(verified);
+  const result = Object.entries(verified)
+    .filter(([, img]) => img !== undefined)
+    .map(([key]) => key);
+
+  return result;
 };
 
 const verifyYouTubeThumbnail = async (
