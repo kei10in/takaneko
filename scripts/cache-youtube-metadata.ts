@@ -4,7 +4,10 @@ import { ALL_SONGS } from "~/features/songs/songs";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
 import { fetchYouTubeVideoMetadata } from "~/utils/youtube/youtubeVideoMetadata";
 
-const OUTPUT_FILE = path.resolve(import.meta.dirname, "../app/features/songs/videoMetadata.json");
+const OUTPUT_FILE = path.resolve(
+  import.meta.dirname,
+  "../app/features/songs/youtubeVideoMetadata.json",
+);
 
 /**
  * 高嶺のなでしこの全楽曲に関連する YouTube 動画のメタデータをキャッシュします。
