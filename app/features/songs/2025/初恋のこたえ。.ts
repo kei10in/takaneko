@@ -23,5 +23,9 @@ export const 初恋のこたえ: SongMetaDescriptor = {
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=MdzIkBvRMC0",
     },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=QrmbhDL-FMI",
+    },
   ],
 };
