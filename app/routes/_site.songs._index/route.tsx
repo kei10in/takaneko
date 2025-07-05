@@ -38,10 +38,10 @@ export default function Component() {
         <TabGroup className="mt-2">
           <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">
             {tabs.map((tab) => (
-              <li key={tab.key}>
+              <li key={tab.key} className="flex-none overflow-hidden">
                 <Tab
                   as="button"
-                  className="data-[selected]:bg-nadeshiko-800 flex-none overflow-hidden rounded-lg bg-gray-100 px-4 py-2 outline-none data-[selected]:text-white"
+                  className="data-[selected]:bg-nadeshiko-800 rounded-lg bg-gray-100 px-4 py-2 outline-none data-[selected]:text-white"
                 >
                   <span className="text-center text-sm select-none">{tab.name}</span>
                 </Tab>
