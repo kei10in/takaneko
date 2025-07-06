@@ -8,14 +8,10 @@ import { RandomGoods } from "~/features/products/product";
 import { SelectableEmojis } from "~/features/trade/stamp";
 import { stampPositions } from "~/features/trade/stampPosition";
 import { getTradeItemTitle } from "~/features/trade/tradeItemTitle";
-import {
-  TradeDescription,
-  TradeStatus,
-  tradeStateToImageSrc,
-  tradeStatusToAlternativeText,
-} from "~/features/trade/TradeStatus";
+import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
+import { TradeStatusStamp } from "./TradeStatusStamp";
 
 interface Props {
   productImage: RandomGoods;
@@ -87,8 +83,6 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
           };
 
           const tradeStatus = tradeDescriptions[pos.id]?.status ?? { tag: "none" };
-          const tradeStateImageSrc = tradeStateToImageSrc(tradeStatus);
-          const tradeStatusAlt = tradeStatusToAlternativeText(tradeStatus);
 
           return (
             <SwiperSlide key={i} className="w-fit px-4">
@@ -101,21 +95,14 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
                     src={productImage.url}
                     alt={getTradeItemTitle(productImage, i)}
                   />
-                  {tradeStateImageSrc != undefined ? (
-                    <img
-                      src={tradeStateImageSrc}
-                      alt={tradeStatusAlt}
-                      className="absolute"
-                      style={{ ...stampPos }}
-                    />
-                  ) : tradeStatus.tag === "emoji" ? (
-                    <div
-                      className="absolute flex items-center justify-center text-center leading-none"
-                      style={{ ...stampPos, fontSize: stampPos.height * 0.9 }}
-                    >
-                      {tradeStatus.emoji}
-                    </div>
-                  ) : null}
+
+                  <TradeStatusStamp
+                    status={tradeStatus}
+                    x={stampPos.left}
+                    y={stampPos.top}
+                    width={stampPos.width}
+                    height={stampPos.height}
+                  />
                 </div>
               </div>
             </SwiperSlide>
