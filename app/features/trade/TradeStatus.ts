@@ -6,56 +6,24 @@ export type TradeStatus =
 
 export type TradeDescription = { id: number; status: TradeStatus };
 
+export const TradeStatusImages = [
+  { match: (ts: TradeStatus) => ts.tag == "want", src: "/求.svg", alt: "求" },
+  {
+    match: (ts: TradeStatus) => ts.tag == "have" && (ts.count == undefined || ts.count < 1),
+    src: "/譲.svg",
+    alt: "譲",
+  },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 1, src: "/1.svg", alt: "1" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count === 2, src: "/2.svg", alt: "2" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 3, src: "/3.svg", alt: "3" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 4, src: "/4.svg", alt: "4" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 5, src: "/5.svg", alt: "5" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 6, src: "/6.svg", alt: "6" },
+];
+
 export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => {
-  if (trade.tag == "want") {
-    return "/求.svg";
-  } else if (trade.tag == "have") {
-    if (trade.count == undefined) {
-      return "/譲.svg";
-    } else if (trade.count < 1) {
-      return "/譲.svg";
-    } else if (trade.count == 1) {
-      return "/1.svg";
-    } else if (trade.count == 2) {
-      return "/2.svg";
-    } else if (trade.count == 3) {
-      return "/3.svg";
-    } else if (trade.count == 4) {
-      return "/4.svg";
-    } else if (trade.count == 5) {
-      return "/5.svg";
-    } else if (trade.count >= 6) {
-      return "/6.svg";
-    }
-  }
-
-  return undefined;
-};
-
-export const tradeStatusToAlternativeText = (trade: TradeStatus): string | undefined => {
-  if (trade.tag == "want") {
-    return "求";
-  } else if (trade.tag == "have") {
-    if (trade.count == undefined) {
-      return "譲";
-    } else if (trade.count < 1) {
-      return "譲";
-    } else if (trade.count == 1) {
-      return "1";
-    } else if (trade.count == 2) {
-      return "2";
-    } else if (trade.count == 3) {
-      return "3";
-    } else if (trade.count == 4) {
-      return "4";
-    } else if (trade.count == 5) {
-      return "5";
-    } else if (trade.count >= 6) {
-      return "6";
-    }
-  }
-
-  return undefined;
+  const img = TradeStatusImages.find((item) => item.match(trade));
+  return img?.src;
 };
 
 export const totalWant = (tradeDescriptions: Record<number, TradeDescription>): number => {
