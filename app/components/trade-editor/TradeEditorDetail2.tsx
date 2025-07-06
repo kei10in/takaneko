@@ -49,11 +49,13 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   };
 
   return (
-    <div className="py-4">
+    // トランジションのときにスタンプが切れないように、Swiper を visible にする。
+    // その代わりに Dialog 側で Swiper のはみ出たところを非表示にする。
+    <div className="overflow-hidden pb-4">
       {/* Image and image selector */}
       <Swiper
         className={clsx(
-          "w-full",
+          "w-full overflow-visible",
           "[&_.swiper-button-next]:text-nadeshiko-800",
           "[&_.swiper-button-prev]:text-nadeshiko-800",
           "[&_.swiper-button-next]:drop-shadow-sm",
