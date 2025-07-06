@@ -318,29 +318,41 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
             "data-closed:opacity-0 data-closed:backdrop-blur-none",
           )}
         />
-        <div className="fixed inset-0 flex w-screen items-center justify-center">
+        <div className="fixed inset-0 flex w-screen items-center justify-center px-12">
           <DialogPanel
             transition
             className={clsx(
-              "max-w-lg min-w-64 divide-y divide-gray-200 border border-gray-200 bg-white text-lg text-gray-700 select-none",
+              "w-full max-w-80 grow text-gray-700 select-none",
               "transition-all duration-300 ease-in-out",
               "data-closed:scale-50 data-closed:opacity-0",
             )}
           >
-            <div className="flex w-full items-center justify-between p-4">
-              <p className="text-center">トレード設定をクリアしますか？</p>
+            <div className="w-full space-y-2 rounded-2xl border-gray-200 bg-gray-100 py-4">
+              <div className="py-4">
+                <BsTrashFill className="mx-auto h-10 w-10 text-gray-400" />
+                <p className="mt-4 px-6 text-center font-semibold text-gray-600">
+                  トレード設定をクリアしますか？
+                </p>
+                <p className="mt-2 px-6 text-center text-gray-600">
+                  このグッズのトレード設定をクリアします。
+                </p>
+              </div>
+
+              <div className="px-4">
+                <CloseButton
+                  className="bg-nadeshiko-800 hover:bg-nadeshiko-900 active:bg-nadeshiko-600 block w-full rounded-full px-8 py-2 text-center text-lg font-bold text-white"
+                  onClick={() => onClearTradeDescriptions?.(productImage.id)}
+                >
+                  クリアする
+                </CloseButton>
+              </div>
+
+              <div className="px-4">
+                <CloseButton className="text-nadeshiko-800 hover:text-nadeshiko-900 active:text-nadeshiko-600 block w-full rounded-full p-2 px-8 py-2 text-center text-lg font-bold">
+                  キャンセル
+                </CloseButton>
+              </div>
             </div>
-
-            <CloseButton
-              className="block w-full p-2 text-center font-bold text-red-500 hover:bg-gray-100"
-              onClick={() => onClearTradeDescriptions?.(productImage.id)}
-            >
-              クリアする
-            </CloseButton>
-
-            <CloseButton className="block w-full p-2 text-center font-bold text-blue-500 hover:bg-gray-100">
-              キャンセル
-            </CloseButton>
           </DialogPanel>
         </div>
       </Dialog>
