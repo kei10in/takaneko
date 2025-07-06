@@ -37,6 +37,20 @@ const fetchAndCacheMediaMetadata = async () => {
       const imageUrl = findFirstNonEmpty([media.image?.path, metadata?.ogp?.image]);
       const mediaUrl = findFirstNonEmpty([media.mediaUrl, metadata?.ogp?.url]);
       if (!title || !authorName || !imageUrl || !mediaUrl) {
+        const fields = [];
+        if (!title) {
+          fields.push("title");
+        }
+        if (!authorName) {
+          fields.push("authorName");
+        }
+        if (!imageUrl) {
+          fields.push("imageUrl");
+        }
+        if (!mediaUrl) {
+          fields.push("mediaUrl");
+        }
+        console.error(`Error: Missing required fields: ${fields.join(", ")} in ${mediaUrl}`);
         return [];
       }
 
