@@ -1,7 +1,8 @@
 import { forwardRef, Ref, useMemo } from "react";
 import { ImagePosition } from "~/features/products/product";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
+import { TradeDescription } from "~/features/trade/TradeStatus";
+import { TradeStatusStamp } from "./TradeStatusStamp";
 
 interface Props {
   image: { url: string; width: number; height: number };
@@ -61,47 +62,18 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
 
       {stamps.map((pos) => {
         const trade = tradeDescriptions[pos.id];
-        if (trade == undefined) {
-          return null;
-        }
-
         const { x, y, width, height } = pos;
 
-        const src = tradeStateToImageSrc(trade.status);
-        if (src != undefined) {
-          return (
-            <img
-              key={trade.id}
-              src={src}
-              alt=""
-              className="absolute"
-              style={{
-                left: x * scaleX,
-                top: y * scaleY,
-                width: width * scaleX,
-                height: height * scaleY,
-              }}
-            />
-          );
-        } else if (trade.status.tag === "emoji") {
-          return (
-            <div
-              key={trade.id}
-              className="absolute flex items-center justify-center text-center leading-none"
-              style={{
-                left: x * scaleX,
-                top: y * scaleY,
-                width: width * scaleX,
-                height: height * scaleY,
-                fontSize: height * scaleY * 0.9,
-              }}
-            >
-              <div>{trade.status.emoji}</div>
-            </div>
-          );
-        } else {
-          return null;
-        }
+        return (
+          <TradeStatusStamp
+            key={pos.id}
+            status={trade?.status}
+            x={x * scaleX}
+            y={y * scaleY}
+            width={width * scaleX}
+            height={height * scaleY}
+          />
+        );
       })}
     </div>
   );
