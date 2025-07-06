@@ -170,7 +170,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
             <PopoverPanel anchor={{ to: "bottom", gap: "1rem", padding: "2rem" }}>
               {({ close }) => (
-                <div className="rounded-xl border bg-white p-2">
+                <div className="rounded-xl border border-gray-200 bg-white p-2">
                   <div className="mx-auto mt-0.5 grid w-64 grid-cols-5 place-items-center items-center justify-center gap-0.5">
                     {SelectableEmojis.map((emoji) => (
                       <TradeStateButton
