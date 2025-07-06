@@ -286,9 +286,12 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           setDetailDialogState({ ...detailDialogState, open: false });
         }}
       >
-        <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-xs" />
-        <div className="fixed inset-0 flex w-screen items-center justify-center">
-          <DialogPanel className="bg-nadeshiko-50 mx-2 w-full max-w-lg">
+        <DialogBackdrop className={dialogBackdropStyle()} transition />
+        <div className={dialogBaseStyle()}>
+          <DialogPanel
+            className={clsx(dialogPanelStyle(), "bg-nadeshiko-50 mx-2 w-full max-w-lg")}
+            transition
+          >
             <div className="ml-auto w-fit p-2">
               <CloseButton as={XMarkButton} />
             </div>
@@ -352,8 +355,15 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
       {/* Preview Dialog */}
       <Dialog open={preview} className="relative z-50" onClose={() => setPreview(false)}>
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <DialogPanel className="max-h-svh max-w-lg overflow-y-auto border border-gray-200 bg-white">
+        <DialogBackdrop transition className={dialogBackdropStyle()} />
+        <div className={dialogBaseStyle()}>
+          <DialogPanel
+            className={clsx(
+              dialogPanelStyle(),
+              "m-4 max-h-svh overflow-y-auto border border-gray-200 bg-white pb-4",
+            )}
+            transition
+          >
             <div className="sticky top-0 bg-white/90 p-2">
               <CloseButton className="ml-auto" as={XMarkButton} />
             </div>
