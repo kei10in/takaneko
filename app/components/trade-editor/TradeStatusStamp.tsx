@@ -12,7 +12,19 @@ interface Props {
   height: number;
 }
 
+/**
+ * TradeStatusStamp コンポーネントはトレードのステータスを示すスタンプを表示します。
+ * スタンプを押したり、消したりしたときのアニメーションも含まれています。
+ */
 export const TradeStatusStamp: React.FC<Props> = (props: Props) => {
+  // 全てのスタンプを React 上で描画して、アニメーションを実現しています。
+  // Headless UI の `Transition` コンポーネントは `Transition` コンポーネントが
+  // React で描画されているときに  `show` プロパティが変更されることでアニメー
+  // ションをトリガーします。またアニメーションをするためには、直前に表示されて
+  // いたスタンプと新たに描画したいスタンプの 2 つが同時に React 上で描画されて
+  // いる必要があります。あらかじめすべてのスタンプを描画しておくことで、確実に
+  // アニメーションをトリガーさせることができます。
+
   const { status = { tag: "none" }, x, y, width, height } = props;
 
   return (
