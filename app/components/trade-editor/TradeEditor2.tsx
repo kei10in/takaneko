@@ -216,7 +216,12 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 </PopoverButton>
                 <PopoverPanel
                   anchor={{ to: "top", gap: "1.5rem" }}
-                  className="overflow-hidden rounded-xl bg-white shadow-md"
+                  transition
+                  className={clsx(
+                    "overflow-hidden rounded-xl bg-white shadow-md",
+                    "transition duration-300",
+                    "data-closed:translate-y-10 data-closed:scale-80 data-closed:opacity-0",
+                  )}
                 >
                   {({ close }) => (
                     <EmojiPanel

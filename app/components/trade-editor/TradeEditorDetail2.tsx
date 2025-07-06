@@ -170,7 +170,14 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
               </div>
             </PopoverButton>
 
-            <PopoverPanel anchor={{ to: "bottom", gap: "1rem", padding: "2rem" }}>
+            <PopoverPanel
+              anchor={{ to: "bottom", gap: "1rem", padding: "2rem" }}
+              transition
+              className={clsx(
+                "transition duration-300",
+                "data-closed:translate-y-10 data-closed:scale-80 data-closed:opacity-0",
+              )}
+            >
               {({ close }) => (
                 <div className="rounded-xl border border-gray-200 bg-white p-2">
                   <div className="mx-auto mt-0.5 grid w-64 grid-cols-5 place-items-center items-center justify-center gap-0.5">
