@@ -29,6 +29,7 @@ import {
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { CopyButton } from "../CopyButton";
+import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle } from "../styles";
 import { XMarkButton } from "../XMarkButton";
 import { EmojiPanel } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
@@ -310,21 +311,13 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         className="relative z-50"
         onClose={() => setShowConfirmClear(false)}
       >
-        <DialogBackdrop
-          transition
-          className={clsx(
-            "fixed inset-0 bg-black/50 backdrop-blur-xs",
-            "transition duration-300 ease-in-out",
-            "data-closed:opacity-0 data-closed:backdrop-blur-none",
-          )}
-        />
-        <div className="fixed inset-0 flex w-screen items-center justify-center px-12">
+        <DialogBackdrop transition className={dialogBackdropStyle()} />
+        <div className={dialogBaseStyle()}>
           <DialogPanel
             transition
             className={clsx(
-              "w-full max-w-80 grow text-gray-700 select-none",
-              "transition-all duration-300 ease-in-out",
-              "data-closed:scale-50 data-closed:opacity-0",
+              dialogPanelStyle(),
+              "m-12 w-full max-w-80 grow text-gray-700 select-none",
             )}
           >
             <div className="w-full space-y-2 rounded-2xl border-gray-200 bg-gray-100 py-4">
