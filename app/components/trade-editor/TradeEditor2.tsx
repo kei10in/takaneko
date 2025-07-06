@@ -1,6 +1,7 @@
 import {
   CloseButton,
   Dialog,
+  DialogBackdrop,
   DialogPanel,
   Popover,
   PopoverButton,
@@ -284,7 +285,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           setDetailDialogState({ ...detailDialogState, open: false });
         }}
       >
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-xs">
+        <DialogBackdrop className="fixed inset-0 bg-black/50 backdrop-blur-xs" />
+        <div className="fixed inset-0 flex w-screen items-center justify-center">
           <DialogPanel className="bg-nadeshiko-50 mx-2 w-full max-w-lg">
             <div className="ml-auto w-fit p-2">
               <CloseButton as={XMarkButton} />
@@ -308,8 +310,23 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         className="relative z-50"
         onClose={() => setShowConfirmClear(false)}
       >
-        <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4 backdrop-blur-xs">
-          <DialogPanel className="max-w-lg min-w-64 divide-y divide-gray-200 border border-gray-200 bg-white text-lg text-gray-700">
+        <DialogBackdrop
+          transition
+          className={clsx(
+            "fixed inset-0 bg-black/50 backdrop-blur-xs",
+            "transition duration-300 ease-in-out",
+            "data-closed:opacity-0 data-closed:backdrop-blur-none",
+          )}
+        />
+        <div className="fixed inset-0 flex w-screen items-center justify-center">
+          <DialogPanel
+            transition
+            className={clsx(
+              "max-w-lg min-w-64 divide-y divide-gray-200 border border-gray-200 bg-white text-lg text-gray-700 select-none",
+              "transition-all duration-300 ease-in-out",
+              "data-closed:scale-50 data-closed:opacity-0",
+            )}
+          >
             <div className="flex w-full items-center justify-between p-4">
               <p className="text-center">トレード設定をクリアしますか？</p>
             </div>
