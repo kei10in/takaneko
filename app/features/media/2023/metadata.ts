@@ -172,6 +172,17 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    title:
+      "高嶺のなでしこ、新曲「革命の女王」&「僕は君になれない」を紹介するインタビュー進行…···「全国ツアーも期待してください」",
+    authorName: "WowKorea FAN",
+    publishedAt: "2023-04-25",
+    mediaUrl: "https://youtu.be/LParXlrC9BI",
+    imageUrl: "https://i.ytimg.com/vi/LParXlrC9BI/hqdefault.jpg",
+    category: "youtube",
+    presents: ["東山恵里沙", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     title: "運転免許トロッカ！新アンバサダー“高嶺のなでしこ”メッセージ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-04-17",

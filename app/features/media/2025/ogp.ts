@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://e.usen.com/interview/interview-original/takanenonadeshiko-kononatsu.html",
+    publishedAt: "2025-07-05",
+    category: "article",
+    presents: ["葉月紗蘭", "東山恵里沙", "日向端ひな"],
+    siteName: "USENの音楽情報サイト「encore（アンコール）」",
+  },
+  {
     mediaUrl: "https://popnroll.tv/articles/43864",
     publishedAt: "2025-07-02",
     category: "article",

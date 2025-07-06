@@ -91,6 +91,11 @@ export const YouTube2023 = [
     presents: [],
   },
   {
+    videoId: "LParXlrC9BI",
+    publishedAt: "2023-04-25",
+    presents: ["東山恵里沙", "松本ももな", "籾山ひめり"],
+  },
+  {
     videoId: "35lxvC668Ek",
     publishedAt: "2023-04-17",
     presents: [],

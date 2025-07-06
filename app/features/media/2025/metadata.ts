@@ -15,6 +15,17 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "高嶺のなでしこ「この夏、好きになっちゃえばいいのに。」インタビュー――5曲連続配信リリースも第四弾！ | USENの音楽情報サイト「encore（アンコール）」",
+    authorName: "USENの音楽情報サイト「encore（アンコール）」",
+    publishedAt: "2025-07-05",
+    mediaUrl: "https://e.usen.com/interview/interview-original/takanenonadeshiko-kononatsu.html",
+    imageUrl: "https://e.usen.com/image/f0f709ba94639a734c63850a9eafefdf70432899.jpg",
+    category: "article",
+    presents: ["葉月紗蘭", "東山恵里沙", "日向端ひな"],
+  },
+  {
+    kind: "ogp",
+    title:
       "🍭 高嶺のなでしこ［インタビュー］『LARME』とのタイアップで花開く“新しい可愛い”のカタチ「メンバーがモデルさんをしている姿って本当に尊い」 - Pop'n'Roll(ポップンロール)",
     authorName: "Pop'n'Roll",
     publishedAt: "2025-07-02",
