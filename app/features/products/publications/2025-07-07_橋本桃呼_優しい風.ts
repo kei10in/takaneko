@@ -17,7 +17,7 @@ export const 橋本桃呼_優しい風: Publication = {
     },
   ],
   featuredMembers: ["橋本桃呼"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1942233424099692719",
   links: [
     {
       text: "",

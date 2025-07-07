@@ -17,7 +17,7 @@ export const 城月菜央_記憶の中: Publication = {
     },
   ],
   featuredMembers: ["城月菜央"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1942233424099692719",
   links: [
     {
       text: "",

@@ -17,7 +17,7 @@ export const 籾山ひめり_木漏れ日: Publication = {
     },
   ],
   featuredMembers: ["籾山ひめり"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1942233424099692719",
   links: [
     {
       text: "",
