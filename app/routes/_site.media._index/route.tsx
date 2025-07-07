@@ -167,7 +167,7 @@ export default function MediaIndex() {
                   className="hover:text-gray-600"
                 >
                   <div className="flex w-full gap-4">
-                    <div className="flex-1">
+                    <div className="min-w-0 flex-1">
                       <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
                       <p className="line-clamp-1 text-sm text-gray-600">
                         {video.category == "youtube" && <BsYoutube className="mr-1 inline" />}
