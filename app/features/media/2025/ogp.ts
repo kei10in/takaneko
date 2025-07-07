@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://rockinon.com/interview/detail/212621",
+    publishedAt: "2025-07-07",
+    category: "article",
+    presents: ["橋本桃呼", "葉月紗蘭", "東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://thetv.jp/news/detail/1276292/",
+    publishedAt: "2025-07-07",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://e.usen.com/interview/interview-original/takanenonadeshiko-kononatsu.html",
     publishedAt: "2025-07-05",
     category: "article",

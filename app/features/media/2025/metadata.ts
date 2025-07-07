@@ -2,6 +2,28 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title:
+      "【インタビュー】かわいさもエモさも表現する10人組アイドル・高嶺のなでしこの魅力とは？ サウンドプロデューサー・HoneyWorksとの歩み、5ヶ月連続リリースで成長する今を語る－rockinon.com｜https://rockinon.com/interview/detail/212621",
+    authorName: "rockinon.com",
+    publishedAt: "2025-07-07",
+    mediaUrl: "https://rockinon.com/interview/detail/212621",
+    imageUrl: "https://rockinon.com/images/entry/width:600/212621/1",
+    category: "article",
+    presents: ["橋本桃呼", "葉月紗蘭", "東山恵里沙"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ、初のドラマ エンディングテーマも入った5曲連続配信リリースから幕張ライブへ「成功できたら武道館に近づけるかも」 | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2025-07-07",
+    mediaUrl: "https://thetv.jp/news/detail/1276292/",
+    imageUrl: "https://thetv.jp/i/nw/1276292/14881545.jpg?w=1284",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
+  },
+  {
     kind: "youtube",
     title:
       "“高嶺のなでしこ”レッスン中を突撃取材 海外公演映像・プライベート写真を大公開！(2025年7月5日)",
