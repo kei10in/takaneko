@@ -29,17 +29,19 @@ export const Setlist: React.FC<Props> = (props: Props) => {
             }
 
             const { n, name, desc } =
-              part.kind == "talk"
-                ? { n: "", name: "MC", desc: undefined }
-                : part.kind == "song"
-                  ? {
-                      n: `${part.index + 1}`,
-                      name: part.songTitle,
-                      desc: part.costumeName || "衣装不明",
-                    }
-                  : part.kind == "encore"
-                    ? { n: "", name: "アンコール", desc: undefined }
-                    : { n: "", name: part.title || "企画", desc: part.costumeName || "衣装不明" };
+              part.kind == "announce"
+                ? { n: "", name: part.name, desc: part.members.join("、") }
+                : part.kind == "talk"
+                  ? { n: "", name: "MC", desc: undefined }
+                  : part.kind == "song"
+                    ? {
+                        n: `${part.index + 1}`,
+                        name: part.songTitle,
+                        desc: part.costumeName || "衣装不明",
+                      }
+                    : part.kind == "encore"
+                      ? { n: "", name: "アンコール", desc: undefined }
+                      : { n: "", name: part.title || "企画", desc: part.costumeName || "衣装不明" };
 
             const slug =
               part.kind == "song"

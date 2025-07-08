@@ -35,4 +35,17 @@ describe("parseSetlist", () => {
       { kind: "song", section: "encore", index: 0, songTitle: "Song D" },
     ]);
   });
+
+  it("parse announcement with members", () => {
+    const input = ["影ナレ: 葉月紗蘭、東山恵里沙", "Song E"];
+    const result = parseSetlist(input);
+    expect(result).toEqual([
+      {
+        kind: "announce",
+        name: "影ナレ",
+        members: ["葉月紗蘭", "東山恵里沙"],
+      },
+      { kind: "song", section: "main", index: 0, songTitle: "Song E" },
+    ]);
+  });
 });

@@ -1,7 +1,15 @@
+import { MemberName } from "../profile/members";
+import { parseMemberName } from "../profile/parseMemberName";
+
 export type StagePart =
   | {
       kind: "talk";
       costumeName?: string | undefined;
+    }
+  | {
+      kind: "announce";
+      name: string;
+      members: MemberName[];
     }
   | {
       kind: "song";
@@ -52,6 +60,26 @@ const parseStagePart = (
   state: StageState,
 ): { nextState: StageState; stagePart: StagePart } => {
   const p = part.trim();
+
+  if (p.startsWith("影ナレ:")) {
+    const names = p
+      .slice(4)
+      .trim()
+      .split("、")
+      .flatMap((x) => x.split(","))
+      .map((x) => {
+        const memberName = parseMemberName(x.trim());
+        if (memberName == undefined) {
+          throw new Error(`Invalid member name: ${x}`);
+        }
+        return memberName;
+      });
+
+    return {
+      nextState: state,
+      stagePart: { kind: "announce", name: "影ナレ", members: names },
+    };
+  }
 
   if (p.toLowerCase() == "mc" || p.toLowerCase().startsWith("mc:")) {
     return { nextState: state, stagePart: { kind: "talk", costumeName: state.costumeName } };
