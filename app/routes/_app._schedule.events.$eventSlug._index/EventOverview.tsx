@@ -102,7 +102,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
             )}
 
             {goods?.url && (
-              <p className="mt-0 mb-2 text-base leading-snug">
+              <p className="mt-0 mb-2 truncate text-base leading-snug">
                 <Link className="text-nadeshiko-950" to={goods.url}>
                   {goods.url}
                 </Link>
