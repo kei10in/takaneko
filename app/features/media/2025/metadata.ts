@@ -3,6 +3,28 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title: "不破湊サンみたいなコーデがしたいっ♡「すぅにゃの推し活WORLD」 vol.4",
+    authorName: "Popteen Media",
+    publishedAt: "2025-07-08",
+    mediaUrl: "https://popteen.co.jp/media/71242/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/06/bc543b038875365a3e0d076fda7dd39a.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ、国民的アイドル目指して「凛とした日本女性の清楚な美しさを体現していきたい」 | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2025-07-08",
+    mediaUrl: "https://thetv.jp/news/detail/1276360/",
+    imageUrl: "https://thetv.jp/i/nw/1276360/14882149.jpg?w=1284",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来"],
+  },
+  {
+    kind: "ogp",
     title:
       "【インタビュー】かわいさもエモさも表現する10人組アイドル・高嶺のなでしこの魅力とは？ サウンドプロデューサー・HoneyWorksとの歩み、5ヶ月連続リリースで成長する今を語る－rockinon.com｜https://rockinon.com/interview/detail/212621",
     authorName: "rockinon.com",
