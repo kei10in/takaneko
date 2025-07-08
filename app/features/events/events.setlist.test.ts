@@ -23,7 +23,8 @@ describe("all setlist items", () => {
         return (
           item.songTitle.startsWith("MC") ||
           item.songTitle.startsWith("企画") ||
-          item.songTitle.startsWith("衣装")
+          item.songTitle.startsWith("衣装") ||
+          item.songTitle.startsWith("影ナレ")
         );
       })
       .map(({ slug }) => path.basename(slug, ".mdx"));
