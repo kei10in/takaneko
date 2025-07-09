@@ -60,7 +60,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="container mx-auto max-w-3xl px-4">
+    <div className="container mx-auto my-12 max-w-3xl px-4">
       <section className="mt-12">
         <h2 id="organizing" className="text-nadeshiko-800 my-8 text-4xl leading-tight">
           7/10、7/11 ラジオ出演 まとめ
@@ -161,6 +161,10 @@ export default function Index() {
             </section>
           );
         })}
+
+        <p className="text-sm text-gray-500">
+          ※CBCラジオ「あんななのなななっ！」は 7/11 には放送がないため掲載を見送っています。
+        </p>
       </section>
     </div>
   );
