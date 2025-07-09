@@ -3,6 +3,53 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    title:
+      "高嶺のなでしこメンバーおすすめ、5曲連続配信リリースと一緒に注目してほしい“好き曲”紹介 | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://thetv.jp/news/detail/1276361/",
+    imageUrl: "https://thetv.jp/i/nw/1276361/14882183.jpg?w=1284",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ、9月の幕張ワンマンライブ＆5曲連続配信リリースへの想いを語る！【インタビュー前編】",
+    authorName: "asageiMUSE",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://asageimuse.com/excerpt/26662",
+    imageUrl:
+      "https://asageimuse.com/wp-content/uploads/2025/07/a961abfe39e06c5c234c29d9e8e7cac9-1.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ、映画出演やランウェイなど各メンバーの活躍ぶり＆好きなファッションを語る！【インタビュー後編】",
+    authorName: "asageiMUSE",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://asageimuse.com/excerpt/26675",
+    imageUrl:
+      "https://asageimuse.com/wp-content/uploads/2025/07/2666ff8aaffe0b2dfa245cb9b33c7ea3-1.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ、結成3年で着実に成長「スピード感を落とさずに」　幕張の先に目指す夢の舞台",
+    authorName: "ENCOUNT",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://encount.press/archives/823787/",
+    imageUrl:
+      "https://encount.press/wp-content/uploads/2025/07/08234155/2d487b7e55e7564c2fb1e28c257e79a1.jpg",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     title: "不破湊サンみたいなコーデがしたいっ♡「すぅにゃの推し活WORLD」 vol.4",
     authorName: "Popteen Media",
     publishedAt: "2025-07-08",
