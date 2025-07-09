@@ -2,17 +2,32 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { BsBroadcastPin, BsStopwatch } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { SITE_TITLE } from "~/constants";
+import { DOMAIN, SITE_TITLE } from "~/constants";
 import { RadioAppearances } from "./content";
 
 export const meta: MetaFunction = () => {
+  const title = `「この夏、好きになっちゃえばいいのに。」ラジオ出演 - ${SITE_TITLE}`;
+  const description =
+    "高嶺のなでしこ (たかねこ) が 7/10, 7/11 に出演する「この夏、好きになっちゃえばいいのに。」に関するラジオ番組をまとめたページです。出演時間や radiko へのリンクをまとめています。";
+  const url = `https://${DOMAIN}/`;
+
   return [
-    { title: `「この夏、好きになっちゃえばいいのに。」ラジオ出演 - ${SITE_TITLE}` },
-    {
-      name: "description",
-      content:
-        "高嶺のなでしこ (たかねこ) の「この夏、好きになっちゃえばいいのに。」に関するラジオ出演に関する情報をまとめたページです。",
-    },
+    { title },
+    { name: "description", content: description },
+
+    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: `${url}takaneko/site-image.webp` },
+    { property: "og:url", content: `${url}special/2025-summer-radio` },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: `${url}icon-512.png` },
   ];
 };
 
@@ -30,14 +45,14 @@ export default function Index() {
   const days = [
     {
       key: "day1",
-      name: "2025 年 7 月 10 日",
+      name: "2025 年 7 月 10 日 (木)",
       items: RadioAppearances.filter((e) => e.meta.date.toString() === "2025-07-10").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
     },
     {
       key: "day2",
-      name: "2025 年 7 月 11 日",
+      name: "2025 年 7 月 11 日 (金)",
       items: RadioAppearances.filter((e) => e.meta.date.toString() === "2025-07-11").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
