@@ -19,23 +19,23 @@ import { EventMeta, validateEventMeta } from "~/features/events/meta";
 export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [
   {
     meta: validateEventMeta(meta0),
-    radiko: "https://radiko.jp/share/?sid=CBC&t=20250710220000",
+    radiko: "https://radiko.jp/share/?sid=CBC&t=20250710233005",
   },
   {
     meta: validateEventMeta(meta1),
-    radiko: "https://radiko.jp/share/?sid=E-RADIO&t=20250710140000",
+    radiko: "https://radiko.jp/share/?sid=E-RADIO&t=20250710142200",
   },
   {
     meta: validateEventMeta(meta2),
-    radiko: "https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710180000",
+    radiko: "https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710191140",
   },
   {
     meta: validateEventMeta(meta3),
-    radiko: "https://radiko.jp/share/?sid=FMGIFU&t=20250710170000",
+    radiko: "https://radiko.jp/share/?sid=FMGIFU&t=20250710180830",
   },
   {
     meta: validateEventMeta(meta4),
-    radiko: "https://radiko.jp/share/?sid=FMMIE&t=20250710170000",
+    radiko: "https://radiko.jp/share/?sid=FMMIE&t=20250710183155",
   },
   {
     meta: validateEventMeta(meta5),
@@ -43,11 +43,11 @@ export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [
   },
   {
     meta: validateEventMeta(meta6),
-    radiko: "https://radiko.jp/share/?sid=KBC&t=20250710140000",
+    radiko: "https://radiko.jp/share/?sid=KBC&t=20250710140500",
   },
   {
     meta: validateEventMeta(meta7),
-    radiko: "https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710150000",
+    radiko: "https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710160010",
   },
   {
     meta: validateEventMeta(meta8),
@@ -55,19 +55,19 @@ export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [
   },
   {
     meta: validateEventMeta(meta9),
-    radiko: "https://radiko.jp/share/?sid=RKB&t=20250710153900",
+    radiko: "https://radiko.jp/share/?sid=RKB&t=20250710160000",
   },
   {
     meta: validateEventMeta(meta10),
-    radiko: "https://radiko.jp/share/?sid=TOKAIRADIO&t=20250710130000",
+    radiko: "https://radiko.jp/share/?sid=TOKAIRADIO&t=20250710133530",
   },
   {
     meta: validateEventMeta(meta11),
-    radiko: "https://radiko.jp/share/?sid=FMT&t=20250710130000",
+    radiko: "https://radiko.jp/share/?sid=FMT&t=20250710140000",
   },
   {
     meta: validateEventMeta(meta12),
-    radiko: "https://radiko.jp/share/?sid=ZIP-FM&t=20250710200000",
+    radiko: "https://radiko.jp/share/?sid=ZIP-FM&t=20250710204900",
   },
   {
     meta: validateEventMeta(meta13),
