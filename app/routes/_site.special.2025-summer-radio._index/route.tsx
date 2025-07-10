@@ -81,9 +81,17 @@ export default function Index() {
           <p>タップすると radiko が開きます。</p>
           <p>時間は出演時間の目安です。</p>
         </div>
-        {days.map((day) => {
+        <section className="my-8">
+          <h3 className="my-2 text-lg font-semibold text-gray-500">radiko で聴く方法</h3>
+
+          <p>radiko では、放送から過去 7 日以内の番組を無料で聴取可能です。 </p>
+          <p>
+            居住エリア外の放送は radiko の「エリアフリー」プランに加入することで聞くことができます。
+          </p>
+        </section>
+        {days.slice(1).map((day) => {
           return (
-            <section key={day.key} className="mb-8">
+            <section key={day.key} className="my-8">
               <h3 className="my-2 text-lg font-semibold text-gray-500">{day.name}</h3>
               <ul className="space-y-2">
                 {day.items.map((e) => {
@@ -164,8 +172,51 @@ export default function Index() {
           );
         })}
 
+        {days.slice(0, 1).map((day) => {
+          return (
+            <section key={day.key} className="mb-8">
+              <h3 className="my-2 text-lg font-semibold text-gray-500">{day.name}</h3>
+              <div className="my-4 space-y-2">
+                <p>radiko へのリンクになっています。</p>
+                <p>
+                  リンクを開くと高嶺のなでしこメンバーが出演しているところから再生することができます。
+                </p>
+              </div>
+              <ul className="space-y-2">
+                {day.items.map((e) => {
+                  return (
+                    <li key={e.meta.summary}>
+                      <Link
+                        className={clsx("block rounded-lg bg-gray-50 px-3 py-2")}
+                        to={e.radiko}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className="flex items-stretch gap-3">
+                          <div className="w-11 flex-none">
+                            <p>{e.meta.start}</p>
+                          </div>
+                          <div className={clsx("w-1 flex-none rounded-full", "bg-nadeshiko-400")} />
+                          <div className="min-w-0 flex-1">
+                            <p className={clsx("line-clamp-2")}>{e.meta.summary}</p>
+                            <p className={clsx("text-sm", "text-nadeshiko-800")}>
+                              {e.meta.present
+                                ?.map((name) => memberNameToEmoji(name) + name)
+                                .join("、")}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          );
+        })}
+
         <p className="text-sm text-gray-500">
-          ※CBCラジオ「あんななのなななっ！」は 7/11 には放送がないため掲載を見送っています。
+          ※CBCラジオ「あんななのなななっ！」は放送日未定です。
         </p>
       </section>
     </div>
