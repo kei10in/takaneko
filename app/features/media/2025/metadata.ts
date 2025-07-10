@@ -4,6 +4,29 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "高嶺のなでしこ　「メンバー全員がかわいくて、曲もめちゃくちゃ良いので、“この夏、好きになっちゃえばいいのに。”と心の底から思っています（笑）」 | SPICE - エンタメ特化型情報メディア スパイス",
+    authorName: "SPICE（スパイス）｜エンタメ特化型情報メディア スパイス",
+    publishedAt: "2025-07-10",
+    mediaUrl: "https://spice.eplus.jp/articles/338472",
+    imageUrl:
+      "https://spice.eplus.jp/images/tkZ9WmwOHc24Gm54y0QBezx2Ko3q1GNf9u5WFMSFZCC7CSI5xBtg8nXarC90Gq4b",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙"],
+  },
+  {
+    kind: "ogp",
+    title:
+      "『高嶺のなでしこ』松本ももな「絶対に成功させて、みんなで最高の景色を見たいと思っています」｜ウォーカープラス",
+    authorName: "ウォーカープラス（Walkerplus）",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://www.walkerplus.com/article/1275466/",
+    imageUrl: "https://news.walkerplus.com/article/1275466/14864090_615.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
+    title:
       "高嶺のなでしこメンバーおすすめ、5曲連続配信リリースと一緒に注目してほしい“好き曲”紹介 | WEBザテレビジョン",
     authorName: "WEBザテレビジョン",
     publishedAt: "2025-07-09",

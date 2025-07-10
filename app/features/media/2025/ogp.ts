@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://spice.eplus.jp/articles/338472",
+    publishedAt: "2025-07-10",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://www.walkerplus.com/article/1275466/",
+    publishedAt: "2025-07-09",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
     mediaUrl: "https://thetv.jp/news/detail/1276361/",
     publishedAt: "2025-07-09",
     category: "article",
