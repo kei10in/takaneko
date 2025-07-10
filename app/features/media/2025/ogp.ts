@@ -76,6 +76,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: ["涼海すう"],
   },
   {
+    mediaUrl: "https://www.oricon.co.jp/special/71624/",
+    publishedAt: "2025-06-30",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
     mediaUrl: "https://encount.press/archives/815872/",
     publishedAt: "2025-06-24",
     category: "article",

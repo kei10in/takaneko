@@ -151,6 +151,17 @@ export const metadata2025: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    title: "前髪、触角…日本独自のテクニックも　アイドルの前髪は、なぜ崩れない？ ",
+    authorName: "ORICON NEWS",
+    publishedAt: "2025-06-30",
+    mediaUrl: "https://www.oricon.co.jp/special/71624/",
+    imageUrl:
+      "https://contents.oricon.co.jp/special/img/71000/71624/social/img1200/1751248587411.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
     title: "高嶺のなでしこ、大成功の中国2公演　想像を超えた現地ファンの熱気「愛をいっぱい感じた」",
     authorName: "ENCOUNT",
     publishedAt: "2025-06-24",
