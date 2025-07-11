@@ -24,6 +24,7 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-07-09",
     category: "article",
     presents: [],
+    // https://x.com/scketto1/status/1943450359944601938
   },
   {
     mediaUrl: "https://asageimuse.com/excerpt/26675",
@@ -92,6 +93,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-06-30",
     category: "article",
     presents: ["松本ももな"],
+  },
+  {
+    mediaUrl: "https://asageimuse.com/excerpt/26588",
+    publishedAt: "2025-06-28",
+    category: "article",
+    presents: [],
   },
   {
     mediaUrl: "https://encount.press/archives/815872/",

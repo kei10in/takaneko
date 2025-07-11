@@ -185,6 +185,18 @@ export const metadata2025: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    title:
+      "高嶺のなでしこ、LARMEコラボのスペシャルファッションショーでランウェイをウォーキング！華麗な衣装と仕草で女性ファンを魅了",
+    authorName: "asageiMUSE",
+    publishedAt: "2025-06-28",
+    mediaUrl: "https://asageimuse.com/excerpt/26588",
+    imageUrl:
+      "https://asageimuse.com/wp-content/uploads/2025/06/4588d32f3f4768553b9751f095d26419.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     title: "高嶺のなでしこ、大成功の中国2公演　想像を超えた現地ファンの熱気「愛をいっぱい感じた」",
     authorName: "ENCOUNT",
     publishedAt: "2025-06-24",
