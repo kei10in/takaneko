@@ -89,7 +89,7 @@ export default function Index() {
             居住エリア外の放送は radiko の「エリアフリー」プランに加入することで聞くことができます。
           </p>
         </section>
-        {days.slice(1).map((day) => {
+        {days.slice(2).map((day) => {
           return (
             <section key={day.key} className="my-8">
               <h3 className="my-2 text-lg font-semibold text-gray-500">{day.name}</h3>
@@ -172,7 +172,7 @@ export default function Index() {
           );
         })}
 
-        {days.slice(0, 1).map((day) => {
+        {days.slice(0, 2).map((day) => {
           return (
             <section key={day.key} className="mb-8">
               <h3 className="my-2 text-lg font-semibold text-gray-500">{day.name}</h3>

@@ -71,14 +71,14 @@ export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [
   },
   {
     meta: validateEventMeta(meta13),
-    radiko: "https://radiko.jp/share/?sid=CROSSFM&t=20250711163000",
+    radiko: "https://radiko.jp/share/?sid=CROSSFM&t=20250711173045",
   },
   {
     meta: validateEventMeta(meta14),
-    radiko: "https://radiko.jp/share/?sid=FMAICHI&t=20250711130000",
+    radiko: "https://radiko.jp/share/?sid=FMAICHI&t=20250711133620",
   },
   {
     meta: validateEventMeta(meta15),
-    radiko: "https://radiko.jp/share/?sid=AIR-G&t=20250711200000",
+    radiko: "https://radiko.jp/share/?sid=AIR-G&t=20250711202015",
   },
 ].filter((x): x is { meta: EventMeta; radiko: string } => x.meta != undefined);
