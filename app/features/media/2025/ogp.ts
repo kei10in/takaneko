@@ -8,6 +8,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: ["橋本桃呼", "東山恵里沙"],
   },
   {
+    mediaUrl: "https://fineboys-online.jp/interview/detail.php?id=5602",
+    publishedAt: "2025-07-09",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.walkerplus.com/article/1275466/",
     publishedAt: "2025-07-09",
     category: "article",

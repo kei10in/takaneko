@@ -16,6 +16,17 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     title:
+      "この夏、高嶺のなでしこ沼に！5曲連続配信リリースで幕張へ！ | インタビュー | FINEBOYS Online",
+    authorName: "FINEBOYS Online｜ファインボーイズオンライン",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://fineboys-online.jp/interview/detail.php?id=5602",
+    imageUrl: "https://cdn.fineboys-online.jp/thegear/content/theme/img/org/article/5602/main.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    title:
       "『高嶺のなでしこ』松本ももな「絶対に成功させて、みんなで最高の景色を見たいと思っています」｜ウォーカープラス",
     authorName: "ウォーカープラス（Walkerplus）",
     publishedAt: "2025-07-09",
