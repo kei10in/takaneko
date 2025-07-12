@@ -12,6 +12,9 @@ export type StagePart =
       members: MemberName[];
     }
   | {
+      kind: "overture";
+    }
+  | {
       kind: "song";
       index: number;
       section: "main" | "encore";
@@ -29,6 +32,10 @@ export type StagePart =
   | {
       kind: "costume";
       costumeName: string;
+    }
+  | {
+      kind: "interlude";
+      description?: string | undefined;
     };
 
 interface StageState {
@@ -103,6 +110,15 @@ const parseStagePart = (
       nextState: state,
       stagePart: { kind: "special", title: segmentTitle, costumeName: state.costumeName },
     };
+  }
+
+  if (p.toLowerCase().startsWith("overture")) {
+    return { nextState: state, stagePart: { kind: "overture" } };
+  }
+
+  if (p.startsWith("幕間") || p.toLowerCase().startsWith("interlude")) {
+    const description = p.split(":")[1]?.trim() || undefined;
+    return { nextState: state, stagePart: { kind: "interlude", description } };
   }
 
   const songTitle = p;

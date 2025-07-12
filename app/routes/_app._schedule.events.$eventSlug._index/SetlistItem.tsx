@@ -18,6 +18,11 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
     const subtext = part.members.join("、");
     return <SimpleListItem text={text} subtext={subtext} />;
   }
+  if (part.kind == "overture") {
+    const text = "Overture";
+    const subtext = "";
+    return <SimpleListItem text={text} subtext={subtext} />;
+  }
   if (part.kind == "talk") {
     const text = "MC";
     const subtext = "";
@@ -26,6 +31,11 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   if (part.kind == "special") {
     const text = part.title ?? "企画";
     const subtext = part.costumeName || "衣装不明";
+    return <SimpleListItem text={text} subtext={subtext} />;
+  }
+  if (part.kind == "interlude") {
+    const text = part.description ?? "幕間";
+    const subtext = part.description != undefined ? "幕間" : "";
     return <SimpleListItem text={text} subtext={subtext} />;
   }
   if (part.kind == "encore") {
