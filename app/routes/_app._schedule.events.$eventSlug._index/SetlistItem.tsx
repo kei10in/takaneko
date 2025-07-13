@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { BsChevronRight } from "react-icons/bs";
+import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
 import { Link } from "react-router";
 import { StagePart } from "~/features/events/setlist";
 import { ALL_SONGS } from "~/features/songs/songs";
@@ -40,20 +40,31 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   }
   if (part.kind == "encore") {
     const text = "アンコール";
-    const subtext = "";
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SectionListItem text={text} />;
   }
 
   const n = `${part.index + 1}`;
   const name = part.songTitle;
   const desc = part.costumeName || "衣装不明";
-  const slug =
-    part.kind == "song" ? ALL_SONGS.find((track) => track.name === name)?.slug : undefined;
+  const track = ALL_SONGS.find((track) => track.name === name);
+  const slug = track?.slug;
+  const img = track?.coverArt;
 
   const component = (
-    <div className={clsx("group flex items-center justify-stretch")}>
-      <p className="w-11 flex-none px-3 text-right font-semibold text-gray-400">{n}</p>
-      <div className="w-full min-w-0 flex-1 px-2 py-2">
+    <div className={clsx("group flex items-center justify-stretch gap-2")}>
+      <p className="w-12 flex-none px-3 text-right font-semibold text-gray-400">{n}</p>
+      <div className="flex-none py-2">
+        <div className="flex items-center justify-center overflow-hidden rounded shadow">
+          {img ? (
+            <img className="h-10 w-10 object-cover" src={img} alt={name} />
+          ) : (
+            <div className="flex h-10 w-10 items-center justify-center bg-gray-200">
+              <BsMusicNoteBeamed className="h-5 w-5 flex-none bg-gray-200 text-gray-500" />
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="w-full min-w-0 flex-1 py-2">
         <p className={clsx("line-clamp-1")}>{name}</p>
         <p className="line-clamp-1 text-xs text-gray-400">{desc}</p>
       </div>
@@ -80,6 +91,20 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   }
 };
 
+interface SectionListItemProps {
+  text: string;
+}
+
+const SectionListItem: React.FC<SectionListItemProps> = ({ text }: SectionListItemProps) => {
+  return (
+    <li>
+      <div className="group flex h-14 items-end py-2 pl-2">
+        <p className="line-clamp-1 font-semibold text-gray-600">{text}</p>
+      </div>
+    </li>
+  );
+};
+
 interface SimpleListItemProps {
   text: string;
   subtext: string;
@@ -88,7 +113,7 @@ interface SimpleListItemProps {
 const SimpleListItem: React.FC<SimpleListItemProps> = ({ text, subtext }: SimpleListItemProps) => {
   return (
     <li>
-      <div className={clsx("group pl-11")}>
+      <div className={clsx("group pl-12")}>
         <div className="w-full min-w-0 flex-1 px-2 py-2">
           <p className={clsx("line-clamp-1")}>{text}</p>
           <p className="line-clamp-1 text-xs text-gray-400">{subtext}</p>

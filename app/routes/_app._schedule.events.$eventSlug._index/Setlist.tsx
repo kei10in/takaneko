@@ -19,7 +19,7 @@ export const Setlist: React.FC<Props> = (props: Props) => {
         {title ?? "セットリスト"}
       </h3>
 
-      <div className="pl-4">
+      <div>
         <ul className="divide-y divide-gray-100">
           {setlist.map((part, i) => {
             return <SetlistItem key={i} part={part} />;
