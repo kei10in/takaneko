@@ -14,21 +14,19 @@ export const Setlist: React.FC<Props> = (props: Props) => {
   const { title, setlist, links } = props;
 
   return (
-    <section className="">
-      <h3 className="my-2 pb-1 text-lg leading-tight font-semibold text-gray-500">
+    <section className="my-4">
+      <h3 className="my-2 text-lg leading-tight font-semibold text-gray-500">
         {title ?? "セットリスト"}
       </h3>
 
-      <div>
-        <ul className="divide-y divide-gray-100">
-          {setlist.map((part, i) => {
-            return <SetlistItem key={i} part={part} />;
-          })}
-        </ul>
-      </div>
+      <ul className="divide-y divide-gray-100 pb-4">
+        {setlist.map((part, i) => {
+          return <SetlistItem key={i} part={part} />;
+        })}
+      </ul>
 
       {links.length > 0 && (
-        <p className="mt-4 pl-6 text-xs text-gray-400">
+        <p className="pb-4 pl-6 text-xs text-gray-400">
           出典:{" "}
           <Link
             className="text-nadeshiko-600"
