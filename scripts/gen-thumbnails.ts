@@ -55,6 +55,7 @@ const main = async () => {
     "./public/takaneko/media/**/*",
   ];
   const matchFiles = globSync(targetGlobs, { nodir: true }).filter(
+    // Filter しないと無限に増えていく。
     (filepath) => !isThumbnail(filepath),
   );
 
