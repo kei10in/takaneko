@@ -26,6 +26,10 @@ export const 可愛くてごめん: SongMetaDescriptor = {
       videoId: "oB12TDu4dVE",
     },
     {
+      text: "LIVE",
+      videoId: "https://www.youtube.com/watch?v=_ICAYT8antM",
+    },
+    {
       text: "ちゅーたん",
       videoId: "https://www.youtube.com/watch?v=K4xLi8IF1FM",
     },
