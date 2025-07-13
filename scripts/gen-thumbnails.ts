@@ -2,7 +2,7 @@ import { globSync } from "glob";
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
-import { thumbnails } from "~/utils/fileConventions";
+import { isThumbnail, thumbnails } from "~/utils/fileConventions";
 
 const isImage = async (filepath: string): Promise<boolean> => {
   try {
@@ -54,7 +54,9 @@ const main = async () => {
     "./public/takaneko/live-goods/**/*",
     "./public/takaneko/media/**/*",
   ];
-  const matchFiles = globSync(targetGlobs, { nodir: true });
+  const matchFiles = globSync(targetGlobs, { nodir: true }).filter(
+    (filepath) => !isThumbnail(filepath),
+  );
 
   const promises = matchFiles.map(async (filepath) => await processFile(filepath));
 

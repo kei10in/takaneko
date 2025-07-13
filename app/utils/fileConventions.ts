@@ -10,11 +10,12 @@ export const thumbnailSrcSet = (filepath: string): { src: string; srcset: string
 export const thumbnails = (filepath: string): [string, string, string] => {
   const i = filepath.lastIndexOf(".");
   const prefix = filepath.substring(0, i);
+  const [_, category, ...rest] = prefix.split("/");
 
   return [
-    `/thumbnails${prefix}@1x.webp`,
-    `/thumbnails${prefix}@2x.webp`,
-    `/thumbnails${prefix}@3x.webp`,
+    `/${category}/thumbnails/${rest.join("/")}@1x.webp`,
+    `/${category}/thumbnails/${rest.join("/")}@2x.webp`,
+    `/${category}/thumbnails/${rest.join("/")}@3x.webp`,
   ];
 };
 
