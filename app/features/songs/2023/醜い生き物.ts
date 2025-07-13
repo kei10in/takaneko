@@ -13,7 +13,6 @@ export const 醜い生き物: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

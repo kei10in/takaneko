@@ -13,10 +13,8 @@ export const 美しく生きろ: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/美しく生きろ.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_nvfOlQSHVkDfWhQUnMT4fZn3q_IXZQZlw",
-  },
+  coverArt: "/takaneko/songs/2024/美しく生きろ.webp",
+
   officialSite: "",
   youtube: [
     {

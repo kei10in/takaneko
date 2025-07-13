@@ -13,10 +13,8 @@ export const 推しの魔法: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/推しの魔法.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kvMBZ2l6cab-TahAwJ6fN4gMXmmVNNgC0",
-  },
+  coverArt: "/takaneko/songs/2024/推しの魔法.webp",
+
   officialSite: "",
   youtube: [
     {

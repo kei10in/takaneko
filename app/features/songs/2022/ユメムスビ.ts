@@ -13,10 +13,9 @@ export const ユメムスビ: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2022/ユメムスビ.jpg",
-    ref: "https://magazine.tunecore.co.jp/newrelease/249134/",
-  },
+  // https://magazine.tunecore.co.jp/newrelease/249134/
+  coverArt: "/takaneko/songs/2022/ユメムスビ.jpg",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1127",
   youtube: [
     {

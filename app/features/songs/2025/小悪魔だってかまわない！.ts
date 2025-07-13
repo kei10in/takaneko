@@ -13,10 +13,8 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2025/小悪魔だってかまわない！.webp",
-    ref: "https://www.youtube.com/watch?v=OZycs0TBwKY",
-  },
+  coverArt: "/takaneko/songs/2025/小悪魔だってかまわない！.webp",
+
   officialSite: "",
   youtube: [
     {

@@ -13,7 +13,6 @@ export const ラブホイッスル: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

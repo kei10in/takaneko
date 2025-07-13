@@ -13,10 +13,8 @@ export const メランコリックハニー: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "",
-    ref: "",
-  },
+  coverArt: "/takaneko/songs/2025/メランコリックハニー.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=3690",
   youtube: [
     {

@@ -13,10 +13,8 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/ヒロインは平均以下。.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_l5od607_pYTfsL8pAtyBWD0_B2HQkMBQo",
-  },
+  coverArt: "/takaneko/songs/2023/ヒロインは平均以下。.webp",
+
   officialSite: "",
   youtube: [
     {

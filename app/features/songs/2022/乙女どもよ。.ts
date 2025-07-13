@@ -13,10 +13,8 @@ export const 乙女どもよ: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2022/乙女どもよ。.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kjp4x_1Tp8OLiQNMpFdPbOxwL3ZrBteBQ",
-  },
+  coverArt: "/takaneko/songs/2022/乙女どもよ。.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1147",
   youtube: [
     {

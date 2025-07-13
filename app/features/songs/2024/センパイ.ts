@@ -14,10 +14,8 @@ export const センパイ: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/センパイ.webp",
-    ref: "https://music.youtube.com/watch?v=HwSVyD1Vs8M",
-  },
+  coverArt: "/takaneko/songs/2024/センパイ.webp",
+
   officialSite: "",
   youtube: [
     {

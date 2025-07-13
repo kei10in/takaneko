@@ -13,7 +13,6 @@ export const 今好きになる: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

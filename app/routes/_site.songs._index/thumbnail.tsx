@@ -23,18 +23,6 @@ export const Thumbnail: React.FC<Props> = (props: Props) => {
     );
   }
 
-  if (track.image != undefined) {
-    return (
-      <img
-        src={track.image.path}
-        alt={track.name}
-        width={160}
-        height={90}
-        className="bg-nadeshiko-100 text-nadeshiko-600 h-[5.625rem] w-40 object-contain text-xs"
-      />
-    );
-  }
-
   return (
     <div className="flex h-[5.625rem] w-40 items-center justify-center bg-gray-100">
       <BsMusicNoteBeamed className="h-12 w-12 text-gray-300" />

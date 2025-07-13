@@ -13,10 +13,8 @@ export const 決戦スピリット: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/決戦スピリット.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kDbb60uPjNKahdGdJYCIjvob6ecA0Twfc",
-  },
+  coverArt: "/takaneko/songs/2023/決戦スピリット.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1365",
   youtube: [
     {

@@ -13,10 +13,8 @@ export const メイド至上主義: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/メイド☆至上主義.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_m0nQUSFq1L9uXO_kh1PBVfF9OczxzfayE",
-  },
+  coverArt: "/takaneko/songs/2024/メイド☆至上主義.webp",
+
   officialSite: "",
   youtube: [
     {

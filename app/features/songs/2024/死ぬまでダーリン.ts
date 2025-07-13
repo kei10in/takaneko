@@ -13,7 +13,6 @@ export const 死ぬまでダーリン: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

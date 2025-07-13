@@ -13,10 +13,8 @@ export const 男の子の目的は何: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/男の子の目的は何？.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_mlLqFFUp5Y4NLGxUQqX_repxjVM7LjJ0w",
-  },
+  coverArt: "/takaneko/songs/2023/男の子の目的は何？.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1150",
   youtube: [
     {

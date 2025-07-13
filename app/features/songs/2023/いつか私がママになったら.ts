@@ -13,10 +13,8 @@ export const いつか私がママになったら: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/いつか私がママになったら.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_mHBzBlAjaqHqKLVjjELA_h2SP6ut2IgRA",
-  },
+  coverArt: "/takaneko/songs/2023/いつか私がママになったら.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1432",
   youtube: [
     {

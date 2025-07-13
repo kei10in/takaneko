@@ -1,5 +1,4 @@
 import { MemberName } from "~/features/profile/members";
-import { ImageDescription } from "~/utils/types/ImageDescription";
 
 export interface SongMetaDescriptor {
   slug: string;
@@ -13,7 +12,8 @@ export interface SongMetaDescriptor {
 
   tags?: SongTag[] | undefined;
 
-  image?: ImageDescription | undefined;
+  coverArt?: string;
+
   featuredMembers?: MemberName[] | undefined;
   officialSite?: string | undefined;
   youtube?: { text: string; videoId: string }[] | undefined;

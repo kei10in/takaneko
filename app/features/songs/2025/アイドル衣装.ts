@@ -13,10 +13,8 @@ export const アイドル衣装: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "",
-    ref: "",
-  },
+  coverArt: "/takaneko/songs/2025/アイドル衣装.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=3841",
   youtube: [
     {

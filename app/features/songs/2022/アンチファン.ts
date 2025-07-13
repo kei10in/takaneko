@@ -13,10 +13,8 @@ export const アンチファン: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2022/アンチファン.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_lSX4Q5WolLt7NE-ZcO07sXHUXm6M80gRk",
-  },
+  coverArt: "/takaneko/songs/2022/アンチファン.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1127",
   youtube: [
     {

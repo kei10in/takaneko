@@ -13,7 +13,6 @@ export const ファンサ: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: undefined,
   officialSite: undefined,
   youtube: [
     {

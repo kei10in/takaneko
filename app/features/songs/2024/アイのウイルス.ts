@@ -13,7 +13,6 @@ export const アイのウイルス: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

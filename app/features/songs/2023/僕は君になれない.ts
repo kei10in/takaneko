@@ -13,10 +13,8 @@ export const 僕は君になれない: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/僕は君になれない.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_mo_iUFuDGql0SBVVhOzFRVcTXj6A-IjHE",
-  },
+  coverArt: "/takaneko/songs/2023/僕は君になれない.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1157",
   youtube: [
     {

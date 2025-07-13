@@ -13,10 +13,8 @@ export const 女の子は強い: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2022/女の子は強い.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kMpY4ZBQDnp1oUuNK2c8ihEOqUeWyjG0U",
-  },
+  coverArt: "/takaneko/songs/2022/女の子は強い.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1133",
   youtube: [
     {

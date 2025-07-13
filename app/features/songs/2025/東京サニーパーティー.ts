@@ -13,7 +13,6 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
 
   tags: [Unperformed],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

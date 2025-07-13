@@ -13,10 +13,8 @@ export const 可愛いって言われたい: SongMetaDescriptor = {
 
   tags: [Original, Repertoire, UnitSong],
 
-  image: {
-    path: "/takaneko/songs/2024/可愛いって言われたい.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_l6496om0ThZZVdZsD-u7lbB2Pp2ck9FSo",
-  },
+  coverArt: "/takaneko/songs/2024/可愛いって言われたい.webp",
+
   officialSite: "",
   youtube: [
     {

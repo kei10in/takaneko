@@ -13,7 +13,6 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {

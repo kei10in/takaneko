@@ -13,10 +13,8 @@ export const 革命の女王: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/革命の女王.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_mGItdMe0NrxmmxQuO5dtAa_aHNzwA2R2A",
-  },
+  coverArt: "/takaneko/songs/2023/革命の女王.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1154",
   youtube: [
     {

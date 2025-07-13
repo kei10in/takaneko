@@ -13,7 +13,6 @@ export const シス_ラブ: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

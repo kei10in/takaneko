@@ -13,7 +13,6 @@ export const No1: SongMetaDescriptor = {
 
   tags: [Unperformed],
 
-  image: undefined,
   officialSite: "https://example.com", // Added official site
   youtube: [
     {

@@ -13,10 +13,8 @@ export const CuteForLife: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2025/Cute for life.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_lBvE2GoZprXRl5YYNOOED0igtrhvOzzUs",
-  },
+  coverArt: "/takaneko/songs/2025/Cute for life.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=3693",
   youtube: [
     {

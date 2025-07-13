@@ -13,7 +13,6 @@ export const 初恋の絵本: SongMetaDescriptor = {
 
   tags: [Unperformed],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

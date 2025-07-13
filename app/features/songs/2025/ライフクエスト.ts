@@ -13,10 +13,8 @@ export const ライフクエスト: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "",
-    ref: "",
-  },
+  coverArt: "/takaneko/songs/2025/ライフクエスト.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=3887",
   youtube: [
     {

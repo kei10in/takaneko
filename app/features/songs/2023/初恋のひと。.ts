@@ -13,10 +13,8 @@ export const 初恋のひと: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/初恋のひと。.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_nhU2NNahXiYsPcBVaP1YJDP8NPTD17XDQ",
-  },
+  coverArt: "/takaneko/songs/2023/初恋のひと。.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1160",
   youtube: [
     {

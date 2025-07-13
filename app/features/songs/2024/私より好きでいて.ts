@@ -13,10 +13,8 @@ export const 私より好きでいて: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/私より好きでいて.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_nxBkFIvRxozxbdCX0KpQfZzB6EiTyVZ-4",
-  },
+  coverArt: "/takaneko/songs/2024/私より好きでいて.webp",
+
   officialSite: "",
   youtube: [
     {

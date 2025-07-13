@@ -13,10 +13,8 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/I’M YOUR IDOL.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_nE_vY6r79eTWtZfSf42nEMxi1rlwBDy4o",
-  },
+  coverArt: "/takaneko/songs/2024/I’M YOUR IDOL.webp",
+
   officialSite: "",
   youtube: [
     {

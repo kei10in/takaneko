@@ -13,7 +13,6 @@ export const 私が恋を知る日: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

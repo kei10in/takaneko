@@ -13,10 +13,8 @@ export const モテチェン: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2024/モテチェン！.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_l9ln5Wh9kbxHveqpKGQr10RSaMmI867B8",
-  },
+  coverArt: "/takaneko/songs/2024/モテチェン！.webp",
+
   officialSite: "",
   youtube: [
     {

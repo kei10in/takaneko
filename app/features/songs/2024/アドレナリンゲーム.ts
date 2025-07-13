@@ -13,7 +13,8 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: undefined,
+  coverArt: "/takaneko/songs/2024/アドレナリンゲーム.webp",
+
   officialSite: "",
   youtube: [
     {

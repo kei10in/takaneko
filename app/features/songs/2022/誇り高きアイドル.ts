@@ -13,7 +13,6 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: undefined,
   officialSite: undefined,
   youtube: [
     {

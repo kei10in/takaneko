@@ -13,10 +13,8 @@ export const 私は怪物: SongMetaDescriptor = {
 
   tags: [Original, Repertoire, UnitSong],
 
-  image: {
-    path: "/takaneko/songs/2024/私は怪物.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_mHcO6RZqt7_YlZWgJqufOmT0CLt-7Lk_8",
-  },
+  coverArt: "/takaneko/songs/2024/私は怪物.webp",
+
   officialSite: "",
   youtube: [
     {

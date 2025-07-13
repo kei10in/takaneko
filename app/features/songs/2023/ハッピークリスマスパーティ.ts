@@ -13,7 +13,6 @@ export const ハッピークリスマスパーティ: SongMetaDescriptor = {
 
   tags: [Limited],
 
-  image: undefined,
   officialSite: "",
   youtube: [
     {

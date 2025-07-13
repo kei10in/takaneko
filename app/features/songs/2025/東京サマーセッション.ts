@@ -10,7 +10,6 @@ export const 東京サマーセッション: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
-  image: undefined,
   youtube: [
     {
       text: "瀬戸口優・榎本夏樹・望月蒼太・早坂あかり・芹沢春輝・合田美桜",

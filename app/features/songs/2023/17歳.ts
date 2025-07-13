@@ -13,10 +13,8 @@ export const _17歳: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: {
-    path: "/takaneko/songs/2023/17歳.webp",
-    ref: "https://music.youtube.com/playlist?list=OLAK5uy_kNBe5Ja7U4DDaJxxX0AKDV5IjysIaI4Fs",
-  },
+  coverArt: "/takaneko/songs/2023/17歳.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {

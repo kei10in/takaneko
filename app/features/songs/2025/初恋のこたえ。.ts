@@ -13,10 +13,8 @@ export const 初恋のこたえ: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
-  image: {
-    path: "",
-    ref: "",
-  },
+  coverArt: "/takaneko/songs/2025/初恋のこたえ.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=3887",
   youtube: [
     {

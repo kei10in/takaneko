@@ -13,7 +13,6 @@ export const 超絶かわいい: SongMetaDescriptor = {
 
   tags: [TakanekoVersion, Repertoire],
 
-  image: undefined,
   officialSite: undefined,
   youtube: [
     {
