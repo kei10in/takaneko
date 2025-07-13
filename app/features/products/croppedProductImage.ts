@@ -5,8 +5,8 @@ import { stem } from "~/utils/string";
  * 実寸: 89mm x 127mm
  */
 export const CROPPED_PHOTO_SIZE = {
-  width: 356,
-  height: 508,
+  width: 267,
+  height: 381,
 };
 
 /**
@@ -14,8 +14,8 @@ export const CROPPED_PHOTO_SIZE = {
  * 実寸: 54mm x 86mm
  */
 export const CROPPED_MINI_PHOTO_CARD_SIZE = {
-  width: 324,
-  height: 516,
+  width: 216,
+  height: 344,
 };
 
 export const croppedImagePath = (imagePath: string, id: number) => {

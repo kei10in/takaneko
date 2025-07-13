@@ -24,7 +24,12 @@ export const getOutputImageSize = (photo: RandomGoods, pos: ImagePosition) => {
   } else if (isRegularTakanekoMiniPhotoCard(photo)) {
     return CROPPED_MINI_PHOTO_CARD_SIZE;
   } else {
-    return { width: pos.width, height: pos.height };
+    const targetWidth = 214;
+    if (pos.width < targetWidth) {
+      return { width: pos.width, height: pos.height };
+    }
+    const targetHeight = Math.floor(pos.height * (targetWidth / pos.width));
+    return { width: targetWidth, height: targetHeight };
   }
 };
 
