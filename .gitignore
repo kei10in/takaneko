@@ -1,8 +1,6 @@
 ## 自動生成ファイル
 public/calendar*.ics
 public/sitemap.xml
-public/thumbnails/
-public/takaneko/cropped/
 
 ## React router
 .react-router/
