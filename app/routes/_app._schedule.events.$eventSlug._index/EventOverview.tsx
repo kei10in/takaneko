@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { BsCart3, BsClock } from "react-icons/bs";
 import { Link } from "react-router";
 
 interface Props {
@@ -22,52 +23,68 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
   const parsedTimeSlot = parseTimeSlot(timeSlot);
 
   return (
-    <section>
-      <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
-        イベント概要
-      </h2>
+    <Fragment>
+      <section>
+        <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+          イベント概要
+        </h2>
 
-      <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-        {parsedTimeSlot.length > 0 && (
-          <li className="my-0 marker:text-gray-400">
-            <p className="mt-0 mb-2 text-base leading-snug">
-              <strong className="font-semibold">出演時間:</strong>
-              {parsedTimeSlot.length == 1 && parsedTimeSlot[0]}
-              {parsedTimeSlot.length == 2 && (
-                <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-                  {parsedTimeSlot.map((slot, index) => (
-                    <li key={index} className="my-0 marker:text-gray-400">
-                      {slot}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </p>
-          </li>
-        )}
+        <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
+          {parsedTimeSlot.length > 0 && (
+            <li className="my-0 marker:text-gray-400">
+              <p className="mt-0 mb-2 text-base leading-snug">
+                <strong className="font-semibold">出演時間:</strong>
+                {parsedTimeSlot.length == 1 && parsedTimeSlot[0]}
+                {parsedTimeSlot.length == 2 && (
+                  <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
+                    {parsedTimeSlot.map((slot, index) => (
+                      <li key={index} className="my-0 marker:text-gray-400">
+                        {slot}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </p>
+            </li>
+          )}
 
-        {timetable != undefined && (
-          <li className="my-0 marker:text-gray-400">
-            <p className="mt-0 mb-2 text-base leading-snug">
-              <strong className="font-semibold">タイムテーブル:</strong>
-            </p>
-            <p className="mt-0 mb-2 text-center text-base leading-snug">
-              <Link className="text-nadeshiko-950" to="#timetable" preventScrollReset>
-                <img className="inline w-60 max-w-xs" src={timetable.path} alt="タイムテーブル" />
-              </Link>
-            </p>
-          </li>
-        )}
+          {timetable != undefined && (
+            <li className="my-0 marker:text-gray-400">
+              <p className="mt-0 mb-2 text-base leading-snug">
+                <strong className="font-semibold">タイムテーブル:</strong>
+              </p>
+              <p className="mt-0 mb-2 text-center text-base leading-snug">
+                <Link className="text-nadeshiko-950" to="#timetable" preventScrollReset>
+                  <img className="inline w-60 max-w-xs" src={timetable.path} alt="タイムテーブル" />
+                </Link>
+              </p>
+            </li>
+          )}
+        </ul>
+      </section>
 
-        {showMerchandise(goods) && (
-          <li className="my-0 marker:text-gray-400">
-            <p className="mt-0 mb-2 text-base leading-snug">
-              <strong className="font-semibold">物販:</strong>
+      {showMerchandise(goods) && (
+        <section>
+          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+            物販情報
+          </h2>
+
+          <div className="mt-0 mb-2 flex items-center gap-2 px-1">
+            <BsClock className="text-gray-400" />
+
+            <p className="text-base leading-snug">
               {goods?.time?.length == 1 && ` ${goods.time[0]} 〜`}
               {goods?.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
             </p>
+          </div>
 
-            {goods?.lineup instanceof Array && (
+          {goods?.lineup instanceof Array && (
+            <div>
+              <div className="mt-0 mb-2 flex items-center gap-2 px-1">
+                <BsCart3 className="text-gray-400" />
+                <p className="text-base leading-snug">ラインナップ</p>
+              </div>
+
               <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
                 {goods.lineup.map((lineup, i) => (
                   <li key={i} className="my-0 marker:text-gray-400">
@@ -75,19 +92,25 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
                   </li>
                 ))}
               </ul>
-            )}
+            </div>
+          )}
 
-            {goods?.url && (
-              <p className="mt-0 mb-2 truncate text-base leading-snug">
-                <Link className="text-nadeshiko-950" to={goods.url}>
-                  {goods.url}
-                </Link>
-              </p>
-            )}
-          </li>
-        )}
-      </ul>
-    </section>
+          {goods?.url && (
+            <p className="pt-2 pb-4 pl-2 text-xs text-gray-400">
+              出典:{" "}
+              <Link
+                className="text-nadeshiko-600"
+                to={goods.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {goods.url}
+              </Link>
+            </p>
+          )}
+        </section>
+      )}
+    </Fragment>
   );
 };
 
