@@ -119,13 +119,10 @@ import { 超NATSUZOME2025限定カード } from "./2025/2025-07-06_超NATSUZOME2
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
-  超NATSUZOME2025限定カード,
-  LARME高嶺のなでしこ_ミニフォト,
-  LARME高嶺のなでしこ_ステッカー,
-  SpringRide広州上海_生写真,
   ROUND1_コラボキャンペーン_オリジナルコースター,
   ROUND1_コラボキャンペーン_オリジナルステッカー,
-  ROUND1_コラボキャンペーン_オリジナルしおり,
+  アイドル衣装_生写真,
+  アイドル衣装_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
