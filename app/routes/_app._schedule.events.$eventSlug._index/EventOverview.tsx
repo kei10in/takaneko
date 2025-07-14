@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router";
 
 interface Props {
-  ticket?: string | undefined;
   timeSlot?: [string] | [string, string] | [string, string][] | undefined;
   timetable?: { path: string; ref: string } | undefined;
-  streaming?: { text: string; url: string } | undefined;
   goods?:
     | {
         time?: [string] | [string, string] | undefined;
@@ -16,14 +14,8 @@ interface Props {
 }
 
 export const EventDetails: React.FC<Props> = (props: Props) => {
-  const { ticket, timeSlot, timetable, streaming, goods } = props;
-  if (
-    (ticket == undefined || ticket == "") &&
-    timeSlot == undefined &&
-    timetable == undefined &&
-    streaming == undefined &&
-    !showMerchandise(goods)
-  ) {
+  const { timeSlot, timetable, goods } = props;
+  if (timeSlot == undefined && timetable == undefined && !showMerchandise(goods)) {
     return null;
   }
 
@@ -36,22 +28,6 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       </h2>
 
       <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-        {ticket != undefined && ticket != "" && (
-          <li className="my-0 marker:text-gray-400">
-            <p className="mt-0 mb-2 text-base leading-snug">
-              <Link to={ticket}>🎫チケット</Link>
-            </p>
-          </li>
-        )}
-
-        {streaming != undefined && (
-          <li className="my-0 marker:text-gray-400">
-            <p className="mt-0 mb-2 text-base leading-snug">
-              <strong>配信:</strong> <Link to={streaming.url}>{streaming.text}</Link>
-            </p>
-          </li>
-        )}
-
         {parsedTimeSlot.length > 0 && (
           <li className="my-0 marker:text-gray-400">
             <p className="mt-0 mb-2 text-base leading-snug">

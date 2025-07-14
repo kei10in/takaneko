@@ -2,6 +2,7 @@ import { Dialog, DialogPanel } from "@headlessui/react";
 import { useMemo } from "react";
 import {
   BsBoxArrowUpRight,
+  BsBroadcast,
   BsCalendar,
   BsCalendar3,
   BsDoorOpen,
@@ -9,6 +10,7 @@ import {
   BsPersonFill,
   BsPersonFillSlash,
   BsPinMap,
+  BsTicketPerforated,
 } from "react-icons/bs";
 import {
   Link,
@@ -168,6 +170,37 @@ export default function EventPage() {
               </div>
             </Link>
           )}
+          {meta.overview?.ticket && (
+            <Link className="block" to={meta.overview.ticket} target="_blank" rel="noreferrer">
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <BsTicketPerforated className="text-gray-400" />
+                </span>
+                <span className="text-nadeshiko-900">チケット</span>
+                <span>
+                  <BsBoxArrowUpRight className="text-gray-400" />
+                </span>
+              </div>
+            </Link>
+          )}
+          {meta.overview?.streaming && (
+            <Link
+              className="block"
+              to={meta.overview.streaming.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <BsBroadcast className="text-gray-400" />
+                </span>
+                <span className="text-nadeshiko-900">{meta.overview.streaming.text}</span>
+                <span>
+                  <BsBoxArrowUpRight className="text-gray-400" />
+                </span>
+              </div>
+            </Link>
+          )}
 
           {meta.present != undefined && meta.present.length != 0 && (
             <div className="flex items-center gap-1 px-5">
@@ -204,10 +237,8 @@ export default function EventPage() {
         <EventRecap recaps={meta.recaps} />
 
         <EventDetails
-          ticket={meta.overview?.ticket}
           timeSlot={meta.overview?.timeSlot}
           timetable={meta.overview?.timetable}
-          streaming={meta.overview?.streaming}
           goods={meta.overview?.goods}
         />
 
