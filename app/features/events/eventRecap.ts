@@ -35,7 +35,13 @@ export const isEmptyEventRecap = (recap: EventRecap): boolean => {
   const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
   const isSetlistEmpty = recap.setlist.length === 0;
 
-  return isTitleEmpty && isSetlistEmpty;
+  return (
+    isTitleEmpty &&
+    recap.open == undefined &&
+    recap.start == undefined &&
+    recap.description == undefined &&
+    isSetlistEmpty
+  );
 };
 
 export const validateEventRecapDescription = (

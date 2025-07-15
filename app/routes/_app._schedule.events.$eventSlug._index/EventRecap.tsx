@@ -19,17 +19,12 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
         開催内容
       </h2>
 
-      {recaps?.map(({ title, open, start, end, description, setlist, links }, i) => {
-        if (
-          title == undefined &&
-          open == undefined &&
-          start == undefined &&
-          description == undefined &&
-          setlist.length == 0 &&
-          links.length == 0
-        ) {
+      {recaps?.map((recap, i) => {
+        if (isEmptyEventRecap(recap)) {
           return null;
         }
+
+        const { title, open, start, end, description, setlist, links } = recap;
 
         return (
           <section key={i}>
@@ -37,7 +32,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
               <h3 className="my-2 text-lg leading-tight font-semibold text-gray-700">{title}</h3>
             )}
 
-            {open && start && (
+            {(open || start) && (
               <div className="flex items-center gap-4">
                 {open && (
                   <p>
@@ -66,7 +61,7 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
 
             {description && <p className="my-3 text-base leading-snug">{description}</p>}
 
-            <Setlist setlist={setlist} links={links} />
+            {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
           </section>
         );
       })}
