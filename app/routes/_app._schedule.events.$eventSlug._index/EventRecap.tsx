@@ -26,6 +26,17 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
 
         const { title, open, start, end, description, setlist, links } = recap;
 
+        const startTitle =
+          open && start && end
+            ? "公演時間" // 多分、主催系の二部構成
+            : !open && start && end
+              ? "出演時間" // 多分、対バンかフェス
+              : open && start && !end
+                ? "開演時間" // 多分、主催系の二部構成
+                : !open && start && !end
+                  ? "開演時間" // 多分ない
+                  : "";
+
         return (
           <section key={i}>
             {title && (
@@ -36,23 +47,17 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
               <div className="flex items-center gap-4">
                 {open && (
                   <p>
-                    <strong className="font-semibold text-gray-500">開場:</strong>{" "}
+                    <strong className="font-semibold text-gray-500">開場時間:</strong>{" "}
                     <span>{open}</span>
                   </p>
                 )}
 
-                {start && !end && (
+                {start && (
                   <p>
-                    <strong className="font-semibold text-gray-500">開演:</strong>{" "}
-                    <span>{start}</span>
-                  </p>
-                )}
-
-                {start && end && (
-                  <p>
-                    <strong className="font-semibold text-gray-500">公演:</strong>{" "}
+                    <strong className="font-semibold text-gray-500">{startTitle}:</strong>{" "}
                     <span>
-                      {start} 〜 {end}
+                      {start}
+                      {end && ` 〜 ${end}`}
                     </span>
                   </p>
                 )}
