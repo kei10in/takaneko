@@ -1,0 +1,8 @@
+import { EventMetaDescriptor } from "../../meta";
+import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
+
+export const meta: EventMetaDescriptor = convertPublicationToEventMeta();
+
+export const Content = () => {};
+
+export default Content;
