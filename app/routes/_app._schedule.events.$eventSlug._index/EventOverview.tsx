@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { BsCart3, BsClock } from "react-icons/bs";
+import { BsBoxArrowUpRight, BsCart3, BsClock } from "react-icons/bs";
 import { Link } from "react-router";
 
 interface Props {
@@ -21,26 +21,32 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
 
   return (
     <Fragment>
-      <section>
-        <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
-          イベント概要
-        </h2>
+      {timetable != undefined && (
+        <section>
+          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+            タイムテーブル
+          </h2>
 
-        <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-          {timetable != undefined && (
-            <li className="my-0 marker:text-gray-400">
-              <p className="mt-0 mb-2 text-base leading-snug">
-                <strong className="font-semibold">タイムテーブル:</strong>
-              </p>
-              <p className="mt-0 mb-2 text-center text-base leading-snug">
-                <Link className="text-nadeshiko-950" to="#timetable" preventScrollReset>
-                  <img className="inline w-60 max-w-xs" src={timetable.path} alt="タイムテーブル" />
-                </Link>
-              </p>
-            </li>
-          )}
-        </ul>
-      </section>
+          <div className="mx-auto mt-0 mb-2 w-60 max-w-xs overflow-hidden">
+            <div className="w-full">
+              <Link className="text-nadeshiko-950 block" to="#timetable" preventScrollReset>
+                <img className="inline w-full" src={timetable.path} alt="タイムテーブル" />
+              </Link>
+            </div>
+            <p className="w-full p-1 text-right text-xs text-gray-600">
+              <Link
+                className="text-nadeshiko-600 inline-flex items-center gap-1"
+                to={timetable.ref}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>画像引用元</span>
+                <BsBoxArrowUpRight />
+              </Link>
+            </p>
+          </div>
+        </section>
+      )}
 
       {showMerchandise(goods) && (
         <section>
