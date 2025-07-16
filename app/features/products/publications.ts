@@ -66,6 +66,7 @@ import {
   Zipper_2025年春号,
 } from "./publications/Zipper";
 import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
+import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka";
 import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
 import { 日経エンタテインメント_2024年2月号 } from "./publications/日経エンタテイメント";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
@@ -150,6 +151,7 @@ const publications: Publication[] = [
   松本ももな_SweetDateTime,
   籾山ひめり_木漏れ日,
   グラビアンエイジ_VOL2,
+  シティ情報Fukuoka_2025年8月号,
   モデルプレスカウントダウンマガジン_vol10,
 ];
 
