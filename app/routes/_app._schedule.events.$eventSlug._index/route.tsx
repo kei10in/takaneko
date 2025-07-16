@@ -236,11 +236,7 @@ export default function EventPage() {
       <article className="mb-4 max-w-none px-4">
         <EventRecap recaps={meta.recaps} />
 
-        <EventDetails
-          timeSlot={meta.overview?.timeSlot}
-          timetable={meta.overview?.timetable}
-          goods={meta.overview?.goods}
-        />
+        <EventDetails timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
 
         <Mdx Content={Content} />
 

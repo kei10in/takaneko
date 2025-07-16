@@ -5,6 +5,13 @@ import { parseSetlist, StagePart } from "./setlist";
 
 export const EventRecapDescription = z.object({
   title: z.string().optional(),
+
+  open: z.string().optional(),
+  start: z.string().optional(),
+  end: z.string().optional(),
+
+  description: z.string().optional(),
+
   setlist: z.array(z.string()).optional(),
 
   // みくるんの #たかねこセトリを指定します。
@@ -16,6 +23,10 @@ type EventRecapDescription = z.infer<typeof EventRecapDescription>;
 
 export interface EventRecap {
   title?: string | undefined;
+  open?: string | undefined;
+  start?: string | undefined;
+  end?: string | undefined;
+  description?: string | undefined;
   setlist: StagePart[];
   links: LinkDescription[];
 }
@@ -24,7 +35,13 @@ export const isEmptyEventRecap = (recap: EventRecap): boolean => {
   const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
   const isSetlistEmpty = recap.setlist.length === 0;
 
-  return isTitleEmpty && isSetlistEmpty;
+  return (
+    isTitleEmpty &&
+    recap.open == undefined &&
+    recap.start == undefined &&
+    recap.description == undefined &&
+    isSetlistEmpty
+  );
 };
 
 export const validateEventRecapDescription = (
@@ -37,7 +54,7 @@ export const validateEventRecapDescription = (
   const recaps = Array.isArray(data) ? data : [data];
 
   return recaps.flatMap((recap) => {
-    const { title, url, links } = recap;
+    const { title, open, start, end, description, url, links } = recap;
 
     //
     // Validate setlist field
@@ -67,6 +84,9 @@ export const validateEventRecapDescription = (
 
     if (
       title == undefined &&
+      open == undefined &&
+      start == undefined &&
+      description == undefined &&
       validatedSetlist.length === 0 &&
       linkDescriptionsForUrl.length === 0 &&
       validatedLinks.length === 0
@@ -77,6 +97,10 @@ export const validateEventRecapDescription = (
     return [
       {
         title,
+        open: open,
+        start: start,
+        end: end,
+        description: description,
         setlist: validatedSetlist,
         links: [...linkDescriptionsForUrl, ...validatedLinks],
       },

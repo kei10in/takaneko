@@ -5,19 +5,16 @@ import { LinkDescription } from "~/utils/types/LinkDescription";
 import { SetlistItem } from "./SetlistItem";
 
 interface Props {
-  title?: string | undefined;
   setlist: StagePart[];
   links: LinkDescription[];
 }
 
 export const Setlist: React.FC<Props> = (props: Props) => {
-  const { title, setlist, links } = props;
+  const { setlist, links } = props;
 
   return (
     <section className="my-4">
-      <h3 className="my-2 text-lg leading-tight font-semibold text-gray-500">
-        {title ?? "セットリスト"}
-      </h3>
+      <h4 className="my-2 leading-tight font-bold text-gray-500">セットリスト</h4>
 
       <ul className="divide-y divide-gray-100 pb-4">
         {setlist.map((part, i) => {

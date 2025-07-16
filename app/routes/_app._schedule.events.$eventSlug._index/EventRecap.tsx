@@ -19,12 +19,56 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
         開催内容
       </h2>
 
-      {recaps?.map(({ title, setlist, links }, i) => {
-        if (title == undefined && setlist.length == 0 && links.length == 0) {
+      {recaps?.map((recap, i) => {
+        if (isEmptyEventRecap(recap)) {
           return null;
         }
 
-        return <Setlist key={i} title={title} setlist={setlist} links={links} />;
+        const { title, open, start, end, description, setlist, links } = recap;
+
+        const startTitle =
+          open && start && end
+            ? "公演時間" // 多分、主催系の二部構成
+            : !open && start && end
+              ? "出演時間" // 多分、対バンかフェス
+              : open && start && !end
+                ? "開演時間" // 多分、主催系の二部構成
+                : !open && start && !end
+                  ? "開演時間" // 多分ない
+                  : "";
+
+        return (
+          <section key={i}>
+            {title && (
+              <h3 className="my-2 text-lg leading-tight font-semibold text-gray-700">{title}</h3>
+            )}
+
+            {(open || start) && (
+              <div className="flex items-center gap-4">
+                {open && (
+                  <p>
+                    <strong className="font-semibold text-gray-500">開場時間:</strong>{" "}
+                    <span>{open}</span>
+                  </p>
+                )}
+
+                {start && (
+                  <p>
+                    <strong className="font-semibold text-gray-500">{startTitle}:</strong>{" "}
+                    <span>
+                      {start}
+                      {end && ` 〜 ${end}`}
+                    </span>
+                  </p>
+                )}
+              </div>
+            )}
+
+            {description && <p className="my-3 text-base leading-snug">{description}</p>}
+
+            {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
+          </section>
+        );
       })}
     </section>
   );
