@@ -12,13 +12,6 @@ import { ShowNotes, ShowNotesDescription, validateShowNotes } from "./showNotes"
 const EventOverview = z.object({
   // チケット販売サイトの URL を指定します。
   ticket: z.string().optional(),
-  timeSlot: z
-    .union([
-      z.tuple([z.string()]),
-      z.tuple([z.string(), z.string()]),
-      z.array(z.tuple([z.string(), z.string()])),
-    ])
-    .optional(),
   timetable: ImageDescription.optional(),
   goods: z
     .object({

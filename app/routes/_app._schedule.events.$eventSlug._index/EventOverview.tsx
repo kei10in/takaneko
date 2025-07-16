@@ -3,7 +3,6 @@ import { BsCart3, BsClock } from "react-icons/bs";
 import { Link } from "react-router";
 
 interface Props {
-  timeSlot?: [string] | [string, string] | [string, string][] | undefined;
   timetable?: { path: string; ref: string } | undefined;
   goods?:
     | {
@@ -15,12 +14,10 @@ interface Props {
 }
 
 export const EventDetails: React.FC<Props> = (props: Props) => {
-  const { timeSlot, timetable, goods } = props;
-  if (timeSlot == undefined && timetable == undefined && !showMerchandise(goods)) {
+  const { timetable, goods } = props;
+  if (timetable == undefined && !showMerchandise(goods)) {
     return null;
   }
-
-  const parsedTimeSlot = parseTimeSlot(timeSlot);
 
   return (
     <Fragment>
@@ -30,24 +27,6 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
         </h2>
 
         <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-          {parsedTimeSlot.length > 0 && (
-            <li className="my-0 marker:text-gray-400">
-              <p className="mt-0 mb-2 text-base leading-snug">
-                <strong className="font-semibold">出演時間:</strong>
-                {parsedTimeSlot.length == 1 && parsedTimeSlot[0]}
-                {parsedTimeSlot.length == 2 && (
-                  <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-                    {parsedTimeSlot.map((slot, index) => (
-                      <li key={index} className="my-0 marker:text-gray-400">
-                        {slot}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </p>
-            </li>
-          )}
-
           {timetable != undefined && (
             <li className="my-0 marker:text-gray-400">
               <p className="mt-0 mb-2 text-base leading-snug">
@@ -112,27 +91,6 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       )}
     </Fragment>
   );
-};
-
-const parseTimeSlot = (
-  timeSlot: [string] | [string, string] | [string, string][] | undefined,
-): string[] => {
-  if (timeSlot == undefined) {
-    return [];
-  }
-  if (timeSlot.length == 0) {
-    return [];
-  } else if (timeSlot.length == 1 && typeof timeSlot[0] == "string") {
-    return [`timeSlot[0] 〜`];
-  } else if (
-    timeSlot.length == 2 &&
-    typeof timeSlot[0] == "string" &&
-    typeof timeSlot[1] == "string"
-  ) {
-    return [`${timeSlot[0]} 〜 ${timeSlot[1]}`];
-  } else {
-    return (timeSlot as [string, string][]).map((slot) => `${slot[0]} 〜 ${slot[1]}`);
-  }
 };
 
 const showMerchandise = (
