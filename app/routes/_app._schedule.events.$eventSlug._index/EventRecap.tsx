@@ -19,57 +19,59 @@ export const EventRecap: React.FC<Props> = (props: Props) => {
         開催内容
       </h2>
 
-      {recaps?.map((recap, i) => {
-        if (isEmptyEventRecap(recap)) {
-          return null;
-        }
+      <div className="space-y-8">
+        {recaps?.map((recap, i) => {
+          if (isEmptyEventRecap(recap)) {
+            return null;
+          }
 
-        const { title, open, start, end, description, setlist, links } = recap;
+          const { title, open, start, end, description, setlist, links } = recap;
 
-        const startTitle =
-          open && start && end
-            ? "公演時間" // 多分、主催系の二部構成
-            : !open && start && end
-              ? "出演時間" // 多分、対バンかフェス
-              : open && start && !end
-                ? "開演時間" // 多分、主催系の二部構成
-                : !open && start && !end
-                  ? "開演時間" // 多分ない
-                  : "";
+          const startTitle =
+            open && start && end
+              ? "公演時間" // 多分、主催系の二部構成
+              : !open && start && end
+                ? "出演時間" // 多分、対バンかフェス
+                : open && start && !end
+                  ? "開演時間" // 多分、主催系の二部構成
+                  : !open && start && !end
+                    ? "開演時間" // 多分ない
+                    : "";
 
-        return (
-          <section key={i}>
-            {title && (
-              <h3 className="my-2 text-lg leading-tight font-semibold text-gray-700">{title}</h3>
-            )}
+          return (
+            <section key={i}>
+              {title && <h3 className="text-lg font-semibold text-gray-700">{title}</h3>}
 
-            {(open || start) && (
-              <div className="flex items-center gap-4">
-                {open && (
-                  <p>
-                    <strong className="font-semibold text-gray-500">開場時間:</strong>{" "}
-                    <span>{open}</span>
-                  </p>
+              <div className="mt-3 space-y-2">
+                {(open || start) && (
+                  <div className="flex items-center gap-4">
+                    {open && (
+                      <p>
+                        <strong className="font-semibold text-gray-500">開場時間:</strong>{" "}
+                        <span>{open}</span>
+                      </p>
+                    )}
+
+                    {start && (
+                      <p>
+                        <strong className="font-semibold text-gray-500">{startTitle}:</strong>{" "}
+                        <span>
+                          {start}
+                          {end && ` 〜 ${end}`}
+                        </span>
+                      </p>
+                    )}
+                  </div>
                 )}
 
-                {start && (
-                  <p>
-                    <strong className="font-semibold text-gray-500">{startTitle}:</strong>{" "}
-                    <span>
-                      {start}
-                      {end && ` 〜 ${end}`}
-                    </span>
-                  </p>
-                )}
+                {description && <p>{description}</p>}
+
+                {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
               </div>
-            )}
-
-            {description && <p className="my-3 text-base leading-snug">{description}</p>}
-
-            {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
-          </section>
-        );
-      })}
+            </section>
+          );
+        })}
+      </div>
     </section>
   );
 };
