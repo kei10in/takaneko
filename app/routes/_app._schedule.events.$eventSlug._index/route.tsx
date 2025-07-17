@@ -32,8 +32,8 @@ import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../../features/profile/members";
+import { EventDetails } from "./EventDetails";
 import { EventOverview } from "./EventOverview";
-import { EventRecap } from "./EventRecap";
 import { makePageDescription } from "./makePageDescription";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -234,7 +234,7 @@ export default function EventPage() {
       </div>
 
       <article className="mb-4 max-w-none px-4">
-        <EventRecap recaps={meta.recaps} />
+        <EventDetails recaps={meta.recaps} />
 
         <EventOverview timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
 

@@ -6,7 +6,7 @@ interface Props {
   recaps: Recap[];
 }
 
-export const EventRecap: React.FC<Props> = (props: Props) => {
+export const EventDetails: React.FC<Props> = (props: Props) => {
   const { recaps } = props;
 
   if (recaps.length == 0 || recaps.every((recap) => isEmptyEventRecap(recap))) {
