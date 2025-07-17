@@ -32,7 +32,7 @@ import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../../features/profile/members";
-import { EventDetails } from "./EventOverview";
+import { EventOverview } from "./EventOverview";
 import { EventRecap } from "./EventRecap";
 import { makePageDescription } from "./makePageDescription";
 
@@ -236,7 +236,7 @@ export default function EventPage() {
       <article className="mb-4 max-w-none px-4">
         <EventRecap recaps={meta.recaps} />
 
-        <EventDetails timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
+        <EventOverview timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
 
         <Mdx Content={Content} />
 

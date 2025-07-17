@@ -13,7 +13,7 @@ interface Props {
     | undefined;
 }
 
-export const EventDetails: React.FC<Props> = (props: Props) => {
+export const EventOverview: React.FC<Props> = (props: Props) => {
   const { timetable, goods } = props;
   if (timetable == undefined && !showMerchandise(goods)) {
     return null;
