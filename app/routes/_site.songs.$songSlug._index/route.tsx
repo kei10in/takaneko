@@ -104,9 +104,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
             </span>
           </div>
           <ul className="space-y-1">
-            {lives.map(({ acts, event: e }, i) => (
+            {lives.map(({ segments, event: e }, i) => (
               <Fragment key={i}>
-                {acts.map((act, j) => (
+                {segments.map(({ act, segment }, j) => (
                   <li key={j}>
                     <div className="flex items-stretch gap-2 p-1">
                       <div
@@ -115,8 +115,8 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                           liveTypeColor(e.meta.liveType),
                         )}
                       />
-                      <div className="text-sm">
-                        <p>
+                      <div className="text-xs">
+                        <p className="text-sm">
                           <Link to={`/events/${e.slug}`}>
                             {act.title ? `${e.meta.title} - ${act.title}` : e.meta.title}
                           </Link>
@@ -132,6 +132,14 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                           <span className="line-clamp-1">
                             {e.meta.region} {e.meta.location}
                           </span>
+                        </p>
+                        <p className="flex items-center gap-1 text-gray-400">
+                          <span>
+                            {segment.section == "main" ? "M" : "EN"}
+                            {(segment.index + 1).toString().padStart(2, "0")}
+                          </span>
+                          {" / "}
+                          <span className="line-clamp-1">{segment.costumeName || "衣装不明"}</span>
                         </p>
                       </div>
                     </div>

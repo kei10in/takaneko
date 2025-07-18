@@ -1,6 +1,14 @@
 import { MemberName } from "../profile/members";
 import { parseMemberName } from "../profile/parseMemberName";
 
+export interface SongSegment {
+  kind: "song";
+  index: number;
+  section: "main" | "encore";
+  songTitle: string;
+  costumeName?: string | undefined;
+}
+
 export type Segment =
   | {
       kind: "talk";
@@ -14,13 +22,7 @@ export type Segment =
   | {
       kind: "overture";
     }
-  | {
-      kind: "song";
-      index: number;
-      section: "main" | "encore";
-      songTitle: string;
-      costumeName?: string | undefined;
-    }
+  | SongSegment
   | {
       kind: "encore";
     }
