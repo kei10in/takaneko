@@ -1,11 +1,11 @@
 import { clsx } from "clsx";
 import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
 import { Link } from "react-router";
-import { StagePart } from "~/features/events/setlist";
+import { Segment } from "~/features/events/setlist";
 import { ALL_SONGS } from "~/features/songs/songs";
 
 interface Props {
-  part: StagePart;
+  part: Segment;
 }
 
 export const SetlistItem: React.FC<Props> = ({ part }: Props) => {

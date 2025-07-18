@@ -1,7 +1,7 @@
 import { z } from "zod/v4";
 
 import { LinkDescription } from "~/utils/types/LinkDescription";
-import { parseSetlist, StagePart } from "./setlist";
+import { parseSetlist, Segment } from "./setlist";
 
 export const ActDescription = z.object({
   title: z.string().optional(),
@@ -27,7 +27,7 @@ export interface Act {
   start?: string | undefined;
   end?: string | undefined;
   description?: string | undefined;
-  setlist: StagePart[];
+  setlist: Segment[];
   links: LinkDescription[];
 }
 

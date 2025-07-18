@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import { Link } from "react-router";
-import { StagePart } from "~/features/events/setlist";
+import { Segment } from "~/features/events/setlist";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { SetlistItem } from "./SetlistItem";
 
 interface Props {
-  setlist: StagePart[];
+  setlist: Segment[];
   links: LinkDescription[];
 }
 

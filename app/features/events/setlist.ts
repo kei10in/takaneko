@@ -1,7 +1,7 @@
 import { MemberName } from "../profile/members";
 import { parseMemberName } from "../profile/parseMemberName";
 
-export type StagePart =
+export type Segment =
   | {
       kind: "talk";
       costumeName?: string | undefined;
@@ -38,19 +38,19 @@ export type StagePart =
       description?: string | undefined;
     };
 
-interface StageState {
+interface ParsingState {
   section: "main" | "encore";
   costumeName?: string | undefined;
   index: number;
 }
 
-export const parseSetlist = (startPlan: string[]): StagePart[] => {
+export const parseSetlist = (startPlan: string[]): Segment[] => {
   const { result } = startPlan.reduce(
-    (acc: { state: StageState; result: StagePart[] }, part: string) => {
-      const { nextState, stagePart } = parseStagePart(part, acc.state);
+    (acc: { state: ParsingState; result: Segment[] }, part: string) => {
+      const { nextState, segment } = parseSegment(part, acc.state);
       return {
         state: nextState,
-        result: [...acc.result, stagePart],
+        result: [...acc.result, segment],
       };
     },
     {
@@ -62,10 +62,10 @@ export const parseSetlist = (startPlan: string[]): StagePart[] => {
   return result;
 };
 
-const parseStagePart = (
+const parseSegment = (
   part: string,
-  state: StageState,
-): { nextState: StageState; stagePart: StagePart } => {
+  state: ParsingState,
+): { nextState: ParsingState; segment: Segment } => {
   const p = part.trim();
 
   if (p.startsWith("影ナレ:")) {
@@ -84,47 +84,47 @@ const parseStagePart = (
 
     return {
       nextState: state,
-      stagePart: { kind: "announce", name: "影ナレ", members: names },
+      segment: { kind: "announce", name: "影ナレ", members: names },
     };
   }
 
   if (p.toLowerCase() == "mc" || p.toLowerCase().startsWith("mc:")) {
-    return { nextState: state, stagePart: { kind: "talk", costumeName: state.costumeName } };
+    return { nextState: state, segment: { kind: "talk", costumeName: state.costumeName } };
   }
 
   if (p == "アンコール" || p.toLowerCase() == "encore") {
     return {
       nextState: { section: "encore", index: 0, costumeName: state.costumeName },
-      stagePart: { kind: "encore" },
+      segment: { kind: "encore" },
     };
   }
 
   if (p.startsWith("衣装:")) {
     const costumeName = p.slice(3).trim();
-    return { nextState: { ...state, costumeName }, stagePart: { kind: "costume", costumeName } };
+    return { nextState: { ...state, costumeName }, segment: { kind: "costume", costumeName } };
   }
 
   if (p == "企画" || p.startsWith("企画:")) {
     const segmentTitle = p.startsWith("企画:") ? p.slice(3).trim() : undefined;
     return {
       nextState: state,
-      stagePart: { kind: "special", title: segmentTitle, costumeName: state.costumeName },
+      segment: { kind: "special", title: segmentTitle, costumeName: state.costumeName },
     };
   }
 
   if (p.toLowerCase().startsWith("overture")) {
-    return { nextState: state, stagePart: { kind: "overture" } };
+    return { nextState: state, segment: { kind: "overture" } };
   }
 
   if (p.startsWith("幕間") || p.toLowerCase().startsWith("interlude")) {
     const description = p.split(":")[1]?.trim() || undefined;
-    return { nextState: state, stagePart: { kind: "interlude", description } };
+    return { nextState: state, segment: { kind: "interlude", description } };
   }
 
   const songTitle = p;
   return {
     nextState: { ...state, index: state.index + 1 },
-    stagePart: {
+    segment: {
       kind: "song",
       section: state.section,
       costumeName: state.costumeName,
