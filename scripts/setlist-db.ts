@@ -13,8 +13,8 @@ const main = async () => {
 
   const records = Object.values(songToLiveMap).flatMap((summary) => {
     return summary.events.flatMap((event) => {
-      return event.recaps.map((recap) => {
-        return { song: summary.name, event: event.event, recap };
+      return event.acts.map((act) => {
+        return { song: summary.name, event: event.event, act };
       });
     });
   });
@@ -30,7 +30,7 @@ const main = async () => {
       region: record.event.meta.region,
       location: record.event.meta.location,
       event: record.event.meta.title,
-      part: record.recap.title,
+      part: record.act.title,
     });
   });
 };

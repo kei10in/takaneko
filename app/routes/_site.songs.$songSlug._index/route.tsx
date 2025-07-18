@@ -104,9 +104,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
             </span>
           </div>
           <ul className="space-y-1">
-            {lives.map(({ recaps, event: e }, i) => (
+            {lives.map(({ acts, event: e }, i) => (
               <Fragment key={i}>
-                {recaps.map((recap, j) => (
+                {acts.map((act, j) => (
                   <li key={j}>
                     <div className="flex items-stretch gap-2 p-1">
                       <div
@@ -118,7 +118,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                       <div className="text-sm">
                         <p>
                           <Link to={`/events/${e.slug}`}>
-                            {recap.title ? `${e.meta.title} - ${recap.title}` : e.meta.title}
+                            {act.title ? `${e.meta.title} - ${act.title}` : e.meta.title}
                           </Link>
                         </p>
                         <p className="flex items-center gap-1 text-gray-400">

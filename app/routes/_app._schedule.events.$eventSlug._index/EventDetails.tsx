@@ -9,7 +9,7 @@ interface Props {
 export const EventDetails: React.FC<Props> = (props: Props) => {
   const { acts } = props;
 
-  if (acts.length == 0 || acts.every((recap) => isEmptyAct(recap))) {
+  if (acts.length == 0 || acts.every((act) => isEmptyAct(act))) {
     return null;
   }
 
@@ -20,12 +20,12 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       </h2>
 
       <div className="space-y-8">
-        {acts?.map((recap, i) => {
-          if (isEmptyAct(recap)) {
+        {acts?.map((act, i) => {
+          if (isEmptyAct(act)) {
             return null;
           }
 
-          const { title, open, start, end, description, setlist, links } = recap;
+          const { title, open, start, end, description, setlist, links } = act;
 
           const startTitle =
             open && start && end

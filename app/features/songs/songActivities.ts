@@ -6,7 +6,7 @@ export interface SongActivitySummary {
   name: string;
   count: number;
   events: {
-    recaps: Act[];
+    acts: Act[];
     event: EventModule;
   }[];
 }
@@ -20,20 +20,20 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
   events.forEach((event) => {
     const { meta } = event;
 
-    const recapMap: Record<string, Act[]> = {};
-    meta.acts.flatMap((recap) => {
-      recap.setlist
+    const actMap: Record<string, Act[]> = {};
+    meta.acts.flatMap((act) => {
+      act.setlist
         .filter((p) => p.kind == "song")
         .map((p) => p.songTitle)
         .forEach((song) => {
-          if (recapMap[song] == undefined) {
-            recapMap[song] = [];
+          if (actMap[song] == undefined) {
+            actMap[song] = [];
           }
 
           // ひとつの公演で同じ曲が 2 回以上披露された場合が考慮されています。
-          // recap をそのまま push しているので参照の比較 (include) で十分です。
-          if (!recapMap[song].includes(recap)) {
-            recapMap[song].push(recap);
+          // act をそのまま push しているので参照の比較 (include) で十分です。
+          if (!actMap[song].includes(act)) {
+            actMap[song].push(act);
           }
 
           if (result[song] != undefined) {
@@ -44,12 +44,12 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
         });
     });
 
-    Object.entries(recapMap).forEach(([song, recaps]) => {
+    Object.entries(actMap).forEach(([song, acts]) => {
       if (!result[song]) {
         return;
       }
 
-      result[song].events.push({ recaps, event });
+      result[song].events.push({ acts: acts, event });
     });
   });
 

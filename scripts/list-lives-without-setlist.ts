@@ -42,8 +42,8 @@ const main = async () => {
   }
 };
 
-const allSetListHasAnySongs = (recap: Act): boolean => {
-  return recap.setlist.filter((p) => p.kind == "song").length > 0;
+const allSetListHasAnySongs = (act: Act): boolean => {
+  return act.setlist.filter((p) => p.kind == "song").length > 0;
 };
 
 main();

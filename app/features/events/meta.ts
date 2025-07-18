@@ -88,13 +88,13 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
     const summary = `${statusPrefix}${r.data.summary}`;
     const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
 
-    const recapDescriptions = Array.isArray(r.data.acts)
+    const actDescriptions = Array.isArray(r.data.acts)
       ? r.data.acts
       : r.data.acts != undefined
         ? [r.data.acts]
         : [];
 
-    const acts = validateActDescription(recapDescriptions);
+    const acts = validateActDescription(actDescriptions);
 
     const showNotes = validateShowNotes(r.data.showNotes);
 
