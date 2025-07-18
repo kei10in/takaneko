@@ -1,5 +1,5 @@
 import { VDCMagazine035 } from "~/features/products/publications/VDC Magazine";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(VDCMagazine035);

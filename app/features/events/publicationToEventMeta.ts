@@ -1,6 +1,6 @@
 import { convertToGroupIfAllMembersPresent } from "~/features/profile/members";
 import { Publication } from "../products/product";
-import { EventMetaDescriptor } from "./meta";
+import { EventMetaDescriptor } from "./eventMeta";
 
 export const convertPublicationToEventMeta = (publication: Publication): EventMetaDescriptor => {
   return {

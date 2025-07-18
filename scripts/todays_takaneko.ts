@@ -3,7 +3,7 @@ import Handlebars from "handlebars";
 import { register } from "node:module";
 import { dedent } from "ts-dedent";
 import { categoryToEmoji } from "~/features/events/EventType";
-import { compareEventMeta, EventMeta, validateEventMeta } from "~/features/events/meta";
+import { compareEventMeta, EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 

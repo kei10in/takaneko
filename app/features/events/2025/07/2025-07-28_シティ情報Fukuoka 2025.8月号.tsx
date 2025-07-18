@@ -1,5 +1,5 @@
 import { シティ情報Fukuoka_2025年8月号 } from "~/features/products/publications/シティ情報Fukuoka";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor =

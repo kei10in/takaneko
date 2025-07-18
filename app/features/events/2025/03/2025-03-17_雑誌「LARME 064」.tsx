@@ -1,5 +1,5 @@
 import { LARME_064 } from "~/features/products/publications/LARME";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(LARME_064);

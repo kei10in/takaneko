@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { stem } from "~/utils/string";
+import { validateEventMeta } from "./eventMeta";
 import { EventModule } from "./eventModule";
-import { validateEventMeta } from "./meta";
 
 export const importEventFilesAsEventModule = (): Record<string, EventModule> => {
   return Object.fromEntries(

@@ -1,9 +1,9 @@
 import { createEvents, HeaderAttributes } from "ics";
 import * as fs from "node:fs";
 import { register } from "node:module";
+import { EventMeta } from "~/features/events/eventMeta";
 import { EventType } from "~/features/events/EventType";
 import { convertEventMetaToEventAttributes } from "~/features/events/ical";
-import { EventMeta } from "~/features/events/meta";
 import { loadAllEventMeta } from "./events";
 
 register("@mdx-js/node-loader", import.meta.url);

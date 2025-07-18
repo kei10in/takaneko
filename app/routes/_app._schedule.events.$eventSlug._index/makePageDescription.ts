@@ -1,5 +1,5 @@
 import { EventType } from "~/features/events/EventType";
-import { EventMeta } from "~/features/events/meta";
+import { EventMeta } from "~/features/events/eventMeta";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import {
   AllMembers,

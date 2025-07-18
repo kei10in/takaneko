@@ -1,5 +1,5 @@
 import { モデルプレスカウントダウンマガジン_vol10 } from "~/features/products/publications/モデルプレスカウントダウンマガジン";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor =

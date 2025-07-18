@@ -1,7 +1,7 @@
 import { glob } from "glob";
 import path, { basename } from "node:path";
+import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
-import { EventMeta, validateEventMeta } from "~/features/events/meta";
 import { stem } from "~/utils/string";
 
 export const loadAllEventMeta = async (): Promise<[string, EventMeta][]> => {

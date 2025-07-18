@@ -1,5 +1,5 @@
 import { TopYellNeo2025Spring } from "~/features/products/publications/Top Yell NEO";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(TopYellNeo2025Spring);

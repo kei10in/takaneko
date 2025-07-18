@@ -1,5 +1,5 @@
 import { OutOfMusic_87 } from "~/features/products/publications/Out of Music";
-import { EventMetaDescriptor } from "../../meta";
+import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(OutOfMusic_87);

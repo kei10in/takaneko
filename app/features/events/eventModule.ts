@@ -1,5 +1,5 @@
 import { MDXContent } from "mdx/types";
-import { EventMeta } from "./meta";
+import { EventMeta } from "./eventMeta";
 
 export interface EventModule {
   slug: string;

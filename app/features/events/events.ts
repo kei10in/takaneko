@@ -1,8 +1,8 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { importEventFilesAsEventModule } from "./eventFiles";
+import { compareEventMeta } from "./eventMeta";
 import { EventModule } from "./eventModule";
-import { compareEventMeta } from "./meta";
 
 export const ALL_EVENTS = importEventFilesAsEventModule();
 

@@ -14,7 +14,7 @@ import { meta as meta12 } from "~/features/events/2025/07/2025-07-10_ZIP-FM「Ne
 import { meta as meta13 } from "~/features/events/2025/07/2025-07-11_CROSS FM「MISHMASH FRIDAY -金ズマ-」.mdx";
 import { meta as meta14 } from "~/features/events/2025/07/2025-07-11_FM AICHI「FRIDAY MAGIC」.mdx";
 import { meta as meta15 } from "~/features/events/2025/07/2025-07-11_FM北海道「IMAREAL」.mdx";
-import { EventMeta, validateEventMeta } from "~/features/events/meta";
+import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 
 export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [
   {

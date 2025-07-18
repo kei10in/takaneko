@@ -1,6 +1,6 @@
 import { createEvent, EventAttributes } from "ics";
 import { DOMAIN } from "~/constants";
-import { EventMeta } from "./meta";
+import { EventMeta } from "./eventMeta";
 
 export const makeIcs = async (
   id: string,

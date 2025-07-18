@@ -1,6 +1,6 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { compareEventMeta } from "../events/eventMeta";
 import { EventModule } from "../events/eventModule";
-import { compareEventMeta } from "../events/meta";
 
 export type CalendarEvent = Omit<EventModule, "Content">;
 
