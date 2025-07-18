@@ -234,7 +234,7 @@ export default function EventPage() {
       </div>
 
       <article className="mb-4 max-w-none px-4">
-        <EventDetails recaps={meta.recaps} />
+        <EventDetails acts={meta.recaps} />
 
         <EventOverview timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
 

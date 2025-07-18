@@ -1,15 +1,15 @@
 import React from "react";
-import { isEmptyAct, Act as Recap } from "~/features/events/act";
+import { Act, isEmptyAct } from "~/features/events/act";
 import { Setlist } from "./Setlist";
 
 interface Props {
-  recaps: Recap[];
+  acts: Act[];
 }
 
 export const EventDetails: React.FC<Props> = (props: Props) => {
-  const { recaps } = props;
+  const { acts } = props;
 
-  if (recaps.length == 0 || recaps.every((recap) => isEmptyAct(recap))) {
+  if (acts.length == 0 || acts.every((recap) => isEmptyAct(recap))) {
     return null;
   }
 
@@ -20,7 +20,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
       </h2>
 
       <div className="space-y-8">
-        {recaps?.map((recap, i) => {
+        {acts?.map((recap, i) => {
           if (isEmptyAct(recap)) {
             return null;
           }
