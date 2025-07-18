@@ -4,7 +4,7 @@ import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
-import { EventRecap, EventRecapDescription, validateEventRecapDescription } from "./eventRecap";
+import { Act, ActDescription, validateActDescription } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes, ShowNotesDescription, validateShowNotes } from "./showNotes";
@@ -60,7 +60,7 @@ const EventMetaDescriptor = z.object({
   absent: z.array(MemberName).optional(),
 
   overview: EventOverview.optional(),
-  recaps: z.union([EventRecapDescription, z.array(EventRecapDescription)]).optional(),
+  recaps: z.union([ActDescription, z.array(ActDescription)]).optional(),
   showNotes: ShowNotesDescription.optional(),
   updatedAt: z.string().optional(),
 });
@@ -74,7 +74,7 @@ export type EventMeta = Omit<
   date: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
-  recaps: EventRecap[];
+  recaps: Act[];
   showNotes: ShowNotes;
   descriptor: EventMetaDescriptor;
 };
@@ -94,7 +94,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         ? [r.data.recaps]
         : [];
 
-    const recaps = validateEventRecapDescription(recapDescriptions);
+    const recaps = validateActDescription(recapDescriptions);
 
     const showNotes = validateShowNotes(r.data.showNotes);
 

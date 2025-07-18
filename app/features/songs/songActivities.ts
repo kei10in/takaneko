@@ -1,12 +1,12 @@
+import { Act } from "../events/act";
 import { EventModule } from "../events/eventModule";
-import { EventRecap } from "../events/eventRecap";
 import { SongMetaDescriptor } from "./types";
 
 export interface SongActivitySummary {
   name: string;
   count: number;
   events: {
-    recaps: EventRecap[];
+    recaps: Act[];
     event: EventModule;
   }[];
 }
@@ -20,7 +20,7 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
   events.forEach((event) => {
     const { meta } = event;
 
-    const recapMap: Record<string, EventRecap[]> = {};
+    const recapMap: Record<string, Act[]> = {};
     meta.recaps.flatMap((recap) => {
       recap.setlist
         .filter((p) => p.kind == "song")

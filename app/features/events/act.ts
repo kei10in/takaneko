@@ -3,7 +3,7 @@ import { z } from "zod/v4";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist, StagePart } from "./setlist";
 
-export const EventRecapDescription = z.object({
+export const ActDescription = z.object({
   title: z.string().optional(),
 
   open: z.string().optional(),
@@ -19,9 +19,9 @@ export const EventRecapDescription = z.object({
   links: z.array(z.union([z.string(), LinkDescription])).optional(),
 });
 
-type EventRecapDescription = z.infer<typeof EventRecapDescription>;
+type ActDescription = z.infer<typeof ActDescription>;
 
-export interface EventRecap {
+export interface Act {
   title?: string | undefined;
   open?: string | undefined;
   start?: string | undefined;
@@ -31,35 +31,35 @@ export interface EventRecap {
   links: LinkDescription[];
 }
 
-export const isEmptyEventRecap = (recap: EventRecap): boolean => {
-  const isTitleEmpty = recap.title == undefined || recap.title.trim() === "";
-  const isSetlistEmpty = recap.setlist.length === 0;
+export const isEmptyAct = (act: Act): boolean => {
+  const isTitleEmpty = act.title == undefined || act.title.trim() === "";
+  const isSetlistEmpty = act.setlist.length === 0;
 
   return (
     isTitleEmpty &&
-    recap.open == undefined &&
-    recap.start == undefined &&
-    recap.description == undefined &&
+    act.open == undefined &&
+    act.start == undefined &&
+    act.description == undefined &&
     isSetlistEmpty
   );
 };
 
-export const validateEventRecapDescription = (
-  data: EventRecapDescription | EventRecapDescription[] | undefined,
-): EventRecap[] => {
+export const validateActDescription = (
+  data: ActDescription | ActDescription[] | undefined,
+): Act[] => {
   if (data == undefined) {
     return [];
   }
 
-  const recaps = Array.isArray(data) ? data : [data];
+  const acts = Array.isArray(data) ? data : [data];
 
-  return recaps.flatMap((recap) => {
-    const { title, open, start, end, description, url, links } = recap;
+  return acts.flatMap((act) => {
+    const { title, open, start, end, description, url, links } = act;
 
     //
     // Validate setlist field
     //
-    const setlist = recap.setlist ?? [];
+    const setlist = act.setlist ?? [];
     const validatedSetlist = parseSetlist(setlist);
 
     //

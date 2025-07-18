@@ -1,5 +1,5 @@
 import { register } from "node:module";
-import { EventRecap } from "~/features/events/eventRecap";
+import { Act } from "~/features/events/act";
 import { NaiveDate } from "../app/utils/datetime/NaiveDate";
 import { loadAllEventMeta } from "./events";
 
@@ -42,7 +42,7 @@ const main = async () => {
   }
 };
 
-const allSetListHasAnySongs = (recap: EventRecap): boolean => {
+const allSetListHasAnySongs = (recap: Act): boolean => {
   return recap.setlist.filter((p) => p.kind == "song").length > 0;
 };
 
