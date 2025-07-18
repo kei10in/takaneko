@@ -26,8 +26,8 @@ const main = async () => {
         return false;
       }
 
-      // 全ての Recap に setlist があれば、セットリストが設定済み。
-      if (meta.recaps.length > 0 && meta.recaps.every(allSetListHasAnySongs)) {
+      // 全ての Act に setlist があれば、セットリストが設定済み。
+      if (meta.acts.length > 0 && meta.acts.every(allSetListHasAnySongs)) {
         return false;
       }
 

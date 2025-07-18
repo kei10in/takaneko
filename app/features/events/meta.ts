@@ -60,7 +60,7 @@ const EventMetaDescriptor = z.object({
   absent: z.array(MemberName).optional(),
 
   overview: EventOverview.optional(),
-  recaps: z.union([ActDescription, z.array(ActDescription)]).optional(),
+  acts: z.union([ActDescription, z.array(ActDescription)]).optional(),
   showNotes: ShowNotesDescription.optional(),
   updatedAt: z.string().optional(),
 });
@@ -69,12 +69,12 @@ export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
 export type EventMeta = Omit<
   EventMetaDescriptor,
-  "date" | "recaps" | "showNotes" | "images" | "links"
+  "date" | "acts" | "showNotes" | "images" | "links"
 > & {
   date: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
-  recaps: Act[];
+  acts: Act[];
   showNotes: ShowNotes;
   descriptor: EventMetaDescriptor;
 };
@@ -88,13 +88,13 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
     const summary = `${statusPrefix}${r.data.summary}`;
     const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
 
-    const recapDescriptions = Array.isArray(r.data.recaps)
-      ? r.data.recaps
-      : r.data.recaps != undefined
-        ? [r.data.recaps]
+    const recapDescriptions = Array.isArray(r.data.acts)
+      ? r.data.acts
+      : r.data.acts != undefined
+        ? [r.data.acts]
         : [];
 
-    const recaps = validateActDescription(recapDescriptions);
+    const acts = validateActDescription(recapDescriptions);
 
     const showNotes = validateShowNotes(r.data.showNotes);
 
@@ -114,7 +114,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         .filter(
           (link): link is LinkDescription => link != undefined && link.text != "" && link.url != "",
         ),
-      recaps,
+      acts,
       showNotes,
       descriptor: r.data,
     };

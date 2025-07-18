@@ -10,7 +10,7 @@ import { ALL_EVENTS } from "./events";
 
 describe("all setlist items", () => {
   const allSetlistItems = Object.entries(ALL_EVENTS).flatMap(([slug, e]) =>
-    e.meta.recaps?.flatMap((r) => r.setlist).map((item) => ({ item, slug, event: e })),
+    e.meta.acts?.flatMap((r) => r.setlist).map((item) => ({ item, slug, event: e })),
   );
 
   it("should not contain non-song items labeled as songs", () => {
@@ -67,7 +67,7 @@ describe("all setlist items", () => {
 
 describe("all events with setlist", () => {
   const eventsWithSetlist = Object.entries(ALL_EVENTS).filter(([, e]) => {
-    return e.meta.recaps.length > 0;
+    return e.meta.acts.length > 0;
   });
 
   it("should have liveType", () => {
