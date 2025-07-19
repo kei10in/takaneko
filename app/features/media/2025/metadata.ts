@@ -2,6 +2,60 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title:
+      "【4Kグラビア】【高嶺のなでしこ】が贈る忘れられない夏！最高のサマーチューン！！【メイキング】",
+    authorName: "グラビアンエイジch【KADOKAWAドラゴンエイジ公式CH】",
+    publishedAt: "2025-07-19",
+    mediaUrl: "https://youtu.be/g1t3ae5gsjc",
+    imageUrl: "https://i.ytimg.com/vi/g1t3ae5gsjc/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "【4Kグラビア】【高嶺のなでしこ】解禁された息をのむ美しさ…新たな魅力に心奪われる♡【メイキング】",
+    authorName: "グラビアンエイジch【KADOKAWAドラゴンエイジ公式CH】",
+    publishedAt: "2025-07-18",
+    mediaUrl: "https://youtu.be/Bbzh9bKvdiE",
+    imageUrl: "https://i.ytimg.com/vi/Bbzh9bKvdiE/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "『TIF presents ONE SONG FES』の裏側へ！橋本桃呼（高嶺のなでしこ）密着ドキュメント【もういちど、アイドルを生きる#5】",
+    authorName: "Quick Japan",
+    publishedAt: "2025-07-18",
+    mediaUrl: "https://youtu.be/dcIbmeMiwmE",
+    imageUrl: "https://i.ytimg.com/vi/dcIbmeMiwmE/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "ogp",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第2回『M3GAN』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-07-18",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/761375",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/07/761375_02.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "【4Kグラビア】【高嶺のなでしこ】と過ごすキラめく夏！弾ける笑顔は太陽より眩しい！【メイキング】",
+    authorName: "グラビアンエイジch【KADOKAWAドラゴンエイジ公式CH】",
+    publishedAt: "2025-07-10",
+    mediaUrl: "https://youtu.be/zPXVFUf2ZKw",
+    imageUrl: "https://i.ytimg.com/vi/zPXVFUf2ZKw/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
     kind: "ogp",
     title:
       "高嶺のなでしこ　「メンバー全員がかわいくて、曲もめちゃくちゃ良いので、“この夏、好きになっちゃえばいいのに。”と心の底から思っています（笑）」 | SPICE - エンタメ特化型情報メディア スパイス",

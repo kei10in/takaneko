@@ -2,10 +2,31 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2025 = [
   {
+    videoId: "g1t3ae5gsjc",
+    publishedAt: "2025-07-19",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    videoId: "Bbzh9bKvdiE",
+    publishedAt: "2025-07-18",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    videoId: "dcIbmeMiwmE",
+    publishedAt: "2025-07-18",
+    presents: ["橋本桃呼"],
+    officialTwitter: "https://x.com/takanenofficial/status/1946153097035997598",
+  },
+  {
     videoId: "Mk8RWBP3P2c",
     publishedAt: "2025-07-05",
     presents: ["涼海すう", "東山恵里沙", "松本ももな", "籾山ひめり"],
     officialTwitter: "https://x.com/takanenofficial/status/1941338875982643417",
+  },
+  {
+    videoId: "zPXVFUf2ZKw",
+    publishedAt: "2025-07-10",
+    presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
   },
   {
     videoId: "LHigAd63pfM",
