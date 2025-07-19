@@ -15,6 +15,10 @@ export const シティ情報Fukuoka_2025年8月号: Publication = {
       path: "/publications/2025/2025-07-28_シティ情報Fukuoka 2025.8月号.jpg",
       ref: "https://x.com/takanenofficial/status/1945438347956236699",
     },
+    {
+      path: "/publications/2025/2025-07-28_シティ情報Fukuoka 2025.8月号_1.jpg",
+      ref: "https://x.com/CityJohoFukuoka/status/1946049962518908990",
+    },
   ],
   featuredMembers: ["橋本桃呼", "日向端ひな"],
   officialTwitter: "https://x.com/takanenofficial/status/1945438347956236699",
