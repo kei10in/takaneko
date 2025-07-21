@@ -203,9 +203,11 @@ export default function Index() {
                         </ul>
                       </div>
 
-                      <div className="flex flex-none items-center justify-center text-sm text-gray-500">
-                        {formatDataSize(size)}
-                      </div>
+                      {size && (
+                        <div className="flex flex-none items-center justify-center text-sm text-gray-500">
+                          {formatDataSize(size)}
+                        </div>
+                      )}
 
                       <div className="flex flex-none items-center justify-center p-4">
                         <BsDownload className="text-nadeshiko-900" />
