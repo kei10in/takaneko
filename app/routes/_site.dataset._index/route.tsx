@@ -6,7 +6,7 @@ import { formatDataSize } from "~/utils/dataSize";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `データ - ${SITE_TITLE}` },
+    { title: `データ セット - ${SITE_TITLE}` },
     {
       name: "description",
       content:
