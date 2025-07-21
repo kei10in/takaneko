@@ -111,7 +111,7 @@ export default function Index() {
     {
       fieldName: "event",
       type: "string",
-      description: "イベント名です。",
+      description: "イベント名",
     },
     {
       fieldName: "act",
