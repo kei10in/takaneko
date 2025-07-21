@@ -74,7 +74,7 @@
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.13",
     "remark-gfm": "^4.0.1",
-    "sharp": "^0.34.1",
+    "sharp": "^0.34.3",
     "tailwindcss": "^4.1.11",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
