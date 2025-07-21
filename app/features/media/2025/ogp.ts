@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://nonno.hpplus.jp/entertainment/interview/261409/",
+    publishedAt: "2025-07-21",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙", "松本ももな"],
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/761375",
     publishedAt: "2025-07-18",
     category: "article",

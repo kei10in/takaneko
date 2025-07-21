@@ -2,6 +2,28 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    title:
+      "高嶺のなでしこ 橋本桃呼・東山恵里沙・松本ももな 『ライフクエスト』配信中。3人がごほうびに選ぶものは？ | インタビュー | non-no web",
+    authorName: "non-no web",
+    publishedAt: "2025-07-21",
+    mediaUrl: "https://nonno.hpplus.jp/entertainment/interview/261409/",
+    imageUrl: "https://nonno.hpplus.jp/wp-content/uploads/8217d37079ef2ebc77d9de973e1ff168.jpg",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙", "松本ももな"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "映画「事故物件ゾク恐い間取り」ホラー映画界の巨匠・中田秀夫監督にホラー大好きアイドル・城月菜央（高嶺のなでしこ）がインタビュー👻",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-07-20",
+    mediaUrl: "https://youtu.be/vXR9vxPuTAo",
+    imageUrl: "https://i.ytimg.com/vi/vXR9vxPuTAo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     title:
       "【4Kグラビア】【高嶺のなでしこ】が贈る忘れられない夏！最高のサマーチューン！！【メイキング】",

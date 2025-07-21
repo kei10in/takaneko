@@ -2,6 +2,12 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2025 = [
   {
+    videoId: "vXR9vxPuTAo",
+    publishedAt: "2025-07-20",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1946502858116829240",
+  },
+  {
     videoId: "g1t3ae5gsjc",
     publishedAt: "2025-07-19",
     presents: ["城月菜央", "橋本桃呼", "籾山ひめり"],
