@@ -1,6 +1,7 @@
 ## 自動生成ファイル
 public/calendar*.ics
 public/sitemap.xml
+public/data/
 
 ## React router
 .react-router/
