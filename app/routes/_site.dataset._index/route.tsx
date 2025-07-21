@@ -52,7 +52,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const json = await response.json();
   const parseResult = DatasetMeta.safeParse(json);
   if (parseResult.error) {
-    console.error("Invalid dataset meta format:", parseResult.error);
     return { meta: {} };
   }
 
@@ -61,7 +60,6 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
 
 export default function Index() {
   const { meta } = useLoaderData<typeof loader>();
-  console.log({ meta });
 
   const schema = [
     {
