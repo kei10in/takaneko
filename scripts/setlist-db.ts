@@ -1,5 +1,5 @@
 import * as csv from "@fast-csv/format";
-import fs from "node:fs";
+import fs, { writeFileSync } from "node:fs";
 import { register } from "node:module";
 import { SongSegment } from "~/features/events/setlist";
 import { loadAllEventsAsEventModule } from "./events";
@@ -45,13 +45,9 @@ const main = async () => {
 
   fs.mkdirSync("public/data", { recursive: true });
 
-  await writeAsCsv("public/data/setlists.csv", records);
-  await writeAsCsvUtf8WithBOM("public/data/setlists_utf8-with-bom.csv", records);
-  fs.writeFileSync("public/data/setlists.json", JSON.stringify(records));
-
-  const size1 = fs.statSync("public/data/setlists.csv").size;
-  const size2 = fs.statSync("public/data/setlists_utf8-with-bom.csv").size;
-  const size3 = fs.statSync("public/data/setlists.json").size;
+  const size1 = await writeAsCsv("public/data/setlists.csv", records);
+  const size2 = await writeAsCsvUtf8WithBOM("public/data/setlists_utf8-with-bom.csv", records);
+  const size3 = await writeAsJson("public/data/setlists.json", records);
 
   fs.writeFileSync(
     "public/data/meta.json",
@@ -72,46 +68,43 @@ const main = async () => {
 /**
  * writeAsCsv は指定したファイルに CSV 形式でレコードを出力します。
  */
-const writeAsCsv = async (filepath: string, records: Record[]) => {
-  const writeStream = fs.createWriteStream(filepath);
-  try {
-    await writeCsvToStreamAsync(writeStream, records);
-  } finally {
-    writeStream.close();
-  }
+const writeAsCsv = async (filepath: string, records: Record[]): Promise<number> => {
+  const buffer = await writeCsv(records);
+  const size = buffer.byteLength;
+
+  writeFileSync(filepath, buffer);
+  return size;
 };
 
 /**
  * writeAsCsv は指定したファイルに CSV 形式でレコードを出力します。
  */
 const writeAsCsvUtf8WithBOM = async (filepath: string, records: Record[]) => {
-  const writeStream = fs.createWriteStream(filepath);
   const bom = Buffer.from([0xef, 0xbb, 0xbf]); // UTF-8 BOM
-  writeStream.write(bom);
-  try {
-    await writeCsvToStreamAsync(writeStream, records);
-  } finally {
-    writeStream.close();
-  }
+  const buffer = await writeCsv(records);
+  const resultBuffer = Buffer.concat([bom, buffer]);
+  const size = resultBuffer.byteLength;
+
+  writeFileSync(filepath, resultBuffer);
+  return size;
 };
 
-const writeCsvToStreamAsync = async (writeStream: fs.WriteStream, records: Record[]) => {
-  const p = new Promise<void>((resolve, reject) => {
-    const csvStream = csv.format({ headers: true });
-    csvStream.pipe(writeStream);
-    csvStream.on("error", (e) => {
-      console.log("CSV stream error:", e);
-      reject(e);
+const writeCsv = async (records: Record[]): Promise<Buffer> => {
+  const p = new Promise<Buffer>((resolve) => {
+    csv.writeToBuffer(records, { headers: true }).then((buffer) => {
+      resolve(buffer);
     });
-    csvStream.on("end", () => {
-      resolve();
-    });
-
-    records.forEach((record) => csvStream.write(record));
-    csvStream.end();
   });
 
-  await p;
+  return await p;
+};
+
+const writeAsJson = async (filepath: string, records: Record[]): Promise<number> => {
+  const json = JSON.stringify(records, null, 2);
+  const buffer = Buffer.from(json);
+  const size = buffer.byteLength;
+  writeFileSync(filepath, buffer);
+  return size;
 };
 
 main();
