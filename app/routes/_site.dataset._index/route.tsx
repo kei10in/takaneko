@@ -3,6 +3,7 @@ import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction, useLoaderData } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { formatDataSize } from "~/utils/dataSize";
+import { DatasetMeta } from "./types";
 
 export const meta: MetaFunction = () => {
   return [
@@ -41,34 +42,26 @@ const TAKANEKO_DATA_FILES = [
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const origin = new URL(request.url).origin;
+  const metaUrl = new URL("/data/meta.json", origin).toString();
 
-  const promises = TAKANEKO_DATA_FILES.map(async (file): Promise<[string, number][]> => {
-    const url = new URL(file.url, origin);
+  const response = await fetch(metaUrl);
+  if (!response.ok) {
+    return { meta: {} };
+  }
 
-    try {
-      const response = await fetch(url, { method: "HEAD" });
-      if (!response.ok) {
-        return [];
-      }
-      const size = response.headers.get("Content-Length");
-      if (size == null) {
-        return [];
-      }
+  const json = await response.json();
+  const parseResult = DatasetMeta.safeParse(json);
+  if (parseResult.error) {
+    console.error("Invalid dataset meta format:", parseResult.error);
+    return { meta: {} };
+  }
 
-      return [[file.url, Number(size)]];
-    } catch (error) {
-      return [];
-    }
-  });
-
-  const result = await Promise.all(promises);
-  const sizes: Record<string, number> = Object.fromEntries(result.flat());
-
-  return { sizes };
+  return { meta: parseResult.data };
 };
 
 export default function Index() {
-  const { sizes } = useLoaderData<typeof loader>();
+  const { meta } = useLoaderData<typeof loader>();
+  console.log({ meta });
 
   const schema = [
     {
@@ -173,7 +166,7 @@ export default function Index() {
             <h3 className="text-lg font-semibold text-gray-500">ダウンロード</h3>
             <ul className="mt-1 divide-y divide-gray-200 rounded-lg border border-gray-200">
               {TAKANEKO_DATA_FILES.map((item) => {
-                const size = sizes[item.url];
+                const size = meta[item.url]?.size;
 
                 return (
                   <li key={item.url}>
@@ -203,11 +196,9 @@ export default function Index() {
                         </ul>
                       </div>
 
-                      {size && (
-                        <div className="flex flex-none items-center justify-center text-sm text-gray-500">
-                          {formatDataSize(size)}
-                        </div>
-                      )}
+                      <div className="flex flex-none items-center justify-center text-sm text-gray-500">
+                        {formatDataSize(size)}
+                      </div>
 
                       <div className="flex flex-none items-center justify-center p-4">
                         <BsDownload className="text-nadeshiko-900" />
