@@ -33,6 +33,10 @@ const UTILS = [
     url: "/shortlink",
   },
   {
+    name: "データ セット",
+    url: "/dataset",
+  },
+  {
     name: "RSS フィード",
     url: "/takaneko-feeds",
   },

@@ -67,6 +67,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
                     <Link to="/shortlink">短い URL を作るやつ</Link>
                   </li>
                   <li>
+                    <Link to="/dataset">データ セット</Link>
+                  </li>
+                  <li>
                     <Link to="/takaneko-feeds">RSS フィード</Link>
                   </li>
                 </ul>
