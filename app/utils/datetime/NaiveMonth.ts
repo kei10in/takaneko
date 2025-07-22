@@ -8,6 +8,15 @@ export class NaiveMonth {
     this.month = date.getUTCMonth() + 1;
   }
 
+  weeksInMonth = (): number => {
+    const firstDate = new Date(this.year, this.month - 1, 1);
+    const lastDate = new Date(this.year, this.month, 0);
+    const firstDayOfWeek = firstDate.getDay();
+    const daysInMonth = lastDate.getDate();
+
+    return Math.ceil((firstDayOfWeek + daysInMonth) / 7);
+  };
+
   getTimeAsUTC = (): number => {
     return Date.UTC(this.year, this.month - 1, 1);
   };

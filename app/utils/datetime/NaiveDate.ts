@@ -48,11 +48,25 @@ export class NaiveDate {
     return this.year === other.year && this.month === other.month && this.day === other.day;
   };
 
+  compareTo = (other: NaiveDate): number => {
+    const thisTime = this.getTimeAsUTC();
+    const otherTime = other.getTimeAsUTC();
+    return thisTime - otherTime;
+  };
+
   toString = (): string => {
     const y = this.year.toString().padStart(4, "0");
     const m = this.month.toString().padStart(2, "0");
     const d = this.day.toString().padStart(2, "0");
     return `${y}-${m}-${d}`;
+  };
+
+  static firstDateOfMonth = (month: NaiveMonth): NaiveDate => {
+    return new NaiveDate(month.year, month.month, 1);
+  };
+
+  static lastDateOfMonth = (month: NaiveMonth): NaiveDate => {
+    return new NaiveDate(month.year, month.month + 1, 0);
   };
 
   static today(): NaiveDate {

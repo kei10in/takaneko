@@ -1,12 +1,10 @@
 import { clsx } from "clsx";
-import { useMemo } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { getCalendarDatesOfMonth } from "../../utils/calendar/calendarDate";
 import { EventType } from "../events/EventType";
-import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
+import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
 import { MonthlyCalendarController } from "./MonthlyCalendarController";
@@ -24,12 +22,8 @@ interface Props {
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, month, category, hash = "", hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
-  const dates = useMemo(
-    () => getCalendarDatesOfMonth(month.year, month.month),
-    [month.year, month.month],
-  );
-  const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
-  const calendarEvents = useMemo(() => calendarMonth.flatMap((week) => week), [calendarMonth]);
+  // スクロール位置の調整のために必要な値です。
+  const weeksInMonth = month.weeksInMonth();
 
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
@@ -52,23 +46,24 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           hrefPreviousMonth={hrefPreviousMonth}
           hrefNextMonth={hrefNextMonth}
         />
-        <MonthlyCalendar calendarMonth={calendarMonth} month={month} />
+        <MonthlyCalendar month={month} events={events} />
       </div>
 
       <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
         <div
           id="events-list"
           className={clsx(
-            calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
-            calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
+            weeksInMonth == 5 && "scroll-mt-[21.375rem]",
+            weeksInMonth == 6 && "scroll-mt-[24.175rem]",
             "lg:flex-1 lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
           )}
         >
           <EventList
-            calendarEvents={calendarEvents}
+            month={month}
+            events={events}
             classNameForDate={clsx(
-              calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
-              calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
+              weeksInMonth == 5 && "scroll-mt-[21.375rem]",
+              weeksInMonth == 6 && "scroll-mt-[24.175rem]",
               "lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
             )}
           />

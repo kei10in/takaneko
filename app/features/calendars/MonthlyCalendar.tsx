@@ -1,16 +1,24 @@
+import { useMemo } from "react";
 import { Link } from "react-router";
+import { getCalendarDatesOfMonth } from "~/utils/calendar/calendarDate";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarCell } from "./CalendarCell";
-import { CalendarEvent } from "./calendarEvents";
+import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 
 interface Props {
-  calendarMonth: { date: NaiveDate; events: CalendarEvent[] }[][];
   month: NaiveMonth;
+  events: CalendarEvent[];
 }
 
 export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
-  const { calendarMonth, month } = props;
+  const { month, events } = props;
+
+  const dates = useMemo(
+    () => getCalendarDatesOfMonth(month.year, month.month),
+    [month.year, month.month],
+  );
+  const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
   return (
     <table className="w-full max-w-full table-fixed border-collapse border-none">
