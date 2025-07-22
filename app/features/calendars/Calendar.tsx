@@ -9,6 +9,7 @@ import { EventType } from "../events/EventType";
 import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
+import { MonthlyCalendarController } from "./MonthlyCalendarController";
 
 interface Props {
   events: CalendarEvent[];
@@ -43,8 +44,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           "lg:flex-1 lg:overflow-y-auto lg:pb-8",
         )}
       >
-        <MonthlyCalendar
-          calendarMonth={calendarMonth}
+        <MonthlyCalendarController
           month={month}
           category={category}
           hash={hash}
@@ -52,6 +52,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           hrefPreviousMonth={hrefPreviousMonth}
           hrefNextMonth={hrefNextMonth}
         />
+        <MonthlyCalendar calendarMonth={calendarMonth} month={month} />
       </div>
 
       <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
