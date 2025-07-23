@@ -26,6 +26,11 @@ export class NaiveMonth {
     return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
   };
 
+  advance = (months: number): NaiveMonth => {
+    const date = new Date(Date.UTC(this.year, this.month - 1 + months, 1));
+    return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
+  };
+
   nextMonth = (): NaiveMonth => {
     const date = new Date(Date.UTC(this.year, this.month, 1));
     return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
@@ -36,8 +41,16 @@ export class NaiveMonth {
     return new NaiveMonth(date.getUTCFullYear(), date.getUTCMonth() + 1);
   };
 
+  differenceInMonths = (other: NaiveMonth): number => {
+    return (this.year - other.year) * 12 + (this.month - other.month);
+  };
+
   equals = (other: NaiveMonth): boolean => {
     return this.year === other.year && this.month === other.month;
+  };
+
+  toString = (): string => {
+    return `${this.year}-${String(this.month).padStart(2, "0")}`;
   };
 
   static current(): NaiveMonth {

@@ -1,6 +1,9 @@
 import { clsx } from "clsx";
+import { useMemo } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { Virtual } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventType } from "../events/EventType";
@@ -8,6 +11,7 @@ import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
 import { MonthlyCalendarController } from "./MonthlyCalendarController";
+import { calendarMonthHref } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
@@ -28,6 +32,19 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
 
+  const [months, currentIndex] = useMemo(() => {
+    const startMonth = new NaiveMonth(2022, 1);
+    const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
+
+    const n = lastMonth.differenceInMonths(startMonth) + 1;
+    const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
+    const currentIndex = month.differenceInMonths(startMonth);
+
+    return [months, currentIndex];
+  }, [month]);
+
+  const navigate = useNavigate();
+
   return (
     <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
       <div
@@ -46,7 +63,26 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           hrefPreviousMonth={hrefPreviousMonth}
           hrefNextMonth={hrefNextMonth}
         />
-        <MonthlyCalendar month={month} events={events} />
+        <Swiper
+          modules={[Virtual]}
+          virtual={{ enabled: true }}
+          initialSlide={currentIndex}
+          onSlideChange={(swiper) => {
+            const href = calendarMonthHref(months[swiper.realIndex]);
+            navigate(href, { replace: true });
+          }}
+          className={clsx(
+            "transition-all lg:h-auto",
+            weeksInMonth == 5 && "h-[15.75rem]",
+            weeksInMonth == 6 && "h-[18.6875rem]",
+          )}
+        >
+          {months.map((m) => (
+            <SwiperSlide key={m.toString()}>
+              <MonthlyCalendar month={m} events={events} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
