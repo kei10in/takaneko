@@ -14,6 +14,9 @@ interface Props {
   hrefToday: string;
   hrefPreviousMonth: string;
   hrefNextMonth: string;
+  onClickToday?: () => void;
+  onClickPrevious?: () => void;
+  onClickNext?: () => void;
 }
 
 const Categories = [
@@ -31,7 +34,17 @@ const Categories = [
 ];
 
 export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
-  const { month, category, hash, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const {
+    month,
+    category,
+    hash,
+    hrefToday,
+    onClickToday,
+    hrefPreviousMonth,
+    onClickPrevious,
+    hrefNextMonth,
+    onClickNext,
+  } = props;
 
   return (
     <div className="mx-2 flex items-center justify-between py-2">
@@ -39,6 +52,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
         className="flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
         to={hrefToday}
         preventScrollReset={true}
+        onClick={onClickToday}
       >
         <span className="mx-auto">今日</span>
       </Link>
@@ -80,12 +94,14 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
           <Link
             className="inline-flex h-full grow items-center justify-center text-sm"
             to={hrefPreviousMonth}
+            onClick={onClickPrevious}
           >
             <HiChevronLeft />
           </Link>
           <Link
             className="inline-flex h-full grow items-center justify-center text-sm"
             to={hrefNextMonth}
+            onClick={onClickNext}
           >
             <HiChevronRight />
           </Link>
