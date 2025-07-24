@@ -1,18 +1,16 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import {
   ClientLoaderFunctionArgs,
   LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
   useLocation,
-  useNavigate,
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
 import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -74,16 +72,6 @@ export default function Index() {
   const m = new NaiveMonth(year, month);
 
   const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const m = new NaiveMonth(year, month);
-    const currentMonth = NaiveMonth.current();
-    if (location.hash === "" && m.equals(currentMonth)) {
-      const anchor = NaiveDate.todayInJapan().toString();
-      navigate(`${location.search}#${anchor}`, { replace: true });
-    }
-  }, [location.hash, location.search, month, navigate, year]);
 
   const urlParam = { search: location.search };
 
