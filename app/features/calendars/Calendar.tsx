@@ -27,23 +27,34 @@ interface Props {
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, month, category, hash = "", hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
 
+  // month の初期値を保持するための ref です。
+  // Swiper に渡す initialSlide の値を計算するために使用します。
+  // initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が変わってしまうため、
+  // 初期値を保持しておく必要があります。
+  const monthRef = useRef(month);
+  const initialMonth = monthRef.current;
+
   // スクロール位置の調整のために必要な値です。
   const weeksInMonth = month.weeksInMonth();
 
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
 
-  const [months, currentIndex, currentMonthIndex] = useMemo(() => {
+  const [startMonth, months, initialSlide, currentMonthIndex] = useMemo(() => {
     const startMonth = new NaiveMonth(2022, 1);
     const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
 
     const n = lastMonth.differenceInMonths(startMonth) + 1;
     const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
-    const currentIndex = month.differenceInMonths(startMonth);
+    const initialSlide = initialMonth.differenceInMonths(startMonth);
     const currentMonthIndex = NaiveMonth.current().differenceInMonths(startMonth);
 
-    return [months, currentIndex, currentMonthIndex];
-  }, [month]);
+    return [startMonth, months, initialSlide, currentMonthIndex];
+  }, [initialMonth]);
+
+  const currentSlide = useMemo(() => {
+    return month.differenceInMonths(startMonth);
+  }, [month, startMonth]);
 
   const swiperRef = useRef<SwiperType>(null);
 
@@ -77,8 +88,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <Swiper
           modules={[Virtual]}
           virtual={{ enabled: true }}
-          initialSlide={currentIndex}
+          initialSlide={initialSlide}
           onSlideChange={(swiper) => {
+            // マウントされたときに `navigate` が呼ばれないようにする。
+            // `onSlideChange` はマウントされたときにも呼ばれてしまう。
+            if (currentSlide === swiper.realIndex) {
+              return;
+            }
             const href = calendarMonthHref(months[swiper.realIndex]);
             navigate(href, { replace: true });
           }}
