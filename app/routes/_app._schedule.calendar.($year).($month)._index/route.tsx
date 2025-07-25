@@ -1,16 +1,18 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import {
   ClientLoaderFunctionArgs,
   LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
   useLocation,
+  useNavigate,
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
 import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -30,35 +32,49 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
-  const r = validateYearMonth({ year: params.year, month: params.month });
-  if (r == undefined) {
-    throw new Response("", { status: 404 });
-  }
+  const { year, month, day } = (() => {
+    if (params.year == undefined && params.month == undefined) {
+      const m = NaiveDate.todayInJapan();
+      return { year: m.year, month: m.month, day: m.day };
+    } else {
+      const r = validateYearMonth({ year: params.year, month: params.month });
+      if (r == undefined) {
+        throw new Response("", { status: 404 });
+      }
+      return { ...r, day: undefined };
+    }
+  })();
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
   const category = parseCategory(t);
 
-  const { year, month } = r;
-  return { year, month, category };
+  return { year, month, day, category };
 };
 
 export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
-  const r = validateYearMonth({ year: params.year, month: params.month });
-  if (r == undefined) {
-    throw new Response("", { status: 404 });
-  }
+  const { year, month, day } = (() => {
+    if (params.year == undefined && params.month == undefined) {
+      const m = NaiveDate.today();
+      return { year: m.year, month: m.month, day: m.day };
+    } else {
+      const r = validateYearMonth({ year: params.year, month: params.month });
+      if (r == undefined) {
+        throw new Response("", { status: 404 });
+      }
+      return { ...r, day: undefined };
+    }
+  })();
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
   const category = parseCategory(t);
 
-  const { year, month } = r;
-  return { year, month, category };
+  return { year, month, day, category };
 };
 
 export default function Index() {
-  const { year, month, category } = useLoaderData<typeof loader>();
+  const { year, month, day, category } = useLoaderData<typeof loader>();
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
@@ -72,6 +88,20 @@ export default function Index() {
   const m = new NaiveMonth(year, month);
 
   const location = useLocation();
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (day == undefined) {
+      return;
+    }
+
+    if (location.hash == "") {
+      const date = new NaiveDate(year, month, day);
+      const anchor = date.toString();
+      navigate(`${location.search}#${anchor}`, { replace: true });
+    }
+  }, [day, location.hash, location.search, month, navigate, year]);
 
   const urlParam = { search: location.search };
 
