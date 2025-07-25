@@ -12,20 +12,17 @@ import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
 import { MonthlyCalendarController } from "./MonthlyCalendarController";
-import { calendarMonthHref } from "./utils";
+import { calendarMonthHref, currentMonthHref } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
   month: NaiveMonth;
   category?: EventType | undefined;
   hash?: string | undefined;
-  hrefToday: string;
-  hrefPreviousMonth: string;
-  hrefNextMonth: string;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, month, category, hash = "", hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const { events, month, category, hash = "" } = props;
 
   // month の初期値を保持するための ref です。
   // Swiper に渡す initialSlide の値を計算するために使用します。
@@ -60,6 +57,10 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  const hrefToday = { pathname: currentMonthHref(), search: location.search };
+  const hrefPreviousMonth = { pathname: calendarMonthHref(prevMonth), search: location.search };
+  const hrefNextMonth = { pathname: calendarMonthHref(nextMonth), search: location.search };
 
   const handleClickToday = () => swiperRef.current?.slideTo(currentMonthIndex, undefined, false);
   const handleClickPreviousMonth = () => swiperRef.current?.slidePrev(undefined, false);

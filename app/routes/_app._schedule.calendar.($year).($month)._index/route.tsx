@@ -8,7 +8,7 @@ import {
   useNavigate,
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
-import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
+import { validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
 import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
@@ -106,19 +106,9 @@ export default function Index() {
     }
   }, [day, location.hash, location.search, month, navigate, year]);
 
-  const urlParam = { search: location.search };
-
   return (
     <div className="container mx-auto">
-      <Calendar
-        events={calendarEvents}
-        month={m}
-        category={category}
-        hash={location.hash}
-        hrefToday={currentMonthHref(urlParam)}
-        hrefPreviousMonth={calendarMonthHref(m.previousMonth(), urlParam)}
-        hrefNextMonth={calendarMonthHref(m.nextMonth(), urlParam)}
-      />
+      <Calendar events={calendarEvents} month={m} category={category} hash={location.hash} />
     </div>
   );
 }

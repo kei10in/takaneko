@@ -2,7 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsChevronDown } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { Link } from "react-router";
+import { Link, To } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventType } from "../events/EventType";
@@ -11,9 +11,9 @@ interface Props {
   month: NaiveMonth;
   category?: EventType | undefined;
   hash?: string | undefined;
-  hrefToday: string;
-  hrefPreviousMonth: string;
-  hrefNextMonth: string;
+  hrefToday: To;
+  hrefPreviousMonth: To;
+  hrefNextMonth: To;
   onClickToday?: () => void;
   onClickPrevious?: () => void;
   onClickNext?: () => void;
