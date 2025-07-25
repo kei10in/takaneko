@@ -2,6 +2,38 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    title:
+      "【ショートドラマ】住みますアイドル　事故物件1日目　映画「事故物件ゾク 恐い間取り」コラボ",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-07-25",
+    mediaUrl: "https://youtu.be/7A0NcPz3Exs",
+    imageUrl: "https://i.ytimg.com/vi/7A0NcPz3Exs/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title:
+      "【ショートドラマ】住みますアイドル　事故物件0日目　映画「事故物件ゾク 恐い間取り」コラボショートドラマ　　＃高嶺のなでしこ　＃城月菜央　＃ホラーちゃんねる",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-07-24",
+    mediaUrl: "https://youtu.be/UfzRlI0z2SI",
+    imageUrl: "https://i.ytimg.com/vi/UfzRlI0z2SI/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title: "【予告】「事故物件住みますアイドル」コラボショートドラマがホラーちゃんねるにて独占配信",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-07-23",
+    mediaUrl: "https://youtu.be/hsHkiXBgm38",
+    imageUrl: "https://i.ytimg.com/vi/hsHkiXBgm38/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "ogp",
     title:
       "高嶺のなでしこ 橋本桃呼・東山恵里沙・松本ももな 『ライフクエスト』配信中。3人がごほうびに選ぶものは？ | インタビュー | non-no web",

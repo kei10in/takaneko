@@ -2,6 +2,24 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2025 = [
   {
+    videoId: "7A0NcPz3Exs",
+    publishedAt: "2025-07-25",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1948725043455742284",
+  },
+  {
+    videoId: "UfzRlI0z2SI",
+    publishedAt: "2025-07-24",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1948372646158065955",
+  },
+  {
+    videoId: "hsHkiXBgm38",
+    publishedAt: "2025-07-23",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1948002770809704503",
+  },
+  {
     videoId: "vXR9vxPuTAo",
     publishedAt: "2025-07-20",
     presents: ["城月菜央"],
