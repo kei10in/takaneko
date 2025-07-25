@@ -6,6 +6,7 @@ import { Link, To } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventType } from "../events/EventType";
+import { calendarMonthHref } from "./utils";
 
 interface Props {
   month: NaiveMonth;
@@ -81,7 +82,12 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                       "block w-24 px-3 text-center text-sm text-gray-600",
                       "data-current:bg-nadeshiko-700 data-current:text-white",
                     )}
-                    to={c.query == undefined ? `${hash}` : `?t=${c.query}${hash}`}
+                    to={{
+                      pathname: calendarMonthHref(month),
+                      search: c.query == undefined ? "" : `?t=${c.query}`,
+                      hash: `#${hash}`,
+                    }}
+                    preventScrollReset={true}
                   >
                     {c.display}
                   </CloseButton>
