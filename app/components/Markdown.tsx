@@ -1,7 +1,8 @@
 import { Break, Nodes } from "mdast";
-import ReactMarkdown, { Components } from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { map } from "unist-util-map";
+import { components } from "./MdComponents";
 
 const allowBrTags = () => {
   return (tree: Nodes) => {
@@ -20,16 +21,18 @@ interface Props {
   children: string | undefined;
 }
 
-const components: Components = {
-  p: ({ children }) => <p className="mt-1 text-sm">{children}</p>,
-};
-
 export const Markdown: React.FC<Props> = (props: Props) => {
   const { children } = props;
 
   return (
-    <ReactMarkdown components={components} remarkPlugins={[allowBrTags, remarkGfm]} skipHtml={true}>
-      {children}
-    </ReactMarkdown>
+    <div>
+      <ReactMarkdown
+        components={components}
+        remarkPlugins={[allowBrTags, remarkGfm]}
+        skipHtml={true}
+      >
+        {children}
+      </ReactMarkdown>
+    </div>
   );
 };

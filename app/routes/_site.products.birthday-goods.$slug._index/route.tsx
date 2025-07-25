@@ -47,11 +47,11 @@ export default function Index() {
           <ul className="mt-8 space-y-8">
             {collection.lineup.map((item, i) => {
               return (
-                <li key={i} className="w-full">
-                  <p className="text-lg font-semibold text-gray-400">{item.name}</p>
+                <li key={i} className="w-full space-y-3">
+                  <h3 className="text-xl font-semibold text-gray-400">{item.name}</h3>
                   <Markdown>{item.description}</Markdown>
                   {item.priceWithTax != undefined && (
-                    <p className="mt-2 flex items-end gap-1 text-gray-500">
+                    <p className="flex items-end gap-1 text-gray-500">
                       <span className="flex items-center">
                         <span className="text-md leading-none">￥</span>
                         <span className="text-lg leading-none">
