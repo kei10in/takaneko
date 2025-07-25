@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link, useLocation, useNavigate } from "react-router";
 import { Virtual } from "swiper/modules";
@@ -36,16 +36,15 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
 
-  const [startMonth, months, initialSlide, currentMonthIndex] = useMemo(() => {
+  const [startMonth, months, initialSlide] = useMemo(() => {
     const startMonth = new NaiveMonth(2022, 1);
     const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
 
     const n = lastMonth.differenceInMonths(startMonth) + 1;
     const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
     const initialSlide = initialMonth.differenceInMonths(startMonth);
-    const currentMonthIndex = NaiveMonth.current().differenceInMonths(startMonth);
 
-    return [startMonth, months, initialSlide, currentMonthIndex];
+    return [startMonth, months, initialSlide];
   }, [initialMonth]);
 
   const currentSlide = useMemo(() => {
@@ -61,9 +60,15 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const hrefPreviousMonth = { pathname: calendarMonthHref(prevMonth), search: location.search };
   const hrefNextMonth = { pathname: calendarMonthHref(nextMonth), search: location.search };
 
-  const handleClickToday = () => swiperRef.current?.slideTo(currentMonthIndex, undefined, false);
-  const handleClickPreviousMonth = () => swiperRef.current?.slidePrev(undefined, false);
-  const handleClickNextMonth = () => swiperRef.current?.slideNext(undefined, false);
+  useEffect(() => {
+    if (swiperRef.current == undefined) {
+      return;
+    }
+
+    if (swiperRef.current.realIndex !== currentSlide) {
+      swiperRef.current.slideTo(currentSlide, undefined, false);
+    }
+  }, [currentSlide]);
 
   return (
     <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
@@ -80,11 +85,8 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           category={category}
           hash={location.hash}
           hrefToday={hrefToday}
-          onClickToday={handleClickToday}
           hrefPreviousMonth={hrefPreviousMonth}
-          onClickPrevious={handleClickPreviousMonth}
           hrefNextMonth={hrefNextMonth}
-          onClickNext={handleClickNextMonth}
         />
         <Swiper
           modules={[Virtual]}
@@ -148,21 +150,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
         <div className="">
           <div className="flex items-center justify-between">
-            <Link
-              className="flex items-center font-bold text-gray-500"
-              to={`${hrefPreviousMonth}`}
-              onClick={handleClickPreviousMonth}
-            >
+            <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
               <span>
                 <HiChevronLeft />
               </span>
               <span>{displayMonth(prevMonth)}</span>
             </Link>
-            <Link
-              className="flex items-center font-bold text-gray-500"
-              to={`${hrefNextMonth}`}
-              onClick={handleClickNextMonth}
-            >
+            <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
               <span>{displayMonth(nextMonth)}</span>
               <span>
                 <HiChevronRight />
