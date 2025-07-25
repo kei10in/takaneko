@@ -8,7 +8,7 @@ import {
   useNavigate,
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
-import { calendarMonthHref, currentMonthHref, validateYearMonth } from "~/features/calendars/utils";
+import { validateYearMonth } from "~/features/calendars/utils";
 import { loadEvents } from "~/features/events/events";
 import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
@@ -32,39 +32,54 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 };
 
 export const loader = async ({ params, request }: LoaderFunctionArgs) => {
-  const r = validateYearMonth({ year: params.year, month: params.month });
-  if (r == undefined) {
-    throw new Response("", { status: 404 });
-  }
+  const { year, month, day } = (() => {
+    if (params.year == undefined && params.month == undefined) {
+      const m = NaiveDate.todayInJapan();
+      return { year: m.year, month: m.month, day: m.day };
+    } else {
+      const r = validateYearMonth({ year: params.year, month: params.month });
+      if (r == undefined) {
+        throw new Response("", { status: 404 });
+      }
+      return { ...r, day: undefined };
+    }
+  })();
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
   const category = parseCategory(t);
 
-  const { year, month } = r;
-  return { year, month, category };
+  return { year, month, day, category };
 };
 
 export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
-  const r = validateYearMonth({ year: params.year, month: params.month });
-  if (r == undefined) {
-    throw new Response("", { status: 404 });
-  }
+  const { year, month, day } = (() => {
+    if (params.year == undefined && params.month == undefined) {
+      const m = NaiveDate.today();
+      return { year: m.year, month: m.month, day: m.day };
+    } else {
+      const r = validateYearMonth({ year: params.year, month: params.month });
+      if (r == undefined) {
+        throw new Response("", { status: 404 });
+      }
+      return { ...r, day: undefined };
+    }
+  })();
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
   const category = parseCategory(t);
 
-  const { year, month } = r;
-  return { year, month, category };
+  return { year, month, day, category };
 };
 
 export default function Index() {
-  const { year, month, category } = useLoaderData<typeof loader>();
+  const { year, month, day, category } = useLoaderData<typeof loader>();
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
-    const events = loadEvents(m);
+    // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
+    const events = loadEvents([m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)]);
     const calendarEvents = events.filter((e) =>
       category == undefined ? true : e.meta.category === category,
     );
@@ -77,27 +92,22 @@ export default function Index() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const m = new NaiveMonth(year, month);
-    const currentMonth = NaiveMonth.current();
-    if (location.hash === "" && m.equals(currentMonth)) {
-      const anchor = NaiveDate.todayInJapan().toString();
-      navigate(`${location.search}#${anchor}`, { replace: true });
+    if (day == undefined) {
+      return;
     }
-  }, [location.hash, location.search, month, navigate, year]);
 
-  const urlParam = { search: location.search };
+    if (location.hash == "") {
+      const date = new NaiveDate(year, month, day);
+      const anchor = date.toString();
+
+      const elem = document.getElementById(anchor);
+      elem?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [day, location.hash, location.search, month, navigate, year]);
 
   return (
     <div className="container mx-auto">
-      <Calendar
-        events={calendarEvents}
-        month={m}
-        category={category}
-        hash={location.hash}
-        hrefToday={currentMonthHref(urlParam)}
-        hrefPreviousMonth={calendarMonthHref(m.previousMonth(), urlParam)}
-        hrefNextMonth={calendarMonthHref(m.nextMonth(), urlParam)}
-      />
+      <Calendar events={calendarEvents} month={m} category={category} />
     </div>
   );
 }

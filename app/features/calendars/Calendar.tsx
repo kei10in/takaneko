@@ -1,37 +1,74 @@
 import { clsx } from "clsx";
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
+import { Virtual } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper/types";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { getCalendarDatesOfMonth } from "../../utils/calendar/calendarDate";
 import { EventType } from "../events/EventType";
-import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
+import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
+import { MonthlyCalendarController } from "./MonthlyCalendarController";
+import { calendarMonthHref, currentMonthHref } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
   month: NaiveMonth;
   category?: EventType | undefined;
-  hash?: string | undefined;
-  hrefToday: string;
-  hrefPreviousMonth: string;
-  hrefNextMonth: string;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, month, category, hash = "", hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const { events, month, category } = props;
 
-  const dates = useMemo(
-    () => getCalendarDatesOfMonth(month.year, month.month),
-    [month.year, month.month],
-  );
-  const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
-  const calendarEvents = useMemo(() => calendarMonth.flatMap((week) => week), [calendarMonth]);
+  // month の初期値を保持するための ref です。
+  // Swiper に渡す initialSlide の値を計算するために使用します。
+  // initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が変わってしまうため、
+  // 初期値を保持しておく必要があります。
+  const monthRef = useRef(month);
+  const initialMonth = monthRef.current;
+
+  // スクロール位置の調整のために必要な値です。
+  const weeksInMonth = month.weeksInMonth();
 
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
+
+  const [startMonth, months, initialSlide] = useMemo(() => {
+    const startMonth = new NaiveMonth(2022, 1);
+    const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
+
+    const n = lastMonth.differenceInMonths(startMonth) + 1;
+    const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
+    const initialSlide = initialMonth.differenceInMonths(startMonth);
+
+    return [startMonth, months, initialSlide];
+  }, [initialMonth]);
+
+  const currentSlide = useMemo(() => {
+    return month.differenceInMonths(startMonth);
+  }, [month, startMonth]);
+
+  const swiperRef = useRef<SwiperType>(null);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const hrefToday = { pathname: currentMonthHref(), search: location.search };
+  const hrefPreviousMonth = { pathname: calendarMonthHref(prevMonth), search: location.search };
+  const hrefNextMonth = { pathname: calendarMonthHref(nextMonth), search: location.search };
+
+  useEffect(() => {
+    if (swiperRef.current == undefined) {
+      return;
+    }
+
+    if (swiperRef.current.realIndex !== currentSlide) {
+      swiperRef.current.slideTo(currentSlide, undefined, false);
+    }
+  }, [currentSlide]);
 
   return (
     <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
@@ -43,31 +80,57 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           "lg:flex-1 lg:overflow-y-auto lg:pb-8",
         )}
       >
-        <MonthlyCalendar
-          calendarMonth={calendarMonth}
+        <MonthlyCalendarController
           month={month}
           category={category}
-          hash={hash}
+          hash={location.hash}
           hrefToday={hrefToday}
           hrefPreviousMonth={hrefPreviousMonth}
           hrefNextMonth={hrefNextMonth}
         />
+        <Swiper
+          modules={[Virtual]}
+          virtual={{ enabled: true }}
+          initialSlide={initialSlide}
+          onSlideChange={(swiper) => {
+            // マウントされたときに `navigate` が呼ばれないようにする。
+            // `onSlideChange` はマウントされたときにも呼ばれてしまう。
+            if (currentSlide === swiper.realIndex) {
+              return;
+            }
+            const href = calendarMonthHref(months[swiper.realIndex]);
+            navigate({ pathname: href, search: location.search }, { replace: true });
+          }}
+          className={clsx(
+            "transition-all lg:h-auto",
+            weeksInMonth == 5 && "h-[15.75rem]",
+            weeksInMonth == 6 && "h-[18.6875rem]",
+          )}
+          onSwiper={(swiper) => (swiperRef.current = swiper)}
+        >
+          {months.map((m) => (
+            <SwiperSlide key={m.toString()}>
+              <MonthlyCalendar month={m} events={events} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
         <div
           id="events-list"
           className={clsx(
-            calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
-            calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
+            weeksInMonth == 5 && "scroll-mt-[21.375rem]",
+            weeksInMonth == 6 && "scroll-mt-[24.175rem]",
             "lg:flex-1 lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
           )}
         >
           <EventList
-            calendarEvents={calendarEvents}
+            month={month}
+            events={events}
             classNameForDate={clsx(
-              calendarMonth.length == 5 && "scroll-mt-[21.375rem]",
-              calendarMonth.length == 6 && "scroll-mt-[24.175rem]",
+              weeksInMonth == 5 && "scroll-mt-[21.375rem]",
+              weeksInMonth == 6 && "scroll-mt-[24.175rem]",
               "lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
             )}
           />
@@ -87,13 +150,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
         <div className="">
           <div className="flex items-center justify-between">
-            <Link className="flex items-center font-bold text-gray-500" to={`${hrefPreviousMonth}`}>
+            <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
               <span>
                 <HiChevronLeft />
               </span>
               <span>{displayMonth(prevMonth)}</span>
             </Link>
-            <Link className="flex items-center font-bold text-gray-500" to={`${hrefNextMonth}`}>
+            <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
               <span>{displayMonth(nextMonth)}</span>
               <span>
                 <HiChevronRight />

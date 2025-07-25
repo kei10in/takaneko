@@ -1,22 +1,48 @@
 import { clsx } from "clsx";
+import { useMemo } from "react";
 import { Link } from "react-router";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarEventItem } from "./CalendarEventItem";
-import { CalendarEvent } from "./calendarEvents";
+import { CalendarEvent, sortedCalendarEvents } from "./calendarEvents";
 import { dateHref } from "./utils";
 
 interface Props {
-  calendarEvents: { date: NaiveDate; events: CalendarEvent[] }[];
+  month: NaiveMonth;
+  events: CalendarEvent[];
   classNameForDate?: string;
 }
 
 export const EventList: React.FC<Props> = (props: Props) => {
-  const { calendarEvents: events, classNameForDate } = props;
+  const { month, events, classNameForDate } = props;
+
+  const eventsByDate = useMemo(() => {
+    // 表示するのは指定した月のイベントのみ
+    const filtered = events.filter((e) => {
+      return e.meta.date.naiveMonth().equals(month);
+    });
+
+    return sortedCalendarEvents(filtered).reduce(
+      (acc, event) => {
+        if (acc.length == 0) {
+          return [{ date: event.meta.date, events: [event] }];
+        }
+
+        const last = acc[acc.length - 1];
+        if (last.date.equals(event.meta.date)) {
+          return [...acc.slice(0, -1), { date: last.date, events: [...last.events, event] }];
+        } else {
+          return [...acc, { date: event.meta.date, events: [event] }];
+        }
+      },
+      [] as { date: NaiveDate; events: CalendarEvent[] }[],
+    );
+  }, [events, month]);
 
   return (
     <div className="pb-4">
-      {events.map(({ date: dt, events: eventsInDate }) => {
+      {eventsByDate.map(({ date: dt, events: eventsInDate }) => {
         const anchor = dt.toString();
         const date = displayDate(dt);
 
