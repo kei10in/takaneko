@@ -1,3 +1,4 @@
+import { Markdown } from "node_modules/react-markdown/lib";
 import React from "react";
 import { Act, isEmptyAct } from "~/features/events/act";
 import { Setlist } from "./Setlist";
@@ -64,7 +65,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
                   </div>
                 )}
 
-                {description && <p>{description}</p>}
+                {description && <Markdown>{description}</Markdown>}
 
                 {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
               </div>

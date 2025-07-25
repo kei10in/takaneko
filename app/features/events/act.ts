@@ -1,5 +1,6 @@
 import { z } from "zod/v4";
 
+import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist, Segment } from "./setlist";
 
@@ -100,7 +101,7 @@ export const validateActDescription = (
         open: open,
         start: start,
         end: end,
-        description: description,
+        description: description != undefined ? dedent(description) : undefined,
         setlist: validatedSetlist,
         links: [...linkDescriptionsForUrl, ...validatedLinks],
       },
