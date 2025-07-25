@@ -99,7 +99,9 @@ export default function Index() {
     if (location.hash == "") {
       const date = new NaiveDate(year, month, day);
       const anchor = date.toString();
-      navigate(`${location.search}#${anchor}`, { replace: true });
+
+      const elem = document.getElementById(anchor);
+      elem?.scrollIntoView({ behavior: "smooth" });
     }
   }, [day, location.hash, location.search, month, navigate, year]);
 
