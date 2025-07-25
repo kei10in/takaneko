@@ -78,7 +78,8 @@ export default function Index() {
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
-    const events = loadEvents(m);
+    // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
+    const events = loadEvents([m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)]);
     const calendarEvents = events.filter((e) =>
       category == undefined ? true : e.meta.category === category,
     );
