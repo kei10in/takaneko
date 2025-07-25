@@ -47,7 +47,7 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
     title:
-      "映画「事故物件ゾク恐い間取り」ホラー映画界の巨匠・中田秀夫監督にホラー大好きアイドル・城月菜央（高嶺のなでしこ）がインタビュー👻",
+      "映画「事故物件ゾク 恐い間取り」ホラー映画界の名手・中田秀夫監督にホラー大好きアイドル・城月菜央（高嶺のなでしこ）がインタビュー👻",
     authorName: "ホラーちゃんねる",
     publishedAt: "2025-07-20",
     mediaUrl: "https://youtu.be/vXR9vxPuTAo",
