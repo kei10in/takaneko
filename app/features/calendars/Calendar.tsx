@@ -18,11 +18,10 @@ interface Props {
   events: CalendarEvent[];
   month: NaiveMonth;
   category?: EventType | undefined;
-  hash?: string | undefined;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, month, category, hash = "" } = props;
+  const { events, month, category } = props;
 
   // month の初期値を保持するための ref です。
   // Swiper に渡す initialSlide の値を計算するために使用します。
@@ -79,7 +78,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <MonthlyCalendarController
           month={month}
           category={category}
-          hash={hash}
+          hash={location.hash}
           hrefToday={hrefToday}
           onClickToday={handleClickToday}
           hrefPreviousMonth={hrefPreviousMonth}

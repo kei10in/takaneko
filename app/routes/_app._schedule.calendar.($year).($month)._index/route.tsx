@@ -89,7 +89,6 @@ export default function Index() {
   const m = new NaiveMonth(year, month);
 
   const location = useLocation();
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -108,7 +107,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <Calendar events={calendarEvents} month={m} category={category} hash={location.hash} />
+      <Calendar events={calendarEvents} month={m} category={category} />
     </div>
   );
 }
