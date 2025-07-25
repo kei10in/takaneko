@@ -18,17 +18,9 @@ export const EventList: React.FC<Props> = (props: Props) => {
   const { month, events, classNameForDate } = props;
 
   const eventsByDate = useMemo(() => {
-    const firstDate = NaiveDate.firstDateOfMonth(month);
-    const firstCalendarDate = firstDate.addDays(-firstDate.dayOfWeek);
-    const lastDate = NaiveDate.lastDateOfMonth(month);
-    const lastCalendarDate = lastDate.addDays(6 - lastDate.dayOfWeek);
-
-    // 表示するのは指定した月のカレンダーの範囲内のイベントのみ
+    // 表示するのは指定した月のイベントのみ
     const filtered = events.filter((e) => {
-      const eventDate = e.meta.date;
-      return (
-        eventDate.compareTo(firstCalendarDate) >= 0 && eventDate.compareTo(lastCalendarDate) <= 0
-      );
+      return e.meta.date.naiveMonth().equals(month);
     });
 
     return sortedCalendarEvents(filtered).reduce(
