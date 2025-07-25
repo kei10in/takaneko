@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { useMemo, useRef } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
@@ -58,6 +58,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
   const swiperRef = useRef<SwiperType>(null);
 
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleClickToday = () => swiperRef.current?.slideTo(currentMonthIndex, undefined, false);
@@ -96,7 +97,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
               return;
             }
             const href = calendarMonthHref(months[swiper.realIndex]);
-            navigate(href, { replace: true });
+            navigate({ pathname: href, search: location.search }, { replace: true });
           }}
           className={clsx(
             "transition-all lg:h-auto",
