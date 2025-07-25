@@ -38,15 +38,16 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
           <tr key={i} className="border-y border-gray-300">
             {week.map(({ date, events }, j) => {
               const dateString = date.toString();
+              const currentMonth = date.naiveMonth().equals(month);
               return (
                 <td key={j} className="p-0">
-                  {events.length == 0 ? (
+                  {events.length == 0 || !currentMonth ? (
                     <div className="w-full">
                       <CalendarCell
                         date={date.day}
                         day={date.dayOfWeek}
                         events={events}
-                        currentMonth={date.naiveMonth().equals(month)}
+                        currentMonth={currentMonth}
                         today={date.equals(NaiveDate.todayInJapan())}
                       />
                     </div>
@@ -64,7 +65,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                         date={date.day}
                         day={date.dayOfWeek}
                         events={events}
-                        currentMonth={date.naiveMonth().equals(month)}
+                        currentMonth={currentMonth}
                         today={date.equals(NaiveDate.todayInJapan())}
                       />
                     </Link>
