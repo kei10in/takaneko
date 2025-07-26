@@ -1,5 +1,5 @@
-import { Markdown } from "node_modules/react-markdown/lib";
 import React from "react";
+import { Markdown } from "~/components/Markdown";
 import { Act, isEmptyAct } from "~/features/events/act";
 import { Setlist } from "./Setlist";
 
