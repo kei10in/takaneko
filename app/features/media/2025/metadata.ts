@@ -4,6 +4,17 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
     title:
+      "【ショートドラマ】住みますアイドル　事故物件2日目　映画「事故物件ゾク 恐い間取り」コラボ",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-07-26",
+    mediaUrl: "https://youtu.be/tpwwctmr2uk",
+    imageUrl: "https://i.ytimg.com/vi/tpwwctmr2uk/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    title:
       "【ショートドラマ】住みますアイドル　事故物件1日目　映画「事故物件ゾク 恐い間取り」コラボ",
     authorName: "ホラーちゃんねる",
     publishedAt: "2025-07-25",
