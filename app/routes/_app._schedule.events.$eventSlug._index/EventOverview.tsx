@@ -29,7 +29,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
 
           <div className="mx-auto mt-0 mb-2 w-60 max-w-xs overflow-hidden">
             <div className="w-full">
-              <Link className="text-nadeshiko-950 block" to="#timetable" preventScrollReset>
+              <Link className="text-nadeshiko-950 block" to="#timetable" preventScrollReset replace>
                 <img className="inline w-full" src={timetable.path} alt="タイムテーブル" />
               </Link>
             </div>
