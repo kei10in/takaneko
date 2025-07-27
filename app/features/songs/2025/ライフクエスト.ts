@@ -9,7 +9,7 @@ export const ライフクエスト: SongMetaDescriptor = {
   composedBy: "shito, 中西",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "籾山ひめり",
 
   tags: [Original, Repertoire],
 
@@ -20,6 +20,10 @@ export const ライフクエスト: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=5ezn2DJbK7s",
+    },
+    {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=sW19jLLfPq4",
     },
   ],
 };
