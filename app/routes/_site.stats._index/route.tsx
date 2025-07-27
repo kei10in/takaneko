@@ -1,8 +1,8 @@
 import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { Bar } from "react-chartjs-2";
 import { MetaFunction } from "react-router";
+import { BarChart } from "~/components/charts/BarChart";
 import { ALL_EVENTS } from "~/features/events/events";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -32,9 +32,7 @@ export const loader = async () => {
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { concertCountsByPrefecture } = loaderData;
 
-  const labels = concertCountsByPrefecture.map((pref) => pref.name);
-  const data = concertCountsByPrefecture.map((pref) => pref.count);
-  const height = 20 * labels.length + 80;
+  const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -53,46 +51,12 @@ export default function Component({ loaderData }: Route.ComponentProps) {
             同じ日に複数の場所でステージをしている場合は、それぞれにカウントしています。
           </p>
 
-          <div className="mt-4" style={{ height }}>
-            <Bar
-              data={{
-                labels,
-                datasets: [
-                  {
-                    data,
-                    backgroundColor: "rgba(242, 104, 158, 0.8)",
-                  },
-                ],
-              }}
-              options={{
-                indexAxis: "y",
-                responsive: true,
-                layout: {
-                  padding: {
-                    right: 22,
-                  },
-                },
-                plugins: {
-                  legend: {
-                    display: false,
-                  },
-                  datalabels: {
-                    color: "#f26894",
-                    font: {
-                      weight: "bold",
-                    },
-                    align: "end",
-                    anchor: "end",
-                    formatter: (value) => value.toString(),
-                  },
-                },
-                maintainAspectRatio: false,
-              }}
-            />
+          <div className="mt-4">
+            <BarChart data={data} />
           </div>
         </section>
 
-        <section className="mt-8">
+        <section className="mt-12">
           <h2 className="mb-2 text-2xl font-semibold text-gray-600">ライブでよくやるやつ</h2>
           <p className="mb-4 text-gray-600">
             数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
