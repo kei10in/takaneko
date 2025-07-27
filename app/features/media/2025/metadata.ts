@@ -4,6 +4,17 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
     title:
+      "日本ペイントマレッツ vs 日本生命レッドエルフ ノジマTリーグ2025-2026女子開幕戦 2025年07月27日(日) 14:00試合開始 代々木第二体育館 開幕戦直前スペシャル13時配信スタート",
+    authorName: "【公式】卓球Tリーグ公式サイト",
+    publishedAt: "2025-07-27",
+    mediaUrl: "https://youtu.be/JK3sm50DW10",
+    imageUrl: "https://i.ytimg.com/vi/JK3sm50DW10/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
+    title:
       "【ショートドラマ】住みますアイドル　事故物件3日目　映画「事故物件ゾク 恐い間取り」コラボ　＃事故物件　＃ホラー　＃高嶺のなでしこ",
     authorName: "ホラーちゃんねる",
     publishedAt: "2025-07-27",
