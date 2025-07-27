@@ -91,7 +91,9 @@ export default function EventPage() {
   const d = meta.date;
   const m = d.naiveMonth();
 
-  const close = () => navigate(".", { replace: true, preventScrollReset: true });
+  // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防振するために、
+  // `To` のオブジェクトを渡す。
+  const close = () => navigate({ pathname: "." }, { replace: true, preventScrollReset: true });
 
   return (
     <div className="container mx-auto lg:max-w-4xl">
