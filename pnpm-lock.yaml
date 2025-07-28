@@ -81,8 +81,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
       zod:
-        specifier: ^3.25.67
-        version: 3.25.67
+        specifier: ^3.25.76
+        version: 3.25.76
       zustand:
         specifier: ^5.0.6
         version: 5.0.6(@types/react@19.1.8)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0))
@@ -338,8 +338,8 @@ packages:
     resolution: {integrity: sha512-2WJMeRQPHKSPemqk/awGrAiuFfzBmOIPXKizAsVhWH9YJqLZ0H+HS4c8loHGgW6utJ3E/ejXQUsiGaQy2NZ9Fw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.27.6':
-    resolution: {integrity: sha512-vbavdySgbTTrmFE+EsiqUTzlOr5bzlnJtUv9PynGCAKvfQqjIXbvFdumPM/GxMDfyuGMJaJAU6TO4zc1Jf1i8Q==}
+  '@babel/runtime@7.28.2':
+    resolution: {integrity: sha512-KHp2IflsnGywDjBWDkR9iEqiWSpc8GIi0lgTT3mOElT0PP1tG26P4tmFI2YvAdzgq9RGyoHZQEIEdZy6Ec5xCA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -4485,8 +4485,8 @@ packages:
   zod@3.22.3:
     resolution: {integrity: sha512-EjIevzuJRiRPbVH4mGc8nApb/lVLKVpmUhAaR5R5doKGfAnGJ6Gr3CViAVjP+4FWSxCsybeWQdcgCtbX+7oZug==}
 
-  zod@3.25.67:
-    resolution: {integrity: sha512-idA2YXwpCdqUSKRCACDE6ItZD9TZzy3OZMtpfLoh6oPR47lipysRrJfjzMqFxQ3uJuUPyUeWe1r9vLH33xO/Qw==}
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
   zustand@5.0.6:
     resolution: {integrity: sha512-ihAqNeUVhe0MAD+X8M5UzqyZ9k3FFZLBTtqo6JLPwV53cbRB/mJwBI0PxcIgqhBBHlEs8G45OTDTMq3gNcLq3A==}
@@ -4683,7 +4683,7 @@ snapshots:
     dependencies:
       regenerator-runtime: 0.14.1
 
-  '@babel/runtime@7.27.6': {}
+  '@babel/runtime@7.28.2': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -5692,7 +5692,7 @@ snapshots:
   '@testing-library/dom@10.4.0':
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/runtime': 7.27.6
+      '@babel/runtime': 7.28.2
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -9305,7 +9305,7 @@ snapshots:
 
   zod@3.22.3: {}
 
-  zod@3.25.67: {}
+  zod@3.25.76: {}
 
   zustand@5.0.6(@types/react@19.1.8)(react@19.1.0)(use-sync-external-store@1.5.0(react@19.1.0)):
     optionalDependencies:
