@@ -26,7 +26,7 @@ import { ImageCarousel } from "~/components/ImageCarousel";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { loadEventModule } from "~/features/events/events";
-import { categoryToEmoji } from "~/features/events/EventType";
+import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
@@ -123,7 +123,7 @@ export default function EventPage() {
 
         <div className="my-4 space-y-2">
           <h1 className="px-4 pb-1.5 text-2xl font-bold">
-            <span>{categoryToEmoji(meta.category)}</span>
+            <span>{eventTypeToEmoji(meta.category)}</span>
             <span>{meta.title ?? meta.summary}</span>
           </h1>
           <div className="flex items-center gap-1 px-5">

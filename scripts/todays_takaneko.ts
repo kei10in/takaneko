@@ -2,7 +2,7 @@ import { glob } from "glob";
 import Handlebars from "handlebars";
 import { register } from "node:module";
 import { dedent } from "ts-dedent";
-import { categoryToEmoji } from "~/features/events/EventType";
+import { eventTypeToEmoji } from "~/features/events/EventType";
 import { compareEventMeta, EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -48,7 +48,7 @@ const createRequestBody = async () => {
 
   events.sort(compareEventMeta);
 
-  const items = events.map((event) => `${categoryToEmoji(event.category)}${event.summary}`);
+  const items = events.map((event) => `${eventTypeToEmoji(event.category)}${event.summary}`);
 
   const date = displayDate(today);
   const year = today.year.toString().padStart(4, "0");

@@ -35,7 +35,7 @@ export const compareEventType = (a: EventType, b: EventType): number => {
   return order.indexOf(a) - order.indexOf(b);
 };
 
-export const categoryToEmoji = (category: EventType): string => {
+export const eventTypeToEmoji = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "🎤";
@@ -62,7 +62,7 @@ export const categoryToEmoji = (category: EventType): string => {
   }
 };
 
-export const categoryToColor = (category: EventType): string => {
+export const eventTypeToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "bg-zinc-500";
@@ -86,37 +86,6 @@ export const categoryToColor = (category: EventType): string => {
       return "bg-indigo-400";
     case EventType.OTHER:
       return "bg-amber-900";
-  }
-};
-
-export const parseCategory = (category: string | null): EventType | undefined => {
-  if (category == undefined) {
-    return undefined;
-  }
-
-  switch (category.toLowerCase()) {
-    case "live":
-      return EventType.LIVE;
-    case "event":
-      return EventType.EVENT;
-    case "streaming":
-      return EventType.STREAMING;
-    case "release":
-      return EventType.RELEASE;
-    case "birthday":
-      return EventType.BIRTHDAY;
-    case "tv":
-      return EventType.TV;
-    case "radio":
-      return EventType.RADIO;
-    case "web":
-      return EventType.WEB;
-    case "magazine":
-      return EventType.MAGAZINE;
-    case "other":
-      return EventType.OTHER;
-    default:
-      return undefined;
   }
 };
 

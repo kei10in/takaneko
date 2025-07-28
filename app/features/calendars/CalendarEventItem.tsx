@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { HiMapPin } from "react-icons/hi2";
-import { categoryToColor, categoryToEmoji, EventType } from "../events/EventType";
+import { EventType, eventTypeToColor, eventTypeToEmoji } from "../events/EventType";
 
 interface Props {
   category: EventType;
@@ -11,7 +11,7 @@ interface Props {
 
 export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const { category, summary, location, region } = props;
-  const color = categoryToColor(category);
+  const color = eventTypeToColor(category);
 
   const place = location || region;
 
@@ -20,7 +20,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
       <div className={clsx("w-1 flex-none self-stretch rounded-full", color)} />
       <div>
         <p className="space-x-1">
-          <span>{categoryToEmoji(category)}</span>
+          <span>{eventTypeToEmoji(category)}</span>
           <span>{summary}</span>
         </p>
         {place && (
