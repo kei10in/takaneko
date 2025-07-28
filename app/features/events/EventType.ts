@@ -9,6 +9,7 @@ export const EventTypeEnum = z.enum([
   "TV",
   "RADIO",
   "WEB",
+  "BOOK",
   "MAGAZINE",
   "OTHER",
 ]);
@@ -26,6 +27,7 @@ export const compareEventType = (a: EventType, b: EventType): number => {
     EventType.TV,
     EventType.RADIO,
     EventType.WEB,
+    EventType.BOOK,
     EventType.MAGAZINE,
     EventType.OTHER,
   ];
@@ -51,6 +53,8 @@ export const categoryToEmoji = (category: EventType): string => {
       return "📻";
     case EventType.WEB:
       return "📱";
+    case EventType.BOOK:
+      return "📖";
     case EventType.MAGAZINE:
       return "📰";
     case EventType.OTHER:
@@ -76,6 +80,8 @@ export const categoryToColor = (category: EventType): string => {
       return "bg-sky-400";
     case EventType.WEB:
       return "bg-blue-600";
+    case EventType.BOOK:
+      return "bg-indigo-400";
     case EventType.MAGAZINE:
       return "bg-indigo-400";
     case EventType.OTHER:
