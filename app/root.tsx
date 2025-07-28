@@ -7,7 +7,7 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import {
   isRouteErrorResponse,
@@ -210,22 +210,42 @@ export function HydrateFallback() {
 }
 
 export function ErrorBoundary() {
+  const { title, description, error } = useParseError();
+
+  useEffect(() => {
+    if (error != undefined) {
+      console.error(error.stack);
+      console.error(error.message);
+    }
+  }, [error]);
+
+  return (
+    <div className="container mx-auto lg:max-w-5xl">
+      <section className="py-16 text-center">
+        <h1 className="text-5xl text-gray-400">{title}</h1>
+        <p className="tet-gray-800 mt-4">{description}</p>
+      </section>
+    </div>
+  );
+}
+
+const useParseError = () => {
   const error = useRouteError();
 
-  const [title, description] = isRouteErrorResponse(error)
-    ? [error.status.toString(), error.status == 404 ? "ページが見つかりません。" : error.statusText]
-    : ["不明なエラー", "不明なエラーが発生しました。"];
-
   if (isRouteErrorResponse(error)) {
-    return (
-      <div className="container mx-auto lg:max-w-5xl">
-        <section className="py-16 text-center">
-          <h1 className="text-5xl text-gray-400">{title}</h1>
-          <p className="tet-gray-800 mt-4">{description}</p>
-        </section>
-      </div>
-    );
-  } else {
-    return <h1>Unknown Error</h1>;
+    return {
+      title: error.status.toString(),
+      description: error.status == 404 ? "ページが見つかりません。" : error.statusText,
+    };
+  } else if (error instanceof Error) {
+    return {
+      title: "エラー",
+      description: "予期しないエラーが発生しました。",
+      error,
+    };
   }
-}
+  return {
+    title: "エラー",
+    description: "予期しないエラーが発生しました。",
+  };
+};
