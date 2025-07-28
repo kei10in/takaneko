@@ -5,34 +5,27 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link, To } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { EventType } from "../events/EventType";
+import { EventFilters, EventFilterType } from "../events/eventFilter";
 import { calendarMonthHref } from "./utils";
 
 interface Props {
   month: NaiveMonth;
-  category?: EventType | undefined;
+  filter?: EventFilterType | undefined;
   hash?: string | undefined;
   hrefToday: To;
   hrefPreviousMonth: To;
   hrefNextMonth: To;
 }
 
-const Categories = [
-  { display: "すべて", query: undefined, value: undefined },
-  { display: "ライブ", query: "live", value: EventType.LIVE },
-  { display: "イベント", query: "event", value: EventType.EVENT },
-  { display: "生配信", query: "streaming", value: EventType.STREAMING },
-  { display: "テレビ", query: "tv", value: EventType.TV },
-  { display: "ラジオ", query: "radio", value: EventType.RADIO },
-  { display: "Web", query: "web", value: EventType.WEB },
-  { display: "誕生日", query: "birthday", value: EventType.BIRTHDAY },
-  { display: "発売日", query: "release", value: EventType.RELEASE },
-  { display: "雑誌", query: "magazine", value: EventType.MAGAZINE },
-  { display: "その他", query: "other", value: EventType.OTHER },
-];
-
 export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
-  const { month, category, hash, hrefToday, hrefPreviousMonth, hrefNextMonth } = props;
+  const {
+    month,
+    filter = EventFilterType.all,
+    hash,
+    hrefToday,
+    hrefPreviousMonth,
+    hrefNextMonth,
+  } = props;
 
   return (
     <div className="mx-2 flex items-center justify-between py-2">
@@ -48,7 +41,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
         <Popover className="w-28">
           <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
             <div className="mx-auto flex-1 pl-2">
-              {Categories.find((x) => x.value == category)?.display ?? "All"}
+              {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
             </div>
             <div className="flex-none px-1">
               <BsChevronDown className="text-xs" />
@@ -59,18 +52,18 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
             className="border-nadeshiko-100 bg-nadeshiko-50 overflow-hidden rounded-sm border py-2 shadow-md"
           >
             <ul className="space-y-1">
-              {Categories.map((c) => (
+              {EventFilters.map((c) => (
                 <li key={c.display}>
                   <CloseButton
                     as={Link}
-                    data-current={category == c.value ? "" : undefined}
+                    data-current={filter == c.name ? "" : undefined}
                     className={clsx(
                       "block w-24 px-3 text-center text-sm text-gray-600",
                       "data-current:bg-nadeshiko-700 data-current:text-white",
                     )}
                     to={{
                       pathname: calendarMonthHref(month),
-                      search: c.query == undefined ? "" : `?t=${c.query}`,
+                      search: c.name == EventFilterType.all ? "" : `?t=${c.name}`,
                       hash: `#${hash}`,
                     }}
                     preventScrollReset={true}

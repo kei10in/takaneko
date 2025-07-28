@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { EventType } from "../events/EventType";
+import { EventFilterType } from "../events/eventFilter";
 import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
@@ -17,11 +17,11 @@ import { calendarMonthHref, currentMonthHref } from "./utils";
 interface Props {
   events: CalendarEvent[];
   month: NaiveMonth;
-  category?: EventType | undefined;
+  filter?: EventFilterType | undefined;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, month, category } = props;
+  const { events, month, filter } = props;
 
   // month の初期値を保持するための ref です。
   // Swiper に渡す initialSlide の値を計算するために使用します。
@@ -82,7 +82,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
       >
         <MonthlyCalendarController
           month={month}
-          category={category}
+          filter={filter}
           hash={location.hash}
           hrefToday={hrefToday}
           hrefPreviousMonth={hrefPreviousMonth}

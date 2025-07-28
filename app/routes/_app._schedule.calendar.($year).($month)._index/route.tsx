@@ -9,8 +9,8 @@ import {
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
 import { validateYearMonth } from "~/features/calendars/utils";
+import { EventFilters } from "~/features/events/eventFilter";
 import { loadEvents } from "~/features/events/events";
-import { parseCategory } from "~/features/events/EventType";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -47,9 +47,8 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
-  const category = parseCategory(t);
 
-  return { year, month, day, category };
+  return { year, month, day, filter: t };
 };
 
 export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
@@ -68,23 +67,25 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
 
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
-  const category = parseCategory(t);
 
-  return { year, month, day, category };
+  return { year, month, day, filter: t };
 };
 
 export default function Index() {
-  const { year, month, day, category } = useLoaderData<typeof loader>();
+  const { year, month, day, filter } = useLoaderData<typeof loader>();
+
+  const eventFilter = useMemo(() => {
+    const eventFilter = EventFilters.find((f) => f.name == filter) ?? EventFilters[0];
+    return eventFilter;
+  }, [filter]);
 
   const calendarEvents = useMemo(() => {
     const m = new NaiveMonth(year, month);
     // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
     const events = loadEvents([m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)]);
-    const calendarEvents = events.filter((e) =>
-      category == undefined ? true : e.meta.category === category,
-    );
+    const calendarEvents = events.filter(eventFilter.predicate);
     return calendarEvents;
-  }, [month, year, category]);
+  }, [year, month, eventFilter.predicate]);
 
   const m = new NaiveMonth(year, month);
 
@@ -107,7 +108,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <Calendar events={calendarEvents} month={m} category={category} />
+      <Calendar events={calendarEvents} month={m} filter={eventFilter.name} />
     </div>
   );
 }
