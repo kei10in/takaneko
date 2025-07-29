@@ -45,8 +45,8 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0(chart.js@4.5.0)(react@19.1.1)
       react-content-loader:
-        specifier: ^7.0.2
-        version: 7.0.2(react@19.1.1)
+        specifier: ^7.1.1
+        version: 7.1.1(react@19.1.1)
       react-dom:
         specifier: ^19.1.1
         version: 19.1.1(react@19.1.1)
@@ -3663,8 +3663,8 @@ packages:
       chart.js: ^4.1.1
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  react-content-loader@7.0.2:
-    resolution: {integrity: sha512-773S98JTyC8VB2nu7LXUhpHx8tZMieGxMcx3qTe7IkohT6Br7d9AXnIXs/wQ6IhlUdKQcw6JLKk1QKigYCWDRA==}
+  react-content-loader@7.1.1:
+    resolution: {integrity: sha512-yNkqtd+15wXRLfDKZb5nTqDV2fPTG2kpUgeGRb+WBz43bU0j4DSGXETF0bnFr44fAoTPpm0Dya0WGdhpHSvtYA==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16.0.0'
@@ -8231,7 +8231,7 @@ snapshots:
       chart.js: 4.5.0
       react: 19.1.1
 
-  react-content-loader@7.0.2(react@19.1.1):
+  react-content-loader@7.1.1(react@19.1.1):
     dependencies:
       react: 19.1.1
 
