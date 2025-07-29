@@ -130,8 +130,12 @@ export default function EventPage() {
             <BsCalendar className="text-gray-400" />
             <p>
               {displayDateWithDayOfWeek(d)}
-              {meta.start != undefined && ` ${meta.start} 〜`}
-              {meta.end != undefined && ` ${meta.end}`}
+              {meta.start != undefined && meta.start != "" && ` ${meta.start} 〜`}
+              {meta.end != undefined && meta.end != "" && ` ${meta.end}`}
+              {(meta.start == undefined || meta.start == "") &&
+                meta.end != undefined &&
+                meta.end != "" &&
+                " まで"}
             </p>
           </div>
           {meta.open && (
