@@ -3,6 +3,16 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getCalendarDatesOfMonth } from "./calendarDate";
 
 describe("getCalendarDatesOfMonth", () => {
+  expect.addEqualityTesters([
+    (a: unknown, b: unknown) => {
+      if (a instanceof NaiveDate && b instanceof NaiveDate) {
+        return a.equals(b);
+      } else {
+        return undefined;
+      }
+    },
+  ]);
+
   it("should return the correct calendar dates of a month", () => {
     const year = 2024;
     const month = 8;
@@ -57,15 +67,50 @@ describe("getCalendarDatesOfMonth", () => {
 
     const result = getCalendarDatesOfMonth(year, month);
 
-    expect.addEqualityTesters([
-      (a: unknown, b: unknown) => {
-        if (a instanceof NaiveDate && b instanceof NaiveDate) {
-          return a.equals(b);
-        } else {
-          return undefined;
-        }
-      },
-    ]);
+    expect(result).toEqual(expectedDates);
+  });
+
+  it("should return 4 weeks for February 2026", () => {
+    const expectedDates: NaiveDate[][] = [
+      [
+        new NaiveDate(2026, 2, 1),
+        new NaiveDate(2026, 2, 2),
+        new NaiveDate(2026, 2, 3),
+        new NaiveDate(2026, 2, 4),
+        new NaiveDate(2026, 2, 5),
+        new NaiveDate(2026, 2, 6),
+        new NaiveDate(2026, 2, 7),
+      ],
+      [
+        new NaiveDate(2026, 2, 8),
+        new NaiveDate(2026, 2, 9),
+        new NaiveDate(2026, 2, 10),
+        new NaiveDate(2026, 2, 11),
+        new NaiveDate(2026, 2, 12),
+        new NaiveDate(2026, 2, 13),
+        new NaiveDate(2026, 2, 14),
+      ],
+      [
+        new NaiveDate(2026, 2, 15),
+        new NaiveDate(2026, 2, 16),
+        new NaiveDate(2026, 2, 17),
+        new NaiveDate(2026, 2, 18),
+        new NaiveDate(2026, 2, 19),
+        new NaiveDate(2026, 2, 20),
+        new NaiveDate(2026, 2, 21),
+      ],
+      [
+        new NaiveDate(2026, 2, 22),
+        new NaiveDate(2026, 2, 23),
+        new NaiveDate(2026, 2, 24),
+        new NaiveDate(2026, 2, 25),
+        new NaiveDate(2026, 2, 26),
+        new NaiveDate(2026, 2, 27),
+        new NaiveDate(2026, 2, 28),
+      ],
+    ];
+
+    const result = getCalendarDatesOfMonth(2026, 2);
 
     expect(result).toEqual(expectedDates);
   });
