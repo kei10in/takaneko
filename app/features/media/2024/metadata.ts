@@ -411,6 +411,17 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    title:
+      "【真夏のアイドルLIVE】FRUITS ZIPPER・高嶺のなでしこ・わーすた ・虹のコンキスタドール・JamsCollection・テラス×テラス～人気アイドルが六本木の夜を熱く盛り上げる!",
+    authorName: "動画、はじめてみました【テレビ朝日公式】",
+    publishedAt: "2024-08-15",
+    mediaUrl: "https://youtu.be/5Ts_rVheplA",
+    imageUrl: "https://i.ytimg.com/vi/5Ts_rVheplA/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     title: "【LuckyFes'24】高嶺のなでしこインタビュー",
     authorName: "LuckyFes",
     publishedAt: "2024-08-04",
