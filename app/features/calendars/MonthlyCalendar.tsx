@@ -21,16 +21,16 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
   return (
-    <table className="w-full max-w-full table-fixed border-collapse border-none select-none">
+    <table className="w-full max-w-full table-fixed border-separate border-spacing-0 select-none">
       <thead>
         <tr className="text-xs text-gray-500 lg:text-sm">
-          <th className="w-1/7 p-0">日</th>
-          <th className="w-1/7 p-0">月</th>
-          <th className="w-1/7 p-0">火</th>
-          <th className="w-1/7 p-0">水</th>
-          <th className="w-1/7 p-0">木</th>
-          <th className="w-1/7 p-0">金</th>
-          <th className="w-1/7 p-0">土</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">日</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">月</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">火</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">水</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">木</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">金</th>
+          <th className="w-1/7 border-b border-gray-300 p-0">土</th>
         </tr>
       </thead>
       <tbody>
@@ -40,7 +40,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
               const dateString = date.toString();
               const currentMonth = date.naiveMonth().equals(month);
               return (
-                <td key={j} className="p-0">
+                <td key={j} className="border-b border-gray-300 p-0">
                   {events.length == 0 || !currentMonth ? (
                     <div className="w-full">
                       <CalendarCell
