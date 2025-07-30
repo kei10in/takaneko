@@ -21,7 +21,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
   return (
-    <table className="w-full max-w-full table-fixed border-collapse border-none">
+    <table className="w-full max-w-full table-fixed border-collapse border-none select-none">
       <thead>
         <tr className="text-xs text-gray-500 lg:text-sm">
           <th className="w-1/7 p-0">日</th>
