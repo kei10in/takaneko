@@ -103,6 +103,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           }}
           className={clsx(
             "transition-all lg:h-auto",
+            weeksInMonth == 4 && "h-[12.8125rem]",
             weeksInMonth == 5 && "h-[15.75rem]",
             weeksInMonth == 6 && "h-[18.6875rem]",
           )}
@@ -120,8 +121,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <div
           id="events-list"
           className={clsx(
-            weeksInMonth == 5 && "scroll-mt-[21.375rem]",
-            weeksInMonth == 6 && "scroll-mt-[24.175rem]",
+            weeksInMonth == 4 && "scroll-mt-[18.8125rem]",
+            weeksInMonth == 5 && "scroll-mt-[21.75rem]",
+            weeksInMonth == 6 && "scroll-mt-[24.6875rem]",
             "lg:flex-1 lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
           )}
         >
@@ -129,8 +131,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
             month={month}
             events={events}
             classNameForDate={clsx(
-              weeksInMonth == 5 && "scroll-mt-[21.375rem]",
-              weeksInMonth == 6 && "scroll-mt-[24.175rem]",
+              weeksInMonth == 4 && "scroll-mt-[18.8125rem]",
+              weeksInMonth == 5 && "scroll-mt-[21.75rem]",
+              weeksInMonth == 6 && "scroll-mt-[24.6875rem]",
               "lg:scroll-mt-[calc(var(--header-height)+3rem)]!",
             )}
           />
