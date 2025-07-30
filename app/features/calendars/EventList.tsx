@@ -5,7 +5,7 @@ import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarEventItem } from "./CalendarEventItem";
-import { CalendarEvent, sortedCalendarEvents } from "./calendarEvents";
+import { CalendarEvent } from "./calendarEvents";
 import { dateHref } from "./utils";
 
 interface Props {
@@ -18,26 +18,26 @@ export const EventList: React.FC<Props> = (props: Props) => {
   const { month, events, classNameForDate } = props;
 
   const eventsByDate = useMemo(() => {
+    const firstDate = NaiveDate.firstDateOfMonth(month);
+    const lastDate = NaiveDate.firstDateOfMonth(month.nextMonth());
+
+    const dates = Array.from({ length: lastDate.differenceInDays(firstDate) }, (_, i) => {
+      return firstDate.addDays(i);
+    });
+
     // 表示するのは指定した月のイベントのみ
-    const filtered = events.filter((e) => {
+    let xs = events.filter((e) => {
       return e.meta.date.naiveMonth().equals(month);
     });
 
-    return sortedCalendarEvents(filtered).reduce(
-      (acc, event) => {
-        if (acc.length == 0) {
-          return [{ date: event.meta.date, events: [event] }];
-        }
+    const result = dates.map((date) => {
+      const i = xs.findIndex((e) => !e.meta.date.equals(date));
+      const events = xs.slice(0, i == -1 ? xs.length : i);
+      xs = xs.slice(i);
+      return { date, events };
+    });
 
-        const last = acc[acc.length - 1];
-        if (last.date.equals(event.meta.date)) {
-          return [...acc.slice(0, -1), { date: last.date, events: [...last.events, event] }];
-        } else {
-          return [...acc, { date: event.meta.date, events: [event] }];
-        }
-      },
-      [] as { date: NaiveDate; events: CalendarEvent[] }[],
-    );
+    return result;
   }, [events, month]);
 
   return (
@@ -46,12 +46,11 @@ export const EventList: React.FC<Props> = (props: Props) => {
         const anchor = dt.toString();
         const date = displayDate(dt);
 
-        if (eventsInDate.length == 0) {
-          return null;
-        }
-
         return (
-          <div key={dt.getTimeAsUTC()}>
+          <div
+            key={dt.getTimeAsUTC()}
+            className={clsx("overflow-hidden", eventsInDate.length == 0 && "h-0")}
+          >
             <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)} id={anchor}>
               <Link to={dateHref(dt)}>{date}</Link>
             </div>

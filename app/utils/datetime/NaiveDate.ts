@@ -40,6 +40,12 @@ export class NaiveDate {
     return new NaiveDate(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate());
   };
 
+  differenceInDays = (other: NaiveDate): number => {
+    const thisTime = this.getTimeAsUTC();
+    const otherTime = other.getTimeAsUTC();
+    return Math.floor((thisTime - otherTime) / (1000 * 60 * 60 * 24));
+  };
+
   naiveMonth = (): NaiveMonth => {
     return new NaiveMonth(this.year, this.month);
   };
