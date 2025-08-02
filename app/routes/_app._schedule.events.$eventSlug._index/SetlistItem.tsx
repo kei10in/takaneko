@@ -69,7 +69,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
         </div>
       </div>
       <div className="w-full min-w-0 flex-1 py-2">
-        <p className={clsx("line-clamp-1")}>{name}</p>
+        <p className={clsx("line-clamp-1", slug && "text-nadeshiko-900")}>{name}</p>
         <p className="line-clamp-1 text-xs text-gray-400">{desc}</p>
       </div>
       {slug && (
