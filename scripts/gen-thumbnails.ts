@@ -2,7 +2,7 @@ import { globSync } from "glob";
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
-import { isThumbnail, thumbnails } from "~/utils/fileConventions";
+import { isThumbnail, thumbnailDir, thumbnails } from "~/utils/fileConventions";
 
 const isImage = async (filepath: string): Promise<boolean> => {
   try {
@@ -58,6 +58,18 @@ const main = async () => {
     // Filter しないと無限に増えていく。
     (filepath) => !isThumbnail(filepath),
   );
+
+  const thumbnailDirs = new Set(
+    matchFiles.map((filepath) => {
+      return thumbnailDir(filepath.replace(/\\/g, "/"));
+    }),
+  );
+  thumbnailDirs.forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+      return;
+    }
+    fs.rmSync(dir, { recursive: true });
+  });
 
   const promises = matchFiles.map(async (filepath) => await processFile(filepath));
 

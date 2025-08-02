@@ -7,6 +7,11 @@ export const thumbnailSrcSet = (filepath: string): { src: string; srcset: string
   };
 };
 
+export const thumbnailDir = (filepath: string): string => {
+  const [p, category] = filepath.split("/");
+  return `${p}/${category}/thumbnails`;
+};
+
 export const thumbnails = (filepath: string): [string, string, string] => {
   const i = filepath.lastIndexOf(".");
   const prefix = filepath.substring(0, i);
