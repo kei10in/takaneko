@@ -160,6 +160,11 @@ export default function MediaIndex() {
           {items.map((video) => {
             return (
               <li key={video.mediaUrl}>
+                {video.deleted && (
+                  <p className="line-clamp-1 w-fit rounded-xs bg-red-300 px-1 text-xs font-semibold text-white">
+                    リンク先は削除されたか非公開です
+                  </p>
+                )}
                 <Link
                   to={video.mediaUrl}
                   target="_blank"
@@ -191,7 +196,7 @@ export default function MediaIndex() {
                       <img
                         src={video.imageUrl}
                         alt={video.title}
-                        className="max-h-32 w-32 object-cover"
+                        className="max-h-32 w-32 bg-gray-100 object-cover text-xs text-gray-400"
                       />
                     </div>
                   </div>
