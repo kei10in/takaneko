@@ -41,15 +41,15 @@ export const nonno_2024年10月号: Publication = {
   url: "https://nonno.hpplus.jp/magazine/163787/",
   coverImages: [
     {
-      path: "/publications/2024-08-20_non-no_2024年10月号.jpg",
+      path: "/publications/2024/2024-08-20_non-no_2024年10月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0DBQ3WYRT",
     },
     {
-      path: "/publications/2024-08-20_non-no_2024年10月号_特別版1.jpg",
+      path: "/publications/2024/2024-08-20_non-no_2024年10月号_特別版1.jpg",
       ref: "https://www.amazon.co.jp/dp/B0D9J56Y9H",
     },
     {
-      path: "/publications/2024-08-20_non-no_2024年10月号_特別版2.jpg",
+      path: "/publications/2024/2024-08-20_non-no_2024年10月号_特別版2.jpg",
       ref: "https://www.amazon.co.jp/dp/B00MBUXKEA",
     },
   ],

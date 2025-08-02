@@ -128,7 +128,7 @@ export const Zipper_2024年秋号: Publication = {
   url: "https://www.zipper.jp/news/news-20240928-01",
   coverImages: [
     {
-      path: "/publications/2024-09-28_Zipper2024年秋号.webp",
+      path: "/publications/2024/2024-09-28_Zipper2024年秋号.webp",
       ref: "https://www.zipper.jp/news/news-20240928-01",
     },
   ],

@@ -12,7 +12,7 @@ export const BLT_2024年9月号: Publication = {
   url: "https://bltweb.jp/2024/07/22/blt2409_cover/",
   coverImages: [
     {
-      path: "/publications/2024-07-26_B.L.T_2024年9月号.jpg",
+      path: "/publications/2024/2024-07-26_B.L.T_2024年9月号.jpg",
       ref: "https://bltweb.jp/2024/07/22/blt2409_cover/",
     },
   ],
@@ -40,7 +40,7 @@ export const BLT_2023年2月号: Publication = {
   url: "https://bltweb.jp/2022/12/19/blt2302-h46-4_store/",
   coverImages: [
     {
-      path: "/publications/2022-12-26_B.L.T_2023年2月号.jpg",
+      path: "/publications/2022/2022-12-26_B.L.T_2023年2月号.jpg",
       ref: "https://bltweb.jp/2022/12/19/blt2302-h46-4_store/",
     },
   ],

@@ -11,7 +11,7 @@ export const Myojo_2024年9月号: Publication = {
   url: "https://x.com/Myojo_henshu/status/1815234938788249892",
   coverImages: [
     {
-      path: "/publications/2024-07-22_Myojo_2024年9月号_表紙.jpg",
+      path: "/publications/2024/2024-07-22_Myojo_2024年9月号_表紙.jpg",
       ref: "https://x.com/Myojo_henshu/status/1811639771971878948",
     },
   ],

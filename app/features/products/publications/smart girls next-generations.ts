@@ -12,7 +12,7 @@ export const SmartGirlsNextGenerations: Publication = {
   url: "https://tkj.jp/book/?cd=TD056856",
   coverImages: [
     {
-      path: "/publications/2024-07-29_smart girls next-generations.jpg",
+      path: "/publications/2024/2024-07-29_smart girls next-generations.jpg",
       ref: "https://tkj.jp/book/?cd=TD056856",
     },
   ],

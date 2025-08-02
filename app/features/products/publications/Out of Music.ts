@@ -101,11 +101,11 @@ export const OutOfMusic_86: Publication = {
   url: "https://outofmusic.net/2024/07/29/20/45/58/717/表紙巻頭-the-rampage-バックカバー巻末-dxteen-7-24-発売-out-of-music-86/bn/outofmusic/",
   coverImages: [
     {
-      path: "/publications/2024-07-24_Out of MUSIC 86_表紙.jpg",
+      path: "/publications/2024/2024-07-24_Out of MUSIC 86_表紙.jpg",
       ref: "https://outofmusic.net/2024/07/29/20/45/58/717/表紙巻頭-the-rampage-バックカバー巻末-dxteen-7-24-発売-out-of-music-86/bn/outofmusic/",
     },
     {
-      path: "/publications/2024-07-24_Out of MUSIC 86_裏表紙.jpg",
+      path: "/publications/2024/2024-07-24_Out of MUSIC 86_裏表紙.jpg",
       ref: "https://outofmusic.net/2024/07/29/20/45/58/717/表紙巻頭-the-rampage-バックカバー巻末-dxteen-7-24-発売-out-of-music-86/bn/outofmusic/",
     },
   ],

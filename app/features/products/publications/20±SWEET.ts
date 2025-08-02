@@ -12,7 +12,7 @@ export const _20SWEET_2023_JANUARY: Publication = {
   url: "https://bltweb.jp/tag/20%C2%B1sweet/",
   coverImages: [
     {
-      path: "/publications/2023-01-13_20±SWEET_2023_JANUARY.jpg",
+      path: "/publications/2023/2023-01-13_20±SWEET_2023_JANUARY.jpg",
       ref: "https://x.com/BLTTV/status/1607604527544565761",
     },
   ],

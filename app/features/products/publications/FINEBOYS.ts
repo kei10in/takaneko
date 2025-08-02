@@ -12,7 +12,7 @@ export const FINEBOYS_2024年7月号: Publication = {
   url: "https://hinode-publishing.jp/?newmag=fineboys-2024年7月号",
   coverImages: [
     {
-      path: "/publications/2024-06-07_FINEBOYS_2024年7月号.jpg",
+      path: "/publications/2024/2024-06-07_FINEBOYS_2024年7月号.jpg",
       ref: "https://hinode-publishing.jp/?newmag=fineboys-2024年7月号",
     },
   ],

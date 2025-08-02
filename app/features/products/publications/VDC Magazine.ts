@@ -113,7 +113,7 @@ export const VDCMagazine030: Publication = {
   url: "https://wp.vdc.tokyo/article/11065",
   coverImages: [
     {
-      path: "/publications/2024-03-22_VDC Magazine_030.jpg",
+      path: "/publications/2024/2024-03-22_VDC Magazine_030.jpg",
       ref: "https://wp.vdc.tokyo/article/11065",
     },
   ],
@@ -150,7 +150,7 @@ export const VDCMagazine029: Publication = {
   url: "https://wp.vdc.tokyo/article/10847",
   coverImages: [
     {
-      path: "/publications/2023-12-22_VDC Magazine_029.jpg",
+      path: "/publications/2023/2023-12-22_VDC Magazine_029.jpg",
       ref: "https://wp.vdc.tokyo/article/10847",
     },
   ],

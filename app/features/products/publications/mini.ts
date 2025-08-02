@@ -12,7 +12,7 @@ export const mini_2023年2月号: Publication = {
   url: "https://tkj.jp/mini/202302",
   coverImages: [
     {
-      path: "/publications/2023-01-12_mini_2023年2月号.jpg",
+      path: "/publications/2023/2023-01-12_mini_2023年2月号.jpg",
       ref: "https://store.tkj.jp/shopdetail/000000015367/",
     },
   ],
@@ -38,7 +38,7 @@ export const mini_2022年10月号: Publication = {
   url: "https://tkj.jp/mini/202210",
   coverImages: [
     {
-      path: "/publications/2022-09-01_mini_2022年10月号.jpg",
+      path: "/publications/2022/2022-09-01_mini_2022年10月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0B7HBZYY8",
     },
   ],

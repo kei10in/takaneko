@@ -12,7 +12,7 @@ export const 橋本桃呼_MOMOKO_ISM: Publication = {
   url: "",
   coverImages: [
     {
-      path: "/publications/2024-06-22_橋本桃呼_MOMOKO ISM.jpg",
+      path: "/publications/2024/2024-06-22_橋本桃呼_MOMOKO ISM.jpg",
       ref: "https://x.com/takanenofficial/status/1804107216229740825",
     },
   ],

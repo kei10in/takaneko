@@ -12,7 +12,7 @@ export const 日経エンタテインメント_2024年2月号: Publication = {
   url: "https://project.nikkeibp.co.jp/ent/monthly/2024/02/",
   coverImages: [
     {
-      path: "/publications/2024-01-04_日経エンタテインメント！_2024年2月号.jpg",
+      path: "/publications/2024/2024-01-04_日経エンタテインメント！_2024年2月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0CQ8TSWV8",
     },
   ],

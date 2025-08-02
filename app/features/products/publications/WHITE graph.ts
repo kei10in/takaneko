@@ -12,7 +12,7 @@ export const WHITE_graph_011: Publication = {
   url: "https://bookclub.kodansha.co.jp/product?item=0000386988",
   coverImages: [
     {
-      path: "/publications/2024-05-29_WHITE graph 011.jpg",
+      path: "/publications/2024/2024-05-29_WHITE graph 011.jpg",
       ref: "https://bookclub.kodansha.co.jp/product?item=0000386988",
     },
   ],
@@ -33,7 +33,7 @@ export const 松本ももな_SweetDateTime: Publication = {
   url: "https://bookclub.kodansha.co.jp/product?item=0000393751",
   coverImages: [
     {
-      path: "/publications/2024-05-29_松本ももな SWEET DATE TIME.jpg",
+      path: "/publications/2024/2024-05-29_松本ももな SWEET DATE TIME.jpg",
       ref: "https://bookclub.kodansha.co.jp/product?item=0000393751",
     },
   ],

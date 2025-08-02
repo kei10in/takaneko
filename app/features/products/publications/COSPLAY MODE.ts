@@ -12,7 +12,7 @@ export const COSPLAY_MODE_2024年9月号: Publication = {
   url: "https://cosplaymode.net/feature/29392/",
   coverImages: [
     {
-      path: "/publications/2024-08-02_COSPLAY MODE 2024年9月号.jpg",
+      path: "/publications/2024/2024-08-02_COSPLAY MODE 2024年9月号.jpg",
       ref: "https://x.com/cosplay_mode/status/1819161195418693695",
     },
   ],

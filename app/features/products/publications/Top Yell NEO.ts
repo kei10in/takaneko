@@ -72,15 +72,15 @@ export const TopYellNeo2024Autumn: Publication = {
   url: "https://www.takeshobo.co.jp/book/b10085561.html",
   coverImages: [
     {
-      path: "/publications/2024-09-30_Top Yell NEO 2024 AUTUMN_表紙.jpg",
+      path: "/publications/2024/2024-09-30_Top Yell NEO 2024 AUTUMN_表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10085561.html",
     },
     {
-      path: "/publications/2024-09-30_Top Yell NEO 2024 AUTUMN_裏表紙.jpg",
+      path: "/publications/2024/2024-09-30_Top Yell NEO 2024 AUTUMN_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10085561.html",
     },
     {
-      path: "/publications/2024-09-30_Top Yell NEO 2024 AUTUMN_X.jpg",
+      path: "/publications/2024/2024-09-30_Top Yell NEO 2024 AUTUMN_X.jpg",
       ref: "https://x.com/TopYell/status/1840355974076567716",
     },
   ],
@@ -100,15 +100,15 @@ export const TopYellNeo2024Spring: Publication = {
   url: "https://www.takeshobo.co.jp/book/b10080549.html",
   coverImages: [
     {
-      path: "/publications/2024-04-01_Top Yell NEO 2024 SPRING_表紙.jpg",
+      path: "/publications/2024/2024-04-01_Top Yell NEO 2024 SPRING_表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10080549.html",
     },
     {
-      path: "/publications/2024-04-01_Top Yell NEO 2024 SPRING_裏表紙.jpg",
+      path: "/publications/2024/2024-04-01_Top Yell NEO 2024 SPRING_裏表紙.jpg",
       ref: "https://www.takeshobo.co.jp/book/b10080549.html",
     },
     {
-      path: "/publications/2024-04-01_Top Yell NEO 2024 SPRING_X.jpg",
+      path: "/publications/2024/2024-04-01_Top Yell NEO 2024 SPRING_X.jpg",
       ref: "https://x.com/TopYell/status/1774628432770670755",
     },
   ],
@@ -144,7 +144,7 @@ export const TopYellNeo2022AUTUMN: Publication = {
   url: "https://www.takeshobo.co.jp/book/b10072493.html",
   coverImages: [
     {
-      path: "/publications/2022-09-30_Top Yell NEO 2022 AUTUMN_表紙.png",
+      path: "/publications/2022/2022-09-30_Top Yell NEO 2022 AUTUMN_表紙.png",
       ref: "https://www.takeshobo.co.jp/book/b10072493.html",
     },
     {

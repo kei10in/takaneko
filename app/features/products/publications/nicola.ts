@@ -12,7 +12,7 @@ export const nicola_2024年5月号: Publication = {
   url: "https://nicola.jp/article/article-18973/",
   coverImages: [
     {
-      path: "/publications/2024-04-01_nicola 2024年5月号.jpg",
+      path: "/publications/2024/2024-04-01_nicola 2024年5月号.jpg",
       ref: "https://nicola.jp/article/article-18973/",
     },
   ],

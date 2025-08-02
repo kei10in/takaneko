@@ -12,11 +12,11 @@ export const CMNOW_vol220_2023年1_2月号: Publication = {
   url: "http://www.genkosha.co.jp/cm/backnumber/2400.html",
   coverImages: [
     {
-      path: "/publications/2022-12-09_CMNOW_vol220_2023年1-2月号_表紙.jpg",
+      path: "/publications/2022/2022-12-09_CMNOW_vol220_2023年1-2月号_表紙.jpg",
       ref: "https://www.amazon.co.jp/dp/B00A7ZCLGO",
     },
     {
-      path: "/publications/2022-12-09_CMNOW_vol220_2023年1-2月号_裏表紙.jpg",
+      path: "/publications/2022/2022-12-09_CMNOW_vol220_2023年1-2月号_裏表紙.jpg",
       ref: "https://www.amazon.co.jp/dp/B00A7ZCLGO",
     },
   ],

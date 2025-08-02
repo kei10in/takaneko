@@ -12,7 +12,7 @@ export const COMMERCIAL_PHOTO_2023年10月号: Publication = {
   url: "http://www.genkosha.co.jp/cp/backnumber/5249.html",
   coverImages: [
     {
-      path: "/publications/2023-09-14_COMMERCIAL PHOTO 2023年10月号.jpg",
+      path: "/publications/2023/2023-09-14_COMMERCIAL PHOTO 2023年10月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0CFVKVMCZ",
     },
   ],

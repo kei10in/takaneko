@@ -12,7 +12,7 @@ export const 月刊ENTAME_2024年8月号: Publication = {
   url: "https://x.com/gekkan_entame/status/1805874857256927518",
   coverImages: [
     {
-      path: "/publications/2024-06-28_月刊ENTAME_2024年8月号.jpg",
+      path: "/publications/2024/2024-06-28_月刊ENTAME_2024年8月号.jpg",
       ref: "https://x.com/gekkan_entame/status/1805874857256927518",
     },
   ],
@@ -38,7 +38,7 @@ export const 月刊ENTAME_2023年3_4月合併号: Publication = {
   url: "https://entamenext.com/magazines/detail/54",
   coverImages: [
     {
-      path: "/publications/2023-01-30_月刊ENTAME_2023年3・4月合併号.jpg",
+      path: "/publications/2023/2023-01-30_月刊ENTAME_2023年3・4月合併号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0BRT758YT",
     },
   ],

@@ -45,7 +45,7 @@ export const TOKYO_RESIDENT_Issue002: Publication = {
   url: "https://land.inc/products/tokyo-resident-issue-002-power-of-music-通常版-madein表紙",
   coverImages: [
     {
-      path: "/publications/2024-09-24_TOKYO RESIDENT Issue002.webp",
+      path: "/publications/2024/2024-09-24_TOKYO RESIDENT Issue002.webp",
       ref: "https://land.inc/products/tokyo-resident-issue-002-power-of-music-通常版-madein表紙",
     },
   ],

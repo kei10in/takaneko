@@ -15,11 +15,11 @@ export const Ray_2024年11月号: Publication = {
   url: "https://books.shufunotomo.co.jp/book/b10092440.html",
   coverImages: [
     {
-      path: "/publications/2024-09-21_Ray_2024年11月号_表紙.jpg",
+      path: "/publications/2024/2024-09-21_Ray_2024年11月号_表紙.jpg",
       ref: "https://books.shufunotomo.co.jp/book/b10092440.html",
     },
     {
-      path: "/publications/2024-09-21_Ray_2024年11月号増刊特別版_表紙.jpg",
+      path: "/publications/2024/2024-09-21_Ray_2024年11月号増刊特別版_表紙.jpg",
       ref: "https://books.shufunotomo.co.jp/book/b10092441.html",
     },
   ],
