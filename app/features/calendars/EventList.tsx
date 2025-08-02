@@ -47,24 +47,26 @@ export const EventList: React.FC<Props> = (props: Props) => {
         const date = displayDate(dt);
 
         return (
-          <div
-            key={dt.getTimeAsUTC()}
-            className={clsx("overflow-hidden", eventsInDate.length == 0 && "h-0")}
-          >
-            <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)} id={anchor}>
-              <Link to={dateHref(dt)}>{date}</Link>
-            </div>
-            <div>
-              {eventsInDate.map((event) => (
-                <Link key={event.slug} to={`/events/${event.slug}`}>
-                  <CalendarEventItem
-                    category={event.meta.category}
-                    summary={event.meta.summary}
-                    location={event.meta.location}
-                    region={event.meta.region}
-                  />
-                </Link>
-              ))}
+          <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
+            {/* イベントがない日を表示しないための要素。
+            `overflow-hidden` な要素は `id` が付いている要素の子要素にしないと
+            Chrome でのスクロールが期待通りにならない。*/}
+            <div className={clsx("overflow-hidden", eventsInDate.length == 0 && "h-0")}>
+              <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)}>
+                <Link to={dateHref(dt)}>{date}</Link>
+              </div>
+              <div>
+                {eventsInDate.map((event) => (
+                  <Link key={event.slug} to={`/events/${event.slug}`}>
+                    <CalendarEventItem
+                      category={event.meta.category}
+                      summary={event.meta.summary}
+                      location={event.meta.location}
+                      region={event.meta.region}
+                    />
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         );
