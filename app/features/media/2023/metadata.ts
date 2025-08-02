@@ -172,6 +172,16 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    title: "高嶺のなでしこ 松本ももなちゃん Ank Rougeカタログメイキング",
+    authorName: "Ank Rouge channel",
+    publishedAt: "2023-05-11",
+    mediaUrl: "https://youtu.be/ucuWsiqA3L0",
+    imageUrl: "https://i.ytimg.com/vi/ucuWsiqA3L0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "youtube",
     title:
       "高嶺のなでしこ、新曲「革命の女王」&「僕は君になれない」を紹介するインタビュー進行…···「全国ツアーも期待してください」",
     authorName: "WowKorea FAN",

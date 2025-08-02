@@ -3,6 +3,26 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    title: "【8月1日公開】♥Jamieエーエヌケー×籾山ひめりちゃん撮影メイキング♥",
+    authorName: "Jamieエーエヌケーchannel♥",
+    publishedAt: "2025-07-31",
+    mediaUrl: "https://youtu.be/xQvYJoyIzjs",
+    imageUrl: "https://i.ytimg.com/vi/xQvYJoyIzjs/hqdefault.jpg",
+    category: "youtube",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "youtube",
+    title: "【8月1日公開】♡Ank Rouge×籾山ひめりちゃんカタログメイキング♡",
+    authorName: "Ank Rouge channel♡",
+    publishedAt: "2025-07-31",
+    mediaUrl: "https://youtu.be/eyoa2_NU138",
+    imageUrl: "https://i.ytimg.com/vi/eyoa2_NU138/hqdefault.jpg",
+    category: "youtube",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     title:
       "【ショートドラマ】住みますアイドル 事故物件4日目丑三つ時　映画「事故物件ゾク 恐い間取り」コラボ　＃事故物件　#映画　#ホラー",
     authorName: "ホラーちゃんねる",
