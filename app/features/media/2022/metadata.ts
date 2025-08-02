@@ -3,6 +3,7 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2022: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "d3uN2mkIovE",
     title: "#22【本大会まとめ⑩】学生フォーミュラ日本大会：リポーターが伝える会場の様子",
     authorName: "(公社)自動車技術会",
     publishedAt: "2022-12-27",
@@ -13,6 +14,7 @@ export const metadata2022: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://cmnow.jp/entertainment/22102914413/",
     title: "いま話題の「たかねこ」ちゃんとは!? 1stファンミーティング直前まとめ – CMNOW WEB",
     authorName: "CMNOW WEB",
     publishedAt: "2022-10-31",
@@ -23,6 +25,7 @@ export const metadata2022: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "Jqjk6IZE3qk",
     title: "#11【2022年大会参戦チームのリアル】東京農工大学③_学生フォーミュラ日本大会",
     authorName: "(公社)自動車技術会",
     publishedAt: "2022-10-06",
@@ -33,6 +36,7 @@ export const metadata2022: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "lu0x7gQKNSQ",
     title: "#10【2022年大会参戦チームのリアル】豊橋技術科学大学②_学生フォーミュラ日本大会",
     authorName: "(公社)自動車技術会",
     publishedAt: "2022-09-29",

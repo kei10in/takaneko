@@ -39,6 +39,7 @@ export type MediaDescriptor =
 
 export interface MediaDetails {
   kind: "youtube" | "ogp" | "static";
+  key: string;
   title: string;
   authorName: string;
   publishedAt: string;
@@ -46,4 +47,5 @@ export interface MediaDetails {
   imageUrl: string;
   category: "video" | "article" | "audio" | "youtube";
   presents: MemberName[];
+  deleted?: boolean | undefined;
 }

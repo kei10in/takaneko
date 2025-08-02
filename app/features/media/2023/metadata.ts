@@ -3,6 +3,7 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2023: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "iZfWABjcVUM",
     title:
       "【高嶺のなでしこ】秘蔵！ヘアメイク中のももなんを直撃｜撮影バッグステージvol.1（松本ももな）",
     authorName: "運転免許トロッカ!",
@@ -14,6 +15,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "uYGUgxcG9R0",
     title:
       "【ドS鈴木愛理】大バズり中の苦労人アイドル「高嶺のなでしこ」を追い詰めたらオーイシ爆笑！辛い時に救われたアニメキャラの名言とは!?【アニソン神曲カバーでしょdeショー‼】",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -25,6 +27,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "Mj95-zruHv0",
     title:
       "高嶺のなでしこ、新曲「いつか私がママになったら」初パフォーマンス　酪農応援アンバサダー就任に意気込み　『第 14 回 ALL JAPAN ナチュラルチーズコンテスト』 一般向け初ライブパフォーマンス",
     authorName: "oricon",
@@ -36,6 +39,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "-aUWpjcSgKY",
     title: '高嶺のなでしこ がPR！春休みの合宿免許のご予約は"運転免許トロッカ！"',
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-11-06",
@@ -46,6 +50,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "RbrtKRtNMpY",
     title: "【飲まなくてごめん】酪農応援アンバサダー「高嶺のなでしこ」が牧場で、酪農体験に挑戦！",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2023-10-16",
@@ -56,6 +61,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "rPueVet2x70",
     title: '"高嶺のなでしこ"が「運転免許トロッカ！ゲーム」で白熱のバトル！(後編)',
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-10-12",
@@ -66,6 +72,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "dcE73pJT4rA",
     title: "高嶺のなでしこ、新曲発表の感想と1周年記念ライブを終えた感想インタビュー実施！",
     authorName: "WowKorea FAN",
     publishedAt: "2023-09-19",
@@ -76,6 +83,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.wws-channel.com/girls2/450073.html",
     title:
       "【インタビュー】高嶺のなでしこ・松本ももな、星谷美来、東山恵里沙が『すきっちゅーの！』MVの可愛さを語る！",
     authorName: "WWSチャンネル",
@@ -87,6 +95,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "e31JtCL8Hx0",
     title:
       "松本かれん&松本ももな、記者の質問でまさかのハプニング！？　“W松本”が仲良くなったきっかけを明かす　FRUITS ZIPPER&高嶺のなでしこコラボインタビュー",
     authorName: "oricon",
@@ -98,6 +107,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "SZIHQHnKJIc",
     title: "星乃夢奈『今好きになる。』Official Music Video",
     authorName: "ゆなちゃんねる",
     publishedAt: "2023-08-31",
@@ -108,6 +118,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "hNF9mhoS8jU",
     title: '"高嶺のなでしこ"が「運転免許トロッカ！ゲーム」で白熱のバトル！(前編)',
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-08-25",
@@ -118,6 +129,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "AefOHYVIuHo",
     title:
       "【アイドル熱唱】「高嶺のなでしこ」VS「PeeltheApple」カラオケ本気バトル！モーニング娘。・キャンディーズ・超ときめき宣伝部…今旬アイドルが伝説アイドル曲を歌い上げる！《アイドル神声バトル》",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -129,6 +141,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "_tU8lAPv684",
     title:
       "高嶺のなでしこ、「初恋のひと。」と1周年単独ライブを紹介するインタビュー実施！..「9月3日1周年単独ライブたくさん来てくださいね~」",
     authorName: "WowKorea FAN",
@@ -140,6 +153,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "yF9GyFkmM-U",
     title:
       "【高嶺のなでしこ】Vとリアルアイドルのゲーム桃太郎電鉄〜昭和 平成 令和も定番〜コラボ！#めたしっぷ",
     authorName: "メタバースアイドル めたしっぷ【公式】",
@@ -151,6 +165,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "NQBiKzJY4gE",
     title:
       "高嶺のなでしこ、「全国お招きツアー2023~First trip~」ツアーファイナル初単独公演インタビュー実施… 「ぜひ見に来てくださいますよね？」",
     authorName: "WowKorea FAN",
@@ -162,6 +177,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "bwjBjaTIlBk",
     title: "“高嶺のなでしこ”が夏休みの合宿免許をPR★ご予約は運転免許トロッカ！",
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-05-19",
@@ -172,6 +188,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "ucuWsiqA3L0",
     title: "高嶺のなでしこ 松本ももなちゃん Ank Rougeカタログメイキング",
     authorName: "Ank Rouge channel",
     publishedAt: "2023-05-11",
@@ -182,6 +199,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "LParXlrC9BI",
     title:
       "高嶺のなでしこ、新曲「革命の女王」&「僕は君になれない」を紹介するインタビュー進行…···「全国ツアーも期待してください」",
     authorName: "WowKorea FAN",
@@ -193,6 +211,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "35lxvC668Ek",
     title: "運転免許トロッカ！新アンバサダー“高嶺のなでしこ”メッセージ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2023-04-17",
@@ -203,6 +222,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko/",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
     publishedAt: "2023-04-04",
@@ -213,6 +233,7 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "3tFd2i9UdFA",
     title: "#26 学生フォーミュラ日本大会2022を振り返って（リポーターたちの対談）",
     authorName: "(公社)自動車技術会",
     publishedAt: "2023-01-18",

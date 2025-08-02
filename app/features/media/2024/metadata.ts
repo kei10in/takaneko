@@ -3,6 +3,7 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2024: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "69Kukwgz8R0",
     title: "【抜き打ち】たくさんのモデルたちに年内最後の体重測定!!【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-12-28",
@@ -13,18 +14,20 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://abema.tv/video/episode/88-77_s1_p293",
     title:
       "#258:【ラパルフェ】「モノマネをやめたい」M-1準々決勝のネタが物議を醸した2人が真剣悩み相談!!【完全版】 - しくじり先生 俺みたいになるな!! - 本編 (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
     authorName: "ABEMA",
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=504&quality=75&version=1746615393&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1754013625&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },
   {
     kind: "youtube",
+    key: "bCM_vq0rScs",
     title:
       "【ムチャぶり】抜群の表現力＆歌唱力をもつモデルを発見！今からここでカラオケしてください!!【Popteen】",
     authorName: "PopteenTV",
@@ -36,6 +39,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://strmweb.jp/?p=15750",
     title:
       "高嶺のなでしこ「この10人だからこそ出せる色がある。これからも1人1人が個性を出せるようなグループを作り続けたい」INTERVIEW",
     authorName: "STREAM（ストリーム）",
@@ -47,6 +51,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.radionikkei.jp/toraken/42_takakneko.html",
     title:
       "第42回ゲスト研究員は、引き続き高嶺のなでしこの松本ももなさんと籾山ひめりさん！｜虎ノ門 トレンド経済研究所｜エンタメ・カルチャー｜ラジオNIKKEI",
     authorName: "ラジオNIKKEI",
@@ -59,6 +64,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.walkerplus.com/article/1229695/",
     title: "高嶺のなでしこが2ndシングルを発売！メンバー10名にインタビュー(1/4)｜ウォーカープラス",
     authorName: "ウォーカープラス（Walkerplus）",
     publishedAt: "2024-12-11",
@@ -69,6 +75,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://recochoku.jp/ch/recolog/takanenonadeshiko/",
     title:
       "高嶺のなでしこ（城月菜央・松本ももな・籾山ひめり）が2ndシングルで描いた新境地を語る「ずっとそばにいてくださると嬉しいです」",
     authorName: "レコログ",
@@ -80,6 +87,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popnroll.tv/articles/41644",
     title:
       "🍭 高嶺のなでしこ［インタビュー］2ndシングルが照らす希望の光、広がるその先の景色「5曲でいろんな一面が見られるので、フルで楽しんでほしい」 - Pop'n'Roll(ポップンロール)",
     authorName: "Pop'n'Roll",
@@ -92,6 +100,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.oricon.co.jp/news/2358400/",
     title:
       "【インタビュー】高嶺のなでしこ“らしさ”とは？ メンバーが語るグループの方向性とそれぞれの個性 ",
     authorName: "ORICON NEWS",
@@ -104,6 +113,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko-4/",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
     publishedAt: "2024-12-11",
@@ -115,6 +125,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "rIANtpllshE",
     title:
       "高嶺のなでしこ、リレーインタビューでわちゃわちゃ！？新曲「I’M YOUR IDOL / アドレナリンゲーム」徹底解剖&“過去最大規模”ワンマンライブに意気込み【単独インタビュー】",
     authorName: "oricon",
@@ -126,6 +137,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.oricon.co.jp/news/2357995/",
     title:
       "高嶺のなでしこ、グループ結成から2年の現在地語る「家族みたいな存在」　新曲リリース&“過去最大規模”ワンマンに意気込み ",
     authorName: "ORICON NEWS",
@@ -138,6 +150,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "static",
+    key: "https://outofmusic.net/?p=1286",
     title:
       "【先行掲載・WEBオリジナル記事】＜高嶺のなでしこ＞国立代々木第二体育館公演、開催！ 話題の10人組アイドルグループ、高嶺のなでしこ。注目の2nd Single「Iʼ M YOUR IDOL / アドレナリンゲーム」、総1万6,000字 ロング・インタビュー 前編、先行掲載！。",
     authorName: "OUT of MUSIC",
@@ -149,6 +162,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.radionikkei.jp/toraken/41nadeshiko.html",
     title:
       "第41回ゲスト研究員は高嶺のなでしこの松本ももなさんと籾山ひめりさん！｜虎ノ門 トレンド経済研究所｜エンタメ・カルチャー｜ラジオNIKKEI",
     authorName: "ラジオNIKKEI",
@@ -161,6 +175,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://cmnow.jp/next/24110522772/",
     title:
       "高嶺のなでしこから橋本桃呼、春野莉々、涼海すうが登場！ 『Iʼ M YOUR IDOL / アドレナリンゲーム』を語る。 – CMNOW WEB",
     authorName: "CMNOW WEB",
@@ -172,6 +187,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "oTSf8zfMoAY",
     title:
       "【Part.4】ついに最終決戦！この一戦で優勝者が決まる!? 超十代大運動会2024 最終戦 チーム合同リレー（超十代）",
     authorName: "超十代チャンネル【ULTRA TEENS Channel】",
@@ -183,6 +199,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "sm1Y8fQ0fqU",
     title:
       "【Part.3】決勝戦目前。。。勝利の椅子に座るのは私だ!!!総勢36名で行う超椅子取りゲーム！超十代大運動会2024 第3回戦椅子取りゲーム（超十代）",
     authorName: "超十代チャンネル【ULTRA TEENS Channel】",
@@ -194,6 +211,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "YALM6PgE1sQ",
     title:
       "【Part.2】仲良しは今日で終わりだ。親友達でも手は抜かない！勝つのは私だ！超十代大運動会2024 第2回戦 綱取り！（超十代）",
     authorName: "超十代チャンネル【ULTRA TEENS Channel】",
@@ -205,6 +223,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "EpBnreI1nQY",
     title:
       "【Part.1】超十代チャンネル史上最大級の戦いがついに開幕！超十代大運動会2024 みんなも推しを応援してね!!!（超十代）",
     authorName: "超十代チャンネル【ULTRA TEENS Channel】",
@@ -216,6 +235,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "CS0BTp4e1IA",
     title: "【重要】超十代チャンネルから皆様に大事なお知らせがあります",
     authorName: "超十代チャンネル【ULTRA TEENS Channel】",
     publishedAt: "2024-11-03",
@@ -226,6 +246,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.shinmai.co.jp/news/article/CNTS2024102000780",
     title:
       "皆さん、詐欺には気を付けて　「高嶺のなでしこ」春野さん、故郷の駒ヶ根市で一日警察署長を務め啓発｜信濃毎日新聞デジタル　信州・長野県のニュースサイト",
     authorName: "信濃毎日新聞デジタル",
@@ -237,18 +258,20 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://abema.tv/video/episode/88-77_s1_p281",
     title:
       "#248:【臓器売買】筋トレし過ぎで私生活しくじり倒す!!恋人にも振られ借金地獄!?筋肉生活の弊害とは?!【横川尚隆】後編 - しくじり先生 俺みたいになるな!! - 本編 (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
     authorName: "ABEMA",
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=504&quality=75&version=1746615392&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1754013624&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
   {
     kind: "youtube",
+    key: "MjnzhkdtezY",
     title: "高嶺のなでしこ　2nd ファンミーティング 「酪農応援プロジェクト」コラボメイキング映像",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-10-16",
@@ -259,6 +282,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://natalie.mu/music/pp/churaku-takaneko",
     title:
       "“酪農応援アンバサダー”高嶺のなでしこ、楽しく学びながら発信する酪農家の思いや牛乳の魅力 - 音楽ナタリー 特集・インタビュー",
     authorName: "音楽ナタリー",
@@ -271,18 +295,20 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://abema.tv/video/episode/88-77_s1_p280",
     title:
       "#247:【横川尚隆】筋トレで借金600万!!筋トレ沼にハマりすぎた先に待つ地獄とは!?【ボディビルダー界のレジェンド】 - しくじり先生 俺みたいになるな!! - 本編 (バラエティ) | 無料動画・見逃し配信を見るなら | ABEMA",
     authorName: "ABEMA",
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=504&quality=75&version=1746615392&width=896",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1754013624&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
   {
     kind: "youtube",
+    key: "QdegLqwOZ9E",
     title: "【衝撃】高校生のスクバの中はこんなことになってた...【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-09-28",
@@ -293,6 +319,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "Xy8rDxy6Hgs",
     title: "【大失恋】モデルが公開告白！しかし厳しい現実が。。。【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-09-23",
@@ -303,6 +330,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/autumn_uniformsnap/",
     title: "ちょっぴり秋っぽな最新制服SNAP!!",
     authorName: "Popteen Media",
     publishedAt: "2024-09-15",
@@ -314,6 +342,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/charactergoods_present/",
     title: "JKに人気のキャラグッズを大量プレゼントちゃーん♡",
     authorName: "Popteen Media",
     publishedAt: "2024-09-09",
@@ -325,6 +354,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/bachikawafes_part2/",
     title: "Popteenばちかわフェスイベント完全レポート!!PART2",
     authorName: "Popteen Media",
     publishedAt: "2024-09-09",
@@ -336,6 +366,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_10_hyoushi/bachikawafes_part1/",
     title: "Popteenばちかわフェスイベント完全レポート!!PART1",
     authorName: "Popteen Media",
     publishedAt: "2024-09-09",
@@ -347,6 +378,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "eSb_h9ohh6Q",
     title:
       "【ハプニング】現役アイドル松本ももなの保育士1日体験に密着【高嶺のなでしこ】【HoneyWorks】",
     authorName: "保育士バンク！チャンネル【公式】",
@@ -358,6 +390,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "spYkHfWCyd8",
     title:
       "【高嶺のなでしこ】2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」9/26(木) Zepp Nagoyaにて開催！ティザー映像到着！",
     authorName: "SUNDAY FOLK PROMOTION",
@@ -369,6 +402,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "BlutW1YWek8",
     title: "【激おこ案件】カメラマンがモデルに怒られました、、、!?【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-08-31",
@@ -379,6 +413,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "jmGEMZg45xc",
     title:
       "【1曲で２０役超！】ななみなな・カトリーナ陽子・だしおさん・みはるがバズり曲「Bling-Bang-Bang-Born」でモノマネ七変化！！  #まいにち賞レース #つめ込みモノマネGP",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -390,6 +425,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "s1ebJP17-TU",
     title: "【涙腺崩壊】さくてぃん感動の卒業ステージ!!モデル全員大泣き状態!?【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-08-25",
@@ -400,6 +436,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "static",
+    key: "https://outofmusic.net/?p=599",
     title:
       "【特集ハイライト】＜高嶺のなでしこ＞10人組アイドルグループ 高嶺のなでしこ Digital Single『モテチェン！』インタビュー OUT of MUSIC 86掲載",
     authorName: "OUT of MUSIC",
@@ -411,6 +448,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "5Ts_rVheplA",
     title:
       "【真夏のアイドルLIVE】FRUITS ZIPPER・高嶺のなでしこ・わーすた ・虹のコンキスタドール・JamsCollection・テラス×テラス～人気アイドルが六本木の夜を熱く盛り上げる!",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -422,6 +460,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "B_pTpzsaObE",
     title: "【LuckyFes'24】高嶺のなでしこインタビュー",
     authorName: "LuckyFes",
     publishedAt: "2024-08-04",
@@ -432,6 +471,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_9_hyoushi/summer_nailcatalog/",
     title: "モデルが考えた夏ネイルカタログ♡",
     authorName: "Popteen Media",
     publishedAt: "2024-08-01",
@@ -443,6 +483,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_9_hyoushi/best_cosme/",
     title: "Popteenのモデルが選ぶ2024年上半期ベスコスリスト♡",
     authorName: "Popteen Media",
     publishedAt: "2024-08-01",
@@ -454,6 +495,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://ciao.shogakukan.co.jp/topics/157830/",
     title:
       "【高嶺のなでしこ】城月菜央ちゃんに『ショコラの魔法』の魅力を聞いたよ！みづほ梨乃先生の描きおろしイラストも！！ - ちゃおプラス",
     authorName: "ちゃおプラス",
@@ -466,6 +508,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.idol-culture.jp/geinou/132652/",
     title:
       "“高嶺のなでしこ”籾山ひめり「頼られると頑張りたい」キャプテン就任への思いを告白｜BUBKA Web（ブブカ ウェブ）",
     authorName: "BUBKA Web（ブブカ ウェブ）",
@@ -477,6 +520,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.idol-culture.jp/geinou/132651/",
     title:
       "高嶺のなでしこ・籾山ひめり、新曲のお気に入りポイントを明かす「“私も可愛くなれるんだぞ！”っていうメッセージが込められている」｜BUBKA Web（ブブカ ウェブ）",
     authorName: "BUBKA Web（ブブカ ウェブ）",
@@ -488,6 +532,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "8sm8FpP8gQ8",
     title:
       "【歌うまアイドルは誰？】高嶺のなでしこ・Peel the Apple・マジカル・パンチライン・LinQの歌姫がかわいさ・ハモリ・表現力で歌唱対決！バズソング「全方向美少女」を熱唱！ #まいにち賞レース",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -499,6 +544,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://asageimuse.com/excerpt/23627",
     title: "高嶺のなでしこインタビュー、新曲『モテチェン！』は「勇気を出す手助けができる曲」",
     authorName: "asageiMUSE",
     publishedAt: "2024-07-26",
@@ -510,6 +556,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://nicola.jp/?p=22017",
     title:
       "【高嶺のなでしこ】最新曲『モテチェン！』インタビュー！ たかねこメンバーの「かわいいのための努力」とは？｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
     authorName: "ニコラネット｜nicola公式サイト（新潮社）",
@@ -521,6 +568,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko-3/",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
     publishedAt: "2024-07-19",
@@ -532,6 +580,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://cmnow.jp/entertainment/24061821585/",
     title:
       "Single連続リリース、全国ツアー2024 ツアーファイナル…勢いが止まらない「高嶺のなでしこ」が登場！ – CMNOW WEB",
     authorName: "CMNOW WEB",
@@ -543,6 +592,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.walkerplus.com/article/1205174/",
     title:
       "『高嶺のなでしこ』松本ももな「この曲を歌って可愛いを更新できるように頑張りたい」(1/2)｜ウォーカープラス",
     authorName: "ウォーカープラス（Walkerplus）",
@@ -554,6 +604,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://strmweb.jp/archives/13455/",
     title:
       "高嶺のなでしこ「結成2周年 “橋本桃呼＆春野莉々＆日向端ひな”が笑顔で語ったステージへの熱意」INTERVIEW",
     authorName: "STREAM（ストリーム）",
@@ -565,6 +616,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "y9seli9v8GE",
     title: "松本ももなちゃん Ank Rougeカタログメイキング♡",
     authorName: "Ank Rouge channel♡",
     publishedAt: "2024-07-11",
@@ -575,6 +627,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_8_hyoushi/2024summer_event_2/",
     title: "Popteen ばちかわフェス2024チケット販売開始‼︎",
     authorName: "Popteen Media",
     publishedAt: "2024-07-02",
@@ -586,6 +639,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "aAE1tGG1iLg",
     title: "【大混乱】この中に嘘つきがいます！人狼は誰だっ！！【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-06-30",
@@ -596,6 +650,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "jKqtH-d6whg",
     title:
       "【横山由依に続け！】高嶺のなでしこ・CANDY TUNE・OCHA NORMA・虹のコンキスタドール からリアクション芸を極めしアイドルが集結！アルピーにハマるのは誰だ！？ #まいにち賞レース",
     authorName: "動画、はじめてみました【テレビ朝日公式】",
@@ -607,6 +662,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "qDWptqbPVDc",
     title: "【デビュー】超期待の新人がモデルデビュー!!初撮影でテンションMAX!!【Popteen】",
     authorName: "PopteenTV",
     publishedAt: "2024-06-22",
@@ -617,6 +673,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_7_hyoushi/summer_coordinate_schooluniform/",
     title: "テーマ別 夏私服おひろめSNAP♡-放課後キャラ出し制服編-",
     authorName: "Popteen Media",
     publishedAt: "2024-06-17",
@@ -629,6 +686,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/month_magazine/2024_7_hyoushi/creatormodeldebut/",
     title: "私たちもクリエイターモデルになりま〜す♡",
     authorName: "Popteen Media",
     publishedAt: "2024-06-03",
@@ -640,6 +698,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "dp7fYvkROYc",
     title: "酪農応援ニュース メイキング映像",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-06-01",
@@ -650,6 +709,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "eEseLWatYxc",
     title: "【高嶺のなでしこ】たかねこ早口チャレンジvol.5(星谷美来×城月菜央)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-05-14",
@@ -660,6 +720,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://mycolor.jp/michellmacaron/momonaM_item",
     title: "松本ももなｃ特集",
     authorName: "ファッション通販＆メディアMyColor ～マイカラー～",
     publishedAt: "2024-05-08",
@@ -670,6 +731,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "0RKb9XMM_gI",
     title: "【高嶺のなでしこ】たかねこ早口チャレンジvol.4(葉月紗蘭×日向端ひな)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-05-07",
@@ -680,6 +742,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "4JkjAtXEUnM",
     title: "【高嶺のなでしこ】たかねこ早口チャレンジvol.3(東山恵里沙×春野莉々)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-05-07",
@@ -690,6 +753,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "Kp5Q_JVe8gU",
     title: "【高嶺のなでしこ】たかねこ早口チャレンジvol.2(松本ももな×籾山ひめり)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-04-23",
@@ -700,6 +764,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "2cpJZZatVzs",
     title: "【高嶺のなでしこ】たかねこ早口チャレンジvol.1(涼海すう×橋本桃呼)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-04-16",
@@ -710,6 +775,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "BsALipVzbfI",
     title: "【高嶺のなでしこ】運転免許トロッカクイズ 第1問！(涼海すう×橋本桃呼)｜運転免許トロッカ",
     authorName: "運転免許トロッカ!",
     publishedAt: "2024-04-16",
@@ -720,6 +786,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://nicola.jp/?p=19490",
     title:
       "【今気になる！ 令和最強ティーン】高嶺のなでしこ・東山恵里沙ちゃん｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
     authorName: "ニコラネット｜nicola公式サイト（新潮社）",
@@ -731,6 +798,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "fYPiZtEgAzY",
     title: "「ヒミツのミルクイズ」に高嶺のなでしこが挑戦　葉月紗蘭＆城月菜央 ver",
     authorName: "milkchapon",
     publishedAt: "2024-03-29",
@@ -741,6 +809,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "fLbptjbKr5k",
     title: "「ヒミツのミルクイズ」に高嶺のなでしこが挑戦　松本ももな＆橋本桃呼 ver",
     authorName: "milkchapon",
     publishedAt: "2024-03-29",
@@ -751,6 +820,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "cfB9IHTdQms",
     title: "「ヒミツのミルクイズ」に高嶺のなでしこが挑戦　日向端ひな＆籾山ひめり ver",
     authorName: "milkchapon",
     publishedAt: "2024-03-29",
@@ -761,6 +831,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "gQtbellN6Ac",
     title: "「ヒミツのミルクイズ」に高嶺のなでしこが挑戦　東山恵里沙＆春野莉々 ver",
     authorName: "milkchapon",
     publishedAt: "2024-03-29",
@@ -771,6 +842,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "ZTVs_hs95lA",
     title: "「ヒミツのミルクイズ」に高嶺のなでしこが挑戦　星谷美来＆涼海すう ver",
     authorName: "milkchapon",
     publishedAt: "2024-03-29",
@@ -781,6 +853,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "g2fJbed_0lY",
     title: "【酪農応援プロジェクト2024】　酪農応援ニュース　第3回",
     authorName: "ウェザーニュース",
     publishedAt: "2024-03-29",
@@ -791,6 +864,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "L117TxKbKfE",
     title: "「酪農応援ニュース」第3回　リポート映像（北海道編）",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-03-28",
@@ -801,6 +875,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "n2ywIfn16Y0",
     title: "「酪農応援ニュース」第2回　リポート映像（鹿児島編）",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-03-20",
@@ -811,6 +886,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "Dwwe9x-eYk8",
     title: "「酪農応援ニュース」第1回　リポート映像（岐阜編）",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-03-20",
@@ -821,6 +897,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "FYElLOWHNxg",
     title: "【酪農応援プロジェクト2024】　酪農応援ニュース　第2回",
     authorName: "ウェザーニュース",
     publishedAt: "2024-03-14",
@@ -831,6 +908,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "q6dVNOgjTik",
     title: "酪農応援プロジェクト2024　酪農応援ニュース　第1回",
     authorName: "ウェザーニュース",
     publishedAt: "2024-03-08",
@@ -841,6 +919,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://nicola.jp/?p=18655",
     title:
       "【高嶺のなでしこ】メジャーデビューシングル『美しく生きろ／恋を知った世界』インタビュー！　新学年をむかえるティーンの読者へのメッセージも♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
     authorName: "ニコラネット｜nicola公式サイト（新潮社）",
@@ -852,6 +931,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "oo2BqViKCUc",
     title: "ミルクの時間　酪農特別授業",
     authorName: "一般社団法人中央酪農会議",
     publishedAt: "2024-03-06",
@@ -862,6 +942,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://nicola.jp/?p=18495",
     title:
       "【高嶺のなでしこ】メンバー全員の個人プロフ帳♡　学生時代のお決まりヘアアレから今後の夢まで、ぜーんぶ手描きで大公開♡｜TOPICS｜ニコラネット｜nicola公式サイト（新潮社）",
     authorName: "ニコラネット｜nicola公式サイト（新潮社）",
@@ -873,6 +954,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.radionikkei.jp/toraken/3.html",
     title:
       "第4回ゲスト研究員は引き続き、高嶺のなでしこ、東山恵里沙さんと葉月紗蘭さん！｜虎ノ門 トレンド経済研究所｜エンタメ・カルチャー｜ラジオNIKKEI",
     authorName: "ラジオNIKKEI",
@@ -884,6 +966,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://thetv.jp/news/detail/1182799/",
     title:
       "高嶺のなでしこ、メジャーデビュー曲は「同じアイドルの人に聴いてほしい」 | WEBザテレビジョン",
     authorName: "WEBザテレビジョン",
@@ -895,6 +978,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://thetv.jp/news/detail/1184512/",
     title:
       "高嶺のなでしこの強みは“十人十色”「10人のうち1人には虜になってもらえる」 | WEBザテレビジョン",
     authorName: "WEBザテレビジョン",
@@ -906,6 +990,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://thetv.jp/news/detail/1184513/",
     title:
       "高嶺のなでしこ、最終目標は“武道館”「美しく生きろ」でメジャーデビュー | WEBザテレビジョン",
     authorName: "WEBザテレビジョン",
@@ -917,6 +1002,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://xtrend.nikkei.com/atcl/contents/18/00962/00009/",
     title: "高嶺のなでしこ　女性人気でMV再生1300万超えの注目アイドル",
     authorName: "日経クロストレンド",
     publishedAt: "2024-02-22",
@@ -927,6 +1013,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.radionikkei.jp/toraken/2.html",
     title:
       "第3回ゲスト研究員は高嶺のなでしこ、葉月紗蘭さんと東山恵里沙さん！｜虎ノ門 トレンド経済研究所｜エンタメ・カルチャー｜ラジオNIKKEI",
     authorName: "ラジオNIKKEI",
@@ -938,6 +1025,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko-2/",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
     publishedAt: "2024-02-21",
@@ -948,6 +1036,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
     title:
       "高嶺のなでしこ、２１日メジャーデビュー　シングル「美しく生きろ／恋を知った世界」バスらせる",
     authorName: "サンスポ",
@@ -960,6 +1049,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "4Pyi7Gk2IXI",
     title: "【柚姫の部屋 第237回】TEAM SHACHI大黒柚姫と瀬戸口俊介のほぼ月曜夜９時生配信",
     authorName: "TEAM SHACHI【公式】",
     publishedAt: "2024-02-05",
@@ -970,6 +1060,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://prtimes.jp/main/html/rd/p/000000561.000025517.html",
     title:
       "【オフィシャルレポート】高嶺のなでしこ 初の海外公演！『CONTEMPO：マカオ・ジャパン・スプリング・フェスティバル』のトップバッターを飾る",
     authorName: "プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES",
@@ -982,6 +1073,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "mVaR9q39xYs",
     title: "高嶺のなでしこ 東山 恵里沙ちゃん Ank Rougeカタログメイキング",
     authorName: "Ank Rouge チャンネル",
     publishedAt: "2024-02-01",
@@ -992,6 +1084,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://natalie.mu/music/column/558076",
     title: "女性アイドル / グループ編 | マイベストトラック2023 Vol. 1 - 音楽ナタリー コラム",
     authorName: "音楽ナタリー",
     publishedAt: "2024-01-24",
@@ -1003,6 +1096,7 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "D8RlMD4MGiE",
     title:
       "高嶺のなでしこ、「美しく生きろ」のM/V公開及びメジャーデビューを控えた感想インタビューを実施！",
     authorName: "WowKorea FAN",
