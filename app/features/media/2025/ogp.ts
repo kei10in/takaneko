@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://bezzy.jp/2025/07/70604/",
+    publishedAt: "2025-07-31",
+    category: "article",
+    presents: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "松本ももな"],
+    officialTwitter: "https://x.com/takanenofficial/status/1950828879507255614",
+  },
+  {
     mediaUrl: "https://nonno.hpplus.jp/entertainment/interview/261409/",
     publishedAt: "2025-07-21",
     category: "article",

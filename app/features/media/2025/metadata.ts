@@ -22,6 +22,16 @@ export const metadata2025: MediaDetails[] = [
     presents: ["籾山ひめり"],
   },
   {
+    kind: "ogp",
+    title: "強みを磨いてグループ史上最大の挑戦へ、この夏を駆ける高嶺のなでしこの全力宣言",
+    authorName: "Bezzy［ベジー］｜アーティストをもっと好きになるエンタメメディア",
+    publishedAt: "2025-07-31",
+    mediaUrl: "https://bezzy.jp/2025/07/70604/",
+    imageUrl: "https://bezzy.jp/cms/wp-content/uploads/2025/07/0961-1200x800.jpg",
+    category: "article",
+    presents: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "松本ももな"],
+  },
+  {
     kind: "youtube",
     title:
       "【ショートドラマ】住みますアイドル 事故物件4日目丑三つ時　映画「事故物件ゾク 恐い間取り」コラボ　＃事故物件　#映画　#ホラー",
