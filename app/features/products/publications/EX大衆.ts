@@ -94,7 +94,7 @@ export const EX大衆_2022年10月号: Publication = {
   url: "https://www.futabasha.co.jp/book/magazine/49101177110260000000",
   coverImages: [
     {
-      path: "/publications/EX大衆_2022年10月号.jpg",
+      path: "/publications/2022-09-14_EX大衆_2022年10月号.jpg",
       ref: "https://www.futabasha.co.jp/book/magazine/49101177110260000000",
     },
   ],
