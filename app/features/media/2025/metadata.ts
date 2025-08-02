@@ -69,6 +69,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/JK3sm50DW10/hqdefault.jpg",
     category: "youtube",
     presents: [],
+    deleted: true,
   },
   {
     kind: "youtube",
@@ -273,6 +274,7 @@ export const metadata2025: MediaDetails[] = [
       "https://asageimuse.com/wp-content/uploads/2025/07/a961abfe39e06c5c234c29d9e8e7cac9-1.jpg",
     category: "article",
     presents: [],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -286,6 +288,7 @@ export const metadata2025: MediaDetails[] = [
       "https://asageimuse.com/wp-content/uploads/2025/07/2666ff8aaffe0b2dfa245cb9b33c7ea3-1.jpg",
     category: "article",
     presents: [],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -434,6 +437,7 @@ export const metadata2025: MediaDetails[] = [
       "https://asageimuse.com/wp-content/uploads/2025/06/4588d32f3f4768553b9751f095d26419.jpg",
     category: "article",
     presents: [],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -734,6 +738,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/xSME23C4vKA/hqdefault.jpg",
     category: "youtube",
     presents: ["春野莉々"],
+    deleted: true,
   },
   {
     kind: "youtube",

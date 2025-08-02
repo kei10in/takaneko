@@ -541,6 +541,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/8sm8FpP8gQ8/hqdefault.jpg",
     category: "youtube",
     presents: ["東山恵里沙"],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -553,6 +554,7 @@ export const metadata2024: MediaDetails[] = [
       "https://asageimuse.com/wp-content/uploads/2024/07/fef3c2d586572ed1b6474b257da9208c.jpg",
     category: "article",
     presents: [],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -659,6 +661,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/jKqtH-d6whg/hqdefault.jpg",
     category: "youtube",
     presents: ["橋本桃呼"],
+    deleted: true,
   },
   {
     kind: "youtube",

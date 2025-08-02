@@ -2,7 +2,9 @@ import fs from "fs/promises";
 import path from "path";
 import { format, resolveConfig, resolveConfigFile } from "prettier";
 import { dedent } from "ts-dedent";
-import { MediaDetails } from "~/features/media/types";
+import { mediaKey } from "~/features/media/mediaDescriptor";
+import { getAllMediaMetadata } from "~/features/media/metadata";
+import { MediaDescriptor, MediaDetails } from "~/features/media/types";
 import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
 import { getAllMedia } from "../app/features/media/allMedia";
 import { NaiveDate } from "../app/utils/datetime/NaiveDate";
@@ -15,11 +17,16 @@ const oEmbedEndpoint = "https://www.youtube.com/oembed";
 const fetchAndCacheMediaMetadata = async () => {
   const allMedia = getAllMedia();
 
+  const existingMediaMetadata = Object.fromEntries(getAllMediaMetadata().map((m) => [m.key, m]));
+
   const metadataPromises = allMedia.map(async (media): Promise<MediaDetails[]> => {
+    const key = mediaKey(media);
+
     if (media.kind == "static") {
       return [
         {
           kind: "static",
+          key,
           title: media.title,
           authorName: media.authorName,
           publishedAt: media.publishedAt,
@@ -57,6 +64,7 @@ const fetchAndCacheMediaMetadata = async () => {
       return [
         {
           kind: "ogp",
+          key,
           title: title.split(",")[0],
           authorName: authorName.split(",")[0],
           publishedAt: media.publishedAt,
@@ -88,6 +96,7 @@ const fetchAndCacheMediaMetadata = async () => {
       return [
         {
           kind: "youtube",
+          key,
           title: data.title,
           authorName: data.author_name,
           publishedAt: media.publishedAt,
@@ -103,8 +112,11 @@ const fetchAndCacheMediaMetadata = async () => {
   });
 
   const items = (await Promise.all(metadataPromises)).flatMap((x) => x);
+  const newMediaMetadata = Object.fromEntries(items.map((item) => [item.key, item]));
 
-  const resultsByYear = items.reduce((acc: { year: number; media: MediaDetails[] }[], media) => {
+  const updated = mergeMediaMetadata(allMedia, existingMediaMetadata, newMediaMetadata);
+
+  const resultsByYear = updated.reduce((acc: { year: number; media: MediaDetails[] }[], media) => {
     const publishedDate = NaiveDate.parseUnsafe(media.publishedAt);
     const year = publishedDate.year;
 
@@ -135,6 +147,25 @@ const fetchAndCacheMediaMetadata = async () => {
       await fs.writeFile(outputFilePath, formattedContent, "utf-8");
     }),
   );
+};
+
+const mergeMediaMetadata = (
+  allMedia: MediaDescriptor[],
+  existing: Record<string, MediaDetails>,
+  newItems: Record<string, MediaDetails>,
+): MediaDetails[] => {
+  return allMedia.flatMap((media) => {
+    const key = mediaKey(media);
+    const oldItem = existing[key];
+    const newItem = newItems[key];
+    if (oldItem == undefined && newItem == undefined) {
+      return [];
+    } else if (newItem != undefined) {
+      return [newItem];
+    } else {
+      return [{ ...oldItem, deleted: true }];
+    }
+  });
 };
 
 /**
