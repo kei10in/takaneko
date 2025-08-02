@@ -1,6 +1,7 @@
 import { z } from "zod/v4";
 
 export const StageCostumes = z.enum([
+  "2025 夏衣装",
   "アイドル衣装衣装",
   "2025 春衣装",
   "ピンク衣装",
