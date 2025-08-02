@@ -62,8 +62,14 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
               alt={name}
             />
           ) : (
-            <div className="flex h-10 w-10 items-center justify-center bg-gray-200">
-              <BsMusicNoteBeamed className="h-5 w-5 flex-none bg-gray-200 text-gray-500" />
+            <div
+              className={clsx(
+                "flex h-10 w-10 items-center justify-center",
+                slug && "bg-nadeshiko-200 text-nadeshiko-600",
+                !slug && "bg-gray-100 text-gray-500",
+              )}
+            >
+              <BsMusicNoteBeamed className="h-5 w-5 flex-none" />
             </div>
           )}
         </div>
