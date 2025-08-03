@@ -14,6 +14,19 @@ export const metadata2025: MediaDetails[] = [
     presents: ["城月菜央"],
   },
   {
+    kind: "ogp",
+    key: "https://mezamashi.media/articles/181920",
+    title:
+      "あなたの推しも？撮り下ろしTOKYO IDOL FESTIVAL(TIF) 2025 2日目出演アイドルによるファンに向けた15文字のラブレターを掲載！ | めざましmedia | “好き”でつながる",
+    authorName: "めざましmedia",
+    publishedAt: "2025-08-02",
+    mediaUrl: "https://mezamashi.media/articles/181920",
+    imageUrl:
+      "https://mezamashi.ismcdn.jp/mwimgs/8/2/1200xm/img_828be727b9ed2ecdd2449817a3f54948242018.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "xQvYJoyIzjs",
     title: "【8月1日公開】♥Jamieエーエヌケー×籾山ひめりちゃん撮影メイキング♥",

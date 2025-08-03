@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://mezamashi.media/articles/181920",
+    publishedAt: "2025-08-02",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://bezzy.jp/2025/07/70604/",
     publishedAt: "2025-07-31",
     category: "article",
