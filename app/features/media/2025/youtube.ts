@@ -5,6 +5,7 @@ export const YouTube2025 = [
     videoId: "WmJC13ijUU8",
     publishedAt: "2025-08-03",
     presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1952014218347393458",
   },
   {
     videoId: "xQvYJoyIzjs",
