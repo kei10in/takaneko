@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "WmJC13ijUU8",
+    title:
+      "高嶺のなでしこ・城月菜央が、絶叫お化け屋敷に行ってみた👻映画「事故物件ゾク 恐い間取り」❌台場怪奇学校コラポ",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2025-08-03",
+    mediaUrl: "https://youtu.be/WmJC13ijUU8",
+    imageUrl: "https://i.ytimg.com/vi/WmJC13ijUU8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "xQvYJoyIzjs",
     title: "【8月1日公開】♥Jamieエーエヌケー×籾山ひめりちゃん撮影メイキング♥",
     authorName: "Jamieエーエヌケーchannel♥",
