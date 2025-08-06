@@ -116,6 +116,7 @@ import { SpringRide広州上海_生写真 } from "./2025/2025-06-20_生写真「
 import { LARME高嶺のなでしこ_ステッカー } from "./2025/2025-06-25_ステッカー「LARME×高嶺のなでしこ」";
 import { LARME高嶺のなでしこ_ミニフォト } from "./2025/2025-06-25_ミニフォトカード「LARME×高嶺のなでしこ」";
 import { 超NATSUZOME2025限定カード } from "./2025/2025-07-06_超NATSUZOME2025限定カード";
+import { お守りアクキー } from "./2025/2025-08-07_お守りアクキー";
 import { _2025浴衣_ミニフォト } from "./2025/2025-08-07_ミニフォトカード「2025 浴衣」";
 import { _2025浴衣_生写真 } from "./2025/2025-08-07_生写真「2025 浴衣」";
 import { RandomGoods, TradeTextType } from "./product";
@@ -123,6 +124,7 @@ import { RandomGoods, TradeTextType } from "./product";
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _2025浴衣_生写真,
   _2025浴衣_ミニフォト,
+  お守りアクキー,
   ROUND1_コラボキャンペーン_オリジナルコースター,
   ROUND1_コラボキャンペーン_オリジナルステッカー,
 ];
@@ -130,6 +132,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   _2025浴衣_生写真,
   _2025浴衣_ミニフォト,
+  お守りアクキー,
   超NATSUZOME2025限定カード,
   LARME高嶺のなでしこ_ミニフォト,
   LARME高嶺のなでしこ_ステッカー,

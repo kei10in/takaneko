@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const お守りアクキー: RandomGoods = {
+  id: "お守りアクキー",
+  slug: "お守りアクキー",
+  name: "ランダムお守りアクキー",
+  year: 2025,
+  series: "私たちの宣言式",
+  category: "アクリルキーホルダー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-08-07_お守りアクキー.webp",
+  width: 340,
+  height: 239,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 52, y: 41, width: 60, height: 92 },
+    { id: 2, x: 115, y: 41, width: 60, height: 92 },
+    { id: 3, x: 178, y: 41, width: 60, height: 92 },
+    { id: 4, x: 241, y: 41, width: 60, height: 92 },
+    { id: 5, x: 15, y: 134, width: 60, height: 92 },
+    { id: 6, x: 80, y: 134, width: 60, height: 92 },
+    { id: 7, x: 145, y: 134, width: 60, height: 92 },
+    { id: 8, x: 205, y: 134, width: 60, height: 92 },
+    { id: 9, x: 266, y: 134, width: 60, height: 92 },
+  ],
+};
