@@ -33,6 +33,36 @@ export const REGULAR_PHOTO_SET = [
   { id: 30, name: "籾山ひめり", description: "ヒキ" },
 ];
 
+export const REGULAR_PHOTO_SET2 = [
+  { id: 1, name: "城月菜央", description: "ヨリ" },
+  { id: 2, name: "城月菜央", description: "チュウ" },
+  { id: 3, name: "城月菜央", description: "ヒキ" },
+  { id: 4, name: "涼海すう", description: "ヨリ" },
+  { id: 5, name: "涼海すう", description: "チュウ" },
+  { id: 6, name: "涼海すう", description: "ヒキ" },
+  { id: 7, name: "橋本桃呼", description: "ヨリ" },
+  { id: 8, name: "橋本桃呼", description: "チュウ" },
+  { id: 9, name: "橋本桃呼", description: "ヒキ" },
+  { id: 10, name: "葉月紗蘭", description: "ヨリ" },
+  { id: 11, name: "葉月紗蘭", description: "チュウ" },
+  { id: 12, name: "葉月紗蘭", description: "ヒキ" },
+  { id: 13, name: "東山恵里沙", description: "ヨリ" },
+  { id: 14, name: "東山恵里沙", description: "チュウ" },
+  { id: 15, name: "東山恵里沙", description: "ヒキ" },
+  { id: 16, name: "日向端ひな", description: "ヨリ" },
+  { id: 17, name: "日向端ひな", description: "チュウ" },
+  { id: 18, name: "日向端ひな", description: "ヒキ" },
+  { id: 19, name: "星谷美来", description: "ヨリ" },
+  { id: 20, name: "星谷美来", description: "チュウ" },
+  { id: 21, name: "星谷美来", description: "ヒキ" },
+  { id: 22, name: "松本ももな", description: "ヨリ" },
+  { id: 23, name: "松本ももな", description: "チュウ" },
+  { id: 24, name: "松本ももな", description: "ヒキ" },
+  { id: 25, name: "籾山ひめり", description: "ヨリ" },
+  { id: 26, name: "籾山ひめり", description: "チュウ" },
+  { id: 27, name: "籾山ひめり", description: "ヒキ" },
+];
+
 export const CENTERED_PHOTO_SET = [
   { id: 1, name: "城月菜央", description: "チュウ" },
   { id: 2, name: "城月菜央", description: "ヨリ" },
@@ -97,6 +127,36 @@ export const REGULAR_MINI_PHOTO_SET = [
   { id: 28, name: "籾山ひめり", description: "" },
   { id: 29, name: "籾山ひめり", description: "" },
   { id: 30, name: "籾山ひめり", description: "" },
+];
+
+export const REGULAR_MINI_PHOTO_SET2 = [
+  { id: 1, name: "城月菜央", description: "" },
+  { id: 2, name: "城月菜央", description: "" },
+  { id: 3, name: "城月菜央", description: "" },
+  { id: 4, name: "涼海すう", description: "" },
+  { id: 5, name: "涼海すう", description: "" },
+  { id: 6, name: "涼海すう", description: "" },
+  { id: 7, name: "橋本桃呼", description: "" },
+  { id: 8, name: "橋本桃呼", description: "" },
+  { id: 9, name: "橋本桃呼", description: "" },
+  { id: 10, name: "葉月紗蘭", description: "" },
+  { id: 11, name: "葉月紗蘭", description: "" },
+  { id: 12, name: "葉月紗蘭", description: "" },
+  { id: 13, name: "東山恵里沙", description: "" },
+  { id: 14, name: "東山恵里沙", description: "" },
+  { id: 15, name: "東山恵里沙", description: "" },
+  { id: 16, name: "日向端ひな", description: "" },
+  { id: 17, name: "日向端ひな", description: "" },
+  { id: 18, name: "日向端ひな", description: "" },
+  { id: 19, name: "星谷美来", description: "" },
+  { id: 20, name: "星谷美来", description: "" },
+  { id: 21, name: "星谷美来", description: "" },
+  { id: 22, name: "松本ももな", description: "" },
+  { id: 23, name: "松本ももな", description: "" },
+  { id: 24, name: "松本ももな", description: "" },
+  { id: 25, name: "籾山ひめり", description: "" },
+  { id: 26, name: "籾山ひめり", description: "" },
+  { id: 27, name: "籾山ひめり", description: "" },
 ];
 
 const ALL_LINEUP_CHARACTERS = [
