@@ -54,14 +54,16 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
             物販情報
           </h2>
 
-          <div className="mt-0 mb-2 flex items-center gap-2 px-1">
-            <BsClock className="text-gray-400" />
+          {goods?.time && (
+            <div className="mt-0 mb-2 flex items-center gap-2 px-1">
+              <BsClock className="text-gray-400" />
 
-            <p className="text-base leading-snug">
-              {goods?.time?.length == 1 && ` ${goods.time[0]} 〜`}
-              {goods?.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
-            </p>
-          </div>
+              <p className="text-base leading-snug">
+                {goods?.time?.length == 1 && ` ${goods.time[0]} 〜`}
+                {goods?.time?.length == 2 && ` ${goods.time[0]} 〜 ${goods.time[1]}`}
+              </p>
+            </div>
+          )}
 
           {goods?.lineup instanceof Array && (
             <div>
