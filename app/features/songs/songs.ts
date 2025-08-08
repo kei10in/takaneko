@@ -40,6 +40,7 @@ import { 私は怪物 } from "./2024/私は怪物";
 import { 私より好きでいて } from "./2024/私より好きでいて";
 import { 美しく生きろ } from "./2024/美しく生きろ";
 import { CuteForLife } from "./2025/Cute for life";
+import { この世界は嘘でできている } from "./2025/この世界は嘘でできている";
 import { アイドル衣装 } from "./2025/アイドル衣装";
 import { メランコリックハニー } from "./2025/メランコリックハニー";
 import { ライフクエスト } from "./2025/ライフクエスト";
@@ -52,6 +53,7 @@ import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2025
+  この世界は嘘でできている,
   ライフクエスト,
   東京サマーセッション,
   初恋のこたえ,
