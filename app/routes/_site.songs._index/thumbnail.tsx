@@ -24,7 +24,7 @@ export const Thumbnail: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <div className="flex h-[5.625rem] w-40 items-center justify-center bg-gray-100">
+    <div className="flex aspect-video w-full items-center justify-center bg-gray-100">
       <BsMusicNoteBeamed className="h-12 w-12 text-gray-300" />
     </div>
   );
