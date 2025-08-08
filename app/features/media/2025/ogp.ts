@@ -2,8 +2,38 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.lvtimes.net/broad/71117/",
+    publishedAt: "2025-08-04",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://horror2.jp/74779",
+    publishedAt: "2025-08-04",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    mediaUrl: "https://thetv.jp/news/detail/1282854/",
+    publishedAt: "2025-08-03",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://www.lvtimes.net/broad/70992/",
+    publishedAt: "2025-08-03",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://mezamashi.media/articles/181920",
     publishedAt: "2025-08-02",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://kaiwaiweb.com/news/12965/",
+    publishedAt: "2025-07-31",
     category: "article",
     presents: [],
   },
@@ -69,6 +99,12 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-07-09",
     category: "article",
     presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    mediaUrl: "https://kaiwaiweb.com/news/11842/",
+    publishedAt: "2025-07-09",
+    category: "article",
+    presents: [],
   },
   {
     mediaUrl: "https://popteen.co.jp/media/71242/",

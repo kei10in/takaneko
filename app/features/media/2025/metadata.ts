@@ -2,6 +2,29 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://www.lvtimes.net/broad/71117/",
+    title: "高嶺のなでしこ、切なさ・力強さ・ファンとの一体感を感じさせるステージ！＜TIF2025＞",
+    authorName: "Liveen Times",
+    publishedAt: "2025-08-04",
+    mediaUrl: "https://www.lvtimes.net/broad/71117/",
+    imageUrl: "https://www.lvtimes.net/wp-content/uploads/2025/08/AY5R2560.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://horror2.jp/74779",
+    title:
+      "城月菜央（高嶺のなでしこ）が「恐怖心展」を体験！　「恐怖が感情だけでなく思考にも訴えてくる」",
+    authorName: "ホラー通信",
+    publishedAt: "2025-08-04",
+    mediaUrl: "https://horror2.jp/74779",
+    imageUrl: "https://horror2.jp/files/2025/07/S__13049871_0.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "WmJC13ijUU8",
     title:
@@ -12,6 +35,29 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/WmJC13ijUU8/hqdefault.jpg",
     category: "youtube",
     presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
+    key: "https://thetv.jp/news/detail/1282854/",
+    title:
+      "高嶺のなでしこ、“初恋”をつなぐセットリストでストーリーを感じる熱いステージを展開＜TIF2025＞ | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2025-08-03",
+    mediaUrl: "https://thetv.jp/news/detail/1282854/",
+    imageUrl: "https://thetv.jp/i/nw/1282854/15036183.jpg?w=1284",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.lvtimes.net/broad/70992/",
+    title: "高嶺のなでしこ、青春の疾走感と“かわいい”の全開放！＜TIF2025＞",
+    authorName: "Liveen Times",
+    publishedAt: "2025-08-03",
+    mediaUrl: "https://www.lvtimes.net/broad/70992/",
+    imageUrl: "https://www.lvtimes.net/wp-content/uploads/2025/08/AY5R1855.jpg",
+    category: "article",
+    presents: [],
   },
   {
     kind: "ogp",
@@ -47,6 +93,19 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/eyoa2_NU138/hqdefault.jpg",
     category: "youtube",
     presents: ["籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://kaiwaiweb.com/news/12965/",
+    title:
+      "【六本木アイドルフェスティバル2025ライブレポート】高嶺のなでしこ、大トリで好きが溢れる圧巻のステージ - KAiWAi (カイワイ)",
+    authorName: "KAiWAi (カイワイ)",
+    publishedAt: "2025-07-31",
+    mediaUrl: "https://kaiwaiweb.com/news/12965/",
+    imageUrl:
+      "https://kaiwaiweb.com/wp/wp-content/uploads/2025/07/takanekosama_RIF2025_029-watermarked.jpg",
+    category: "article",
+    presents: [],
   },
   {
     kind: "ogp",
@@ -327,6 +386,19 @@ export const metadata2025: MediaDetails[] = [
       "https://encount.press/wp-content/uploads/2025/07/08234155/2d487b7e55e7564c2fb1e28c257e79a1.jpg",
     category: "article",
     presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://kaiwaiweb.com/news/11842/",
+    title:
+      "【超NATSUZOME2025ライブレポート】高嶺のなでしこ、夕映えのステージに響いた決意と可憐のダブルトーン - KAiWAi (カイワイ)",
+    authorName: "KAiWAi (カイワイ)",
+    publishedAt: "2025-07-09",
+    mediaUrl: "https://kaiwaiweb.com/news/11842/",
+    imageUrl:
+      "https://kaiwaiweb.com/wp/wp-content/uploads/2025/07/takanenonadeshikosama_natsuzome_050-watermarked.jpg",
+    category: "article",
+    presents: [],
   },
   {
     kind: "ogp",
