@@ -8,7 +8,7 @@ export const sitemapBuilder = (): Plugin => {
     const buildSitemapScript = path.resolve(__dirname, "..", "..", "scripts", "build-sitemap.ts");
     const output = path.resolve(__dirname, "..", "..", "public", "sitemap.xml");
 
-    const result = spawnSync("pnpm", ["tsx", buildSitemapScript], { shell: true });
+    const result = spawnSync("npm", ["exec", "tsx", buildSitemapScript], { shell: true });
     if (result.error) {
       throw result.error;
     }

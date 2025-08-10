@@ -79,6 +79,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 <h3 className="font-semibold">About</h3>
                 <ul className="space-y-2">
                   <li>
+                    <Link to="/getting-started">はじめての方へ</Link>
+                  </li>
+                  <li>
                     <Link to="/releases">リリース ノート</Link>
                   </li>
                   <li>

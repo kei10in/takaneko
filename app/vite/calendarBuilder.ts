@@ -7,7 +7,7 @@ export const calendarBuilder = (): Plugin => {
     const buildCalendarScript = path.resolve(__dirname, "..", "..", "scripts", "build-calendar.ts");
     const output = path.resolve(__dirname, "..", "..", path.join("public", filename));
 
-    const result = spawnSync("pnpm", ["tsx", buildCalendarScript, kind, output], { shell: true });
+    const result = spawnSync("npm", ["exec", "tsx", buildCalendarScript, kind, output], { shell: true });
     if (result.error) {
       throw result.error;
     }

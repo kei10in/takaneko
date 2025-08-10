@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "deploy": "pnpm run build && wrangler pages deploy",
+    "deploy": "npm run build && wrangler pages deploy",
     "dev": "react-router dev",
     "format": "prettier --write app",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "wrangler pages dev ./build/client",
-    "preview": "pnpm run build && wrangler pages dev",
+    "preview": "npm run build && wrangler pages dev",
     "cf-typegen": "wrangler types",
     "typecheck": "react-router typegen && tsc"
   },

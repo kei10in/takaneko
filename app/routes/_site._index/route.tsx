@@ -105,7 +105,23 @@ export default function Index() {
         </div>
 
         <section className="mx-auto w-full max-w-md space-y-16 pt-8 pb-12 lg:max-w-3xl">
-          <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
+          <div className="px-4 space-y-3">
+            <p>「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <p className="text-sm text-blue-800 mb-2">
+                🌟 <strong>初めてご利用の方へ</strong>
+              </p>
+              <p className="text-sm text-blue-700 mb-3">
+                イベントの流れやサイトの使い方について詳しく説明しています。
+              </p>
+              <Link 
+                to="/getting-started"
+                className="inline-block bg-blue-600 text-white px-4 py-2 rounded text-sm font-semibold hover:bg-blue-700 transition-colors"
+              >
+                はじめての方へ →
+              </Link>
+            </div>
+          </div>
 
           <section className="space-y-4">
             <h2 className="flex items-center gap-2 px-4 text-xl leading-tight font-semibold text-gray-500">
