@@ -4,9 +4,12 @@ import {
   MetaFunction,
   useLoaderData,
 } from "react-router";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { validateYearMonthDate } from "~/features/calendars/utils";
+import { importEventModulesByDate } from "~/features/events/eventModule";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -33,7 +36,11 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   }
 
   const { year, month, day } = r;
-  return { year, month, day };
+  const events = (await importEventModulesByDate(new NaiveDate(year, month, day))).map(
+    calendarEventFromEventModule,
+  );
+
+  return { year, month, day, events };
 };
 
 export const clientLoader = async ({ params }: ClientLoaderFunctionArgs) => {
@@ -43,11 +50,15 @@ export const clientLoader = async ({ params }: ClientLoaderFunctionArgs) => {
   }
 
   const { year, month, day } = r;
-  return { year, month, day };
+  const events = (await importEventModulesByDate(new NaiveDate(year, month, day))).map(
+    calendarEventFromEventModule,
+  );
+
+  return { year, month, day, events };
 };
 
 export default function Index() {
-  const { year, month, day } = useLoaderData<typeof clientLoader>();
+  const { year, month, day, events } = useLoaderData<typeof loader>();
 
-  return <DailyCalendar year={year} month={month} day={day} />;
+  return <DailyCalendar year={year} month={month} day={day} events={events} />;
 }

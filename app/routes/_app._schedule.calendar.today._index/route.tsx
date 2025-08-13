@@ -1,7 +1,9 @@
-import { MetaFunction } from "react-router";
+import { MetaFunction, useLoaderData } from "react-router";
 import { DOMAIN } from "~/constants";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { dateHref } from "~/features/calendars/utils";
+import { importEventModulesByDate } from "~/features/events/eventModule";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -24,8 +26,26 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
+export const loader = async () => {
   const today = NaiveDate.todayInJapan();
 
-  return <DailyCalendar year={today.year} month={today.month} day={today.day} />;
+  const { year, month, day } = today;
+  const events = (await importEventModulesByDate(today)).map(calendarEventFromEventModule);
+
+  return { year, month, day, events };
+};
+
+export const clientLoader = async () => {
+  const today = NaiveDate.todayInJapan();
+
+  const { year, month, day } = today;
+  const events = (await importEventModulesByDate(today)).map(calendarEventFromEventModule);
+
+  return { year, month, day, events };
+};
+
+export default function Index() {
+  const { year, month, day, events } = useLoaderData<typeof loader>();
+
+  return <DailyCalendar year={year} month={month} day={day} events={events} />;
 }

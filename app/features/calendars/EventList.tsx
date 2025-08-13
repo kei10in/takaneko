@@ -26,12 +26,14 @@ export const EventList: React.FC<Props> = (props: Props) => {
     });
 
     // 表示するのは指定した月のイベントのみ
+    const monthString = month.toString();
     let xs = events.filter((e) => {
-      return e.meta.date.naiveMonth().equals(month);
+      return e.date.startsWith(monthString);
     });
 
     const result = dates.map((date) => {
-      const i = xs.findIndex((e) => !e.meta.date.equals(date));
+      const dateString = date.toString();
+      const i = xs.findIndex((e) => e.date != dateString);
       const events = xs.slice(0, i == -1 ? xs.length : i);
       xs = xs.slice(i);
       return { date, events };
@@ -59,10 +61,10 @@ export const EventList: React.FC<Props> = (props: Props) => {
                 {eventsInDate.map((event) => (
                   <Link key={event.slug} to={`/events/${event.slug}`}>
                     <CalendarEventItem
-                      category={event.meta.category}
-                      summary={event.meta.summary}
-                      location={event.meta.location}
-                      region={event.meta.region}
+                      category={event.category}
+                      summary={event.summary}
+                      location={event.location}
+                      region={event.region}
                     />
                   </Link>
                 ))}

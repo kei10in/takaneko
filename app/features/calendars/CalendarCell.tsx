@@ -62,7 +62,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
         {events.length <= 5 ? (
           <div className="flex h-1 items-center justify-center gap-0.5 lg:h-1.5 lg:gap-1">
             {events.map((event) => {
-              const color = eventTypeToColor(event.meta.category);
+              const color = eventTypeToColor(event.category);
               return (
                 <div
                   className={clsx("h-1 w-1 flex-none rounded-full", "lg:h-1.5 lg:w-1.5", color)}

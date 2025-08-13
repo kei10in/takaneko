@@ -1,26 +1,21 @@
-import { useMemo } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { loadEventsInDay } from "../events/events";
 import { CalendarEventItem } from "./CalendarEventItem";
+import { CalendarEvent } from "./calendarEvents";
 import { calendarMonthHref, dateHref } from "./utils";
 
 interface Props {
   year: number;
   month: number;
   day: number;
+  events: CalendarEvent[];
 }
 
 export const DailyCalendar: React.FC<Props> = (props: Props) => {
-  const { year, month, day } = props;
-
-  const calendarEvents = useMemo(() => {
-    const events = loadEventsInDay(new NaiveDate(year, month, day));
-    return events;
-  }, [day, month, year]);
+  const { year, month, day, events } = props;
 
   const d = new NaiveDate(year, month, day);
   const m = d.naiveMonth();
@@ -66,14 +61,14 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
         </div>
 
         <div>
-          {calendarEvents.length !== 0 ? (
-            calendarEvents.map((event) => (
+          {events.length !== 0 ? (
+            events.map((event) => (
               <Link key={event.slug} to={`/events/${event.slug}`}>
                 <CalendarEventItem
-                  category={event.meta.category}
-                  summary={event.meta.summary}
-                  location={event.meta.location}
-                  region={event.meta.region}
+                  category={event.category}
+                  summary={event.summary}
+                  location={event.location}
+                  region={event.region}
                 />
               </Link>
             ))

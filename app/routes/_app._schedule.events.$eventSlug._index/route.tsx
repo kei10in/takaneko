@@ -21,11 +21,13 @@ import {
   useLocation,
   useNavigate,
 } from "react-router";
+import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
-import { loadEventModule } from "~/features/events/events";
+import { validateEventMeta } from "~/features/events/eventMeta";
+import { importEventModuleBySlug } from "~/features/events/eventModule";
 import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
@@ -37,20 +39,21 @@ import { EventOverview } from "./EventOverview";
 import { makePageDescription } from "./makePageDescription";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const event = data == undefined ? undefined : loadEventModule(data.slug);
-  const title = event?.meta.title ?? event?.meta.summary ?? "スケジュール";
+  const meta = validateEventMeta(data?.eventMeta);
+
+  const title = meta?.title ?? meta?.summary ?? "スケジュール";
   const description =
-    event == undefined
+    meta == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
-      : (event.meta.description ?? makePageDescription(event.meta));
+      : (meta.description ?? makePageDescription(meta));
 
   const result: MetaDescriptor[] = [
     { title: formatTitle(title) },
     { name: "description", content: description },
   ];
 
-  if (event != undefined) {
-    result.push(...twitterCard(event.meta));
+  if (meta != undefined) {
+    result.push(...twitterCard(meta));
   }
 
   return result;
@@ -63,31 +66,30 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  const event = loadEventModule(eventSlug);
+  const event = await importEventModuleBySlug(eventSlug);
   if (event == undefined) {
     throw new Response("", { status: 404 });
   }
 
   const ics = await makeIcs(eventSlug, event.meta);
 
-  return { slug: eventSlug, ics };
+  return { slug: eventSlug, ics, eventMeta: event.meta.descriptor };
 };
 
 export default function EventPage() {
-  const data = useLoaderData<typeof loader>();
-  const eventId = data.slug;
-  const ics = data.ics;
-  const event = useMemo(() => loadEventModule(eventId), [eventId]);
+  const { slug, ics, eventMeta } = useLoaderData<typeof loader>();
+  const meta = useMemo(() => validateEventMeta(eventMeta), [eventMeta]);
+
+  const { data } = useSWR(slug, importEventModuleBySlug);
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (event == undefined) {
+  if (meta == undefined) {
     return null;
   }
 
-  const Content = event.Content;
-  const meta = event.meta;
+  const Content = data?.Content;
   const d = meta.date;
   const m = d.naiveMonth();
 
@@ -244,7 +246,7 @@ export default function EventPage() {
 
         <EventOverview timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
 
-        <Mdx Content={Content} />
+        {Content != undefined && <Mdx Content={Content} />}
 
         {meta.links.length > 0 && (
           <section>
