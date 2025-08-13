@@ -1,15 +1,16 @@
 import { clsx } from "clsx";
-import { useMemo } from "react";
 import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from "react-icons/bs";
-import { Link, MetaFunction } from "react-router";
+import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { dateHref } from "~/features/calendars/utils";
-import { loadEventsInDay } from "~/features/events/events";
+import { importEventModulesByDate } from "~/features/events/eventModule";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { getActiveDateInJapan } from "~/utils/japanTime";
 import { ProductItem } from "../_app.trade/ProductItem";
@@ -52,16 +53,38 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
-  const date = useMemo(() => getActiveDateInJapan(new Date()), []);
-  const events = useMemo(
-    () =>
-      [0, 1, 2, 3, 4, 5, 6].map((i) => {
-        const d = date.addDays(i);
-        return { date: d, events: loadEventsInDay(d) };
-      }),
-    [date],
+export const loader = async () => {
+  const date = getActiveDateInJapan(new Date());
+
+  const events = await Promise.all(
+    [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
+      const d = date.addDays(i);
+      const { year, month, day } = d;
+      const events = await importEventModulesByDate(d);
+      return { year, month, day, events: events.map(calendarEventFromEventModule) };
+    }),
   );
+
+  return { events };
+};
+
+export const clientLoader = async () => {
+  const date = getActiveDateInJapan(new Date());
+
+  const events = await Promise.all(
+    [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
+      const d = date.addDays(i);
+      const { year, month, day } = d;
+      const events = await importEventModulesByDate(d);
+      return { year, month, day, events: events.map(calendarEventFromEventModule) };
+    }),
+  );
+
+  return { events };
+};
+
+export default function Index() {
+  const { events } = useLoaderData<typeof loader>();
 
   const recentProducts = TAKANEKO_PHOTOS.slice(0, 12);
 
@@ -138,33 +161,36 @@ export default function Index() {
               modules={[A11y]}
               slidesPerView={1.15}
             >
-              {events.map(({ date, events }, i) => (
-                <SwiperSlide key={i}>
-                  <div className="pl-4">
-                    <p className="mb-4 font-semibold text-gray-400">
-                      <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
-                    </p>
-                    <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
-                      {events.length !== 0 ? (
-                        events.map((event) => (
-                          <Link key={event.slug} to={`/events/${event.slug}`}>
-                            <CalendarEventItem
-                              category={event.meta.category}
-                              summary={event.meta.summary}
-                              location={event.meta.location}
-                              region={event.meta.region}
-                            />
-                          </Link>
-                        ))
-                      ) : (
-                        <div className="flex h-full items-center justify-center text-gray-600">
-                          予定はありません。
-                        </div>
-                      )}
+              {events.map(({ year, month, day, events }, i) => {
+                const date = new NaiveDate(year, month, day);
+                return (
+                  <SwiperSlide key={i}>
+                    <div className="pl-4">
+                      <p className="mb-4 font-semibold text-gray-400">
+                        <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
+                      </p>
+                      <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
+                        {events.length !== 0 ? (
+                          events.map((event) => (
+                            <Link key={event.slug} to={`/events/${event.slug}`}>
+                              <CalendarEventItem
+                                category={event.category}
+                                summary={event.summary}
+                                location={event.location}
+                                region={event.region}
+                              />
+                            </Link>
+                          ))
+                        ) : (
+                          <div className="flex h-full items-center justify-center text-gray-600">
+                            予定はありません。
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </section>
 
