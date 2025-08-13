@@ -64,9 +64,12 @@ export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] =
 };
 
 export const compareCalendarEvents = (a: CalendarEvent, b: CalendarEvent): number => {
-  const d = a.date.localeCompare(b.date);
-  if (d != 0) {
-    return d;
+  if (a.date < b.date) {
+    return -1;
+  }
+
+  if (a.date > b.date) {
+    return 1;
   }
 
   // キャンセルされてるのは時間を無視して後ろに。
