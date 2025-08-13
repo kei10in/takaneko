@@ -93,7 +93,13 @@ export const importEventModuleBySlug = async (slug: string): Promise<EventModule
 };
 
 export const selectEventModuleBySlug = (slug: string): ImportingModule | undefined => {
-  const [y, m] = slug.split("_")[0].split("-");
+  // Validate slug format: YYYY-MM-DD_title
+  const match = /^(\d{4})-(\d{2})-\d{2}_.+/.exec(slug);
+  if (!match) {
+    return undefined;
+  }
+  const y = match[1];
+  const m = match[2];
 
   const key1 = `./${y}/${m}/${slug}.mdx`;
   const key2 = `./${y}/${m}/${slug}.tsx`;
