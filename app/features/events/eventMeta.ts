@@ -156,7 +156,10 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
   return compareEventType(a.category, b.category);
 };
 
-const compareEventStatus = (a: EventStatus | undefined, b: EventStatus | undefined): number => {
+export const compareEventStatus = (
+  a: EventStatus | undefined,
+  b: EventStatus | undefined,
+): number => {
   const order = [undefined, "RESCHEDULED", "WITHDRAWN", "CANCELED"];
   const ai = order.indexOf(a);
   const bi = order.indexOf(b);

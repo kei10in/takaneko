@@ -1,8 +1,31 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { compareEventMeta } from "../events/eventMeta";
+import { compareEventStatus, EventStatus } from "../events/eventMeta";
 import { EventModule } from "../events/eventModule";
+import { compareEventType, EventType } from "../events/EventType";
 
-export type CalendarEvent = Omit<EventModule, "Content">;
+export type CalendarEvent = {
+  slug: string;
+  date: string;
+  start: string | undefined;
+  summary: string;
+  status: EventStatus | undefined;
+  category: EventType;
+  region: string | undefined;
+  location: string | undefined;
+};
+
+export const calendarEventFromEventModule = (e: EventModule): CalendarEvent => {
+  return {
+    slug: e.slug,
+    date: e.meta.date.toString(),
+    start: e.meta.start,
+    summary: e.meta.summary,
+    status: e.meta.status,
+    category: e.meta.category,
+    region: e.meta.region,
+    location: e.meta.location,
+  };
+};
 
 /**
  * Zip calendar dates and events.
@@ -15,8 +38,7 @@ export const zipCalendarDatesAndEvents = (
 
   return dates.map((week) =>
     week.map((date) => {
-      const utcDate = date.getTimeAsUTC();
-      const eventsInDate = sortedCalendarEvents(groupedEvents.get(utcDate) ?? []);
+      const eventsInDate = sortedCalendarEvents(groupedEvents.get(date.toString()) ?? []);
       return { date, events: eventsInDate };
     }),
   );
@@ -25,10 +47,10 @@ export const zipCalendarDatesAndEvents = (
 /**
  * Group events by date.
  */
-export const groupEventsByDate = (events: CalendarEvent[]): Map<number, CalendarEvent[]> => {
-  const map = new Map<number, CalendarEvent[]>();
+export const groupEventsByDate = (events: CalendarEvent[]): Map<string, CalendarEvent[]> => {
+  const map = new Map<string, CalendarEvent[]>();
   for (const event of events) {
-    const key = event.meta.date.getTimeAsUTC();
+    const key = event.date;
     if (!map.has(key)) {
       map.set(key, []);
     }
@@ -38,14 +60,36 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<number, Calendar
 };
 
 export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] => {
-  return events.toSorted((a, b) => compareEventMeta(a.meta, b.meta));
+  return events.toSorted((a, b) => compareCalendarEvents(a, b));
+};
+
+export const compareCalendarEvents = (a: CalendarEvent, b: CalendarEvent): number => {
+  const aDate = NaiveDate.parseUnsafe(a.date);
+  const bDate = NaiveDate.parseUnsafe(b.date);
+  const d = aDate.getTimeAsUTC() - bDate.getTimeAsUTC();
+  if (d != 0) {
+    return d;
+  }
+
+  // キャンセルされてるのは時間を無視して後ろに。
+  const s = compareEventStatus(a.status, b.status);
+  if (s != 0) {
+    return s;
+  }
+
+  const t = (a.start ?? "24:00").localeCompare(b.start ?? "24:00");
+  if (t != 0) {
+    return t;
+  }
+
+  return compareEventType(a.category, b.category);
 };
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {
   const regions = events
-    .filter((event) => event.meta.status == undefined)
-    .filter((event) => event.meta.region != undefined)
-    .map((event) => event.meta.region ?? "");
+    .filter((event) => event.status == undefined)
+    .filter((event) => event.region != undefined)
+    .map((event) => event.region ?? "");
 
   const result: string[] = [];
 

@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import {
   ClientLoaderFunctionArgs,
   LoaderFunctionArgs,
@@ -8,9 +8,10 @@ import {
   useNavigate,
 } from "react-router";
 import { Calendar } from "~/features/calendars/Calendar";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
-import { loadEvents } from "~/features/events/events";
+import { importEventModulesByMonth } from "~/features/events/eventModule";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -48,7 +49,23 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
 
-  return { year, month, day, filter: t };
+  const filter = t;
+
+  const eventFilter = EventFilters.find((f) => f.name == filter) ?? EventFilters[0];
+  const m = new NaiveMonth(year, month);
+  const events = (
+    await Promise.all(
+      // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
+        importEventModulesByMonth(m),
+      ),
+    )
+  )
+    .flat()
+    .filter(eventFilter.predicate)
+    .map(calendarEventFromEventModule);
+
+  return { year, month, day, filter: t, events };
 };
 
 export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs) => {
@@ -68,24 +85,29 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
   const url = new URL(request.url);
   const t = url.searchParams.get("t");
 
-  return { year, month, day, filter: t };
+  const filter = t;
+
+  const eventFilter = EventFilters.find((f) => f.name == filter) ?? EventFilters[0];
+  const m = new NaiveMonth(year, month);
+  const events = (
+    await Promise.all(
+      // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
+        importEventModulesByMonth(m),
+      ),
+    )
+  )
+    .flat()
+    .filter(eventFilter.predicate)
+    .map(calendarEventFromEventModule);
+
+  return { year, month, day, filter: t, events };
 };
 
 export default function Index() {
-  const { year, month, day, filter } = useLoaderData<typeof loader>();
+  const { year, month, day, filter, events } = useLoaderData<typeof loader>();
 
-  const eventFilter = useMemo(() => {
-    const eventFilter = EventFilters.find((f) => f.name == filter) ?? EventFilters[0];
-    return eventFilter;
-  }, [filter]);
-
-  const calendarEvents = useMemo(() => {
-    const m = new NaiveMonth(year, month);
-    // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
-    const events = loadEvents([m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)]);
-    const calendarEvents = events.filter(eventFilter.predicate);
-    return calendarEvents;
-  }, [year, month, eventFilter.predicate]);
+  const filterName = EventFilters.find((f) => f.name == filter)?.name ?? EventFilters[0].name;
 
   const m = new NaiveMonth(year, month);
 
@@ -108,7 +130,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto">
-      <Calendar events={calendarEvents} month={m} filter={eventFilter.name} />
+      <Calendar events={events} month={m} filter={filterName} />
     </div>
   );
 }
