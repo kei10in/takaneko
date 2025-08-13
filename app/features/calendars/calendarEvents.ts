@@ -64,9 +64,7 @@ export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] =
 };
 
 export const compareCalendarEvents = (a: CalendarEvent, b: CalendarEvent): number => {
-  const aDate = NaiveDate.parseUnsafe(a.date);
-  const bDate = NaiveDate.parseUnsafe(b.date);
-  const d = aDate.getTimeAsUTC() - bDate.getTimeAsUTC();
+  const d = a.date.localeCompare(b.date);
   if (d != 0) {
     return d;
   }
