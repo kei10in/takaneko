@@ -1,7 +1,5 @@
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { importEventFilesAsEventModule } from "./eventFiles";
-import { compareEventMeta } from "./eventMeta";
 import { EventModule } from "./eventModule";
 
 export const ALL_EVENTS = importEventFilesAsEventModule();
@@ -24,22 +22,6 @@ export const loadEvents = (month: NaiveMonth | NaiveMonth[]): EventModule[] => {
   const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
     return prefixes.some((prefix) => filename.startsWith(prefix));
   });
-
-  return events;
-};
-
-export const loadEventsInDay = (date: NaiveDate): EventModule[] => {
-  const y = date.year.toString();
-  const m = date.month.toString().padStart(2, "0");
-  const d = date.day.toString().padStart(2, "0");
-
-  const prefixes = [`./${y}/${m}/${y}-${m}-${d}_`];
-
-  const events = Object.values(ALL_EVENTS).filter(({ filename }) => {
-    return prefixes.some((prefix) => filename.startsWith(prefix));
-  });
-
-  events.sort((a, b) => compareEventMeta(a.meta, b.meta));
 
   return events;
 };

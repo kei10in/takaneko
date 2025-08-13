@@ -4,7 +4,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
-import { ALL_EVENTS, loadEventModule, loadEvents, loadEventsInDay } from "./events";
+import { ALL_EVENTS, loadEventModule, loadEvents } from "./events";
 
 describe("loadEvents", () => {
   it("should load events for the given month", () => {
@@ -26,31 +26,6 @@ describe("loadEvents", () => {
           "./2024/08/2024-08-10_「高嶺のなでしこ 2nd ファンミーティング〜成長発表会〜」開催&2周年記念個別サイン会.mdx",
       }),
     );
-  });
-});
-
-describe("loadEventsInDay", () => {
-  it("should load events for the given date", () => {
-    const date = new NaiveDate(2024, 8, 15);
-    const events = loadEventsInDay(date);
-
-    expect(events.length).toBeGreaterThan(0);
-
-    events.forEach((event) => {
-      expect(event.slug).toBeDefined();
-      expect(event.filename).toBeDefined();
-      expect(event.meta).toBeDefined();
-    });
-
-    expect(events[0]).toMatchObject({
-      filename: "./2024/08/2024-08-15_NEO KASSEN 2024.mdx",
-      slug: "2024-08-15_NEO KASSEN 2024",
-    });
-
-    expect(events[1]).toMatchObject({
-      filename: "./2024/08/2024-08-15_まいにちフェス2024 produced by au.mdx",
-      slug: "2024-08-15_まいにちフェス2024 produced by au",
-    });
   });
 });
 
