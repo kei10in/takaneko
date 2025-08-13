@@ -45,7 +45,7 @@ export const clientLoader = async () => {
 };
 
 export default function Index() {
-  const { year, month, day, events } = useLoaderData();
+  const { year, month, day, events } = useLoaderData<typeof loader>();
 
   return <DailyCalendar year={year} month={month} day={day} events={events} />;
 }
