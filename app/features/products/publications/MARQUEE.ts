@@ -1,5 +1,39 @@
 import { Publication } from "../product";
 
+export const MARQUEE_Vol159: Publication = {
+  slug: "MARQUEE Vol.159",
+  name: "MARQUEE Vol.159",
+  date: "2025-08-25",
+  kind: "mooks",
+  publisher: "星雲社",
+  listPrice: 1375,
+  priceWithTax: 1513,
+  code: [{ kind: "isbn", value: "978-4-434-36190-6" }],
+  url: "http://www.marquee-mag.com/backnumber.html",
+  coverImages: [
+    {
+      path: "/publications/marquee/vol159a.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol159b.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    {
+      path: "/publications/marquee/vol159_1.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1955465891220771093",
+    },
+  ],
+  featuredMembers: ["日向端ひな", "星谷美来", "籾山ひめり"],
+  officialTwitter: ["https://x.com/takanenofficial/status/1955483320558686289"],
+  links: [
+    {
+      text: "MARQUEE 公式 X 告知",
+      url: "https://x.com/MARQUEE_info/status/1955464090568233471",
+    },
+  ],
+};
+
 export const MARQUEE_Vol158: Publication = {
   slug: "MARQUEE Vol.158",
   name: "MARQUEE Vol.158",
