@@ -1,6 +1,6 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "takaneko"
-compatibility_date = "2025-04-02"
+compatibility_date = "2025-04-04"
 compatibility_flags = ["nodejs_compat_v2"]
 main = "./workers/app.ts"
 
