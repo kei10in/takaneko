@@ -1,3 +1,4 @@
+import { cloudflare } from "@cloudflare/vite-plugin";
 import mdx from "@mdx-js/rollup";
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
@@ -22,6 +23,7 @@ export default defineConfig({
   plugins: [
     Inspect(),
     takanekono(),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tailwindcss(),
     mdx({
       remarkPlugins: [gfm],
