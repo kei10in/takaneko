@@ -3,6 +3,29 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://news.mynavi.jp/article/20250813-3405171/",
+    title:
+      "『SASUKE』本戦出場をかけアイドル12人が勝負「てっぺん取りたい」「グループとしてもいい風を」",
+    authorName: "マイナビニュース",
+    publishedAt: "2025-08-13",
+    mediaUrl: "https://news.mynavi.jp/article/20250813-3405171/",
+    imageUrl: "https://news.mynavi.jp/article/20250813-3405171/ogp_images/ogp.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
+    key: "https://kaiwaiweb.com/news/13369/",
+    title: "江嶋綾恵梨が切り撮る『TIF2025』高嶺のなでしこ編 - KAiWAi (カイワイ)",
+    authorName: "KAiWAi (カイワイ)",
+    publishedAt: "2025-08-13",
+    mediaUrl: "https://kaiwaiweb.com/news/13369/",
+    imageUrl: "https://kaiwaiweb.com/wp/wp-content/uploads/2025/08/DSCF6865.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://www.lvtimes.net/broad/71117/",
     title: "高嶺のなでしこ、切なさ・力強さ・ファンとの一体感を感じさせるステージ！＜TIF2025＞",
     authorName: "Liveen Times",
@@ -950,7 +973,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1754039782&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1754984654&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },

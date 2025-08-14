@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://news.mynavi.jp/article/20250813-3405171/",
+    publishedAt: "2025-08-13",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://kaiwaiweb.com/news/13369/",
+    publishedAt: "2025-08-13",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.lvtimes.net/broad/71117/",
     publishedAt: "2025-08-04",
     category: "article",
