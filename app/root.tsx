@@ -23,6 +23,37 @@ import { XMarkButton } from "./components/XMarkButton";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
 
+const LINKS = [
+  {
+    name: "トレード画像をつくるやつ",
+    url: "/trade",
+  },
+  {
+    name: "スケジュール",
+    url: "/calendar",
+  },
+  {
+    name: "楽曲",
+    url: "/songs",
+  },
+  {
+    name: "メディア",
+    url: "/media",
+  },
+  {
+    name: "グッズ",
+    url: "/products",
+  },
+  {
+    name: "メンバー",
+    url: "/members",
+  },
+  {
+    name: "統計",
+    url: "/stats",
+  },
+];
+
 const UTILS = [
   {
     name: "カレンダーをアプリに登録",
@@ -73,27 +104,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <div className="ml-auto">
                 <div className="hidden items-center gap-8 text-sm font-bold text-gray-500 lg:flex">
-                  <Link className="hover:text-nadeshiko-700" to="/trade">
-                    トレード画像をつくるやつ
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/calendar">
-                    スケジュール
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/songs">
-                    楽曲
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/media">
-                    メディア
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/products">
-                    グッズ
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/members">
-                    メンバー
-                  </Link>
-                  <Link className="hover:text-nadeshiko-700" to="/stats">
-                    統計
-                  </Link>
+                  {LINKS.map((link) => (
+                    <Link key={link.url} className="hover:text-nadeshiko-700" to={link.url}>
+                      {link.name}
+                    </Link>
+                  ))}
+
                   <Menu>
                     <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
                     <MenuItems
@@ -136,41 +152,13 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </div>
               <div className="p-6">
                 <ul className="space-y-6 pr-5 font-bold text-gray-700">
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/trade" onClick={close}>
-                      <p>トレード画像をつくるやつ</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/calendar" onClick={close}>
-                      <p>スケジュール</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/songs" onClick={close}>
-                      <p>楽曲</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/media" onClick={close}>
-                      <p>メディア</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/products" onClick={close}>
-                      <p>グッズ</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/members" onClick={close}>
-                      <p>メンバー</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="hover:text-nadeshiko-700" to="/stats" onClick={close}>
-                      <p>統計</p>
-                    </Link>
-                  </li>
+                  {LINKS.map((link) => (
+                    <li key={link.url}>
+                      <Link className="hover:text-nadeshiko-700" to={link.url} onClick={close}>
+                        <p>{link.name}</p>
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
 
                 <hr className="my-6 border-gray-200" />
