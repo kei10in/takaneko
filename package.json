@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "deploy": "pnpm run build && wrangler pages deploy",
+    "deploy": "pnpm run build && wrangler deploy",
     "dev": "react-router dev",
     "format": "prettier --write app",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
