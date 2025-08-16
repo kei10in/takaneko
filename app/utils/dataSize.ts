@@ -3,6 +3,10 @@
  * 有効数字三桁で文字列化します。
  */
 export const formatDataSize = (size: number): string => {
+  if (Number.isNaN(size)) {
+    return "Unknown Bytes";
+  }
+
   if (!Number.isInteger(size)) {
     return formatDataSize(Math.round(size));
   }
