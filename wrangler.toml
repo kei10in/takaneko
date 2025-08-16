@@ -4,6 +4,8 @@ compatibility_date = "2025-04-04"
 compatibility_flags = ["nodejs_compat_v2"]
 main = "./workers/app.ts"
 
+[observability]
+enabled = true
 [assets]
 directory = "./build/client/"
 not_found_handling = "404-page"
