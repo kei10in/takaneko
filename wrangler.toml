@@ -6,9 +6,10 @@ main = "./workers/app.ts"
 
 [observability]
 enabled = true
+
 [assets]
-directory = "./build/client/"
 not_found_handling = "404-page"
+binding = "ASSETS"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure
