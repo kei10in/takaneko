@@ -1,0 +1,41 @@
+import { Publication } from "../product";
+
+export const グラビアプレスVol12: Publication = {
+  slug: "グラビアプレスVol12",
+  name: "グラビアプレス Vol.12",
+  date: "2025-09-05",
+  kind: "magazines", // "books"
+  publisher: "秀麗出版",
+  listPrice: 1364,
+  priceWithTax: 1500,
+  code: [{ kind: "ISBN", value: " 978-4910031750 " }],
+  url: "https://presswalker.jp/press/85053",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-09-05_グラビアプレス Vol.12_表紙.jpg",
+      ref: "https://x.com/SHIBUYA_T_MUSIC/status/1957744356296679641",
+    },
+    {
+      path: "/publications/2025/2025-09-05_グラビアプレス Vol.12_裏表紙.jpg",
+      ref: "https://x.com/SHIBUYA_T_MUSIC/status/1957744356296679641",
+    },
+  ],
+  featuredMembers: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+  officialTwitter: "",
+  links: [
+    {
+      text: "",
+      url: "",
+    },
+  ],
+};
