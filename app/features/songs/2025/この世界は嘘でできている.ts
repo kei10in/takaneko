@@ -9,12 +9,17 @@ export const この世界は嘘でできている: SongMetaDescriptor = {
   composedBy: "shito, 中西",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "akane",
 
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/この世界は嘘でできている.webp",
 
   officialSite: undefined,
-  youtube: [],
+  youtube: [
+    {
+      text: "MV",
+      videoId: "https://www.youtube.com/watch?v=pfrBPp_btAQ",
+    },
+  ],
 };
