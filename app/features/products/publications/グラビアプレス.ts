@@ -31,11 +31,11 @@ export const グラビアプレスVol12: Publication = {
     "松本ももな",
     "籾山ひめり",
   ],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1958461634772377724",
   links: [
     {
-      text: "",
-      url: "",
+      text: "グラビアプレス編集部 X オフショット紹介",
+      url: "https://x.com/GRAVURE_PRESS/status/1958363440533459309",
     },
   ],
 };
