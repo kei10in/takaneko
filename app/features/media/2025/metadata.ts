@@ -3,6 +3,19 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://spice.eplus.jp/articles/340073",
+    title:
+      "高嶺のなでしこ　寸劇あり、ゲームあり、華麗に魅せるライブパフォーマンスあり、3rdファンミーティングで届けた9人の覚悟 | SPICE - エンタメ特化型情報メディア スパイス",
+    authorName: "SPICE（スパイス）｜エンタメ特化型情報メディア スパイス",
+    publishedAt: "2025-08-19",
+    mediaUrl: "https://spice.eplus.jp/articles/340073",
+    imageUrl:
+      "https://spice.eplus.jp/images/exknA8JHG36FxqwqUbzAARJlCcNVJ1uSvIWLyGi7lsAMiJSakqae7IWEvpXksQaJ",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://news.mynavi.jp/article/20250813-3405171/",
     title:
       "『SASUKE』本戦出場をかけアイドル12人が勝負「てっぺん取りたい」「グループとしてもいい風を」",
