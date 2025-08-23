@@ -3,7 +3,7 @@ import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { MetaFunction } from "react-router";
 import { formatTitle } from "~/utils/htmlHeader";
-import ConcertPerformanceCount from "./ConcertPeformanceCount";
+import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
 
 Chart.register(ChartDataLabels);
 
@@ -30,7 +30,7 @@ export default function Component() {
           <p className="mb-4 text-gray-600">
             数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
           </p>
-          <ConcertPerformanceCount />
+          <ConcertPerformanceCount range="all" />
         </section>
         <section className="mt-8">
           <h2 className="mb-2 text-2xl font-semibold text-gray-600">不明なセットリストについて</h2>
