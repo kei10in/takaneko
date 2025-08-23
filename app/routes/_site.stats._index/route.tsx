@@ -1,13 +1,8 @@
 import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import { MetaFunction } from "react-router";
-import { BarChart } from "~/components/charts/BarChart";
-import { ALL_EVENTS } from "~/features/events/events";
-import { aggregatePrefectureStats } from "~/features/stats/pref";
+import { Link, MetaFunction } from "react-router";
 import { formatTitle } from "~/utils/htmlHeader";
-import type { Route } from "./+types/route";
-import ConcertPerformanceCount from "./ConcertPeformanceCount";
 
 Chart.register(ChartDataLabels);
 
@@ -21,59 +16,43 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = async () => {
-  const concertCountsByPrefecture = aggregatePrefectureStats(Object.values(ALL_EVENTS));
+const items = [
+  {
+    title: "楽曲別パフォーマンス回数",
+    description:
+      "わかっているすべてのライブのセットリストをもとに楽曲パフォーマンス回数を集計したグラフです。",
+    url: "/stats/concert-performances",
+  },
+  {
+    title: "都道府県別ライブ開催数",
+    description: "各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。",
+    url: "/stats/prefectures",
+  },
+];
 
-  return {
-    concertCountsByPrefecture,
-  };
-};
-
-export default function Component({ loaderData }: Route.ComponentProps) {
-  const { concertCountsByPrefecture } = loaderData;
-
-  const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
-
+export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">統計</h1>
+        <h1 className="text-nadeshiko-800 my-2 mb-8 text-5xl font-semibold lg:mt-12">統計</h1>
 
-        <section className="mt-8">
-          <h2 className="mb-4 text-2xl font-semibold text-gray-600">都道府県別ライブ開催数</h2>
-
-          <p className="text-sm">
-            各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。
-          </p>
-          <p className="text-sm">
-            同じ日のイベントで複数回ステージがあった場合や、一部と二部に分かれているライブであっても
-            1 回としてカウントしています。
-            同じ日に複数の場所でステージをしている場合は、それぞれにカウントしています。
-          </p>
-
-          <div className="mt-4">
-            <BarChart data={data} />
-          </div>
-        </section>
-
-        <section className="mt-12">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">ライブでよくやるやつ</h2>
-          <p className="mb-4 text-gray-600">
-            数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
-          </p>
-          <ConcertPerformanceCount />
-          <section className="mt-8">
-            <h3 className="mb-2 text-lg font-semibold text-gray-600">不明なセットリストについて</h3>
-
-            <p>現在下記のライブのセットリストが不明です。 </p>
-
-            <ul className="my-2 list-disc pl-6 marker:text-gray-400">
-              <li>
-                <p>たかねこの秋まつり2024 〜FC limited〜 第一部</p>
-              </li>
-            </ul>
-          </section>
-        </section>
+        <div className="space-y-4">
+          {items.map((item) => {
+            return (
+              <Link key={item.url} to={item.url} className="block">
+                <section
+                  key={item.url}
+                  className="rounded-xl border border-gray-200 bg-white p-4 shadow"
+                >
+                  <div>
+                    <h2 className="mb-1 text-lg font-semibold text-gray-500">{item.title}</h2>
+                    <p className="text-sm text-gray-600">{item.description}</p>
+                  </div>
+                </section>
+              </Link>
+            );
+          })}
+        </div>
       </section>
     </div>
   );
