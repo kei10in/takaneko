@@ -21,7 +21,7 @@ const items = [
     title: "楽曲別パフォーマンス回数",
     description:
       "わかっているすべてのライブのセットリストをもとに楽曲パフォーマンス回数を集計したグラフです。",
-    url: "/stats/concert-performances",
+    url: "/stats/songs",
   },
   {
     title: "都道府県別ライブ開催数",
