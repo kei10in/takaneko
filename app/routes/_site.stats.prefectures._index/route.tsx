@@ -15,7 +15,8 @@ export const meta: MetaFunction = () => {
     { title: formatTitle("都道府県別ライブ開催数") },
     {
       name: "description",
-      content: "高嶺のなでしこの統計情報です。",
+      content:
+        "高嶺のなでしこ（たかねこ）が各都道府県で開催したライブや全国ツアー、リリースイベント（リリイベ）の回数を集計し、グラフで公開しています。",
     },
   ];
 };

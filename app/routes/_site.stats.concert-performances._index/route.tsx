@@ -11,7 +11,8 @@ export const meta: MetaFunction = () => {
     { title: formatTitle("楽曲別パフォーマンス回数") },
     {
       name: "description",
-      content: "高嶺のなでしこの統計情報です。",
+      content:
+        "高嶺のなでしこ (たかねこ) の楽曲がライブでパフォーマンスされた回数を集計し、グラフで公開。セットリストの分析や人気曲の傾向、ライブ統計データをチェックできます。",
     },
   ];
 };
