@@ -68,7 +68,7 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
     return data;
   });
 
-  if (isLoading || data == undefined) {
+  if (isLoading) {
     return (
       <div className="flex h-56 w-full items-center justify-center">
         <BsBarChartLineFill className="h-12 w-12 animate-pulse text-gray-300" />
