@@ -41,7 +41,9 @@ const Terms = [
 ];
 
 export default function Component() {
-  const [term, setTerm] = useState(Terms[1]);
+  const [term, setTerm] = useState(Terms[2].value);
+
+  const label = Terms.find((t) => t.value === term)?.label ?? Terms[2].label;
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -57,7 +59,7 @@ export default function Component() {
               <div className="flex-none">
                 <Listbox value={term} onChange={setTerm}>
                   <ListboxButton className="flex w-36 items-center rounded-full border border-gray-300 px-2 py-0.5 text-start text-sm">
-                    <div className="flex-auto px-2 text-gray-600">{term.label}</div>
+                    <div className="flex-auto px-2 text-gray-600">{label}</div>
                     <BsChevronDown className="flex-none text-gray-400" />
                   </ListboxButton>
                   <ListboxOptions
@@ -67,7 +69,7 @@ export default function Component() {
                     {Terms.map((term) => (
                       <ListboxOption
                         key={term.value}
-                        value={term}
+                        value={term.value}
                         className={clsx(
                           "block w-full px-2.5 py-1 text-start text-sm text-gray-600",
                           "data-focus:bg-nadeshiko-200 data-focus:text-nadeshiko-900",
@@ -95,7 +97,7 @@ export default function Component() {
             <p className="mb-4 text-gray-600">
               直近のライブでパフォーマンスされた楽曲のトップ 20 曲を表示しています。
             </p>
-            <ConcertPerformanceCount term={term.value} range={20} />
+            <ConcertPerformanceCount term={term} range={20} />
           </section>
 
           <section>
