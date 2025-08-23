@@ -26,16 +26,25 @@ export default function Component() {
         </h1>
 
         <section className="mt-12">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">ライブでよくやるやつ</h2>
+          <h2 className="mb-2 text-2xl font-semibold text-gray-600">最近のライブ</h2>
           <p className="mb-4 text-gray-600">
-            数値は一部不正確です。いくつかのライブのセットリストが不明なためです。
+            直近 3 か月のライブでパフォーマンスされた楽曲のトップ 20 曲です。
           </p>
-          <ConcertPerformanceCount range="all" />
+          <ConcertPerformanceCount term="recent" range={20} />
         </section>
+
+        <section className="mt-12">
+          <h2 className="mb-2 text-2xl font-semibold text-gray-600">すべてのライブ</h2>
+          <p className="mb-4 text-gray-600">
+            いくつかのライブのセットリストが不明なため、数値は一部不正確です。
+          </p>
+          <ConcertPerformanceCount term="all" />
+        </section>
+
         <section className="mt-8">
           <h2 className="mb-2 text-2xl font-semibold text-gray-600">不明なセットリストについて</h2>
 
-          <p>現在下記のライブのセットリストが不明です。 </p>
+          <p className="mb-4 text-gray-600">現在下記のライブのセットリストが不明です。 </p>
 
           <ul className="my-2 list-disc pl-6 marker:text-gray-400">
             <li>

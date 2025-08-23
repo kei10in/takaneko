@@ -30,7 +30,7 @@ const importEventModule = async (im: ImportingModule): Promise<EventModule | und
   return { slug: stem(im.filename), filename: im.filename, meta, Content };
 };
 
-const importEventModules = async (m: ImportingModule[]): Promise<EventModule[]> => {
+export const importEventModules = async (m: ImportingModule[]): Promise<EventModule[]> => {
   const promises = m.map(async (im): Promise<EventModule[]> => {
     const eventModule = await importEventModule(im);
     if (eventModule == undefined) {
