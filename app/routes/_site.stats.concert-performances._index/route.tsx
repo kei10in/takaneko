@@ -48,7 +48,7 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-12 text-5xl font-semibold lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 mb-12 text-3xl font-semibold lg:mt-12">
           楽曲別パフォーマンス回数
         </h1>
 

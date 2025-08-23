@@ -37,7 +37,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-8 text-5xl font-semibold lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 mb-8 text-3xl font-semibold lg:mt-12">
           都道府県別ライブ開催数
         </h1>
 
