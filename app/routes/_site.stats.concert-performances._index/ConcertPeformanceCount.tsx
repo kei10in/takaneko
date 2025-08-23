@@ -17,15 +17,17 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 Chart.register(ChartDataLabels);
 
 interface Props {
-  term: "all" | "recent";
+  term: string;
   range?: number | undefined;
 }
 
 const loadEvents = async (term: string) => {
-  if (term == "recent") {
+  if (term.startsWith("recent")) {
+    const days = parseInt(term.replace("recent", ""), 10);
+
     const today = NaiveDate.today();
 
-    const importingModules = Array.from({ length: 90 }).flatMap((_, i) =>
+    const importingModules = Array.from({ length: days }).flatMap((_, i) =>
       selectEventModulesByDate(today.addDays(-i)),
     );
     const modules = await importEventModules(importingModules);

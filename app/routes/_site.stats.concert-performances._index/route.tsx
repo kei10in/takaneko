@@ -1,11 +1,10 @@
-import { Chart } from "chart.js";
-import "chart.js/auto";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/react";
+import { clsx } from "clsx";
+import { useState } from "react";
+import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { formatTitle } from "~/utils/htmlHeader";
 import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
-
-Chart.register(ChartDataLabels);
 
 export const meta: MetaFunction = () => {
   return [
@@ -17,41 +16,109 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const Terms = [
+  {
+    value: "recent30",
+    label: "直近 30 日",
+  },
+  {
+    value: "recent60",
+    label: "直近 60 日",
+  },
+  {
+    value: "recent90",
+    label: "直近 90 日",
+  },
+  {
+    value: "recent120",
+    label: "直近 120 日",
+  },
+  {
+    value: "recent180",
+    label: "直近 180 日",
+  },
+];
+
 export default function Component() {
+  const [term, setTerm] = useState(Terms[1]);
+
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 mb-12 text-5xl font-semibold lg:mt-12">
           楽曲別パフォーマンス回数
         </h1>
 
-        <section className="mt-12">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">最近のライブ</h2>
-          <p className="mb-4 text-gray-600">
-            直近 3 か月のライブでパフォーマンスされた楽曲のトップ 20 曲です。
-          </p>
-          <ConcertPerformanceCount term="recent" range={20} />
-        </section>
+        <div className="space-y-12">
+          <section>
+            <div className="mb-2 flex items-center">
+              <h2 className="flex-auto text-2xl font-semibold text-gray-600">最近のライブ</h2>
+              <div className="flex-none">
+                <Listbox value={term} onChange={setTerm}>
+                  <ListboxButton className="flex w-36 items-center rounded-full border border-gray-300 px-2 py-0.5 text-start text-sm">
+                    <div className="flex-auto px-2 text-gray-600">{term.label}</div>
+                    <BsChevronDown className="flex-none text-gray-400" />
+                  </ListboxButton>
+                  <ListboxOptions
+                    anchor={{ to: "bottom end", gap: 4, offset: -4 }}
+                    className={clsx("w-34 rounded border border-gray-100 bg-white py-1 shadow")}
+                  >
+                    {Terms.map((term) => (
+                      <ListboxOption
+                        key={term.value}
+                        value={term}
+                        className={clsx(
+                          "block w-full px-2.5 py-1 text-start text-sm text-gray-600",
+                          "data-focus:bg-nadeshiko-200 data-focus:text-nadeshiko-900",
+                        )}
+                      >
+                        {({ selected }) => {
+                          return (
+                            <div className="flex items-center select-none">
+                              <div className="w-4">
+                                {selected && (
+                                  <BsCheck2 className="text-nadeshiko-900 inline-block text-lg" />
+                                )}
+                              </div>
+                              <div className="px-2">{term.label}</div>
+                            </div>
+                          );
+                        }}
+                      </ListboxOption>
+                    ))}
+                  </ListboxOptions>
+                </Listbox>
+              </div>
+            </div>
 
-        <section className="mt-12">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">すべてのライブ</h2>
-          <p className="mb-4 text-gray-600">
-            いくつかのライブのセットリストが不明なため、数値は一部不正確です。
-          </p>
-          <ConcertPerformanceCount term="all" />
-        </section>
+            <p className="mb-4 text-gray-600">
+              直近のライブでパフォーマンスされた楽曲のトップ 20 曲を表示しています。
+            </p>
+            <ConcertPerformanceCount term={term.value} range={20} />
+          </section>
 
-        <section className="mt-8">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-600">不明なセットリストについて</h2>
+          <section>
+            <h2 className="mb-2 text-2xl font-semibold text-gray-600">すべてのライブ</h2>
+            <p className="mb-4 text-gray-600">
+              いくつかのライブのセットリストが不明なため、数値は一部不正確です。
+            </p>
+            <ConcertPerformanceCount term="all" />
+          </section>
 
-          <p className="mb-4 text-gray-600">現在下記のライブのセットリストが不明です。 </p>
+          <section>
+            <h2 className="mb-2 text-2xl font-semibold text-gray-600">
+              不明なセットリストについて
+            </h2>
 
-          <ul className="my-2 list-disc pl-6 marker:text-gray-400">
-            <li>
-              <p>たかねこの秋まつり2024 〜FC limited〜 第一部</p>
-            </li>
-          </ul>
-        </section>
+            <p className="mb-4 text-gray-600">現在下記のライブのセットリストが不明です。 </p>
+
+            <ul className="my-2 list-disc pl-6 marker:text-gray-400">
+              <li>
+                <p>たかねこの秋まつり2024 〜FC limited〜 第一部</p>
+              </li>
+            </ul>
+          </section>
+        </div>
       </section>
     </div>
   );
