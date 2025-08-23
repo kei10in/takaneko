@@ -28,6 +28,12 @@ const items = [
     description: "各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。",
     url: "/stats/prefectures",
   },
+  {
+    title: "データセット",
+    description:
+      "集計に使用しているセットリストのデータを公開しています。CSV または JSON 形式でダウンロードできます。",
+    url: "/dataset",
+  },
 ];
 
 export default function Component() {
