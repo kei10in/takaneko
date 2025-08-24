@@ -6,6 +6,7 @@ import { SongMetaDescriptor } from "./types";
 export interface SongActivitySummary {
   name: string;
   count: number;
+  song: SongMetaDescriptor;
   events: {
     segments: { act: Act; segment: SongSegment }[];
     event: EventModule;
@@ -15,7 +16,7 @@ export interface SongActivitySummary {
 export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescriptor[]) => {
   const result: Record<string, SongActivitySummary> = {};
   songs.forEach((song) => {
-    result[song.name] = { name: song.name, count: 0, events: [] };
+    result[song.name] = { name: song.name, count: 0, song, events: [] };
   });
 
   events.forEach((event) => {
