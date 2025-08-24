@@ -16,15 +16,29 @@ export const Footer: React.FC<Props> = (props: Props) => {
       <div className={"container mx-auto bg-gray-100 text-sm text-gray-600"}>
         <div className="mx-4 space-y-8 py-8">
           <div className="space-y-6 lg:grid lg:grid-cols-5 lg:gap-8 lg:space-y-0">
-            <section className="space-y-2 pb-4 lg:col-span-2">
-              <h3 className="flex items-center gap-1 text-base font-bold">
-                <img className="w-7" src="/icon.svg" alt="ロゴ" />
-                <p>{SITE_TITLE}</p>
-              </h3>
-              <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>
-              <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
-              <p>使用されているイベントの画像は各イベントの主催者などの第三者に帰属します。</p>
-            </section>
+            <div className="lg:col-span-2">
+              <section className="space-y-2 pb-4">
+                <h3 className="flex items-center gap-1 text-base font-bold">
+                  <img className="w-7" src="/icon.svg" alt="ロゴ" />
+                  <p>{SITE_TITLE}</p>
+                </h3>
+                <div className="space-y-1">
+                  <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>
+                  <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
+                  <p>使用されているイベントの画像は各イベントの主催者などの第三者に帰属します。</p>
+                </div>
+              </section>
+
+              <section className="space-y-2 pb-4">
+                <h4 className="flex items-center gap-1 text-sm font-bold">謝辞</h4>
+                <div className="space-y-1">
+                  <p>
+                    「たかねこの」は高嶺のなでしこのファンの皆様の支えによって成り立っています。
+                  </p>
+                  <p>皆様の日々の情報発信を心より感謝いたします。</p>
+                </div>
+              </section>
+            </div>
 
             <section className="space-y-2">
               <h3 className="font-semibold">コンテンツ</h3>
