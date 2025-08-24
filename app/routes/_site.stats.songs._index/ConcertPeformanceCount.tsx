@@ -3,7 +3,7 @@ import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
-import { BarChart } from "~/components/charts/BarChart";
+import { SongBarChart } from "~/components/charts/SongBarChart";
 import { importEventFilesAsEventModule } from "~/features/events/eventFiles";
 import {
   EventModule,
@@ -51,7 +51,10 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
 
     const allSongs = Object.values(songToLiveMap);
     const sortedAllSongs = allSongs.sort((a, b) => b.count - a.count);
-    const data = sortedAllSongs.map((x) => ({ key: x.name, value: x.count }));
+    const data = sortedAllSongs.map((x) => ({
+      song: x.song,
+      value: x.count,
+    }));
 
     if (range != undefined) {
       // 披露回数が 0 のものは除外する
@@ -85,6 +88,6 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
       </div>
     );
   } else {
-    return <BarChart data={data} />;
+    return <SongBarChart data={data} />;
   }
 };
