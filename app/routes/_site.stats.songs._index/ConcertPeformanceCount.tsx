@@ -54,15 +54,16 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
     const data = sortedAllSongs.map((x) => ({ key: x.name, value: x.count }));
 
     if (range != undefined) {
-      if (range > data.length) {
-        return data;
-      }
+      // 披露回数が 0 のものは除外する
+      const i = data.findLastIndex((x) => x.value > 0);
 
       // 披露回数が同じものがある場合は、range より多くなっても良いように調整する
       const n = data[range - 1].value;
-      const i = data.findLastIndex((x) => x.value === n);
+      const j = data.findLastIndex((x) => x.value === n);
 
-      return data.slice(0, i + 1);
+      const k = Math.min(i, j);
+
+      return data.slice(0, k + 1);
     }
 
     return data;
