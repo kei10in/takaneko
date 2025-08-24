@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { formatTitle } from "~/utils/htmlHeader";
 import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
 
@@ -47,8 +48,17 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
+      <div className="px-4 py-1">
+        <Breadcrumb
+          items={[
+            { label: "たかねこの", to: "/" },
+            { label: "統計", to: "/stats" },
+          ]}
+        />
+      </div>
+
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-12 text-3xl font-semibold lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 mb-12 text-3xl font-semibold lg:mt-6">
           楽曲別パフォーマンス回数
         </h1>
 

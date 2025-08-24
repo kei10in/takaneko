@@ -4,6 +4,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import useSWR from "swr";
+import { Breadcrumb } from "~/components/Breadcrumb";
 import { BarChart } from "~/components/charts/BarChart";
 import { ALL_EVENTS } from "~/features/events/events";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
@@ -35,8 +36,17 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
+      <div className="px-4 py-1">
+        <Breadcrumb
+          items={[
+            { label: "たかねこの", to: "/" },
+            { label: "統計", to: "/stats" },
+          ]}
+        />
+      </div>
+
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-8 text-3xl font-semibold lg:mt-12">
+        <h1 className="text-nadeshiko-800 my-2 mb-8 text-3xl font-semibold lg:mt-6">
           都道府県別ライブ開催数
         </h1>
 
