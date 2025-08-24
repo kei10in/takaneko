@@ -1,12 +1,13 @@
 import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
+import useSWR from "swr";
 import { BarChart } from "~/components/charts/BarChart";
 import { ALL_EVENTS } from "~/features/events/events";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
-import type { Route } from "./+types/route";
 
 Chart.register(ChartDataLabels);
 
@@ -21,18 +22,16 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = async () => {
-  const concertCountsByPrefecture = aggregatePrefectureStats(Object.values(ALL_EVENTS));
+export default function Component() {
+  const { data, error, isLoading } = useSWR("prefectureStats", async () => {
+    const concertCountsByPrefecture = await new Promise<{ name: string; count: number }[]>(
+      (resolve) => resolve(aggregatePrefectureStats(Object.values(ALL_EVENTS))),
+    );
 
-  return {
-    concertCountsByPrefecture,
-  };
-};
+    const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
 
-export default function Component({ loaderData }: Route.ComponentProps) {
-  const { concertCountsByPrefecture } = loaderData;
-
-  const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
+    return data;
+  });
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -51,7 +50,20 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         </p>
 
         <div className="mt-4">
-          <BarChart data={data} />
+          {isLoading ? (
+            <div className="flex h-56 w-full items-center justify-center">
+              <BsBarChartLineFill className="h-12 w-12 animate-pulse text-gray-300" />
+            </div>
+          ) : error || data == undefined ? (
+            <div className="flex h-56 w-full items-center justify-center">
+              <div className="space-y-3">
+                <BsXCircleFill className="mx-auto h-12 w-12 text-gray-300" />
+                <p className="text-gray-400">データの読み込みに失敗しました。</p>
+              </div>
+            </div>
+          ) : (
+            <BarChart data={data} />
+          )}
         </div>
       </section>
     </div>
