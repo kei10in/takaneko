@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/75459/",
+    title: "好きなクリープハイプで眠る夜も♡すぅにゃの推し活WORLD！Vol.5",
+    authorName: "Popteen Media",
+    publishedAt: "2025-08-22",
+    mediaUrl: "https://popteen.co.jp/media/75459/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/08/d1d3cb0c114a6ad55d53b993a2dde33d-1024x1024.png",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
     key: "https://spice.eplus.jp/articles/340073",
     title:
       "高嶺のなでしこ　寸劇あり、ゲームあり、華麗に魅せるライブパフォーマンスあり、3rdファンミーティングで届けた9人の覚悟 | SPICE - エンタメ特化型情報メディア スパイス",
