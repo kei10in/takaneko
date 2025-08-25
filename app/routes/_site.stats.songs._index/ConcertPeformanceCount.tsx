@@ -4,9 +4,8 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
 import { SongBarChart } from "~/components/charts/SongBarChart";
-import { importEventFilesAsEventModule } from "~/features/events/eventFiles";
 import {
-  EventModule,
+  importAllEventModules,
   importEventModules,
   selectEventModulesByDate,
 } from "~/features/events/eventModule";
@@ -35,10 +34,10 @@ const loadEvents = async (term: string) => {
     return modules;
   }
 
-  const modules = await new Promise<Record<string, EventModule>>((resolve) => {
-    resolve(importEventFilesAsEventModule());
-  });
-  return Object.values(modules);
+  // Load all event modules
+  const modules = await importAllEventModules();
+
+  return modules;
 };
 
 export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props) => {
