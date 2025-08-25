@@ -3,12 +3,14 @@ import { assert, describe, expect, it } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
-import { ALL_EVENTS } from "./events";
+import { importAllEventModules } from "./eventModule";
 
-describe("event module", () => {
+describe("event module", async () => {
   const AllAssets = allAssetFiles();
 
-  describe.each(Object.entries(ALL_EVENTS))("Event: %s", (filename, event) => {
+  const allEvents = await importAllEventModules();
+
+  describe.each(allEvents.map((e) => [e.filename, e]))("Event: %s", (filename, event) => {
     it("should have filename compliant with year, month and date", () => {
       const [year, month, slug] = filename.split("/").slice(-3);
       const idDate = NaiveDate.parseUnsafe(slug.split("_")[0]);
