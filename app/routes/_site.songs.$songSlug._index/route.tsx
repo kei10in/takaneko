@@ -2,11 +2,13 @@ import { clsx } from "clsx";
 import { Fragment, useMemo } from "react";
 import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
+import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { importAllEventModules } from "~/features/events/eventModule";
 import { liveTypeColor } from "~/features/events/EventType";
+import { makeSongToLiveMap } from "~/features/songs/songActivities";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
-import { SongToLiveMap } from "~/features/songs/songToLive";
 import { AllYouTubeVideoMetadata } from "~/features/songs/youtubeVideoMetadata";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -40,7 +42,16 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { track } = loaderData;
 
-  const lives = useMemo(() => (SongToLiveMap[track.name]?.events ?? []).toReversed(), [track.name]);
+  const { data: songToLiveMap } = useSWR(`songToLiveMap`, async () => {
+    const allEvents = await importAllEventModules();
+    const songToLiveMap = makeSongToLiveMap(allEvents, ALL_SONGS);
+    return songToLiveMap;
+  });
+
+  const lives = useMemo(
+    () => (songToLiveMap?.[track.name]?.events ?? []).toReversed(),
+    [songToLiveMap, track.name],
+  );
 
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
 
