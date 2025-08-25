@@ -6,7 +6,7 @@ import { MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { BarChart } from "~/components/charts/BarChart";
-import { ALL_EVENTS } from "~/features/events/events";
+import { importAllEventModules } from "~/features/events/eventModule";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -25,9 +25,9 @@ export const meta: MetaFunction = () => {
 
 export default function Component() {
   const { data, error, isLoading } = useSWR("prefectureStats", async () => {
-    const concertCountsByPrefecture = await new Promise<{ name: string; count: number }[]>(
-      (resolve) => resolve(aggregatePrefectureStats(Object.values(ALL_EVENTS))),
-    );
+    const modules = await importAllEventModules();
+
+    const concertCountsByPrefecture = aggregatePrefectureStats(modules);
 
     const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
 

@@ -6,11 +6,13 @@ import {
   StageCostumeNames,
   TShirtCostumeNames,
 } from "../costumes/costumes";
-import { ALL_EVENTS } from "./events";
+import { importAllEventModules } from "./eventModule";
 
-describe("all setlist items", () => {
-  const allSetlistItems = Object.entries(ALL_EVENTS).flatMap(([slug, e]) =>
-    e.meta.acts?.flatMap((r) => r.setlist).map((item) => ({ item, slug, event: e })),
+describe("all setlist items", async () => {
+  const allEvents = await importAllEventModules();
+
+  const allSetlistItems = allEvents.flatMap((e) =>
+    e.meta.acts?.flatMap((r) => r.setlist).map((item) => ({ item, slug: e.slug, event: e })),
   );
 
   it("should not contain non-song items labeled as songs", () => {
@@ -65,17 +67,19 @@ describe("all setlist items", () => {
   });
 });
 
-describe("all events with setlist", () => {
-  const eventsWithSetlist = Object.entries(ALL_EVENTS).filter(([, e]) => {
+describe("all events with setlist", async () => {
+  const allEvents = await importAllEventModules();
+
+  const eventsWithSetlist = allEvents.filter((e) => {
     return e.meta.acts.length > 0;
   });
 
   it("should have liveType", () => {
-    const badEvents = eventsWithSetlist.filter(([, e]) => e.meta.liveType === undefined);
+    const badEvents = eventsWithSetlist.filter((e) => e.meta.liveType === undefined);
 
     if (badEvents.length > 0) {
       const message = `Found ${badEvents.length} events without liveType:\n${badEvents
-        .map(([slug]) => `- ${path.basename(slug, ".mdx")}`)
+        .map((e) => `- ${path.basename(e.slug, ".mdx")}`)
         .join("\n")}`;
       throw new Error(message);
     }
