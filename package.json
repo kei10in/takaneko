@@ -54,7 +54,7 @@
     "@testing-library/react": "^16.2.0",
     "@types/mdast": "^4.0.4",
     "@types/mdx": "^2.0.13",
-    "@types/node": "^22.15.3",
+    "@types/node": "^22.17.2",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
     "@types/react-scroll": "^1.8.10",
