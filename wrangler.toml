@@ -1,8 +1,15 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "takaneko"
-compatibility_date = "2025-04-02"
+compatibility_date = "2025-04-04"
 compatibility_flags = ["nodejs_compat_v2"]
-pages_build_output_dir = "./build/client"
+main = "./workers/app.ts"
+
+[observability]
+enabled = true
+
+[assets]
+not_found_handling = "404-page"
+binding = "ASSETS"
 
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure

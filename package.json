@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "react-router build",
-    "deploy": "pnpm run build && wrangler pages deploy",
+    "deploy": "pnpm run build && wrangler deploy",
     "dev": "react-router dev",
     "format": "prettier --write app",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
@@ -43,6 +43,7 @@
     "zustand": "^5.0.7"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.11.4",
     "@eslint/js": "^9.33.0",
     "@fast-csv/format": "^5.0.2",
     "@mdx-js/node-loader": "^3.1.0",
