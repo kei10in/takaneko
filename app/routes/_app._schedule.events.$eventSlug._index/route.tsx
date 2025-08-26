@@ -191,10 +191,11 @@ export default function EventPage() {
               </div>
             </Link>
           )}
-          {meta.overview?.streaming && (
+          {meta.streamings.map((streaming) => (
             <Link
+              key={streaming.url}
               className="block"
-              to={meta.overview.streaming.url}
+              to={streaming.url}
               target="_blank"
               rel="noreferrer"
             >
@@ -202,13 +203,13 @@ export default function EventPage() {
                 <span>
                   <BsBroadcast className="text-gray-400" />
                 </span>
-                <span className="text-nadeshiko-900">{meta.overview.streaming.text}</span>
+                <span className="text-nadeshiko-900">{streaming.text}</span>
                 <span>
                   <BsBoxArrowUpRight className="text-gray-400" />
                 </span>
               </div>
             </Link>
-          )}
+          ))}
 
           {meta.present != undefined && meta.present.length != 0 && (
             <div className="flex items-center gap-1 px-5">

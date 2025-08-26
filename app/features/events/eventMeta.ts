@@ -20,7 +20,7 @@ const EventOverview = z.object({
       url: z.string().optional(),
     })
     .optional(),
-  streaming: LinkDescription.optional(),
+  streaming: z.union([LinkDescription, z.array(LinkDescription)]).optional(),
 });
 
 export type EventOverview = z.infer<typeof EventOverview>;
@@ -74,6 +74,8 @@ export type EventMeta = Omit<
   date: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
+  streamings: LinkDescription[];
+  overview?: Omit<EventOverview, "streaming"> | undefined;
   acts: Act[];
   showNotes: ShowNotes;
   descriptor: EventMetaDescriptor;
@@ -87,6 +89,13 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
 
     const summary = `${statusPrefix}${r.data.summary}`;
     const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
+
+    const streaming =
+      r.data.overview?.streaming == undefined
+        ? []
+        : Array.isArray(r.data.overview.streaming)
+          ? r.data.overview.streaming
+          : [r.data.overview.streaming];
 
     const actDescriptions = Array.isArray(r.data.acts)
       ? r.data.acts
@@ -114,6 +123,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
         .filter(
           (link): link is LinkDescription => link != undefined && link.text != "" && link.url != "",
         ),
+      streamings: streaming,
       acts,
       showNotes,
       descriptor: r.data,
