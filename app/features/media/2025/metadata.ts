@@ -3,6 +3,19 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://wanibooks-newscrunch.com/articles/-/5839",
+    title:
+      "この夏を超えて・・・。高嶺のなでしこメンバー3人が語る3rd ANNIVERSARY CONCERT。 | WANI BOOKS Newsクランチ！（ニュースクランチ！）",
+    authorName: "WANI BOOKS Newsクランチ！（ニュースクランチ！）",
+    publishedAt: "2025-08-26",
+    mediaUrl: "https://wanibooks-newscrunch.com/articles/-/5839",
+    imageUrl:
+      "https://wanibooks.ismcdn.jp/mwimgs/c/1/750m/img_c1c8a539d975a5571ff8c514816e6c8a2619253.jpg",
+    category: "article",
+    presents: ["東山恵里沙", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://popteen.co.jp/media/75459/",
     title: "好きなクリープハイプで眠る夜も♡すぅにゃの推し活WORLD！Vol.5",
     authorName: "Popteen Media",

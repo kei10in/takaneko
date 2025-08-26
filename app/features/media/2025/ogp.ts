@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://wanibooks-newscrunch.com/articles/-/5839",
+    publishedAt: "2025-08-26",
+    category: "article",
+    presents: ["東山恵里沙", "日向端ひな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/75459/",
     publishedAt: "2025-08-22",
     category: "article",
