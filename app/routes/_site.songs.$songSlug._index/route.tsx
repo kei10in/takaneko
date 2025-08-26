@@ -15,6 +15,7 @@ import { formatTitle } from "~/utils/htmlHeader";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
 import type { Route } from "./+types/route";
 import { Credit } from "./Credit";
+import { LiveSkeleton } from "./LiveSkeleton";
 import { YouTubeCard } from "./YouTubeCard";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -42,14 +43,14 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { track } = loaderData;
 
-  const { data: songToLiveMap } = useSWR(`songToLiveMap`, async () => {
+  const { data: songToLiveMap, isLoading } = useSWR(`songToLiveMap`, async () => {
     const allEvents = await importAllEventModules();
     const songToLiveMap = makeSongToLiveMap(allEvents, ALL_SONGS);
     return songToLiveMap;
   });
 
   const lives = useMemo(
-    () => (songToLiveMap?.[track.name]?.events ?? []).toReversed(),
+    () => songToLiveMap?.[track.name]?.events?.toReversed(),
     [songToLiveMap, track.name],
   );
 
@@ -115,7 +116,20 @@ export default function Component({ loaderData }: Route.ComponentProps) {
             </span>
           </div>
           <ul className="space-y-1">
-            {lives.map(({ segments, event: e }, i) => (
+            {isLoading &&
+              [1, 2, 3].map((x) => (
+                <li key={x}>
+                  <LiveSkeleton />
+                </li>
+              ))}
+            {lives?.length == 0 && (
+              <li>
+                <p className="p-1 text-gray-500">
+                  この楽曲を披露したライブが見つかりませんでした。
+                </p>
+              </li>
+            )}
+            {lives?.map(({ segments, event: e }, i) => (
               <Fragment key={i}>
                 {segments.map(({ act, segment }, j) => (
                   <li key={j}>
