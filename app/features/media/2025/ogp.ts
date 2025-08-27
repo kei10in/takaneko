@@ -6,6 +6,7 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-08-26",
     category: "article",
     presents: ["東山恵里沙", "日向端ひな", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/1960583153472692684",
   },
   {
     mediaUrl: "https://popteen.co.jp/media/75459/",
