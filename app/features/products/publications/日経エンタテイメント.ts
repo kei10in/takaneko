@@ -1,5 +1,35 @@
 import { Publication } from "../product";
 
+export const 日経エンタテインメント_2025年10月号: Publication = {
+  slug: "日経エンタテインメント！ 2025年10月号",
+  name: "日経エンタテインメント！ 2025年10月号",
+  date: "2025-09-04",
+  kind: "magazines",
+  publisher: "日経BP",
+  listPrice: 809,
+  priceWithTax: 890,
+  code: [],
+  url: "", // "https://project.nikkeibp.co.jp/ent/monthly/2025/10/",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-09-04_日経エンタテインメント！_2025年10月号.jpg",
+      ref: "https://www.amazon.co.jp/dp/B0FKG8HRG1",
+    },
+  ],
+  featuredMembers: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+  officialTwitter: undefined,
+};
+
 export const 日経エンタテインメント_2024年2月号: Publication = {
   slug: "日経エンタテインメント！ 2024年2月号",
   name: "日経エンタテインメント！ 2024年2月号",

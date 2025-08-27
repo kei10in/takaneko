@@ -70,7 +70,10 @@ import { グラビアプレスVol12 } from "./publications/グラビアプレス
 import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
 import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka";
 import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
-import { 日経エンタテインメント_2024年2月号 } from "./publications/日経エンタテイメント";
+import {
+  日経エンタテインメント_2024年2月号,
+  日経エンタテインメント_2025年10月号,
+} from "./publications/日経エンタテイメント";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
 import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA";
 import { 橋本桃呼_MOMOKO_ISM } from "./publications/橋本桃呼_MOMOKO_ISM";
@@ -146,6 +149,7 @@ const publications: Publication[] = [
   週刊少年チャンピオン_2024年No51,
   週刊少年チャンピオン_2025年No32,
   日経エンタテインメント_2024年2月号,
+  日経エンタテインメント_2025年10月号,
   月刊ENTAME_2023年3_4月合併号,
   月刊ENTAME_2024年8月号,
   城月菜央_記憶の中,
