@@ -135,3 +135,43 @@ const parseSegment = (
     },
   };
 };
+
+export const formatSetlist = (
+  setlist: Segment[],
+  option?: { copyWithMC: boolean; copyWithOrder: boolean },
+) => {
+  const { copyWithMC = false, copyWithOrder = false } = option ?? {};
+
+  const items: string[] = [];
+
+  setlist.forEach((segment) => {
+    switch (segment.kind) {
+      case "talk":
+        if (copyWithMC && items[items.length - 1] !== "MC") {
+          items.push("MC");
+        }
+        break;
+      case "song":
+        if (copyWithOrder) {
+          const mark = `${segment.section == "main" ? "M" : "EN"}`;
+          const order = `${segment.index + 1}`;
+          items.push(`${mark}${order} ${segment.songTitle}`);
+        } else {
+          items.push(segment.songTitle);
+        }
+        break;
+      case "encore":
+        items.push("(アンコール)");
+        break;
+      case "announce":
+      case "overture":
+      case "special":
+      case "costume":
+      case "interlude":
+      default:
+        break;
+    }
+  });
+
+  return items.join("\n");
+};
