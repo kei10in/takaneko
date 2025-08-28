@@ -3,6 +3,19 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://prtimes.jp/main/html/rd/p/000000796.000025517.html",
+    title:
+      "【オフィシャルレポート】高嶺のなでしこ 広州・上海に続き、ソウル初のワンマンライブもチケット完売！延べ約1",
+    authorName: "プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES",
+    publishedAt: "2025-08-28",
+    mediaUrl: "https://prtimes.jp/main/html/rd/p/000000796.000025517.html",
+    imageUrl:
+      "https://prcdn.freetls.fastly.net/release_image/25517/796/25517-796-f74cebd72d7310cb5b44fa0635250a4f-3900x2925.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://wanibooks-newscrunch.com/articles/-/5839",
     title:
       "この夏を超えて・・・。高嶺のなでしこメンバー3人が語る3rd ANNIVERSARY CONCERT。 | WANI BOOKS Newsクランチ！（ニュースクランチ！）",
