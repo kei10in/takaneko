@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://thetv.jp/news/detail/1289131/",
+    title:
+      "高嶺のなでしこ「新曲『この世界は嘘でできている』は私たちの“勝負曲”」、9人体制で迎える幕張ライブへの思い | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2025-08-28",
+    mediaUrl: "https://thetv.jp/news/detail/1289131/",
+    imageUrl: "https://thetv.jp/i/nw/1289131/15191516.jpg?w=1284",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://prtimes.jp/main/html/rd/p/000000796.000025517.html",
     title:
       "【オフィシャルレポート】高嶺のなでしこ 広州・上海に続き、ソウル初のワンマンライブもチケット完売！延べ約1",
