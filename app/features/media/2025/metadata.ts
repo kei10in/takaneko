@@ -27,6 +27,18 @@ export const metadata2025: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "youtube",
+    key: "o-whMm-I3Xg",
+    title:
+      "【閲覧注意】ななまがり&トム・ブラウン考案の超個性的行動がヤバすぎた※あくまでコントです※ゲスト：阿部なつき/水野舞菜/橋本桃呼（高嶺のなでしこ）【パクチーテレビ】",
+    authorName: "動画、はじめてみました【テレビ朝日公式】",
+    publishedAt: "2025-08-27",
+    mediaUrl: "https://youtu.be/o-whMm-I3Xg",
+    imageUrl: "https://i.ytimg.com/vi/o-whMm-I3Xg/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
     kind: "ogp",
     key: "https://wanibooks-newscrunch.com/articles/-/5839",
     title:
