@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import os from "node:os";
 import path from "path";
 import { format, resolveConfig, resolveConfigFile } from "prettier";
 import { dedent } from "ts-dedent";
@@ -179,6 +180,7 @@ const prettier = async (source: string): Promise<string> => {
   const formatted = await format(source, {
     ...options,
     parser: "typescript",
+    endOfLine: os.EOL == "\n" ? "lf" : "crlf",
   });
 
   return formatted;
