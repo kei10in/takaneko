@@ -53,6 +53,7 @@ export type TShirtCostumes = z.infer<typeof TShirtCostumes>;
 export const TShirtCostumeNames: string[] = TShirtCostumes.options;
 
 export const SpecialCostumeNames = [
+  "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
   "2025 浴衣",
   "パジャマ",
   "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
