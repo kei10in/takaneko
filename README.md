@@ -49,17 +49,6 @@ pnpm install
 - `pnpm format` - Prettier によるコードフォーマットを実行します。
 - `pnpm vitest run` - テストを実行します。
 
-### スクリプト
-
-プロジェクトには以下の自動化スクリプトが含まれています：
-
-- `build-calendar.ts`: カレンダーデータの生成
-- `build-sitemap.ts`: サイトマップの生成
-- `cache-media-metadata.ts`: メディア情報のキャッシュ
-- `cache-youtube-metadata.ts`: YouTube メタデータのキャッシュ
-- `gen-thumbnails.ts`: サムネイル画像の生成
-- その他の画像処理・データ処理スクリプト
-
 ### 詳細
 
 その他の開発に関する詳細は [ARCHITECTURE.md](./docs/ARCHITECTURE.md) を参照してください。

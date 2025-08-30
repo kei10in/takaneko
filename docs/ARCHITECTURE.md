@@ -37,3 +37,14 @@ pnpm tsx ./scripts/setlist-db.ts
 ### グッズデータ
 
 **パス:** `app/features/products/`
+
+## スクリプト
+
+プロジェクトには以下の自動化スクリプトが含まれています：
+
+- `build-calendar.ts`: カレンダーデータの生成
+- `build-sitemap.ts`: サイトマップの生成
+- `cache-media-metadata.ts`: メディア情報のキャッシュ
+- `cache-youtube-metadata.ts`: YouTube メタデータのキャッシュ
+- `gen-thumbnails.ts`: サムネイル画像の生成
+- その他の画像処理・データ処理スクリプト
