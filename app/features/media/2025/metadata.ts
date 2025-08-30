@@ -168,6 +168,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/xQvYJoyIzjs/hqdefault.jpg",
     category: "youtube",
     presents: ["籾山ひめり"],
+    deleted: true,
   },
   {
     kind: "youtube",
@@ -179,6 +180,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/eyoa2_NU138/hqdefault.jpg",
     category: "youtube",
     presents: ["籾山ひめり"],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -1343,6 +1345,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/kdXGcSF4xvI/hqdefault.jpg",
     category: "youtube",
     presents: ["日向端ひな"],
+    deleted: true,
   },
   {
     kind: "youtube",

@@ -626,6 +626,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/y9seli9v8GE/hqdefault.jpg",
     category: "youtube",
     presents: ["松本ももな"],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -1084,6 +1085,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/mVaR9q39xYs/hqdefault.jpg",
     category: "youtube",
     presents: ["東山恵里沙"],
+    deleted: true,
   },
   {
     kind: "ogp",
