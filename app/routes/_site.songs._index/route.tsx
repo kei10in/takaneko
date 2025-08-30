@@ -1,5 +1,6 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Link, MetaFunction } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { Limited, Original, Repertoire, TakanekoVersion, Unperformed } from "~/features/songs/tags";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -31,7 +32,7 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="py-8">
-        <h1 className="text-nadeshiko-800 my-2 px-4 text-5xl font-semibold lg:mt-12">楽曲</h1>
+        <h1 className={pageHeading("my-2 px-4 lg:mt-12")}>楽曲</h1>
 
         <p className="px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
