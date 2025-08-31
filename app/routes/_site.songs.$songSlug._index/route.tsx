@@ -4,6 +4,7 @@ import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { pageHeading } from "~/components/styles";
 import { importAllEventModules } from "~/features/events/eventModule";
 import { liveTypeColor } from "~/features/events/EventType";
 import { makeSongToLiveMap } from "~/features/songs/songActivities";
@@ -79,7 +80,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
       </div>
 
       <section className="my-8 px-4">
-        <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">{track.name}</h1>
+        <h1 className={pageHeading("my-4 lg:mt-12")}>{track.name}</h1>
 
         <div>
           <Credit song={track} />

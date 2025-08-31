@@ -1,9 +1,10 @@
 import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { formatDataSize } from "~/utils/dataSize";
-import { Route } from "./+types/route";
+import type { Route } from "./+types/route";
 import { DatasetMeta } from "./types";
 
 export const meta: MetaFunction = () => {
@@ -128,7 +129,7 @@ export default function Index() {
   return (
     <div className="container mx-auto max-w-3xl">
       <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">データ セット</h1>
+        <h1 className={pageHeading("my-2 lg:mt-12")}>データ セット</h1>
         <section className="mt-8">
           <h2 className="text-2xl text-gray-500">セットリスト ログ</h2>
           <div className="my-4 space-y-1 text-sm">

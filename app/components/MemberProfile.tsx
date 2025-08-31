@@ -3,6 +3,7 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link } from "react-router";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { MemberDescription } from "../features/profile/members";
+import { pageHeading } from "./styles";
 
 interface Props {
   profile: MemberDescription;
@@ -53,7 +54,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
         </div>
 
         <section className="p-4">
-          <h1 className="text-nadeshiko-800 my-2 text-5xl font-semibold lg:mt-12">{name}</h1>
+          <h1 className={pageHeading("my-2 lg:mt-12")}>{name}</h1>
 
           <div className="flex gap-4 text-gray-500">
             <p>{kana}</p>
