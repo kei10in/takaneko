@@ -19,7 +19,7 @@ export default function Index() {
     <div className="container mx-auto">
       <MemberProfile profile={MikuruHoshitani}>
         <section className="mt-12 px-4">
-          <h2 className="mb-4 text-center text-3xl font-bold text-gray-400">Link</h2>
+          <h2 className="mb-4 text-center text-2xl font-bold text-gray-400">Link</h2>
           <div>
             <Link className="block" to="https://www.instagram.com/min.0o6/">
               <div className="flex h-28 gap-2 bg-white shadow-sm">

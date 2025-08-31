@@ -9,6 +9,7 @@ import {
   BsTrash,
 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { ProductItem } from "~/routes/_app.trade/ProductItem";
@@ -85,8 +86,8 @@ const tools = [
 
 export default function Index() {
   return (
-    <section className="mx-auto px-4 py-8 lg:max-w-4xl">
-      <h1 className="my-4 text-3xl font-semibold text-gray-600">トレード画像をつくるやつ</h1>
+    <section className="mx-auto px-4 py-12 lg:max-w-4xl">
+      <h1 className={pageHeading()}>トレード画像をつくるやつ</h1>
 
       <div className="my-4 flex justify-between">
         <p>ランダムグッズのトレード画像が作成できます。</p>

@@ -22,7 +22,7 @@ export default function Index() {
       <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>プロフィール</h1>
         <section>
-          <h2 className="my-4 text-3xl font-semibold text-gray-600">メンバー</h2>
+          <h2 className="my-4 text-2xl font-semibold text-gray-600">メンバー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
             {AllMembers.map((member) => (

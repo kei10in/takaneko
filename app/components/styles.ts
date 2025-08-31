@@ -9,7 +9,7 @@ export const pageColumnBox = (...args: ClassValue[]) => {
 };
 
 export const pageHeading = (...args: ClassValue[]) => {
-  return clsx("text-nadeshiko-800 text-5xl font-semibold", ...args);
+  return clsx("text-nadeshiko-800 text-3xl font-semibold", ...args);
 };
 
 export const dialogBackdropStyle = () => {

@@ -112,7 +112,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
       </div>
 
       <section className="mt-12 px-4">
-        <h2 className="mb-4 text-center text-3xl font-bold text-gray-400">SNS</h2>
+        <h2 className="mb-4 text-center text-2xl font-bold text-gray-400">SNS</h2>
         <ul className="flex flex-wrap justify-center gap-4 text-black">
           <li>
             <Link
