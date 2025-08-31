@@ -7,7 +7,7 @@ import {
   useSearchParams,
 } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { shortlink, ShortLinkResult } from "~/utils/shortlink";
@@ -96,8 +96,8 @@ export default function Index() {
           </section>
         )}
 
-        <section className="space-y-4">
-          <h2 className="mt-16 text-2xl">iPhone に追加する</h2>
+        <section className="mt-16 space-y-4">
+          <h2 className={sectionHeading()}>iPhone に追加する</h2>
           <p>
             Siri ショートカットを使って iPhone の共有メニューに、短い URL
             を作る機能を追加することができます。

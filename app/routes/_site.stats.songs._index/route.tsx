@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { formatTitle } from "~/utils/htmlHeader";
 import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
 
@@ -64,7 +64,7 @@ export default function Component() {
         <div className="mt-8 space-y-12">
           <section>
             <div className="mb-2 flex items-center">
-              <h2 className="flex-auto text-2xl font-semibold text-gray-600">最近のライブ</h2>
+              <h2 className={sectionHeading("flex-auto")}>最近のライブ</h2>
               <div className="flex-none">
                 <Listbox value={term} onChange={setTerm}>
                   <ListboxButton className="flex w-36 items-center rounded-full border border-gray-300 px-2 py-0.5 text-start text-sm">
@@ -110,7 +110,7 @@ export default function Component() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-2xl font-semibold text-gray-600">すべてのライブ</h2>
+            <h2 className={sectionHeading("mb-2")}>すべてのライブ</h2>
             <p className="mb-4 text-gray-600">
               いくつかのライブのセットリストが不明なため、数値は一部不正確です。
             </p>
@@ -118,9 +118,7 @@ export default function Component() {
           </section>
 
           <section>
-            <h2 className="mb-2 text-2xl font-semibold text-gray-600">
-              不明なセットリストについて
-            </h2>
+            <h2 className={sectionHeading("mb-2")}>不明なセットリストについて</h2>
 
             <p className="mb-4 text-gray-600">現在下記のライブのセットリストが不明です。 </p>
 

@@ -1,7 +1,7 @@
 import { MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { Markdown } from "~/components/Markdown";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
@@ -44,7 +44,7 @@ export default function Index() {
         </div>
 
         <section className="mt-12 px-4">
-          <h2 className="text-2xl font-semibold text-gray-500">ラインナップ</h2>
+          <h2 className={sectionHeading()}>ラインナップ</h2>
           <ul className="mt-8 space-y-8">
             {collection.lineup.map((item, i) => {
               return (

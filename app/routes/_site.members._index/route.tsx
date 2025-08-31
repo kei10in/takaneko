@@ -2,7 +2,7 @@ import { BsDiscord, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa6";
 import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "../../features/profile/members";
 
@@ -22,7 +22,7 @@ export default function Index() {
       <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>プロフィール</h1>
         <section>
-          <h2 className="my-4 text-2xl font-semibold text-gray-600">メンバー</h2>
+          <h2 className={sectionHeading("my-4")}>メンバー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
             {AllMembers.map((member) => (
@@ -69,7 +69,7 @@ export default function Index() {
         </section>
 
         <section>
-          <h2 className="mt-12 mb-4 text-2xl font-semibold text-gray-400">マネージャー</h2>
+          <h2 className={sectionHeading("mt-12 mb-4")}>マネージャー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
             <li className="flex-none">
@@ -99,7 +99,7 @@ export default function Index() {
         </section>
 
         <section>
-          <h2 className="mt-12 mb-4 text-2xl font-semibold text-gray-400">高嶺のなでしこ</h2>
+          <h2 className={sectionHeading("mt-12 mb-4")}>高嶺のなでしこ</h2>
 
           <ul className="list-disc space-y-2 pl-6 marker:text-gray-300">
             <li>

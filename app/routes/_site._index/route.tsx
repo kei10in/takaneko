@@ -3,6 +3,7 @@ import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from 
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { sectionHeading } from "~/components/styles";
 import { DOMAIN, SITE_TITLE } from "~/constants";
 import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
@@ -131,8 +132,8 @@ export default function Index() {
           <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
 
           <section className="space-y-4">
-            <h2 className="flex items-center gap-2 px-4 text-xl leading-tight font-semibold text-gray-500">
-              <BsCalendar className="h-6 w-6" />
+            <h2 className={sectionHeading("flex items-center gap-2 px-4")}>
+              <BsCalendar className="inline-block text-gray-400" />
               <span>スケジュール</span>
             </h2>
 
@@ -195,8 +196,8 @@ export default function Index() {
           </section>
 
           <section className="space-y-4 px-4">
-            <h2 className="flex items-center gap-2 text-xl leading-tight font-semibold text-gray-500">
-              <BsArrowLeftRight className="h-6 w-6" />
+            <h2 className={sectionHeading("flex items-center gap-2")}>
+              <BsArrowLeftRight className="inline-block text-gray-400" />
               <span>トレード画像つくるやつ</span>
             </h2>
             <p>

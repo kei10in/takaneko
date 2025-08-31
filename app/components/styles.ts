@@ -12,6 +12,10 @@ export const pageHeading = (...args: ClassValue[]) => {
   return clsx("text-nadeshiko-800 text-3xl font-semibold", ...args);
 };
 
+export const sectionHeading = (...args: ClassValue[]) => {
+  return clsx("text-2xl text-gray-600", ...args);
+};
+
 export const dialogBackdropStyle = () => {
   return clsx(
     "fixed inset-0 bg-black/50 backdrop-blur-xs",

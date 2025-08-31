@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
-import { pageColumnBox, pageHeading } from "~/components/styles";
+import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
 import { Publication } from "~/features/products/product";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -69,7 +69,7 @@ export default function PublicationProduct(props: Props) {
         </dl>
 
         <section className="space-y-2">
-          <h2 className="text-lg font-semibold text-gray-500">掲載メンバー</h2>
+          <h2 className={sectionHeading()}>掲載メンバー</h2>
           <ul className="flex flex-wrap gap-2">
             {product.featuredMembers.map((member) => {
               const m = findMemberDescription(member);
@@ -94,7 +94,7 @@ export default function PublicationProduct(props: Props) {
 
         {product.links != undefined && product.links.length > 0 && (
           <section className="space-y-2">
-            <h2 className="text-lg font-semibold text-gray-500">リンク</h2>
+            <h2 className={sectionHeading()}>リンク</h2>
             <ul className="list-disc pl-6">
               {product.links?.map((link, i) => {
                 return (

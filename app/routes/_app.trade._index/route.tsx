@@ -9,7 +9,7 @@ import {
   BsTrash,
 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { ProductItem } from "~/routes/_app.trade/ProductItem";
@@ -101,7 +101,7 @@ export default function Index() {
       </div>
 
       <section className="mt-12">
-        <h2 className="mb-2 text-2xl font-semibold text-gray-600">サマリー</h2>
+        <h2 className={sectionHeading("mb-2")}>サマリー</h2>
 
         <ul className="space-y-4">
           <li>
@@ -131,7 +131,7 @@ export default function Index() {
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12">
-          <h2 className="my-4 text-2xl font-semibold text-gray-600">ホットなやつ</h2>
+          <h2 className={sectionHeading("my-4")}>ホットなやつ</h2>
           <ul className="flex flex-wrap gap-4">
             {TAKANEKO_PHOTOS_FEATURED.map((photo) => {
               const thumbs = thumbnailSrcSet(photo.url);
@@ -154,7 +154,7 @@ export default function Index() {
       )}
 
       <section className="mt-12">
-        <h2 className="my-4 text-2xl font-semibold text-gray-600">ランダムグッズ</h2>
+        <h2 className={sectionHeading("my-4")}>ランダムグッズ</h2>
         <ul className="flex flex-wrap gap-4">
           {TAKANEKO_PHOTOS.map((photo) => {
             const thumbs = thumbnailSrcSet(photo.url);
@@ -176,7 +176,7 @@ export default function Index() {
       </section>
 
       <section className="mt-12">
-        <h2 className="my-4 text-2xl font-semibold text-gray-600">使い方</h2>
+        <h2 className={sectionHeading("my-4")}>使い方</h2>
 
         <p>ツールを選んで、アイテムをタップします。</p>
         <ul className="my-4 list-disc space-y-1 pl-6 marker:text-gray-300">

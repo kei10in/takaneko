@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { formatDataSize } from "~/utils/dataSize";
 import type { Route } from "./+types/route";
@@ -131,7 +131,7 @@ export default function Index() {
       <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>データ セット</h1>
         <section className="mt-8">
-          <h2 className="text-2xl text-gray-500">セットリスト ログ</h2>
+          <h2 className={sectionHeading()}>セットリスト ログ</h2>
           <div className="my-4 space-y-1 text-sm">
             <p>高嶺のなでしこが過去のライブで披露した楽曲の記録です。</p>
             <p>

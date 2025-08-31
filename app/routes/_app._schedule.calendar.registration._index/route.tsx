@@ -1,7 +1,7 @@
 import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { DOMAIN } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -45,7 +45,7 @@ export default function Index() {
 
         {cals.map((cal, i) => (
           <section key={i} className="my-12">
-            <h2 className="mb-6 text-2xl font-bold text-gray-500">{cal.name}</h2>
+            <h2 className={sectionHeading("mb-6")}>{cal.name}</h2>
 
             <div className="space-y-4">
               <p>{cal.description}</p>
@@ -92,7 +92,7 @@ export default function Index() {
         ))}
 
         <section className="mt-12">
-          <h2 className="mb-8 text-2xl font-bold text-gray-500">URL でカレンダーに登録する</h2>
+          <h2 className={sectionHeading("mb-8")}>URL でカレンダーに登録する</h2>
 
           <div className="space-y-4">
             <p>カレンダーへの登録方法は、使っているカレンダーアプリの使い方を見てください。</p>
