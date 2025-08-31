@@ -2,7 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
   otherTakanekoRandomGoods,
@@ -90,7 +90,7 @@ export default function Index() {
 
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading("flex items-center gap-3")}>
           <BsCardChecklist className="inline-block" />
           <span>欲しいやつ</span>

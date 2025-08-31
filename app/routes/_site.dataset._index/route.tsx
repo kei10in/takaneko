@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { formatDataSize } from "~/utils/dataSize";
 import type { Route } from "./+types/route";
@@ -128,7 +128,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>データ セット</h1>
         <section className="mt-8">
           <h2 className="text-2xl text-gray-500">セットリスト ログ</h2>

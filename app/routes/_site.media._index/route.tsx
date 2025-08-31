@@ -18,7 +18,7 @@ import {
   useSearchParams,
 } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { getAllMediaMetadata } from "~/features/media/metadata";
 import { AllMembers, findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
@@ -86,7 +86,7 @@ export default function MediaIndex() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="p-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>メディア</h1>
 
         <div className="flex justify-end">

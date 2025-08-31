@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageColumnBox, pageHeading } from "~/components/styles";
 import { RandomGoods } from "~/features/products/product";
 
 interface Props {
@@ -21,7 +21,7 @@ export function PhotoProduct(props: Props) {
         </div>
       </div>
 
-      <section className="px-4 py-8">
+      <section className={pageColumnBox("px-4")}>
         <h1 className={pageHeading()}>{product.name}</h1>
 
         <dl className="mt-8 grid grid-cols-3 gap-2">

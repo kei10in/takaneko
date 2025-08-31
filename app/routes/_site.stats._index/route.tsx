@@ -2,7 +2,7 @@ import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Link, MetaFunction } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { formatTitle } from "~/utils/htmlHeader";
 
 Chart.register(ChartDataLabels);
@@ -40,7 +40,7 @@ const items = [
 export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>統計</h1>
 
         <div className="mt-8 space-y-4">

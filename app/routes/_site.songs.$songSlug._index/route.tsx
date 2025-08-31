@@ -4,7 +4,7 @@ import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { importAllEventModules } from "~/features/events/eventModule";
 import { liveTypeColor } from "~/features/events/EventType";
 import { makeSongToLiveMap } from "~/features/songs/songActivities";
@@ -79,7 +79,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         />
       </div>
 
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>{track.name}</h1>
 
         <div className="mt-8">

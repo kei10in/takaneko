@@ -1,5 +1,5 @@
 import { Link, MetaFunction } from "react-router";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { MINI_PHOTO_CARDS } from "~/features/products/photos";
 import { ProductCard } from "../../components/ProductCard";
@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto text-gray-600">
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>ミニフォトカード</h1>
 
         <ul className="mt-8 grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">

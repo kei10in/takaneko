@@ -6,7 +6,7 @@ import { MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { BarChart } from "~/components/charts/BarChart";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { importAllEventModules } from "~/features/events/eventModule";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -46,7 +46,7 @@ export default function Component() {
         />
       </div>
 
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>都道府県別ライブ開催数</h1>
 
         <p className="mt-8 text-sm">

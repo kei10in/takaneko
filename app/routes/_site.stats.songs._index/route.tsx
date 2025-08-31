@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { formatTitle } from "~/utils/htmlHeader";
 import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
 
@@ -58,7 +58,7 @@ export default function Component() {
         />
       </div>
 
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>楽曲別パフォーマンス回数</h1>
 
         <div className="mt-8 space-y-12">

@@ -1,5 +1,13 @@
 import { ClassValue, clsx } from "clsx";
 
+export const pageBox = (...args: ClassValue[]) => {
+  return clsx("py-12", ...args);
+};
+
+export const pageColumnBox = (...args: ClassValue[]) => {
+  return clsx("py-8", ...args);
+};
+
 export const pageHeading = (...args: ClassValue[]) => {
   return clsx("text-nadeshiko-800 text-5xl font-semibold", ...args);
 };

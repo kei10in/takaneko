@@ -3,7 +3,7 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link } from "react-router";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { MemberDescription } from "../features/profile/members";
-import { pageHeading } from "./styles";
+import { pageColumnBox, pageHeading } from "./styles";
 
 interface Props {
   profile: MemberDescription;
@@ -36,7 +36,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
   } = profile;
 
   return (
-    <div className="mx-auto pb-16 lg:max-w-5xl lg:py-16">
+    <div className="mx-auto pb-16 lg:max-w-5xl lg:py-12">
       <div className="lg:grid lg:grid-cols-2 lg:gap-4">
         <div className="w-full">
           <div className="mx-auto w-fit">
@@ -53,10 +53,10 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </div>
         </div>
 
-        <section className="p-4">
-          <h1 className={pageHeading("my-2 lg:mt-12")}>{name}</h1>
+        <section className={pageColumnBox("px-4")}>
+          <h1 className={pageHeading()}>{name}</h1>
 
-          <div className="flex gap-4 text-gray-500">
+          <div className="mt-2 flex gap-4 text-gray-500">
             <p>{kana}</p>
             <p>{romaji}</p>
           </div>

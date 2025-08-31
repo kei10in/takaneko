@@ -1,7 +1,7 @@
 import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { DOMAIN } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -40,7 +40,7 @@ export default function Index() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="px-4 py-12">
+      <section className={pageBox("px-4")}>
         <h1 className={pageHeading()}>アプリに登録</h1>
 
         {cals.map((cal, i) => (

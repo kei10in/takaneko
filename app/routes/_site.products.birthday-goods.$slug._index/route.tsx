@@ -1,7 +1,7 @@
 import { MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { Markdown } from "~/components/Markdown";
-import { pageHeading } from "~/components/styles";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
@@ -36,7 +36,7 @@ export default function Index() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <section className="py-12">
+      <section className={pageBox()}>
         <h1 className={pageHeading("px-4")}>{collection.name}</h1>
 
         <div className="mt-8">

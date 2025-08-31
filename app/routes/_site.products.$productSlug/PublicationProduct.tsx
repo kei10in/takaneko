@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
-import { pageHeading } from "~/components/styles";
+import { pageColumnBox, pageHeading } from "~/components/styles";
 import { Publication } from "~/features/products/product";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -48,7 +48,7 @@ export default function PublicationProduct(props: Props) {
         images={product.coverImages.map((img) => ({ src: img.path, alt: product.name }))}
       />
 
-      <section className="space-y-8 px-4 py-8">
+      <section className={pageColumnBox("space-y-8 px-4")}>
         <h1 className={pageHeading()}>
           {product.url == undefined ? (
             product.name
