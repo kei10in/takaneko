@@ -2,6 +2,7 @@ import { BsDiscord, BsInstagram, BsTwitterX, BsYoutube } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa6";
 import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { AllMembers } from "../../features/profile/members";
 
@@ -18,7 +19,8 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="px-4 py-8">
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>プロフィール</h1>
         <section>
           <h2 className="my-4 text-3xl font-semibold text-gray-600">メンバー</h2>
 

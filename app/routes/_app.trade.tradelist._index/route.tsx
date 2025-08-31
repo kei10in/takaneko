@@ -2,6 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
   otherTakanekoRandomGoods,
@@ -89,9 +90,9 @@ export default function Index() {
 
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
-      <section className="px-4 py-8">
-        <h1 className="my-4 flex items-center gap-3 text-3xl font-semibold text-gray-600">
-          <BsGift className="text-nadeshiko-900 inline-block" />
+      <section className="px-4 py-12">
+        <h1 className={pageHeading("flex items-center gap-3")}>
+          <BsGift className="inline-block" />
           <span>譲れるやつ</span>
         </h1>
         <div className="flex justify-end">

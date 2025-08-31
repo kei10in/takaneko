@@ -128,8 +128,8 @@ export default function Index() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="px-4 py-8">
-        <h1 className={pageHeading("my-2 lg:mt-12")}>データ セット</h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>データ セット</h1>
         <section className="mt-8">
           <h2 className="text-2xl text-gray-500">セットリスト ログ</h2>
           <div className="my-4 space-y-1 text-sm">

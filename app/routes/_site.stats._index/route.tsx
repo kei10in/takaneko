@@ -40,10 +40,10 @@ const items = [
 export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="px-4 py-8">
-        <h1 className={pageHeading("my-2 mb-8 lg:mt-12")}>統計</h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>統計</h1>
 
-        <div className="space-y-4">
+        <div className="mt-8 space-y-4">
           {items.map((item) => {
             return (
               <Link key={item.url} to={item.url} className="block">

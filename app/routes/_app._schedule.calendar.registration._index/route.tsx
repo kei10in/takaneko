@@ -1,6 +1,7 @@
 import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
+import { pageHeading } from "~/components/styles";
 import { DOMAIN } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -38,9 +39,9 @@ export default function Index() {
   const showShareButton = shouldUseWebShareApi();
 
   return (
-    <div className="mx-auto max-w-3xl">
-      <section className="my-12 px-4 text-gray-800">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">アプリに登録</h1>
+    <div className="container mx-auto max-w-3xl">
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>アプリに登録</h1>
 
         {cals.map((cal, i) => (
           <section key={i} className="my-12">

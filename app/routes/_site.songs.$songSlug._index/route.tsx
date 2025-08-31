@@ -79,10 +79,10 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         />
       </div>
 
-      <section className="my-8 px-4">
-        <h1 className={pageHeading("my-4 lg:mt-12")}>{track.name}</h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>{track.name}</h1>
 
-        <div>
+        <div className="mt-8">
           <Credit song={track} />
         </div>
 

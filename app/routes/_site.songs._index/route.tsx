@@ -31,10 +31,10 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="py-8">
-        <h1 className={pageHeading("my-2 px-4 lg:mt-12")}>楽曲</h1>
+      <section className="py-12">
+        <h1 className={pageHeading("px-4")}>楽曲</h1>
 
-        <p className="px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
+        <p className="mt-8 px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
         <TabGroup className="mt-2">
           <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">

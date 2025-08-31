@@ -1,5 +1,6 @@
 import { Link, MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { LiveGoodsCollection } from "~/features/products/product";
@@ -33,8 +34,8 @@ export default function Index() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">{live.name}</h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>{live.name}</h1>
 
         <div className="mt-8">
           <ImageSlide2 images={images.map((img) => ({ ...img, alt: live.name }))} />

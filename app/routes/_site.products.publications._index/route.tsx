@@ -1,4 +1,5 @@
 import { Link, MetaFunction } from "react-router";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { PUBLICATIONS } from "~/features/products/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -19,10 +20,10 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto text-gray-600">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">書籍・雑誌</h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>書籍・雑誌</h1>
 
-        <ul className="grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+        <ul className="mt-8 grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
           {PUBLICATIONS.map((publication) => {
             const thumbs =
               publication.coverImages[0] == undefined

@@ -7,6 +7,7 @@ import {
   useSearchParams,
 } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
+import { pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { shortlink, ShortLinkResult } from "~/utils/shortlink";
@@ -56,8 +57,8 @@ export default function Index() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <section className="px-4 py-8 text-gray-700">
-        <h1 className="center my-4 text-3xl font-semibold text-gray-600">短い URL を作るやつ</h1>
+      <section className="px-4 py-12 text-gray-700">
+        <h1 className={pageHeading()}>短い URL を作るやつ</h1>
         <p className="mt-8">
           高嶺のなでしこ公式のツイートの https://takanenonadeshiko.jp/?p=55 のような短い URL
           を作ります。

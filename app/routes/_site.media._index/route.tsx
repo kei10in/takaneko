@@ -86,10 +86,10 @@ export default function MediaIndex() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="p-4">
-        <h1 className={pageHeading("my-4 lg:mt-12")}>メディア</h1>
+      <section className="p-4 py-12">
+        <h1 className={pageHeading()}>メディア</h1>
 
-        <div className="my-4 flex justify-end">
+        <div className="flex justify-end">
           <Popover className="">
             <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
               {/* <div className="mx-auto flex-1 pl-2">メンバー</div> */}
@@ -157,7 +157,7 @@ export default function MediaIndex() {
           </Popover>
         </div>
 
-        <ul className="w-full space-y-6 py-2">
+        <ul className="mt-4 w-full space-y-6 py-2">
           {items.map((video) => {
             return (
               <li key={video.mediaUrl}>

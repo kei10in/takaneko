@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { pageHeading } from "~/components/styles";
 import { formatTitle } from "~/utils/htmlHeader";
 import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
 
@@ -57,12 +58,10 @@ export default function Component() {
         />
       </div>
 
-      <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-12 text-3xl font-semibold lg:mt-6">
-          楽曲別パフォーマンス回数
-        </h1>
+      <section className="px-4 py-12">
+        <h1 className={pageHeading()}>楽曲別パフォーマンス回数</h1>
 
-        <div className="space-y-12">
+        <div className="mt-8 space-y-12">
           <section>
             <div className="mb-2 flex items-center">
               <h2 className="flex-auto text-2xl font-semibold text-gray-600">最近のライブ</h2>
