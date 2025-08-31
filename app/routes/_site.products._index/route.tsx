@@ -1,6 +1,7 @@
 import { BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
@@ -96,9 +97,9 @@ export default function Index() {
 
   return (
     <div className="container mx-auto text-gray-600">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">グッズ</h1>
-        <div className="rounded-lg border border-yellow-500 bg-yellow-50 p-4">
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>グッズ</h1>
+        <div className="mt-8 rounded-lg border border-yellow-500 bg-yellow-50 p-4">
           <p>
             このページに記載のないものは「
             <Link className="text-nadeshiko-800" to="/memo">
@@ -113,7 +114,7 @@ export default function Index() {
           return (
             <section className="mt-12" key={slug}>
               <Link className="mb-8 flex items-end justify-between" to={slug}>
-                <h2 className="text-2xl">{title}</h2>
+                <h2 className={sectionHeading()}>{title}</h2>
                 <p className="text-nadeshiko-800 flex w-fit items-center text-sm">
                   <span>すべて表示</span>
                   <BsChevronRight className="ml-1 inline-block" />

@@ -4,6 +4,7 @@ import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { importAllEventModules } from "~/features/events/eventModule";
 import { liveTypeColor } from "~/features/events/EventType";
 import { makeSongToLiveMap } from "~/features/songs/songActivities";
@@ -78,15 +79,19 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         />
       </div>
 
-      <section className="my-8 px-4">
-        <h1 className="text-nadeshiko-800 my-4 text-5xl font-semibold lg:mt-12">{track.name}</h1>
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>{track.name}</h1>
 
-        <div>
+        <div className="mt-8">
           <Credit song={track} />
         </div>
 
-        <section>
-          <h2 className="sticky top-0 mt-4 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
+        <section className="mt-4">
+          <h2
+            className={sectionHeading(
+              "sticky top-0 bg-white/90 py-2 lg:top-[var(--header-height)]",
+            )}
+          >
             <span className="flex items-center gap-2">
               <BsPlayBtnFill className="inline-block text-gray-400" />
               <span>ビデオ</span>
@@ -108,13 +113,17 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           </ul>
         </section>
 
-        <section>
-          <div className="sticky top-0 mt-2 bg-white/90 py-2 text-2xl text-gray-800 lg:top-[var(--header-height)]">
+        <section className="mt-2">
+          <h2
+            className={sectionHeading(
+              "sticky top-0 bg-white/90 py-2 lg:top-[var(--header-height)]",
+            )}
+          >
             <span className="flex items-center gap-2">
               <BsMicFill className="inline-block text-gray-400" />
               <span>ライブ</span>
             </span>
-          </div>
+          </h2>
           <ul className="space-y-1">
             {isLoading &&
               [1, 2, 3].map((x) => (

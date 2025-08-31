@@ -6,6 +6,7 @@ import { MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { BarChart } from "~/components/charts/BarChart";
+import { pageBox, pageHeading } from "~/components/styles";
 import { importAllEventModules } from "~/features/events/eventModule";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -45,12 +46,10 @@ export default function Component() {
         />
       </div>
 
-      <section className="px-4 py-8">
-        <h1 className="text-nadeshiko-800 my-2 mb-8 text-3xl font-semibold lg:mt-6">
-          都道府県別ライブ開催数
-        </h1>
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>都道府県別ライブ開催数</h1>
 
-        <p className="text-sm">
+        <p className="mt-8 text-sm">
           各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。
         </p>
         <p className="text-sm">

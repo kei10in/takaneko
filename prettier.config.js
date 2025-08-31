@@ -6,6 +6,8 @@ const config = {
   endOfLine: "auto",
   plugins: ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
   printWidth: 100,
+
+  tailwindFunctions: ["clsx"],
 };
 
 export default config;

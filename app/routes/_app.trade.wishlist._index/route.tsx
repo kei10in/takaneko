@@ -2,6 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
   otherTakanekoRandomGoods,
@@ -89,9 +90,9 @@ export default function Index() {
 
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
-      <section className="px-4 py-8">
-        <h1 className="my-4 flex items-center gap-3 text-3xl font-semibold text-gray-600">
-          <BsCardChecklist className="text-nadeshiko-900 inline-block" />
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading("flex items-center gap-3")}>
+          <BsCardChecklist className="inline-block" />
           <span>欲しいやつ</span>
         </h1>
         <div className="flex justify-end">
@@ -160,7 +161,7 @@ export default function Index() {
           </Popover>
         </div>
         <section className="my-12">
-          <h2 className="text-2xl font-semibold text-gray-600">
+          <h2 className={sectionHeading()}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> 生写真
           </h2>
           {photoWants.map(({ productImage, tradingItemDetails }) => (
@@ -173,7 +174,7 @@ export default function Index() {
         </section>
 
         <section className="my-12">
-          <h2 className="text-2xl font-semibold text-gray-600">
+          <h2 className={sectionHeading()}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> ミニフォトカード
           </h2>
           {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
@@ -186,7 +187,7 @@ export default function Index() {
         </section>
 
         <section className="my-12">
-          <h2 className="text-2xl font-semibold text-gray-600">
+          <h2 className={sectionHeading()}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> その他
           </h2>
           {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (

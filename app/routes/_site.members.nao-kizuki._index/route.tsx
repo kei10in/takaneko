@@ -1,5 +1,6 @@
 import { Link, MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
+import { sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { NaoKizuki } from "../../features/profile/members";
 
@@ -18,7 +19,7 @@ export default function Index() {
     <div className="container mx-auto">
       <MemberProfile profile={NaoKizuki} />
       <section className="mt-12 mb-20 px-4">
-        <h2 className="mb-4 text-center text-3xl font-bold text-gray-400">Link</h2>
+        <h2 className={sectionHeading("mb-4 text-center")}>Link</h2>
         <div className="text-center">
           <Link to="https://kizukinao.my.canva.site/" target="_blank" rel="noopener noreferrer">
             城月菜央ウェブサイト

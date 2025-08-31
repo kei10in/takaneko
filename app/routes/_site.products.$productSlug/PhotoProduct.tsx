@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { pageColumnBox, pageHeading } from "~/components/styles";
 import { RandomGoods } from "~/features/products/product";
 
 interface Props {
@@ -20,8 +21,8 @@ export function PhotoProduct(props: Props) {
         </div>
       </div>
 
-      <section className="p-4">
-        <h1 className="text-nadeshiko-800 my-2 text-3xl font-semibold lg:mt-12">{product.name}</h1>
+      <section className={pageColumnBox("px-4")}>
+        <h1 className={pageHeading()}>{product.name}</h1>
 
         <dl className="mt-8 grid grid-cols-3 gap-2">
           <dt className="text-gray-400">発売年</dt>

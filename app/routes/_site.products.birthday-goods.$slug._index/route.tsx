@@ -1,6 +1,7 @@
 import { MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { Markdown } from "~/components/Markdown";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
@@ -35,15 +36,15 @@ export default function Index() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <section className="pt-8 pb-12">
-        <h1 className="my-4 px-4 text-3xl font-semibold text-gray-600">{collection.name}</h1>
+      <section className={pageBox()}>
+        <h1 className={pageHeading("px-4")}>{collection.name}</h1>
 
         <div className="mt-8">
           <ImageSlide2 images={images.map((img) => ({ ...img, alt: collection.name }))} />
         </div>
 
         <section className="mt-12 px-4">
-          <h2 className="text-2xl font-semibold text-gray-500">ラインナップ</h2>
+          <h2 className={sectionHeading()}>ラインナップ</h2>
           <ul className="mt-8 space-y-8">
             {collection.lineup.map((item, i) => {
               return (

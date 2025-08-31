@@ -1,4 +1,20 @@
-import { clsx } from "clsx";
+import { ClassValue, clsx } from "clsx";
+
+export const pageBox = (...args: ClassValue[]) => {
+  return clsx("py-12", ...args);
+};
+
+export const pageColumnBox = (...args: ClassValue[]) => {
+  return clsx("py-8", ...args);
+};
+
+export const pageHeading = (...args: ClassValue[]) => {
+  return clsx("text-nadeshiko-800 text-3xl font-semibold", ...args);
+};
+
+export const sectionHeading = (...args: ClassValue[]) => {
+  return clsx("text-2xl text-gray-600", ...args);
+};
 
 export const dialogBackdropStyle = () => {
   return clsx(

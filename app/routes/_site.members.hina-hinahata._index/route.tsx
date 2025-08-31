@@ -1,6 +1,7 @@
 import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { MemberProfile } from "~/components/MemberProfile";
+import { sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { HinaHinahata } from "../../features/profile/members";
 
@@ -19,7 +20,7 @@ export default function Index() {
     <div className="container mx-auto">
       <MemberProfile profile={HinaHinahata}>
         <section className="mt-12 px-4">
-          <h2 className="mb-4 text-center text-3xl font-bold text-gray-400">Link</h2>
+          <h2 className={sectionHeading("mb-4 text-center")}>Link</h2>
           <div>
             <LinkCard to="https://lit.link/hinahinahata" />
           </div>

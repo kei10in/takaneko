@@ -1,5 +1,6 @@
 import { Link, MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { LiveGoodsCollection } from "~/features/products/product";
@@ -33,8 +34,8 @@ export default function Index() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">{live.name}</h1>
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>{live.name}</h1>
 
         <div className="mt-8">
           <ImageSlide2 images={images.map((img) => ({ ...img, alt: live.name }))} />
@@ -43,7 +44,7 @@ export default function Index() {
         <div className="mt-12">
           {live.goods.map((goods) => (
             <section key={goods.type} className="my-4">
-              <h2 className="text-xl leading-tight font-semibold text-gray-500">{goods.type}</h2>
+              <h2 className={sectionHeading()}>{goods.type}</h2>
 
               <ul className="mt-4 list-outside list-disc pl-6 marker:text-gray-300">
                 {goods.lineup.map((item) => (

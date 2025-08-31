@@ -1,5 +1,6 @@
 import { MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 
@@ -29,31 +30,27 @@ export default function Index() {
 
   return (
     <div className="container mx-auto max-w-3xl">
-      <section className="px-4 py-8">
-        <section className="text-gray-700">
-          <h2 className="center my-4 text-3xl font-semibold text-gray-600">
-            たかねこの RSS フィード
-          </h2>
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>たかねこの RSS フィード</h1>
 
-          <p>
-            高嶺のなでしこ公式サイトの RSS フィードです。ニュースとスケジュールの 2
-            つのフィードがあります。
-          </p>
+        <p className="mt-8">
+          高嶺のなでしこ公式サイトの RSS フィードです。ニュースとスケジュールの 2
+          つのフィードがあります。
+        </p>
 
-          <div className="mt-4 space-y-4">
-            {feeds.map((feed) => (
-              <div key={feed.url} className="">
-                <h3>{feed.name}</h3>
-                <SharableUrl
-                  className="mt-2"
-                  url={feed.url}
-                  shareButton={showShareButton}
-                  title={feed.name}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+        <div className="mt-4 space-y-4">
+          {feeds.map((feed) => (
+            <div key={feed.url} className="">
+              <h3>{feed.name}</h3>
+              <SharableUrl
+                className="mt-2"
+                url={feed.url}
+                shareButton={showShareButton}
+                title={feed.name}
+              />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

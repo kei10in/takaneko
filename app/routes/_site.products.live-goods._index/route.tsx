@@ -1,5 +1,6 @@
 import { Link, MetaFunction } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
+import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { LiveGoods } from "~/features/products/liveGoods";
 
@@ -17,10 +18,10 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto text-gray-600">
-      <section className="px-4 py-8">
-        <h1 className="my-4 text-3xl font-semibold text-gray-600">ライブ グッズ</h1>
+      <section className={pageBox("px-4")}>
+        <h1 className={pageHeading()}>ライブ グッズ</h1>
 
-        <div className="space-y-8">
+        <div className="mt-8 space-y-8">
           {LiveGoods.map((live) => {
             return (
               <section key={live.slug}>

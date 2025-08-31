@@ -1,6 +1,7 @@
 import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link, MetaFunction } from "react-router";
+import { pageColumnBox, pageHeading } from "~/components/styles";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { SITE_TITLE } from "~/constants";
 
@@ -51,8 +52,8 @@ export default function Index() {
         </div>
       </div>
 
-      <section className="p-4">
-        <h1 className="text-nadeshiko-800 my-2 text-3xl font-semibold lg:mt-12">{name}</h1>
+      <section className={pageColumnBox("px-4")}>
+        <h1 className={pageHeading()}>{name}</h1>
 
         <div className="flex gap-4 text-gray-500">
           <p>{kana}</p>
