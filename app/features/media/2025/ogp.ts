@@ -2,6 +2,19 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
+    publishedAt: "2025-08-31",
+    category: "article",
+    presents: ["城月菜央", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/766262",
+    publishedAt: "2025-08-30",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/1962440496497737855",
+  },
+  {
     mediaUrl: "https://thetv.jp/news/detail/1289131/",
     publishedAt: "2025-08-28",
     category: "article",

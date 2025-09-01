@@ -2,6 +2,42 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "dmYhpOLT7hg",
+    title:
+      "【ファンミ独占密着】高嶺のなでしこ3周年“9人で立つ大舞台”籾山ひめり「私たちの覚悟を」ファンへのメッセージほぼノーカット＆浴衣で『可愛くてごめん』披露！新曲リハ映像＆ケータリング食リポも",
+    authorName: "めざましmedia",
+    publishedAt: "2025-09-01",
+    mediaUrl: "https://youtu.be/dmYhpOLT7hg",
+    imageUrl: "https://i.ytimg.com/vi/dmYhpOLT7hg/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
+    title:
+      "幕張メッセイベントホールでの3周年ライブを控える「高嶺のなでしこ」に直撃！　籾山ひめりの母性が爆発!? - エンタメ - ニュース",
+    authorName: "週プレNEWS［週刊プレイボーイのニュースサイト］",
+    publishedAt: "2025-08-31",
+    mediaUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
+    imageUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/images/Takanenonadeshiko01.jpg",
+    category: "article",
+    presents: ["城月菜央", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/766262",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第3回『ザ・ウォッチャーズ』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-08-30",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/766262",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/08/766262_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "ogp",
     key: "https://thetv.jp/news/detail/1289131/",
     title:
