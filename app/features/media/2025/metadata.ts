@@ -26,6 +26,18 @@ export const metadata2025: MediaDetails[] = [
     presents: ["城月菜央", "日向端ひな", "籾山ひめり"],
   },
   {
+    kind: "youtube",
+    key: "941-Y6Kf1vI",
+    title:
+      "【総勢268人のアイドルが出演】TIF15年目なので”15秒”でお題に答えてもらいました！一発ギャグ・もしもアイドルじゃなかったら？・アイドル界でNo.1なこと・推しへの愛♥",
+    authorName: "めざましmedia",
+    publishedAt: "2025-08-30",
+    mediaUrl: "https://youtu.be/941-Y6Kf1vI",
+    imageUrl: "https://i.ytimg.com/vi/941-Y6Kf1vI/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
     kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/766262",
     title:
