@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const AWonderfulEncounter_アクリルキーホルダー: RandomGoods = {
+  id: "A Wonderful Encounter FC抽選会 メンバー個別 繋がるアクリルキーホルダー",
+  slug: "アクリルキーホルダー「A Wonderful Encounter FC抽選会」",
+  name: "A Wonderful Encounter FC抽選会 メンバー個別 繋がるアクリルキーホルダー",
+  year: 2025,
+  series: "A Wonderful Encounter FC抽選会",
+  category: "アクリルキーホルダー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-09-07_メンバー個別 繋がるアクリルキーホルダー.jpg",
+  width: 1166,
+  height: 467,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 135, y: 5, width: 230, height: 256 },
+    { id: 2, x: 366, y: 5, width: 230, height: 256 },
+    { id: 3, x: 601, y: 12, width: 230, height: 256 },
+    { id: 4, x: 838, y: 12, width: 230, height: 256 },
+    { id: 5, x: 13, y: 266, width: 230, height: 256 },
+    { id: 6, x: 248, y: 268, width: 230, height: 256 },
+    { id: 7, x: 483, y: 267, width: 230, height: 256 },
+    { id: 8, x: 718, y: 268, width: 230, height: 256 },
+    { id: 9, x: 953, y: 266, width: 230, height: 256 },
+  ],
+};

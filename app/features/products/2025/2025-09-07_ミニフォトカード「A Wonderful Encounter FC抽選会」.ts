@@ -1,0 +1,36 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const AWonderfulEncounter_ミニフォトカード: RandomGoods = {
+  id: "A Wonderful Encounter FC抽選会 メンバー個別デザイン ミニフォトカード",
+  slug: "ミニフォトカード「A Wonderful Encounter FC抽選会」",
+  name: "A Wonderful Encounter FC抽選会 メンバー個別デザイン ミニフォトカード",
+  year: 2025,
+  series: "A Wonderful Encounter FC抽選会",
+  category: "ミニフォトカード",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-09-07_メンバー個別デザイン ミニフォトカード.webp",
+  width: 1200,
+  height: 675,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 161, y: 1, width: 214, height: 327 },
+    { id: 2, x: 383, y: 1, width: 214, height: 327 },
+    { id: 3, x: 605, y: 1, width: 214, height: 327 },
+    { id: 4, x: 826, y: 1, width: 205, height: 327 },
+    { id: 5, x: 46, y: 346, width: 214, height: 327 },
+    { id: 6, x: 271, y: 346, width: 214, height: 327 },
+    { id: 7, x: 493, y: 346, width: 209, height: 327 },
+    { id: 8, x: 710, y: 346, width: 214, height: 327 },
+    { id: 9, x: 930, y: 346, width: 214, height: 327 },
+  ],
+};

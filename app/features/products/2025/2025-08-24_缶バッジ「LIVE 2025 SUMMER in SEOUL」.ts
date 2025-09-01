@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const Live2025SummerInSeoul_缶バッジ: RandomGoods = {
+  id: "ランダム缶バッジ「LIVE 2025 SUMMER in SEOUL」",
+  slug: "缶バッジ「LIVE 2025 SUMMER in SEOUL」",
+  name: "ランダム缶バッジ「LIVE 2025 SUMMER in SEOUL」ver.",
+  year: 2025,
+  series: "LIVE 2025 SUMMER in SEOUL",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-08-24_缶バッジ「LIVE 2025 SUMMER in SEOUL」.webp",
+  width: 1314,
+  height: 1264,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 71, y: 53, width: 392, height: 392 },
+    { id: 2, x: 467, y: 53, width: 392, height: 392 },
+    { id: 3, x: 866, y: 53, width: 392, height: 392 },
+    { id: 4, x: 71, y: 428, width: 392, height: 392 },
+    { id: 5, x: 467, y: 428, width: 392, height: 392 },
+    { id: 6, x: 866, y: 428, width: 392, height: 392 },
+    { id: 7, x: 71, y: 811, width: 392, height: 392 },
+    { id: 8, x: 467, y: 811, width: 392, height: 392 },
+    { id: 9, x: 866, y: 811, width: 392, height: 392 },
+  ],
+};

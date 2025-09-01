@@ -119,6 +119,9 @@ import { 超NATSUZOME2025限定カード } from "./2025/2025-07-06_超NATSUZOME2
 import { お守りアクキー } from "./2025/2025-08-07_お守りアクキー";
 import { _2025浴衣_ミニフォト } from "./2025/2025-08-07_ミニフォトカード「2025 浴衣」";
 import { _2025浴衣_生写真 } from "./2025/2025-08-07_生写真「2025 浴衣」";
+import { Live2025SummerInSeoul_缶バッジ } from "./2025/2025-08-24_缶バッジ「LIVE 2025 SUMMER in SEOUL」";
+import { AWonderfulEncounter_アクリルキーホルダー } from "./2025/2025-09-07_アクリルキーホルダー「A Wonderful Encounter FC抽選会」";
+import { AWonderfulEncounter_ミニフォトカード } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter FC抽選会」";
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
@@ -130,6 +133,9 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  AWonderfulEncounter_アクリルキーホルダー,
+  AWonderfulEncounter_ミニフォトカード,
+  Live2025SummerInSeoul_缶バッジ,
   _2025浴衣_生写真,
   _2025浴衣_ミニフォト,
   お守りアクキー,
