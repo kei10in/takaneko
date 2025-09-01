@@ -25,6 +25,10 @@ export const 革命の女王: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "tgtkGQM_yHU",
     },
+    {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 日向端ひな ver ",
+      videoId: "https://www.youtube.com/watch?v=EYgxdF_Wkkw",
+    },
   ],
   linkcore: "https://linkco.re/SMRG5Z34",
 };

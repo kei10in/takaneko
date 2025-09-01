@@ -22,6 +22,10 @@ export const 乙女どもよ: SongMetaDescriptor = {
       videoId: "JAA4CaJdXc8",
     },
     {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 葉月紗蘭 ver",
+      videoId: "https://www.youtube.com/watch?v=gqZcYKVXK1Q",
+    },
+    {
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=FqCw7gCTZQs",
     },

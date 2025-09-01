@@ -22,6 +22,10 @@ export const 推しの魔法: SongMetaDescriptor = {
       videoId: "pDC1ZgUDLZQ",
     },
     {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 城月菜央 ver",
+      videoId: "https://www.youtube.com/watch?v=uLQOrng_d_o",
+    },
+    {
       text: "LIP×LIP",
       videoId: "https://www.youtube.com/watch?v=lP2gYetRFIo",
     },
