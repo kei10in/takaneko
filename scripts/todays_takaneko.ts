@@ -1,37 +1,25 @@
 import { glob } from "glob";
-import Handlebars from "handlebars";
 import { register } from "node:module";
-import { dedent } from "ts-dedent";
-import { eventTypeToEmoji } from "~/features/events/EventType";
-import { compareEventMeta, EventMeta, validateEventMeta } from "~/features/events/eventMeta";
-import { displayDate } from "~/utils/dateDisplay";
+import { createAnnouncePost } from "scripts/lib/socialMedia";
+import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 register("@mdx-js/node-loader", import.meta.url);
 
-const template = Handlebars.compile(dedent`
-  {{date}}の #たかねこの予定
-
-  {{#each items}}
-  {{this}}
-  {{/each}}
-
-  👇詳しくはこちら👇
-  https://takanekofan.app/calendar/{{year}}/{{month}}/{{day}}
-`);
-
 export const main = async () => {
   const url = generateUrl();
-  const body = await createRequestBody();
-  if (body == undefined) {
+  const bodies = await createRequestBodies();
+  if (bodies.length == 0) {
     return;
   }
 
-  await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body,
-  });
+  for (const body of bodies) {
+    await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+  }
 };
 
 const generateUrl = () => {
@@ -39,26 +27,15 @@ const generateUrl = () => {
   return `https://maker.ifttt.com/trigger/todays_takaneko/with/key/${iftttWebhookKey}`;
 };
 
-const createRequestBody = async () => {
+const createRequestBodies = async () => {
   const today = NaiveDate.todayInJapan();
-  const events = (await loadEventMetaInDate(today)).filter((e) => e.status !== "CANCELED");
-  if (events.length === 0) {
-    return undefined;
-  }
+  const events = await loadEventMetaInDate(today);
 
-  events.sort(compareEventMeta);
+  const posts = await createAnnouncePost(events, today);
 
-  const items = events.map((event) => `${eventTypeToEmoji(event.category)}${event.summary}`);
+  const bodies = posts.map((post) => ({ value1: post }));
 
-  const date = displayDate(today);
-  const year = today.year.toString().padStart(4, "0");
-  const month = today.month.toString().padStart(2, "0");
-  const day = today.day.toString().padStart(2, "0");
-  const content = template({ date, items, year, month, day });
-
-  const body = JSON.stringify({ value1: content });
-
-  return body;
+  return bodies;
 };
 
 const loadEventMetaInDate = async (date: NaiveDate): Promise<EventMeta[]> => {
