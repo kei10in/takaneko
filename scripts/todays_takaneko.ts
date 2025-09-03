@@ -10,10 +10,12 @@ export const main = async () => {
   const url = generateUrl();
   const bodies = await createRequestBodies();
   if (bodies.length == 0) {
+    console.log("No events today");
     return;
   }
 
   for (const body of bodies) {
+    console.log("Post announcement:", { body });
     await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -56,7 +58,9 @@ const findEventFiles = async (date: NaiveDate) => {
   const month = date.month.toString().padStart(2, "0");
 
   const scriptDir = import.meta.dirname;
-  const files = await glob(`${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.mdx`);
+  const files = await glob(
+    `${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.{mdx,tsx}`,
+  );
 
   return files;
 };
