@@ -25,5 +25,9 @@ export const アイドル衣装: SongMetaDescriptor = {
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=Zy8zFOHL8_s",
     },
+    {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -)",
+      videoId: "https://www.youtube.com/watch?v=srRzKsh_lMY",
+    },
   ],
 };
