@@ -22,6 +22,10 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
       videoId: "OZycs0TBwKY",
     },
     {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 橋本桃呼 ver",
+      videoId: "https://www.youtube.com/watch?v=Zwqu7594BEU",
+    },
+    {
       text: "めいちゃん",
       videoId: "https://www.youtube.com/watch?v=SMEyLYGGLKc",
     },
