@@ -17,6 +17,7 @@ import {
   BsPencilSquare,
   BsTrashFill,
 } from "react-icons/bs";
+import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
 import { useTradeEditorPanelStore } from "~/features/trade/store";
 import {
@@ -27,9 +28,11 @@ import {
   TradeStatus,
 } from "~/features/trade/TradeStatus";
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
+import { ProductItem } from "~/routes/_app.trade/ProductItem";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { CopyButton } from "../CopyButton";
-import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle } from "../styles";
+import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
 import { XMarkButton } from "../XMarkButton";
 import { EmojiPanel } from "./EmojiPanel";
 import { HtmlTradeImage } from "./HtmlTradeImage";
@@ -41,6 +44,7 @@ interface Props {
   productImage: RandomGoods;
   tradeDescriptions: Record<number, TradeDescription>;
   width: number;
+  relativeItems?: RandomGoods[];
   onChangeTradeDescription?: (photoId: number, status: TradeStatus) => void;
   onClearTradeDescriptions?: (id: string) => void;
 }
@@ -50,6 +54,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
     productImage,
     tradeDescriptions,
     width,
+    relativeItems = [],
     onClearTradeDescriptions,
     onChangeTradeDescription,
   } = props;
@@ -177,6 +182,35 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           </section>
         </div>
       </div>
+
+      {relativeItems.length > 0 && (
+        <section className="mx-auto max-w-lg">
+          <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
+          <div className="mt-4 px-5">
+            <ul className="flex flex-wrap justify-center gap-3 pb-1.5">
+              {relativeItems.map((photo) => (
+                <li key={photo.slug}>
+                  <NavLink to={`/trade/${photo.slug}`}>
+                    {({ isActive }) => {
+                      const thumbs = thumbnailSrcSet(photo.url);
+                      return (
+                        <ProductItem
+                          image={thumbs.src}
+                          imageSet={thumbs.srcset}
+                          year={photo.year}
+                          content={photo.series}
+                          description={photo.category}
+                          selected={isActive}
+                        />
+                      );
+                    }}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>{" "}
+          </div>
+        </section>
+      )}
 
       {/* パネル */}
       <div className="sticky h-14 lg:h-16" style={{ bottom: 0 }}>
@@ -387,7 +421,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 };
 
 const toolButton = () =>
-  clsx("h-10 w-10 group rounded-xl p-1 transition-colors data-checked:bg-gray-200");
+  clsx("group h-10 w-10 rounded-xl p-1 transition-colors data-checked:bg-gray-200");
 const stamp = () => clsx("opacity-50 transition-opacity group-data-checked:opacity-100");
 const toolIcon = () =>
   clsx("h-6 w-6 text-gray-400 transition-colors group-data-checked:text-gray-600");

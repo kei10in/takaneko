@@ -6,6 +6,7 @@ import {
 } from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { relativeProductImages } from "~/features/products/relativeProductImages";
 import { useTradeStore } from "~/features/trade/store";
 import { TradeDescription } from "~/features/trade/TradeStatus";
 import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData";
@@ -61,11 +62,14 @@ export default function TradeImageEditor() {
   const updateTradeDescriptions = useTradeStore((state) => state.updateTradeDescriptions);
   const clearTradeDescriptions = useTradeStore((state) => state.clearTradeDescriptions);
 
+  const relativeItems = relativeProductImages(selectedProduct);
+
   return (
     <div className="overflow-x-clip">
       <TradeEditor2
         productImage={selectedProduct}
         tradeDescriptions={tradeDescriptionsInLineup}
+        relativeItems={relativeItems}
         width={360}
         onChangeTradeDescription={(photoId, status) =>
           updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
