@@ -30,6 +30,10 @@ export const 決戦スピリット: SongMetaDescriptor = {
       videoId: "QXfgneto5wM",
     },
     {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 籾山ひめり ver",
+      videoId: "https://www.youtube.com/watch?v=MX-zMJE4Tug",
+    },
+    {
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=ErqUUYWfOBo",
     },
