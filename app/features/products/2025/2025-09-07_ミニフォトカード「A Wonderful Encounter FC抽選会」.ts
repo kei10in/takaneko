@@ -1,6 +1,6 @@
 import { RandomGoods, TradeTextType } from "~/features/products/product";
 
-export const AWonderfulEncounter_ミニフォトカード: RandomGoods = {
+export const AWonderfulEncounterFC抽選会_ミニフォト: RandomGoods = {
   id: "A Wonderful Encounter FC抽選会 メンバー個別デザイン ミニフォトカード",
   slug: "ミニフォトカード「A Wonderful Encounter FC抽選会」",
   name: "A Wonderful Encounter FC抽選会 メンバー個別デザイン ミニフォトカード",

@@ -1,5 +1,13 @@
 # リリース ノート
 
+## 2025-09-04
+
+- トレード画像をつくるやつに、A Wonderful Encounter のグッズを追加しました。
+  - 生写真「A Wonderful Encounter」
+  - ミニフォトカード「A Wonderful Encounter」
+  - ランダムにゃでしこドットステッカー
+  - ランダム缶バッジ「A Wonderful Encounter」ver.
+
 ## 2025-09-01
 
 - トレード画像をつくるやつに次のグッズを追加しました。

@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const AWonderfulEncounter_缶バッジ: RandomGoods = {
+  id: "ランダム缶バッジ「A Wonderful Encounter」",
+  slug: "缶バッジ「A Wonderful Encounter」",
+  name: "ランダム缶バッジ「A Wonderful Encounter」ver.",
+  year: 2025,
+  series: "A Wonderful Encounter",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-09-07_缶バッジ「A Wonderful Encounter」.webp",
+  width: 235,
+  height: 235,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 14, y: 14, width: 68, height: 68 },
+    { id: 2, x: 83, y: 14, width: 68, height: 68 },
+    { id: 3, x: 153, y: 14, width: 68, height: 68 },
+    { id: 4, x: 14, y: 83, width: 68, height: 68 },
+    { id: 5, x: 83, y: 83, width: 68, height: 68 },
+    { id: 6, x: 153, y: 83, width: 68, height: 68 },
+    { id: 7, x: 14, y: 152, width: 68, height: 68 },
+    { id: 8, x: 83, y: 152, width: 68, height: 68 },
+    { id: 9, x: 153, y: 152, width: 68, height: 68 },
+  ],
+};

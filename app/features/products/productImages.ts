@@ -120,8 +120,12 @@ import { お守りアクキー } from "./2025/2025-08-07_お守りアクキー";
 import { _2025浴衣_ミニフォト } from "./2025/2025-08-07_ミニフォトカード「2025 浴衣」";
 import { _2025浴衣_生写真 } from "./2025/2025-08-07_生写真「2025 浴衣」";
 import { Live2025SummerInSeoul_缶バッジ } from "./2025/2025-08-24_缶バッジ「LIVE 2025 SUMMER in SEOUL」";
-import { AWonderfulEncounter_アクリルキーホルダー } from "./2025/2025-09-07_アクリルキーホルダー「A Wonderful Encounter FC抽選会」";
-import { AWonderfulEncounter_ミニフォトカード } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter FC抽選会」";
+import { AWonderfulEncounterFC抽選会_アクリルキーホルダー } from "./2025/2025-09-07_アクリルキーホルダー「A Wonderful Encounter FC抽選会」";
+import { AWonderfulEncounter_にゃでしこステッカー } from "./2025/2025-09-07_ステッカー「A Wonderful Encounter」";
+import { AWonderfulEncounterFC抽選会_ミニフォト } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter FC抽選会」";
+import { AWonderfulEncounter_ミニフォト } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」";
+import { AWonderfulEncounter_生写真 } from "./2025/2025-09-07_生写真「A Wonderful Encounter」";
+import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ「A Wonderful Encounter」";
 import { RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
@@ -133,8 +137,12 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
-  AWonderfulEncounter_アクリルキーホルダー,
-  AWonderfulEncounter_ミニフォトカード,
+  AWonderfulEncounter_生写真,
+  AWonderfulEncounter_ミニフォト,
+  AWonderfulEncounter_缶バッジ,
+  AWonderfulEncounter_にゃでしこステッカー,
+  AWonderfulEncounterFC抽選会_アクリルキーホルダー,
+  AWonderfulEncounterFC抽選会_ミニフォト,
   Live2025SummerInSeoul_缶バッジ,
   _2025浴衣_生写真,
   _2025浴衣_ミニフォト,

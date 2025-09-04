@@ -1,6 +1,6 @@
 import { RandomGoods, TradeTextType } from "~/features/products/product";
 
-export const AWonderfulEncounter_アクリルキーホルダー: RandomGoods = {
+export const AWonderfulEncounterFC抽選会_アクリルキーホルダー: RandomGoods = {
   id: "A Wonderful Encounter FC抽選会 メンバー個別 繋がるアクリルキーホルダー",
   slug: "アクリルキーホルダー「A Wonderful Encounter FC抽選会」",
   name: "A Wonderful Encounter FC抽選会 メンバー個別 繋がるアクリルキーホルダー",
