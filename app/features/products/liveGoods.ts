@@ -3,6 +3,7 @@ import {
   _1周年記念ライブ美しく生きろ,
   _1周年記念ライブ美しく生きろ大阪公演,
 } from "./lives/1周年記念ライブ 〜美しく生きろ〜";
+import { _3rd_ANNIVERSARY_CONCERT_AWonderfulEncounter } from "./lives/2025-09-07_3rd ANNIVERSARY CONCERT「A Wonderful Encounter」";
 import {
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる,
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れるTourFinal,
@@ -29,6 +30,7 @@ import { 東名阪ツアー2025_SpringRide } from "./lives/東名阪ツアー202
 import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
+  _3rd_ANNIVERSARY_CONCERT_AWonderfulEncounter,
   東名阪ツアー2025_SpringRide,
   たかねこフェスvol4_出張編,
   CuteForLife,
