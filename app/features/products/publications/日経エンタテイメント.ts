@@ -9,11 +9,19 @@ export const 日経エンタテインメント_2025年10月号: Publication = {
   listPrice: 809,
   priceWithTax: 890,
   code: [],
-  url: "", // "https://project.nikkeibp.co.jp/ent/monthly/2025/10/",
+  url: "https://project.nikkeibp.co.jp/ent/monthly/2025/10/",
   coverImages: [
     {
       path: "/publications/2025/2025-09-04_日経エンタテインメント！_2025年10月号.jpg",
       ref: "https://www.amazon.co.jp/dp/B0FKG8HRG1",
+    },
+    {
+      path: "/publications/2025/2025-09-04_日経エンタテインメント！_2025年10月号_1.jpg",
+      ref: "https://x.com/nikkei_ent/status/1963433118209323230",
+    },
+    {
+      path: "/publications/2025/2025-09-04_日経エンタテインメント！_2025年10月号_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1963444407979348348",
     },
   ],
   featuredMembers: [
@@ -27,7 +35,7 @@ export const 日経エンタテインメント_2025年10月号: Publication = {
     "松本ももな",
     "籾山ひめり",
   ],
-  officialTwitter: undefined,
+  officialTwitter: "https://x.com/takanenofficial/status/1963444407979348348",
 };
 
 export const 日経エンタテインメント_2024年2月号: Publication = {
