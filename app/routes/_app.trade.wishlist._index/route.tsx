@@ -18,6 +18,7 @@ import {
 } from "~/features/tradeSummaries/tradingItemDetails";
 import {
   useMiniPhotoCardWishListImages,
+  useOtherGoodsWishListImages,
   usePhotoWishListImages,
 } from "../../components/TradeListImage/wishListImages";
 import { AllMembers, MemberDescription } from "../../features/profile/members";
@@ -100,6 +101,7 @@ export default function Index() {
 
   const imagesForPhoto = usePhotoWishListImages(photoWants);
   const imagesForMiniPhoto = useMiniPhotoCardWishListImages(miniPhotoCardWants);
+  const imagesForOtherGoods = useOtherGoodsWishListImages(otherGoodsWants);
 
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
@@ -215,6 +217,7 @@ export default function Index() {
           <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> その他
           </h2>
+
           <div className="px-4">
             {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
               <WishItemList
@@ -224,6 +227,11 @@ export default function Index() {
               />
             ))}
           </div>
+
+          <OrganizedTradeImages
+            title="その他のランダムグッズのまとめ"
+            images={imagesForOtherGoods}
+          />
         </section>
       </section>
     </div>

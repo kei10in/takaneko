@@ -33,8 +33,8 @@ export const usePhotoWishListImages = (
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`photo-wish-list`, items], async ([_, items]) => {
-    return await drawWithList(items, "ほしい生写真");
+  const { data, isLoading } = useSWR([`/wishlist/photos`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい 生写真");
   });
 
   useAutoRevokeImageSource(data);
@@ -59,8 +59,34 @@ export const useMiniPhotoCardWishListImages = (
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`mini-photo-wish-list`, items], async ([_, items]) => {
-    return await drawWithList(items, "ほしいミニフォトカード");
+  const { data, isLoading } = useSWR([`/wishlist/mini-photo-cards`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい ミニフォトカード");
+  });
+
+  useAutoRevokeImageSource(data);
+
+  if (isLoading || data == undefined) {
+    return Array.from({ length: items.length }, () => undefined);
+  }
+
+  return data;
+};
+
+export const useOtherGoodsWishListImages = (
+  wishList: {
+    productImage: RandomGoods;
+    tradingItemDetails: TradingItemDetail[];
+  }[],
+): (ImageSource | undefined)[] => {
+  const items = useMemo(() => {
+    const xs = wishList.flatMap((x) =>
+      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+    );
+    return ArrayUtils.chunks(xs, 30);
+  }, [wishList]);
+
+  const { data, isLoading } = useSWR([`/wishlist/other-goods`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい その他のランダムグッズ");
   });
 
   useAutoRevokeImageSource(data);

@@ -17,6 +17,7 @@ import {
 } from "~/features/tradeSummaries/tradingItemDetails";
 import {
   useMiniPhotoCardOfferListImages,
+  useOtherGoodsOfferListImages,
   usePhotoOfferListImages,
 } from "../../components/TradeListImage/offerListImages";
 import { AllMembers, MemberDescription } from "../../features/profile/members";
@@ -95,6 +96,7 @@ export default function Index() {
 
   const imagesForPhoto = usePhotoOfferListImages(photoWants);
   const imagesForMiniPhoto = useMiniPhotoCardOfferListImages(miniPhotoCardWants);
+  const imagesForOtherGoods = useOtherGoodsOfferListImages(otherGoodsWants);
 
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
@@ -218,6 +220,11 @@ export default function Index() {
               />
             ))}
           </div>
+
+          <OrganizedTradeImages
+            title="その他のランダムグッズのまとめ"
+            images={imagesForOtherGoods}
+          />
         </section>
       </section>
     </div>
