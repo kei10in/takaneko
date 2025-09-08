@@ -2,7 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
-import { OrganizedTradeImages } from "~/components/OrganizedTradeImages";
+import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
@@ -175,17 +175,28 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> 生写真
           </h2>
 
-          <div className="px-4">
-            {photoWants.map(({ productImage, tradingItemDetails }) => (
-              <TradingItemList
-                key={productImage.slug}
-                productImage={productImage}
-                tradingItemDetails={tradingItemDetails}
-              />
-            ))}
-          </div>
+          {photoWants.length != 0 && (
+            <div className="px-4">
+              {photoWants.map(({ productImage, tradingItemDetails }) => (
+                <TradingItemList
+                  key={productImage.slug}
+                  productImage={productImage}
+                  tradingItemDetails={tradingItemDetails}
+                />
+              ))}
+            </div>
+          )}
 
-          <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
+          {photoWants.length != 0 && (
+            <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
+          )}
+
+          {photoWants.length == 0 && (
+            <div className="mt-2 px-4 text-gray-600">
+              <p className="mx-auto mt-2 w-fit text-4xl">🌸</p>
+              <p className="mx-auto mt-2 w-fit text-sm">譲れるやつがありません</p>
+            </div>
+          )}
         </section>
 
         <section className="my-12">
@@ -193,17 +204,28 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> ミニフォトカード
           </h2>
 
-          <div className="px-4">
-            {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
-              <TradingItemList
-                key={productImage.slug}
-                productImage={productImage}
-                tradingItemDetails={tradingItemDetails}
-              />
-            ))}
-          </div>
+          {miniPhotoCardWants.length != 0 && (
+            <div className="px-4">
+              {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
+                <TradingItemList
+                  key={productImage.slug}
+                  productImage={productImage}
+                  tradingItemDetails={tradingItemDetails}
+                />
+              ))}
+            </div>
+          )}
 
-          <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
+          {miniPhotoCardWants.length != 0 && (
+            <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
+          )}
+
+          {miniPhotoCardWants.length == 0 && (
+            <div className="mt-2 px-4 text-gray-600">
+              <p className="mx-auto mt-2 w-fit text-4xl">🌸</p>
+              <p className="mx-auto mt-2 w-fit text-sm">譲れるやつがありません</p>
+            </div>
+          )}
         </section>
 
         <section className="my-12">
@@ -211,20 +233,31 @@ export default function Index() {
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> その他
           </h2>
 
-          <div className="px-4">
-            {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
-              <TradingItemList
-                key={productImage.slug}
-                productImage={productImage}
-                tradingItemDetails={tradingItemDetails}
-              />
-            ))}
-          </div>
+          {otherGoodsWants.length != 0 && (
+            <div className="px-4">
+              {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
+                <TradingItemList
+                  key={productImage.slug}
+                  productImage={productImage}
+                  tradingItemDetails={tradingItemDetails}
+                />
+              ))}
+            </div>
+          )}
 
-          <OrganizedTradeImages
-            title="その他のランダムグッズのまとめ"
-            images={imagesForOtherGoods}
-          />
+          {otherGoodsWants.length != 0 && (
+            <OrganizedTradeImages
+              title="その他のランダムグッズのまとめ"
+              images={imagesForOtherGoods}
+            />
+          )}
+
+          {otherGoodsWants.length == 0 && (
+            <div className="mt-2 px-4 text-gray-600">
+              <p className="mx-auto mt-2 w-fit text-4xl">🌸</p>
+              <p className="mx-auto mt-2 w-fit text-sm">譲れるやつがありません</p>
+            </div>
+          )}
         </section>
       </section>
     </div>
