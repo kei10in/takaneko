@@ -15,9 +15,12 @@ import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
+import {
+  useMiniPhotoCardOfferListImages,
+  usePhotoOfferListImages,
+} from "../../components/TradeListImage/offerListImages";
 import { AllMembers, MemberDescription } from "../../features/profile/members";
 import { TradingItemList } from "./TradingItemList";
-import { useMiniPhotoCardOfferListImages, usePhotoOfferListImages } from "./hooks";
 
 export const meta: MetaFunction = () => {
   return [

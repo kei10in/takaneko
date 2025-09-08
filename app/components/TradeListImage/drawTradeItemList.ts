@@ -1,13 +1,7 @@
 import Konva from "konva";
+import { ImageSource } from "~/utils/html/types";
 import { loadImage } from "~/utils/loadImage";
-
-export interface PhotoItem {
-  path: string;
-  status: string;
-  name: string;
-  id: number;
-  series: string;
-}
+import { TradeItemRenderProps } from "./TradeItemRenderProps";
 
 interface Rect {
   x: number;
@@ -109,8 +103,8 @@ class ItemRect {
   }
 }
 
-const drawTradeImage = async (
-  items: PhotoItem[],
+const drawTradeItemList = async (
+  items: TradeItemRenderProps[],
   options: {
     bannerTitle: string;
     bannerColor: string;
@@ -270,17 +264,19 @@ const drawTradeImage = async (
         }),
       );
 
-      const icon = new Image();
-      await loadImage(icon, item.status);
-      layer.add(
-        new Konva.Image({
-          image: icon,
-          x: x + r.icon.x,
-          y: y + r.icon.y,
-          width: r.icon.width,
-          height: r.icon.height,
-        }),
-      );
+      if (item.status != undefined) {
+        const icon = new Image();
+        await loadImage(icon, item.status);
+        layer.add(
+          new Konva.Image({
+            image: icon,
+            x: x + r.icon.x,
+            y: y + r.icon.y,
+            width: r.icon.width,
+            height: r.icon.height,
+          }),
+        );
+      }
 
       layer.add(
         new Konva.Text({
@@ -321,20 +317,44 @@ const drawTradeImage = async (
   return (await layer.toBlob({ mimeType: "image/webp", quality: 0.95 })) as Blob;
 };
 
-export const drawWithList = async (items: PhotoItem[], bannerTitle: string): Promise<Blob> => {
-  return await drawTradeImage(items, {
-    bannerTitle,
-    bannerColor: "#fa9dbb",
-    emblemColor: "#ed4f81",
-    backgroundColor: "#fffcfd",
-  });
+export const drawWithList = async (
+  items: TradeItemRenderProps[][],
+  bannerTitle: string,
+): Promise<ImageSource[]> => {
+  return await Promise.all(
+    items.map(async (chunk) => {
+      const blob = await drawTradeItemList(chunk, {
+        bannerTitle,
+        bannerColor: "#fa9dbb",
+        emblemColor: "#ed4f81",
+        backgroundColor: "#fffcfd",
+      });
+
+      return {
+        blob,
+        objectURL: URL.createObjectURL(blob),
+      };
+    }),
+  );
 };
 
-export const drawTradeList = async (items: PhotoItem[], bannerTitle: string): Promise<Blob> => {
-  return await drawTradeImage(items, {
-    bannerTitle,
-    bannerColor: "oklch(21% 0.006 285.885)",
-    emblemColor: "#fa9dbb",
-    backgroundColor: "oklch(96.7% 0.001 286.375)",
-  });
+export const drawOfferList = async (
+  items: TradeItemRenderProps[][],
+  bannerTitle: string,
+): Promise<ImageSource[]> => {
+  return await Promise.all(
+    items.map(async (chunk) => {
+      const blob = await drawTradeItemList(chunk, {
+        bannerTitle,
+        bannerColor: "oklch(21% 0.006 285.885)",
+        emblemColor: "#fa9dbb",
+        backgroundColor: "oklch(96.7% 0.001 286.375)",
+      });
+
+      return {
+        blob,
+        objectURL: URL.createObjectURL(blob),
+      };
+    }),
+  );
 };
