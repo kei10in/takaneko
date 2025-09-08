@@ -1,4 +1,4 @@
-import { Limited } from "../tags";
+import { Limited, Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 病名恋ワズライ: SongMetaDescriptor = {
@@ -11,7 +11,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
-  tags: [Limited],
+  tags: [TakanekoVersion, Repertoire, Limited],
 
   youtube: [
     {

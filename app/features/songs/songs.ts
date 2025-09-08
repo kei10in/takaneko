@@ -49,10 +49,12 @@ import { 小悪魔だってかまわない } from "./2025/小悪魔だってか�
 import { 東京サニーパーティー } from "./2025/東京サニーパーティー";
 import { 東京サマーセッション } from "./2025/東京サマーセッション";
 import { 病名恋ワズライ } from "./2025/病名恋ワズライ";
+import { 花は誓いを忘れない } from "./2025/花は誓いを忘れない";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2025
+  花は誓いを忘れない,
   この世界は嘘でできている,
   ライフクエスト,
   東京サマーセッション,
