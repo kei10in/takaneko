@@ -1,7 +1,9 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { clsx } from "clsx";
+import { useMemo } from "react";
 import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
+import { OrganizedTradeImages } from "~/components/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
@@ -14,6 +16,11 @@ import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
+import {
+  useMiniPhotoCardWishListImages,
+  useOtherGoodsWishListImages,
+  usePhotoWishListImages,
+} from "../../components/TradeListImage/wishListImages";
 import { AllMembers, MemberDescription } from "../../features/profile/members";
 import { WishItemList } from "./WishItemList";
 
@@ -54,22 +61,26 @@ export default function Index() {
     return [{ productImage, tradingItemDetails: wants }];
   });
 
-  const miniPhotoCardWants = miniPhotoCards.flatMap((productImage) => {
-    const tradeDescriptions = allTradeDescriptions[productImage.id];
-    if (tradeDescriptions == undefined) {
-      return [];
-    }
+  const miniPhotoCardWants = useMemo(
+    () =>
+      miniPhotoCards.flatMap((productImage) => {
+        const tradeDescriptions = allTradeDescriptions[productImage.id];
+        if (tradeDescriptions == undefined) {
+          return [];
+        }
 
-    const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
-    const wants = details
-      .filter((i) => i.status.tag === "want")
-      .filter((x) => matchMember(x, selected));
-    if (wants.length === 0) {
-      return [];
-    }
+        const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
+        const wants = details
+          .filter((i) => i.status.tag === "want")
+          .filter((x) => matchMember(x, selected));
+        if (wants.length === 0) {
+          return [];
+        }
 
-    return [{ productImage, tradingItemDetails: wants }];
-  });
+        return [{ productImage, tradingItemDetails: wants }];
+      }),
+    [allTradeDescriptions, miniPhotoCards, selected],
+  );
 
   const otherGoodsWants = otherGoods.flatMap((productImage) => {
     const tradeDescriptions = allTradeDescriptions[productImage.id];
@@ -88,14 +99,19 @@ export default function Index() {
     return [{ productImage, tradingItemDetails: wants }];
   });
 
+  const imagesForPhoto = usePhotoWishListImages(photoWants);
+  const imagesForMiniPhoto = useMiniPhotoCardWishListImages(miniPhotoCardWants);
+  const imagesForOtherGoods = useOtherGoodsWishListImages(otherGoodsWants);
+
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
-      <section className={pageBox("px-4")}>
-        <h1 className={pageHeading("flex items-center gap-3")}>
+      <section className={pageBox()}>
+        <h1 className={pageHeading("flex items-center gap-3 px-4")}>
           <BsCardChecklist className="inline-block" />
           <span>欲しいやつ</span>
         </h1>
-        <div className="flex justify-end">
+
+        <div className="flex justify-end px-4">
           <Popover className="w-28">
             <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
               <div className="mx-auto flex-1 pl-2">メンバー</div>
@@ -160,43 +176,62 @@ export default function Index() {
             </PopoverPanel>
           </Popover>
         </div>
+
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> 生写真
           </h2>
-          {photoWants.map(({ productImage, tradingItemDetails }) => (
-            <WishItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {photoWants.map(({ productImage, tradingItemDetails }) => (
+              <WishItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
         </section>
 
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> ミニフォトカード
           </h2>
-          {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
-            <WishItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
+              <WishItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
         </section>
 
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> その他
           </h2>
-          {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
-            <WishItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
+              <WishItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages
+            title="その他のランダムグッズのまとめ"
+            images={imagesForOtherGoods}
+          />
         </section>
       </section>
     </div>

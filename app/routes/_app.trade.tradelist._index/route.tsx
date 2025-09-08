@@ -2,6 +2,7 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { MetaFunction, useSearchParams } from "react-router";
+import { OrganizedTradeImages } from "~/components/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import {
@@ -14,6 +15,11 @@ import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
+import {
+  useMiniPhotoCardOfferListImages,
+  useOtherGoodsOfferListImages,
+  usePhotoOfferListImages,
+} from "../../components/TradeListImage/offerListImages";
 import { AllMembers, MemberDescription } from "../../features/profile/members";
 import { TradingItemList } from "./TradingItemList";
 
@@ -88,14 +94,18 @@ export default function Index() {
     return [{ productImage, tradingItemDetails: wants }];
   });
 
+  const imagesForPhoto = usePhotoOfferListImages(photoWants);
+  const imagesForMiniPhoto = useMiniPhotoCardOfferListImages(miniPhotoCardWants);
+  const imagesForOtherGoods = useOtherGoodsOfferListImages(otherGoodsWants);
+
   return (
     <div className="mx-auto w-full max-w-lg lg:max-w-3xl">
-      <section className={pageBox("px-4")}>
-        <h1 className={pageHeading("flex items-center gap-3")}>
+      <section className={pageBox()}>
+        <h1 className={pageHeading("flex items-center gap-3 px-4")}>
           <BsGift className="inline-block" />
           <span>譲れるやつ</span>
         </h1>
-        <div className="flex justify-end">
+        <div className="flex justify-end px-4">
           <Popover className="w-28">
             <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
               <div className="mx-auto flex-1 pl-2">メンバー</div>
@@ -161,42 +171,60 @@ export default function Index() {
           </Popover>
         </div>
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> 生写真
           </h2>
-          {photoWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {photoWants.map(({ productImage, tradingItemDetails }) => (
+              <TradingItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
         </section>
 
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> ミニフォトカード
           </h2>
-          {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {miniPhotoCardWants.map(({ productImage, tradingItemDetails }) => (
+              <TradingItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
         </section>
 
         <section className="my-12">
-          <h2 className={sectionHeading()}>
+          <h2 className={sectionHeading("px-4")}>
             <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> その他
           </h2>
-          {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
-            <TradingItemList
-              key={productImage.slug}
-              productImage={productImage}
-              tradingItemDetails={tradingItemDetails}
-            />
-          ))}
+
+          <div className="px-4">
+            {otherGoodsWants.map(({ productImage, tradingItemDetails }) => (
+              <TradingItemList
+                key={productImage.slug}
+                productImage={productImage}
+                tradingItemDetails={tradingItemDetails}
+              />
+            ))}
+          </div>
+
+          <OrganizedTradeImages
+            title="その他のランダムグッズのまとめ"
+            images={imagesForOtherGoods}
+          />
         </section>
       </section>
     </div>

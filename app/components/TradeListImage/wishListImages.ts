@@ -1,0 +1,99 @@
+import { useMemo } from "react";
+import useSWR from "swr";
+import { drawWithList } from "~/components/TradeListImage/drawTradeItemList";
+import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource";
+import { croppedImagePath } from "~/features/products/croppedProductImage";
+import { RandomGoods } from "~/features/products/product";
+import { tradeStateToImageSrc } from "~/features/trade/TradeStatus";
+import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
+import { ArrayUtils } from "~/utils/array";
+import { ImageSource } from "~/utils/html/types";
+import { TradeItemRenderProps } from "./types";
+
+const transformWishToRenderProps = (details: TradingItemDetail): TradeItemRenderProps => {
+  return {
+    path: croppedImagePath(details.product.url, details.position.id),
+    status: tradeStateToImageSrc(details.status),
+    name: details.item.name,
+    id: details.item.id,
+    series: details.product.series,
+  };
+};
+
+export const usePhotoWishListImages = (
+  wishList: {
+    productImage: RandomGoods;
+    tradingItemDetails: TradingItemDetail[];
+  }[],
+): (ImageSource | undefined)[] => {
+  const items = useMemo(() => {
+    const xs = wishList.flatMap((x) =>
+      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+    );
+    return ArrayUtils.chunks(xs, 30);
+  }, [wishList]);
+
+  const { data, isLoading } = useSWR([`/wishlist/photos`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい 生写真");
+  });
+
+  useAutoRevokeImageSource(data);
+
+  if (isLoading || data == undefined) {
+    return Array.from({ length: items.length }, () => undefined);
+  }
+
+  return data;
+};
+
+export const useMiniPhotoCardWishListImages = (
+  wishList: {
+    productImage: RandomGoods;
+    tradingItemDetails: TradingItemDetail[];
+  }[],
+): (ImageSource | undefined)[] => {
+  const items = useMemo(() => {
+    const xs = wishList.flatMap((x) =>
+      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+    );
+    return ArrayUtils.chunks(xs, 30);
+  }, [wishList]);
+
+  const { data, isLoading } = useSWR([`/wishlist/mini-photo-cards`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい ミニフォトカード");
+  });
+
+  useAutoRevokeImageSource(data);
+
+  if (isLoading || data == undefined) {
+    return Array.from({ length: items.length }, () => undefined);
+  }
+
+  return data;
+};
+
+export const useOtherGoodsWishListImages = (
+  wishList: {
+    productImage: RandomGoods;
+    tradingItemDetails: TradingItemDetail[];
+  }[],
+): (ImageSource | undefined)[] => {
+  const items = useMemo(() => {
+    const xs = wishList.flatMap((x) =>
+      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+    );
+    return ArrayUtils.chunks(xs, 30);
+  }, [wishList]);
+
+  const { data, isLoading } = useSWR([`/wishlist/other-goods`, items], async ([_, items]) => {
+    return await drawWithList(items, "ほしい その他のランダムグッズ");
+  });
+
+  useAutoRevokeImageSource(data);
+
+  if (isLoading || data == undefined) {
+    return Array.from({ length: items.length }, () => undefined);
+  }
+
+  return data;
+};
