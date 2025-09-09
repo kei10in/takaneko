@@ -24,7 +24,7 @@ export default function Index() {
               <div className="mt-2 space-y-2">
                 {site.merchandises.map((m) => (
                   <section key={m.name} className="bg-white px-4 py-2 shadow">
-                    <h3 className="text-lg font-semibold">{m.name}</h3>
+                    <h3 className="text-md font-semibold">{m.name}</h3>
                     <div className="text-sm">
                       <p>{m.edition}</p>
                       <p>価格: {m.price} 円</p>
