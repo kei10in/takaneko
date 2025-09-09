@@ -5,7 +5,7 @@ export interface ShopBenefits {
     price: number;
     edition: "スペシャル盤" | "初回限定盤" | "たかねこ盤" | "たかねこセット";
     sku: string;
-    benefits: string[];
+    bonuses: string[];
     reservationStart: string;
     reservationEnd: string;
     url: string;
@@ -21,8 +21,8 @@ export const ECSites: ShopBenefits[] = [
         price: 11000,
         edition: "スペシャル盤",
         sku: "VIZL-2481",
-        benefits: [
-          "メンバー直筆サイン入り着せ替えジャケット（ランダム9種） 1 枚",
+        bonuses: [
+          "メンバー直筆サイン入り着せ替えジャケット（ランダム9種） 4 枚",
           "オリジナルポストカード〈絵柄C〉",
         ],
         reservationStart: "2025-09-07",
