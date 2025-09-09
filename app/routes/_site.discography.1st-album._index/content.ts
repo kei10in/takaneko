@@ -338,7 +338,38 @@ export const ECSites: ShopBenefits[] = [
   },
   {
     shopName: "HMV&BOOKS online",
-    merchandises: [],
+    merchandises: [
+      {
+        name: "見上げるたびに、恋をする。【スペシャル盤】(CD+BOOK)",
+        price: 11000,
+        edition: "スペシャル盤",
+        sku: "VIZL-2481",
+        bonuses: ["オリジナルポストカード〈絵柄B〉"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://www.hmv.co.jp/product/detail/16227377",
+      },
+      {
+        name: "見上げるたびに、恋をする。【初回限定盤】(CD+DVD)",
+        price: 5500,
+        edition: "初回限定盤",
+        sku: "VIZL-2482",
+        bonuses: ["オリジナルポストカード〈絵柄B〉"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://www.hmv.co.jp/product/detail/16227378",
+      },
+      {
+        name: "見上げるたびに、恋をする。【たかねこ盤】",
+        price: 3300,
+        edition: "たかねこ盤",
+        sku: "VICL-66101",
+        bonuses: ["オリジナルポストカード〈絵柄B〉"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://www.hmv.co.jp/product/detail/16227379",
+      },
+    ],
   },
 ];
 
