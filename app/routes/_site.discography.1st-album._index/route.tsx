@@ -1,4 +1,5 @@
 import { Link, MetaFunction } from "react-router";
+import { Fragment } from "react/jsx-runtime";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { ECSites } from "./content";
@@ -29,12 +30,17 @@ export default function Index() {
                       <p>{m.edition}</p>
                       <p>価格: {m.price} 円</p>
                       <p>商品番号: {m.sku}</p>
-                      <p>特典:</p>
-                      <ul className="list-inside list-disc">
-                        {m.bonuses.map((b, i) => (
-                          <li key={i}>{b}</li>
-                        ))}
-                      </ul>
+                      {m.bonuses.length == 0 && <p>特典: なし</p>}
+                      {m.bonuses.length > 0 && (
+                        <Fragment>
+                          <p>特典:</p>
+                          <ul className="list-inside list-disc">
+                            {m.bonuses.map((b, i) => (
+                              <li key={i}>{b}</li>
+                            ))}
+                          </ul>
+                        </Fragment>
+                      )}
                       <p>
                         商品ページ:{" "}
                         <Link
