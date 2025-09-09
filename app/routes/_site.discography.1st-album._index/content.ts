@@ -12,22 +12,6 @@ export interface ShopBenefits {
   }[];
 }
 
-/*
-{
-  name: "",
-  price: ,
-  edition: "",
-  sku: "",
-  bonuses: [
-    "",
-    "",
-  ],
-  reservationStart: "",
-  reservationEnd: "",
-  url: "",,
-},
-*/
-
 export const ECSites: ShopBenefits[] = [
   {
     shopName: "ビクターオンラインストア",
@@ -254,7 +238,68 @@ export const ECSites: ShopBenefits[] = [
   },
   {
     shopName: "Amazon.co.jp",
-    merchandises: [],
+    merchandises: [
+      {
+        name: "【Amazon.co.jp限定】見上げるたびに、恋をする。 [スペシャル盤] [CD ＋ BOOK] - 高嶺のなでしこ （Amazon.co.jp限定特典 ： メガジャケ　付）",
+        price: 11000,
+        edition: "スペシャル盤",
+        sku: "VIZL-2481",
+        bonuses: ["メガジャケ"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/fcwvCjk",
+      },
+      {
+        name: "【Amazon.co.jp限定】見上げるたびに、恋をする。 [初回限定盤] [CD ＋ DVD] - 高嶺のなでしこ （Amazon.co.jp限定特典 ： メガジャケ　付）",
+        price: 5500,
+        edition: "初回限定盤",
+        sku: "VIZL-2482",
+        bonuses: ["メガジャケ"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/6zz1zVy",
+      },
+      {
+        name: "【Amazon.co.jp限定】見上げるたびに、恋をする。 [通常盤] [CD] - 高嶺のなでしこ （Amazon.co.jp限定特典 ： メガジャケ　付）",
+        price: 3300,
+        edition: "たかねこ盤",
+        sku: "VICL-66101",
+        bonuses: ["メガジャケ"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/2ZTsGFC",
+      },
+      {
+        name: "見上げるたびに、恋をする。 [スペシャル盤] [CD ＋ BOOK] - 高嶺のなでしこ",
+        price: 11000,
+        edition: "スペシャル盤",
+        sku: "VIZL-2481",
+        bonuses: [],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/02YX8IH",
+      },
+      {
+        name: "見上げるたびに、恋をする。 [初回限定盤] [CD ＋ DVD] - 高嶺のなでしこ",
+        price: 5500,
+        edition: "初回限定盤",
+        sku: "VIZL-2482",
+        bonuses: [],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/eBJ50SZ",
+      },
+      {
+        name: "見上げるたびに、恋をする。 [通常盤] [CD] - 高嶺のなでしこ",
+        price: 3300,
+        edition: "たかねこ盤",
+        sku: "VICL-66101",
+        bonuses: [],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://amzn.asia/d/hhDwTXz",
+      },
+    ],
   },
   {
     shopName: "タワーレコード",
@@ -265,3 +310,19 @@ export const ECSites: ShopBenefits[] = [
     merchandises: [],
   },
 ];
+
+/*
+{
+  name: "",
+  price: ,
+  edition: "",
+  sku: "",
+  bonuses: [
+    "",
+    "",
+  ],
+  reservationStart: "",
+  reservationEnd: "",
+  url: "",
+},
+*/
