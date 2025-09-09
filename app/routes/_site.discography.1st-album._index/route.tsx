@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link, MetaFunction } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
@@ -13,12 +14,26 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const bonuses = useMemo(() => {
+    const allBonuses = ECSites.flatMap((site) => site.merchandises.flatMap((m) => m.bonuses));
+    return Array.from(new Set(allBonuses)).toSorted();
+  }, []);
+
   return (
     <div className="container mx-auto max-w-3xl">
       <section className={pageBox()}>
         <h1 className={pageHeading()}>1st アルバム「見上げるたびに、恋をする。」特典まとめ</h1>
 
         <section className="mt-8 space-y-8">
+          <section>
+            <h2 className={sectionHeading()}>特典一覧</h2>
+            <ul className="mt-2 list-inside list-disc">
+              {bonuses.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          </section>
+
           {ECSites.map((site) => (
             <section key={site.shopName}>
               <h2 className={sectionHeading()}>{site.shopName}</h2>

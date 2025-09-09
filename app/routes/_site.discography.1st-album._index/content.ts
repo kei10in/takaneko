@@ -371,7 +371,7 @@ export const ECSites: ShopBenefits[] = [
       },
     ],
   },
-];
+] as const;
 
 /*
 {
