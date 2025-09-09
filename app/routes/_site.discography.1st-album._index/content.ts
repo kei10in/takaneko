@@ -4,7 +4,7 @@ export interface ShopBenefits {
     name: string;
     price: number;
     edition: "スペシャル盤" | "初回限定盤" | "たかねこ盤" | "たかねこセット";
-    sku: string;
+    sku?: string;
     bonuses: string[];
     reservationStart: string;
     reservationEnd?: string;
@@ -210,7 +210,47 @@ export const ECSites: ShopBenefits[] = [
   },
   {
     shopName: "セブンネットショッピング",
-    merchandises: [],
+    merchandises: [
+      {
+        name: "高嶺のなでしこ／見上げるたびに、恋をする。（スペシャル盤／CD+BOOK）（セブンネット限定特典：アクリルコースター（メンバーランダム９種））",
+        price: 11000,
+        edition: "スペシャル盤",
+        sku: "VIZL-2481",
+        bonuses: ["アクリルコースター（メンバーランダム９種）"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://7net.omni7.jp/detail/1301583085",
+      },
+      {
+        name: "高嶺のなでしこ／見上げるたびに、恋をする。（初回限定盤／CD+DVD）（セブンネット限定特典：アクリルコースター（メンバーランダム９種）） ",
+        price: 5500,
+        edition: "初回限定盤",
+        sku: "VIZL-2482",
+        bonuses: ["アクリルコースター（メンバーランダム９種）"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://7net.omni7.jp/detail/1301583086",
+      },
+      {
+        name: "高嶺のなでしこ／見上げるたびに、恋をする。（たかねこ盤／CD）（セブンネット限定特典：アクリルコースター（メンバーランダム９種））",
+        price: 3300,
+        edition: "たかねこ盤",
+        sku: "VICL-66101",
+        bonuses: ["アクリルコースター（メンバーランダム９種）"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://7net.omni7.jp/detail/1301583087",
+      },
+      {
+        name: "高嶺のなでしこ／見上げるたびに、恋をする。（スペシャル盤+初回限定盤+たかねこ盤　3枚セット）（セブンネット限定特典：アクリルコースター（メンバーランダム９種）×3）",
+        price: 19800,
+        edition: "たかねこ盤",
+        bonuses: ["アクリルコースター（メンバーランダム９種）×3"],
+        reservationStart: "",
+        reservationEnd: "",
+        url: "https://7net.omni7.jp/detail/1301583088",
+      },
+    ],
   },
   {
     shopName: "Amazon.co.jp",
