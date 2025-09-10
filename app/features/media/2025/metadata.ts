@@ -3,6 +3,41 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "a1Gbr4LLqnc",
+    title:
+      "高嶺のなでしこ、初の韓国ワンマンライブ！橋本桃呼（高嶺のなでしこ）密着ドキュメント【もういちど、アイドルを生きる#6】",
+    authorName: "Quick Japan",
+    publishedAt: "2025-09-08",
+    mediaUrl: "https://youtu.be/a1Gbr4LLqnc",
+    imageUrl: "https://i.ytimg.com/vi/a1Gbr4LLqnc/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.jvcmusic.co.jp/takaneko/special/",
+    title: "高嶺のなでしこ 1st Album「見上げるたびに、恋をする。」SPECIAL SITE",
+    authorName: "高嶺のなでしこ 1st Album「見上げるたびに、恋をする。」SPECIAL SITE",
+    publishedAt: "2025-04-07",
+    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
+    imageUrl: "https://www.jvcmusic.co.jp/takaneko/special/assets/images/common/ogp_20250907.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "youtube",
+    key: "ar-v2exx9a0",
+    title:
+      "全国のホテルで楽しめるイマーシブサウンドアトラクション「変な部屋」を【高嶺のなでしこ】城月菜央 が体験！！",
+    authorName: "imavo",
+    publishedAt: "2025-09-05",
+    mediaUrl: "https://youtu.be/ar-v2exx9a0",
+    imageUrl: "https://i.ytimg.com/vi/ar-v2exx9a0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "dmYhpOLT7hg",
     title:
       "【ファンミ独占密着】高嶺のなでしこ3周年“9人で立つ大舞台”籾山ひめり「私たちの覚悟を」ファンへのメッセージほぼノーカット＆浴衣で『可愛くてごめん』披露！新曲リハ映像＆ケータリング食リポも",

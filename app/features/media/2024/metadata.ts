@@ -422,6 +422,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/jmGEMZg45xc/hqdefault.jpg",
     category: "youtube",
     presents: ["籾山ひめり"],
+    deleted: true,
   },
   {
     kind: "youtube",

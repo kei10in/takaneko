@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
+    publishedAt: "2025-09-07",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
     publishedAt: "2025-08-31",
     category: "article",
