@@ -6,11 +6,11 @@ import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: formatTitle("ねこ撮") },
+    { title: formatTitle("ねこ撮写ルンです - 2024年") },
     {
       name: "description",
       content:
-        "高嶺のなでしこ (たかねこ) の各メンバーが「写ルンです」で撮影した写真のうち、城月菜央と葉月紗蘭のカメラを現像したものです。",
+        "高嶺のなでしこ (たかねこ) の各メンバーが 2024年5月のキャンペーンにおいて「写ルンです」で撮影した写真のうち、城月菜央と葉月紗蘭のカメラを現像したものです。",
     },
   ];
 };
