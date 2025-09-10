@@ -29,6 +29,10 @@ export const 美しく生きろ: SongMetaDescriptor = {
       text: "Live (Cute for life)",
       videoId: "https://www.youtube.com/watch?v=2n04nAnKI3Y",
     },
+    {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 涼海すう ver",
+      videoId: "https://www.youtube.com/watch?v=_nfm0Ky9UhE",
+    },
   ],
   linkfire: "https://jvcmusic.lnk.to/utsukushikuikiro",
 };

@@ -26,8 +26,12 @@ export const 可愛くてごめん: SongMetaDescriptor = {
       videoId: "oB12TDu4dVE",
     },
     {
-      text: "LIVE",
+      text: "LIVE (Cute for life)",
       videoId: "https://www.youtube.com/watch?v=_ICAYT8antM",
+    },
+    {
+      text: "Live (東名阪ツアー 2025 - Spring Ride -) 星谷美来 ver",
+      videoId: "https://www.youtube.com/watch?v=wVD5xfymKYU",
     },
     {
       text: "ちゅーたん",
