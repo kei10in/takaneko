@@ -73,6 +73,13 @@ const UTILS = [
   },
 ];
 
+const SPECIALS = [
+  {
+    name: "ねこ撮写ルンです - 2024年",
+    url: "/nekosatsu",
+  },
+];
+
 export function Layout({ children }: { children: React.ReactNode }) {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -129,6 +136,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
                       </ul>
                     </MenuItems>
                   </Menu>
+
+                  <Menu>
+                    <MenuButton className="hover:text-nadeshiko-700">スペシャル</MenuButton>
+                    <MenuItems
+                      anchor={{ to: "top end", gap: "1.5rem" }}
+                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                    >
+                      <ul className="space-y-4 text-sm font-bold text-gray-500">
+                        {SPECIALS.map((util) => (
+                          <li key={util.url}>
+                            <MenuItem>
+                              <Link className="hover:text-nadeshiko-700" to={util.url}>
+                                {util.name}
+                              </Link>
+                            </MenuItem>
+                          </li>
+                        ))}
+                      </ul>
+                    </MenuItems>
+                  </Menu>
                 </div>
                 <button
                   data-primary
@@ -145,38 +172,65 @@ export function Layout({ children }: { children: React.ReactNode }) {
         {children}
 
         <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
-          <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
-            <DialogPanel className="relative top-4 right-4 h-fit w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
-              <div className="absolute top-4 right-4 flex-none">
-                <CloseButton as={XMarkButton} />
-              </div>
-              <div className="p-6">
-                <ul className="space-y-6 pr-5 font-bold text-gray-700">
-                  {LINKS.map((link) => (
-                    <li key={link.url}>
-                      <Link className="hover:text-nadeshiko-700" to={link.url} onClick={close}>
-                        <p>{link.name}</p>
-                      </Link>
+          <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 p-4 backdrop-blur-xs">
+            <DialogPanel className="relative h-full w-80 overflow-y-auto rounded-xl border-l border-gray-200 bg-white">
+              <div className="h-fit">
+                <div className="absolute top-4 right-4 flex-none">
+                  <CloseButton as={XMarkButton} />
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                    {LINKS.map((link) => (
+                      <li key={link.url}>
+                        <Link className="hover:text-nadeshiko-700" to={link.url} onClick={close}>
+                          <p>{link.name}</p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <hr className="my-6 border-gray-200" />
+
+                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                    <li>
+                      <p className="text-gray-400">ツール</p>
+                      <ul className="mt-4 space-y-4">
+                        {UTILS.map((util) => (
+                          <li key={util.url}>
+                            <Link
+                              className="hover:text-nadeshiko-700"
+                              to={util.url}
+                              onClick={close}
+                            >
+                              <p>{util.name}</p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </li>
-                  ))}
-                </ul>
+                  </ul>
 
-                <hr className="my-6 border-gray-200" />
+                  <hr className="my-6 border-gray-200" />
 
-                <ul className="space-y-6 pr-5 font-bold text-gray-700">
-                  <li>
-                    <p className="text-gray-400">ツール</p>
-                    <ul className="mt-4 space-y-4">
-                      {UTILS.map((util) => (
-                        <li key={util.url}>
-                          <Link className="hover:text-nadeshiko-700" to={util.url} onClick={close}>
-                            <p>{util.name}</p>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
+                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                    <li>
+                      <p className="text-gray-400">スペシャル</p>
+                      <ul className="mt-4 space-y-4">
+                        {SPECIALS.map((util) => (
+                          <li key={util.url}>
+                            <Link
+                              className="hover:text-nadeshiko-700"
+                              to={util.url}
+                              onClick={close}
+                            >
+                              <p>{util.name}</p>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </DialogPanel>
           </div>
