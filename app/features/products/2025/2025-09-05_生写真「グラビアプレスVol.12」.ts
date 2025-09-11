@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const グラビアプレスVol12_生写真: RandomGoods = {
+  id: "生写真「グラビアプレス Vol.12」",
+  slug: "生写真「グラビアプレス Vol.12」",
+  name: "生写真「グラビアプレス Vol.12」",
+  year: 2025,
+  series: "A Wonderful Encounter",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-09-05_生写真「グラビアプレス Vol.12」.webp",
+  width: 1500,
+  height: 1500,
+  lineup: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: false,
+  positions: [
+    { id: 1, x: 125, y: 50, width: 300, height: 450 },
+    { id: 2, x: 600, y: 50, width: 300, height: 450 },
+    { id: 3, x: 1075, y: 50, width: 300, height: 450 },
+    { id: 4, x: 125, y: 525, width: 300, height: 450 },
+    { id: 5, x: 600, y: 525, width: 300, height: 450 },
+    { id: 6, x: 1075, y: 525, width: 300, height: 450 },
+    { id: 7, x: 125, y: 1000, width: 300, height: 450 },
+    { id: 8, x: 600, y: 1000, width: 300, height: 450 },
+    { id: 9, x: 1000, y: 1075, width: 450, height: 300 },
+  ],
+};

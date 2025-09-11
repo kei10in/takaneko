@@ -120,6 +120,7 @@ import { お守りアクキー } from "./2025/2025-08-07_お守りアクキー";
 import { _2025浴衣_ミニフォト } from "./2025/2025-08-07_ミニフォトカード「2025 浴衣」";
 import { _2025浴衣_生写真 } from "./2025/2025-08-07_生写真「2025 浴衣」";
 import { Live2025SummerInSeoul_缶バッジ } from "./2025/2025-08-24_缶バッジ「LIVE 2025 SUMMER in SEOUL」";
+import { グラビアプレスVol12_生写真 } from "./2025/2025-09-05_生写真「グラビアプレスVol.12」";
 import { AWonderfulEncounterFC抽選会_アクリルキーホルダー } from "./2025/2025-09-07_アクリルキーホルダー「A Wonderful Encounter FC抽選会」";
 import { AWonderfulEncounter_にゃでしこステッカー } from "./2025/2025-09-07_ステッカー「A Wonderful Encounter」";
 import { AWonderfulEncounterFC抽選会_ミニフォト } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter FC抽選会」";
@@ -143,6 +144,7 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   AWonderfulEncounter_にゃでしこステッカー,
   AWonderfulEncounterFC抽選会_アクリルキーホルダー,
   AWonderfulEncounterFC抽選会_ミニフォト,
+  グラビアプレスVol12_生写真,
   Live2025SummerInSeoul_缶バッジ,
   _2025浴衣_生写真,
   _2025浴衣_ミニフォト,
