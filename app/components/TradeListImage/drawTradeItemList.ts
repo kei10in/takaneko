@@ -1,7 +1,7 @@
 import Konva from "konva";
 import { ImageSource } from "~/utils/html/types";
 import { loadImage } from "~/utils/loadImage";
-import { TradeItemRenderProps } from "./TradeItemRenderProps";
+import { TradeItemRenderProps } from "./types";
 
 interface Rect {
   x: number;
