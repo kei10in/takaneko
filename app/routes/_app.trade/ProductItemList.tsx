@@ -1,14 +1,15 @@
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { ProductItem } from "./ProductItem";
 
 interface Props {
   items: RandomGoods[];
+  onClickLink?: () => void;
 }
 
 export const ProductItemList: React.FC<Props> = (props: Props) => {
-  const { items } = props;
+  const { items, onClickLink } = props;
 
   return (
     <div className="@container">
@@ -17,7 +18,7 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
           const thumbs = thumbnailSrcSet(photo.url);
           return (
             <li key={photo.slug}>
-              <Link to={`/trade/${photo.slug}`}>
+              <NavLink to={`/trade/${photo.slug}`} onClick={onClickLink}>
                 <ProductItem
                   image={thumbs.src}
                   imageSet={thumbs.srcset}
@@ -25,7 +26,7 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
                   content={photo.name}
                   description={photo.category}
                 />
-              </Link>
+              </NavLink>
             </li>
           );
         })}

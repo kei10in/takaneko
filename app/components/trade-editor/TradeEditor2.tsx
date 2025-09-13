@@ -17,7 +17,6 @@ import {
   BsPencilSquare,
   BsTrashFill,
 } from "react-icons/bs";
-import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
 import { useTradeEditorPanelStore } from "~/features/trade/store";
 import {
@@ -28,9 +27,8 @@ import {
   TradeStatus,
 } from "~/features/trade/TradeStatus";
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
-import { ProductItem } from "~/routes/_app.trade/ProductItem";
+import { ProductItemList } from "~/routes/_app.trade/ProductItemList";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { CopyButton } from "../CopyButton";
 import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
 import { XMarkButton } from "../XMarkButton";
@@ -186,28 +184,8 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       {relativeItems.length > 0 && (
         <section className="mx-auto max-w-lg">
           <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
-          <div className="mt-4 px-5">
-            <ul className="flex flex-wrap justify-center gap-3 pb-1.5">
-              {relativeItems.map((photo) => (
-                <li key={photo.slug}>
-                  <NavLink to={`/trade/${photo.slug}`}>
-                    {({ isActive }) => {
-                      const thumbs = thumbnailSrcSet(photo.url);
-                      return (
-                        <ProductItem
-                          image={thumbs.src}
-                          imageSet={thumbs.srcset}
-                          year={photo.year}
-                          content={photo.series}
-                          description={photo.category}
-                          selected={isActive}
-                        />
-                      );
-                    }}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>{" "}
+          <div className="mt-4 px-2">
+            <ProductItemList items={relativeItems} />
           </div>
         </section>
       )}

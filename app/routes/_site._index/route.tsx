@@ -12,9 +12,8 @@ import { importEventModulesByDate } from "~/features/events/eventModule";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import { ProductItem } from "../_app.trade/ProductItem";
+import { ProductItemList } from "../_app.trade/ProductItemList";
 
 export const meta: MetaFunction = () => {
   const title = SITE_TITLE;
@@ -210,22 +209,9 @@ export default function Index() {
                 <BsChevronRight className="ml-1 inline-block" />
               </Link>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              {recentProducts.map((product) => {
-                const thumbs = thumbnailSrcSet(product.url);
-                return (
-                  <Link to={`/trade/${product.slug}`} key={product.slug}>
-                    <ProductItem
-                      image={thumbs.src}
-                      imageSet={thumbs.srcset}
-                      year={product.year}
-                      content={product.series}
-                      description={product.category}
-                    />
-                  </Link>
-                );
-              })}
-            </div>
+
+            <ProductItemList items={recentProducts} />
+
             <div className="w-full">
               <Link
                 className="bg-nadeshiko-800 text-nadeshiko-50 mx-auto block w-fit rounded-full px-8 py-2 font-semibold"

@@ -10,10 +10,9 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
-import { Link, NavLink, useLocation } from "react-router";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { Link, useLocation } from "react-router";
 import { RandomGoods } from "../../features/products/product";
-import { ProductItem } from "./ProductItem";
+import { ProductItemList } from "./ProductItemList";
 
 interface Props {
   allPhotos: {
@@ -119,27 +118,7 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
               </div>
             </DisclosureButton>
             <DisclosurePanel>
-              <ul className="flex flex-wrap justify-center gap-3 px-4 pb-1.5">
-                {item.photos.map((photo) => (
-                  <li key={photo.slug}>
-                    <NavLink to={`/trade/${photo.slug}`} onClick={onClickMenuItem}>
-                      {({ isActive }) => {
-                        const thumbs = thumbnailSrcSet(photo.url);
-                        return (
-                          <ProductItem
-                            image={thumbs.src}
-                            imageSet={thumbs.srcset}
-                            year={photo.year}
-                            content={photo.series}
-                            description={photo.category}
-                            selected={isActive}
-                          />
-                        );
-                      }}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
+              <ProductItemList items={item.photos} onClickLink={onClickMenuItem} />
             </DisclosurePanel>
           </Disclosure>
         );
