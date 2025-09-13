@@ -86,10 +86,10 @@ const tools = [
 
 export default function Index() {
   return (
-    <section className="mx-auto px-4 py-12 lg:max-w-4xl">
-      <h1 className={pageHeading()}>トレード画像をつくるやつ</h1>
+    <section className="mx-auto py-12 lg:max-w-4xl">
+      <h1 className={pageHeading("px-4")}>トレード画像をつくるやつ</h1>
 
-      <div className="my-4 flex justify-between">
+      <div className="my-4 flex justify-between px-4">
         <p>ランダムグッズのトレード画像が作成できます。</p>
         <figure className="mx-4 flex flex-none justify-center">
           <img
@@ -101,9 +101,9 @@ export default function Index() {
       </div>
 
       <section className="mt-12">
-        <h2 className={sectionHeading("mb-2")}>サマリー</h2>
+        <h2 className={sectionHeading("mb-2 px-4")}>サマリー</h2>
 
-        <ul className="space-y-4">
+        <ul className="space-y-4 px-4">
           <li>
             <Link className="group block" to="/trade/wishlist">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
@@ -130,9 +130,9 @@ export default function Index() {
       </section>
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
-        <section className="mt-12">
-          <h2 className={sectionHeading("my-4")}>ホットなやつ</h2>
-          <ul className="flex flex-wrap gap-4">
+        <section className="@container mt-12">
+          <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
+          <ul className="grid grid-cols-2 gap-x-2 gap-y-8 px-2 @md:grid-cols-3 @xl:grid-cols-4 @2xl:grid-cols-5">
             {TAKANEKO_PHOTOS_FEATURED.map((photo) => {
               const thumbs = thumbnailSrcSet(photo.url);
               return (
@@ -142,7 +142,7 @@ export default function Index() {
                       image={thumbs.src}
                       imageSet={thumbs.srcset}
                       year={photo.year}
-                      content={photo.series}
+                      content={photo.name}
                       description={photo.category}
                     />
                   </Link>
@@ -153,9 +153,9 @@ export default function Index() {
         </section>
       )}
 
-      <section className="mt-12">
-        <h2 className={sectionHeading("my-4")}>ランダムグッズ</h2>
-        <ul className="flex flex-wrap gap-4">
+      <section className="@container mt-12">
+        <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
+        <ul className="grid grid-cols-2 gap-x-2 gap-y-8 px-2 @md:grid-cols-3 @xl:grid-cols-4 @2xl:grid-cols-5">
           {TAKANEKO_PHOTOS.map((photo) => {
             const thumbs = thumbnailSrcSet(photo.url);
             return (
@@ -165,7 +165,7 @@ export default function Index() {
                     image={thumbs.src}
                     imageSet={thumbs.srcset}
                     year={photo.year}
-                    content={photo.series}
+                    content={photo.name}
                     description={photo.category}
                   />
                 </Link>
@@ -175,7 +175,7 @@ export default function Index() {
         </ul>
       </section>
 
-      <section className="mt-12">
+      <section className="mt-12 px-4">
         <h2 className={sectionHeading("my-4")}>使い方</h2>
 
         <p>ツールを選んで、アイテムをタップします。</p>
