@@ -30,7 +30,7 @@ const filters = [
   { id: "other", label: "その他" },
 ];
 
-export const ProductList: React.FC<Props> = (props: Props) => {
+export const MenuContents: React.FC<Props> = (props: Props) => {
   const { allPhotos, onClickMenuItem } = props;
 
   const [filter, setFilter] = useState(filters[0].id);
