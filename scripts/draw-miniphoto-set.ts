@@ -8,7 +8,7 @@ const main = async () => {
   const outputImage = "public/takaneko/goods/2025/generated.webp";
   const outputJson = "public/takaneko/goods/2025/positions.json";
 
-  const productImage = new ProductImage(files, { size: { width: 154, height: 220 } });
+  const productImage = new ProductImage(files, { size: { width: 138, height: 220 } });
 
   productImage.writePositions(outputJson);
   await productImage.draw(outputImage);
