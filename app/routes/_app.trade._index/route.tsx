@@ -12,9 +12,8 @@ import { Link, MetaFunction } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
-import { ProductItem } from "~/routes/_app.trade/ProductItem";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { ProductItemList } from "../_app.trade/ProductItemList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -130,49 +129,15 @@ export default function Index() {
       </section>
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
-        <section className="@container mt-12">
+        <section className="mt-12">
           <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
-          <ul className="grid grid-cols-2 gap-x-2 gap-y-8 px-2 @md:grid-cols-3 @xl:grid-cols-4 @2xl:grid-cols-5">
-            {TAKANEKO_PHOTOS_FEATURED.map((photo) => {
-              const thumbs = thumbnailSrcSet(photo.url);
-              return (
-                <li key={photo.slug}>
-                  <Link to={`/trade/${photo.slug}`}>
-                    <ProductItem
-                      image={thumbs.src}
-                      imageSet={thumbs.srcset}
-                      year={photo.year}
-                      content={photo.name}
-                      description={photo.category}
-                    />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <ProductItemList items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
 
-      <section className="@container mt-12">
+      <section className="mt-12">
         <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
-        <ul className="grid grid-cols-2 gap-x-2 gap-y-8 px-2 @md:grid-cols-3 @xl:grid-cols-4 @2xl:grid-cols-5">
-          {TAKANEKO_PHOTOS.map((photo) => {
-            const thumbs = thumbnailSrcSet(photo.url);
-            return (
-              <li key={photo.slug}>
-                <Link to={`/trade/${photo.slug}`}>
-                  <ProductItem
-                    image={thumbs.src}
-                    imageSet={thumbs.srcset}
-                    year={photo.year}
-                    content={photo.name}
-                    description={photo.category}
-                  />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <ProductItemList items={TAKANEKO_PHOTOS} />
       </section>
 
       <section className="mt-12 px-4">
