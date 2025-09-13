@@ -12,7 +12,7 @@ export const 韓国風制服_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-04-06_生写真「韓国風制服」.webp",
   width: 210,
   height: 244,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 10, y: 10, width: 28, height: 40 },
     { id: 2, x: 42, y: 10, width: 28, height: 40 },

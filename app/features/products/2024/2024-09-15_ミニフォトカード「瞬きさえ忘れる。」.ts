@@ -12,7 +12,7 @@ export const 瞬きさえ忘れる_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-09-15_ミニフォトカード「瞬きさえ忘れる。」.webp",
   width: 827,
   height: 553,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 149, y: 15, width: 79, height: 125 },
     { id: 2, x: 239, y: 15, width: 79, height: 125 },

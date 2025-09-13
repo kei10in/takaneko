@@ -48,7 +48,7 @@ export const clientLoader = ({ params }: ClientLoaderFunctionArgs) => {
 
 export default function TradeImageEditor() {
   const selectedProduct = useLoaderData<typeof loader>();
-  const lineup = selectedProduct.lineup ?? [];
+  const lineup = selectedProduct.variants ?? [];
   const lineupIds = lineup.map((p) => p.id);
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);

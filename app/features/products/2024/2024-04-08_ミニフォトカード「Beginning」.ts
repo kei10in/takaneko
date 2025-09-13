@@ -11,7 +11,7 @@ export const Beginning_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-04-08_ミニフォトカード「Beginning」.png",
   width: 542,
   height: 347,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "美しく生きろ" },
     { id: 2, name: "城月菜央", description: "アンチファン" },
     { id: 3, name: "城月菜央", description: "全国お招きツアー" },

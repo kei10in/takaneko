@@ -12,7 +12,7 @@ export const メイド至上主義_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-06-21_生写真「メイド☆至上主義」.webp",
   width: 1680,
   height: 2128,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 45, y: 240, width: 235, height: 335 },
     { id: 2, x: 316, y: 240, width: 235, height: 335 },

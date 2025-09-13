@@ -57,7 +57,7 @@ export interface RandomGoods {
   series: string;
   category: string;
   tradeText?: TradeTextType;
-  lineup: ItemDescription[];
+  variants: ItemDescription[];
 
   // 画像に関する情報です。
   url: string;

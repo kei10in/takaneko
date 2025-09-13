@@ -11,7 +11,7 @@ export const AWonderfulEncounter_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2025/2025-09-07_缶バッジ「A Wonderful Encounter」.webp",
   width: 1200,
   height: 1200,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

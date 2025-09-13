@@ -1,7 +1,7 @@
 import { RandomGoods, TradeTextType } from "../products/product";
 
 export const getTradeItemTitle = (product: RandomGoods, i: number): string => {
-  const item = product.lineup[i];
+  const item = product.variants[i];
   if (item == undefined) {
     return "";
   }

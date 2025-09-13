@@ -12,7 +12,7 @@ export const 恋を知った世界_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-03-03_ミニフォトカード「恋を知った世界」.jpg",
   width: 720,
   height: 1040,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 8, y: 177, width: 103, height: 158 },
     { id: 2, x: 127, y: 175, width: 103, height: 158 },

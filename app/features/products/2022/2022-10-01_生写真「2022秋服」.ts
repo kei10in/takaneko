@@ -12,7 +12,7 @@ export const _2022秋服_生写真: RandomGoods = {
   url: "/takaneko/goods/2022/2022-10-01_生写真「2022秋服」.webp",
   width: 1280,
   height: 1300,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 49, y: 191, width: 143, height: 203 },
     { id: 2, x: 257, y: 191, width: 143, height: 203 },

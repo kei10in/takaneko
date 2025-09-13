@@ -12,7 +12,7 @@ export const バレンタイン2025_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-02-14_ミニフォトカード「バレンタイン2025」.webp",
   width: 960,
   height: 1280,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 75, y: 115, width: 128, height: 200 },
     { id: 2, x: 211, y: 115, width: 128, height: 200 },

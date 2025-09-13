@@ -11,7 +11,7 @@ export const SpringRide広州上海_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-06-20_生写真「Spring Ride 広州&上海」.webp",
   width: 538,
   height: 630,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "ヒキ" },
     { id: 2, name: "城月菜央", description: "チュウ" },
     { id: 3, name: "城月菜央", description: "ヨリ" },

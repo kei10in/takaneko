@@ -12,7 +12,7 @@ export const 韓国風制服_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-04-06_ミニフォトカード「韓国風制服」.webp",
   width: 210,
   height: 244,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 16, y: 8, width: 26, height: 41 },
     { id: 2, x: 46, y: 8, width: 26, height: 41 },

@@ -12,7 +12,7 @@ export const イースター_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-05-01_生写真「イースター」.webp",
   width: 1188,
   height: 1381,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 23, y: 156, width: 160, height: 227 },
     { id: 2, x: 220, y: 156, width: 160, height: 227 },

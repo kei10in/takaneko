@@ -11,7 +11,7 @@ export const 前髪クリップ: RandomGoods = {
   url: "/takaneko/goods/2025/2025-05-06_前髪クリップ.webp",
   width: 349,
   height: 202,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

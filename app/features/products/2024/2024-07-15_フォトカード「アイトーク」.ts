@@ -11,7 +11,7 @@ export const アイトーク_フォトカード: RandomGoods = {
   url: "/takaneko/goods/2024/2024-07-15_フォトカード「アイトーク」.webp",
   width: 1950,
   height: 1148,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

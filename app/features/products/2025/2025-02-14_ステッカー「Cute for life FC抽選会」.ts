@@ -11,7 +11,7 @@ export const CuteForLife_ステッカー: RandomGoods = {
   url: "/takaneko/goods/2025/2025-02-14_メンバー個別デザイン イベントPASS風ステッカー.png",
   width: 1075,
   height: 615,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

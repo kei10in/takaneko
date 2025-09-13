@@ -11,7 +11,7 @@ export const 瞬きさえ忘れる_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2024/2024-09-15_缶バッジ「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 1680,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

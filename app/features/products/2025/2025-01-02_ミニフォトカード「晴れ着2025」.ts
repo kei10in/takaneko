@@ -12,7 +12,7 @@ export const 晴れ着2025_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-01-02_ミニフォトカード「晴れ着2025」.webp",
   width: 1114,
   height: 1506,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 55, y: 166, width: 158, height: 248 },
     { id: 2, x: 223, y: 166, width: 158, height: 248 },

@@ -11,7 +11,7 @@ export const にゃでしこ_前髪クリップ: RandomGoods = {
   url: "/takaneko/goods/2024/2024-05-12_前髪クリップ「にゃでしこ」.webp",
   width: 1680,
   height: 1680,
-  lineup: [
+  variants: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

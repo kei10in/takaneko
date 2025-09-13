@@ -12,7 +12,7 @@ export const _2023年振袖_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-01-01_生写真「2023年振袖」.webp",
   width: 1300,
   height: 1300,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 49, y: 162, width: 146, height: 208 },
     { id: 2, x: 256, y: 162, width: 146, height: 208 },

@@ -12,7 +12,7 @@ export const バレンタイン2025_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-02-14_生写真「バレンタイン2025」.webp",
   width: 960,
   height: 1280,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 72, y: 164, width: 127, height: 181 },
     { id: 2, x: 210, y: 164, width: 127, height: 181 },

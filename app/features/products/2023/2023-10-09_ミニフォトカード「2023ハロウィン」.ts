@@ -12,7 +12,7 @@ export const _2023ハロウィン_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2023/2023-10-09_ミニフォトカード「2023ハロウィン」.jpg",
   width: 1078,
   height: 1522,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 262, width: 149, height: 237 },
     { id: 2, x: 197, y: 262, width: 149, height: 237 },

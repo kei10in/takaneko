@@ -11,7 +11,7 @@ export const クリスマス2023_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2023/2023-12-24_缶バッジ「2023年クリスマス」.webp",
   width: 595,
   height: 595,
-  lineup: [
+  variants: [
     { id: 1, name: "星谷美来", description: "通常" },
     { id: 2, name: "春野莉々", description: "通常" },
     { id: 3, name: "橋本桃呼", description: "通常" },

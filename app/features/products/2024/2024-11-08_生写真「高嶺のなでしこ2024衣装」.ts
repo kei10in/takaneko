@@ -12,7 +12,7 @@ export const 高嶺のなでしこ2024衣装_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-11-08_生写真「高嶺のなでしこ2024衣装」.webp",
   width: 1500,
   height: 1900,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 40, y: 215, width: 209, height: 298 },
     { id: 2, x: 282, y: 215, width: 209, height: 298 },

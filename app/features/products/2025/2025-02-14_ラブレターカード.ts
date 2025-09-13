@@ -11,7 +11,7 @@ export const ラブレターカード: RandomGoods = {
   url: "/takaneko/goods/2025/2025-02-14_ラブレターカード.webp",
   width: 1417,
   height: 1417,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

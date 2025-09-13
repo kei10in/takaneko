@@ -12,7 +12,7 @@ export const わたし色に染まれ_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-05-12_ミニフォトカード「わたし色に染まれ」.png",
   width: 413,
   height: 548,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 50, y: 21, width: 48, height: 78 },
     { id: 2, x: 102, y: 21, width: 48, height: 78 },

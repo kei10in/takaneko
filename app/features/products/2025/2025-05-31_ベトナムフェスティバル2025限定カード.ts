@@ -12,7 +12,7 @@ export const ベトナムフェスティバル2025限定カード: RandomGoods =
   url: "/takaneko/goods/2025/2025-05-31_ベトナムフェスティバル2025限定カード.jpg",
   width: 1060,
   height: 1500,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

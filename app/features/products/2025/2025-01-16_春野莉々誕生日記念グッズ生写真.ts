@@ -11,7 +11,7 @@ export const 春野莉々誕生日記念グッズ_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-01-16_生写真「春野莉々誕生日記念グッズ 2025」.webp",
   width: 1600,
   height: 1600,
-  lineup: [
+  variants: [
     { id: 1, name: "春野莉々", description: "狼耳 & 王冠 1" },
     { id: 2, name: "春野莉々", description: "狼耳 & 王冠 2" },
     { id: 3, name: "春野莉々", description: "狼耳 & 王冠 3" },

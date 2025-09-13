@@ -11,7 +11,7 @@ export const ROUND1_コラボキャンペーン_オリジナルコースター: 
   url: "/takaneko/goods/2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルコースター.webp",
   width: 820,
   height: 1083,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "第1弾" },
     { id: 2, name: "涼海すう", description: "第1弾" },
     { id: 3, name: "橋本桃呼", description: "第1弾" },

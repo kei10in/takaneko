@@ -33,7 +33,7 @@ const generateNumberingTradeText = (
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const members: { name: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     const member = members.find((m) => m.name === item.name);
     if (member) {
       member.items.push(item);
@@ -90,7 +90,7 @@ const generateNameOnlyTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
-  const have = productImage.lineup
+  const have = productImage.variants
     .flatMap((item) => {
       if (tradeDescriptions[item.id]?.status.tag === "have") {
         return [item.name];
@@ -100,7 +100,7 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const wants = productImage.lineup
+  const wants = productImage.variants
     .flatMap((item) => {
       if (tradeDescriptions[item.id]?.status.tag === "want") {
         return [item.name];
@@ -123,7 +123,7 @@ const generateDescriptionTradeText = (
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const members: { name: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     const member = members.find((m) => m.name === item.name);
     if (member) {
       member.items.push(item);
@@ -189,7 +189,7 @@ const generateGroupByDescriptionTradeText = (
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const xs: { description: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     if (item.description == undefined) {
       return;
     }

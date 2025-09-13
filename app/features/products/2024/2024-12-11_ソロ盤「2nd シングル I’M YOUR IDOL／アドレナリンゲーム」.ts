@@ -12,7 +12,7 @@ export const セカンドシングル_ソロ盤: RandomGoods = {
   url: "/takaneko/goods/2024/2024-12-11_ソロ盤「2nd シングル I’M YOUR IDOL／アドレナリンゲーム」.jpg",
   width: 800,
   height: 621,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

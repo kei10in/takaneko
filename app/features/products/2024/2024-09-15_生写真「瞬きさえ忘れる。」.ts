@@ -12,7 +12,7 @@ export const 瞬きさえ忘れる_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-09-15_生写真「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 2128,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 45, y: 240, width: 233, height: 334 },
     { id: 2, x: 317, y: 240, width: 233, height: 334 },

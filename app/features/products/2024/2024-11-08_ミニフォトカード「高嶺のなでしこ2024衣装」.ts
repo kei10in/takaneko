@@ -12,7 +12,7 @@ export const 高嶺のなでしこ2024衣装_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-11-08_ミニフォトカード「高嶺のなでしこ2024衣装」.jpg",
   width: 1448,
   height: 2048,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 62, y: 286, width: 199, height: 312 },
     { id: 2, x: 290, y: 286, width: 199, height: 312 },

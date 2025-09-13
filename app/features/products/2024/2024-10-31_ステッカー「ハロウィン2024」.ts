@@ -11,7 +11,7 @@ export const ハロウィン2024_ステッカー: RandomGoods = {
   url: "/takaneko/goods/2024/2024-10-31_ステッカー「ハロウィン2024」.webp",
   width: 1260,
   height: 1260,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

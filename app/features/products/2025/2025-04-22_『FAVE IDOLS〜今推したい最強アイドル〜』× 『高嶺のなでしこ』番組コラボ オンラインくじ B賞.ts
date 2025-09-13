@@ -11,7 +11,7 @@ export const FAVE_IDOLS_オンラインくじB賞: RandomGoods = {
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ B賞.webp",
   width: 2800,
   height: 1150,
-  lineup: [
+  variants: [
     { id: 11, name: "城月菜央", description: "B賞" },
     { id: 12, name: "涼海すう", description: "B賞" },
     { id: 13, name: "橋本桃呼", description: "B賞" },

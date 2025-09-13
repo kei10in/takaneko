@@ -12,7 +12,7 @@ export const 白ワンピース_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-08-12_ミニフォト「白ワンピース」.jpg",
   width: 720,
   height: 1040,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 24, y: 176, width: 102, height: 162 },
     { id: 2, x: 137, y: 176, width: 102, height: 162 },

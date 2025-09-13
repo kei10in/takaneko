@@ -12,7 +12,7 @@ export const 梅雨_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-06-29_生写真「梅雨」.webp",
   width: 1179,
   height: 1391,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 23, y: 158, width: 160, height: 228 },
     { id: 2, x: 218, y: 158, width: 160, height: 228 },

@@ -11,7 +11,7 @@ export const クリスマス2024_目印チャーム: RandomGoods = {
   url: "/takaneko/goods/2024/2024-12-25_目印チャーム「クリスマス2024」.webp",
   width: 1181,
   height: 1181,
-  lineup: [
+  variants: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

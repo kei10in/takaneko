@@ -12,7 +12,7 @@ export const LARME高嶺のなでしこ_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-06-25_ミニフォトカード「LARME×高嶺のなでしこ」.webp",
   width: 820,
   height: 760,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 41, y: 29, width: 78, height: 129 },
     { id: 2, x: 172, y: 29, width: 78, height: 129 },

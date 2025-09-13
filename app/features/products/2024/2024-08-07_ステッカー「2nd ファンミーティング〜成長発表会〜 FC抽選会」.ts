@@ -11,7 +11,7 @@ export const 成長発表会_FC抽選会_メンバー個別デザインステッ
   url: "/takaneko/goods/2024/2024-08-07_ステッカー「2nd ファンミーティング〜成長発表会〜 FC抽選会」.png",
   width: 1200,
   height: 637,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

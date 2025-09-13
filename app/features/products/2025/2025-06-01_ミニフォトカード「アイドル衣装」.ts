@@ -12,7 +12,7 @@ export const アイドル衣装_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-06-17_ミニフォトカード「アイドル衣装」.webp",
   width: 1260,
   height: 1592,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 33, y: 190, width: 159, height: 250 },
     { id: 2, x: 240, y: 190, width: 159, height: 250 },

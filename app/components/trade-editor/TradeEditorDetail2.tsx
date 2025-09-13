@@ -24,7 +24,7 @@ interface Props {
 export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   const { productImage, tradeDescriptions, index, onChangeItem, onChangeTradeState } = props;
 
-  const photos = productImage.lineup;
+  const photos = productImage.variants;
   const selPhoto = photos[index];
   const positions = productImage.positions;
 

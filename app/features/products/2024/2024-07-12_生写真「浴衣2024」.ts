@@ -12,7 +12,7 @@ export const 浴衣2024_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-07-12_生写真「浴衣2024」.png",
   width: 351,
   height: 460,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 12, y: 28, width: 52, height: 74 },
     { id: 2, x: 67, y: 28, width: 52, height: 74 },

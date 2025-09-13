@@ -12,7 +12,7 @@ export const povo20_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-10-02_生写真「povo」.jpg",
   width: 1182,
   height: 1387,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 22, y: 156, width: 161, height: 230 },
     { id: 2, x: 217, y: 156, width: 161, height: 230 },

@@ -12,7 +12,7 @@ export const _2025春衣装_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-05-06_ミニフォトカード「2025 春衣装」.webp",
   width: 212,
   height: 270,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 8, y: 8, width: 29, height: 46 },
     { id: 2, x: 41, y: 8, width: 29, height: 46 },

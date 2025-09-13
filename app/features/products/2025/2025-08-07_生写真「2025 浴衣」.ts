@@ -12,7 +12,7 @@ export const _2025浴衣_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-08-07_生写真「2025 浴衣」.webp",
   width: 1036,
   height: 1205,
-  lineup: REGULAR_PHOTO_SET2,
+  variants: REGULAR_PHOTO_SET2,
   positions: [
     { id: 1, x: 40, y: 40, width: 141, height: 201 },
     { id: 2, x: 201, y: 40, width: 141, height: 201 },

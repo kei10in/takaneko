@@ -12,7 +12,7 @@ export const マリン_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-07-11_生写真「マリン」.webp",
   width: 1144,
   height: 1395,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 19, y: 158, width: 156, height: 223 },
     { id: 2, x: 209, y: 158, width: 156, height: 223 },

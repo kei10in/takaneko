@@ -12,7 +12,7 @@ export const スーツ_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-06-11_生写真「スーツ」.webp",
   width: 1066,
   height: 1256,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 143, width: 144, height: 206 },
     { id: 2, x: 198, y: 143, width: 144, height: 206 },

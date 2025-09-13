@@ -12,7 +12,7 @@ export const 浴衣2024_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-07-21_ミニフォトカード「浴衣2024」.jpg",
   width: 720,
   height: 1040,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 26, y: 174, width: 103, height: 162 },
     { id: 2, x: 139, y: 174, width: 103, height: 162 },

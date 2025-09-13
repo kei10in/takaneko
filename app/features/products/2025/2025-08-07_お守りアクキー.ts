@@ -11,7 +11,7 @@ export const お守りアクキー: RandomGoods = {
   url: "/takaneko/goods/2025/2025-08-07_お守りアクキー.webp",
   width: 340,
   height: 239,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

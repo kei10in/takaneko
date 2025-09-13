@@ -12,7 +12,7 @@ export const ハロウィン_生写真: RandomGoods = {
   url: "/takaneko/goods/2022/2022-10-31_生写真「ハロウィン」.jpg",
   width: 1280,
   height: 1300,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 51, y: 155, width: 138, height: 196 },
     { id: 2, x: 260, y: 155, width: 138, height: 196 },

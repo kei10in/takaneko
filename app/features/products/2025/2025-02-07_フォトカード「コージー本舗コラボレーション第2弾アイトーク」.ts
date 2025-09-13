@@ -11,7 +11,7 @@ export const コージー本舗第2弾アイトーク_フォトカード: Random
   url: "/takaneko/goods/2025/2025-02-07_フォトカード「コージー本舗コラボレーション第2弾 アイトーク」.webp",
   width: 2480,
   height: 1754,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "春野莉々", description: "" },

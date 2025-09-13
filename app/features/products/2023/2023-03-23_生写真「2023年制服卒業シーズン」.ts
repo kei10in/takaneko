@@ -12,7 +12,7 @@ export const _2023年制服卒業シーズン_生写真: RandomGoods = {
   url: "/takaneko/goods/2023/2023-03-23_生写真「2023年制服卒業シーズン」.webp",
   width: 1500,
   height: 2027,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 10, y: 193, width: 230, height: 327 },
     { id: 2, x: 260, y: 193, width: 230, height: 327 },

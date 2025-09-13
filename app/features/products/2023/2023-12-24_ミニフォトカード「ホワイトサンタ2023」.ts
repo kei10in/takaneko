@@ -12,7 +12,7 @@ export const ホワイトサンタ2023_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2023/2023-12-24_ミニフォトカード「ホワイトサンタ2023」.png",
   width: 184,
   height: 241,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 4, y: 26, width: 25, height: 40 },
     { id: 2, x: 34, y: 26, width: 25, height: 40 },

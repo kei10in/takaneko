@@ -12,7 +12,7 @@ export const メイド至上主義_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-06-21_ミニフォトカード「メイド☆至上主義」.webp",
   width: 1680,
   height: 2128,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 75, y: 239, width: 210, height: 336 },
     { id: 2, x: 339, y: 239, width: 210, height: 336 },

@@ -11,7 +11,7 @@ export const ROUND1_コラボキャンペーン_オリジナルしおり: Random
   url: "/takaneko/goods/2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルしおり.webp",
   width: 820,
   height: 380,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

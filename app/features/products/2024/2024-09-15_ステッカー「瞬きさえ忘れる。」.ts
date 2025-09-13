@@ -11,7 +11,7 @@ export const 瞬きさえ忘れる_にゃでしこステッカー: RandomGoods =
   url: "/takaneko/goods/2024/2024-09-15_ステッカー「瞬きさえ忘れる。」.webp",
   width: 1680,
   height: 1680,
-  lineup: [
+  variants: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

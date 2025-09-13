@@ -12,7 +12,7 @@ export const アイドル衣装_生写真: RandomGoods = {
   url: "/takaneko/goods/2025/2025-06-17_生写真「アイドル衣装」.webp",
   width: 1260,
   height: 1592,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 37, y: 187, width: 176, height: 251 },
     { id: 2, x: 240, y: 188, width: 176, height: 251 },

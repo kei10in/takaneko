@@ -12,7 +12,7 @@ export const AWonderfulEncounter_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」.webp",
   width: 1080,
   height: 1238,
-  lineup: REGULAR_MINI_PHOTO_SET2,
+  variants: REGULAR_MINI_PHOTO_SET2,
   positions: [
     { id: 1, x: 41, y: 33, width: 138, height: 220 },
     { id: 2, x: 213, y: 33, width: 138, height: 220 },

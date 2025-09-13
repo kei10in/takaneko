@@ -11,7 +11,7 @@ export const FAVE_IDOLS_オンラインくじ10連特典: RandomGoods = {
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ 10連特典.webp",
   width: 2800,
   height: 1150,
-  lineup: [
+  variants: [
     { id: 61, name: "城月菜央", description: "10連特典" },
     { id: 62, name: "涼海すう", description: "10連特典" },
     { id: 63, name: "橋本桃呼", description: "10連特典" },

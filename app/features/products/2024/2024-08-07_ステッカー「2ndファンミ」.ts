@@ -11,7 +11,7 @@ export const _2ndファンミ_にゃでしこステッカー: RandomGoods = {
   url: "/takaneko/goods/2024/2024-08-07_ステッカー「2ndファンミ」.webp",
   width: 1181,
   height: 1181,
-  lineup: [
+  variants: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

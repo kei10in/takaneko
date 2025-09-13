@@ -12,7 +12,7 @@ export const クリスマス2024_ミニフォト: RandomGoods = {
   url: "/takaneko/goods/2024/2024-12-25_ミニフォトカード「クリスマス2024」.webp",
   width: 1680,
   height: 2127,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 76, y: 241, width: 210, height: 332 },
     { id: 2, x: 340, y: 241, width: 210, height: 332 },

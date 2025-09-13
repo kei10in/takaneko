@@ -12,7 +12,7 @@ export const ワンピース_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-05-27_生写真「ワンピース」.webp",
   width: 1579,
   height: 2000,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 41, y: 225, width: 221, height: 315 },
     { id: 2, x: 297, y: 225, width: 221, height: 315 },
