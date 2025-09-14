@@ -15,7 +15,7 @@ const transformOfferToRenderProps = (details: TradingItemDetail): TradeItemRende
   return {
     path: croppedImagePath(details.product.url, details.position.id),
     status: tradeStateToImageSrc(details.status),
-    title: TradeListImage.title(details.product),
+    title: TradeListImage.title(details.product, details.item),
     subtitle: TradeListImage.subtitle(details.product),
   };
 };
