@@ -22,6 +22,13 @@ export interface OfficialGoods {
   images?: ImageDescription[];
 }
 
+export const ProductLine = {
+  Photo: "生写真セット",
+  MiniPhotoCard: "ミニフォトカードセット",
+} as const;
+
+export type ProductLine = (typeof ProductLine)[keyof typeof ProductLine];
+
 export const TradeTextType = {
   Description: "description",
   GroupByDescription: "groupByDescription",
@@ -56,6 +63,7 @@ export interface RandomGoods {
   year: number;
   series: string;
   category: string;
+  productLine?: ProductLine;
   tradeText?: TradeTextType;
   variants: ItemDescription[];
 
