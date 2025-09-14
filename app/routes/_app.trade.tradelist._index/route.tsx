@@ -188,7 +188,7 @@ export default function Index() {
           )}
 
           {photoWants.length != 0 && (
-            <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
+            <OrganizedTradeImages title="生写真セットのまとめ" images={imagesForPhoto} />
           )}
 
           {photoWants.length == 0 && (
@@ -217,7 +217,10 @@ export default function Index() {
           )}
 
           {miniPhotoCardWants.length != 0 && (
-            <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
+            <OrganizedTradeImages
+              title="ミニフォトカードセットのまとめ"
+              images={imagesForMiniPhoto}
+            />
           )}
 
           {miniPhotoCardWants.length == 0 && (
