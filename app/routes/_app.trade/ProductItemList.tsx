@@ -23,7 +23,7 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
                   image={thumbs.src}
                   imageSet={thumbs.srcset}
                   year={photo.year}
-                  content={photo.name}
+                  content={photo.abbrev ?? photo.name}
                   description={photo.category}
                 />
               </NavLink>
