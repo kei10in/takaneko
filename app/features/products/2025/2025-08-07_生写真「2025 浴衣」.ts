@@ -6,7 +6,7 @@ export const _2025浴衣_生写真: RandomGoods = {
   slug: "生写真「2025 浴衣」",
   name: "生写真「2025 浴衣」ver.",
   year: 2025,
-  series: "2025 浴衣",
+  series: "私たちの宣言式",
   category: "生写真",
   set: { kind: ProductLine.Photo, setName: "2025 浴衣" },
   tradeText: TradeTextType.Numbering,

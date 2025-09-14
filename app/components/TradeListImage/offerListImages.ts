@@ -16,7 +16,7 @@ const transformOfferToRenderProps = (details: TradingItemDetail): TradeItemRende
     status: tradeStateToImageSrc(details.status),
     name: details.item.name,
     id: details.item.id,
-    series: details.product.series,
+    series: details.product.set?.setName ?? details.product.series,
   };
 };
 

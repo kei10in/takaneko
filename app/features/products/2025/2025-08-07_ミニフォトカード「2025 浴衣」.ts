@@ -6,7 +6,7 @@ export const _2025浴衣_ミニフォト: RandomGoods = {
   slug: "ミニフォトカード「2025 浴衣」",
   name: "ミニフォトカードセット「2025 浴衣」ver.",
   year: 2025,
-  series: "2025 浴衣",
+  series: "私たちの宣言式",
   category: "ミニフォトカード",
   set: { kind: ProductLine.MiniPhotoCard, setName: "2025 浴衣" },
   tradeText: TradeTextType.Numbering,

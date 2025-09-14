@@ -48,7 +48,9 @@ export function WishItemList(props: WishItemListProps) {
                 />
                 <div className="pt-1 text-center">
                   <p className="line-clamp-2">{makeTitle(detail)}</p>
-                  <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+                  <p className="line-clamp-2 text-xs text-gray-400">
+                    {detail.product.set?.setName ?? detail.product.series}
+                  </p>
                 </div>
               </div>
             </li>
