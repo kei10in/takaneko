@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 韓国風制服_生写真: RandomGoods = {
@@ -8,6 +8,7 @@ export const 韓国風制服_生写真: RandomGoods = {
   year: 2025,
   series: "韓国風制服",
   category: "生写真",
+  productLine: ProductLine.Photo,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-04-06_生写真「韓国風制服」.webp",
   width: 210,

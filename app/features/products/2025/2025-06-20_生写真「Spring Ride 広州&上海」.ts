@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const SpringRide広州上海_生写真: RandomGoods = {
   id: "生写真「Spring Ride 広州&上海」",
@@ -7,6 +7,7 @@ export const SpringRide広州上海_生写真: RandomGoods = {
   year: 2025,
   series: "Spring Ride 広州&上海",
   category: "生写真",
+  productLine: ProductLine.Photo,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-06-20_生写真「Spring Ride 広州&上海」.webp",
   width: 538,

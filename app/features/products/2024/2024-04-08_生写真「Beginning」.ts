@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const Beginning_生写真: RandomGoods = {
   id: "生写真 (Beginning ver)",
@@ -7,6 +7,7 @@ export const Beginning_生写真: RandomGoods = {
   year: 2024,
   series: "Beginning",
   category: "生写真",
+  productLine: ProductLine.Photo,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-04-08_生写真「Beginning」.png",
   width: 542,
