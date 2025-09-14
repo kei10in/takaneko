@@ -127,7 +127,7 @@ import { AWonderfulEncounterFC抽選会_ミニフォト } from "./2025/2025-09-0
 import { AWonderfulEncounter_ミニフォト } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」";
 import { AWonderfulEncounter_生写真 } from "./2025/2025-09-07_生写真「A Wonderful Encounter」";
 import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ「A Wonderful Encounter」";
-import { RandomGoods, TradeTextType } from "./product";
+import { ProductLine, RandomGoods } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _2025浴衣_生写真,
@@ -272,17 +272,14 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
 export const regularTakanekoPhotos = () => TAKANEKO_PHOTOS.filter(isRegularTakanekoPhoto);
 
 export const isRegularTakanekoPhoto = (photo: RandomGoods) =>
-  photo.category == "生写真" && photo.tradeText == TradeTextType.Numbering;
+  photo.productLine == ProductLine.Photo;
 
 export const regularTakanekoMiniPhotoCards = () =>
   TAKANEKO_PHOTOS.filter(isRegularTakanekoMiniPhotoCard);
 
 export const isRegularTakanekoMiniPhotoCard = (photo: RandomGoods) =>
-  photo.category == "ミニフォト" && photo.tradeText == TradeTextType.Numbering;
+  photo.productLine == ProductLine.MiniPhotoCard;
 
 export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTakanekoRandomGoods);
 
-export const isOtherTakanekoRandomGoods = (photo: RandomGoods) =>
-  (photo.category == "生写真" && photo.tradeText != TradeTextType.Numbering) ||
-  (photo.category == "ミニフォト" && photo.tradeText != TradeTextType.Numbering) ||
-  (photo.category != "生写真" && photo.category != "ミニフォト");
+export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.productLine == undefined;

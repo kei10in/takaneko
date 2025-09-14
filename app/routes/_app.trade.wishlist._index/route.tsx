@@ -179,7 +179,7 @@ export default function Index() {
 
         <section className="my-12">
           <h2 className={sectionHeading("px-4")}>
-            <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> 生写真
+            <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> 生写真セット
           </h2>
 
           {photoWants.length != 0 && (
@@ -208,7 +208,7 @@ export default function Index() {
 
         <section className="my-12">
           <h2 className={sectionHeading("px-4")}>
-            <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> ミニフォトカード
+            <img className="mb-1 inline h-8" src="/求.svg" alt="求" /> ミニフォトカードセット
           </h2>
 
           {miniPhotoCardWants.length != 0 && (
