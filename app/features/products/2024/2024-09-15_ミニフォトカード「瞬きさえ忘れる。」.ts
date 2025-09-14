@@ -7,7 +7,7 @@ export const 瞬きさえ忘れる_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット「瞬きさえ忘れる。」ver.",
   year: 2024,
   series: "瞬きさえ忘れる。",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-09-15_ミニフォトカード「瞬きさえ忘れる。」.webp",

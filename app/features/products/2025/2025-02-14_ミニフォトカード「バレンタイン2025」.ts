@@ -7,7 +7,7 @@ export const バレンタイン2025_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット「バレンタイン2025」ver.",
   year: 2025,
   series: "バレンタイン2025",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-02-14_ミニフォトカード「バレンタイン2025」.webp",

@@ -7,7 +7,7 @@ export const 海の妖精_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (海の妖精 ver.)",
   year: 2023,
   series: "海の妖精",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-11-29_ミニフォトカード「海の妖精」.webp",

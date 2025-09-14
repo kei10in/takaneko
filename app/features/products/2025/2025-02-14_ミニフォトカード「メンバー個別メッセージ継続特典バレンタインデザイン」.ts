@@ -6,7 +6,7 @@ export const メンバー個別メッセージ継続特典バレンタインデ�
   name: "ミニフォトカード「メンバー個別メッセージ継続特典バレンタイン デザイン」",
   year: 2025,
   series: "メンバー個別メッセージ継続特典バレンタイン デザイン",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-02-14_ミニフォトカード「メンバー個別メッセージ継続特典バレンタインデザイン」.png",
   width: 1086,

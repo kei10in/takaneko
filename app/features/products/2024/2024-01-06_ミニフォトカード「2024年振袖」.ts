@@ -7,7 +7,7 @@ export const _2024年振袖_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (2024年振袖ver.)",
   year: 2024,
   series: "2024年振袖",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-01-06_ミニフォトカード「2024年振袖」.jpg",

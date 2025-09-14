@@ -7,7 +7,7 @@ export const 白ワンピース_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (白ワンピースver.)",
   year: 2024,
   series: "白ワンピース",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-08-12_ミニフォト「白ワンピース」.jpg",

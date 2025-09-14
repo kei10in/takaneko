@@ -7,7 +7,7 @@ export const AWonderfulEncounter_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット「A Wonderful Encounter」ver.",
   year: 2025,
   series: "A Wonderful Encounter",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」.webp",

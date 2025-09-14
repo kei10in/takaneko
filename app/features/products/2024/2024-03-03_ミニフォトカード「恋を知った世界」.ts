@@ -7,7 +7,7 @@ export const 恋を知った世界_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット(恋を知った世界ver.)",
   year: 2024,
   series: "恋を知った世界",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-03-03_ミニフォトカード「恋を知った世界」.jpg",

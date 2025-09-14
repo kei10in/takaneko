@@ -7,7 +7,7 @@ export const _2025春衣装_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット「2025 春衣装」ver.",
   year: 2025,
   series: "2025 春衣装",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-05-06_ミニフォトカード「2025 春衣装」.webp",

@@ -7,7 +7,7 @@ export const 高嶺のなでしこ2024衣装_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット「高嶺のなでしこ2024衣装」ver.",
   year: 2024,
   series: "高嶺のなでしこ2024衣装",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-11-08_ミニフォトカード「高嶺のなでしこ2024衣装」.jpg",

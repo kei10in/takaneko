@@ -7,7 +7,7 @@ export const 僕は君になれない衣装_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (僕は君になれない衣装 ver.)",
   year: 2023,
   series: "僕は君になれない衣装",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
   productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-09-03_ミニフォトカード「僕は君になれない衣装」.jpg",
