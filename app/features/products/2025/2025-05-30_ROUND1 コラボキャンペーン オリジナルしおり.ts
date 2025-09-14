@@ -7,6 +7,7 @@ export const ROUND1_コラボキャンペーン_オリジナルしおり: Random
   year: 2025,
   series: "ROUND1 コラボキャンペーン",
   category: "しおり",
+  tradeTitle: "しおり ROUND1 コラボ",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルしおり.webp",
   width: 820,

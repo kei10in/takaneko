@@ -4,7 +4,7 @@ import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
 export const AWonderfulEncounter_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「A Wonderful Encounter」",
   slug: "ミニフォトカード「A Wonderful Encounter」",
-  name: "ミニフォトカードセット「A Wonderful Encounter」ver.",
+  name: "ミニフォトカードセット (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
   category: "ミニフォトカード",

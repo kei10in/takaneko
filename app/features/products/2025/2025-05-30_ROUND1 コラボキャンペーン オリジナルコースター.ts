@@ -7,6 +7,7 @@ export const ROUND1_コラボキャンペーン_オリジナルコースター: 
   year: 2025,
   series: "ROUND1 コラボキャンペーン",
   category: "コースター",
+  tradeTitle: "コースター ROUND1 コラボ",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルコースター.webp",
   width: 820,

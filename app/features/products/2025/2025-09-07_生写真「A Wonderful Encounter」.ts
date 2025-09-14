@@ -4,7 +4,7 @@ import { REGULAR_PHOTO_SET2 } from "../utils";
 export const AWonderfulEncounter_生写真: RandomGoods = {
   id: "生写真「A Wonderful Encounter」",
   slug: "生写真「A Wonderful Encounter」",
-  name: "生写真「A Wonderful Encounter」ver.",
+  name: "生写真 (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
   category: "生写真",

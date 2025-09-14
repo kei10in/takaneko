@@ -3,7 +3,7 @@ import { RandomGoods, TradeTextType } from "~/features/products/product";
 export const AWonderfulEncounter_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ「A Wonderful Encounter」",
   slug: "缶バッジ「A Wonderful Encounter」",
-  name: "ランダム缶バッジ「A Wonderful Encounter」ver.",
+  name: "ランダム缶バッジ (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
   category: "缶バッジ",

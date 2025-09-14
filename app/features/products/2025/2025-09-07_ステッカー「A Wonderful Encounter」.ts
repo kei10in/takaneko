@@ -7,6 +7,7 @@ export const AWonderfulEncounter_にゃでしこステッカー: RandomGoods = {
   year: 2025,
   series: "A Wonderful Encounter",
   category: "ステッカー",
+  tradeTitle: "にゃでしこドットステッカー",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-09-07_ランダムにゃでしこドットステッカー.webp",
   width: 1200,

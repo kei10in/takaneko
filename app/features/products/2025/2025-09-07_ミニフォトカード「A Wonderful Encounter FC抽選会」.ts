@@ -7,6 +7,7 @@ export const AWonderfulEncounterFC抽選会_ミニフォト: RandomGoods = {
   year: 2025,
   series: "A Wonderful Encounter FC抽選会",
   category: "ミニフォトカード",
+  tradeTitle: "幕張 FC抽選会 ミニフォト",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-09-07_メンバー個別デザイン ミニフォトカード.webp",
   width: 1200,

@@ -7,6 +7,7 @@ export const お守りアクキー: RandomGoods = {
   year: 2025,
   series: "私たちの宣言式",
   category: "アクリルキーホルダー",
+  tradeTitle: "お守りアクキー",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-08-07_お守りアクキー.webp",
   width: 340,
