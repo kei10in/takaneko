@@ -7,7 +7,7 @@ export const FAVE_IDOLS_オンラインくじC賞: RandomGoods = {
   abbrev: "FAVE IDOLS オンラインくじ C賞 アクリルパネル",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "C賞 アクリルパネル",
+  category: "アクリルパネル",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ C賞.webp",
   width: 2800,

@@ -7,7 +7,7 @@ export const FAVE_IDOLS_オンラインくじ10連特典: RandomGoods = {
   abbrev: "FAVE IDOLS オンラインくじ 10連特典 ポストカード",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "10連特典 ポストカード",
+  category: "ポストカード",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ 10連特典.webp",
   width: 2800,

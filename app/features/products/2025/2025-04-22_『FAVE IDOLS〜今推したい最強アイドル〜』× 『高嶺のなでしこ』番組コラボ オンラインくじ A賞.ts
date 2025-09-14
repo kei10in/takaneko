@@ -7,7 +7,7 @@ export const FAVE_IDOLS_オンラインくじA賞: RandomGoods = {
   abbrev: "FAVE IDOLS オンラインくじ A賞 撮り下ろしボイス3種入り目覚まし時計",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "A賞 目覚まし時計",
+  category: "目覚まし時計",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ A賞.webp",
   width: 3050,

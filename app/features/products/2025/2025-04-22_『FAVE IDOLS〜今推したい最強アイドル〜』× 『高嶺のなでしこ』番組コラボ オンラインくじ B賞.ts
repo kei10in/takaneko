@@ -7,7 +7,7 @@ export const FAVE_IDOLS_オンラインくじB賞: RandomGoods = {
   abbrev: "FAVE IDOLS オンラインくじ B賞 番組着用メンバーゼッケンプリントTシャツ",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "B賞 Tシャツ",
+  category: "Tシャツ",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ B賞.webp",
   width: 2800,
