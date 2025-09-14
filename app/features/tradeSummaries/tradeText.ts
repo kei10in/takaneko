@@ -1,13 +1,13 @@
 import { AllMembers } from "~/features/profile/members";
 import { ItemDescription, RandomGoods } from "../products/product";
-import { tradeTitle } from "../products/productImages";
+import { TradeText } from "../products/productImages";
 import { TradeDescription } from "../trade/TradeStatus";
 
 export const convertToTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string | undefined => {
-  const title = tradeTitle(productImage);
+  const title = TradeText.title(productImage);
 
   if (productImage.tradeText === "numbering") {
     return generateNumberingTradeText(title, productImage, tradeDescriptions);

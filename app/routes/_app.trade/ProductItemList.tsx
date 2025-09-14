@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
+import { RandomGoodsCard } from "~/features/products/productImages";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { ProductItem } from "./ProductItem";
 
@@ -23,8 +24,8 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
                   image={thumbs.src}
                   imageSet={thumbs.srcset}
                   year={photo.year}
-                  content={photo.abbrev ?? photo.name}
-                  description={photo.category}
+                  content={RandomGoodsCard.title(photo)}
+                  description={RandomGoodsCard.subtitle(photo)}
                 />
               </NavLink>
             </li>

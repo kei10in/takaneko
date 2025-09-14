@@ -283,22 +283,51 @@ export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTaka
 
 export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.set?.kind == undefined;
 
-export const tradeTitle = (photo: RandomGoods) => {
-  if (photo.tradeTitle) {
-    return photo.tradeTitle;
+export const abbrevCategory = (category: string) => {
+  if (category == "ミニフォトカード") {
+    return "ミニフォト";
   }
 
-  if (photo.set?.kind == ProductLine.Photo) {
-    return `生写真 ${photo.set.setName}`;
+  if (category == "アクリルキーホルダー") {
+    return "アクキー";
   }
 
-  if (photo.set?.kind == ProductLine.MiniPhotoCard) {
-    return `ミニフォト ${photo.set.setName}`;
-  }
-
-  if (photo.abbrev) {
-    return photo.abbrev;
-  }
-
-  return `${photo.category} ${photo.series}`;
+  return category;
 };
+
+/**
+ * ランダムグッズのカードに表示するテキストを生成するためのユーティリティ
+ */
+export const RandomGoodsCard = {
+  title: (photo: RandomGoods) => photo.abbrev ?? photo.name,
+  subtitle: (photo: RandomGoods) => photo.category,
+} as const;
+
+/**
+ * トレード ツイートに使うテキスト パースを生成するためのユーティリティ
+ */
+export const TradeText = {
+  title: (photo: RandomGoods) => {
+    if (photo.tradeTitle) {
+      return photo.tradeTitle;
+    }
+
+    if (photo.set?.kind == ProductLine.Photo) {
+      return `生写真 ${photo.set.setName}`;
+    }
+
+    if (photo.set?.kind == ProductLine.MiniPhotoCard) {
+      return `ミニフォト ${photo.set.setName}`;
+    }
+
+    return `${abbrevCategory(photo.category)} ${photo.series}`;
+  },
+};
+
+/**
+ * トレード用まとめ画像の項目に使うテキストを生成するためのユーティリティ
+ */
+export const TradeListImage = {
+  title: (photo: RandomGoods) => `${photo.name} ${photo.id}`,
+  subtitle: (photo: RandomGoods) => photo.set?.setName ?? TradeText.title(photo),
+} as const;
