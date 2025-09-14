@@ -11,7 +11,7 @@ import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
 import { Link, useLocation } from "react-router";
-import { RandomGoods } from "../../features/products/product";
+import { ProductLine, RandomGoods } from "../../features/products/product";
 import { ProductItemList } from "./ProductItemList";
 
 interface Props {
@@ -24,8 +24,8 @@ interface Props {
 
 const filters = [
   { id: "all", label: "All" },
-  { id: "photo", label: "生写真" },
-  { id: "mini-photo", label: "ミニフォト" },
+  { id: "photo", label: "生写真セット" },
+  { id: "mini-photo", label: "ミニフォトセット" },
   { id: "other", label: "その他" },
 ];
 
@@ -37,15 +37,19 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
   const location = useLocation();
   const filteredAllPhotos = allPhotos.map((item) => {
     if (filter == "photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.category == "生写真") };
+      return {
+        ...item,
+        photos: item.photos.filter((photo) => photo.productLine == ProductLine.Photo),
+      };
     } else if (filter == "mini-photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.category == "ミニフォト") };
+      return {
+        ...item,
+        photos: item.photos.filter((photo) => photo.productLine == ProductLine.MiniPhotoCard),
+      };
     } else if (filter == "other") {
       return {
         ...item,
-        photos: item.photos.filter(
-          (photo) => photo.category != "生写真" && photo.category != "ミニフォト",
-        ),
+        photos: item.photos.filter((photo) => photo.productLine == undefined),
       };
     } else {
       return item;
