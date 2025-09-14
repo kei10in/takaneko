@@ -282,3 +282,23 @@ export const isRegularTakanekoMiniPhotoCard = (photo: RandomGoods) =>
 export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTakanekoRandomGoods);
 
 export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.set?.kind == undefined;
+
+export const tradeTitle = (photo: RandomGoods) => {
+  if (photo.tradeTitle) {
+    return photo.tradeTitle;
+  }
+
+  if (photo.set?.kind == ProductLine.Photo) {
+    return `生写真 ${photo.set.setName}`;
+  }
+
+  if (photo.set?.kind == ProductLine.MiniPhotoCard) {
+    return `ミニフォト ${photo.set.setName}`;
+  }
+
+  if (photo.abbrev) {
+    return photo.abbrev;
+  }
+
+  return `${photo.category} ${photo.series}`;
+};

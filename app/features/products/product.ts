@@ -65,7 +65,10 @@ export interface RandomGoods {
   set?: { kind: ProductLine; setName: string } | undefined;
   series: string;
   category: string;
+
+  tradeTitle?: string;
   tradeText?: TradeTextType;
+
   variants: ItemDescription[];
 
   // 画像に関する情報です。
