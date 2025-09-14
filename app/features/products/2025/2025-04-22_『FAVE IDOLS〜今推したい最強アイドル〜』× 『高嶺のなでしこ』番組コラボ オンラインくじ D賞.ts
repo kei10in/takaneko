@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじD賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ D賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ D賞 Tシャツアクリルキーホルダー",
+  abbrev: "FAVE IDOLS オンラインくじ D賞 Tシャツアクリルキーホルダー",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "D賞 アクリルキーホルダー",

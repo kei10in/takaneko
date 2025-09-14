@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじC賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ C賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ C賞 アクリルパネル",
+  abbrev: "FAVE IDOLS オンラインくじ C賞 アクリルパネル",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "C賞 アクリルパネル",

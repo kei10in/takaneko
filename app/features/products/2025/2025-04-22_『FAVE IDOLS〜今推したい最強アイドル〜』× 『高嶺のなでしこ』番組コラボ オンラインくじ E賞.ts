@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじE賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ E賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞 缶バッジ",
+  abbrev: "FAVE IDOLS オンラインくじ E賞 缶バッジ",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "E賞 缶バッジ",

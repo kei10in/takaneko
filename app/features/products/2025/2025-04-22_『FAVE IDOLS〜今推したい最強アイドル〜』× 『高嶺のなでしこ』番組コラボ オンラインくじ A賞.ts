@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじA賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ A賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ A賞 撮り下ろしボイス3種入り目覚まし時計",
+  abbrev: "FAVE IDOLS オンラインくじ A賞 撮り下ろしボイス3種入り目覚まし時計",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "A賞 目覚まし時計",

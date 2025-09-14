@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじB賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ B賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ B賞 番組着用メンバーゼッケンプリントTシャツ",
+  abbrev: "FAVE IDOLS オンラインくじ B賞 番組着用メンバーゼッケンプリントTシャツ",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "B賞 Tシャツ",

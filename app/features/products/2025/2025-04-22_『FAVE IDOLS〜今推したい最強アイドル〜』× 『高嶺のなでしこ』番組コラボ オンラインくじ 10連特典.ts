@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじ10連特典: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ 10連特典",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ 10連特典 ポストカード",
+  abbrev: "FAVE IDOLS オンラインくじ 10連特典 ポストカード",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "10連特典 ポストカード",

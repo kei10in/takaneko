@@ -4,6 +4,7 @@ export const FAVE_IDOLS_オンラインくじF賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ F賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ F賞 クリアカード",
+  abbrev: "FAVE IDOLS オンラインくじ F賞 クリアカード",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
   category: "F賞 クリアカード",
