@@ -300,7 +300,15 @@ export const abbrevCategory = (category: string) => {
  */
 export const RandomGoodsCard = {
   title: (photo: RandomGoods) => photo.abbrev ?? photo.name,
-  subtitle: (photo: RandomGoods) => photo.category,
+  subtitle: (photo: RandomGoods) => {
+    if (isRegularTakanekoPhoto(photo)) {
+      return "生写真セット";
+    } else if (isRegularTakanekoMiniPhotoCard(photo)) {
+      return "ミニフォトセット";
+    } else {
+      return "その他";
+    }
+  },
 } as const;
 
 /**
