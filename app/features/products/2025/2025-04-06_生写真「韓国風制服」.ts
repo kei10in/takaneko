@@ -8,7 +8,7 @@ export const 韓国風制服_生写真: RandomGoods = {
   year: 2025,
   series: "韓国風制服",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "韓国風制服" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-04-06_生写真「韓国風制服」.webp",
   width: 210,

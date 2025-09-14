@@ -8,7 +8,7 @@ export const メイド至上主義_ミニフォト: RandomGoods = {
   year: 2024,
   series: "メイド☆至上主義",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "メイド☆至上主義" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-06-21_ミニフォトカード「メイド☆至上主義」.webp",
   width: 1680,

@@ -8,7 +8,7 @@ export const _2023ハロウィン_生写真: RandomGoods = {
   year: 2023,
   series: "2023ハロウィン",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "2023ハロウィン" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-10-25_生写真「2023ハロウィン」.webp",
   width: 1180,

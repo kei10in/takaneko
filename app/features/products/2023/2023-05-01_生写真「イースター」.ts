@@ -8,7 +8,7 @@ export const イースター_生写真: RandomGoods = {
   year: 2023,
   series: "イースター",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "イースター" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-05-01_生写真「イースター」.webp",
   width: 1188,

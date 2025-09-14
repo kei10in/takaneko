@@ -8,7 +8,7 @@ export const ライブ女子_生写真: RandomGoods = {
   year: 2024,
   series: "ライブ女子",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "ライブ女子" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-10-30_生写真「ライブ女子」.webp",
   width: 1680,

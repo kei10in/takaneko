@@ -8,7 +8,7 @@ export const ホワイトサンタ2023_ミニフォト: RandomGoods = {
   year: 2023,
   series: "ホワイトサンタ2023",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ホワイトサンタ2023" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-12-24_ミニフォトカード「ホワイトサンタ2023」.png",
   width: 184,

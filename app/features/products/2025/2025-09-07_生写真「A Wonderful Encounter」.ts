@@ -8,7 +8,7 @@ export const AWonderfulEncounter_生写真: RandomGoods = {
   year: 2025,
   series: "A Wonderful Encounter",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "A Wonderful Encounter" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-09-07_生写真「A Wonderful Encounter」.webp",
   width: 1080,

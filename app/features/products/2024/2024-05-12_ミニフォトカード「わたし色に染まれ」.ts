@@ -8,7 +8,7 @@ export const わたし色に染まれ_ミニフォト: RandomGoods = {
   year: 2024,
   series: "わたし色に染まれ",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "わたし色に染まれ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-05-12_ミニフォトカード「わたし色に染まれ」.png",
   width: 413,

@@ -8,7 +8,7 @@ export const 浴衣2024_ミニフォト: RandomGoods = {
   year: 2024,
   series: "浴衣2024",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "浴衣2024" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-07-21_ミニフォトカード「浴衣2024」.jpg",
   width: 720,

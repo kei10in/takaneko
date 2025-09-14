@@ -8,7 +8,7 @@ export const _2023ハロウィン_ミニフォト: RandomGoods = {
   year: 2023,
   series: "2023ハロウィン",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "2023ハロウィン" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-10-09_ミニフォトカード「2023ハロウィン」.jpg",
   width: 1078,

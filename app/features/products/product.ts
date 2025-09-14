@@ -61,9 +61,10 @@ export interface RandomGoods {
   priceWithTax?: number;
   images?: ImageDescription[];
   year: number;
+  // 生写真セット・ミニフォトカードセットだけに設定する値です。
+  set?: { kind: ProductLine; setName: string } | undefined;
   series: string;
   category: string;
-  productLine?: ProductLine;
   tradeText?: TradeTextType;
   variants: ItemDescription[];
 

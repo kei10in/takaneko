@@ -8,7 +8,7 @@ export const _2024年バレンタイン_ミニフォト: RandomGoods = {
   year: 2024,
   series: "2024年バレンタイン",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "2024年バレンタイン" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-02-14_ミニフォトカード「2024年バレンタイン」.webp",
   width: 1116,

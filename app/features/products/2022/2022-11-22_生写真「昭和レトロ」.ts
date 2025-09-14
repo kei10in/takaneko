@@ -8,7 +8,7 @@ export const 昭和レトロ_生写真: RandomGoods = {
   year: 2022,
   series: "昭和レトロ",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "昭和レトロ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2022/2022-11-22_生写真「昭和レトロ」.webp",
   width: 1300,

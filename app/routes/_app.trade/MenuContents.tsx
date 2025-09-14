@@ -11,7 +11,12 @@ import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
 import { Link, useLocation } from "react-router";
-import { ProductLine, RandomGoods } from "../../features/products/product";
+import {
+  isOtherTakanekoRandomGoods,
+  isRegularTakanekoMiniPhotoCard,
+  isRegularTakanekoPhoto,
+} from "~/features/products/productImages";
+import { RandomGoods } from "../../features/products/product";
 import { ProductItemList } from "./ProductItemList";
 
 interface Props {
@@ -37,20 +42,11 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
   const location = useLocation();
   const filteredAllPhotos = allPhotos.map((item) => {
     if (filter == "photo") {
-      return {
-        ...item,
-        photos: item.photos.filter((photo) => photo.productLine == ProductLine.Photo),
-      };
+      return { ...item, photos: item.photos.filter(isRegularTakanekoPhoto) };
     } else if (filter == "mini-photo") {
-      return {
-        ...item,
-        photos: item.photos.filter((photo) => photo.productLine == ProductLine.MiniPhotoCard),
-      };
+      return { ...item, photos: item.photos.filter(isRegularTakanekoMiniPhotoCard) };
     } else if (filter == "other") {
-      return {
-        ...item,
-        photos: item.photos.filter((photo) => photo.productLine == undefined),
-      };
+      return { ...item, photos: item.photos.filter(isOtherTakanekoRandomGoods) };
     } else {
       return item;
     }

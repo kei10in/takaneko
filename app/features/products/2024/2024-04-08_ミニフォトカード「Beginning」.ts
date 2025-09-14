@@ -7,7 +7,7 @@ export const Beginning_ミニフォト: RandomGoods = {
   year: 2024,
   series: "Beginning",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "Beginning" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-04-08_ミニフォトカード「Beginning」.png",
   width: 542,

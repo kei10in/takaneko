@@ -8,7 +8,7 @@ export const アイドル衣装_ミニフォト: RandomGoods = {
   year: 2025,
   series: "アイドル衣装",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "アイドル衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-06-17_ミニフォトカード「アイドル衣装」.webp",
   width: 1260,

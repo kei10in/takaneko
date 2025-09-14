@@ -8,7 +8,7 @@ export const 浴衣_生写真: RandomGoods = {
   year: 2023,
   series: "浴衣",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "浴衣" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-08-09_生写真「浴衣」.webp",
   width: 1180,

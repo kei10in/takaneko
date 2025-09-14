@@ -8,7 +8,7 @@ export const 恋を知った世界_生写真: RandomGoods = {
   year: 2024,
   series: "恋を知った世界",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "恋を知った世界" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-03-27_生写真「恋を知った世界」.webp",
   width: 720,

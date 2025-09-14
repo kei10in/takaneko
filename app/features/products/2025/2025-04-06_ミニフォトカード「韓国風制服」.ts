@@ -8,7 +8,7 @@ export const 韓国風制服_ミニフォト: RandomGoods = {
   year: 2025,
   series: "韓国風制服",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "韓国風制服" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-04-06_ミニフォトカード「韓国風制服」.webp",
   width: 210,

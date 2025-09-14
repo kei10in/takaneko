@@ -8,7 +8,7 @@ export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoo
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "たかねこ全国お招きツアー2023衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-04-23_生写真「たかねこ全国お招きツアー 2023」.png",
   width: 266,

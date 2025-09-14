@@ -8,7 +8,7 @@ export const 瞬きさえ忘れる_生写真: RandomGoods = {
   year: 2024,
   series: "瞬きさえ忘れる。",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "瞬きさえ忘れる。" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-09-15_生写真「瞬きさえ忘れる。」.webp",
   width: 1680,

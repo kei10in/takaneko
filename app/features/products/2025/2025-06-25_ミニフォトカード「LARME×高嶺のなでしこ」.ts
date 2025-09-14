@@ -8,7 +8,7 @@ export const LARME高嶺のなでしこ_ミニフォト: RandomGoods = {
   year: 2025,
   series: "LARME×高嶺のなでしこ",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "LARME×高嶺のなでしこ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-06-25_ミニフォトカード「LARME×高嶺のなでしこ」.webp",
   width: 820,

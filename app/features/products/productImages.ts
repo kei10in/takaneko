@@ -271,15 +271,14 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
 
 export const regularTakanekoPhotos = () => TAKANEKO_PHOTOS.filter(isRegularTakanekoPhoto);
 
-export const isRegularTakanekoPhoto = (photo: RandomGoods) =>
-  photo.productLine == ProductLine.Photo;
+export const isRegularTakanekoPhoto = (photo: RandomGoods) => photo.set?.kind == ProductLine.Photo;
 
 export const regularTakanekoMiniPhotoCards = () =>
   TAKANEKO_PHOTOS.filter(isRegularTakanekoMiniPhotoCard);
 
 export const isRegularTakanekoMiniPhotoCard = (photo: RandomGoods) =>
-  photo.productLine == ProductLine.MiniPhotoCard;
+  photo.set?.kind == ProductLine.MiniPhotoCard;
 
 export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTakanekoRandomGoods);
 
-export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.productLine == undefined;
+export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.set?.kind == undefined;

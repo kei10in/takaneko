@@ -8,7 +8,7 @@ export const たかねこ全国お招きツアー2023衣装_ミニフォト: Ran
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "たかねこ全国お招きツアー2023衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-04-23_ミニフォトカード「たかねこ全国お招きツアー 2023」.png",
   width: 266,

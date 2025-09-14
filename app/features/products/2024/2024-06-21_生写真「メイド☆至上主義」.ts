@@ -8,7 +8,7 @@ export const メイド至上主義_生写真: RandomGoods = {
   year: 2024,
   series: "メイド☆至上主義",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "メイド☆至上主義" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-06-21_生写真「メイド☆至上主義」.webp",
   width: 1680,

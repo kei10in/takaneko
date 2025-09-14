@@ -8,7 +8,7 @@ export const ライブ女子_ミニフォト: RandomGoods = {
   year: 2024,
   series: "ライブ女子",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ライブ女子" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-10-25_ミニフォトカード「ライブ女子」.webp",
   width: 1865,

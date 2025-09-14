@@ -8,7 +8,7 @@ export const ワンピース_生写真: RandomGoods = {
   year: 2024,
   series: "ワンピース",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "ワンピース" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-05-27_生写真「ワンピース」.webp",
   width: 1579,

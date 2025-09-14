@@ -8,7 +8,7 @@ export const povo20_生写真: RandomGoods = {
   year: 2023,
   series: "povo",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "povo" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-10-02_生写真「povo」.jpg",
   width: 1182,

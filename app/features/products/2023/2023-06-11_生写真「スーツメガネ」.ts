@@ -8,7 +8,7 @@ export const スーツメガネ_生写真: RandomGoods = {
   year: 2023,
   series: "スーツメガネ",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "スーツメガネ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-06-11_生写真「スーツメガネ」.webp",
   width: 1064,

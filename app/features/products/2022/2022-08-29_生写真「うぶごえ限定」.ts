@@ -8,7 +8,7 @@ export const うぶごえ_生写真: RandomGoods = {
   year: 2022,
   series: "うぶごえ",
   category: "生写真",
-  productLine: ProductLine.Photo,
+  set: { kind: ProductLine.Photo, setName: "うぶごえ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2022/2022-08-29_生写真「うぶごえ限定」.jpg",
   width: 1280,

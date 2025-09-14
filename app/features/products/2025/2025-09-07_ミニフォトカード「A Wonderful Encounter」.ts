@@ -8,7 +8,7 @@ export const AWonderfulEncounter_ミニフォト: RandomGoods = {
   year: 2025,
   series: "A Wonderful Encounter",
   category: "ミニフォトカード",
-  productLine: ProductLine.MiniPhotoCard,
+  set: { kind: ProductLine.MiniPhotoCard, setName: "A Wonderful Encounter" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」.webp",
   width: 1080,
