@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ハロウィン2024_ミニフォト: RandomGoods = {
@@ -8,6 +8,7 @@ export const ハロウィン2024_ミニフォト: RandomGoods = {
   year: 2024,
   series: "ハロウィン 2024",
   category: "ミニフォト",
+  productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-10-31_ミニフォトカード「ハロウィン2024」.webp",
   width: 1680,

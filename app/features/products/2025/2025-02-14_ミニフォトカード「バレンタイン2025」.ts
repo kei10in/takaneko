@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const バレンタイン2025_ミニフォト: RandomGoods = {
@@ -8,6 +8,7 @@ export const バレンタイン2025_ミニフォト: RandomGoods = {
   year: 2025,
   series: "バレンタイン2025",
   category: "ミニフォト",
+  productLine: ProductLine.MiniPhotoCard,
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-02-14_ミニフォトカード「バレンタイン2025」.webp",
   width: 960,
