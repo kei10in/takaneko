@@ -6,7 +6,7 @@ export const 韓国風制服_生写真: RandomGoods = {
   slug: "生写真「韓国風制服」",
   name: "生写真セット「韓国風制服」ver.",
   year: 2025,
-  series: "韓国風制服",
+  series: "たかねこフェス vol.4",
   category: "生写真",
   set: { kind: ProductLine.Photo, setName: "韓国風制服" },
   tradeText: TradeTextType.Numbering,

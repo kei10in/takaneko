@@ -6,7 +6,7 @@ export const バレンタイン2025_ミニフォト: RandomGoods = {
   slug: "ミニフォトカード「バレンタイン2025」",
   name: "ミニフォトカードセット「バレンタイン2025」ver.",
   year: 2025,
-  series: "バレンタイン2025",
+  series: "Cute for life",
   category: "ミニフォトカード",
   set: { kind: ProductLine.MiniPhotoCard, setName: "バレンタイン2025" },
   tradeText: TradeTextType.Numbering,

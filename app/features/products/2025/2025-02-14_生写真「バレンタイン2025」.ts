@@ -6,7 +6,7 @@ export const バレンタイン2025_生写真: RandomGoods = {
   slug: "生写真「バレンタイン2025」",
   name: "生写真セット「バレンタイン2025」ver.",
   year: 2025,
-  series: "バレンタイン2025",
+  series: "Cute for life",
   category: "生写真",
   set: { kind: ProductLine.Photo, setName: "バレンタイン2025" },
   tradeText: TradeTextType.Numbering,

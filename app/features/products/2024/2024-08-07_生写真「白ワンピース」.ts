@@ -6,7 +6,7 @@ export const 白ワンピース_生写真: RandomGoods = {
   slug: "生写真「白ワンピース」",
   name: "生写真セット (白ワンピースver.)",
   year: 2024,
-  series: "白ワンピース",
+  series: "2nd ファンミ",
   category: "生写真",
   set: { kind: ProductLine.Photo, setName: "白ワンピース" },
   tradeText: TradeTextType.Numbering,

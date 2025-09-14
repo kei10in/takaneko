@@ -6,7 +6,7 @@ export const 韓国風制服_ミニフォト: RandomGoods = {
   slug: "ミニフォトカード「韓国風制服」",
   name: "ミニフォトカードセット「韓国風制服」ver.",
   year: 2025,
-  series: "韓国風制服",
+  series: "たかねこフェス vol.4",
   category: "ミニフォトカード",
   set: { kind: ProductLine.MiniPhotoCard, setName: "韓国風制服" },
   tradeText: TradeTextType.Numbering,
