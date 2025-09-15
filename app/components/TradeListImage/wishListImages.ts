@@ -9,9 +9,9 @@ import { tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
 import { ArrayUtils } from "~/utils/array";
 import { ImageSource } from "~/utils/html/types";
-import { TradeItemRenderProps } from "./types";
+import { TradingItemRenderProps } from "./types";
 
-const transformWishToRenderProps = (details: TradingItemDetail): TradeItemRenderProps => {
+const transformWishToRenderProps = (details: TradingItemDetail): TradingItemRenderProps => {
   return {
     path: croppedImagePath(details.product.url, details.position.id),
     status: tradeStateToImageSrc(details.status),
