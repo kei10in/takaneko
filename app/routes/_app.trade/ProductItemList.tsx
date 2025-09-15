@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
 import { RandomGoodsCard } from "~/features/products/productImages";
@@ -14,7 +15,14 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="@container">
-      <ul className="grid grid-cols-2 gap-x-2 gap-y-8 px-2 @md:grid-cols-3 @md:gap-x-4 @xl:grid-cols-4 @4xl:grid-cols-5 @4xl:gap-x-6">
+      <ul
+        className={clsx(
+          "grid grid-cols-2 justify-items-center gap-x-2 gap-y-8 px-2",
+          "@md:grid-cols-3 @md:gap-x-4",
+          "@xl:grid-cols-4",
+          "@4xl:grid-cols-5 @4xl:gap-x-6",
+        )}
+      >
         {items.map((photo) => {
           const thumbs = thumbnailSrcSet(photo.url);
           return (

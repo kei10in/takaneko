@@ -17,13 +17,8 @@ export const ProductItem: React.FC<Props> = (props: Props) => {
       className={clsx("outline-nadeshiko-800 group rounded-lg data-selected:outline-2")}
       data-selected={selected ? "true" : undefined}
     >
-      <div className="h-46 w-full">
-        <img
-          src={image}
-          srcSet={imageSet}
-          alt="product"
-          className="bg-nadeshiko-100 h-full w-full object-cover object-top"
-        />
+      <div className="aspect-square w-full">
+        <img src={image} srcSet={imageSet} alt="product" className="h-full w-full object-contain" />
       </div>
       <div className="flex flex-col space-y-0.5 px-1 py-1">
         <p className="line-clamp-3 text-sm leading-tight">{content}</p>
