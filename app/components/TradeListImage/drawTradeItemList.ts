@@ -397,7 +397,7 @@ const drawTradeItemList = async (
   return renderer.draw();
 };
 
-export const drawWithList = async (
+export const drawWishList = async (
   items: TradingItemRenderProps[][],
   bannerTitle: string,
 ): Promise<ImageSource[]> => {

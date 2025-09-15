@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import useSWR from "swr";
-import { drawWithList } from "~/components/TradeListImage/drawTradeItemList";
+import { drawWishList } from "~/components/TradeListImage/drawTradeItemList";
 import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource";
 import { croppedImagePath } from "~/features/products/croppedProductImage";
 import { RandomGoods } from "~/features/products/product";
@@ -34,7 +34,7 @@ export const usePhotoWishListImages = (
   }, [wishList]);
 
   const { data, isLoading } = useSWR([`/wishlist/photos`, items], async ([_, items]) => {
-    return await drawWithList(items, "ほしい 生写真");
+    return await drawWishList(items, "ほしい 生写真");
   });
 
   useAutoRevokeImageSource(data);
@@ -60,7 +60,7 @@ export const useMiniPhotoCardWishListImages = (
   }, [wishList]);
 
   const { data, isLoading } = useSWR([`/wishlist/mini-photo-cards`, items], async ([_, items]) => {
-    return await drawWithList(items, "ほしい ミニフォトカード");
+    return await drawWishList(items, "ほしい ミニフォトカード");
   });
 
   useAutoRevokeImageSource(data);
@@ -86,7 +86,7 @@ export const useOtherGoodsWishListImages = (
   }, [wishList]);
 
   const { data, isLoading } = useSWR([`/wishlist/other-goods`, items], async ([_, items]) => {
-    return await drawWithList(items, "ほしい その他のランダムグッズ");
+    return await drawWishList(items, "ほしい その他のランダムグッズ");
   });
 
   useAutoRevokeImageSource(data);
