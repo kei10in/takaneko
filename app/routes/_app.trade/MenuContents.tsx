@@ -117,7 +117,7 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
                 <HiChevronRight className="transition-transform group-data-open:rotate-90" />
               </div>
             </DisclosureButton>
-            <DisclosurePanel>
+            <DisclosurePanel className="px4">
               <ProductItemList items={item.photos} onClickLink={onClickMenuItem} />
             </DisclosurePanel>
           </Disclosure>
