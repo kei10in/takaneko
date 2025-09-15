@@ -36,7 +36,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
                 : open && start && !end
                   ? "開演時間" // 多分、主催系の二部構成
                   : !open && start && !end
-                    ? "開演時間" // 多分ない
+                    ? "開始時間" // 多分、リリイベの CD 販売や握手会
                     : "";
 
           return (
