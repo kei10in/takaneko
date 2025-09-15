@@ -172,11 +172,22 @@ class TradingItemListImage {
     this.frame = { width: this.fullImage.width, height };
   }
 
+  calculateStartX(): number {
+    if (this.items.length <= 3) {
+      const w = this.itemRect.width * this.items.length + this.xSpace * (this.items.length - 1);
+      return (this.fullImage.width - w) / 2;
+    } else {
+      return this.xMargin;
+    }
+  }
+
   tradingItemRects(): ItemRenderPositions[] {
+    const xStart = this.calculateStartX();
+
     return this.items.map((item, i) => {
       const row = Math.floor(i / 6);
       const col = i % 6;
-      const x = this.xMargin + this.itemRect.width * col + this.xSpace * col;
+      const x = xStart + this.itemRect.width * col + this.xSpace * col;
       const y = this.banner.height + this.yMargin + this.itemRect.height * row + this.ySpace * row;
 
       const r = this.itemRect.fitToItemRect(item.image.naturalWidth, item.image.naturalHeight);
