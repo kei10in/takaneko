@@ -12,6 +12,11 @@ export const YouTube2024 = [
     presents: ["涼海すう"],
   },
   {
+    videoId: "zaR65NSe_so",
+    publishedAt: "2024-12-18",
+    presents: [],
+  },
+  {
     videoId: "rIANtpllshE",
     publishedAt: "2024-12-08",
     presents: [],
