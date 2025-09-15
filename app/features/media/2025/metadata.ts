@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "cv5gFafJ4tU",
+    title:
+      "高嶺のなでしこ、9人の覚悟。3rdファンミーティングに密着！橋本桃呼（高嶺のなでしこ）密着ドキュメント【もういちど、アイドルを生きる#7】",
+    authorName: "Quick Japan",
+    publishedAt: "2025-09-11",
+    mediaUrl: "https://youtu.be/cv5gFafJ4tU",
+    imageUrl: "https://i.ytimg.com/vi/cv5gFafJ4tU/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "a1Gbr4LLqnc",
     title:
       "高嶺のなでしこ、初の韓国ワンマンライブ！橋本桃呼（高嶺のなでしこ）密着ドキュメント【もういちど、アイドルを生きる#6】",
