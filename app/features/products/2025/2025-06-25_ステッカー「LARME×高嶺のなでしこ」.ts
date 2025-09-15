@@ -11,7 +11,7 @@ export const LARME高嶺のなでしこ_ステッカー: RandomGoods = {
   url: "/takaneko/goods/2025/2025-06-25_ステッカー「LARME×高嶺のなでしこ」.webp",
   width: 1500,
   height: 1500,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "全身" },
     { id: 2, name: "涼海すう", description: "全身" },
     { id: 3, name: "橋本桃呼", description: "全身" },

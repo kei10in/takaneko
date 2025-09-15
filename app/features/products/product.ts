@@ -22,6 +22,13 @@ export interface OfficialGoods {
   images?: ImageDescription[];
 }
 
+export const ProductLine = {
+  Photo: "生写真セット",
+  MiniPhotoCard: "ミニフォトカードセット",
+} as const;
+
+export type ProductLine = (typeof ProductLine)[keyof typeof ProductLine];
+
 export const TradeTextType = {
   Description: "description",
   GroupByDescription: "groupByDescription",
@@ -54,10 +61,15 @@ export interface RandomGoods {
   priceWithTax?: number;
   images?: ImageDescription[];
   year: number;
+  // 生写真セット・ミニフォトカードセットだけに設定する値です。
+  set?: { kind: ProductLine; setName: string } | undefined;
   series: string;
   category: string;
+
+  tradeTitle?: string;
   tradeText?: TradeTextType;
-  lineup: ItemDescription[];
+
+  variants: ItemDescription[];
 
   // 画像に関する情報です。
   url: string;

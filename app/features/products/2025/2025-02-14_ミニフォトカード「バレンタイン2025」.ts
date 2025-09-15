@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const バレンタイン2025_ミニフォト: RandomGoods = {
@@ -6,13 +6,14 @@ export const バレンタイン2025_ミニフォト: RandomGoods = {
   slug: "ミニフォトカード「バレンタイン2025」",
   name: "ミニフォトカードセット「バレンタイン2025」ver.",
   year: 2025,
-  series: "バレンタイン2025",
-  category: "ミニフォト",
+  series: "Cute for life",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "バレンタイン2025" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-02-14_ミニフォトカード「バレンタイン2025」.webp",
   width: 960,
   height: 1280,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 75, y: 115, width: 128, height: 200 },
     { id: 2, x: 211, y: 115, width: 128, height: 200 },

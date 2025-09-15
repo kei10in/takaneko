@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const わたし色に染まれ_生写真: RandomGoods = {
@@ -8,11 +8,12 @@ export const わたし色に染まれ_生写真: RandomGoods = {
   year: 2024,
   series: "わたし色に染まれ",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "わたし色に染まれ" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-05-12_生写真「わたし色に染まれ」.png",
   width: 413,
   height: 548,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 39, y: 32, width: 53, height: 76 },
     { id: 2, x: 96, y: 32, width: 53, height: 76 },

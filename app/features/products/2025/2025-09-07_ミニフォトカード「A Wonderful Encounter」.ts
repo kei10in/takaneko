@@ -1,18 +1,19 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
 
 export const AWonderfulEncounter_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「A Wonderful Encounter」",
   slug: "ミニフォトカード「A Wonderful Encounter」",
-  name: "ミニフォトカードセット「A Wonderful Encounter」ver.",
+  name: "ミニフォトカードセット (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "A Wonderful Encounter" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」.webp",
   width: 1080,
   height: 1238,
-  lineup: REGULAR_MINI_PHOTO_SET2,
+  variants: REGULAR_MINI_PHOTO_SET2,
   positions: [
     { id: 1, x: 41, y: 33, width: 138, height: 220 },
     { id: 2, x: 213, y: 33, width: 138, height: 220 },

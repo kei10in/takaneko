@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const メイド至上主義_生写真: RandomGoods = {
@@ -8,11 +8,12 @@ export const メイド至上主義_生写真: RandomGoods = {
   year: 2024,
   series: "メイド☆至上主義",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "メイド☆至上主義" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-06-21_生写真「メイド☆至上主義」.webp",
   width: 1680,
   height: 2128,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 45, y: 240, width: 235, height: 335 },
     { id: 2, x: 316, y: 240, width: 235, height: 335 },

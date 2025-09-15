@@ -11,7 +11,7 @@ export const 瞬きさえ忘れる_FC抽選会_メンバー個別デザインス
   url: "/takaneko/goods/2024/2024-10-06_ステッカー「瞬きさえ忘れる。FC抽選会」.png",
   width: 1200,
   height: 637,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

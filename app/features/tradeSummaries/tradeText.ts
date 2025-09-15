@@ -1,25 +1,28 @@
 import { AllMembers } from "~/features/profile/members";
 import { ItemDescription, RandomGoods } from "../products/product";
+import { TradeText } from "../products/productImages";
 import { TradeDescription } from "../trade/TradeStatus";
 
 export const convertToTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string | undefined => {
+  const title = TradeText.title(productImage);
+
   if (productImage.tradeText === "numbering") {
-    return generateNumberingTradeText(productImage, tradeDescriptions);
+    return generateNumberingTradeText(title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "nameOnly") {
-    return generateNameOnlyTradeText(productImage, tradeDescriptions);
+    return generateNameOnlyTradeText(title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "description") {
-    return generateDescriptionTradeText(productImage, tradeDescriptions);
+    return generateDescriptionTradeText(title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "groupByDescription") {
-    return generateGroupByDescriptionTradeText(productImage, tradeDescriptions);
+    return generateGroupByDescriptionTradeText(title, productImage, tradeDescriptions);
   }
 
   return undefined;
@@ -29,11 +32,12 @@ export const convertToTradeText = (
  * `TradeTextType.Numbering` 用のトレード用テキストを生成します。
  */
 const generateNumberingTradeText = (
+  title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const members: { name: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     const member = members.find((m) => m.name === item.name);
     if (member) {
       member.items.push(item);
@@ -78,19 +82,18 @@ const generateNumberingTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
-
-  return concatenateTradeText({ name, have, wants });
+  return concatenateTradeText({ title, have, wants });
 };
 
 /**
  * `TradeTextType.NameOnly` 用のトレード用テキストを生成します。
  */
 const generateNameOnlyTradeText = (
+  title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
-  const have = productImage.lineup
+  const have = productImage.variants
     .flatMap((item) => {
       if (tradeDescriptions[item.id]?.status.tag === "have") {
         return [item.name];
@@ -100,7 +103,7 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const wants = productImage.lineup
+  const wants = productImage.variants
     .flatMap((item) => {
       if (tradeDescriptions[item.id]?.status.tag === "want") {
         return [item.name];
@@ -110,20 +113,19 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
-
-  return concatenateTradeText({ name, have, wants });
+  return concatenateTradeText({ title, have, wants });
 };
 
 /**
  * `TradeTextType.Description` 用のトレード用テキストを生成します。
  */
 const generateDescriptionTradeText = (
+  title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const members: { name: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     const member = members.find((m) => m.name === item.name);
     if (member) {
       member.items.push(item);
@@ -168,9 +170,7 @@ const generateDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
-
-  return concatenateTradeText({ name, have, wants });
+  return concatenateTradeText({ title, have, wants });
 };
 
 /**
@@ -185,11 +185,12 @@ const generateDescriptionTradeText = (
  *   F賞 葉月, 春野
  */
 const generateGroupByDescriptionTradeText = (
+  title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string => {
   const xs: { description: string; items: ItemDescription[] }[] = [];
-  productImage.lineup.forEach((item) => {
+  productImage.variants.forEach((item) => {
     if (item.description == undefined) {
       return;
     }
@@ -244,15 +245,13 @@ const generateGroupByDescriptionTradeText = (
     })
     .join("\n");
 
-  const name = productImage.abbrev ?? `${productImage.series} ${productImage.category}`;
-
-  return concatenateTradeText({ name, have, wants });
+  return concatenateTradeText({ title, have, wants });
 };
 
-const concatenateTradeText = (args: { name: string; have: string; wants: string }) => {
-  const { name, have, wants } = args;
+const concatenateTradeText = (args: { title: string; have: string; wants: string }) => {
+  const { title, have, wants } = args;
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
 
-  return `高嶺のなでしこ たかねこ トレード 交換\n${name}\n${haveText}${wantsText}`;
+  return `高嶺のなでしこ たかねこ トレード 交換\n${title}\n${haveText}${wantsText}`;
 };

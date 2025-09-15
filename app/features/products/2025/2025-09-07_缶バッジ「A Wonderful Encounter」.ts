@@ -3,7 +3,7 @@ import { RandomGoods, TradeTextType } from "~/features/products/product";
 export const AWonderfulEncounter_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ「A Wonderful Encounter」",
   slug: "缶バッジ「A Wonderful Encounter」",
-  name: "ランダム缶バッジ「A Wonderful Encounter」ver.",
+  name: "ランダム缶バッジ (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
   category: "缶バッジ",
@@ -11,7 +11,7 @@ export const AWonderfulEncounter_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2025/2025-09-07_缶バッジ「A Wonderful Encounter」.webp",
   width: 1200,
   height: 1200,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

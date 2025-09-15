@@ -4,14 +4,15 @@ export const FAVE_IDOLS_オンラインくじF賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ F賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ F賞 クリアカード",
+  abbrev: "FAVE IDOLS オンラインくじ F賞 クリアカード",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "F賞 クリアカード",
+  category: "クリアカード",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ F賞.webp",
   width: 2800,
   height: 1150,
-  lineup: [
+  variants: [
     { id: 51, name: "城月菜央", description: "F賞" },
     { id: 52, name: "涼海すう", description: "F賞" },
     { id: 53, name: "橋本桃呼", description: "F賞" },

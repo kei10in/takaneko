@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ライブ女子_ミニフォト: RandomGoods = {
@@ -7,12 +7,13 @@ export const ライブ女子_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (ライブ女子ver.)",
   year: 2024,
   series: "ライブ女子",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ライブ女子" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-10-25_ミニフォトカード「ライブ女子」.webp",
   width: 1865,
   height: 2362,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 84, y: 267, width: 235, height: 371 },
     { id: 2, x: 377, y: 267, width: 235, height: 371 },

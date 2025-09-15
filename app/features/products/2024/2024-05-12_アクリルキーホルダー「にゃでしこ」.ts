@@ -11,7 +11,7 @@ export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   url: "/takaneko/goods/2024/2024-05-12_アクリルキーホルダー「にゃでしこ」.webp",
   width: 1500,
   height: 1200,
-  lineup: [
+  variants: [
     { id: 1, name: "てんにゃ", description: "" },
     { id: 2, name: "ルニャ・コーチ", description: "" },
     { id: 3, name: "すうにゃろう", description: "" },

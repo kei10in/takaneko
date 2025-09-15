@@ -4,14 +4,15 @@ export const FAVE_IDOLS_オンラインくじE賞: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",
   slug: "FAVE IDOLS オンラインくじ E賞",
   name: "『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞 缶バッジ",
+  abbrev: "FAVE IDOLS オンラインくじ E賞 缶バッジ",
   year: 2025,
   series: "FAVE IDOLS オンラインくじ",
-  category: "E賞 缶バッジ",
+  category: "缶バッジ",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-04-22_『FAVE IDOLS〜今推したい最強アイドル〜』× 『高嶺のなでしこ』番組コラボ オンラインくじ E賞.webp",
   width: 2800,
   height: 1150,
-  lineup: [
+  variants: [
     { id: 41, name: "城月菜央", description: "E賞" },
     { id: 42, name: "涼海すう", description: "E賞" },
     { id: 43, name: "橋本桃呼", description: "E賞" },

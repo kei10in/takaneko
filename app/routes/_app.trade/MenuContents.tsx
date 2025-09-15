@@ -10,10 +10,14 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
 import { HiChevronRight } from "react-icons/hi2";
-import { Link, NavLink, useLocation } from "react-router";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { Link, useLocation } from "react-router";
+import {
+  isOtherTakanekoRandomGoods,
+  isRegularTakanekoMiniPhotoCard,
+  isRegularTakanekoPhoto,
+} from "~/features/products/productImages";
 import { RandomGoods } from "../../features/products/product";
-import { ProductItem } from "./ProductItem";
+import { ProductItemList } from "./ProductItemList";
 
 interface Props {
   allPhotos: {
@@ -25,12 +29,12 @@ interface Props {
 
 const filters = [
   { id: "all", label: "All" },
-  { id: "photo", label: "生写真" },
-  { id: "mini-photo", label: "ミニフォト" },
+  { id: "photo", label: "生写真セット" },
+  { id: "mini-photo", label: "ミニフォトセット" },
   { id: "other", label: "その他" },
 ];
 
-export const ProductList: React.FC<Props> = (props: Props) => {
+export const MenuContents: React.FC<Props> = (props: Props) => {
   const { allPhotos, onClickMenuItem } = props;
 
   const [filter, setFilter] = useState(filters[0].id);
@@ -38,16 +42,11 @@ export const ProductList: React.FC<Props> = (props: Props) => {
   const location = useLocation();
   const filteredAllPhotos = allPhotos.map((item) => {
     if (filter == "photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.category == "生写真") };
+      return { ...item, photos: item.photos.filter(isRegularTakanekoPhoto) };
     } else if (filter == "mini-photo") {
-      return { ...item, photos: item.photos.filter((photo) => photo.category == "ミニフォト") };
+      return { ...item, photos: item.photos.filter(isRegularTakanekoMiniPhotoCard) };
     } else if (filter == "other") {
-      return {
-        ...item,
-        photos: item.photos.filter(
-          (photo) => photo.category != "生写真" && photo.category != "ミニフォト",
-        ),
-      };
+      return { ...item, photos: item.photos.filter(isOtherTakanekoRandomGoods) };
     } else {
       return item;
     }
@@ -118,28 +117,8 @@ export const ProductList: React.FC<Props> = (props: Props) => {
                 <HiChevronRight className="transition-transform group-data-open:rotate-90" />
               </div>
             </DisclosureButton>
-            <DisclosurePanel>
-              <ul className="flex flex-wrap justify-center gap-3 px-4 pb-1.5">
-                {item.photos.map((photo) => (
-                  <li key={photo.slug}>
-                    <NavLink to={`/trade/${photo.slug}`} onClick={onClickMenuItem}>
-                      {({ isActive }) => {
-                        const thumbs = thumbnailSrcSet(photo.url);
-                        return (
-                          <ProductItem
-                            image={thumbs.src}
-                            imageSet={thumbs.srcset}
-                            year={photo.year}
-                            content={photo.series}
-                            description={photo.category}
-                            selected={isActive}
-                          />
-                        );
-                      }}
-                    </NavLink>
-                  </li>
-                ))}
-              </ul>
+            <DisclosurePanel className="px4">
+              <ProductItemList items={item.photos} onClickLink={onClickMenuItem} />
             </DisclosurePanel>
           </Disclosure>
         );

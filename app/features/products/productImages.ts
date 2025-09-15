@@ -127,7 +127,7 @@ import { AWonderfulEncounterFC抽選会_ミニフォト } from "./2025/2025-09-0
 import { AWonderfulEncounter_ミニフォト } from "./2025/2025-09-07_ミニフォトカード「A Wonderful Encounter」";
 import { AWonderfulEncounter_生写真 } from "./2025/2025-09-07_生写真「A Wonderful Encounter」";
 import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ「A Wonderful Encounter」";
-import { RandomGoods, TradeTextType } from "./product";
+import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _2025浴衣_生写真,
@@ -271,18 +271,95 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
 
 export const regularTakanekoPhotos = () => TAKANEKO_PHOTOS.filter(isRegularTakanekoPhoto);
 
-export const isRegularTakanekoPhoto = (photo: RandomGoods) =>
-  photo.category == "生写真" && photo.tradeText == TradeTextType.Numbering;
+export const isRegularTakanekoPhoto = (photo: RandomGoods) => photo.set?.kind == ProductLine.Photo;
 
 export const regularTakanekoMiniPhotoCards = () =>
   TAKANEKO_PHOTOS.filter(isRegularTakanekoMiniPhotoCard);
 
 export const isRegularTakanekoMiniPhotoCard = (photo: RandomGoods) =>
-  photo.category == "ミニフォト" && photo.tradeText == TradeTextType.Numbering;
+  photo.set?.kind == ProductLine.MiniPhotoCard;
 
 export const otherTakanekoRandomGoods = () => TAKANEKO_PHOTOS.filter(isOtherTakanekoRandomGoods);
 
-export const isOtherTakanekoRandomGoods = (photo: RandomGoods) =>
-  (photo.category == "生写真" && photo.tradeText != TradeTextType.Numbering) ||
-  (photo.category == "ミニフォト" && photo.tradeText != TradeTextType.Numbering) ||
-  (photo.category != "生写真" && photo.category != "ミニフォト");
+export const isOtherTakanekoRandomGoods = (photo: RandomGoods) => photo.set?.kind == undefined;
+
+export const abbrevCategory = (category: string) => {
+  if (category == "ミニフォトカード") {
+    return "ミニフォト";
+  }
+
+  if (category == "アクリルキーホルダー") {
+    return "アクキー";
+  }
+
+  return category;
+};
+
+/**
+ * ランダムグッズのカードに表示するテキストを生成するためのユーティリティ
+ */
+export const RandomGoodsCard = {
+  title: (photo: RandomGoods) => photo.abbrev ?? photo.name,
+  subtitle: (photo: RandomGoods) => {
+    if (isRegularTakanekoPhoto(photo)) {
+      return "生写真セット";
+    } else if (isRegularTakanekoMiniPhotoCard(photo)) {
+      return "ミニフォトセット";
+    } else {
+      return "その他";
+    }
+  },
+} as const;
+
+/**
+ * トレード ツイートに使うテキスト パースを生成するためのユーティリティ
+ *
+ * アイテムごとのテキストの生成はここでは定義しません。生写真・ミニフォトは
+ * アイテムごとではなくメンバーごとにテキストを作成するためです。
+ */
+export const TradeText = {
+  title: (photo: RandomGoods) => {
+    if (photo.tradeTitle) {
+      return photo.tradeTitle;
+    }
+
+    if (photo.set?.kind == ProductLine.Photo) {
+      return `生写真 ${photo.set.setName}`;
+    }
+
+    if (photo.set?.kind == ProductLine.MiniPhotoCard) {
+      return `ミニフォト ${photo.set.setName}`;
+    }
+
+    return `${abbrevCategory(photo.category)} ${photo.series}`;
+  },
+};
+
+/**
+ * トレード用まとめ画像の項目に使うテキストを生成するためのユーティリティ
+ */
+export const TradeListImage = {
+  title: (photo: RandomGoods, item: ItemDescription) => {
+    if (photo.tradeText == TradeTextType.Numbering) {
+      return `${item.id.toString().padStart(2, "0")} ${item.name}`;
+    } else if (photo.tradeText == TradeTextType.NameOnly) {
+      return item.name;
+    } else if (photo.tradeText == TradeTextType.Description) {
+      if (item.description == undefined) {
+        return item.name;
+      } else {
+        return `${item.name} ${item.description}`;
+      }
+    } else if (photo.tradeText == TradeTextType.GroupByDescription) {
+      if (item.description == undefined) {
+        return item.name;
+      } else {
+        return `${item.name} ${item.description}`;
+      }
+    } else {
+      return item.name;
+    }
+  },
+
+  subtitle: (photo: RandomGoods) => photo.set?.setName ?? TradeText.title(photo),
+} as const;

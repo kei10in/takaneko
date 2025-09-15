@@ -5,7 +5,7 @@ import { Link, MetaFunction, Outlet } from "react-router";
 import { XMarkButton } from "~/components/XMarkButton";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
-import { ProductList } from "./ProductList";
+import { MenuContents } from "./MenuContents";
 
 export const meta: MetaFunction = () => {
   return [
@@ -54,7 +54,7 @@ export default function Index() {
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
           <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
-            <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
+            <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 
           <main className="min-w-0 flex-1">
@@ -76,7 +76,7 @@ export default function Index() {
             </div>
 
             <div>
-              <ProductList allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
+              <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
             </div>
           </DialogPanel>
         </div>

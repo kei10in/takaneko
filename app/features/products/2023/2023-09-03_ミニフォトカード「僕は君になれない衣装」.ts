@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 僕は君になれない衣装_ミニフォト: RandomGoods = {
@@ -7,12 +7,13 @@ export const 僕は君になれない衣装_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (僕は君になれない衣装 ver.)",
   year: 2023,
   series: "僕は君になれない衣装",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "僕は君になれない衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-09-03_ミニフォトカード「僕は君になれない衣装」.jpg",
   width: 720,
   height: 990,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 18, y: 111, width: 100, height: 158 },
     { id: 2, x: 134, y: 111, width: 100, height: 158 },

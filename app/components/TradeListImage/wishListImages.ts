@@ -4,6 +4,7 @@ import { drawWithList } from "~/components/TradeListImage/drawTradeItemList";
 import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource";
 import { croppedImagePath } from "~/features/products/croppedProductImage";
 import { RandomGoods } from "~/features/products/product";
+import { TradeListImage } from "~/features/products/productImages";
 import { tradeStateToImageSrc } from "~/features/trade/TradeStatus";
 import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
 import { ArrayUtils } from "~/utils/array";
@@ -14,9 +15,8 @@ const transformWishToRenderProps = (details: TradingItemDetail): TradeItemRender
   return {
     path: croppedImagePath(details.product.url, details.position.id),
     status: tradeStateToImageSrc(details.status),
-    name: details.item.name,
-    id: details.item.id,
-    series: details.product.series,
+    title: TradeListImage.title(details.product, details.item),
+    subtitle: TradeListImage.subtitle(details.product),
   };
 };
 

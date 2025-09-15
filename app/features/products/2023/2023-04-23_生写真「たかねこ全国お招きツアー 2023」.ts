@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoods = {
@@ -8,11 +8,12 @@ export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoo
   year: 2023,
   series: "たかねこ全国お招きツアー2023衣装",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "たかねこ全国お招きツアー2023衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-04-23_生写真「たかねこ全国お招きツアー 2023」.png",
   width: 266,
   height: 266,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 11, y: 14, width: 25, height: 36 },
     { id: 2, x: 39, y: 14, width: 25, height: 36 },

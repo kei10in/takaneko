@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET } from "../utils";
 
 export const 白ワンピース_生写真: RandomGoods = {
@@ -6,13 +6,14 @@ export const 白ワンピース_生写真: RandomGoods = {
   slug: "生写真「白ワンピース」",
   name: "生写真セット (白ワンピースver.)",
   year: 2024,
-  series: "白ワンピース",
+  series: "2nd ファンミ",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "白ワンピース" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-08-07_生写真「白ワンピース」.webp",
   width: 1680,
   height: 2128,
-  lineup: REGULAR_PHOTO_SET,
+  variants: REGULAR_PHOTO_SET,
   positions: [
     { id: 1, x: 44, y: 240, width: 234, height: 334 },
     { id: 2, x: 316, y: 240, width: 234, height: 334 },

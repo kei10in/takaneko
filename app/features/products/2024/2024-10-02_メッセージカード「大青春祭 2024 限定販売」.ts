@@ -12,7 +12,7 @@ export const 大青春祭2024_メッセージカード: RandomGoods = {
   url: "/takaneko/goods/2024/2024-10-02_メッセージカード「大青春祭 2024 限定販売」.webp",
   width: 610,
   height: 362,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

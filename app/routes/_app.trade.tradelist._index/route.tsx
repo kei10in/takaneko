@@ -172,7 +172,7 @@ export default function Index() {
         </div>
         <section className="my-12">
           <h2 className={sectionHeading("px-4")}>
-            <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> 生写真
+            <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> 生写真セット
           </h2>
 
           {photoWants.length != 0 && (
@@ -188,7 +188,7 @@ export default function Index() {
           )}
 
           {photoWants.length != 0 && (
-            <OrganizedTradeImages title="生写真のまとめ" images={imagesForPhoto} />
+            <OrganizedTradeImages title="生写真セットのまとめ" images={imagesForPhoto} />
           )}
 
           {photoWants.length == 0 && (
@@ -201,7 +201,7 @@ export default function Index() {
 
         <section className="my-12">
           <h2 className={sectionHeading("px-4")}>
-            <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> ミニフォトカード
+            <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> ミニフォトカードセット
           </h2>
 
           {miniPhotoCardWants.length != 0 && (
@@ -217,7 +217,10 @@ export default function Index() {
           )}
 
           {miniPhotoCardWants.length != 0 && (
-            <OrganizedTradeImages title="ミニフォトカードのまとめ" images={imagesForMiniPhoto} />
+            <OrganizedTradeImages
+              title="ミニフォトカードセットのまとめ"
+              images={imagesForMiniPhoto}
+            />
           )}
 
           {miniPhotoCardWants.length == 0 && (

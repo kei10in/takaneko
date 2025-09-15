@@ -17,6 +17,6 @@ export const descriptionForTradeImagesTool = (product: RandomGoods | undefined) 
 
   return (
     `${product.year}年発売の高嶺のなでしこ“${product.name}”のトレード画像を作成します。` +
-    `ラインナップは、${flattenLineup(product.lineup).join("、")}。`
+    `ラインナップは、${flattenLineup(product.variants).join("、")}。`
   );
 };

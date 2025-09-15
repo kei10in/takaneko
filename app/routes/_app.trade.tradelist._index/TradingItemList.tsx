@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { croppedImagePath } from "~/features/products/croppedProductImage";
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods } from "~/features/products/product";
+import { TradeListImage } from "~/features/products/productImages";
 import type { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
 
 type TradingItemListProps = {
@@ -47,8 +48,12 @@ export function TradingItemList(props: TradingItemListProps) {
                   height={height}
                 />
                 <div className="pt-1 text-center">
-                  <p className="line-clamp-2">{makeTitle(detail)}</p>
-                  <p className="line-clamp-2 text-xs text-gray-400">{detail.product.series}</p>
+                  <p className="line-clamp-2">
+                    {TradeListImage.title(detail.product, detail.item)}
+                  </p>
+                  <p className="line-clamp-2 text-xs text-gray-400">
+                    {TradeListImage.subtitle(detail.product)}
+                  </p>
                 </div>
               </div>
             </li>
@@ -58,25 +63,3 @@ export function TradingItemList(props: TradingItemListProps) {
     </div>
   );
 }
-
-const makeTitle = (detail: TradingItemDetail) => {
-  if (detail.product.tradeText == TradeTextType.Numbering) {
-    return `${detail.item.name} ${detail.item.id}`;
-  } else if (detail.product.tradeText == TradeTextType.NameOnly) {
-    return detail.item.name;
-  } else if (detail.product.tradeText == TradeTextType.Description) {
-    if (detail.item.description == undefined) {
-      return detail.item.name;
-    } else {
-      return `${detail.item.name} ${detail.item.description}`;
-    }
-  } else if (detail.product.tradeText == TradeTextType.GroupByDescription) {
-    if (detail.item.description == undefined) {
-      return detail.item.name;
-    } else {
-      return `${detail.item.name} ${detail.item.description}`;
-    }
-  } else {
-    return detail.item.name;
-  }
-};

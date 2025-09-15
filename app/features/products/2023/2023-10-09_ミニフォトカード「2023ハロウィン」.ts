@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const _2023ハロウィン_ミニフォト: RandomGoods = {
@@ -7,12 +7,13 @@ export const _2023ハロウィン_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (2023ハロウィン ver.)",
   year: 2023,
   series: "2023ハロウィン",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "2023ハロウィン" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2023/2023-10-09_ミニフォトカード「2023ハロウィン」.jpg",
   width: 1078,
   height: 1522,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 21, y: 262, width: 149, height: 237 },
     { id: 2, x: 197, y: 262, width: 149, height: 237 },

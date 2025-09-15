@@ -11,7 +11,7 @@ export const ハニフェス_生写真: RandomGoods = {
   url: "/takaneko/goods/2024/2024-04-29_生写真「ハニフェス」.webp",
   width: 1440,
   height: 1820,
-  lineup: [
+  variants: [
     { id: 1, name: "橋本桃呼", description: "" },
     { id: 2, name: "松本ももな", description: "" },
     { id: 3, name: "春野莉々", description: "" },

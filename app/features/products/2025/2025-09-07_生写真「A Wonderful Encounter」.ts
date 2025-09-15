@@ -1,18 +1,19 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_PHOTO_SET2 } from "../utils";
 
 export const AWonderfulEncounter_生写真: RandomGoods = {
   id: "生写真「A Wonderful Encounter」",
   slug: "生写真「A Wonderful Encounter」",
-  name: "生写真「A Wonderful Encounter」ver.",
+  name: "生写真 (A Wonderful Encounter ver.)",
   year: 2025,
   series: "A Wonderful Encounter",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "A Wonderful Encounter" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-09-07_生写真「A Wonderful Encounter」.webp",
   width: 1080,
   height: 1238,
-  lineup: REGULAR_PHOTO_SET2,
+  variants: REGULAR_PHOTO_SET2,
   positions: [
     { id: 1, x: 33, y: 33, width: 154, height: 220 },
     { id: 2, x: 205, y: 33, width: 154, height: 220 },

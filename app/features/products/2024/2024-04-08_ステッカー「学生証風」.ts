@@ -11,7 +11,7 @@ export const 学生証風_ステッカー: RandomGoods = {
   url: "/takaneko/goods/2024/2024-04-08_ステッカー「学生証風」.webp",
   width: 2000,
   height: 2000,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "真顔" },
     { id: 2, name: "涼海すう", description: "真顔" },
     { id: 3, name: "橋本桃呼", description: "真顔" },

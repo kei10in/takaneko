@@ -5,9 +5,9 @@ import { BsBan } from "react-icons/bs";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { RandomGoods } from "~/features/products/product";
+import { TradeListImage } from "~/features/products/productImages";
 import { SelectableEmojis } from "~/features/trade/stamp";
 import { stampPositions } from "~/features/trade/stampPosition";
-import { getTradeItemTitle } from "~/features/trade/tradeItemTitle";
 import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
 import { ClippedImage } from "../ClippedImage";
 import { TradeStateButton } from "./TradeStateButton";
@@ -24,7 +24,7 @@ interface Props {
 export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   const { productImage, tradeDescriptions, index, onChangeItem, onChangeTradeState } = props;
 
-  const photos = productImage.lineup;
+  const photos = productImage.variants;
   const selPhoto = photos[index];
   const positions = productImage.positions;
 
@@ -95,7 +95,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
                     className="bg-gray-50 object-contain text-sm text-gray-500"
                     style={{ width, height }}
                     src={productImage.url}
-                    alt={getTradeItemTitle(productImage, i)}
+                    alt={TradeListImage.title(productImage, productImage.variants[i])}
                   />
 
                   <TradeStatusStamp

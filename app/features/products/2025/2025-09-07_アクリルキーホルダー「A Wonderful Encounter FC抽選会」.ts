@@ -7,11 +7,12 @@ export const AWonderfulEncounterFC抽選会_アクリルキーホルダー: Rand
   year: 2025,
   series: "A Wonderful Encounter FC抽選会",
   category: "アクリルキーホルダー",
+  tradeTitle: "幕張 FC抽選会 アクキー",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-09-07_メンバー個別 繋がるアクリルキーホルダー.jpg",
   width: 1166,
   height: 467,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

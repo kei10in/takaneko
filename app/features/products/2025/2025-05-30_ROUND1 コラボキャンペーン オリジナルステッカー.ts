@@ -4,15 +4,15 @@ export const ROUND1_コラボキャンペーン_オリジナルステッカー: 
   id: "ROUND1 コラボキャンペーン オリジナルステッカー",
   slug: "ROUND1 コラボキャンペーン オリジナルステッカー",
   name: "ROUND1 コラボキャンペーン オリジナルステッカー",
-  abbrev: "ROUND1 コラボキャンペーン オリジナルステッカー",
   year: 2025,
   series: "ROUND1 コラボキャンペーン",
   category: "ステッカー",
+  tradeTitle: "ステッカー ROUND1 コラボ",
   tradeText: TradeTextType.GroupByDescription,
   url: "/takaneko/goods/2025/2025-05-30_ROUND1 コラボキャンペーン オリジナルステッカー.webp",
   width: 820,
   height: 1137,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "第1弾" },
     { id: 2, name: "涼海すう", description: "第1弾" },
     { id: 3, name: "橋本桃呼", description: "第1弾" },

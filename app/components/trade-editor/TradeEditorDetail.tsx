@@ -23,7 +23,7 @@ export const TradeEditorDetail: React.FC<Props> = (props: Props) => {
   const { productImage, tradeDescriptions, index, onClickPrev, onClickNext, onChangeTradeState } =
     props;
 
-  const photos = productImage.lineup;
+  const photos = productImage.variants;
   const selPhoto = photos[index];
   const positions = productImage.positions;
   const maxWidth = useMemo(() => Math.max(...positions.map((p) => p.width)), [positions]);

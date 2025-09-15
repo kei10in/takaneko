@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const 恋を知った世界_ミニフォト: RandomGoods = {
@@ -7,12 +7,13 @@ export const 恋を知った世界_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット(恋を知った世界ver.)",
   year: 2024,
   series: "恋を知った世界",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "恋を知った世界" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-03-03_ミニフォトカード「恋を知った世界」.jpg",
   width: 720,
   height: 1040,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 8, y: 177, width: 103, height: 158 },
     { id: 2, x: 127, y: 175, width: 103, height: 158 },

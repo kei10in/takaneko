@@ -7,11 +7,12 @@ export const AWonderfulEncounter_にゃでしこステッカー: RandomGoods = {
   year: 2025,
   series: "A Wonderful Encounter",
   category: "ステッカー",
+  tradeTitle: "にゃでしこドットステッカー",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2025/2025-09-07_ランダムにゃでしこドットステッカー.webp",
   width: 1200,
   height: 1200,
-  lineup: [
+  variants: [
     { id: 1, name: "ルニャ・コーチ", description: "" },
     { id: 2, name: "すうにゃろう", description: "" },
     { id: 3, name: "はしもと もふ呼", description: "" },

@@ -11,7 +11,7 @@ export const ハニフェス_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2024/2024-04-29_缶バッジ「ハニフェス」.webp",
   width: 1680,
   height: 1485,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "春野莉々", description: "" },
     { id: 3, name: "星谷美来", description: "" },

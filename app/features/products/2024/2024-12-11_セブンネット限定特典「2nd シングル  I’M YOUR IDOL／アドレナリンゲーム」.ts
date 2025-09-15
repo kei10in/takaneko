@@ -12,7 +12,7 @@ export const ミニアクリルスタンドキーホルダーメンバーソロ�
   url: "/takaneko/goods/2024/2024-12-11_セブンネット限定特典「2nd シングル  I’M YOUR IDOL／アドレナリンゲーム」.jpg",
   width: 1980,
   height: 1606,
-  lineup: [
+  variants: [
     { id: 1, name: "橋本桃呼", description: "" },
     { id: 2, name: "春野莉々", description: "" },
     { id: 3, name: "松本ももな", description: "" },

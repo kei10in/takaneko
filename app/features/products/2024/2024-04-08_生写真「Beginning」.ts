@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 
 export const Beginning_生写真: RandomGoods = {
   id: "生写真 (Beginning ver)",
@@ -7,11 +7,12 @@ export const Beginning_生写真: RandomGoods = {
   year: 2024,
   series: "Beginning",
   category: "生写真",
+  set: { kind: ProductLine.Photo, setName: "Beginning" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-04-08_生写真「Beginning」.png",
   width: 542,
   height: 347,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "美しく生きろ" },
     { id: 2, name: "城月菜央", description: "アンチファン" },
     { id: 3, name: "城月菜央", description: "全国お招きツアー" },

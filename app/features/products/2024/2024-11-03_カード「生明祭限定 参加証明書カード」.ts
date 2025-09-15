@@ -12,7 +12,7 @@ export const 生明祭限定_参加証明書カード: RandomGoods = {
   url: "/takaneko/goods/2024/2024-11-03_カード「生明祭限定 参加証明書カード」.webp",
   width: 1015,
   height: 428,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },

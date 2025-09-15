@@ -17,7 +17,6 @@ import {
   BsPencilSquare,
   BsTrashFill,
 } from "react-icons/bs";
-import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
 import { useTradeEditorPanelStore } from "~/features/trade/store";
 import {
@@ -28,9 +27,8 @@ import {
   TradeStatus,
 } from "~/features/trade/TradeStatus";
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
-import { ProductItem } from "~/routes/_app.trade/ProductItem";
+import { ProductItemList } from "~/routes/_app.trade/ProductItemList";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { CopyButton } from "../CopyButton";
 import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
 import { XMarkButton } from "../XMarkButton";
@@ -143,27 +141,27 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
               })}
             </div>
 
-            <p className="px-1 text-right">©INCS・TP</p>
-          </div>
-        ) : null}
+            <p className="px-1 text-right text-xs">©INCS・TP</p>
 
-        <div className="mx-auto max-w-lg px-4">
-          <section className="my-4 px-1 py-2">
-            <h1>
-              <span className="block text-2xl text-gray-800">{productImage.series}</span>
-              <span className="block text-lg text-gray-400">{productImage.category}</span>
-            </h1>
-
-            <div className="mt-2 flex max-w-lg gap-12 text-2xl">
+            <div className="mx-auto mt-1 flex w-fit max-w-lg gap-4 text-2xl">
               <p className="flex items-center gap-2">
                 <img src="/求.svg" alt="求" className="inline w-7" />
-                <span>{totalWant(tradeDescriptions)}</span>
+                <span className="min-w-8">{totalWant(tradeDescriptions)}</span>
               </p>
               <p className="flex items-center gap-2">
                 <img src="/譲.svg" alt="譲" className="inline w-7" />
-                <span>{totalHaveCount(tradeDescriptions)}</span>
+                <span className="min-w-8">{totalHaveCount(tradeDescriptions)}</span>
               </p>
             </div>
+          </div>
+        ) : null}
+
+        <div className="mx-auto mt-8 max-w-lg px-4">
+          <section className="px-1 py-2">
+            <h1>
+              <span className="block text-2xl text-gray-800">{productImage.name}</span>
+              <span className="block text-lg text-gray-400">{productImage.series}</span>
+            </h1>
 
             {tradeText != undefined && tradeText.length != 0 && (
               <section className="my-8">
@@ -184,30 +182,10 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       </div>
 
       {relativeItems.length > 0 && (
-        <section className="mx-auto max-w-lg">
+        <section className="mx-auto mt-8 max-w-lg">
           <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
-          <div className="mt-4 px-5">
-            <ul className="flex flex-wrap justify-center gap-3 pb-1.5">
-              {relativeItems.map((photo) => (
-                <li key={photo.slug}>
-                  <NavLink to={`/trade/${photo.slug}`}>
-                    {({ isActive }) => {
-                      const thumbs = thumbnailSrcSet(photo.url);
-                      return (
-                        <ProductItem
-                          image={thumbs.src}
-                          imageSet={thumbs.srcset}
-                          year={photo.year}
-                          content={photo.series}
-                          description={photo.category}
-                          selected={isActive}
-                        />
-                      );
-                    }}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>{" "}
+          <div className="mt-4 px-2">
+            <ProductItemList items={relativeItems} />
           </div>
         </section>
       )}

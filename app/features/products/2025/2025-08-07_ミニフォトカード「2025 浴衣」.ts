@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
 
 export const _2025浴衣_ミニフォト: RandomGoods = {
@@ -6,13 +6,14 @@ export const _2025浴衣_ミニフォト: RandomGoods = {
   slug: "ミニフォトカード「2025 浴衣」",
   name: "ミニフォトカードセット「2025 浴衣」ver.",
   year: 2025,
-  series: "2025 浴衣",
-  category: "ミニフォト",
+  series: "私たちの宣言式",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "2025 浴衣" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-08-07_ミニフォトカード「2025 浴衣」.webp",
   width: 1586,
   height: 2245,
-  lineup: REGULAR_MINI_PHOTO_SET2,
+  variants: REGULAR_MINI_PHOTO_SET2,
   positions: [
     { id: 1, x: 82, y: 423, width: 222, height: 339 },
     { id: 2, x: 324, y: 423, width: 222, height: 339 },

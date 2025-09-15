@@ -12,9 +12,8 @@ import { Link, MetaFunction } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
-import { ProductItem } from "~/routes/_app.trade/ProductItem";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { ProductItemList } from "../_app.trade/ProductItemList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -86,10 +85,10 @@ const tools = [
 
 export default function Index() {
   return (
-    <section className="mx-auto px-4 py-12 lg:max-w-4xl">
-      <h1 className={pageHeading()}>トレード画像をつくるやつ</h1>
+    <section className="mx-auto py-12 lg:max-w-4xl">
+      <h1 className={pageHeading("px-4")}>トレード画像をつくるやつ</h1>
 
-      <div className="my-4 flex justify-between">
+      <div className="my-4 flex justify-between px-4">
         <p>ランダムグッズのトレード画像が作成できます。</p>
         <figure className="mx-4 flex flex-none justify-center">
           <img
@@ -101,9 +100,9 @@ export default function Index() {
       </div>
 
       <section className="mt-12">
-        <h2 className={sectionHeading("mb-2")}>サマリー</h2>
+        <h2 className={sectionHeading("mb-2 px-4")}>サマリー</h2>
 
-        <ul className="space-y-4">
+        <ul className="space-y-4 px-4">
           <li>
             <Link className="group block" to="/trade/wishlist">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
@@ -131,51 +130,17 @@ export default function Index() {
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12">
-          <h2 className={sectionHeading("my-4")}>ホットなやつ</h2>
-          <ul className="flex flex-wrap gap-4">
-            {TAKANEKO_PHOTOS_FEATURED.map((photo) => {
-              const thumbs = thumbnailSrcSet(photo.url);
-              return (
-                <li key={photo.slug}>
-                  <Link to={`/trade/${photo.slug}`}>
-                    <ProductItem
-                      image={thumbs.src}
-                      imageSet={thumbs.srcset}
-                      year={photo.year}
-                      content={photo.series}
-                      description={photo.category}
-                    />
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
+          <ProductItemList items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
 
       <section className="mt-12">
-        <h2 className={sectionHeading("my-4")}>ランダムグッズ</h2>
-        <ul className="flex flex-wrap gap-4">
-          {TAKANEKO_PHOTOS.map((photo) => {
-            const thumbs = thumbnailSrcSet(photo.url);
-            return (
-              <li key={photo.slug}>
-                <Link to={`/trade/${photo.slug}`}>
-                  <ProductItem
-                    image={thumbs.src}
-                    imageSet={thumbs.srcset}
-                    year={photo.year}
-                    content={photo.series}
-                    description={photo.category}
-                  />
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
+        <ProductItemList items={TAKANEKO_PHOTOS} />
       </section>
 
-      <section className="mt-12">
+      <section className="mt-12 px-4">
         <h2 className={sectionHeading("my-4")}>使い方</h2>
 
         <p>ツールを選んで、アイテムをタップします。</p>

@@ -12,7 +12,7 @@ export const mapProductToTradingItemDetails = (
   productImage: RandomGoods,
   tradeDescriptions: Record<string, TradeDescription>,
 ): TradingItemDetail[] => {
-  return productImage.lineup.map((item, i) => {
+  return productImage.variants.map((item, i) => {
     return {
       item,
       product: productImage,

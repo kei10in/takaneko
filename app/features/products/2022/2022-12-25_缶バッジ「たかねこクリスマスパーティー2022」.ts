@@ -11,7 +11,7 @@ export const クリスマス2022_缶バッジ: RandomGoods = {
   url: "/takaneko/goods/2022/2022-12-25_缶バッジ「たかねこクリスマスパーティー2022」.webp",
   width: 1280,
   height: 1280,
-  lineup: [
+  variants: [
     { id: 1, name: "松本ももな", description: "通常" },
     { id: 2, name: "城月菜央", description: "通常" },
     { id: 3, name: "東山恵里沙", description: "通常" },

@@ -280,7 +280,7 @@ const drawTradeItemList = async (
 
       layer.add(
         new Konva.Text({
-          text: `${item.name} ${item.id}`,
+          text: item.title,
           fontSize: itemRect.title.fontSize,
           lineHeight: itemRect.title.lineHeight,
           fontFamily: "sans-serif",
@@ -296,7 +296,7 @@ const drawTradeItemList = async (
 
       layer.add(
         new Konva.Text({
-          text: item.series,
+          text: item.subtitle,
           fontSize: itemRect.description.fontSize,
           lineHeight: itemRect.description.lineHeight,
           fontFamily: "sans-serif",

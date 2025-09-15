@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET } from "../utils";
 
 export const ワンピース_ミニフォト: RandomGoods = {
@@ -7,12 +7,13 @@ export const ワンピース_ミニフォト: RandomGoods = {
   name: "ミニフォトカードセット (ワンピースver.)",
   year: 2024,
   series: "ワンピース",
-  category: "ミニフォト",
+  category: "ミニフォトカード",
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ワンピース" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2024/2024-05-27_ミニフォトカード「ワンピース」.jpg",
   width: 1579,
   height: 2000,
-  lineup: REGULAR_MINI_PHOTO_SET,
+  variants: REGULAR_MINI_PHOTO_SET,
   positions: [
     { id: 1, x: 70, y: 225, width: 197, height: 315 },
     { id: 2, x: 318, y: 225, width: 197, height: 315 },

@@ -11,7 +11,7 @@ export const たかねこフェスvol4_目印チャーム: RandomGoods = {
   url: "/takaneko/goods/2025/2025-04-06_目印チャーム「たかねこフェス vol.4」.webp",
   width: 428,
   height: 218,
-  lineup: [
+  variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
     { id: 3, name: "橋本桃呼", description: "" },
