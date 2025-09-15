@@ -20,6 +20,7 @@ export type StageCostumes = z.infer<typeof StageCostumes>;
 export const StageCostumeNames: string[] = StageCostumes.options;
 
 export const MvCostumes = z.enum([
+  "ハニフェス 2025 制服衣装",
   "ホワイトチョコ・ビターチョコ制服衣装",
   "アイのウイルス制服衣装",
   "I’M YOUR IDOL MV 衣装",
@@ -38,6 +39,7 @@ export type MvCostumes = z.infer<typeof MvCostumes>;
 export const MvCostumeNames: string[] = MvCostumes.options;
 
 export const TShirtCostumes = z.enum([
+  "T シャツ (ハニフェス 2025)",
   "T シャツ (Spring Ride ver.)",
   "T シャツ (瞬きさえ忘れる。 ver.)",
   "T シャツ (2nd ファンミ ver.)",
