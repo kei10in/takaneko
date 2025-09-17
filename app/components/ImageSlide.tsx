@@ -94,20 +94,30 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
             style={{ transform: `translateX(${markerOffset}px)` }}
           />
         </div>
-        <div className="pointer-events-none absolute top-0 right-1 left-1 flex h-20 items-center justify-between py-2">
-          <button
-            className="pointer-events-auto flex h-full w-8 flex-none items-center justify-center opacity-60 transition-opacity hover:opacity-100"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <BsChevronLeft className="mr-0.5 size-5 text-gray-600" />
-          </button>
-          <button
-            className="pointer-events-auto flex h-full w-8 flex-none items-center justify-center opacity-60 transition-opacity hover:opacity-100"
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <BsChevronRight className="size-5 text-gray-600" />
-          </button>
-        </div>
+        <button
+          className="absolute top-0 left-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
+          onClick={() => {
+            const r = listRef.current?.parentElement?.getBoundingClientRect();
+            listRef.current?.parentElement?.scrollBy({
+              left: -(r?.width ?? 0) * 0.6,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <BsChevronLeft className="mr-0.5 size-5 text-gray-600" />
+        </button>
+        <button
+          className="absolute top-0 right-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
+          onClick={() => {
+            const r = listRef.current?.parentElement?.getBoundingClientRect();
+            listRef.current?.parentElement?.scrollBy({
+              left: (r?.width ?? 0) * 0.6,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <BsChevronRight className="size-5 text-gray-600" />
+        </button>
       </div>
     </div>
   );
