@@ -1,7 +1,9 @@
 interface State {
   dragging: boolean;
 
-  scrollWidth: number;
+  scrollMin: number;
+  scrollMax: number;
+
   contentWidth: number;
 
   startX: number;
@@ -21,7 +23,9 @@ export class ScrollCalculator {
     this.state = {
       dragging: false,
 
-      scrollWidth: 0,
+      scrollMin: 0,
+      scrollMax: 0,
+
       contentWidth: 0,
 
       startX: 0,
@@ -46,7 +50,9 @@ export class ScrollCalculator {
     this.state = {
       dragging: true,
 
-      scrollWidth: args.scrollWidth,
+      scrollMin: 0,
+      scrollMax: args.scrollWidth - args.contentWidth,
+
       contentWidth: args.contentWidth,
 
       startX: args.startX,
@@ -101,14 +107,14 @@ export class ScrollCalculator {
   }
 
   end(): { scrollLeft: number; transform: number } {
-    if (this.state.lastScrollLeft < 0) {
+    if (this.state.lastScrollLeft < this.state.scrollMin) {
       return {
         scrollLeft: 0,
         transform: 0,
       };
-    } else if (this.state.scrollWidth - this.state.contentWidth < this.state.lastScrollLeft) {
+    } else if (this.state.scrollMax < this.state.lastScrollLeft) {
       return {
-        scrollLeft: this.state.scrollWidth - this.state.contentWidth,
+        scrollLeft: this.state.scrollMax,
         transform: 0,
       };
     }
@@ -117,22 +123,20 @@ export class ScrollCalculator {
   }
 
   scrollOrTransform(): { scrollLeft: number; transform: number } {
-    const maxScroll = this.state.scrollWidth - this.state.contentWidth;
-
-    if (this.state.lastScrollLeft < 0) {
+    if (this.state.lastScrollLeft < this.state.scrollMin) {
       const scrollLeft = rubberBand(this.state.lastScrollLeft, this.state.contentWidth);
 
       return {
         scrollLeft: 0,
         transform: -scrollLeft,
       };
-    } else if (maxScroll < this.state.lastScrollLeft) {
-      const offset = this.state.lastScrollLeft - maxScroll;
+    } else if (this.state.scrollMax < this.state.lastScrollLeft) {
+      const offset = this.state.lastScrollLeft - this.state.scrollMax;
       const scrollLeft = rubberBand(offset, this.state.contentWidth);
 
       return {
         scrollLeft: 0,
-        transform: -maxScroll - scrollLeft,
+        transform: -this.state.scrollMax - scrollLeft,
       };
     }
 
