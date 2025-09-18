@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
-import XScroll from "./XScroll";
+import XScroll from "./scrollable/XScroll";
 
 interface Props {
   images: { src: string; alt: string }[];
