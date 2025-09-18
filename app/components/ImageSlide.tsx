@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
+import XScroll from "./XScroll";
 
 interface Props {
   images: { src: string; alt: string }[];
@@ -67,7 +68,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         ))}
       </Swiper>
       <div className="relative">
-        <div className="scrollbar-hidden overflow-y-auto py-2">
+        <XScroll className="scrollbar-hidden overflow-y-auto py-2">
           <ul className="inline-flex space-x-2 px-10" ref={listRef}>
             {images.map((image, i) => (
               <li key={i} className={clsx("h-fit w-fit min-w-0 flex-none")}>
@@ -93,7 +94,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
             className="bg-nadeshiko-800 mt-1 h-0.5 w-16 rounded-full transition-transform duration-300"
             style={{ transform: `translateX(${markerOffset}px)` }}
           />
-        </div>
+        </XScroll>
         <button
           className="absolute top-0 left-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
           onClick={() => {
