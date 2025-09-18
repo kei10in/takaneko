@@ -117,18 +117,33 @@ export class ScrollCalculator {
   }
 
   scrollOrTransform(): { scrollLeft: number; transform: number } {
+    const maxScroll = this.state.scrollWidth - this.state.contentWidth;
+
     if (this.state.lastScrollLeft < 0) {
+      const scrollLeft = rubberBand(this.state.lastScrollLeft, this.state.contentWidth);
+
       return {
         scrollLeft: 0,
-        transform: -this.state.lastScrollLeft,
+        transform: -scrollLeft,
       };
-    } else if (this.state.scrollWidth - this.state.contentWidth < this.state.lastScrollLeft) {
+    } else if (maxScroll < this.state.lastScrollLeft) {
+      const offset = this.state.lastScrollLeft - maxScroll;
+      const scrollLeft = rubberBand(offset, this.state.contentWidth);
+
       return {
         scrollLeft: 0,
-        transform: -this.state.lastScrollLeft,
+        transform: -maxScroll - scrollLeft,
       };
     }
 
     return { scrollLeft: this.state.lastScrollLeft, transform: 0 };
   }
 }
+
+const rubberBand = (offset: number, dimension: number) => {
+  const constant = 0.55;
+  return (
+    ((dimension * constant * Math.abs(offset)) / (dimension + constant * Math.abs(offset))) *
+    Math.sign(offset)
+  );
+};
