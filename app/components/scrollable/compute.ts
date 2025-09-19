@@ -1,6 +1,4 @@
 interface State {
-  dragging: boolean;
-
   scrollMin: number;
   scrollMax: number;
 
@@ -27,8 +25,6 @@ export class ScrollCalculator {
 
   constructor(options: { stopVelocity: number; momentumDecay: number }) {
     this.state = {
-      dragging: false,
-
       scrollMin: 0,
       scrollMax: 0,
 
@@ -54,8 +50,6 @@ export class ScrollCalculator {
     contentWidth: number;
   }) {
     this.state = {
-      dragging: true,
-
       scrollMin: 0,
       scrollMax: args.scrollWidth - args.contentWidth,
 
@@ -77,7 +71,6 @@ export class ScrollCalculator {
 
     if (dt != 0) {
       const vx = dx / dt;
-      console.log({ vx });
 
       this.state = {
         ...this.state,
@@ -143,17 +136,12 @@ export class ScrollCalculator {
       const newVx = this.state.vx * this.momentumDecay ** (dt / 16); // 60FPS環境（dt = 16）正規化するといいらしい。
       const stop = Math.abs(this.state.vx) < this.stopVelocity;
 
-      // console.log("updateInMomentum");
-      // console.log({ state: this.state, dt, dx, newScrollLeft, newVx, stop, timeStamp });
-
       this.state = {
         ...this.state,
         lastScrollLeft: newScrollLeft,
         lastTs: timeStamp,
         vx: newVx,
       };
-
-      // console.log({ ...this.state, stop });
 
       return { ...this.scrollOrTransform(), stop };
     }

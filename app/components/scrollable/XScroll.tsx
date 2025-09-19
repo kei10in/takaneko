@@ -92,8 +92,6 @@ export default function XScroll({
 
       const newScroll = s.obj.update(e.clientX, e.timeStamp);
 
-      console.log(newScroll);
-
       applyScrollPosition(viewPort, content, newScroll);
 
       const sel = window.getSelection?.();
