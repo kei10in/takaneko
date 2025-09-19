@@ -39,10 +39,15 @@ export default function XScroll({
   const viewPortRef = useRef<HTMLDivElement | null>(null);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
-  const stateRef = useRef({
+  const stateRef = useRef<{
+    dragging: boolean;
+    rafId: number | undefined;
+    pointerId: number | undefined;
+    obj: ScrollCalculator;
+  }>({
     dragging: false,
-    rafId: 0 as number | 0,
-    pointerId: null as number | null,
+    rafId: undefined,
+    pointerId: undefined,
     obj: new ScrollCalculator({ stopVelocity, momentumDecay }),
   });
 
@@ -66,13 +71,17 @@ export default function XScroll({
       // if (isInteractive(e.target)) return;
 
       const s = stateRef.current;
-      s.obj.init({
-        startX: e.clientX,
-        scrollLeft: viewPort.scrollLeft,
-        timeStamp: e.timeStamp,
-        scrollWidth: viewPort.scrollWidth,
-        contentWidth: content.clientWidth,
-      });
+      if (s.rafId) {
+        stopMomentum();
+      } else {
+        s.obj.init({
+          startX: e.clientX,
+          scrollLeft: viewPort.scrollLeft,
+          timeStamp: e.timeStamp,
+          scrollWidth: viewPort.scrollWidth,
+          contentWidth: content.clientWidth,
+        });
+      }
 
       s.dragging = true;
       s.pointerId = e.pointerId;
@@ -101,13 +110,10 @@ export default function XScroll({
     const stopMomentum = () => {
       const s = stateRef.current;
 
-      const newScroll = s.obj.end();
-      applyScrollPosition(viewPort, content, newScroll);
-
       if (s.rafId) {
         cancelAnimationFrame(s.rafId);
       }
-      s.rafId = 0;
+      s.rafId = undefined;
     };
 
     const startMomentum = () => {
@@ -143,10 +149,10 @@ export default function XScroll({
       }
 
       s.dragging = false;
-      if (s.pointerId !== null) {
+      if (s.pointerId != undefined) {
         try {
           const pointerId = s.pointerId;
-          s.pointerId = null;
+          s.pointerId = undefined;
           viewPort.releasePointerCapture(pointerId);
         } catch {
           // do nothing
@@ -162,10 +168,10 @@ export default function XScroll({
       if (e && e.pointerType !== "mouse") return;
 
       s.dragging = false;
-      if (s.pointerId !== null) {
+      if (s.pointerId != undefined) {
         try {
           const pointerId = s.pointerId;
-          s.pointerId = null;
+          s.pointerId = undefined;
           viewPort.releasePointerCapture(pointerId);
         } catch {
           // do nothing
