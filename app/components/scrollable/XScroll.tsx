@@ -84,13 +84,6 @@ export default function XScroll({
       }
 
       s.dragging = true;
-      s.pointerId = e.pointerId;
-
-      try {
-        viewPort.setPointerCapture(e.pointerId);
-      } catch {
-        // do nothing
-      }
 
       e.preventDefault();
     };
@@ -100,6 +93,19 @@ export default function XScroll({
       if (!s.dragging || e.pointerType !== "mouse") return;
 
       const newScroll = s.obj.update(e.clientX, e.timeStamp);
+
+      if (!s.obj.isScrolling) {
+        return;
+      }
+
+      if (s.pointerId == undefined) {
+        try {
+          viewPort.setPointerCapture(e.pointerId);
+          s.pointerId = e.pointerId;
+        } catch {
+          // do nothing
+        }
+      }
 
       applyScrollPosition(viewPort, content, newScroll);
 

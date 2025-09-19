@@ -10,6 +10,10 @@ interface State {
   lastScrollLeft: number;
   lastTs: number;
   vx: number;
+
+  // スクロール中かを判別するための値。
+  totalMove: number;
+  totalDuration: number;
 }
 
 export class ScrollCalculator {
@@ -36,6 +40,9 @@ export class ScrollCalculator {
       lastScrollLeft: 0,
       lastTs: 0,
       vx: 0,
+
+      totalMove: 0,
+      totalDuration: 0,
     };
 
     this.momentumDecay = options.momentumDecay;
@@ -62,7 +69,14 @@ export class ScrollCalculator {
 
       lastTs: args.timeStamp,
       vx: 0,
+
+      totalMove: 0,
+      totalDuration: 0,
     };
+  }
+
+  get isScrolling() {
+    return this.state.totalMove > 5 || this.state.totalDuration > 50;
   }
 
   update(mouseX: number, timeStamp: number): { scrollLeft: number; transform: number } {
@@ -74,10 +88,14 @@ export class ScrollCalculator {
 
       this.state = {
         ...this.state,
+
         lastX: mouseX,
         lastScrollLeft: this.state.lastScrollLeft + dx,
         lastTs: timeStamp,
         vx,
+
+        totalMove: this.state.totalMove + Math.abs(dx),
+        totalDuration: this.state.totalDuration + dt,
       };
     }
 
