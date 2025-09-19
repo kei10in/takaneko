@@ -61,14 +61,8 @@ export default function XScroll({
     viewPort.style.overflowY = viewPort.style.overflowY || "hidden";
     viewPort.style.touchAction = viewPort.style.touchAction || "auto";
 
-    // const isInteractive = (t: EventTarget | null): boolean => {
-    //   if (!(t instanceof Element)) return false;
-    //   return !!t.closest('a, button, input, textarea, select, [contenteditable], [role="button"]');
-    // };
-
     const onPointerDown = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") return;
-      // if (isInteractive(e.target)) return;
 
       const s = stateRef.current;
       if (s.rafId) {
