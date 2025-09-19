@@ -22,8 +22,8 @@ export class ScrollCalculator {
   private stopVelocity: number;
 
   // for bounce back
-  private omegaN = 14.0 / 1000; // 固有角周波数
-  private zeta = 0.85; // 減衰比
+  private omegaN = 20 / 1000; // 固有角周波数
+  private zeta = 1; // 減衰比
 
   constructor(options: { stopVelocity: number; momentumDecay: number }) {
     this.state = {
@@ -102,9 +102,9 @@ export class ScrollCalculator {
       const a = k * (this.state.scrollMin - this.state.lastScrollLeft) - d * this.state.vx;
       const newVx = this.state.vx + a * dt;
       const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
-      const stop = newVx > 0 && this.state.scrollMin < newScrollLeft;
-
-      console.log({ a, vx: this.state.vx, newVx, newScrollLeft, stop });
+      const stop =
+        (newVx > 0 && this.state.scrollMin < newScrollLeft) ||
+        (newVx > 0 && newVx < this.stopVelocity);
 
       this.state = {
         ...this.state,
@@ -124,9 +124,9 @@ export class ScrollCalculator {
       const a = -k * (this.state.lastScrollLeft - this.state.scrollMax) - d * this.state.vx;
       const newVx = this.state.vx + a * dt;
       const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
-      const stop = newVx < 0 && newScrollLeft < this.state.scrollMax;
-
-      console.log({ a, vx: this.state.vx, newVx, newScrollLeft, stop });
+      const stop =
+        (newVx < 0 && newScrollLeft < this.state.scrollMax) ||
+        (newVx < 0 && -newVx < this.stopVelocity);
 
       this.state = {
         ...this.state,
