@@ -57,10 +57,6 @@ export default function XScroll({
     if (!viewPort) return;
     if (!content) return;
 
-    viewPort.style.overflowX = viewPort.style.overflowX || "auto";
-    viewPort.style.overflowY = viewPort.style.overflowY || "hidden";
-    viewPort.style.touchAction = viewPort.style.touchAction || "auto";
-
     const onPointerDown = (e: PointerEvent) => {
       if (e.pointerType !== "mouse") return;
 
