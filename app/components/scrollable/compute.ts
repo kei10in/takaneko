@@ -16,8 +16,14 @@ interface State {
 
 export class ScrollCalculator {
   state: State;
+
+  // for momentum
   private momentumDecay: number;
   private stopVelocity: number;
+
+  // for bounce back
+  private omegaN = 14.0 / 1000; // 固有角周波数
+  private zeta = 0.85; // 減衰比
 
   constructor(options: { stopVelocity: number; momentumDecay: number }) {
     this.state = {
@@ -66,16 +72,17 @@ export class ScrollCalculator {
   }
 
   update(mouseX: number, timeStamp: number): { scrollLeft: number; transform: number } {
-    const dx = mouseX - this.state.lastX;
+    const dx = this.state.lastX - mouseX;
     const dt = timeStamp - this.state.lastTs;
 
     if (dt != 0) {
       const vx = dx / dt;
+      console.log({ vx });
 
       this.state = {
         ...this.state,
         lastX: mouseX,
-        lastScrollLeft: this.state.lastScrollLeft - dx,
+        lastScrollLeft: this.state.lastScrollLeft + dx,
         lastTs: timeStamp,
         vx,
       };
@@ -85,25 +92,71 @@ export class ScrollCalculator {
   }
 
   updateInMomentum(timeStamp: number): { scrollLeft: number; transform: number; stop: boolean } {
-    const dt = timeStamp - this.state.lastTs;
-    const dx = this.state.vx * dt;
-    const newScrollLeft = this.state.lastScrollLeft - dx;
-    const newVx = this.state.vx * this.momentumDecay ** (dt / 16); // 60FPS環境（dt = 16）正規化するといいらしい。
-    const stop = Math.abs(this.state.vx) < this.stopVelocity;
+    if (this.state.lastScrollLeft < this.state.scrollMin) {
+      // Bounce back
+      const dt = timeStamp - this.state.lastTs;
 
-    console.log("updateInMomentum");
-    console.log({ state: this.state, dt, dx, newScrollLeft, newVx, stop, timeStamp });
+      const k = this.omegaN * this.omegaN;
+      const d = 2 * this.zeta * this.omegaN;
 
-    this.state = {
-      ...this.state,
-      lastScrollLeft: newScrollLeft,
-      lastTs: timeStamp,
-      vx: newVx,
-    };
+      const a = k * (this.state.scrollMin - this.state.lastScrollLeft) - d * this.state.vx;
+      const newVx = this.state.vx + a * dt;
+      const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
+      const stop = newVx > 0 && this.state.scrollMin < newScrollLeft;
 
-    console.log({ ...this.state, stop });
+      console.log({ a, vx: this.state.vx, newVx, newScrollLeft, stop });
 
-    return { ...this.scrollOrTransform(), stop };
+      this.state = {
+        ...this.state,
+        lastScrollLeft: stop ? this.state.scrollMin : newScrollLeft,
+        lastTs: timeStamp,
+        vx: newVx,
+      };
+
+      return { ...this.scrollOrTransform(), stop };
+    } else if (this.state.scrollMax < this.state.lastScrollLeft) {
+      // Bounce back
+      const dt = timeStamp - this.state.lastTs;
+
+      const k = this.omegaN * this.omegaN;
+      const d = 2 * this.zeta * this.omegaN;
+
+      const a = -k * (this.state.lastScrollLeft - this.state.scrollMax) - d * this.state.vx;
+      const newVx = this.state.vx + a * dt;
+      const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
+      const stop = newVx < 0 && newScrollLeft < this.state.scrollMax;
+
+      console.log({ a, vx: this.state.vx, newVx, newScrollLeft, stop });
+
+      this.state = {
+        ...this.state,
+        lastScrollLeft: stop ? this.state.scrollMax : newScrollLeft,
+        lastTs: timeStamp,
+        vx: newVx,
+      };
+
+      return { ...this.scrollOrTransform(), stop };
+    } else {
+      const dt = timeStamp - this.state.lastTs;
+      const dx = this.state.vx * dt;
+      const newScrollLeft = this.state.lastScrollLeft + dx;
+      const newVx = this.state.vx * this.momentumDecay ** (dt / 16); // 60FPS環境（dt = 16）正規化するといいらしい。
+      const stop = Math.abs(this.state.vx) < this.stopVelocity;
+
+      // console.log("updateInMomentum");
+      // console.log({ state: this.state, dt, dx, newScrollLeft, newVx, stop, timeStamp });
+
+      this.state = {
+        ...this.state,
+        lastScrollLeft: newScrollLeft,
+        lastTs: timeStamp,
+        vx: newVx,
+      };
+
+      // console.log({ ...this.state, stop });
+
+      return { ...this.scrollOrTransform(), stop };
+    }
   }
 
   end(): { scrollLeft: number; transform: number } {
