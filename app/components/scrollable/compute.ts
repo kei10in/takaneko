@@ -180,17 +180,17 @@ export class ScrollCalculator {
     const k = this.omegaN * this.omegaN;
     const d = 2 * this.zeta * this.omegaN;
     const a = -k * (this.state.lastScrollLeft - target) - d * this.state.vx;
-    const newVx = this.state.vx + a * dt;
+    const vxNew = this.state.vx + a * dt;
 
-    const dx = newVx * dt;
+    const dx = vxNew * dt;
     const newScrollLeft = this.state.lastScrollLeft + dx;
-    const stop = Math.abs(newVx) < this.stopVelocity;
+    const stop = Math.abs(vxNew) < this.stopVelocity;
 
     this.state = {
       ...this.state,
       lastScrollLeft: stop ? target : newScrollLeft,
       lastTs: timeStamp,
-      vx: newVx,
+      vx: vxNew,
     };
 
     return { ...this.scrollOrTransform(), stop };
