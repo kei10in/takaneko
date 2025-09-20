@@ -75,6 +75,64 @@ export class ScrollCalculator {
     };
   }
 
+  /**
+   * 慣性スクロール中に再度ドラッグされた場合の初期化
+   */
+  reInit(args: {
+    startX: number;
+    scrollLeft: number;
+    timeStamp: number;
+    scrollWidth: number;
+    contentWidth: number;
+  }) {
+    // 今の実装でほとんどの場合うまく動いていますが、オーバーシュートしたときの
+    // 挙動だけまだおかしいです。
+
+    const inOverScroll =
+      this.state.lastScrollLeft < this.state.scrollMin ||
+      this.state.scrollMax < this.state.lastScrollLeft;
+
+    if (inOverScroll) {
+      // オーバースクロールのときに PointerDown された場合、信用できない値があるため
+      // 過去の値を利用する。
+      this.state = {
+        scrollMin: this.state.scrollMin,
+        scrollMax: this.state.scrollMax,
+
+        contentWidth: args.contentWidth,
+
+        startX: this.state.startX,
+        startScrollLeft: this.state.startScrollLeft,
+        lastX: this.state.lastX,
+        lastScrollLeft: this.state.lastScrollLeft,
+
+        lastTs: args.timeStamp,
+        vx: 0,
+
+        totalMove: 0,
+        totalDuration: 0,
+      };
+    } else {
+      this.state = {
+        scrollMin: 0,
+        scrollMax: args.scrollWidth - args.contentWidth,
+
+        contentWidth: args.contentWidth,
+
+        startX: args.startX,
+        startScrollLeft: args.scrollLeft,
+        lastX: args.startX,
+        lastScrollLeft: args.scrollLeft,
+
+        lastTs: args.timeStamp,
+        vx: 0,
+
+        totalMove: 0,
+        totalDuration: 0,
+      };
+    }
+  }
+
   get isScrolling() {
     return this.state.totalMove > 5 || this.state.totalDuration > 50;
   }

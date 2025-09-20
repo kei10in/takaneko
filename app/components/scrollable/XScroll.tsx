@@ -63,6 +63,13 @@ export default function XScroll({
       const s = stateRef.current;
       if (s.rafId) {
         stopMomentum();
+        s.obj.reInit({
+          startX: e.clientX,
+          scrollLeft: viewPort.scrollLeft,
+          timeStamp: e.timeStamp,
+          scrollWidth: viewPort.scrollWidth,
+          contentWidth: content.clientWidth,
+        });
       } else {
         s.obj.init({
           startX: e.clientX,
