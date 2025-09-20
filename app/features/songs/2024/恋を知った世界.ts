@@ -13,6 +13,8 @@ export const 恋を知った世界: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
+  coverArt: "/takaneko/songs/2024/恋を知った世界.webp",
+
   officialSite: "https://takanenonadeshiko.jp/?p=1748",
   youtube: [
     {

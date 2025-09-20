@@ -13,6 +13,8 @@ export const アイのウイルス: SongMetaDescriptor = {
 
   tags: [Original, Repertoire],
 
+  coverArt: "/takaneko/songs/2024/アイのウイルス.webp",
+
   officialSite: "",
   youtube: [
     {
