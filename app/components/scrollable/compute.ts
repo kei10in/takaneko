@@ -24,7 +24,7 @@ export class ScrollCalculator {
   private stopVelocity: number;
 
   // for bounce back
-  private omegaN = 20 / 1000; // 固有角周波数
+  private omegaN = 14 / 1000; // 固有角周波数
   private zeta = 1; // 減衰比
 
   constructor(options: { stopVelocity?: number | undefined; momentumDecay?: number | undefined }) {
@@ -179,12 +179,11 @@ export class ScrollCalculator {
 
     const k = this.omegaN * this.omegaN;
     const d = 2 * this.zeta * this.omegaN;
-
     const a = -k * (this.state.lastScrollLeft - target) - d * this.state.vx;
-
     const newVx = this.state.vx + a * dt;
-    const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
 
+    const dx = newVx * dt;
+    const newScrollLeft = this.state.lastScrollLeft + dx;
     const stop = Math.abs(newVx) < this.stopVelocity;
 
     this.state = {
@@ -206,10 +205,11 @@ export class ScrollCalculator {
       return this.updateBounceBack({ timeStamp, target: this.state.scrollMax });
     } else {
       const dt = timeStamp - this.state.lastTs;
-      const dx = this.state.vx * dt;
-      const newScrollLeft = this.state.lastScrollLeft + dx;
       const newVx = this.state.vx * this.momentumDecay ** (dt / 16); // 60FPS環境（dt = 16）正規化するといいらしい。
-      const stop = Math.abs(this.state.vx) < this.stopVelocity;
+
+      const dx = newVx * dt;
+      const newScrollLeft = this.state.lastScrollLeft + dx;
+      const stop = Math.abs(newVx) < this.stopVelocity;
 
       this.state = {
         ...this.state,
