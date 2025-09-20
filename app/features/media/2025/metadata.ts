@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://realsound.jp/2025/09/post-2154271.html",
+    title:
+      "高嶺のなでしこが刻んだ“誇り高きアイドル” としての矜持　新章へと向かうデビュー3周年記念ライブを観て",
+    authorName: "Real Sound｜リアルサウンド",
+    publishedAt: "2025-09-17",
+    mediaUrl: "https://realsound.jp/2025/09/post-2154271.html",
+    imageUrl: "https://realsound.jp/wp-content/uploads/2025/09/20250912-takaneko-99.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "cv5gFafJ4tU",
     title:

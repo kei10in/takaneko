@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://realsound.jp/2025/09/post-2154271.html",
+    publishedAt: "2025-09-17",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
     publishedAt: "2025-09-07",
     category: "article",
