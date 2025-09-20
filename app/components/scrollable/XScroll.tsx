@@ -68,7 +68,7 @@ export default function XScroll({
           scrollLeft: viewPort.scrollLeft,
           timeStamp: e.timeStamp,
           scrollWidth: viewPort.scrollWidth,
-          contentWidth: content.clientWidth,
+          contentWidth: viewPort.clientWidth,
         });
       } else {
         s.obj.init({
@@ -76,7 +76,7 @@ export default function XScroll({
           scrollLeft: viewPort.scrollLeft,
           timeStamp: e.timeStamp,
           scrollWidth: viewPort.scrollWidth,
-          contentWidth: content.clientWidth,
+          contentWidth: viewPort.clientWidth,
         });
       }
 
