@@ -28,6 +28,11 @@
   :root {
     --header-height: 3.5rem;
   }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 @layer components {
