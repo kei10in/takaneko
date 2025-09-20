@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
-import XScroll from "./scrollable/XScroll";
+import { XScroll } from "./scrollable/XScroll";
 
 interface Props {
   images: { src: string; alt: string }[];
@@ -13,6 +13,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
   const { images } = props;
 
   const swiperRef = useRef<SwiperType>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLUListElement>(null);
 
   const thumbsOffset = 40;
@@ -30,7 +31,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
           const li = listRef.current?.children[swiper.realIndex] as HTMLLIElement | undefined;
           const liRect = li?.getBoundingClientRect();
           const ulRect = listRef.current?.getBoundingClientRect();
-          const scrollRect = listRef.current?.parentElement?.getBoundingClientRect();
+          const scrollRect = scrollRef.current?.getBoundingClientRect();
 
           // 選択しているサムネイルを示すマーカーの位置の計算
           if (liRect != undefined && ulRect != undefined) {
@@ -41,13 +42,13 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
           if (liRect != undefined && scrollRect != undefined) {
             if (liRect.left - thumbsOffset < scrollRect.left) {
               // li の左端がスクロールコンテナの左端より左にはみ出している場合
-              listRef.current?.parentElement?.scrollBy({
+              scrollRef.current?.scrollBy({
                 left: liRect.left - scrollRect.left - thumbsOffset,
                 behavior: "smooth",
               });
             } else if (liRect.right + thumbsOffset > scrollRect.right) {
               // li の右端がスクロールコンテナの右端より右にはみ出している場合
-              listRef.current?.parentElement?.scrollBy({
+              scrollRef.current?.scrollBy({
                 left: liRect.right - scrollRect.right + thumbsOffset,
                 behavior: "smooth",
               });
@@ -68,7 +69,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         ))}
       </Swiper>
       <div className="relative">
-        <XScroll className="scrollbar-hidden overflow-y-auto py-2">
+        <XScroll ref={scrollRef} className="scrollbar-hidden overflow-y-auto py-2">
           <ul className="inline-flex space-x-2 px-10" ref={listRef}>
             {images.map((image, i) => (
               <li key={i} className={clsx("h-fit w-fit min-w-0 flex-none")}>
@@ -98,8 +99,8 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         <button
           className="absolute top-0 left-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
           onClick={() => {
-            const r = listRef.current?.parentElement?.getBoundingClientRect();
-            listRef.current?.parentElement?.scrollBy({
+            const r = scrollRef.current?.getBoundingClientRect();
+            scrollRef.current?.scrollBy({
               left: -(r?.width ?? 0) * 0.6,
               behavior: "smooth",
             });
@@ -110,8 +111,8 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         <button
           className="absolute top-0 right-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
           onClick={() => {
-            const r = listRef.current?.parentElement?.getBoundingClientRect();
-            listRef.current?.parentElement?.scrollBy({
+            const r = scrollRef.current?.getBoundingClientRect();
+            scrollRef.current?.scrollBy({
               left: (r?.width ?? 0) * 0.6,
               behavior: "smooth",
             });

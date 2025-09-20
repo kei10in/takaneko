@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { ReactNode, useEffect, useRef } from "react";
+import { forwardRef, ReactNode, useEffect, useImperativeHandle, useRef } from "react";
 import { ScrollCalculator } from "./compute";
 
 /**
@@ -29,187 +29,205 @@ const applyScrollPosition = (
   viewPort.scrollLeft = scroll.scrollLeft;
 };
 
-export default function XScroll({
-  children,
-  className = "",
-  momentum = true,
-  momentumDecay = 0.95,
-  stopVelocity = 0.02,
-}: Props) {
-  const viewPortRef = useRef<HTMLDivElement | null>(null);
-  const contentRef = useRef<HTMLDivElement | null>(null);
+export const XScroll = forwardRef<HTMLDivElement, Props>(
+  (
+    { children, className = "", momentum = true, momentumDecay = 0.95, stopVelocity = 0.02 }: Props,
+    ref,
+  ) => {
+    const viewPortRef = useRef<HTMLDivElement | null>(null);
+    const contentRef = useRef<HTMLDivElement | null>(null);
 
-  const stateRef = useRef<{
-    dragging: boolean;
-    rafId: number | undefined;
-    pointerId: number | undefined;
-    obj: ScrollCalculator;
-  }>({
-    dragging: false,
-    rafId: undefined,
-    pointerId: undefined,
-    obj: new ScrollCalculator({ stopVelocity, momentumDecay }),
-  });
+    useImperativeHandle(ref, () => viewPortRef.current as HTMLDivElement);
 
-  useEffect(() => {
-    const viewPort = viewPortRef.current;
-    const content = contentRef.current;
-    if (!viewPort) return;
-    if (!content) return;
+    const stateRef = useRef<{
+      dragging: boolean;
+      rafId: number | undefined;
+      pointerId: number | undefined;
+      obj: ScrollCalculator;
+    }>({
+      dragging: false,
+      rafId: undefined,
+      pointerId: undefined,
+      obj: new ScrollCalculator({ stopVelocity, momentumDecay }),
+    });
 
-    const onPointerDown = (e: PointerEvent) => {
-      if (e.pointerType !== "mouse") return;
-
-      const s = stateRef.current;
-      if (s.rafId) {
-        stopMomentum();
-        s.obj.reInit({
-          startX: e.clientX,
-          scrollLeft: viewPort.scrollLeft,
-          timeStamp: e.timeStamp,
-          scrollWidth: viewPort.scrollWidth,
-          contentWidth: viewPort.clientWidth,
-        });
-      } else {
-        s.obj.init({
-          startX: e.clientX,
-          scrollLeft: viewPort.scrollLeft,
-          timeStamp: e.timeStamp,
-          scrollWidth: viewPort.scrollWidth,
-          contentWidth: viewPort.clientWidth,
-        });
-      }
-
-      s.dragging = true;
-
-      e.preventDefault();
-    };
-
-    const onPointerMove = (e: PointerEvent) => {
-      const s = stateRef.current;
-      if (!s.dragging || e.pointerType !== "mouse") return;
-
-      const newScroll = s.obj.update(e.clientX, e.timeStamp);
-
-      if (!s.obj.isScrolling) {
+    useEffect(() => {
+      const viewPort = viewPortRef.current;
+      const content = contentRef.current;
+      if (!viewPort || !content) {
         return;
       }
 
-      if (s.pointerId == undefined) {
-        try {
-          viewPort.setPointerCapture(e.pointerId);
-          s.pointerId = e.pointerId;
-        } catch {
-          // do nothing
+      const onPointerDown = (e: PointerEvent) => {
+        if (e.pointerType != "mouse") {
+          return;
         }
-      }
 
-      applyScrollPosition(viewPort, content, newScroll);
+        const s = stateRef.current;
+        if (s.rafId) {
+          stopMomentum();
+          s.obj.reInit({
+            startX: e.clientX,
+            scrollLeft: viewPort.scrollLeft,
+            timeStamp: e.timeStamp,
+            scrollWidth: viewPort.scrollWidth,
+            contentWidth: viewPort.clientWidth,
+          });
+        } else {
+          s.obj.init({
+            startX: e.clientX,
+            scrollLeft: viewPort.scrollLeft,
+            timeStamp: e.timeStamp,
+            scrollWidth: viewPort.scrollWidth,
+            contentWidth: viewPort.clientWidth,
+          });
+        }
 
-      const sel = window.getSelection?.();
-      if (sel && sel.type === "Range") sel.removeAllRanges();
-    };
+        s.dragging = true;
 
-    const stopMomentum = () => {
-      const s = stateRef.current;
+        e.preventDefault();
+      };
 
-      if (s.rafId) {
-        cancelAnimationFrame(s.rafId);
-      }
-      s.rafId = undefined;
-    };
+      const onPointerMove = (e: PointerEvent) => {
+        const s = stateRef.current;
+        if (!s.dragging || e.pointerType !== "mouse") {
+          return;
+        }
 
-    const startMomentum = () => {
-      if (!momentum) return;
-      const s = stateRef.current;
-      stopMomentum();
-      const step = (n: DOMHighResTimeStamp) => {
-        const { stop, ...newScroll } = s.obj.updateInMomentum(n);
+        const newScroll = s.obj.update(e.clientX, e.timeStamp);
+
+        if (!s.obj.isScrolling) {
+          return;
+        }
+
+        if (s.pointerId == undefined) {
+          try {
+            viewPort.setPointerCapture(e.pointerId);
+            s.pointerId = e.pointerId;
+          } catch {
+            // do nothing
+          }
+        }
+
+        applyScrollPosition(viewPort, content, newScroll);
+
+        const sel = window.getSelection?.();
+        if (sel && sel.type === "Range") sel.removeAllRanges();
+      };
+
+      const stopMomentum = () => {
+        const s = stateRef.current;
+
+        if (s.rafId) {
+          cancelAnimationFrame(s.rafId);
+        }
+        s.rafId = undefined;
+      };
+
+      const startMomentum = () => {
+        if (!momentum) {
+          return;
+        }
+        const s = stateRef.current;
+        stopMomentum();
+        const step = (n: DOMHighResTimeStamp) => {
+          const { stop, ...newScroll } = s.obj.updateInMomentum(n);
+
+          if (contentRef.current != undefined) {
+            applyScrollPosition(viewPort, contentRef.current, newScroll);
+          }
+
+          if (!stop) {
+            s.rafId = requestAnimationFrame(step);
+          } else {
+            stopMomentum();
+          }
+        };
+        s.rafId = requestAnimationFrame(step);
+      };
+
+      const onPointerUp = (e: PointerEvent) => {
+        const s = stateRef.current;
+
+        if (!s.dragging) {
+          return;
+        }
+        if (e && e.pointerType !== "mouse") {
+          return;
+        }
+
+        const newScrollLeft = s.obj.update(e.clientX, e.timeStamp);
 
         if (contentRef.current != undefined) {
-          applyScrollPosition(viewPort, contentRef.current, newScroll);
+          applyScrollPosition(viewPort, contentRef.current, newScrollLeft);
         }
 
-        if (!stop) {
-          s.rafId = requestAnimationFrame(step);
-        } else {
-          stopMomentum();
+        s.dragging = false;
+        if (s.pointerId != undefined) {
+          try {
+            const pointerId = s.pointerId;
+            s.pointerId = undefined;
+            viewPort.releasePointerCapture(pointerId);
+          } catch {
+            // do nothing
+          }
         }
+        startMomentum();
       };
-      s.rafId = requestAnimationFrame(step);
-    };
 
-    const onPointerUp = (e: PointerEvent) => {
-      const s = stateRef.current;
+      const onPointerCancel = (e: { pointerType: string }) => {
+        const s = stateRef.current;
 
-      if (!s.dragging) return;
-      if (e && e.pointerType !== "mouse") return;
-
-      const newScrollLeft = s.obj.update(e.clientX, e.timeStamp);
-
-      if (contentRef.current != undefined) {
-        applyScrollPosition(viewPort, contentRef.current, newScrollLeft);
-      }
-
-      s.dragging = false;
-      if (s.pointerId != undefined) {
-        try {
-          const pointerId = s.pointerId;
-          s.pointerId = undefined;
-          viewPort.releasePointerCapture(pointerId);
-        } catch {
-          // do nothing
+        if (!s.dragging) {
+          return;
         }
-      }
-      startMomentum();
-    };
-
-    const onPointerCancel = (e: { pointerType: string }) => {
-      const s = stateRef.current;
-
-      if (!s.dragging) return;
-      if (e && e.pointerType !== "mouse") return;
-
-      s.dragging = false;
-      if (s.pointerId != undefined) {
-        try {
-          const pointerId = s.pointerId;
-          s.pointerId = undefined;
-          viewPort.releasePointerCapture(pointerId);
-        } catch {
-          // do nothing
+        if (e && e.pointerType !== "mouse") {
+          return;
         }
-      }
-      startMomentum();
-    };
 
-    const onMouseLeaveDoc = () => {
-      onPointerCancel({ pointerType: "mouse" });
-    };
+        s.dragging = false;
+        if (s.pointerId != undefined) {
+          try {
+            const pointerId = s.pointerId;
+            s.pointerId = undefined;
+            viewPort.releasePointerCapture(pointerId);
+          } catch {
+            // do nothing
+          }
+        }
+        startMomentum();
+      };
 
-    viewPort.addEventListener("pointerdown", onPointerDown);
-    viewPort.addEventListener("pointermove", onPointerMove, { passive: false });
-    viewPort.addEventListener("pointerup", onPointerUp);
-    viewPort.addEventListener("pointercancel", onPointerCancel);
-    document.addEventListener("mouseleave", onMouseLeaveDoc);
+      const onMouseLeaveDoc = () => {
+        onPointerCancel({ pointerType: "mouse" });
+      };
 
-    return () => {
-      stopMomentum();
-      viewPort.removeEventListener("pointerdown", onPointerDown);
-      viewPort.removeEventListener("pointermove", onPointerMove);
-      viewPort.removeEventListener("pointerup", onPointerUp);
-      viewPort.removeEventListener("pointercancel", onPointerCancel);
-      document.removeEventListener("mouseleave", onMouseLeaveDoc);
-    };
-  }, [momentum, momentumDecay, stopVelocity]);
+      viewPort.addEventListener("pointerdown", onPointerDown);
+      viewPort.addEventListener("pointermove", onPointerMove, { passive: false });
+      viewPort.addEventListener("pointerup", onPointerUp);
+      viewPort.addEventListener("pointercancel", onPointerCancel);
+      document.addEventListener("mouseleave", onMouseLeaveDoc);
 
-  return (
-    <div
-      ref={viewPortRef}
-      className={clsx("overscroll-contain", className)}
-      style={{ cursor: "auto" }}
-    >
-      <div ref={contentRef}>{children}</div>
-    </div>
-  );
-}
+      return () => {
+        stopMomentum();
+        viewPort.removeEventListener("pointerdown", onPointerDown);
+        viewPort.removeEventListener("pointermove", onPointerMove);
+        viewPort.removeEventListener("pointerup", onPointerUp);
+        viewPort.removeEventListener("pointercancel", onPointerCancel);
+        document.removeEventListener("mouseleave", onMouseLeaveDoc);
+      };
+    }, [momentum, momentumDecay, stopVelocity]);
+
+    return (
+      <div
+        ref={viewPortRef}
+        className={clsx("overscroll-contain", className)}
+        style={{ cursor: "auto" }}
+      >
+        <div ref={contentRef}>{children}</div>
+      </div>
+    );
+  },
+);
+
+XScroll.displayName = "XScroll";
