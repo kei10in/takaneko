@@ -30,10 +30,7 @@ const applyScrollPosition = (
 };
 
 export const XScroll = forwardRef<HTMLDivElement, Props>(
-  (
-    { children, className = "", momentum = true, momentumDecay = 0.95, stopVelocity = 0.02 }: Props,
-    ref,
-  ) => {
+  ({ children, className = "", momentum = true, momentumDecay, stopVelocity }: Props, ref) => {
     const viewPortRef = useRef<HTMLDivElement | null>(null);
     const contentRef = useRef<HTMLDivElement | null>(null);
 

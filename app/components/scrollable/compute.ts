@@ -27,7 +27,9 @@ export class ScrollCalculator {
   private omegaN = 20 / 1000; // 固有角周波数
   private zeta = 1; // 減衰比
 
-  constructor(options: { stopVelocity: number; momentumDecay: number }) {
+  constructor(options: { stopVelocity?: number | undefined; momentumDecay?: number | undefined }) {
+    const { stopVelocity = 0.02, momentumDecay = 0.95 } = options;
+
     this.state = {
       scrollMin: 0,
       scrollMax: 0,
@@ -45,8 +47,8 @@ export class ScrollCalculator {
       totalDuration: 0,
     };
 
-    this.momentumDecay = options.momentumDecay;
-    this.stopVelocity = options.stopVelocity;
+    this.momentumDecay = momentumDecay;
+    this.stopVelocity = stopVelocity;
   }
 
   init(args: {
