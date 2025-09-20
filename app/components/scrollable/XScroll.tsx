@@ -43,12 +43,12 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
       dragging: boolean;
       rafId: number | undefined;
       pointerId: number | undefined;
-      obj: ScrollCalculator;
+      scrollCalculator: ScrollCalculator;
     }>({
       dragging: false,
       rafId: undefined,
       pointerId: undefined,
-      obj: new ScrollCalculator({ stopVelocity, momentumDecay }),
+      scrollCalculator: new ScrollCalculator({ stopVelocity, momentumDecay }),
     });
 
     useEffect(() => {
@@ -64,9 +64,10 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         }
 
         const s = stateRef.current;
+
         if (s.rafId) {
           stopMomentum();
-          s.obj.reInit({
+          s.scrollCalculator.reInit({
             startX: e.clientX,
             scrollLeft: viewPort.scrollLeft,
             timeStamp: e.timeStamp,
@@ -74,7 +75,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
             contentWidth: viewPort.clientWidth,
           });
         } else {
-          s.obj.init({
+          s.scrollCalculator.init({
             startX: e.clientX,
             scrollLeft: viewPort.scrollLeft,
             timeStamp: e.timeStamp,
@@ -84,22 +85,31 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         }
 
         s.dragging = true;
+        s.pointerId = undefined;
+        s.rafId = undefined;
 
         e.preventDefault();
       };
 
       const onPointerMove = (e: PointerEvent) => {
+        if (e.pointerType !== "mouse") {
+          return;
+        }
+
         const s = stateRef.current;
-        if (!s.dragging || e.pointerType !== "mouse") {
+        if (!s.dragging) {
           return;
         }
 
-        const newScroll = s.obj.update(e.clientX, e.timeStamp);
+        const newScroll = s.scrollCalculator.update(e.clientX, e.timeStamp);
 
-        if (!s.obj.isScrolling) {
+        if (!s.scrollCalculator.isScrolling) {
           return;
         }
 
+        // Pointer Capture はスクロールであることが確定してから行います。
+        // PointerDown など、クリックの可能性があるときに Pointer Capture を行う
+        // とクリックができなくなります。
         if (s.pointerId == undefined) {
           try {
             viewPort.setPointerCapture(e.pointerId);
@@ -112,7 +122,9 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         applyScrollPosition(viewPort, content, newScroll);
 
         const sel = window.getSelection?.();
-        if (sel && sel.type === "Range") sel.removeAllRanges();
+        if (sel && sel.type === "Range") {
+          sel.removeAllRanges();
+        }
       };
 
       const stopMomentum = () => {
@@ -128,14 +140,14 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         if (!momentum) {
           return;
         }
-        const s = stateRef.current;
-        stopMomentum();
-        const step = (n: DOMHighResTimeStamp) => {
-          const { stop, ...newScroll } = s.obj.updateInMomentum(n);
 
-          if (contentRef.current != undefined) {
-            applyScrollPosition(viewPort, contentRef.current, newScroll);
-          }
+        const s = stateRef.current;
+
+        stopMomentum();
+
+        const step = (n: DOMHighResTimeStamp) => {
+          const { stop, ...newScroll } = s.scrollCalculator.updateInMomentum(n);
+          applyScrollPosition(viewPort, content, newScroll);
 
           if (!stop) {
             s.rafId = requestAnimationFrame(step);
@@ -146,60 +158,44 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         s.rafId = requestAnimationFrame(step);
       };
 
+      const endScrolling = (e: { clientX: number; timeStamp: number }) => {
+        const s = stateRef.current;
+        if (!s.dragging) {
+          return;
+        }
+
+        const newScrollLeft = s.scrollCalculator.update(e.clientX, e.timeStamp);
+        applyScrollPosition(viewPort, content, newScrollLeft);
+
+        s.dragging = false;
+        if (s.pointerId != undefined) {
+          try {
+            const pointerId = s.pointerId;
+            s.pointerId = undefined;
+            viewPort.releasePointerCapture(pointerId);
+          } catch {
+            // do nothing
+          }
+        }
+        startMomentum();
+      };
+
       const onPointerUp = (e: PointerEvent) => {
-        const s = stateRef.current;
-
-        if (!s.dragging) {
+        if (e.pointerType != "mouse") {
           return;
         }
-        if (e && e.pointerType !== "mouse") {
-          return;
-        }
-
-        const newScrollLeft = s.obj.update(e.clientX, e.timeStamp);
-
-        if (contentRef.current != undefined) {
-          applyScrollPosition(viewPort, contentRef.current, newScrollLeft);
-        }
-
-        s.dragging = false;
-        if (s.pointerId != undefined) {
-          try {
-            const pointerId = s.pointerId;
-            s.pointerId = undefined;
-            viewPort.releasePointerCapture(pointerId);
-          } catch {
-            // do nothing
-          }
-        }
-        startMomentum();
+        endScrolling(e);
       };
 
-      const onPointerCancel = (e: { pointerType: string }) => {
-        const s = stateRef.current;
-
-        if (!s.dragging) {
+      const onPointerCancel = (e: PointerEvent) => {
+        if (e.pointerType != "mouse") {
           return;
         }
-        if (e && e.pointerType !== "mouse") {
-          return;
-        }
-
-        s.dragging = false;
-        if (s.pointerId != undefined) {
-          try {
-            const pointerId = s.pointerId;
-            s.pointerId = undefined;
-            viewPort.releasePointerCapture(pointerId);
-          } catch {
-            // do nothing
-          }
-        }
-        startMomentum();
+        endScrolling(e);
       };
 
-      const onMouseLeaveDoc = () => {
-        onPointerCancel({ pointerType: "mouse" });
+      const onMouseLeaveDoc = (e: MouseEvent) => {
+        endScrolling(e);
       };
 
       viewPort.addEventListener("pointerdown", onPointerDown);
