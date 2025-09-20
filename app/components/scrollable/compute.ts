@@ -167,51 +167,43 @@ export class ScrollCalculator {
     return this.scrollOrTransform();
   }
 
+  updateBounceBack(args: { timeStamp: number; target: number }): {
+    scrollLeft: number;
+    transform: number;
+    stop: boolean;
+  } {
+    const { timeStamp, target } = args;
+
+    // Bounce back
+    const dt = timeStamp - this.state.lastTs;
+
+    const k = this.omegaN * this.omegaN;
+    const d = 2 * this.zeta * this.omegaN;
+
+    const a = -k * (this.state.lastScrollLeft - target) - d * this.state.vx;
+
+    const newVx = this.state.vx + a * dt;
+    const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
+
+    const stop = Math.abs(newVx) < this.stopVelocity;
+
+    this.state = {
+      ...this.state,
+      lastScrollLeft: stop ? target : newScrollLeft,
+      lastTs: timeStamp,
+      vx: newVx,
+    };
+
+    return { ...this.scrollOrTransform(), stop };
+  }
+
   updateInMomentum(timeStamp: number): { scrollLeft: number; transform: number; stop: boolean } {
     if (this.state.lastScrollLeft < this.state.scrollMin) {
       // Bounce back
-      const dt = timeStamp - this.state.lastTs;
-
-      const k = this.omegaN * this.omegaN;
-      const d = 2 * this.zeta * this.omegaN;
-
-      const a = k * (this.state.scrollMin - this.state.lastScrollLeft) - d * this.state.vx;
-      const newVx = this.state.vx + a * dt;
-      const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
-      const stop =
-        (newVx > 0 && this.state.scrollMin < newScrollLeft) ||
-        (newVx > 0 && newVx < this.stopVelocity);
-
-      this.state = {
-        ...this.state,
-        lastScrollLeft: stop ? this.state.scrollMin : newScrollLeft,
-        lastTs: timeStamp,
-        vx: newVx,
-      };
-
-      return { ...this.scrollOrTransform(), stop };
+      return this.updateBounceBack({ timeStamp, target: this.state.scrollMin });
     } else if (this.state.scrollMax < this.state.lastScrollLeft) {
       // Bounce back
-      const dt = timeStamp - this.state.lastTs;
-
-      const k = this.omegaN * this.omegaN;
-      const d = 2 * this.zeta * this.omegaN;
-
-      const a = -k * (this.state.lastScrollLeft - this.state.scrollMax) - d * this.state.vx;
-      const newVx = this.state.vx + a * dt;
-      const newScrollLeft = this.state.lastScrollLeft + this.state.vx * dt;
-      const stop =
-        (newVx < 0 && newScrollLeft < this.state.scrollMax) ||
-        (newVx < 0 && -newVx < this.stopVelocity);
-
-      this.state = {
-        ...this.state,
-        lastScrollLeft: stop ? this.state.scrollMax : newScrollLeft,
-        lastTs: timeStamp,
-        vx: newVx,
-      };
-
-      return { ...this.scrollOrTransform(), stop };
+      return this.updateBounceBack({ timeStamp, target: this.state.scrollMax });
     } else {
       const dt = timeStamp - this.state.lastTs;
       const dx = this.state.vx * dt;
