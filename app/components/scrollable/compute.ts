@@ -184,7 +184,7 @@ export class ScrollCalculator {
 
     const dx = vxNew * dt;
     const newScrollLeft = this.state.lastScrollLeft + dx;
-    const stop = Math.abs(vxNew) < this.stopVelocity;
+    const stop = Math.abs(vxNew) < this.stopVelocity && Math.abs(newScrollLeft - target) < 0.5;
 
     this.state = {
       ...this.state,
