@@ -4,6 +4,7 @@ import { 橋本桃呼_優しい風 } from "./publications/2025-07-07_橋本桃�
 import { 籾山ひめり_木漏れ日 } from "./publications/2025-07-07_籾山ひめり_木漏れ日";
 import { _20SWEET_2023_JANUARY } from "./publications/20±SWEET";
 import { BLT_2023年2月号, BLT_2024年9月号 } from "./publications/B.L.T";
+import { BEEEEM_vol1 } from "./publications/BEEEEM";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
 import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO";
 import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
@@ -84,6 +85,7 @@ import {
 
 const publications: Publication[] = [
   _20SWEET_2023_JANUARY,
+  BEEEEM_vol1,
   BLT_2023年2月号,
   BLT_2024年9月号,
   CMNOW_vol220_2023年1_2月号,
