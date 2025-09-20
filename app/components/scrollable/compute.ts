@@ -133,6 +133,11 @@ export class ScrollCalculator {
     }
   }
 
+  /**
+   * スクロール操作中かどうかを返します。
+   * クリック操作の可能性がある場合は `false` を返します。
+   * 確実にスクロール操作である場合に `true` を返します。
+   */
   get isScrolling() {
     return this.state.totalMove > 5 || this.state.totalDuration > 50;
   }
