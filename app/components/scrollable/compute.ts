@@ -24,7 +24,7 @@ export class ScrollCalculator {
   private stopVelocity: number;
 
   // for bounce back
-  private omegaN = 14 / 1000; // 固有角周波数
+  private omegaN = 12 / 1000; // 固有角周波数
   private zeta = 1; // 減衰比
 
   constructor(options: { stopVelocity?: number | undefined; momentumDecay?: number | undefined }) {
