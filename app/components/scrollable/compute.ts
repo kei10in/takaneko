@@ -103,9 +103,9 @@ export class ScrollCalculator {
 
         contentWidth: args.contentWidth,
 
-        startX: this.state.startX,
+        startX: args.startX,
         startScrollLeft: this.state.startScrollLeft,
-        lastX: this.state.lastX,
+        lastX: args.startX,
         lastScrollLeft: this.state.lastScrollLeft,
 
         lastTs: args.timeStamp,

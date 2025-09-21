@@ -65,7 +65,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         if (s.rafId) {
           stopMomentum();
           s.scrollCalculator.reInit({
-            startX: e.clientX,
+            startX: e.screenX,
             scrollLeft: viewPort.scrollLeft,
             timeStamp: e.timeStamp,
             scrollWidth: viewPort.scrollWidth,
@@ -73,7 +73,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
           });
         } else {
           s.scrollCalculator.init({
-            startX: e.clientX,
+            startX: e.screenX,
             scrollLeft: viewPort.scrollLeft,
             timeStamp: e.timeStamp,
             scrollWidth: viewPort.scrollWidth,
@@ -98,7 +98,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
           return;
         }
 
-        const newScroll = s.scrollCalculator.update(e.clientX, e.timeStamp);
+        const newScroll = s.scrollCalculator.update(e.screenX, e.timeStamp);
 
         if (!s.scrollCalculator.isScrolling) {
           return;
@@ -155,13 +155,13 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         s.rafId = requestAnimationFrame(step);
       };
 
-      const endScrolling = (e: { clientX: number; timeStamp: number }) => {
+      const endScrolling = (e: { screenX: number; timeStamp: number }) => {
         const s = stateRef.current;
         if (!s.dragging) {
           return;
         }
 
-        const newScrollLeft = s.scrollCalculator.update(e.clientX, e.timeStamp);
+        const newScrollLeft = s.scrollCalculator.update(e.screenX, e.timeStamp);
         applyScrollPosition(viewPort, content, newScrollLeft);
 
         s.dragging = false;
