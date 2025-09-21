@@ -130,11 +130,8 @@ import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
-  _2025浴衣_生写真,
-  _2025浴衣_ミニフォト,
-  お守りアクキー,
-  ROUND1_コラボキャンペーン_オリジナルコースター,
-  ROUND1_コラボキャンペーン_オリジナルステッカー,
+  LARME高嶺のなでしこ_ミニフォト,
+  LARME高嶺のなでしこ_ステッカー,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
