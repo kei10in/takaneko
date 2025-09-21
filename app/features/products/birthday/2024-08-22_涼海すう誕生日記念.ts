@@ -75,6 +75,7 @@ export const だんぼーる: OfficialGoods = {
 export const 涼海すう誕生日記念_2024年8月22日: BirthdayGoodsCollection = {
   slug: "涼海すう誕生日記念 2024年8月22日",
   name: "涼海すう誕生日記念 2024年8月22日",
+  date: "2024-08-22",
   memberName: "涼海すう",
   lineup: [いらすぅとTシャツ, あくすぅた, だんぼーる],
   images: [

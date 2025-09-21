@@ -72,6 +72,7 @@ export const たからものはここにぽーち: OfficialGoods = {
 export const 籾山ひめり誕生日記念_2025年03月22日: BirthdayGoodsCollection = {
   slug: "籾山ひめり誕生日記念_2025年03月22日",
   name: "籾山ひめり誕生日記念 2025年03月22日",
+  date: "2025-03-22",
   memberName: "籾山ひめり",
   lineup: [あくすたひめり生誕ばーじょん, きらきらTシャツ, たからものはここにぽーち],
   images: [

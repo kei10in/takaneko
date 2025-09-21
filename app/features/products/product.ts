@@ -144,6 +144,7 @@ export interface LiveGoodsCollection {
 export interface BirthdayGoodsCollection {
   slug: string;
   name: string;
+  date: string;
   memberName: MemberName;
   images: ImageDescription[];
   lineup: OfficialGoods[];

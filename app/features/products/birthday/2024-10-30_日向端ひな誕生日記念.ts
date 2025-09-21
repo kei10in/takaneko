@@ -64,6 +64,7 @@ export const がんばってかいた3連キンホルダー: OfficialGoods = {
 export const 日向端ひな誕生日記念_2024年10月30日: BirthdayGoodsCollection = {
   slug: "日向端ひな誕生日記念 2024年10月30日",
   name: "日向端ひな誕生日記念 2024年10月30日",
+  date: "2024-10-30",
   memberName: "日向端ひな",
   lineup: [_18センチのひにゃねこアクスタ, ひにゃねこかがみ, がんばってかいた3連キンホルダー],
   images: [

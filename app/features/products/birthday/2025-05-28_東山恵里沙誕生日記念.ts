@@ -62,6 +62,7 @@ export const 箱推しミニフォトケース: OfficialGoods = {
 export const 東山恵里沙誕生日記念_2025年05月28日: BirthdayGoodsCollection = {
   slug: "東山恵里沙誕生日記念_2025年05月28日",
   name: "東山恵里沙誕生日記念 2025年05月28日",
+  date: "2025-05-28",
   memberName: "東山恵里沙",
   lineup: [アクスタ, ひょっこりTシャツ, 箱推しミニフォトケース],
   images: [

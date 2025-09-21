@@ -68,6 +68,7 @@ export const もふとんアクリルスタンドケース: OfficialGoods = {
 export const 橋本桃呼誕生日記念_2025年05月28日: BirthdayGoodsCollection = {
   slug: "橋本桃呼誕生日記念_2025年05月28日",
   name: "橋本桃呼誕生日記念 2025年05月28日",
+  date: "2025-06-28",
   memberName: "橋本桃呼",
   lineup: [
     おはもーこおやもーこアクリルスタンド,

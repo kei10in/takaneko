@@ -64,6 +64,7 @@ export const シュシュるん: OfficialGoods = {
 export const 星谷美来誕生日記念_2024年11月6日: BirthdayGoodsCollection = {
   slug: "星谷美来誕生日記念 2024年11月6日",
   name: "星谷美来誕生日記念 2024年11月6日",
+  date: "2024-11-06",
   memberName: "星谷美来",
   lineup: [まいにちエコるん, みくるんお守り写真, シュシュるん],
   images: [

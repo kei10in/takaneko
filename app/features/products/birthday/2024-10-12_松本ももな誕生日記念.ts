@@ -68,6 +68,7 @@ export const おりぼんの擬人化なりきりアイテム: OfficialGoods = {
 export const 松本ももな誕生日記念_2024年10月12日: BirthdayGoodsCollection = {
   slug: "松本ももな誕生日記念 2024年10月12日",
   name: "松本ももな誕生日記念 2024年10月12日",
+  date: "2024-10-12",
   memberName: "松本ももな",
   lineup: [ももぽにゃんT, ももにゃくすた, おりぼんの擬人化なりきりアイテム],
   images: [

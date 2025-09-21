@@ -58,6 +58,7 @@ export const アクリルスタンド: OfficialGoods = {
 export const 葉月紗蘭誕生日記念_2025年03月03日: BirthdayGoodsCollection = {
   slug: "葉月紗蘭誕生日記念_2025年03月03日",
   name: "葉月紗蘭誕生日記念 2025年03月03日",
+  date: "2025-03-03",
   memberName: "葉月紗蘭",
   lineup: [フォトアルバム, 前髪ピン, アクリルスタンド],
   images: [

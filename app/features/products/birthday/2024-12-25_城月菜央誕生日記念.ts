@@ -60,6 +60,7 @@ export const サイズ的にも使いやすいポーチ: OfficialGoods = {
 export const 城月菜央誕生日記念_2024年12月25日: BirthdayGoodsCollection = {
   slug: "城月菜央誕生日記念 2024年12月25日",
   name: "城月菜央誕生日記念 2024年12月25日",
+  date: "2024-12-25",
   memberName: "城月菜央",
   lineup: [誰でも着やすいTシャツ, かっこいいおしゃれなグラス, サイズ的にも使いやすいポーチ],
   images: [

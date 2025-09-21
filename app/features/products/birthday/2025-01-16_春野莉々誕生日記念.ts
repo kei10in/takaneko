@@ -74,6 +74,7 @@ export const 生写真: OfficialGoods = {
 export const 春野莉々誕生日記念_2025年01月16日: BirthdayGoodsCollection = {
   slug: "春野莉々誕生日記念 2025年01月16日",
   name: "春野莉々誕生日記念 2025年01月16日",
+  date: "2025-01-16",
   memberName: "春野莉々",
   lineup: [契約結べるアクスタ, 本気出したTシャツ, 生写真],
   images: [

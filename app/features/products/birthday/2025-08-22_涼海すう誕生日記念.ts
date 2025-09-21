@@ -88,6 +88,7 @@ export const 証明写真ですぅ: OfficialGoods = {
 export const 涼海すう誕生日記念_2025年8月22日: BirthdayGoodsCollection = {
   slug: "涼海すう誕生日記念 2025年8月22日",
   name: "涼海すう誕生日記念 2025年8月22日",
+  date: "2025-08-22",
   memberName: "涼海すう",
   lineup: [あくすぅた2025, いらすぅとTシャツ2025, 証明写真ですぅ],
   images: [
