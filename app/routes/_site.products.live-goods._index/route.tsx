@@ -1,12 +1,14 @@
+import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
-import { ImageSlide } from "~/components/ImageSlide";
-import { pageBox, pageHeading } from "~/components/styles";
+import { SquareCard } from "~/components/SquareCard";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { LiveGoods } from "~/features/products/liveGoods";
+import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `ライブ グッズ - ${SITE_TITLE}` },
+    { title: `ライブ・イベント グッズ - ${SITE_TITLE}` },
     {
       name: "description",
       content:
@@ -18,43 +20,34 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto text-gray-600">
-      <section className={pageBox("px-4")}>
-        <h1 className={pageHeading()}>ライブ グッズ</h1>
+      <section className={pageBox()}>
+        <h1 className={pageHeading("my-4 px-4")}>ライブ・イベント グッズ</h1>
 
-        <div className="mt-8 space-y-8">
-          {LiveGoods.map((live) => {
-            return (
-              <section key={live.slug}>
-                <h3 className="text-xl">{live.name}</h3>
-                <div className="py-4 md:grid md:grid-cols-2 md:gap-4">
-                  <ImageSlide
-                    images={live.images.map((img) => ({ src: img.path, alt: live.name }))}
+        <section className="@container mt-8 px-4">
+          <h2 className={sectionHeading()}>ライブ・イベント グッズ一覧</h2>
+
+          <div
+            className={clsx(
+              "mt-6 grid grid-cols-2 gap-x-2 gap-y-8",
+              "@md:grid-cols-3 @xl:grid-cols-4 @3xl:grid-cols-5 @5xl:grid-cols-6",
+            )}
+          >
+            {LiveGoods.map((lg) => {
+              const thumbs = thumbnailSrcSet(lg.images[0].path);
+
+              return (
+                <Link key={lg.slug} className="block" to={`/products/live-goods/${lg.slug}`}>
+                  <SquareCard
+                    image={thumbs.src}
+                    imageSet={thumbs.srcset}
+                    title={lg.name}
+                    description={""}
                   />
-                  <div className="space-y-4 pt-4 md:pt-0">
-                    {live.goods.map((goods) => (
-                      <section key={goods.type}>
-                        <h4>{goods.type}</h4>
-                        <ul className="list-outside list-disc pl-6 marker:text-gray-300">
-                          {goods.lineup.map((item) => (
-                            <li key={typeof item === "string" ? item : item.slug}>
-                              {typeof item === "string" ? (
-                                item
-                              ) : (
-                                <Link className="text-nadeshiko-800" to={`/products/${item.slug}`}>
-                                  {item.name}
-                                </Link>
-                              )}
-                            </li>
-                          ))}
-                        </ul>
-                      </section>
-                    ))}
-                  </div>
-                </div>
-              </section>
-            );
-          })}
-        </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       </section>
     </div>
   );

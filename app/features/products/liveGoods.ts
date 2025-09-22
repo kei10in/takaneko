@@ -3,6 +3,10 @@ import {
   _1周年記念ライブ美しく生きろ,
   _1周年記念ライブ美しく生きろ大阪公演,
 } from "./lives/1周年記念ライブ 〜美しく生きろ〜";
+import { LiveAround2025SpringRide } from "./lives/2025-06-20_LIVE AROUND 2025 – Spring Ride –";
+import { LARME高嶺のなでしこSpecialCollaborationWeek } from "./lives/2025-06-25_LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK";
+import { _3rdファンミーティング_私たちの宣言式 } from "./lives/2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜";
+import { Live2025SummerInSeoul } from "./lives/2025-08-24_LIVE 2025 SUMMER in SEOUL";
 import { _3rd_ANNIVERSARY_CONCERT_AWonderfulEncounter } from "./lives/2025-09-07_3rd ANNIVERSARY CONCERT「A Wonderful Encounter」";
 import {
   _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる,
@@ -31,6 +35,10 @@ import { LiveGoodsCollection } from "./product";
 
 export const LiveGoods: LiveGoodsCollection[] = [
   _3rd_ANNIVERSARY_CONCERT_AWonderfulEncounter,
+  Live2025SummerInSeoul,
+  _3rdファンミーティング_私たちの宣言式,
+  LARME高嶺のなでしこSpecialCollaborationWeek,
+  LiveAround2025SpringRide,
   東名阪ツアー2025_SpringRide,
   たかねこフェスvol4_出張編,
   CuteForLife,

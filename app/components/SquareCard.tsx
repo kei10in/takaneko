@@ -2,7 +2,7 @@ interface Props {
   image: string;
   imageSet?: string;
   title: string;
-  description: string;
+  description?: string | undefined;
 }
 
 export const SquareCard: React.FC<Props> = (props: Props) => {
@@ -15,9 +15,11 @@ export const SquareCard: React.FC<Props> = (props: Props) => {
       </div>
       <div>
         <p className="line-clamp-3 text-center text-sm leading-tight text-neutral-600">{title}</p>
-        <p className="line-clamp-3 text-center text-xs leading-tight text-neutral-400">
-          {description}
-        </p>
+        {description && (
+          <p className="line-clamp-3 text-center text-xs leading-tight text-neutral-400">
+            {description}
+          </p>
+        )}
       </div>
     </div>
   );

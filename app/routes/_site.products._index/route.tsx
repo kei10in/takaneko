@@ -25,7 +25,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const sections = [
     {
-      title: "ライブ グッズ",
+      title: "ライブ・イベント グッズ",
       slug: "/products/live-goods",
       items: LiveGoods.slice(0, 10).map((live) => {
         const thumbs = thumbnailSrcSet(live.images[0].path);
