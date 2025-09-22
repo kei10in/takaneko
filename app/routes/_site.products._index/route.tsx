@@ -1,6 +1,7 @@
 import { BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
@@ -126,19 +127,9 @@ export default function Index() {
                     const { slug, image, imageSet, name } = item;
 
                     return (
-                      <SwiperSlide key={slug} className="w-fit px-1">
+                      <SwiperSlide key={slug} className="w-46 px-2">
                         <Link to={slug}>
-                          <div className="w-44 overflow-hidden">
-                            <img
-                              className="aspect-square w-full bg-gray-50 object-contain"
-                              src={image}
-                              srcSet={imageSet}
-                              alt={name}
-                            />
-                            <div className="px-2 py-2">
-                              <p className="mx-auto line-clamp-4 w-fit text-sm">{name}</p>
-                            </div>
-                          </div>
+                          <SquareCard image={image} imageSet={imageSet} title={name} />
                         </Link>
                       </SwiperSlide>
                     );

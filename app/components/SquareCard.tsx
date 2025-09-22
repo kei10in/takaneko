@@ -1,5 +1,5 @@
 interface Props {
-  image: string;
+  image?: string | undefined;
   imageSet?: string;
   title: string;
   description?: string | undefined;
