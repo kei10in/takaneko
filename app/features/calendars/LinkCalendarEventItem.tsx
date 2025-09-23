@@ -7,7 +7,7 @@ export const LinkCalendarEventItem: React.FC<Props> = (props: Props) => {
   const { category, summary, location, region, ...rest } = props;
 
   return (
-    <Link {...rest} className="block">
+    <Link {...rest} className="inset-focus block">
       <CalendarEventItem
         category={category}
         summary={summary}
