@@ -104,7 +104,7 @@ export const NaoKizuki: MemberDescription = {
   twitter: "https://twitter.com/nao_kizuki",
   instagram: "https://www.instagram.com/nao_kizuki_/",
   tiktok: "https://www.tiktok.com/@nao_kizuki",
-  showroom: "https://www.showroom-live.com/r/tps_122500",
+  showroom: "https://www.showroom-live.com/r/nao_kizuki",
 } as const;
 
 export const SuSuzumi: MemberDescription = {
@@ -138,7 +138,7 @@ export const SuSuzumi: MemberDescription = {
   twitter: "https://x.com/su_suzumi_",
   instagram: "https://www.instagram.com/su_suzumi_/",
   tiktok: "https://www.tiktok.com/@suu._.suu",
-  showroom: "https://www.showroom-live.com/r/jdol_2022_334",
+  showroom: "https://www.showroom-live.com/r/su_suzumi",
 } as const;
 
 export const MomokoHashimoto: MemberDescription = {
@@ -204,7 +204,7 @@ export const SaaraHazuki: MemberDescription = {
   twitter: "https://twitter.com/saara_hazuki",
   instagram: "https://www.instagram.com/saara_hazuki/",
   tiktok: "https://www.tiktok.com/@saara_hazuki",
-  showroom: "https://www.showroom-live.com/r/jdol_2022_257",
+  showroom: "https://www.showroom-live.com/r/saara_hazuki",
 } as const;
 
 export const RiriHaruno: MemberDescription = {
@@ -272,7 +272,7 @@ export const ErisaHigashiyama: MemberDescription = {
   twitter: "https://x.com/erisahigasiyama",
   instagram: "https://www.instagram.com/erisa_higashiyama/",
   tiktok: "https://www.tiktok.com/@erisahigasiyama",
-  showroom: "https://www.showroom-live.com/r/jdol_2022_233",
+  showroom: "https://www.showroom-live.com/r/erisa_higashiyama",
 } as const;
 
 export const HinaHinahata: MemberDescription = {
@@ -306,7 +306,7 @@ export const HinaHinahata: MemberDescription = {
   twitter: "https://x.com/hina_hinahata",
   instagram: "https://www.instagram.com/hinatama18",
   tiktok: "https://www.tiktok.com/@hinatam_18",
-  showroom: "https://www.showroom-live.com/r/jdol_2022_287",
+  showroom: "https://www.showroom-live.com/r/hina_hinahata",
 } as const;
 
 export const MikuruHoshitani: MemberDescription = {
@@ -341,7 +341,7 @@ export const MikuruHoshitani: MemberDescription = {
   twitter: "https://x.com/mikuru_hositani",
   instagram: "https://www.instagram.com/mikuru_1106/",
   tiktok: "https://www.tiktok.com/@mikurun33",
-  showroom: "https://www.showroom-live.com/r/jdol_2022_229",
+  showroom: "https://www.showroom-live.com/r/mikuru_hoshitani",
 } as const;
 
 export const MomonaMatsumoto: MemberDescription = {
