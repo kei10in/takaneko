@@ -8,6 +8,7 @@ const config = {
   printWidth: 100,
 
   tailwindFunctions: ["clsx"],
+  tailwindStylesheets: ["./app/tailwind.css"],
 };
 
 export default config;
