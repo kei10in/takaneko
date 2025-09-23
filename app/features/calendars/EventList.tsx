@@ -50,16 +50,13 @@ export const EventList: React.FC<Props> = (props: Props) => {
 
         return (
           <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
-            {/* イベントがない日を表示しないための要素。
-            `overflow-hidden` な要素は `id` が付いている要素の子要素にしないと
-            Chrome でのスクロールが期待通りにならない。*/}
-            <div className={clsx("overflow-hidden", eventsInDate.length == 0 && "h-0")}>
+            <div className={clsx(eventsInDate.length == 0 && "hidden")}>
               <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)}>
                 <Link to={dateHref(dt)}>{date}</Link>
               </div>
               <div>
                 {eventsInDate.map((event) => (
-                  <Link key={event.slug} to={`/events/${event.slug}`}>
+                  <Link key={event.slug} to={`/events/${event.slug}`} className="block">
                     <CalendarEventItem
                       category={event.category}
                       summary={event.summary}
