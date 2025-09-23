@@ -39,6 +39,19 @@
   }
 }
 
+@layer components {
+  .inset-focus {
+    &:focus,
+    &:focus-visible {
+      @apply ring-0;
+    }
+
+    &:focus-visible {
+      @apply inset-ring-nadeshiko-700 inset-ring-3;
+    }
+  }
+}
+
 @layer utilities {
   .scrollbar-hidden {
     -ms-overflow-style: none; /* IE and Edge */
