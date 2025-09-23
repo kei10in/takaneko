@@ -16,6 +16,52 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const SocialMedia = [
+  {
+    url: "https://www.youtube.com/@official6743",
+    icon: BsYoutube,
+  },
+  {
+    url: "https://x.com/takanenofficial",
+    icon: BsTwitterX,
+  },
+  {
+    url: "https://www.instagram.com/takanenofficial/",
+    icon: BsInstagram,
+  },
+  {
+    url: "https://www.tiktok.com/@takanenofficial",
+    icon: FaTiktok,
+  },
+  {
+    url: "https://discord.gg/JE54h9trxm",
+    icon: BsDiscord,
+  },
+  {
+    url: "https://bere.al/takanenofficial",
+    icon: SiBereal,
+  },
+];
+
+const ChineseSocialMedia = [
+  {
+    url: "https://space.bilibili.com/3493257990375590",
+    icon: SiBilibili,
+  },
+  {
+    url: "https://weibo.com/u/7953892369",
+    icon: SiSinaweibo,
+  },
+  {
+    url: "https://www.xiaohongshu.com/user/profile/670366fd000000001d033fdf",
+    icon: SiXiaohongshu,
+  },
+  {
+    url: "https://v.douyin.com/iACQBTWT/",
+    icon: SiTiktok,
+  },
+];
+
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -135,74 +181,36 @@ export default function Index() {
           </ul>
 
           <ul className="my-4 flex gap-2 px-2 text-gray-700">
-            <li>
-              <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
-                <BsYoutube className="h-5 w-5" />
-              </Link>
-            </li>
-            <li>
-              <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
-                <BsTwitterX className="h-5 w-5" />
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="https://www.instagram.com/takanenofficial/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <BsInstagram className="h-5 w-5" />
-              </Link>
-            </li>
-            <li>
-              <Link to="https://www.tiktok.com/@takanenofficial" target="_blank" rel="noreferrer">
-                <FaTiktok className="h-5 w-5" />
-              </Link>
-            </li>
-            <li>
-              <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
-                <BsDiscord className="h-5 w-5" />
-              </Link>
-            </li>
-            <li>
-              <Link to="https://bere.al/takanenofficial" target="_blank" rel="noreferrer">
-                <SiBereal className="h-5 w-5" />
-              </Link>
-            </li>
+            {SocialMedia.map((media) => (
+              <li key={media.url}>
+                <Link
+                  className="flex h-5 w-5 items-center justify-center rounded"
+                  to={media.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <media.icon className="h-full w-full" />
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <section>
             <h3 className="mt-8 mb-4 text-xl font-semibold text-gray-400">中国 SNS</h3>
 
             <ul className="my-4 flex gap-2 px-2 text-gray-700">
-              <li>
-                <Link
-                  to="https://space.bilibili.com/3493257990375590"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <SiBilibili className="h-5 w-5" />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://weibo.com/u/7953892369" target="_blank" rel="noreferrer">
-                  <SiSinaweibo className="h-5 w-5" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="https://www.xiaohongshu.com/user/profile/670366fd000000001d033fdf"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <SiXiaohongshu className="h-5 w-5" />
-                </Link>
-              </li>
-              <li>
-                <Link to="https://v.douyin.com/iACQBTWT/" target="_blank" rel="noreferrer">
-                  <SiTiktok className="h-5 w-5" />
-                </Link>
-              </li>
+              {ChineseSocialMedia.map((media) => (
+                <li key={media.url}>
+                  <Link
+                    className="block h-5 w-5 rounded"
+                    to={media.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <media.icon className="h-full w-full" />
+                  </Link>
+                </li>
+              ))}
             </ul>
           </section>
         </section>

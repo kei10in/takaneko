@@ -15,6 +15,17 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+const SocialMedia = [
+  {
+    url: "https://x.com/takanekomanager",
+    icon: FaXTwitter,
+  },
+  {
+    url: "https://www.tiktok.com/@takanenokawachiofficial",
+    icon: FaTiktok,
+  },
+];
+
 export default function Index() {
   const name = "たかねこまねーじゃー";
   const kana = "マネージャー";
@@ -32,8 +43,6 @@ export default function Index() {
     path: "/takaneko/tennya.png",
     ref: "https://x.com/takanekomanager",
   };
-  const twitter = "https://x.com/takanekomanager";
-  const tiktok = "https://www.tiktok.com/@takanenokawachiofficial";
 
   return (
     <div className="mx-auto pb-12 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-4 lg:py-12">
@@ -44,11 +53,11 @@ export default function Index() {
             src={image.path}
             alt="プロフィール"
           />
-          <Link className="text-sm text-gray-400" to={image.ref} target="_blank" rel="noreferrer">
-            <p className="text-right">
+          <p className="text-right text-sm text-gray-400">
+            <Link to={image.ref} target="_blank" rel="noreferrer">
               引用元 <HiArrowTopRightOnSquare className="inline" />
-            </p>
-          </Link>
+            </Link>
+          </p>
         </div>
       </div>
 
@@ -75,18 +84,16 @@ export default function Index() {
             </ul>
           </dd>
         </dl>
-        <li className="mt-8 flex gap-4 text-black">
-          <ul>
-            <Link to={twitter} target="_blank" rel="noreferrer">
-              <FaXTwitter className="h-6 w-6" />
-            </Link>
-          </ul>
-          <ul>
-            <Link to={tiktok} target="_blank" rel="noreferrer">
-              <FaTiktok className="h-6 w-6" />
-            </Link>
-          </ul>
-        </li>
+
+        <ul className="mt-8 flex gap-4 text-black">
+          {SocialMedia.map((media) => (
+            <li key={media.url}>
+              <Link className="block rounded" to={media.url} target="_blank" rel="noreferrer">
+                <media.icon className="h-6 w-6" />
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </div>
   );

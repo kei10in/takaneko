@@ -145,8 +145,17 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
             </Link>
           </li>
           <li>
-            <Link to={showroom} target="_blank" rel="noreferrer">
-              <img className="block h-12 w-12" src="/showroom/showroom-icon.png" alt="SHOWROOM" />
+            <Link
+              className="block h-12 w-12 rounded-xl"
+              to={showroom}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                className="block h-full w-full"
+                src="/showroom/showroom-icon.png"
+                alt="SHOWROOM"
+              />
             </Link>
           </li>
         </ul>
