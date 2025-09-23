@@ -39,7 +39,7 @@ export default function Component() {
         <TabGroup className="mt-2">
           <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">
             {tabs.map((tab) => (
-              <li key={tab.key} className="flex-none overflow-hidden">
+              <li key={tab.key} className="flex-none">
                 <Tab
                   as="button"
                   className="data-[selected]:bg-nadeshiko-800 rounded-lg bg-gray-100 px-4 py-2 outline-none data-[selected]:text-white"
@@ -52,15 +52,16 @@ export default function Component() {
 
           <TabPanels>
             {tabs.map((tab) => (
-              <TabPanel key={tab.key}>
+              <TabPanel key={tab.key} tabIndex={-1}>
                 <ul className="mt-2 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
                   {tab.content.map((track) => (
                     <li key={track.slug}>
                       <div className="w-full">
-                        <Link to={`/songs/${track.slug}`}>
-                          <div className="overflow-hidden rounded-lg shadow-lg">
-                            <Thumbnail track={track} />
-                          </div>
+                        <Link
+                          to={`/songs/${track.slug}`}
+                          className="block w-full overflow-hidden rounded-lg shadow-lg"
+                        >
+                          <Thumbnail track={track} />
                         </Link>
                         <div className="mt-2 text-sm">
                           <Link to={`/songs/${track.slug}`}>{track.name}</Link>
