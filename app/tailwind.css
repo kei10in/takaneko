@@ -24,6 +24,17 @@
     ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
+@layer base {
+  :focus,
+  :focus-visible {
+    @apply outline-none;
+  }
+
+  :where(:focus-visible) {
+    @apply ring-nadeshiko-700 ring-3 ring-offset-1;
+  }
+}
+
 @layer utilities {
   :root {
     --header-height: 3.5rem;
