@@ -50,6 +50,13 @@
       @apply inset-ring-nadeshiko-700 inset-ring-3;
     }
   }
+
+  .focus-none {
+    &:focus,
+    &:focus-visible {
+      @apply ring-0;
+    }
+  }
 }
 
 @layer utilities {

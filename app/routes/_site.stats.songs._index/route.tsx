@@ -73,7 +73,9 @@ export default function Component() {
                   </ListboxButton>
                   <ListboxOptions
                     anchor={{ to: "bottom end", gap: 4, offset: -4 }}
-                    className={clsx("w-34 rounded border border-gray-100 bg-white py-1 shadow")}
+                    className={clsx(
+                      "focus-none w-34 rounded border border-gray-100 bg-white py-1 shadow",
+                    )}
                   >
                     {Terms.map((term) => (
                       <ListboxOption
