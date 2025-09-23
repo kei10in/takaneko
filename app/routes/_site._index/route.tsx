@@ -13,7 +13,7 @@ import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import { ProductItemList } from "../_app.trade/ProductItemList";
+import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 
 export const meta: MetaFunction = () => {
   const title = SITE_TITLE;
@@ -210,7 +210,7 @@ export default function Index() {
               </Link>
             </div>
 
-            <ProductItemList items={recentProducts} />
+            <RandomGoodsList items={recentProducts} />
 
             <div className="w-full">
               <Link

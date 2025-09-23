@@ -27,7 +27,7 @@ import {
   TradeStatus,
 } from "~/features/trade/TradeStatus";
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
-import { ProductItemList } from "~/routes/_app.trade/ProductItemList";
+import { RandomGoodsList } from "~/routes/_app.trade/RandomGoodsList";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { CopyButton } from "../CopyButton";
 import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
@@ -185,7 +185,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         <section className="mx-auto mt-8 max-w-lg">
           <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
           <div className="mt-4 px-2">
-            <ProductItemList items={relativeItems} />
+            <RandomGoodsList items={relativeItems} />
           </div>
         </section>
       )}

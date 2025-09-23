@@ -17,7 +17,7 @@ import {
   isRegularTakanekoPhoto,
 } from "~/features/products/productImages";
 import { RandomGoods } from "../../features/products/product";
-import { ProductItemList } from "./ProductItemList";
+import { RandomGoodsList } from "./RandomGoodsList";
 
 interface Props {
   allPhotos: {
@@ -78,7 +78,7 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
         </RadioGroup>
       </div>
 
-      <ul>
+      <ul className="mt-2">
         <li className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
           <Link to="/trade/wishlist" onClick={onClickMenuItem}>
             <p className="flex items-center gap-2 py-2 text-lg font-bold">
@@ -111,14 +111,14 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
 
         return (
           <Disclosure key={item.name} defaultOpen={open}>
-            <DisclosureButton className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+            <DisclosureButton className="group hover:text-nadeshiko-900 inset-focus flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
               <h3 className="text-lg font-bold">{item.name}</h3>
               <div>
                 <HiChevronRight className="transition-transform group-data-open:rotate-90" />
               </div>
             </DisclosureButton>
-            <DisclosurePanel className="px4">
-              <ProductItemList items={item.photos} onClickLink={onClickMenuItem} />
+            <DisclosurePanel className="pb-8">
+              <RandomGoodsList items={item.photos} onClickLink={onClickMenuItem} />
             </DisclosurePanel>
           </Disclosure>
         );

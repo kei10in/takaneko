@@ -1,16 +1,16 @@
 import { clsx } from "clsx";
 import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product";
-import { RandomGoodsCard } from "~/features/products/productImages";
+import { RandomGoodsCardTexts } from "~/features/products/productImages";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
-import { ProductItem } from "./ProductItem";
+import { RandomGoodsCard } from "./RandomGoodsCard";
 
 interface Props {
   items: RandomGoods[];
   onClickLink?: () => void;
 }
 
-export const ProductItemList: React.FC<Props> = (props: Props) => {
+export const RandomGoodsList: React.FC<Props> = (props: Props) => {
   const { items, onClickLink } = props;
 
   return (
@@ -27,13 +27,13 @@ export const ProductItemList: React.FC<Props> = (props: Props) => {
           const thumbs = thumbnailSrcSet(photo.url);
           return (
             <li key={photo.slug}>
-              <NavLink to={`/trade/${photo.slug}`} onClick={onClickLink}>
-                <ProductItem
+              <NavLink to={`/trade/${photo.slug}`} onClick={onClickLink} className="block">
+                <RandomGoodsCard
                   image={thumbs.src}
                   imageSet={thumbs.srcset}
                   year={photo.year}
-                  content={RandomGoodsCard.title(photo)}
-                  description={RandomGoodsCard.subtitle(photo)}
+                  content={RandomGoodsCardTexts.title(photo)}
+                  description={RandomGoodsCardTexts.subtitle(photo)}
                 />
               </NavLink>
             </li>
