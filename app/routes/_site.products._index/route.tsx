@@ -114,21 +114,21 @@ export default function Index() {
           const { title, slug, items } = section;
           return (
             <section className="mt-12" key={slug}>
-              <Link className="mb-8 flex items-end justify-between" to={slug}>
+              <Link className="flex items-end justify-between" to={slug}>
                 <h2 className={sectionHeading()}>{title}</h2>
                 <p className="text-nadeshiko-800 flex w-fit items-center text-sm">
                   <span>すべて表示</span>
                   <BsChevronRight className="ml-1 inline-block" />
                 </p>
               </Link>
-              <div>
-                <Swiper slidesPerView="auto">
+              <div className="mt-6">
+                <Swiper slidesPerView="auto" className="py-2">
                   {items.map((item) => {
                     const { slug, image, imageSet, name } = item;
 
                     return (
                       <SwiperSlide key={slug} className="w-46 px-2">
-                        <Link to={slug}>
+                        <Link to={slug} className="block">
                           <SquareCard image={image} imageSet={imageSet} title={name} />
                         </Link>
                       </SwiperSlide>
