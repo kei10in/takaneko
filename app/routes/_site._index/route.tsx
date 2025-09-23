@@ -172,7 +172,7 @@ export default function Index() {
                       <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
                         {events.length !== 0 ? (
                           events.map((event) => (
-                            <Link key={event.slug} to={`/events/${event.slug}`}>
+                            <Link key={event.slug} to={`/events/${event.slug}`} className="block">
                               <CalendarEventItem
                                 category={event.category}
                                 summary={event.summary}

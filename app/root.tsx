@@ -179,11 +179,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <CloseButton as={XMarkButton} />
                 </div>
                 <div className="p-6">
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     {LINKS.map((link) => (
                       <li key={link.url}>
-                        <Link className="hover:text-nadeshiko-700" to={link.url} onClick={close}>
-                          <p>{link.name}</p>
+                        <Link
+                          className="hover:text-nadeshiko-700 block"
+                          to={link.url}
+                          onClick={close}
+                        >
+                          {link.name}
                         </Link>
                       </li>
                     ))}
@@ -191,18 +195,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
                   <hr className="my-6 border-gray-200" />
 
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     <li>
                       <p className="text-gray-400">ツール</p>
-                      <ul className="mt-4 space-y-4">
+                      <ul className="mt-4 space-y-6">
                         {UTILS.map((util) => (
                           <li key={util.url}>
                             <Link
-                              className="hover:text-nadeshiko-700"
+                              className="hover:text-nadeshiko-700 block"
                               to={util.url}
                               onClick={close}
                             >
-                              <p>{util.name}</p>
+                              {util.name}
                             </Link>
                           </li>
                         ))}
@@ -212,18 +216,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
                   <hr className="my-6 border-gray-200" />
 
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     <li>
                       <p className="text-gray-400">スペシャル</p>
-                      <ul className="mt-4 space-y-4">
+                      <ul className="mt-4 space-y-6">
                         {SPECIALS.map((util) => (
                           <li key={util.url}>
                             <Link
-                              className="hover:text-nadeshiko-700"
+                              className="hover:text-nadeshiko-700 block"
                               to={util.url}
                               onClick={close}
                             >
-                              <p>{util.name}</p>
+                              {util.name}
                             </Link>
                           </li>
                         ))}
