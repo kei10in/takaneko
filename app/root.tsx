@@ -122,7 +122,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
                     <MenuItems
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                      className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
                       <ul className="space-y-4 text-sm font-bold text-gray-500">
                         {UTILS.map((util) => (
@@ -142,7 +142,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <MenuButton className="hover:text-nadeshiko-700">スペシャル</MenuButton>
                     <MenuItems
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                      className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
                       <ul className="space-y-4 text-sm font-bold text-gray-500">
                         {SPECIALS.map((util) => (
