@@ -3,8 +3,8 @@ import { Link } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
+import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
 import { calendarMonthHref, dateHref } from "./utils";
 
 interface Props {
@@ -63,14 +63,14 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
         <div>
           {events.length !== 0 ? (
             events.map((event) => (
-              <Link key={event.slug} to={`/events/${event.slug}`}>
-                <CalendarEventItem
-                  category={event.category}
-                  summary={event.summary}
-                  location={event.location}
-                  region={event.region}
-                />
-              </Link>
+              <LinkCalendarEventItem
+                key={event.slug}
+                to={`/events/${event.slug}`}
+                category={event.category}
+                summary={event.summary}
+                location={event.location}
+                region={event.region}
+              />
             ))
           ) : (
             <div className="mx-auto w-fit py-4 text-gray-800">予定はありません。</div>

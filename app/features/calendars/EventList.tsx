@@ -4,8 +4,8 @@ import { Link } from "react-router";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
+import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
 import { dateHref } from "./utils";
 
 interface Props {
@@ -56,14 +56,14 @@ export const EventList: React.FC<Props> = (props: Props) => {
               </div>
               <div>
                 {eventsInDate.map((event) => (
-                  <Link key={event.slug} to={`/events/${event.slug}`} className="block">
-                    <CalendarEventItem
-                      category={event.category}
-                      summary={event.summary}
-                      location={event.location}
-                      region={event.region}
-                    />
-                  </Link>
+                  <LinkCalendarEventItem
+                    key={event.slug}
+                    to={`/events/${event.slug}`}
+                    category={event.category}
+                    summary={event.summary}
+                    location={event.location}
+                    region={event.region}
+                  />
                 ))}
               </div>
             </div>
