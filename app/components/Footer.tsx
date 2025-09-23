@@ -8,6 +8,33 @@ interface Props {
   className?: string;
 }
 
+const SocialMedia = [
+  {
+    url: "https://www.youtube.com/@official6743",
+    icon: FaYoutube,
+  },
+  {
+    url: "https://x.com/takanenofficial",
+    icon: FaXTwitter,
+  },
+  {
+    url: "https://www.instagram.com/takanenofficial/",
+    icon: FaInstagram,
+  },
+  {
+    url: "https://www.tiktok.com/@takanenofficial",
+    icon: FaTiktok,
+  },
+  {
+    url: "https://discord.gg/JE54h9trxm",
+    icon: FaDiscord,
+  },
+  {
+    url: "https://bere.al/takanenofficial",
+    icon: SiBereal,
+  },
+];
+
 export const Footer: React.FC<Props> = (props: Props) => {
   const { className } = props;
 
@@ -123,44 +150,18 @@ export const Footer: React.FC<Props> = (props: Props) => {
               </ul>
 
               <ul className="flex gap-1.5 py-1">
-                <li>
-                  <Link to="https://www.youtube.com/@official6743" target="_blank" rel="noreferrer">
-                    <FaYoutube className="h-4 w-4" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://x.com/takanenofficial" target="_blank" rel="noreferrer">
-                    <FaXTwitter className="h-4 w-4" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://www.instagram.com/takanenofficial/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaInstagram className="h-4 w-4" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="https://www.tiktok.com/@takanenofficial"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FaTiktok className="h-4 w-4" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://discord.gg/JE54h9trxm" target="_blank" rel="noreferrer">
-                    <FaDiscord className="h-4 w-4" />
-                  </Link>
-                </li>
-                <li>
-                  <Link to="https://bere.al/takanenofficial" target="_blank" rel="noreferrer">
-                    <SiBereal className="h-4 w-4" />
-                  </Link>
-                </li>
+                {SocialMedia.map((media) => (
+                  <li key={media.url}>
+                    <Link
+                      className="block h-4 w-4 rounded-xs"
+                      to={media.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <media.icon className="h-full w-full" />
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </section>
           </div>
@@ -168,7 +169,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
           <div className="flex gap-2">
             <div className="flex-1">MIT © 2024</div>
             <Link
-              className="inline-block flex-none"
+              className="inline-block flex-none rounded"
               to="https://twitter.com/takanekofan"
               target="_blank"
               rel="noreferrer"
@@ -176,7 +177,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
               <FaXTwitter className="h-6 w-6" />
             </Link>
             <Link
-              className="inline-block flex-none"
+              className="inline-block flex-none rounded"
               to="https://github.com/kei10in/takaneko"
               target="_blank"
               rel="noreferrer"
