@@ -25,6 +25,10 @@
 }
 
 @layer base {
+  :root {
+    --header-height: 3.5rem;
+  }
+
   :focus,
   :focus-visible {
     @apply outline-none;
@@ -36,22 +40,8 @@
 }
 
 @layer utilities {
-  :root {
-    --header-height: 3.5rem;
-  }
-
   .scrollbar-hidden {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-  }
-}
-
-@layer components {
-  .icon-btn {
-    @apply flex h-10 w-10 items-center justify-center rounded-full text-gray-700 hover:bg-gray-100 active:bg-gray-200;
-
-    &[data-primary="true"] {
-      @apply text-nadeshiko-800 hover:bg-nadeshiko-500/10 active:bg-nadeshiko-500/20 bg-transparent;
-    }
   }
 }

@@ -2,6 +2,7 @@ import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { Link, Outlet } from "react-router";
+import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
 
 export default function Index() {
@@ -28,7 +29,7 @@ export default function Index() {
             </div>
 
             <div className="flex-none lg:hidden">
-              <button data-primary className="icon-btn" onClick={() => setShowMenu(true)}>
+              <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
                 <BsList className="h-6 w-6" />
               </button>
             </div>

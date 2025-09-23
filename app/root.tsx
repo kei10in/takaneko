@@ -19,6 +19,7 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
+import { iconButtonPrimary } from "./components/styles/buttons";
 import { XMarkButton } from "./components/XMarkButton";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
@@ -158,8 +159,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </Menu>
                 </div>
                 <button
-                  data-primary
-                  className="icon-btn lg:hidden"
+                  className={iconButtonPrimary("lg:hidden")}
                   onClick={() => setShowMenu(true)}
                 >
                   <BsThreeDotsVertical className="h-6 w-6" />
