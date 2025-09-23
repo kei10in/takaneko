@@ -24,23 +24,44 @@
     ui-sans-serif, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
-@layer utilities {
+@layer base {
   :root {
     --header-height: 3.5rem;
   }
 
-  .scrollbar-hidden {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  :focus,
+  :focus-visible {
+    @apply outline-none;
+  }
+
+  :where(:focus-visible) {
+    @apply ring-nadeshiko-700 ring-3 ring-offset-1;
   }
 }
 
 @layer components {
-  .icon-btn {
-    @apply flex h-10 w-10 items-center justify-center rounded-full text-gray-700 hover:bg-gray-100 active:bg-gray-200;
-
-    &[data-primary="true"] {
-      @apply text-nadeshiko-800 hover:bg-nadeshiko-500/10 active:bg-nadeshiko-500/20 bg-transparent;
+  .inset-focus {
+    &:focus,
+    &:focus-visible {
+      @apply ring-0;
     }
+
+    &:focus-visible {
+      @apply inset-ring-nadeshiko-700 inset-ring-3;
+    }
+  }
+
+  .focus-none {
+    &:focus,
+    &:focus-visible {
+      @apply ring-0;
+    }
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

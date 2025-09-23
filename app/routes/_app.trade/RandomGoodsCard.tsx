@@ -9,7 +9,7 @@ interface Props {
   selected?: boolean;
 }
 
-export const ProductItem: React.FC<Props> = (props: Props) => {
+export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
   const { image, imageSet, year, content, description, selected = false } = props;
 
   return (

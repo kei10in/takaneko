@@ -4,8 +4,8 @@ import { Link } from "react-router";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { CalendarEventItem } from "./CalendarEventItem";
 import { CalendarEvent } from "./calendarEvents";
+import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
 import { dateHref } from "./utils";
 
 interface Props {
@@ -50,23 +50,20 @@ export const EventList: React.FC<Props> = (props: Props) => {
 
         return (
           <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
-            {/* イベントがない日を表示しないための要素。
-            `overflow-hidden` な要素は `id` が付いている要素の子要素にしないと
-            Chrome でのスクロールが期待通りにならない。*/}
-            <div className={clsx("overflow-hidden", eventsInDate.length == 0 && "h-0")}>
+            <div className={clsx(eventsInDate.length == 0 && "hidden")}>
               <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)}>
                 <Link to={dateHref(dt)}>{date}</Link>
               </div>
               <div>
                 {eventsInDate.map((event) => (
-                  <Link key={event.slug} to={`/events/${event.slug}`}>
-                    <CalendarEventItem
-                      category={event.category}
-                      summary={event.summary}
-                      location={event.location}
-                      region={event.region}
-                    />
-                  </Link>
+                  <LinkCalendarEventItem
+                    key={event.slug}
+                    to={`/events/${event.slug}`}
+                    category={event.category}
+                    summary={event.summary}
+                    location={event.location}
+                    region={event.region}
+                  />
                 ))}
               </div>
             </div>

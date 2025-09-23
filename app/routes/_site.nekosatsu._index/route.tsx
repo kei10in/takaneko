@@ -98,11 +98,12 @@ export default function Component() {
               <h2 className={sectionHeading()}>{pics.member.name}</h2>
               <ul className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
                 {pics.pictures.map((pic, i) => (
-                  <li
-                    key={pic}
-                    className="aspect-[5/3.5] max-w-80 overflow-hidden rounded-lg shadow"
-                  >
-                    <Link to={`#${pics.member.slug}-${i}`} preventScrollReset={true}>
+                  <li key={pic}>
+                    <Link
+                      className="block aspect-[5/3.5] max-w-80 overflow-hidden rounded-lg shadow"
+                      to={`#${pics.member.slug}-${i}`}
+                      preventScrollReset={true}
+                    >
                       <img
                         src={pic}
                         alt={`${pics.member.name} ${i}`}

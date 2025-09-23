@@ -216,6 +216,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         ref={viewPortRef}
         className={clsx("overscroll-contain", className)}
         style={{ cursor: "auto" }}
+        tabIndex={-1}
       >
         <div ref={contentRef}>{children}</div>
       </div>

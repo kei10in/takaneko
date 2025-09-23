@@ -170,7 +170,7 @@ export default function MediaIndex() {
                   to={video.mediaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-gray-600"
+                  className="block hover:text-gray-600"
                 >
                   <div className="flex w-full gap-4">
                     <div className="min-w-0 flex-1">

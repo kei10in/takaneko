@@ -13,7 +13,7 @@ import { pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { ProductItemList } from "../_app.trade/ProductItemList";
+import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 
 export const meta: MetaFunction = () => {
   return [
@@ -131,13 +131,13 @@ export default function Index() {
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12">
           <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
-          <ProductItemList items={TAKANEKO_PHOTOS_FEATURED} />
+          <RandomGoodsList items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
 
       <section className="mt-12">
         <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
-        <ProductItemList items={TAKANEKO_PHOTOS} />
+        <RandomGoodsList items={TAKANEKO_PHOTOS} />
       </section>
 
       <section className="mt-12 px-4">

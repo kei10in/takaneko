@@ -24,7 +24,7 @@ export const SongBarChart: React.FC<Props> = ({ data }: Props) => {
         const to = `/songs/${slug}`;
 
         return (
-          <Link to={to} key={slug} className="group block">
+          <Link to={to} key={slug} className="group block rounded">
             <div className="flex w-full items-center gap-2 text-sm leading-tight">
               <div className="flex flex-none items-center justify-center overflow-hidden rounded shadow">
                 {coverArt ? (

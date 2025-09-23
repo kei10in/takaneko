@@ -295,7 +295,7 @@ export const abbrevCategory = (category: string) => {
 /**
  * ランダムグッズのカードに表示するテキストを生成するためのユーティリティ
  */
-export const RandomGoodsCard = {
+export const RandomGoodsCardTexts = {
   title: (photo: RandomGoods) => photo.abbrev ?? photo.name,
   subtitle: (photo: RandomGoods) => {
     if (isRegularTakanekoPhoto(photo)) {

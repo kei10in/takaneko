@@ -69,7 +69,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         ))}
       </Swiper>
       <div className="relative">
-        <XScroll ref={scrollRef} className="scrollbar-hidden overflow-y-auto py-2">
+        <XScroll ref={scrollRef} className="scrollbar-hidden inset-focus overflow-y-auto px-2 py-2">
           <ul className="inline-flex space-x-2 px-10" ref={listRef}>
             {images.map((image, i) => (
               <li key={i} className={clsx("h-fit w-fit min-w-0 flex-none")}>
@@ -97,7 +97,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
           />
         </XScroll>
         <button
-          className="absolute top-0 left-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
+          className="inset-focus absolute top-0 left-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
           onClick={() => {
             const r = scrollRef.current?.getBoundingClientRect();
             scrollRef.current?.scrollBy({
@@ -109,7 +109,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
           <BsChevronLeft className="mr-0.5 size-5 text-gray-600" />
         </button>
         <button
-          className="absolute top-0 right-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
+          className="inset-focus absolute top-0 right-0 hidden h-20 w-10 items-center justify-center bg-white opacity-60 transition-opacity hover:opacity-80 pointer-fine:flex"
           onClick={() => {
             const r = scrollRef.current?.getBoundingClientRect();
             scrollRef.current?.scrollBy({

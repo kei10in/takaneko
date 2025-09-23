@@ -21,7 +21,7 @@ export const TradeStateButton: React.FC<Props> = (props: Props) => {
   return (
     <Switch
       className={clsx(
-        "group flex-none rounded-2xl p-1 opacity-50",
+        "group inset-focus flex-none rounded-2xl p-1 opacity-50",
         "text-gray-600 data-checked:bg-gray-800/10 data-checked:opacity-100",
       )}
       checked={selected}

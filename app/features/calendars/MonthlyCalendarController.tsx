@@ -30,7 +30,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
   return (
     <div className="mx-2 flex items-center justify-between py-2">
       <Link
-        className="flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
+        className="inset-focus flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
         to={hrefToday}
         preventScrollReset={true}
       >
@@ -77,13 +77,13 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
         </Popover>
         <div className="inline-flex h-8 w-20 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
           <Link
-            className="inline-flex h-full grow items-center justify-center text-sm"
+            className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
             to={hrefPreviousMonth}
           >
             <HiChevronLeft />
           </Link>
           <Link
-            className="inline-flex h-full grow items-center justify-center text-sm"
+            className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
             to={hrefNextMonth}
           >
             <HiChevronRight />

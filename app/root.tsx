@@ -19,6 +19,7 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
+import { iconButtonPrimary } from "./components/styles/buttons";
 import { XMarkButton } from "./components/XMarkButton";
 import { SITE_TITLE } from "./constants";
 import "./tailwind.css";
@@ -121,7 +122,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
                     <MenuItems
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                      className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
                       <ul className="space-y-4 text-sm font-bold text-gray-500">
                         {UTILS.map((util) => (
@@ -141,7 +142,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                     <MenuButton className="hover:text-nadeshiko-700">スペシャル</MenuButton>
                     <MenuItems
                       anchor={{ to: "top end", gap: "1.5rem" }}
-                      className="z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                      className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
                     >
                       <ul className="space-y-4 text-sm font-bold text-gray-500">
                         {SPECIALS.map((util) => (
@@ -158,8 +159,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   </Menu>
                 </div>
                 <button
-                  data-primary
-                  className="icon-btn lg:hidden"
+                  className={iconButtonPrimary("lg:hidden")}
                   onClick={() => setShowMenu(true)}
                 >
                   <BsThreeDotsVertical className="h-6 w-6" />
@@ -179,11 +179,15 @@ export function Layout({ children }: { children: React.ReactNode }) {
                   <CloseButton as={XMarkButton} />
                 </div>
                 <div className="p-6">
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     {LINKS.map((link) => (
                       <li key={link.url}>
-                        <Link className="hover:text-nadeshiko-700" to={link.url} onClick={close}>
-                          <p>{link.name}</p>
+                        <Link
+                          className="hover:text-nadeshiko-700 block"
+                          to={link.url}
+                          onClick={close}
+                        >
+                          {link.name}
                         </Link>
                       </li>
                     ))}
@@ -191,18 +195,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
                   <hr className="my-6 border-gray-200" />
 
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     <li>
                       <p className="text-gray-400">ツール</p>
-                      <ul className="mt-4 space-y-4">
+                      <ul className="mt-4 space-y-6">
                         {UTILS.map((util) => (
                           <li key={util.url}>
                             <Link
-                              className="hover:text-nadeshiko-700"
+                              className="hover:text-nadeshiko-700 block"
                               to={util.url}
                               onClick={close}
                             >
-                              <p>{util.name}</p>
+                              {util.name}
                             </Link>
                           </li>
                         ))}
@@ -212,18 +216,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
                   <hr className="my-6 border-gray-200" />
 
-                  <ul className="space-y-6 pr-5 font-bold text-gray-700">
+                  <ul className="space-y-6 pr-10 font-bold text-gray-700">
                     <li>
                       <p className="text-gray-400">スペシャル</p>
-                      <ul className="mt-4 space-y-4">
+                      <ul className="mt-4 space-y-6">
                         {SPECIALS.map((util) => (
                           <li key={util.url}>
                             <Link
-                              className="hover:text-nadeshiko-700"
+                              className="hover:text-nadeshiko-700 block"
                               to={util.url}
                               onClick={close}
                             >
-                              <p>{util.name}</p>
+                              {util.name}
                             </Link>
                           </li>
                         ))}

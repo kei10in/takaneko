@@ -2,6 +2,7 @@ import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { Link, MetaFunction, Outlet } from "react-router";
+import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
 import { SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
@@ -42,7 +43,7 @@ export default function Index() {
               <Link to="/trade">トレード画像をつくるやつ</Link>
             </p>
             <div className="flex-none">
-              <button data-primary className="icon-btn" onClick={() => setShowMenu(true)}>
+              <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
                 <BsList className="h-6 w-6" />
               </button>
             </div>

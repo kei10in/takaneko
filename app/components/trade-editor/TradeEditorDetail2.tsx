@@ -160,7 +160,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
           <Popover className="relative">
             <PopoverButton
               className={clsx(
-                "group w-fit flex-none rounded-2xl p-1 opacity-50",
+                "group inset-focus w-fit flex-none rounded-2xl p-1 opacity-50",
                 "data-selected:bg-gray-800/10 data-selected:opacity-100",
               )}
               data-selected={tradeStatus.tag == "emoji" || undefined}

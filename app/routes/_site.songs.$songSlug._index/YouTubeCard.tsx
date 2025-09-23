@@ -125,37 +125,37 @@ export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
 
   return (
     <div className="w-full p-1">
-      <div>
-        <Link
-          className="hover:text-nadeshiko-800"
-          to={`https://youtu.be/${videoId}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full rounded-xl object-cover text-sm"
-            src={yt.thumbnailUrl}
-            alt={yt.title}
-          />
-        </Link>
-      </div>
+      <Link
+        className="hover:text-nadeshiko-800 block overflow-hidden rounded-xl"
+        to={`https://youtu.be/${videoId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full object-cover text-sm"
+          src={yt.thumbnailUrl}
+          alt={yt.title}
+        />
+      </Link>
       <div>
         <div className="space-y-0.5 px-1 py-2">
-          <p className="line-clamp-2 text-base leading-snug text-gray-800">
-            <Link
-              className="hover:text-nadeshiko-800"
-              to={`https://youtu.be/${videoId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {yt.title}
-            </Link>
-          </p>
-          <p className="line-clamp-1 text-xs text-gray-400">
-            <Link to={yt.authorUrl} target="_blank" rel="noopener noreferrer">
-              {yt.authorName}
-            </Link>
-          </p>
+          <Link
+            className="hover:text-nadeshiko-800 line-clamp-2 block text-base leading-snug text-gray-800"
+            to={`https://youtu.be/${videoId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {yt.title}
+          </Link>
+
+          <Link
+            className="line-clamp-1 block w-fit text-xs text-gray-400"
+            to={yt.authorUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {yt.authorName}
+          </Link>
         </div>
       </div>
     </div>

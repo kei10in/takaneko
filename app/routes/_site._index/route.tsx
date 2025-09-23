@@ -5,15 +5,15 @@ import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sectionHeading } from "~/components/styles";
 import { DOMAIN, SITE_TITLE } from "~/constants";
-import { CalendarEventItem } from "~/features/calendars/CalendarEventItem";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
+import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
 import { dateHref } from "~/features/calendars/utils";
 import { importEventModulesByDate } from "~/features/events/eventModule";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
-import { ProductItemList } from "../_app.trade/ProductItemList";
+import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 
 export const meta: MetaFunction = () => {
   const title = SITE_TITLE;
@@ -172,14 +172,14 @@ export default function Index() {
                       <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
                         {events.length !== 0 ? (
                           events.map((event) => (
-                            <Link key={event.slug} to={`/events/${event.slug}`}>
-                              <CalendarEventItem
-                                category={event.category}
-                                summary={event.summary}
-                                location={event.location}
-                                region={event.region}
-                              />
-                            </Link>
+                            <LinkCalendarEventItem
+                              key={event.slug}
+                              to={`/events/${event.slug}`}
+                              category={event.category}
+                              summary={event.summary}
+                              location={event.location}
+                              region={event.region}
+                            />
                           ))
                         ) : (
                           <div className="flex h-full items-center justify-center text-gray-600">
@@ -210,7 +210,7 @@ export default function Index() {
               </Link>
             </div>
 
-            <ProductItemList items={recentProducts} />
+            <RandomGoodsList items={recentProducts} />
 
             <div className="w-full">
               <Link

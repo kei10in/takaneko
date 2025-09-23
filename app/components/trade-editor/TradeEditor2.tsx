@@ -27,7 +27,7 @@ import {
   TradeStatus,
 } from "~/features/trade/TradeStatus";
 import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
-import { ProductItemList } from "~/routes/_app.trade/ProductItemList";
+import { RandomGoodsList } from "~/routes/_app.trade/RandomGoodsList";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { CopyButton } from "../CopyButton";
 import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
@@ -182,10 +182,10 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       </div>
 
       {relativeItems.length > 0 && (
-        <section className="mx-auto mt-8 max-w-lg">
+        <section className="mx-auto mt-8 mb-8 max-w-lg">
           <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
           <div className="mt-4 px-2">
-            <ProductItemList items={relativeItems} />
+            <RandomGoodsList items={relativeItems} />
           </div>
         </section>
       )}
@@ -399,7 +399,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 };
 
 const toolButton = () =>
-  clsx("group h-10 w-10 rounded-xl p-1 transition-colors data-checked:bg-gray-200");
+  clsx("inset-focus group h-10 w-10 rounded-xl p-1 transition-colors data-checked:bg-gray-200");
 const stamp = () => clsx("opacity-50 transition-opacity group-data-checked:opacity-100");
 const toolIcon = () =>
   clsx("h-6 w-6 text-gray-400 transition-colors group-data-checked:text-gray-600");

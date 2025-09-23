@@ -46,16 +46,15 @@ export default function Component() {
         <div className="mt-8 space-y-4">
           {items.map((item) => {
             return (
-              <Link key={item.url} to={item.url} className="block">
-                <section
-                  key={item.url}
-                  className="rounded-xl border border-gray-200 bg-white p-4 shadow"
-                >
-                  <div>
-                    <h2 className="mb-1 text-lg font-semibold text-gray-500">{item.title}</h2>
-                    <p className="text-sm text-gray-600">{item.description}</p>
-                  </div>
-                </section>
+              <Link
+                key={item.url}
+                className="block rounded-xl border border-gray-200 bg-white p-4 shadow"
+                to={item.url}
+              >
+                <div>
+                  <h2 className="mb-1 text-lg font-semibold text-gray-500">{item.title}</h2>
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                </div>
               </Link>
             );
           })}
