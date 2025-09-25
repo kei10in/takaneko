@@ -27,8 +27,12 @@ export const BEEEEM_vol1: Publication = {
     "松本ももな",
     "籾山ひめり",
   ],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1970815619814797615",
   links: [
+    {
+      text: "新ガールズカルチャーマガジン『BEEEEM』、ストア別購入特典の絵柄解禁 - KAiWAi (カイワイ)",
+      url: "https://kaiwaiweb.com/news/17309/",
+    },
     {
       text: "高嶺のなでしこサイン入りチェキ プレゼント企画",
       url: "https://x.com/KaiWaiweb/status/1967425303242051909",
