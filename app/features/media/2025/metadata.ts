@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/76726",
+    title: "ヒトリ遊びの天才になるコト。すぅにゃの推し活WORLD♡Vol.6",
+    authorName: "Popteen Media",
+    publishedAt: "2025-09-25",
+    mediaUrl: "https://popteen.co.jp/media/76726",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/09/cd32e84e8cf21b59cb2e7426586cb3af.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
     key: "https://realsound.jp/2025/09/post-2154271.html",
     title:
       "高嶺のなでしこが刻んだ“誇り高きアイドル” としての矜持　新章へと向かうデビュー3周年記念ライブを観て",
