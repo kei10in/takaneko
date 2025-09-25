@@ -35,7 +35,7 @@
   }
 
   :where(:focus-visible) {
-    @apply ring-nadeshiko-700 ring-3 ring-offset-1;
+    @apply ring-nadeshiko-700 ring-2 ring-offset-2;
   }
 }
 
@@ -43,18 +43,18 @@
   .inset-focus {
     &:focus,
     &:focus-visible {
-      @apply ring-0;
+      @apply ring-0 ring-transparent ring-offset-0;
     }
 
     &:focus-visible {
-      @apply inset-ring-nadeshiko-700 inset-ring-3;
+      @apply inset-ring-nadeshiko-700 inset-ring-2;
     }
   }
 
   .focus-none {
     &:focus,
     &:focus-visible {
-      @apply ring-0;
+      @apply ring-0 ring-transparent ring-offset-0;
     }
   }
 }
