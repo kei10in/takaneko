@@ -1,5 +1,21 @@
 import { Publication } from "../product";
 
+export const IDOL_FILE_Vol37: Publication = {
+  slug: "IDOL FILE Vol.37",
+  name: "IDOL FILE Vol.37",
+  date: "2025-10-17",
+  kind: "magazines", // "books"
+  publisher: "ロックスエンタテインメント",
+  listPrice: 1818,
+  priceWithTax: 2000,
+  code: [{ kind: "", value: "" }],
+  url: "",
+  coverImages: [],
+  featuredMembers: ["橋本桃呼"],
+  officialTwitter: "",
+  links: [],
+};
+
 export const IDOL_FILE_Vol35: Publication = {
   slug: "IDOL FILE Vol.35",
   name: "IDOL FILE Vol.35",

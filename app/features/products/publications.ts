@@ -16,7 +16,7 @@ import {
 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
 import { IDOL_AND_READ_041, IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
-import { IDOL_FILE_Vol35 } from "./publications/IDOL FILE";
+import { IDOL_FILE_Vol35, IDOL_FILE_Vol37 } from "./publications/IDOL FILE";
 import {
   LARME_054,
   LARME_056,
@@ -99,6 +99,7 @@ const publications: Publication[] = [
   IDOL_AND_READ_高田メタルSpecial,
   IDOL_AND_READ_041,
   IDOL_FILE_Vol35,
+  IDOL_FILE_Vol37,
   LARME_054,
   LARME_056,
   LARME_058,
