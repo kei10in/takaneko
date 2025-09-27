@@ -111,17 +111,19 @@ export default function Index() {
             </h1>
 
             <div className="mt-2 flex justify-end gap-2 text-sm font-semibold select-none">
-              <Link to="/trade">
-                <div className="bg-nadeshiko-800 flex h-7 items-center gap-1 rounded-md px-4 text-white">
-                  <BsArrowLeftRight className="h-4 w-4" />
-                  <div>トレード画像つくるやつ</div>
-                </div>
+              <Link
+                className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 items-center gap-1 rounded-md px-4"
+                to="/trade"
+              >
+                <BsArrowLeftRight className="h-4 w-4" />
+                <div>トレード画像つくるやつ</div>
               </Link>
-              <Link to="/calendar">
-                <div className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 w-full items-center gap-1 rounded-md px-4">
-                  <BsCalendar className="h-4 w-4" />
-                  <div>スケジュール</div>
-                </div>
+              <Link
+                className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 items-center gap-1 rounded-md px-4"
+                to="/calendar"
+              >
+                <BsCalendar className="h-4 w-4" />
+                <div>スケジュール</div>
               </Link>
             </div>
           </div>
