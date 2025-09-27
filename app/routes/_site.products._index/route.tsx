@@ -1,4 +1,4 @@
-import { BsChevronRight } from "react-icons/bs";
+import { BsBook, BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SquareCard } from "~/components/SquareCard";
@@ -129,7 +129,12 @@ export default function Index() {
                     return (
                       <SwiperSlide key={slug} className="w-46 px-2">
                         <Link to={slug} className="block">
-                          <SquareCard image={image} imageSet={imageSet} title={name} />
+                          <SquareCard
+                            image={image}
+                            imageSet={imageSet}
+                            title={name}
+                            fallback={<BsBook />}
+                          />
                         </Link>
                       </SwiperSlide>
                     );

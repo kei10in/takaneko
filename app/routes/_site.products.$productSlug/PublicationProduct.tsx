@@ -1,4 +1,5 @@
 import React from "react";
+import { BsBook } from "react-icons/bs";
 import { Link } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
 import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
@@ -44,9 +45,16 @@ export default function PublicationProduct(props: Props) {
 
   return (
     <div className="mx-auto pb-12 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-4 lg:py-12">
-      <ImageSlide
-        images={product.coverImages.map((img) => ({ src: img.path, alt: product.name }))}
-      />
+      {product.coverImages.length > 0 && (
+        <ImageSlide
+          images={product.coverImages.map((img) => ({ src: img.path, alt: product.name }))}
+        />
+      )}
+      {product.coverImages.length === 0 && (
+        <div className="m-4 flex aspect-square items-center justify-center bg-gray-100 text-gray-400 *:h-1/3 *:w-1/3">
+          <BsBook />
+        </div>
+      )}
 
       <section className={pageColumnBox("space-y-8 px-4")}>
         <h1 className={pageHeading()}>

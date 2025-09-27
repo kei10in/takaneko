@@ -16,8 +16,8 @@ export const PublicationCard: React.FC<Props> = (props: Props) => {
     <div className="w-full bg-white shadow-sm">
       <div className="aspect-square w-full flex-0">
         {image == undefined && (
-          <div className="h-full w-full bg-gray-100 p-20 text-gray-400">
-            <BsBook className="h-full w-full" />
+          <div className="flex h-full w-full items-center justify-center bg-gray-100 text-gray-400">
+            <BsBook className="h-1/3 w-1/3" />
           </div>
         )}
         {image && (
