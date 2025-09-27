@@ -29,24 +29,19 @@
     --header-height: 3.5rem;
   }
 
-  :focus,
-  :focus-visible {
+  :focus:not(:focus-visible) {
     @apply outline-none;
   }
 
-  :where(:focus-visible) {
-    @apply ring-nadeshiko-700 ring-2 ring-offset-2;
+  :focus-visible {
+    @apply outline-nadeshiko-700 outline-2 outline-offset-2;
   }
 }
 
 @layer components {
   .inset-focus {
-    &:focus,
     &:focus-visible {
-      @apply ring-0 ring-transparent ring-offset-0;
-    }
-
-    &:focus-visible {
+      @apply outline-none;
       @apply inset-ring-nadeshiko-700 inset-ring-2;
     }
   }
@@ -54,7 +49,7 @@
   .focus-none {
     &:focus,
     &:focus-visible {
-      @apply ring-0 ring-transparent ring-offset-0;
+      @apply outline-none;
     }
   }
 }
