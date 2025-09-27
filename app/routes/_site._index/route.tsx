@@ -89,49 +89,62 @@ export default function Index() {
   const recentProducts = TAKANEKO_PHOTOS.slice(0, 12);
 
   return (
-    <div className="bg-gray-50">
-      <div className="container mx-auto bg-white text-gray-600 shadow-lg lg:max-w-5xl">
-        <div className="relative mx-auto w-fit lg:static lg:flex lg:w-full">
-          <img
-            className="aspect-4/3 max-h-96 w-full min-w-96 lg:h-96 lg:w-auto lg:flex-none"
-            src="/takaneko/hero.jpg"
-            alt="ヒーロー画像"
-          />
-          <div
-            className={clsx(
-              "bg-nadeshiko-100/90 absolute bottom-0 w-full px-6 py-4",
-              "lg:static lg:flex-1 lg:px-10 lg:py-8",
-            )}
-          >
-            <h1 className="text-right font-serif text-2xl leading-tight text-gray-500 italic lg:text-5xl">
-              <span className="text-nadeshiko-900">高嶺のなでしこの</span>
-              <br />
-              ファンサイト
-              <span className="text-nadeshiko-900"></span>
-            </h1>
+    <div className="bg-white">
+      <div className="lg:bg-nadeshiko-100">
+        <div className="container mx-auto">
+          <div className="w-full lg:flex lg:flex-row-reverse">
+            <div className="aspect-4/3 w-full min-w-96 lg:min-h-0 lg:w-auto lg:min-w-0 lg:flex-1">
+              <img
+                className={clsx("aspect-4/3 w-full min-w-96 lg:w-auto lg:min-w-0 lg:flex-1")}
+                src="/takaneko/hero.jpg"
+                alt="ヒーロー画像"
+              />
+            </div>
 
-            <div className="mt-2 flex justify-end gap-2 text-sm font-semibold select-none">
-              <Link
-                className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 items-center gap-1 rounded-md px-4"
-                to="/trade"
+            <div
+              className={clsx(
+                "w-full space-y-6 py-6 lg:w-auto lg:flex-none 2xl:px-8",
+                "lg:space-y-8 lg:py-24 2xl:py-32",
+              )}
+            >
+              <h1
+                className={clsx("flex flex-col px-8 text-center font-serif text-zinc-600 xl:gap-1")}
               >
-                <BsArrowLeftRight className="h-4 w-4" />
-                <div>トレード画像つくるやつ</div>
-              </Link>
-              <Link
-                className="bg-nadeshiko-800 text-nadeshiko-100 flex h-7 items-center gap-1 rounded-md px-4"
-                to="/calendar"
-              >
-                <BsCalendar className="h-4 w-4" />
-                <div>スケジュール</div>
-              </Link>
+                <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
+                <span className="text-nadeshiko-800 text-4xl xl:text-6xl">{SITE_TITLE}</span>
+              </h1>
+
+              <p className="px-8 text-center font-serif text-lg text-zinc-600 xl:text-xl">
+                たかねこのファンを技術で支援する。
+              </p>
+
+              <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 px-4 text-sm font-semibold select-none">
+                <Link
+                  className="bg-nadeshiko-800 text-nadeshiko-100 flex h-9 w-full items-center rounded-full px-4"
+                  to="/calendar"
+                >
+                  <div className="mx-auto flex items-center gap-1">
+                    <BsCalendar className="h-4 w-4" />
+                    <div>スケジュール</div>
+                  </div>
+                </Link>
+                <Link
+                  className="bg-nadeshiko-800 text-nadeshiko-100 flex h-9 w-full items-center rounded-full px-4"
+                  to="/trade"
+                >
+                  <div className="mx-auto flex items-center gap-1">
+                    <BsArrowLeftRight className="h-4 w-4" />
+                    <div>トレード画像つくるやつ</div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
+      <div className="container mx-auto mt-8 lg:max-w-5xl">
         <section className="mx-auto w-full max-w-md space-y-16 pt-8 pb-12 lg:max-w-3xl">
-          <p className="px-4">「{SITE_TITLE}」は、高嶺のなでしこの非公式ファンサイトです。</p>
-
           <section className="space-y-4">
             <h2 className={sectionHeading("flex items-center gap-2 px-4")}>
               <BsCalendar className="inline-block text-gray-400" />
