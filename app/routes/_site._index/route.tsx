@@ -107,12 +107,26 @@ export default function Index() {
                 "lg:space-y-8 lg:py-24 2xl:py-32",
               )}
             >
-              <h1
-                className={clsx("flex flex-col px-8 text-center font-serif text-zinc-600 xl:gap-1")}
+              <div
+                className={clsx(
+                  "relative",
+                  "before:absolute before:inset-x-0 before:bottom-0 before:mx-auto before:bg-[url(/icon.svg)] before:bg-cover before:bg-no-repeat",
+                  "before:opacity-30",
+                  "before:size-6 before:-translate-x-24.5 before:translate-y-1",
+                  "xl:before:size-9 xl:before:-translate-x-40 xl:before:translate-y-2",
+                )}
               >
-                <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
-                <span className="text-nadeshiko-800 text-4xl xl:text-6xl">{SITE_TITLE}</span>
-              </h1>
+                <h1
+                  className={clsx(
+                    "relative flex flex-col px-8 text-center font-serif text-zinc-600 xl:gap-1",
+                  )}
+                >
+                  <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
+                  <span className="text-nadeshiko-800 line-clamp-1 text-4xl xl:text-6xl">
+                    {SITE_TITLE}
+                  </span>
+                </h1>
+              </div>
 
               <p className="px-8 text-center font-serif text-lg text-zinc-600 xl:text-xl">
                 たかねこのファンを技術で支援する。
