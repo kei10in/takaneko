@@ -157,8 +157,8 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-8 lg:max-w-5xl">
-        <section className="mx-auto w-full max-w-md space-y-16 pt-8 pb-12 lg:max-w-3xl">
+      <div className="container mx-auto mt-12 lg:mt-24 lg:max-w-5xl">
+        <section className="mx-auto w-full max-w-md space-y-16 pb-12 lg:max-w-3xl">
           <section className="space-y-4">
             <h2 className={sectionHeading("flex items-center gap-2 px-4")}>
               <BsCalendar className="inline-block text-gray-400" />
