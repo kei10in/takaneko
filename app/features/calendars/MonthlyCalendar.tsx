@@ -9,10 +9,11 @@ import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
 interface Props {
   month: NaiveMonth;
   events: CalendarEvent[];
+  disabled?: boolean;
 }
 
 export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
-  const { month, events } = props;
+  const { month, events, disabled = false } = props;
 
   const dates = useMemo(
     () => getCalendarDatesOfMonth(month.year, month.month),
@@ -38,10 +39,11 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
           <tr key={i} className="border-y border-gray-300">
             {week.map(({ date, events }, j) => {
               const dateString = date.toString();
+              // カレンダーの始まりや終わりに含まれる、前や次の月の日付かどうか
               const currentMonth = date.naiveMonth().equals(month);
               return (
                 <td key={j} className="border-b border-gray-300 p-0">
-                  {events.length == 0 || !currentMonth ? (
+                  {disabled || events.length == 0 || !currentMonth ? (
                     <div className="w-full">
                       <CalendarCell
                         date={date.day}
@@ -53,7 +55,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                     </div>
                   ) : (
                     <Link
-                      className="block w-full"
+                      className="inset-focus block w-full"
                       to={`#${dateString}`}
                       onClick={(e) => {
                         e.preventDefault();

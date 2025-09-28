@@ -109,9 +109,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           )}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {months.map((m) => (
+          {months.map((m, i) => (
             <SwiperSlide key={m.toString()}>
-              <MonthlyCalendar month={m} events={events} />
+              <MonthlyCalendar month={m} events={events} disabled={i !== currentSlide} />
             </SwiperSlide>
           ))}
         </Swiper>
