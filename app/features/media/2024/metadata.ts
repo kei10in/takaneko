@@ -1098,6 +1098,7 @@ export const metadata2024: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/mVaR9q39xYs/hqdefault.jpg",
     category: "youtube",
     presents: ["東山恵里沙"],
+    deleted: true,
   },
   {
     kind: "ogp",
