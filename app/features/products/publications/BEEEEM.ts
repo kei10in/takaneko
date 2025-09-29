@@ -15,6 +15,46 @@ export const BEEEEM_vol1: Publication = {
       path: "/publications/2025/2025-09-30_BEEEEM vol.1.jpg",
       ref: "https://kaiwaiweb.com/news/16090/",
     },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポスター.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード城月菜央.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード涼海すう.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード橋本桃呼.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード葉月紗蘭.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード東山恵里沙.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード日向端ひな.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード星谷美来.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード松本ももな.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
+    {
+      path: "/publications/2025/2025-09-30_BEEEEM vol.1_ポストカード籾山ひめり.jpg",
+      ref: "https://kaiwaiweb.com/news/17309/",
+    },
   ],
   featuredMembers: [
     "城月菜央",
