@@ -222,8 +222,8 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     key: "https://kaiwaiweb.com/news/13369/",
-    title: "江嶋綾恵梨が切り撮る『TIF2025』高嶺のなでしこ編 - KAiWAi (カイワイ)",
-    authorName: "KAiWAi (カイワイ)",
+    title: "江嶋綾恵梨が切り撮る『TIF2025』高嶺のなでしこ編 - BEEEEM（ビーーーム）",
+    authorName: "BEEEEM（ビーーーム）",
     publishedAt: "2025-08-13",
     mediaUrl: "https://kaiwaiweb.com/news/13369/",
     imageUrl: "https://kaiwaiweb.com/wp/wp-content/uploads/2025/08/DSCF6865.jpg",
@@ -329,8 +329,8 @@ export const metadata2025: MediaDetails[] = [
     kind: "ogp",
     key: "https://kaiwaiweb.com/news/12965/",
     title:
-      "【六本木アイドルフェスティバル2025ライブレポート】高嶺のなでしこ、大トリで好きが溢れる圧巻のステージ - KAiWAi (カイワイ)",
-    authorName: "KAiWAi (カイワイ)",
+      "【六本木アイドルフェスティバル2025ライブレポート】高嶺のなでしこ、大トリで好きが溢れる圧巻のステージ - BEEEEM（ビーーーム）",
+    authorName: "BEEEEM（ビーーーム）",
     publishedAt: "2025-07-31",
     mediaUrl: "https://kaiwaiweb.com/news/12965/",
     imageUrl:
@@ -622,8 +622,8 @@ export const metadata2025: MediaDetails[] = [
     kind: "ogp",
     key: "https://kaiwaiweb.com/news/11842/",
     title:
-      "【超NATSUZOME2025ライブレポート】高嶺のなでしこ、夕映えのステージに響いた決意と可憐のダブルトーン - KAiWAi (カイワイ)",
-    authorName: "KAiWAi (カイワイ)",
+      "【超NATSUZOME2025ライブレポート】高嶺のなでしこ、夕映えのステージに響いた決意と可憐のダブルトーン - BEEEEM（ビーーーム）",
+    authorName: "BEEEEM（ビーーーム）",
     publishedAt: "2025-07-09",
     mediaUrl: "https://kaiwaiweb.com/news/11842/",
     imageUrl:
