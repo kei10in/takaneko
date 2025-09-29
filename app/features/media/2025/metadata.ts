@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/770339",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第4回『Five Nights at Freddy’s』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-09-29",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/770339",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/09/770339_04.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
     key: "https://popteen.co.jp/media/76726",
     title: "ヒトリ遊びの天才になるコト。すぅにゃの推し活WORLD♡Vol.6",
     authorName: "Popteen Media",
