@@ -50,6 +50,18 @@ export const metadata2024: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "youtube",
+    key: "zaR65NSe_so",
+    title:
+      "【高嶺のなでしこ】「たかねこ」の新曲で踊ろう！カラオケパフォーマンス合戦‼【DAM CHANNEL】",
+    authorName: "カラオケDAM公式チャンネル",
+    publishedAt: "2024-12-18",
+    mediaUrl: "https://youtu.be/zaR65NSe_so",
+    imageUrl: "https://i.ytimg.com/vi/zaR65NSe_so/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
     kind: "ogp",
     key: "https://strmweb.jp/?p=15750",
     title:

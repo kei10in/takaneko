@@ -118,6 +118,18 @@ export const metadata2023: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "MvODp1egnz8",
+    title:
+      ".yell Live「ヌマトーク @JAM出張版2部」 (MC：#相沢梨紗 #望月みゆ ゲスト：#城月菜央 #葉月紗蘭 #涼海すう #星谷美来)",
+    authorName: "yell Live公式",
+    publishedAt: "2023-08-28",
+    mediaUrl: "https://youtu.be/MvODp1egnz8",
+    imageUrl: "https://i.ytimg.com/vi/MvODp1egnz8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "涼海すう", "葉月紗蘭", "星谷美来"],
+  },
+  {
+    kind: "youtube",
     key: "hNF9mhoS8jU",
     title: '"高嶺のなでしこ"が「運転免許トロッカ！ゲーム」で白熱のバトル！(前編)',
     authorName: "運転免許トロッカ!",
@@ -230,6 +242,17 @@ export const metadata2023: MediaDetails[] = [
     imageUrl: "https://www.vanitymix.jp/wp-content/uploads/2023/04/takane-Aph-fix.jpg",
     category: "article",
     presents: [],
+  },
+  {
+    kind: "youtube",
+    key: "nVAUgCvEjn8",
+    title: "「ヌマトーク」#51 (ゲスト：【#高嶺のなでしこ】#城月菜央 #日向端ひな　MC：#望月みゆ)",
+    authorName: "yell Live公式",
+    publishedAt: "2023-01-20",
+    mediaUrl: "https://youtu.be/nVAUgCvEjn8",
+    imageUrl: "https://i.ytimg.com/vi/nVAUgCvEjn8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "日向端ひな"],
   },
   {
     kind: "youtube",

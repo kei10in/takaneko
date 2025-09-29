@@ -61,6 +61,11 @@ export const YouTube2023 = [
     presents: ["春野莉々"],
   },
   {
+    videoId: "MvODp1egnz8",
+    publishedAt: "2023-08-28",
+    presents: ["城月菜央", "涼海すう", "葉月紗蘭", "星谷美来"],
+  },
+  {
     videoId: "hNF9mhoS8jU",
     publishedAt: "2023-08-25",
     presents: ["城月菜央", "葉月紗蘭", "星谷美来", "松本ももな", "籾山ひめり"],
@@ -104,6 +109,11 @@ export const YouTube2023 = [
     videoId: "35lxvC668Ek",
     publishedAt: "2023-04-17",
     presents: [],
+  },
+  {
+    videoId: "nVAUgCvEjn8",
+    publishedAt: "2023-01-20",
+    presents: ["城月菜央", "日向端ひな"],
   },
   {
     videoId: "3tFd2i9UdFA",
