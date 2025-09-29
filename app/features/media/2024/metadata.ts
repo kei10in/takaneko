@@ -1053,6 +1053,18 @@ export const metadata2024: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://qjweb.jp/feature/106128/",
+    title:
+      "【祝メジャーデビュー】高嶺のなでしこ、元ラストアイドルからの学びは？10人の「推しカルチャー」も発表！ - QJWeb クイック・ジャパン ウェブ",
+    authorName: "QJWeb クイック・ジャパン ウェブ",
+    publishedAt: "2024-02-19",
+    mediaUrl: "https://qjweb.jp/feature/106128/",
+    imageUrl: "https://qjweb.jp/wp-content/uploads/2024/02/tn_3.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
     title:
       "高嶺のなでしこ、２１日メジャーデビュー　シングル「美しく生きろ／恋を知った世界」バスらせる",

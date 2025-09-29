@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2022: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://ticket.rakuten.co.jp/features/interview221229/",
+    title: "アイドル情報専門ページ【R-IDOL】 | インタビュー｜高嶺のなでしこ",
+    authorName: "アイドル情報専門ページ【R-IDOL】",
+    publishedAt: "2022-12-29",
+    mediaUrl: "https://ticket.rakuten.co.jp/features/interview221229/",
+    imageUrl:
+      "https://ticketscmspro.blob.core.windows.net/%24web/usersite/uploaded/RT/676469/676470/asset/images/interview/001.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "d3uN2mkIovE",
     title: "#22【本大会まとめ⑩】学生フォーミュラ日本大会：リポーターが伝える会場の様子",

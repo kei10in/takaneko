@@ -296,6 +296,12 @@ export const Ogp2024: OgpMediaDescriptor[] = [
     presents: [],
   },
   {
+    mediaUrl: "https://qjweb.jp/feature/106128/",
+    publishedAt: "2024-02-19",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
     publishedAt: "2024-02-13",
     category: "article",
