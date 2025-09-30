@@ -11,6 +11,7 @@ import {
   regularTakanekoMiniPhotoCards,
   regularTakanekoPhotos,
 } from "~/features/products/productImages";
+import { MemberDescription } from "~/features/profile/types";
 import { useTradeStore } from "~/features/trade/store";
 import {
   mapProductToTradingItemDetails,
@@ -21,7 +22,7 @@ import {
   useOtherGoodsWishListImages,
   usePhotoWishListImages,
 } from "../../components/TradeListImage/wishListImages";
-import { AllMembers, MemberDescription } from "../../features/profile/members";
+import { AllMembers } from "../../features/profile/members";
 import { WishItemList } from "./WishItemList";
 
 export const meta: MetaFunction = () => {

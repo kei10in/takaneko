@@ -1,5 +1,5 @@
-import { MemberName } from "../profile/members";
 import { parseMemberName } from "../profile/parseMemberName";
+import { MemberName } from "../profile/types";
 
 export interface SongSegment {
   kind: "song";

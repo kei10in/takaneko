@@ -1,4 +1,4 @@
-import { MemberName } from "./members";
+import { MemberName } from "./types";
 
 export const parseMemberName = (name: string): MemberName | undefined => {
   // Remove any trailing numbers or special characters

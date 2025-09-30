@@ -1,9 +1,9 @@
 import { z } from "zod/v4";
 
-import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { MemberName, MemberNameOrGroup } from "../profile/types";
 import { Act, ActDescription, validateActDescription } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";

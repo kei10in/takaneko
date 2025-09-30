@@ -1,4 +1,4 @@
-import { MemberName } from "~/features/profile/members";
+import { MemberName } from "~/features/profile/types";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 

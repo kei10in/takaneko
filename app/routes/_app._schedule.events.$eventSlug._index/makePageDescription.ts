@@ -1,13 +1,8 @@
 import { EventType } from "~/features/events/EventType";
 import { EventMeta } from "~/features/events/eventMeta";
+import { MemberDescription, MemberName, MemberNameOrGroup } from "~/features/profile/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import {
-  AllMembers,
-  findMemberDescription,
-  MemberDescription,
-  MemberName,
-  MemberNameOrGroup,
-} from "../../features/profile/members";
+import { AllMembers, findMemberDescription } from "../../features/profile/members";
 
 export const makePageDescription = (meta: EventMeta): string => {
   if (meta.category == EventType.LIVE) {

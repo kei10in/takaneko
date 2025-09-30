@@ -1,4 +1,4 @@
-import { MemberName } from "~/features/profile/members";
+import { MemberName } from "../profile/types";
 
 export interface SongMetaDescriptor {
   slug: string;

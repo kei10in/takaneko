@@ -1,5 +1,5 @@
+import type { MemberName } from "~/features/profile/types";
 import { ImageDescription } from "~/utils/types/ImageDescription";
-import { MemberName } from "../profile/members";
 
 export interface YouTubeVideoDescriptor {
   videoId: string;
