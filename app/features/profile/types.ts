@@ -1,7 +1,12 @@
 import { z } from "zod/v4";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
-export const GroupId = z.enum(["高嶺のなでしこ", "高嶺のなでしこ2"]);
+export const GroupId = z.enum([
+  // 10 人体制の高嶺のなでしこ
+  "高嶺のなでしこ",
+  // 9 人体制の高嶺のなでしこ。2025-08-01 以降
+  "高嶺のなでしこ2",
+]);
 export type GroupId = z.infer<typeof GroupId>;
 
 export interface GroupDescription {
