@@ -1,6 +1,6 @@
 import { z } from "zod/v4";
 
-export const MemberName = z.union([
+export const MemberId = z.union([
   z.literal("城月菜央"),
   z.literal("涼海すう"),
   z.literal("橋本桃呼"),
@@ -13,13 +13,13 @@ export const MemberName = z.union([
   z.literal("籾山ひめり"),
 ]);
 
-export type MemberName = z.infer<typeof MemberName>;
+export type MemberId = z.infer<typeof MemberId>;
 
-export const MemberNameOrGroup = z.union([z.literal("高嶺のなでしこ"), MemberName]);
-export type MemberNameOrGroup = z.infer<typeof MemberNameOrGroup>;
+export const MemberIdOrGroupId = z.union([z.literal("高嶺のなでしこ"), MemberId]);
+export type MemberIdOrGroupId = z.infer<typeof MemberIdOrGroupId>;
 
 export interface MemberDescription {
-  id: MemberName;
+  id: MemberId;
   slug: string;
   number: number;
   name: string;

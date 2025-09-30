@@ -1,9 +1,9 @@
 import { findMemberDescription } from "~/features/profile/members";
 import { TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko";
-import { MemberNameOrGroup } from "~/features/profile/types";
+import { MemberIdOrGroupId } from "~/features/profile/types";
 
 interface Props {
-  member: MemberNameOrGroup;
+  member: MemberIdOrGroupId;
   className?: string;
   size?: number | string;
 }

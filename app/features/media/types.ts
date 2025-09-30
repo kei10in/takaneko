@@ -1,10 +1,10 @@
-import type { MemberName } from "~/features/profile/types";
+import type { MemberId } from "~/features/profile/types";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
 export interface YouTubeVideoDescriptor {
   videoId: string;
   publishedAt: string;
-  presents: MemberName[];
+  presents: MemberId[];
   officialTwitter?: string;
 }
 
@@ -17,7 +17,7 @@ export interface OgpMediaDescriptor {
   image?: ImageDescription;
 
   category: "video" | "article" | "audio";
-  presents: MemberName[];
+  presents: MemberId[];
   officialTwitter?: string;
 }
 
@@ -28,7 +28,7 @@ export interface StaticMediaDescriptor {
   mediaUrl: string;
   image: ImageDescription;
   category: "video" | "article" | "audio";
-  presents: MemberName[];
+  presents: MemberId[];
   officialTwitter?: string;
 }
 
@@ -46,6 +46,6 @@ export interface MediaDetails {
   mediaUrl: string;
   imageUrl: string;
   category: "video" | "article" | "audio" | "youtube";
-  presents: MemberName[];
+  presents: MemberId[];
   deleted?: boolean | undefined;
 }

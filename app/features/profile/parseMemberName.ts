@@ -1,6 +1,6 @@
-import { MemberName } from "./types";
+import { MemberId } from "./types";
 
-export const parseMemberName = (name: string): MemberName | undefined => {
+export const parseMemberName = (name: string): MemberId | undefined => {
   // Remove any trailing numbers or special characters
   const cleanedName = name.replace(/\s+$/, "").trim();
 

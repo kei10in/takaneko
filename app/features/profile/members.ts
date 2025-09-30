@@ -1,6 +1,6 @@
-import { MemberDescription, MemberName, MemberNameOrGroup } from "./types";
+import { MemberDescription, MemberId, MemberIdOrGroupId } from "./types";
 
-export const convertToGroupIfAllMembersPresent = (members: MemberName[]): MemberNameOrGroup[] => {
+export const convertToGroupIfAllMembersPresent = (members: MemberId[]): MemberIdOrGroupId[] => {
   if (
     members.includes("城月菜央") &&
     members.includes("涼海すう") &&
@@ -379,7 +379,7 @@ export const AllMembers: MemberDescription[] = [
   HimeriMomiyama,
 ] as const;
 
-export const findMemberDescription = (name: MemberName): MemberDescription => {
+export const findMemberDescription = (name: MemberId): MemberDescription => {
   if (name === "城月菜央") {
     return NaoKizuki;
   } else if (name === "涼海すう") {
