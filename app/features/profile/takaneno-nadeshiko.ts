@@ -1,6 +1,6 @@
 import { GroupDescription } from "./types";
 
-const TakanenoNadeshikoBase = {
+export const TakanenoNadeshikoBase = {
   slug: "takaneno-nadeshiko",
   name: "高嶺のなでしこ",
   kana: "たかねのなでしこ",

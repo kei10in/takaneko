@@ -75,5 +75,8 @@ export interface MemberDescription {
   showroom: string;
 }
 
+export const MemberIdOrAll = z.union([z.literal("all"), MemberId]);
+export type MemberIdOrAll = z.infer<typeof MemberIdOrAll>;
+
 export const MemberIdOrGroupId = z.union([GroupId, MemberId]);
 export type MemberIdOrGroupId = z.infer<typeof MemberIdOrGroupId>;

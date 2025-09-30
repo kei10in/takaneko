@@ -95,7 +95,7 @@ export default function MediaIndex() {
               {/* <div className="mx-auto flex-1 pl-2">メンバー</div> */}
 
               <div className="flex items-center gap-2">
-                <MemberIcon member={selected ?? "高嶺のなでしこ"} size={24} />
+                <MemberIcon member={selected ?? "all"} size={24} />
                 <p>{selected ? findMemberDescription(selected).name : "全員"}</p>
               </div>
 
@@ -124,7 +124,7 @@ export default function MediaIndex() {
                           ) : null}
                         </div>
                         <div className="flex items-center gap-2">
-                          <MemberIcon member="高嶺のなでしこ" size={24} />
+                          <MemberIcon member="all" size={24} />
                           <p>全員</p>
                         </div>
                       </div>
