@@ -1,22 +1,44 @@
 import { z } from "zod/v4";
+import { ImageDescription } from "~/utils/types/ImageDescription";
 
-export const MemberId = z.union([
-  z.literal("城月菜央"),
-  z.literal("涼海すう"),
-  z.literal("橋本桃呼"),
-  z.literal("葉月紗蘭"),
-  z.literal("春野莉々"),
-  z.literal("東山恵里沙"),
-  z.literal("日向端ひな"),
-  z.literal("星谷美来"),
-  z.literal("松本ももな"),
-  z.literal("籾山ひめり"),
+export const GroupId = z.enum(["高嶺のなでしこ", "高嶺のなでしこ2"]);
+export type GroupId = z.infer<typeof GroupId>;
+
+export interface GroupDescription {
+  id: GroupId;
+  slug: string;
+  name: string;
+  kana: string;
+  romaji: string;
+  nickname: string;
+  birthday: string;
+  nyadeshiko: string;
+  hashTag: string;
+  hashTagForReply: string;
+  idPhoto: ImageDescription;
+  image: ImageDescription;
+  officialProfile: string;
+  twitter: string;
+  instagram: string;
+  tiktok: string;
+  showroom: string;
+  members: MemberId[];
+}
+
+export const MemberId = z.enum([
+  "城月菜央",
+  "涼海すう",
+  "橋本桃呼",
+  "葉月紗蘭",
+  "春野莉々",
+  "東山恵里沙",
+  "日向端ひな",
+  "星谷美来",
+  "松本ももな",
+  "籾山ひめり",
 ]);
 
 export type MemberId = z.infer<typeof MemberId>;
-
-export const MemberIdOrGroupId = z.union([z.literal("高嶺のなでしこ"), MemberId]);
-export type MemberIdOrGroupId = z.infer<typeof MemberIdOrGroupId>;
 
 export interface MemberDescription {
   id: MemberId;
@@ -52,3 +74,6 @@ export interface MemberDescription {
   tiktok: string;
   showroom: string;
 }
+
+export const MemberIdOrGroupId = z.union([z.literal("高嶺のなでしこ"), MemberId]);
+export type MemberIdOrGroupId = z.infer<typeof MemberIdOrGroupId>;
