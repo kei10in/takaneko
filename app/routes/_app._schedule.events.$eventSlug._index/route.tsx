@@ -31,6 +31,7 @@ import { importEventModuleBySlug } from "~/features/events/eventModule";
 import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
+import { TakanenoNadeshiko, TakanenoNadeshiko2 } from "~/features/profile/takaneno-nadeshiko";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../../features/profile/members";
@@ -220,7 +221,9 @@ export default function EventPage() {
                 {meta.present
                   .map((n) => {
                     if (n == "高嶺のなでしこ") {
-                      return n;
+                      return TakanenoNadeshiko.name;
+                    } else if (n == "高嶺のなでしこ2") {
+                      return TakanenoNadeshiko2.name;
                     }
                     return findMemberDescription(n).name;
                   })

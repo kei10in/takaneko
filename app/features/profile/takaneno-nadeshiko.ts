@@ -1,5 +1,6 @@
-export const TakanenoNadeshiko = {
-  id: "高嶺のなでしこ",
+import { GroupDescription } from "./types";
+
+const TakanenoNadeshikoBase = {
   slug: "takaneno-nadeshiko",
   name: "高嶺のなでしこ",
   kana: "たかねのなでしこ",
@@ -22,4 +23,37 @@ export const TakanenoNadeshiko = {
   instagram: "https://www.instagram.com/takanenofficial/",
   tiktok: "https://www.tiktok.com/@takanenofficial",
   showroom: "https://www.showroom-live.com/r/takanenonadeshiko_official",
+} as const;
+
+export const TakanenoNadeshiko: GroupDescription = {
+  id: "高嶺のなでしこ",
+  ...TakanenoNadeshikoBase,
+  members: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "春野莉々",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+} as const;
+
+export const TakanenoNadeshiko2: GroupDescription = {
+  id: "高嶺のなでしこ2",
+  ...TakanenoNadeshikoBase,
+  members: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "東山恵里沙",
+    "日向端ひな",
+    "星谷美来",
+    "松本ももな",
+    "籾山ひめり",
+  ],
 } as const;

@@ -1,5 +1,5 @@
 import { findMemberDescription } from "~/features/profile/members";
-import { TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko";
+import { TakanenoNadeshiko, TakanenoNadeshiko2 } from "~/features/profile/takaneno-nadeshiko";
 import { MemberIdOrGroupId } from "~/features/profile/types";
 
 interface Props {
@@ -11,7 +11,13 @@ interface Props {
 export const MemberIcon = (props: Props) => {
   const { size, member, className } = props;
 
-  const md = member === "高嶺のなでしこ" ? TakanenoNadeshiko : findMemberDescription(member);
+  // FIXME: "高嶺のなでしこ" や "高嶺のなでしこ2" ではなく "all" が来るべき。
+  const md =
+    member === "高嶺のなでしこ"
+      ? TakanenoNadeshiko
+      : member === "高嶺のなでしこ2"
+        ? TakanenoNadeshiko2
+        : findMemberDescription(member);
 
   return (
     <span className={className}>
