@@ -20,17 +20,8 @@ export const OutOfMusic_88: Publication = {
       ref: "https://outofmusic.net/?p=2356",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
   officialTwitter: "",
   links: [
     {
@@ -64,18 +55,7 @@ export const OutOfMusic_87: Publication = {
       ref: "https://outofmusic.net/?p=1385",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "https://x.com/takanenofficial/status/1879492198334701914",
   links: [
     {
@@ -109,17 +89,6 @@ export const OutOfMusic_86: Publication = {
       ref: "https://outofmusic.net/2024/07/29/20/45/58/717/表紙巻頭-the-rampage-バックカバー巻末-dxteen-7-24-発売-out-of-music-86/bn/outofmusic/",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "https://x.com/takanenofficial/status/1813099403626095103",
 };

@@ -112,18 +112,7 @@ export const TopYellNeo2024Spring: Publication = {
       ref: "https://x.com/TopYell/status/1774628432770670755",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   links: [
     {
       text: "掲載内容紹介",

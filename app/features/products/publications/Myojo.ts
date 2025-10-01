@@ -16,18 +16,7 @@ export const Myojo_2024年9月号: Publication = {
     },
   ],
   ebooks: [{ text: "Kindle", url: "https://www.amazon.co.jp/dp/B0D9NCVCC5/" }],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "https://x.com/takanenofficial/status/1822437811200594144",
   links: [
     {
