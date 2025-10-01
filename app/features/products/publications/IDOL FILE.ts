@@ -13,7 +13,12 @@ export const IDOL_FILE_Vol37: Publication = {
   coverImages: [],
   featuredMembers: ["橋本桃呼"],
   officialTwitter: "",
-  links: [],
+  links: [
+    {
+      text: "橋本桃呼 動画コメント",
+      url: "https://x.com/idolfile_jp/status/1971540371030331547",
+    },
+  ],
 };
 
 export const IDOL_FILE_Vol35: Publication = {
