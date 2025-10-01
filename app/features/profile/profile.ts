@@ -24,6 +24,22 @@ export const findMemberOrGroupDescription = (
   return findMemberDescription(id);
 };
 
+export const flattenMembers = (members: MemberIdOrGroupId[]): MemberId[] => {
+  const result: Set<MemberId> = new Set();
+  members.forEach((m) => {
+    if (m == GroupId.高嶺のなでしこ) {
+      TakanenoNadeshiko.members.forEach((member) => result.add(member));
+    } else if (m == GroupId.高嶺のなでしこ2) {
+      TakanenoNadeshiko2.members.forEach((member) => result.add(member));
+    } else {
+      result.add(m);
+    }
+  });
+
+  // ソート済みのとこから filter することでソートしています。
+  return AllMembersProfile.members.filter((x) => result.has(x));
+};
+
 export const findIdPhoto = (
   id: MemberId | GroupId | MemberCollectionId,
 ): { idPhoto: ImageDescription; name: string } => {

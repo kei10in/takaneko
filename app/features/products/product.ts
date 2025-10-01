@@ -1,4 +1,4 @@
-import { MemberId } from "~/features/profile/types";
+import { MemberId, MemberIdOrGroupId } from "~/features/profile/types";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 
@@ -110,7 +110,7 @@ export interface Publication {
     category?: string;
     store?: string;
   }[];
-  featuredMembers: MemberId[];
+  featuredMembers: MemberIdOrGroupId[];
   officialTwitter?: string | string[];
   links?: LinkDescription[];
 }

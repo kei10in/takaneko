@@ -1,6 +1,8 @@
 import { MemberDescription, MemberId, MemberIdOrGroupId } from "./types";
 
-export const convertToGroupIfAllMembersPresent = (members: MemberId[]): MemberIdOrGroupId[] => {
+export const convertToGroupIfAllMembersPresent = (
+  members: MemberIdOrGroupId[],
+): MemberIdOrGroupId[] => {
   if (
     members.includes("城月菜央") &&
     members.includes("涼海すう") &&

@@ -4,6 +4,7 @@ import { Link } from "react-router";
 import { ImageSlide } from "~/components/ImageSlide";
 import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
 import { Publication } from "~/features/products/product";
+import { flattenMembers } from "~/features/profile/profile";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { findMemberDescription } from "../../features/profile/members";
@@ -79,7 +80,7 @@ export default function PublicationProduct(props: Props) {
         <section className="space-y-2">
           <h2 className={sectionHeading()}>掲載メンバー</h2>
           <ul className="flex flex-wrap gap-2">
-            {product.featuredMembers.map((member) => {
+            {flattenMembers(product.featuredMembers).map((member) => {
               const m = findMemberDescription(member);
 
               return (
