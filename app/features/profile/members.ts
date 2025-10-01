@@ -1,25 +1,4 @@
-import { MemberDescription, MemberId, MemberIdOrGroupId } from "./types";
-
-export const convertToGroupIfAllMembersPresent = (
-  members: MemberIdOrGroupId[],
-): MemberIdOrGroupId[] => {
-  if (
-    members.includes("城月菜央") &&
-    members.includes("涼海すう") &&
-    members.includes("橋本桃呼") &&
-    members.includes("葉月紗蘭") &&
-    members.includes("春野莉々") &&
-    members.includes("東山恵里沙") &&
-    members.includes("日向端ひな") &&
-    members.includes("星谷美来") &&
-    members.includes("松本ももな") &&
-    members.includes("籾山ひめり")
-  ) {
-    return ["高嶺のなでしこ"];
-  }
-
-  return members;
-};
+import { MemberDescription, MemberId } from "./types";
 
 export const NaoKizuki: MemberDescription = {
   id: "城月菜央",
