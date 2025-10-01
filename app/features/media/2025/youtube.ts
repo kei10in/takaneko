@@ -22,13 +22,13 @@ export const YouTube2025 = [
   {
     videoId: "dmYhpOLT7hg",
     publishedAt: "2025-09-01",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
     officialTwitter: "https://x.com/takanenofficial/status/1962447991442387154",
   },
   {
     videoId: "941-Y6Kf1vI",
     publishedAt: "2025-08-30",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     videoId: "o-whMm-I3Xg",
