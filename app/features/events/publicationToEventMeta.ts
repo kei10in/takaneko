@@ -9,6 +9,7 @@ export const convertPublicationToEventMeta = (publication: Publication): EventMe
     date: publication.date,
     region: publication.kind == "books" ? "書籍" : "雑誌",
     present: publication.featuredMembers,
+    absent: publication.absent,
     images: publication.coverImages,
     link: {
       text: "商品ページ",

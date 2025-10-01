@@ -24,6 +24,19 @@ export const findMemberOrGroupDescription = (
   return findMemberDescription(id);
 };
 
+export const presentMembers = (
+  present: MemberIdOrGroupId[] | undefined,
+  absent: MemberId[] | undefined = [],
+): MemberId[] => {
+  if (present == undefined || present.length == 0) {
+    return [];
+  }
+
+  const members = flattenMembers(present);
+
+  return members.filter((m) => !absent.includes(m));
+};
+
 export const flattenMembers = (members: MemberIdOrGroupId[]): MemberId[] => {
   const result: Set<MemberId> = new Set();
   members.forEach((m) => {

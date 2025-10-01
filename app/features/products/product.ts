@@ -111,6 +111,7 @@ export interface Publication {
     store?: string;
   }[];
   featuredMembers: MemberIdOrGroupId[];
+  absent?: MemberId[];
   officialTwitter?: string | string[];
   links?: LinkDescription[];
 }
