@@ -15,12 +15,14 @@ import {
   LoaderFunctionArgs,
   MetaFunction,
   useLoaderData,
+  useLocation,
   useSearchParams,
 } from "react-router";
 import { MemberIcon } from "~/components/MemberIcon";
 import { pageBox, pageHeading } from "~/components/styles";
 import { getAllMediaMetadata } from "~/features/media/metadata";
 import { AllMembers, findMemberDescription } from "~/features/profile/members";
+import { AllMembersProfile } from "~/features/profile/takaneno-nadeshiko";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -37,6 +39,8 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
+
+const FilterOptions = [AllMembersProfile, ...AllMembers];
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
@@ -78,6 +82,9 @@ export default function MediaIndex() {
   const m = searchParams.get("m");
   const { page, total, items, selected } = metadata;
 
+  const location = useLocation();
+  const self = location.pathname;
+
   const prev = Math.max(1, page - 1);
   const next = Math.min(total, page + 1);
 
@@ -109,30 +116,12 @@ export default function MediaIndex() {
             >
               {({ close }) => (
                 <ul className="min-w-60">
-                  <li>
-                    <Link to="" className="block" onClick={() => close()}>
-                      <div
-                        className={clsx(
-                          "flex items-center gap-2",
-                          "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
-                          "data-current:bg-nadeshiko-700 data-current:text-white",
-                        )}
-                      >
-                        <div className="text-nadeshiko-800 h-6 w-6">
-                          {AllMembers.every((x) => x.id != selected) ? (
-                            <BsCheck className="h-full w-full" />
-                          ) : null}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <MemberIcon member="all" size={24} />
-                          <p>全員</p>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                  {AllMembers.map((c) => (
+                  {FilterOptions.map((c) => (
                     <li key={c.id}>
-                      <Link to={`?m=${c.slug}`} onClick={() => close()}>
+                      <Link
+                        to={c.id == AllMembersProfile.id ? self : `?m=${c.slug}`}
+                        onClick={() => close()}
+                      >
                         <div
                           className={clsx(
                             "flex items-center gap-2",
@@ -141,7 +130,9 @@ export default function MediaIndex() {
                           )}
                         >
                           <div className="text-nadeshiko-800 h-6 w-6">
-                            {c.id == selected ? <BsCheck className="h-full w-full" /> : null}
+                            {c.id == (selected ?? AllMembersProfile.id) ? (
+                              <BsCheck className="h-full w-full" />
+                            ) : null}
                           </div>
                           <div className="flex items-center gap-2">
                             <MemberIcon member={c.id} key={c.id} size={24} />
