@@ -11,6 +11,10 @@ export const GroupIdEnum = z.enum([
 export const GroupId = GroupIdEnum.enum;
 export type GroupId = z.infer<typeof GroupIdEnum>;
 
+export const isGroupId = (id: string): id is GroupId => {
+  return GroupIdEnum.options.includes(id as GroupId);
+};
+
 export interface GroupDescription {
   id: GroupId;
   slug: string;
@@ -48,6 +52,10 @@ export const MemberIdEnum = z.enum([
 export const MemberId = MemberIdEnum.enum;
 export type MemberId = z.infer<typeof MemberIdEnum>;
 
+export const isMemberId = (id: string): id is MemberId => {
+  return MemberIdEnum.options.includes(id as MemberId);
+};
+
 export interface MemberDescription {
   id: MemberId;
   slug: string;
@@ -83,7 +91,30 @@ export interface MemberDescription {
   showroom: string;
 }
 
-export const MemberIdOrAll = z.union([z.literal("all"), MemberIdEnum]);
+export const MemberCollectionIdEnum = z.enum(["all"]);
+export const MemberCollectionId = MemberCollectionIdEnum.enum;
+export type MemberCollectionId = z.infer<typeof MemberCollectionIdEnum>;
+
+export const isMemberCollectionId = (id: string): id is MemberCollectionId => {
+  return MemberCollectionIdEnum.options.includes(id as MemberCollectionId);
+};
+
+export interface MemberCollectionDescription {
+  id: MemberCollectionId;
+  name: string;
+  kana: string;
+  idPhoto: {
+    path: string;
+    ref: string;
+  };
+  image: {
+    path: string;
+    ref: string;
+  };
+  members: MemberId[];
+}
+
+export const MemberIdOrAll = z.union([z.literal(MemberCollectionId.all), MemberIdEnum]);
 export type MemberIdOrAll = z.infer<typeof MemberIdOrAll>;
 
 export const MemberIdOrGroupId = z.union([GroupIdEnum, MemberIdEnum]);

@@ -1,4 +1,19 @@
-import { GroupDescription } from "./types";
+import { GroupDescription, MemberCollectionDescription, MemberIdEnum } from "./types";
+
+export const AllMembersProfile: MemberCollectionDescription = {
+  id: "all",
+  name: "全員",
+  kana: "ぜんいん",
+  idPhoto: {
+    path: "/takaneko/tennya.png",
+    ref: "https://takanenonadeshiko.jp/",
+  },
+  image: {
+    path: "/takaneko/tennya.png",
+    ref: "https://takanenonadeshiko.jp/",
+  },
+  members: MemberIdEnum.options,
+} as const;
 
 export const TakanenoNadeshikoBase = {
   slug: "takaneno-nadeshiko",
