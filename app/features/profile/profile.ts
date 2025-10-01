@@ -1,7 +1,7 @@
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { findMemberDescription } from "./members";
 import { AllMembersProfile, TakanenoNadeshiko, TakanenoNadeshiko2 } from "./takaneno-nadeshiko";
-import { GroupId, MemberCollectionId, MemberId } from "./types";
+import { GroupId, MemberCollectionId, MemberId, MemberIdOrGroupId } from "./types";
 
 export const findIdPhoto = (
   id: MemberId | GroupId | MemberCollectionId,
@@ -19,4 +19,21 @@ export const findIdPhoto = (
   }
 
   return findMemberDescription(id);
+};
+
+/**
+ * includesMember は指定されたメンバーが `memberList` に含まれているかどうかを判定します。
+ */
+export const includesMember = (member: MemberId, memberList: MemberIdOrGroupId[]): boolean => {
+  return memberList.some((p) => {
+    if (p == GroupId.高嶺のなでしこ) {
+      return TakanenoNadeshiko.members.includes(member);
+    }
+
+    if (p == GroupId.高嶺のなでしこ2) {
+      return TakanenoNadeshiko2.members.includes(member);
+    }
+
+    return p == member;
+  });
 };

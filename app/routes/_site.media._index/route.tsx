@@ -22,7 +22,8 @@ import { MemberIcon } from "~/components/MemberIcon";
 import { pageBox, pageHeading } from "~/components/styles";
 import { getAllMediaMetadata } from "~/features/media/metadata";
 import { AllMembers, findMemberDescription } from "~/features/profile/members";
-import { AllMembersProfile } from "~/features/profile/takaneno-nadeshiko";
+import { includesMember } from "~/features/profile/profile";
+import { AllMembersProfile, TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko";
 import { isGroupId } from "~/features/profile/types";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -59,12 +60,12 @@ export const loader = async ({ request }: LoaderFunctionArgs) => {
   const PAGE_SIZE = 40;
 
   const allMediaMetadata = getAllMediaMetadata().filter((media) => {
-    if (media.presents.length == 0) {
-      return true;
-    }
-
     if (selectedMember) {
-      return media.presents.includes(selectedMember);
+      if (media.presents.length == 0) {
+        return includesMember(selectedMember, [TakanenoNadeshiko.id]);
+      }
+
+      return includesMember(selectedMember, media.presents);
     }
 
     return true;
