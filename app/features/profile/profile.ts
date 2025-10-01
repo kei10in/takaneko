@@ -1,7 +1,28 @@
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { findMemberDescription } from "./members";
 import { AllMembersProfile, TakanenoNadeshiko, TakanenoNadeshiko2 } from "./takaneno-nadeshiko";
-import { GroupId, MemberCollectionId, MemberId, MemberIdOrGroupId } from "./types";
+import {
+  GroupDescription,
+  GroupId,
+  MemberCollectionId,
+  MemberDescription,
+  MemberId,
+  MemberIdOrGroupId,
+} from "./types";
+
+export const findMemberOrGroupDescription = (
+  id: MemberId | GroupId,
+): MemberDescription | GroupDescription => {
+  if (id == GroupId.高嶺のなでしこ) {
+    return TakanenoNadeshiko;
+  }
+
+  if (id == GroupId.高嶺のなでしこ2) {
+    return TakanenoNadeshiko2;
+  }
+
+  return findMemberDescription(id);
+};
 
 export const findIdPhoto = (
   id: MemberId | GroupId | MemberCollectionId,
