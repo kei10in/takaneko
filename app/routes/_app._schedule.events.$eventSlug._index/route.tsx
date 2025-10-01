@@ -224,8 +224,9 @@ export default function EventPage() {
                       return TakanenoNadeshiko.name;
                     } else if (n == "高嶺のなでしこ2") {
                       return TakanenoNadeshiko2.name;
+                    } else {
+                      return findMemberDescription(n).name;
                     }
-                    return findMemberDescription(n).name;
                   })
                   .join(" / ")}
               </span>

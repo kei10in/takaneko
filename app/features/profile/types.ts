@@ -1,13 +1,15 @@
 import { z } from "zod/v4";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
-export const GroupId = z.enum([
+export const GroupIdEnum = z.enum([
   // 10 人体制の高嶺のなでしこ
   "高嶺のなでしこ",
   // 9 人体制の高嶺のなでしこ。2025-08-01 以降
   "高嶺のなでしこ2",
 ]);
-export type GroupId = z.infer<typeof GroupId>;
+
+export const GroupId = GroupIdEnum.enum;
+export type GroupId = z.infer<typeof GroupIdEnum>;
 
 export interface GroupDescription {
   id: GroupId;
@@ -30,7 +32,7 @@ export interface GroupDescription {
   members: MemberId[];
 }
 
-export const MemberId = z.enum([
+export const MemberIdEnum = z.enum([
   "城月菜央",
   "涼海すう",
   "橋本桃呼",
@@ -43,7 +45,8 @@ export const MemberId = z.enum([
   "籾山ひめり",
 ]);
 
-export type MemberId = z.infer<typeof MemberId>;
+export const MemberId = MemberIdEnum.enum;
+export type MemberId = z.infer<typeof MemberIdEnum>;
 
 export interface MemberDescription {
   id: MemberId;
@@ -80,8 +83,8 @@ export interface MemberDescription {
   showroom: string;
 }
 
-export const MemberIdOrAll = z.union([z.literal("all"), MemberId]);
+export const MemberIdOrAll = z.union([z.literal("all"), MemberIdEnum]);
 export type MemberIdOrAll = z.infer<typeof MemberIdOrAll>;
 
-export const MemberIdOrGroupId = z.union([GroupId, MemberId]);
+export const MemberIdOrGroupId = z.union([GroupIdEnum, MemberIdEnum]);
 export type MemberIdOrGroupId = z.infer<typeof MemberIdOrGroupId>;
