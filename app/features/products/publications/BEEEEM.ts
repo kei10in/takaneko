@@ -60,17 +60,7 @@ export const BEEEEM_vol1: Publication = {
       ref: "https://kaiwaiweb.com/news/17309/",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ2"],
   officialTwitter: "https://x.com/takanenofficial/status/1970815619814797615",
   links: [
     {

@@ -1,4 +1,4 @@
-import { MemberName } from "~/features/profile/members";
+import { MemberId } from "../profile/types";
 
 export interface SongMetaDescriptor {
   slug: string;
@@ -14,7 +14,7 @@ export interface SongMetaDescriptor {
 
   coverArt?: string;
 
-  featuredMembers?: MemberName[] | undefined;
+  featuredMembers?: MemberId[] | undefined;
   officialSite?: string | undefined;
   youtube?: { text: string; videoId: string }[] | undefined;
   linkcore?: string;

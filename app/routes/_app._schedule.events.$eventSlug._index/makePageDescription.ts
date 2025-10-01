@@ -1,13 +1,9 @@
 import { EventType } from "~/features/events/EventType";
 import { EventMeta } from "~/features/events/eventMeta";
+import { TakanenoNadeshiko, TakanenoNadeshiko2 } from "~/features/profile/takaneno-nadeshiko";
+import { MemberDescription, MemberId, MemberIdOrGroupId } from "~/features/profile/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import {
-  AllMembers,
-  findMemberDescription,
-  MemberDescription,
-  MemberName,
-  MemberNameOrGroup,
-} from "../../features/profile/members";
+import { findMemberDescription } from "../../features/profile/members";
 
 export const makePageDescription = (meta: EventMeta): string => {
   if (meta.category == EventType.LIVE) {
@@ -101,16 +97,24 @@ export const makeOtherDescription = (meta: EventMeta) => {
 };
 
 const presentMembers = (
-  present: MemberNameOrGroup[] | undefined,
-  absent: MemberName[],
+  present: MemberIdOrGroupId[] | undefined,
+  absent: MemberId[],
 ): MemberDescription[] => {
   if (present == undefined || present.length == 0) {
     return [];
   }
 
+  const members: MemberId[] = [];
+
   if (present.includes("高嶺のなでしこ")) {
-    return AllMembers.filter((m) => !absent.includes(m.id));
+    members.concat(...TakanenoNadeshiko.members);
+  } else if (present.includes("高嶺のなでしこ2")) {
+    members.concat(...TakanenoNadeshiko2.members);
+  } else {
+    members.concat(
+      ...present.filter((m): m is MemberId => m !== "高嶺のなでしこ" && m !== "高嶺のなでしこ2"),
+    );
   }
 
-  return present.filter((m) => m != "高嶺のなでしこ").map((m) => findMemberDescription(m));
+  return members.filter((m) => !absent.includes(m)).map((m) => findMemberDescription(m));
 };

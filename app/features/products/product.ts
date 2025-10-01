@@ -1,4 +1,4 @@
-import { MemberName } from "~/features/profile/members";
+import { MemberId, MemberIdOrGroupId } from "~/features/profile/types";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 
@@ -110,7 +110,8 @@ export interface Publication {
     category?: string;
     store?: string;
   }[];
-  featuredMembers: MemberName[];
+  featuredMembers: MemberIdOrGroupId[];
+  absent?: MemberId[];
   officialTwitter?: string | string[];
   links?: LinkDescription[];
 }
@@ -145,7 +146,7 @@ export interface BirthdayGoodsCollection {
   slug: string;
   name: string;
   date: string;
-  memberName: MemberName;
+  memberName: MemberId;
   images: ImageDescription[];
   lineup: OfficialGoods[];
 }

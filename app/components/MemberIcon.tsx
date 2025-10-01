@@ -1,8 +1,8 @@
-import { findMemberDescription, MemberNameOrGroup } from "~/features/profile/members";
-import { TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko";
+import { findIdPhoto } from "~/features/profile/profile";
+import { MemberIdOrAll } from "~/features/profile/types";
 
 interface Props {
-  member: MemberNameOrGroup;
+  member: MemberIdOrAll;
   className?: string;
   size?: number | string;
 }
@@ -10,7 +10,7 @@ interface Props {
 export const MemberIcon = (props: Props) => {
   const { size, member, className } = props;
 
-  const md = member === "高嶺のなでしこ" ? TakanenoNadeshiko : findMemberDescription(member);
+  const md = findIdPhoto(member);
 
   return (
     <span className={className}>

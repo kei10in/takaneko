@@ -1,9 +1,9 @@
 import { z } from "zod/v4";
 
-import { MemberName, MemberNameOrGroup } from "~/features/profile/members";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
 import { Act, ActDescription, validateActDescription } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
@@ -56,8 +56,8 @@ const EventMetaDescriptor = z.object({
   links: z.array(z.union([LinkDescription, z.string()])).optional(),
   image: ImageDescription.optional(),
   images: z.array(ImageDescription).optional(),
-  present: z.array(MemberNameOrGroup).optional(),
-  absent: z.array(MemberName).optional(),
+  present: z.array(MemberIdOrGroupId).optional(),
+  absent: z.array(MemberIdEnum).optional(),
 
   overview: EventOverview.optional(),
   acts: z.union([ActDescription, z.array(ActDescription)]).optional(),

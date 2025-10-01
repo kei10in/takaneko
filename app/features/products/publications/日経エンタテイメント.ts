@@ -24,17 +24,7 @@ export const 日経エンタテインメント_2025年10月号: Publication = {
       ref: "https://x.com/takanenofficial/status/1963444407979348348",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ2"],
   officialTwitter: "https://x.com/takanenofficial/status/1963444407979348348",
 };
 

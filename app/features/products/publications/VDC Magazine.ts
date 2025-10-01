@@ -40,18 +40,7 @@ export const VDCMagazine035: Publication = {
       store: "タワーレコード",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "https://x.com/takanenofficial/status/1926254965187567736",
   links: [
     {
@@ -117,18 +106,7 @@ export const VDCMagazine030: Publication = {
       ref: "https://wp.vdc.tokyo/article/11065",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "https://x.com/takanenofficial/status/1763512398554832982",
   links: [
     {

@@ -35,7 +35,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://realsound.jp/2025/09/post-2154271.html",
     imageUrl: "https://realsound.jp/wp-content/uploads/2025/09/20250912-takaneko-99.jpg",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "youtube",
@@ -94,7 +94,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://youtu.be/dmYhpOLT7hg",
     imageUrl: "https://i.ytimg.com/vi/dmYhpOLT7hg/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -118,7 +118,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://youtu.be/941-Y6Kf1vI",
     imageUrl: "https://i.ytimg.com/vi/941-Y6Kf1vI/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -142,7 +142,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://thetv.jp/news/detail/1289131/",
     imageUrl: "https://thetv.jp/i/nw/1289131/15191516.jpg?w=1284",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -155,7 +155,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl:
       "https://prcdn.freetls.fastly.net/release_image/25517/796/25517-796-f74cebd72d7310cb5b44fa0635250a4f-3900x2925.jpg?format=jpeg&auto=webp&fit=bounds&width=2400&height=1260",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "youtube",
@@ -205,7 +205,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl:
       "https://spice.eplus.jp/images/exknA8JHG36FxqwqUbzAARJlCcNVJ1uSvIWLyGi7lsAMiJSakqae7IWEvpXksQaJ",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -228,7 +228,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://kaiwaiweb.com/news/13369/",
     imageUrl: "https://kaiwaiweb.com/wp/wp-content/uploads/2025/08/DSCF6865.jpg",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -239,7 +239,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://www.lvtimes.net/broad/71117/",
     imageUrl: "https://www.lvtimes.net/wp-content/uploads/2025/08/AY5R2560.jpg",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -275,7 +275,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://thetv.jp/news/detail/1282854/",
     imageUrl: "https://thetv.jp/i/nw/1282854/15036183.jpg?w=1284",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -286,7 +286,7 @@ export const metadata2025: MediaDetails[] = [
     mediaUrl: "https://www.lvtimes.net/broad/70992/",
     imageUrl: "https://www.lvtimes.net/wp-content/uploads/2025/08/AY5R1855.jpg",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "ogp",
@@ -299,7 +299,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl:
       "https://mezamashi.ismcdn.jp/mwimgs/8/2/1200xm/img_828be727b9ed2ecdd2449817a3f54948242018.jpg",
     category: "article",
-    presents: [],
+    presents: ["高嶺のなでしこ2"],
   },
   {
     kind: "youtube",

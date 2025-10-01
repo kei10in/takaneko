@@ -16,18 +16,7 @@ export const モデルプレスカウントダウンマガジン_vol10: Publicat
       ref: "https://mdpr.jp/special/mpcd",
     },
   ],
-  featuredMembers: [
-    "城月菜央",
-    "涼海すう",
-    "橋本桃呼",
-    "葉月紗蘭",
-    "春野莉々",
-    "東山恵里沙",
-    "日向端ひな",
-    "星谷美来",
-    "松本ももな",
-    "籾山ひめり",
-  ],
+  featuredMembers: ["高嶺のなでしこ"],
   officialTwitter: "",
   links: [
     {
