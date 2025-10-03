@@ -157,6 +157,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/o-whMm-I3Xg/hqdefault.jpg",
     category: "youtube",
     presents: ["橋本桃呼"],
+    deleted: true,
   },
   {
     kind: "ogp",
