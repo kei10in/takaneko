@@ -164,6 +164,11 @@ export default function MediaIndex() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block hover:text-gray-600"
+                  onClick={(e) => {
+                    if (media.deleted) {
+                      e.preventDefault();
+                    }
+                  }}
                 >
                   <div className="flex w-full gap-4">
                     <div className="min-w-0 flex-1">
