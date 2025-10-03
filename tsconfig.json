@@ -13,6 +13,7 @@
     "scripts/**/*.ts",
     "vite.config.ts"
   ],
+  "exclude": ["app/features/events/_book-template.tsx"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
     "types": ["@react-router/cloudflare", "vite/client", "mdx", "./worker-configuration.d.ts"],
