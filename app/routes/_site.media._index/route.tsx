@@ -151,37 +151,37 @@ export default function MediaIndex() {
         </div>
 
         <ul className="mt-4 w-full space-y-6 py-2">
-          {items.map((video) => {
+          {items.map((media) => {
             return (
-              <li key={video.mediaUrl}>
-                {video.deleted && (
+              <li key={media.mediaUrl}>
+                {media.deleted && (
                   <p className="line-clamp-1 w-fit rounded-xs bg-red-300 px-1 text-xs font-semibold text-white">
                     リンク先は削除されたか非公開です
                   </p>
                 )}
                 <Link
-                  to={video.mediaUrl}
+                  to={media.mediaUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block hover:text-gray-600"
                 >
                   <div className="flex w-full gap-4">
                     <div className="min-w-0 flex-1">
-                      <h2 className="text-md line-clamp-3 font-semibold">{video.title}</h2>
+                      <h2 className="text-md line-clamp-3 font-semibold">{media.title}</h2>
                       <p className="line-clamp-1 text-sm text-gray-600">
-                        {video.category == "youtube" && <BsYoutube className="mr-1 inline" />}
-                        {video.category == "video" && (
+                        {media.category == "youtube" && <BsYoutube className="mr-1 inline" />}
+                        {media.category == "video" && (
                           <BsFillCameraReelsFill className="mr-1 inline" />
                         )}
-                        {video.category == "article" && <BsNewspaper className="mr-1 inline" />}
-                        {video.category == "audio" && <BsMicFill className="mr-1 inline" />}
-                        {video.authorName}
+                        {media.category == "article" && <BsNewspaper className="mr-1 inline" />}
+                        {media.category == "audio" && <BsMicFill className="mr-1 inline" />}
+                        {media.authorName}
                       </p>
                       <p className="line-clamp-1 text-sm text-gray-600">
-                        {displayDate(NaiveDate.parseUnsafe(video.publishedAt))}
+                        {displayDate(NaiveDate.parseUnsafe(media.publishedAt))}
                       </p>
                       <div className="space-x-1">
-                        {video.presents.map((present) => {
+                        {media.presents.map((present) => {
                           if (isGroupId(present)) {
                             return null;
                           }
@@ -191,8 +191,8 @@ export default function MediaIndex() {
                     </div>
                     <div className="w-32 flex-none">
                       <img
-                        src={video.imageUrl}
-                        alt={video.title}
+                        src={media.imageUrl}
+                        alt={media.title}
                         className="max-h-32 w-32 bg-gray-100 object-cover text-xs text-gray-400"
                       />
                     </div>
