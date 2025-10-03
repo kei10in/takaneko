@@ -21,12 +21,6 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: ["高嶺のなでしこ2"],
   },
   {
-    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
-    publishedAt: "2025-09-07",
-    category: "article",
-    presents: ["高嶺のなでしこ2"],
-  },
-  {
     mediaUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
     publishedAt: "2025-08-31",
     category: "article",
@@ -368,12 +362,6 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     publishedAt: "2025-04-08",
     category: "article",
     presents: ["涼海すう"],
-  },
-  {
-    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
-    publishedAt: "2025-04-07",
-    category: "article",
-    presents: [],
   },
   {
     mediaUrl: "https://popteen.co.jp/media/66054/",

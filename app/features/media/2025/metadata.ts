@@ -62,17 +62,6 @@ export const metadata2025: MediaDetails[] = [
     presents: ["橋本桃呼"],
   },
   {
-    kind: "ogp",
-    key: "https://www.jvcmusic.co.jp/takaneko/special/",
-    title: "高嶺のなでしこ 1st Album「見上げるたびに、恋をする。」SPECIAL SITE",
-    authorName: "高嶺のなでしこ 1st Album「見上げるたびに、恋をする。」SPECIAL SITE",
-    publishedAt: "2025-04-07",
-    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
-    imageUrl: "https://www.jvcmusic.co.jp/takaneko/special/assets/images/common/ogp_20250907.jpg",
-    category: "article",
-    presents: [],
-  },
-  {
     kind: "youtube",
     key: "ar-v2exx9a0",
     title:
@@ -1289,17 +1278,6 @@ export const metadata2025: MediaDetails[] = [
       "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/04/88bf539d49dcf477eadfe7d2def7b04a.jpg",
     category: "article",
     presents: ["涼海すう"],
-  },
-  {
-    kind: "ogp",
-    key: "https://www.jvcmusic.co.jp/takaneko/special/",
-    title: "高嶺のなでしこ「この夏、好きになっちゃえばいいのに。」SPECIAL SITE",
-    authorName: "高嶺のなでしこ「この夏、好きになっちゃえばいいのに。」SPECIAL SITE",
-    publishedAt: "2025-04-07",
-    mediaUrl: "https://www.jvcmusic.co.jp/takaneko/special/",
-    imageUrl: "https://www.jvcmusic.co.jp/takaneko/special/assets/images/common/ogp.jpg",
-    category: "article",
-    presents: [],
   },
   {
     kind: "ogp",
