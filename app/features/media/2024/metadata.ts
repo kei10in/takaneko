@@ -21,7 +21,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1755068737&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },
@@ -127,7 +127,7 @@ export const metadata2024: MediaDetails[] = [
     key: "https://www.oricon.co.jp/news/2358400/",
     title:
       "【インタビュー】高嶺のなでしこ“らしさ”とは？ メンバーが語るグループの方向性とそれぞれの個性 ",
-    authorName: "ORICON NEWS",
+    authorName: "オリコンニュース（ORICON NEWS）",
     publishedAt: "2024-12-11",
     mediaUrl: "https://www.oricon.co.jp/news/2358400/",
     imageUrl:
@@ -164,7 +164,7 @@ export const metadata2024: MediaDetails[] = [
     key: "https://www.oricon.co.jp/news/2357995/",
     title:
       "高嶺のなでしこ、グループ結成から2年の現在地語る「家族みたいな存在」　新曲リリース&“過去最大規模”ワンマンに意気込み ",
-    authorName: "ORICON NEWS",
+    authorName: "オリコンニュース（ORICON NEWS）",
     publishedAt: "2024-12-08",
     mediaUrl: "https://www.oricon.co.jp/news/2357995/",
     imageUrl:
@@ -289,7 +289,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1755068736&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -326,7 +326,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1755068736&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },

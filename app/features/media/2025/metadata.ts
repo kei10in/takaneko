@@ -735,7 +735,7 @@ export const metadata2025: MediaDetails[] = [
     key: "https://www.oricon.co.jp/news/2393464/full/",
     title:
       "【インタビュー】高嶺のなでしこ、5曲連続配信リリース続行中　幕張メッセ単独ライブに向けた覚悟と決意 ",
-    authorName: "ORICON NEWS",
+    authorName: "オリコンニュース（ORICON NEWS）",
     publishedAt: "2025-07-02",
     mediaUrl: "https://www.oricon.co.jp/news/2393464/full/",
     imageUrl:
@@ -759,7 +759,7 @@ export const metadata2025: MediaDetails[] = [
     kind: "ogp",
     key: "https://www.oricon.co.jp/special/71624/",
     title: "前髪、触角…日本独自のテクニックも　アイドルの前髪は、なぜ崩れない？ ",
-    authorName: "ORICON NEWS",
+    authorName: "オリコンニュース（ORICON NEWS）",
     publishedAt: "2025-06-30",
     mediaUrl: "https://www.oricon.co.jp/special/71624/",
     imageUrl:
@@ -1178,7 +1178,7 @@ export const metadata2025: MediaDetails[] = [
     key: "https://www.oricon.co.jp/news/2380978/full/",
     title:
       "高嶺のなでしこ・籾山ひめり、ティーン世代に金言「やっておきたいなっていう思い出は全部叶えた方がいい」　日向端ひなが“十代の思い出”明かす「今思うと勉強しなって感じなんですけど(笑)」【インタビュー】 ",
-    authorName: "ORICON NEWS",
+    authorName: "オリコンニュース（ORICON NEWS）",
     publishedAt: "2025-04-22",
     mediaUrl: "https://www.oricon.co.jp/news/2380978/full/",
     imageUrl:
@@ -1195,7 +1195,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1754984654&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1759461245&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },
