@@ -2,6 +2,30 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "F78hD6G0hQw",
+    title:
+      "【推しに会えた園児の反応は…】現役アイドル籾山ひめりが保育士に挑戦！【高嶺のなでしこ】【HoneyWorks】",
+    authorName: "保育士バンク！チャンネル【公式】",
+    publishedAt: "2025-10-06",
+    mediaUrl: "https://youtu.be/F78hD6G0hQw",
+    imageUrl: "https://i.ytimg.com/vi/F78hD6G0hQw/hqdefault.jpg",
+    category: "youtube",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/77345/",
+    title: "大谷・竹パラ・しなこチャン・ディズニーのあの名作も♡【ハロコスVol.3】",
+    authorName: "Popteen Media",
+    publishedAt: "2025-10-02",
+    mediaUrl: "https://popteen.co.jp/media/77345/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/09/cfa8b3e1fa50b36f2dba85e72feba21e.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/770339",
     title:
