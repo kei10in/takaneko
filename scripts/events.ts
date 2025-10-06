@@ -14,7 +14,7 @@ export const loadAllEventMeta = async (): Promise<[string, EventMeta][]> => {
 
 export const listAllEventFiles = async () => {
   const scriptDir = import.meta.dirname;
-  const files = await glob(`${scriptDir}/../app/features/events/**/*.mdx`);
+  const files = await glob(`${scriptDir}/../app/features/events/*/**/*.{mdx,tsx}`);
   return files;
 };
 
