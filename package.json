@@ -48,7 +48,7 @@
     "@eslint/js": "^9.33.0",
     "@fast-csv/format": "^5.0.2",
     "@mdx-js/node-loader": "^3.1.0",
-    "@mdx-js/rollup": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.1",
     "@react-router/dev": "^7.9.3",
     "@react-router/fs-routes": "^7.9.3",
     "@tailwindcss/typography": "^0.5.16",
