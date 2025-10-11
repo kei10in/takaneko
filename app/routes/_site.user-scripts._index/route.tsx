@@ -1,3 +1,4 @@
+import { ClassValue, clsx } from "clsx";
 import { BsDownload, BsExclamationTriangleFill } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
@@ -24,10 +25,10 @@ export default function Index() {
         <p className="mt-8">高嶺のなでしこに関係するユーザー スクリプトを紹介しています。</p>
 
         <div className="border-nadeshiko-800 bg-nadeshiko-200 mt-4 flex items-center gap-3 rounded-lg border px-3 py-2 text-xs">
-          <BsExclamationTriangleFill className="text-nadeshiko-900 h-6 w-6" />
-          <p>
+          <BsExclamationTriangleFill className="text-nadeshiko-900 size-6 flex-none" />
+          <p className="min-w-0 flex-1">
             ユーザー スクリプトの利用は自己責任でお願いします。
-            このページの内容によって被ったいかなる不利益についても、当サイトの管理人は一切の責任を負いません。
+            このページの内容によって被った、いかなる不利益についても当サイトの運営者は一切の責任を負いません。
           </p>
         </div>
 
@@ -36,8 +37,8 @@ export default function Index() {
 
           <p className="mt-4">iPhone で「たかねこナイト」をバックラウンド再生する方法です。</p>
 
-          <ol className="list-decimal space-y-4 px-10">
-            <li className="mt-4 space-y-2">
+          <ol className={orderedList("mt-4 space-y-6 pl-8")}>
+            <li className={orderedListItem("space-y-2")}>
               <p>
                 App Store から
                 <Link
@@ -52,7 +53,7 @@ export default function Index() {
               </p>
               <LinkCard to="https://apps.apple.com/jp/app/userscripts/id1463298887" />
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               次のリンクからスクリプト ファイル
               <span className="rounded-sm bg-zinc-100 px-1 font-mono">
                 allow-background-play.user.js
@@ -67,45 +68,45 @@ export default function Index() {
                 <span>ダウンロード</span>
               </a>
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               ダウンロードしたファイルを「この iPhone内」にある
               <span className="rounded-sm bg-zinc-100 px-1 font-mono">Userscripts</span>
               フォルダに移動します。ファイルの移動には「ファイル」アプリを利用します。
             </li>
-            <li>
-              <p>拡張機能を有効化するために Safari を開きます。</p>
+            <li className={orderedListItem("space-y-2")}>
+              <p>機能拡張を有効化するために Safari を開きます。</p>
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               <p>アドレスバーの左にあるボタンから表示メニューを開きます。</p>
               <img
-                className="mt-2 max-w-70 rounded bg-zinc-50 shadow"
+                className="mt-2 max-w-60 rounded bg-zinc-50 shadow"
                 src="/user-scripts/enable-userscripts-01.webp"
                 alt="ステップ 1: 表示メニューを開く"
               />
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               <p>
                 <span>表示メニューの中から「機能拡張を管理」を選択します。</span>
                 <br />
                 <img
-                  className="mt-2 max-w-70 rounded bg-zinc-50 shadow"
+                  className="mt-2 max-w-60 rounded bg-zinc-50 shadow"
                   src="/user-scripts/enable-userscripts-02.webp"
                   alt="ステップ 2: 機能拡張を管理を選択"
                 />
               </p>
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               <p>
                 <span>機能拡張の一覧から「Userscripts」をオンにします。</span>
                 <br />
                 <img
-                  className="mt-2 max-w-70 rounded bg-zinc-50 shadow"
+                  className="mt-2 max-w-60 rounded bg-zinc-50 shadow"
                   src="/user-scripts/enable-userscripts-03.webp"
                   alt="ステップ 3: Userscripts をオンにする"
                 />
               </p>
             </li>
-            <li>
+            <li className={orderedListItem("space-y-2")}>
               <p>
                 <Link
                   className="text-nadeshiko-800 hover:underline"
@@ -124,3 +125,17 @@ export default function Index() {
     </div>
   );
 }
+
+export const orderedList = (...args: ClassValue[]) => {
+  return clsx("[counter-reset:list]", ...args);
+};
+
+export const orderedListItem = (...args: ClassValue[]) => {
+  return clsx(
+    "before:float-left before:mr-2 before:-ml-8 before:rounded-full",
+    "before:text-center",
+    "before:bg-nadeshiko-800 before:size-6 before:font-bold before:text-white",
+    "before:content-[counter(list)] before:[counter-increment:list]",
+    ...args,
+  );
+};
