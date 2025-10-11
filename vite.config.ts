@@ -4,6 +4,7 @@ import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import gfm from "remark-gfm";
 import Inspect from "vite-plugin-inspect";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { takanekono } from "./app/vite/plugin";
 
@@ -30,6 +31,9 @@ export default defineConfig({
     }),
     !process.env.VITEST && reactRouter(),
     tsconfigPaths(),
+    viteStaticCopy({
+      targets: [{ src: "libs/allow-background-play.user.js", dest: "user-scripts" }],
+    }),
   ],
   test: {
     environment: "happy-dom",

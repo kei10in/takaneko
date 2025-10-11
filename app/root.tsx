@@ -72,6 +72,10 @@ const UTILS = [
     name: "RSS フィード",
     url: "/takaneko-feeds",
   },
+  {
+    name: "ユーザー スクリプト",
+    url: "/user-scripts",
+  },
 ];
 
 const SPECIALS = [
