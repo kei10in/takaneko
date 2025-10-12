@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/77712/",
+    title: "現役アイドル直伝の目立つ推し活グッズ♩すぅにゃの推し活WORLD♡Vol.7",
+    authorName: "Popteen Media",
+    publishedAt: "2025-10-10",
+    mediaUrl: "https://popteen.co.jp/media/77712/",
+    imageUrl: "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/10/insta1009-b.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "youtube",
     key: "F78hD6G0hQw",
     title:
