@@ -28,7 +28,7 @@ export default function Index() {
           <BsExclamationTriangleFill className="text-nadeshiko-900 size-6 flex-none" />
           <p className="min-w-0 flex-1">
             ユーザー スクリプトの利用は自己責任でお願いします。
-            このページの内容によって被った、いかなる不利益についても当サイトの運営者は一切の責任を負いません。
+            このページの内容によって生じた不利益について、当サイトは一切の責任を負いません。
           </p>
         </div>
 
