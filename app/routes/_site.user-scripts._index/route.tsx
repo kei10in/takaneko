@@ -1,4 +1,3 @@
-import { ClassValue, clsx } from "clsx";
 import { BsDownload, BsExclamationTriangleFill, BsFiletypeJs } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
@@ -40,8 +39,8 @@ export default function Index() {
             で開いて実施してください。
           </p>
 
-          <ol className={orderedList("mt-4 space-y-6 pl-8")}>
-            <li className={orderedListItem("space-y-2")}>
+          <ol className="list-rounded-decimal mt-4 space-y-6">
+            <li className="space-y-2">
               <p>
                 App Store から
                 <Link
@@ -56,7 +55,7 @@ export default function Index() {
               </p>
               <LinkCard to="https://apps.apple.com/jp/app/userscripts/id1463298887" />
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               <p>次のリンクからスクリプト ファイル をダウンロードします。</p>
               <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
                 <a
@@ -74,12 +73,12 @@ export default function Index() {
                 </span>
               </p>
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               ダウンロードしたファイルを「この iPhone内」にある
               <span className="rounded-sm bg-zinc-100 px-1 font-mono">Userscripts</span>
               フォルダに移動します。フォルダがない場合は作成します。ファイルの移動には「ファイル」アプリを利用します。
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               <p>Safari を開き、アドレスバーの左にあるボタンから表示メニューを開きます。</p>
               <img
                 className="mt-2 max-w-60 rounded bg-zinc-50 shadow"
@@ -87,7 +86,7 @@ export default function Index() {
                 alt="ステップ 1: 表示メニューを開く"
               />
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               <p>
                 <span>表示メニューの中から「機能拡張を管理」を選択します。</span>
                 <br />
@@ -98,7 +97,7 @@ export default function Index() {
                 />
               </p>
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               <p>
                 <span>機能拡張の一覧から「Userscripts」をオンにします。</span>
                 <br />
@@ -109,7 +108,7 @@ export default function Index() {
                 />
               </p>
             </li>
-            <li className={orderedListItem("space-y-2")}>
+            <li className="space-y-2">
               <p>
                 <Link
                   className="text-nadeshiko-800 hover:underline"
@@ -128,17 +127,3 @@ export default function Index() {
     </div>
   );
 }
-
-export const orderedList = (...args: ClassValue[]) => {
-  return clsx("[counter-reset:list]", ...args);
-};
-
-export const orderedListItem = (...args: ClassValue[]) => {
-  return clsx(
-    "before:float-left before:mr-2 before:-ml-8 before:rounded-full",
-    "before:text-center",
-    "before:bg-nadeshiko-800 before:size-6 before:font-bold before:text-white",
-    "before:content-[counter(list)] before:[counter-increment:list]",
-    ...args,
-  );
-};

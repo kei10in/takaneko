@@ -54,6 +54,21 @@
   }
 }
 
+@layer components {
+  .list-rounded-decimal {
+    @apply pl-8 [counter-reset:list];
+
+    & > li {
+      &::before {
+        @apply float-left mr-2 -ml-8 rounded-full;
+        @apply text-center;
+        @apply bg-nadeshiko-800 size-6 font-bold text-white;
+        @apply content-[counter(list)] [counter-increment:list];
+      }
+    }
+  }
+}
+
 @layer utilities {
   .scrollbar-hidden {
     -ms-overflow-style: none; /* IE and Edge */
