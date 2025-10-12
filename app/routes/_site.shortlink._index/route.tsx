@@ -111,7 +111,7 @@ export default function Index() {
               手順に従ってスクリプトの実行を許可してください。
             </p>
 
-            <ol className="list-decimal space-y-2 px-10">
+            <ol className="list-rounded-decimal space-y-4">
               <li>設定アプリを開きます。</li>
               <li>アプリ &gt; ショートカット &gt; 詳細 を開きます。</li>
               <li>
@@ -141,7 +141,7 @@ export default function Index() {
           <section className="space-y-2">
             <h3 className="text-bold text-lg">使い方:</h3>
 
-            <ol className="list-decimal space-y-2 px-10">
+            <ol className="list-rounded-decimal mt-4 space-y-4">
               <li>短縮 URL を作りたい、高嶺のなでしこ公式サイトのページをブラウザで開きます。</li>
               <li>
                 <p>共有ボタンをタップしてメニューを開きます。</p>
