@@ -35,7 +35,10 @@ export default function Index() {
         <section className="mt-12">
           <h2 className={sectionHeading()}>「たかねこナイト」をバックグランドで再生する</h2>
 
-          <p className="mt-4">iPhone で「たかねこナイト」をバックラウンド再生する方法です。</p>
+          <p className="mt-4">
+            iPhone で「たかねこナイト」をバックラウンド再生する方法です。この手順はページを Safari
+            で開いて実施してください。
+          </p>
 
           <ol className={orderedList("mt-4 space-y-6 pl-8")}>
             <li className={orderedListItem("space-y-2")}>
@@ -71,13 +74,10 @@ export default function Index() {
             <li className={orderedListItem("space-y-2")}>
               ダウンロードしたファイルを「この iPhone内」にある
               <span className="rounded-sm bg-zinc-100 px-1 font-mono">Userscripts</span>
-              フォルダに移動します。ファイルの移動には「ファイル」アプリを利用します。
+              フォルダに移動します。フォルダがない場合は作成します。ファイルの移動には「ファイル」アプリを利用します。
             </li>
             <li className={orderedListItem("space-y-2")}>
-              <p>機能拡張を有効化するために Safari を開きます。</p>
-            </li>
-            <li className={orderedListItem("space-y-2")}>
-              <p>アドレスバーの左にあるボタンから表示メニューを開きます。</p>
+              <p>Safari を開き、アドレスバーの左にあるボタンから表示メニューを開きます。</p>
               <img
                 className="mt-2 max-w-60 rounded bg-zinc-50 shadow"
                 src="/user-scripts/enable-userscripts-01.webp"
