@@ -9,6 +9,33 @@
 // @run-at             document-start
 // ==/UserScript==
 (() => {
+  // ==== グローバルデバッグフラグ ====
+  // window.__takanekonoAllowBackgroundPlayDebug が true のときだけコンソール出力します。
+  // 例: 開発者ツールのコンソールで → window.__takanekonoAllowBackgroundPlayDebug = true
+  if (typeof window !== "undefined" && !("__takanekonoAllowBackgroundPlayDebug" in window)) {
+    try {
+      Object.defineProperty(window, "__takanekonoAllowBackgroundPlayDebug", {
+        value: false,
+        writable: true,
+        configurable: true,
+        enumerable: false,
+      });
+    } catch (_) {
+      // defineProperty が失敗する環境では単純代入にフォールバック
+      window.__takanekonoAllowBackgroundPlayDebug = false;
+    }
+  }
+  const debugEnabled = () => !!(window && window.__takanekonoAllowBackgroundPlayDebug);
+  const dlog = (...args) => {
+    if (debugEnabled()) {
+      try {
+        console.log(...args);
+      } catch (_) {
+        /* noop */
+      }
+    }
+  };
+
   // ==== 設定（閾値など） ====
   const GA_URL_PATTERNS = [
     /googletagmanager\.com\/gtag\/js/i,
@@ -133,7 +160,7 @@
 
     // デバッグ出力（必要ならコメントアウト解除）
     if (type === "visibilitychange") {
-      console.log(
+      dlog(
         `[visibilitychange] add by ${meta.suspect ? "🟢LIKELY GTAG/GTM" : "⚪️other"} | score=${meta.heuristicScore}`,
         {
           listener,
@@ -190,5 +217,5 @@
     },
   };
 
-  console.log("[__vismon] ready. 例: __vismon.getSuspectedGtag()");
+  dlog("[__vismon] ready. 例: __vismon.getSuspectedGtag()");
 })();
