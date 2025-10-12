@@ -3,7 +3,7 @@
 // @description        Allow background play for Audee membership users.
 // @author             kei10in
 // @version            1.0.0
-// @match              https://audee-membership.jp/*/audio/*
+// @match              https://audee-membership.jp/*
 // @grant              none
 // @inject-into        page
 // @run-at             document-start
