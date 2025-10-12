@@ -1,5 +1,5 @@
 import { ClassValue, clsx } from "clsx";
-import { BsDownload, BsExclamationTriangleFill } from "react-icons/bs";
+import { BsDownload, BsExclamationTriangleFill, BsFiletypeJs } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
@@ -57,19 +57,22 @@ export default function Index() {
               <LinkCard to="https://apps.apple.com/jp/app/userscripts/id1463298887" />
             </li>
             <li className={orderedListItem("space-y-2")}>
-              次のリンクからスクリプト ファイル
-              <span className="rounded-sm bg-zinc-100 px-1 font-mono">
-                allow-background-play.user.js
-              </span>
-              をダウンロードします。
-              <a
-                className="bg-nadeshiko-800 mt-2 mb-4 flex h-8 w-fit items-center justify-center rounded-md px-6 font-bold text-white"
-                href="/user-scripts/allow-background-play.user.js"
-                download
-              >
-                <BsDownload className="mr-2 inline-block" />
-                <span>ダウンロード</span>
-              </a>
+              <p>次のリンクからスクリプト ファイル をダウンロードします。</p>
+              <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                <a
+                  className="bg-nadeshiko-800 inline-flex h-8 items-center justify-center rounded-md px-6 font-bold text-white"
+                  href="/user-scripts/allow-background-play.user.js"
+                  download
+                >
+                  <BsDownload className="mr-2 inline-block" />
+                  <span>ダウンロード</span>
+                </a>
+
+                <span className="inline-flex items-center gap-1 font-mono text-gray-600">
+                  <BsFiletypeJs className="inline-block size-5" />
+                  allow-background-play.user.js
+                </span>
+              </p>
             </li>
             <li className={orderedListItem("space-y-2")}>
               ダウンロードしたファイルを「この iPhone内」にある
