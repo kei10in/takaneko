@@ -102,12 +102,7 @@ export default function Index() {
             </div>
 
             <div className="flex w-full flex-1 items-center lg:w-auto lg:flex-none">
-              <div
-                className={clsx(
-                  "w-full space-y-6 pt-6 pb-10 2xl:px-8",
-                  "lg:space-y-8 lg:py-24 2xl:py-32",
-                )}
-              >
+              <div className={clsx("w-full space-y-6 pt-6 pb-10 lg:space-y-8 lg:pb-24 2xl:px-8")}>
                 <div
                   className={clsx(
                     "relative",
