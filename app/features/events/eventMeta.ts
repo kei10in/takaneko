@@ -158,7 +158,10 @@ export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
     return s;
   }
 
-  const t = (a.start ?? "24:00").localeCompare(b.start ?? "24:00");
+  const aStart = a.acts[0]?.start ?? a.start ?? "48:00";
+  const bStart = b.acts[0]?.start ?? b.start ?? "48:00";
+
+  const t = aStart.localeCompare(bStart);
   if (t != 0) {
     return t;
   }

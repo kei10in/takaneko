@@ -1,12 +1,11 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { compareEventStatus, EventStatus } from "../events/eventMeta";
+import { EventStatus } from "../events/eventMeta";
 import { EventModule } from "../events/eventModule";
-import { compareEventType, EventType } from "../events/EventType";
+import { EventType } from "../events/EventType";
 
 export type CalendarEvent = {
   slug: string;
   date: string;
-  start: string | undefined;
   summary: string;
   status: EventStatus | undefined;
   category: EventType;
@@ -18,7 +17,6 @@ export const calendarEventFromEventModule = (e: EventModule): CalendarEvent => {
   return {
     slug: e.slug,
     date: e.meta.date.toString(),
-    start: e.meta.start,
     summary: e.meta.summary,
     status: e.meta.status,
     category: e.meta.category,
@@ -38,7 +36,7 @@ export const zipCalendarDatesAndEvents = (
 
   return dates.map((week) =>
     week.map((date) => {
-      const eventsInDate = sortedCalendarEvents(groupedEvents.get(date.toString()) ?? []);
+      const eventsInDate = groupedEvents.get(date.toString()) ?? [];
       return { date, events: eventsInDate };
     }),
   );
@@ -57,33 +55,6 @@ export const groupEventsByDate = (events: CalendarEvent[]): Map<string, Calendar
     map.get(key)!.push(event);
   }
   return map;
-};
-
-export const sortedCalendarEvents = (events: CalendarEvent[]): CalendarEvent[] => {
-  return events.toSorted((a, b) => compareCalendarEvents(a, b));
-};
-
-export const compareCalendarEvents = (a: CalendarEvent, b: CalendarEvent): number => {
-  if (a.date < b.date) {
-    return -1;
-  }
-
-  if (a.date > b.date) {
-    return 1;
-  }
-
-  // キャンセルされてるのは時間を無視して後ろに。
-  const s = compareEventStatus(a.status, b.status);
-  if (s != 0) {
-    return s;
-  }
-
-  const t = (a.start ?? "24:00").localeCompare(b.start ?? "24:00");
-  if (t != 0) {
-    return t;
-  }
-
-  return compareEventType(a.category, b.category);
 };
 
 export const uniqueEventRegions = (events: CalendarEvent[]): string[] => {

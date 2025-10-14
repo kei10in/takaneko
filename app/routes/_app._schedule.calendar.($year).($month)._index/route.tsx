@@ -11,6 +11,7 @@ import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
+import { compareEventMeta } from "~/features/events/eventMeta";
 import { importEventModulesByMonth } from "~/features/events/eventModule";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -63,6 +64,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   )
     .flat()
     .filter(eventFilter.predicate)
+    .toSorted((a, b) => compareEventMeta(a.meta, b.meta))
     .map(calendarEventFromEventModule);
 
   return { year, month, day, filter: t, events };
