@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "TsFMmZcPH70",
+    title:
+      "【オリジナル楽曲】ときのそら「バチャリアラブ feat. 涼海すう&籾山ひめり from 高嶺のなでしこ」【Official Music Video】",
+    authorName: "ときのそら",
+    publishedAt: "2025-10-10",
+    mediaUrl: "https://youtu.be/TsFMmZcPH70",
+    imageUrl: "https://i.ytimg.com/vi/TsFMmZcPH70/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "籾山ひめり"],
+  },
+  {
     kind: "ogp",
     key: "https://popteen.co.jp/media/77712/",
     title: "現役アイドル直伝の目立つ推し活グッズ♩すぅにゃの推し活WORLD♡Vol.7",

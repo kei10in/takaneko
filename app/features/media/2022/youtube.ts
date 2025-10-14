@@ -7,6 +7,11 @@ export const YouTube2022 = [
     presents: ["籾山ひめり", "松本ももな"],
   },
   {
+    videoId: "y7VugEsAVE0",
+    publishedAt: "2022-12-14",
+    presents: ["籾山ひめり"],
+  },
+  {
     videoId: "Jqjk6IZE3qk",
     publishedAt: "2022-10-06",
     presents: ["橋本桃呼", "松本ももな"],

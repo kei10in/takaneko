@@ -25,6 +25,17 @@ export const metadata2022: MediaDetails[] = [
     presents: ["籾山ひめり", "松本ももな"],
   },
   {
+    kind: "youtube",
+    key: "y7VugEsAVE0",
+    title: "1 PICTURE 1 STORY #06 「I don’t wanna be lonely ～クリスマスに恋をしよう～ 」",
+    authorName: "1 PICTURE 1 STORY",
+    publishedAt: "2022-12-14",
+    mediaUrl: "https://youtu.be/y7VugEsAVE0",
+    imageUrl: "https://i.ytimg.com/vi/y7VugEsAVE0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["籾山ひめり"],
+  },
+  {
     kind: "ogp",
     key: "https://cmnow.jp/entertainment/22102914413/",
     title: "いま話題の「たかねこ」ちゃんとは!? 1stファンミーティング直前まとめ – CMNOW WEB",
