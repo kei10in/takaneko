@@ -3,16 +3,29 @@ import { Publication } from "../product";
 export const IDOL_FILE_Vol37: Publication = {
   slug: "IDOL FILE Vol.37",
   name: "IDOL FILE Vol.37",
-  date: "2025-10-17",
+  date: "2025-10-22",
   kind: "magazines", // "books"
-  publisher: "ロックスエンタテインメント",
-  listPrice: 1818,
-  priceWithTax: 2000,
+  publisher: "シンコーミュージック",
+  listPrice: 2000,
+  priceWithTax: 2200,
   code: [{ kind: "", value: "" }],
-  url: "",
-  coverImages: [],
+  url: "https://www.shinko-music.co.jp/item/pid0763297/",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-10-22_IDOL FILE Vol.37_表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/1979140383809638774",
+    },
+    {
+      path: "/publications/2025/2025-10-22_IDOL FILE Vol.37_裏表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/1979140383809638774",
+    },
+    {
+      path: "/publications/2025/2025-10-22_IDOL FILE Vol.37_橋本桃呼.jpg",
+      ref: "https://x.com/takanenofficial/status/1980835323639918618",
+    },
+  ],
   featuredMembers: ["橋本桃呼"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/1980835323639918618",
   links: [
     {
       text: "橋本桃呼 動画コメント",
