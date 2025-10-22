@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const MARQUEE_Fes_Day1_限定カード: RandomGoods = {
+  id: "MARQUEE Fes Day1 限定カード",
+  slug: "MARQUEE Fes Day1 限定カード",
+  name: "MARQUEE Fes Day1 限定カード",
+  year: 2025,
+  series: "MARQUEE Fes Day1 限定カード",
+  category: "カード",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-10-22_MARQUEE Fes Day1 限定カード.jpg",
+  width: 842,
+  height: 1191,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: false,
+  positions: [
+    { id: 1, x: 83, y: 267, width: 153, height: 248 },
+    { id: 2, x: 256, y: 267, width: 153, height: 248 },
+    { id: 3, x: 430, y: 267, width: 153, height: 248 },
+    { id: 4, x: 603, y: 267, width: 153, height: 248 },
+    { id: 5, x: 83, y: 555, width: 153, height: 248 },
+    { id: 6, x: 256, y: 555, width: 153, height: 248 },
+    { id: 7, x: 430, y: 555, width: 153, height: 248 },
+    { id: 8, x: 604, y: 555, width: 153, height: 248 },
+    { id: 9, x: 83, y: 840, width: 153, height: 248 },
+  ],
+};

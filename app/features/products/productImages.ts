@@ -128,15 +128,18 @@ import { AWonderfulEncounter_ミニフォト } from "./2025/2025-09-07_ミニフ
 import { AWonderfulEncounter_生写真 } from "./2025/2025-09-07_生写真「A Wonderful Encounter」";
 import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ「A Wonderful Encounter」";
 import { BEEEEM_vol1_ポストカード } from "./2025/2025-09-30_ポストカード「BEEEEM vol.1」";
+import { MARQUEE_Fes_Day1_限定カード } from "./2025/2025-10-22_MARQUEE Fes Day1 限定カード";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  MARQUEE_Fes_Day1_限定カード,
   BEEEEM_vol1_ポストカード,
   LARME高嶺のなでしこ_ミニフォト,
   LARME高嶺のなでしこ_ステッカー,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  MARQUEE_Fes_Day1_限定カード,
   BEEEEM_vol1_ポストカード,
   AWonderfulEncounter_生写真,
   AWonderfulEncounter_ミニフォト,
