@@ -1,6 +1,5 @@
 import { z } from "zod/v4";
 
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
@@ -139,9 +138,7 @@ const prefixOfEventStatus = (status: EventStatus | undefined): string => {
 };
 
 export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
-  const aDate = NaiveDate.parseUnsafe(a.date);
-  const bDate = NaiveDate.parseUnsafe(b.date);
-  const d = aDate.getTimeAsUTC() - bDate.getTimeAsUTC();
+  const d = a.date.localeCompare(b.date);
   if (d != 0) {
     return d;
   }
