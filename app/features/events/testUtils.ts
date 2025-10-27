@@ -1,4 +1,3 @@
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventMeta, EventMetaDescriptor } from "./eventMeta";
 
 /**
@@ -6,15 +5,11 @@ import { EventMeta, EventMetaDescriptor } from "./eventMeta";
  * 必須フィールドのみを指定し、配列やオブジェクトのフィールドはデフォルト値で埋める
  */
 export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => {
-  const date = partial.date ?? "2025-08-01";
-  const naiveDate = NaiveDate.parseUnsafe(date);
-
   const eventMeta: EventMeta = {
     title: partial.title ?? partial.summary ?? "Test Event Title",
     summary: partial.summary ?? "Test Event Summary",
     category: partial.category ?? "LIVE",
-    date,
-    naiveDate,
+    date: partial.date ?? "2025-08-01",
 
     description: partial.description,
     status: partial.status,

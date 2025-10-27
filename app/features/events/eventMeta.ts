@@ -72,7 +72,6 @@ const EventMetaDescriptor = z.object({
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
 export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes" | "images" | "links"> & {
-  naiveDate: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
   streamings: LinkDescription[];
@@ -105,7 +104,6 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       ...r.data,
       summary,
       title,
-      naiveDate: NaiveDate.parseUnsafe(r.data.date),
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
