@@ -16,7 +16,7 @@ export type CalendarEvent = {
 export const calendarEventFromEventModule = (e: EventModule): CalendarEvent => {
   return {
     slug: e.slug,
-    date: e.meta.date.toString(),
+    date: e.meta.naiveDate.toString(),
     summary: e.meta.summary,
     status: e.meta.status,
     category: e.meta.category,

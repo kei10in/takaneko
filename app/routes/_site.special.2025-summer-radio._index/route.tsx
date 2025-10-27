@@ -46,14 +46,14 @@ export default function Index() {
     {
       key: "day1",
       name: "2025 年 7 月 10 日 (木)",
-      items: RadioAppearances.filter((e) => e.meta.date.toString() === "2025-07-10").toSorted(
+      items: RadioAppearances.filter((e) => e.meta.naiveDate.toString() === "2025-07-10").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
     },
     {
       key: "day2",
       name: "2025 年 7 月 11 日 (金)",
-      items: RadioAppearances.filter((e) => e.meta.date.toString() === "2025-07-11").toSorted(
+      items: RadioAppearances.filter((e) => e.meta.naiveDate.toString() === "2025-07-11").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
     },
@@ -97,9 +97,9 @@ export default function Index() {
                 {day.items.map((e) => {
                   const [startHour, startMinute] = (e.meta.start ?? "00:00").split(":");
                   const startTime = Date.UTC(
-                    e.meta.date.year,
-                    e.meta.date.month - 1,
-                    e.meta.date.day,
+                    e.meta.naiveDate.year,
+                    e.meta.naiveDate.month - 1,
+                    e.meta.naiveDate.day,
                     startHour ? parseInt(startHour) - 9 : 0,
                     startMinute ? parseInt(startMinute) : 0,
                   );

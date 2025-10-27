@@ -18,7 +18,7 @@ export const twitterCard = (args: EventMeta): MetaDescriptor[] => {
       },
       {
         name: "twitter:title",
-        content: `${displayDate(args.date)} ${args.title ?? args.summary}`,
+        content: `${displayDate(args.naiveDate)} ${args.title ?? args.summary}`,
       },
     ],
   );

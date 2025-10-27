@@ -91,7 +91,7 @@ export default function EventPage() {
   }
 
   const Content = data?.Content;
-  const d = meta.date;
+  const d = meta.naiveDate;
   const m = d.naiveMonth();
 
   // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防振するために、

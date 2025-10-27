@@ -71,11 +71,8 @@ const EventMetaDescriptor = z.object({
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<
-  EventMetaDescriptor,
-  "date" | "acts" | "showNotes" | "images" | "links"
-> & {
-  date: NaiveDate;
+export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes" | "images" | "links"> & {
+  naiveDate: NaiveDate;
   images: ImageDescription[];
   links: LinkDescription[];
   streamings: LinkDescription[];
@@ -108,7 +105,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       ...r.data,
       summary,
       title,
-      date: NaiveDate.parseUnsafe(r.data.date),
+      naiveDate: NaiveDate.parseUnsafe(r.data.date),
       images: [r.data.image, ...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
@@ -144,7 +141,7 @@ const prefixOfEventStatus = (status: EventStatus | undefined): string => {
 };
 
 export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
-  const d = a.date.getTimeAsUTC() - b.date.getTimeAsUTC();
+  const d = a.naiveDate.getTimeAsUTC() - b.naiveDate.getTimeAsUTC();
   if (d != 0) {
     return d;
   }

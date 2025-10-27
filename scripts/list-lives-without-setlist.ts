@@ -17,7 +17,7 @@ const main = async () => {
       }
 
       // まだ開催されていないライブはリストしなくてよい。
-      if (meta.date.getTimeAsUTC() >= today.getTimeAsUTC()) {
+      if (meta.naiveDate.getTimeAsUTC() >= today.getTimeAsUTC()) {
         return false;
       }
 

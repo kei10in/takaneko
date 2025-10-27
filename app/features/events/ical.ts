@@ -12,7 +12,7 @@ export const makeIcs = async (
     icsDataUrl == undefined
       ? undefined
       : {
-          filename: `${meta.date}_${meta.summary}.ics`,
+          filename: `${meta.naiveDate}_${meta.summary}.ics`,
           dataUrl: icsDataUrl,
         };
 
@@ -47,7 +47,7 @@ export const convertEventMetaToEventAttributes = async (
   id: string,
   e: EventMeta,
 ): Promise<EventAttributes> => {
-  const d = e.date;
+  const d = e.naiveDate;
   const uid = await icsEventId(id);
 
   const ea: EventAttributes = {
