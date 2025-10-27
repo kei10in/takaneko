@@ -25,7 +25,7 @@ export const makePageDescription = (meta: EventMeta): string => {
  * ワンマンライブ・対バンライブ用の description を生成します。
  */
 export const makeLiveDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
   const presentText = ` ${present.map((m) => m.id).join("・")}`;
@@ -40,7 +40,7 @@ export const makeLiveDescription = (meta: EventMeta) => {
  * 主催イベント以外では適切な文章になりません。
  */
 export const makeEventDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
   const presentText = `出演は、${present.map((m) => m.id).join("・")}。`;
@@ -54,7 +54,7 @@ export const makeEventDescription = (meta: EventMeta) => {
  * 雑誌掲載用の description を生成します。
  */
 export const makeMagazineDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
   const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
@@ -66,7 +66,7 @@ export const makeMagazineDescription = (meta: EventMeta) => {
  * テレビ番組出演用の description を生成します。
  */
 export const makeTvDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
   const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
@@ -78,7 +78,7 @@ export const makeTvDescription = (meta: EventMeta) => {
  * ラジオ出演用の description を生成します。
  */
 export const makerRadioDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);
   const presentText = present.length == 0 ? "" : ` ${present.map((m) => m.id).join("・")}`;
@@ -90,7 +90,7 @@ export const makerRadioDescription = (meta: EventMeta) => {
  * その他のイベント用の description を生成します。
  */
 export const makeOtherDescription = (meta: EventMeta) => {
-  const date = displayDateWithDayOfWeek(meta.naiveDate);
+  const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
 
   return `${date} ${title}`;

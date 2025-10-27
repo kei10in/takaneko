@@ -4,6 +4,10 @@ import { NaiveDate } from "./datetime/NaiveDate";
 import { NaiveMonth } from "./datetime/NaiveMonth";
 
 describe("displayDate", () => {
+  it("should return '2022年01月01日' for '2022-01-01' string", () => {
+    expect(displayDate("2022-01-01")).toBe("2022年01月01日");
+  });
+
   it("should return '2022年01月01日' for year 2022-01-01", () => {
     expect(displayDate(2022, 1, 1)).toBe("2022年01月01日");
   });

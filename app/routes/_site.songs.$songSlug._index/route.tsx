@@ -165,7 +165,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                           <p className="flex items-center gap-1 text-gray-400">
                             <BsCalendar className="inline flex-none text-xs" />
                             <span className="line-clamp-1">
-                              {displayDateWithDayOfWeek(e.meta.naiveDate)}
+                              {displayDateWithDayOfWeek(e.meta.date)}
                             </span>
                           </p>
                           <p className="flex items-center gap-1 text-gray-400">

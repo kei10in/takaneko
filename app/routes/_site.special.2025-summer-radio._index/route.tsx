@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BsBroadcastPin, BsStopwatch } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { DOMAIN, SITE_TITLE } from "~/constants";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { RadioAppearances } from "./content";
 
 export const meta: MetaFunction = () => {
@@ -46,14 +47,14 @@ export default function Index() {
     {
       key: "day1",
       name: "2025 年 7 月 10 日 (木)",
-      items: RadioAppearances.filter((e) => e.meta.naiveDate.toString() === "2025-07-10").toSorted(
+      items: RadioAppearances.filter((e) => e.meta.date === "2025-07-10").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
     },
     {
       key: "day2",
       name: "2025 年 7 月 11 日 (金)",
-      items: RadioAppearances.filter((e) => e.meta.naiveDate.toString() === "2025-07-11").toSorted(
+      items: RadioAppearances.filter((e) => e.meta.date === "2025-07-11").toSorted(
         (a, b) => a.meta.start?.localeCompare(b.meta.start ?? "00:00") ?? 0,
       ),
     },
@@ -96,10 +97,11 @@ export default function Index() {
               <ul className="space-y-2">
                 {day.items.map((e) => {
                   const [startHour, startMinute] = (e.meta.start ?? "00:00").split(":");
+                  const nd = NaiveDate.parseUnsafe(e.meta.date);
                   const startTime = Date.UTC(
-                    e.meta.naiveDate.year,
-                    e.meta.naiveDate.month - 1,
-                    e.meta.naiveDate.day,
+                    nd.year,
+                    nd.month - 1,
+                    nd.day,
                     startHour ? parseInt(startHour) - 9 : 0,
                     startMinute ? parseInt(startMinute) : 0,
                   );

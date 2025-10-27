@@ -141,7 +141,9 @@ const prefixOfEventStatus = (status: EventStatus | undefined): string => {
 };
 
 export const compareEventMeta = (a: EventMeta, b: EventMeta): number => {
-  const d = a.naiveDate.getTimeAsUTC() - b.naiveDate.getTimeAsUTC();
+  const aDate = NaiveDate.parseUnsafe(a.date);
+  const bDate = NaiveDate.parseUnsafe(b.date);
+  const d = aDate.getTimeAsUTC() - bDate.getTimeAsUTC();
   if (d != 0) {
     return d;
   }

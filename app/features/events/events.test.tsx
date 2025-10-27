@@ -23,7 +23,7 @@ describe("event module", async () => {
       const slug = filename.split("/").pop();
       assert(slug != undefined);
       const idDate = NaiveDate.parseUnsafe(slug.split("_")[0]);
-      const metaDate = event.meta.naiveDate;
+      const metaDate = NaiveDate.parseUnsafe(event.meta.date);
 
       expect(idDate.year).toEqual(metaDate.year);
       expect(idDate.month).toEqual(metaDate.month);

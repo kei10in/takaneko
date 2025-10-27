@@ -33,7 +33,7 @@ const main = async () => {
               order: segment.index + 1,
               song: segment.songTitle,
               costume: segment.costumeName ?? "",
-              date: event.meta.naiveDate.toString(),
+              date: event.meta.date,
               event: event.meta.summary,
               act: act.title ?? "",
               region: event.meta.region ?? "",

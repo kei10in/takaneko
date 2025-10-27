@@ -33,6 +33,7 @@ import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventDetails";
@@ -91,7 +92,7 @@ export default function EventPage() {
   }
 
   const Content = data?.Content;
-  const d = meta.naiveDate;
+  const d = NaiveDate.parseUnsafe(meta.date);
   const m = d.naiveMonth();
 
   // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防振するために、

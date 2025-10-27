@@ -1,5 +1,6 @@
 import { createEvent, EventAttributes } from "ics";
 import { DOMAIN } from "~/constants";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventMeta } from "./eventMeta";
 
 export const makeIcs = async (
@@ -12,7 +13,7 @@ export const makeIcs = async (
     icsDataUrl == undefined
       ? undefined
       : {
-          filename: `${meta.naiveDate}_${meta.summary}.ics`,
+          filename: `${meta.date}_${meta.summary}.ics`,
           dataUrl: icsDataUrl,
         };
 
@@ -47,7 +48,7 @@ export const convertEventMetaToEventAttributes = async (
   id: string,
   e: EventMeta,
 ): Promise<EventAttributes> => {
-  const d = e.naiveDate;
+  const d = NaiveDate.parseUnsafe(e.date);
   const uid = await icsEventId(id);
 
   const ea: EventAttributes = {
