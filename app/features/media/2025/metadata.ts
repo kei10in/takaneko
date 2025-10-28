@@ -3,6 +3,29 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "BDGAjmWG0Rs",
+    title: "個性爆発！「高嶺のなでしこ」の悩みとは【音楽マシマシ 2025.7.28OA】",
+    authorName: "HBCラジオ公式YouTubeチャンネル",
+    publishedAt: "2025-10-26",
+    mediaUrl: "https://youtu.be/BDGAjmWG0Rs",
+    imageUrl: "https://i.ytimg.com/vi/BDGAjmWG0Rs/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/772949",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第5回『アダムス・ファミリー』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-10-25",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/772949",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/10/772949_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "TsFMmZcPH70",
     title:
       "【オリジナル楽曲】ときのそら「バチャリアラブ feat. 涼海すう&籾山ひめり from 高嶺のなでしこ」【Official Music Video】",
