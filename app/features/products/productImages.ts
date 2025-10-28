@@ -130,9 +130,11 @@ import { AWonderfulEncounter_缶バッジ } from "./2025/2025-09-07_缶バッジ
 import { BEEEEM_vol1_ポストカード } from "./2025/2025-09-30_ポストカード「BEEEEM vol.1」";
 import { MARQUEE_Fes_Day1_限定カード } from "./2025/2025-10-22_MARQUEE Fes Day1 限定カード";
 import { たかねこハロウィン2025_ミニフォト } from "./2025/2025-10-28_ミニフォトカード「たかねこハロウィン2025」";
+import { たかねこハロウィン2025_生写真 } from "./2025/2025-10-29_生写真「たかねこハロウィン2025」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  たかねこハロウィン2025_生写真,
   たかねこハロウィン2025_ミニフォト,
   MARQUEE_Fes_Day1_限定カード,
   BEEEEM_vol1_ポストカード,
@@ -141,6 +143,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  たかねこハロウィン2025_生写真,
   たかねこハロウィン2025_ミニフォト,
   MARQUEE_Fes_Day1_限定カード,
   BEEEEM_vol1_ポストカード,
