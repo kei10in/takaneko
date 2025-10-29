@@ -77,7 +77,6 @@ export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes" | "images
   overview?: Omit<EventOverview, "streaming"> | undefined;
   acts: Act[];
   showNotes: ShowNotes;
-  descriptor: EventMetaDescriptor;
 };
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
@@ -117,7 +116,6 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       streamings: r.data.overview?.streaming ?? [],
       acts,
       showNotes,
-      descriptor: r.data,
     };
   } else {
     return undefined;

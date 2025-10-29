@@ -1,5 +1,4 @@
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { useMemo } from "react";
 import {
   BsBoxArrowUpRight,
   BsBroadcast,
@@ -75,25 +74,20 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
   const ics = await makeIcs(eventSlug, event.meta);
 
-  return { slug: eventSlug, ics, eventMeta: event.meta.descriptor };
+  return { slug: eventSlug, ics, eventMeta: event.meta };
 };
 
 export default function EventPage() {
-  const { slug, ics, eventMeta } = useLoaderData<typeof loader>();
-  const meta = useMemo(() => validateEventMeta(eventMeta), [eventMeta]);
-
-  const { data } = useSWR(slug, importEventModuleBySlug);
+  const { slug, ics, eventMeta: meta } = useLoaderData<typeof loader>();
+  const d = NaiveDate.parseUnsafe(meta.date);
+  const m = d.naiveMonth();
 
   const location = useLocation();
   const navigate = useNavigate();
 
-  if (meta == undefined) {
-    return null;
-  }
-
+  // Content は React Component なため `loader` から渡すことができず SSR できない。
+  const { data } = useSWR(slug, importEventModuleBySlug);
   const Content = data?.Content;
-  const d = NaiveDate.parseUnsafe(meta.date);
-  const m = d.naiveMonth();
 
   // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防振するために、
   // `To` のオブジェクトを渡す。

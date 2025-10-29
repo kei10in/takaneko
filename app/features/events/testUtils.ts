@@ -1,4 +1,4 @@
-import { EventMeta, EventMetaDescriptor } from "./eventMeta";
+import { EventMeta } from "./eventMeta";
 
 /**
  * テスト用の EventMeta を作成する関数
@@ -36,9 +36,6 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
 
     // showNotes はデフォルトで空の構造
     showNotes: partial.showNotes ?? { played: [] },
-
-    // descriptor は基本情報を含む
-    descriptor: {} as EventMetaDescriptor,
   };
 
   return eventMeta;
