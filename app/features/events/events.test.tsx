@@ -31,11 +31,14 @@ describe("event module", async () => {
     });
 
     it("should contains valid image reference in meta", () => {
-      const path = event.meta.image?.path;
-      if (path == undefined || path == "") {
-        return;
+      for (const image of event.meta.images) {
+        const path = image.path;
+        if (path == undefined || path == "") {
+          continue;
+        }
+
+        expect(AllAssets).toContain(path);
       }
-      expect(AllAssets).toContain(path);
     });
 
     it("should contains valid image reference in content", () => {

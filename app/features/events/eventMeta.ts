@@ -57,7 +57,6 @@ const EventMetaDescriptor = z.object({
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
   links: z.array(z.union([LinkDescription, z.string()])).optional(),
-  image: ImageDescription.optional(),
   images: z.array(ImageDescription).optional(),
   present: z.array(MemberIdOrGroupId).optional(),
   absent: z.array(MemberIdEnum).optional(),
@@ -102,7 +101,7 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       ...r.data,
       summary,
       title,
-      images: [r.data.image, ...(r.data.images ?? [])].filter(
+      images: [...(r.data.images ?? [])].filter(
         (img): img is ImageDescription => img != undefined && img.path != "",
       ),
       // link の URL が空文字列の場合は無視します。

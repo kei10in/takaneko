@@ -20,7 +20,6 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     region: partial.region,
     location: partial.location,
     link: partial.link,
-    image: partial.image,
     present: partial.present,
     absent: partial.absent,
     updatedAt: partial.updatedAt,
