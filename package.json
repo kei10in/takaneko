@@ -47,7 +47,7 @@
     "@cloudflare/vite-plugin": "^1.11.4",
     "@eslint/js": "^9.33.0",
     "@fast-csv/format": "^5.0.2",
-    "@mdx-js/node-loader": "^3.1.0",
+    "@mdx-js/node-loader": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
     "@react-router/dev": "^7.9.4",
     "@react-router/fs-routes": "^7.9.4",
