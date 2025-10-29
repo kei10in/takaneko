@@ -56,7 +56,15 @@ const EventMetaDescriptor = z.object({
   region: z.string().optional(),
   location: z.string().optional(),
   link: z.object({ text: z.string(), url: z.string() }).optional(),
-  links: z.array(z.union([LinkDescription, z.string()])).optional(),
+  links: z
+    .array(z.union([LinkDescription, z.string()]))
+    .transform((x) =>
+      x.map(normalizeLink).filter((link): link is LinkDescription => {
+        return link != undefined && link.text != "" && link.url != "";
+      }),
+    )
+    .optional()
+    .default([]),
   images: z
     .array(ImageDescription)
     .transform((x) => x.filter((img) => img.path != ""))
@@ -73,8 +81,7 @@ const EventMetaDescriptor = z.object({
 
 export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes" | "links"> & {
-  links: LinkDescription[];
+export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes"> & {
   streamings: LinkDescription[];
   overview?: Omit<EventOverview, "streaming"> | undefined;
   acts: Act[];
@@ -107,11 +114,6 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       // link の URL が空文字列の場合は無視します。
       // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
       link: r.data.link?.url == "" ? undefined : r.data.link,
-      links: (r.data.links ?? [])
-        .map((link) => normalizeLink(link))
-        .filter(
-          (link): link is LinkDescription => link != undefined && link.text != "" && link.url != "",
-        ),
       streamings: r.data.overview?.streaming ?? [],
       acts,
       showNotes,
