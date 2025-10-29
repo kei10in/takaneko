@@ -33,10 +33,6 @@ describe("event module", async () => {
     it("should contains valid image reference in meta", () => {
       for (const image of event.meta.images) {
         const path = image.path;
-        if (path == undefined || path == "") {
-          continue;
-        }
-
         expect(AllAssets).toContain(path);
       }
     });
