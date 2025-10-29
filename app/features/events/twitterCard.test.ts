@@ -33,10 +33,12 @@ describe("twitterCard", () => {
       date: "2025-08-07",
       title: "Test Event",
       summary: "Test Summary",
-      image: {
-        path: "/images/test-event.jpg",
-        ref: "https://example.com",
-      },
+      images: [
+        {
+          path: "/images/test-event.jpg",
+          ref: "https://example.com",
+        },
+      ],
     });
 
     const result = twitterCard(eventMeta);
