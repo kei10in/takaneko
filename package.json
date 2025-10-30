@@ -15,7 +15,7 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.7",
+    "@headlessui/react": "^2.2.9",
     "@react-router/cloudflare": "^7.9.4",
     "chart.js": "^4.5.1",
     "chartjs-plugin-datalabels": "^2.2.0",
