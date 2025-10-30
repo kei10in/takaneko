@@ -10,9 +10,11 @@ import { 東山恵里沙誕生日記念_2025年05月28日 } from "./birthday/202
 import { 橋本桃呼誕生日記念_2025年05月28日 } from "./birthday/2025-06-28_橋本桃呼誕生日記念";
 import { 涼海すう誕生日記念_2025年8月22日 } from "./birthday/2025-08-22_涼海すう誕生日記念";
 import { 松本ももな誕生日記念_2025年10月12日 } from "./birthday/2025-10-12_松本ももな誕生日記念";
+import { 日向端ひな誕生日記念_2025年10月30日 } from "./birthday/2025-10-30_日向端ひな誕生日記念";
 import { BirthdayGoodsCollection } from "./product";
 
 export const BirthdayGoods: BirthdayGoodsCollection[] = [
+  日向端ひな誕生日記念_2025年10月30日,
   松本ももな誕生日記念_2025年10月12日,
   涼海すう誕生日記念_2025年8月22日,
   橋本桃呼誕生日記念_2025年05月28日,
