@@ -55,7 +55,14 @@ const EventMetaDescriptor = z.object({
   end: z.string().optional(),
   region: z.string().optional(),
   location: z.string().optional(),
-  link: z.object({ text: z.string(), url: z.string() }).optional(),
+  link: z
+    .object({ text: z.string(), url: z.string() })
+    .optional()
+    .transform((link) =>
+      // link の URL が空文字列の場合は無視します。
+      // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
+      link?.url == "" ? undefined : link,
+    ),
   links: z
     .array(z.union([LinkDescription, z.string()]))
     .transform((x) =>
@@ -111,9 +118,6 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
       ...r.data,
       summary,
       title,
-      // link の URL が空文字列の場合は無視します。
-      // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
-      link: r.data.link?.url == "" ? undefined : r.data.link,
       streamings: r.data.overview?.streaming ?? [],
       acts,
       showNotes,
