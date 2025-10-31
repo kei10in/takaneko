@@ -174,8 +174,8 @@ export default function EventPage() {
               </div>
             </Link>
           )}
-          {meta.overview?.ticket && (
-            <Link className="block" to={meta.overview.ticket} target="_blank" rel="noreferrer">
+          {meta.ticket && (
+            <Link className="block" to={meta.ticket} target="_blank" rel="noreferrer">
               <div className="flex items-center gap-1 px-5">
                 <span>
                   <BsTicketPerforated className="text-gray-400" />

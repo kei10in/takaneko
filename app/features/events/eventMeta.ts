@@ -9,8 +9,6 @@ import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
 
 const EventOverview = z.object({
-  // チケット販売サイトの URL を指定します。
-  ticket: z.string().optional(),
   timetable: ImageDescription.optional(),
   goods: z
     .object({
@@ -81,6 +79,9 @@ const EventMeta = z
       .default([]),
     present: z.array(MemberIdOrGroupId).optional(),
     absent: z.array(MemberIdEnum).optional(),
+
+    // チケット販売サイトの URL を指定します。
+    ticket: z.string().optional(),
 
     overview: EventOverview.optional(),
     acts: z
