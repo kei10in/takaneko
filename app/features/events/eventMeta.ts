@@ -3,7 +3,7 @@ import { z } from "zod/v4";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
-import { ActDescription, isEmptyAct } from "./act";
+import { Act, isEmptyAct } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
@@ -36,86 +36,80 @@ const EventStatus = z.union([
 
 export type EventStatus = z.infer<typeof EventStatus>;
 
-const EventMetaDescriptor = z.object({
-  // 長くなる場合は `title` を使うことができます。
-  summary: z.string(),
+const EventMetaDescriptor = z
+  .object({
+    // 長くなる場合は `title` を使うことができます。
+    summary: z.string(),
 
-  // イベントの完全なタイトルを指定します。
-  title: z.string().optional(),
+    // イベントの完全なタイトルを指定します。
+    title: z.string().optional(),
 
-  // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
-  description: z.string().optional(),
+    // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
+    description: z.string().optional(),
 
-  status: EventStatus.optional(),
-  category: EventTypeEnum,
-  liveType: LiveTypeEnum.optional(),
-  date: z.string(),
-  open: z.string().optional(),
-  start: z.string().optional(),
-  end: z.string().optional(),
-  region: z.string().optional(),
-  location: z.string().optional(),
-  link: z
-    .object({ text: z.string(), url: z.string() })
-    .optional()
-    .transform((link) =>
-      // link の URL が空文字列の場合は無視します。
-      // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
-      link?.url == "" ? undefined : link,
-    ),
-  links: z
-    .array(z.union([LinkDescription, z.string()]))
-    .transform((x) =>
-      x.map(normalizeLink).filter((link): link is LinkDescription => {
-        return link != undefined && link.text != "" && link.url != "";
-      }),
-    )
-    .optional()
-    .default([]),
-  images: z
-    .array(ImageDescription)
-    .transform((x) => x.filter((img) => img.path != ""))
-    .optional()
-    .default([]),
-  present: z.array(MemberIdOrGroupId).optional(),
-  absent: z.array(MemberIdEnum).optional(),
+    status: EventStatus.optional(),
+    category: EventTypeEnum,
+    liveType: LiveTypeEnum.optional(),
+    date: z.string(),
+    open: z.string().optional(),
+    start: z.string().optional(),
+    end: z.string().optional(),
+    region: z.string().optional(),
+    location: z.string().optional(),
+    link: z
+      .object({ text: z.string(), url: z.string() })
+      .optional()
+      .transform((link) =>
+        // link の URL が空文字列の場合は無視します。
+        // この時点で link が妥当であることを検証しておくことで他のところで検証しなくていいようにします。
+        link?.url == "" ? undefined : link,
+      ),
+    links: z
+      .array(z.union([LinkDescription, z.string()]))
+      .transform((x) =>
+        x.map(normalizeLink).filter((link): link is LinkDescription => {
+          return link != undefined && link.text != "" && link.url != "";
+        }),
+      )
+      .optional()
+      .default([]),
+    images: z
+      .array(ImageDescription)
+      .transform((x) => x.filter((img) => img.path != ""))
+      .optional()
+      .default([]),
+    present: z.array(MemberIdOrGroupId).optional(),
+    absent: z.array(MemberIdEnum).optional(),
 
-  overview: EventOverview.optional(),
-  acts: z
-    .union([ActDescription, z.array(ActDescription)])
-    .transform((x) => (Array.isArray(x) ? x : [x]).filter((act) => !isEmptyAct(act)))
-    .optional()
-    .default([]),
-  showNotes: ShowNotes,
-  updatedAt: z.string().optional(),
-});
+    overview: EventOverview.optional(),
+    acts: z
+      .union([Act, z.array(Act)])
+      .transform((x) => (Array.isArray(x) ? x : [x]).filter((act) => !isEmptyAct(act)))
+      .optional()
+      .default([]),
+    showNotes: ShowNotes,
+    updatedAt: z.string().optional(),
+  })
+  .transform((data) => {
+    const statusPrefix = prefixOfEventStatus(data.status);
+
+    const summary = `${statusPrefix}${data.summary}`;
+    const title = data.title == undefined ? summary : `${statusPrefix}${data.title}`;
+
+    return {
+      ...data,
+      summary,
+      title,
+      streamings: data.overview?.streaming ?? [],
+    };
+  });
 
 export type EventMetaDescriptor = z.input<typeof EventMetaDescriptor>;
-export type EventMetaDescriptorOutput = z.output<typeof EventMetaDescriptor>;
-
-export type EventMeta = EventMetaDescriptorOutput & {
-  streamings: LinkDescription[];
-  overview?: Omit<EventOverview, "streaming"> | undefined;
-};
+export type EventMeta = z.output<typeof EventMetaDescriptor>;
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
-
-  if (r.success) {
-    const statusPrefix = prefixOfEventStatus(r.data.status);
-
-    const summary = `${statusPrefix}${r.data.summary}`;
-    const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
-
-    return {
-      ...r.data,
-      summary,
-      title,
-      streamings: r.data.overview?.streaming ?? [],
-    };
-  } else {
-    return undefined;
-  }
+  return r.data;
 };
 
 const prefixOfEventStatus = (status: EventStatus | undefined): string => {

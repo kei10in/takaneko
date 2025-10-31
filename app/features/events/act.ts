@@ -4,7 +4,7 @@ import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist } from "./setlist";
 
-export const ActDescription = z
+export const Act = z
   .object({
     title: z.string().optional(),
 
@@ -37,8 +37,8 @@ export const ActDescription = z
     return { ...rest, links: [...url, ...links] };
   });
 
-export type ActDescription = z.input<typeof ActDescription>;
-export type Act = z.output<typeof ActDescription>;
+export type ActDescription = z.input<typeof Act>;
+export type Act = z.output<typeof Act>;
 
 export const isEmptyAct = (act: Act): boolean => {
   const isTitleEmpty = act.title == undefined || act.title.trim() === "";
