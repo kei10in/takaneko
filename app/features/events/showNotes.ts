@@ -1,21 +1,11 @@
 import { z } from "zod/v4";
 
-export const ShowNotesDescription = z.object({
-  played: z.array(z.string()).optional(),
-});
+export const ShowNotes = z
+  .object({
+    played: z.array(z.string()).optional().default([]),
+  })
+  .optional()
+  .default({ played: [] });
 
-export type ShowNotesDescription = z.infer<typeof ShowNotesDescription>;
-
-export interface ShowNotes {
-  played: string[];
-}
-
-export const validateShowNotes = (data: ShowNotesDescription | undefined): ShowNotes => {
-  if (!data) {
-    return { played: [] };
-  }
-
-  return {
-    played: data.played ?? [],
-  };
-};
+export type ShowNotesDescription = z.input<typeof ShowNotes>;
+export type ShowNotes = z.output<typeof ShowNotes>;

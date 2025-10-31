@@ -23,7 +23,7 @@ describe("event module", async () => {
       const slug = filename.split("/").pop();
       assert(slug != undefined);
       const idDate = NaiveDate.parseUnsafe(slug.split("_")[0]);
-      const metaDate = event.meta.date;
+      const metaDate = NaiveDate.parseUnsafe(event.meta.date);
 
       expect(idDate.year).toEqual(metaDate.year);
       expect(idDate.month).toEqual(metaDate.month);
@@ -31,11 +31,10 @@ describe("event module", async () => {
     });
 
     it("should contains valid image reference in meta", () => {
-      const path = event.meta.image?.path;
-      if (path == undefined || path == "") {
-        return;
+      for (const image of event.meta.images) {
+        const path = image.path;
+        expect(AllAssets).toContain(path);
       }
-      expect(AllAssets).toContain(path);
     });
 
     it("should contains valid image reference in content", () => {

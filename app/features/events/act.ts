@@ -2,35 +2,43 @@ import { z } from "zod/v4";
 
 import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
-import { parseSetlist, Segment } from "./setlist";
+import { parseSetlist } from "./setlist";
 
-export const ActDescription = z.object({
-  title: z.string().optional(),
+export const Act = z
+  .object({
+    title: z.string().optional(),
 
-  open: z.string().optional(),
-  start: z.string().optional(),
-  end: z.string().optional(),
+    open: z.string().optional(),
+    start: z.string().optional(),
+    end: z.string().optional(),
 
-  description: z.string().optional(),
+    description: z.string().transform(dedent).optional(),
 
-  setlist: z.array(z.string()).optional(),
+    setlist: z
+      .array(z.string())
+      .transform((x) => parseSetlist(x))
+      .optional()
+      .default([]),
 
-  // みくるんの #たかねこセトリを指定します。
-  url: z.string().optional(),
-  links: z.array(z.union([z.string(), LinkDescription])).optional(),
-});
+    // みくるんの #たかねこセトリを指定します。
+    url: z
+      .string()
+      .transform((x): LinkDescription[] => (x == "" ? [] : [{ url: x, text: "#たかねこセトリ" }]))
+      .optional()
+      .default([]),
+    links: z
+      .array(z.union([z.string().transform((x) => ({ url: x, text: x })), LinkDescription]))
+      .transform((x) => x.filter((link) => link.url != "" && link.text != ""))
+      .optional()
+      .default([]),
+  })
+  .transform((act) => {
+    const { url, links, ...rest } = act;
+    return { ...rest, links: [...url, ...links] };
+  });
 
-type ActDescription = z.infer<typeof ActDescription>;
-
-export interface Act {
-  title?: string | undefined;
-  open?: string | undefined;
-  start?: string | undefined;
-  end?: string | undefined;
-  description?: string | undefined;
-  setlist: Segment[];
-  links: LinkDescription[];
-}
+export type ActDescription = z.input<typeof Act>;
+export type Act = z.output<typeof Act>;
 
 export const isEmptyAct = (act: Act): boolean => {
   const isTitleEmpty = act.title == undefined || act.title.trim() === "";
@@ -43,68 +51,4 @@ export const isEmptyAct = (act: Act): boolean => {
     act.description == undefined &&
     isSetlistEmpty
   );
-};
-
-export const validateActDescription = (
-  data: ActDescription | ActDescription[] | undefined,
-): Act[] => {
-  if (data == undefined) {
-    return [];
-  }
-
-  const acts = Array.isArray(data) ? data : [data];
-
-  return acts.flatMap((act) => {
-    const { title, open, start, end, description, url, links } = act;
-
-    //
-    // Validate setlist field
-    //
-    const setlist = act.setlist ?? [];
-    const validatedSetlist = parseSetlist(setlist);
-
-    //
-    // Validate links field
-    //
-    const linkDescriptionsForUrl = ((): LinkDescription[] => {
-      if (url == undefined || url == "") {
-        return [];
-      }
-
-      return [{ text: "#たかねこセトリ", url }];
-    })();
-
-    const validatedLinks =
-      links?.map((link) => {
-        if (typeof link === "string") {
-          return { text: link, url: link };
-        } else {
-          return link;
-        }
-      }) ?? [];
-
-    if (
-      title == undefined &&
-      open == undefined &&
-      start == undefined &&
-      description == undefined &&
-      validatedSetlist.length === 0 &&
-      linkDescriptionsForUrl.length === 0 &&
-      validatedLinks.length === 0
-    ) {
-      return [];
-    }
-
-    return [
-      {
-        title,
-        open: open,
-        start: start,
-        end: end,
-        description: description != undefined ? dedent(description) : undefined,
-        setlist: validatedSetlist,
-        links: [...linkDescriptionsForUrl, ...validatedLinks],
-      },
-    ];
-  });
 };

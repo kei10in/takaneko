@@ -1,11 +1,19 @@
 import { NaiveDate } from "./datetime/NaiveDate";
 import { NaiveMonth } from "./datetime/NaiveMonth";
 
+export function displayDate(d: string): string;
 export function displayDate(nd: NaiveDate): string;
 export function displayDate(year: number, month: number, day: number): string;
 
-export function displayDate(yearOrNd: number | NaiveDate, month?: number, day?: number): string {
-  if (typeof yearOrNd === "number" && typeof month === "number" && typeof day === "number") {
+export function displayDate(
+  yearOrNd: number | string | NaiveDate,
+  month?: number,
+  day?: number,
+): string {
+  if (typeof yearOrNd === "string") {
+    const nd = NaiveDate.parseUnsafe(yearOrNd);
+    return displayDate(nd);
+  } else if (typeof yearOrNd === "number" && typeof month === "number" && typeof day === "number") {
     return displayDate(new NaiveDate(yearOrNd, month, day));
   } else if (yearOrNd instanceof NaiveDate) {
     const y = yearOrNd.year.toString().padStart(4, "0");
@@ -17,15 +25,19 @@ export function displayDate(yearOrNd: number | NaiveDate, month?: number, day?: 
   }
 }
 
+export function displayDateWithDayOfWeek(d: string): string;
 export function displayDateWithDayOfWeek(nd: NaiveDate): string;
 export function displayDateWithDayOfWeek(year: number, month: number, day: number): string;
 
 export function displayDateWithDayOfWeek(
-  yearOrNd: number | NaiveDate,
+  yearOrNd: number | string | NaiveDate,
   month?: number,
   day?: number,
 ): string {
-  if (typeof yearOrNd === "number" && typeof month === "number" && typeof day === "number") {
+  if (typeof yearOrNd === "string") {
+    const nd = NaiveDate.parseUnsafe(yearOrNd);
+    return displayDateWithDayOfWeek(nd);
+  } else if (typeof yearOrNd === "number" && typeof month === "number" && typeof day === "number") {
     return displayDateWithDayOfWeek(new NaiveDate(yearOrNd, month, day));
   } else if (yearOrNd instanceof NaiveDate) {
     const y = yearOrNd.year.toString().padStart(4, "0");
