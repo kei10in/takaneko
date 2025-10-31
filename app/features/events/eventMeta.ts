@@ -86,9 +86,10 @@ const EventMetaDescriptor = z.object({
   updatedAt: z.string().optional(),
 });
 
-export type EventMetaDescriptor = z.infer<typeof EventMetaDescriptor>;
+export type EventMetaDescriptor = z.input<typeof EventMetaDescriptor>;
+export type EventMetaDescriptorOutput = z.output<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptor, "acts" | "showNotes"> & {
+export type EventMeta = Omit<EventMetaDescriptorOutput, "acts" | "showNotes"> & {
   streamings: LinkDescription[];
   overview?: Omit<EventOverview, "streaming"> | undefined;
   acts: Act[];
