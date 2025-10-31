@@ -2,47 +2,43 @@ import { z } from "zod/v4";
 
 import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
-import { parseSetlist, Segment } from "./setlist";
+import { parseSetlist } from "./setlist";
 
-export const ActDescription = z.object({
-  title: z.string().optional(),
+export const ActDescription = z
+  .object({
+    title: z.string().optional(),
 
-  open: z.string().optional(),
-  start: z.string().optional(),
-  end: z.string().optional(),
+    open: z.string().optional(),
+    start: z.string().optional(),
+    end: z.string().optional(),
 
-  description: z.string().optional(),
+    description: z.string().transform(dedent).optional(),
 
-  setlist: z
-    .array(z.string())
-    .transform((x) => parseSetlist(x))
-    .optional()
-    .default([]),
+    setlist: z
+      .array(z.string())
+      .transform((x) => parseSetlist(x))
+      .optional()
+      .default([]),
 
-  // みくるんの #たかねこセトリを指定します。
-  url: z
-    .string()
-    .transform((x): LinkDescription[] => (x == "" ? [] : [{ url: x, text: "#たかねこセトリ" }]))
-    .optional()
-    .default([]),
-  links: z
-    .array(z.union([z.string().transform((x) => ({ url: x, text: x })), LinkDescription]))
-    .transform((x) => x.filter((link) => link.url != "" && link.text != ""))
-    .optional()
-    .default([]),
-});
+    // みくるんの #たかねこセトリを指定します。
+    url: z
+      .string()
+      .transform((x): LinkDescription[] => (x == "" ? [] : [{ url: x, text: "#たかねこセトリ" }]))
+      .optional()
+      .default([]),
+    links: z
+      .array(z.union([z.string().transform((x) => ({ url: x, text: x })), LinkDescription]))
+      .transform((x) => x.filter((link) => link.url != "" && link.text != ""))
+      .optional()
+      .default([]),
+  })
+  .transform((act) => {
+    const { url, links, ...rest } = act;
+    return { ...rest, links: [...url, ...links] };
+  });
 
-type ActDescription = z.infer<typeof ActDescription>;
-
-export interface Act {
-  title?: string | undefined;
-  open?: string | undefined;
-  start?: string | undefined;
-  end?: string | undefined;
-  description?: string | undefined;
-  setlist: Segment[];
-  links: LinkDescription[];
-}
+export type ActDescription = z.input<typeof ActDescription>;
+export type Act = z.output<typeof ActDescription>;
 
 export const isEmptyAct = (act: Act): boolean => {
   const isTitleEmpty = act.title == undefined || act.title.trim() === "";
@@ -57,9 +53,7 @@ export const isEmptyAct = (act: Act): boolean => {
   );
 };
 
-export const validateActDescription = (
-  data: ActDescription | ActDescription[] | undefined,
-): Act[] => {
+export const validateActDescription = (data: Act | Act[] | undefined): Act[] => {
   if (data == undefined) {
     return [];
   }
@@ -67,7 +61,7 @@ export const validateActDescription = (
   const acts = Array.isArray(data) ? data : [data];
 
   return acts.flatMap((act) => {
-    const { title, open, start, end, description, setlist, url, links } = act;
+    const { title, open, start, description, setlist, links } = act;
 
     if (
       title == undefined &&
@@ -75,22 +69,11 @@ export const validateActDescription = (
       start == undefined &&
       description == undefined &&
       setlist.length === 0 &&
-      url.length === 0 &&
       links.length === 0
     ) {
       return [];
     }
 
-    return [
-      {
-        title,
-        open: open,
-        start: start,
-        end: end,
-        description: description != undefined ? dedent(description) : undefined,
-        setlist,
-        links: [...url, ...links],
-      },
-    ];
+    return [act];
   });
 };
