@@ -13,7 +13,11 @@ export const ActDescription = z.object({
 
   description: z.string().optional(),
 
-  setlist: z.array(z.string()).optional(),
+  setlist: z
+    .array(z.string())
+    .transform((x) => parseSetlist(x))
+    .optional()
+    .default([]),
 
   // みくるんの #たかねこセトリを指定します。
   url: z.string().optional(),
@@ -55,13 +59,7 @@ export const validateActDescription = (
   const acts = Array.isArray(data) ? data : [data];
 
   return acts.flatMap((act) => {
-    const { title, open, start, end, description, url, links } = act;
-
-    //
-    // Validate setlist field
-    //
-    const setlist = act.setlist ?? [];
-    const validatedSetlist = parseSetlist(setlist);
+    const { title, open, start, end, description, setlist, url, links } = act;
 
     //
     // Validate links field
@@ -88,7 +86,7 @@ export const validateActDescription = (
       open == undefined &&
       start == undefined &&
       description == undefined &&
-      validatedSetlist.length === 0 &&
+      setlist.length === 0 &&
       linkDescriptionsForUrl.length === 0 &&
       validatedLinks.length === 0
     ) {
@@ -102,7 +100,7 @@ export const validateActDescription = (
         start: start,
         end: end,
         description: description != undefined ? dedent(description) : undefined,
-        setlist: validatedSetlist,
+        setlist,
         links: [...linkDescriptionsForUrl, ...validatedLinks],
       },
     ];
