@@ -91,15 +91,10 @@ const EventMetaDescriptor = z
     updatedAt: z.string().optional(),
   })
   .transform((data) => {
-    const statusPrefix = prefixOfEventStatus(data.status);
-
-    const summary = `${statusPrefix}${data.summary}`;
-    const title = data.title == undefined ? summary : `${statusPrefix}${data.title}`;
-
     return {
       ...data,
-      summary,
-      title,
+      summary: prependStatus(data.status, data.summary),
+      title: prependStatus(data.status, data.title ?? data.summary),
       streamings: data.overview?.streaming ?? [],
     };
   });
@@ -110,6 +105,11 @@ export type EventMeta = z.output<typeof EventMetaDescriptor>;
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
   const r = EventMetaDescriptor.safeParse(obj);
   return r.data;
+};
+
+const prependStatus = (status: EventStatus | undefined, text: string): string => {
+  const statusText = prefixOfEventStatus(status);
+  return `${statusText}${text}`;
 };
 
 const prefixOfEventStatus = (status: EventStatus | undefined): string => {
