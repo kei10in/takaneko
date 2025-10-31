@@ -6,7 +6,7 @@ import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
 import { Act, ActDescription, validateActDescription } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
-import { ShowNotes, ShowNotesDescription, validateShowNotes } from "./showNotes";
+import { ShowNotes } from "./showNotes";
 
 const EventOverview = z.object({
   // チケット販売サイトの URL を指定します。
@@ -82,18 +82,17 @@ const EventMetaDescriptor = z.object({
 
   overview: EventOverview.optional(),
   acts: z.union([ActDescription, z.array(ActDescription)]).optional(),
-  showNotes: ShowNotesDescription.optional(),
+  showNotes: ShowNotes,
   updatedAt: z.string().optional(),
 });
 
 export type EventMetaDescriptor = z.input<typeof EventMetaDescriptor>;
 export type EventMetaDescriptorOutput = z.output<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptorOutput, "acts" | "showNotes"> & {
+export type EventMeta = Omit<EventMetaDescriptorOutput, "acts"> & {
   streamings: LinkDescription[];
   overview?: Omit<EventOverview, "streaming"> | undefined;
   acts: Act[];
-  showNotes: ShowNotes;
 };
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
@@ -113,15 +112,12 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
 
     const acts = validateActDescription(actDescriptions);
 
-    const showNotes = validateShowNotes(r.data.showNotes);
-
     return {
       ...r.data,
       summary,
       title,
       streamings: r.data.overview?.streaming ?? [],
       acts,
-      showNotes,
     };
   } else {
     return undefined;
