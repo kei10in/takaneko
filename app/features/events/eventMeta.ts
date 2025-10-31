@@ -26,7 +26,8 @@ const EventOverview = z.object({
     .default([]),
 });
 
-export type EventOverview = z.infer<typeof EventOverview>;
+export type EventOverviewDescriptor = z.input<typeof EventOverview>;
+export type EventOverview = z.output<typeof EventOverview>;
 
 const EventStatus = z.union([
   z.literal("RESCHEDULED"),
@@ -36,7 +37,7 @@ const EventStatus = z.union([
 
 export type EventStatus = z.infer<typeof EventStatus>;
 
-const EventMetaDescriptor = z
+const EventMeta = z
   .object({
     // 長くなる場合は `title` を使うことができます。
     summary: z.string(),
@@ -99,11 +100,11 @@ const EventMetaDescriptor = z
     };
   });
 
-export type EventMetaDescriptor = z.input<typeof EventMetaDescriptor>;
-export type EventMeta = z.output<typeof EventMetaDescriptor>;
+export type EventMetaDescriptor = z.input<typeof EventMeta>;
+export type EventMeta = z.output<typeof EventMeta>;
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
-  const r = EventMetaDescriptor.safeParse(obj);
+  const r = EventMeta.safeParse(obj);
   return r.data;
 };
 
