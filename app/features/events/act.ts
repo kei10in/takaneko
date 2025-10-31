@@ -20,8 +20,16 @@ export const ActDescription = z.object({
     .default([]),
 
   // みくるんの #たかねこセトリを指定します。
-  url: z.string().optional(),
-  links: z.array(z.union([z.string(), LinkDescription])).optional(),
+  url: z
+    .string()
+    .transform((x): LinkDescription[] => (x == "" ? [] : [{ url: x, text: "#たかねこセトリ" }]))
+    .optional()
+    .default([]),
+  links: z
+    .array(z.union([z.string().transform((x) => ({ url: x, text: x })), LinkDescription]))
+    .transform((x) => x.filter((link) => link.url != "" && link.text != ""))
+    .optional()
+    .default([]),
 });
 
 type ActDescription = z.infer<typeof ActDescription>;
@@ -61,34 +69,14 @@ export const validateActDescription = (
   return acts.flatMap((act) => {
     const { title, open, start, end, description, setlist, url, links } = act;
 
-    //
-    // Validate links field
-    //
-    const linkDescriptionsForUrl = ((): LinkDescription[] => {
-      if (url == undefined || url == "") {
-        return [];
-      }
-
-      return [{ text: "#たかねこセトリ", url }];
-    })();
-
-    const validatedLinks =
-      links?.map((link) => {
-        if (typeof link === "string") {
-          return { text: link, url: link };
-        } else {
-          return link;
-        }
-      }) ?? [];
-
     if (
       title == undefined &&
       open == undefined &&
       start == undefined &&
       description == undefined &&
       setlist.length === 0 &&
-      linkDescriptionsForUrl.length === 0 &&
-      validatedLinks.length === 0
+      url.length === 0 &&
+      links.length === 0
     ) {
       return [];
     }
@@ -101,7 +89,7 @@ export const validateActDescription = (
         end: end,
         description: description != undefined ? dedent(description) : undefined,
         setlist,
-        links: [...linkDescriptionsForUrl, ...validatedLinks],
+        links: [...url, ...links],
       },
     ];
   });
