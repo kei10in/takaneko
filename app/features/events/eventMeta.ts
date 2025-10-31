@@ -3,7 +3,7 @@ import { z } from "zod/v4";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
-import { Act, ActDescription, validateActDescription } from "./act";
+import { ActDescription, isEmptyAct } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
@@ -81,7 +81,11 @@ const EventMetaDescriptor = z.object({
   absent: z.array(MemberIdEnum).optional(),
 
   overview: EventOverview.optional(),
-  acts: z.union([ActDescription, z.array(ActDescription)]).optional(),
+  acts: z
+    .union([ActDescription, z.array(ActDescription)])
+    .transform((x) => (Array.isArray(x) ? x : [x]).filter((act) => !isEmptyAct(act)))
+    .optional()
+    .default([]),
   showNotes: ShowNotes,
   updatedAt: z.string().optional(),
 });
@@ -89,10 +93,9 @@ const EventMetaDescriptor = z.object({
 export type EventMetaDescriptor = z.input<typeof EventMetaDescriptor>;
 export type EventMetaDescriptorOutput = z.output<typeof EventMetaDescriptor>;
 
-export type EventMeta = Omit<EventMetaDescriptorOutput, "acts"> & {
+export type EventMeta = EventMetaDescriptorOutput & {
   streamings: LinkDescription[];
   overview?: Omit<EventOverview, "streaming"> | undefined;
-  acts: Act[];
 };
 
 export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
@@ -104,20 +107,11 @@ export const validateEventMeta = (obj: unknown): EventMeta | undefined => {
     const summary = `${statusPrefix}${r.data.summary}`;
     const title = r.data.title == undefined ? summary : `${statusPrefix}${r.data.title}`;
 
-    const actDescriptions = Array.isArray(r.data.acts)
-      ? r.data.acts
-      : r.data.acts != undefined
-        ? [r.data.acts]
-        : [];
-
-    const acts = validateActDescription(actDescriptions);
-
     return {
       ...r.data,
       summary,
       title,
       streamings: r.data.overview?.streaming ?? [],
-      acts,
     };
   } else {
     return undefined;

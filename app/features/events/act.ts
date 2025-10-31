@@ -52,28 +52,3 @@ export const isEmptyAct = (act: Act): boolean => {
     isSetlistEmpty
   );
 };
-
-export const validateActDescription = (data: Act | Act[] | undefined): Act[] => {
-  if (data == undefined) {
-    return [];
-  }
-
-  const acts = Array.isArray(data) ? data : [data];
-
-  return acts.flatMap((act) => {
-    const { title, open, start, description, setlist, links } = act;
-
-    if (
-      title == undefined &&
-      open == undefined &&
-      start == undefined &&
-      description == undefined &&
-      setlist.length === 0 &&
-      links.length === 0
-    ) {
-      return [];
-    }
-
-    return [act];
-  });
-};
