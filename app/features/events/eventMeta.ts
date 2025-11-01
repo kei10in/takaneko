@@ -17,11 +17,6 @@ const EventOverview = z.object({
       url: z.string().optional(),
     })
     .optional(),
-  streaming: z
-    .union([LinkDescription, z.array(LinkDescription)])
-    .transform((x) => (Array.isArray(x) ? x : [x]))
-    .optional()
-    .default([]),
 });
 
 export type EventOverviewDescriptor = z.input<typeof EventOverview>;
@@ -82,6 +77,11 @@ const EventMeta = z
 
     // チケット販売サイトの URL を指定します。
     ticket: z.string().optional(),
+    streamings: z
+      .union([LinkDescription, z.array(LinkDescription)])
+      .transform((x) => (Array.isArray(x) ? x : [x]).filter((x) => x.url != ""))
+      .optional()
+      .default([]),
 
     overview: EventOverview.optional(),
     acts: z
@@ -97,7 +97,6 @@ const EventMeta = z
       ...data,
       summary: prependStatus(data.status, data.summary),
       title: prependStatus(data.status, data.title ?? data.summary),
-      streamings: data.overview?.streaming ?? [],
     };
   });
 
