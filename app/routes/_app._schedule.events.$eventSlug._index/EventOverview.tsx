@@ -53,7 +53,6 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
               </div>
             );
           })}
-          ;
         </section>
       )}
 
