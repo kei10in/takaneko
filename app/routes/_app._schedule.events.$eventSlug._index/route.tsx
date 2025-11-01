@@ -234,7 +234,7 @@ export default function EventPage() {
       <article className="mb-4 max-w-none px-4">
         <EventDetails acts={meta.acts} />
 
-        <EventOverview timetables={meta.timetables} goods={meta.overview?.goods} />
+        <EventOverview timetables={meta.timetables} goods={meta.goods} />
 
         {Content != undefined && <Mdx Content={Content} />}
 

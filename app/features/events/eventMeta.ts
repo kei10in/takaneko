@@ -77,11 +77,20 @@ const EventMeta = z
 
     // チケット販売サイトの URL を指定します。
     ticket: z.string().optional(),
+
     streamings: z
       .union([LinkDescription, z.array(LinkDescription)])
       .transform((x) => (Array.isArray(x) ? x : [x]).filter((x) => x.url != ""))
       .optional()
       .default([]),
+
+    goods: z
+      .object({
+        time: z.union([z.tuple([z.string()]), z.tuple([z.string(), z.string()])]).optional(),
+        lineup: z.array(z.string()).optional(),
+        url: z.string().optional(),
+      })
+      .optional(),
 
     overview: EventOverview.optional(),
     acts: z
