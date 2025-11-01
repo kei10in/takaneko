@@ -234,7 +234,7 @@ export default function EventPage() {
       <article className="mb-4 max-w-none px-4">
         <EventDetails acts={meta.acts} />
 
-        <EventOverview timetable={meta.overview?.timetable} goods={meta.overview?.goods} />
+        <EventOverview timetables={meta.timetables} goods={meta.overview?.goods} />
 
         {Content != undefined && <Mdx Content={Content} />}
 
@@ -308,31 +308,38 @@ export default function EventPage() {
         </Dialog>
       ))}
 
-      {meta.overview?.timetable != undefined && (
-        <Dialog open={location.hash == `#timetable`} className="relative z-50" onClose={close}>
-          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-xs">
-            <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
-              <img
-                alt="プレビュー"
-                className="block h-full max-h-[80svh] w-full object-contain"
-                src={meta.overview.timetable.path}
-              />
+      {meta.timetables.map((tt, i) => {
+        return (
+          <Dialog
+            open={location.hash == `#timetable-${i}`}
+            className="relative z-50"
+            onClose={close}
+            key={i}
+          >
+            <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-xs">
+              <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
+                <img
+                  alt="プレビュー"
+                  className="block h-full max-h-[80svh] w-full object-contain"
+                  src={tt.path}
+                />
 
-              <p className="p-1 text-right text-xs font-semibold text-white/80">
-                <Link
-                  to={meta.overview.timetable.ref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1"
-                >
-                  <span>画像の引用元</span>
-                  <BsBoxArrowUpRight />
-                </Link>
-              </p>
-            </DialogPanel>
-          </div>
-        </Dialog>
-      )}
+                <p className="p-1 text-right text-xs font-semibold text-white/80">
+                  <Link
+                    to={tt.ref}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1"
+                  >
+                    <span>画像の引用元</span>
+                    <BsBoxArrowUpRight />
+                  </Link>
+                </p>
+              </DialogPanel>
+            </div>
+          </Dialog>
+        );
+      })}
     </div>
   );
 }

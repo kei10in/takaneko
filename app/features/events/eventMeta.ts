@@ -93,10 +93,17 @@ const EventMeta = z
     updatedAt: z.string().optional(),
   })
   .transform((data) => {
+    const timetables = [];
+    timetables.push(...data.images.filter((img) => img.tags.includes("timetable")));
+    if (timetables.length === 0 && data.overview?.timetable) {
+      timetables.push(data.overview.timetable);
+    }
+
     return {
       ...data,
       summary: prependStatus(data.status, data.summary),
       title: prependStatus(data.status, data.title ?? data.summary),
+      timetables,
     };
   });
 

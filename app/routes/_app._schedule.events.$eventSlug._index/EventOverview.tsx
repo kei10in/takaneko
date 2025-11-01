@@ -3,7 +3,7 @@ import { BsBoxArrowUpRight, BsCart3, BsClock } from "react-icons/bs";
 import { Link } from "react-router";
 
 interface Props {
-  timetable?: { path: string; ref: string } | undefined;
+  timetables?: { path: string; ref: string }[] | undefined;
   goods?:
     | {
         time?: [string] | [string, string] | undefined;
@@ -14,37 +14,46 @@ interface Props {
 }
 
 export const EventOverview: React.FC<Props> = (props: Props) => {
-  const { timetable, goods } = props;
-  if (timetable == undefined && !showMerchandise(goods)) {
+  const { timetables = [], goods } = props;
+  if (timetables.length === 0 && !showMerchandise(goods)) {
     return null;
   }
 
   return (
     <Fragment>
-      {timetable != undefined && (
+      {timetables.length > 0 && (
         <section>
           <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
             タイムテーブル
           </h2>
-
-          <div className="mx-auto mt-0 mb-2 w-60 max-w-xs overflow-hidden">
-            <div className="w-full">
-              <Link className="text-nadeshiko-950 block" to="#timetable" preventScrollReset replace>
-                <img className="inline w-full" src={timetable.path} alt="タイムテーブル" />
-              </Link>
-            </div>
-            <p className="w-full p-1 text-right text-xs text-gray-600">
-              <Link
-                className="text-nadeshiko-600 inline-flex items-center gap-1"
-                to={timetable.ref}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>画像引用元</span>
-                <BsBoxArrowUpRight />
-              </Link>
-            </p>
-          </div>
+          {timetables.map((tt, i) => {
+            return (
+              <div className="mx-auto mt-0 mb-2 w-60 max-w-xs overflow-hidden" key={i}>
+                <div className="w-full">
+                  <Link
+                    className="text-nadeshiko-950 block"
+                    to={`#timetable-${i}`}
+                    preventScrollReset
+                    replace
+                  >
+                    <img className="inline w-full" src={tt.path} alt="タイムテーブル" />
+                  </Link>
+                </div>
+                <p className="w-full p-1 text-right text-xs text-gray-600">
+                  <Link
+                    className="text-nadeshiko-600 inline-flex items-center gap-1"
+                    to={tt.ref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>画像引用元</span>
+                    <BsBoxArrowUpRight />
+                  </Link>
+                </p>
+              </div>
+            );
+          })}
+          ;
         </section>
       )}
 

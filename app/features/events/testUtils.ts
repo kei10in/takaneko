@@ -28,6 +28,7 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     images: partial.images ?? [],
     links: partial.links ?? [],
     streamings: partial.streamings ?? [],
+    timetables: partial.timetables ?? [],
     acts: partial.acts ?? [],
 
     // overview は streaming を除外した形（EventMeta の型に合わせる）
