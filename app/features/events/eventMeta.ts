@@ -8,20 +8,6 @@ import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
 
-const EventOverview = z.object({
-  timetable: ImageDescription.optional(),
-  goods: z
-    .object({
-      time: z.union([z.tuple([z.string()]), z.tuple([z.string(), z.string()])]).optional(),
-      lineup: z.array(z.string()).optional(),
-      url: z.string().optional(),
-    })
-    .optional(),
-});
-
-export type EventOverviewDescriptor = z.input<typeof EventOverview>;
-export type EventOverview = z.output<typeof EventOverview>;
-
 const EventStatus = z.union([
   z.literal("RESCHEDULED"),
   z.literal("CANCELED"),
@@ -92,7 +78,6 @@ const EventMeta = z
       })
       .optional(),
 
-    overview: EventOverview.optional(),
     acts: z
       .union([Act, z.array(Act)])
       .transform((x) => (Array.isArray(x) ? x : [x]).filter((act) => !isEmptyAct(act)))
@@ -102,17 +87,11 @@ const EventMeta = z
     updatedAt: z.string().optional(),
   })
   .transform((data) => {
-    const timetables = [];
-    timetables.push(...data.images.filter((img) => img.tags.includes("timetable")));
-    if (timetables.length === 0 && data.overview?.timetable) {
-      timetables.push(data.overview.timetable);
-    }
-
     return {
       ...data,
       summary: prependStatus(data.status, data.summary),
       title: prependStatus(data.status, data.title ?? data.summary),
-      timetables,
+      timetables: data.images.filter((img) => img.tags.includes("timetable")),
     };
   });
 

@@ -31,9 +31,6 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     timetables: partial.timetables ?? [],
     acts: partial.acts ?? [],
 
-    // overview は streaming を除外した形（EventMeta の型に合わせる）
-    overview: partial.overview,
-
     // showNotes はデフォルトで空の構造
     showNotes: partial.showNotes ?? { played: [] },
   };
