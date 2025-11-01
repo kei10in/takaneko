@@ -68,7 +68,7 @@ const EventMeta = z
       .optional()
       .default([]),
     images: z
-      .array(ImageDescription)
+      .array(ImageDescription.extend({ tags: z.array(z.string()).optional().default([]) }))
       .transform((x) => x.filter((img) => img.path != ""))
       .optional()
       .default([]),
