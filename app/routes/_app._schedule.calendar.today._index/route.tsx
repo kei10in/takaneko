@@ -18,11 +18,12 @@ export const meta: MetaFunction = () => {
         "高嶺のなでしこの出演予定やリリース情報をまとめた非公式スケジュールです。" +
         "気になるイベント・ライブ・テレビ・ラジオの出演日や雑誌・CDの発売日などを確認しましょう。",
     },
-    {
-      tagName: "link",
-      rel: "canonical",
-      href: `https://${DOMAIN}${dateHref(today)}`,
-    },
+    { tagName: "link", rel: "canonical", href: `https://${DOMAIN}${dateHref(today)}` },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: formatTitle("今日のスケジュール") },
+    { name: "twitter:image", content: `https://${DOMAIN}/takanekono-card-schedule.png` },
   ];
 };
 

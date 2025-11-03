@@ -1,4 +1,5 @@
 import { MetaDescriptor } from "react-router";
+import { DOMAIN } from "~/constants";
 import { displayDate } from "~/utils/dateDisplay";
 import { EventMeta } from "./eventMeta";
 
@@ -19,11 +20,10 @@ export const twitterCard = (args: EventMeta): MetaDescriptor[] => {
         name: "twitter:title",
         content: `${displayDate(args.date)} ${args.title ?? args.summary}`,
       },
-      // TODO: 画像をつくって対応する。
-      // {
-      //   name: "twitter:image",
-      //   content: `https://${DOMAIN}${args.image.path}`,
-      // },
+      {
+        name: "twitter:image",
+        content: `https://${DOMAIN}/takanekono-card-schedule.png`,
+      },
     ],
   );
 

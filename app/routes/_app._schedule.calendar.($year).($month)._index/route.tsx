@@ -7,6 +7,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router";
+import { DOMAIN } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { validateYearMonth } from "~/features/calendars/utils";
@@ -30,6 +31,11 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
         "高嶺のなでしこの出演予定やリリース情報をまとめた非公式スケジュールです。" +
         "気になるイベント・ライブ・テレビ・ラジオの出演日や雑誌・CDの発売日などを確認しましょう。",
     },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: formatTitle(title) },
+    { name: "twitter:image", content: `https://${DOMAIN}/takanekono-card-schedule.png` },
   ];
 };
 
