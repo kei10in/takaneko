@@ -31,9 +31,7 @@ const genFavicon = async (src: string, dest: string) => {
 
 const genAppleTouchIcon = async (src: Buffer, dest: string) => {
   await sharp(src)
-    // リサイズだけだと余白が大きい。
-    .resize(200, 200)
-    .extract({ left: 10, top: 10, width: 180, height: 180 })
+    .resize(180, 180)
     // 透過の部分がグレーで埋められる。白背景の方が望ましい。
     .flatten({ background: { r: 255, g: 255, b: 255 } })
     .toFile(path.join(dest, "apple-touch-icon.png"));
