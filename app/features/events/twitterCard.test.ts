@@ -25,6 +25,10 @@ describe("twitterCard", () => {
         name: "twitter:title",
         content: "2025年08月07日 Test Event",
       },
+      {
+        content: "https://takanekofan.app/takanekono-card-schedule.png",
+        name: "twitter:image",
+      },
     ]);
   });
 
