@@ -3,12 +3,10 @@ import mdx from "@mdx-js/rollup";
 import { reactRouter } from "@react-router/dev/vite";
 import tailwindcss from "@tailwindcss/vite";
 import gfm from "remark-gfm";
+import { defineConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { takanekono } from "./app/vite/plugin";
-
-// vitest 用の property の型を導入するために vite ではなく vitest の`defineConfig` を使います。
-import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   // 開発サーバーで実行したときに `entry.server.tsx` で `renderToReadableStream`
@@ -28,7 +26,7 @@ export default defineConfig({
     mdx({
       remarkPlugins: [gfm],
     }),
-    !process.env.VITEST && reactRouter(),
+    reactRouter(),
     tsconfigPaths(),
   ],
   test: {
