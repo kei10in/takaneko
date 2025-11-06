@@ -11,6 +11,9 @@ enabled = true
 not_found_handling = "404-page"
 binding = "ASSETS"
 
+# `directory` は必須なため設定していますが、build すると別の値に書き換えられます。
+directory = "./public"
+
 # Automatically place your workloads in an optimal location to minimize latency.
 # If you are running back-end logic in a Pages Function, running it closer to your back-end infrastructure
 # rather than the end user may result in better performance.
