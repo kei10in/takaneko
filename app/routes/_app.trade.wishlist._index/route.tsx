@@ -38,7 +38,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const selected = AllMembers.find((x) => x.id == searchParams.get("m"));
+  const selected = useMemo(
+    () => AllMembers.find((x) => x.id == searchParams.get("m")),
+    [searchParams],
+  );
 
   const allTradeDescriptions = useTradeStore((state) => state.allTradeDescriptions);
   const photos = regularTakanekoPhotos();
@@ -62,26 +65,22 @@ export default function Index() {
     return [{ productImage, tradingItemDetails: wants }];
   });
 
-  const miniPhotoCardWants = useMemo(
-    () =>
-      miniPhotoCards.flatMap((productImage) => {
-        const tradeDescriptions = allTradeDescriptions[productImage.id];
-        if (tradeDescriptions == undefined) {
-          return [];
-        }
+  const miniPhotoCardWants = miniPhotoCards.flatMap((productImage) => {
+    const tradeDescriptions = allTradeDescriptions[productImage.id];
+    if (tradeDescriptions == undefined) {
+      return [];
+    }
 
-        const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
-        const wants = details
-          .filter((i) => i.status.tag === "want")
-          .filter((x) => matchMember(x, selected));
-        if (wants.length === 0) {
-          return [];
-        }
+    const details = mapProductToTradingItemDetails(productImage, tradeDescriptions);
+    const wants = details
+      .filter((i) => i.status.tag === "want")
+      .filter((x) => matchMember(x, selected));
+    if (wants.length === 0) {
+      return [];
+    }
 
-        return [{ productImage, tradingItemDetails: wants }];
-      }),
-    [allTradeDescriptions, miniPhotoCards, selected],
-  );
+    return [{ productImage, tradingItemDetails: wants }];
+  });
 
   const otherGoodsWants = otherGoods.flatMap((productImage) => {
     const tradeDescriptions = allTradeDescriptions[productImage.id];
