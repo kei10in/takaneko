@@ -18,6 +18,7 @@ export default defineConfig([
     "worker-configuration.d.ts",
     "!**/.server",
     "!**/.client",
+    "**/*-template.tsx",
   ]),
   {
     languageOptions: {
