@@ -26,7 +26,7 @@ export const おはもーこおやもーこアクリルスタンド: OfficialGoo
 export const もーこと未来の思い出をカレンダー: OfficialGoods = {
   slug: "もーこと未来の思い出をカレンダー🩷",
   name: "もーこと未来の思い出をカレンダー🩷",
-  date: "2025-05-28",
+  date: "2025-06-28",
   description: dedent`
     みんなのお部屋や職場など、目の前にもーこさんをいつでも見れるカレンダーにしたよお🫶
 
@@ -48,7 +48,7 @@ export const もーこと未来の思い出をカレンダー: OfficialGoods = {
 export const もふとんアクリルスタンドケース: OfficialGoods = {
   slug: "もふとん🛌🍑アクリルスタンドケース",
   name: "もふとん🛌🍑アクリルスタンドケース",
-  date: "2025-05-28",
+  date: "2025-06-28",
   description: dedent`
     アクスタをいれたらお布団で寝てるみたいになるよっっ！！！＞ ＜ ε[＿＿＿]з
 
@@ -65,9 +65,9 @@ export const もふとんアクリルスタンドケース: OfficialGoods = {
   ],
 };
 
-export const 橋本桃呼誕生日記念_2025年05月28日: BirthdayGoodsCollection = {
-  slug: "橋本桃呼誕生日記念_2025年05月28日",
-  name: "橋本桃呼誕生日記念 2025年05月28日",
+export const 橋本桃呼誕生日記念_2025年06月28日: BirthdayGoodsCollection = {
+  slug: "橋本桃呼誕生日記念_2025年06月28日",
+  name: "橋本桃呼誕生日記念 2025年06月28日",
   date: "2025-06-28",
   memberName: "橋本桃呼",
   lineup: [
