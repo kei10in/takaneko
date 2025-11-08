@@ -29,7 +29,4 @@ export default defineConfig({
     reactRouter(),
     tsconfigPaths(),
   ],
-  test: {
-    environment: "happy-dom",
-  },
 });
