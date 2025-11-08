@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { HiArrowUp, HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link, useLocation, useNavigate } from "react-router";
 import { Virtual } from "swiper/modules";
@@ -23,29 +23,26 @@ interface Props {
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, month, filter } = props;
 
-  // month の初期値を保持するための ref です。
-  // Swiper に渡す initialSlide の値を計算するために使用します。
-  // initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が変わってしまうため、
-  // 初期値を保持しておく必要があります。
-  const monthRef = useRef(month);
-  const initialMonth = monthRef.current;
-
   // スクロール位置の調整のために必要な値です。
   const weeksInMonth = month.weeksInMonth();
 
   const prevMonth = month.previousMonth();
   const nextMonth = month.nextMonth();
 
-  const [startMonth, months, initialSlide] = useMemo(() => {
+  // コンポーネントがマウントされたときに一回だけ値を決定します。
+  // Swiper に渡す initialSlide の値を計算するための計算です。
+  // Swiper の initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が
+  // 変わってしまうため、初期値を保持しておく必要があります。
+  const [{ startMonth, months, initialSlide }] = useState(() => {
     const startMonth = new NaiveMonth(2022, 1);
     const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
 
     const n = lastMonth.differenceInMonths(startMonth) + 1;
     const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
-    const initialSlide = initialMonth.differenceInMonths(startMonth);
+    const initialSlide = month.differenceInMonths(startMonth);
 
-    return [startMonth, months, initialSlide];
-  }, [initialMonth]);
+    return { startMonth, months, initialSlide };
+  });
 
   const currentSlide = useMemo(() => {
     return month.differenceInMonths(startMonth);

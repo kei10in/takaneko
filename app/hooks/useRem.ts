@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 export const useRem = () => {
-  const [remSize, setRemSize] = useState(16);
-
-  useEffect(() => {
+  const remSize = useMemo(() => {
     if (document == undefined) {
-      return;
+      return 16;
     }
     const x = getComputedStyle(document.documentElement).fontSize;
-    setRemSize(parseFloat(x));
+    return parseFloat(x);
   }, []);
 
   return remSize;

@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export const useAutoRevokeImageSource = (data: { blob: Blob; objectURL: string }[] | undefined) => {
-  const [current, setCurrent] = useState<{ blob: Blob; objectURL: string }[]>([]);
+  const ref = useRef<{ blob: Blob; objectURL: string }[]>([]);
 
   useEffect(() => {
-    if (current == data) {
+    if (ref.current == data) {
       return;
     }
 
-    current.forEach((v) => URL.revokeObjectURL(v.objectURL));
-    setCurrent(data ?? []);
-    return () => current.forEach((v) => URL.revokeObjectURL(v.objectURL));
-  }, [current, data]);
+    ref.current.forEach((v) => URL.revokeObjectURL(v.objectURL));
+    ref.current = data ?? [];
+    return () => ref.current.forEach((v) => URL.revokeObjectURL(v.objectURL));
+  }, [data]);
 };

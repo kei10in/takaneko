@@ -33,7 +33,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const [currentTime, setCurrentTime] = useState(Date.now());
+  const [currentTime, setCurrentTime] = useState(() => Date.now());
 
   useEffect(() => {
     const interval = setInterval(() => {
