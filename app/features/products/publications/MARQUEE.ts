@@ -1,5 +1,51 @@
 import { Publication } from "../product";
 
+export const MARQUEE_Vol160: Publication = {
+  slug: "MARQUEE Vol.160",
+  name: "MARQUEE Vol.160",
+  date: "2025-11-26",
+  kind: "mooks",
+  publisher: "星雲社",
+  listPrice: 1375,
+  priceWithTax: 1513,
+  code: [{ kind: "isbn", value: "978-4-434-36596-6" }],
+  url: "http://www.marquee-mag.com/backnumber.html",
+  coverImages: [
+    {
+      path: "/publications/marquee/vol160a.jpg",
+      ref: "http://www.marquee-mag.com/backnumber.html",
+    },
+    // {
+    //   path: "/publications/marquee/vol160b.jpg",
+    //   ref: "http://www.marquee-mag.com/backnumber.html",
+    // },
+    {
+      path: "/publications/marquee/vol160_1.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1987716756799189496",
+    },
+    {
+      path: "/publications/marquee/vol160_2.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1987716756799189496",
+    },
+    {
+      path: "/publications/marquee/vol160_3.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1987716756799189496",
+    },
+    {
+      path: "/publications/marquee/vol160_4.jpg",
+      ref: "https://x.com/MARQUEE_info/status/1987716756799189496",
+    },
+  ],
+  featuredMembers: ["東山恵里沙"],
+  officialTwitter: ["https://x.com/takanenofficial/status/1987807828124537297"],
+  links: [
+    {
+      text: "MARQUEE 公式 X 告知",
+      url: "https://x.com/MARQUEE_info/status/1987716756799189496",
+    },
+  ],
+};
+
 export const MARQUEE_Vol159: Publication = {
   slug: "MARQUEE Vol.159",
   name: "MARQUEE Vol.159",
