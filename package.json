@@ -91,7 +91,20 @@
     "wrangler": "^4.33.1"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": "^22.0.0",
+    "pnpm": "^10.7.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.0.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^10.7.0",
+      "onFail": "error"
+    }
   },
   "pnpm": {
     "overrides": {
