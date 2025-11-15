@@ -71,9 +71,8 @@ export const Calendar: React.FC<Props> = (props: Props) => {
     <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
       <div
         className={clsx(
-          "sticky top-12 bg-white",
-          "lg:top-[calc(var(--header-height)+3rem)]",
-          "lg:h-fit lg:max-h-[calc(100svh-var(--header-height)-3rem)]",
+          "sticky top-[calc(var(--header-height)+var(--secondary-header-height))] bg-white",
+          "lg:h-fit lg:max-h-[calc(100svh-var(--header-height)-var(--secondary-header-height))]",
           "lg:flex-1 lg:overflow-y-auto lg:pb-8",
         )}
       >

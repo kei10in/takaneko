@@ -5,7 +5,7 @@
 
 @import "tailwindcss";
 
-@plugin '@tailwindcss/typography';
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-nadeshiko-50: #fffcfd;
@@ -27,6 +27,7 @@
 @layer base {
   :root {
     --header-height: 3.5rem;
+    --secondary-header-height: 3rem;
   }
 
   :focus:not(:focus-visible) {

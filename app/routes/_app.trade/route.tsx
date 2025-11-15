@@ -36,7 +36,7 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-0 z-10 h-12 w-full border-b backdrop-blur-sm lg:hidden">
+      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-(--header-height) h-(--secondary-header-height) w-full border-b backdrop-blur-sm lg:hidden">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-800">
@@ -54,7 +54,7 @@ export default function Index() {
       <div className="container mx-auto">
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
-          <nav className="sticky top-[var(--header-height)] hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
+          <nav className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
             <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
           </nav>
 

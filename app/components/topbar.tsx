@@ -82,7 +82,7 @@ export const Topbar: React.FC = () => {
 
   return (
     <Fragment>
-      <div className="border-b-nadeshiko-200 bg-nadeshiko-50/90 z-10 h-(--header-height) border-b backdrop-blur-sm lg:sticky lg:top-0">
+      <div className="border-b-nadeshiko-200 bg-nadeshiko-50/90 sticky top-0 z-10 h-(--header-height) border-b backdrop-blur-sm">
         <div className="container mx-auto h-full">
           <div className="flex h-full items-center px-4">
             <div className="text-base font-bold text-gray-900">

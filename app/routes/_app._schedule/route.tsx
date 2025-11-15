@@ -11,7 +11,7 @@ export default function Index() {
 
   return (
     <div>
-      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-0 z-10 h-12 w-full border-b backdrop-blur-sm lg:top-[var(--header-height)]">
+      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-(--header-height) z-10 h-(--secondary-header-height) w-full border-b backdrop-blur-sm">
         <div className="container mx-auto h-full">
           <div className="mx-4 flex h-full items-center justify-between">
             <p className="text-base font-bold text-gray-600">
