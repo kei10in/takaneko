@@ -3,6 +3,30 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "L5i5JroVJ3s",
+    title:
+      "【応援メンバーも大熱狂】SASUKEアイドル予選会 第2種目配信開始🔥 #橋本桃呼 #桜木心菜 #高嶺のなでしこ #私立恵比寿中学",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-11-14",
+    mediaUrl: "https://youtu.be/L5i5JroVJ3s",
+    imageUrl: "https://i.ytimg.com/vi/L5i5JroVJ3s/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
+    key: "bbz9D8CRv2I",
+    title:
+      "#4 【究極スタミナ決戦】新種目テイルインポッシブル ラスト１周で劇的ドラマ アイドルの意地激突 #SASUKEアイドル予選会2025",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-11-14",
+    mediaUrl: "https://youtu.be/bbz9D8CRv2I",
+    imageUrl: "https://i.ytimg.com/vi/bbz9D8CRv2I/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "F5qjrBtF9lo",
     title:
       "#3 【決着】アイドル最速女王決定戦 ビーチフラッグスを制したのは？SASUKEアイドル予選会2025",
