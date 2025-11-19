@@ -52,7 +52,7 @@
     "@react-router/dev": "^7.9.5",
     "@react-router/fs-routes": "^7.9.5",
     "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.16",
+    "@tailwindcss/vite": "^4.1.17",
     "@testing-library/react": "^16.2.0",
     "@types/mdast": "^4.0.4",
     "@types/mdx": "^2.0.13",
