@@ -8,20 +8,39 @@ import {
   BsPencilSquare,
   BsTrash,
 } from "react-icons/bs";
-import { Link, MetaFunction } from "react-router";
+import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { DOMAIN, SITE_TITLE } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
+import { formatTitle } from "~/utils/htmlHeader";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
+import { Route } from "./+types/route";
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = ({ location }) => {
+  const title = formatTitle("トレード画像つくるやつ");
+  const description =
+    "高嶺のなでしこ (たかねこ) の生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。";
+  const image = `https://${DOMAIN}/takanekono-card-trading-image-generator.png`;
+  const url = `https://${DOMAIN}${location.pathname}`;
+
   return [
-    { title: `トレード画像つくるやつ - ${SITE_TITLE}` },
-    {
-      name: "description",
-      content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",
-    },
+    { title: title },
+    { name: "description", content: description },
+
+    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: image },
+    { property: "og:url", content: url },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:image", content: image },
   ];
 };
 

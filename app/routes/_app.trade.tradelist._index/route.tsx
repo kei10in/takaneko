@@ -1,10 +1,10 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
-import { MetaFunction, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
 import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { DOMAIN, SITE_TITLE } from "~/constants";
 import {
   otherTakanekoRandomGoods,
   regularTakanekoMiniPhotoCards,
@@ -16,22 +16,40 @@ import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
 } from "~/features/tradeSummaries/tradingItemDetails";
+import { formatTitle } from "~/utils/htmlHeader";
 import {
   useMiniPhotoCardOfferListImages,
   useOtherGoodsOfferListImages,
   usePhotoOfferListImages,
 } from "../../components/TradeListImage/offerListImages";
 import { AllMembers } from "../../features/profile/members";
+import { Route } from "./+types/route";
 import { TradingItemList } from "./TradingItemList";
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = ({ location }) => {
+  const title = formatTitle("譲れるやつ");
+  const description =
+    "高嶺のなでしこ (たかねこ) の生写真やミニフォトカードなどのトレード用画像を作ったついでに譲れるやつをリストアップできます。";
+  const image = `https://${DOMAIN}/takanekono-card-trading-image-generator.png`;
+  const url = `https://${DOMAIN}${location.pathname}`;
+
   return [
-    { title: `譲れるやつ -  ${SITE_TITLE}` },
-    {
-      name: "description",
-      content:
-        "生写真やミニフォトカードなどのトレード用画像を作ったついでに譲れるやつをリストアップできます。",
-    },
+    { title: title },
+    { name: "description", content: description },
+
+    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: image },
+    { property: "og:url", content: url },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:creator", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:image", content: image },
   ];
 };
 
