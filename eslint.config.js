@@ -67,6 +67,9 @@ export default defineConfig([
         },
       },
     },
+    rules: {
+      "import/no-unresolved": "off",
+    },
   },
 
   // Custom
