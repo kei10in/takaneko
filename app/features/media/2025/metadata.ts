@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "KafMweYmrBQ",
+    title:
+      "#５ 【パワー勝負】新種目パワーフォース　力と力がぶつかる パワー対決を制するのは？ #SASUKEアイドル予選会2025",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-11-21",
+    mediaUrl: "https://youtu.be/KafMweYmrBQ",
+    imageUrl: "https://i.ytimg.com/vi/KafMweYmrBQ/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "L5i5JroVJ3s",
     title:
       "【応援メンバーも大熱狂】SASUKEアイドル予選会 第2種目配信開始🔥 #橋本桃呼 #桜木心菜 #高嶺のなでしこ #私立恵比寿中学",
