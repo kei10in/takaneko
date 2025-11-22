@@ -6,10 +6,13 @@ import sharp from "sharp";
 const src = "public/icon.svg";
 const dest = "public";
 
-// <link rel="icon" href="/favicon.ico" sizes="32x32">
-// <link rel="icon" href="/icon.svg" type="image/svg+xml">
-// <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
-// <link rel="manifest" href="/manifest.webmanifest">
+// <link rel="icon" href="/favicon.ico" />
+// <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+// <link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png" />
+// <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
+// <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
+// <link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- 180×180 -->
+// <link rel="manifest" href="/manifest.webmanifest" />
 // { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
 // { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
 
@@ -17,6 +20,7 @@ const main = async () => {
   const imageBuffer = await fs.readFile(src);
 
   await genFavicon(src, dest);
+  await genFavicon48Png(imageBuffer, dest);
   await genAppleTouchIcon(imageBuffer, dest);
   await genPwa192(imageBuffer, dest);
   await genPwa512(imageBuffer, dest);
@@ -25,8 +29,12 @@ const main = async () => {
 const genFavicon = async (src: string, dest: string) => {
   iconGen(src, dest, {
     report: false,
-    ico: { name: "favicon", sizes: [16, 32] },
+    ico: { name: "favicon", sizes: [16, 32, 48] },
   });
+};
+
+const genFavicon48Png = async (src: Buffer, dest: string) => {
+  await sharp(src).resize(48, 48).toFile(path.join(dest, "icon-48.png"));
 };
 
 const genAppleTouchIcon = async (src: Buffer, dest: string) => {
