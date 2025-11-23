@@ -34,6 +34,10 @@ export const 可愛くてごめん: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=wVD5xfymKYU",
     },
     {
+      text: "THE FIRST TAKE",
+      videoId: "https://www.youtube.com/watch?v=nDeKfR5iBxY",
+    },
+    {
       text: "ちゅーたん",
       videoId: "https://www.youtube.com/watch?v=K4xLi8IF1FM",
     },
