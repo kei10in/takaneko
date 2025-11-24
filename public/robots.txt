@@ -1,24 +1,27 @@
 # For Google image
-User-agent: Googlebot-Image
-Disallow: /
+User-Agent: Googlebot-Image
+Disallow: /*/
 
 # For Bing
-User-agent: Bingbot
-Disallow: /*.jpg
-Disallow: /*.png
-Disallow: /*.webp
+User-Agent: Bingbot
+Disallow: /*/*.jpg
+Disallow: /*/*.jpeg
+Disallow: /*/*.png
+Disallow: /*/*.webp
 
 # For DuckDuckGo
-User-agent: DuckDuckBot
-Disallow: /*.jpg
-Disallow: /*.png
-Disallow: /*.webp
+User-Agent: DuckDuckBot
+Disallow: /*/*.jpg
+Disallow: /*/*.jpeg
+Disallow: /*/*.png
+Disallow: /*/*.webp
 
 # For Yahoo!
-User-agent: Slurp
-Disallow: /*.jpg
-Disallow: /*.png
-Disallow: /*.webp
+User-Agent: Slurp
+Disallow: /*/*.jpg
+Disallow: /*/*.jpeg
+Disallow: /*/*.png
+Disallow: /*/*.webp
 
 User-Agent: *
 
