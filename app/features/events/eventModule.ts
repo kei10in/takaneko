@@ -45,8 +45,13 @@ export const importEventModules = async (m: ImportingModule[]): Promise<EventMod
 };
 
 export const importAllEventModules = async (): Promise<EventModule[]> => {
-  const m = Object.entries(modules).map(([filename, module]) => ({ filename, module }));
+  const m = selectAllEventModules();
   return await importEventModules(m);
+};
+
+export const selectAllEventModules = (): ImportingModule[] => {
+  const result = Object.entries(modules).map(([filename, module]) => ({ filename, module }));
+  return result;
 };
 
 export const importEventModulesByMonth = async (month: NaiveMonth): Promise<EventModule[]> => {
