@@ -21,7 +21,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <meta name="robots" content="noimageindex" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml " />
+        <link rel="icon" href="/icon.svg" sizes="any" type="image/svg+xml" />
         <link rel="icon" href="/icon-48.png" sizes="48x48" type="image/png" />
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
         <link rel="icon" href="/icon-512.png" sizes="512x512" type="image/png" />
