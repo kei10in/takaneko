@@ -84,7 +84,7 @@ const EventMeta = z
       .optional()
       .default([]),
     showNotes: ShowNotes,
-    updatedAt: z.string().optional(),
+    updatedAt: z.iso.date().optional(),
   })
   .transform((data) => {
     return {
