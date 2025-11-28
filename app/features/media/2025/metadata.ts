@@ -26,6 +26,18 @@ export const metadata2025: MediaDetails[] = [
     presents: ["涼海すう", "橋本桃呼"],
   },
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/775621",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第6回『新感染 ファイナル・エクスプレス』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-11-26",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/775621",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/11/775621_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "KafMweYmrBQ",
     title:
