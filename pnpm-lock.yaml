@@ -42,8 +42,8 @@ importers:
         specifier: ^5.1.32
         version: 5.1.32
       konva:
-        specifier: ^10.0.9
-        version: 10.0.9
+        specifier: ^10.0.11
+        version: 10.0.11
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -3157,8 +3157,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  konva@10.0.9:
-    resolution: {integrity: sha512-AEqV0XqfE0ouHjcSo/IVAXZUK4jB/r18OlUoIzPFEx/59Vb95Yq1S4Ch5QuDDEXJT21SEpOMb89zSpEpsQWzWg==}
+  konva@10.0.11:
+    resolution: {integrity: sha512-h0O6YNrwdgfb76kzkiMIqkyufUxE6GPcNwJZhYalnZ5qnYBEuxSRk62fQwtJqygGP5hdZKzJs2ea1ivVP+zetw==}
 
   language-subtag-registry@0.3.23:
     resolution: {integrity: sha512-0K65Lea881pHotoGEa5gDlMxt3pctLi2RplBb7Ezh4rRdLEOtgi7n4EwK9lamnUCkKBqaeKRVebTq6BAxSkpXQ==}
@@ -7739,7 +7739,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  konva@10.0.9: {}
+  konva@10.0.11: {}
 
   language-subtag-registry@0.3.23: {}
 
