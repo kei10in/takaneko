@@ -3,9 +3,33 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "yawFIcRTKv0",
+    title:
+      "＃７【激突】パワーフォース最終決戦！レジェンド驚愕の結末！力を制したのは？ #SASUKEアイドル予選会2025",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-11-28",
+    mediaUrl: "https://youtu.be/yawFIcRTKv0",
+    imageUrl: "https://i.ytimg.com/vi/yawFIcRTKv0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
+    key: "mfukppFWq58",
+    title:
+      "＃６【死闘】歴史的名勝負 パワー対決！決勝に勝ち上がるのは？ パワーフォース2回戦 #SASUKEアイドル予選会2025",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-11-28",
+    mediaUrl: "https://youtu.be/mfukppFWq58",
+    imageUrl: "https://i.ytimg.com/vi/mfukppFWq58/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "KafMweYmrBQ",
     title:
-      "#５ 【パワー勝負】新種目パワーフォース　力と力がぶつかる パワー対決を制するのは？ #SASUKEアイドル予選会2025",
+      "#５ 【パワー勝負】新種目パワーフォース　力と力がぶつかる パワー対決を制するのは？-1回戦- #SASUKEアイドル予選会2025",
     authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
     publishedAt: "2025-11-21",
     mediaUrl: "https://youtu.be/KafMweYmrBQ",
