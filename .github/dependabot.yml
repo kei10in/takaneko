@@ -12,6 +12,10 @@ updates:
     cooldown:
       default-days: 7
     groups:
+      cloudflare:
+        patterns:
+          - "@cloudflare/vite-plugin"
+          - "wrangler"
       react-and-react-dom:
         patterns:
           - "react"
