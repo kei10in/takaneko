@@ -87,7 +87,7 @@
     "vite": "^7.2.4",
     "vite-plugin-inspect": "^11.3.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.12",
+    "vitest": "^4.0.13",
     "wrangler": "^4.50.0"
   },
   "engines": {
