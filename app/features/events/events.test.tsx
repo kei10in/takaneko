@@ -1,12 +1,15 @@
 import { createRoutesStub } from "react-router";
 import { assert, describe, expect, it, test } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { allPages } from "~/utils/sitemap";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
 import { importAllEventModules, selectAllEventModules } from "./eventModule";
 
 describe("event module", async () => {
+  const AllPages = await allPages(NaiveDate.todayInJapan());
   const AllAssets = allAssetFiles();
+  const AllPaths = [...AllAssets, ...AllPages.map((e) => e.path)];
 
   const allEvents = await importAllEventModules();
 
@@ -56,7 +59,7 @@ describe("event module", async () => {
         .map((url) => decodeURIComponent(url));
 
       urls.forEach((url) => {
-        expect(AllAssets).toContain(url);
+        expect(AllPaths).toContain(url);
       });
     });
   });
