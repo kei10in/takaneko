@@ -84,8 +84,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       url-metadata:
-        specifier: ^5.2.3
-        version: 5.2.3
+        specifier: ^5.3.0
+        version: 5.3.0
       zod:
         specifier: ^4.1.13
         version: 4.1.13
@@ -2938,8 +2938,8 @@ packages:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
     engines: {node: '>= 0.4'}
 
-  ipaddr.js@2.2.0:
-    resolution: {integrity: sha512-Ag3wB2o37wslZS19hZqorUnrnzSkpOVy+IiiDEiTqNubEYpYuHWIf6K4psgN2ZWKExS4xhVCrRVfb/wfW8fWJA==}
+  ipaddr.js@2.3.0:
+    resolution: {integrity: sha512-Zv/pA+ciVFbCSBBjGfaKUya/CcGmUHzTydLMaTwrUUEM2DIEO3iZvueGxmacvmN50fGpGVKeTXpb2LcYQxeVdg==}
     engines: {node: '>= 10'}
 
   is-alphabetical@2.0.1:
@@ -4435,8 +4435,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  url-metadata@5.2.3:
-    resolution: {integrity: sha512-1vDXmhQhDNkcufC3yL7fAbcNHGMlff8M3PXSRbqtEjSrJkY8HRK57onYoR36Pl5uaQR3y8M0YhzMfQUmKTbchA==}
+  url-metadata@5.3.0:
+    resolution: {integrity: sha512-EE5YG8Nwn/yurKR7iLIzd4H8AplRFCDYYi3s8yYaadv8ZV6aI126X11wxRuo6PKmJD9ESUwy3lyDp7bQp/vVsQ==}
     engines: {node: '>=6.0.0'}
 
   use-sync-external-store@1.5.0:
@@ -7526,7 +7526,7 @@ snapshots:
       hasown: 2.0.2
       side-channel: 1.1.0
 
-  ipaddr.js@2.2.0: {}
+  ipaddr.js@2.3.0: {}
 
   is-alphabetical@2.0.1: {}
 
@@ -8781,7 +8781,7 @@ snapshots:
 
   request-filtering-agent@2.0.1:
     dependencies:
-      ipaddr.js: 2.2.0
+      ipaddr.js: 2.3.0
 
   resolve-from@4.0.0: {}
 
@@ -9414,7 +9414,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-metadata@5.2.3:
+  url-metadata@5.3.0:
     dependencies:
       cheerio: 1.1.2
       node-fetch: 2.7.0
