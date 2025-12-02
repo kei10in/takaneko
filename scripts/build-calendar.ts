@@ -4,7 +4,7 @@ import { register } from "node:module";
 import { EventMeta } from "~/features/events/eventMeta";
 import { EventType } from "~/features/events/EventType";
 import { convertEventMetaToEventAttributes } from "~/features/events/ical";
-import { loadAllEventMeta } from "./events";
+import { loadAllEventMeta } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 

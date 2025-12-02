@@ -1,7 +1,7 @@
 import { register } from "node:module";
 import { Act } from "~/features/events/act";
 import { NaiveDate } from "../app/utils/datetime/NaiveDate";
-import { loadAllEventMeta } from "./events";
+import { loadAllEventMeta } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 

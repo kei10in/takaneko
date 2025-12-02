@@ -3,7 +3,7 @@ import { register } from "node:module";
 import { dedent } from "ts-dedent";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { allPages } from "~/utils/sitemap";
-import { Events } from "./events";
+import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 

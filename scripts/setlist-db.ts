@@ -2,7 +2,7 @@ import * as csv from "@fast-csv/format";
 import fs, { writeFileSync } from "node:fs";
 import { register } from "node:module";
 import { SongSegment } from "~/features/events/setlist";
-import { loadAllEventsAsEventModule } from "./events";
+import { loadAllEventsAsEventModule } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
