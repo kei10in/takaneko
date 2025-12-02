@@ -1,16 +1,18 @@
 import { register } from "node:module";
 import { Act } from "~/features/events/act";
 import { NaiveDate } from "../app/utils/datetime/NaiveDate";
-import { loadAllEventMeta } from "./lib/events";
+import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
 const main = async () => {
   const today = NaiveDate.today();
-  const events = await loadAllEventMeta();
+  const events = await Events.importAllEventModules();
   // events: [slug, meta]
   const livesWithoutSetlist = events
-    .filter(([, meta]) => {
+    .filter((e) => {
+      const { meta } = e;
+
       // ライブのないイベントはリストしなくてよい。
       if (meta.liveType == undefined) {
         return false;
@@ -34,7 +36,7 @@ const main = async () => {
 
       return true;
     })
-    .map(([slug]) => slug)
+    .map(({ slug }) => slug)
     .toSorted()
     .toReversed();
 

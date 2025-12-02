@@ -2,7 +2,7 @@ import * as csv from "@fast-csv/format";
 import fs, { writeFileSync } from "node:fs";
 import { register } from "node:module";
 import { SongSegment } from "~/features/events/setlist";
-import { loadAllEventsAsEventModule } from "./lib/events";
+import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
@@ -19,11 +19,11 @@ interface Record {
 }
 
 const main = async () => {
-  const events = await loadAllEventsAsEventModule();
+  const events = await Events.importAllEventModules();
 
-  const records = Object.entries(events)
-    .toSorted(([a], [b]) => a.localeCompare(b))
-    .flatMap(([_slug, event]) => {
+  const records = events
+    .toSorted((a, b) => a.slug.localeCompare(b.slug))
+    .flatMap((event) => {
       return event.meta.acts.flatMap((act) => {
         return act.setlist
           .filter((p): p is SongSegment => p.kind == "song")

@@ -4,7 +4,7 @@ import { register } from "node:module";
 import { EventMeta } from "~/features/events/eventMeta";
 import { EventType } from "~/features/events/EventType";
 import { convertEventMetaToEventAttributes } from "~/features/events/ical";
-import { loadAllEventMeta } from "./lib/events";
+import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
@@ -48,11 +48,11 @@ const buildCalendar = async (
 ) => {
   const { pred = () => true } = args;
 
-  const events = await loadAllEventMeta();
+  const events = await Events.importAllEventModules();
   const eventAttributesList = await Promise.all(
     events
-      .filter(([, meta]) => pred(meta))
-      .map(async ([id, meta]) => convertEventMetaToEventAttributes(id, meta)),
+      .filter((event) => pred(event.meta))
+      .map(async (event) => convertEventMetaToEventAttributes(event.slug, event.meta)),
   );
 
   const header: HeaderAttributes = { calName };
