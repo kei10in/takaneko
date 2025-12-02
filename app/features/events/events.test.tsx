@@ -7,7 +7,7 @@ import { extractURLsFromComponent } from "~/utils/tests/react";
 import { Events } from "./events";
 
 describe("event module", async () => {
-  const AllPages = await allPages(NaiveDate.todayInJapan());
+  const AllPages = await allPages(NaiveDate.todayInJapan(), Events);
   const AllAssets = allAssetFiles();
   const AllPaths = [...AllAssets, ...AllPages.map((e) => e.path)];
 

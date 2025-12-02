@@ -2,7 +2,21 @@ import { glob } from "glob";
 import path, { basename } from "node:path";
 import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
+import { EventRepository } from "~/features/events/EventRepository";
 import { stem } from "~/utils/string";
+
+const importGlob = (): Record<string, () => Promise<unknown>> => {
+  const scriptDir = import.meta.dirname;
+  return Object.fromEntries(
+    glob.sync(`${scriptDir}/../app/features/events/*/**/*.{mdx,tsx}`).map((f) => {
+      return [path.basename(f), () => import(f)];
+    }),
+  );
+};
+
+const modules = importGlob();
+
+export const Events = new EventRepository(modules);
 
 export const loadAllEventMeta = async (): Promise<[string, EventMeta][]> => {
   const files = await listAllEventFiles();
