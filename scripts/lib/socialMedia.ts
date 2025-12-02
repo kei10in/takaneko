@@ -35,7 +35,6 @@ export const formatEventForSocialMedia = (event: EventMeta) => {
 };
 
 const HEADER = "🌸きょうの #たかねこの予定🐈‍⬛";
-const FOOTER = "🔗";
 
 export const createAnnouncePost = async (
   events: EventMeta[],
@@ -53,14 +52,12 @@ export const createAnnouncePost = async (
   const postItems = splitEventContents(items, url);
 
   if (postItems.length == 1) {
-    const posts = postItems.map((contents) =>
-      [HEADER, ...contents, `${FOOTER}${url}`].join("\n\n"),
-    );
+    const posts = postItems.map((contents) => [HEADER, ...contents, url].join("\n\n"));
     return posts;
   }
 
   const posts = postItems.map((contents, index) =>
-    [`${HEADER} ${index + 1}`, ...contents, `${FOOTER}${url}`].join("\n\n"),
+    [`${HEADER} ${index + 1}`, ...contents, url].join("\n\n"),
   );
 
   return posts;
@@ -75,7 +72,7 @@ const splitEventContents = (contents: string[], url: string): string[][] => {
 
   contents.forEach((content) => {
     // 実装簡略化のために分割するときは、投稿番号をつけてツイート全体の長さをチェックする。
-    const post = [`${HEADER} 1`, ...currentBlock, content, `${FOOTER}${url}`].join("\n\n");
+    const post = [`${HEADER} 1`, ...currentBlock, content, url].join("\n\n");
     const v = twitter.parseTweet(post);
 
     if (v.valid) {
