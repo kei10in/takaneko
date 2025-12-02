@@ -4,11 +4,8 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
 import { SongBarChart } from "~/components/charts/SongBarChart";
-import {
-  importAllEventModules,
-  importEventModules,
-  selectEventModulesByDate,
-} from "~/features/events/eventModule";
+import { importEventModules } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { makeSongToLiveMap, SongActivitySummary } from "~/features/songs/songActivities";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -27,7 +24,7 @@ const loadEvents = async (term: string) => {
     const today = NaiveDate.today();
 
     const importingModules = Array.from({ length: days }).flatMap((_, i) =>
-      selectEventModulesByDate(today.addDays(-i)),
+      Events.selectEventModulesByDate(today.addDays(-i)),
     );
     const modules = await importEventModules(importingModules);
 
@@ -35,7 +32,7 @@ const loadEvents = async (term: string) => {
   }
 
   // Load all event modules
-  const modules = await importAllEventModules();
+  const modules = await Events.importAllEventModules();
 
   return modules;
 };

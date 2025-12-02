@@ -9,7 +9,7 @@ import { calendarEventFromEventModule } from "~/features/calendars/calendarEvent
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { validateYearMonthDate } from "~/features/calendars/utils";
 import { compareEventMeta } from "~/features/events/eventMeta";
-import { importEventModulesByDate } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -43,7 +43,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   }
 
   const { year, month, day } = r;
-  const events = (await importEventModulesByDate(new NaiveDate(year, month, day)))
+  const events = (await Events.importEventModulesByDate(new NaiveDate(year, month, day)))
     .toSorted((a, b) => compareEventMeta(a.meta, b.meta))
     .map(calendarEventFromEventModule);
 
@@ -57,7 +57,7 @@ export const clientLoader = async ({ params }: ClientLoaderFunctionArgs) => {
   }
 
   const { year, month, day } = r;
-  const events = (await importEventModulesByDate(new NaiveDate(year, month, day))).map(
+  const events = (await Events.importEventModulesByDate(new NaiveDate(year, month, day))).map(
     calendarEventFromEventModule,
   );
 

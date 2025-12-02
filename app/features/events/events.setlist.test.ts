@@ -6,10 +6,10 @@ import {
   StageCostumeNames,
   TShirtCostumeNames,
 } from "../costumes/costumes";
-import { importAllEventModules } from "./eventModule";
+import { Events } from "./events";
 
 describe("all setlist items", async () => {
-  const allEvents = await importAllEventModules();
+  const allEvents = await Events.importAllEventModules();
 
   const allSetlistItems = allEvents.flatMap((e) =>
     e.meta.acts?.flatMap((r) => r.setlist).map((item) => ({ item, slug: e.slug, event: e })),
@@ -68,7 +68,7 @@ describe("all setlist items", async () => {
 });
 
 describe("all events with setlist", async () => {
-  const allEvents = await importAllEventModules();
+  const allEvents = await Events.importAllEventModules();
 
   const eventsWithSetlist = allEvents.filter((e) => {
     return e.meta.acts.length > 0;

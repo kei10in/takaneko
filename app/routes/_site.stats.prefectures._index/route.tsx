@@ -7,7 +7,7 @@ import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { BarChart } from "~/components/charts/BarChart";
 import { pageBox, pageHeading } from "~/components/styles";
-import { importAllEventModules } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { aggregatePrefectureStats } from "~/features/stats/pref";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
 
 export default function Component() {
   const { data, error, isLoading } = useSWR("prefectureStats", async () => {
-    const modules = await importAllEventModules();
+    const modules = await Events.importAllEventModules();
 
     const concertCountsByPrefecture = aggregatePrefectureStats(modules);
 

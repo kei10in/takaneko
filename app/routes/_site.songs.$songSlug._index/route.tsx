@@ -5,7 +5,7 @@ import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { importAllEventModules } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { liveTypeColor } from "~/features/events/EventType";
 import { makeSongToLiveMap } from "~/features/songs/songActivities";
 import { SongMeta } from "~/features/songs/SongMeta";
@@ -45,7 +45,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   const { track } = loaderData;
 
   const { data: songToLiveMap, isLoading } = useSWR(`songToLiveMap`, async () => {
-    const allEvents = await importAllEventModules();
+    const allEvents = await Events.importAllEventModules();
     const songToLiveMap = makeSongToLiveMap(allEvents, ALL_SONGS);
     return songToLiveMap;
   });

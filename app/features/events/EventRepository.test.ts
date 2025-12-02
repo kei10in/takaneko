@@ -3,16 +3,11 @@ import { assert, describe, expect, it } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { isObject } from "~/utils/types/object";
-import {
-  importAllEventModules,
-  selectEventModuleBySlug,
-  selectEventModulesByDate,
-  selectEventModulesByMonth,
-} from "./eventModule";
+import { Events } from "./events";
 
-describe("eventModule", () => {
+describe("EventRepository", () => {
   describe("imported events", async () => {
-    const importedEvents = await importAllEventModules();
+    const importedEvents = await Events.importAllEventModules();
 
     describe.each(importedEvents)("module $filename", (module) => {
       it("should export meta as EventMeta", () => {
@@ -25,7 +20,7 @@ describe("eventModule", () => {
   describe("selectEventModuleByMonth", () => {
     it("should return modules for the specified month", () => {
       const month = new NaiveMonth(2025, 7);
-      const result = selectEventModulesByMonth(month);
+      const result = Events.selectEventModulesByMonth(month);
 
       const files = fs.readdirSync(`${import.meta.dirname}/2025/07`);
 
@@ -36,7 +31,7 @@ describe("eventModule", () => {
   describe("selectEventModuleByDate", () => {
     it("should return modules for the specified date", () => {
       const date = new NaiveDate(2025, 8, 7);
-      const result = selectEventModulesByDate(date);
+      const result = Events.selectEventModulesByDate(date);
 
       expect(result).toEqual([
         expect.objectContaining({
@@ -47,7 +42,7 @@ describe("eventModule", () => {
 
     it("should return modules for the specified date", () => {
       const date = new NaiveDate(2025, 8, 5);
-      const result = selectEventModulesByDate(date);
+      const result = Events.selectEventModulesByDate(date);
 
       expect(result).toEqual([]);
     });
@@ -56,21 +51,21 @@ describe("eventModule", () => {
   describe("selectEventModuleBySlug", () => {
     it("should return module for mdx file by slug", () => {
       const slug = "2025-08-13_NEO KASSEN 2025";
-      const result = selectEventModuleBySlug(slug);
+      const result = Events.selectEventModuleBySlug(slug);
 
       expect(result).toMatchObject({ filename: "./2025/08/2025-08-13_NEO KASSEN 2025.mdx" });
     });
 
     it("should return undefined for invalid slug format 1", () => {
       const slug = "invalid slug format";
-      const result = selectEventModuleBySlug(slug);
+      const result = Events.selectEventModuleBySlug(slug);
 
       expect(result).toBeUndefined();
     });
 
     it("should return undefined for invalid slug format 2", () => {
       const slug = "prefix_invalid slug format";
-      const result = selectEventModuleBySlug(slug);
+      const result = Events.selectEventModuleBySlug(slug);
 
       expect(result).toBeUndefined();
     });

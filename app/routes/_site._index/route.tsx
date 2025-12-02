@@ -8,7 +8,7 @@ import { DOMAIN, SITE_TITLE } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
 import { dateHref } from "~/features/calendars/utils";
-import { importEventModulesByDate } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -60,7 +60,7 @@ export const loader = async () => {
     [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
       const d = date.addDays(i);
       const { year, month, day } = d;
-      const events = await importEventModulesByDate(d);
+      const events = await Events.importEventModulesByDate(d);
       return { year, month, day, events: events.map(calendarEventFromEventModule) };
     }),
   );
@@ -75,7 +75,7 @@ export const clientLoader = async () => {
     [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
       const d = date.addDays(i);
       const { year, month, day } = d;
-      const events = await importEventModulesByDate(d);
+      const events = await Events.importEventModulesByDate(d);
       return { year, month, day, events: events.map(calendarEventFromEventModule) };
     }),
   );

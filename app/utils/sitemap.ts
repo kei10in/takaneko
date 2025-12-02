@@ -1,6 +1,6 @@
 import { DOMAIN } from "~/constants";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
-import { importAllEventModules } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { PUBLICATIONS } from "~/features/products/publications";
@@ -61,7 +61,7 @@ const buildMonthlyPages = (start: NaiveMonth, end: NaiveMonth): SitemapPath[] =>
 };
 
 const buildEventPages = async (): Promise<SitemapPath[]> => {
-  const events = await importAllEventModules();
+  const events = await Events.importAllEventModules();
   return events.map(({ slug, meta }) => ({ path: `/events/${slug}`, lastmod: meta.updatedAt }));
 };
 

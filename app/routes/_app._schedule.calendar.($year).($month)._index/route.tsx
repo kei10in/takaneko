@@ -13,7 +13,7 @@ import { calendarEventFromEventModule } from "~/features/calendars/calendarEvent
 import { validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
-import { importEventModulesByMonth } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
@@ -64,7 +64,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
       [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        importEventModulesByMonth(m),
+        Events.importEventModulesByMonth(m),
       ),
     )
   )
@@ -101,7 +101,7 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
       [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        importEventModulesByMonth(m),
+        Events.importEventModulesByMonth(m),
       ),
     )
   )

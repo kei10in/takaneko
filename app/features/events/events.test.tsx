@@ -4,17 +4,17 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { allPages } from "~/utils/sitemap";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
-import { importAllEventModules, selectAllEventModules } from "./eventModule";
+import { Events } from "./events";
 
 describe("event module", async () => {
   const AllPages = await allPages(NaiveDate.todayInJapan());
   const AllAssets = allAssetFiles();
   const AllPaths = [...AllAssets, ...AllPages.map((e) => e.path)];
 
-  const allEvents = await importAllEventModules();
+  const allEvents = await Events.importAllEventModules();
 
   test("all events contains all event modules", () => {
-    const allModules = selectAllEventModules();
+    const allModules = Events.selectAllEventModules();
 
     const filenameFromEvents = new Set(allEvents.map((e) => e.filename));
     const filenameFromModules = new Set(allModules.map((m) => m.filename));

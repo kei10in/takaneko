@@ -26,7 +26,7 @@ import { ImageCarousel } from "~/components/ImageCarousel";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { validateEventMeta } from "~/features/events/eventMeta";
-import { importEventModuleBySlug } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
@@ -67,7 +67,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  const event = await importEventModuleBySlug(eventSlug);
+  const event = await Events.importEventModuleBySlug(eventSlug);
   if (event == undefined) {
     throw new Response("", { status: 404 });
   }
@@ -86,7 +86,7 @@ export default function EventPage() {
   const navigate = useNavigate();
 
   // Content は React Component なため `loader` から渡すことができず SSR できない。
-  const { data } = useSWR(slug, importEventModuleBySlug);
+  const { data } = useSWR(slug, (x) => Events.importEventModuleBySlug(x));
   const Content = data?.Content;
 
   // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防振するために、

@@ -1,15 +1,12 @@
 import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
+import { Events } from "~/features/events/events";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import {
-  importEventModuleBySlug,
-  importEventModulesByDate,
-} from "../../app/features/events/eventModule";
 import { createAnnouncePost, formatEventForSocialMedia } from "./socialMedia";
 
 describe("formatEventForSocialMedia", () => {
   const importEvent = async (slug: string) => {
-    const em = await importEventModuleBySlug(slug);
+    const em = await Events.importEventModuleBySlug(slug);
     if (em == undefined) {
       expect.fail("event module not found");
     }
@@ -60,7 +57,7 @@ describe("formatEventForSocialMedia", () => {
 describe("createAnnouncePost", () => {
   it("should create announcement posts for today's events", async () => {
     const today = new NaiveDate(2025, 8, 7);
-    const events = (await importEventModulesByDate(today)).map((e) => e.meta);
+    const events = (await Events.importEventModulesByDate(today)).map((e) => e.meta);
     const posts = await createAnnouncePost(events, today);
 
     expect(posts).toHaveLength(1);
@@ -76,7 +73,7 @@ describe("createAnnouncePost", () => {
 
   it("should create announcement posts for multiple events", async () => {
     const today = new NaiveDate(2025, 8, 8);
-    const events = (await importEventModulesByDate(today)).map((e) => e.meta);
+    const events = (await Events.importEventModulesByDate(today)).map((e) => e.meta);
     const posts = await createAnnouncePost(events, today);
 
     expect(posts).toHaveLength(1);

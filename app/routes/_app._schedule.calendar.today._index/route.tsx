@@ -3,7 +3,7 @@ import { DOMAIN } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { dateHref } from "~/features/calendars/utils";
-import { importEventModulesByDate } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -31,7 +31,7 @@ export const loader = async () => {
   const today = NaiveDate.todayInJapan();
 
   const { year, month, day } = today;
-  const events = (await importEventModulesByDate(today)).map(calendarEventFromEventModule);
+  const events = (await Events.importEventModulesByDate(today)).map(calendarEventFromEventModule);
 
   return { year, month, day, events };
 };
@@ -40,7 +40,7 @@ export const clientLoader = async () => {
   const today = NaiveDate.todayInJapan();
 
   const { year, month, day } = today;
-  const events = (await importEventModulesByDate(today)).map(calendarEventFromEventModule);
+  const events = (await Events.importEventModulesByDate(today)).map(calendarEventFromEventModule);
 
   return { year, month, day, events };
 };
