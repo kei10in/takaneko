@@ -67,7 +67,7 @@ describe("createAnnouncePost", () => {
       🎤3rd ファンミーティング 〜私たちの宣言式〜
       📍豊洲PIT
 
-      🔗https://takanekofan.app/calendar/2025/08/07
+      https://takanekofan.app/calendar/2025/08/07
       `);
   });
 
@@ -88,7 +88,7 @@ describe("createAnnouncePost", () => {
 
       🐈‍⬛3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント
 
-      🔗https://takanekofan.app/calendar/2025/08/08
+      https://takanekofan.app/calendar/2025/08/08
       `);
   });
 });
