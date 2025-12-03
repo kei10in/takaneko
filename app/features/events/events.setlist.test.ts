@@ -71,7 +71,8 @@ describe("all events with setlist", async () => {
   const allEvents = await Events.importAllEventModules();
 
   const eventsWithSetlist = allEvents.filter((e) => {
-    return e.meta.acts.length > 0;
+    const actsWithSetlist = e.meta.acts.filter((act) => act.setlist.length > 0);
+    return actsWithSetlist.length > 0;
   });
 
   it("should have liveType", () => {
