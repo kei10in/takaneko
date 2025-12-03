@@ -131,9 +131,11 @@ import { BEEEEM_vol1_ポストカード } from "./2025/2025-09-30_ポストカ�
 import { MARQUEE_Fes_Day1_限定カード } from "./2025/2025-10-22_MARQUEE Fes Day1 限定カード";
 import { たかねこハロウィン2025_ミニフォト } from "./2025/2025-10-28_ミニフォトカード「たかねこハロウィン2025」";
 import { たかねこハロウィン2025_生写真 } from "./2025/2025-10-29_生写真「たかねこハロウィン2025」";
+import { 見上げるたびに恋をする_ミニフォト } from "./2025/2025-12-04_ミニフォトカード「見上げるたびに、恋をする。」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  見上げるたびに恋をする_ミニフォト,
   たかねこハロウィン2025_生写真,
   たかねこハロウィン2025_ミニフォト,
   MARQUEE_Fes_Day1_限定カード,
@@ -143,6 +145,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  見上げるたびに恋をする_ミニフォト,
   たかねこハロウィン2025_生写真,
   たかねこハロウィン2025_ミニフォト,
   MARQUEE_Fes_Day1_限定カード,
