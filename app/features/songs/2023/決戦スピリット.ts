@@ -34,6 +34,10 @@ export const 決戦スピリット: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=MX-zMJE4Tug",
     },
     {
+      text: "THE FIRST TAKE",
+      videoId: "https://www.youtube.com/watch?v=Aq8bmrnbuII",
+    },
+    {
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=ErqUUYWfOBo",
     },
