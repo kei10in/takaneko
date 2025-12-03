@@ -3,7 +3,7 @@ import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
 
 export const 見上げるたびに恋をする_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「見上げるたびに、恋をする。」",
-  slug: "ミニフォトカード「見上げるたびに、恋をする。」",
+  slug: "ミニフォトカード「見上げるたびに、恋をする」",
   name: "ミニフォトカードセット (見上げるたびに、恋をする。)",
   year: 2025,
   series: "見上げるたびに、恋をする。",
