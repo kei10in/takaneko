@@ -5,21 +5,21 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
   slug: "花は誓いを忘れない",
   name: "花は誓いを忘れない",
 
-  lyricsBy: "不明",
-  composedBy: "不明",
+  lyricsBy: "shito, 中西",
+  composedBy: "shito",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "RINO HONDA",
 
   tags: [Original, Repertoire],
 
-  // coverArt: "/takaneko/songs/2025/花は誓いを忘れない.webp",
+  coverArt: "/takaneko/songs/2025/花は誓いを忘れない.webp",
 
   officialSite: undefined,
   youtube: [
-    // {
-    //   text: "MV",
-    //   videoId: "https://www.youtube.com/watch?v=pfrBPp_btAQ",
-    // },
+    {
+      text: "MV",
+      videoId: "https://www.youtube.com/watch?v=f1ss7kWQnY8",
+    },
   ],
 };
