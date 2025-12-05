@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "FJQ2wK1_vho",
+    title:
+      "＃8【最終種目】SASUKEタイムレース究極スピード決戦①試されるSASUKE力 衝撃の記録誕生！SASUKE出場権を掴むのは？　#SASUKEアイドル予選会2025",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-12-05",
+    mediaUrl: "https://youtu.be/FJQ2wK1_vho",
+    imageUrl: "https://i.ytimg.com/vi/FJQ2wK1_vho/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "yawFIcRTKv0",
     title:
       "＃７【激突】パワーフォース最終決戦！レジェンド驚愕の結末！力を制したのは？ #SASUKEアイドル予選会2025",
