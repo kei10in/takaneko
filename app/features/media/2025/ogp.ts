@@ -2,6 +2,17 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://glassgirl.info/article/post-31830/",
+    publishedAt: "2025-12-02",
+    category: "article",
+    presents: ["日向端ひな"],
+    officialTwitter: "https://x.com/takanenofficial/status/1995803873068630257",
+    image: {
+      path: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+      ref: "https://glassgirl.info/article/post-31830/",
+    },
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/775621",
     publishedAt: "2025-11-26",
     category: "article",

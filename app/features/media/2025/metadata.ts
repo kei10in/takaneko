@@ -14,6 +14,18 @@ export const metadata2025: MediaDetails[] = [
     presents: ["涼海すう", "橋本桃呼"],
   },
   {
+    kind: "ogp",
+    key: "https://glassgirl.info/article/post-31830/",
+    title:
+      "【マンスリーアイドルコラム No.053・初週のみ無料公開】高嶺のなでしこ 日向端ひな #1「ひなたま、コラムはじめます！」（12月火曜日担当・全4回） | ガラスガール",
+    authorName: "ガラスガール",
+    publishedAt: "2025-12-02",
+    mediaUrl: "https://glassgirl.info/article/post-31830/",
+    imageUrl: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
     kind: "youtube",
     key: "yawFIcRTKv0",
     title:
