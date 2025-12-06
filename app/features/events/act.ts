@@ -12,7 +12,10 @@ export const Act = z
     start: z.string().optional(),
     end: z.string().optional(),
 
-    description: z.string().transform(dedent).optional(),
+    description: z
+      .string()
+      .transform((v) => dedent(v))
+      .optional(),
 
     setlist: z
       .array(z.string())
