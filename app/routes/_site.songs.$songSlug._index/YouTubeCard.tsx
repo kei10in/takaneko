@@ -46,8 +46,6 @@ const metadataToCardProps = (videoId: string, metadata: YouTubeVideoMetadata): C
 };
 
 const fetchCardProps = async (videoId: string): Promise<CardProps> => {
-  console.log(videoId);
-
   const oEmbed = await fetchYouTubeOEmbed(videoId);
   if (oEmbed == undefined) {
     throw new Error("Failed to fetch YouTube OEmbed data");
