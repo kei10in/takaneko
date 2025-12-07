@@ -92,10 +92,10 @@ export const Topbar: React.FC = () => {
       >
         <div className="h-full px-4 @lg:px-6">
           <div className="flex h-full items-center">
-            <div className="text-base font-bold text-gray-900">
-              <Link className="flex items-center gap-1" to="/">
-                <img className="w-7" src="/icon.svg" alt="アイコン" />
-                <p>{SITE_TITLE}</p>
+            <div className="text-base text-gray-900">
+              <Link className="flex items-center gap-2" to="/">
+                <img className="w-8" src="/icon.svg" alt="アイコン" />
+                <p className="font-serif text-xl font-light text-gray-500">{SITE_TITLE}</p>
               </Link>
             </div>
             <div className="ml-auto">
