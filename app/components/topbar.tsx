@@ -95,7 +95,7 @@ export const Topbar: React.FC = () => {
             <div className="text-base text-gray-900">
               <Link className="flex items-center gap-2" to="/">
                 <img className="w-8" src="/icon.svg" alt="アイコン" />
-                <p className="font-serif text-xl font-light text-gray-500">{SITE_TITLE}</p>
+                <p className="font-serif text-xl text-gray-600">{SITE_TITLE}</p>
               </Link>
             </div>
             <div className="ml-auto">

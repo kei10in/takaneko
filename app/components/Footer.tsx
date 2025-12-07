@@ -47,7 +47,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
               <section className="space-y-3 pb-4">
                 <h3 className="flex items-center gap-2 text-base font-bold">
                   <img className="w-8" src="/icon.svg" alt="ロゴ" />
-                  <p className="font-serif text-xl font-light text-gray-500">{SITE_TITLE}</p>
+                  <p className="font-serif text-xl text-gray-600">{SITE_TITLE}</p>
                 </h3>
                 <div className="space-y-1">
                   <p>「{SITE_TITLE}」は非公式のファンコンテンツです。</p>
