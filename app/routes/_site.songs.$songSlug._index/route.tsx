@@ -93,9 +93,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
           <section className="mt-8">
             <h2
-              className={sectionHeading(
-                "sticky top-0 bg-white/90 py-2 lg:top-[var(--header-height)]",
-              )}
+              className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}
             >
               <span className="flex items-center gap-2">
                 <BsPlayBtnFill className="inline-block text-gray-400" />
@@ -121,9 +119,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
           <section className="mt-8">
             <h2
-              className={sectionHeading(
-                "sticky top-0 bg-white/90 py-2 lg:top-[var(--header-height)]",
-              )}
+              className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}
             >
               <span className="flex items-center gap-2">
                 <BsMicFill className="inline-block text-gray-400" />
