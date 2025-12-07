@@ -7,6 +7,7 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/react";
+import { clsx } from "clsx";
 import { Fragment, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { Link } from "react-router";
@@ -82,9 +83,15 @@ export const Topbar: React.FC = () => {
 
   return (
     <Fragment>
-      <div className="border-b-nadeshiko-200 bg-nadeshiko-50/90 sticky top-0 z-10 h-(--header-height) border-b backdrop-blur-sm">
-        <div className="container mx-auto h-full">
-          <div className="flex h-full items-center px-4">
+      <div
+        className={clsx(
+          "@container",
+          "sticky top-0 z-10 h-(--header-height)",
+          "border-b-nadeshiko-200 bg-nadeshiko-50/90 border-b backdrop-blur-sm",
+        )}
+      >
+        <div className="h-full px-4 @lg:px-6">
+          <div className="flex h-full items-center">
             <div className="text-base font-bold text-gray-900">
               <Link className="flex items-center gap-1" to="/">
                 <img className="w-7" src="/icon.svg" alt="アイコン" />

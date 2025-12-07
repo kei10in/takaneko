@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <div>
       <SecondaryTopbar>
-        <div className="mx-4 flex h-full items-center justify-between">
+        <div className="flex h-full items-center justify-between">
           <p className="text-base font-bold text-gray-600">
             <Link to="/calendar">スケジュール</Link>
           </p>

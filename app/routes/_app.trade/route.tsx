@@ -38,7 +38,7 @@ export default function Index() {
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
       <SecondaryTopbar className="lg:hidden">
-        <div className="mx-4 flex h-full items-center justify-between">
+        <div className="flex h-full items-center justify-between">
           <p className="text-base font-bold text-gray-800">
             <Link to="/trade">トレード画像をつくるやつ</Link>
           </p>
