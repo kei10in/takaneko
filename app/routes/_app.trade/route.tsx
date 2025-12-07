@@ -2,6 +2,7 @@ import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { BsList } from "react-icons/bs";
 import { Link, MetaFunction, Outlet } from "react-router";
+import { SecondaryTopbar } from "~/components/SecondaryTopbar";
 import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
 import { SITE_TITLE } from "~/constants";
@@ -36,20 +37,18 @@ export default function Index() {
   return (
     <div>
       {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <div className="border-nadeshiko-200 bg-nadeshiko-200/90 sticky top-(--header-height) z-10 h-(--secondary-header-height) w-full border-b backdrop-blur-sm lg:hidden">
-        <div className="container mx-auto h-full">
-          <div className="mx-4 flex h-full items-center justify-between">
-            <p className="text-base font-bold text-gray-800">
-              <Link to="/trade">トレード画像をつくるやつ</Link>
-            </p>
-            <div className="flex-none">
-              <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
-                <BsList className="h-6 w-6" />
-              </button>
-            </div>
+      <SecondaryTopbar className="lg:hidden">
+        <div className="mx-4 flex h-full items-center justify-between">
+          <p className="text-base font-bold text-gray-800">
+            <Link to="/trade">トレード画像をつくるやつ</Link>
+          </p>
+          <div className="flex-none">
+            <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
+              <BsList className="h-6 w-6" />
+            </button>
           </div>
         </div>
-      </div>
+      </SecondaryTopbar>
 
       <div className="container mx-auto">
         <div className="flex w-full">
