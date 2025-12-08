@@ -80,7 +80,7 @@
     "remark-gfm": "^4.0.1",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "twitter-text": "^3.1.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.48.0",
