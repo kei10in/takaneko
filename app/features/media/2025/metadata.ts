@@ -15,6 +15,18 @@ export const metadata2025: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "youtube",
+    key: "m3u44cVIaq0",
+    title:
+      "＃９【混戦優勝争い】#風見和香 リベンジへ！女王 #伊藤実希 の逆襲は？佐藤莉華 ・塩釜菜那 初出場二人のタイムは？SASUKE出場権を懸けた最終決戦！",
+    authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
+    publishedAt: "2025-12-12",
+    mediaUrl: "https://youtu.be/m3u44cVIaq0",
+    imageUrl: "https://i.ytimg.com/vi/m3u44cVIaq0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼"],
+  },
+  {
     kind: "ogp",
     key: "https://utaten.com/specialArticle/index/9685",
     title:
