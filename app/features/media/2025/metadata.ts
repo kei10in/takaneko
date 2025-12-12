@@ -2,6 +2,43 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://rhp.nagoya/event/entry-928.html",
+    title:
+      "12月15日（月）～12月21日（日）高嶺のなでしこのMVを特集！ | イベント情報 | Hisaya-odori Park（久屋大通公園）",
+    authorName: "Hisaya-odori Park（久屋大通公園）",
+    publishedAt: "2025-12-15",
+    mediaUrl: "https://rhp.nagoya/event/entry-928.html",
+    imageUrl:
+      "https://rhp.nagoya/archives/001/202512/ffdf4367faf5a08b4630263ab571c10817a44806ebcc068054a3101dea6acb4b.png",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://utaten.com/specialArticle/index/9685",
+    title:
+      "【2025年12月版】UtaTenが注目するアーティスト6選！編集部が気になるアーティストを紹介！アーティストからのコメントも！ | 歌詞検索サイト【UtaTen】ふりがな付",
+    authorName: "UtaTen",
+    publishedAt: "2025-12-12",
+    mediaUrl: "https://utaten.com/specialArticle/index/9685",
+    imageUrl:
+      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2025121221",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "youtube",
+    key: "lvaSQ3VWDUg",
+    title: "【高嶺のなでしこ】UtaTen注目アーティスト2025年12月コメント動画",
+    authorName: "UtaTen",
+    publishedAt: "2025-12-09",
+    mediaUrl: "https://youtu.be/lvaSQ3VWDUg",
+    imageUrl: "https://i.ytimg.com/vi/lvaSQ3VWDUg/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "FJQ2wK1_vho",
     title:

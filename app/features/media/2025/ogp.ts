@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://rhp.nagoya/event/entry-928.html",
+    publishedAt: "2025-12-15",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://utaten.com/specialArticle/index/9685",
+    publishedAt: "2025-12-12",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://glassgirl.info/article/post-31830/",
     publishedAt: "2025-12-02",
     category: "article",
