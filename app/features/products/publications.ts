@@ -52,6 +52,7 @@ import { nonno_2024年10月号, nonno_2025年09月号 } from "./publications/non
 import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN";
 import { OutOfMusic_86, OutOfMusic_87, OutOfMusic_88 } from "./publications/Out of Music";
 import { Ray_2024年11月号 } from "./publications/Ray";
+import { SCawaii_2026年2月号 } from "./publications/S Cawaii!";
 import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations";
 import { TOKYO_RESIDENT_Issue002, TOKYO_RESIDENT_Issue003 } from "./publications/TOKYO RESIDENT";
 import {
@@ -138,6 +139,7 @@ const publications: Publication[] = [
   OutOfMusic_87,
   OutOfMusic_88,
   Ray_2024年11月号,
+  SCawaii_2026年2月号,
   SmartGirlsNextGenerations,
   TOKYO_RESIDENT_Issue002,
   TOKYO_RESIDENT_Issue003,
