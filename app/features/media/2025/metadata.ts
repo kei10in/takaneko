@@ -51,6 +51,18 @@ export const metadata2025: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "ogp",
+    key: "https://glassgirl.info/article/post-31962/",
+    title:
+      "【マンスリーアイドルコラム No.053】高嶺のなでしこ 日向端ひな #2「ボイトレレッスンと死神」（12月火曜日担当・全4回） | ガラスガール",
+    authorName: "ガラスガール",
+    publishedAt: "2025-12-09",
+    mediaUrl: "https://glassgirl.info/article/post-31962/",
+    imageUrl: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
     kind: "youtube",
     key: "FJQ2wK1_vho",
     title:

@@ -14,6 +14,16 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: [],
   },
   {
+    mediaUrl: "https://glassgirl.info/article/post-31962/",
+    publishedAt: "2025-12-09",
+    category: "article",
+    presents: ["日向端ひな"],
+    image: {
+      path: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+      ref: "https://glassgirl.info/article/post-31830/",
+    },
+  },
+  {
     mediaUrl: "https://glassgirl.info/article/post-31830/",
     publishedAt: "2025-12-02",
     category: "article",
