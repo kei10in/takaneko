@@ -19,6 +19,50 @@ export const OutOfMusic_88: Publication = {
       path: "/publications/2025/2025-07-08_Out of MUSIC 88_裏表紙.jpg",
       ref: "https://outofmusic.net/?p=2356",
     },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_城月菜央.jpg",
+      ref: "https://x.com/Cosufi1/status/1994007813459464390",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_涼海すう.jpg",
+      ref: "https://x.com/Cosufi1/status/1994337490715685025",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_橋本桃呼.jpg",
+      ref: "https://x.com/Cosufi1/status/1994739868594049345",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_葉月紗蘭.jpg",
+      ref: "https://x.com/Cosufi1/status/1995062851338391855",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_東山恵里沙.jpg",
+      ref: "https://x.com/Cosufi1/status/1995420176377143381",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_日向端ひな.jpg",
+      ref: "https://x.com/Cosufi1/status/1995775242346881030",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_星谷美来.jpg",
+      ref: "https://x.com/Cosufi1/status/1996135052510712155",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_松本ももな.jpg",
+      ref: "https://x.com/Cosufi1/status/1996501120026636300",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_籾山ひめり.jpg",
+      ref: "https://x.com/Cosufi1/status/1996872472277475673",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_集合写真.jpg",
+      ref: "https://x.com/Cosufi1/status/1993675270612811815",
+    },
+    {
+      path: "/publications/2025/2025-07-08_Out of MUSIC 88_集合写真2.jpg",
+      ref: "https://x.com/70914041/status/1998697151245988116",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ"],
   absent: ["春野莉々"],
