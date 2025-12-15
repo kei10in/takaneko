@@ -31,5 +31,9 @@ export const SCawaii_2026年2月号: Publication = {
       text: "S Cawaii!2026年2月号増刊 | 松本ももな（高嶺のなでしこ） ミニフォトカード付き特別版 - infosquare（インフォスクエア）",
       url: "https://infosquare.shop/?pid=189514542",
     },
+    {
+      text: "松本ももなコメント動画 - S Cawaii! 編集部 X",
+      url: "https://x.com/mag_scawaii/status/2000521222229008767",
+    },
   ],
 };
