@@ -8,6 +8,13 @@ export const Ogp2025: OgpMediaDescriptor[] = [
     presents: [],
   },
   {
+    mediaUrl: "https://beeeem.com/article/takanekobf01",
+    publishedAt: "2025-12-13",
+    category: "article",
+    presents: [],
+    siteName: "BEEEEM",
+  },
+  {
     mediaUrl: "https://utaten.com/specialArticle/index/9685",
     publishedAt: "2025-12-12",
     category: "article",

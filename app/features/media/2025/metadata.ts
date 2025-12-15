@@ -15,6 +15,19 @@ export const metadata2025: MediaDetails[] = [
     presents: [],
   },
   {
+    kind: "ogp",
+    key: "https://beeeem.com/article/takanekobf01",
+    title:
+      "高嶺のなでしこ【BEEEEM FES vol.1ライブレポート】“気高く美しい華”が舞った、可憐と熱情が交差する瞬間-BEEEEM",
+    authorName: "BEEEEM",
+    publishedAt: "2025-12-13",
+    mediaUrl: "https://beeeem.com/article/takanekobf01",
+    imageUrl:
+      "https://imagedelivery.net/GAZ6B7nYxar6-1ZqFjo_3w/39b2d958-497c-45f5-e24f-8708bd883900/medium",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "m3u44cVIaq0",
     title:
