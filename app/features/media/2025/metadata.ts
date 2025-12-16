@@ -3,6 +3,30 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
+    title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
+    authorName: "VANITYMIX マガジン",
+    publishedAt: "2025-12-17",
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
+    imageUrl:
+      "https://www.vanitymix.jp/wp-content/uploads/2025/12/高嶺のなでしこ_アーティスト写真-e1765522902830.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://glassgirl.info/article/post-32229/",
+    title:
+      "【マンスリーアイドルコラム No.053】高嶺のなでしこ 日向端ひな #3「オーディション。そしてアニメ化希望」（12月火曜日担当・全4回） | ガラスガール",
+    authorName: "ガラスガール",
+    publishedAt: "2025-12-16",
+    mediaUrl: "https://glassgirl.info/article/post-32229/",
+    imageUrl: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "ogp",
     key: "https://rhp.nagoya/event/entry-928.html",
     title:
       "12月15日（月）～12月21日（日）高嶺のなでしこのMVを特集！ | イベント情報 | Hisaya-odori Park（久屋大通公園）",

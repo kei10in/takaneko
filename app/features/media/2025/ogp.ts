@@ -2,6 +2,24 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
+    publishedAt: "2025-12-17",
+    category: "article",
+    presents: [],
+    officialTwitter: "https://x.com/takanenofficial/status/2000766663025693040",
+  },
+  {
+    mediaUrl: "https://glassgirl.info/article/post-32229/",
+    publishedAt: "2025-12-16",
+    category: "article",
+    presents: ["日向端ひな"],
+    officialTwitter: "https://x.com/takanenofficial/status/2000861152423895090",
+    image: {
+      path: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+      ref: "https://glassgirl.info/article/post-31830/",
+    },
+  },
+  {
     mediaUrl: "https://rhp.nagoya/event/entry-928.html",
     publishedAt: "2025-12-15",
     category: "article",
