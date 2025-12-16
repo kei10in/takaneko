@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const _1stアルバム_楽天ブックス限定特典アクリルスタンド: RandomGoods = {
+  id: "1st アルバム「見上げるたびに、恋をする。」楽天ブックス限定特典アクリルスタンド",
+  slug: "1st アルバム「見上げるたびに、恋をする。」楽天ブックス限定特典アクリルスタンド",
+  name: "1st アルバム「見上げるたびに、恋をする。」楽天ブックス限定特典アクリルスタンド",
+  year: 2025,
+  series: "1st アルバム「見上げるたびに、恋をする。」",
+  category: "アクリルスタンド",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-12-16_1stアルバム「見上げるたびに、恋をする。」_楽天ブックス限定特典アクリルスタンド.jpg",
+  width: 1240,
+  height: 1240,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 78, y: 7, width: 257, height: 408 },
+    { id: 2, x: 492, y: 7, width: 257, height: 408 },
+    { id: 3, x: 905, y: 7, width: 257, height: 408 },
+    { id: 4, x: 78, y: 417, width: 257, height: 408 },
+    { id: 5, x: 492, y: 417, width: 257, height: 408 },
+    { id: 6, x: 905, y: 417, width: 257, height: 408 },
+    { id: 7, x: 78, y: 827, width: 257, height: 408 },
+    { id: 8, x: 492, y: 827, width: 257, height: 408 },
+    { id: 9, x: 905, y: 827, width: 257, height: 408 },
+  ],
+};

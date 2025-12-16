@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const _1stアルバム_セブンネット限定特典アクリルコースター: RandomGoods = {
+  id: "1st アルバム「見上げるたびに、恋をする。」セブンネット限定特典アクリルコースター",
+  slug: "1st アルバム「見上げるたびに、恋をする。」セブンネット限定特典アクリルコースター",
+  name: "1st アルバム「見上げるたびに、恋をする。」セブンネット限定特典アクリルコースター",
+  year: 2025,
+  series: "1st アルバム「見上げるたびに、恋をする。」",
+  category: "アクリルコースター",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-12-16_1stアルバム「見上げるたびに、恋をする。」_セブンネット限定特典アクリルコースター.webp",
+  width: 839,
+  height: 878,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: false,
+  positions: [
+    { id: 1, x: 23, y: 51, width: 257, height: 257 },
+    { id: 2, x: 292, y: 51, width: 257, height: 257 },
+    { id: 3, x: 562, y: 51, width: 257, height: 257 },
+    { id: 4, x: 23, y: 326, width: 257, height: 257 },
+    { id: 5, x: 292, y: 326, width: 257, height: 257 },
+    { id: 6, x: 562, y: 326, width: 257, height: 257 },
+    { id: 7, x: 23, y: 601, width: 257, height: 257 },
+    { id: 8, x: 292, y: 601, width: 257, height: 257 },
+    { id: 9, x: 562, y: 601, width: 257, height: 257 },
+  ],
+};
