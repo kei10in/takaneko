@@ -14,8 +14,8 @@ export const _1stアルバム_楽天ブックス限定特典アクリルスタ�
   variants: [
     { id: 1, name: "城月菜央", description: "" },
     { id: 2, name: "涼海すう", description: "" },
-    { id: 3, name: "橋本桃呼", description: "" },
-    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 3, name: "葉月紗蘭", description: "" },
+    { id: 4, name: "橋本桃呼", description: "" },
     { id: 5, name: "東山恵里沙", description: "" },
     { id: 6, name: "日向端ひな", description: "" },
     { id: 7, name: "星谷美来", description: "" },
