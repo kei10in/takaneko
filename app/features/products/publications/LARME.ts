@@ -37,11 +37,11 @@ export const LARME_066: Publication = {
   url: "https://larme.co/magazine/1090/",
   coverImages: [
     {
-      path: "/publications/larme/2025-09-16_LARME066.jpg",
+      path: "/publications/larme/2025-09-17_LARME066.jpg",
       ref: "https://larme.co/magazine/1090/",
     },
     {
-      path: "/publications/larme/2025-09-16_LARME066_1.jpg",
+      path: "/publications/larme/2025-09-17_LARME066_1.jpg",
       ref: "https://x.com/takanenofficial/status/1967830815586628074",
     },
   ],
