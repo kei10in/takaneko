@@ -1,5 +1,30 @@
 import { Publication } from "../product";
 
+export const LARME_067: Publication = {
+  slug: "LARME 067",
+  name: "LARME 067",
+  date: "2025-12-17",
+  kind: "magazines",
+  publisher: "LARME",
+  listPrice: 891,
+  priceWithTax: 980,
+  code: [],
+  url: "https://larme.co/magazine/1090/",
+  coverImages: [
+    {
+      path: "/publications/larme/2025-12-17_LARME067.jpg",
+      ref: "https://x.com/larmemagazine/status/1996919916071616714",
+    },
+    {
+      path: "/publications/larme/2025-12-17_LARME067_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2000902478309810588",
+    },
+  ],
+  featuredMembers: ["松本ももな", "高嶺のなでしこ2"],
+  officialTwitter: "https://x.com/takanenofficial/status/2000902478309810588",
+  links: [],
+};
+
 export const LARME_066: Publication = {
   slug: "LARME 066",
   name: "LARME 066",
