@@ -3,15 +3,27 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://natalie.mu/music/pp/takaneko",
+    title:
+      "高嶺のなでしこ インタビュー｜1stアルバム「見上げるたびに、恋をする。」は“戦友”と駆け抜けた青春の証 - 音楽ナタリー 特集・インタビュー",
+    authorName: "音楽ナタリー",
+    publishedAt: "2025-12-17",
+    mediaUrl: "https://natalie.mu/music/pp/takaneko",
+    imageUrl: "https://ogre.natalie.mu/media/pp/takaneko/takaneko_ogp.jpg?imwidth=1280&imdensity=1",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
     key: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
     title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
     authorName: "VANITYMIX マガジン",
-    publishedAt: "2025-12-17",
+    publishedAt: "2025-12-16",
     mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
     imageUrl:
       "https://www.vanitymix.jp/wp-content/uploads/2025/12/高嶺のなでしこ_アーティスト写真-e1765522902830.jpg",
     category: "article",
-    presents: [],
+    presents: ["星谷美来", "籾山ひめり"],
   },
   {
     kind: "ogp",

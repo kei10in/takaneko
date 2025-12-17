@@ -2,10 +2,16 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
-    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
+    mediaUrl: "https://natalie.mu/music/pp/takaneko",
     publishedAt: "2025-12-17",
     category: "article",
     presents: [],
+  },
+  {
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-6/",
+    publishedAt: "2025-12-16",
+    category: "article",
+    presents: ["星谷美来", "籾山ひめり"],
     officialTwitter: "https://x.com/takanenofficial/status/2000766663025693040",
   },
   {
