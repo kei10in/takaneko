@@ -21,5 +21,9 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=f1ss7kWQnY8",
     },
+    {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=A9JbEdiICfo",
+    },
   ],
 };
