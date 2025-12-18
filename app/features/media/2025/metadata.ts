@@ -23,7 +23,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl:
       "https://www.vanitymix.jp/wp-content/uploads/2025/12/高嶺のなでしこ_アーティスト写真-e1765522902830.jpg",
     category: "article",
-    presents: ["星谷美来", "籾山ひめり"],
+    presents: ["葉月紗蘭", "星谷美来", "籾山ひめり"],
   },
   {
     kind: "ogp",
