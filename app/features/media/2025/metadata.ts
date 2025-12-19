@@ -3,6 +3,31 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.oricon.co.jp/news/2425639/full/",
+    title:
+      "高嶺のなでしこ、初アルバムで3年間の成長を総括　メンバーが語る未来への抱負【インタビュー】 ",
+    authorName: "オリコンニュース（ORICON NEWS）",
+    publishedAt: "2025-12-19",
+    mediaUrl: "https://www.oricon.co.jp/news/2425639/full/",
+    imageUrl:
+      "https://contents.oricon.co.jp/upimg/news/2426000/2425639/20251218_102626_p_o_67545018.jpg",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙", "松本ももな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://rockinon.com/interview/detail/213869",
+    title:
+      "【インタビュー】かわいさもかっこよさも、強さも弱さも表現するアイドル、高嶺のなでしこ。HoneyWorksと歩んだ軌跡の詰まった1stフルアルバム『見上げるたびに、恋をする。』を語る－rockinon.com｜https://rockinon.com/interview/detail/213869",
+    authorName: "rockinon.com",
+    publishedAt: "2025-12-18",
+    mediaUrl: "https://rockinon.com/interview/detail/213869",
+    imageUrl: "https://rockinon.com/images/entry/width:1200/213869/1",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
+  {
+    kind: "ogp",
     key: "https://natalie.mu/music/pp/takaneko",
     title:
       "高嶺のなでしこ インタビュー｜1stアルバム「見上げるたびに、恋をする。」は“戦友”と駆け抜けた青春の証 - 音楽ナタリー 特集・インタビュー",

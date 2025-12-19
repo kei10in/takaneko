@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.oricon.co.jp/news/2425639/full/",
+    publishedAt: "2025-12-19",
+    category: "article",
+    presents: ["橋本桃呼", "東山恵里沙", "松本ももな"],
+  },
+  {
+    mediaUrl: "https://rockinon.com/interview/detail/213869",
+    publishedAt: "2025-12-18",
+    category: "article",
+    presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+  },
+  {
     mediaUrl: "https://natalie.mu/music/pp/takaneko",
     publishedAt: "2025-12-17",
     category: "article",
