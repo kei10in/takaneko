@@ -25,5 +25,9 @@ export const この世界は嘘でできている: SongMetaDescriptor = {
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=J55hfkoib_M",
     },
+    {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=5NhnsN2atjk",
+    },
   ],
 };
