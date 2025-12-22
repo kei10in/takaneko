@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://realsound.jp/2025/12/post-2243406.html",
+    title:
+      "高嶺のなでしこ、走り続けたからこそ見えた景色ーー『見上げるたびに、恋をする。』に刻まれた“物語”",
+    authorName: "Real Sound｜リアルサウンド",
+    publishedAt: "2025-12-20",
+    mediaUrl: "https://realsound.jp/2025/12/post-2243406.html",
+    imageUrl: "https://realsound.jp/wp-content/uploads/2025/12/20251219-takanenonadeshiko-99.jpg",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://www.oricon.co.jp/news/2425639/full/",
     title:
       "高嶺のなでしこ、初アルバムで3年間の成長を総括　メンバーが語る未来への抱負【インタビュー】 ",
@@ -74,6 +86,7 @@ export const metadata2025: MediaDetails[] = [
       "https://rhp.nagoya/archives/001/202512/ffdf4367faf5a08b4630263ab571c10817a44806ebcc068054a3101dea6acb4b.png",
     category: "article",
     presents: [],
+    deleted: true,
   },
   {
     kind: "ogp",

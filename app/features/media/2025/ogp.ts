@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://realsound.jp/2025/12/post-2243406.html",
+    publishedAt: "2025-12-20",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://www.oricon.co.jp/news/2425639/full/",
     publishedAt: "2025-12-19",
     category: "article",
