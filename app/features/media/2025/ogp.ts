@@ -2,6 +2,19 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
+    publishedAt: "2025-12-22",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    mediaUrl: "https://skream.jp/interview/2025/12/takanenonadeshiko.php",
+    publishedAt: "2025-12-22",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+    title: "高嶺のなでしこ | Skream! インタビュー",
+  },
+  {
     mediaUrl: "https://realsound.jp/2025/12/post-2243406.html",
     publishedAt: "2025-12-20",
     category: "article",

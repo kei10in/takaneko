@@ -3,6 +3,42 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "ZClvrHRQ5fo",
+    title: "高嶺のなでしこ、1stアルバム『見上げるたびに、恋をする』リリース―Skream!動画メッセージ",
+    authorName: "skreamjapan",
+    publishedAt: "2025-12-22",
+    mediaUrl: "https://youtu.be/ZClvrHRQ5fo",
+    imageUrl: "https://i.ytimg.com/vi/ZClvrHRQ5fo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
+    title:
+      'HoneyWorksサウンド・プロデュース、高嶺のなでしこのインタビュー＆動画メッセージ公開。"アイドルがアイドルのことを歌う"強さと矜持――1stアルバム『見上げるたびに、恋をする。』リリース',
+    authorName: "Skream! 邦楽ロック・洋楽ロック ポータルサイト",
+    publishedAt: "2025-12-22",
+    mediaUrl: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
+    imageUrl:
+      "https://skream.jp/news/assets_c/2025/12/takanenonadeshiko_interview-thumb-1200xauto-243641.jpg",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://skream.jp/interview/2025/12/takanenonadeshiko.php",
+    title: "高嶺のなでしこ | Skream! インタビュー",
+    authorName: "Skream! 邦楽ロック・洋楽ロック ポータルサイト",
+    publishedAt: "2025-12-22",
+    mediaUrl: "https://skream.jp/interview/2025/12/takanenonadeshiko.php",
+    imageUrl:
+      "https://skream.jp/interview/assets_c/2025/12/takanenonadeshiko-thumb-500xauto-242937.jpg",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     key: "bhd6b2aaqrw",
     title: "【番外編】結城りなSASUKEへの道〜アイドル予選会を振り返る〜",
     authorName: "ukkaチャンネル",
