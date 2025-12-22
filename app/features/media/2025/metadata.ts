@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "bhd6b2aaqrw",
+    title: "【番外編】結城りなSASUKEへの道〜アイドル予選会を振り返る〜",
+    authorName: "ukkaチャンネル",
+    publishedAt: "2025-12-21",
+    mediaUrl: "https://youtu.be/bhd6b2aaqrw",
+    imageUrl: "https://i.ytimg.com/vi/bhd6b2aaqrw/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://realsound.jp/2025/12/post-2243406.html",
     title:
