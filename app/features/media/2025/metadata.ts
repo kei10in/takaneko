@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2025: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://glassgirl.info/article/post-32354/",
+    title:
+      "【マンスリーアイドルコラム No.053】高嶺のなでしこ 日向端ひな #4「旅の始まりと たかねこのクルーたち！」（12月火曜日担当・全4回） | ガラスガール",
+    authorName: "ガラスガール",
+    publishedAt: "2025-12-23",
+    mediaUrl: "https://glassgirl.info/article/post-32354/",
+    imageUrl: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
     kind: "youtube",
     key: "ZClvrHRQ5fo",
     title: "高嶺のなでしこ、1stアルバム『見上げるたびに、恋をする』リリース―Skream!動画メッセージ",

@@ -2,6 +2,17 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://glassgirl.info/article/post-32354/",
+    publishedAt: "2025-12-23",
+    category: "article",
+    presents: ["日向端ひな"],
+    officialTwitter: "https://x.com/takanenofficial/status/2003420320116670540",
+    image: {
+      path: "/media/2025/2025-12-02_ガラスガールコラム.jpg",
+      ref: "https://glassgirl.info/article/post-31830/",
+    },
+  },
+  {
     mediaUrl: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
     publishedAt: "2025-12-22",
     category: "article",
