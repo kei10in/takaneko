@@ -134,9 +134,11 @@ import { たかねこハロウィン2025_生写真 } from "./2025/2025-10-29_生
 import { 見上げるたびに恋をする_ミニフォト } from "./2025/2025-12-04_ミニフォトカード「見上げるたびに、恋をする。」";
 import { _1stアルバム_セブンネット限定特典アクリルコースター } from "./2025/2025-12-16_1stアルバム「見上げるたびに、恋をする。」_セブンネット限定特典アクリルコースター";
 import { _1stアルバム_楽天ブックス限定特典アクリルスタンド } from "./2025/2025-12-16_1stアルバム「見上げるたびに、恋をする。」_楽天ブックス限定特典アクリルスタンド";
+import { クリスマス2025_ミニフォト } from "./2025/2025-12-24_ミニフォトカード「クリスマス2025」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  クリスマス2025_ミニフォト,
   _1stアルバム_楽天ブックス限定特典アクリルスタンド,
   _1stアルバム_セブンネット限定特典アクリルコースター,
   見上げるたびに恋をする_ミニフォト,
@@ -146,6 +148,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  クリスマス2025_ミニフォト,
   _1stアルバム_楽天ブックス限定特典アクリルスタンド,
   _1stアルバム_セブンネット限定特典アクリルコースター,
   見上げるたびに恋をする_ミニフォト,
