@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const クリスマス2025_アクリルコースター: RandomGoods = {
+  id: "アクリルコースター「クリスマス2025」ver.",
+  slug: "アクリルコースター「クリスマス2025」",
+  name: "アクリルコースター「クリスマス2025」ver.",
+  year: 2025,
+  series: "クリスマス2025",
+  category: "アクリルコースター",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-12-25_アクリルコースター「クリスマス2025」.webp",
+  width: 308,
+  height: 308,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 8, y: 14, width: 94, height: 94 },
+    { id: 2, x: 107, y: 14, width: 94, height: 94 },
+    { id: 3, x: 206, y: 14, width: 94, height: 94 },
+    { id: 4, x: 8, y: 108, width: 94, height: 94 },
+    { id: 5, x: 107, y: 108, width: 94, height: 94 },
+    { id: 6, x: 206, y: 108, width: 94, height: 94 },
+    { id: 7, x: 8, y: 203, width: 94, height: 94 },
+    { id: 8, x: 107, y: 203, width: 94, height: 94 },
+    { id: 9, x: 206, y: 203, width: 94, height: 94 },
+  ],
+};

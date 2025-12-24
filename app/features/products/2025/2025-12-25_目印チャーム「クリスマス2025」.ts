@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const クリスマス2025_目印チャーム: RandomGoods = {
+  id: "目印チャーム「クリスマス2025」",
+  slug: "イラスト目印チャーム「クリスマス2025」",
+  name: "イラスト目印チャーム「クリスマス2025」ver.",
+  year: 2025,
+  series: "クリスマス2025",
+  category: "目印チャーム",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2025/2025-12-25_目印チャーム「クリスマス2025」.webp",
+  width: 408,
+  height: 240,
+  variants: [
+    { id: 1, name: "城月菜央", description: "イラスト: 涼海すう" },
+    { id: 2, name: "葉月紗蘭", description: "イラスト: 涼海すう" },
+    { id: 3, name: "日向端ひな", description: "イラスト: 涼海すう" },
+    { id: 4, name: "橋本桃呼", description: "イラスト: 涼海すう" },
+    { id: 5, name: "松本ももな", description: "イラスト: 涼海すう" },
+    { id: 6, name: "涼海すう", description: "イラスト: 葉月紗蘭" },
+    { id: 7, name: "東山恵里沙", description: "イラスト: 葉月紗蘭" },
+    { id: 8, name: "星谷美来", description: "イラスト: 葉月紗蘭" },
+    { id: 9, name: "籾山ひめり", description: "イラスト: 葉月紗蘭" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 10, y: 51, width: 77, height: 79 },
+    { id: 2, x: 89, y: 51, width: 77, height: 79 },
+    { id: 3, x: 166, y: 51, width: 77, height: 79 },
+    { id: 4, x: 244, y: 54, width: 77, height: 79 },
+    { id: 5, x: 321, y: 54, width: 77, height: 79 },
+    { id: 6, x: 49, y: 148, width: 77, height: 79 },
+    { id: 7, x: 124, y: 150, width: 77, height: 79 },
+    { id: 8, x: 203, y: 150, width: 77, height: 79 },
+    { id: 9, x: 287, y: 153, width: 77, height: 79 },
+  ],
+};
