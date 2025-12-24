@@ -1,4 +1,4 @@
-import { Limited, Repertoire, TakanekoVersion } from "../tags";
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 病名恋ワズライ: SongMetaDescriptor = {
@@ -11,7 +11,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   choreographedBy: "らん先生",
 
-  tags: [TakanekoVersion, Repertoire, Limited],
+  tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2025/病名恋ワズライ.jpg",
 
