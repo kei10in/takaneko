@@ -11,8 +11,8 @@ export const クリスマス2025_生写真: RandomGoods = {
   set: { kind: ProductLine.Photo, setName: "クリスマス2025" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-12-25_生写真「クリスマス2025」.webp",
-  width: 1190,
-  height: 1684,
+  width: 1080,
+  height: 1238,
   variants: REGULAR_PHOTO_SET2,
   positions: [
     { id: 1, x: 33, y: 33, width: 154, height: 220 },
