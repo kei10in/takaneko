@@ -25,5 +25,9 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=A9JbEdiICfo",
     },
+    {
+      text: "LIVE (A Wonderful Encounter)",
+      videoId: "https://www.youtube.com/watch?v=cg5bcITxD20",
+    },
   ],
 };
