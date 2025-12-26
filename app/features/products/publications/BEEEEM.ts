@@ -1,5 +1,47 @@
 import { Publication } from "../product";
 
+export const BEEEEM_vol2: Publication = {
+  slug: "BEEEEM vol.2",
+  name: "BEEEEM vol.2",
+  date: "2026-01-17",
+  kind: "magazines", // "books"
+  publisher: "株式会社原宿POP",
+  listPrice: 2000,
+  priceWithTax: 2200,
+  code: [{ kind: "isbn", value: "978-4-9914-1345-2" }],
+  url: "https://beeeem.com/article/beeeemvol2",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_表紙.webp",
+      ref: "https://beeeem.com/article/beeeemvol2",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_裏表紙.webp",
+      ref: "https://beeeem.com/article/beeeemvol2",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_先行カット1.webp",
+      ref: "https://beeeem.com/article/beeeemvol2",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_先行カット2.webp",
+      ref: "https://beeeem.com/article/beeeemvol2",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_先行カット3.webp",
+      ref: "https://beeeem.com/article/beeeemvol2",
+    },
+  ],
+  featuredMembers: ["松本ももな", "籾山ひめり"],
+  officialTwitter: "",
+  links: [
+    {
+      text: "≒JOY 天野香乃愛×市原愛弓×江角怜音、表紙に登場ーーガールズカルチャー雑誌『BEEEEM』vol.2発売決定【先行イメージカット公開】-BEEEEM",
+      url: "https://beeeem.com/article/beeeemvol2",
+    },
+  ],
+};
+
 export const BEEEEM_vol1: Publication = {
   slug: "BEEEEM vol.1",
   name: "BEEEEM vol.1",
