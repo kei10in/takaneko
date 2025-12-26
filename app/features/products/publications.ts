@@ -68,6 +68,7 @@ import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/W
 import {
   Zipper_2024_2025年冬号,
   Zipper_2024年秋号,
+  Zipper_2025_2026年冬号,
   Zipper_2025年夏号,
   Zipper_2025年春号,
 } from "./publications/Zipper";
@@ -159,6 +160,7 @@ const publications: Publication[] = [
   Zipper_2024_2025年冬号,
   Zipper_2025年春号,
   Zipper_2025年夏号,
+  Zipper_2025_2026年冬号,
   週刊少年チャンピオン_2024年No51,
   週刊少年チャンピオン_2025年No32,
   日経エンタテインメント_2024年2月号,

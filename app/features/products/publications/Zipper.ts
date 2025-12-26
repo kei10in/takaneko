@@ -1,5 +1,30 @@
 import { Publication } from "../product";
 
+export const Zipper_2025_2026年冬号: Publication = {
+  slug: "Zipper 2025-2026年冬号",
+  name: "Zipper 2025-2026年冬号",
+  date: "2025-12-27",
+  kind: "mooks",
+  publisher: "祥伝社",
+  listPrice: 800,
+  priceWithTax: 880,
+  code: [{ kind: "ISBN", value: "9784396880293" }],
+  url: "https://www.zipper.jp/news/news-20251226/",
+  coverImages: [
+    {
+      path: "/publications/2025/2025-12-26_Zipper 2025-2026年冬号_通常版.jpg",
+      ref: "https://www.zipper.jp/news/news-20251226/",
+    },
+    {
+      path: "/publications/2025/2025-12-26_Zipper 2025-2026年冬号_特装版.jpg",
+      ref: "https://www.zipper.jp/news/news-20251226/",
+    },
+  ],
+  featuredMembers: ["松本ももな", "籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/1988804093855559812",
+  links: [],
+};
+
 export const Zipper_2025年夏号: Publication = {
   slug: "Zipper 2025年夏号",
   name: "Zipper 2025年夏号",
