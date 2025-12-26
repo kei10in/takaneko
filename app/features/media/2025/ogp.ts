@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2025: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/777508",
+    publishedAt: "2025-12-26",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     mediaUrl: "https://glassgirl.info/article/post-32354/",
     publishedAt: "2025-12-23",
     category: "article",

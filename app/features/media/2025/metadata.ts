@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/777508",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第7回『富江』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2025-12-26",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/777508",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2025/12/777508_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
     key: "https://glassgirl.info/article/post-32354/",
     title:
       "【マンスリーアイドルコラム No.053】高嶺のなでしこ 日向端ひな #4「旅の始まりと たかねこのクルーたち！」（12月火曜日担当・全4回） | ガラスガール",
