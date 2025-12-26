@@ -118,8 +118,8 @@ export const Zipper_2025年春号: Publication = {
 };
 
 export const Zipper_2024_2025年冬号: Publication = {
-  slug: "Zipper 2024-2025年秋号",
-  name: "Zipper 2024-2025年秋号",
+  slug: "Zipper 2024-2025年冬号",
+  name: "Zipper 2024-2025年冬号",
   date: "2024-12-26",
   kind: "mooks",
   publisher: "祥伝社",
@@ -128,7 +128,7 @@ export const Zipper_2024_2025年冬号: Publication = {
   url: "https://www.zipper.jp/news/news-20241218",
   coverImages: [
     {
-      path: "/publications/2024/2024-12-26_Zipper 2024-2025年秋号.webp",
+      path: "/publications/2024/2024-12-26_Zipper 2024-2025年冬号.webp",
       ref: "https://www.zipper.jp/news/news-20241218",
     },
   ],
