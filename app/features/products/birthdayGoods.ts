@@ -12,9 +12,11 @@ import { 涼海すう誕生日記念_2025年8月22日 } from "./birthday/2025-08
 import { 松本ももな誕生日記念_2025年10月12日 } from "./birthday/2025-10-12_松本ももな誕生日記念";
 import { 日向端ひな誕生日記念_2025年10月30日 } from "./birthday/2025-10-30_日向端ひな誕生日記念";
 import { 星谷美来誕生日記念_2025年11月06日 } from "./birthday/2025-11-06_星谷美来誕生日記念";
+import { 城月菜央誕生日記念_2025年12月25日 } from "./birthday/2025-12-25_城月菜央誕生日記念";
 import { BirthdayGoodsCollection } from "./product";
 
 export const BirthdayGoods: BirthdayGoodsCollection[] = [
+  城月菜央誕生日記念_2025年12月25日,
   星谷美来誕生日記念_2025年11月06日,
   日向端ひな誕生日記念_2025年10月30日,
   松本ももな誕生日記念_2025年10月12日,
