@@ -4,9 +4,18 @@ import { EventRepository } from "~/features/events/EventRepository";
 
 const importGlob = (): Record<string, () => Promise<unknown>> => {
   const scriptDir = import.meta.dirname;
+  const eventsDir = path.resolve(scriptDir, "..", "..", "app", "features", "events");
+
   return Object.fromEntries(
-    glob.sync(`${scriptDir}/../app/features/events/*/**/*.{mdx,tsx}`).map((f) => {
-      return [path.basename(f), () => import(f)];
+    glob.sync(`${eventsDir.replace(/\\/g, "/")}/*/**/*.{mdx,tsx}`).map((f) => {
+      return [
+        path.basename(f),
+        () => {
+          const cwd = process.cwd();
+          const importPath = path.relative(cwd, f);
+          return import(importPath);
+        },
+      ];
     }),
   );
 };

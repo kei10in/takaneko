@@ -6,7 +6,10 @@ export const datasetBuilder = (): Plugin => {
   const buildSetlistData = () => {
     const buildSetlistDataScript = path.resolve(__dirname, "..", "..", "scripts", "setlist-db.ts");
 
-    const result = spawnSync("pnpm", ["tsx", buildSetlistDataScript], { shell: true });
+    const result = spawnSync("pnpm", ["tsx", buildSetlistDataScript], {
+      shell: true,
+      stdio: "inherit",
+    });
     if (result.error) {
       throw result.error;
     }
