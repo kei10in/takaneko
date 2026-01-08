@@ -29,5 +29,9 @@ export const 初恋のこたえ: SongMetaDescriptor = {
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=y_0O87GC6WQ",
     },
+    {
+      text: "LIVE (A Wonderful Encounter)",
+      videoId: "https://www.youtube.com/watch?v=gXPTUUR0dDc",
+    },
   ],
 };
