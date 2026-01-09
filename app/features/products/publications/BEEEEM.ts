@@ -39,6 +39,10 @@ export const BEEEEM_vol2: Publication = {
       text: "≒JOY 天野香乃愛×市原愛弓×江角怜音、表紙に登場ーーガールズカルチャー雑誌『BEEEEM』vol.2発売決定【先行イメージカット公開】-BEEEEM",
       url: "https://beeeem.com/article/beeeemvol2",
     },
+    {
+      text: "コメント動画 - BEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2009580922530853108",
+    },
   ],
 };
 
