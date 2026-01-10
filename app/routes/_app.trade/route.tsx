@@ -26,8 +26,10 @@ export default function Index() {
   const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023);
   const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024);
   const in2025 = TAKANEKO_PHOTOS.filter((p) => p.year == 2025);
+  const in2026 = TAKANEKO_PHOTOS.filter((p) => p.year == 2026);
   const allPhotos = [
     { name: "ホットなやつ", photos: TAKANEKO_PHOTOS_FEATURED },
+    { name: "2026 年", photos: in2026 },
     { name: "2025 年", photos: in2025 },
     { name: "2024 年", photos: in2024 },
     { name: "2023 年", photos: in2023 },

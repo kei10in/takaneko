@@ -139,9 +139,13 @@ import { クリスマス2025_アクリルコースター } from "./2025/2025-12-
 import { クリスマス2025_生写真 } from "./2025/2025-12-25_生写真「クリスマス2025」";
 import { クリスマス2025_目印チャーム } from "./2025/2025-12-25_目印チャーム「クリスマス2025」";
 import { クリスマス2025_缶バッジ } from "./2025/2025-12-25_缶バッジ「クリスマス2025」";
+import { 晴れ着2026_ミニフォト } from "./2026/2026-01-01_ミニフォトカード「晴れ着2026」";
+import { 晴れ着2026_生写真 } from "./2026/2026-01-01_生写真「晴れ着2026」";
+import { 見上げるたびに恋をする衣装_生写真 } from "./2026/2026-01-01_生写真「見上げるたびに、恋をする。衣装」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  晴れ着2026_ミニフォト,
   クリスマス2025_生写真,
   クリスマス2025_ミニフォト,
   クリスマス2025_目印チャーム,
@@ -150,6 +154,9 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  晴れ着2026_生写真,
+  晴れ着2026_ミニフォト,
+  見上げるたびに恋をする衣装_生写真,
   クリスマス2025_生写真,
   クリスマス2025_ミニフォト,
   クリスマス2025_目印チャーム,
