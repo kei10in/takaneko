@@ -31,6 +31,18 @@ export const BEEEEM_vol2: Publication = {
       path: "/publications/2026/2026-01-17_BEEEEM vol.2_先行カット3.webp",
       ref: "https://beeeem.com/article/beeeemvol2",
     },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_2ショットポストカード.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2011996843366858909",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_ソロポストカード_松本ももな.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2011996843366858909",
+    },
+    {
+      path: "/publications/2026/2026-01-17_BEEEEM vol.2_ソロポストカード_籾山ひめり.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2011996843366858909",
+    },
   ],
   featuredMembers: ["松本ももな", "籾山ひめり"],
   officialTwitter: "",
@@ -42,6 +54,10 @@ export const BEEEEM_vol2: Publication = {
     {
       text: "コメント動画 - BEEEMニュース X",
       url: "https://x.com/BEEEEM_NEWS/status/2009580922530853108",
+    },
+    {
+      text: "【松本ももな×籾山ひめり（高嶺のなでしこ）】ガールズカルチャー雑誌『BEEEEM』vol.2 一般販売 特典情報-BEEEEM",
+      url: "https://beeeem.com/article/beeeem2-tn1",
     },
   ],
 };
