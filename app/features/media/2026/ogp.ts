@@ -21,4 +21,10 @@ export const Ogp2026: OgpMediaDescriptor[] = [
       ref: "https://kansai.pia.co.jp/interview/music/2026-01/takanenonadeshiko.html",
     },
   },
+  {
+    mediaUrl: "https://popteen.co.jp/media/80796/",
+    publishedAt: "2026-01-05",
+    category: "article",
+    presents: ["涼海すう"],
+  },
 ];

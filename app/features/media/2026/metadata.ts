@@ -36,4 +36,16 @@ export const metadata2026: MediaDetails[] = [
     category: "article",
     presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
   },
+  {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/80796/",
+    title: "お正月太りをリセット♡年始からの痩せ美容習慣",
+    authorName: "Popteen Media",
+    publishedAt: "2026-01-05",
+    mediaUrl: "https://popteen.co.jp/media/80796/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2025/12/c0dfe507dc2b4d597e13da5ee369c2c6.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
 ];
