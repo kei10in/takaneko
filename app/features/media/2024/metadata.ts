@@ -21,7 +21,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1769162715&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },
@@ -201,7 +201,7 @@ export const metadata2024: MediaDetails[] = [
     kind: "ogp",
     key: "https://cmnow.jp/next/24110522772/",
     title:
-      "高嶺のなでしこから橋本桃呼、春野莉々、涼海すうが登場！ 『Iʼ M YOUR IDOL / アドレナリンゲーム』を語る。 – CMNOW WEB",
+      "高嶺のなでしこから橋本桃呼、春野莉々、涼海すうが登場！ 『Iʼ M YOUR IDOL / アドレナリンゲーム』を語る。 ? CMNOW WEB",
     authorName: "CMNOW WEB",
     publishedAt: "2024-11-27",
     mediaUrl: "https://cmnow.jp/next/24110522772/",
@@ -289,7 +289,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1769162714&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -326,7 +326,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1759481270&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1769162714&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -609,7 +609,7 @@ export const metadata2024: MediaDetails[] = [
     kind: "ogp",
     key: "https://cmnow.jp/entertainment/24061821585/",
     title:
-      "Single連続リリース、全国ツアー2024 ツアーファイナル…勢いが止まらない「高嶺のなでしこ」が登場！ – CMNOW WEB",
+      "Single連続リリース、全国ツアー2024 ツアーファイナル…勢いが止まらない「高嶺のなでしこ」が登場！ ? CMNOW WEB",
     authorName: "CMNOW WEB",
     publishedAt: "2024-07-16",
     mediaUrl: "https://cmnow.jp/entertainment/24061821585/",

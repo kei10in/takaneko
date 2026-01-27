@@ -192,7 +192,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-12-12",
     mediaUrl: "https://utaten.com/specialArticle/index/9685",
     imageUrl:
-      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2025121221",
+      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2026012721",
     category: "article",
     presents: [],
   },
@@ -806,7 +806,6 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/JK3sm50DW10/hqdefault.jpg",
     category: "youtube",
     presents: [],
-    deleted: true,
   },
   {
     kind: "youtube",
@@ -1603,7 +1602,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1762501040&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1768383695&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },

@@ -38,7 +38,7 @@ export const metadata2022: MediaDetails[] = [
   {
     kind: "ogp",
     key: "https://cmnow.jp/entertainment/22102914413/",
-    title: "いま話題の「たかねこ」ちゃんとは!? 1stファンミーティング直前まとめ – CMNOW WEB",
+    title: "いま話題の「たかねこ」ちゃんとは!? 1stファンミーティング直前まとめ ? CMNOW WEB",
     authorName: "CMNOW WEB",
     publishedAt: "2022-10-31",
     mediaUrl: "https://cmnow.jp/entertainment/22102914413/",
