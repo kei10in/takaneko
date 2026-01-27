@@ -59,6 +59,10 @@ export const BEEEEM_vol2: Publication = {
       text: "【松本ももな×籾山ひめり（高嶺のなでしこ）】ガールズカルチャー雑誌『BEEEEM』vol.2 一般販売 特典情報-BEEEEM",
       url: "https://beeeem.com/article/beeeem2-tn1",
     },
+    {
+      text: "高嶺のなでしこ 松本ももな × 籾山ひめり、立ち止まり、考え、前へ進んだ1年-BEEEEM",
+      url: "https://beeeem.com/article/takaneko-beeeem2",
+    },
   ],
 };
 
