@@ -1,8 +1,8 @@
 import { Break, Nodes } from "mdast";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown, { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { map } from "unist-util-map";
-import { components } from "./MdComponents";
+import { components as markdownComponents } from "./MdComponents";
 
 const allowBrTags = () => {
   return (tree: Nodes) => {
@@ -18,11 +18,12 @@ const allowBrTags = () => {
 };
 
 interface Props {
+  components?: Components;
   children: string | undefined;
 }
 
 export const Markdown: React.FC<Props> = (props: Props) => {
-  const { children } = props;
+  const { children, components = markdownComponents } = props;
 
   return (
     <div>
