@@ -16,6 +16,7 @@ export default defineConfig({
     tailwindcss(),
     mdx({
       remarkPlugins: [gfm],
+      include: [/\.mdx$/],
     }),
     reactRouter(),
     tsconfigPaths(),

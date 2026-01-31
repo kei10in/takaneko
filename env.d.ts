@@ -3,3 +3,7 @@ declare module "*.mdx" {
 
   export const meta: EventMetaDescriptor | undefined;
 }
+
+declare module "*.md" {
+  export default string;
+}

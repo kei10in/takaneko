@@ -1,9 +1,9 @@
 import { MetaFunction } from "react-router";
+import { Markdown } from "~/components/Markdown";
 import { markdownComponents2 } from "~/components/MdComponents2";
-import { Mdx } from "~/components/Mdx";
 import { pageBox } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
-import Article from "./article.md";
+import article from "./article.md?raw";
 
 export const meta: MetaFunction = () => {
   return [
@@ -20,7 +20,7 @@ export default function Releases() {
   return (
     <div className="container mx-auto max-w-2xl">
       <section className={pageBox("px-4")}>
-        <Mdx Content={Article} components={markdownComponents2} />
+        <Markdown components={markdownComponents2}>{article}</Markdown>
       </section>
     </div>
   );

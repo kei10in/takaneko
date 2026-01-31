@@ -1,7 +1,7 @@
 import { MetaFunction } from "react-router";
-import { Mdx } from "~/components/Mdx";
+import { Markdown } from "~/components/Markdown";
 import { SITE_TITLE } from "~/constants";
-import ReleaseNotes from "../../../RELEASES.md";
+import ReleaseNotes from "../../../RELEASES.md?raw";
 
 export const meta: MetaFunction = () => {
   return [
@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => {
 export default function Releases() {
   return (
     <article className="container mx-auto my-8 max-w-xl px-4">
-      <Mdx Content={ReleaseNotes} />
+      <Markdown>{ReleaseNotes}</Markdown>
     </article>
   );
 }
