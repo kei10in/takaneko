@@ -30,6 +30,10 @@ export const 決戦スピリット: SongMetaDescriptor = {
       videoId: "QXfgneto5wM",
     },
     {
+      text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
+      videoId: "https://www.youtube.com/watch?v=__rgL3hLhkI",
+    },
+    {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 籾山ひめり ver",
       videoId: "https://www.youtube.com/watch?v=MX-zMJE4Tug",
     },

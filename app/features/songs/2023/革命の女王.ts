@@ -26,6 +26,10 @@ export const 革命の女王: SongMetaDescriptor = {
       videoId: "tgtkGQM_yHU",
     },
     {
+      text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
+      videoId: "https://www.youtube.com/watch?v=__rgL3hLhkI",
+    },
+    {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 日向端ひな ver ",
       videoId: "https://www.youtube.com/watch?v=EYgxdF_Wkkw",
     },

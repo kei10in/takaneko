@@ -26,6 +26,10 @@ export const 可愛くてごめん: SongMetaDescriptor = {
       videoId: "oB12TDu4dVE",
     },
     {
+      text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
+      videoId: "https://www.youtube.com/watch?v=VI1n97ZC3mw",
+    },
+    {
       text: "LIVE (Cute for life)",
       videoId: "https://www.youtube.com/watch?v=_ICAYT8antM",
     },
