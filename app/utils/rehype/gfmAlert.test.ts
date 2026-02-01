@@ -78,7 +78,7 @@ describe("gfmAlert", () => {
     const markdown = "> [!NOTE]";
     const result = await processMarkdown(markdown);
     expect(result).toMatchInlineSnapshot(`
-      "<div class="markdown-alert markdown-alert-note"><p></p>
+      "<div class="markdown-alert markdown-alert-note">
       </div>"
     `);
   });
@@ -134,6 +134,24 @@ describe("gfmAlert", () => {
     expect(result).toMatchInlineSnapshot(`
       "<div class="markdown-alert markdown-alert-note"><p>First paragraph</p>
       <p>Second paragraph</p>
+      </div>"
+    `);
+  });
+
+  it("should handle list", async () => {
+    const markdown = dedent`
+      > [!NOTE]
+      > 
+      > - First item
+      > - Second item
+    `;
+    const result = await processMarkdown(markdown);
+    expect(result).toMatchInlineSnapshot(`
+      "<div class="markdown-alert markdown-alert-note">
+      <ul>
+      <li>First item</li>
+      <li>Second item</li>
+      </ul>
       </div>"
     `);
   });

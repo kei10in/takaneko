@@ -23,16 +23,27 @@ export const gfmAlert: Plugin<[], Root> = () => {
       }
 
       const parsed = parseAlertType(head);
-
       if (parsed == undefined) {
         return;
       }
+
+      if (parsed.type == "tip") {
+        console.log(parsed);
+        console.log(node);
+      }
+
+      const newChildren = [];
+      // 空の <p></p> が残らないように、単独の [!<LABEL>] だった場合は、head を捨てる。
+      if (parsed.siblings.length != 0) {
+        newChildren.push({ ...head, children: parsed.siblings });
+      }
+      newChildren.push(...node.children.slice(headIndex + 1));
 
       parent.children[index] = {
         type: "element",
         tagName: "div",
         properties: { className: ["markdown-alert", "markdown-alert-" + parsed.type] },
-        children: [{ ...head, children: parsed.siblings }, ...node.children.slice(headIndex + 1)],
+        children: newChildren,
       };
     });
   };
