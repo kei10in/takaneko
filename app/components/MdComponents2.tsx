@@ -1,3 +1,5 @@
+import { clsx } from "clsx";
+import { BsExclamationTriangleFill, BsInfoCircle } from "react-icons/bs";
 import { Components } from "react-markdown";
 import { pageHeading, sectionHeading } from "./styles";
 
@@ -32,8 +34,65 @@ export const markdownComponents2: Components = {
       {children}
     </h6>
   ),
+  div: ({ children, className, node: _, ...props }) => {
+    const splitted = className?.split(" ") ?? [];
+    if (splitted.includes("markdown-alert")) {
+      if (splitted.includes("markdown-alert-note")) {
+        return (
+          <div className="my-6 border-l-4 border-blue-400 bg-blue-50 p-4" {...props}>
+            <div className="flex items-center gap-2 pb-2 text-blue-400">
+              <BsInfoCircle className="text-lg" />
+              <p>
+                <strong>Note</strong>
+              </p>
+            </div>
+            <div>{children}</div>
+          </div>
+        );
+      } else if (splitted.includes("markdown-alert-tip")) {
+        return (
+          <div className="my-6 border-l-4 border-l-green-400 pl-4" {...props}>
+            {children}
+          </div>
+        );
+      } else if (splitted.includes("markdown-alert-warning")) {
+        return (
+          <div
+            className="border-nadeshiko-500 bg-nadeshiko-100 my-6 rounded-md border px-4 pb-4"
+            {...props}
+          >
+            <div className="text-nadeshiko-800 mt-4 flex items-center gap-2">
+              <BsExclamationTriangleFill />
+              <p>
+                <strong>注意</strong>
+              </p>
+            </div>
+            <div>{children}</div>
+          </div>
+        );
+      } else if (splitted.includes("markdown-alert-danger")) {
+        return (
+          <div className="my-6 border-l-4 border-l-red-400 pl-4" {...props}>
+            {children}
+          </div>
+        );
+      } else {
+        return (
+          <div className="my-6 border-l-4 border-l-gray-400 pl-4" {...props}>
+            {children}
+          </div>
+        );
+      }
+    } else {
+      return (
+        <div className={clsx(className, "mt-4")} {...props}>
+          {children}
+        </div>
+      );
+    }
+  },
   p: ({ children, ...props }) => (
-    <p className="mt-4" {...props}>
+    <p className="mt-4 first:mt-0" {...props}>
       {children}
     </p>
   ),
