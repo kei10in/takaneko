@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/780056",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第8回『呪詛』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-01-29",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/780056",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/01/777508_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "qF7TrecoG3I",
     title: "「プロローグ〜想い出」 ジブリをうたう その2　ショートムービー",
