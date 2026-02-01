@@ -31,6 +31,10 @@ export const IDOL_FILE_Vol39: Publication = {
       text: "星谷美来 動画コメント",
       url: "https://x.com/idolfile_jp/status/2014559657051009428",
     },
+    {
+      text: "衣装提供情報 - YUKA HATAKEYAMA X",
+      url: "https://x.com/yuka_hatakeyama/status/2017545351297671569",
+    },
   ],
 };
 
