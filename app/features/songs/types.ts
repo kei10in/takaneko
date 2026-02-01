@@ -1,3 +1,5 @@
+import { z } from "zod/v4";
+import { LiveTypeEnum } from "../events/EventType";
 import { MemberId } from "../profile/types";
 
 export interface SongMetaDescriptor {
@@ -26,3 +28,36 @@ export interface SongTag {
   name: string;
   description: string;
 }
+
+/**
+ * 特定の楽曲が披露された公演の概要情報を表します。
+ */
+export const SimpleSongActivity = z.object({
+  event: z.object({
+    slug: z.string(),
+    title: z.string(),
+    liveType: LiveTypeEnum.optional(),
+    date: z.string(),
+    region: z.string().optional(),
+    location: z.string().optional(),
+  }),
+  segments: z.array(
+    z.object({
+      actTitle: z.string().optional(),
+      section: z.enum(["main", "encore"]),
+      costumeName: z.string().optional(),
+      index: z.number(),
+    }),
+  ),
+});
+
+export type SimpleSongActivity = z.output<typeof SimpleSongActivity>;
+
+export const LivesForSong = z.object({
+  slug: z.string(),
+  name: z.string(),
+  count: z.int(),
+  lives: z.array(SimpleSongActivity),
+});
+
+export type LivesForSong = z.output<typeof LivesForSong>;
