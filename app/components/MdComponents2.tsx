@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { BsExclamationTriangleFill, BsInfoCircle } from "react-icons/bs";
+import { BsExclamationTriangleFill, BsInfoCircle, BsLightbulb } from "react-icons/bs";
 import { Components } from "react-markdown";
 import { pageHeading, sectionHeading } from "./styles";
 
@@ -10,7 +10,7 @@ export const markdownComponents2: Components = {
     </h1>
   ),
   h2: ({ children, ...props }) => (
-    <h2 className={sectionHeading("mt-8 border-b border-gray-200 pb-1")} {...props}>
+    <h2 className={sectionHeading("mt-12 mb-4 border-b border-gray-200")} {...props}>
       {children}
     </h2>
   ),
@@ -51,8 +51,14 @@ export const markdownComponents2: Components = {
         );
       } else if (splitted.includes("markdown-alert-tip")) {
         return (
-          <div className="my-6 border-l-4 border-l-green-400 pl-4" {...props}>
-            {children}
+          <div className="my-6 border-l-4 border-green-500 bg-green-50 p-4" {...props}>
+            <div className="flex items-center gap-2 pb-2 text-green-500">
+              <BsLightbulb className="text-lg" />
+              <p>
+                <strong>Tip</strong>
+              </p>
+            </div>
+            <div>{children}</div>
           </div>
         );
       } else if (splitted.includes("markdown-alert-warning")) {
@@ -97,7 +103,7 @@ export const markdownComponents2: Components = {
     </p>
   ),
   ul: ({ children, ...props }) => (
-    <ul className="mt-4 list-disc space-y-2 pl-8 text-base leading-snug" {...props}>
+    <ul className="mt-4 list-disc space-y-2 pl-8 text-base leading-snug first:mt-0" {...props}>
       {children}
     </ul>
   ),
@@ -132,7 +138,7 @@ export const markdownComponents2: Components = {
     </blockquote>
   ),
   img: ({ alt, ...props }) => (
-    <img className="mx-auto mt-4 max-w-60 rounded-lg bg-zinc-50 shadow" alt={alt} {...props} />
+    <img className="mx-auto mt-4 max-w-60 rounded-lg bg-zinc-50 shadow-lg" alt={alt} {...props} />
   ),
   code: ({ children, ...props }) => (
     <code className="inline rounded-sm bg-gray-100 px-1 py-0.5 font-mono text-sm" {...props}>
