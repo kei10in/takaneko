@@ -1,7 +1,7 @@
 import { EventModule } from "../events/eventModule";
 import { SongMetaDescriptor } from "../songs/types";
 
-interface SongPerformed {
+export interface SongPerformed {
   title: string;
   slug: string;
   coverArt?: string;

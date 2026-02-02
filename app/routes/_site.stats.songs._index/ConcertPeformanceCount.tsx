@@ -4,10 +4,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
 import { SongBarChart } from "~/components/charts/SongBarChart";
-import { importEventModules } from "~/features/events/eventModule";
-import { Events } from "~/features/events/events";
-import { makeSongToLiveMap, SongActivitySummary } from "~/features/songs/songActivities";
-import { ALL_SONGS } from "~/features/songs/songs";
+import { SongPerformed } from "~/features/stats/performanceCount";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 Chart.register(ChartDataLabels);
@@ -17,40 +14,40 @@ interface Props {
   range?: number | undefined;
 }
 
-const loadEvents = async (term: string) => {
+const findStartDate = (term: string): NaiveDate => {
   if (term.startsWith("recent")) {
     const days = parseInt(term.replace("recent", ""), 10);
 
     const today = NaiveDate.today();
+    const start = today.addDays(-days + 1);
 
-    const importingModules = Array.from({ length: days }).flatMap((_, i) =>
-      Events.selectEventModulesByDate(today.addDays(-i)),
-    );
-    const modules = await importEventModules(importingModules);
-
-    return modules;
+    return start;
+  } else {
+    // 高嶺のなでしこのデビュー日が最初の日。
+    return new NaiveDate(2022, 8, 7);
   }
-
-  // Load all event modules
-  const modules = await Events.importAllEventModules();
-
-  return modules;
 };
 
 export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props) => {
-  const { data, error, isLoading } = useSWR(term, async (key: string) => {
-    const events = await loadEvents(key);
+  const { data, error, isLoading } = useSWR(`/data/stats/${term}/songs.json`, async () => {
+    const start = findStartDate(term);
+    const startDateStr = start.toString();
+    const response = await fetch("/data/stats/songs.json");
+    if (!response.ok) {
+      throw new Error("Failed to fetch song performance data");
+    }
 
-    const songToLiveMap = await new Promise<Record<string, SongActivitySummary>>((resolve) => {
-      resolve(makeSongToLiveMap(events, ALL_SONGS));
-    });
-
-    const allSongs = Object.values(songToLiveMap);
-    const sortedAllSongs = allSongs.sort((a, b) => b.count - a.count);
-    const data = sortedAllSongs.map((x) => ({
-      song: x.song,
-      value: x.count,
+    const songsPerformed = (await response.json()) as SongPerformed[];
+    const filteredSongs = songsPerformed.map((song) => ({
+      ...song,
+      lives: song.lives.filter((dateStr) => dateStr >= startDateStr),
     }));
+    const data = filteredSongs
+      .map((song) => ({
+        song: { slug: song.slug, name: song.title, coverArt: song.coverArt },
+        value: song.lives.length,
+      }))
+      .toSorted((a, b) => b.value - a.value);
 
     if (range != undefined) {
       // 披露回数が 0 のものは除外する

@@ -1,12 +1,11 @@
 import { clsx } from "clsx";
 import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
 import { Link } from "react-router";
-import { SongMetaDescriptor } from "~/features/songs/types";
 import { calculateChartDimensions } from "./scale";
 
 interface Props {
   data: {
-    song: SongMetaDescriptor;
+    song: { slug: string; name: string; coverArt?: string };
     value: number;
   }[];
 }
