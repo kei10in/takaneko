@@ -4,7 +4,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
 import { SongBarChart } from "~/components/charts/SongBarChart";
-import { SongPerformed } from "~/features/stats/performanceCount";
+import { SongPerformanceStats } from "~/features/stats/types";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 Chart.register(ChartDataLabels);
@@ -37,12 +37,17 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
       throw new Error("Failed to fetch song performance data");
     }
 
-    const songsPerformed = (await response.json()) as SongPerformed[];
-    const filteredSongs = songsPerformed.map((song) => ({
-      ...song,
-      lives: song.lives.filter((dateStr) => dateStr >= startDateStr),
-    }));
-    const data = filteredSongs
+    const json = await response.json();
+    const parsed = SongPerformanceStats.safeParse(json);
+    if (!parsed.success) {
+      throw new Error("Invalid song performance data");
+    }
+
+    const data = parsed.data.songs
+      .map((song) => ({
+        ...song,
+        lives: song.lives.filter((dateStr) => dateStr >= startDateStr),
+      }))
       .map((song) => ({
         song: { slug: song.slug, name: song.title, coverArt: song.coverArt },
         value: song.lives.length,

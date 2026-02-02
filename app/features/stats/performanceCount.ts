@@ -1,17 +1,11 @@
 import { EventModule } from "../events/eventModule";
 import { SongMetaDescriptor } from "../songs/types";
-
-export interface SongPerformed {
-  title: string;
-  slug: string;
-  coverArt?: string;
-  lives: string[];
-}
+import { SongPerformanceStats, SongPerformed } from "./types";
 
 export const makeSongPerformedList = (
   events: EventModule[],
   songs: SongMetaDescriptor[],
-): SongPerformed[] => {
+): SongPerformanceStats => {
   const result: Record<string, SongPerformed> = {};
   songs.forEach((song) => {
     result[song.name] = {
@@ -39,5 +33,5 @@ export const makeSongPerformedList = (
     });
   });
 
-  return Object.values(result);
+  return { songs: Object.values(result) };
 };
