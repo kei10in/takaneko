@@ -17,7 +17,7 @@ const buildSongToLiveMap = async () => {
 
   livesForSongs.forEach((livesToSong) => {
     const slug = livesToSong.slug;
-    const json = JSON.stringify(livesToSong, null, 2);
+    const json = JSON.stringify(livesToSong);
 
     const outputPath = `./public/data/songs/${slug}/lives.json`;
     mkdirSync(dirname(outputPath), { recursive: true });
