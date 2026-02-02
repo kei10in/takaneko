@@ -1,7 +1,8 @@
 import { Act } from "../events/act";
 import { EventModule } from "../events/eventModule";
 import { SongSegment } from "../events/setlist";
-import { SongMetaDescriptor } from "./types";
+import { ALL_SONGS } from "./songs";
+import { LivesForSong, SimpleSongActivity, SongMetaDescriptor } from "./types";
 
 export interface SongActivitySummary {
   name: string;
@@ -49,6 +50,44 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
 
       result[song].events.push({ segments, event });
     });
+  });
+
+  return result;
+};
+
+export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
+  const songToLiveMap = makeSongToLiveMap(events, ALL_SONGS);
+
+  const result = Object.values(songToLiveMap).map((activitySummary) => {
+    const performedLives: SimpleSongActivity[] = activitySummary.events.map((e) => {
+      return {
+        event: {
+          slug: e.event.slug,
+          summary: e.event.meta.summary,
+          title: e.event.meta.title,
+          liveType: e.event.meta.liveType,
+          date: e.event.meta.date,
+          region: e.event.meta.region,
+          location: e.event.meta.location,
+        },
+
+        segments: e.segments.map(({ act, segment }) => ({
+          actTitle: act.title,
+          section: segment.section,
+          costumeName: segment.costumeName,
+          index: segment.index,
+        })),
+      };
+    });
+
+    const data = {
+      slug: activitySummary.song.slug,
+      name: activitySummary.song.name,
+      count: activitySummary.count,
+      lives: performedLives,
+    };
+
+    return data;
   });
 
   return result;
