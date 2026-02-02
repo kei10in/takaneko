@@ -1,15 +1,14 @@
 import { clsx } from "clsx";
-import { Fragment, useMemo } from "react";
+import { Fragment } from "react";
 import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { Events } from "~/features/events/events";
 import { liveTypeColor } from "~/features/events/EventType";
-import { makeSongToLiveMap } from "~/features/songs/songActivities";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
+import { LivesForSong } from "~/features/songs/types";
 import { AllYouTubeVideoMetadata } from "~/features/songs/youtubeVideoMetadata";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -44,16 +43,21 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { track } = loaderData;
 
-  const { data: songToLiveMap, isLoading } = useSWR(`songToLiveMap`, async () => {
-    const allEvents = await Events.importAllEventModules();
-    const songToLiveMap = makeSongToLiveMap(allEvents, ALL_SONGS);
-    return songToLiveMap;
+  const { data: performances, isLoading } = useSWR(`songs/${track.slug}/lives.json`, async () => {
+    const response = await fetch(`/data/songs/${track.slug}/lives.json`);
+    if (!response.ok) {
+      return undefined;
+    }
+
+    const json = await response.json();
+    const result = LivesForSong.safeParse(json);
+    if (result.error) {
+      return undefined;
+    }
+    return result.data;
   });
 
-  const lives = useMemo(
-    () => songToLiveMap?.[track.name]?.events?.toReversed(),
-    [songToLiveMap, track.name],
-  );
+  const lives = performances?.lives ?? [];
 
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
 
@@ -134,40 +138,35 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                     <LiveSkeleton />
                   </li>
                 ))}
-              {lives?.length == 0 && (
+              {!isLoading && lives.length == 0 && (
                 <li>
                   <p className="p-1 text-gray-500">
                     この楽曲を披露したライブが見つかりませんでした。
                   </p>
                 </li>
               )}
-              {lives?.map(({ segments, event: e }, i) => (
+              {lives.map(({ segments, event: e }, i) => (
                 <Fragment key={i}>
-                  {segments.map(({ act, segment }, j) => (
+                  {segments.map((segment, j) => (
                     <li key={j}>
                       <div className="flex items-stretch gap-2 p-1">
                         <div
-                          className={clsx(
-                            "w-1 flex-none rounded-full",
-                            liveTypeColor(e.meta.liveType),
-                          )}
+                          className={clsx("w-1 flex-none rounded-full", liveTypeColor(e.liveType))}
                         />
                         <div className="text-xs">
                           <p className="text-sm">
                             <Link to={`/events/${e.slug}`}>
-                              {act.title ? `${e.meta.title} - ${act.title}` : e.meta.title}
+                              {segment.actTitle ? `${e.title} - ${segment.actTitle}` : e.title}
                             </Link>
                           </p>
                           <p className="flex items-center gap-1 text-gray-400">
                             <BsCalendar className="inline flex-none text-xs" />
-                            <span className="line-clamp-1">
-                              {displayDateWithDayOfWeek(e.meta.date)}
-                            </span>
+                            <span className="line-clamp-1">{displayDateWithDayOfWeek(e.date)}</span>
                           </p>
                           <p className="flex items-center gap-1 text-gray-400">
                             <BsGeo className="inline flex-none text-xs" />
                             <span className="line-clamp-1">
-                              {e.meta.region} {e.meta.location}
+                              {e.region} {e.location}
                             </span>
                           </p>
                           <p className="flex items-center gap-1 text-gray-400">
