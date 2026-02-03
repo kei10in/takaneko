@@ -4,6 +4,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
 import { SongBarChart } from "~/components/charts/SongBarChart";
+import { calculatePerformanceCount } from "~/features/stats/performanceCount";
 import { SongPerformanceStats } from "~/features/stats/types";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
@@ -31,7 +32,6 @@ const findStartDate = (term: string): NaiveDate => {
 export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props) => {
   const { data, error, isLoading } = useSWR(`/data/stats/${term}/songs.json`, async () => {
     const start = findStartDate(term);
-    const startDateStr = start.toString();
     const response = await fetch("/data/stats/songs.json");
     if (!response.ok) {
       throw new Error("Failed to fetch song performance data");
@@ -43,31 +43,7 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
       throw new Error("Invalid song performance data");
     }
 
-    const data = parsed.data.songs
-      .map((song) => ({
-        ...song,
-        lives: song.lives.filter((dateStr) => dateStr >= startDateStr),
-      }))
-      .map((song) => ({
-        song: { slug: song.slug, name: song.title, coverArt: song.coverArt },
-        value: song.lives.length,
-      }))
-      .toSorted((a, b) => b.value - a.value);
-
-    if (range != undefined) {
-      // 披露回数が 0 のものは除外する
-      const i = data.findLastIndex((x) => x.value > 0);
-
-      // 披露回数が同じものがある場合は、range より多くなっても良いように調整する
-      const n = data[range - 1].value;
-      const j = data.findLastIndex((x) => x.value === n);
-
-      const k = Math.min(i, j);
-
-      return data.slice(0, k + 1);
-    }
-
-    return data;
+    return calculatePerformanceCount(parsed.data, start, NaiveDate.today(), range ?? "all");
   });
 
   if (isLoading) {
@@ -86,6 +62,6 @@ export const ConcertPerformanceCount: React.FC<Props> = ({ term, range }: Props)
       </div>
     );
   } else {
-    return <SongBarChart data={data} />;
+    return <SongBarChart songs={data} />;
   }
 };
