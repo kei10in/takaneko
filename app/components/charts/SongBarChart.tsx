@@ -1,26 +1,26 @@
 import { clsx } from "clsx";
 import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
 import { Link } from "react-router";
-import { SongMetaDescriptor } from "~/features/songs/types";
 import { calculateChartDimensions } from "./scale";
 
 interface Props {
-  data: {
-    song: SongMetaDescriptor;
+  songs: {
+    slug: string;
+    title: string;
+    coverArt?: string;
     value: number;
   }[];
 }
 
-export const SongBarChart: React.FC<Props> = ({ data }: Props) => {
-  const maxValue = Math.max(...data.map((item) => item.value));
+export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
+  const maxValue = Math.max(...songs.map((item) => item.value));
 
   const { limit } = calculateChartDimensions(maxValue);
 
   return (
     <div className="w-full space-y-2.5">
-      {data.map((item) => {
-        const { value, song } = item;
-        const { name, slug, coverArt } = song;
+      {songs.map((item) => {
+        const { value, title, slug, coverArt } = item;
         const to = `/songs/${slug}`;
 
         return (
@@ -31,7 +31,7 @@ export const SongBarChart: React.FC<Props> = ({ data }: Props) => {
                   <img
                     className="h-8 w-8 bg-gray-100 object-cover text-xs text-gray-500"
                     src={coverArt}
-                    alt={name}
+                    alt={title}
                   />
                 ) : (
                   <div
@@ -47,7 +47,7 @@ export const SongBarChart: React.FC<Props> = ({ data }: Props) => {
               </div>
               <div className="min-w-0 flex-auto space-y-0.5">
                 <p className="flex justify-between text-gray-500">
-                  <span className="line-clamp-1">{name}</span>
+                  <span className="line-clamp-1">{title}</span>
                   <span className="text-nadeshiko-800 font-semibold">{value}</span>
                 </p>
                 <div className="h-3 overflow-hidden rounded-xs bg-gray-100">
