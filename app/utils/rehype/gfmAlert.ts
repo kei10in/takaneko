@@ -27,11 +27,6 @@ export const gfmAlert: Plugin<[], Root> = () => {
         return;
       }
 
-      if (parsed.type == "tip") {
-        console.log(parsed);
-        console.log(node);
-      }
-
       const newChildren = [];
       // 空の <p></p> が残らないように、単独の [!<LABEL>] だった場合は、head を捨てる。
       if (parsed.siblings.length != 0) {

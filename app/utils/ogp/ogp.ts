@@ -9,10 +9,6 @@ export const ogp = async (url: string): Promise<SocialCards> => {
       includeResponseBody: true,
     });
 
-    if (url == "https://virtualgorillaplus.com/movie/ugly-stepsister-concept-movies/") {
-      console.log("body head:", String(metadata.responseBody ?? "").slice(0, 500));
-    }
-
     const result = convertOgObjectToSocialCards(metadata);
     return result;
   } catch (e) {
