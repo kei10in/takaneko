@@ -2,6 +2,29 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "QEtZ5r3i9Qo",
+    title: "「はにゅうの宿」〜過ぎ去りし日々〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-04",
+    mediaUrl: "https://youtu.be/QEtZ5r3i9Qo",
+    imageUrl: "https://i.ytimg.com/vi/QEtZ5r3i9Qo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "aNIMMC5gM7M",
+    title:
+      "「やさしさに包まれたなら」〜明日の日は確かならず〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-04",
+    mediaUrl: "https://youtu.be/aNIMMC5gM7M",
+    imageUrl: "https://i.ytimg.com/vi/aNIMMC5gM7M/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
     kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/780056",
     title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第8回『呪詛』 | TV LIFE web",
