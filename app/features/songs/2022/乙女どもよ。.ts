@@ -11,6 +11,10 @@ export const 乙女どもよ: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
+  videoRelease: "2022-10-24",
+  digitalRelease: "2023-02-04",
+  liveDebut: "2022-09-18",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2022/乙女どもよ。.webp",

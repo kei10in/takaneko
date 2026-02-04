@@ -11,6 +11,10 @@ export const 女の子は強い: SongMetaDescriptor = {
 
   choreographedBy: "高良舞子",
 
+  videoRelease: "2022-12-25",
+  digitalRelease: "2022-12-26",
+  liveDebut: "2022-10-05",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2022/女の子は強い.webp",

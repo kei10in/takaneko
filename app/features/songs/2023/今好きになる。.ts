@@ -11,6 +11,10 @@ export const 今好きになる: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: "2023-10-13",
+  digitalRelease: undefined,
+  liveDebut: "2023-11-19",
+
   tags: [Limited],
 
   officialSite: "",

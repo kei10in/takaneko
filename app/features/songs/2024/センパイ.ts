@@ -12,6 +12,10 @@ export const センパイ: SongMetaDescriptor = {
   // https://x.com/Naaaa_7/status/1789663179204923570
   choreographedBy: "NaNa",
 
+  videoRelease: "2024-04-20",
+  digitalRelease: "2024-04-21",
+  liveDebut: "2024-04-29",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2024/センパイ.webp",

@@ -11,6 +11,10 @@ export const 決戦スピリット: SongMetaDescriptor = {
 
   choreographedBy: "akane",
 
+  videoRelease: "2023-06-22",
+  digitalRelease: "2023-07-09",
+  liveDebut: "2023-06-23",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/決戦スピリット.webp",

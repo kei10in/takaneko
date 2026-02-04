@@ -11,6 +11,10 @@ export const ハッピークリスマスパーティ: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2023-12-24",
+
   tags: [Limited],
 
   officialSite: "",

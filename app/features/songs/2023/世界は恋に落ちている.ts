@@ -11,6 +11,10 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
 
   choreographedBy: "籾山ひめり",
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2023-11-19",
+
   tags: [Limited],
 
   officialSite: "https://takanenonadeshiko.jp/?p=1373",

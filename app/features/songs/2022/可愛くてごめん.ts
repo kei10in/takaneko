@@ -11,6 +11,10 @@ export const 可愛くてごめん: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2022-11-18",
+  digitalRelease: "2023-01-27",
+  liveDebut: "2022-11-19",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2022/可愛くてごめん.webp",

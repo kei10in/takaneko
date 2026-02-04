@@ -11,6 +11,10 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2025-12-05",
+  digitalRelease: "2025-12-05",
+  liveDebut: "2025-09-07",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/花は誓いを忘れない.webp",

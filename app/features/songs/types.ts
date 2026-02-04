@@ -12,6 +12,10 @@ export interface SongMetaDescriptor {
 
   choreographedBy?: string | undefined;
 
+  videoRelease?: string | undefined;
+  digitalRelease?: string | undefined;
+  liveDebut?: string | undefined;
+
   tags?: SongTag[] | undefined;
 
   coverArt?: string;

@@ -11,6 +11,10 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2023-07-21",
+  digitalRelease: "2023-07-23",
+  liveDebut: "2023-06-23",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/月曜日の憂鬱.webp",

@@ -11,6 +11,10 @@ export const 初恋のこたえ: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: "2025-06-18",
+  digitalRelease: "2025-06-18",
+  liveDebut: "2025-06-20",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/初恋のこたえ。.webp",

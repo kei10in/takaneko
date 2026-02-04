@@ -11,6 +11,10 @@ export const アイドル衣装: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2025-05-28",
+  digitalRelease: "2025-05-28",
+  liveDebut: "2025-05-06",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/アイドル衣装.webp",

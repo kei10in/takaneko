@@ -11,6 +11,10 @@ export const CuteForLife: SongMetaDescriptor = {
 
   choreographedBy: "らん先生",
 
+  videoRelease: "2025-04-07",
+  digitalRelease: "2025-04-07",
+  liveDebut: "2025-02-14",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/Cute for life.webp",

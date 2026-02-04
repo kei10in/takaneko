@@ -11,6 +11,10 @@ export const ライフクエスト: SongMetaDescriptor = {
 
   choreographedBy: "籾山ひめり",
 
+  videoRelease: "2025-07-02",
+  digitalRelease: "2025-07-02",
+  liveDebut: "2025-07-26",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/ライフクエスト.webp",

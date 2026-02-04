@@ -11,6 +11,10 @@ export const 私より好きでいて: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2024-06-29",
+  digitalRelease: "2024-06-05",
+  liveDebut: "2024-04-18",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/私より好きでいて.webp",

@@ -11,6 +11,10 @@ export const モテチェン: SongMetaDescriptor = {
 
   choreographedBy: "ローカルカンピオーネ, 籾山ひめり",
 
+  videoRelease: "2024-07-14",
+  digitalRelease: "2024-07-14",
+  liveDebut: "2024-07-13",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/モテチェン！.webp",

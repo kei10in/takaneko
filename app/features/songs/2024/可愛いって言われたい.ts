@@ -11,6 +11,10 @@ export const 可愛いって言われたい: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2024-02-03",
+  digitalRelease: "2024-02-04",
+  liveDebut: "2022-10-31",
+
   tags: [Original, Repertoire, UnitSong],
 
   coverArt: "/takaneko/songs/2024/可愛いって言われたい.webp",

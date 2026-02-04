@@ -11,6 +11,10 @@ export const アイのウイルス: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2024-12-11",
+  digitalRelease: "2024-12-11",
+  liveDebut: "2024-11-08",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/アイのウイルス.webp",

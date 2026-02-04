@@ -11,6 +11,10 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
 
   choreographedBy: "akane",
 
+  videoRelease: "2024-11-27",
+  digitalRelease: "2024-11-27",
+  liveDebut: "2024-09-15",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/I’M YOUR IDOL.webp",

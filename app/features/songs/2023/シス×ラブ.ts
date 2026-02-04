@@ -11,6 +11,10 @@ export const シス_ラブ: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2023-11-19",
+
   tags: [Limited],
 
   officialSite: "",

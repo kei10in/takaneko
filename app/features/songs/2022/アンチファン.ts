@@ -11,6 +11,10 @@ export const アンチファン: SongMetaDescriptor = {
 
   choreographedBy: "日下このみ",
 
+  videoRelease: "2022-08-27",
+  digitalRelease: "2022-10-01",
+  liveDebut: "2022-08-07",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2022/アンチファン.webp",

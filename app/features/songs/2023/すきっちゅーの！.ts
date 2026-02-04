@@ -11,6 +11,10 @@ export const すきっちゅーの: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2023-09-01",
+  digitalRelease: "2023-09-03",
+  liveDebut: "2023-09-03",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/すきっちゅーの！.webp",

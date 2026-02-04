@@ -11,6 +11,10 @@ export const 超絶かわいい: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2023-04-23",
+
   tags: [TakanekoVersion, Repertoire],
 
   officialSite: undefined,

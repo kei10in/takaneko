@@ -11,6 +11,10 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
 
   choreographedBy: "ZAZA (KAGARI & YUKI)",
 
+  videoRelease: "2024-11-06",
+  digitalRelease: "2024-11-06",
+  liveDebut: "2024-10-06",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/アドレナリンゲーム.webp",

@@ -11,6 +11,10 @@ export const _17歳: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2023-09-03",
+  digitalRelease: "2023-09-09",
+  liveDebut: "2023-09-03",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/17歳.webp",

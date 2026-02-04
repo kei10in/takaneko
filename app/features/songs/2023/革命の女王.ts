@@ -11,6 +11,10 @@ export const 革命の女王: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
+  videoRelease: "2023-04-21",
+  digitalRelease: "2023-04-04",
+  liveDebut: "2023-04-23",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2023/革命の女王.webp",

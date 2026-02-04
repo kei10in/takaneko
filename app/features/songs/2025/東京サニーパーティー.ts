@@ -11,6 +11,10 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: "2025-03-28",
+  digitalRelease: undefined,
+  liveDebut: undefined,
+
   tags: [Unperformed],
 
   officialSite: "",

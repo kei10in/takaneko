@@ -11,6 +11,10 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
 
   choreographedBy: "佐藤マリン",
 
+  videoRelease: "2024-09-07",
+  digitalRelease: "2024-09-08",
+  liveDebut: "2024-07-13",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2024/LOVE ANTHEM.webp",

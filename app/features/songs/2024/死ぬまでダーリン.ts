@@ -11,6 +11,10 @@ export const 死ぬまでダーリン: SongMetaDescriptor = {
 
   choreographedBy: "籾山ひめり",
 
+  videoRelease: "2024-10-19",
+  digitalRelease: undefined,
+  liveDebut: "2024-09-15",
+
   tags: [Limited],
 
   officialSite: "",

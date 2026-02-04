@@ -11,6 +11,10 @@ export const いつか私がママになったら: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2023-12-16",
+  digitalRelease: "2023-10-16",
+  liveDebut: "2023-10-26",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2023/いつか私がママになったら.webp",

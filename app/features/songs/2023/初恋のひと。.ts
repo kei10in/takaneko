@@ -11,6 +11,10 @@ export const 初恋のひと: SongMetaDescriptor = {
 
   choreographedBy: "木下菜津子",
 
+  videoRelease: "2023-07-01",
+  digitalRelease: "2023-07-04",
+  liveDebut: "2023-06-23",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2023/初恋のひと。.webp",

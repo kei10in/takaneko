@@ -11,6 +11,10 @@ export const ファンサ: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2022-08-27",
+
   tags: [TakanekoVersion, Repertoire],
 
   officialSite: undefined,

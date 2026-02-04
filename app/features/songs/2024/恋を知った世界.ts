@@ -11,6 +11,10 @@ export const 恋を知った世界: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2024-02-21",
+  digitalRelease: "2024-02-21",
+  liveDebut: "2023-12-24",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/恋を知った世界.webp",

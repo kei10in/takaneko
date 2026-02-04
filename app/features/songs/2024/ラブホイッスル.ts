@@ -11,6 +11,10 @@ export const ラブホイッスル: SongMetaDescriptor = {
 
   choreographedBy: "籾山ひめり",
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2024-09-15",
+
   tags: [Limited],
 
   officialSite: "",

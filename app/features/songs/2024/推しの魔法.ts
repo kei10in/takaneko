@@ -11,6 +11,10 @@ export const 推しの魔法: SongMetaDescriptor = {
 
   choreographedBy: "らん先生",
 
+  videoRelease: "2024-03-22",
+  digitalRelease: "2024-03-25",
+  liveDebut: "2024-03-23",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2024/推しの魔法.webp",

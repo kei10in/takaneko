@@ -11,6 +11,10 @@ export const No1: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: "2024-01-04",
+  digitalRelease: undefined,
+  liveDebut: undefined,
+
   tags: [Unperformed],
 
   officialSite: "https://example.com", // Added official site

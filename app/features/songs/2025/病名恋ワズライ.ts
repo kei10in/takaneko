@@ -11,6 +11,10 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   choreographedBy: "らん先生",
 
+  videoRelease: "2025-11-20",
+  digitalRelease: "2025-11-21",
+  liveDebut: "2025-02-14",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2025/病名恋ワズライ.jpg",

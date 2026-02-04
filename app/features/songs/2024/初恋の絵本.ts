@@ -11,6 +11,10 @@ export const 初恋の絵本: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: "2024-12-21",
+  digitalRelease: undefined,
+  liveDebut: undefined,
+
   tags: [Unperformed],
 
   officialSite: "",

@@ -11,6 +11,10 @@ export const ユメムスビ: SongMetaDescriptor = {
 
   choreographedBy: "日下このみ",
 
+  videoRelease: "2022-10-01",
+  digitalRelease: "2022-10-01",
+  liveDebut: "2022-08-07",
+
   tags: [Original, Repertoire],
 
   // https://magazine.tunecore.co.jp/newrelease/249134/

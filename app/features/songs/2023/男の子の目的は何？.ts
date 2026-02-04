@@ -11,6 +11,10 @@ export const 男の子の目的は何: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2023-03-20",
+  digitalRelease: "2023-03-20",
+  liveDebut: "2022-02-14",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/男の子の目的は何？.webp",

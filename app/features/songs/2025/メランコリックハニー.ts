@@ -11,6 +11,10 @@ export const メランコリックハニー: SongMetaDescriptor = {
 
   choreographedBy: "RINO HONDA",
 
+  videoRelease: "2025-04-30",
+  digitalRelease: "2025-04-30",
+  liveDebut: "2025-04-06",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/メランコリックハニー.webp",

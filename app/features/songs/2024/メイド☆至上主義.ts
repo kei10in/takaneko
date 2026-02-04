@@ -11,6 +11,10 @@ export const メイド至上主義: SongMetaDescriptor = {
 
   choreographedBy: "いどみん",
 
+  videoRelease: "2024-05-11",
+  digitalRelease: "2024-05-13",
+  liveDebut: "2024-04-29",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2024/メイド☆至上主義.webp",

@@ -11,6 +11,10 @@ export const 美しく生きろ: SongMetaDescriptor = {
 
   choreographedBy: "akane",
 
+  videoRelease: "2024-01-19",
+  digitalRelease: "2024-01-19",
+  liveDebut: "2022-10-31",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2024/美しく生きろ.webp",

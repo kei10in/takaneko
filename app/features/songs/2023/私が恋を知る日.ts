@@ -11,6 +11,10 @@ export const 私が恋を知る日: SongMetaDescriptor = {
 
   choreographedBy: undefined,
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2023-12-24",
+
   tags: [Limited],
 
   officialSite: "",

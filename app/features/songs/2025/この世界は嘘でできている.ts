@@ -11,6 +11,10 @@ export const この世界は嘘でできている: SongMetaDescriptor = {
 
   choreographedBy: "akane",
 
+  videoRelease: "2025-08-20",
+  digitalRelease: "2025-08-20",
+  liveDebut: "2025-08-07",
+
   tags: [Original, Repertoire],
 
   coverArt: "/takaneko/songs/2025/この世界は嘘でできている.webp",

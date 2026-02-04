@@ -11,6 +11,10 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
 
   choreographedBy: "NaNa",
 
+  videoRelease: undefined,
+  digitalRelease: undefined,
+  liveDebut: "2022-08-20",
+
   tags: [TakanekoVersion, Repertoire],
 
   officialSite: undefined,

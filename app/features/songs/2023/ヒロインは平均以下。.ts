@@ -11,6 +11,10 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
 
   choreographedBy: "SACO MAKITA",
 
+  videoRelease: "2023-06-21",
+  digitalRelease: "2023-07-15",
+  liveDebut: "2023-06-23",
+
   tags: [TakanekoVersion, Repertoire],
 
   coverArt: "/takaneko/songs/2023/ヒロインは平均以下。.webp",
