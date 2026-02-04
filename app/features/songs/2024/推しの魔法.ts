@@ -22,6 +22,10 @@ export const 推しの魔法: SongMetaDescriptor = {
       videoId: "pDC1ZgUDLZQ",
     },
     {
+      text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
+      videoId: "https://www.youtube.com/watch?v=Cbv2fbWhMGg",
+    },
+    {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 城月菜央 ver",
       videoId: "https://www.youtube.com/watch?v=uLQOrng_d_o",
     },
