@@ -66,6 +66,11 @@ export default function Component() {
                         <div className="mt-2 text-sm">
                           <Link to={`/songs/${track.slug}`}>{track.name}</Link>
                         </div>
+                        <p className="text-xs text-gray-400">
+                          {track.digitalRelease == undefined
+                            ? `No digital release`
+                            : `${track.digitalRelease.replace(/-/g, ".")} release`}
+                        </p>
                       </div>
                     </li>
                   ))}

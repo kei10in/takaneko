@@ -91,7 +91,13 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         <section className="px-4 py-8">
           <h1 className={pageHeading()}>{track.name}</h1>
 
-          <div className="mt-2">
+          {track.digitalRelease && (
+            <p className="text-nadeshiko-700 mt-1 text-sm">
+              {track.digitalRelease.replace(/-/g, ".")} <span className="">release</span>
+            </p>
+          )}
+
+          <div className="mt-8">
             <Credit song={track} />
           </div>
 
