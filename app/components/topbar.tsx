@@ -87,7 +87,7 @@ export const Topbar: React.FC = () => {
         className={clsx(
           "@container",
           "sticky top-0 z-10 h-(--header-height)",
-          "border-b-nadeshiko-200 bg-nadeshiko-50/90 border-b backdrop-blur-sm",
+          "border-b border-b-nadeshiko-200 bg-nadeshiko-50/90 backdrop-blur-sm",
         )}
       >
         <div className="h-full px-4 @lg:px-6">
@@ -166,7 +166,7 @@ export const Topbar: React.FC = () => {
                   {LINKS.map((link) => (
                     <li key={link.url}>
                       <Link
-                        className="hover:text-nadeshiko-700 block"
+                        className="block hover:text-nadeshiko-700"
                         to={link.url}
                         onClick={close}
                       >
@@ -185,7 +185,7 @@ export const Topbar: React.FC = () => {
                       {UTILS.map((util) => (
                         <li key={util.url}>
                           <Link
-                            className="hover:text-nadeshiko-700 block"
+                            className="block hover:text-nadeshiko-700"
                             to={util.url}
                             onClick={close}
                           >
@@ -206,7 +206,7 @@ export const Topbar: React.FC = () => {
                       {SPECIALS.map((util) => (
                         <li key={util.url}>
                           <Link
-                            className="hover:text-nadeshiko-700 block"
+                            className="block hover:text-nadeshiko-700"
                             to={util.url}
                             onClick={close}
                           >

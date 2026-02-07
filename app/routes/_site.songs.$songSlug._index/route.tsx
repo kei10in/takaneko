@@ -92,7 +92,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <h1 className={pageHeading()}>{track.name}</h1>
 
           {track.digitalRelease && (
-            <p className="text-nadeshiko-700 mt-1 text-sm">
+            <p className="mt-1 text-sm text-nadeshiko-700">
               {track.digitalRelease.replace(/-/g, ".")} <span className="">release</span>
             </p>
           )}

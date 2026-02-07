@@ -15,11 +15,11 @@ export const BarChart: React.FC<Props> = ({ data }: Props) => {
         <div key={item.key} className="w-full text-sm leading-tight">
           <p className="flex justify-between text-gray-500">
             <span>{item.key}</span>
-            <span className="text-nadeshiko-800 font-semibold">{item.value}</span>
+            <span className="font-semibold text-nadeshiko-800">{item.value}</span>
           </p>
           <div className="h-3 overflow-hidden rounded-xs bg-gray-100">
             <div
-              className="bg-nadeshiko-800 h-full rounded-xs"
+              className="h-full rounded-xs bg-nadeshiko-800"
               style={{ width: `${(item.value / limit) * 100}%` }}
             />
           </div>

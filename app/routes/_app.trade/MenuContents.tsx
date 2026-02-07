@@ -79,19 +79,19 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
       </div>
 
       <ul className="mt-2">
-        <li className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+        <li className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
           <Link to="/trade/wishlist" onClick={onClickMenuItem}>
             <p className="flex items-center gap-2 py-2 text-lg font-bold">
-              <BsCardChecklist className="text-nadeshiko-900 inline-block" />
+              <BsCardChecklist className="inline-block text-nadeshiko-900" />
               <span>欲しいやつ</span>
             </p>
           </Link>
         </li>
 
-        <li className="group hover:text-nadeshiko-900 flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+        <li className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
           <Link to="/trade/tradelist" onClick={onClickMenuItem}>
             <p className="flex items-center gap-2 py-2 text-lg font-bold">
-              <BsGift className="text-nadeshiko-900 inline-block" />
+              <BsGift className="inline-block text-nadeshiko-900" />
               <span>譲れるやつ</span>
             </p>
           </Link>
@@ -111,7 +111,7 @@ export const MenuContents: React.FC<Props> = (props: Props) => {
 
         return (
           <Disclosure key={item.name} defaultOpen={open}>
-            <DisclosureButton className="group hover:text-nadeshiko-900 inset-focus flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900">
+            <DisclosureButton className="group inset-focus flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
               <h3 className="text-lg font-bold">{item.name}</h3>
               <div>
                 <HiChevronRight className="transition-transform group-data-open:rotate-90" />

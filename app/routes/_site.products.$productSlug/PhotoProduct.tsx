@@ -31,7 +31,7 @@ export function PhotoProduct(props: Props) {
 
         <div className="mt-12">
           <Link
-            className="bg-nadeshiko-800 rounded-sm px-4 py-1 text-white"
+            className="rounded-sm bg-nadeshiko-800 px-4 py-1 text-white"
             to={`/trade/${product.slug}`}
           >
             トレード画像を作る

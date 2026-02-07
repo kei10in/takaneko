@@ -109,7 +109,7 @@ export default function PublicationProduct(props: Props) {
                 return (
                   <li key={i} className="flex-none marker:text-gray-400">
                     <Link
-                      className="text-nadeshiko-800 block"
+                      className="block text-nadeshiko-800"
                       to={link.url}
                       target="_blank"
                       rel="noreferrer"

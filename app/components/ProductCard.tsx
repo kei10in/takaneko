@@ -15,7 +15,7 @@ export const ProductCard: React.FC<Props> = (props: Props) => {
         <img src={url} alt={series ?? id} className="h-full w-full object-contain object-center" />
       </div>
       <div className="space-y-1 bg-gray-50 px-4 py-2">
-        <div className="border-nadeshiko-800 text-nadeshiko-800 w-fit border px-2 py-px text-sm leading-none">
+        <div className="w-fit border border-nadeshiko-800 px-2 py-px text-sm leading-none text-nadeshiko-800">
           {year}
         </div>
         <p className="text-sm">{name}</p>

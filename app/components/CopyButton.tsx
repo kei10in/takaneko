@@ -35,12 +35,12 @@ export const CopyButton: React.FC<Props> = (props: Props) => {
     >
       <div className="flex flex-none items-center justify-center overflow-hidden">
         <BsCopy className="h-4 w-4 text-gray-600 group-data-[state=copied]:hidden" />
-        <BsCheck2 className="text-nadeshiko-800 hidden h-4 w-4 group-data-[state=copied]:block" />
+        <BsCheck2 className="hidden h-4 w-4 text-nadeshiko-800 group-data-[state=copied]:block" />
       </div>
       {text && (
         <div className="text-gray-600">
           <div className="group-data-[state=copied]:hidden">コピー</div>
-          <div className="text-nadeshiko-800 hidden group-data-[state=copied]:block">完了</div>
+          <div className="hidden text-nadeshiko-800 group-data-[state=copied]:block">完了</div>
         </div>
       )}
     </button>

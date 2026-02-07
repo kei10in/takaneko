@@ -76,13 +76,13 @@ export default function Index() {
             defaultValue={urlInQuery ?? undefined}
           />
           <button
-            className="bg-nadeshiko-800 ml-auto block h-8 rounded-md px-6 font-bold text-white md:ml-0 md:flex-none"
+            className="ml-auto block h-8 rounded-md bg-nadeshiko-800 px-6 font-bold text-white md:ml-0 md:flex-none"
             type="submit"
           >
             短くする
           </button>
         </Form>
-        {error != undefined && <p className="text-nadeshiko-900 mx-2 my-2">{error}</p>}
+        {error != undefined && <p className="mx-2 my-2 text-nadeshiko-900">{error}</p>}
 
         {data.url != undefined && (
           <section className="mt-4">
@@ -127,7 +127,7 @@ export default function Index() {
               <li>
                 <p>👇のボタンをタップしてショートカットを追加します。</p>
                 <Link
-                  className="bg-nadeshiko-800 mx-auto mt-2 mb-4 flex h-8 w-fit items-center justify-center rounded-md px-6 font-bold text-white"
+                  className="mx-auto mt-2 mb-4 flex h-8 w-fit items-center justify-center rounded-md bg-nadeshiko-800 px-6 font-bold text-white"
                   to="https://www.icloud.com/shortcuts/a69485f588084ac5841ef1c808bd2283"
                   target="_blank"
                   rel="noreferrer"

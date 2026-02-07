@@ -8,7 +8,7 @@ export const ピンク衣装_ミニフォト: RandomGoods = {
   year: 2025,
   series: "ピンク衣装",
   category: "ミニフォトカード",
-  set: { kind: ProductLine.MiniPhotoCard, setName: "ピンク衣装", },
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ピンク衣装" },
   tradeText: TradeTextType.Numbering,
   url: "/takaneko/goods/2025/2025-03-05_ミニフォトカード「ピンク衣装」.webp",
   width: 1499,

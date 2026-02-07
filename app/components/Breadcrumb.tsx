@@ -16,7 +16,7 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
     <p className="flex items-center gap-1.5 text-sm">
       {items.map((item, index) => (
         <Fragment key={index}>
-          <Link className="text-nadeshiko-800 font-semibold" to={item.to}>
+          <Link className="font-semibold text-nadeshiko-800" to={item.to}>
             {item.label}
           </Link>
           {index < items.length - 1 && (

@@ -76,12 +76,7 @@
     "title": "初恋の絵本／HoneyWorks feat.GUMI　┗|∵|┓",
     "authorName": "HoneyWorks OFFICIAL",
     "authorUrl": "https://www.youtube.com/@HoneyWorksOFFICIAL",
-    "thumbnails": [
-      "defaultJpeg",
-      "mqDefaultJpeg",
-      "hqDefaultJpeg",
-      "sdDefaultJpeg"
-    ]
+    "thumbnails": ["defaultJpeg", "mqDefaultJpeg", "hqDefaultJpeg", "sdDefaultJpeg"]
   },
   "1GguL5dZd3M": {
     "videoId": "1GguL5dZd3M",
@@ -1592,12 +1587,7 @@
     "title": "HoneyWorks　『初恋の絵本 feat.合田美桜(CV：豊崎愛生)』",
     "authorName": "Sony Music (Japan)",
     "authorUrl": "https://www.youtube.com/@sonymusicjapan",
-    "thumbnails": [
-      "defaultJpeg",
-      "mqDefaultJpeg",
-      "hqDefaultJpeg",
-      "sdDefaultJpeg"
-    ]
+    "thumbnails": ["defaultJpeg", "mqDefaultJpeg", "hqDefaultJpeg", "sdDefaultJpeg"]
   },
   "d8hDuDBGfXk": {
     "videoId": "d8hDuDBGfXk",

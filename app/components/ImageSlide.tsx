@@ -92,7 +92,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
             ))}
           </ul>
           <div
-            className="bg-nadeshiko-800 mt-1 h-0.5 w-16 rounded-full transition-transform duration-300"
+            className="mt-1 h-0.5 w-16 rounded-full bg-nadeshiko-800 transition-transform duration-300"
             style={{ transform: `translateX(${markerOffset}px)` }}
           />
         </XScroll>

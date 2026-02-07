@@ -23,8 +23,8 @@ export default function Index() {
 
         <p className="mt-8">高嶺のなでしこに関係するユーザー スクリプトを紹介しています。</p>
 
-        <div className="border-nadeshiko-800 bg-nadeshiko-200 mt-4 flex items-center gap-3 rounded-lg border px-3 py-2 text-xs">
-          <BsExclamationTriangleFill className="text-nadeshiko-900 size-6 flex-none" />
+        <div className="mt-4 flex items-center gap-3 rounded-lg border border-nadeshiko-800 bg-nadeshiko-200 px-3 py-2 text-xs">
+          <BsExclamationTriangleFill className="size-6 flex-none text-nadeshiko-900" />
           <p className="min-w-0 flex-1">
             ユーザー スクリプトの利用は自己責任でお願いします。
             このページの内容によって生じた不利益について、当サイトは一切の責任を負いません。
@@ -59,7 +59,7 @@ export default function Index() {
               <p>次のリンクからスクリプト ファイル をダウンロードします。</p>
               <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
                 <a
-                  className="bg-nadeshiko-800 inline-flex h-8 items-center justify-center rounded-md px-6 font-bold text-white"
+                  className="inline-flex h-8 items-center justify-center rounded-md bg-nadeshiko-800 px-6 font-bold text-white"
                   href="/user-scripts/allow-background-play.user.js"
                   download
                 >

@@ -72,7 +72,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
             })}
           </div>
         ) : (
-          <div className="bg-nadeshiko-700 mx-auto h-1 w-7 rounded-sm" />
+          <div className="mx-auto h-1 w-7 rounded-sm bg-nadeshiko-700" />
         )}
       </div>
     </div>

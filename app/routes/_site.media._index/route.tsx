@@ -114,7 +114,7 @@ export default function MediaIndex() {
             </PopoverButton>
             <PopoverPanel
               anchor={{ to: "bottom end", gap: "0.5rem" }}
-              className="border-nadeshiko-100 bg-nadeshiko-50 overflow-hidden rounded-sm border py-2 shadow-md"
+              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
             >
               {({ close }) => (
                 <ul className="min-w-60">
@@ -127,11 +127,11 @@ export default function MediaIndex() {
                         <div
                           className={clsx(
                             "flex items-center gap-2",
-                            "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
+                            "w-full px-6 py-1 text-base text-gray-600 hover:bg-nadeshiko-300",
                             "data-current:bg-nadeshiko-700 data-current:text-white",
                           )}
                         >
-                          <div className="text-nadeshiko-800 h-6 w-6">
+                          <div className="h-6 w-6 text-nadeshiko-800">
                             {c.id == (selected ?? AllMembersProfile.id) ? (
                               <BsCheck className="h-full w-full" />
                             ) : null}
@@ -215,7 +215,7 @@ export default function MediaIndex() {
             </div>
           ) : (
             <Link
-              className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
+              className="block rounded border border-nadeshiko-500 p-2 text-nadeshiko-800 hover:bg-nadeshiko-200"
               to={prevTo}
             >
               <BsChevronLeft />
@@ -230,7 +230,7 @@ export default function MediaIndex() {
             </div>
           ) : (
             <Link
-              className="text-nadeshiko-800 hover:bg-nadeshiko-200 border-nadeshiko-500 block rounded border p-2"
+              className="block rounded border border-nadeshiko-500 p-2 text-nadeshiko-800 hover:bg-nadeshiko-200"
               to={nextTo}
             >
               <BsChevronRight />

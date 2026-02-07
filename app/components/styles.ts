@@ -9,7 +9,7 @@ export const pageColumnBox = (...args: ClassValue[]) => {
 };
 
 export const pageHeading = (...args: ClassValue[]) => {
-  return clsx("text-nadeshiko-800 text-3xl font-semibold", ...args);
+  return clsx("text-3xl font-semibold text-nadeshiko-800", ...args);
 };
 
 export const sectionHeading = (...args: ClassValue[]) => {

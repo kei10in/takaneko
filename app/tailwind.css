@@ -35,7 +35,7 @@
   }
 
   :focus-visible {
-    @apply outline-nadeshiko-700 outline-2 outline-offset-2;
+    @apply outline-2 outline-offset-2 outline-nadeshiko-700;
   }
 }
 
@@ -43,7 +43,7 @@
   .inset-focus {
     &:focus-visible {
       @apply outline-none;
-      @apply inset-ring-nadeshiko-700 inset-ring-2;
+      @apply inset-ring-2 inset-ring-nadeshiko-700;
     }
   }
 
@@ -63,7 +63,7 @@
       &::before {
         @apply float-left mr-2 -ml-8 rounded-full;
         @apply text-center;
-        @apply bg-nadeshiko-800 size-6 font-bold text-white;
+        @apply size-6 bg-nadeshiko-800 font-bold text-white;
         @apply content-[counter(list)] [counter-increment:list];
       }
     }

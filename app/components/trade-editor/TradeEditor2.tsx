@@ -306,7 +306,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         <DialogBackdrop className={dialogBackdropStyle()} transition />
         <div className={dialogBaseStyle()}>
           <DialogPanel
-            className={clsx(dialogPanelStyle(), "bg-nadeshiko-50 mx-2 w-full max-w-lg")}
+            className={clsx(dialogPanelStyle(), "mx-2 w-full max-w-lg bg-nadeshiko-50")}
             transition
           >
             <div className="ml-auto w-fit p-2">
@@ -353,7 +353,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
 
               <div className="px-4">
                 <CloseButton
-                  className="bg-nadeshiko-800 hover:bg-nadeshiko-900 active:bg-nadeshiko-600 block w-full rounded-full px-8 py-2 text-center text-lg font-bold text-white"
+                  className="block w-full rounded-full bg-nadeshiko-800 px-8 py-2 text-center text-lg font-bold text-white hover:bg-nadeshiko-900 active:bg-nadeshiko-600"
                   onClick={() => onClearTradeDescriptions?.(productImage.id)}
                 >
                   クリアする
@@ -361,7 +361,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
               </div>
 
               <div className="px-4">
-                <CloseButton className="text-nadeshiko-800 hover:text-nadeshiko-900 active:text-nadeshiko-600 block w-full rounded-full p-2 px-8 py-2 text-center text-lg font-bold">
+                <CloseButton className="block w-full rounded-full p-2 px-8 py-2 text-center text-lg font-bold text-nadeshiko-800 hover:text-nadeshiko-900 active:text-nadeshiko-600">
                   キャンセル
                 </CloseButton>
               </div>

@@ -116,7 +116,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
         <ul className="flex flex-wrap justify-center gap-4 text-black">
           <li>
             <Link
-              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
+              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
               to={twitter}
               target="_blank"
               rel="noreferrer"
@@ -126,7 +126,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </li>
           <li>
             <Link
-              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
+              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
               to={instagram}
               target="_blank"
               rel="noreferrer"
@@ -136,7 +136,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
           </li>
           <li>
             <Link
-              className="text-nadeshiko-50 block h-12 w-12 rounded-xl bg-black p-2"
+              className="block h-12 w-12 rounded-xl bg-black p-2 text-nadeshiko-50"
               to={tiktok}
               target="_blank"
               rel="noreferrer"

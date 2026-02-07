@@ -127,13 +127,13 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
   return (
     <div className="w-full p-1">
       <Link
-        className="hover:text-nadeshiko-800 block overflow-hidden rounded-xl"
+        className="block overflow-hidden rounded-xl hover:text-nadeshiko-800"
         to={`https://youtu.be/${videoId}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-          className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full object-cover text-sm"
+          className="aspect-video w-full bg-nadeshiko-100 object-cover text-sm text-nadeshiko-600"
           src={yt.thumbnailUrl}
           alt={yt.title}
         />
@@ -141,7 +141,7 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
       <div>
         <div className="space-y-0.5 px-1 py-2">
           <Link
-            className="hover:text-nadeshiko-800 line-clamp-2 block text-base leading-snug text-gray-800"
+            className="line-clamp-2 block text-base leading-snug text-gray-800 hover:text-nadeshiko-800"
             to={`https://youtu.be/${videoId}`}
             target="_blank"
             rel="noopener noreferrer"

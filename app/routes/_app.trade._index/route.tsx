@@ -125,7 +125,7 @@ export default function Index() {
           <li>
             <Link className="group block" to="/trade/wishlist">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsCardChecklist className="text-nadeshiko-900 group-hover:text-nadeshiko-950 inline-block" />
+                <BsCardChecklist className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
                 <span className="text-gray-600 group-hover:text-gray-800">欲しいやつ</span>
               </h3>
               <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
@@ -136,7 +136,7 @@ export default function Index() {
           <li>
             <Link className="group block" to="/trade/tradelist">
               <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsGift className="text-nadeshiko-900 group-hover:text-nadeshiko-950 inline-block" />
+                <BsGift className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
                 <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
               </h3>
               <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">

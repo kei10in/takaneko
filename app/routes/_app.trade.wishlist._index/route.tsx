@@ -139,19 +139,19 @@ export default function Index() {
             </PopoverButton>
             <PopoverPanel
               anchor={{ to: "bottom end", gap: "0.5rem" }}
-              className="border-nadeshiko-100 bg-nadeshiko-50 overflow-hidden rounded-sm border py-2 shadow-md"
+              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
             >
               <ul className="min-w-60">
                 <li>
                   <CloseButton
                     className={clsx(
                       "flex items-center gap-2",
-                      "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
+                      "w-full px-6 py-1 text-base text-gray-600 hover:bg-nadeshiko-300",
                       "data-current:bg-nadeshiko-700 data-current:text-white",
                     )}
                     onClick={() => setSearchParams(undefined, { preventScrollReset: true })}
                   >
-                    <div className="text-nadeshiko-800 h-6 w-6">
+                    <div className="h-6 w-6 text-nadeshiko-800">
                       {AllMembers.every((x) => x.id != selected?.id) ? (
                         <BsCheck className="h-full w-full" />
                       ) : null}
@@ -171,12 +171,12 @@ export default function Index() {
                     <CloseButton
                       className={clsx(
                         "flex items-center gap-2",
-                        "hover:bg-nadeshiko-300 w-full px-6 py-1 text-base text-gray-600",
+                        "w-full px-6 py-1 text-base text-gray-600 hover:bg-nadeshiko-300",
                         "data-current:bg-nadeshiko-700 data-current:text-white",
                       )}
                       onClick={() => setSearchParams({ m: c.id }, { preventScrollReset: true })}
                     >
-                      <div className="text-nadeshiko-800 h-6 w-6">
+                      <div className="h-6 w-6 text-nadeshiko-800">
                         {c.id == selected?.id ? <BsCheck className="h-full w-full" /> : null}
                       </div>
                       <div className="flex items-center gap-2">

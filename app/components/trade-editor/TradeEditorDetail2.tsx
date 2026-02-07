@@ -114,7 +114,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
 
       {/* Caption */}
       <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem] bg-white shadow-sm">
-        <div className="bg-nadeshiko-500 absolute -top-9 -left-5 h-20 w-20 rounded-full" />
+        <div className="absolute -top-9 -left-5 h-20 w-20 rounded-full bg-nadeshiko-500" />
         <div className="absolute rounded-full p-2">
           <p className="text-[0.625rem] leading-none text-white">No.</p>
           <p className="px-1 text-sm leading-none text-white">
@@ -124,7 +124,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
         <div className="flex h-full items-center justify-center">
           <div>
             <p className="text-center text-xl text-gray-800">{selPhoto.name}</p>
-            <p className="text-md text-nadeshiko-800 text-center">{selPhoto.description}</p>
+            <p className="text-md text-center text-nadeshiko-800">{selPhoto.description}</p>
           </div>
         </div>
       </div>

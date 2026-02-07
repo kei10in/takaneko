@@ -57,7 +57,7 @@ export const OrganizedTradeImages: React.FC<Props> = (props: Props) => {
 
       {showShareButton && (
         <button
-          className="bg-nadeshiko-800 text-nadeshiko-50 mx-auto mt-4 flex items-center gap-2 rounded-full px-8 py-2 font-semibold"
+          className="mx-auto mt-4 flex items-center gap-2 rounded-full bg-nadeshiko-800 px-8 py-2 font-semibold text-nadeshiko-50"
           onClick={() => {
             const description = "ひとつにまとめたトレード画像をまとめて共有します。";
             const prefix = "WishList";

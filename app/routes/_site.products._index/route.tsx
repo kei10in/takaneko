@@ -116,7 +116,7 @@ export default function Index() {
             <section className="mt-12" key={slug}>
               <Link className="flex items-end justify-between" to={slug}>
                 <h2 className={sectionHeading()}>{title}</h2>
-                <p className="text-nadeshiko-800 flex w-fit items-center text-sm">
+                <p className="flex w-fit items-center text-sm text-nadeshiko-800">
                   <span>すべて表示</span>
                   <BsChevronRight className="ml-1 inline-block" />
                 </p>

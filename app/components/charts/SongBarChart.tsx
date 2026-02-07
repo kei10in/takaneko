@@ -48,11 +48,11 @@ export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
               <div className="min-w-0 flex-auto space-y-0.5">
                 <p className="flex justify-between text-gray-500">
                   <span className="line-clamp-1">{title}</span>
-                  <span className="text-nadeshiko-800 font-semibold">{value}</span>
+                  <span className="font-semibold text-nadeshiko-800">{value}</span>
                 </p>
                 <div className="h-3 overflow-hidden rounded-xs bg-gray-100">
                   <div
-                    className="bg-nadeshiko-800 h-full rounded-xs"
+                    className="h-full rounded-xs bg-nadeshiko-800"
                     style={{ width: `${(value / limit) * 100}%` }}
                   />
                 </div>

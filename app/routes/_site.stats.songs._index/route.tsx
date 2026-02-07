@@ -91,7 +91,7 @@ export default function Component() {
                             <div className="flex items-center select-none">
                               <div className="w-4">
                                 {selected && (
-                                  <BsCheck2 className="text-nadeshiko-900 inline-block text-lg" />
+                                  <BsCheck2 className="inline-block text-lg text-nadeshiko-900" />
                                 )}
                               </div>
                               <div className="px-2">{term.label}</div>

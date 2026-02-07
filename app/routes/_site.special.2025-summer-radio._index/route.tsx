@@ -63,7 +63,7 @@ export default function Index() {
   return (
     <div className="container mx-auto my-12 max-w-3xl px-4">
       <section className="mt-12">
-        <h2 id="organizing" className="text-nadeshiko-800 my-8 text-4xl leading-tight">
+        <h2 id="organizing" className="my-8 text-4xl leading-tight text-nadeshiko-800">
           7/10、7/11 ラジオ出演 まとめ
         </h2>
         <div className="my-8 space-y-2">
@@ -73,7 +73,7 @@ export default function Index() {
               to="https://x.com/takanenofficial/status/1942871358289195370"
               target="_blank"
               rel="noreferrer"
-              className="text-nadeshiko-800 font-semibold"
+              className="font-semibold text-nadeshiko-800"
             >
               高嶺のなでしこ公式 X
             </Link>{" "}

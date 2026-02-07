@@ -18,7 +18,7 @@ export const Thumbnail: React.FC<Props> = (props: Props) => {
         alt={track.name}
         width={160}
         height={90}
-        className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full object-cover text-xs"
+        className="aspect-video w-full bg-nadeshiko-100 object-cover text-xs text-nadeshiko-600"
       />
     );
   }

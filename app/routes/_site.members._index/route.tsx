@@ -136,7 +136,7 @@ export default function Index() {
                   </div>
                   <div className="flex-1 bg-white/95 bg-[url('/takaneko/emblem.png')] bg-contain bg-center bg-no-repeat bg-blend-lighten">
                     <p>たかねこまねーじゃー</p>
-                    <ul className="text-nadeshiko-700 mt-2 flex gap-2"></ul>
+                    <ul className="mt-2 flex gap-2 text-nadeshiko-700"></ul>
                   </div>
                 </div>
               </Link>

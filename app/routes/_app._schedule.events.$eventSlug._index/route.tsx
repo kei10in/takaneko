@@ -263,12 +263,12 @@ export default function EventPage() {
 
       {ics != undefined && (
         <Link
-          className="border-nadeshiko-500 bg-nadeshiko-100 mx-auto my-10 block w-fit rounded-md border px-3 py-1"
+          className="mx-auto my-10 block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
           to={ics.dataUrl}
           download={ics.filename}
           discover="none"
         >
-          <div className="text-nadeshiko-800 flex items-center gap-1">
+          <div className="flex items-center gap-1 text-nadeshiko-800">
             <span>
               <BsCalendar3 className="h-5 w-5" />
             </span>

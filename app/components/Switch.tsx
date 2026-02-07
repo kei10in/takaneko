@@ -13,7 +13,7 @@ export const Switch: React.FC<Props> = ({ checked, onChange, name }: Props) => {
       className={clsx(
         "group flex w-9.5 flex-none cursor-pointer overflow-hidden rounded-full p-0.5 transition-colors ease-in-out",
         "focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white",
-        "data-checked:bg-nadeshiko-800 bg-gray-200",
+        "bg-gray-200 data-checked:bg-nadeshiko-800",
         "text-left data-checked:text-right",
       )}
       checked={checked}

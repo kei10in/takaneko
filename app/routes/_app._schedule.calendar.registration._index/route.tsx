@@ -51,11 +51,11 @@ export default function Index() {
               <p>{cal.description}</p>
 
               <Link
-                className="border-nadeshiko-500 bg-nadeshiko-100 block w-fit rounded-md border px-3 py-1"
+                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
                 to={`webcal://${cal.url}`}
                 discover="none"
               >
-                <div className="text-nadeshiko-800 flex items-center gap-2">
+                <div className="flex items-center gap-2 text-nadeshiko-800">
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>
@@ -64,13 +64,13 @@ export default function Index() {
               </Link>
 
               <Link
-                className="border-nadeshiko-500 bg-nadeshiko-100 block w-fit rounded-md border px-3 py-1"
+                className="block w-fit rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-3 py-1"
                 to={`https://calendar.google.com/calendar/u/0/r?cid=${encodeURIComponent(`webcal://${cal.url}`)}`}
                 discover="none"
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="text-nadeshiko-800 flex items-center gap-2">
+                <div className="flex items-center gap-2 text-nadeshiko-800">
                   <span>
                     <BsCalendar3 className="h-5 w-5" />
                   </span>

@@ -64,10 +64,10 @@ export const markdownComponents2: Components = {
       } else if (splitted.includes("markdown-alert-warning")) {
         return (
           <div
-            className="border-nadeshiko-500 bg-nadeshiko-100 my-6 rounded-md border px-4 pb-4"
+            className="my-6 rounded-md border border-nadeshiko-500 bg-nadeshiko-100 px-4 pb-4"
             {...props}
           >
-            <div className="text-nadeshiko-800 mt-4 flex items-center gap-2">
+            <div className="mt-4 flex items-center gap-2 text-nadeshiko-800">
               <BsExclamationTriangleFill />
               <p>
                 <strong>注意</strong>

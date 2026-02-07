@@ -118,7 +118,7 @@ export default function Index() {
                     )}
                   >
                     <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
-                    <span className="text-nadeshiko-800 line-clamp-1 text-4xl xl:text-6xl">
+                    <span className="line-clamp-1 text-4xl text-nadeshiko-800 xl:text-6xl">
                       {SITE_TITLE}
                     </span>
                   </h1>
@@ -130,7 +130,7 @@ export default function Index() {
 
                 <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 px-4 text-sm font-semibold select-none">
                   <Link
-                    className="bg-nadeshiko-800 text-nadeshiko-100 flex h-9 w-full items-center rounded-full px-4"
+                    className="flex h-9 w-full items-center rounded-full bg-nadeshiko-800 px-4 text-nadeshiko-100"
                     to="/calendar"
                   >
                     <div className="mx-auto flex items-center gap-1">
@@ -139,7 +139,7 @@ export default function Index() {
                     </div>
                   </Link>
                   <Link
-                    className="bg-nadeshiko-800 text-nadeshiko-100 flex h-9 w-full items-center rounded-full px-4"
+                    className="flex h-9 w-full items-center rounded-full bg-nadeshiko-800 px-4 text-nadeshiko-100"
                     to="/trade"
                   >
                     <div className="mx-auto flex items-center gap-1">
@@ -172,7 +172,7 @@ export default function Index() {
             </p>
 
             <Link
-              className="text-nadeshiko-800 mt-2! ml-auto block w-fit px-4 text-sm"
+              className="mt-2! ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
               to="/calendar"
             >
               <span>すべてのスケジュール</span>
@@ -230,7 +230,7 @@ export default function Index() {
             </p>
             <div className="items-bottom flex justify-between">
               <p className="font-semibold text-gray-400">最近のグッズ:</p>
-              <Link className="text-nadeshiko-800 block text-sm" to="/trade">
+              <Link className="block text-sm text-nadeshiko-800" to="/trade">
                 <span>すべてのグッズ</span>
                 <BsChevronRight className="ml-1 inline-block" />
               </Link>
@@ -240,7 +240,7 @@ export default function Index() {
 
             <div className="w-full">
               <Link
-                className="bg-nadeshiko-800 text-nadeshiko-50 mx-auto block w-fit rounded-full px-8 py-2 font-semibold"
+                className="mx-auto block w-fit rounded-full bg-nadeshiko-800 px-8 py-2 font-semibold text-nadeshiko-50"
                 to="/trade"
               >
                 すべてのグッズ

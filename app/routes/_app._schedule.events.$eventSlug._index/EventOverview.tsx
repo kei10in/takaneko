@@ -31,7 +31,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
               <div className="mx-auto mt-0 mb-2 w-60 max-w-xs overflow-hidden" key={i}>
                 <div className="w-full">
                   <Link
-                    className="text-nadeshiko-950 block"
+                    className="block text-nadeshiko-950"
                     to={`#timetable-${i}`}
                     preventScrollReset
                     replace
@@ -41,7 +41,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
                 </div>
                 <p className="w-full p-1 text-right text-xs text-gray-600">
                   <Link
-                    className="text-nadeshiko-600 inline-flex items-center gap-1"
+                    className="inline-flex items-center gap-1 text-nadeshiko-600"
                     to={tt.ref}
                     target="_blank"
                     rel="noopener noreferrer"

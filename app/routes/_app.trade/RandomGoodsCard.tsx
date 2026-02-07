@@ -14,7 +14,7 @@ export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
 
   return (
     <div
-      className={clsx("outline-nadeshiko-800 group rounded-lg data-selected:outline-2")}
+      className={clsx("group rounded-lg outline-nadeshiko-800 data-selected:outline-2")}
       data-selected={selected ? "true" : undefined}
     >
       <div className="aspect-square w-full">
@@ -23,7 +23,7 @@ export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
       <div className="flex flex-col space-y-0.5 px-1 py-1">
         <p className="line-clamp-3 text-sm leading-tight">{content}</p>
         <p className="line-clamp-1 text-xs leading-tight text-gray-400">{description}</p>
-        <p className="border-nadeshiko-800 text-nadeshiko-800 w-fit border px-2 py-px text-xs leading-none">
+        <p className="w-fit border border-nadeshiko-800 px-2 py-px text-xs leading-none text-nadeshiko-800">
           {year}
         </p>
       </div>
