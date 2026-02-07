@@ -120,7 +120,11 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
                 return (
                   <li key={videoId}>
-                    <YouTubeCard videoId={videoId} metadata={AllYouTubeVideoMetadata[videoId]} />
+                    <YouTubeCard
+                      videoId={videoId}
+                      publishedAt={yt.publishedAt}
+                      metadata={AllYouTubeVideoMetadata[videoId]}
+                    />
                   </li>
                 );
               }) ?? null}

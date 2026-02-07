@@ -7,6 +7,7 @@ import { fetchYouTubeOEmbed } from "~/utils/youtube/youtubeOEmbed";
 
 interface Props {
   videoId: string;
+  publishedAt: string;
   metadata?: YouTubeVideoMetadata;
 }
 
@@ -60,7 +61,8 @@ const fetchCardProps = async (videoId: string): Promise<CardProps> => {
   };
 };
 
-export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
+export const YouTubeCard: React.FC<Props> = (props: Props) => {
+  const { videoId, publishedAt, metadata } = props;
   const { data, error, isLoading } = useSWR(metadata == undefined ? videoId : null, fetchCardProps);
 
   const yt = metadata != undefined ? metadataToCardProps(videoId, metadata) : data;
@@ -75,6 +77,7 @@ export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
           <div className="space-y-1 py-2">
             <p className="h-4 w-4/5 rounded-full bg-gray-200 py-0.75"></p>
             <p className="line-clamp-1 flex h-3 w-1/3 items-center gap-1 rounded-full bg-gray-200 p-0.5"></p>
+            <p className="line-clamp-1 flex h-3 w-1/4 items-center gap-1 rounded-full bg-gray-200 p-0.5"></p>
           </div>
         </div>
       </div>
@@ -154,6 +157,10 @@ export const YouTubeCard: React.FC<Props> = ({ videoId, metadata }: Props) => {
           >
             {yt.authorName}
           </Link>
+
+          <p className="line-clamp-1 block w-fit text-xs text-gray-400">
+            {publishedAt.replace(/-/g, ".")}
+          </p>
         </div>
       </div>
     </div>
