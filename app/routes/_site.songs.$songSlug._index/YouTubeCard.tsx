@@ -1,14 +1,12 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import { Link } from "react-router";
 import useSWR from "swr";
-import { YouTubeVideoMetadata } from "~/utils/youtube/types";
 import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
 import { fetchYouTubeOEmbed } from "~/utils/youtube/youtubeOEmbed";
 
 interface Props {
   videoId: string;
   publishedAt: string;
-  metadata?: YouTubeVideoMetadata;
 }
 
 interface CardProps {
@@ -19,7 +17,14 @@ interface CardProps {
   thumbnailUrl: string;
 }
 
-const metadataToCardProps = (videoId: string, metadata: YouTubeVideoMetadata): CardProps => {
+/**
+ * `findPrioritizedThumbnail` は、YouTube サムネイル画像の中から優先度の高いもの
+ * のうち実際に存在するものを返します。
+ * できるだけ大きく、画質劣化の少ないものを優先します。
+ * @param videoId
+ * @returns
+ */
+const findPrioritizedThumbnail = async (videoId: string): Promise<string | undefined> => {
   const imgs = youtubeImage(videoId);
   const priorities: (keyof YouTubeImage)[] = [
     "maxResDefault",
@@ -34,16 +39,47 @@ const metadataToCardProps = (videoId: string, metadata: YouTubeVideoMetadata): C
     "defaultJpeg",
   ];
 
-  const thumbnailType = priorities.find((x) => metadata.thumbnails.includes(x)) ?? "hqDefaultJpeg";
-  const thumbnailUrl = imgs[thumbnailType].url;
+  const result = new Promise<number | undefined>((resolve) => {
+    const controller = new AbortController();
+    const state: ("pending" | "success" | "failed")[] = Array(priorities.length).fill("pending");
+    let settled = false;
 
-  return {
-    videoId,
-    title: metadata.title,
-    authorName: metadata.authorName,
-    authorUrl: metadata.authorUrl,
-    thumbnailUrl: thumbnailUrl,
-  };
+    priorities.forEach(async (p, i) => {
+      console.log(`Checking thumbnail: ${p}`);
+      const url = imgs[p].url;
+
+      try {
+        const param = { method: "GET", headers: { Range: "bytes=0-0" }, signal: controller.signal };
+        const response = await fetch(url, param);
+        state[i] = response.ok ? "success" : "failed";
+      } catch (e) {
+        state[i] = "failed";
+      }
+
+      const n = state.findIndex((x) => x != "failed");
+      if (n != -1 && state[n] == "pending") {
+        // まだ終わってない。
+        return;
+      }
+
+      // 決定した
+      const r = n == -1 ? undefined : n;
+      if (settled) {
+        return;
+      }
+
+      settled = true;
+      controller.abort();
+      resolve(r);
+    });
+  });
+
+  const index = await result;
+  if (index == undefined) {
+    return undefined;
+  }
+
+  return imgs[priorities[index]].url;
 };
 
 const fetchCardProps = async (videoId: string): Promise<CardProps> => {
@@ -52,20 +88,20 @@ const fetchCardProps = async (videoId: string): Promise<CardProps> => {
     throw new Error("Failed to fetch YouTube OEmbed data");
   }
 
+  const thumbnailUrl = await findPrioritizedThumbnail(videoId);
+
   return {
     videoId,
     title: oEmbed.title,
     authorName: oEmbed.author_name,
     authorUrl: oEmbed.author_url,
-    thumbnailUrl: oEmbed.thumbnail_url,
+    thumbnailUrl: thumbnailUrl ?? oEmbed.thumbnail_url,
   };
 };
 
 export const YouTubeCard: React.FC<Props> = (props: Props) => {
-  const { videoId, publishedAt, metadata } = props;
-  const { data, error, isLoading } = useSWR(metadata == undefined ? videoId : null, fetchCardProps);
-
-  const yt = metadata != undefined ? metadataToCardProps(videoId, metadata) : data;
+  const { videoId, publishedAt } = props;
+  const { data: yt, error, isLoading } = useSWR(videoId, fetchCardProps);
 
   if (yt == undefined && isLoading) {
     return (
@@ -127,13 +163,13 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
   return (
     <div className="w-full p-1">
       <Link
-        className="block overflow-hidden rounded-xl hover:text-nadeshiko-800"
+        className="hover:text-nadeshiko-800 block overflow-hidden rounded-xl"
         to={`https://youtu.be/${videoId}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
-          className="aspect-video w-full bg-nadeshiko-100 object-cover text-sm text-nadeshiko-600"
+          className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full object-cover text-sm"
           src={yt.thumbnailUrl}
           alt={yt.title}
         />
@@ -141,7 +177,7 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
       <div>
         <div className="space-y-0.5 px-1 py-2">
           <Link
-            className="line-clamp-2 block text-base leading-snug text-gray-800 hover:text-nadeshiko-800"
+            className="hover:text-nadeshiko-800 line-clamp-2 block text-base leading-snug text-gray-800"
             to={`https://youtu.be/${videoId}`}
             target="_blank"
             rel="noopener noreferrer"

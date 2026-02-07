@@ -9,7 +9,6 @@ import { liveTypeColor } from "~/features/events/EventType";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { LivesForSong } from "~/features/songs/types";
-import { AllYouTubeVideoMetadata } from "~/features/songs/youtubeVideoMetadata";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
@@ -92,7 +91,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <h1 className={pageHeading()}>{track.name}</h1>
 
           {track.digitalRelease && (
-            <p className="mt-1 text-sm text-nadeshiko-700">
+            <p className="text-nadeshiko-700 mt-1 text-sm">
               {track.digitalRelease.replace(/-/g, ".")} <span className="">release</span>
             </p>
           )}
@@ -120,11 +119,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
                 return (
                   <li key={videoId}>
-                    <YouTubeCard
-                      videoId={videoId}
-                      publishedAt={yt.publishedAt}
-                      metadata={AllYouTubeVideoMetadata[videoId]}
-                    />
+                    <YouTubeCard videoId={videoId} publishedAt={yt.publishedAt} />
                   </li>
                 );
               }) ?? null}
