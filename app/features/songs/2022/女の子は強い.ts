@@ -24,14 +24,17 @@ export const 女の子は強い: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "edid66UmfiQ",
+      publishedAt: "2022-12-25",
     },
     {
       text: "Dance Practice Video",
       videoId: "PDxThh-XaQk",
+      publishedAt: "2023-02-04",
     },
     {
       text: "初音ミク",
       videoId: "https://www.youtube.com/watch?v=PVrp_lNkoYE",
+      publishedAt: "2022-12-26",
     },
   ],
   linkcore: "https://linkco.re/gPX4UU3S",

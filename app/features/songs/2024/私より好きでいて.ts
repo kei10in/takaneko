@@ -24,10 +24,12 @@ export const 私より好きでいて: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "vo0f9AoWFLg",
+      publishedAt: "2024-06-29",
     },
     {
       text: "Dance Practice Video",
       videoId: "aXYuSaZqkCM",
+      publishedAt: "2024-08-10",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/lovememorethanido",

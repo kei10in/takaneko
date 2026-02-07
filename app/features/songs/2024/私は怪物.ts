@@ -24,10 +24,12 @@ export const 私は怪物: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "LG3Kho_3ZOA",
+      publishedAt: "2024-02-06",
     },
     {
       text: "Dance Practice Video",
       videoId: "EokERvrVY6k",
+      publishedAt: "2024-06-08",
     },
   ],
   linkcore: "https://linkco.re/eUmuFaRt",

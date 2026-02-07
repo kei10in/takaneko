@@ -22,14 +22,17 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
     {
       text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
       videoId: "https://www.youtube.com/watch?v=yMABvUMzBEQ",
+      publishedAt: "2021-06-30",
     },
     {
       text: "Kotoha バージョン",
       videoId: "https://www.youtube.com/watch?v=Qou76O_Rys0",
+      publishedAt: "2021-03-19",
     },
     {
       text: "off vocal",
       videoId: "https://www.youtube.com/watch?v=u5sP0fRJP_I",
+      publishedAt: "2021-03-21",
     },
   ],
   linkcore: undefined,

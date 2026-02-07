@@ -24,10 +24,12 @@ export const 恋を知った世界: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "iSvx1zS-zSs",
+      publishedAt: "2024-02-21",
     },
     {
       text: "Dance Practice Video",
       videoId: "07kCyxvrY1U",
+      publishedAt: "2024-06-01",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/koiwoshittasekai",

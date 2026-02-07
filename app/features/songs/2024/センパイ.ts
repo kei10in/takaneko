@@ -25,22 +25,27 @@ export const センパイ: SongMetaDescriptor = {
     {
       text: "ハコニワリリィ, 可憐なアイボリー & 高嶺のなでしこ",
       videoId: "rOZBjopRSv8",
+      publishedAt: "2024-04-20",
     },
     {
       text: "TrySail",
       videoId: "https://www.youtube.com/watch?v=RF_Lc6gMuI0",
+      publishedAt: "2016-12-13",
     },
     {
       text: "TrySail フルコーラス",
       videoId: "https://www.youtube.com/watch?v=QpKIuhvl98Q",
+      publishedAt: "2018-08-26",
     },
     {
       text: "TrySail フルコーラス 2",
       videoId: "https://www.youtube.com/watch?v=AhKFbx6ADGE",
+      publishedAt: "2018-08-26",
     },
     {
       text: "鎖那",
       videoId: "https://www.youtube.com/watch?v=FG8ONKAuPx0",
+      publishedAt: "2016-12-27",
     },
   ],
 };

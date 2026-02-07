@@ -24,18 +24,22 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
     {
       text: "Dance Performance Video",
       videoId: "8wwTjwjqQR0",
+      publishedAt: "2023-06-21",
     },
     {
       text: "Dance Practice Video",
       videoId: "SnMxkXlE0VQ",
+      publishedAt: "2023-07-14",
     },
     {
       text: "涼海ひより",
       videoId: "https://www.youtube.com/watch?v=yl8cdZMXefI",
+      publishedAt: "2023-04-09",
     },
     {
       text: "off vocal",
       videoId: "https://www.youtube.com/watch?v=lO43sFs7Mpw",
+      publishedAt: "2023-04-10",
     },
   ],
   linkcore: "https://linkco.re/d9zs5rbD",

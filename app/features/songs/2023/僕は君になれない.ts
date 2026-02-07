@@ -24,14 +24,17 @@ export const 僕は君になれない: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "-Mm3QGGxg1k",
+      publishedAt: "2023-04-21",
     },
     {
       text: "Dance Practice Video",
       videoId: "IU_tFAq0Q4E",
+      publishedAt: "2023-04-12",
     },
     {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 東山恵里沙 ver",
       videoId: "https://www.youtube.com/watch?v=PuS7Lf1AQ7A",
+      publishedAt: "2025-09-03",
     },
   ],
   linkcore: "https://linkco.re/mmANYVTN",

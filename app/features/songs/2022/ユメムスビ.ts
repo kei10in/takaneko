@@ -25,6 +25,7 @@ export const ユメムスビ: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "qgYnKvdcMJQ",
+      publishedAt: "2022-10-01",
     },
   ],
   linkcore: "https://linkco.re/8NCaQgFT",

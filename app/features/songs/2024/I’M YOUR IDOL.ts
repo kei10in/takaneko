@@ -24,10 +24,12 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "iz6KQup9Uys",
+      publishedAt: "2024-11-27",
     },
     {
       text: "LIVE",
       videoId: "7NK49pi5BFQ",
+      publishedAt: "2024-11-30",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/imyouridol",

@@ -24,6 +24,7 @@ export const アイのウイルス: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "Bsq2ZKelIqQ",
+      publishedAt: "2024-12-11",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/takaneko_2ndsingle",

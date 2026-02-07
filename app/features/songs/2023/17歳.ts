@@ -24,22 +24,27 @@ export const _17歳: SongMetaDescriptor = {
     {
       text: "Dance Performance Video",
       videoId: "puTujCvaRjA",
+      publishedAt: "2023-09-03",
     },
     {
       text: "歌ってみた",
       videoId: "w4aDnfJ_tKU",
+      publishedAt: "2023-08-28",
     },
     {
       text: "Dance Practice Video",
       videoId: "_KDcZgugOsY",
+      publishedAt: "2023-09-30",
     },
     {
       text: "mona",
       videoId: "https://www.youtube.com/watch?v=dvsp6rJRJiw",
+      publishedAt: "2021-08-20",
     },
     {
       text: "off vocal",
       videoId: "https://www.youtube.com/watch?v=TcaB2BJPcXU",
+      publishedAt: "2021-08-22",
     },
   ],
   linkcore: "https://linkco.re/Nzfyynp7",

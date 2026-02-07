@@ -24,18 +24,22 @@ export const 革命の女王: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "WcJbDYD9u94",
+      publishedAt: "2023-04-21",
     },
     {
       text: "Dance Practice Video",
       videoId: "tgtkGQM_yHU",
+      publishedAt: "2023-04-12",
     },
     {
       text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
       videoId: "https://www.youtube.com/watch?v=__rgL3hLhkI",
+      publishedAt: "2026-01-17",
     },
     {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 日向端ひな ver ",
       videoId: "https://www.youtube.com/watch?v=EYgxdF_Wkkw",
+      publishedAt: "2025-08-31",
     },
   ],
   linkcore: "https://linkco.re/SMRG5Z34",

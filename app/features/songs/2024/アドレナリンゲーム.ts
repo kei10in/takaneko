@@ -24,18 +24,22 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "n_8LTS92LXE",
+      publishedAt: "2024-11-06",
     },
     {
       text: "Dance Special ver.",
       videoId: "TqSjs96kNC0",
+      publishedAt: "2024-10-07",
     },
     {
       text: "LIVE",
       videoId: "Bn6rTXTooXg",
+      publishedAt: "2024-11-09",
     },
     {
       text: "エンディング映像",
       videoId: "https://www.youtube.com/watch?v=sk19KXYkWCo",
+      publishedAt: "2024-10-06",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/adrenalinegame",

@@ -5,6 +5,7 @@ import { MemberId } from "../profile/types";
 export interface SongVideo {
   text: string;
   videoId: string;
+  publishedAt: string;
 }
 
 export interface SongMetaDescriptor {

@@ -24,14 +24,17 @@ export const モテチェン: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "ivfMBjNqLZE",
+      publishedAt: "2024-07-14",
     },
     {
       text: "Dance Practice Video",
       videoId: "frT2NgaVlrc",
+      publishedAt: "2024-08-01",
     },
     {
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=hkcCpIJgta8",
+      publishedAt: "2024-08-19",
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/motechen",

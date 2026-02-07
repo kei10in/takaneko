@@ -24,10 +24,12 @@ export const メランコリックハニー: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "645TOVz8on8",
+      publishedAt: "2025-04-30",
     },
     {
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=S6ks_vyopd0",
+      publishedAt: "2025-05-16",
     },
   ],
 };

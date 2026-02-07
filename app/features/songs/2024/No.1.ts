@@ -22,14 +22,17 @@ export const No1: SongMetaDescriptor = {
     {
       text: "歌ってみた",
       videoId: "jDQKzMDsu5A",
+      publishedAt: "2024-01-04",
     },
     {
       text: "mona",
       videoId: "https://www.youtube.com/watch?v=Zs1sHB6DNR4",
+      publishedAt: "2019-12-28",
     },
     {
       text: "off vocal",
       videoId: "https://www.youtube.com/watch?v=nUynVbIHDmA",
+      publishedAt: "2020-05-28",
     },
   ],
 };

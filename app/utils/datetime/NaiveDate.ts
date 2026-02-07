@@ -100,4 +100,14 @@ export class NaiveDate {
     const d = Date.parse(date);
     return NaiveDate.fromTimeAsUTC(d);
   }
+
+  static parseUnsafeInJapan(date: string): NaiveDate {
+    const d = Date.parse(date);
+    const dateInJapan = new Date(d + 9 * 60 * 60 * 1000);
+    return new NaiveDate(
+      dateInJapan.getUTCFullYear(),
+      dateInJapan.getUTCMonth() + 1,
+      dateInJapan.getUTCDate(),
+    );
+  }
 }

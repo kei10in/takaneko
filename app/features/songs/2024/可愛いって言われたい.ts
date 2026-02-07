@@ -24,10 +24,12 @@ export const 可愛いって言われたい: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "SLMwsq7IoWU",
+      publishedAt: "2024-02-03",
     },
     {
       text: "Dance Practice Video",
       videoId: "5e97LQK5jdA",
+      publishedAt: "2024-06-08",
     },
   ],
   linkcore: "https://linkco.re/A2UVFyTy",

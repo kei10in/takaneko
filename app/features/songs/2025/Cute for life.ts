@@ -24,10 +24,12 @@ export const CuteForLife: SongMetaDescriptor = {
     {
       text: "MV",
       videoId: "9tN1esSj2Tg",
+      publishedAt: "2025-04-07",
     },
     {
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=xAiS9F-_Avk",
+      publishedAt: "2025-04-11",
     },
   ],
 };

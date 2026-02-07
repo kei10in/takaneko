@@ -24,18 +24,22 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
     {
       text: "Dance Performance Video",
       videoId: "OZycs0TBwKY",
+      publishedAt: "2025-02-08",
     },
     {
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 橋本桃呼 ver",
       videoId: "https://www.youtube.com/watch?v=Zwqu7594BEU",
+      publishedAt: "2025-09-02",
     },
     {
       text: "めいちゃん",
       videoId: "https://www.youtube.com/watch?v=SMEyLYGGLKc",
+      publishedAt: "2021-05-26",
     },
     {
       text: "初音ミク",
       videoId: "https://www.youtube.com/watch?v=Vsj8tzO1ONk",
+      publishedAt: "2021-05-20",
     },
   ],
 };

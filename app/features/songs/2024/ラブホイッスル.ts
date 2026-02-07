@@ -22,6 +22,7 @@ export const ラブホイッスル: SongMetaDescriptor = {
     {
       text: "CHiCO with HoneyWorks 音源",
       videoId: "H36kjGG1dsI",
+      publishedAt: "2018-08-26",
     },
   ],
 };
