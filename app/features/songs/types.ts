@@ -2,6 +2,11 @@ import { z } from "zod/v4";
 import { LiveTypeEnum } from "../events/EventType";
 import { MemberId } from "../profile/types";
 
+export interface SongVideo {
+  text: string;
+  videoId: string;
+}
+
 export interface SongMetaDescriptor {
   slug: string;
   name: string;
@@ -22,7 +27,7 @@ export interface SongMetaDescriptor {
 
   featuredMembers?: MemberId[] | undefined;
   officialSite?: string | undefined;
-  youtube?: { text: string; videoId: string }[] | undefined;
+  youtube?: SongVideo[] | undefined;
   linkcore?: string;
   linkfire?: string;
 }
