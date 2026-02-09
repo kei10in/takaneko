@@ -35,15 +35,19 @@
   }
 
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-nadeshiko-700;
+    @apply outline-nadeshiko-700 outline-2 outline-offset-2;
   }
 }
 
 @layer components {
+  .main-viewport {
+    @apply min-h-[calc(100svh-var(--header-height))];
+  }
+
   .inset-focus {
     &:focus-visible {
       @apply outline-none;
-      @apply inset-ring-2 inset-ring-nadeshiko-700;
+      @apply inset-ring-nadeshiko-700 inset-ring-2;
     }
   }
 
@@ -63,7 +67,7 @@
       &::before {
         @apply float-left mr-2 -ml-8 rounded-full;
         @apply text-center;
-        @apply size-6 bg-nadeshiko-800 font-bold text-white;
+        @apply bg-nadeshiko-800 size-6 font-bold text-white;
         @apply content-[counter(list)] [counter-increment:list];
       }
     }

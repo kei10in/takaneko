@@ -5,7 +5,7 @@ import { Footer } from "~/components/Footer";
 export default function SiteLayout() {
   return (
     <Fragment>
-      <div className="min-h-[calc(100svh-var(--header-height))]">
+      <div className="main-viewport">
         <Outlet />
       </div>
       <Footer />
