@@ -45,7 +45,7 @@
     "unist-util-visit": "^5.1.0",
     "url-metadata": "^5.4.1",
     "zod": "^4.3.6",
-    "zustand": "^5.0.10"
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.22.1",
