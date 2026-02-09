@@ -3,6 +3,28 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "wzvyHl7Y15g",
+    title: "「いつも何度でも」〜消えゆく風を抱きしめる〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-09",
+    mediaUrl: "https://youtu.be/wzvyHl7Y15g",
+    imageUrl: "https://i.ytimg.com/vi/wzvyHl7Y15g/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "WKrTTyIsk1k",
+    title: "「カントリー・ロード」〜夢と知りせば〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-09",
+    mediaUrl: "https://youtu.be/WKrTTyIsk1k",
+    imageUrl: "https://i.ytimg.com/vi/WKrTTyIsk1k/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
     key: "QEtZ5r3i9Qo",
     title: "「はにゅうの宿」〜過ぎ去りし日々〜 　ジブリをうたう その2　ショートムービー",
     authorName: "Victor Entertainment",
