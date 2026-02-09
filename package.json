@@ -76,7 +76,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "glob": "^13.0.0",
-    "globals": "^17.2.0",
+    "globals": "^17.3.0",
     "handlebars": "^4.7.8",
     "happy-dom": "^20.4.0",
     "icon-gen": "^5.0.0",
