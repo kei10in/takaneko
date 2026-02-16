@@ -1,6 +1,7 @@
 import { z } from "zod/v4";
 
 export const StageCostumes = z.enum([
+  "Bouquet of 9 Flowers 衣装",
   "見上げるたびに、恋をする。衣装",
   "2025 夏衣装",
   "アイドル衣装衣装",
@@ -39,6 +40,7 @@ export type MvCostumes = z.infer<typeof MvCostumes>;
 export const MvCostumeNames: string[] = MvCostumes.options;
 
 export const TShirtCostumes = z.enum([
+  "T シャツ (Bouquet of 9 Flowers ver.)",
   "T シャツ (ハニフェス 2025)",
   "T シャツ (Spring Ride ver.)",
   "T シャツ (瞬きさえ忘れる。 ver.)",
