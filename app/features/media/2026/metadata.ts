@@ -3,6 +3,28 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "93ujrV0JClQ",
+    title: "「さよならの夏」〜夏祭りにそよぐ風〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-13",
+    mediaUrl: "https://youtu.be/93ujrV0JClQ",
+    imageUrl: "https://i.ytimg.com/vi/93ujrV0JClQ/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "5K67ZivleSc",
+    title: "「地球儀」〜そして未来へと歩み出す〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-13",
+    mediaUrl: "https://youtu.be/5K67ZivleSc",
+    imageUrl: "https://i.ytimg.com/vi/5K67ZivleSc/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
     key: "wzvyHl7Y15g",
     title: "「いつも何度でも」〜消えゆく風を抱きしめる〜 　ジブリをうたう その2　ショートムービー",
     authorName: "Victor Entertainment",
