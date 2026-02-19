@@ -9,7 +9,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   composedBy: "HoneyWorks",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: "籾山ひめり",
+  choreographedBy: "らん先生",
 
   videoRelease: undefined,
   digitalRelease: undefined,
