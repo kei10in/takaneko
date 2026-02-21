@@ -2,6 +2,19 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://natalie.mu/music/pp/churaku-takaneko03",
+    title:
+      "高嶺のなでしこ×「牛乳を飲んで、酪農応援！プレゼントキャンペーン」｜笑顔で伝える牛乳の普遍的な“おいしさ” - 音楽ナタリー 特集・インタビュー",
+    authorName: "音楽ナタリー",
+    publishedAt: "2026-02-20",
+    mediaUrl: "https://natalie.mu/music/pp/churaku-takaneko03",
+    imageUrl:
+      "https://ogre.natalie.mu/media/pp/churaku-takaneko03/churaku-takaneko03_x-4.jpg?imwidth=1280&imdensity=1",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "tBGwtoXIet8",
     title: "「世界の約束」〜新しい旅に出よう〜 　ジブリをうたう その2　ショートムービー",
