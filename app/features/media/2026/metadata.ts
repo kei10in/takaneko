@@ -3,6 +3,28 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "tBGwtoXIet8",
+    title: "「世界の約束」〜新しい旅に出よう〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-19",
+    mediaUrl: "https://youtu.be/tBGwtoXIet8",
+    imageUrl: "https://i.ytimg.com/vi/tBGwtoXIet8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "39fi5RWX8lA",
+    title: "「朝ごはんの歌」〜春の予感〜 　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-19",
+    mediaUrl: "https://youtu.be/39fi5RWX8lA",
+    imageUrl: "https://i.ytimg.com/vi/39fi5RWX8lA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
     key: "93ujrV0JClQ",
     title: "「さよならの夏」〜夏祭りにそよぐ風〜 　ジブリをうたう その2　ショートムービー",
     authorName: "Victor Entertainment",
