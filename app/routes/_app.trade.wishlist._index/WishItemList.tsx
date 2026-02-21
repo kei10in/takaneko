@@ -36,7 +36,7 @@ export function WishItemList(props: WishItemListProps) {
           return (
             <li
               key={detail.item.id}
-              className="flex w-28 items-center justify-center overflow-hidden text-sm"
+              className="items-top flex w-28 justify-center overflow-hidden text-sm"
             >
               <div>
                 <img
