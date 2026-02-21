@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const アクロトーキョー_スマホ型アクリルスタンド: RandomGoods = {
+  id: "アクロトーキョー スマホ型アクリルスタンド",
+  slug: "アクロトーキョー スマホ型アクリルスタンド",
+  name: "アクロトーキョー コラボグッズ スマホ型アクリルスタンド",
+  year: 2026,
+  series: "アクロトーキョー スペシャル コラボレーション グッズ",
+  category: "アクリルスタンド",
+  tradeText: TradeTextType.Description,
+  url: "/takaneko/goods/2026/2026-02-20_アクロトーキョー スマホ型アクリルスタンド.webp",
+  width: 1500,
+  height: 1500,
+  variants: [
+    { id: 1, name: "橋本桃呼", description: "Gamchu" },
+    { id: 2, name: "橋本桃呼", description: "REFLEM" },
+    { id: 3, name: "橋本桃呼", description: "ililil" },
+    { id: 4, name: "橋本桃呼", description: "TRAVAS TOKYO" },
+    { id: 5, name: "城月菜央", description: "REFLEM" },
+    { id: 6, name: "城月菜央", description: "TRAVAS TOKYO" },
+    { id: 7, name: "城月菜央", description: "AdaNous" },
+    { id: 8, name: "城月菜央", description: "Grrr the Lipper" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 87, y: 50, width: 375, height: 450 },
+    { id: 2, x: 562, y: 50, width: 375, height: 450 },
+    { id: 3, x: 1037, y: 50, width: 375, height: 450 },
+    { id: 4, x: 87, y: 525, width: 375, height: 450 },
+    { id: 5, x: 562, y: 525, width: 375, height: 450 },
+    { id: 6, x: 1037, y: 525, width: 375, height: 450 },
+    { id: 7, x: 87, y: 1000, width: 375, height: 450 },
+    { id: 8, x: 562, y: 1000, width: 375, height: 450 },
+  ],
+};

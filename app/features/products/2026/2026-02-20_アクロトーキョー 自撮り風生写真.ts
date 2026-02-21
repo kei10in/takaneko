@@ -1,0 +1,38 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const アクロトーキョー_自撮り風生写真: RandomGoods = {
+  id: "アクロトーキョー 自撮り風生写真",
+  slug: "アクロトーキョー 自撮り風生写真",
+  name: "アクロトーキョー コラボグッズ 自撮り風生写真",
+  year: 2026,
+  series: "アクロトーキョー スペシャル コラボレーション グッズ",
+  category: "生写真",
+  tradeText: TradeTextType.Description,
+  url: "/takaneko/goods/2026/2026-02-20_アクロトーキョー 自撮り風生写真.webp",
+  width: 1500,
+  height: 1975,
+  variants: [
+    { id: 1, name: "城月菜央", description: "TRAVAS TOKYO" },
+    { id: 2, name: "城月菜央", description: "AdaNous" },
+    { id: 3, name: "城月菜央", description: "Grrr the Lipper" },
+    { id: 4, name: "城月菜央", description: "REFLEM" },
+    { id: 5, name: "橋本桃呼", description: "Gamchu" },
+    { id: 6, name: "橋本桃呼", description: "REFLEM" },
+    { id: 7, name: "橋本桃呼", description: "TRAVAS TOKYO" },
+    { id: 8, name: "橋本桃呼", description: "ililil" },
+    { id: 9, name: "城月菜央 & 橋本桃呼", description: "Grrr the Lipper & Gamchu" },
+    { id: 10, name: "城月菜央 & 橋本桃呼", description: "REFLEM" },
+  ],
+  positions: [
+    { id: 1, x: 50, y: 125, width: 450, height: 300 },
+    { id: 2, x: 525, y: 125, width: 450, height: 300 },
+    { id: 3, x: 1000, y: 125, width: 450, height: 300 },
+    { id: 4, x: 50, y: 600, width: 450, height: 300 },
+    { id: 5, x: 525, y: 600, width: 450, height: 300 },
+    { id: 6, x: 1000, y: 600, width: 450, height: 300 },
+    { id: 7, x: 50, y: 1075, width: 450, height: 300 },
+    { id: 8, x: 525, y: 1075, width: 450, height: 300 },
+    { id: 9, x: 1000, y: 1075, width: 450, height: 300 },
+    { id: 10, x: 50, y: 1550, width: 450, height: 300 },
+  ],
+};

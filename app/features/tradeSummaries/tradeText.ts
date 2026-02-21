@@ -54,13 +54,12 @@ const generateNumberingTradeText = (
       if (have.length === 0) {
         return [];
       }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
+      const familyName = extractFamilyName(member.name);
+      if (familyName == undefined) {
         return [];
       }
-      const familyName = name.split(" ")[0];
 
-      return `${familyName} ${have.join(", ")}`;
+      return [`${familyName} ${have.join(", ")}`];
     })
     .join("\n");
 
@@ -72,13 +71,12 @@ const generateNumberingTradeText = (
       if (wants.length === 0) {
         return [];
       }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
+      const familyName = extractFamilyName(member.name);
+      if (familyName == undefined) {
         return [];
       }
-      const familyName = name.split(" ")[0];
 
-      return `${familyName} ${wants.join(", ")}`;
+      return [`${familyName} ${wants.join(", ")}`];
     })
     .join("\n");
 
@@ -142,13 +140,12 @@ const generateDescriptionTradeText = (
       if (have.length === 0) {
         return [];
       }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
+      const familyName = extractFamilyName(member.name);
+      if (familyName == undefined) {
         return [];
       }
-      const familyName = name.split(" ")[0];
 
-      return `${familyName} ${have.join(", ")}`;
+      return [`${familyName} ${have.join(", ")}`];
     })
     .join("\n");
 
@@ -160,13 +157,12 @@ const generateDescriptionTradeText = (
       if (wants.length === 0) {
         return [];
       }
-      const name = AllMembers.find((m) => m.id == member.name)?.name;
-      if (name == undefined) {
+      const familyName = extractFamilyName(member.name);
+      if (familyName == undefined) {
         return [];
       }
-      const familyName = name.split(" ")[0];
 
-      return `${familyName} ${wants.join(", ")}`;
+      return [`${familyName} ${wants.join(", ")}`];
     })
     .join("\n");
 
@@ -208,11 +204,10 @@ const generateGroupByDescriptionTradeText = (
       const have = x.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
         .flatMap((i) => {
-          const name = AllMembers.find((m) => m.id == i.name)?.name;
-          if (name == undefined) {
+          const familyName = extractFamilyName(i.name);
+          if (familyName == undefined) {
             return [];
           }
-          const familyName = name.split(" ")[0];
           return [familyName];
         });
 
@@ -229,11 +224,10 @@ const generateGroupByDescriptionTradeText = (
       const wants = x.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
         .flatMap((i) => {
-          const name = AllMembers.find((m) => m.id == i.name)?.name;
-          if (name == undefined) {
+          const familyName = extractFamilyName(i.name);
+          if (familyName == undefined) {
             return [];
           }
-          const familyName = name.split(" ")[0];
           return [familyName];
         });
 
@@ -254,4 +248,13 @@ const concatenateTradeText = (args: { title: string; have: string; wants: string
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
 
   return `高嶺のなでしこ たかねこ トレード 交換\n${title}\n${haveText}${wantsText}`;
+};
+
+const extractFamilyName = (name: string): string | undefined => {
+  const members = AllMembers.filter((m) => name.includes(m.id));
+  if (members.length === 0) {
+    return undefined;
+  }
+
+  return members.map((m) => m.name.split(" ")[0]).join(" & ");
 };
