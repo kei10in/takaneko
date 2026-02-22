@@ -40,7 +40,7 @@ export function WishItemList(props: WishItemListProps) {
             >
               <div>
                 <img
-                  className="mx-auto block max-h-36 max-w-full object-contain data-[shadow]:drop-shadow-sm"
+                  className="mx-auto block max-h-36 max-w-full object-contain data-shadow:drop-shadow-sm"
                   data-shadow={shadow}
                   src={imagePath}
                   alt={`${detail.item.name} ${detail.item.id}`}
