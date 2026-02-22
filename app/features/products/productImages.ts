@@ -142,6 +142,10 @@ import { クリスマス2025_缶バッジ } from "./2025/2025-12-25_缶バッジ
 import { 晴れ着2026_ミニフォト } from "./2026/2026-01-01_ミニフォトカード「晴れ着2026」";
 import { 晴れ着2026_生写真 } from "./2026/2026-01-01_生写真「晴れ着2026」";
 import { 見上げるたびに恋をする衣装_生写真 } from "./2026/2026-01-01_生写真「見上げるたびに、恋をする。衣装」";
+import { BouquetOf9Flowers_ミニフォト } from "./2026/2026-02-14_ミニフォトカード「Bouquet of 9 Flowers」";
+import { BouquetOf9Flowers_生写真 } from "./2026/2026-02-14_生写真「Bouquet of 9 Flowers」";
+import { BouquetOf9Flowers_目印チャーム } from "./2026/2026-02-14_目印チャーム「Bouquet of 9 Flowers」";
+import { BouquetOf9Flowers_缶バッジ } from "./2026/2026-02-14_缶バッジ「Bouquet of 9 Flowers」";
 import { アクロトーキョー_アクリルコースター } from "./2026/2026-02-20_アクロトーキョー アクリルコースター";
 import { アクロトーキョー_スマホ型アクリルスタンド } from "./2026/2026-02-20_アクロトーキョー スマホ型アクリルスタンド";
 import { アクロトーキョー_チェキ風アクリルキーホルダー } from "./2026/2026-02-20_アクロトーキョー チェキ風アクリルキーホルダー";
@@ -150,12 +154,12 @@ import { アクロトーキョー_自撮り風生写真 } from "./2026/2026-02-2
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  BouquetOf9Flowers_生写真,
+  BouquetOf9Flowers_ミニフォト,
+  BouquetOf9Flowers_缶バッジ,
+  BouquetOf9Flowers_目印チャーム,
+  晴れ着2026_生写真,
   晴れ着2026_ミニフォト,
-  クリスマス2025_生写真,
-  クリスマス2025_ミニフォト,
-  クリスマス2025_目印チャーム,
-  クリスマス2025_缶バッジ,
-  クリスマス2025_アクリルコースター,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
@@ -164,6 +168,10 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   アクロトーキョー_チェキ風アクリルキーホルダー,
   アクロトーキョー_アクリルコースター,
   アクロトーキョー_スマホ型アクリルスタンド,
+  BouquetOf9Flowers_生写真,
+  BouquetOf9Flowers_ミニフォト,
+  BouquetOf9Flowers_缶バッジ,
+  BouquetOf9Flowers_目印チャーム,
   晴れ着2026_生写真,
   晴れ着2026_ミニフォト,
   見上げるたびに恋をする衣装_生写真,

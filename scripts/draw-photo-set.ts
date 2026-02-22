@@ -3,10 +3,10 @@ import "konva/canvas-backend";
 import { ProductImage } from "./lib/ProductImage.js";
 
 const main = async () => {
-  const files = globSync("public/takaneko/goods/2025/work/*.png").toSorted();
+  const files = globSync("public/takaneko/goods/work/*.png").toSorted();
 
-  const outputImage = "public/takaneko/goods/2025/generated.webp";
-  const outputJson = "public/takaneko/goods/2025/positions.json";
+  const outputImage = "public/takaneko/goods/generated.webp";
+  const outputJson = "public/takaneko/goods/positions.json";
 
   const productImage = new ProductImage(files, { size: { width: 154, height: 220 } });
 

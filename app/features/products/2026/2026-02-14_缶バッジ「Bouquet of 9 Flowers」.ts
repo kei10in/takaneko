@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const BouquetOf9Flowers_缶バッジ: RandomGoods = {
+  id: "缶バッジ「Bouquet of 9 Flowers」",
+  slug: "キラキラ缶バッジ「Bouquet of 9 Flowers」",
+  name: "キラキラ缶バッジ「Bouquet of 9 Flowers」ver.",
+  year: 2026,
+  series: "Bouquet of 9 Flowers",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-02-14_缶バッジ「Bouquet of 9 Flowers」.webp",
+  width: 522,
+  height: 522,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 24, y: 27, width: 155, height: 155 },
+    { id: 2, x: 184, y: 27, width: 155, height: 155 },
+    { id: 3, x: 343, y: 27, width: 155, height: 155 },
+    { id: 4, x: 24, y: 185, width: 155, height: 155 },
+    { id: 5, x: 184, y: 185, width: 155, height: 155 },
+    { id: 6, x: 343, y: 185, width: 155, height: 155 },
+    { id: 7, x: 24, y: 342, width: 155, height: 155 },
+    { id: 8, x: 184, y: 342, width: 155, height: 155 },
+    { id: 9, x: 343, y: 342, width: 155, height: 155 },
+  ],
+};
