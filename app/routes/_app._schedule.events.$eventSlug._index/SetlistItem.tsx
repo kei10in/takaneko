@@ -1,5 +1,13 @@
 import { clsx } from "clsx";
-import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
+import {
+  BsChevronRight,
+  BsHourglassSplit,
+  BsMagic,
+  BsMegaphoneFill,
+  BsMicFill,
+  BsMusicNoteBeamed,
+  BsSoundwave,
+} from "react-icons/bs";
 import { Link } from "react-router";
 import { Segment } from "~/features/events/setlist";
 import { ALL_SONGS } from "~/features/songs/songs";
@@ -16,27 +24,27 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   if (part.kind == "announce") {
     const text = part.name;
     const subtext = part.members.join("、");
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SimpleListItem icon="megaphone" text={text} subtext={subtext} />;
   }
   if (part.kind == "overture") {
     const text = "Overture";
     const subtext = "";
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SimpleListItem icon="sound" text={text} subtext={subtext} />;
   }
   if (part.kind == "talk") {
     const text = "MC";
     const subtext = "";
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SimpleListItem icon="mic" text={text} subtext={subtext} />;
   }
   if (part.kind == "special") {
     const text = part.title ?? "企画";
     const subtext = part.costumeName || "衣装不明";
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SimpleListItem icon="special" text={text} subtext={subtext} />;
   }
   if (part.kind == "interlude") {
     const text = part.description ?? "幕間";
     const subtext = part.description != undefined ? "幕間" : "";
-    return <SimpleListItem text={text} subtext={subtext} />;
+    return <SimpleListItem icon="interlude" text={text} subtext={subtext} />;
   }
   if (part.kind == "encore") {
     const text = "アンコール";
@@ -116,16 +124,37 @@ const SectionListItem: React.FC<SectionListItemProps> = ({ text }: SectionListIt
 };
 
 interface SimpleListItemProps {
+  icon?: "mic" | "megaphone" | "sound" | "special" | "interlude" | undefined;
   text: string;
   subtext: string;
 }
 
-const SimpleListItem: React.FC<SimpleListItemProps> = ({ text, subtext }: SimpleListItemProps) => {
+const SimpleListItem: React.FC<SimpleListItemProps> = ({
+  icon,
+  text,
+  subtext,
+}: SimpleListItemProps) => {
+  const iconMap = {
+    mic: BsMicFill,
+    megaphone: BsMegaphoneFill,
+    sound: BsSoundwave,
+    special: BsMagic,
+    interlude: BsHourglassSplit,
+  } as const;
+  const Icon = icon ? iconMap[icon] : null;
+
   return (
     <li>
-      <div className={clsx("group pl-12")}>
-        <div className="w-full min-w-0 flex-1 px-2 py-2">
-          <p className={clsx("line-clamp-1")}>{text}</p>
+      <div className={clsx("group flex items-center justify-stretch gap-2")}>
+        <div className="flex-none pl-14">
+          <div className="flex items-center justify-center overflow-hidden">
+            <div className={clsx("flex size-10 items-center justify-center px-3")}>
+              {Icon && <Icon className="h-5 w-5 flex-none text-nadeshiko-300" />}
+            </div>
+          </div>
+        </div>
+        <div className="w-full min-w-0 flex-1 py-2">
+          <p className={clsx("line-clamp-1 text-nadeshiko-700")}>{text}</p>
           <p className="line-clamp-1 text-xs text-gray-400">{subtext}</p>
         </div>
       </div>
