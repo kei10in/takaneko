@@ -52,12 +52,14 @@ export default function Index() {
         </div>
       </SecondaryTopbar>
 
-      <div className="container mx-auto">
+      <div className="@container">
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
-          <nav className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] w-96 flex-none overflow-y-auto lg:block">
-            <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
-          </nav>
+          <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] flex-none overflow-y-auto px-4 lg:block">
+            <nav className="w-96">
+              <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
+            </nav>
+          </aside>
 
           <main className="min-w-0 flex-1">
             <Outlet />
