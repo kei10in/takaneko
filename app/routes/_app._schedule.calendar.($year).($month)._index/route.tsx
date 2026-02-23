@@ -137,7 +137,7 @@ export default function Index() {
   }, [day, location.hash, location.search, month, navigate, year]);
 
   return (
-    <div className="container mx-auto">
+    <div className="@container">
       <Calendar events={events} month={m} filter={filterName} />
     </div>
   );
