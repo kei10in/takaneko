@@ -28,3 +28,9 @@ updates:
           - "@react-router/dev"
           - "@react-router/fs-routes"
           - react-router
+      minor-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
