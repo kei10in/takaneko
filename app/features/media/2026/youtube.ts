@@ -2,6 +2,18 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "pgcgmmoiwfo",
+    publishedAt: "2026-02-23",
+    presents: ["葉月紗蘭"],
+    officialTwitter: "https://x.com/takanenofficial/status/2025778894553649510",
+  },
+  {
+    videoId: "096zDixTAdQ",
+    publishedAt: "2026-02-23",
+    presents: ["葉月紗蘭"],
+    officialTwitter: "https://x.com/takanenofficial/status/2025777636178268307",
+  },
+  {
     videoId: "tBGwtoXIet8",
     publishedAt: "2026-02-19",
     presents: ["葉月紗蘭"],

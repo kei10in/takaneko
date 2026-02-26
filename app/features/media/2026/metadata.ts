@@ -2,6 +2,28 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "pgcgmmoiwfo",
+    title: "「Arrietty’s Song」〜トンネルの向こう〜　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-23",
+    mediaUrl: "https://youtu.be/pgcgmmoiwfo",
+    imageUrl: "https://i.ytimg.com/vi/pgcgmmoiwfo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "096zDixTAdQ",
+    title: "「テルーの唄」〜原始の森のように〜　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-23",
+    mediaUrl: "https://youtu.be/096zDixTAdQ",
+    imageUrl: "https://i.ytimg.com/vi/096zDixTAdQ/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
     kind: "ogp",
     key: "https://natalie.mu/music/pp/churaku-takaneko03",
     title:
