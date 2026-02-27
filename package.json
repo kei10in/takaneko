@@ -48,7 +48,7 @@
     "zustand": "^5.0.11"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.25.1",
+    "@cloudflare/vite-plugin": "^1.25.2",
     "@eslint/js": "^9.39.3",
     "@fast-csv/format": "^5.0.5",
     "@googleapis/youtube": "^31.0.0",
@@ -98,7 +98,7 @@
     "vite-plugin-inspect": "^11.3.3",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18",
-    "wrangler": "^4.66.0"
+    "wrangler": "^4.67.0"
   },
   "engines": {
     "node": "^22.0.0"
