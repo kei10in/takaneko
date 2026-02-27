@@ -7,7 +7,7 @@ import { SITE_TITLE } from "~/constants";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
-import { PUBLICATIONS } from "~/features/products/publications";
+import { PUBLICATIONS } from "~/features/publications/publications";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {

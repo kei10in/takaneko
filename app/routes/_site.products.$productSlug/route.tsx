@@ -1,7 +1,7 @@
 import { MetaFunction, useParams } from "react-router";
 import { MINI_PHOTO_CARDS, OTHER_PHOTOS, PHOTOS } from "~/features/products/photos";
 import { Product } from "~/features/products/product";
-import { PUBLICATIONS } from "~/features/products/publications";
+import { PUBLICATIONS } from "~/features/publications/publications";
 import { formatTitle } from "~/utils/htmlHeader";
 import { PhotoProduct } from "./PhotoProduct";
 import PublicationProduct from "./PublicationProduct";

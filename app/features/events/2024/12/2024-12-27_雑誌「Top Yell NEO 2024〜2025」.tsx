@@ -1,4 +1,4 @@
-import { TopYellNeo2024_2025 } from "~/features/products/publications/Top Yell NEO";
+import { TopYellNeo2024_2025 } from "~/features/publications/publications/Top Yell NEO";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

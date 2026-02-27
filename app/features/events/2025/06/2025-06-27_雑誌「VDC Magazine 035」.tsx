@@ -1,4 +1,4 @@
-import { VDCMagazine035 } from "~/features/products/publications/VDC Magazine";
+import { VDCMagazine035 } from "~/features/publications/publications/VDC Magazine";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

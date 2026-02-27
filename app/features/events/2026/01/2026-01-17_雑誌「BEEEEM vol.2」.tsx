@@ -1,4 +1,4 @@
-import { BEEEEM_vol2 } from "~/features/products/publications/BEEEEM";
+import { BEEEEM_vol2 } from "~/features/publications/publications/BEEEEM";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

@@ -1,4 +1,4 @@
-import { IDOL_AND_READ_041 } from "~/features/products/publications/IDOL AND READ";
+import { IDOL_AND_READ_041 } from "~/features/publications/publications/IDOL AND READ";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

@@ -1,4 +1,4 @@
-import { IDOL_FILE_Vol35 } from "~/features/products/publications/IDOL FILE";
+import { IDOL_FILE_Vol35 } from "~/features/publications/publications/IDOL FILE";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

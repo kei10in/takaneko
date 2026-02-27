@@ -1,4 +1,4 @@
-import { MARQUEE_Vol159 } from "~/features/products/publications/MARQUEE";
+import { MARQUEE_Vol159 } from "~/features/publications/publications/MARQUEE";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

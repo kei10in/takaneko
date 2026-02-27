@@ -1,4 +1,4 @@
-import { Publication } from "../products/product";
+import { Publication } from "../publications/types";
 import { EventMetaDescriptor } from "./eventMeta";
 import { EventType } from "./EventType";
 

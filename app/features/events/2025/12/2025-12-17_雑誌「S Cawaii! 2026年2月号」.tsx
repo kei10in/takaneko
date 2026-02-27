@@ -1,4 +1,4 @@
-import { SCawaii_2026年2月号 } from "~/features/products/publications/S Cawaii!";
+import { SCawaii_2026年2月号 } from "~/features/publications/publications/S Cawaii!";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

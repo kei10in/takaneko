@@ -1,4 +1,4 @@
-import { LARME_064 } from "~/features/products/publications/LARME";
+import { LARME_064 } from "~/features/publications/publications/LARME";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

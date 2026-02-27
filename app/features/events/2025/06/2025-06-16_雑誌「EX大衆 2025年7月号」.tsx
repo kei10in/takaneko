@@ -1,4 +1,4 @@
-import { EX大衆_2025年07月号 } from "~/features/products/publications/EX大衆";
+import { EX大衆_2025年07月号 } from "~/features/publications/publications/EX大衆";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

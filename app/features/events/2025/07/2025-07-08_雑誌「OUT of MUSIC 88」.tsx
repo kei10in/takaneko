@@ -1,4 +1,4 @@
-import { OutOfMusic_88 } from "~/features/products/publications/Out of Music";
+import { OutOfMusic_88 } from "~/features/publications/publications/Out of Music";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

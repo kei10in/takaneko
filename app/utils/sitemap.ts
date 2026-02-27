@@ -3,8 +3,8 @@ import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { EventRepository } from "~/features/events/EventRepository";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
-import { PUBLICATIONS } from "~/features/products/publications";
 import { AllMembers } from "~/features/profile/members";
+import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "./datetime/NaiveDate";
 import { NaiveMonth } from "./datetime/NaiveMonth";
 

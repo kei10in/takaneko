@@ -1,4 +1,4 @@
-import { シティ情報Fukuoka_2025年8月号 } from "~/features/products/publications/シティ情報Fukuoka";
+import { シティ情報Fukuoka_2025年8月号 } from "~/features/publications/publications/シティ情報Fukuoka";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

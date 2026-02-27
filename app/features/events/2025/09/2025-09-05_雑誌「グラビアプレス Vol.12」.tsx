@@ -1,4 +1,4 @@
-import { グラビアプレスVol12 } from "~/features/products/publications/グラビアプレス";
+import { グラビアプレスVol12 } from "~/features/publications/publications/グラビアプレス";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

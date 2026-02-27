@@ -1,4 +1,4 @@
-import { モデルプレスカウントダウンマガジン_vol10 } from "~/features/products/publications/モデルプレスカウントダウンマガジン";
+import { モデルプレスカウントダウンマガジン_vol10 } from "~/features/publications/publications/モデルプレスカウントダウンマガジン";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 

@@ -1,4 +1,4 @@
-import { オシグラフVol1 } from "~/features/products/publications/オシグラフ";
+import { オシグラフVol1 } from "~/features/publications/publications/オシグラフ";
 import { EventMetaDescriptor } from "../../eventMeta";
 import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
 
