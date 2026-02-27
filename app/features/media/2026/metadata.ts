@@ -3,6 +3,28 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "VZmluxfUZ-w",
+    title: "エピローグ〜再会　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-27",
+    mediaUrl: "https://youtu.be/VZmluxfUZ-w",
+    imageUrl: "https://i.ytimg.com/vi/VZmluxfUZ-w/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
+    key: "-ntodupoL-8",
+    title: "「上を向いて歩こう」〜記録を撮り重ねて〜　ジブリをうたう その2　ショートムービー",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-02-27",
+    mediaUrl: "https://youtu.be/-ntodupoL-8",
+    imageUrl: "https://i.ytimg.com/vi/-ntodupoL-8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
     key: "pgcgmmoiwfo",
     title: "「Arrietty’s Song」〜トンネルの向こう〜　ジブリをうたう その2　ショートムービー",
     authorName: "Victor Entertainment",
