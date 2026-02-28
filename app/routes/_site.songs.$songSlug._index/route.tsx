@@ -1,9 +1,17 @@
 import { clsx } from "clsx";
 import { Fragment } from "react";
-import { BsCalendar, BsGeo, BsMicFill, BsPlayBtnFill } from "react-icons/bs";
+import {
+  BsBarChartLineFill,
+  BsCalendar,
+  BsGeo,
+  BsMicFill,
+  BsPersonStandingDress,
+  BsPlayBtnFill,
+} from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { CostumeBarChart } from "~/components/charts/CostumeBarChart";
 import { pageHeading, sectionHeading } from "~/components/styles";
 import { liveTypeColor } from "~/features/events/EventType";
 import { SongMeta } from "~/features/songs/SongMeta";
@@ -57,6 +65,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   });
 
   const lives = performances?.lives ?? [];
+  const costumeStats = performances?.costumeStats ?? [];
 
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
 
@@ -91,7 +100,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <h1 className={pageHeading()}>{track.name}</h1>
 
           {track.digitalRelease && (
-            <p className="text-nadeshiko-700 mt-1 text-sm">
+            <p className="mt-1 text-sm text-nadeshiko-700">
               {track.digitalRelease.replace(/-/g, ".")} <span className="">release</span>
             </p>
           )}
@@ -124,6 +133,40 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                 );
               }) ?? null}
             </ul>
+          </section>
+
+          <section className="mt-8">
+            <h2
+              className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}
+            >
+              <span className="flex items-center gap-2">
+                <BsPersonStandingDress className="inline-block text-gray-400" />
+                <span>衣装</span>
+              </span>
+            </h2>
+
+            <p>この楽曲を披露したときの衣装のトップ 10 を表示しています。</p>
+
+            <div className="mt-4 space-y-2 px-1">
+              {isLoading && (
+                <div className="flex h-40 w-full items-center justify-center">
+                  <BsBarChartLineFill className="h-12 w-12 animate-pulse text-gray-300" />
+                </div>
+              )}
+              {!isLoading && costumeStats.length == 0 && (
+                <p className="p-1 text-gray-500">
+                  この楽曲を披露したライブが見つかりませんでした。
+                </p>
+              )}
+              {!isLoading && costumeStats.length > 0 && (
+                <CostumeBarChart
+                  costume={costumeStats.slice(0, 10).map(({ costumeName, count }) => ({
+                    costumeName,
+                    value: count,
+                  }))}
+                />
+              )}
+            </div>
           </section>
 
           <section className="mt-8">

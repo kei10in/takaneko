@@ -1,149 +1,183 @@
 [
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "花は誓いを忘れない",
     "slug": "花は誓いを忘れない",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "この世界は嘘でできている",
     "slug": "この世界は嘘でできている",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ライフクエスト",
     "slug": "ライフクエスト",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "東京サマーセッション",
     "slug": "東京サマーセッション",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋のこたえ。",
     "slug": "初恋のこたえ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "アイドル衣装",
     "slug": "アイドル衣装",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "メランコリックハニー",
     "slug": "メランコリックハニー",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "東京サニーパーティー",
     "slug": "東京サニーパーティー",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "Cute for life",
     "slug": "Cute for life",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "病名恋ワズライ",
     "slug": "病名恋ワズライ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "小悪魔だってかまわない！",
     "slug": "小悪魔だってかまわない！",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋の絵本",
     "slug": "初恋の絵本",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "アイのウイルス",
     "slug": "アイのウイルス",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "I’M YOUR IDOL",
     "slug": "IM YOUR IDOL",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "アドレナリンゲーム",
     "slug": "アドレナリンゲーム",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ラブホイッスル",
     "slug": "ラブホイッスル",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "死ぬまでダーリン",
     "slug": "死ぬまでダーリン",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "LOVE ANTHEM",
     "slug": "LOVE ANTHEM",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "モテチェン！",
     "slug": "モテチェン！",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "私より好きでいて",
     "slug": "私より好きでいて",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "センパイ。",
     "slug": "センパイ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "メイド☆至上主義",
     "slug": "メイド☆至上主義",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "推しの魔法",
     "slug": "推しの魔法",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "恋を知った世界",
     "slug": "恋を知った世界",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "乙女どもよ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 2,
     "lives": [
       {
@@ -189,6 +223,16 @@
     "slug": "私は怪物",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2022 サンタ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "乙女どもよ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 2,
     "lives": [
       {
@@ -234,6 +278,12 @@
     "slug": "可愛いって言われたい",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "乙女どもよ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -260,114 +310,150 @@
     "slug": "美しく生きろ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "No.1",
     "slug": "No.1",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "私が恋を知る日",
     "slug": "私が恋を知る日",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ハッピークリスマスパーティ",
     "slug": "ハッピークリスマスパーティ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "いつか私がママになったら",
     "slug": "いつか私がママになったら",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "醜い生き物",
     "slug": "醜い生き物",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "シス×ラブ",
     "slug": "シス×ラブ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "世界は恋に落ちている",
     "slug": "世界は恋に落ちている",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "今好きになる。",
     "slug": "今好きになる",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "すきっちゅーの！",
     "slug": "すきっちゅーの！",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "17歳",
     "slug": "17歳",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "月曜日の憂鬱",
     "slug": "月曜日の憂鬱",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋のひと。",
     "slug": "初恋のひと",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "決戦スピリット",
     "slug": "決戦スピリット",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ヒロインは平均以下。",
     "slug": "ヒロインは平均以下",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "#超絶かわいい",
     "slug": "超絶かわいい",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "革命の女王",
     "slug": "革命の女王",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "僕は君になれない",
     "slug": "僕は君になれない",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "男の子の目的は何？",
     "slug": "男の子の目的は何",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "女の子は強い制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2022 サンタ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 1,
+      },
+    ],
     "count": 15,
     "lives": [
       {
@@ -647,6 +733,20 @@
     "slug": "女の子は強い",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "女の子は強い制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2022 サンタ衣装",
+        "count": 1,
+      },
+    ],
     "count": 8,
     "lives": [
       {
@@ -793,6 +893,16 @@
     "slug": "可愛くてごめん",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 14,
+      },
+      {
+        "costumeName": "乙女どもよ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 15,
     "lives": [
       {
@@ -1085,6 +1195,24 @@
     "slug": "乙女どもよ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 25,
+      },
+      {
+        "costumeName": "女の子は強い制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (高嶺のなでしこ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 1,
+      },
+    ],
     "count": 28,
     "lives": [
       {
@@ -1598,6 +1726,16 @@
     "slug": "ファンサ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 16,
+      },
+      {
+        "costumeName": "T シャツ (高嶺のなでしこ ver.)",
+        "count": 1,
+      },
+    ],
     "count": 17,
     "lives": [
       {
@@ -1928,6 +2066,20 @@
     "slug": "誇り高きアイドル",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 20,
+      },
+      {
+        "costumeName": "2022 サンタ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "ハロウィンコスプレ🎃",
+        "count": 1,
+      },
+    ],
     "count": 23,
     "lives": [
       {
@@ -2333,6 +2485,16 @@
     "slug": "ユメムスビ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 32,
+      },
+      {
+        "costumeName": "女の子は強い制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 33,
     "lives": [
       {

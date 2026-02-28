@@ -67,6 +67,12 @@ export const LivesForSong = z.object({
   slug: z.string(),
   name: z.string(),
   count: z.int(),
+  costumeStats: z.array(
+    z.object({
+      costumeName: z.string(),
+      count: z.int(),
+    }),
+  ),
   lives: z.array(SimpleSongActivity),
 });
 

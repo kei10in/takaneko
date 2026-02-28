@@ -1,65 +1,97 @@
 [
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "花は誓いを忘れない",
     "slug": "花は誓いを忘れない",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "この世界は嘘でできている",
     "slug": "この世界は嘘でできている",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ライフクエスト",
     "slug": "ライフクエスト",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "東京サマーセッション",
     "slug": "東京サマーセッション",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋のこたえ。",
     "slug": "初恋のこたえ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "アイドル衣装",
     "slug": "アイドル衣装",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "メランコリックハニー",
     "slug": "メランコリックハニー",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "東京サニーパーティー",
     "slug": "東京サニーパーティー",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "Cute for life",
     "slug": "Cute for life",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "病名恋ワズライ",
     "slug": "病名恋ワズライ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -181,12 +213,23 @@
     "slug": "小悪魔だってかまわない！",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋の絵本",
     "slug": "初恋の絵本",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -251,6 +294,28 @@
     "slug": "アイのウイルス",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 35,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+    ],
     "count": 40,
     "lives": [
       {
@@ -862,6 +927,28 @@
     "slug": "IM YOUR IDOL",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 21,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+    ],
     "count": 32,
     "lives": [
       {
@@ -1360,6 +1447,28 @@
     "slug": "アドレナリンゲーム",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -1481,6 +1590,12 @@
     "slug": "ラブホイッスル",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 6,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -1602,6 +1717,32 @@
     "slug": "死ぬまでダーリン",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "モテチェン！ MV 衣装",
+        "count": 1,
+      },
+    ],
     "count": 18,
     "lives": [
       {
@@ -1951,6 +2092,48 @@
     "slug": "LOVE ANTHEM",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "読売ジャイアンツ ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "モテチェン！ MV 衣装",
+        "count": 1,
+      },
+    ],
     "count": 33,
     "lives": [
       {
@@ -2572,6 +2755,32 @@
     "slug": "モテチェン！",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 13,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 25,
     "lives": [
       {
@@ -2989,6 +3198,48 @@
     "slug": "私より好きでいて",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "T シャツ (わたし色に染まれ ver.)",
+        "count": 10,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 25,
     "lives": [
       {
@@ -3406,6 +3657,32 @@
     "slug": "センパイ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 13,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 19,
     "lives": [
       {
@@ -3709,6 +3986,48 @@
     "slug": "メイド☆至上主義",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 17,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 3,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 48,
     "lives": [
       {
@@ -4563,6 +4882,68 @@
     "slug": "推しの魔法",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 19,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 15,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "恋を知った世界制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (CONTEMPO ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (たかねこちゃん個別デザイン)",
+        "count": 1,
+      },
+    ],
     "count": 59,
     "lives": [
       {
@@ -5574,6 +5955,24 @@
     "slug": "恋を知った世界",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+    ],
     "count": 17,
     "lives": [
       {
@@ -5839,6 +6238,32 @@
     "slug": "私は怪物",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "恋を知った世界制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+    ],
     "count": 18,
     "lives": [
       {
@@ -6123,6 +6548,64 @@
     "slug": "可愛いって言われたい",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 34,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 29,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 14,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (Beginning ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (CONTEMPO ver.)",
+        "count": 1,
+      },
+    ],
     "count": 115,
     "lives": [
       {
@@ -8172,18 +8655,26 @@
     "slug": "美しく生きろ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "No.1",
     "slug": "No.1",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "私が恋を知る日",
     "slug": "私が恋を知る日",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 2,
+      },
+    ],
     "count": 2,
     "lives": [
       {
@@ -8216,6 +8707,24 @@
     "slug": "ハッピークリスマスパーティ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -8324,6 +8833,12 @@
     "slug": "いつか私がママになったら",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -8350,6 +8865,12 @@
     "slug": "醜い生き物",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -8376,6 +8897,20 @@
     "slug": "シス×ラブ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "京れもん 着物",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -8440,6 +8975,20 @@
     "slug": "世界は恋に落ちている",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -8504,6 +9053,44 @@
     "slug": "今好きになる",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+    ],
     "count": 29,
     "lives": [
       {
@@ -9062,6 +9649,36 @@
     "slug": "すきっちゅーの！",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 3,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+    ],
     "count": 13,
     "lives": [
       {
@@ -9316,6 +9933,52 @@
     "slug": "17歳",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "恋を知った世界制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+    ],
     "count": 31,
     "lives": [
       {
@@ -9912,6 +10575,72 @@
     "slug": "月曜日の憂鬱",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 29,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 18,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 11,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "T シャツ (瞬きさえ忘れる。 ver.)",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 3,
+      },
+      {
+        "costumeName": "恋を知った世界制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "京れもん 着物",
+        "count": 1,
+      },
+    ],
     "count": 90,
     "lives": [
       {
@@ -11551,6 +12280,48 @@
     "slug": "初恋のひと",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 21,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 19,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 73,
     "lives": [
       {
@@ -12880,6 +13651,44 @@
     "slug": "決戦スピリット",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 3,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+    ],
     "count": 34,
     "lives": [
       {
@@ -13533,6 +14342,36 @@
     "slug": "ヒロインは平均以下",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "モテチェン！ MV 衣装",
+        "count": 1,
+      },
+    ],
     "count": 18,
     "lives": [
       {
@@ -13882,6 +14721,36 @@
     "slug": "超絶かわいい",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 30,
     "lives": [
       {
@@ -14394,6 +15263,44 @@
     "slug": "革命の女王",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+    ],
     "count": 33,
     "lives": [
       {
@@ -14963,6 +15870,36 @@
     "slug": "僕は君になれない",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+    ],
     "count": 19,
     "lives": [
       {
@@ -15331,6 +16268,56 @@
     "slug": "男の子の目的は何",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "恋を知った世界制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 47,
     "lives": [
       {
@@ -16166,6 +17153,64 @@
     "slug": "女の子は強い",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 27,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 25,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 15,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 13,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 3,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "読売ジャイアンツ ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (CONTEMPO ver.)",
+        "count": 1,
+      },
+    ],
     "count": 103,
     "lives": [
       {
@@ -18052,6 +19097,44 @@
     "slug": "可愛くてごめん",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+    ],
     "count": 26,
     "lives": [
       {
@@ -18553,6 +19636,84 @@
     "slug": "乙女どもよ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 25,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 21,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 19,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 13,
+      },
+      {
+        "costumeName": "T シャツ (わたし色に染まれ ver.)",
+        "count": 10,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "T シャツ (瞬きさえ忘れる。 ver.)",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 4,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "T シャツ (CONTEMPO ver.)",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME fes vol.1 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "モテチェン！ MV 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "センパイ。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (Beginning ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (たかねこちゃん個別デザイン)",
+        "count": 1,
+      },
+    ],
     "count": 121,
     "lives": [
       {
@@ -20755,6 +21916,36 @@
     "slug": "ファンサ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+    ],
     "count": 20,
     "lives": [
       {
@@ -21142,6 +22333,40 @@
     "slug": "誇り高きアイドル",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "キュンキュン学園制服",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (2nd ファンミ ver.)",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "京れもん 着物",
+        "count": 1,
+      },
+    ],
     "count": 11,
     "lives": [
       {
@@ -21358,6 +22583,28 @@
     "slug": "ユメムスビ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+    ],
     "count": 10,
     "lives": [
       {

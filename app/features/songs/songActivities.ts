@@ -24,7 +24,8 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
     const { meta } = event;
 
     const actMap: Record<string, { act: Act; segment: SongSegment }[]> = {};
-    meta.acts.flatMap((act) => {
+
+    meta.acts.forEach((act) => {
       act.setlist
         .filter((p) => p.kind == "song")
         .forEach((segment) => {
@@ -32,14 +33,7 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
           if (actMap[song] == undefined) {
             actMap[song] = [];
           }
-
           actMap[song].push({ act, segment });
-
-          if (result[song] != undefined) {
-            // ひとつの公演で同じ曲が複数回披露された場合は、披露された回数を
-            // カウントします。
-            result[song].count += 1;
-          }
         });
     });
 
@@ -48,6 +42,7 @@ export const makeSongToLiveMap = (events: EventModule[], songs: SongMetaDescript
         return;
       }
 
+      result[song].count += segments.length;
       result[song].events.push({ segments, event });
     });
   });
@@ -80,10 +75,27 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
       };
     });
 
+    const costumeCount: Record<string, number> = {};
+    activitySummary.events.forEach(({ segments }) => {
+      segments.forEach(({ segment }) => {
+        const costume = segment.costumeName ?? "Unknown";
+        if (costumeCount[costume] == undefined) {
+          costumeCount[costume] = 0;
+        }
+        costumeCount[costume]++;
+      });
+    });
+
     const data = {
       slug: activitySummary.song.slug,
       name: activitySummary.song.name,
       count: activitySummary.count,
+      costumeStats: Object.entries(costumeCount)
+        .map(([costumeName, count]) => ({
+          costumeName,
+          count,
+        }))
+        .toSorted((a, b) => b.count - a.count),
       lives: performedLives,
     };
 

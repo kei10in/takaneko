@@ -1,5 +1,27 @@
 [
   {
+    "costumeStats": [
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 16,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 1,
+      },
+    ],
     "count": 21,
     "lives": [
       {
@@ -367,6 +389,40 @@
     "slug": "花は誓いを忘れない",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ハニフェス 2025 制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 19,
     "lives": [
       {
@@ -709,6 +765,24 @@
     "slug": "この世界は嘘でできている",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -817,6 +891,16 @@
     "slug": "ライフクエスト",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 浴衣",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+    ],
     "count": 4,
     "lives": [
       {
@@ -887,6 +971,68 @@
     "slug": "東京サマーセッション",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 11,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "2025 浴衣",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "たかねこハロウィン2025 探偵衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+    ],
     "count": 43,
     "lives": [
       {
@@ -1685,6 +1831,36 @@
     "slug": "初恋のこたえ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 17,
     "lives": [
       {
@@ -1989,6 +2165,48 @@
     "slug": "アイドル衣装",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 18,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 37,
     "lives": [
       {
@@ -2595,12 +2813,47 @@
     "slug": "メランコリックハニー",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "東京サニーパーティー",
     "slug": "東京サニーパーティー",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 27,
     "lives": [
       {
@@ -3043,6 +3296,40 @@
     "slug": "Cute for life",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "たかねこハロウィン2025 探偵衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 18,
     "lives": [
       {
@@ -3392,6 +3679,44 @@
     "slug": "病名恋ワズライ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "たかねこハロウィン2025 探偵衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ハニフェス 2025 制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 25,
     "lives": [
       {
@@ -3874,12 +4199,19 @@
     "slug": "小悪魔だってかまわない！",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "初恋の絵本",
     "slug": "初恋の絵本",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -3906,6 +4238,52 @@
     "slug": "アイのウイルス",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "T シャツ (Spring Ride ver.)",
+        "count": 3,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 2,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+    ],
     "count": 33,
     "lives": [
       {
@@ -4462,6 +4840,36 @@
     "slug": "IM YOUR IDOL",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 16,
     "lives": [
       {
@@ -4760,18 +5168,30 @@
     "slug": "アドレナリンゲーム",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ラブホイッスル",
     "slug": "ラブホイッスル",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "死ぬまでダーリン",
     "slug": "死ぬまでダーリン",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -4823,6 +5243,12 @@
     "slug": "LOVE ANTHEM",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -4849,6 +5275,20 @@
     "slug": "モテチェン！",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -4913,6 +5353,44 @@
     "slug": "私より好きでいて",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "たかねこハロウィン2025 探偵衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 14,
     "lives": [
       {
@@ -5186,6 +5664,20 @@
     "slug": "センパイ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+    ],
     "count": 3,
     "lives": [
       {
@@ -5250,6 +5742,48 @@
     "slug": "メイド☆至上主義",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+    ],
     "count": 20,
     "lives": [
       {
@@ -5637,6 +6171,68 @@
     "slug": "推しの魔法",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "バレンタイン 2025 衣装",
+        "count": 1,
+      },
+    ],
     "count": 32,
     "lives": [
       {
@@ -6239,12 +6835,19 @@
     "slug": "恋を知った世界",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "私は怪物",
     "slug": "私は怪物",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -6271,6 +6874,76 @@
     "slug": "可愛いって言われたい",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 21,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 13,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 11,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME Fes'25 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ハニフェス 2025 制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+        "count": 1,
+      },
+    ],
     "count": 87,
     "lives": [
       {
@@ -7840,54 +8513,88 @@
     "slug": "美しく生きろ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "No.1",
     "slug": "No.1",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "私が恋を知る日",
     "slug": "私が恋を知る日",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "ハッピークリスマスパーティ",
     "slug": "ハッピークリスマスパーティ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "いつか私がママになったら",
     "slug": "いつか私がママになったら",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "醜い生き物",
     "slug": "醜い生き物",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "シス×ラブ",
     "slug": "シス×ラブ",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "世界は恋に落ちている",
     "slug": "世界は恋に落ちている",
   },
   {
+    "costumeStats": [],
     "count": 0,
     "lives": [],
     "name": "今好きになる。",
     "slug": "今好きになる",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -8009,6 +8716,16 @@
     "slug": "すきっちゅーの！",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+    ],
     "count": 2,
     "lives": [
       {
@@ -8054,6 +8771,24 @@
     "slug": "17歳",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+    ],
     "count": 7,
     "lives": [
       {
@@ -8194,6 +8929,76 @@
     "slug": "月曜日の憂鬱",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 18,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "T シャツ (Spring Ride ver.)",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME Fes'25 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ハニフェス 2025 制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 浴衣",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "バレンタイン 2025 衣装",
+        "count": 1,
+      },
+    ],
     "count": 59,
     "lives": [
       {
@@ -9231,6 +10036,60 @@
     "slug": "初恋のひと",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 17,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 7,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+        "count": 1,
+      },
+    ],
     "count": 63,
     "lives": [
       {
@@ -10357,6 +11216,48 @@
     "slug": "決戦スピリット",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ハニフェス 2025 制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 17,
     "lives": [
       {
@@ -10687,6 +11588,28 @@
     "slug": "ヒロインは平均以下",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 5,
     "lives": [
       {
@@ -10789,6 +11712,32 @@
     "slug": "超絶かわいい",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 14,
     "lives": [
       {
@@ -11062,6 +12011,28 @@
     "slug": "革命の女王",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 5,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+    ],
     "count": 15,
     "lives": [
       {
@@ -11341,6 +12312,20 @@
     "slug": "僕は君になれない",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 4,
     "lives": [
       {
@@ -11424,6 +12409,56 @@
     "slug": "男の子の目的は何",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "全国お招きツアー衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "バレンタイン 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 1,
+      },
+    ],
     "count": 19,
     "lives": [
       {
@@ -11792,6 +12827,72 @@
     "slug": "女の子は強い",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 19,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 6,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "LARME Fes'25 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "初恋のひと。制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+        "count": 1,
+      },
+      {
+        "costumeName": "2025 浴衣",
+        "count": 1,
+      },
+      {
+        "costumeName": "バレンタイン 2025 衣装",
+        "count": 1,
+      },
+    ],
     "count": 67,
     "lives": [
       {
@@ -12994,6 +14095,48 @@
     "slug": "可愛くてごめん",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "2025 春衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "バレンタイン 2025 衣装",
+        "count": 1,
+      },
+    ],
     "count": 16,
     "lives": [
       {
@@ -13305,6 +14448,68 @@
     "slug": "乙女どもよ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 春衣装",
+        "count": 20,
+      },
+      {
+        "costumeName": "ピンク衣装",
+        "count": 11,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 10,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 9,
+      },
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 8,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 4,
+      },
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アイドル衣装衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "クリスマス 2025 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "わたし色に染まれ衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+        "count": 1,
+      },
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+        "count": 1,
+      },
+    ],
     "count": 80,
     "lives": [
       {
@@ -14728,6 +15933,24 @@
     "slug": "ファンサ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 3,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "見上げるたびに、恋をする。衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+    ],
     "count": 6,
     "lives": [
       {
@@ -14836,6 +16059,12 @@
     "slug": "誇り高きアイドル",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "2025 夏衣装",
+        "count": 1,
+      },
+    ],
     "count": 1,
     "lives": [
       {
@@ -14862,6 +16091,20 @@
     "slug": "ユメムスビ",
   },
   {
+    "costumeStats": [
+      {
+        "costumeName": "高嶺のなでしこ 2024 衣装",
+        "count": 2,
+      },
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "I’M YOUR IDOL 衣装",
+        "count": 1,
+      },
+    ],
     "count": 4,
     "lives": [
       {
