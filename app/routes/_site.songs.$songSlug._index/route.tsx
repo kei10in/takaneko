@@ -145,7 +145,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               </span>
             </h2>
 
-            <p>この楽曲を披露したときの衣装のトップ 10 を表示しています。</p>
+            <p>この楽曲のときの衣装を披露したときの回数が多い順に表示しています。</p>
 
             <div className="mt-4 space-y-2 px-1">
               {isLoading && (
@@ -160,7 +160,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               )}
               {!isLoading && costumeStats.length > 0 && (
                 <CostumeBarChart
-                  costume={costumeStats.slice(0, 10).map(({ costumeName, count }) => ({
+                  costume={costumeStats.map(({ costumeName, count }) => ({
                     costumeName,
                     value: count,
                   }))}
