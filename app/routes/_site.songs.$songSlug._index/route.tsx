@@ -145,7 +145,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               </span>
             </h2>
 
-            <p>この楽曲のときの衣装を披露したときの回数が多い順に表示しています。</p>
+            <p>この楽曲のときの衣装を、使用回数が多い順に表示しています。</p>
 
             <div className="mt-4 space-y-2 px-1">
               {isLoading && (
