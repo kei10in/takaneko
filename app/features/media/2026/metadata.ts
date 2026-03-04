@@ -24,6 +24,17 @@ export const metadata2026: MediaDetails[] = [
     presents: ["葉月紗蘭"],
   },
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/781951",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第9回『羊たちの沈黙』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-02-28",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/781951",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/02/781951_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "VZmluxfUZ-w",
     title: "エピローグ〜再会　ジブリをうたう その2　ショートムービー",
