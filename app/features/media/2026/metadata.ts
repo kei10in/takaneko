@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "NKKwfXKnUS8",
+    title: "高嶺のなでしこ、HEROINES FES 2026の盛り上がりを語る！",
+    authorName: "WWS チャンネル",
+    publishedAt: "2026-03-04",
+    mediaUrl: "https://youtu.be/NKKwfXKnUS8",
+    imageUrl: "https://i.ytimg.com/vi/NKKwfXKnUS8/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     key: "Z_ir5EhW1OA",
     title: "スタジオジブリ トリビュートアルバム「ジブリをうたう その２」ショートムービーメイキング",
     authorName: "Victor Entertainment",
