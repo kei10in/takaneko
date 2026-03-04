@@ -151,9 +151,11 @@ import { アクロトーキョー_スマホ型アクリルスタンド } from ".
 import { アクロトーキョー_チェキ風アクリルキーホルダー } from "./2026/2026-02-20_アクロトーキョー チェキ風アクリルキーホルダー";
 import { アクロトーキョー_ペアアクリルブロック } from "./2026/2026-02-20_アクロトーキョー ペアアクリルブロック";
 import { アクロトーキョー_自撮り風生写真 } from "./2026/2026-02-20_アクロトーキョー 自撮り風生写真";
+import { セーラー服2026_ミニフォト } from "./2026/2026-03-05_ミニフォトカード「セーラー服2026";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  セーラー服2026_ミニフォト,
   BouquetOf9Flowers_生写真,
   BouquetOf9Flowers_ミニフォト,
   BouquetOf9Flowers_缶バッジ,
@@ -163,6 +165,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  セーラー服2026_ミニフォト,
   アクロトーキョー_自撮り風生写真,
   アクロトーキョー_ペアアクリルブロック,
   アクロトーキョー_チェキ風アクリルキーホルダー,
