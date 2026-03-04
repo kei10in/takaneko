@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "Z_ir5EhW1OA",
+    title: "スタジオジブリ トリビュートアルバム「ジブリをうたう その２」ショートムービーメイキング",
+    authorName: "Victor Entertainment",
+    publishedAt: "2026-03-04",
+    mediaUrl: "https://youtu.be/Z_ir5EhW1OA",
+    imageUrl: "https://i.ytimg.com/vi/Z_ir5EhW1OA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "youtube",
     key: "VZmluxfUZ-w",
     title: "エピローグ〜再会　ジブリをうたう その2　ショートムービー",
     authorName: "Victor Entertainment",
