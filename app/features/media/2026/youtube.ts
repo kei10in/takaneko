@@ -10,16 +10,19 @@ export const YouTube2026 = [
     videoId: "w2yuxRhPPxQ",
     publishedAt: "2026-03-06",
     presents: ["葉月紗蘭", "日向端ひな", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2029907558891409783",
   },
   {
     videoId: "uK9GQP8dHDs",
     publishedAt: "2026-03-06",
     presents: ["城月菜央", "東山恵里沙", "松本ももな"],
+    officialTwitter: "https://x.com/takanenofficial/status/2029907558891409783",
   },
   {
     videoId: "SE71MiND2rY",
     publishedAt: "2026-03-06",
     presents: ["涼海すう", "橋本桃呼", "星谷美来"],
+    officialTwitter: "https://x.com/takanenofficial/status/2029907558891409783",
   },
   {
     videoId: "NKKwfXKnUS8",
