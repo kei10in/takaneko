@@ -2,6 +2,26 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "gFn9dOcBJjY",
+    publishedAt: "2026-03-06",
+    presents: [],
+  },
+  {
+    videoId: "w2yuxRhPPxQ",
+    publishedAt: "2026-03-06",
+    presents: ["葉月紗蘭", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    videoId: "uK9GQP8dHDs",
+    publishedAt: "2026-03-06",
+    presents: ["城月菜央", "東山恵里沙", "松本ももな"],
+  },
+  {
+    videoId: "SE71MiND2rY",
+    publishedAt: "2026-03-06",
+    presents: ["涼海すう", "橋本桃呼", "星谷美来"],
+  },
+  {
     videoId: "NKKwfXKnUS8",
     publishedAt: "2026-03-04",
     presents: [],
@@ -34,6 +54,12 @@ export const YouTube2026 = [
     publishedAt: "2026-02-23",
     presents: ["葉月紗蘭"],
     officialTwitter: "https://x.com/takanenofficial/status/2025777636178268307",
+  },
+  {
+    videoId: "sUTI8BRnoE4",
+    publishedAt: "2026-02-20",
+    presents: [],
+    officialTwitter: "https://x.com/takanenofficial/status/2027989796635693128",
   },
   {
     videoId: "tBGwtoXIet8",
