@@ -10,7 +10,7 @@ describe("calculatePerformanceCount", async () => {
   const events = await Events.importAllEventModules();
   const stats = makeSongPerformedList(events, ALL_SONGS);
 
-  it("should calculate performance counts of 2022", () => {
+  it("should calculate performance counts of 2022", async () => {
     const result = calculatePerformanceCount(
       stats,
       new NaiveDate(2022, 1, 1),
@@ -18,10 +18,10 @@ describe("calculatePerformanceCount", async () => {
       "all",
     ).filter((s) => s.value > 0);
 
-    expect(result).toMatchFileSnapshot(snapshotFor("2022"));
+    await expect(result).toMatchFileSnapshot(snapshotFor("2022"));
   });
 
-  it("should calculate performance counts of 2023", () => {
+  it("should calculate performance counts of 2023", async () => {
     const result = calculatePerformanceCount(
       stats,
       new NaiveDate(2023, 1, 1),
@@ -29,10 +29,10 @@ describe("calculatePerformanceCount", async () => {
       "all",
     ).filter((s) => s.value > 0);
 
-    expect(result).toMatchFileSnapshot(snapshotFor("2023"));
+    await expect(result).toMatchFileSnapshot(snapshotFor("2023"));
   });
 
-  it("should calculate performance counts of 2024", () => {
+  it("should calculate performance counts of 2024", async () => {
     const result = calculatePerformanceCount(
       stats,
       new NaiveDate(2024, 1, 1),
@@ -40,10 +40,10 @@ describe("calculatePerformanceCount", async () => {
       "all",
     ).filter((s) => s.value > 0);
 
-    expect(result).toMatchFileSnapshot(snapshotFor("2024"));
+    await expect(result).toMatchFileSnapshot(snapshotFor("2024"));
   });
 
-  it("should calculate performance counts of 2025", () => {
+  it("should calculate performance counts of 2025", async () => {
     const result = calculatePerformanceCount(
       stats,
       new NaiveDate(2025, 1, 1),
@@ -51,6 +51,6 @@ describe("calculatePerformanceCount", async () => {
       "all",
     ).filter((s) => s.value > 0);
 
-    expect(result).toMatchFileSnapshot(snapshotFor("2025"));
+    await expect(result).toMatchFileSnapshot(snapshotFor("2025"));
   });
 });
