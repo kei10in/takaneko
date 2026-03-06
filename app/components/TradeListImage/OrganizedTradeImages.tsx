@@ -35,13 +35,13 @@ export const OrganizedTradeImages: React.FC<Props> = (props: Props) => {
         {images.map((image, i) => {
           return (
             <SwiperSlide key={i} className="w-fit min-w-0">
-              <div className="mx-auto aspect-[3/4] w-full max-w-75">
+              <div className="mx-auto aspect-3/4 w-full max-w-75">
                 {image == undefined ? (
-                  <div className="aspect-[3/4] h-full w-full p-2">
+                  <div className="aspect-3/4 h-full w-full p-2">
                     <div className="h-full w-full animate-pulse rounded bg-gray-200" />
                   </div>
                 ) : (
-                  <div className="aspect-[3/4] bg-gray-50">
+                  <div className="aspect-3/4 bg-gray-50">
                     <img
                       src={image.objectURL}
                       alt={`まとめ画像 ${i}`}
