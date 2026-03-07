@@ -390,7 +390,10 @@ class TradingItemListImage {
 
     // toBlob の実装上は Promise<Blob> が返ってくるはずなのに、
     // 型が unknown になっているのでキャストしています。
-    return (await layer.toBlob({ mimeType: "image/webp", quality: 0.95 })) as Blob;
+    const blob = (await layer.toBlob({ mimeType: "image/webp", quality: 0.95 })) as Blob;
+    stage.destroy();
+
+    return blob;
   }
 }
 
@@ -405,49 +408,53 @@ const drawTradeItemList = async (
 ): Promise<Blob> => {
   const loadedItems = await Promise.all(items.map(loadTradingImageItem));
   const renderer = new TradingItemListImage(loadedItems, options);
-  return renderer.draw();
+  return await renderer.draw();
 };
 
 export const drawWishList = async (
   items: TradingItemRenderProps[][],
   bannerTitle: string,
 ): Promise<ImageSource[]> => {
-  return await Promise.all(
-    items.map(async (chunk) => {
-      const blob = await drawTradeItemList(chunk, {
-        bannerTitle,
-        bannerColor: "#fa9dbb",
-        emblemColor: "#ed4f81",
-        backgroundColor: "#fffcfd",
-      });
+  const result: ImageSource[] = [];
 
-      return {
-        blob,
-        objectURL: URL.createObjectURL(blob),
-      };
-    }),
-  );
+  for (const chunk of items) {
+    const blob = await drawTradeItemList(chunk, {
+      bannerTitle,
+      bannerColor: "#fa9dbb",
+      emblemColor: "#ed4f81",
+      backgroundColor: "#fffcfd",
+    });
+
+    result.push({
+      blob,
+      objectURL: URL.createObjectURL(blob),
+    });
+  }
+
+  return result;
 };
 
 export const drawOfferList = async (
   items: TradingItemRenderProps[][],
   bannerTitle: string,
 ): Promise<ImageSource[]> => {
-  return await Promise.all(
-    items.map(async (chunk) => {
-      const blob = await drawTradeItemList(chunk, {
-        bannerTitle,
-        bannerColor: "oklch(21% 0.006 285.885)",
-        emblemColor: "#fa9dbb",
-        backgroundColor: "oklch(96.7% 0.001 286.375)",
-      });
+  const result: ImageSource[] = [];
 
-      return {
-        blob,
-        objectURL: URL.createObjectURL(blob),
-      };
-    }),
-  );
+  for (const chunk of items) {
+    const blob = await drawTradeItemList(chunk, {
+      bannerTitle,
+      bannerColor: "oklch(21% 0.006 285.885)",
+      emblemColor: "#fa9dbb",
+      backgroundColor: "oklch(96.7% 0.001 286.375)",
+    });
+
+    result.push({
+      blob,
+      objectURL: URL.createObjectURL(blob),
+    });
+  }
+
+  return result;
 };
 
 const loadTradingImageItem = async (item: TradingItemRenderProps): Promise<TradingItem> => {
