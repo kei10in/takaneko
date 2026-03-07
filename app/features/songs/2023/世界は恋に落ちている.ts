@@ -1,4 +1,4 @@
-import { Limited } from "../tags";
+import { Repertoire, TakanekoVersion } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 世界は恋に落ちている: SongMetaDescriptor = {
@@ -12,10 +12,12 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   choreographedBy: "らん先生",
 
   videoRelease: undefined,
-  digitalRelease: undefined,
+  digitalRelease: "2026-03-05",
   liveDebut: "2023-11-19",
 
-  tags: [Limited],
+  tags: [TakanekoVersion, Repertoire],
+
+  coverArt: "/takaneko/songs/2026/世界は恋に落ちている.jpg",
 
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
