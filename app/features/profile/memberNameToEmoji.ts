@@ -8,6 +8,8 @@ export const memberNameToEmoji = (name: string): string => {
       return "🩷";
     case "葉月紗蘭":
       return "🤍";
+    case "春野莉々":
+      return "💚";
     case "東山恵里沙":
       return "🧡";
     case "日向端ひな":
