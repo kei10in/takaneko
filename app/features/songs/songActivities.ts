@@ -71,6 +71,7 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
           section: segment.section,
           costumeName: segment.costumeName,
           index: segment.index,
+          members: segment.members,
         })),
       };
     });

@@ -53,10 +53,11 @@ export const SimpleSongActivity = z.object({
   }),
   segments: z.array(
     z.object({
+      index: z.number(),
       actTitle: z.string().optional(),
       section: z.enum(["main", "encore"]),
       costumeName: z.string().optional(),
-      index: z.number(),
+      members: z.array(z.string()).optional(),
     }),
   ),
 });

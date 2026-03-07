@@ -7,6 +7,7 @@ export interface SongSegment {
   section: "main" | "encore";
   songTitle: string;
   costumeName?: string | undefined;
+  members: MemberId[];
 }
 
 export type Segment =
@@ -123,7 +124,18 @@ const parseSegment = (
     return { nextState: state, segment: { kind: "interlude", description } };
   }
 
-  const songTitle = p;
+  const [songTitle, membersStr] = p.split(":").map((x) => x.trim());
+  const members = membersStr
+    ?.split("、")
+    .flatMap((x) => x.split(","))
+    .flatMap((x) => {
+      const memberName = parseMemberName(x.trim());
+      if (memberName == undefined) {
+        return [];
+      }
+      return [memberName];
+    });
+
   return {
     nextState: { ...state, index: state.index + 1 },
     segment: {
@@ -132,6 +144,7 @@ const parseSegment = (
       costumeName: state.costumeName,
       index: state.index,
       songTitle,
+      members,
     },
   };
 };

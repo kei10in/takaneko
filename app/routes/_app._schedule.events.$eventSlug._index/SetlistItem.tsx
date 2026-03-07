@@ -10,6 +10,7 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router";
 import { Segment } from "~/features/events/setlist";
+import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { ALL_SONGS } from "~/features/songs/songs";
 
 interface Props {
@@ -53,7 +54,9 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
 
   const n = `${part.index + 1}`;
   const name = part.songTitle;
-  const desc = part.costumeName || "衣装不明";
+  const members = part.members?.map((m) => memberNameToEmoji(m)).join("") ?? "";
+  const costume = part.costumeName || "衣装不明";
+  const desc = members != "" ? `${members} ${costume}` : costume;
   const track = ALL_SONGS.find((track) => track.name === name);
   const slug = track?.slug;
   const img = track?.coverArt;

@@ -14,6 +14,7 @@ import { Breadcrumb } from "~/components/Breadcrumb";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart";
 import { pageHeading, sectionHeading } from "~/components/styles";
 import { liveTypeColor } from "~/features/events/EventType";
+import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { SongMeta } from "~/features/songs/SongMeta";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { LivesForSong } from "~/features/songs/types";
@@ -195,42 +196,62 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               )}
               {lives.map(({ segments, event: e }, i) => (
                 <Fragment key={i}>
-                  {segments.map((segment, j) => (
-                    <li key={j}>
-                      <div className="flex items-stretch gap-2 p-1">
-                        <div
-                          className={clsx("w-1 flex-none rounded-full", liveTypeColor(e.liveType))}
-                        />
-                        <div className="text-xs">
-                          <p className="text-sm">
-                            <Link to={`/events/${e.slug}`}>
-                              {segment.actTitle ? `${e.title} - ${segment.actTitle}` : e.title}
-                            </Link>
-                          </p>
-                          <p className="flex items-center gap-1 text-gray-400">
-                            <BsCalendar className="inline flex-none text-xs" />
-                            <span className="line-clamp-1">{displayDateWithDayOfWeek(e.date)}</span>
-                          </p>
-                          <p className="flex items-center gap-1 text-gray-400">
-                            <BsGeo className="inline flex-none text-xs" />
-                            <span className="line-clamp-1">
-                              {e.region} {e.location}
-                            </span>
-                          </p>
-                          <p className="flex items-center gap-1 text-gray-400">
-                            <span>
-                              {segment.section == "main" ? "M" : "EN"}
-                              {(segment.index + 1).toString().padStart(2, "0")}
-                            </span>
-                            {" / "}
-                            <span className="line-clamp-1">
-                              {segment.costumeName || "衣装不明"}
-                            </span>
-                          </p>
+                  {segments.map((segment, j) => {
+                    const members =
+                      segment.members
+                        ?.flatMap((m) => {
+                          const s = memberNameToEmoji(m);
+                          return s == "" ? [] : [s];
+                        })
+                        .join("") ?? "";
+
+                    return (
+                      <li key={j}>
+                        <div className="flex items-stretch gap-2 p-1">
+                          <div
+                            className={clsx(
+                              "w-1 flex-none rounded-full",
+                              liveTypeColor(e.liveType),
+                            )}
+                          />
+                          <div className="text-xs">
+                            <p className="text-sm">
+                              <Link to={`/events/${e.slug}`}>
+                                {segment.actTitle ? `${e.title} - ${segment.actTitle}` : e.title}
+                              </Link>
+                            </p>
+                            <p className="flex items-center gap-1 text-gray-400">
+                              <BsCalendar className="inline flex-none text-xs" />
+                              <span className="line-clamp-1">
+                                {displayDateWithDayOfWeek(e.date)}
+                              </span>
+                            </p>
+                            <p className="flex items-center gap-1 text-gray-400">
+                              <BsGeo className="inline flex-none text-xs" />
+                              <span className="line-clamp-1">
+                                {e.region} {e.location}
+                              </span>
+                            </p>
+                            <p className="flex items-center gap-1 text-gray-400">
+                              <span>
+                                {segment.section == "main" ? "M" : "EN"}
+                                {(segment.index + 1).toString().padStart(2, "0")}
+                              </span>
+                              <span> / </span>
+                              <span className="line-clamp-1">
+                                {segment.costumeName || "衣装不明"}
+                              </span>
+                              {members != "" && (
+                                <Fragment>
+                                  <span className="line-clamp-1">by {members}</span>
+                                </Fragment>
+                              )}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </Fragment>
               ))}
             </ul>
