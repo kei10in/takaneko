@@ -12,6 +12,8 @@ export type PhotoType = "artist" | "press" | "none";
 export interface StageCostume {
   kind: "stage";
   name: string;
+  slug: string;
+
   photoType: PhotoType;
 
   stylist?: string;
