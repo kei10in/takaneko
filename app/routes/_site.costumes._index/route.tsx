@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox("space-y-8")}>
+      <section className={pageBox("space-y-8 px-4")}>
         <h1 className={pageHeading()}>衣装</h1>
 
         <div className="space-y-1 rounded-lg border border-amber-400 bg-amber-50 px-4 py-2">
