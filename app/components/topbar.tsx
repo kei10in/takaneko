@@ -9,7 +9,16 @@ import {
 } from "@headlessui/react";
 import { clsx } from "clsx";
 import { Fragment, useState } from "react";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import {
+  BsArrowLeftRight,
+  BsCalendar,
+  BsCart,
+  BsFilm,
+  BsGraphUp,
+  BsMusicNote,
+  BsPersonCircle,
+  BsThreeDotsVertical,
+} from "react-icons/bs";
 import { Link } from "react-router";
 import { SITE_TITLE } from "~/constants";
 import { iconButtonPrimary } from "./styles/buttons";
@@ -18,6 +27,7 @@ import { XMarkButton } from "./XMarkButton";
 type TopBarLink = {
   title: string;
   url: string;
+  Icon?: React.ComponentType<{ className?: string }>;
 };
 
 type TopBarLinkCollection = {
@@ -32,32 +42,39 @@ const TopBarMenu: TopBarMenuItem[] = [
   {
     title: "トレード画像をつくるやつ",
     url: "/trade",
+    Icon: BsArrowLeftRight,
   },
   {
     title: "スケジュール",
     url: "/calendar",
+    Icon: BsCalendar,
   },
   {
     title: "メンバー",
     url: "/members",
+    Icon: BsPersonCircle,
   },
   {
     title: "データベース",
     items: [
       {
         title: "楽曲",
+        Icon: BsMusicNote,
         url: "/songs",
       },
       {
         title: "メディア",
+        Icon: BsFilm,
         url: "/media",
       },
       {
         title: "グッズ",
+        Icon: BsCart,
         url: "/products",
       },
       {
         title: "統計",
+        Icon: BsGraphUp,
         url: "/stats",
       },
     ],
@@ -128,6 +145,7 @@ export const Topbar: React.FC = () => {
                   if (item.url != undefined) {
                     return (
                       <Link key={item.url} className="hover:text-nadeshiko-700" to={item.url}>
+                        {/* トップバーではアイコンを置かない。目立ちすぎるため。 */}
                         {item.title}
                       </Link>
                     );
@@ -144,8 +162,12 @@ export const Topbar: React.FC = () => {
                           {item.items.map((child) => (
                             <li key={child.url}>
                               <MenuItem>
-                                <Link className="hover:text-nadeshiko-700" to={child.url}>
-                                  {child.title}
+                                <Link
+                                  className="flex items-center gap-2 hover:text-nadeshiko-700"
+                                  to={child.url}
+                                >
+                                  {child.Icon != undefined && <child.Icon className="h-4 w-4" />}
+                                  <span>{child.title}</span>
                                 </Link>
                               </MenuItem>
                             </li>
@@ -178,11 +200,12 @@ export const Topbar: React.FC = () => {
                       return (
                         <li key={item.url} className="font-bold text-gray-700">
                           <Link
-                            className="block hover:text-nadeshiko-700"
+                            className="flex items-center gap-2 hover:text-nadeshiko-700"
                             to={item.url}
                             onClick={close}
                           >
-                            {item.title}
+                            {item.Icon != undefined && <item.Icon className="h-4 w-4" />}
+                            <span>{item.title}</span>
                           </Link>
                         </li>
                       );
@@ -201,11 +224,14 @@ export const Topbar: React.FC = () => {
                                 {item.items.map((child) => (
                                   <li key={child.url}>
                                     <Link
-                                      className="block hover:text-nadeshiko-700"
+                                      className="flex items-center gap-2 hover:text-nadeshiko-700"
                                       to={child.url}
                                       onClick={close}
                                     >
-                                      {child.title}
+                                      {child.Icon != undefined && (
+                                        <child.Icon className="h-4 w-4" />
+                                      )}
+                                      <span>{child.title}</span>
                                     </Link>
                                   </li>
                                 ))}
