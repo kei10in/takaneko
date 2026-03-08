@@ -21,6 +21,10 @@ const MdxDocs: Record<string, React.LazyExoticComponent<MDXContent>> = Object.fr
 );
 
 export const loader = async (args: Route.LoaderArgs) => {
+  if (import.meta.env.PROD) {
+    throw new Response("Not Found", { status: 404 });
+  }
+
   const path = args.params["*"];
 
   const mdxKeys =
