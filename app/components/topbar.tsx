@@ -17,6 +17,7 @@ import {
   BsGraphUp,
   BsMusicNote,
   BsPersonCircle,
+  BsPersonStandingDress,
   BsThreeDotsVertical,
 } from "react-icons/bs";
 import { Link } from "react-router";
@@ -61,6 +62,11 @@ const TopBarMenu: TopBarMenuItem[] = [
         title: "楽曲",
         Icon: BsMusicNote,
         url: "/songs",
+      },
+      {
+        title: "衣装",
+        Icon: BsPersonStandingDress,
+        url: "/costumes",
       },
       {
         title: "メディア",
