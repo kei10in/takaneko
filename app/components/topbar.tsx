@@ -134,7 +134,11 @@ export const Topbar: React.FC = () => {
             <div className="text-base text-gray-900">
               <Link className="flex items-center gap-2" to="/">
                 <div className="flex w-10 items-center justify-center">
-                  <img className="size-8" src="/icon.svg" alt="アイコン" />
+                  <img
+                    className="size-8 text-xs text-nadeshiko-500"
+                    src="/icon.svg"
+                    alt="「たかねこの」のロゴ アイコン"
+                  />
                 </div>
                 <p className="font-serif text-xl text-gray-600">{SITE_TITLE}</p>
               </Link>
