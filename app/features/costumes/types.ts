@@ -1,4 +1,5 @@
 import { z } from "zod/v4";
+import { ImageDescription } from "~/utils/types/ImageDescription";
 import { EventTypeEnum, LiveTypeEnum } from "../events/EventType";
 
 export type PhotoType = "artist" | "press" | "none";
@@ -20,6 +21,8 @@ export interface StageCostume {
   photoType: PhotoType;
 
   stylist?: string;
+
+  image: ImageDescription;
 }
 
 /**

@@ -1,5 +1,11 @@
 import { clsx } from "clsx";
-import { BsCalendar, BsExclamationTriangleFill, BsGeo, BsMicFill } from "react-icons/bs";
+import {
+  BsBoxArrowUpRight,
+  BsCalendar,
+  BsExclamationTriangleFill,
+  BsGeo,
+  BsMicFill,
+} from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
@@ -57,6 +63,25 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <div className="container mx-auto lg:max-w-5xl">
+        <div>
+          <img
+            src={costume.image.path}
+            alt={costume.name}
+            className="aspect-4/3 w-full object-cover"
+          />
+          <p className="p-1 text-right text-xs text-gray-400">
+            <Link
+              to={costume.image.ref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1"
+            >
+              <span>画像の引用元</span>
+              <BsBoxArrowUpRight />
+            </Link>
+          </p>
+        </div>
+
         <div className="px-4 py-4">
           <Breadcrumb
             items={[
