@@ -1,5 +1,5 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
-import { MetaFunction } from "react-router";
+import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
 import { AllMvCostumes } from "~/features/costumes/costumesMv";
@@ -36,7 +36,11 @@ export default function Index() {
           <h2 className={sectionHeading()}>ステージ衣装</h2>
           <ul className="mt-4 space-y-2">
             {AllStageCostumes.map((costume) => (
-              <li key={costume.name}>{costume.name}</li>
+              <li key={costume.name}>
+                <Link className="block hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                  {costume.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </section>
