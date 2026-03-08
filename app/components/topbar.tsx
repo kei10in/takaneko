@@ -15,64 +15,86 @@ import { SITE_TITLE } from "~/constants";
 import { iconButtonPrimary } from "./styles/buttons";
 import { XMarkButton } from "./XMarkButton";
 
-const LINKS = [
+type TopBarLink = {
+  title: string;
+  url: string;
+};
+
+type TopBarLinkCollection = {
+  title: string;
+  url?: undefined;
+  items: TopBarLink[];
+};
+
+type TopBarMenuItem = TopBarLink | TopBarLinkCollection;
+
+const TopBarMenu: TopBarMenuItem[] = [
   {
-    name: "トレード画像をつくるやつ",
+    title: "トレード画像をつくるやつ",
     url: "/trade",
   },
   {
-    name: "スケジュール",
+    title: "スケジュール",
     url: "/calendar",
   },
   {
-    name: "楽曲",
-    url: "/songs",
-  },
-  {
-    name: "メディア",
-    url: "/media",
-  },
-  {
-    name: "グッズ",
-    url: "/products",
-  },
-  {
-    name: "メンバー",
+    title: "メンバー",
     url: "/members",
   },
   {
-    name: "統計",
-    url: "/stats",
-  },
-];
-
-const UTILS = [
-  {
-    name: "カレンダーをアプリに登録",
-    url: "/calendar/registration",
-  },
-  {
-    name: "短い URL を作るやつ",
-    url: "/shortlink",
-  },
-  {
-    name: "データ セット",
-    url: "/dataset",
-  },
-  {
-    name: "RSS フィード",
-    url: "/takaneko-feeds",
+    title: "データベース",
+    items: [
+      {
+        title: "楽曲",
+        url: "/songs",
+      },
+      {
+        title: "メディア",
+        url: "/media",
+      },
+      {
+        title: "グッズ",
+        url: "/products",
+      },
+      {
+        title: "統計",
+        url: "/stats",
+      },
+    ],
   },
   {
-    name: "ユーザー スクリプト",
-    url: "/user-scripts",
+    title: "ツール",
+    items: [
+      {
+        title: "カレンダーをアプリに登録",
+        url: "/calendar/registration",
+      },
+      {
+        title: "短い URL を作るやつ",
+        url: "/shortlink",
+      },
+      {
+        title: "データ セット",
+        url: "/dataset",
+      },
+      {
+        title: "RSS フィード",
+        url: "/takaneko-feeds",
+      },
+      {
+        title: "ユーザー スクリプト",
+        url: "/user-scripts",
+      },
+    ],
   },
-];
-
-const SPECIALS = [
   {
-    name: "ねこ撮写ルンです - 2024年",
-    url: "/nekosatsu",
+    title: "スペシャル",
+    items: [
+      {
+        title: "ねこ撮写ルンです - 2024年",
+        url: "/nekosatsu",
+      },
+    ],
   },
 ];
 
@@ -102,51 +124,37 @@ export const Topbar: React.FC = () => {
             </div>
             <div className="ml-auto">
               <div className="hidden items-center gap-8 text-sm font-bold text-gray-500 lg:flex">
-                {LINKS.map((link) => (
-                  <Link key={link.url} className="hover:text-nadeshiko-700" to={link.url}>
-                    {link.name}
-                  </Link>
-                ))}
+                {TopBarMenu.map((item) => {
+                  if (item.url != undefined) {
+                    return (
+                      <Link key={item.url} className="hover:text-nadeshiko-700" to={item.url}>
+                        {item.title}
+                      </Link>
+                    );
+                  }
 
-                <Menu>
-                  <MenuButton className="hover:text-nadeshiko-700">ツール</MenuButton>
-                  <MenuItems
-                    anchor={{ to: "top end", gap: "1.5rem" }}
-                    className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
-                  >
-                    <ul className="space-y-4 text-sm font-bold text-gray-500">
-                      {UTILS.map((util) => (
-                        <li key={util.url}>
-                          <MenuItem>
-                            <Link className="hover:text-nadeshiko-700" to={util.url}>
-                              {util.name}
-                            </Link>
-                          </MenuItem>
-                        </li>
-                      ))}
-                    </ul>
-                  </MenuItems>
-                </Menu>
-
-                <Menu>
-                  <MenuButton className="hover:text-nadeshiko-700">スペシャル</MenuButton>
-                  <MenuItems
-                    anchor={{ to: "top end", gap: "1.5rem" }}
-                    className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
-                  >
-                    <ul className="space-y-4 text-sm font-bold text-gray-500">
-                      {SPECIALS.map((util) => (
-                        <li key={util.url}>
-                          <MenuItem>
-                            <Link className="hover:text-nadeshiko-700" to={util.url}>
-                              {util.name}
-                            </Link>
-                          </MenuItem>
-                        </li>
-                      ))}
-                    </ul>
-                  </MenuItems>
-                </Menu>
+                  return (
+                    <Menu key={item.title}>
+                      <MenuButton className="hover:text-nadeshiko-700">{item.title}</MenuButton>
+                      <MenuItems
+                        anchor={{ to: "top end", gap: "1.5rem" }}
+                        className="focus-none z-50 overflow-hidden rounded-xl bg-white px-8 py-4 shadow-md"
+                      >
+                        <ul className="space-y-4 text-sm font-bold text-gray-500">
+                          {item.items.map((child) => (
+                            <li key={child.url}>
+                              <MenuItem>
+                                <Link className="hover:text-nadeshiko-700" to={child.url}>
+                                  {child.title}
+                                </Link>
+                              </MenuItem>
+                            </li>
+                          ))}
+                        </ul>
+                      </MenuItems>
+                    </Menu>
+                  );
+                })}
               </div>
               <button className={iconButtonPrimary("lg:hidden")} onClick={() => setShowMenu(true)}>
                 <BsThreeDotsVertical className="h-6 w-6" />
@@ -164,60 +172,50 @@ export const Topbar: React.FC = () => {
                 <CloseButton as={XMarkButton} />
               </div>
               <div className="p-6">
-                <ul className="space-y-6 pr-10 font-bold text-gray-700">
-                  {LINKS.map((link) => (
-                    <li key={link.url}>
-                      <Link
-                        className="block hover:text-nadeshiko-700"
-                        to={link.url}
-                        onClick={close}
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-
-                <hr className="my-6 border-gray-200" />
-
-                <ul className="space-y-6 pr-10 font-bold text-gray-700">
-                  <li>
-                    <p className="text-gray-400">ツール</p>
-                    <ul className="mt-4 space-y-6">
-                      {UTILS.map((util) => (
-                        <li key={util.url}>
+                <ul className="space-y-6 pr-10">
+                  {TopBarMenu.map((item) => {
+                    if (item.url != undefined) {
+                      return (
+                        <li key={item.url} className="font-bold text-gray-700">
                           <Link
                             className="block hover:text-nadeshiko-700"
-                            to={util.url}
+                            to={item.url}
                             onClick={close}
                           >
-                            {util.name}
+                            {item.title}
                           </Link>
                         </li>
-                      ))}
-                    </ul>
-                  </li>
-                </ul>
+                      );
+                    }
 
-                <hr className="my-6 border-gray-200" />
-
-                <ul className="space-y-6 pr-10 font-bold text-gray-700">
-                  <li>
-                    <p className="text-gray-400">スペシャル</p>
-                    <ul className="mt-4 space-y-6">
-                      {SPECIALS.map((util) => (
-                        <li key={util.url}>
-                          <Link
-                            className="block hover:text-nadeshiko-700"
-                            to={util.url}
-                            onClick={close}
-                          >
-                            {util.name}
-                          </Link>
+                    return (
+                      <Fragment key={item.title}>
+                        <li>
+                          <hr className="my-6 border-gray-200" />
                         </li>
-                      ))}
-                    </ul>
-                  </li>
+                        <li>
+                          <ul className="space-y-6 pr-10 font-bold text-gray-700">
+                            <li>
+                              <p className="text-gray-400">{item.title}</p>
+                              <ul className="mt-4 space-y-6">
+                                {item.items.map((child) => (
+                                  <li key={child.url}>
+                                    <Link
+                                      className="block hover:text-nadeshiko-700"
+                                      to={child.url}
+                                      onClick={close}
+                                    >
+                                      {child.title}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </Fragment>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
