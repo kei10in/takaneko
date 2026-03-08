@@ -9,8 +9,7 @@
     "dev": "react-router dev",
     "format": "prettier --write app",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app/ scripts/",
-    "start": "wrangler pages dev ./build/client",
-    "preview": "pnpm run build && wrangler pages dev",
+    "start": "wrangler dev",
     "cf-typegen": "wrangler types",
     "typecheck": "react-router typegen && tsc"
   },
