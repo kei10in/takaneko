@@ -1,3 +1,4 @@
+import { BsExclamationTriangleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
@@ -20,8 +21,16 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox()}>
+      <section className={pageBox("space-y-8")}>
         <h1 className={pageHeading()}>衣装</h1>
+
+        <div className="space-y-1 rounded-lg border border-amber-400 bg-amber-50 px-4 py-2">
+          <p>
+            <BsExclamationTriangleFill className="inline text-amber-400" />
+            <span className="ml-2">工事中</span>
+          </p>
+          <p>このページは作成中です。</p>
+        </div>
 
         <section className="mt-8">
           <h2 className={sectionHeading()}>ステージ衣装</h2>
