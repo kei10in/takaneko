@@ -37,7 +37,7 @@ export default function Index() {
           <ul className="mt-4 space-y-2">
             {AllStageCostumes.map((costume) => (
               <li key={costume.name}>
-                <Link className="block hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                <Link className="hover:text-nadeshiko-800" to={`./${costume.slug}`}>
                   {costume.name}
                 </Link>
               </li>
