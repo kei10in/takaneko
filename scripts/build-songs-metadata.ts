@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { register } from "node:module";
 import { dirname } from "node:path";
+import { makeLivesForCostumes } from "~/features/costumes/costumeActivities";
 import { EventModule } from "~/features/events/eventModule";
 import { makeLivesForSongMap } from "~/features/songs/songActivities";
 import { ALL_SONGS } from "~/features/songs/songs";
@@ -13,6 +14,7 @@ const main = async () => {
   const events = await Events.importAllEventModules();
   buildSongToLiveMap(events);
   buildSongPerformedList(events);
+  buildCostumeToLiveIndex(events);
 };
 
 const buildSongToLiveMap = (events: EventModule[]) => {
@@ -35,6 +37,19 @@ const buildSongPerformedList = (events: EventModule[]) => {
   const json = JSON.stringify(list);
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, json);
+};
+
+const buildCostumeToLiveIndex = (events: EventModule[]) => {
+  const livesForCostumes = makeLivesForCostumes(events);
+
+  livesForCostumes.forEach((livesForCostume) => {
+    const slug = livesForCostume.costumeSlug;
+    const json = JSON.stringify(livesForCostume);
+
+    const outputPath = `./public/data/costumes/${slug}/lives.json`;
+    mkdirSync(dirname(outputPath), { recursive: true });
+    writeFileSync(outputPath, json);
+  });
 };
 
 main();
