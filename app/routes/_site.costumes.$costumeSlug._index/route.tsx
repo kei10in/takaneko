@@ -83,7 +83,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           </div>
         )}
 
-        <div className="px-4 py-4">
+        <div className="px-4">
           <Breadcrumb
             items={[
               { label: "たかねこの", to: "/" },
