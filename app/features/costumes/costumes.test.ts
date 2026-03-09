@@ -1,16 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { assertValidSlug } from "~/utils/tests/slug";
-import { AllStageCostumes } from "./costumesStage";
+import { AllCostumes } from "./costumes";
 
-describe("stage costumes", () => {
+describe("costumes", () => {
   it("should have unique slugs", () => {
-    const slugs = AllStageCostumes.map((costume) => costume.slug);
+    const slugs = AllCostumes.map((costume) => costume.slug);
     const uniqueSlugs = new Set(slugs);
     expect(uniqueSlugs.size).toBe(slugs.length);
   });
 
   it("should have valid slugs", () => {
-    AllStageCostumes.forEach((costume) => {
+    AllCostumes.forEach((costume) => {
       assertValidSlug(costume.slug);
     });
   });

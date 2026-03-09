@@ -1,4 +1,9 @@
 import { z } from "zod/v4";
+import { AllMvCostumes } from "./costumesMv";
+import { AllSpecialCostumes } from "./costumesSpecial";
+import { AllStageCostumes } from "./costumesStage";
+import { AllTShirtCostumes } from "./costumesTshirt";
+import { AllUniformCostumes } from "./costumesUniform";
 
 export const StageCostumes = z.enum([
   "Bouquet of 9 Flowers 衣装",
@@ -77,4 +82,12 @@ export const SpecialCostumeNames = [
   "T シャツ (MILK JAPAN)",
   "2022 サンタ衣装",
   "ハロウィンコスプレ🎃",
+];
+
+export const AllCostumes = [
+  ...AllStageCostumes,
+  ...AllUniformCostumes,
+  ...AllMvCostumes,
+  ...AllTShirtCostumes,
+  ...AllSpecialCostumes,
 ];

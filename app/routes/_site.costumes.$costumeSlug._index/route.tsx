@@ -11,7 +11,7 @@ import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { AllStageCostumes } from "~/features/costumes/costumesStage";
+import { AllCostumes } from "~/features/costumes/costumes";
 import { LivesForCostume } from "~/features/costumes/types";
 import { liveTypeColor } from "~/features/events/EventType";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -32,13 +32,12 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
     throw new Response("", { status: 404 });
   }
 
-  const costume = AllStageCostumes.find((x) => x.slug === costumeSlug);
-
-  if (costume == undefined) {
-    throw new Response("", { status: 404 });
+  const costume = AllCostumes.find((x) => x.slug === costumeSlug);
+  if (costume) {
+    return { costume };
   }
 
-  return { costume };
+  throw new Response("", { status: 404 });
 };
 
 export default function Component({ loaderData }: Route.ComponentProps) {
@@ -63,24 +62,26 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <div className="container mx-auto lg:max-w-5xl">
-        <div>
-          <img
-            src={costume.image.path}
-            alt={costume.name}
-            className="aspect-4/3 w-full object-cover"
-          />
-          <p className="p-1 text-right text-xs text-gray-400">
-            <Link
-              to={costume.image.ref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1"
-            >
-              <span>画像の引用元</span>
-              <BsBoxArrowUpRight />
-            </Link>
-          </p>
-        </div>
+        {costume.kind == "stage" && (
+          <div>
+            <img
+              src={costume.image.path}
+              alt={costume.name}
+              className="aspect-4/3 w-full object-cover"
+            />
+            <p className="p-1 text-right text-xs text-gray-400">
+              <Link
+                to={costume.image.ref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1"
+              >
+                <span>画像の引用元</span>
+                <BsBoxArrowUpRight />
+              </Link>
+            </p>
+          </div>
+        )}
 
         <div className="px-4 py-4">
           <Breadcrumb

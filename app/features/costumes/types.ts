@@ -34,11 +34,13 @@ export interface StageCostume {
 export interface UniformCostume {
   kind: "uniform";
   name: string;
+  slug: string;
 }
 
 export interface MvCostume {
   kind: "mv";
   name: string;
+  slug: string;
 }
 
 /**
@@ -48,11 +50,13 @@ export interface MvCostume {
 export interface TShirtCostume {
   kind: "tshirt";
   name: string;
+  slug: string;
 }
 
 export interface SpecialCostume {
   kind: "special";
   name: string;
+  slug: string;
 }
 
 export type Costume = StageCostume | MvCostume | TShirtCostume | SpecialCostume;

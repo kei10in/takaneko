@@ -1,12 +1,12 @@
 import { Act } from "../events/act";
 import { EventModule } from "../events/eventModule";
-import { AllStageCostumes } from "./costumesStage";
+import { AllCostumes } from "./costumes";
 import { LivesForCostume } from "./types";
 
 export const makeLivesForCostumes = (events: EventModule[]): LivesForCostume[] => {
   // Key は costume name
   const result: Record<string, LivesForCostume> = {};
-  AllStageCostumes.forEach((costume) => {
+  AllCostumes.forEach((costume) => {
     result[costume.name] = {
       costumeSlug: costume.slug,
       costumeName: costume.name,

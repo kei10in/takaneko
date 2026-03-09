@@ -49,7 +49,11 @@ export default function Index() {
           <h2 className={sectionHeading()}>制服衣装</h2>
           <ul className="mt-4 space-y-2">
             {AllUniformCostumes.map((costume) => (
-              <li key={costume.name}>{costume.name}</li>
+              <li key={costume.name}>
+                <Link className="hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                  {costume.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </section>
@@ -58,7 +62,11 @@ export default function Index() {
           <h2 className={sectionHeading()}>MV 衣装</h2>
           <ul className="mt-4 space-y-2">
             {AllMvCostumes.map((costume) => (
-              <li key={costume.name}>{costume.name}</li>
+              <li key={costume.name}>
+                <Link className="hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                  {costume.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </section>
@@ -67,7 +75,11 @@ export default function Index() {
           <h2 className={sectionHeading()}>T シャツ衣装</h2>
           <ul className="mt-4 space-y-2">
             {AllTShirtCostumes.map((costume) => (
-              <li key={costume.name}>{costume.name}</li>
+              <li key={costume.name}>
+                <Link className="hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                  {costume.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </section>
@@ -82,7 +94,11 @@ export default function Index() {
           </p>
           <ul className="space-y-2">
             {AllSpecialCostumes.map((costume) => (
-              <li key={costume.name}>{costume.name}</li>
+              <li key={costume.name}>
+                <Link className="hover:text-nadeshiko-800" to={`./${costume.slug}`}>
+                  {costume.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </section>
