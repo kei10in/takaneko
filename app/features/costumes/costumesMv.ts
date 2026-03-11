@@ -80,13 +80,13 @@ export const 小悪魔だってかまわない衣装 = {
 
 export const ImYourIdolMV衣装 = {
   kind: "mv",
-  name: "I’M YOUR IDOL MV 衣装",
+  name: "「I’M YOUR IDOL」MV 衣装",
   slug: "IM YOUR IDOL MV衣装",
 } satisfies MvCostume;
 
 export const アドレナリンゲームMV衣装 = {
   kind: "mv",
-  name: "アドレナリンゲーム MV 衣装",
+  name: "「アドレナリンゲーム」MV 衣装",
   slug: "アドレナリンゲームMV衣装",
 } satisfies MvCostume;
 

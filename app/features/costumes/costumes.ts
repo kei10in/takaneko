@@ -27,19 +27,19 @@ export type StageCostumes = z.infer<typeof StageCostumes>;
 export const StageCostumeNames: string[] = StageCostumes.options;
 
 export const MvCostumes = z.enum([
-  "ハニフェス 2025 制服衣装",
+  "「ハニフェス 2025」制服衣装",
   "ホワイトチョコ・ビターチョコ制服衣装",
-  "アイのウイルス制服衣装",
-  "I’M YOUR IDOL MV 衣装",
-  "アドレナリンゲーム MV 衣装",
-  "モテチェン！ MV 衣装",
-  "センパイ。制服衣装",
-  "恋を知った世界制服衣装",
-  "初恋のひと。制服衣装",
-  "ヒロインは平気以下。制服衣装",
-  "女の子は強い制服衣装",
-  "可愛くてごめん MV 衣装",
-  "乙女どもよ。制服衣装",
+  "「アイのウイルス」制服衣装",
+  "「I’M YOUR IDOL」MV 衣装",
+  "「アドレナリンゲーム」MV 衣装",
+  "「モテチェン！」MV 衣装",
+  "「センパイ。」制服衣装",
+  "「恋を知った世界」制服衣装",
+  "「初恋のひと。」制服衣装",
+  "「ヒロインは平均以下。」制服衣装",
+  "「女の子は強い」制服衣装",
+  "「可愛くてごめん」MV 衣装",
+  "「乙女どもよ。」制服衣装",
 ]);
 
 export type MvCostumes = z.infer<typeof MvCostumes>;
