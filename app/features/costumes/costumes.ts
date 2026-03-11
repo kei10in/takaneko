@@ -4,6 +4,7 @@ import { AllSpecialCostumes } from "./costumesSpecial";
 import { AllStageCostumes } from "./costumesStage";
 import { AllTShirtCostumes } from "./costumesTshirt";
 import { AllUniformCostumes } from "./costumesUniform";
+import { Costume } from "./types";
 
 export const StageCostumes = z.enum([
   "Bouquet of 9 Flowers 衣装",
@@ -84,7 +85,7 @@ export const SpecialCostumeNames = [
   "ハロウィンコスプレ🎃",
 ];
 
-export const AllCostumes = [
+export const AllCostumes: Costume[] = [
   ...AllStageCostumes,
   ...AllUniformCostumes,
   ...AllMvCostumes,

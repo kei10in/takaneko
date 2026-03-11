@@ -59,7 +59,7 @@ export interface SpecialCostume {
   slug: string;
 }
 
-export type Costume = StageCostume | MvCostume | TShirtCostume | SpecialCostume;
+export type Costume = StageCostume | UniformCostume | MvCostume | TShirtCostume | SpecialCostume;
 
 /**
  * 特定の衣装が着用された公演の概要情報を表します。

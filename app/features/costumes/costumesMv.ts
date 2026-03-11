@@ -154,13 +154,13 @@ export const すきっちゅーの私服衣装 = {
   kind: "mv",
   name: "「すきっちゅーの」私服衣装",
   slug: "すきっちゅーの私服衣装",
-};
+} satisfies MvCostume;
 
 export const すきっちゅーのパジャマ衣装 = {
   kind: "mv",
   name: "「すきっちゅーの！」パジャマ衣装",
   slug: "すきっちゅーのパジャマ衣装",
-};
+} satisfies MvCostume;
 
 export const 月曜日の憂鬱MV衣装 = {
   kind: "mv",
@@ -210,7 +210,7 @@ export const ユメムスビMV衣装 = {
   slug: "ユメムスビMV衣装",
 } satisfies MvCostume;
 
-export const AllMvCostumes = [
+export const AllMvCostumes: MvCostume[] = [
   病名恋ワズライ衣装,
   この世界は嘘でできている白衣装,
   この世界は嘘でできている黒衣装,

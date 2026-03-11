@@ -54,7 +54,7 @@ export const 乙女どもよ制服衣装 = {
   slug: "乙女どもよ制服衣装",
 } satisfies UniformCostume;
 
-export const AllUniformCostumes = [
+export const AllUniformCostumes: UniformCostume[] = [
   ハニフェス2025制服衣装,
   ホワイトチョコ・ビターチョコ制服衣装,
   アイのウイルス制服衣装,
