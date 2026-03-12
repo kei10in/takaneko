@@ -6,10 +6,10 @@ import { z } from "zod/v4";
 export const MeetAndGreetSession = z.object({
   // セッションのタイトル
   title: z.string().optional(),
-  // セッションの開始日時
+  // セッションの開始時間
   start: z.string(),
-  // セッションの終了日時
-  end: z.string().optional(),
+  // セッションの終了時間
+  end: z.string(),
   // セッションに参加するメンバーのリスト
   members: z.union([
     z.array(z.string()),
@@ -21,6 +21,7 @@ export const MeetAndGreetSession = z.object({
       }),
     ),
   ]),
+  costume: z.string().optional(),
 });
 
 export type MeetAndGreetSession = z.output<typeof MeetAndGreetSession>;
@@ -29,7 +30,6 @@ export type MeetAndGreetSession = z.output<typeof MeetAndGreetSession>;
  * 対面イベントのタイムスケジュールを表す型です。
  */
 export const TimeScheduleForMeetAndGreet = z.object({
-  kind: z.literal("meet-and-greet"),
   sessions: z.array(MeetAndGreetSession),
 });
 

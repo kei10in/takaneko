@@ -7,6 +7,7 @@ import { Act, isEmptyAct } from "./act";
 import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
+import { TimeScheduleForMeetAndGreet } from "./timeSchedule";
 
 const EventStatus = z.union([
   z.literal("RESCHEDULED"),
@@ -83,6 +84,9 @@ const EventMeta = z
       .transform((x) => (Array.isArray(x) ? x : [x]).filter((act) => !isEmptyAct(act)))
       .optional()
       .default([]),
+
+    meetAndGreet: TimeScheduleForMeetAndGreet.optional(),
+
     showNotes: ShowNotes,
     updatedAt: z.iso.date().optional(),
   })

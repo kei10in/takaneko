@@ -38,6 +38,7 @@ import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventDetails";
 import { EventOverview } from "./EventOverview";
 import { makePageDescription } from "./makePageDescription";
+import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const meta = validateEventMeta(data?.eventMeta);
@@ -235,6 +236,10 @@ export default function EventPage() {
         <EventDetails acts={meta.acts} />
 
         <EventOverview timetables={meta.timetables} goods={meta.goods} />
+
+        {meta.meetAndGreet != undefined && (
+          <MeetAndGreetTimeSchedule date={d} sessions={meta.meetAndGreet.sessions} />
+        )}
 
         {Content != undefined && <Mdx Content={Content} />}
 
