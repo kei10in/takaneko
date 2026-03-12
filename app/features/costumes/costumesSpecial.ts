@@ -14,6 +14,13 @@ export const 高嶺のなでしこ2024衣装_川崎ブレイブサンダース20
   // 星谷美来: 39 https://www.instagram.com/p/DVvylRnCbRS
   // 松本ももな: 12 https://x.com/momonamatsumoto/status/2031723325333049555
   // 籾山ひめり: 16 https://x.com/himeri_momiyama/status/2031723490265763942
+  //
+  // 公式:
+  // - https://x.com/takanenofficial/status/2031747002426626303
+  // - https://x.com/takanenofficial/status/2031748290681983270
+  // - https://x.com/takanenofficial/status/2031749624021860387
+  // - https://x.com/takanenofficial/status/2031751040857718999
+  // - https://x.com/takanenofficial/status/2031754520993161642
 } satisfies SpecialCostume;
 
 export const クリスマス2025衣装 = {
