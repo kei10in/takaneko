@@ -21,6 +21,7 @@ export const 高嶺のなでしこ2024衣装_川崎ブレイブサンダース20
   // - https://x.com/takanenofficial/status/2031749624021860387
   // - https://x.com/takanenofficial/status/2031751040857718999
   // - https://x.com/takanenofficial/status/2031754520993161642
+  // - https://x.com/takanenofficial/status/2032082929695027312
 } satisfies SpecialCostume;
 
 export const クリスマス2025衣装 = {
