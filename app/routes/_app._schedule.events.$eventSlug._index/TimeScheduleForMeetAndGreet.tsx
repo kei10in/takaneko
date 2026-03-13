@@ -60,14 +60,21 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
                             {emoji} {member}
                           </p>
                         );
+                      } else if (Array.isArray(member)) {
+                        const group = member.map((m) => `${memberNameToEmoji(m)} ${m}`).join(" & ");
+                        return (
+                          <p key={j} className="text-sm">
+                            {group}
+                          </p>
+                        );
                       } else {
-                        const emoji = memberNameToEmoji(member.name);
+                        const memberStr = Array.isArray(member.name)
+                          ? member.name.map((n) => `${memberNameToEmoji(n)} ${n}`).join(" & ")
+                          : `${memberNameToEmoji(member.name)} ${member.name}`;
                         return (
                           <div key={j} className="text-sm">
                             {member.lane && <span>[${member.lane}]</span>}
-                            <span>
-                              {emoji} {member.name}
-                            </span>
+                            <span>{memberStr}</span>
                             {member.costume && <span> (${member.costume})</span>}
                           </div>
                         );

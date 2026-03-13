@@ -13,10 +13,18 @@ export const MeetAndGreetSession = z.object({
   // セッションに参加するメンバーのリスト
   members: z.union([
     z.array(z.string()),
+    z.array(z.array(z.string())),
     z.array(
       z.object({
         lane: z.string().optional(),
         name: z.string(),
+        costume: z.string().optional(),
+      }),
+    ),
+    z.array(
+      z.object({
+        lane: z.string().optional(),
+        name: z.array(z.string()),
         costume: z.string().optional(),
       }),
     ),
