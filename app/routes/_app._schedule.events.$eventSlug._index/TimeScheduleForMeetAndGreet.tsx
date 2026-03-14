@@ -52,33 +52,17 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
                     </p>
                   )}
                   <div>
-                    {session.members.map((member, j) => {
-                      if (typeof member === "string") {
-                        const emoji = memberNameToEmoji(member);
-                        return (
-                          <p key={j} className="text-sm">
-                            {emoji} {member}
-                          </p>
-                        );
-                      } else if (Array.isArray(member)) {
-                        const group = member.map((m) => `${memberNameToEmoji(m)} ${m}`).join(" & ");
-                        return (
-                          <p key={j} className="text-sm">
-                            {group}
-                          </p>
-                        );
-                      } else {
-                        const memberStr = Array.isArray(member.name)
-                          ? member.name.map((n) => `${memberNameToEmoji(n)} ${n}`).join(" & ")
-                          : `${memberNameToEmoji(member.name)} ${member.name}`;
-                        return (
-                          <div key={j} className="text-sm">
-                            {member.lane && <span>[${member.lane}]</span>}
-                            <span>{memberStr}</span>
-                            {member.costume && <span> (${member.costume})</span>}
-                          </div>
-                        );
-                      }
+                    {session.lanes.map((lane, j) => {
+                      const memberStr = lane.members
+                        .map((n) => `${memberNameToEmoji(n)} ${n}`)
+                        .join(" & ");
+                      return (
+                        <div key={j} className="text-sm">
+                          {lane.label && <span>[${lane.label}]</span>}
+                          <span>{memberStr}</span>
+                          {lane.costume && <span> (${lane.costume})</span>}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
