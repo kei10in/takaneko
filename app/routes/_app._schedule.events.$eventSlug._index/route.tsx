@@ -238,7 +238,11 @@ export default function EventPage() {
         <EventOverview timetables={meta.timetables} goods={meta.goods} />
 
         {meta.meetAndGreet != undefined && (
-          <MeetAndGreetTimeSchedule date={d} sessions={meta.meetAndGreet.sessions} />
+          <MeetAndGreetTimeSchedule
+            date={d}
+            title={meta.meetAndGreet?.title}
+            sessions={meta.meetAndGreet.sessions}
+          />
         )}
 
         {Content != undefined && <Mdx Content={Content} />}

@@ -8,11 +8,12 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 interface Props {
   date: NaiveDate;
+  title?: string | undefined;
   sessions: MeetAndGreetSession[];
 }
 
 export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
-  const { date, sessions } = props;
+  const { date, title, sessions } = props;
 
   const [currentTime, setCurrentTime] = useState(() => Date.now());
 
@@ -27,7 +28,7 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
   return (
     <section>
       <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
-        タイムスケジュール
+        {title} タイムスケジュール
       </h2>
 
       <ul className="divide-y divide-gray-100">

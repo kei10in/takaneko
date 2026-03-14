@@ -47,6 +47,7 @@ export type MeetAndGreetSession = z.output<typeof MeetAndGreetSession>;
  * 対面イベントのタイムスケジュールを表す型です。
  */
 export const TimeScheduleForMeetAndGreet = z.object({
+  title: z.string().optional(),
   sessions: z.array(MeetAndGreetSession),
 });
 
