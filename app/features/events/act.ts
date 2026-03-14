@@ -24,7 +24,8 @@ export const Act = z
       .optional()
       .default([]),
 
-    lanes: MeetAngGreetLanesList.optional().default([]),
+    // グループ握手会向けのフィールドです。
+    meetAndGreet: z.object({ costume: z.string(), lanes: MeetAngGreetLanesList }).optional(),
 
     // みくるんの #たかねこセトリを指定します。
     url: z
