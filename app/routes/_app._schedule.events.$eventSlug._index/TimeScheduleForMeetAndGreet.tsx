@@ -52,20 +52,18 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
                       <span>{session.costume}</span>
                     </p>
                   )}
-                  <div>
-                    {session.lanes.map((lane, j) => {
-                      const memberStr = lane.members
-                        .map((n) => `${memberNameToEmoji(n)} ${n}`)
-                        .join(" & ");
-                      return (
-                        <div key={j} className="text-sm">
-                          {lane.label && <span>[${lane.label}]</span>}
-                          <span>{memberStr}</span>
-                          {lane.costume && <span> (${lane.costume})</span>}
-                        </div>
-                      );
-                    })}
-                  </div>
+                  {session.lanes.map((lane, j) => {
+                    const memberStr = lane.members
+                      .map((n) => `${memberNameToEmoji(n)} ${n}`)
+                      .join(" & ");
+                    return (
+                      <div key={j} className="text-sm">
+                        {lane.label && <span className="font-semibold">{lane.label}: </span>}
+                        <span>{memberStr}</span>
+                        {lane.costume && <span> ({lane.costume})</span>}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
               {status == "in-progress" && (
