@@ -3,6 +3,7 @@ import { z } from "zod/v4";
 import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist } from "./setlist";
+import { MeetAngGreetLanesList } from "./timeSchedule";
 
 export const Act = z
   .object({
@@ -22,6 +23,8 @@ export const Act = z
       .transform((x) => parseSetlist(x))
       .optional()
       .default([]),
+
+    lanes: MeetAngGreetLanesList.optional().default([]),
 
     // みくるんの #たかねこセトリを指定します。
     url: z
