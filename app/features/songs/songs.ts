@@ -53,6 +53,8 @@ import { 花は誓いを忘れない } from "./2025/花は誓いを忘れない"
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
+  // 2026
+  世界は恋に落ちている,
   // 2025
   花は誓いを忘れない,
   この世界は嘘でできている,
@@ -89,7 +91,6 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   いつか私がママになったら,
   醜い生き物,
   シス_ラブ,
-  世界は恋に落ちている,
   今好きになる,
   すきっちゅーの,
   _17歳,

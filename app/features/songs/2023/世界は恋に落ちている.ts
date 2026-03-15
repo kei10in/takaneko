@@ -9,7 +9,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   composedBy: "HoneyWorks",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: "らん先生",
+  choreographedBy: "籾山ひめり",
 
   videoRelease: undefined,
   digitalRelease: "2026-03-05",
@@ -21,6 +21,11 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
 
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
+    {
+      text: "Dance Performance Video",
+      videoId: "https://www.youtube.com/watch?v=RayWMQMSkeI",
+      publishedAt: "2026-03-15",
+    },
     {
       text: "アニソンでしょでしょ",
       videoId: "sFUJxqo6ye4",
