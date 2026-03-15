@@ -1,5 +1,94 @@
 [
   {
+    "costumeStats": [
+      {
+        "costumeName": "美しく生きろ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "美しく生きろ衣装 (上着なし)",
+        "count": 1,
+      },
+      {
+        "costumeName": "京れもん 着物",
+        "count": 1,
+      },
+    ],
+    "count": 3,
+    "lives": [
+      {
+        "event": {
+          "date": "2024-04-18",
+          "liveType": "SOLO",
+          "location": "Zepp DiverCity",
+          "region": "東京",
+          "slug": "2024-04-18_メジャーデビュー記念ライブ〜Beginning〜",
+          "summary": "メジャーデビュー記念ライブ〜Beginning〜",
+          "title": "メジャーデビュー記念ライブ〜Beginning〜",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "美しく生きろ衣装",
+            "index": 12,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2024-04-08",
+          "liveType": "SOLO",
+          "location": "なんばHatch",
+          "region": "大阪",
+          "slug": "2024-04-08_メジャーデビュー記念ライブ〜Beginning〜",
+          "summary": "メジャーデビュー記念ライブ〜Beginning〜",
+          "title": "メジャーデビュー記念ライブ〜Beginning〜",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "美しく生きろ衣装 (上着なし)",
+            "index": 10,
+            "members": [
+              "橋本桃呼",
+              "日向端ひな",
+              "松本ももな",
+            ],
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2024-02-01",
+          "liveType": "SOLO",
+          "location": "The Londoner Theatre",
+          "region": "マカオ",
+          "slug": "2024-02-01_CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
+          "summary": "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
+          "title": "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "京れもん 着物",
+            "index": 2,
+            "members": [
+              "橋本桃呼",
+              "日向端ひな",
+              "松本ももな",
+            ],
+            "section": "main",
+          },
+        ],
+      },
+    ],
+    "name": "世界は恋に落ちている",
+    "slug": "世界は恋に落ちている",
+  },
+  {
     "costumeStats": [],
     "count": 0,
     "lives": [],
@@ -9671,95 +9760,6 @@
     ],
     "name": "シス×ラブ",
     "slug": "シス×ラブ",
-  },
-  {
-    "costumeStats": [
-      {
-        "costumeName": "美しく生きろ衣装",
-        "count": 1,
-      },
-      {
-        "costumeName": "美しく生きろ衣装 (上着なし)",
-        "count": 1,
-      },
-      {
-        "costumeName": "京れもん 着物",
-        "count": 1,
-      },
-    ],
-    "count": 3,
-    "lives": [
-      {
-        "event": {
-          "date": "2024-04-18",
-          "liveType": "SOLO",
-          "location": "Zepp DiverCity",
-          "region": "東京",
-          "slug": "2024-04-18_メジャーデビュー記念ライブ〜Beginning〜",
-          "summary": "メジャーデビュー記念ライブ〜Beginning〜",
-          "title": "メジャーデビュー記念ライブ〜Beginning〜",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "美しく生きろ衣装",
-            "index": 12,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2024-04-08",
-          "liveType": "SOLO",
-          "location": "なんばHatch",
-          "region": "大阪",
-          "slug": "2024-04-08_メジャーデビュー記念ライブ〜Beginning〜",
-          "summary": "メジャーデビュー記念ライブ〜Beginning〜",
-          "title": "メジャーデビュー記念ライブ〜Beginning〜",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "美しく生きろ衣装 (上着なし)",
-            "index": 10,
-            "members": [
-              "橋本桃呼",
-              "日向端ひな",
-              "松本ももな",
-            ],
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2024-02-01",
-          "liveType": "SOLO",
-          "location": "The Londoner Theatre",
-          "region": "マカオ",
-          "slug": "2024-02-01_CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
-          "summary": "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
-          "title": "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "京れもん 着物",
-            "index": 2,
-            "members": [
-              "橋本桃呼",
-              "日向端ひな",
-              "松本ももな",
-            ],
-            "section": "main",
-          },
-        ],
-      },
-    ],
-    "name": "世界は恋に落ちている",
-    "slug": "世界は恋に落ちている",
   },
   {
     "costumeStats": [

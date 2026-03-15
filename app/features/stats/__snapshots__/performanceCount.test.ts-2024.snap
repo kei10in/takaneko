@@ -198,15 +198,15 @@
     "value": 6,
   },
   {
-    "coverArt": "/takaneko/songs/2024/アイのウイルス.webp",
-    "slug": "アイのウイルス",
-    "title": "アイのウイルス",
-    "value": 3,
-  },
-  {
     "coverArt": "/takaneko/songs/2026/世界は恋に落ちている.jpg",
     "slug": "世界は恋に落ちている",
     "title": "世界は恋に落ちている",
+    "value": 3,
+  },
+  {
+    "coverArt": "/takaneko/songs/2024/アイのウイルス.webp",
+    "slug": "アイのウイルス",
+    "title": "アイのウイルス",
     "value": 3,
   },
   {

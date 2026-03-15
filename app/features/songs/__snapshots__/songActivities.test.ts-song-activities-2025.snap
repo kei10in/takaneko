@@ -1,5 +1,12 @@
 [
   {
+    "costumeStats": [],
+    "count": 0,
+    "lives": [],
+    "name": "世界は恋に落ちている",
+    "slug": "世界は恋に落ちている",
+  },
+  {
     "costumeStats": [
       {
         "costumeName": "見上げるたびに、恋をする。衣装",
@@ -8990,13 +8997,6 @@
     "lives": [],
     "name": "シス×ラブ",
     "slug": "シス×ラブ",
-  },
-  {
-    "costumeStats": [],
-    "count": 0,
-    "lives": [],
-    "name": "世界は恋に落ちている",
-    "slug": "世界は恋に落ちている",
   },
   {
     "costumeStats": [],

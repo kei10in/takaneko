@@ -132,6 +132,12 @@
     "value": 2,
   },
   {
+    "coverArt": "/takaneko/songs/2026/世界は恋に落ちている.jpg",
+    "slug": "世界は恋に落ちている",
+    "title": "世界は恋に落ちている",
+    "value": 1,
+  },
+  {
     "coverArt": undefined,
     "slug": "私が恋を知る日",
     "title": "私が恋を知る日",
@@ -153,12 +159,6 @@
     "coverArt": undefined,
     "slug": "シス×ラブ",
     "title": "シス×ラブ",
-    "value": 1,
-  },
-  {
-    "coverArt": "/takaneko/songs/2026/世界は恋に落ちている.jpg",
-    "slug": "世界は恋に落ちている",
-    "title": "世界は恋に落ちている",
     "value": 1,
   },
   {

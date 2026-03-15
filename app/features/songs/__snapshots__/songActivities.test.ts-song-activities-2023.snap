@@ -1,5 +1,42 @@
 [
   {
+    "costumeStats": [
+      {
+        "costumeName": "僕は君になれない衣装",
+        "count": 1,
+      },
+    ],
+    "count": 1,
+    "lives": [
+      {
+        "event": {
+          "date": "2023-11-19",
+          "liveType": "SOLO",
+          "location": "梅田TRAD",
+          "region": "大阪",
+          "slug": "2023-11-19_「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "summary": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "title": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "僕は君になれない衣装",
+            "index": 11,
+            "members": [
+              "橋本桃呼",
+              "日向端ひな",
+              "松本ももな",
+            ],
+            "section": "main",
+          },
+        ],
+      },
+    ],
+    "name": "世界は恋に落ちている",
+    "slug": "世界は恋に落ちている",
+  },
+  {
     "costumeStats": [],
     "count": 0,
     "lives": [],
@@ -1122,43 +1159,6 @@
     ],
     "name": "シス×ラブ",
     "slug": "シス×ラブ",
-  },
-  {
-    "costumeStats": [
-      {
-        "costumeName": "僕は君になれない衣装",
-        "count": 1,
-      },
-    ],
-    "count": 1,
-    "lives": [
-      {
-        "event": {
-          "date": "2023-11-19",
-          "liveType": "SOLO",
-          "location": "梅田TRAD",
-          "region": "大阪",
-          "slug": "2023-11-19_「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
-          "summary": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
-          "title": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "僕は君になれない衣装",
-            "index": 11,
-            "members": [
-              "橋本桃呼",
-              "日向端ひな",
-              "松本ももな",
-            ],
-            "section": "main",
-          },
-        ],
-      },
-    ],
-    "name": "世界は恋に落ちている",
-    "slug": "世界は恋に落ちている",
   },
   {
     "costumeStats": [
