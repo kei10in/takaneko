@@ -2,6 +2,18 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://mikan-incomplete.com/report/142339",
+    publishedAt: "2026-03-16",
+    category: "article",
+    presents: [],
+  },
+  {
+    mediaUrl: "https://mdpr.jp/news/4747179",
+    publishedAt: "2026-03-16",
+    category: "article",
+    presents: ["橋本桃呼"],
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/781951",
     publishedAt: "2026-02-28",
     category: "article",

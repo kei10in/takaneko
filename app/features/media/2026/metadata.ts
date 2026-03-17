@@ -3,6 +3,53 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "TaYEbfdZcqk",
+    title: "高嶺のなでしこ「美しく生きろ」など３曲熱唱　CREATEs presents IRC 2026",
+    authorName: "vois ヴォイス",
+    publishedAt: "2026-03-16",
+    mediaUrl: "https://youtu.be/TaYEbfdZcqk",
+    imageUrl: "https://i.ytimg.com/vi/TaYEbfdZcqk/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://mikan-incomplete.com/report/142339",
+    title: "高嶺のなでしこが力強いパフォーマンスで圧倒！【IDOL RUNWAY COLLECTION 2026】 | 蜜柑通信",
+    authorName: "蜜柑通信",
+    publishedAt: "2026-03-16",
+    mediaUrl: "https://mikan-incomplete.com/report/142339",
+    imageUrl: "https://mikan-incomplete.com/wp-content/uploads/2026/03/JPG748.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://mdpr.jp/news/4747179",
+    title:
+      "“元ラストアイドル”高嶺のなでしこ・橋本桃呼＆フルコース阿部菜々実がランウェイ競演 カラージャケットのイロチコーデ【IDOL RUNWAY COLLECTION 2026】 - モデルプレス",
+    authorName: "モデルプレス - ライフスタイル・ファッションエンタメニュース",
+    publishedAt: "2026-03-16",
+    mediaUrl: "https://mdpr.jp/news/4747179",
+    imageUrl:
+      "https://img-mdpr.freetls.fastly.net/article/B1nU/wm/B1nUfzx7ulPqWjxalXLAPSsbKLa9yzy1hA2PZwWbV3k.jpg",
+    category: "article",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "youtube",
+    key: "RVMjUw4nAzs",
+    title:
+      "元ラスアイ・阿部菜々実＆橋本桃呼がペアでランウェイ　AKB48平田侑希はフルコースの中川心と",
+    authorName: "vois ヴォイス",
+    publishedAt: "2026-03-15",
+    mediaUrl: "https://youtu.be/RVMjUw4nAzs",
+    imageUrl: "https://i.ytimg.com/vi/RVMjUw4nAzs/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "youtube",
     key: "gFn9dOcBJjY",
     title: "５時に夢中！スピンオフ特番 『ミルクにモ～夢中！』 2026　クッキングシーン映像",
     authorName: "一般社団法人中央酪農会議",

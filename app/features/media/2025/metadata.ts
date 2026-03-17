@@ -2028,6 +2028,7 @@ export const metadata2025: MediaDetails[] = [
       "https://teamshachi.nagoya/s3/skiyaki/uploads/ckeditor/pictures/687086/content_%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2025-01-10_19.16.56.png",
     category: "video",
     presents: ["城月菜央", "橋本桃呼", "東山恵里沙"],
+    deleted: true,
   },
   {
     kind: "ogp",
