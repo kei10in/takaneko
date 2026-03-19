@@ -2,6 +2,25 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    title:
+      "松本ももな（高嶺のなでしこ）木野稟子（α＋）小熊まむ（iLiFE!）佐藤綺星・小栗有以（AKB48）『CREATEs presents IRC 2026』『ゼンレスゾーンゼロ』に登場するアイドル陣営『妄想エンジェル』のキャラクターをイメージした衣装に身を包みランウェイに登場",
+    mediaUrl: "https://www.music-culture.info/8589/",
+    siteName: "Music Culture：ミュージックカルチャー",
+    image: {
+      path: "https://image.jimcdn.com/app/cms/image/transf/none/path/s719b6af472505b2d/image/ia7ef53ffd2f66beb/version/1773913214/image.jpg",
+      ref: "",
+    },
+    publishedAt: "2026-03-19",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    mediaUrl: "https://actresspress.com/idolrunwaycollection20260315/",
+    publishedAt: "2026-03-19",
+    category: "article",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://mikan-incomplete.com/report/142339",
     publishedAt: "2026-03-16",
     category: "article",

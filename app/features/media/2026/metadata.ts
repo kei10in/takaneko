@@ -2,6 +2,32 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://www.music-culture.info/8589/",
+    title:
+      "松本ももな（高嶺のなでしこ）木野稟子（α＋）小熊まむ（iLiFE!）佐藤綺星・小栗有以（AKB48）『CREATEs presents IRC 2026』『ゼンレスゾーンゼロ』に登場するアイドル陣営『妄想エンジェル』のキャラクターをイメージした衣装に身を包みランウェイに登場",
+    authorName: "Music Culture：ミュージックカルチャー",
+    publishedAt: "2026-03-19",
+    mediaUrl: "https://www.music-culture.info/8589/",
+    imageUrl:
+      "https://image.jimcdn.com/app/cms/image/transf/none/path/s719b6af472505b2d/image/ia7ef53ffd2f66beb/version/1773913214/image.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://actresspress.com/idolrunwaycollection20260315/",
+    title:
+      "松本ももな、籾山ひめり、阿部菜々実、橋本桃呼、大森莉緒らMC村重杏奈と共演『IDOL RUNWAY COLLECTION 2026』（写真26枚）【Reporter：熊谷美咲】 | ACTRESS PRESS",
+    authorName: "ACTRESS PRESS",
+    publishedAt: "2026-03-19",
+    mediaUrl: "https://actresspress.com/idolrunwaycollection20260315/",
+    imageUrl:
+      "https://actresspress.com/wp-content/uploads/2026/03/1-thumb-idolrunwaycollection-actresspress20260315.jpg",
+    category: "article",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
     kind: "youtube",
     key: "TaYEbfdZcqk",
     title: "高嶺のなでしこ「美しく生きろ」など３曲熱唱　CREATEs presents IRC 2026",
