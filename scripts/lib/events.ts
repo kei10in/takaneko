@@ -7,7 +7,7 @@ const importGlob = (): Record<string, () => Promise<unknown>> => {
   const eventsDir = path.resolve(scriptDir, "..", "..", "app", "features", "events");
 
   return Object.fromEntries(
-    glob.sync(`${eventsDir.replace(/\\/g, "/")}/*/**/*.{mdx,tsx}`).map((f) => {
+    glob.sync(`${eventsDir.replace(/\\/g, "/")}/*/**/*.{mdx,tsx,ts}`).map((f) => {
       return [
         path.basename(f),
         () => {

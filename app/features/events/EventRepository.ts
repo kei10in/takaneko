@@ -78,11 +78,14 @@ export class EventRepository {
 
     const key1 = `./${y}/${m}/${slug}.mdx`;
     const key2 = `./${y}/${m}/${slug}.tsx`;
+    const key3 = `./${y}/${m}/${slug}.ts`;
 
     if (this.modules[key1]) {
       return { filename: key1, module: this.modules[key1] };
     } else if (this.modules[key2]) {
       return { filename: key2, module: this.modules[key2] };
+    } else if (this.modules[key3]) {
+      return { filename: key3, module: this.modules[key3] };
     } else {
       return undefined;
     }

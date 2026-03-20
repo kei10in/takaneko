@@ -1,4 +1,6 @@
 import { MDXContent } from "mdx/types";
+import { dedent } from "ts-dedent";
+import { makeMarkdownComponent } from "~/components/markdownComponentBuilder";
 import { stem } from "~/utils/string";
 import { EventMeta, validateEventMeta } from "./eventMeta";
 
@@ -21,7 +23,11 @@ export const importEventModule = async (im: ImportingModule): Promise<EventModul
     return undefined;
   }
 
-  const Content = loaded.default as MDXContent;
+  // Event Module を .ts や .tsx でかく場合は、`default export` 意外も受け入れる。
+  const content = loaded.content ?? loaded.default;
+
+  const Content =
+    typeof content === "string" ? makeMarkdownComponent(dedent(content)) : (content as MDXContent);
 
   return { slug: stem(im.filename), filename: im.filename, meta, Content };
 };
