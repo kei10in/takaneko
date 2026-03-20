@@ -4,7 +4,11 @@
  */
 const config = {
   endOfLine: "auto",
-  plugins: ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+  plugins: [
+    "prettier-plugin-organize-imports",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-embed",
+  ],
   printWidth: 100,
 
   tailwindFunctions: ["clsx"],
