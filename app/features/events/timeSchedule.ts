@@ -37,6 +37,8 @@ export const MeetAngGreetLanesList = z.union([
 export const MeetAndGreetSession = z.object({
   // セッションのタイトル
   title: z.string().optional(),
+  // 開場時間
+  open: z.string().optional(),
   // セッションの開始時間
   start: z.string(),
   // セッションの終了時間
