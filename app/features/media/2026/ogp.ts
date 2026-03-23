@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://beeeem.com/article/irc2026-takaneko",
+    siteName: "BEEEEM",
+    publishedAt: "2026-03-23",
+    category: "article",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
     title:
       "松本ももな（高嶺のなでしこ）木野稟子（α＋）小熊まむ（iLiFE!）佐藤綺星・小栗有以（AKB48）『CREATEs presents IRC 2026』『ゼンレスゾーンゼロ』に登場するアイドル陣営『妄想エンジェル』のキャラクターをイメージした衣装に身を包みランウェイに登場",
     mediaUrl: "https://www.music-culture.info/8589/",

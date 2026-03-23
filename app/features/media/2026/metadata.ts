@@ -3,6 +3,19 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://beeeem.com/article/irc2026-takaneko",
+    title:
+      "【＜CREATEs presents IRC 2026＞インタビュー】高嶺のなでしこ「世界観にしっかり入り込めるように、クールな雰囲気を意識して頑張りました」-BEEEEM",
+    authorName: "BEEEEM",
+    publishedAt: "2026-03-23",
+    mediaUrl: "https://beeeem.com/article/irc2026-takaneko",
+    imageUrl:
+      "https://imagedelivery.net/GAZ6B7nYxar6-1ZqFjo_3w/29057d6d-ee95-497e-9a24-efc103bde000/medium",
+    category: "article",
+    presents: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://www.music-culture.info/8589/",
     title:
       "松本ももな（高嶺のなでしこ）木野稟子（α＋）小熊まむ（iLiFE!）佐藤綺星・小栗有以（AKB48）『CREATEs presents IRC 2026』『ゼンレスゾーンゼロ』に登場するアイドル陣営『妄想エンジェル』のキャラクターをイメージした衣装に身を包みランウェイに登場",
