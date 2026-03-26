@@ -32,7 +32,7 @@ export const BLT_graduation_2026中学高校卒業: Publication = {
     },
   ],
   featuredMembers: ["涼海すう"],
-  officialTwitter: "",
+  officialTwitter: "https://x.com/takanenofficial/status/2037032106057158674",
   links: [
     {
       text: "「B.L.T.graduation2026中学・高校卒業」3/24(火)に発売決定！ 表紙・巻頭を飾るのはこの春高校を卒業する乃木坂46・小川彩。さらに、中学を卒業する乃木坂46・川端晃菜も登場。 | B.L.T.web",
