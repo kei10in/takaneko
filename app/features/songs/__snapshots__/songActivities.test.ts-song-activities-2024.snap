@@ -18377,7 +18377,7 @@
       },
       {
         "costumeName": "I’M YOUR IDOL 衣装",
-        "count": 15,
+        "count": 16,
       },
       {
         "costumeName": "僕は君になれない衣装",
@@ -18424,7 +18424,7 @@
         "count": 1,
       },
     ],
-    "count": 103,
+    "count": 104,
     "lives": [
       {
         "event": {
@@ -18828,6 +18828,26 @@
             "actTitle": "第二部",
             "costumeName": "キュンキュン学園制服",
             "index": 0,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2024-10-20",
+          "liveType": "RELEASE_EVENT",
+          "location": "ららぽーと立川立飛",
+          "region": "東京",
+          "slug": "2024-10-20_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント@ららぽーと立川立飛",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@ららぽーと立川立飛",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@ららぽーと立川立飛",
+        },
+        "segments": [
+          {
+            "actTitle": "1 部",
+            "costumeName": "I’M YOUR IDOL 衣装",
+            "index": 2,
             "members": undefined,
             "section": "main",
           },
