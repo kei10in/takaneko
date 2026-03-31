@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/784581",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第10回『WEAPONS／ウェポンズ』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-04-01",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/784581",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/03/784581_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
     key: "https://beeeem.com/article/irc2026-takaneko",
     title:
       "【＜CREATEs presents IRC 2026＞インタビュー】高嶺のなでしこ「世界観にしっかり入り込めるように、クールな雰囲気を意識して頑張りました」-BEEEEM",

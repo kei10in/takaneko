@@ -168,7 +168,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-08",
     mediaUrl: "https://www.oricon.co.jp/news/2357995/",
     imageUrl:
-      "https://contents.oricon.co.jp/upimg/news/2358000/2357995/20241208_110101_o_90679108.jpg",
+      "https://contents.oricon.co.jp/upimg/news/2358000/2357995/20241208_104753_p_o_94401895.jpg",
     category: "article",
     presents: [],
   },

@@ -525,7 +525,7 @@ export const metadata2025: MediaDetails[] = [
     authorName: "週プレNEWS［週刊プレイボーイのニュースサイト］",
     publishedAt: "2025-08-31",
     mediaUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/08/31/128129/",
-    imageUrl: "https://wpb.shueisha.co.jp/news/entertainment/2025/images/Takanenonadeshiko01.jpg",
+    imageUrl: "https://wpb.shueisha.co.jp/gravure/news/2025/images/Takanenonadeshiko01.jpg",
     category: "article",
     presents: ["城月菜央", "日向端ひな", "籾山ひめり"],
   },
