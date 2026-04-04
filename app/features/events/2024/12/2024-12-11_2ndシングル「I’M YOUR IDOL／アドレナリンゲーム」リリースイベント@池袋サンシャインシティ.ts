@@ -46,11 +46,11 @@ export const meta: EventMetaDescriptor = {
         costume: "「I’M YOUR IDOL」MV 衣装",
         lanes: [
           {
-            name: "A レーン",
+            label: "A レーン",
             members: ["城月菜央", "橋本桃呼", "日向端ひな", "星谷美来", "籾山ひめり"],
           },
           {
-            name: "B レーン",
+            label: "B レーン",
             members: ["涼海すう", "葉月紗蘭", "春野莉々", "東山恵里沙", "松本ももな"],
           },
         ],
@@ -61,16 +61,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ライブ & 全員握手会
+  ライブ & 全員握手会
 
-ライブの優先エリアは事前受付が必要です。
+  ライブの優先エリアは事前受付が必要です。
 
-## リンク
+  ## リンク
 
-- [イベントレポート](https://prtimes.jp/main/html/rd/p/000000692.000025517.html)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2889)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3035)
-- [公式 X 詳細](https://x.com/takanenofficial/status/1864642165261127840)
+  - [イベントレポート](https://prtimes.jp/main/html/rd/p/000000692.000025517.html)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2889)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3035)
+  - [公式 X 詳細](https://x.com/takanenofficial/status/1864642165261127840)
 `;

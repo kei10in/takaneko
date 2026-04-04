@@ -41,34 +41,34 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updateAt: "2025-06-16",
+  updatedAt: "2025-06-16",
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-開場: 17:30 / 開演: 18:30
+  開場: 17:30 / 開演: 18:30
 
-**出演:**
+  **出演:**
 
-- 高嶺のなでしこ
-- iLiFE!
+  - 高嶺のなでしこ
+  - iLiFE!
 
-**オープニングアクト:**
+  **オープニングアクト:**
 
-- iLiFE! 候補生
-- Ma’Scar’Piece
+  - iLiFE! 候補生
+  - Ma’Scar’Piece
 
-**🎫チケット:**
+  **🎫チケット:**
 
-- イープラス - https://eplus.jp/takanenonadeshiko/
-- ローソンチケット - https://l-tike.com/takanenonadeshiko/
-- チケットぴあ - https://w.pia.jp/t/takanenonadeshiko/
+  - イープラス - https://eplus.jp/takanenonadeshiko/
+  - ローソンチケット - https://l-tike.com/takanenonadeshiko/
+  - チケットぴあ - https://w.pia.jp/t/takanenonadeshiko/
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ「たかねこフェス〜オータムセッ/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1841810579058503890)
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/たかねこフェス-vol-3-〜オータムセッション〜/)
-- [FC トピック: 「たかねこフェス Vol.3 〜オータムセッション〜」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/1apm8ld2y4eka6re.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ「たかねこフェス〜オータムセッ/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1841810579058503890)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/たかねこフェス-vol-3-〜オータムセッション〜/)
+  - [FC トピック: 「たかねこフェス Vol.3 〜オータムセッション〜」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/1apm8ld2y4eka6re.html)
 `;

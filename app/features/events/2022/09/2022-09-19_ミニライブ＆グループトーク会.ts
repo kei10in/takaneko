@@ -8,7 +8,6 @@ export const meta: EventMetaDescriptor = {
   date: "2022-09-19",
   region: "大阪",
   location: "タワーレコード難波店",
-  status: "RESCHEDULED",
   present: ["高嶺のなでしこ"],
   images: [
     {
@@ -23,12 +22,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-台風により延期
+  台風により延期
 
-https://takanenonadeshiko.jp/?p=449
+  https://takanenonadeshiko.jp/?p=449
 
-## リンク
+  ## リンク
 
-- [公式ニュース 振替日案内](https://takanenonadeshiko.jp/?p=492)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
+  - [公式ニュース 振替日案内](https://takanenonadeshiko.jp/?p=492)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
 `;

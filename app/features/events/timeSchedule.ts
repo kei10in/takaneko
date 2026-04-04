@@ -43,6 +43,8 @@ export const MeetAndGreetSession = z.object({
   start: z.string(),
   // セッションの終了時間
   end: z.string(),
+  // セッションの最終受付時間
+  lastEntry: z.string().optional(),
   // セッションに参加するメンバーのリスト
   lanes: MeetAngGreetLanesList,
   costume: z.string().optional(),

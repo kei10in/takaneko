@@ -6,11 +6,14 @@ export const meta: EventMetaDescriptor = {
   status: "CANCELED",
   date: "2024-08-18",
   region: "東京",
-  url: "https://peacestock.jp/tokyo",
+  link: {
+    text: "イベント公式サイト",
+    url: "https://peacestock.jp/tokyo",
+  },
 };
 
 export const content = /* md */ `
-## PEACE STOCK 79' TOKYO Day 2
+  ## PEACE STOCK 79' TOKYO Day 2
 
-## リンク
+  ## リンク
 `;

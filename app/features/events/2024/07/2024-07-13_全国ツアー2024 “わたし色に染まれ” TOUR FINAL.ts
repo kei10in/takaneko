@@ -56,11 +56,11 @@ export const meta: EventMetaDescriptor = {
       "ファンサ",
     ],
   },
-  updateAt: "2025-06-22",
+  updatedAt: "2025-06-22",
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1883)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1883)
 `;

@@ -33,16 +33,16 @@ export const meta: EventMetaDescriptor = {
   acts: {
     url: "",
   },
-  updateAt: "2025-01-18",
+  updatedAt: "2025-01-18",
 };
 
 export const content = /* md */ `
-オリジナル撮り下ろしフォトカードつき商品2種を発売開始
+  オリジナル撮り下ろしフォトカードつき商品2種を発売開始
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3251)
-- [公式 X 告知](https://x.com/takanenofficial/status/1880136974981623926)
-- [TWIN PLANET X 告知](https://x.com/TP_official_/status/1880132995803492469)
-- [プレスリリース](https://prtimes.jp/main/html/rd/p/000000706.000025517.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3251)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1880136974981623926)
+  - [TWIN PLANET X 告知](https://x.com/TP_official_/status/1880132995803492469)
+  - [プレスリリース](https://prtimes.jp/main/html/rd/p/000000706.000025517.html)
 `;
