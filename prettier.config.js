@@ -5,9 +5,9 @@
 const config = {
   endOfLine: "auto",
   plugins: [
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss",
     "prettier-plugin-embed",
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-organize-imports",
   ],
   printWidth: 100,
 
