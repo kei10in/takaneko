@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ッスッゴイライブ 〜5th anniversary SP LIVE〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-12-10",
+  region: "東京",
+  location: "品川ステラボール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "男の子の目的は何？",
+      "すきっちゅーの！",
+      "MC",
+      "17歳",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1733746452550336756",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1566)
+`;

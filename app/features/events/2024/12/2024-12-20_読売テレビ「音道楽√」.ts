@@ -1,0 +1,32 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "読売テレビ「音道楽√」",
+  category: "TV",
+  date: "2024-12-20",
+  start: "24:35",
+  end: "25:05",
+  region: "テレビ",
+  images: [
+    {
+      path: "/events/2024/2024-12-20_読売テレビ「音道楽√」.jpg",
+      ref: "https://x.com/otodoraku/status/1869669001850134551",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.ytv.co.jp/otodoraku_root/",
+  },
+  present: ["涼海すう", "東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-12-17",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1870031390504522080)
+  - [番組 X 告知 3](https://x.com/otodoraku/status/1869668997064773966)
+  - [番組 X 告知 2](https://x.com/otodoraku/status/1869669001850134551)
+  - [番組 X 告知](https://x.com/otodoraku/status/1868581844079272295)
+  - [番組 TVer](https://tver.jp/series/srz8y0eytz)
+`;

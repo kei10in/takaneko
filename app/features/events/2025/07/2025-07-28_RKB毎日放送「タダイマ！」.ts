@@ -1,0 +1,28 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "RKB毎日放送「タダイマ！」",
+  category: "TV",
+  date: "2025-07-28",
+  start: "15:40",
+  end: "19:00",
+  region: "テレビ",
+  present: ["橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-28_RKB毎日放送「タダイマ！」.jpg",
+      ref: "https://x.com/takanenofficial/status/1949432464234950706",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://rkb.jp/tv/tadaima/",
+  },
+  updatedAt: "2025-07-27",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1949432464234950706)
+`;

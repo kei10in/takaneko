@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "エンドレスサマー 2022",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-08-31",
+  region: "東京",
+  location: "duo MUSIC EXCHANGE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "ユメムスビ",
+      "MC",
+      "アンチファン",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1564923034867118080",
+  },
+  updatedAt: "2024-11-03",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=381)
+`;

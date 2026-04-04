@@ -1,0 +1,65 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@タワーレコード新宿店",
+  category: "EVENT",
+  date: "2024-02-12",
+  region: "東京",
+  location: "タワーレコード新宿店",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=1771",
+  },
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "1 部 グループ握手会・グループショット撮影会",
+        start: "13:30",
+        end: "14:30",
+        lanes: [
+          {
+            label: "Aレーン",
+            members: ["葉月紗蘭", "春野莉々", "日向端ひな", "松本ももな", "籾山ひめり"],
+          },
+          {
+            label: "Bレーン",
+            members: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "星谷美来"],
+          },
+        ],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "2 部 グループ握手会・グループショット撮影会",
+        start: "15:30",
+        end: "16:30",
+        lanes: [
+          {
+            label: "Aレーン",
+            members: ["涼海すう", "橋本桃呼", "東山恵里沙", "日向端ひな", "松本ももな"],
+          },
+          {
+            label: "Bレーン",
+            members: ["城月菜央", "葉月紗蘭", "春野莉々", "星谷美来", "籾山ひめり"],
+          },
+        ],
+        costume: "美しく生きろ衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-20",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1771)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1784)
+`;

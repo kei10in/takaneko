@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "秋葉原アイドルサーキット vol.2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-11-03",
+  region: "東京",
+  location: "神田明神ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2022/2022-11-03_秋葉原アイドルサーキット vol.2_タイムテーブル.jpg",
+      ref: "https://atjam.jp/news/detail/cjBocc7CGsoQ6e2em0RC",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2022/2022-11-03_秋葉原アイドルサーキット vol.2_特典会タイムテーブル.jpg",
+      ref: "https://atjam.jp/news/detail/cjBocc7CGsoQ6e2em0RC",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント サイト",
+    url: "https://atjam.jp/event/detail/pgFh3robiIsVMIXQFsZj",
+  },
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "女の子は強い",
+      "MC",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1588036374044680192",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=491)
+`;

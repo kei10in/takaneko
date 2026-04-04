@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Fes. -day 1-",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-09-13",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "ファンサ",
+      "ユメムスビ",
+      "誇り高きアイドル",
+      "MC",
+      "アンチファン",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1569634395803484164",
+  },
+  updatedAt: "2024-11-03",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=368)
+`;

@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "みんなで超♡まっ茶り公開収録タイム！",
+  title: "GIRLS♥GIRLS♥GIRLS =FULL BOOST= みんなで超♡まっ茶り公開収録タイム！ 1部",
+  category: "OTHER",
+  date: "2025-03-28",
+  open: "16:30",
+  start: "17:00",
+  end: "17:50",
+  region: "東京",
+  location: "Hall Mixa",
+  present: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-03-28_みんなで超♡まっ茶り公開収録タイム！.jpg",
+      ref: "https://x.com/takanenofficial/status/1902918102125539330",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://tiget.net/events/388127",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-03-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1902918102125539330)
+  - [番組 X 告知](https://x.com/macha_timepiyo/status/1902661804725314007)
+`;

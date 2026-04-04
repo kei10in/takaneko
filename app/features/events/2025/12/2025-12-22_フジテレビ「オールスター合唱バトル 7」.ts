@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フジテレビ「オールスター合唱バトル 7」",
+  category: "TV",
+  date: "2025-12-22",
+  start: "19:00",
+  end: undefined,
+  region: "テレビ",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  updatedAt: "2025-12-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2000506128153690328)
+  - [二回目出演後 - 番組 X](https://x.com/gasshobattle/status/2003069342070837586)
+  - [一回目出演後 - 番組 X](https://x.com/gasshobattle/status/2003046437551280633)
+  - [出演告知 - 番組 X](https://x.com/gasshobattle/status/2003041595604771273)
+  - [出演告知 - 番組 X](https://x.com/gasshobattle/status/2002687993715528066)
+  - [出演告知 - 番組 X](https://x.com/gasshobattle/status/2002295484996862189)
+  - [出演告知 - 番組 X](https://x.com/gasshobattle/status/1991045061380129116)
+  - [出演告知 - 番組 X](https://x.com/gasshobattle/status/1984395477635514591)
+`;

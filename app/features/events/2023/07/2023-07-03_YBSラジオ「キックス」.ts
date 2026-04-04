@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YBSラジオ「キックス」",
+  category: "RADIO",
+  liveType: undefined,
+  date: "2023-07-03",
+  open: undefined,
+  start: "15:00",
+  end: undefined,
+  region: "ラジオ",
+  location: "",
+  present: ["橋本桃呼", "松本ももな"],
+  images: [
+    {
+      path: "/events/2023/2023-07-03_YBSラジオ「キックス」.jpg",
+      ref: "https://x.com/takanenofficial/status/1675740342551998466",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.ybs.jp/kks/",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1675740342551998466)
+  - [番組 X 告知](https://x.com/ybs_kks/status/1675725374691618817)
+  - [番組ホームページ](https://www.ybs.jp/kks/)
+`;

@@ -1,0 +1,114 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDORISE!! FESTIVAL 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-03-09",
+  region: "東京",
+  location: "Spotify O-Crest, Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025.jpg",
+      ref: "https://x.com/idorise_info/status/1852244371309236606",
+    },
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025_出演日程.jpg",
+      ref: "https://x.com/idorise_info/status/1870001412232642891",
+    },
+    {
+      path: "/events/2025/2025-03-09_IDORISE!! FESTIVAL 2025_タイムテーブル.jpg",
+      ref: "https://x.com/idorise_info/status/1892831626146828416",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-03-09_IDORISE!! FESTIVAL 2025_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1898681522237935975",
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://idorisefes.jp/",
+  },
+  ticket: "https://eplus.jp/idorise2025/",
+  streamings: {
+    text: "ニコ生 アイドル専門チャンネル「ニコドル」",
+    url: "https://ch.nicovideo.jp/idol-niconama/blomaga/ar2211755",
+  },
+  goods: {
+    lineup: ["ミニフォトカード「ピンク衣装」"],
+  },
+  acts: [
+    {
+      title: "Spotify O-Crest",
+      setlist: [
+        "衣装:高嶺のなでしこ 2024 衣装",
+        "アンチファン",
+        "革命の女王",
+        "アドレナリンゲーム",
+        "MC",
+        "月曜日の憂鬱",
+        "僕は君になれない",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1898604648925446365",
+    },
+    {
+      title: "Spotify O-EAST",
+      setlist: [
+        "衣装: ピンク衣装",
+        "I’M YOUR IDOL",
+        "可愛くてごめん",
+        "Cute for life",
+        "初恋のひと。",
+        "MC",
+        "決戦スピリット",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1898694799575953513",
+    },
+  ],
+  updatedAt: "2025-03-09",
+};
+
+export const content = /* md */ `
+  ## 出演
+
+  ### 一回目
+
+  - **会場 -** Spotify O-Crest
+  - **時間 -** 12:50 〜 13:15
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-Crest会場】](https://live.nicovideo.jp/watch/lv347131387)
+
+  ### トークステージ
+
+  - **会場 -** LOFT9 Shibuya
+  - **時間 -** 16:40 〜 17:05
+  - **出演 -** 城月菜央、東山恵里沙
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【LOFT9 Shibuya会場】](https://live.nicovideo.jp/watch/lv347131391)
+
+  ### 二回目
+
+  - **会場 -** Spotify O-EAST
+  - **時間 -** 18:45 〜 19:15
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-EAST会場】](https://live.nicovideo.jp/watch/lv347131375)
+
+  ## 物販
+
+  - **会場 -** ピットデザイン道玄坂 第2駐車場
+  - **時間 -** 19:30 〜 20:00
+
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1898681522237935975)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1898312771009487340)
+  - [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
+  - [イベント公式サイト](https://idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
+`;

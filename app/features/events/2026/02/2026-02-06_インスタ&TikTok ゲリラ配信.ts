@@ -1,0 +1,47 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "インスタ&TikTok ゲリラ配信",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2026-02-06",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2026-02-09",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  インスタ ライブ & TikTok ライブのゲリラ配信
+
+  ## リンク
+
+  - [配信報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/2019725328130912521)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2019709031523491890)
+`;

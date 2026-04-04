@@ -1,0 +1,60 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL KINGDOM TAIPEI",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-10",
+  open: "09:00",
+  start: "10:00",
+  end: undefined,
+  region: "台湾",
+  location: "台北 統一時代百貨夢廣場",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-10_IDOL KINGDOM TAIPEI_2.webp",
+      ref: "https://tickets.funone.io/activity/activity_detail/41",
+    },
+    {
+      path: "/events/2025/2025-10-10_IDOL KINGDOM TAIPEI.jpg",
+      ref: "https://x.com/takanenofficial/status/1926243059072639477",
+    },
+    {
+      path: "/events/2025/2025-10-10_IDOL KINGDOM TAIPEI_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1975531555637657839",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://tickets.funone.io/activity/activity_detail/41",
+  streamings: undefined,
+  acts: {
+    start: "21:10",
+    end: "21:40",
+    setlist: [
+      "衣装:2025 夏衣装",
+      "初恋のひと。",
+      "女の子は強い",
+      "初恋のこたえ。",
+      "MC",
+      "花は誓いを忘れない",
+      "この世界は嘘でできている",
+      "決戦スピリット",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1976655620876177832",
+  },
+  updatedAt: "2025-10-12",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1976263914091397592)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1975531555637657839)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1926243059072639477)
+`;

@@ -1,0 +1,113 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "2nd シングル「I’M YOUR IDOL / タイトル未定」リリースイベント@有明ガーデン",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2024-09-23",
+  location: "有明ガーデン 3F みんなのテラス",
+  region: "東京",
+  present: ["高嶺のなでしこ"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2024/2024-09-23_2nd シングル リリースイベント@有明_修正版.png",
+      ref: "https://takanenonadeshiko.jp/2ndsgreleaseevent_0923/",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/2ndsgreleaseevent_0923/",
+  },
+  acts: [
+    {
+      title: "1 部",
+      open: "11:30",
+      start: "12:00",
+      setlist: [
+        "衣装: I’M YOUR IDOL 衣装",
+        "I’M YOUR IDOL",
+        "私より好きでいて",
+        "MC",
+        "メイド☆至上主義",
+        "月曜日の憂鬱",
+        "MC",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1838153899678548008",
+    },
+    {
+      title: "1 部 グループ握手会・グループ撮影会",
+      start: "12:45",
+      meetAndGreet: {
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "橋本桃呼", "春野莉々", "東山恵里沙", "星谷美来"],
+          },
+        ],
+      },
+    },
+    {
+      title: "2 部",
+      open: "15:00",
+      start: "15:30",
+      setlist: [
+        "衣装: I’M YOUR IDOL 衣装",
+        "I’M YOUR IDOL",
+        "アンチファン",
+        "MC",
+        "可愛くてごめん",
+        "モテチェン！",
+        "MC",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1838153899678548008",
+    },
+    {
+      title: "2 部 グループ握手会・グループ撮影会",
+      start: "16:15",
+      meetAndGreet: {
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "橋本桃呼", "日向端ひな", "星谷美来", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "葉月紗蘭", "春野莉々", "東山恵里沙", "松本ももな"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-03-28",
+};
+
+export const content = /* md */ `
+  ## 注意
+
+  「全員ショット撮影会」から「グループショット撮影会」に変更されています。
+
+  詳細は[X での告知](https://x.com/takanenofficial/status/1833864327847465429)と[公式ニュース](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923re/)を参照してください。
+
+  ### イベント詳細
+
+  - [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923/)
+  - [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/21.html)
+
+  ## リンク
+
+  - [籾山ひめりイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=2473)
+  - [ヴィレッジヴァンガード イベント情報](https://www.village-v.co.jp/news/event/19419): 待機列の地図画像があります。
+  - [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
+  - [公式 X - イベント詳細告知](https://x.com/takanenofficial/status/1833865384518107256)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2366)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+`;

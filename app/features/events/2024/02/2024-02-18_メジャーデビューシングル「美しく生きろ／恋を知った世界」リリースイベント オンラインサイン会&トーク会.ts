@@ -1,0 +1,64 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント オンラインサイン会&トーク会",
+  category: "EVENT",
+  date: "2024-02-18",
+  region: "Web",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=1773",
+  },
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "オンラインサイン会",
+        start: "17:00",
+        end: "18:00",
+        lanes: [
+          "城月菜央",
+          "涼海すう",
+          "橋本桃呼",
+          "葉月紗蘭",
+          "春野莉々",
+          "東山恵里沙",
+          "日向端ひな",
+          "星谷美来",
+          "松本ももな",
+          "籾山ひめり",
+        ],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "オンライントーク会 1部",
+        start: "19:00",
+        end: "20:00",
+        lanes: ["城月菜央", "葉月紗蘭", "春野莉々", "松本ももな", "籾山ひめり"],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "オンライントーク会 2部",
+        start: "20:10",
+        end: "21:10",
+        lanes: ["涼海すう", "橋本桃呼", "東山恵里沙", "日向端ひな", "星谷美来"],
+        costume: "美しく生きろ衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-20",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1773)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1779)
+`;

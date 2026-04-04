@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "テレビ朝日「かまいガチ」",
+  category: "TV",
+  date: "2025-06-11",
+  open: undefined,
+  start: "23:15",
+  end: "23:45",
+  region: "テレビ",
+  location: "",
+  present: ["涼海すう", "葉月紗蘭", "東山恵里沙", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-06-11_テレビ朝日「かまいガチ」.jpg",
+      ref: "https://www.tv-asahi.co.jp/kamaigachi",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.tv-asahi.co.jp/kamaigachi",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-13",
+};
+
+export const content = /* md */ `
+  ## 放送内容
+
+  ### イタい恋文を勝手に名曲に!あの頃のラブレター歌謡祭!畑芽育赤面!
+
+  かまいガチ特別企画「あの頃のラブレター歌謡祭」<br />
+  さや香新山、エルフ荒川、山内の学生時代の元カノ、友人などにスタッフが連絡をとりガチラブレターを入手!▼それをもとにプロの作曲家とプロの歌唱で勝手に曲に!<br />
+  「もう、やめて!」体も熱くなる赤面の名曲が続々誕生!?<br/>
+  「とんでもない!」ゲスト畑芽育も大興奮!<br/>
+
+  1曲目は新山が高校時代の彼女に送ったラブレターを曲に!<br/>
+  重たいラブレターに新山赤面!一同爆笑!<br/>
+  2曲目はエルフ荒川が中学時代の彼氏に送ったポップなラブレター!<br/>
+  ガチのアイドルの歌唱で最強バズソングが誕生!?<br/>
+  そしてラストは山内の中学時代の日記を曲に!<br/>
+  「怖い怖い怖い!」あまりの内容に畑芽育が悲鳴をあげる!天才作詞家“山内健司"誕生!?<br/>
+
+  ### 【出演者
+
+  - 濱家隆一　山内健司（かまいたち）
+  - 畑芽育
+  - 新山(さや香)
+  - 荒川(エルフ)
+  - 高嶺のなでしこ
+  - Mr.シャチホコ
+  - ダブルネーム
+  - 田中萌(テレビ朝日アナウンサー)
+
+  ## リンク
+
+  - [TikTok フル尺動画](https://www.tiktok.com/@_kamaigachi_/video/7514893483400858888)
+  - [かまいガチ X アフタートーク](https://x.com/kamaigachi/status/1933458398793904207)
+  - [公式 X 放送報告](https://x.com/takanenofficial/status/1932815114732020171)
+  - [お笑いナタリー X 告知](https://x.com/owarai_natalie/status/1932649067085181288)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1930406713901101328)
+  - [番組ホームページ](https://www.tv-asahi.co.jp/kamaigachi)
+`;

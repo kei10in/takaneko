@@ -87,6 +87,8 @@ const EventMeta = z
 
     meetAndGreet: TimeScheduleForMeetAndGreet.optional(),
 
+    costume: z.string().optional(),
+
     showNotes: ShowNotes,
     updatedAt: z.iso.date().optional(),
   })

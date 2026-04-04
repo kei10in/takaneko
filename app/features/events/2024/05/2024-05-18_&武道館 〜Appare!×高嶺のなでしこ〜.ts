@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "&武道館 〜Appare!×高嶺のなでしこ〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-05-18",
+  region: "東京",
+  location: "品川ステラボール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装 (上着なし)",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "推しの魔法",
+      "可愛くてごめん",
+      "メイド☆至上主義",
+      "ヒロインは平均以下。",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1791741430219919688",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2034)
+`;

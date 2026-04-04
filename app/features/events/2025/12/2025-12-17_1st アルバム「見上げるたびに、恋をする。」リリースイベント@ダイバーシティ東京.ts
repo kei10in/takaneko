@@ -1,0 +1,89 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2025-12-17",
+  open: "12:00",
+  start: "16:00",
+  end: undefined,
+  region: "東京",
+  location: "ダイバーシティ東京 プラザ 2F フェスティバル広場",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-12-17_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4836",
+    },
+    {
+      path: "/events/2025/2025-12-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1987857784462045416",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4836",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "花は誓いを忘れない",
+        "この世界は嘘でできている",
+        "MC",
+        "メランコリックハニー",
+        "MC",
+        "初恋のこたえ。",
+        "アイドル衣装",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/2001254549571690873",
+    },
+    {
+      title: "グループ握手会",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "涼海すう", "東山恵里沙", "星谷美来", "松本ももな"],
+          },
+          {
+            label: "B レーン",
+            members: ["葉月紗蘭", "橋本桃呼", "日向端ひな", "籾山ひめり"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-04-04",
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  ミニファイブ & グループ握手会
+
+  CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+
+  - CD 販売開始: 12:00 〜
+  - CD 販売受付場所: ダイバーシティ東京 プラザ フェスティバル広場 CD販売ブース
+
+  ## リンク
+
+  - [オリコン デイリーランキング 1 位報告 - 公式 X](https://x.com/takanenofficial/status/2001238443267932254)
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2001198614597755070)
+  - [イベントレポート - 公式プレス](https://prtimes.jp/main/html/rd/p/000000842.000025517.html)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2000921351994167694)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4836)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1999449154230321659)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1987857784462045416)
+`;

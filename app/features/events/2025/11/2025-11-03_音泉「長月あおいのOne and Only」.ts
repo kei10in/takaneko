@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "音泉「長月あおいのOne and Only 第10回」",
+  category: "STREAMING",
+  date: "2025-11-03",
+  start: "20:00",
+  end: "",
+  region: "Web",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-11-03_音泉「長月あおいのOne and Only」.jpg",
+      ref: "https://x.com/onsenradio/status/1980240077901971855",
+    },
+    {
+      path: "/events/2025/2025-11-03_音泉「長月あおいのOne and Only」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1985331168297017368",
+    },
+    {
+      path: "/events/2025/2025-11-03_音泉「長月あおいのOne and Only」_2.jpg",
+      ref: "https://x.com/onsenradio/status/1985302183538041094",
+    },
+    {
+      path: "/events/2025/2025-11-03_音泉「長月あおいのOne and Only」_3.jpg",
+      ref: "https://x.com/aoi___nagatsuki/status/1985309932011536828",
+    },
+    {
+      path: "/events/2025/2025-11-03_音泉「長月あおいのOne and Only」_4.jpg",
+      ref: "https://x.com/himeri_momiyama/status/1985320345553780910",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.onsen.ag/program/aoi",
+  },
+  updatedAt: "2025-11-03",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  第10回にゲスト出演。
+
+  ## リンク
+
+  - [配信開始告知 - 公式 X](https://x.com/takanenofficial/status/1985331168297017368)
+  - [配信開始告知 - インターネットラジオステーション音泉 X](https://x.com/onsenradio/status/1985302183538041094)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1980274075714125906)
+  - [音泉 X 告知](https://x.com/onsenradio/status/1980240077901971855)
+`;

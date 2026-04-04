@@ -1,0 +1,63 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO FM「たかねこナイト」",
+  title: "P-CREW Deep・高嶺のなでしこ ラジオ定期公演「たかねこナイト」",
+  category: "RADIO",
+  date: "2026-03-10",
+  start: "27:00",
+  end: "27:30",
+  region: "ラジオ",
+  present: ["涼海すう", "葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2026/2026-03-10_TOKYO FM「たかねこナイト」.jpg",
+      ref: "https://x.com/takanenofficial/status/2031229973328179413",
+    },
+    {
+      path: "/events/2026/2026-03-10_TOKYO FM「たかねこナイト」_2.jpg",
+      ref: "https://x.com/PodcastsMs_jp/status/2031505381894299940",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://audee-membership.jp/takanenonadeshiko",
+  },
+  updatedAt: "2026-03-11",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - TOKYO FM 毎週火曜日 27:00 〜 27:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260311030000)
+  - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smjjeiCTJt2PwHSHYBJNfhZe)
+  - [メンバーシップ限定 アンコール](https://audee-membership.jp/takanenonadeshiko/audio/sm5AfgtoUyvvxsBSUkVjCdj4)
+
+  ## 番組説明
+
+  毎週火曜日深夜3時に開演！高嶺のなでしこがお届けするラジオの中の定期公演「たかねこナイト」。
+
+  メインMCの東山恵里沙が週替わりメンバーとともに、
+  楽曲とトークを織り交ぜて展開していく対バンライブのようなラジオ番組です。
+
+  放送後には、メンバーシップ限定の「アンコール」パートも配信。
+
+  声出す準備はできていますか？是非ペンライトを片手にお楽しみください！
+
+  - 番組Webサイト: https://audee-membership.jp/takanenonadeshiko
+  - メッセージフォーム: https://www.tfm.co.jp/f/takanenonadeshiko/message
+
+  X ハッシュタグは「[#たかねこナイト]」
+
+  [#たかねこナイト]: http://x.com/search?q=%23たかねこナイト
+
+  ## リンク
+
+  - [Radiko](https://radiko.jp/share?sid=FMT&t=20260311030000)
+  - [メンバーシップ告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/2031505381894299940)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2031229973328179413)
+  - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
+  - [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
+`;

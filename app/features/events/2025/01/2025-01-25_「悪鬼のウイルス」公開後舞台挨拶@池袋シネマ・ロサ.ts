@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「悪鬼のウイルス」公開後舞台挨拶",
+  title: "「悪鬼のウイルス」公開後舞台挨拶@池袋シネマ・ロサ",
+  category: "OTHER",
+  date: "2025-01-25",
+  start: "15:55",
+  region: "東京",
+  location: "池袋シネマ・ロサ",
+  present: ["城月菜央", "東山恵里沙", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "舞台挨拶詳細",
+    url: "https://www.tumblr.com/tobooks/771981523807338496/1月24日金25日土公開後舞台挨拶決定",
+  },
+  ticket: "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2456168",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-01-18",
+};
+
+export const content = /* md */ `
+  - 舞台挨拶: 17:40 〜 18:10 予定
+  - 登壇（予定）: 村重杏奈、太田将熙、吉田伶香、松野友喜人監督
+
+  ## リンク
+
+  - [公式 X 出演者発表](https://x.com/takanenofficial/status/1880563282513179108)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1878328569082081545)
+  - [舞台挨拶詳細](https://www.tumblr.com/tobooks/771981523807338496/1月24日金25日土公開後舞台挨拶決定)
+`;

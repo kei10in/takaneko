@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL FILE CITY CULTURE CIRCUIT 2026",
+  category: "OTHER",
+  liveType: undefined,
+  date: "2026-03-14",
+  open: "13:00",
+  start: "13:30",
+  end: undefined,
+  region: "東京",
+  location: "下北沢ADRIFT",
+  present: ["葉月紗蘭", "星谷美来"],
+  images: [
+    {
+      path: "/events/2026/2026-03-14_IDOL FILE CITY CULTURE CIRCUIT 2026.jpg",
+      ref: "https://x.com/idolfile_jp/status/2021902108044538059",
+    },
+    {
+      path: "/events/2026/2026-03-14_IDOL FILE CITY CULTURE CIRCUIT 2026_タイムテーブル1.jpg",
+      ref: "https://x.com/idolfile_jp/status/2032050391794286786",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2026/2026-03-14_IDOL FILE CITY CULTURE CIRCUIT 2026_タイムテーブル2.jpg",
+      ref: "https://x.com/idolfile_jp/status/2032050391794286786",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://livepocket.jp/e/ccc2026",
+  streamings: {
+    text: "ニコ生配信",
+    url: "https://live.nicovideo.jp/watch/lv350028208",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    title: "3rd Stage - FASHION STAGE",
+    start: "19:45",
+    end: "20:15",
+    url: "",
+  },
+  updatedAt: "2026-03-13",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  FASHION STAGE に出演
+
+  ## リンク
+
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2032827089389555936)
+  - [#あしたのたかねこ](https://x.com/HEROINES_FES/status/2032061892123115825)
+  - [当日券 販売決定のお知らせ - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032344414576845014)
+  - [タイムテーブル発表 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032050391794286786)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2021939850849788404)
+  - [告知 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2021902108044538059)
+`;

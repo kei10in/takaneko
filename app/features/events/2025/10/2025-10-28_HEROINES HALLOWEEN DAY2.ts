@@ -1,0 +1,69 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HEROINES HALLOWEEN DAY2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-28",
+  open: "09:00",
+  start: "09:30",
+  end: undefined,
+  region: "東京",
+  location: "ZeppDiverCity)",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-28_HEROINES HALLOWEEN DAY2.jpg",
+      ref: "https://x.com/takanenofficial/status/1972254983405158857",
+    },
+    {
+      path: "/events/2025/2025-10-28_HEROINES HALLOWEEN DAY2_タイムテーブル.jpg",
+      ref: "https://x.com/heroines_idol/status/1978053324352934339",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-10-28_HEROINES HALLOWEEN DAY2_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1983106620847731080",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/heroineshalloween2510",
+  streamings: {
+    text: "YouTube Live - HEROINES OFFICIAL (ヒロインズ グループのみ)",
+    url: "https://www.youtube.com/live/EX8uBg_o1gM",
+  },
+  goods: {
+    time: ["18:40", "19:40"],
+    lineup: ["ミニフォトカード「たかねこハロウィン2025」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1982764255834456293",
+  },
+  acts: {
+    start: "18:05",
+    end: "18:30",
+    setlist: [
+      "衣装:アンチファン衣装", // + ヘッドドレス
+      "この世界は嘘でできている",
+      "革命の女王",
+      "MC",
+      "メイド☆至上主義",
+      "女の子は強い",
+      "誇り高きアイドル",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1983118058731516061",
+  },
+  updatedAt: "2025-10-28",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [出演者紹介 - HEROINES FES X](https://x.com/HEROINES_FES/status/1983107393866396109)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1983127010496131520)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1983106620847731080)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1982764255834456293)
+  - [タイムテーブル告知 - HEROINES X](https://x.com/heroines_idol/status/1978053324352934339)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1972254983405158857)
+`;

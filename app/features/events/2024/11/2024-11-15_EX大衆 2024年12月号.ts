@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "EX大衆 2024年12月号",
+  category: "MAGAZINE",
+  date: "2024-11-15",
+  region: "雑誌",
+  images: [
+    {
+      path: "/events/2024/2024-11-15_EX大衆 2024年12月号.jpg",
+      ref: "https://x.com/EXtaishu/status/1856991240849699129",
+    },
+  ],
+  link: {
+    text: "双葉社 商品ページ",
+    url: "https://www.futabasha.co.jp/book/magazine/49101177112480000000",
+  },
+  present: ["松本ももな"],
+  updatedAt: "2024-11-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857287425195974974)
+  - [EX大衆 X 告知](https://x.com/EXtaishu/status/1856991240849699129)
+`;

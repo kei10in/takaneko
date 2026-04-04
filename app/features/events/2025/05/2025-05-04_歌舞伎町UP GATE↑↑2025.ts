@@ -1,0 +1,88 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "歌舞伎町UP GATE↑↑2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-05-04",
+  open: "12:00",
+  start: "13:00",
+  end: undefined,
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-05-04_歌舞伎町UP GATE↑↑2025_タイムテーブル_2.jpg",
+      ref: "https://x.com/kabuki_upgate/status/1914967486229021035",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-05-04_歌舞伎町UP GATE↑↑2025_特典会タイムテーブル.jpg",
+      ref: "https://x.com/kabuki_upgate/status/1915692257912516991",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-05-04_歌舞伎町UP GATE↑↑2025_タイムテーブル.jpg",
+      ref: "https://x.com/kabuki_upgate/status/1913155541821423809",
+    },
+    {
+      path: "/events/2025/2025-05-04_歌舞伎町UP GATE↑↑2025_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1918994256162931198",
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://kabukicho-upgate.com/",
+  },
+  ticket: "https://ticket.rakuten.co.jp/music/jpop/idle/RTZPAWJ/",
+  streamings: undefined,
+  goods: {
+    time: ["20:25", "21:25"],
+    lineup: ["歌舞伎町UP GATE↑↑限定カード"],
+    url: "https://x.com/takanenofficial/status/1918659355156594878",
+  },
+  acts: [
+    {
+      title: "野外ステージ",
+      start: "16:25",
+      end: "16:45",
+      setlist: [
+        "衣装: 2025 春衣装",
+        "可愛くてごめん",
+        "メランコリックハニー",
+        "初恋のひと。",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1919002862665011301",
+    },
+    {
+      title: "Zepp Shinjuku",
+      start: "19:40",
+      end: "20:10",
+      setlist: [
+        "衣装: 2025 春衣装",
+        "美しく生きろ",
+        "革命の女王",
+        "決戦スピリット",
+        "MC",
+        "メランコリックハニー",
+        "推しの魔法",
+        "ファンサ",
+        "初恋のひと。",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1919002862665011301",
+    },
+  ],
+  updatedAt: "2025-05-03",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1918659355156594878)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1913216019633737842)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1902321700043448401)
+  - [イベント X タイムテーブル告知](https://x.com/kabuki_upgate/status/1913155541821423809)
+`;

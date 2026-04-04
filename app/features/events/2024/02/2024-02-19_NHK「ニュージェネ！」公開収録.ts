@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NHK「ニュージェネ！」公開収録",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-02-19",
+  region: "東京",
+  location: "NHKホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:美しく生きろ衣装", "美しく生きろ"],
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1714)
+`;

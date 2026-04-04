@@ -1,0 +1,137 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール",
+  category: "EVENT",
+  date: "2025-11-24",
+  open: "10:00",
+  start: "11:30",
+  end: undefined,
+  region: "東京",
+  location: "大崎ブライトコアホール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-11-24_1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール_ビクター.jpg",
+      ref: "https://victor-store.jp/special/takaneko20251124",
+    },
+    {
+      path: "/events/2025/2025-11-24_1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4419",
+    },
+    {
+      path: "/events/2025/2025-11-24_1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール_直前.jpg",
+      ref: "https://x.com/takanenofficial/status/1992578888480763952",
+    },
+    {
+      path: "/events/2025/2025-11-24_1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール_色紙デザイン.jpg",
+      ref: "https://x.com/takanenofficial/status/1992578888480763952",
+    },
+    {
+      path: "/events/2025/2025-11-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1976256516203413760",
+    },
+  ],
+  link: {
+    text: "事前予約販売サイト - 高嶺のなでしこ リリースイベントat 大崎ブライトコアホール | VICTOR ONLINE STORE",
+    url: "https://victor-store.jp/special/takaneko20251124",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  meetAndGreet: {
+    title: "個別サイン会",
+    sessions: [
+      {
+        title: "1 部",
+        start: "11:30",
+        end: "12:30",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "星谷美来"],
+      },
+      {
+        title: "2 部",
+        start: "12:40",
+        end: "13:40",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"],
+      },
+      {
+        title: "3 部",
+        start: "14:30",
+        end: "15:30",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "星谷美来"],
+      },
+      {
+        title: "4 部",
+        start: "15:40",
+        end: "16:40",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"],
+      },
+      {
+        title: "5 部",
+        start: "16:50",
+        end: "17:50",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "星谷美来"],
+      },
+      {
+        title: "6 部",
+        start: "18:00",
+        end: "19:00",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"],
+      },
+    ],
+  },
+  updatedAt: "2026-04-03",
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  個別サイン会
+
+  CD 1 枚予約で、「個別サイン会参加券」を 1 枚を配布。
+
+  ### 事前予約
+
+  事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251124)で受付。
+
+  - **受付期間:** 11月10日(月) 21:00 〜 11月16日(日) 23:59
+  - **抽選結果:** 11月18日(火) 18:00 以降順次発表
+  - **当選分支払い期限:** 11月20日(木) 23:59 まで
+
+  ### 当日受付
+
+  - 当日 CD 予約販売開始: 10:00 〜
+  - 事前 CD 予約販売当選者・特典券引換: 10:00 〜
+
+  ## タイムスケジュール、参加メンバー
+
+  - 1部 11:30 〜 12:30 城月菜央💛 / 涼海すう🩵 / 橋本桃呼🩷 / 東山恵里沙🧡 / 星谷美来❤
+  - 2部 12:40 〜 13:40 葉月紗蘭🤍 / 日向端ひな💜 / 松本ももな🎀 / 籾山ひめり💙
+  - 3部 14:30 〜 15:30 城月菜央💛 / 涼海すう🩵 / 橋本桃呼🩷 / 東山恵里沙🧡 / 星谷美来❤
+  - 4部 15:40 〜 16:40 葉月紗蘭🤍 / 日向端ひな💜 / 松本ももな🎀 / 籾山ひめり💙
+  - 5部 16:50 〜 17:50 城月菜央💛 / 涼海すう🩵 / 橋本桃呼🩷 / 東山恵里沙🧡 / 星谷美来❤
+  - 6部 18:00 〜 19:00 葉月紗蘭🤍 / 日向端ひな💜 / 松本ももな🎀 / 籾山ひめり💙
+
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1992578888480763952)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4598)
+  - [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20251124)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1987857784462045416)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+`;

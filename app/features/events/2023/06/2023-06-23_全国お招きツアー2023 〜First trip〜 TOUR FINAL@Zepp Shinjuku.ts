@@ -1,0 +1,58 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2023-06-23",
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "Overture",
+      "革命の女王",
+      "誇り高きアイドル",
+      "アンチファン",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "ユメムスビ",
+      "ヒロインは平均以下。",
+      "衣装:「初恋のひと。」制服衣装",
+      "可愛いって言われたい: 城月菜央、涼海すう、葉月紗蘭、星谷美来、松本ももな",
+      "私は怪物: 橋本桃呼、春野莉々、東山恵里沙、日向端ひな、籾山ひめり",
+      "月曜日の憂鬱",
+      "#超絶かわいい",
+      "初恋のひと。",
+      "乙女どもよ。",
+      "女の子は強い",
+      "僕は君になれない",
+      "アンコール",
+      "衣装:T シャツ (たかねこ全国お招きツアー 2023)",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    links: [
+      {
+        text: "ライブレポート",
+        url: "https://prtimes.jp/main/html/rd/p/000000500.000025517.html",
+      },
+    ],
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [ライブレポート](https://prtimes.jp/main/html/rd/p/000000500.000025517.html)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=761)
+`;

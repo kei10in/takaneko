@@ -1,0 +1,70 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アニソフィアフェス2025 Summer",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-07-26",
+  open: "15:00",
+  start: "16:00",
+  end: undefined,
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-07-26_アニソフィアフェス2025 Summer.jpg",
+      ref: "https://x.com/takanenofficial/status/1941029361324630381",
+    },
+    {
+      path: "/events/2025/2025-07-26_アニソフィアフェス2025 Summer_1.jpg",
+      ref: "https://x.com/Suupeasofficial/status/1949028202766373317",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/sf/detail/4360280001-P0030001P021001",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      title: "Suupeas / 籾山ひめりコラボ ",
+      setlist: ["衣装:パジャマ", "アイム・ノット・プリンセス"],
+      links: [
+        {
+          text: "Suupeas X",
+          url: "https://x.com/Suupeasofficial/status/1949028202766373317",
+        },
+      ],
+    },
+    {
+      title: "ステージ",
+      setlist: [
+        "衣装:わたし色に染まれ衣装",
+        "可愛くてごめん",
+        "メランコリックハニー",
+        "小悪魔だってかまわない！",
+        "MC",
+        "ライフクエスト",
+        "決戦スピリット",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1949073216175235100",
+    },
+  ],
+  updatedAt: "2025-07-27",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1948930981446254984)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1941029361324630381)
+`;

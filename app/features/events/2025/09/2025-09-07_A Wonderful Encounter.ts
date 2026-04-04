@@ -1,0 +1,83 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "A Wonderful Encounter",
+  title: "3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2025-09-07",
+  open: "16:30",
+  start: "18:00",
+  end: undefined,
+  region: "千葉",
+  location: "幕張イベントホール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-09-07_A Wonderful Encounter.jpg",
+      ref: "https://x.com/takanenofficial/status/1922615565950058891",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4158",
+  },
+  ticket: "",
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv348613804",
+  },
+  acts: {
+    setlist: [
+      "影ナレ:東山恵里沙、松本ももな",
+      "衣装:「初恋のひと。」制服衣装",
+      "初恋のこたえ。",
+      "恋を知った世界",
+      "病名恋ワズライ",
+      "MC",
+      "メランコリックハニー",
+      "可愛くてごめん",
+      "Cute for life",
+      "幕間",
+      "衣装:2025 夏衣装",
+      "僕は君になれない",
+      "女の子は強い",
+      "乙女どもよ。",
+      "ライフクエスト",
+      "ユメムスビ",
+      "MC",
+      "アイドル衣装",
+      "I’M YOUR IDOL",
+      "幕間:3 年の軌跡",
+      "衣装:美しく生きろ衣装",
+      "この世界は嘘でできている",
+      "誇り高きアイドル",
+      "革命の女王",
+      "決戦スピリット",
+      "ファンサ",
+      "MC",
+      "美しく生きろ",
+      "アンコール",
+      "衣装:見上げるたびに、恋をする。衣装",
+      "花は誓いを忘れない",
+      "MC:告知",
+      "推しの魔法",
+      "初恋のひと。",
+    ],
+    url: "",
+  },
+  updatedAt: "2025-09-09",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [オフィシャル ライブレポート](https://prtimes.jp/main/html/rd/p/000000806.000025517.html)
+  - [音楽ナタリー ライブレポート](https://natalie.mu/music/news/639339)
+  - [ENCOUNT ライブレポート](https://encount.press/archives/855455/)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4158)
+  - [チケット当日引換券について - 公式ニュース](https://takanenonadeshiko.jp/?p=4190)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1963165525435199877)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3386)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1890358265885655133)
+`;

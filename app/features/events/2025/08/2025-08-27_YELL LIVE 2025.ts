@@ -1,0 +1,57 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YELL LIVE 2025",
+  title: "YELL LIVE 2025 powered by TikTok LIVE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-27",
+  open: "16:30",
+  start: "17:30",
+  end: undefined,
+  region: "東京",
+  location: "Zepp Haneda",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-27_YELL LIVE 2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1934566763884388776",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/sf/detail/4348270001-P0030001P0030002P0030003",
+  streamings: {
+    text: "TikTok LIVE",
+    url: "https://www.tiktok.com/@tiktok_live_japan",
+  },
+  goods: {
+    time: ["18::00", "19:00"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1960594049733419274",
+  },
+  acts: {
+    start: "17:35",
+    end: "17:50",
+    setlist: [
+      "衣装:2025 夏衣装",
+      "可愛くてごめん",
+      "メランコリックハニー",
+      "すきっちゅーの！",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1960652032555278700",
+  },
+  updatedAt: "2025-08-27",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1960594049733419274)
+  - [LIVESTAR ニュース](https://avex.jp/livestar/?p=13063)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1934566763884388776)
+  - [LIVESTAR X 開催告知](https://x.com/LIVESTARinc/status/1934460930433446204)
+`;

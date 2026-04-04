@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Fang Music Fes #02",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-09-18",
+  region: "東京",
+  location: "EX THEATER ROPPONGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "MC",
+      "すきっちゅーの！",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1703751588526088263",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1285)
+`;

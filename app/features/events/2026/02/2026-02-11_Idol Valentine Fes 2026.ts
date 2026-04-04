@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Idol Valentine Fes 2026",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-02-11",
+  open: "16:00",
+  start: "17:00",
+  end: undefined,
+  region: "千葉",
+  location: "LaLa arena TOKYO-BAY",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-02-11_Idol Valentine Fes 2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2004401787181453628",
+    },
+  ],
+  link: {
+    text: "Idol Valentine Fes 2026 公式サイト",
+    url: "https://idol-valentine-fes.com/",
+  },
+  ticket: "https://idol-valentine-fes.com/#ticket",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "初恋のこたえ。",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: [
+        {
+          text: "公式 X",
+          url: "https://x.com/takanenofficial/status/2021545160954556628",
+        },
+      ],
+    },
+    {
+      title: "スーパーアイドルメドレー",
+      setlist: ["衣装:見上げるたびに、恋をする。衣装", "可愛くてごめん", "初恋のひと。"],
+      links: [
+        {
+          text: "公式 X",
+          url: "https://x.com/takanenofficial/status/2021545160954556628",
+        },
+      ],
+    },
+  ],
+  updatedAt: "2026-02-13",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2021545160954556628)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2021199974281748644)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2004401787181453628)
+`;

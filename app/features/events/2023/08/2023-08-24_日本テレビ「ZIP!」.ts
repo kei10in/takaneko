@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "日本テレビ「ZIP!」",
+  category: "TV",
+  date: "2023-08-24",
+  start: "07:15",
+  region: "テレビ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2023/2023-08-24_日本テレビ「ZIP!」.jpg",
+      ref: "https://x.com/takanenofficial/status/1694273410539692452",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1694273410539692452)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1297)
+`;

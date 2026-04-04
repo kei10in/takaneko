@@ -1,0 +1,24 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "関内デビル",
+  category: "TV",
+  date: "2024-02-06",
+  region: "テレビ",
+  present: ["城月菜央", "日向端ひな", "松本ももな", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1723)
+`;

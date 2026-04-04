@@ -1,0 +1,61 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこの秋祭り2024 〜FC limited〜",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-10-27",
+  region: "東京",
+  location: "SHIBUYA PLEASURE PLEASURE",
+  present: ["高嶺のなでしこ"],
+  acts: [
+    {
+      title: "第一部",
+      setlist: [
+        "衣装:キュンキュン学園制服",
+        "センパイ。",
+        "恋を知った世界",
+        "MC",
+        "初恋のひと。",
+        "MC",
+        "乙女どもよ。",
+        "誇り高きアイドル",
+        "僕は君になれない",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1850452000531775584",
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "衣装:キュンキュン学園制服",
+        "可愛くてごめん",
+        "ユメムスビ",
+        "MC",
+        "17歳",
+        "MC",
+        "I’M YOUR IDOL",
+        "月曜日の憂鬱",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1850518426059686137",
+    },
+  ],
+};
+
+export const content = /* md */ `
+  ## 概要
+
+  ### 第 1 部
+
+  たかねこキュンキュン学園 & ミニライブ
+
+  ### 第 2 部
+
+  たかねこカラオケパーティー
+
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/10月252627日「たかねこの秋祭り2024〜fc-limited〜」開催決定！/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
+  - [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
+`;

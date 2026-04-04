@@ -1,0 +1,24 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "オンライン個別お話し会",
+  category: "EVENT",
+  date: "2024-06-26",
+  region: "Web",
+  present: ["涼海すう", "橋本桃呼", "東山恵里沙", "日向端ひな", "松本ももな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2202)
+`;

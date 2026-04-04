@@ -5,6 +5,7 @@ import {
   BsExclamationTriangleFill,
   BsGeo,
   BsMicFill,
+  BsPeopleFill,
 } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import { Fragment } from "react/jsx-runtime";
@@ -58,6 +59,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   });
 
   const lives = data?.lives ?? [];
+  const meetAndGreets = data?.meetAndGreets ?? [];
 
   return (
     <div>
@@ -164,6 +166,64 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                   })}
                 </Fragment>
               ))}
+            </ul>
+          </section>
+
+          <section className="mt-8">
+            <h2
+              className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}
+            >
+              <span className="flex items-center gap-2">
+                <BsPeopleFill className="inline-block text-gray-400" />
+                <span>対面イベント</span>
+              </span>
+            </h2>
+
+            <ul className="mt-4 space-y-2">
+              {isLoading &&
+                [1, 2, 3].map((x) => (
+                  <li key={x}>
+                    <LiveSkeleton />
+                  </li>
+                ))}
+              {!isLoading && meetAndGreets.length == 0 && (
+                <li>
+                  <p className="p-1 text-gray-500">
+                    この衣装に関連する対面イベントが見つかりませんでした。
+                  </p>
+                </li>
+              )}
+              {meetAndGreets.map(({ event }, i) => {
+                return (
+                  <li key={i}>
+                    <div className="flex items-stretch gap-2 p-1">
+                      <div
+                        className={clsx(
+                          "w-1 flex-none rounded-full",
+                          liveTypeColor(event.liveType),
+                        )}
+                      />
+                      <div className="text-xs">
+                        <p className="text-sm">
+                          <Link to={`/events/${event.slug}`}>{event.title}</Link>
+                        </p>
+                        <p className="flex items-center gap-1 text-gray-400">
+                          <BsCalendar className="inline flex-none text-xs" />
+                          <span className="line-clamp-1">
+                            {displayDateWithDayOfWeek(event.date)}
+                          </span>
+                        </p>
+                        <p className="flex items-center gap-1 text-gray-400">
+                          <BsGeo className="inline flex-none text-xs" />
+                          <span className="line-clamp-1">
+                            {event.region} {event.location}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         </section>

@@ -1,0 +1,70 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KOOmic idol Festa vol.2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-12-06",
+  open: "10:20",
+  start: "10:40",
+  end: undefined,
+  region: "東京",
+  location: "品川プリンス ステラボール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-12-06_KOOmic idol Festa vol.2_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1996951476753592460",
+    },
+    {
+      path: "/events/2025/2025-12-06_KOOmic idol Festa vol.2_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1996951476753592460",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-12-06_KOOmic idol Festa vol.2.jpg",
+      ref: "https://x.com/KOOmicidolFesta/status/1985734659016442335",
+    },
+    {
+      path: "/events/2025/2025-12-06_KOOmic idol Festa vol.2_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1997279877553414159",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://tiget.net/events/438375",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「見上げるたびに、恋をする。」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1996951476753592460",
+  },
+  acts: {
+    start: "20:05",
+    end: "20:30",
+    description: "タイムテーブルに記載の内容が間違っています。",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "花は誓いを忘れない",
+      "決戦スピリット",
+      "MC",
+      "美しく生きろ",
+      "恋を知った世界",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1997287507566948571",
+  },
+  updatedAt: "2025-12-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1997283707942736032)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1997279877553414159)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1996951476753592460)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1985995599209193576)
+  - [告知 - KOOmic idol Festa！ X](https://x.com/KOOmicidolFesta/status/1985734659016442335)
+`;

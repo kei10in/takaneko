@@ -1,0 +1,32 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ぎふチャン「ときめきステーション ダブジェネカウントダウン」",
+  category: "RADIO",
+  date: "2024-12-14",
+  start: "12:00",
+  region: "ラジオ",
+  link: {
+    text: "番組サイト",
+    url: "https://www.zf-web.com/radio/regular/wgc/post.html",
+  },
+  present: ["東山恵里沙", "星谷美来"],
+  updatedAt: "2024-12-09",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  ぎふチャン 12:00 〜
+
+  ゲストコメント 13:36 ～
+
+  [radiko](https://radiko.jp/#GBS)
+
+  ## リンク
+
+  - [番組 X 直前告知](https://x.com/wgcd1431/status/1867760346674737277)
+  - [番組 X 告知](https://x.com/wgcd1431/status/1867419636935143908)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
+  - [radiko](https://radiko.jp/#GBS)
+`;

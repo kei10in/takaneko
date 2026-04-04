@@ -1,0 +1,47 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CBCラジオ「推シマシ」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "23:30",
+  end: undefined,
+  region: "ラジオ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_CBCラジオ「推シマシ」.png",
+      ref: "https://hicbc.com/radio/oshimashi/",
+    },
+    {
+      path: "/events/2025/2025-07-10_CBCラジオ「推シマシ」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943311804714881119",
+    },
+    {
+      path: "/events/2025/2025-07-10_CBCラジオ「推シマシ」_2.jpg",
+      ref: "https://x.com/oshi_mashi/status/1943323784771178723",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://hicbc.com/radio/oshimashi/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  番組放送枠 22:00 - 24:00
+
+  23:30 ごろ出演予定
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20250710233005)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20250710220000)
+  - [番組 X 報告ポスト](https://x.com/oshi_mashi/status/1943323784771178723)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943311804714881119)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
+`;

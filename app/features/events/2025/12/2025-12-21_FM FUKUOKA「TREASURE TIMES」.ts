@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM FUKUOKA「TREASURE TIMES」",
+  category: "RADIO",
+  date: "2025-12-21",
+  start: "18:30",
+  end: "18:55",
+  region: "ラジオ",
+  present: ["涼海すう", "星谷美来"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://fmfukuoka.co.jp/program/tt/",
+  },
+  updatedAt: "2025-12-21",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演。
+
+  主演時間: 18:50 〜 18:55
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251221185000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251221183000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2002567444158951813)
+`;

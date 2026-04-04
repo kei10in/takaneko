@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「LOVE FLAP」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "13:00",
+  end: undefined,
+  region: "ラジオ",
+  present: ["涼海すう"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_FM大阪「LOVE FLAP」.jpg",
+      ref: "https://www.fmosaka.net/_sites/16782357",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM大阪「LOVE FLAP」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943157475030765940",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM大阪「LOVE FLAP」_2.jpg",
+      ref: "https://x.com/LOVEFLAP/status/1943164829591888191",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM大阪「LOVE FLAP」_3.jpg",
+      ref: "https://x.com/fmosaka851/status/1943179554488803344",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.fmosaka.net/_sites/16782357",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  番組放送枠 13:00 - 14:00
+
+  13:00 ごろ出演予定
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20250710130000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20250710130000)
+  - [FM大阪 X 報告ポスト](https://x.com/fmosaka851/status/1943179554488803344)
+  - [番組 X 報告ポスト](https://x.com/LOVEFLAP/status/1943164829591888191)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943157475030765940)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

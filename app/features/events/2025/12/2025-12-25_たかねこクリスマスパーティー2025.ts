@@ -1,0 +1,123 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこクリスマスパーティー2025",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2025-12-25",
+  open: "14:30",
+  start: "15:30",
+  end: undefined,
+  region: "神奈川",
+  location: "KT Zepp Yokohama",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-25_たかねこクリスマスパーティー2025_詳細.jpg",
+      ref: "https://x.com/takanenofficial/status/1980484186008936839",
+    },
+    {
+      path: "/events/2025/2025-12-25_たかねこクリスマスパーティー2025.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4303",
+    },
+    {
+      path: "/events/2025/2025-12-25_たかねこクリスマスパーティー2025_グッズメニュー.webp",
+      ref: "https://x.com/takanenofficial/status/2003835554342093093",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4303",
+  },
+  ticket: "https://eplus.jp/sf/detail/3709540001",
+  streamings: {
+    text: "ニコ生",
+    url: "https://live.nicovideo.jp/watch/lv349408347",
+  },
+  goods: {
+    time: ["12:00", "14:00"],
+    // ["14:30", "15:30"],
+    // ["18:30", "19:30"],
+    lineup: undefined,
+    url: "https://x.com/takanenofficial/status/2003835554342093093",
+  },
+  acts: [
+    {
+      title: "第一部",
+      open: "14:30",
+      start: "15:30",
+      setlist: [
+        "影ナレ: 星谷美来、城月菜央",
+        "衣装:クリスマス 2025 衣装",
+        "Overture",
+        "女の子は強い",
+        "病名恋ワズライ",
+        "初恋のこたえ。",
+        "MC",
+        "企画: 今年も願いを叶えて！たかねこサンタ",
+        "推しの魔法",
+        "メランコリックハニー",
+        "企画: 城月菜央生誕祭 選手ハンデマッチ",
+        "MC",
+        "花は誓いを忘れない",
+        "乙女どもよ。",
+        "企画: たかねこサンタの Xmas プレゼント SHOW",
+        "MC: 告知、写真撮影、TikTok撮影",
+        "ファンサ",
+        "MC",
+      ],
+      url: "",
+      links: [
+        {
+          text: "https://x.com/takanenofficial/status/2004120074760884380",
+          url: "https://x.com/takanenofficial/status/2004120074760884380",
+        },
+      ],
+    },
+    {
+      title: "第二部",
+      open: "18:30",
+      start: "19:30",
+      setlist: [
+        "影ナレ: 葉月紗蘭、涼海すう",
+        "衣装:クリスマス 2025 衣装",
+        "Overture",
+        "恋を知った世界",
+        "センパイ。",
+        "初恋のひと。",
+        "MC",
+        "企画: 今年も願いを叶えて！たかねこサンタ",
+        "可愛くてごめん",
+        "Cute for life",
+        "企画: たかねこ Mental-ファン GP",
+        "MC",
+        "決戦スピリット",
+        "美しく生きろ",
+        "企画: たかねこサンタの Xmas プレゼント SHOW",
+        "MC: 告知、写真撮影、TikTok撮影",
+        "ファンサ",
+        "MC",
+      ],
+      url: "",
+      links: [
+        {
+          text: "https://x.com/takanenofficial/status/2004170310736924815",
+          url: "https://x.com/takanenofficial/status/2004170310736924815",
+        },
+      ],
+    },
+  ],
+  updatedAt: "2025-12-19",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2004184426763473170)
+  - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2001955669096714431)
+  - [一般チケット告知 (動画あり) - 公式 X](https://x.com/takanenofficial/status/2002604945388810595)
+  - [一般チケット告知 - 公式 X](https://x.com/takanenofficial/status/1980484186008936839)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4303)
+  - [FC 先行チケット](https://takanekofc.com/topics/public/_/vnui2qh8mbpnp958.html)
+`;

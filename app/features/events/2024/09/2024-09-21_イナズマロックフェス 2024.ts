@@ -1,0 +1,49 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "イナズマロックフェス 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-09-21",
+  location: "烏丸半島芝生広場",
+  region: "滋賀",
+  images: [
+    {
+      path: "/events/2024/2024-09-21_イナズマロックフェス2024.jpg",
+      ref: "https://x.com/takanenofficial/status/1819206657236521133",
+    },
+  ],
+  link: {
+    text: "イナズマロックフェス",
+    url: "https://inazumarock.com/2024/",
+  },
+  acts: {
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "可愛くてごめん",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1837429801143226621",
+  },
+};
+
+export const content = /* md */ `
+  ## 出演情報
+
+  フリーエリアでの出演のため無料です。
+
+  - 出演: 風神ステージ 16:50 〜
+
+  [タイムテーブル:](https://x.com/irf_official/status/1829685536786956333)
+
+  [![タイムテーブル](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)
+
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/イナズマロックフェス/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1819206657236521133)
+`;

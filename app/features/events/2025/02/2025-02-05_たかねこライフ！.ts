@@ -1,0 +1,58 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこライフ！",
+  title: "EVOLUTION POP! Vol.79 〜たかねこライフ！ Premium〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-02-05",
+  open: "18:15",
+  start: "19:00",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-WEST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-02-05_たかねこライフ！.jpg",
+      ref: "https://x.com/takanenofficial/status/1882767871031599339",
+    },
+  ],
+  link: {
+    text: "公式 X 告知",
+    url: "https://x.com/takanenofficial/status/1882767871031599339",
+  },
+  ticket: "https://ticketdive.com/event/EVOLUTIONPOP_79",
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv346899840",
+  },
+  acts: {
+    setlist: [
+      "衣装: わたし色に染まれ衣装",
+      "初恋のひと。",
+      "月曜日の憂鬱",
+      "I’M YOUR IDOL",
+      "MC",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "17歳",
+      "ヒロインは平均以下。",
+      "MC",
+      "ファンサ",
+      "決戦スピリット",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1887111914553225527",
+  },
+  updatedAt: "2025-02-07",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1887366889300762922)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1886716340515356876)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1885254252526002648)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1882767871031599339)
+`;

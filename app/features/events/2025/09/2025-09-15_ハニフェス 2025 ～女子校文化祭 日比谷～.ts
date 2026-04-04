@@ -1,0 +1,96 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ハニフェス 2025 ～女子校文化祭 日比谷～",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-09-15",
+  open: "16:00",
+  start: "17:00",
+  end: undefined,
+  region: "東京",
+  location: "日比谷野外音楽堂",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-09-17_ハニフェス 2025 ～女子校文化祭 日比谷～.jpg",
+      ref: "https://x.com/takanenofficial/status/1937088247886127355",
+    },
+    {
+      path: "/events/2025/2025-09-17_ハニフェス 2025 ～女子校文化祭 日比谷～_ソングリスト.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/1966819200707817480",
+    },
+    {
+      path: "/events/2025/2025-09-17_ハニフェス 2025 ～女子校文化祭 日比谷～_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1967430088431185921",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3905",
+  },
+  ticket: "https://l-tike.com/hwfes2025/",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      title: "全員",
+      setlist: ["衣装:「ハニフェス 2025」制服衣装", "今、恋がはじまれ。"],
+      links: [
+        {
+          text: "https://x.com/yurity_naniwa/status/1967553503737639379",
+          url: "https://x.com/yurity_naniwa/status/1967553503737639379",
+        },
+      ],
+    },
+    {
+      title: "高嶺のなでしこブロック",
+      setlist: [
+        "衣装: 「ハニフェス 2025」制服衣装",
+        "初恋のひと。",
+        "ヒロインは平均以下。",
+        "ツインテール魔法少女",
+        "小悪魔だってかまわない！",
+        "美しく生きろ",
+        "この世界は嘘でできている",
+      ],
+      links: [
+        {
+          text: "https://x.com/yurity_naniwa/status/1967554641392218462",
+          url: "https://x.com/yurity_naniwa/status/1967554641392218462",
+        },
+      ],
+    },
+    {
+      title: "アンコール コラボ",
+      setlist: [
+        "衣装: T シャツ (ハニフェス 2025)",
+        "めおと (Hanon、小田桐ななさ、柴咲あかり、土屋玲実、橘美空、橋本桃呼、葉月紗蘭)",
+        "わたしに花束 (CHiCO、永尾梨央、寺本理絵、西原悠桜、東山恵里沙、日向端ひな、籾山ひめり)",
+        "ミスター・ダーリン (Kotoha、高澤百合愛、波左間美晴、福田ひなた、一ノ瀬直緒、河合ここゆ、城月菜央、涼海すう、星谷美来、松本ももな)",
+        "ファンサ (全員)",
+      ],
+      links: [
+        {
+          text: "https://x.com/yurity_naniwa/status/1967557877629067456",
+          url: "https://x.com/yurity_naniwa/status/1967557877629067456",
+        },
+      ],
+    },
+  ],
+  updatedAt: "2025-09-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [「HoneyWorks Presents ハニフェス2025 ～女子校文化祭 日比谷～」ダイジェスト映像 - YouTube](https://www.youtube.com/watch?v=JjqeXaQe578)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1967430088431185921)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1967412278577213652)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3905)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1937088247886127355)
+`;

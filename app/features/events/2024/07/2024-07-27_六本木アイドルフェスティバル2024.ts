@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "六本木アイドルフェスティバル2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-27",
+  region: "東京",
+  location: "六本木ヒルズアリーナ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "モテチェン！",
+      "眩しすぎる流れ星 1half (ラストアイドル cover)",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1817132203350143230",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2255)
+`;

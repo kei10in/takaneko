@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "札幌テレビ放送「どさんこワイド179」",
+  category: "TV",
+  date: "2025-07-10",
+  start: "17:30",
+  end: undefined,
+  region: "テレビ",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_札幌テレビ放送「どさんこワイド179」.jpg",
+      ref: "https://www.tvguide.or.jp/news/news-2800006/",
+    },
+    {
+      path: "/events/2025/2025-07-10_札幌テレビ放送「どさんこワイド179」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943218767229493551",
+    },
+    {
+      path: "/events/2025/2025-07-10_札幌テレビ放送「どさんこワイド179」_2.jpg",
+      ref: "https://x.com/victor_sapporo/status/1943214296160456799",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.stv.jp/tv/dosanko_eve/index.html",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  番組放送時間 15:38 - 19:00
+
+  17:30 ごろ出演予定
+
+  番組内コーナー「奥さんお絵かきですよ」に出演
+
+  ## リンク
+
+  - [ビクターサッポロ X 直前ポスト](https://x.com/victor_sapporo/status/1943214296160456799)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232511188037764)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

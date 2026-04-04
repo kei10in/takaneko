@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Fes.",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-22",
+  open: "13:30",
+  start: "15:00",
+  end: undefined,
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-22_MARQUEE Fes.jpg",
+      ref: "https://x.com/MARQUEE_matsuri/status/1975486571148365891",
+    },
+    {
+      path: "/events/2025/2025-10-22_MARQUEE Fes_グッズ.jpg",
+      ref: "https://x.com/takanenofficial/status/1980620085816348953",
+    },
+    {
+      path: "/events/2025/2025-10-22_MARQUEE Fes_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1980937468129288465",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/sf/word/0000131445",
+  streamings: undefined,
+  goods: {
+    time: ["19:05", "20:05"],
+    lineup: ["MARQUEE Fes Day 1 限定カード / チェキ"],
+    url: "https://x.com/takanenofficial/status/1980620085816348953",
+  },
+  acts: {
+    start: "18:20",
+    end: "18:50",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "初恋のこたえ。",
+      "MC",
+      "花は誓いを忘れない",
+      "ファンサ",
+      "決戦スピリット",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1980949368678281595",
+  },
+  updatedAt: "2025-10-09",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1980937468129288465)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1980620085816348953)
+  - [タイムテーブル公開 - MARQUEE祭 X ](https://x.com/MARQUEE_matsuri/status/1975486571148365891)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1975440998273810468)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1960541610313175435)
+`;

@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "関内デビル",
+  category: "TV",
+  date: "2024-10-16",
+  region: "テレビ",
+  present: ["城月菜央", "橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2024/2024-10-16_関内デビル.jpg",
+      ref: "https://x.com/tvk_kannaidevil/status/1846385580407672931",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tvk-yokohama.com/kannaidevil/",
+  },
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - 放送局: tvk
+  - 放送時間: 23:00 〜
+
+  毎週水曜日の番組内コーナー「たかねこクエスト」
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1846521477589504159)
+  - [番組 X 告知](https://x.com/tvk_kannaidevil/status/1846385580407672931)
+  - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+  - [TVer](https://tver.jp/series/srehapgls0)
+`;

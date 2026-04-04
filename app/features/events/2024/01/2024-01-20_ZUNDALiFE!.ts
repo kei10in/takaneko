@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ZUNDALiFE!",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-20",
+  region: "宮城",
+  location: "仙台PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "誇り高きアイドル",
+      "MC",
+      "可愛くてごめん",
+      "決戦スピリット",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1748643930756047175",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1660)
+`;

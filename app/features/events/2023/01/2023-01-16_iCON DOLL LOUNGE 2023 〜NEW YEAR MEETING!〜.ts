@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-01-16",
+  region: "東京",
+  location: "LIQUIDROOM",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "乙女どもよ。",
+      "アンチファン",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1614947647399550978",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=653)
+`;

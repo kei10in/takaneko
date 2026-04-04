@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "うるトラすフェスタ vol.12",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-27",
+  region: "東京",
+  location: "渋谷 CLUB QUATTRO",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "MC",
+      "女の子は強い",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1630169674171432962",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=731)
+`;

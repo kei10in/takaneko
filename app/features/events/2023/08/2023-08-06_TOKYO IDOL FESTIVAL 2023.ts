@@ -1,0 +1,59 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-06",
+  region: "東京",
+  location: "お台場・青海周辺エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "SMILE GARDEN",
+      start: "12:15",
+      end: "12:35",
+      setlist: [
+        "衣装:アンチファン衣装",
+        "初恋のひと。",
+        "可愛くてごめん",
+        "ヒロインは平均以下。",
+        "#超絶かわいい",
+        "ファンサ",
+      ],
+      url: "",
+    },
+    {
+      title: "HOT STAGE",
+      start: "13:10",
+      end: "13:40",
+      description: `
+        「ねる、取材行ってきます」公開収録
+        
+        長濱ねる、濱口優、原田葵（フジテレビアナウンサー）、FRUITS ZIPPER、高嶺のなでしこ
+      `,
+      setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん"],
+      url: "",
+    },
+    {
+      title: "SKY STAGE",
+      start: "17:55",
+      end: "18:10",
+      setlist: ["衣装:全国お招きツアー衣装", "決戦スピリット", "初恋のひと。", "ファンサ"],
+      url: "https://x.com/Mikuru_hositani/status/1688119774658670593",
+    },
+  ],
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1189)
+`;

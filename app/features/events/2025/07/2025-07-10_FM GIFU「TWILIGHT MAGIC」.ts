@@ -1,0 +1,47 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM GIFU「TWILIGHT MAGIC」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "18:05",
+  end: undefined,
+  region: "ラジオ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_FM GIFU「TWILIGHT MAGIC」.jpg",
+      ref: "https://radiko.jp/r_seasons/3278",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM GIFU「TWILIGHT MAGIC」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943232511188037764",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM GIFU「TWILIGHT MAGIC」_2.jpg",
+      ref: "https://x.com/fm_gifu_tm/status/1943239091665215657",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  updatedAt: "2025-07-07",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  番組放送枠 17:00 - 19:00
+
+  18:05 ごろ出演予定
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMGIFU&t=20250710180830)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20250710170000)
+  - [番組 X 報告ポスト](https://x.com/fm_gifu_tm/status/1943239091665215657)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232511188037764)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
+`;

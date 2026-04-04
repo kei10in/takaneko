@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NEO KASSEN 2024@渋谷",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-15",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-08-15_NEO KASSEN 2024.jpg",
+      ref: "https://x.com/NEOJAPONISMinfo/status/1823673037109256532",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: わたし色に染まれ衣装",
+      "初恋のひと。",
+      "乙女どもよ。",
+      "恋を知った世界",
+      "MC",
+      "革命の女王",
+      "LOVE ANTHEM",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1823985781591171421",
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2221)
+`;

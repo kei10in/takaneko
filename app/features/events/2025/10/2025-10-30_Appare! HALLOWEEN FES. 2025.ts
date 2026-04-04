@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Appare! HALLOWEEN FES. 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-30",
+  open: "09:30",
+  start: "10:00",
+  end: undefined,
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-30_Appare! HALLOWEEN FES. 2025.jpg",
+      ref: "https://x.com/official_appare/status/1978053193679687822",
+    },
+    {
+      path: "/events/2025/2025-10-30_Appare! HALLOWEEN FES. 2025_タイムテーブル.jpg",
+      ref: "https://x.com/official_appare/status/1978053193679687822",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-10-30_Appare! HALLOWEEN FES. 2025_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1983835023037092343",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/apparehalloweenfes2025",
+  streamings: undefined,
+  goods: {
+    time: ["18:55", "20:05"],
+    lineup: ["ミニフォトカード「たかねこハロウィン2025」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1983557208643363146",
+  },
+  acts: {
+    start: "18:15",
+    end: "18:40",
+    setlist: [
+      "衣装:僕は君になれない衣装", // + 犬耳
+      "可愛くてごめん",
+      "推しの魔法",
+      "ヒロインは平均以下。",
+      "MC",
+      "僕は君になれない",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1983844328490594416",
+  },
+  updatedAt: "2025-10-30",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1983864082567721382)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1983835023037092343)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1983557208643363146)
+  - [タイムテーブル告知 - Appare! X](https://x.com/official_appare/status/1978053193679687822)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1972149270015857019)
+`;

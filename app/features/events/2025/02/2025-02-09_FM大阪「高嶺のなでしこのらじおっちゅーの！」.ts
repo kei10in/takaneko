@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「高嶺のなでしこのらじおっちゅーの！」",
+  category: "RADIO",
+  date: "2025-02-09",
+  start: "21:30",
+  end: "22:00",
+  region: "ラジオ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-02-09_FM大阪「高嶺のなでしこのらじおっちゅーの！」.jpg",
+      ref: "https://x.com/fmosaka851/status/1888540806157390248",
+    },
+    {
+      path: "/events/2025/2025-02-09_FM大阪「高嶺のなでしこのらじおっちゅーの！」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1888551060471779433",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/fmosaka851/status/1888540806157390248",
+  },
+  updatedAt: "2025-02-16",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250209213000)
+
+  公開収録前編
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1888551060471779433)
+  - [FM 大阪 X 告知](https://x.com/fmosaka851/status/1888540806157390248)
+  - [FM 大阪 X 放送時間変更のお知らせ](https://x.com/fmosaka851/status/1885636714464481650)
+  - [Radiko](https://radiko.jp/share?sid=FMO&t=20250209213000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+`;

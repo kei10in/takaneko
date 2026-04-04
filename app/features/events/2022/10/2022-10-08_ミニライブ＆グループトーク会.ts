@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ミニライブ＆グループトーク会",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2022-10-08",
+  region: "大阪",
+  location: "タワーレコードNU茶屋町店",
+  present: ["高嶺のなでしこ"],
+  absent: ["日向端ひな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "誇り高きアイドル",
+      "アンチファン",
+      "MC",
+      "ユメムスビ",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1578682063292506112",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+  2022年9月19日に開催予定だった「ミニライブ＆グループトーク会」が、台風の影響により10月8日に延期されました。
+
+  https://takanenonadeshiko.jp/?p=449
+
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=492)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
+  - [欠席告知](https://takanenonadeshiko.jp/?p=498)
+`;

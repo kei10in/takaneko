@@ -1,0 +1,31 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@タワーレコード錦糸町パルコ店",
+  category: "EVENT",
+  date: "2024-02-11",
+  region: "東京",
+  location: "タワーレコード錦糸町パルコ店",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  一日店長ご挨拶会
+
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1769)
+`;

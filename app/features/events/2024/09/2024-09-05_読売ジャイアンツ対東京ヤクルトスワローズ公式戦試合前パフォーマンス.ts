@@ -1,0 +1,40 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-09-05",
+  location: "長良川球場",
+  region: "岐阜",
+  images: [
+    {
+      path: "/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス.webp",
+      ref: "2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス.webp",
+    },
+  ],
+  link: {
+    text: "読売ジャイアンツ対東京ヤクルトスワローズ公式戦",
+    url: "https://www.giants.jp/column/2024games/2024gifu/",
+  },
+  acts: {
+    setlist: ["衣装:読売ジャイアンツ ユニフォーム", "可愛くてごめん", "MC", "モテチェン！"],
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## 開催情報
+
+  高嶺のなでしこタオルが販売されています。
+  タオルの詳細については[こちら](https://www.giants.jp/news/24398/)。
+
+  [![タオル](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1829436442592121198)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/読売ジャイアンツ対東京ヤクルトスワローズ公式/)
+  - [ジャイアンツ ニュース](https://www.giants.jp/news/24398/)
+  - [岐阜公式戦 (9/5)](https://www.giants.jp/column/2024games/2024gifu/)
+`;

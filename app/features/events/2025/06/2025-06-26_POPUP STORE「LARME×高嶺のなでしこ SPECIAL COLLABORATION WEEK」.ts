@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "POPUP STORE「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」",
+  category: "OTHER",
+  date: "2025-06-26",
+  open: undefined,
+  start: "11:00",
+  end: "20:00",
+  region: "東京",
+  location: "マーチエキュート神田万世橋内「万世橋チューブ」",
+  present: [],
+  images: [
+    {
+      path: "/events/2025/2025-06-25_POPUP STORE「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」.jpg",
+      ref: "https://x.com/takanenofficial/status/1935926083544924626",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3898",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-26",
+};
+
+export const content = /* md */ `
+  ## フォトパネル展示
+
+  - 6月25日 (水) 11:00 〜 20:00
+  - 6月26日 (木) 11:00 〜 20:00
+  - 6月27日 (金) 11:00 〜 18:00
+  - 6月28日 (土) イベントのため終日展示なし
+  - 6月29日 (日) 11:00 〜 15:00
+
+  ## POP-UP SHOP
+
+  - 6月25日 (水) 11:00 〜 20:00
+  - 6月26日 (木) 11:00 〜 20:00
+  - 6月27日 (金) 11:00 〜 18:00
+  - 6月28日 (土) 11:00 〜 20:00
+  - 6月29日 (日) 11:00 〜 20:00
+
+  ## リンク
+
+  - [公式 X 案内](https://x.com/takanenofficial/status/1938075307392782752)
+  - [公式 X キャンペーン告知](https://x.com/takanenofficial/status/1937015259081937235)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3898)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1935926083544924626)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
+`;

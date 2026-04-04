@@ -1,0 +1,24 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "あざとくて何が悪いの？",
+  category: "TV",
+  date: "2023-12-14",
+  region: "テレビ",
+  present: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1590)
+`;

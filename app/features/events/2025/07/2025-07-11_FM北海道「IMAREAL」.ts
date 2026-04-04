@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM北海道「IMAREAL」",
+  category: "RADIO",
+  date: "2025-07-11",
+  start: "20:00",
+  end: undefined,
+  region: "ラジオ",
+  location: "",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-11_FM北海道「IMAREAL」.png",
+      ref: "https://www.air-g.co.jp/ima/",
+    },
+    {
+      path: "/events/2025/2025-07-11_FM北海道「IMAREAL」_2.jpg",
+      ref: "https://x.com/airg_ima/status/1943285940514099715",
+    },
+  ],
+  link: {
+    text: "IMAREAL｜AIR-G' FM北海道 80.4",
+    url: "https://www.air-g.co.jp/ima/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  番組放送枠 20:00 - 21:00
+
+  インタビュー出演
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=AIR-G&t=20250711202015)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=AIR-G&t=20250711200000)
+  - [番組 X 前日告知](https://x.com/airg_ima/status/1943285940514099715)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [番組 X 告知](https://x.com/airg_ima/status/1941119870432944496)
+`;

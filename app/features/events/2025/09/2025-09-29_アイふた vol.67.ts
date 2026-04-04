@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アイふた vol.67",
+  category: "OTHER",
+  date: "2025-09-29",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "東京",
+  location: "LOFT9 Shibuya",
+  present: ["城月菜央"],
+  images: [
+    {
+      path: "/events/2025/2025-09-29_アイふた vol.67.jpg",
+      ref: "https://x.com/l9_idol/status/1965341036668240345",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://t.livepocket.jp/e/o1b56",
+  streamings: {
+    text: "ツイキャスプレミア",
+    url: "https://premier.twitcasting.tv/loft9shibuya/shopcart/394904",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  updatedAt: "2025-10-01",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1972285168862863582)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1965355802509869130)
+  - [アイふた X 告知](https://x.com/l9_idol/status/1965341036668240345)
+`;

@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "“EYEがむぎゅっと”フェス",
+  title: "Zoff presents “EYEがむぎゅっと”フェス",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-12-28",
+  open: "13:30",
+  start: "14:30",
+  end: "15:30",
+  region: "東京",
+  location: "池袋サンシャインシティ噴水広場",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-12-28_EYEがむぎゅっとフェス.jpg",
+      ref: "https://x.com/Zoff_INFO/status/1862078671617659256",
+    },
+    {
+      path: "/events/2024/2024-12-28_EYEがむぎゅっとフェス_スケジュール.jpg",
+      ref: "https://x.com/Zoff_INFO/status/1862421244160659552",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://www.zoff.co.jp/shop/t/t1976/",
+  },
+  ticket: "https://www.zoff.co.jp/shop/t/t1982/",
+  streamings: undefined,
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "MC",
+      "I’M YOUR IDOL",
+      "MC",
+      "可愛くてごめん",
+      "MC",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1872906024237322709",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862330713502363930)
+  - [Zoff X イベント告知](https://x.com/Zoff_INFO/status/1862078671617659256)
+  - [Zoff X 出演告知](https://x.com/Zoff_INFO/status/1862318120234537054)
+  - [Zoff X スケジュール告知](https://x.com/Zoff_INFO/status/1862421244160659552)
+`;

@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "歌舞伎町UP GATE↑↑2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-05-05",
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "TOKYU KABUKICHO TOWER",
+      setlist: [
+        "衣装:美しく生きろ衣装",
+        "可愛くてごめん",
+        "すきっちゅーの！",
+        "初恋のひと。",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1787026670685425722",
+    },
+    {
+      title: "Zepp Shinjuku",
+      setlist: [
+        "衣装:美しく生きろ衣装",
+        "革命の女王",
+        "決戦スピリット",
+        "MC",
+        "女の子は強い",
+        "ファンサ",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1787066601382277303",
+    },
+  ],
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1949)
+`;

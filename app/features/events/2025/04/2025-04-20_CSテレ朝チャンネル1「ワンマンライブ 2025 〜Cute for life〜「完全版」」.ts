@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CSテレ朝チャンネル1「ワンマンライブ 2025 〜Cute for life〜「完全版」」",
+  category: "TV",
+  date: "2025-04-20",
+  open: undefined,
+  start: "12:00",
+  end: undefined,
+  region: "テレビ",
+  location: "",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-04-20_ワンマンライブ 2025 〜Cute for life〜「完全版」.jpg",
+      ref: "https://x.com/tvasahi_cs/status/1902268809563845087",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tv-asahi.co.jp/ch/contents/variety/0765/",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-03-20",
+};
+
+export const content = /* md */ `
+  > 国立代々木競技場第二体育館でのワンマンライブに
+  >
+  > 公演当日のオフショットを加えた「完全版」！
+
+  ## リンク
+
+  - [CSテレ朝チャンネル X 告知](https://x.com/tvasahi_cs/status/1902268809563845087)
+`;

@@ -1,0 +1,93 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-02",
+  open: undefined,
+  start: undefined,
+  end: undefined,
+  region: "東京",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-01_TOKYO IDOL FESTIVAL 2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1909889143318188503",
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://official.idolfes.com/s/tif2025/",
+  },
+  ticket: "https://official.idolfes.com/s/tif2025/page/ticket",
+  streamings: undefined,
+  acts: [
+    {
+      title: "INFO CENTRE",
+      start: "14:05",
+      end: "14:35",
+      description: `
+        ぐんまちゃんアイドルフェスティバル特別企画
+        
+        💜日向端ひなが出演。
+        
+        無料配信: [SHOWROOM] / [ミクチャ]
+        
+        [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
+        [ミクチャ]: https://mixch.tv/u/18234529
+        
+        衣装: 2025 春衣装
+        `,
+    },
+    {
+      title: "浮島 STAGE",
+      start: "17:25",
+      end: "17:40",
+      description: "配信なし",
+      setlist: [
+        "衣装:「初恋のひと。」制服衣装",
+        "#超絶かわいい",
+        "推しの魔法",
+        "ヒロインは平均以下。",
+        "小悪魔だってかまわない！",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1951589791537267141",
+    },
+    {
+      title: "UP-T HOT STAGE",
+      start: "19:45",
+      end: "20:15",
+      description: `
+        有料配信: [TIF streaming] / [FOD]
+        
+        [TIF streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8471/
+        `,
+      setlist: [
+        "衣装:2025 夏衣装",
+        "初恋のひと。",
+        "可愛くてごめん",
+        "メランコリックハニー",
+        "MC",
+        "美しく生きろ",
+        "決戦スピリット",
+        "ファンサ",
+        "初恋のこたえ。",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1951623946316718396",
+    },
+  ],
+  updatedAt: "2025-08-02",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [ダイジェスト](https://x.com/takanenofficial/status/1951570661287313700)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1951278102664884319)
+  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
+  - [ぐんまちゃんアイドルフェスティバル X 告知](https://x.com/gunmachan_GIF/status/1948654814260297859)
+`;

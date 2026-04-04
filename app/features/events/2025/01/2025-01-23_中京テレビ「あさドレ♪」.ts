@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "中京テレビ「あさドレ♪」",
+  category: "TV",
+  status: "CANCELED",
+  date: "2025-01-23",
+  start: "05:50",
+  region: "テレビ",
+  // image: {
+  //   path: "/events/2025/",
+  //   ref: "",
+  // },
+  link: {
+    text: "番組サイト",
+    url: "https://ctv.co.jp/asadore/",
+  },
+  updatedAt: "2025-01-20",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - 放送局: 中京テレビ
+  - 放送時間: 05:50 〜
+
+  『身じたく天気』コーナーのリポーターを担当
+
+  ## リンク
+
+  - [公式 X 予定変更告知](https://x.com/takanenofficial/status/1881255367587557607)
+  - [番組 X 予定変更告知](https://x.com/asadore_CTV/status/1881250331889402263)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1878307779473297438)
+  - [番組サイト](https://ctv.co.jp/asadore/)
+  - [TVer](https://tver.jp/series/srehapgls0)
+`;

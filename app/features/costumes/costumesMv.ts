@@ -38,7 +38,7 @@ export const ライフクエスト部屋着衣装 = {
 
 export const 初恋のこたえ浴衣衣装 = {
   kind: "mv",
-  name: "「初恋のこたえ」浴衣衣装",
+  name: "「初恋のこたえ。」浴衣衣装",
   slug: "初恋のこたえ浴衣衣装",
 } satisfies MvCostume;
 
@@ -50,13 +50,13 @@ export const アイドル衣装白衣装 = {
 
 export const メランコリックハニーMV衣装 = {
   kind: "mv",
-  name: "「メランコリックハニー」MV衣装",
+  name: "「メランコリックハニー」MV 衣装",
   slug: "メランコリックハニーMV衣装",
 } satisfies MvCostume;
 
 export const CuteForLife私服衣装 = {
   kind: "mv",
-  name: "「Cute For Life」私服衣装",
+  name: "「Cute for life」私服衣装",
   slug: "CuteForLife私服衣装",
 } satisfies MvCostume;
 
@@ -84,10 +84,16 @@ export const ImYourIdolMV衣装 = {
   slug: "IM YOUR IDOL MV衣装",
 } satisfies MvCostume;
 
-export const アドレナリンゲームMV衣装 = {
+export const アドレナリンゲーム白黒衣装 = {
   kind: "mv",
-  name: "「アドレナリンゲーム」MV 衣装",
-  slug: "アドレナリンゲームMV衣装",
+  name: "「アドレナリンゲーム」白黒衣装",
+  slug: "アドレナリンゲーム白黒衣装",
+} satisfies MvCostume;
+
+export const アドレナリンゲームジャージ = {
+  kind: "mv",
+  name: "「アドレナリンゲーム」ジャージ",
+  slug: "アドレナリンゲームジャージ",
 } satisfies MvCostume;
 
 export const LoveAnthemMV衣装 = {
@@ -108,10 +114,10 @@ export const 私より好きでいてMV衣装 = {
   slug: "私より好きでいてMV衣装",
 } satisfies MvCostume;
 
-export const メイド至上主義MV衣装 = {
+export const メイド至上主義衣装 = {
   kind: "mv",
-  name: "「メイド至上☆主義」MV衣装",
-  slug: "メイド至上主義MV衣装",
+  name: "「メイド☆至上主義」衣装",
+  slug: "メイド至上主義衣装",
 } satisfies MvCostume;
 
 export const 推しの魔法MV衣装 = {
@@ -225,11 +231,12 @@ export const AllMvCostumes: MvCostume[] = [
   東京サニーパーティーパジャマ衣装,
   小悪魔だってかまわない衣装,
   ImYourIdolMV衣装,
-  アドレナリンゲームMV衣装,
+  アドレナリンゲーム白黒衣装,
+  アドレナリンゲームジャージ,
   LoveAnthemMV衣装,
   モテチェンMV衣装,
   私より好きでいてMV衣装,
-  メイド至上主義MV衣装,
+  メイド至上主義衣装,
   推しの魔法MV衣装,
   私は怪物MV衣装,
   可愛いっていわれたいMV衣装,

@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! WHITEDAY 〜渋谷サーキット〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-03-04",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 僕は君になれない衣装",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "すきっちゅーの！",
+      "MC",
+      "月曜日の憂鬱",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1764588670466830814",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1720)
+`;

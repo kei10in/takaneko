@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "可憐なアイボリー 1st Live Tour 〜青春リベンジ！〜 東京公演",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-06-03",
+  region: "東京",
+  location: "品川ステラボール",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "女の子は強い",
+      "可愛くてごめん (可憐なアイボリー コラボver.)",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1664948209595351040",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=1016)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1044)
+`;

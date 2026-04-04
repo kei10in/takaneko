@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NAMBALiFE! vol.2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-23",
+  region: "大阪",
+  location: "Zepp NAMBA",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "初恋のひと。",
+      "恋を知った世界",
+      "MC",
+      "男の子の目的は何？",
+      "#超絶かわいい",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1749702759857950976",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1608)
+`;

@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "うるトラすフェスタ〜桜満開!春SP〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-04-12",
+  region: "東京",
+  location: "Zepp DiverCity",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "推しの魔法",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1778744341525340582",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1946)
+`;

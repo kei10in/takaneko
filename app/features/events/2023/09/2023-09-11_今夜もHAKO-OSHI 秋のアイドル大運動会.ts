@@ -1,0 +1,25 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "今夜もHAKO-OSHI 秋のアイドル大運動会",
+  category: "TV",
+  date: "2023-09-11",
+  region: "テレビ",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1347)
+`;

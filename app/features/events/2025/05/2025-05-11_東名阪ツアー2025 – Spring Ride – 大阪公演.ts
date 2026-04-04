@@ -1,0 +1,78 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "東名阪ツアー2025 – Spring Ride – 大阪公演",
+  title: "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 大阪公演",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2025-05-11",
+  open: "17:00",
+  start: "18:00",
+  end: undefined,
+  region: "大阪",
+  location: "NHK大阪ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-05-06_東名阪ツアー2025 – Spring Ride –.jpg",
+      ref: "https://x.com/takanenofficial/status/1921150724177588230",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/takanenonadeshiko/",
+  streamings: undefined,
+  acts: {
+    setlist: [
+      "影ナレ: 涼海すう、橋本桃呼",
+      "衣装: 全国お招きツアー衣装",
+      "僕は君になれない",
+      "恋を知った世界",
+      "病名恋ワズライ",
+      "センパイ。",
+      "月曜日の憂鬱",
+      "MC",
+      "美しく生きろ",
+      "革命の女王",
+      "アドレナリンゲーム",
+      "決戦スピリット",
+      "幕間:メンバーからのメッセージ",
+      "衣装: アイドル衣装衣装",
+      "アイドル衣装",
+      "乙女どもよ。",
+      "女の子は強い",
+      "MC",
+      "メランコリックハニー",
+      "すきっちゅーの！",
+      "MC:橋本桃呼煽り",
+      "Cute for life",
+      "小悪魔だってかまわない！",
+      "ヒロインは平均以下。",
+      "可愛くてごめん",
+      "ファンサ",
+      "アンコール",
+      "衣装:T シャツ (Spring Ride ver.)",
+      "初恋のひと。",
+      "MC:告知、記念撮影、TikTok 撮影",
+      "I’M YOUR IDOL",
+      "MC",
+    ],
+    links: [
+      {
+        text: "https://x.com/_MARIC/status/1922668247398158340",
+        url: "https://x.com/_MARIC/status/1922668247398158340",
+      },
+    ],
+  },
+  updatedAt: "2025-05-11",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1921173372337353113)
+  - [公式ニュース 開催告知](https://takanenonadeshiko.jp/?p=3375)
+  - [公式 X 開催告知](https://x.com/takanenofficial/status/1890357852654432475)
+`;

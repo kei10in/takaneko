@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-01-22",
+  region: "東京",
+  location: "KeyStudio",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "可愛くてごめん",
+      "女の子は強い",
+      "MC",
+      "アンチファン",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1617045051473039360",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=656)
+`;

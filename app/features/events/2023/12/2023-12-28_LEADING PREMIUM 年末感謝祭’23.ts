@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LEADING PREMIUM 年末感謝祭’23",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-12-28",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: ["星谷美来"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "Overture",
+      "革命の女王",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "すきっちゅーの！",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+      "MC",
+    ],
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [星谷美来のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1643)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1564)
+`;

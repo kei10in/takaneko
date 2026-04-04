@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL SQUARE NEXT 9/20 夜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-09-20",
+  region: "東京",
+  location: "有楽町オルタナティブシアター",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "誇り高きアイドル",
+      "アンチファン",
+      "MC",
+      "乙女どもよ。",
+      "ユメムスビ",
+      "MC",
+      "アンチファン",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1572182801944023043",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=442)
+`;

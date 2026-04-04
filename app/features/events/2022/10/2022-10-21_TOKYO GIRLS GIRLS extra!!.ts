@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO GIRLS GIRLS extra!!",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-10-21",
+  region: "東京",
+  location: "新宿ReNY",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "女の子は強い",
+      "MC",
+      "ユメムスビ",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1583411423417245698",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1576166294373531648)
+  - [livepocket](https://t.livepocket.jp/e/tgg_1021)
+`;

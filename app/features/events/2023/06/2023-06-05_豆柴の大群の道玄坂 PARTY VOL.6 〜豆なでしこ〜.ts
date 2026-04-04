@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-06-05",
+  region: "東京",
+  location: "Spotify O-WEST",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "乙女どもよ。",
+      "MC",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "ユメムスビ",
+      "MC",
+      "#超絶かわいい",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1665705022603001857",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=1016)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1001)
+`;

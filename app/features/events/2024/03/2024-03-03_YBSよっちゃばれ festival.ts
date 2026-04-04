@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YBSよっちゃばれ festival",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-03-03",
+  region: "山梨",
+  location: "YCC県民文化ホール 大ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 美しく生きろ衣装",
+      "17歳",
+      "男の子の目的は何？",
+      "ヒロインは平均以下。",
+      "可愛くてごめん",
+      "MC",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1764213605787119902",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1696)
+`;

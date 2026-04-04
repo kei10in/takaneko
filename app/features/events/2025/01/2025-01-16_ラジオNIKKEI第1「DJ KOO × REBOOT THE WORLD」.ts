@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI第1「DJ KOO × REBOOT THE WORLD」",
+  category: "RADIO",
+  date: "2025-01-16",
+  start: "22:30",
+  end: "23:00",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2025/2025-01-11_ラジオ関西「DJ KOO × REBOOT THE WORLD」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1878003927897330098",
+    },
+    {
+      path: "/events/2025/2025-01-11_ラジオ関西「DJ KOO × REBOOT THE WORLD」_2.jpg",
+      ref: "https://x.com/DjkooReboot/status/1877984286302736858",
+    },
+  ],
+  link: {
+    text: "番組 X 告知",
+    url: "https://x.com/DjkooReboot/status/1877984286302736858",
+  },
+  present: ["涼海すう", "城月菜央"],
+  updatedAt: "2025-01-12",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  「DJKOO REBOOT THE WORLD」内「エイアイカ・千聖 の教えて！ちぃとーく」に出演
+
+  - [radiko 放送回](https://radiko.jp/share?sid=RN1&t=20250116223000)
+  - [radiko 出演コーナー開始位置](https://radiko.jp/share?sid=RN1&t=20250116224825)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1878003927897330098)
+  - [番組 X 告知](https://x.com/DjkooReboot/status/1877984286302736858)
+  - [番組 HP](https://djkoo-rtw.com/)
+  - [radiko](https://radiko.jp/share?sid=RN1&t=20250116223000)
+`;

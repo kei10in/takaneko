@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FMノースウェーブ「RADIO GROOVE」",
+  category: "RADIO",
+  date: "2024-12-10",
+  start: "19:30",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-10_FMノースウェーブ「RADIO GROOVE」.jpg",
+      ref: "https://x.com/RadioGroove825/status/1864641467970670716",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.fmnorth.co.jp/radiogroove/",
+  },
+  present: ["東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-12-11",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  FMノースウェーブ 19:00 〜
+
+  19:30 〜 コメント出演
+
+  [radiko](https://radiko.jp/#NORTHWAVE)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866392450753073599)
+  - [番組 X 告知](https://x.com/RadioGroove825/status/1864641467970670716)
+  - [radiko](https://radiko.jp/#NORTHWAVE)
+`;

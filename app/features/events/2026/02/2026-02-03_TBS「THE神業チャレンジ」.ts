@@ -1,0 +1,76 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TBS「THE神業チャレンジ」",
+  category: "TV",
+  date: "2026-02-03",
+  start: "19:00",
+  end: "20:00",
+  region: "テレビ",
+  present: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "日向端ひな", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-02-03_TBS「THE神業チャレンジ」.jpg",
+      ref: "https://x.com/takanenofficial/status/2018648161863229492",
+    },
+    {
+      path: "/events/2026/2026-02-03_TBS「THE神業チャレンジ」_1.jpg",
+      ref: "https://x.com/saigenkamiwaza/status/2018631548753617144",
+    },
+    {
+      path: "/events/2026/2026-02-03_TBS「THE神業チャレンジ」_2.jpg",
+      ref: "https://x.com/saigenkamiwaza/status/2018631548753617144",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.tbs.co.jp/kamiwazachallenge_tbs/",
+  },
+  updatedAt: "2026-02-04",
+};
+
+export const content = /* md */ `
+  ## 放送内容
+
+  > ▼「神業クレーンゲーム」初挑戦の足立梨花＆涼海すうが神テク連発！さらにファイナル常連・ジョニー志村に衝撃展開！ついに100万円獲得なるか！？
+  >
+  > ▼「神業メイク」新企画！神業メイクを見破れたら賞金10万円！特殊メイクで別人級に変身し商店街に潜むのは…まさかのあの芸能人！？NEWS増田も大混乱！
+
+  ### 出演者
+
+  【MC】
+
+  - チョコレートプラネット（長田庄平、松尾駿）
+
+  【ゲスト】
+
+  - 井森美幸
+  - 佐藤栞里
+  - 陣内智則
+  - ギャル曽根
+  - 齋藤飛鳥
+  - 宮世琉弥
+  - 佐野勇斗（M!LK）
+  - 塩﨑太智（M!LK）
+
+  《神業クレーンゲーム》
+
+  - 足立梨花
+  - ジョニー志村
+  - 涼海すう（高嶺のなでしこ）
+
+  《神業メイク》
+
+  - 松尾駿（チョコレートプラネット）
+  - 長田庄平（チョコレートプラネット）
+  - 井森美幸
+  - 佐藤栞里
+  - 増田貴久（NEWS）
+
+  ## リンク
+
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2018648161863229492)
+  - [放送中告知 - THE神業チャレンジ X](https://x.com/saigenkamiwaza/status/2018631548753617144)
+  - [出演情報 - 公式 X](https://x.com/takanenofficial/status/2016126578204541345)
+  - [次回予告 - THE神業チャレンジ X](https://x.com/saigenkamiwaza/status/2016103901385097696)
+`;

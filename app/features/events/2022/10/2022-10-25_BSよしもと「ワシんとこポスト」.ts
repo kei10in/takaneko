@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "BSよしもと「ワシんとこポスト」",
+  category: "TV",
+  liveType: undefined,
+  date: "2022-10-25",
+  open: undefined,
+  start: "19:00",
+  end: "21:00",
+  region: "テレビ",
+  location: "",
+  present: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1583796233977532418)
+`;

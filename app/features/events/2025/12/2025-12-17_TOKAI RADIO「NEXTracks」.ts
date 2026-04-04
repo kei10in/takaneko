@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKAI RADIO「NEXTracks」",
+  category: "RADIO",
+  date: "2025-12-17",
+  start: "21:00",
+  end: "21:45",
+  region: "ラジオ",
+  present: ["日向端ひな", "星谷美来"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.tokairadio.co.jp/nextracks/",
+  },
+  updatedAt: "2025-12-17",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
+  出演時間: 21:18頃 〜
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251217211820)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251217210000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2001178043323441490)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2001185596304449540)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+`;

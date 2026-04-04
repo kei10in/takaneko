@@ -1,0 +1,99 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「Live Tour - Bouquet of 9 Flowers -」開催記念イベント@東京",
+  title:
+    "「Live Tour - Bouquet of 9 Flowers -」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』@東京",
+  category: "EVENT",
+  date: "2026-03-08",
+  open: undefined,
+  start: "11:00",
+  end: "18:20",
+  region: "東京",
+  location: "TOC有明コンベンションホール EASTホール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "イベント詳細",
+    url: "https://takanenonadeshiko.jp/?p=5013",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "1 部 個別 2 ショット撮影会",
+        start: "11:00",
+        end: "12:00",
+        lastEntry: "11:40",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "2 部 個別 2 ショット撮影会",
+        start: "12:10",
+        end: "13:10",
+        lastEntry: "12:50",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "3 部 個別 TikTok 撮影会",
+        start: "13:40",
+        end: "14:40",
+        lastEntry: "14:20",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "4 部 個別 TikTok 撮影会",
+        start: "14:50",
+        end: "15:50",
+        lastEntry: "15:30",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "5 部 個別サイン会",
+        start: "16:10",
+        end: "17:10",
+        lastEntry: "16:50",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "6 部 個別サイン会",
+        start: "17:20",
+        end: "18:20",
+        lastEntry: "18:00",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-09",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [完売御礼 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/2030556262409330829)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2030303038687342839)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
+  - [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
+`;

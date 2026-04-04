@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-04",
+  region: "東京",
+  location: "お台場・青海周辺エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "TIF 2024",
+    url: "https://official.idolfes.com/s/tif2024/",
+  },
+  acts: {
+    title: "SKY STAGE",
+    setlist: ["衣装:わたし色に染まれ衣装", "美しく生きろ", "月曜日の憂鬱", "ファンサ", "MC"],
+    url: "https://x.com/Mikuru_hositani/status/1820056311503196181",
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2159)
+`;

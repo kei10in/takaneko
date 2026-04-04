@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SHOWROOM「たかねこ肉肉祭」",
+  title: "SHOWROOM 10周年記念特番 たかねこ肉肉祭",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2023-11-24",
+  open: undefined,
+  start: "20:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["城月菜央", "橋本桃呼", "星谷美来", "松本ももな", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2023/2023-11-24_SHOWROOM「たかねこ肉肉祭」.jpg",
+      ref: "https://x.com/takanenofficial/status/1727669637352190021",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1727669637352190021)
+`;

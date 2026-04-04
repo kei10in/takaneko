@@ -1,0 +1,31 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CBCラジオ「あんななのなななっ！」",
+  category: "RADIO",
+  date: "2024-12-22",
+  start: "13:00",
+  end: "14:50",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-22_CBCラジオ「あんななのなななっ！」.jpg",
+      ref: "https://x.com/nanana1053/status/1868198382462026157",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://hicbc.com/radio/nanana/",
+  },
+  present: ["葉月紗蘭", "東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-12-16",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [radiko 放送回](https://radiko.jp/share?sid=CBC&t=20241222130000)
+  - [番組 X 次回予告](https://x.com/nanana1053/status/1868198382462026157)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1868430846610604124)
+  - [radiko](https://radiko.jp/#CBC)
+`;

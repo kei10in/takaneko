@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Fes. -day 2-",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-05-17",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "革命の女王",
+      "#超絶かわいい",
+      "MC",
+      "女の子は強い",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=1016)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=925)
+`;

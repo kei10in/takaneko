@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SHOWROOM「CanCam Room」",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2024-03-28",
+  open: undefined,
+  start: "20:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["城月菜央"],
+  images: [
+    {
+      path: "/events/2024/2024-03-28_SHOWROOM「CanCam Room」.jpg",
+      ref: "https://x.com/takanenofficial/status/1772240937919381782",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  CanCam モデルの 菜波 さんが MC を務める CanCam Room に 城月菜央 が出演。
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1772240937919381782)
+`;

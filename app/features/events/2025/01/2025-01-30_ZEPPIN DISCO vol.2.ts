@@ -1,0 +1,68 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ZEPPIN DISCO vol.2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-01-30",
+  open: "16:50",
+  start: "17:30",
+  region: "神奈川",
+  location: "KT Zepp Yokohama",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-01-30_ZEPPIN DISCO vol.2.jpg",
+      ref: "https://x.com/takanenofficial/status/1877656632592658800",
+    },
+    {
+      path: "/events/2025/2025-01-30_ZEPPIN DISCO vol.2_2.jpg",
+      ref: "https://x.com/ZEPPIN_DISCO/status/1877656633293312288",
+    },
+    {
+      path: "/events/2025/2025-01-30_ZEPPIN DISCO vol.2_タイムテーブル.jpg",
+      ref: "https://x.com/ZEPPIN_DISCO/status/1882405540946735339",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-01-30_ZEPPIN DISCO vol.2_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1884916614698791313",
+    },
+  ],
+  link: {
+    text: "ZEPPIN DISCO 公式 X",
+    url: "https://x.com/zeppin_disco",
+  },
+  ticket: "https://tiget.net/events/364950",
+  streamings: undefined,
+  goods: {
+    time: ["20:00", "21:30"],
+    lineup: ["ミニフォトカードセット「高嶺のなでしこ2024衣装」ver."],
+    url: "https://x.com/takanenofficial/status/1884564651075346835",
+  },
+  acts: {
+    start: "21:30",
+    end: "21:55",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "可愛くてごめん",
+      "センパイ。",
+      "MC",
+      "アドレナリンゲーム",
+      "決戦スピリット",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1884956477808648380",
+  },
+  updatedAt: "2025-02-02",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1884976360466374965)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1884916614698791313)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1884564651075346835)
+  - [ZEPPIN DISCO X タイムテーブル告知](https://x.com/ZEPPIN_DISCO/status/1882405540946735339)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1877656632592658800)
+`;

@@ -1,0 +1,28 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ミニライブ＆グループトーク会",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2022-09-17",
+  region: "大阪",
+  location: "タワーレコード梅田NU茶屋町店",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:アンチファン衣装", "アンチファン", "MC", "ユメムスビ", "ファンサ"],
+    url: "https://x.com/Mikuru_hositani/status/1571062386270015489",
+  },
+  updatedAt: "2024-11-03",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=437)
+`;

@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「高嶺のなでしこのらじおっちゅーの！」",
+  category: "RADIO",
+  date: "2024-12-07",
+  start: "19:00",
+  end: "19:30",
+  region: "ラジオ",
+  present: ["涼海すう", "東山恵里沙", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2024/2024-12-07_高嶺のなでしこのらじおっちゅーの！.jpg",
+      ref: "https://x.com/fmosaka851/status/1865306621414633758",
+    },
+    {
+      path: "/events/2024/2024-12-07_高嶺のなでしこのらじおっちゅーの！_2.jpg",
+      ref: "https://x.com/VictorE_osaka/status/1865351083796901951",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/fmosaka851/status/1865306621414633758",
+  },
+  updatedAt: "2024-12-07",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
+  - [radiko](https://radiko.jp/#FMO)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1865327892957470760)
+  - [FM 大阪 X 告知](https://x.com/fmosaka851/status/1865306621414633758)
+  - [radiko](https://radiko.jp/#FMO)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+`;

@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CBCラジオ「推シマシ」",
+  category: "RADIO",
+  date: "2025-12-04",
+  start: "22:00",
+  end: "24:00",
+  region: "ラジオ",
+  present: ["涼海すう", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-04_CBCラジオ「推シマシ」.png",
+      ref: "https://hicbc.com/radio/oshimashi/",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://hicbc.com/radio/oshimashi/",
+  },
+  updatedAt: "2025-12-04",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演。
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251204230000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251204220000)
+  - [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1995266594985959907)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1996557705830604839)
+`;

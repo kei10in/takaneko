@@ -1,0 +1,68 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "らん先生のといらんど",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-02-19",
+  open: "15:30",
+  start: "16:00",
+  end: undefined,
+  region: "東京",
+  location: "白金高輪 SELENE b2",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-02-19_らん先生のといらんど.jpg",
+      ref: "https://x.com/takanenofficial/status/2012104523574292757",
+    },
+    {
+      path: "/events/2026/2026-02-19_らん先生のといらんど_タイムテーブル.jpg",
+      ref: "https://x.com/ransensei_/status/2021175876574945572",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2026/2026-02-19_らん先生のといらんど_限定カード.jpg",
+      ref: "https://x.com/takanenofficial/status/2024326076558971212",
+    },
+    {
+      path: "/events/2026/2026-02-19_らん先生のといらんど_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2024433047224057889",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://l-tike.com/ransensei_toyland",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["らん先生のといらんど 限定カード / チェキ"],
+    url: "https://x.com/takanenofficial/status/2024326076558971212",
+  },
+  acts: {
+    start: "18:45",
+    end: "19:05",
+    setlist: [
+      "衣装: ピンク衣装",
+      "初恋のこたえ。",
+      "Cute for life",
+      "病名恋ワズライ",
+      "MC",
+      "推しの魔法",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2024448053076508748",
+  },
+  updatedAt: "2026-02-20",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2024433047224057889)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2024326076558971212)
+  - [タイムテーブル公開 - らん先生](https://x.com/ransensei_/status/2021175876574945572)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2012104523574292757)
+`;

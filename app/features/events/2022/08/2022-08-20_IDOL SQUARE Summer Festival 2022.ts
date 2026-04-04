@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL SQUARE Summer Festival 2022",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-08-20",
+  region: "東京",
+  location: "日比谷野外大音楽堂",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装: アンチファン衣装", "アンチファン", "誇り高きアイドル", "MC"],
+    url: "https://x.com/Mikuru_hositani/status/1560888817208283137",
+    links: [
+      {
+        text: "公式 Twitter",
+        url: "https://x.com/takanenofficial/status/1560922262961721344",
+      },
+    ],
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=353)
+`;

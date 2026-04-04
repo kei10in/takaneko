@@ -1,0 +1,71 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NEO KASSEN 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-13",
+  open: "11:00",
+  start: "11:45",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-13_NEO KASSEN 2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1915722458558288164",
+    },
+    {
+      path: "/events/2025/2025-08-13_NEO KASSEN 2025_タイムテーブル1.jpg",
+      ref: "https://x.com/NEOJAPONISMinfo/status/1949023971212755314",
+    },
+    {
+      path: "/events/2025/2025-08-13_NEO KASSEN 2025_タイムテーブル2.jpg",
+      ref: "https://x.com/NEOJAPONISMinfo/status/1949040439962853606",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://neojaponism.com/neokassen/2025",
+  },
+  ticket: "https://ticket.rakuten.co.jp/music/jpop/idle/RTLEJNK/",
+  streamings: {
+    text: "YouTube Live",
+    url: "https://www.youtube.com/watch?v=0I8w8k42Wv4",
+  },
+  goods: {
+    time: ["12:30", "13:30"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1955246879035527657",
+  },
+  acts: {
+    title: "KASSEN Spotify O-EAST",
+    start: "11:45",
+    end: "12:15",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "美しく生きろ",
+      "革命の女王",
+      "この世界は嘘でできている",
+      "MC",
+      "初恋のひと。",
+      "決戦スピリット",
+      "初恋のこたえ。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1955514208101208211",
+  },
+  updatedAt: "2025-08-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [ダイジェスト](https://x.com/takanenofficial/status/1955478903386149242)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1955246879035527657)
+  - [時間入りタイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949040439962853606)
+  - [タイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949023971212755314)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1915722458558288164)
+  - [イベントサイト](https://neojaponism.com/neokassen/2025)
+`;

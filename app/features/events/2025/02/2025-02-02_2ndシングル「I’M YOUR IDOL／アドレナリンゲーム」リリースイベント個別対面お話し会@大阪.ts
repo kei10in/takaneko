@@ -1,0 +1,125 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別対面お話し会@大阪",
+  title:
+    "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別対面お話し会 & スペシャル抽選会」@サンライズホールC",
+  category: "EVENT",
+  date: "2025-02-02",
+  open: "12:00",
+  start: "13:00",
+  end: "19:00",
+  region: "大阪",
+  location: "サンライズビル大阪 サンライズホールC",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-02-02_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=3232",
+    },
+    {
+      path: "/events/2025/2025-02-02_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント_スペシャル抽選会.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=3232",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3232",
+  },
+  ticket: "",
+  streamings: undefined,
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "1 部",
+        start: "13:00",
+        end: "14:00",
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          { label: "1 レーン", member: "松本ももな" },
+          { label: "2 レーン", member: "東山恵里沙" },
+          { label: "3 レーン", member: "星谷美来" },
+          { label: "4 レーン", member: "籾山ひめり" },
+          { label: "5 レーン", member: "橋本桃呼" },
+          { label: "6 レーン", member: "城月菜央" },
+          { label: "7 レーン", member: "葉月紗蘭" },
+        ],
+      },
+      {
+        title: "2 部",
+        start: "14:20",
+        end: "15:20",
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          { label: "1 レーン", member: "松本ももな" },
+          { label: "2 レーン", member: "葉月紗蘭" },
+          { label: "3 レーン", member: "東山恵里沙" },
+          { label: "4 レーン", member: "春野莉々" },
+          { label: "5 レーン", member: "日向端ひな" },
+          { label: "6 レーン", member: "涼海すう" },
+          { label: "7 レーン", member: "籾山ひめり" },
+        ],
+      },
+      {
+        title: "3 部",
+        start: "15:35",
+        end: "16:35",
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          { label: "1 レーン", member: "松本ももな" },
+          { label: "2 レーン", member: "城月菜央" },
+          { label: "3 レーン", member: "星谷美来" },
+          { label: "4 レーン", member: "籾山ひめり" },
+          { label: "5 レーン", member: "橋本桃呼" },
+          { label: "6 レーン", member: "日向端ひな" },
+          { label: "7 レーン", member: "春野莉々" },
+        ],
+      },
+      {
+        title: "4 部",
+        start: "17:15",
+        end: "18:15",
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          { label: "1 レーン", member: "松本ももな" },
+          { label: "2 レーン", member: "葉月紗蘭" },
+          { label: "3 レーン", member: "東山恵里沙" },
+          { label: "4 レーン", member: "春野莉々" },
+          { label: "5 レーン", member: "涼海すう" },
+          { label: "6 レーン", member: "城月菜央" },
+          { label: "7 レーン", member: "橋本桃呼" },
+        ],
+      },
+      {
+        title: "5 部",
+        start: "18:30",
+        end: "19:30",
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          { label: "1 レーン", member: "松本ももな" },
+          { label: "2 レーン", member: "涼海すう" },
+          { label: "3 レーン", member: "星谷美来" },
+          { label: "4 レーン", member: "籾山ひめり" },
+          { label: "5 レーン", member: "橋本桃呼" },
+          { label: "6 レーン", member: "日向端ひな" },
+          { label: "7 レーン", member: "城月菜央" },
+        ],
+      },
+    ],
+  },
+  updatedAt: "2026-04-02",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式ニュース - 春野莉々欠席](https://takanenonadeshiko.jp/?p=3338)
+  - [ビクターエンタテイメント ニュース - 春野莉々欠席](https://www.jvcmusic.co.jp/-/News/A028511/72.html)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1885697159242359068)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3232)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1879853617718714622)
+  - [ビクターオンラインストア イベント詳細](https://victor-store.jp/special/takaneko20250202_talk)
+  - [ビクターオンラインストア X 告知](https://x.com/vos_jn/status/1879851297874350141)
+`;

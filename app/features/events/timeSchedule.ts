@@ -1,4 +1,5 @@
 import { z } from "zod/v4";
+import { CostumeName } from "../costumes/costumeNames";
 
 export const MeetAndGreetLane = z.object({
   label: z.string().optional(),
@@ -43,9 +44,19 @@ export const MeetAndGreetSession = z.object({
   start: z.string(),
   // セッションの終了時間
   end: z.string(),
+  // セッションの最終受付時間
+  lastEntry: z.string().optional(),
   // セッションに参加するメンバーのリスト
   lanes: MeetAngGreetLanesList,
-  costume: z.string().optional(),
+  costume: z
+    .union([
+      CostumeName,
+      z.literal("私服"),
+      z.literal("メンバー私服"),
+      z.literal("メンバー私服 1"),
+      z.literal("メンバー私服 2"),
+    ])
+    .optional(),
 });
 
 export type MeetAndGreetSession = z.output<typeof MeetAndGreetSession>;

@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "長野県駒ケ根市 1 日警察署長",
+  description:
+    "2024年10月20日 (日) に、高嶺のなでしこ 春野莉々が長野県駒ケ根市の一日警察署長に就任します。",
+  category: "OTHER",
+  date: "2024-10-20",
+  location: "ベルシャイン駒ケ根店",
+  region: "長野",
+  present: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2024/2024-10-20_長野県駒ケ根市 1 日警察署長.jpg",
+      ref: "https://x.com/takanenofficial/status/1843486506775916680",
+    },
+  ],
+  link: {
+    text: "長野県警察 X 告知",
+    url: "https://x.com/police_nagano/status/1843864557573521546",
+  },
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  春野莉々 1日警察署長
+
+  - 詐欺防止活動: 11:00 〜 ベルシャイン駒ケ根店
+  - 駒ケ根市 交通安全 暴力追放市民のつどい: 13:30 開場、14:00 開演
+  - 対談「〜交通事故、詐欺額に遭わないいために〜」に出演
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843486506775916680)
+  - [長野県警察 X 告知](https://x.com/police_nagano/status/1843864557573521546)
+`;

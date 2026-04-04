@@ -1,0 +1,67 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "エンドレスサマー2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-26",
+  open: "10:30",
+  start: "11:00",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-26_エンドレスサマー2025.jpg",
+      ref: "https://x.com/official_appare/status/1942906880722112724",
+    },
+    {
+      path: "/events/2025/2025-08-26_エンドレスサマー2025_1.jpg",
+      ref: "https://x.com/official_appare/status/1942906880722112724",
+    },
+    {
+      path: "/events/2025/2025-08-26_エンドレスサマー2025_タイムテーブル.jpg",
+      ref: "https://x.com/official_appare/status/1957034772699742640",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント詳細ページ",
+    url: "https://appare-official.jp/contents/961274",
+  },
+  ticket: "https://ticketdive.com/event/endlessummer2025",
+  streamings: {
+    text: "ニコニコ生放送 (タイムシフトなし)",
+    url: "https://live.nicovideo.jp/watch/lv348521517",
+  },
+  goods: {
+    time: ["20:55", "21:55"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1959971643872125247",
+  },
+  acts: {
+    title: "花火ステージ Spotify O-EAST",
+    start: "19:45",
+    end: "20:10",
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "ヒロインは平均以下。",
+      "乙女どもよ。",
+      "初恋のこたえ。",
+      "MC",
+      "美しく生きろ",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1960315133919740062",
+  },
+  updatedAt: "2025-08-26",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1959971643872125247)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1956521315718017289)
+  - [イベント告知](https://x.com/official_appare/status/1942906880722112724)
+`;

@@ -1,0 +1,30 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HBCテレビ「音楽マシマシ」",
+  category: "TV",
+  date: "2025-07-28",
+  start: "23:59",
+  end: "24:29",
+  region: "テレビ",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-28_HBCラジオ「音楽マシマシ」.jpg",
+      ref: "https://x.com/mashi_hbc/status/1949764890526400973",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.hbc.co.jp/radio/mashimashi/",
+  },
+  updatedAt: "2025-07-27",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [TVer](https://tver.jp/series/srisv9t3ru)
+  - [番組 X 告知](https://x.com/mashi_hbc/status/1949764890526400973)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1949303856611184669)
+`;

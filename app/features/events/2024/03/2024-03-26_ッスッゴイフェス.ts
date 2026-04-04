@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ッスッゴイフェス",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-03-26",
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-03-26_ッスッゴイフェス_タイムテーブル.jpg",
+      ref: "https://x.com/ssuggoi_live/status/1771054215152247114",
+      tags: ["timetable"],
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 僕は君になれない衣装",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "MC",
+      "推しの魔法",
+      "すきっちゅーの！",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1772599322426703921",
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1897)
+`;

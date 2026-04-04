@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NATSUZOME2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-03-31",
+  region: "千葉",
+  location: "稲毛海浜公園野外音楽堂",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 全国お招きツアー衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "すきっちゅーの！",
+      "推しの魔法",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1774316444685406348",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1747)
+`;

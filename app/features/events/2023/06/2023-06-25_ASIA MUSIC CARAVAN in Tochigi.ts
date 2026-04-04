@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ASIA MUSIC CARAVAN in Tochigi",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-06-25",
+  region: "栃木",
+  location: "栃木県総合文化センター",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "男の子の目的は何？",
+      "ヒロインは平均以下。",
+      "MC",
+      "初恋のひと。",
+      "決戦スピリット",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1672913893356896260",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1054)
+`;

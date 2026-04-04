@@ -1,0 +1,61 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ニューイヤーだよ！六本木アイドルフェスティバル",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-01-04",
+  region: "東京",
+  location: "EX THEATER ROPPONGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル.jpg",
+      ref: "https://x.com/takanenofficial/status/1862466538764189861",
+    },
+    {
+      path: "/events/2025/2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル_タイムテーブル.jpg",
+      ref: "https://x.com/idolotakarakuji/status/1867737594592960607",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル_特典会.jpg",
+      ref: "https://x.com/idolotakarakuji/status/1870031385152368845",
+    },
+    {
+      path: "/events/2025/2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1875389767455838342",
+    },
+  ],
+  ticket: "https://ticket.tv-asahi.co.jp/ex/project/idolfes2025",
+  streamings: undefined,
+  goods: {
+    time: ["12:35"],
+    lineup: [
+      "ミニフォトカード「高嶺のなでしこ2024衣装」ver.",
+      "ミニフォトカード「晴れ着2025」ver.",
+    ],
+    url: "https://x.com/takanenofficial/status/1875147528779542599",
+  },
+  acts: {
+    start: "12:00",
+    end: "12:25",
+    setlist: [
+      "衣装: I’M YOUR IDOL 衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "I’M YOUR IDOL",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1875399246213775821",
+  },
+  updatedAt: "2024-01-08",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862466538764189861)
+`;

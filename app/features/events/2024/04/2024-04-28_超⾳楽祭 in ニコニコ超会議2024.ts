@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超⾳楽祭 in ニコニコ超会議2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-04-28",
+  region: "千葉",
+  location: "幕張メッセ ホール 9・10・11",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "可愛くてごめん",
+      "初恋のひと。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1784513457645392048",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1982)
+`;

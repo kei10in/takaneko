@@ -1,19 +1,19 @@
-import { meta as meta0 } from "~/features/events/2025/07/2025-07-10_CBCラジオ「推シマシ」.mdx";
-import { meta as meta1 } from "~/features/events/2025/07/2025-07-10_e-radio「キャッチ！」.mdx";
-import { meta as meta2 } from "~/features/events/2025/07/2025-07-10_FM FUKUOKA「Hyper Night Program GOW!!」.mdx";
-import { meta as meta3 } from "~/features/events/2025/07/2025-07-10_FM GIFU「TWILIGHT MAGIC」.mdx";
-import { meta as meta4 } from "~/features/events/2025/07/2025-07-10_FM三重「つながるジカン」.mdx";
-import { meta as meta5 } from "~/features/events/2025/07/2025-07-10_FM大阪「LOVE FLAP」.mdx";
-import { meta as meta6 } from "~/features/events/2025/07/2025-07-10_KBC九州朝日放送「PAO～N」.mdx";
-import { meta as meta7 } from "~/features/events/2025/07/2025-07-10_Kiss FM KOBE「Kiss Music Presenter」.mdx";
-import { meta as meta8 } from "~/features/events/2025/07/2025-07-10_LOVE FM「music × serendipity」.mdx";
-import { meta as meta9 } from "~/features/events/2025/07/2025-07-10_RKB毎日放送「さえのわっふる」.mdx";
-import { meta as meta10 } from "~/features/events/2025/07/2025-07-10_TOKAI RADIO「OH! MY CHANNEL!」.mdx";
-import { meta as meta11 } from "~/features/events/2025/07/2025-07-10_TOKYO FM「山崎怜奈の誰かに話したかったこと。」.mdx";
-import { meta as meta12 } from "~/features/events/2025/07/2025-07-10_ZIP-FM「Neue Musik」.mdx";
-import { meta as meta13 } from "~/features/events/2025/07/2025-07-11_CROSS FM「MISHMASH FRIDAY -金ズマ-」.mdx";
-import { meta as meta14 } from "~/features/events/2025/07/2025-07-11_FM AICHI「FRIDAY MAGIC」.mdx";
-import { meta as meta15 } from "~/features/events/2025/07/2025-07-11_FM北海道「IMAREAL」.mdx";
+import { meta as meta0 } from "~/features/events/2025/07/2025-07-10_CBCラジオ「推シマシ」";
+import { meta as meta1 } from "~/features/events/2025/07/2025-07-10_e-radio「キャッチ！」";
+import { meta as meta2 } from "~/features/events/2025/07/2025-07-10_FM FUKUOKA「Hyper Night Program GOW!!」";
+import { meta as meta3 } from "~/features/events/2025/07/2025-07-10_FM GIFU「TWILIGHT MAGIC」";
+import { meta as meta4 } from "~/features/events/2025/07/2025-07-10_FM三重「つながるジカン」";
+import { meta as meta5 } from "~/features/events/2025/07/2025-07-10_FM大阪「LOVE FLAP」";
+import { meta as meta6 } from "~/features/events/2025/07/2025-07-10_KBC九州朝日放送「PAO～N」";
+import { meta as meta7 } from "~/features/events/2025/07/2025-07-10_Kiss FM KOBE「Kiss Music Presenter」";
+import { meta as meta8 } from "~/features/events/2025/07/2025-07-10_LOVE FM「music × serendipity」";
+import { meta as meta9 } from "~/features/events/2025/07/2025-07-10_RKB毎日放送「さえのわっふる」";
+import { meta as meta10 } from "~/features/events/2025/07/2025-07-10_TOKAI RADIO「OH! MY CHANNEL!」";
+import { meta as meta11 } from "~/features/events/2025/07/2025-07-10_TOKYO FM「山崎怜奈の誰かに話したかったこと。」";
+import { meta as meta12 } from "~/features/events/2025/07/2025-07-10_ZIP-FM「Neue Musik」";
+import { meta as meta13 } from "~/features/events/2025/07/2025-07-11_CROSS FM「MISHMASH FRIDAY -金ズマ-」";
+import { meta as meta14 } from "~/features/events/2025/07/2025-07-11_FM AICHI「FRIDAY MAGIC」";
+import { meta as meta15 } from "~/features/events/2025/07/2025-07-11_FM北海道「IMAREAL」";
 import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 
 export const RadioAppearances: { meta: EventMeta; radiko: string }[] = [

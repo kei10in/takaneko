@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ガラフェス 日比谷野音 デリシャスサンデー",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-12-17",
+  region: "東京",
+  location: "日比谷野外大音楽堂",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "決戦スピリット",
+      "可愛くてごめん",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1736351568516280679",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1513)
+`;

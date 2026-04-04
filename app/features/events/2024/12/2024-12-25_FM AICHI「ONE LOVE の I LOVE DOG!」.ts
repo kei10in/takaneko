@@ -1,0 +1,28 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM AICHI「ONE LOVE の I LOVE DOG!」",
+  category: "RADIO",
+  date: "2024-12-25",
+  start: "17:27",
+  region: "ラジオ",
+  images: [],
+  link: {
+    text: "番組サイト",
+    url: "https://fma.co.jp/f/prg/dog/",
+  },
+  present: ["東山恵里沙", "星谷美来"],
+  updatedAt: "2024-12-23",
+};
+
+export const content = /* md */ `
+  ## 概要
+
+  コメント出演
+
+  ## リンク
+
+  - [radiko 放送回](https://radiko.jp/share?sid=FMAICHI&t=20241225170000)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1871416460872241233)
+  - [radiko](https://radiko.jp/#FMAICHI)
+`;

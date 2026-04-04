@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "関内デビル",
+  category: "TV",
+  date: "2024-12-04",
+  region: "テレビ",
+  present: ["城月菜央", "涼海すう", "葉月紗蘭"],
+  images: [
+    {
+      path: "/events/2024/2024-12-04_関内デビル放送.jpg",
+      ref: "https://x.com/tvk_kannaidevil/status/1864142584538615938",
+    },
+    {
+      path: "/events/2024/2024-12-04_関内デビル放送_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1865320346590536082",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tvk-yokohama.com/kannaidevil/",
+  },
+  updatedAt: "2024-12-05",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - 放送局: tvk
+  - 放送時間: 23:00 〜
+
+  毎週水曜日の番組内コーナー「たかねこクエスト」
+
+  ## リンク
+
+  - [公式 X TVer 告知](https://x.com/takanenofficial/status/1865320346590536082)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1864286027503829365)
+  - [番組 X 告知](https://x.com/tvk_kannaidevil/status/1864142584538615938)
+  - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+  - [TVer](https://tver.jp/series/srehapgls0)
+`;

@@ -1,0 +1,78 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LIVE AROUND 2025 – Spring Ride – in Shanghai",
+  title: "高嶺のなでしこ LIVE AROUND 2025 – Spring Ride – in Shanghai",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2025-06-22",
+  open: "18:00",
+  start: "19:00",
+  end: undefined,
+  region: "上海",
+  location: "バンダイナムコ上海文化センター 夢想劇場",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3512",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    setlist: [
+      "衣装: 2025 春衣装",
+      "僕は君になれない",
+      "恋を知った世界",
+      "病名恋ワズライ",
+      "センパイ。",
+      "初恋のひと。",
+      "MC",
+      "美しく生きろ",
+      "アドレナリンゲーム",
+      "決戦スピリット",
+      "MC",
+      "東京サマーセッション",
+      "乙女どもよ。",
+      "女の子は強い",
+      "アイドル衣装",
+      "MC",
+      "メランコリックハニー",
+      "可愛くてごめん",
+      "MC: 城月菜央 煽り",
+      "Cute for life",
+      "小悪魔だってかまわない！",
+      "推しの魔法",
+      "ファンサ",
+      "アンコール",
+      "衣装: 「初恋のひと。」制服衣装",
+      "初恋のこたえ。",
+      "MC",
+      "I’M YOUR IDOL",
+    ],
+    links: [
+      {
+        text: "https://x.com/_MARIC/status/1936756052076438000",
+        url: "https://x.com/_MARIC/status/1936756052076438000",
+      },
+    ],
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  - **開場 -** 17:00 (CST) / 18:00 (JST)
+  - **開演 -** 18:00 (CST) / 19:00 (JST)
+
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1936416440300732506)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3512)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1906662764279738773)
+`;

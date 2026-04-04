@@ -1,0 +1,80 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LANDCON 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-04-01",
+  open: "16:30",
+  start: "18:00",
+  end: undefined,
+  region: "東京",
+  location: "有明アリーナ",
+  present: ["高嶺のなでしこ", "松本ももな", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025.webp",
+      ref: "https://mdpr.jp/news/detail/4490377",
+    },
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1903423963449131229",
+    },
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1903423963449131229",
+    },
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025_3.jpg",
+      ref: "https://x.com/takanenofficial/status/1903423963449131229",
+    },
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025_4.jpg",
+      ref: "https://x.com/takanenofficial/status/1903423963449131229",
+    },
+    {
+      path: "/events/2025/2025-04-01_LANDCON 2025_タイムテーブル.jpg",
+      ref: "https://landcon.jp/tokyo2025/",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント サイト",
+    url: "https://landcon.jp/tokyo2025/",
+  },
+  ticket: "https://l-tike.com/landcon",
+  streamings: {
+    text: "ABEMA",
+    url: "https://abema.app/DmjU",
+  },
+  acts: {
+    start: "19:05",
+    end: "19:15",
+    setlist: ["衣装: ピンク衣装", "可愛くてごめん", "ファンサ", "美しく生きろ"],
+    url: "https://x.com/Mikuru_hositani/status/1907066082885808236",
+  },
+  updatedAt: "2025-04-05",
+};
+
+export const content = /* md */ `
+  ## 配信
+
+  [ABEMA](https://abema.app/DmjU) で配信予定。見逃し配信あり。
+
+  一般チケット 4400 円。
+
+  ## ファッションショー
+
+  松本ももな、籾山ひめりが出演。
+
+  ## リンク
+
+  - [モデルプレス X 舞台裏](https://x.com/modelpress/status/1907374951491080486)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1906700705123197254)
+  - [イベント サイト](https://landcon.jp/tokyo2025/)
+  - [公式 X 告知 2](https://x.com/takanenofficial/status/1903423963449131229)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1887792300606284051)
+  - [モデルプレス ニュース](https://mdpr.jp/news/detail/4490377)
+  - [モデルプレス X 告知](https://x.com/modelpress/status/1887788665113551137)
+  - [イベント公式 X](https://x.com/weareland_)
+`;

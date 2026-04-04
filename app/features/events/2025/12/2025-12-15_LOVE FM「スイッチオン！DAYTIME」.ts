@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LOVE FM「スイッチオン！DAYTIME」",
+  category: "RADIO",
+  date: "2025-12-15",
+  start: "13:00",
+  end: "14:00",
+  region: "ラジオ",
+  present: ["城月菜央", "日向端ひな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://lovefm.co.jp/switch_on/programs/more",
+  },
+  updatedAt: "2025-12-15",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=LOVEFM&t=20251215131255)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=LOVEFM&t=20251215130000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2000130533146399146)
+`;

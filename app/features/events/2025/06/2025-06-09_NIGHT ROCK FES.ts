@@ -1,0 +1,78 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NIGHT ROCK FES",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-06-09",
+  open: "16:20",
+  start: "17:00",
+  end: undefined,
+  region: "東京",
+  location: "CLUB CITTA'",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-06-09_NIGHT ROCK FES.jpg",
+      ref: "https://x.com/Yoruamiofficial/status/1918970160553050569",
+    },
+    {
+      path: "/events/2025/2025-06-09_NIGHT ROCK FES_タイムテーブル.jpg",
+      ref: "https://x.com/Yoruamiofficial/status/1920811767183147401",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-06-09_NIGHT ROCK FES_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1932020358087102698",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/nightrockfes_0609",
+  streamings: undefined,
+  goods: {
+    time: ["19:10", "20:10"],
+    lineup: ["ミニフォトカード「アイドル衣装衣装」"],
+    url: "https://x.com/takanenofficial/status/1931712820477079930",
+  },
+  acts: {
+    start: "18:25",
+    end: "19:00",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "僕は君になれない",
+      "乙女どもよ。",
+      "アドレナリンゲーム",
+      "革命の女王",
+      "MC",
+      "小悪魔だってかまわない！",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    links: [
+      {
+        text: "籾山ひめり 今日のセトリ❤️",
+        url: "https://x.com/himeri_momiyama/status/1932036841802486040",
+      },
+      {
+        text: "葉月紗蘭 せとり",
+        url: "https://x.com/saara_hazuki/status/1932036709451289049",
+      },
+    ],
+  },
+  updatedAt: "2025-06-09",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1932020358087102698)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1931712820477079930)
+  - [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1931622222445035665)
+  - [タイムテーブル告知](https://x.com/Yoruamiofficial/status/1920811767183147401)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1918987742316240932)
+`;

@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "しくじり先生",
+  category: "WEB",
+  date: "2024-10-18",
+  region: "Web",
+  present: ["橋本桃呼"],
+  images: [
+    {
+      path: "/events/2024/2024-10-11_しくじり先生.jpg",
+      ref: "https://www.tv-asahi.co.jp/shikujiri/next/",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tv-asahi.co.jp/shikujiri/",
+  },
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  アベマ 10 月 18 日 (金) 21:30 〜
+
+  https://abema.app/7244
+
+  横川尚隆先生「筋トレに沼りすぎて地獄を見ないための授業」完結編
+
+  筋肉界のカリスマ・プロボディビルダー横川尚隆が登壇！筋肉を追い求めすぎたことで様々なしくじりを体験した横川先生の実体験をもとに、いきすぎた筋トレの先に待つ地獄を解説。
+  健康のために筋トレを行う人が急増している中、筋トレにハマりすぎている人たちへ警鐘を鳴らします！
+
+  - 担任：若林正恭（オードリー）
+  - レギュラー生徒：澤部佑（ハライチ）、吉村崇（平成ノブシコブシ）
+  - 先生：横川尚隆
+  - 生徒：岡本夏美、野田クリスタル（マヂカルラブリー）、橋本桃呼（高嶺のなでしこ）
+
+  ＊50音順
+
+  ## リンク
+
+  - [橋本桃呼 X 告知](https://x.com/MomokoHashimoto/status/1846903366657757470)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843939470971994398)
+  - [番組 X 告知](https://x.com/shikuzirit/status/1846853666147652056)
+  - [番組サイト](https://www.tv-asahi.co.jp/shikujiri/)
+`;

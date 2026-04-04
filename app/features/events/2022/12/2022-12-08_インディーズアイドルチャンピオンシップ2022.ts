@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "インディーズアイドルチャンピオンシップ2022",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-12-08",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "女の子は強い",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1600803760237727744",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=566)
+`;

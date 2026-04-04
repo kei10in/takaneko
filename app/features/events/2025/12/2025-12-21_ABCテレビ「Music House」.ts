@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ABCテレビ「Music House」",
+  category: "TV",
+  date: "2025-12-21",
+  start: "26:25",
+  end: "26:45",
+  region: "テレビ",
+  present: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-21_ABCテレビ「Music House」.jpg",
+      ref: "https://x.com/musichouse_ABC/status/2001600704650318278",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.asahi.co.jp/music_house/",
+  },
+  updatedAt: "2025-12-21",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  インタビュー出演
+
+  ## リンク
+
+  - [告知 - TVer新着 X](https://x.com/TVer_info/status/2002983166911602937)
+  - [告知 - 番組 X](https://x.com/musichouse_ABC/status/2001600704650318278)
+`;

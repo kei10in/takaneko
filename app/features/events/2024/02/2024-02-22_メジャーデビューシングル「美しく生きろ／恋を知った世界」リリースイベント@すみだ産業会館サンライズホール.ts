@@ -1,0 +1,68 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@すみだ産業会館サンライズホール",
+  category: "EVENT",
+  date: "2024-02-22",
+  open: "17:30",
+  start: "18:15",
+  region: "東京",
+  location: "すみだ産業会館サンライズホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=1823",
+  },
+  meetAndGreet: {
+    title: "個別撮影会",
+    sessions: [
+      {
+        title: "1 部",
+        start: "18:10",
+        end: "19:00",
+        lanes: ["城月菜央", "葉月紗蘭", "春野莉々", "東山恵里沙", "松本ももな"],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "2 部",
+        start: "19:00",
+        end: "19:45",
+        lanes: ["涼海すう", "橋本桃呼", "日向端ひな", "星谷美来", "籾山ひめり"],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "3 部",
+        start: "19:45",
+        end: "20:30",
+        lanes: ["城月菜央", "葉月紗蘭", "春野莉々", "東山恵里沙", "松本ももな"],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "4 部",
+        start: "20:30",
+        end: "21:15",
+        lanes: ["涼海すう", "橋本桃呼", "日向端ひな", "星谷美来", "籾山ひめり"],
+        costume: "美しく生きろ衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-20",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  個別撮影会
+
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1823)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1876)
+`;

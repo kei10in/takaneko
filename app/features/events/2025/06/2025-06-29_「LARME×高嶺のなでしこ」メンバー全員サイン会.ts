@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「LARME×高嶺のなでしこ」メンバー全員サイン会",
+  category: "EVENT",
+  date: "2025-06-29",
+  open: undefined,
+  start: "18:00",
+  end: "20:00",
+  region: "東京",
+  location: "",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-06-29_「LARME×高嶺のなでしこ」メンバー全員サイン会.jpg",
+      ref: "https://x.com/larmemagazine/status/1923332991427997971",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3759",
+  },
+  ticket: "",
+  streamings: undefined,
+  costume: "LARME×高嶺のなでしこ SPECIAL COLLABORATION 衣装",
+  updatedAt: "2026-04-02",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1939126674685391146)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3759)
+  - [応募商品ページ](https://takanenonadeshiko-ec.com/products/受注生産-数量限定-larme-065-特装版-メンバー全員サイン会ご招待応募)
+  - [LARME 公式 X 告知](https://x.com/larmemagazine/status/1923332991427997971)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1923332603916263507)
+`;

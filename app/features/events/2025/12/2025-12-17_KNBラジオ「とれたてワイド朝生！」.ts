@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KNBラジオ「とれたてワイド朝生！」",
+  category: "RADIO",
+  date: "2025-12-17",
+  start: "08:30",
+  end: "12:00",
+  region: "ラジオ",
+  present: ["城月菜央", "橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ ",
+    url: "https://www.knb.ne.jp/bangumi/asanama",
+  },
+  updatedAt: "2025-12-17",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
+  出演時間: 10:53頃 〜
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=KNB&t=20251217105310)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=KNB&t=20251217100000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2000938968460722527)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+`;

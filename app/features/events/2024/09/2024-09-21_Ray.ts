@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Ray 11月号",
+  category: "MAGAZINE",
+  date: "2024-09-21",
+  region: "雑誌",
+  images: [
+    {
+      path: "/events/2024/2024-09-21_Ray.png",
+      ref: "https://x.com/takanenofficial/status/1804076800764706846",
+    },
+  ],
+  present: ["星谷美来"],
+};
+
+export const content = /* md */ `
+  ## 雑誌情報
+
+  [![通常版表紙](/events/2024/2024-09-21_Ray%2011月号_表紙.jpg)](/events/2024/2024-09-21_Ray%2011月号_表紙.jpg)
+
+  ## リンク
+
+  - [公式 X 掲載告知](https://x.com/takanenofficial/status/1837424060562919917)
+  - [Ray編集部 X 発売告知](https://x.com/mag_ray/status/1837325888121098249)
+  - [公式 X 企画告知](https://x.com/takanenofficial/status/1804076800764706846)
+  - [ミクチャ イベント ページ](https://mixch.tv/p/drplciry)
+  - [TWIN PLANET News](https://www.tp-e.jp/news/hoshitanijyoho/)
+`;

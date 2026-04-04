@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@タワーレコード渋谷店",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2024-11-23",
+  region: "東京",
+  location: "タワーレコード渋谷店 B1F CUTUP STUDIO",
+  images: [
+    {
+      path: "/events/2024/2024-11-23_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=2857",
+    },
+  ],
+  acts: [
+    {
+      open: "18:30",
+      start: "19:00",
+      setlist: [
+        "衣装: I’M YOUR IDOL 衣装",
+        "美しく生きろ",
+        "アドレナリンゲーム",
+        "MC",
+        "可愛くてごめん",
+        "MC",
+        "初恋のひと。",
+        "ファンサ",
+        "I’M YOUR IDOL",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1860300118777553197",
+    },
+    {
+      title: "全員握手会",
+      start: "20:00",
+      meetAndGreet: {
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [],
+      },
+    },
+  ],
+  updatedAt: "2026-03-29",
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  - 16:00 CD予約開始
+
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2857)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1857349224863813931)
+`;

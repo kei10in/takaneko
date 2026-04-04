@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Queen & Princess SP",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-06-12",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "女の子は強い",
+      "MC",
+      "革命の女王",
+      "僕は君になれない",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1668172210337636352",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=1016)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=957)
+`;

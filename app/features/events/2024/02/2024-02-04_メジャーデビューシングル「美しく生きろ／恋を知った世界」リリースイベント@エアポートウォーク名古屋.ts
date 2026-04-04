@@ -1,0 +1,94 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@エアポートウォーク名古屋",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2024-02-04",
+  region: "愛知",
+  location: "エアポートウォーク名古屋",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=1725",
+  },
+  acts: [
+    {
+      title: "第一部 ミニライブ",
+      open: "12:45",
+      start: "13:00",
+      setlist: [
+        "衣装:美しく生きろ衣装",
+        "美しく生きろ",
+        "可愛くてごめん",
+        "17歳",
+        "恋を知った世界",
+        "MC",
+        "乙女どもよ。",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1754081511262052506",
+    },
+    {
+      title: "第一部 グループ握手会",
+      meetAndGreet: {
+        costume: "美しく生きろ衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "葉月紗蘭", "春野莉々", "東山恵里沙", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "橋本桃呼", "日向端ひな", "星谷美来", "松本ももな"],
+          },
+        ],
+      },
+    },
+    {
+      title: "第二部 ミニライブ",
+      open: "15:15",
+      start: "15:30",
+      setlist: [
+        "衣装:美しく生きろ衣装",
+        "恋を知った世界",
+        "初恋のひと。",
+        "アンチファン",
+        "美しく生きろ",
+        "MC",
+        "僕は君になれない",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1754081511262052506",
+    },
+    {
+      title: "第二部 グループ握手会",
+      meetAndGreet: {
+        costume: "美しく生きろ衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["葉月紗蘭", "春野莉々", "日向端ひな", "松本ももな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙", "星谷美来"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-03-20",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1725)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1742)
+`;

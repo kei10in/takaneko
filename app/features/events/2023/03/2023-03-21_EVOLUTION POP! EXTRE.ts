@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "EVOLUTION POP! EXTRE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-03-21",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "MC",
+      "可愛くてごめん",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1638074137632706564",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=787)
+`;

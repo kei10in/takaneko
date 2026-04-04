@@ -1,0 +1,59 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! vol.17",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-06-01",
+  open: "10:00",
+  start: "10:30",
+  end: undefined,
+  region: "東京",
+  location: "Zepp DiverCity",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-06-01_iLiVE! vol.17.jpg",
+      ref: "https://x.com/iLiFE_official/status/1918941504929767716",
+    },
+    {
+      path: "/events/2025/2025-06-01_iLiVE! vol.17_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1929145045749514499",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/iLiVE0601",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「アイドル衣装衣装」"],
+    url: "https://x.com/takanenofficial/status/1928798634415440155",
+  },
+  acts: {
+    start: "19:10",
+    end: "19:35",
+    setlist: [
+      "衣装:ピンク衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "メランコリックハニー",
+      "女の子は強い",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1929141541261775151",
+  },
+  updatedAt: "2025-05-31",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1929145045749514499)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1928798634415440155)
+  - [iLiFE! 公式 X 告知](https://x.com/iLiFE_official/status/1918941504929767716)
+`;

@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アイドル甲子園 in 新宿BLAZE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-28",
+  region: "東京",
+  location: "新宿BLAZE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "MC",
+      "乙女どもよ。",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1630516472014589955",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=712)
+`;

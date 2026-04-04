@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LEADING PREMIUM 年末感謝祭'25",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-12-28",
+  open: "10:30",
+  start: "11:15",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-28_LEADING PREMIUM 年末感謝祭'25.jpg",
+      ref: "https://x.com/takanenofficial/status/1986427220706169302",
+    },
+    {
+      path: "/events/2025/2025-12-28_LEADING PREMIUM 年末感謝祭'25_タイムテーブル.jpg",
+      ref: "https://x.com/Leadi_events/status/2003058059820822733",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-12-28_LEADING PREMIUM 年末感謝祭'25_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2005248757412368818",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketvillage.jp/events/13604",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「見上げるたびに、恋をする。」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2004910230950609087",
+  },
+  acts: {
+    start: "19:30",
+    end: "20:00",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "初恋のこたえ。",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2005247467080818796",
+  },
+  updatedAt: "2025-12-30",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2005248757412368818)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2005258811553239479)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2004910230950609087)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1986427220706169302)
+`;

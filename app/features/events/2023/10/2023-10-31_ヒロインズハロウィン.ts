@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ヒロインズハロウィン",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-10-31",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  absent: ["葉月紗蘭"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "女の子は強い",
+      "ヒロインは平均以下。",
+      "可愛くてごめん",
+      "すきっちゅーの！",
+      "#超絶かわいい",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1719348056850853991",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 葉月紗蘭欠席のお知らせ](https://x.com/takanenofficial/status/1719310802866635200)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1409)
+`;

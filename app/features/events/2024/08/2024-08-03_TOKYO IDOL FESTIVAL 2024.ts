@@ -1,0 +1,50 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-03",
+  region: "東京",
+  location: "お台場・青海周辺エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "TIF 2024",
+    url: "https://official.idolfes.com/s/tif2024/",
+  },
+  acts: [
+    {
+      title: "HOT STAGE",
+      setlist: [
+        "衣装:わたし色に染まれ衣装",
+        "美しく生きろ",
+        "決戦スピリット",
+        "初恋のひと。",
+        "MC",
+        "モテチェン！",
+        "可愛くてごめん",
+        "ファンサ",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1819584652417683789",
+    },
+    {
+      title: "浮島STAGE",
+      setlist: ["衣装:アンチファン衣装", "#超絶かわいい", "LOVE ANTHEM", "ファンサ", "MC"],
+      url: "https://x.com/Mikuru_hositani/status/1819663539784564829",
+    },
+  ],
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2159)
+`;

@@ -1,0 +1,57 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! Vol.16",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-11-21",
+  location: "豊洲 PIT",
+  region: "東京",
+  images: [
+    {
+      path: "/events/2024/2024-11-21_iLiVE! Vol.16.jpg",
+      ref: "https://x.com/takanenofficial/status/1849390383899574648",
+    },
+    {
+      path: "/events/2024/2024-11-21_iLiVE! Vol.16_タイムテーブル.jpg",
+      ref: "https://x.com/info_iLiVE/status/1854834915759866364",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "iLiVE! 公式 X 告知",
+    url: "https://x.com/info_iLiVE/status/1849390385057128497",
+  },
+  ticket: "https://t-dv.com/ilive1121",
+  goods: {
+    time: ["20:10", "売り切れ次第"],
+    lineup: ["ミニフォトカード「高嶺のなでしこ2024」ver."],
+    url: "https://x.com/takanenofficial/status/1859205058736332952",
+  },
+  acts: [
+    {
+      start: "19:40",
+      end: "20:10",
+      setlist: [
+        "衣装: わたし色に染まれ衣装",
+        "美しく生きろ",
+        "LOVE ANTHEM",
+        "MC",
+        "可愛くてごめん",
+        "メイド☆至上主義",
+        "#超絶かわいい",
+        "ファンサ",
+        "初恋のひと。",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1859568601906413756",
+    },
+  ],
+  updatedAt: "2024-11-22",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1849390383899574648)
+  - [iLiVE! 公式 X 告知](https://x.com/info_iLiVE/status/1849390385057128497)
+`;

@@ -1,0 +1,40 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "dot yell fes SUMMER SP 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-14",
+  region: "神奈川",
+  location: "KT Zepp Yokohama",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "決戦スピリット",
+      "月曜日の憂鬱",
+      "MC",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "ファンサ",
+      "MC",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1691077768723980288",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 橋本桃呼欠席のお知らせ](https://x.com/takanenofficial/status/1691009035401867265)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1230)
+`;

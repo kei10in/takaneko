@@ -1,0 +1,50 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "テレビ東京「ジャパンオカルトアーカイブ 〜マジやば不思議話〜」",
+  title: "テレビ東京「ジャパンオカルトアーカイブ 〜マジやば不思議話〜 #4」",
+  category: "TV",
+  date: "2025-12-10",
+  start: "27:20",
+  end: "27:50",
+  region: "テレビ",
+  present: ["城月菜央"],
+  images: [
+    {
+      path: "/events/2025/2025-12-03_テレビ東京「ジャパンオカルトアーカイブ 〜マジやば不思議話〜」.jpg",
+      ref: "https://x.com/JPoccult/status/1989090908554379706",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tv-tokyo.co.jp/japan_occult_archives/",
+  },
+  updatedAt: "2025-12-12",
+};
+
+export const content = /* md */ `
+  ## 出演者
+
+  ### MC
+
+  - 芝大輔 (モグライダー)
+  - コヤッキー
+
+  ### ゲスト
+
+  - 濱口優
+  - 吉田悠軌
+  - ぁみ
+  - ともしげ (モグライダー)
+  - シークエンスはやとも
+  - ウマヅラ
+  - 小栗有以 (AKB48) #1, #2
+  - 城月菜央 (高嶺のなでしこ) #3, #4
+
+  ## リンク
+
+  - [TVer](https://tver.jp/series/sre3ngpc3u)
+  - [本日放送告知 - 公式 X](https://x.com/takanenofficial/status/1998758350935437751)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1993617232384180631)
+  - [告知 - 番組 X](https://x.com/JPoccult/status/1989090908554379706)
+`;

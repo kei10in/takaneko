@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YBS山梨放送「やまなしマルシェ」",
+  category: "TV",
+  liveType: undefined,
+  date: "2023-07-14",
+  open: undefined,
+  start: "09:55",
+  end: undefined,
+  region: "テレビ",
+  location: "",
+  present: ["日向端ひな", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2023/2023-07-14_YBS山梨放送「やまなしマルシェ」.jpg",
+      ref: "https://x.com/takanenofficial/status/1679513786628345857",
+    },
+    {
+      path: "/events/2023/2023-07-14_YBS山梨放送「やまなしマルシェ」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1679513786628345857",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.ybs.jp/pr/marche/",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1679513786628345857)
+`;

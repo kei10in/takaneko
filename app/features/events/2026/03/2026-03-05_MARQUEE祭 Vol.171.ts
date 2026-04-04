@@ -1,0 +1,64 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE祭 Vol.171",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-03-05",
+  open: "14:00",
+  start: "14:30",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-03-05_MARQUEE祭 Vol.171.jpg",
+      ref: "https://x.com/takanenofficial/status/2013114194858578020",
+    },
+    {
+      path: "/takaneko/goods/2026/2026-03-05_ミニフォトカード「セーラー服2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2013114194858578020",
+      tags: ["goods"],
+    },
+    {
+      path: "/events/2026/2026-03-05_MARQUEE祭 Vol.171_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2029522677107724586",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/sf/word/0000131445",
+  streamings: undefined,
+  goods: {
+    time: ["20:45", "21:55"],
+    lineup: ["ミニフォトカード「セーラー服2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2029157426281476321",
+  },
+  acts: {
+    start: "19:25",
+    end: "19:50",
+    setlist: [
+      "衣装: 見上げるたびに、恋をする。衣装",
+      "初恋のこたえ。",
+      "乙女どもよ。",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2029521085205729425",
+  },
+  updatedAt: "2026-03-04",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2029528271784980843)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2029522677107724586)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2029157426281476321)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2013114194858578020)
+`;

@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL GARDEN 2022 AUTUMN",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-10-05",
+  region: "東京",
+  location: "LINE CUBE SHIBUYA",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "MC",
+      "女の子は強い",
+      "ユメムスビ",
+      "MC",
+      "乙女どもよ。",
+      "ファンサ",
+      "MC",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1577582751854649344",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=434)
+`;

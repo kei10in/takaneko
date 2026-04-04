@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! Vol.11",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-12-15",
+  region: "東京",
+  location: "KANDA SQUARE HALL",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "すきっちゅーの！",
+      "男の子の目的は何？",
+      "初恋のひと。",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "僕は君になれない",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1735625138157056131",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1453)
+`;

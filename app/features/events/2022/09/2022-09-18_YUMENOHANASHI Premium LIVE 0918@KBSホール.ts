@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YUMENOHANASHI Premium LIVE 0918@KBSホール",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-09-18",
+  region: "京都",
+  location: "KBSホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "MC",
+      "乙女どもよ。",
+      "ユメムスビ",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1571448853160955904",
+  },
+  updatedAt: "2024-11-03",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=383)
+`;

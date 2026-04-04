@@ -1,0 +1,56 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL Day2",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-03-24",
+  region: "マカオ",
+  location: "The Londoner Theatre",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装 (上着なし)",
+      "Overture",
+      "初恋のひと。",
+      "可愛いって言われたい: 城月菜央、涼海すう、葉月紗蘭、星谷美来、松本ももな",
+      "今好きになる。:葉月紗蘭",
+      "衣装:美しく生きろ衣装",
+      "私は怪物: 橋本桃呼、春野莉々、東山恵里沙、日向端ひな、籾山ひめり",
+      "美しく生きろ",
+      "アンチファン",
+      "革命の女王",
+      "決戦スピリット",
+      "MC",
+      "衣装:美しく生きろ衣装 (上着なし)",
+      "可愛くてごめん",
+      "推しの魔法",
+      "すきっちゅーの！",
+      "ヒロインは平均以下。",
+      "17歳",
+      "MC",
+      "女の子は強い",
+      "月曜日の憂鬱",
+      "僕は君になれない",
+      "アンコール",
+      "衣装:T シャツ (CONTEMPO ver.)",
+      "恋を知った世界",
+      "MC",
+      "ファンサ",
+      "MC",
+    ],
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1710)
+`;

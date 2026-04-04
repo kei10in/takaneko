@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
+  category: "OTHER",
+  liveType: "GUEST",
+  date: "2025-04-12",
+  open: undefined,
+  start: undefined,
+  end: undefined,
+  region: "岐阜",
+  location: "大垣市北公園野球場",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "JD.LEAGUE イベントページ",
+    url: "https://jdleague.jp/news/detail/3144/",
+  },
+  ticket: "https://t.pia.jp/pia/ticketInformation.do?eventCd=2508712&perfCd=001&rlsCd=002",
+  streamings: undefined,
+  acts: {
+    setlist: ["衣装: 2025 春衣装", "可愛くてごめん", "美しく生きろ"],
+    url: "",
+  },
+  updatedAt: "2025-03-31",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1910694335999340940)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1906648970400805015)
+  - [JD.LEAGUE イベントページ](https://jdleague.jp/news/detail/3144/)
+`;

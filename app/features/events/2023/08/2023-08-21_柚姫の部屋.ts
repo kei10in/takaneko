@@ -1,0 +1,24 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "柚姫の部屋",
+  category: "STREAMING",
+  date: "2023-08-21",
+  region: "Web",
+  present: ["日向端ひな", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1274)
+`;

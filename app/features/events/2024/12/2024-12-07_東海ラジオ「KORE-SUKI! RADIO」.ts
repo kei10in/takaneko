@@ -1,0 +1,50 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "東海ラジオ「KORE-SUKI! RADIO」",
+  title: "東海ラジオ「KORE-SUKI❣RADIO」",
+  category: "RADIO",
+  date: "2024-12-07",
+  start: "20:30",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-07_東海ラジオ「KORE-SUKI! RADIO」.jpg",
+      ref: "https://x.com/kore_suki_radio/status/1864980651235037613",
+    },
+    {
+      path: "/events/2024/2024-12-07_東海ラジオ「KORE-SUKI! RADIO」_2.jpg",
+      ref: "https://x.com/victor_nagoya/status/1865306459015385271",
+    },
+    {
+      path: "/events/2024/2024-12-07_東海ラジオ「KORE-SUKI! RADIO」_3.jpg",
+      ref: "https://x.com/MIYOMARUKO/status/1865187017744871751",
+    },
+    {
+      path: "/events/2024/2024-12-07_東海ラジオ「KORE-SUKI! RADIO」_4.jpg",
+      ref: "https://x.com/kore_suki_radio/status/1865335539882148181",
+    },
+  ],
+  link: {
+    text: "番組 RADIKO",
+    url: "https://radiko.jp/r_seasons/10022764",
+  },
+  present: ["葉月紗蘭", "東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-12-07",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  東海ラジオ 20:30 〜
+
+  [radiko](https://radiko.jp/#TOKAIRADIO)
+
+  ## リンク
+
+  - [番組 X 直前告知](https://x.com/kore_suki_radio/status/1865335539882148181)
+  - [番組 X 告知](https://x.com/kore_suki_radio/status/1864980651235037613)
+  - [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1865306459015385271)
+  - [パーソナリティ X 告知](https://x.com/MIYOMARUKO/status/1865187017744871751)
+  - [radiko](https://radiko.jp/#TOKAIRADIO)
+`;

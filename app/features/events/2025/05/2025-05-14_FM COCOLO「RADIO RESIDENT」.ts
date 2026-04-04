@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM COCOLO「RADIO RESIDENT」",
+  title: "FM COCOLO「Radio beyond Borders “RADIO RESIDENT”」",
+  category: "RADIO",
+  date: "2025-05-14",
+  open: undefined,
+  start: "21:00",
+  end: "20:00",
+  region: "ラジオ",
+  location: "",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-05-07_FM COCOLO「RADIO RESIDENT」.jpg",
+      ref: "https://x.com/fmbeyondborders/status/1919993500927656093",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://cocolo.jp/site/blog/3210/39982",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-05-14",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  FM COCOLO 21:00 〜
+
+  - [Radiko 出演回](https://radiko.jp/share/?sid=CCL&t=20250514210000)
+  - [Radiko 出演時間帯](https://radiko.jp/share/?sid=CCL&t=20250514213025)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1920040914128380249)
+  - [Radiko](https://radiko.jp/share/?sid=CCL&t=20250514210000)
+  - [番組 X 告知](https://x.com/fmbeyondborders/status/1919993500927656093)
+`;

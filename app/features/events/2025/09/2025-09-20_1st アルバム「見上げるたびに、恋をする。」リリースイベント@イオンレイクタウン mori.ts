@@ -1,0 +1,95 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2025-09-20",
+  open: undefined,
+  start: "09:30",
+  end: undefined,
+  region: "埼玉",
+  location: "イオンレイクタウンmori FOREST STAGE",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-09-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori.jpg",
+      ref: "https://x.com/takanenofficial/status/1966483237561381160",
+    },
+    {
+      path: "/events/2025/2025-09-20_mori Fes.2025.png",
+      ref: "https://www.aeon-laketown.jp/mori/special/2025musicfes-info/",
+    },
+    {
+      path: "/events/2025/2025-09-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1964657025029407022",
+    },
+  ],
+  link: {
+    text: "高嶺のなでしこ1stアルバム「見上げるたびに、恋をする。」 リリース記念イベントat イオンレイクタウンmori - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4330",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      title: "ミニライブ",
+      open: "11:45",
+      start: "12:30",
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "美しく生きろ",
+        "I’M YOUR IDOL",
+        "MC",
+        "初恋のこたえ。",
+        "MC",
+        "花は誓いを忘れない",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1969298879750554090",
+    },
+    {
+      title: "グループ握手会",
+      start: "13:00",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "涼海すう", "橋本桃呼", "日向端ひな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["葉月紗蘭", "東山恵里沙", "星谷美来", "松本ももな"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-04-03",
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  mori Fes.2025 でリリース記念イベント ミニライブ & グループ握手会 を開催
+
+  - CD 予約開始時間: 09:30 〜
+  - CD 予約受付場所: イオンレイクタウンmori FOREST STAGE (G駐車場屋外特設ステージ) CD 販売ブースにて
+
+  CD 1 枚予約で、整理番号付きミニライブ優先観覧エリア入場券 1 枚と A グループ or B グループの握手会参加券を 2 枚を配布。
+
+  ## リンク
+
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1969026212308611399)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=4330)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1966483237561381160)
+  - [イベント詳細 - イオンレイクタウンmori 公式ホームページ.](https://www.aeon-laketown.jp/mori/event/event_e61871_as.html)
+  - [2025年12月17日(水)高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリース決定！！ - 公式ニュース](https://takanenonadeshiko.jp/?p=4248)
+  - [公式 X mori Fes.2025 告知](https://x.com/takanenofficial/status/1963123642956439611)
+`;

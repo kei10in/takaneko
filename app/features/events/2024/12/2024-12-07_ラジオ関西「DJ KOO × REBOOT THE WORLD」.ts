@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオ関西「DJ KOO × REBOOT THE WORLD」",
+  category: "RADIO",
+  date: "2024-12-07",
+  start: "17:00",
+  end: "17:30",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-07_ラジオ関西「DJ KOO × REBOOT THE WORLD」.jpg",
+      ref: "https://x.com/DjkooReboot/status/1865293220386869747",
+    },
+  ],
+  link: {
+    text: "番組 X 告知",
+    url: "https://x.com/DjkooReboot/status/1865293220386869747",
+  },
+  present: ["涼海すう", "城月菜央"],
+  updatedAt: "2024-12-07",
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  ラジオ大阪 17:00 〜
+
+  - [radiko](https://radiko.jp/#CRK)
+  - [radiko 放送回](https://radiko.jp/share?sid=CRK&t=20241207170000)
+
+  ## リンク
+
+  - [番組 X 告知](https://x.com/DjkooReboot/status/1865293220386869747)
+  - [番組 HP](https://djkoo-rtw.com/)
+  - [radiko](https://radiko.jp/#CRK)
+`;

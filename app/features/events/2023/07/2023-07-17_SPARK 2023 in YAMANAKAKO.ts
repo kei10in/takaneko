@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SPARK 2023 in YAMANAKAKO",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-07-17",
+  region: "山梨",
+  location: "山中湖交流プラザきらら",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "KIKU STAGE",
+      setlist: ["衣装:「初恋のひと。」制服衣装", "月曜日の憂鬱", "僕は君になれない", "ファンサ"],
+      url: "https://x.com/Mikuru_hositani/status/1680828053872852993",
+    },
+    {
+      title: "SPARK STAGE",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "決戦スピリット",
+        "誇り高きアイドル",
+        "MC",
+        "初恋のひと。",
+        "ヒロインは平均以下。",
+        "可愛くてごめん",
+        "#超絶かわいい",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1680893169859440640",
+    },
+  ],
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1012)
+`;

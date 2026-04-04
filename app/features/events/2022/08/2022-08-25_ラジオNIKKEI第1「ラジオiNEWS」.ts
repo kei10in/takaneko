@@ -1,0 +1,26 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI第1「ラジオ iNEWS」",
+  category: "RADIO",
+  date: "2022-08-25",
+  region: "ラジオ",
+  present: ["松本ももな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1560220331582693376)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=374)
+`;

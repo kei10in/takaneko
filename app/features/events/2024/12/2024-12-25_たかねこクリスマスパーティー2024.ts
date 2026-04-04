@@ -1,0 +1,86 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこクリスマスパーティー2024",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-12-25",
+  region: "東京",
+  location: "EX THEATER ROPPONGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/takaneko/live-goods/2024-12-25_たかねこクリスマスパーティー2024_グッズメニュー.jpg",
+      ref: "https://x.com/takanenofficial/status/1871163856141066310",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=2284",
+  },
+  ticket: "",
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv346573282",
+  },
+  acts: [
+    {
+      title: "第一部",
+      setlist: [
+        "衣装:クリスマス 2024 衣装",
+        "ハッピークリスマスパーティ",
+        "Overture",
+        "I’M YOUR IDOL",
+        "乙女どもよ。",
+        "センパイ。",
+        "MC",
+        "企画: 願いを叶えて！たかねこサンタ",
+        "アドレナリンゲーム",
+        "可愛くてごめん",
+        "推しの魔法",
+        "企画: 城月菜央生誕祭 選手どっち選手権",
+        "女の子は強い",
+        "月曜日の憂鬱",
+        "企画: たかねこサンタの Xmas プレゼント SHOW",
+        "MC",
+        "美しく生きろ",
+      ],
+      url: "",
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "衣装:クリスマス 2024 衣装",
+        "ハッピークリスマスパーティ",
+        "Overture",
+        "I’M YOUR IDOL",
+        "初恋のひと。",
+        "決戦スピリット",
+        "MC",
+        "企画: 願いを叶えて！たかねこサンタ",
+        "モテチェン！",
+        "ヒロインは平均以下。",
+        "アドレナリンゲーム",
+        "企画: たかねこ Xmas プレゼント 捜索隊",
+        "可愛くてごめん",
+        "アイのウイルス",
+        "恋を知った世界",
+        "企画: たかねこサンタの Xmas プレゼント SHOW",
+        "MC",
+        "ファンサ",
+      ],
+      url: "",
+    },
+  ],
+  updatedAt: "2024-12-23",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X グッズ情報](https://x.com/takanenofficial/status/1871163856141066310)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1870786362334396889)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/2302/)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2284)
+  - [FC トピック: 「たかねこクリスマスパーティー2024」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/zqk2dn6w4iiywpm4.html)
+`;

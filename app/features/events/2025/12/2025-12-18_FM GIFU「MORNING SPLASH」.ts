@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM GIFU「MORNING SPLASH」",
+  category: "RADIO",
+  date: "2025-12-18",
+  start: "07:30",
+  end: "10:00",
+  region: "ラジオ",
+  present: ["東山恵里沙", "松本ももな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.fmgifu.com/blog/index__37.html",
+  },
+  updatedAt: "2025-12-17",
+};
+
+export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
+  出演時間: 9:34頃〜9:40頃
+
+  ## リンク
+
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMGIFU&t=20251218093405)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20251218073000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2001272415427711040)
+  - [告知 - 放送局 X](https://x.com/FMGIFU/status/2001154434966151305)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2001245995766874308)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+`;

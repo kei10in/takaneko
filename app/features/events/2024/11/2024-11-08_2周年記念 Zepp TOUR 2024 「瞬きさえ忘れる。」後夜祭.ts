@@ -1,0 +1,76 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」後夜祭",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-11-08",
+  location: "KT Zepp Yokohama",
+  region: "横浜",
+  images: [
+    {
+      path: "/events/2024/2024-09-15_Zepp TOUR 2024 「瞬きさえ忘れる。」.jpg",
+      ref: "https://x.com/takanenofficial/status/1829685588209090780",
+    },
+  ],
+  acts: {
+    setlist: [
+      "影ナレ: 東山恵里沙、星谷美来",
+      "衣装: アンチファン衣装",
+      "Overture",
+      "誇り高きアイドル",
+      "決戦スピリット",
+      "アドレナリンゲーム",
+      "MC:楽曲投票",
+      "小悪魔だってかまわない！: 城月菜央、橋本桃呼、東山恵里沙、星谷美来",
+      "衣装: I’M YOUR IDOL 衣装",
+      "MC:投票コメント",
+      "死ぬまでダーリン: 松本ももな",
+      "MC:投票コメント",
+      "ラブホイッスル: 涼海すう、葉月紗蘭、春野莉々、日向端ひな、籾山ひめり",
+      "MC:投票コメント",
+      "センパイ。",
+      "初恋のひと。",
+      "MC:シャッフルくじ引き",
+      "初恋のひと。(歌割りシャッフル)",
+      "MC:シャッフルくじ引き",
+      "アドレナリンゲーム (歌割りシャッフル)",
+      "MC:煽り: 日向端ひな 涼海すうのモノマネ",
+      "美しく生きろ",
+      "LOVE ANTHEM",
+      "グッズ抽選会",
+      "MC:悪鬼のウイルス告知",
+      "アイのウイルス",
+      "MC",
+      "I’M YOUR IDOL",
+      "恋を知った世界",
+      "MC:お知らせ、TikTok撮影",
+      "アンコール",
+      "ファンサ",
+      "MC",
+    ],
+    links: [
+      {
+        text: "https://x.com/_MARIC/status/1855152212689010769",
+        url: "https://x.com/_MARIC/status/1855152212689010769",
+      },
+    ],
+  },
+  updatedAt: "2025-06-13",
+};
+
+export const content = /* md */ `
+  ## 開催情報
+
+  🎫 チケット:
+
+  - e+ - https://eplus.jp/takanenonadeshiko
+  - ローチケ - https://l-tike.com/takanenonadeshiko
+  - チケットぴあ - https://t.pia.jp/t/takanenonadeshiko
+
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2620)
+  - [FC トピック: 高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/qtayqeijui6ozym1.html)
+  - [チケット一般販売告知](https://x.com/takanenofficial/status/1829685588209090780)
+`;

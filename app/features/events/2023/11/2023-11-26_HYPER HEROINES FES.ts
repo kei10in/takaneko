@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HYPER HEROINES FES",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-11-26",
+  region: "埼玉",
+  location: "東武動物公園イベントステージHOLA!",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "すきっちゅーの！",
+      "MC",
+      "#超絶かわいい",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1728686723742216459",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [新幹線事件](https://x.com/takanekomanager/status/1728688876322275784)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1545)
+`;

@@ -31,6 +31,9 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     timetables: partial.timetables ?? [],
     acts: partial.acts ?? [],
 
+    meetAndGreet: partial.meetAndGreet,
+    costume: partial.costume,
+
     // showNotes はデフォルトで空の構造
     showNotes: partial.showNotes ?? { played: [] },
   };

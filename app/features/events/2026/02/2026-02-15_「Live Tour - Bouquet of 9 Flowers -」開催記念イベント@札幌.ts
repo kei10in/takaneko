@@ -1,0 +1,90 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「Live Tour - Bouquet of 9 Flowers -」開催記念イベント@札幌",
+  title:
+    "「Live Tour - Bouquet of 9 Flowers -」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』@札幌",
+  category: "EVENT",
+  date: "2026-02-15",
+  open: undefined,
+  start: "11:00",
+  end: "18:20",
+  region: "北海道",
+  location: "札幌ファクトリーホール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "イベント詳細",
+    url: "https://takanenonadeshiko.jp/?p=5013",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "1 部 個別 2 ショット撮影会",
+        start: "11:00",
+        end: "12:00",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+      },
+      {
+        title: "2 部 個別 2 ショット撮影会",
+        start: "12:10",
+        end: "13:10",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+      },
+      {
+        title: "3 部 個別 TikTok 撮影会",
+        start: "13:40",
+        end: "14:40",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+      },
+      {
+        title: "4 部 個別 TikTok 撮影会",
+        start: "14:50",
+        end: "15:50",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+      },
+      {
+        title: "5 部 個別サイン会",
+        start: "16:10",
+        end: "17:10",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+      },
+      {
+        title: "6 部 個別サイン会",
+        start: "17:20",
+        end: "18:20",
+        costume: "Bouquet of 9 Flowers 衣装",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+      },
+    ],
+  },
+  updatedAt: "2026-04-04",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2022845948846837990)
+  - [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=5018)
+  - [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/2022653299934052562)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
+  - [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
+`;

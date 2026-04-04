@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "キャイ〜ンのWANIWANIさせて",
+  category: "RADIO",
+  date: "2024-08-28",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-08-28_キャイ〜ンのWANIWANIさせて.jpg",
+      ref: "https://x.com/takanenofficial/status/1828704211749732554",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.ybs.jp/pr/wani/",
+  },
+};
+
+export const content = /* md */ `
+  ## 放送予定
+
+  山梨放送<br/>
+  8/28(水)18:00-18:30
+
+  山形放送<br/>
+  9/1(日)14:00-14:30
+
+  宮崎放送<br/>
+  9/1(日)19:30-20:00
+
+  高知放送<br/>
+  9/2(月) 18:00-18:30
+
+  ## リンク
+
+  - [radiko](https://radiko.jp/r_seasons/10019371)
+`;

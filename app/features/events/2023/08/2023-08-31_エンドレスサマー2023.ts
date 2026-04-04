@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "エンドレスサマー2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-31",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: ["日向端ひな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "Overture",
+      "決戦スピリット",
+      "乙女どもよ。",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "僕は君になれない",
+      "MC",
+    ],
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [日向端ひな欠席のお知らせ](https://x.com/takanenofficial/status/1696825196840431795)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1193)
+`;

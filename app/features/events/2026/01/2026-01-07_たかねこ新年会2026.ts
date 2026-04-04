@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこ新年会2026",
+  category: "STREAMING",
+  date: "2026-01-07",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-01-07_たかねこ新年会2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2008478655408668845",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: [
+    {
+      text: "YouTube Live",
+      url: "https://www.youtube.com/live/UN7pczQazh4",
+    },
+  ],
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2026-01-06",
+};
+
+export const content = /* md */ `
+  ## 概要欄
+
+  > 新年あけましておめでとうございます🎍<br/> #たかねこ新年会2026 で一緒に「たかねこ始め」しましょう🐈‍⬛🌸
+
+  ## リンク
+
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2008478655408668845)
+`;

@@ -38,7 +38,7 @@ describe("compareEventMeta", () => {
 
   it("should use act start time when event start time is not available", () => {
     const eventWithActStart = makeEventMetaForTest({
-      acts: [{ start: "18:00", setlist: [], links: [] }],
+      acts: [{ start: "18:00", absent: [], setlist: [], links: [] }],
     });
 
     const eventWithEventStart = makeEventMetaForTest({

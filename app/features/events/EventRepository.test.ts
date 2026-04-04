@@ -35,7 +35,7 @@ describe("EventRepository", () => {
 
       expect(result).toEqual([
         expect.objectContaining({
-          filename: "./2025/08/2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜.mdx",
+          filename: "./2025/08/2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜.ts",
         }),
       ]);
     });
@@ -53,7 +53,7 @@ describe("EventRepository", () => {
       const slug = "2025-08-13_NEO KASSEN 2025";
       const result = Events.selectEventModuleBySlug(slug);
 
-      expect(result).toMatchObject({ filename: "./2025/08/2025-08-13_NEO KASSEN 2025.mdx" });
+      expect(result).toMatchObject({ filename: "./2025/08/2025-08-13_NEO KASSEN 2025.ts" });
     });
 
     it("should return undefined for invalid slug format 1", () => {

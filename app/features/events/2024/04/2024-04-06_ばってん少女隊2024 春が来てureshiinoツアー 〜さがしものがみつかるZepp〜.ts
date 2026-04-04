@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-04-06",
+  region: "愛知",
+  location: "Zepp Nagoya",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "男の子の目的は何？",
+      "推しの魔法",
+      "MC",
+      "Oisa (ばってん少女隊 cover)",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "僕は君になれない",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1776529195633709335",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1899)
+`;

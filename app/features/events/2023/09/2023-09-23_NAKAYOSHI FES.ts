@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NAKAYOSHI FES.2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-09-23",
+  region: "東京",
+  location: "duo MUSIC EXCHANGE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "Overture",
+      "革命の女王",
+      "乙女どもよ。",
+      "MC",
+      "すきっちゅーの！",
+      "ヒロインは平均以下。",
+      "ファンサ",
+      "初恋のひと。",
+      "MC",
+    ],
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1357)
+`;

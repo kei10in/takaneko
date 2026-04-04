@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KBCラジオ「村重杏奈の真夜中クラブ」",
+  category: "RADIO",
+  liveType: undefined,
+  date: "2022-10-09",
+  open: undefined,
+  start: "25:20",
+  end: undefined,
+  region: "ラジオ",
+  location: "",
+  present: ["城月菜央", "橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1579073432255229953)
+`;

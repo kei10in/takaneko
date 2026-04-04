@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-11-05",
+  location: "渋谷Spotify O-WEST",
+  region: "東京",
+  images: [
+    {
+      path: "/events/2024/2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回.jpg",
+      ref: "https://x.com/fukufesvol1/status/1853433206420463884",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "可愛くてごめん",
+      "すきっちゅーの！",
+      "推しの魔法",
+      "MC",
+      "ペダルと車輪と来た道と (STU48 楽曲カバー)",
+      "ファンサ",
+      "MC",
+      "美しく生きろ",
+      "決戦スピリット",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1853777665846809047",
+  },
+};
+
+export const content = /* md */ `
+  ## 開催情報
+
+  - [🎫チケット](https://eplus.jp/fukufes/)
+  - 出演: 19:20 〜 19:55
+  - 配信: ニコニコ生放送 https://live.nicovideo.jp/watch/lv346171365
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843992581916786985)
+  - [フクフェス公式 X 告知](https://x.com/fukufesvol1/status/1843984767638741168)
+`;

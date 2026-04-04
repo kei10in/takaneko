@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「高嶺のなでしこのらじおっちゅーの！」",
+  category: "RADIO",
+  date: "2025-05-31",
+  start: "19:00",
+  end: "19:30",
+  region: "ラジオ",
+  present: ["涼海すう", "橋本桃呼", "松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-05-31_FM大阪「高嶺のなでしこのらじおっちゅーの！」.jpg",
+      ref: "https://x.com/fmosaka851/status/1928723174805614768",
+    },
+    {
+      path: "/events/2025/2025-05-31_FM大阪「高嶺のなでしこのらじおっちゅーの！」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1928756048006971429",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/fmosaka851/status/1928723174805614768",
+  },
+  updatedAt: "2025-05-31",
+};
+
+export const content = /* md */ `
+  ## 放送
+
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250531190000)
+
+  ## リンク
+
+  - [公式 X 告知](https://x.com/takanenofficial/status/1928756048006971429)
+  - [FM 大阪 X 告知](https://x.com/fmosaka851/status/1928723174805614768)
+  - [Radiko](https://radiko.jp/share?sid=FMO&t=20250531190000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+`;

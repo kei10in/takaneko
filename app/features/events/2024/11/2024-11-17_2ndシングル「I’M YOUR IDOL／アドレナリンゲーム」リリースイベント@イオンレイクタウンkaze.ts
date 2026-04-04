@@ -1,0 +1,106 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@イオンレイクタウン kaze",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2024-11-17",
+  region: "埼玉",
+  location: "イオンレイクタウン kaze 翼の広場",
+  images: [
+    {
+      path: "/events/2024/2024-11-17_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント@埼玉.jpg",
+      ref: "https://x.com/takanenofficial/status/1841040836337050069",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=2825",
+  },
+  acts: [
+    {
+      title: "1 部",
+      open: "12:40",
+      start: "13:00",
+      setlist: [
+        "衣装: I’M YOUR IDOL 衣装",
+        "可愛くてごめん",
+        "アドレナリンゲーム",
+        "MC",
+        "メイド☆至上主義",
+        "MC",
+        "17歳",
+        "I’M YOUR IDOL",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1858078946916786237",
+    },
+    {
+      title: "1 部 グループ握手会",
+      start: "13:45",
+      meetAndGreet: {
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "橋本桃呼", "春野莉々", "東山恵里沙", "星谷美来"],
+          },
+        ],
+      },
+    },
+    {
+      title: "2 部",
+      open: "15:40",
+      start: "16:00",
+      setlist: [
+        "衣装: I’M YOUR IDOL 衣装",
+        "誇り高きアイドル",
+        "アドレナリンゲーム",
+        "MC",
+        "初恋のひと。",
+        "MC",
+        "I’M YOUR IDOL",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1858078946916786237",
+    },
+    {
+      title: "2 部 グループ握手会",
+      start: "16:45",
+      meetAndGreet: {
+        costume: "I’M YOUR IDOL 衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "橋本桃呼", "日向端ひな", "星谷美来", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "葉月紗蘭", "春野莉々", "東山恵里沙", "松本ももな"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-03-29",
+};
+
+export const content = /* md */ `
+  ## イベント概要
+
+  CD予約開始時間: 当日 10:00 〜
+
+  CD予約受付場所: イオンレイクタウン kaze 翼の広場 CD販売ブースにて
+
+  イオン開店前は、1階F入口付近に待機列を形成予定。
+
+  ## リンク
+
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2825)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2591)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1855196348448116755)
+`;

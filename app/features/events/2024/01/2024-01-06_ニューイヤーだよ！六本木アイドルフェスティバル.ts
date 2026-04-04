@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ニューイヤーだよ！六本木アイドルフェスティバル",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-06",
+  region: "東京",
+  location: "ヒューリックホール東京",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1743499886857949397",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1641)
+`;

@@ -4,6 +4,7 @@ import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { parseSetlist } from "./setlist";
 import { MeetAngGreetLanesList } from "./timeSchedule";
+import { MemberIdEnum } from "../profile/types";
 
 export const Act = z
   .object({
@@ -12,6 +13,8 @@ export const Act = z
     open: z.string().optional(),
     start: z.string().optional(),
     end: z.string().optional(),
+
+    absent: z.array(MemberIdEnum).optional().default([]),
 
     description: z
       .string()

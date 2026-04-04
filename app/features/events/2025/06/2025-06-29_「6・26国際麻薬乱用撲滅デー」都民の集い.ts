@@ -1,0 +1,73 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「6・26国際麻薬乱用撲滅デー」都民の集い",
+  category: "EVENT",
+  liveType: "GUEST",
+  date: "2025-06-29",
+  open: undefined,
+  start: "13:30",
+  end: "16:00",
+  region: "東京",
+  location: "池袋西口公園野外劇場",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-06-29_「6・26国際麻薬乱用撲滅デー」都民の集い.jpg",
+      ref: "https://x.com/tocho_kyoiku/status/1932996350628479416",
+    },
+  ],
+  link: {
+    text: "「ダメ。ゼッタイ。」普及運動",
+    url: "https://www.hokeniryo.metro.tokyo.lg.jp/anzen/kenkou_anzen/stop/fukyu",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [
+      "衣装: 2025 春衣装",
+      "初恋のひと。",
+      "アイドル衣装",
+      "MC",
+      "可愛くてごめん",
+      "メランコリックハニー",
+      "小悪魔だってかまわない！",
+      "MC",
+      "美しく生きろ",
+      "決戦スピリット",
+      "ファンサ",
+      "初恋のこたえ。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1939262597343395981",
+  },
+  updatedAt: "2025-06-29",
+};
+
+export const content = /* md */ `
+  ## 催し物
+
+  1. 式典（主催者・共催者挨拶等）
+  2. 「高嶺のなでしこ」によるステージライブ
+  3. 警察犬デモンストレーション
+  4. 薬物乱用防止啓発動画放映
+
+  ## 企画展示等
+
+  1. 啓発リーフレット・グッズ配布
+  2. 国連支援募金活動
+  3. 着ぐるみ（「ダメ。ゼッタイ。」君、ピーポくん）による啓発活動
+  4. 警視庁キャラバンカーでの啓発（薬物見本など）
+
+  ## リンク
+
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1939126674685391146)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1934903856657518964)
+  - [東京都 子供・教育 X 告知](https://x.com/tocho_kyoiku/status/1932996350628479416)
+  - [「ダメ。ゼッタイ。」普及運動](https://www.hokeniryo.metro.tokyo.lg.jp/anzen/kenkou_anzen/stop/fukyu)
+`;

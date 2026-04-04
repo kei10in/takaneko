@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM AICHI「大須アメ横 presents オスラバ」",
+  category: "RADIO",
+  date: "2025-07-18",
+  start: "19:30",
+  end: "19:55",
+  region: "ラジオ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-07-18_FM AICHI「大須アメ横 presents オスラバ」.jpg",
+      ref: "https://x.com/takanenofficial/status/1946140604456423456",
+    },
+    {
+      path: "/events/2025/2025-07-18_FM AICHI「大須アメ横 presents オスラバ」_1.jpg",
+      ref: "https://x.com/s2moemoe/status/1946171945634116065",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://fma.co.jp/f/prg/osu/",
+  },
+  updatedAt: "2025-07-19",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20250718193000)
+  - [高橋萌 X 報告ポスト](https://x.com/s2moemoe/status/1946171945634116065)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1946140604456423456)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1944532291537293562)
+`;

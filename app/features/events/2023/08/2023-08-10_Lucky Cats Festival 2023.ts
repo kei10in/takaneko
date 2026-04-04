@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Lucky Cats Festival 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-10",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "初恋のひと。",
+      "MC",
+      "ヒロインは平均以下。",
+      "男の子の目的は何？",
+      "#超絶かわいい",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1689595692124401664",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+  ## リンク
+
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1184)
+`;
