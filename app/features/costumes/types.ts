@@ -1,6 +1,13 @@
 import { z } from "zod/v4";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { EventTypeEnum, LiveTypeEnum } from "../events/EventType";
+import {
+  MvCostumeName,
+  SpecialCostumeName,
+  StageCostumeName,
+  TShirtCostumeName,
+  UniformCostumeName,
+} from "./costumeNames";
 
 export type PhotoType = "artist" | "press" | "none";
 
@@ -15,7 +22,7 @@ export type PhotoType = "artist" | "press" | "none";
  */
 export interface StageCostume {
   kind: "stage";
-  name: string;
+  name: StageCostumeName;
   slug: string;
 
   photoType: PhotoType;
@@ -33,13 +40,13 @@ export interface StageCostume {
  */
 export interface UniformCostume {
   kind: "uniform";
-  name: string;
+  name: UniformCostumeName;
   slug: string;
 }
 
 export interface MvCostume {
   kind: "mv";
-  name: string;
+  name: MvCostumeName;
   slug: string;
 }
 
@@ -49,13 +56,13 @@ export interface MvCostume {
  */
 export interface TShirtCostume {
   kind: "tshirt";
-  name: string;
+  name: TShirtCostumeName;
   slug: string;
 }
 
 export interface SpecialCostume {
   kind: "special";
-  name: string;
+  name: SpecialCostumeName;
   slug: string;
 }
 

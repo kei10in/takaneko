@@ -38,7 +38,7 @@ export const ライフクエスト部屋着衣装 = {
 
 export const 初恋のこたえ浴衣衣装 = {
   kind: "mv",
-  name: "「初恋のこたえ」浴衣衣装",
+  name: "「初恋のこたえ。」浴衣衣装",
   slug: "初恋のこたえ浴衣衣装",
 } satisfies MvCostume;
 
@@ -50,7 +50,7 @@ export const アイドル衣装白衣装 = {
 
 export const メランコリックハニーMV衣装 = {
   kind: "mv",
-  name: "「メランコリックハニー」MV衣装",
+  name: "「メランコリックハニー」MV 衣装",
   slug: "メランコリックハニーMV衣装",
 } satisfies MvCostume;
 
