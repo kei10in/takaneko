@@ -1,7 +1,8 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import useSWR from "swr";
-import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
+import { type YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
 import { fetchYouTubeOEmbed } from "~/utils/youtube/youtubeOEmbed";
 
 interface Props {
@@ -17,14 +18,7 @@ interface CardProps {
   thumbnailUrl: string;
 }
 
-/**
- * `findPrioritizedThumbnail` は、YouTube サムネイル画像の中から優先度の高いもの
- * のうち実際に存在するものを返します。
- * できるだけ大きく、画質劣化の少ないものを優先します。
- * @param videoId
- * @returns
- */
-const findPrioritizedThumbnail = async (videoId: string): Promise<string | undefined> => {
+const getPrioritizedThumbnailUrls = (videoId: string, thumbnailUrl?: string): string[] => {
   const imgs = youtubeImage(videoId);
   const priorities: (keyof YouTubeImage)[] = [
     "maxResDefault",
@@ -39,47 +33,12 @@ const findPrioritizedThumbnail = async (videoId: string): Promise<string | undef
     "defaultJpeg",
   ];
 
-  const result = new Promise<number | undefined>((resolve) => {
-    const controller = new AbortController();
-    const state: ("pending" | "success" | "failed")[] = Array(priorities.length).fill("pending");
-    let settled = false;
-
-    priorities.forEach(async (p, i) => {
-      console.log(`Checking thumbnail: ${p}`);
-      const url = imgs[p].url;
-
-      try {
-        const param = { method: "GET", headers: { Range: "bytes=0-0" }, signal: controller.signal };
-        const response = await fetch(url, param);
-        state[i] = response.ok ? "success" : "failed";
-      } catch (e) {
-        state[i] = "failed";
-      }
-
-      const n = state.findIndex((x) => x != "failed");
-      if (n != -1 && state[n] == "pending") {
-        // まだ終わってない。
-        return;
-      }
-
-      // 決定した
-      const r = n == -1 ? undefined : n;
-      if (settled) {
-        return;
-      }
-
-      settled = true;
-      controller.abort();
-      resolve(r);
-    });
+  return [
+    ...priorities.map((priority) => imgs[priority].url),
+    thumbnailUrl,
+  ].filter((url, index, list): url is string => {
+    return url != undefined && list.indexOf(url) === index;
   });
-
-  const index = await result;
-  if (index == undefined) {
-    return undefined;
-  }
-
-  return imgs[priorities[index]].url;
 };
 
 const fetchCardProps = async (videoId: string): Promise<CardProps> => {
@@ -88,20 +47,23 @@ const fetchCardProps = async (videoId: string): Promise<CardProps> => {
     throw new Error("Failed to fetch YouTube OEmbed data");
   }
 
-  const thumbnailUrl = await findPrioritizedThumbnail(videoId);
-
   return {
     videoId,
     title: oEmbed.title,
     authorName: oEmbed.author_name,
     authorUrl: oEmbed.author_url,
-    thumbnailUrl: thumbnailUrl ?? oEmbed.thumbnail_url,
+    thumbnailUrl: oEmbed.thumbnail_url,
   };
 };
 
 export const YouTubeCard: React.FC<Props> = (props: Props) => {
   const { videoId, publishedAt } = props;
   const { data: yt, error, isLoading } = useSWR(videoId, fetchCardProps);
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
+
+  useEffect(() => {
+    setThumbnailIndex(0);
+  }, [videoId, yt?.thumbnailUrl]);
 
   if (yt == undefined && isLoading) {
     return (
@@ -160,6 +122,9 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
     );
   }
 
+  const thumbnailUrls = getPrioritizedThumbnailUrls(videoId, yt.thumbnailUrl);
+  const thumbnailUrl = thumbnailUrls[thumbnailIndex] ?? yt.thumbnailUrl;
+
   return (
     <div className="w-full p-1">
       <Link
@@ -170,8 +135,16 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
       >
         <img
           className="bg-nadeshiko-100 text-nadeshiko-600 aspect-video w-full object-cover text-sm"
-          src={yt.thumbnailUrl}
+          src={thumbnailUrl}
           alt={yt.title}
+          onError={() => {
+            setThumbnailIndex((current) => {
+              if (current >= thumbnailUrls.length - 1) {
+                return current;
+              }
+              return current + 1;
+            });
+          }}
         />
       </Link>
       <div>
