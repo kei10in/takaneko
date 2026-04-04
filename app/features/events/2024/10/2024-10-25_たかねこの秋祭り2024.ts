@@ -28,17 +28,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-### カラオケ
+  ### カラオケ
 
-[@\_MARIC さん ポスト](https://x.com/_MARIC/status/1849793286145442218)
+  [@\\_MARIC さん ポスト](https://x.com/_MARIC/status/1849793286145442218)
 
-## 概要
+  ## 概要
 
-たかねこカラオケパーティー
+  たかねこカラオケパーティー
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2286)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
-- [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2286)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
+  - [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
 `;
