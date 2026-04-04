@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "どき生らいぶ",
+  category: "TV",
+  date: "2022-08-13",
+  region: "テレビ",
+  present: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+山口朝日放送
+
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=361)
+`;

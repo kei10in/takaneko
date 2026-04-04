@@ -1,0 +1,28 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TGC FES YAMANASHI 2022",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-10-22",
+  region: "山梨",
+  location: "河口湖ステラシアター",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:アンチファン衣装", "ファンサ"],
+    url: "https://x.com/Mikuru_hositani/status/1583712942020624384",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=468)
+`;

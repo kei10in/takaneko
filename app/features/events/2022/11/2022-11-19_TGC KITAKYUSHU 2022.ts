@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TGC KITAKYUSHU 2022",
+  title: "TGC KITAKYUSHU 2022 by TOKYO GIRLS COLLECTION",
+  category: "EVENT",
+  liveType: "GUEST",
+  date: "2022-11-19",
+  region: "福岡",
+  location: "西日本総合展示場新館",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:アンチファン衣装", "可愛くてごめん"],
+    url: "",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=546)
+`;

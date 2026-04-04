@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ミニライブ＆グループトーク会",
+  status: "RESCHEDULED",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2022-09-19",
+  region: "大阪",
+  location: "タワーレコード難波店",
+  status: "RESCHEDULED",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+台風により延期
+
+https://takanenonadeshiko.jp/?p=449
+
+## リンク
+
+- [公式ニュース 振替日案内](https://takanenonadeshiko.jp/?p=492)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
+`;

@@ -1,0 +1,23 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこ誕生日",
+  category: "BIRTHDAY",
+  date: "2022-08-07",
+  region: "🎂",
+};
+
+export const content = /* md */ `
+## About
+
+JDOL AUDITION を勝ち抜いて選ばれた7名のメンバーと、
+元「ラストアイドル」のメンバー3名からなる10人組の女性アイドルグループ。
+
+サウンドプロデュースはクリエイターユニットHoneyWorksが担当。
+
+— グループ名の由来について —
+
+「高嶺」のように手に入れることのできない多くの人から憧れられる、
+「大和“撫子“」のように日本女性の清楚な美しさとかわいらしさを持った、
+誇り高きアイドルグループになってほしいという願いを込めて名付けていただきました✿
+`;

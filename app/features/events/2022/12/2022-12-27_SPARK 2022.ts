@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SPARK 2022",
+  title: "SPARK 2022 in SHINAGAWA",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-12-27",
+  region: "東京",
+  location: "品川インターシティホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "可愛くてごめん",
+      "女の子は強い",
+      "MC",
+      "アンチファン",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1607701603985035265",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=618)
+`;

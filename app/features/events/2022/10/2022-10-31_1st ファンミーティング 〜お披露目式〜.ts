@@ -1,0 +1,58 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st ファンミーティング 〜お披露目式〜",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2022-10-31",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:ハロウィンコスプレ🎃",
+      "ハロウィン・ナイト (AKB48 cover)",
+      "企画:ハロウィン企画 いたずら顔 GP",
+      "ユメムスビ",
+      "MC",
+      "衣装:アンチファン衣装",
+      "OVERTURE",
+      "アンチファン",
+      "誇り高きアイドル",
+      "MC",
+      "青春トレイン (ラストアイドル cover)",
+      "愛を知る (ラストアイドル cover)",
+      "MC",
+      "衣装: 「乙女どもよ。」制服衣装",
+      "可愛いって言われたい: 城月菜央、涼海すう、葉月紗蘭、星谷美来、松本ももな",
+      "私は怪物: 橋本桃呼、春野莉々、東山恵里沙、日向端ひな、籾山ひめり",
+      "MC",
+      "乙女どもよ。",
+      "美しく生きろ",
+      "アンコール",
+      "衣装: T シャツ (メンバー個別名前入り)",
+      "女の子は強い",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1587062951353032705",
+    links: [
+      {
+        text: "ライブレポート",
+        url: "https://prtimes.jp/main/html/rd/p/000000402.000025517.html",
+      },
+    ],
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=352)
+`;

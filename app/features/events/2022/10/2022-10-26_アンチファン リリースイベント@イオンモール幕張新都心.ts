@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アンチファン リリースイベント@イオンモール幕張新都心",
+  title: "1st シングル「アンチファン」リリースイベント@イオンモール幕張新都心グランドスクエア",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2022-10-26",
+  region: "千葉",
+  location: "イオンモール幕張新都心グランドスクエア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:アンチファン衣装", "アンチファン", "ユメムスビ", "MC", "ファンサ", "MC"],
+    url: "https://x.com/Mikuru_hositani/status/1585229252081102848",
+  },
+  updatedAt: "2024-11-04",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=520)
+`;

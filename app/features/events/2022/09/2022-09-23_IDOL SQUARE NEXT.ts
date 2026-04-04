@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL SQUARE NEXT 9/23",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-09-23",
+  region: "東京",
+  location: "有楽町オルタナティブシアター",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2022/2022-09-23_IDOL SQUARE NEXT.jpg",
+      ref: "https://zero-project.net/event/5199",
+    },
+    {
+      path: "/events/2022/2022-09-23_IDOL SQUARE NEXT_タイムテーブル.jpg",
+      ref: "https://zero-project.net/event/5199",
+      tags: ["timetable"],
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "乙女どもよ。",
+      "ユメムスビ",
+      "MC",
+      "アンチファン",
+      "誇り高きアイドル",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1573247393948368896",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+`;

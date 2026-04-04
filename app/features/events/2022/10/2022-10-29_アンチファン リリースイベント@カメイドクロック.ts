@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アンチファン リリースイベント@カメイドクロック",
+  title: "1st シングル「アンチファン」リリースイベント@カメイドクロック カメクロステージ",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2022-10-29",
+  region: "東京",
+  location: "カメイドクロック カメクロステージ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "1 部",
+      setlist: [
+        "衣装:アンチファン衣装",
+        "アンチファン",
+        "ユメムスビ",
+        "MC",
+        "女の子は強い",
+        "誇り高きアイドル",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1586212571916271616",
+    },
+    {
+      title: "2 部",
+      setlist: [
+        "衣装:アンチファン衣装",
+        "アンチファン",
+        "ユメムスビ",
+        "MC",
+        "乙女どもよ。",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1586268205525237760",
+    },
+  ],
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=521)
+`;

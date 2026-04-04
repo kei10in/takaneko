@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "AION CINDERELLA DX -Who is CinderellA?-",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2022-10-13",
+  region: "東京",
+  location: "なかのZERO 大ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "ユメムスビ",
+      "女の子は強い",
+      "MC",
+      "アンチファン",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1580498574713884675",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=463)
+`;

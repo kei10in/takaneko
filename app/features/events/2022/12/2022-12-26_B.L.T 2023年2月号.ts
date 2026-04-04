@@ -1,0 +1,21 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "B.L.T 2023年2月号",
+  category: "MAGAZINE",
+  date: "2022-12-26",
+  region: "雑誌",
+  present: ["松本ももな"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=623)
+`;

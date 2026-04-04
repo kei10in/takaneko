@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: 'SHOWROOM「@JAM トークバラエティー "ドルバナ"」',
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2022-09-27",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2026-03-13",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [出演報告 - 籾山ひめり X](https://x.com/himeri_momiyama/status/1574735994917597190)
+- [公式 X 告知](https://x.com/takanenofficial/status/1572213964653867010)
+`;
