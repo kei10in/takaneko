@@ -57,7 +57,7 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "葉月紗蘭" },
           { label: "5レーン", member: "星谷美来" },
         ],
-        costume: "「恋を知った世界」」制服衣装",
+        costume: "「恋を知った世界」制服衣装",
       },
       {
         title: "4 部",

@@ -54,7 +54,7 @@ export const meta: EventMetaDescriptor = {
         title: "3 部",
         start: "14:10",
         end: "15:10",
-        costume: "「アドレナリンゲーム」MV 白黒衣装",
+        costume: "「アドレナリンゲーム」白黒衣装",
         lanes: [
           { label: "1 レーン", member: "日向端ひな" },
           { label: "2 レーン", member: "春野莉々" },
@@ -67,7 +67,7 @@ export const meta: EventMetaDescriptor = {
         title: "4 部",
         start: "15:20",
         end: "16:20",
-        costume: "「アドレナリンゲーム」MV 白黒衣装",
+        costume: "「アドレナリンゲーム」白黒衣装",
         lanes: [
           { label: "1 レーン", member: "城月菜央" },
           { label: "2 レーン", member: "橋本桃呼" },

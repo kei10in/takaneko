@@ -49,14 +49,14 @@ export const meta: EventMetaDescriptor = {
         title: "3 部",
         start: "14:30",
         end: "15:30",
-        costume: "「この世界は嘘でできている」MV 黒衣装",
+        costume: "「この世界は嘘でできている」黒衣装",
         lanes: ["涼海すう", "橋本桃呼", "葉月紗蘭", "星谷美来", "松本ももな"],
       },
       {
         title: "4 部",
         start: "15:40",
         end: "16:40",
-        costume: "「この世界は嘘でできている」MV 黒衣装",
+        costume: "「この世界は嘘でできている」黒衣装",
         lanes: ["城月菜央", "東山恵里沙", "日向端ひな", "籾山ひめり"],
       },
       {

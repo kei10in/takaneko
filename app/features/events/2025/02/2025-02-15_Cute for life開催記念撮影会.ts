@@ -22,14 +22,14 @@ export const meta: EventMetaDescriptor = {
         title: "1 部 個別 2 ショット撮影会",
         start: "11:00",
         end: "12:00",
-        costume: "バレンタイン衣装 (Cute for life ライブ衣装)",
+        costume: "バレンタイン 2025 衣装",
         lanes: ["城月菜央", "橋本桃呼", "松本ももな", "葉月紗蘭", "星谷美来"],
       },
       {
         title: "2 部 個別 2 ショット撮影会",
         start: "12:10",
         end: "13:10",
-        costume: "バレンタイン衣装 (Cute for life ライブ衣装)",
+        costume: "バレンタイン 2025 衣装",
         lanes: ["日向端ひな", "春野莉々", "涼海すう", "東山恵里沙", "籾山ひめり"],
       },
       {

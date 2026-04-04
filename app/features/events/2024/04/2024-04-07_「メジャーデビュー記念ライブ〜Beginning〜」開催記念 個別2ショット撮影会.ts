@@ -31,7 +31,6 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "葉月紗蘭", costume: "「可愛いって言われたい」MV 衣装" },
           { label: "5レーン", member: "星谷美来", costume: "「可愛いって言われたい」MV 衣装" },
         ],
-        costume: "ユニット衣装",
       },
       {
         title: "2 部",
@@ -44,12 +43,12 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "東山恵里沙", costume: "「私は怪物」MV 衣装" },
           { label: "5レーン", member: "籾山ひめり", costume: "「私は怪物」MV 衣装" },
         ],
-        costume: "ユニット衣装",
       },
       {
         title: "3 部",
         start: "13:40",
         end: "14:40",
+        costume: "「恋を知った世界」制服衣装",
         lanes: [
           { label: "1レーン", member: "城月菜央" },
           { label: "2レーン", member: "橋本桃呼" },
@@ -57,12 +56,12 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "葉月紗蘭" },
           { label: "5レーン", member: "星谷美来" },
         ],
-        costume: "「恋を知った世界」」制服衣装",
       },
       {
         title: "4 部",
         start: "14:50",
         end: "15:50",
+        costume: "「恋を知った世界」制服衣装",
         lanes: [
           { label: "1レーン", member: "日向端ひな" },
           { label: "2レーン", member: "春野莉々" },
@@ -70,12 +69,12 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "東山恵里沙" },
           { label: "5レーン", member: "籾山ひめり" },
         ],
-        costume: "「恋を知った世界」制服衣装",
       },
       {
         title: "5 部",
         start: "16:10",
         end: "17:10",
+        costume: "私服",
         lanes: [
           { label: "1レーン", member: "城月菜央" },
           { label: "2レーン", member: "橋本桃呼" },
@@ -83,12 +82,12 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "葉月紗蘭" },
           { label: "5レーン", member: "星谷美来" },
         ],
-        costume: "私服",
       },
       {
         title: "6 部",
         start: "17:20",
         end: "18:20",
+        costume: "私服",
         lanes: [
           { label: "1レーン", member: "日向端ひな" },
           { label: "2レーン", member: "春野莉々" },
@@ -96,7 +95,6 @@ export const meta: EventMetaDescriptor = {
           { label: "4レーン", member: "東山恵里沙" },
           { label: "5レーン", member: "籾山ひめり" },
         ],
-        costume: "私服",
       },
     ],
   },

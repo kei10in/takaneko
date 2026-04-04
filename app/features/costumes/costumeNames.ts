@@ -11,6 +11,7 @@ export const StageCostumeName = z.enum([
   "I’M YOUR IDOL 衣装",
   "わたし色に染まれ衣装",
   "美しく生きろ衣装 (上着なし)",
+  "美しく生きろ衣装 (ジャケットなし)",
   "美しく生きろ衣装",
   "僕は君になれない衣装",
   "全国お招きツアー衣装",
@@ -30,16 +31,17 @@ export const MvCostumeName = z.enum([
   "「初恋のこたえ。」浴衣衣装",
   "「アイドル衣装」白衣装",
   "「メランコリックハニー」MV 衣装",
-  "「Cute For Life」私服衣装",
+  "「Cute for life」私服衣装",
   "「東京サニーパーティー」制服衣装",
   "「東京サニーパーティー」パジャマ衣装",
   "「小悪魔だってかまわない」衣装",
   "「I’M YOUR IDOL」MV 衣装",
-  "「アドレナリンゲーム」MV 衣装",
+  "「アドレナリンゲーム」白黒衣装",
+  "「アドレナリンゲーム」ジャージ",
   "「LOVE ANTHEM」MV 衣装",
   "モテチェン！ MV 衣装",
   "「私より好きでいて」MV 衣装",
-  "「メイド至上☆主義」MV衣装",
+  "「メイド☆至上主義」衣装",
   "「推しの魔法」MV 衣装",
   "「私は怪物」MV 衣装",
   "「可愛いっていわれたい」MV 衣装",
@@ -60,6 +62,14 @@ export const MvCostumeName = z.enum([
 
 export type MvCostumeName = z.infer<typeof MvCostumeName>;
 export const MvCostumeNames: string[] = MvCostumeName.options;
+
+export const DancePracticeCostumeName = z.enum([
+  "革命の女王 ダンスプラクティス衣装",
+  "僕は君になれない ダンスプラクティス衣装",
+]);
+
+export type DancePracticeCostumeName = z.infer<typeof DancePracticeCostumeName>;
+export const DancePracticeCostumeNames: string[] = DancePracticeCostumeName.options;
 
 export const UniformCostumeName = z.enum([
   "「ハニフェス 2025」制服衣装",
@@ -101,17 +111,20 @@ export const TShirtCostumeNames: string[] = TShirtCostumeName.options;
 export const SpecialCostumeName = z.enum([
   "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
   "クリスマス 2025 衣装",
+  "高嶺のなでしこ×michellMacaron コラボアイテム",
   "たかねこハロウィン2025 探偵衣装",
   "LARME Fes'25 衣装",
   "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
   "2025 浴衣",
   "パジャマ",
+  "LARME×高嶺のなでしこ SPECIAL COLLABORATION 衣装",
   "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
   "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
   "ホワイトチョコ・ビターチョコ制服衣装",
-  "バレンタイン 2025 衣装",
+  "バレンタイン 2025 衣装", // Cute for Life のときの衣装。生写真の衣装とは別もの。
   "クリスマス 2024 衣装",
   "キュンキュン学園制服",
+  "T シャツ (瞬きさえ忘れる ver.) + コーチジャケット (瞬きさえ忘れる ver.)",
   "LARME fes vol.1 衣装",
   "読売ジャイアンツ ユニフォーム",
   "京れもん 着物",
@@ -128,6 +141,7 @@ export const CostumeName = z.enum({
   ...StageCostumeName.enum,
   ...UniformCostumeName.enum,
   ...MvCostumeName.enum,
+  ...DancePracticeCostumeName.enum,
   ...TShirtCostumeName.enum,
   ...SpecialCostumeName.enum,
 });
