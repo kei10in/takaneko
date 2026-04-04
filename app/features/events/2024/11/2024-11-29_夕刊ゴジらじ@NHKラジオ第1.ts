@@ -21,22 +21,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-NHKラジオ第1 17:00 〜
+  NHKラジオ第1 17:00 〜
 
-17:30 ごろ出演予定
+  17:30 ごろ出演予定
 
-[radiko](https://radiko.jp/#!/live/JOCK)
+  [radiko](https://radiko.jp/#!/live/JOCK)
 
-## リンク
+  ## リンク
 
-- [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1862414280974553477)
-- [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862410668449886297)
-- [公式 X 告知](https://x.com/takanenofficial/status/1861666270803792357)
-- [番組 X](https://x.com/nhk_gojiradi)
-- [番組サイト](https://www.nhk.jp/p/nagoya-gojiradi/rs/KVZP971NR3/)
-- [radiko](https://radiko.jp/#!/live/JOCK)
-- [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
+  - [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1862414280974553477)
+  - [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862410668449886297)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1861666270803792357)
+  - [番組 X](https://x.com/nhk_gojiradi)
+  - [番組サイト](https://www.nhk.jp/p/nagoya-gojiradi/rs/KVZP971NR3/)
+  - [radiko](https://radiko.jp/#!/live/JOCK)
+  - [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
 `;

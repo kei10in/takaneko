@@ -79,31 +79,31 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別握手会
+  個別握手会
 
-CD 1 枚予約で、「個別握手会参加券」を 2 枚配布。
+  CD 1 枚予約で、「個別握手会参加券」を 2 枚配布。
 
-### 事前予約
+  ### 事前予約
 
-事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251129)で受付。
+  事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251129)で受付。
 
-- **受付期間:** 11月20日(木) 18:00 〜 11月27日(木) 23:59
-- **抽選結果:** 12月03日(水) 中に当選メールを配信
+  - **受付期間:** 11月20日(木) 18:00 〜 11月27日(木) 23:59
+  - **抽選結果:** 12月03日(水) 中に当選メールを配信
 
-### 当日受付
+  ### 当日受付
 
-- 当日 CD 予約販売開始: 10:00 〜
-- 事前 CD 予約販売当選者・特典券引換: 10:00 〜
+  - 当日 CD 予約販売開始: 10:00 〜
+  - 事前 CD 予約販売当選者・特典券引換: 10:00 〜
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2002000975234826460)
-- [当日券告知 - 公式 X](https://x.com/takanenofficial/status/2001910372026970294)
-- [楽天ブックス特設ページ](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/?scid=we_bks_twt_cd_20251120_1)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4659)
-- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1991491720186589581)
-- [詳細告知 - 楽天ブックス](https://x.com/rakutenbooks/status/1991432599718490164)
-- [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2002000975234826460)
+  - [当日券告知 - 公式 X](https://x.com/takanenofficial/status/2001910372026970294)
+  - [楽天ブックス特設ページ](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/?scid=we_bks_twt_cd_20251120_1)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4659)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1991491720186589581)
+  - [詳細告知 - 楽天ブックス](https://x.com/rakutenbooks/status/1991432599718490164)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
 `;

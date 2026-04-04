@@ -57,12 +57,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-個別撮影会
+  個別撮影会
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1823)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1876)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1823)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1876)
 `;

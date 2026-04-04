@@ -36,17 +36,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://l-tike.com/tp-20th/)
-- **出演:** 16:50 〜 17:10
-- **[タイムテーブル](https://x.com/takanenofficial/status/1851187239176524040):**<br/>
-  [![タイムテーブル](/events/2024/2024-10-30_ツインプラネット感謝祭_タイムテーブル.jpg)](/events/2024/2024-10-30_ツインプラネット感謝祭_タイムテーブル.jpg)
+  - [🎫チケット](https://l-tike.com/tp-20th/)
+  - **出演:** 16:50 〜 17:10
+  - **[タイムテーブル](https://x.com/takanenofficial/status/1851187239176524040):**<br/>
+    [![タイムテーブル](/events/2024/2024-10-30_ツインプラネット感謝祭_タイムテーブル.jpg)](/events/2024/2024-10-30_ツインプラネット感謝祭_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1836737022175969647)
-- [ツインプラネット X 告知](https://x.com/TP_official_/status/1836480383577411809)
-- [オリコンニュース X 告知](https://x.com/oricon/status/1836480314513985573)
-- [タイムテーブル告知](https://x.com/takanenofficial/status/1851187239176524040)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836737022175969647)
+  - [ツインプラネット X 告知](https://x.com/TP_official_/status/1836480383577411809)
+  - [オリコンニュース X 告知](https://x.com/oricon/status/1836480314513985573)
+  - [タイムテーブル告知](https://x.com/takanenofficial/status/1851187239176524040)
 `;

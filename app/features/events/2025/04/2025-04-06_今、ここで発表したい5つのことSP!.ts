@@ -29,8 +29,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1908097217308549367)
-- [ビクター X 告知](https://x.com/VictorMusic/status/1908112239661564023)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1908097217308549367)
+  - [ビクター X 告知](https://x.com/VictorMusic/status/1908112239661564023)
 `;

@@ -21,16 +21,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM 福井 16:00 〜 リモート出演
+  FM 福井 16:00 〜 リモート出演
 
-[radiko e-radio](https://radiko.jp/#E-RADIO)
+  [radiko e-radio](https://radiko.jp/#E-RADIO)
 
-## リンク
+  ## リンク
 
-- [radiko 放送回](https://radiko.jp/share?sid=E-RADIO&t=20241210160000)
-- [公式 X 告知](https://x.com/takanenofficial/status/1866376533595787409)
-- [番組 X 告知](https://x.com/eradio_official/status/1866358099155759157)
-- [radiko e-radio](https://radiko.jp/#E-RADIO)
+  - [radiko 放送回](https://radiko.jp/share?sid=E-RADIO&t=20241210160000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866376533595787409)
+  - [番組 X 告知](https://x.com/eradio_official/status/1866358099155759157)
+  - [radiko e-radio](https://radiko.jp/#E-RADIO)
 `;

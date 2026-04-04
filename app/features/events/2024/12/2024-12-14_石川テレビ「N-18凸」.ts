@@ -15,11 +15,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-石川テレビ 25:45 〜
+  石川テレビ 25:45 〜
 
-## リンク
+  ## リンク
 
-- [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
 `;

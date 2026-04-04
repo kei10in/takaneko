@@ -20,8 +20,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1857287425195974974)
-- [EX大衆 X 告知](https://x.com/EXtaishu/status/1856991240849699129)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857287425195974974)
+  - [EX大衆 X 告知](https://x.com/EXtaishu/status/1856991240849699129)
 `;

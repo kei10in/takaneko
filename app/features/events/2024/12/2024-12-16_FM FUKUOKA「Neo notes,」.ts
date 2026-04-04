@@ -16,8 +16,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/neo_notes_/status/1868581844461220125)
-- [radiko](https://radiko.jp/#FMFUKUOKA)
+  - [番組 X 告知](https://x.com/neo_notes_/status/1868581844461220125)
+  - [radiko](https://radiko.jp/#FMFUKUOKA)
 `;

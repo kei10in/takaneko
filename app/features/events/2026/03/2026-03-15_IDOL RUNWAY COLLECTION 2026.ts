@@ -73,74 +73,74 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信 URL
+  ## 配信 URL
 
-- スペシャル生配信: https://www.youtube.com/watch?v=-SxGUCLjDb0
-- オリジナル生配信: https://www.youtube.com/watch?v=CWhxuLpN4Sw
+  - スペシャル生配信: https://www.youtube.com/watch?v=-SxGUCLjDb0
+  - オリジナル生配信: https://www.youtube.com/watch?v=CWhxuLpN4Sw
 
-## 出演 - ファッションステージ
+  ## 出演 - ファッションステージ
 
-**出演者:** 🩷橋本桃呼 / 🎀松本ももな / 💙籾山ひめり
+  **出演者:** 🩷橋本桃呼 / 🎀松本ももな / 💙籾山ひめり
 
-- [公式 X 出演告知](https://x.com/takanenofficial/status/2023230909672292685)
-- [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/2023202938731336056)
+  - [公式 X 出演告知](https://x.com/takanenofficial/status/2023230909672292685)
+  - [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/2023202938731336056)
 
-## IRC APP
+  ## IRC APP
 
-IRC の公式アプリ モバイル版です。
-配信はこのアプリで行われるようです。
+  IRC の公式アプリ モバイル版です。
+  配信はこのアプリで行われるようです。
 
-- iPhone: https://apps.apple.com/jp/app/irc-app/id6756539642
-- Android: https://play.google.com/store/apps/details?id=com.yoake.ircapp
-- Web: https://app.idolrunwaycollection.jp/ja
+  - iPhone: https://apps.apple.com/jp/app/irc-app/id6756539642
+  - Android: https://play.google.com/store/apps/details?id=com.yoake.ircapp
+  - Web: https://app.idolrunwaycollection.jp/ja
 
-https://x.com/idolrunwaycolle/status/2030917517229916425
+  https://x.com/idolrunwaycolle/status/2030917517229916425
 
-## ブース
+  ## ブース
 
-「まじかるベリーベリー」で、高嶺のなでしこメンバーが書いたプロフシートを展示 & 配布
+  「まじかるベリーベリー」で、高嶺のなでしこメンバーが書いたプロフシートを展示 & 配布
 
-### プロフィール帳
+  ### プロフィール帳
 
-- [城月菜央](https://x.com/nao_kizuki/status/2033134712513003703)
-- [涼海すう](https://x.com/su_suzumi_/status/2033135112779604408)
-- [橋本桃呼](https://x.com/MomokoHashimoto/status/2033134314746220697)
-- [葉月紗蘭](https://x.com/saara_hazuki/status/2033135529169187053)
-- [東山恵里沙](https://x.com/erisahigasiyama/status/2033065587933651294)
-- [日向端ひな](https://x.com/hina_hinahata/status/2033134357834351030)
-- [星谷美来](https://x.com/Mikuru_hositani/status/2033153912359076079)
-- [松本ももな](https://x.com/momonamatsumoto/status/2033136074965536778)
-- [籾山ひめり](https://x.com/himeri_momiyama/status/2033134875046559946)
+  - [城月菜央](https://x.com/nao_kizuki/status/2033134712513003703)
+  - [涼海すう](https://x.com/su_suzumi_/status/2033135112779604408)
+  - [橋本桃呼](https://x.com/MomokoHashimoto/status/2033134314746220697)
+  - [葉月紗蘭](https://x.com/saara_hazuki/status/2033135529169187053)
+  - [東山恵里沙](https://x.com/erisahigasiyama/status/2033065587933651294)
+  - [日向端ひな](https://x.com/hina_hinahata/status/2033134357834351030)
+  - [星谷美来](https://x.com/Mikuru_hositani/status/2033153912359076079)
+  - [松本ももな](https://x.com/momonamatsumoto/status/2033136074965536778)
+  - [籾山ひめり](https://x.com/himeri_momiyama/status/2033134875046559946)
 
-## リンク
+  ## リンク
 
-- [インタービュー公開告知 - BEEEMニュース X](https://x.com/BEEEEM_NEWS/status/2035921980809990375)
-- [LIVE PERFORMANCE 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034588199499293095)
-- [松本ももな 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034586644935049247)
-- [橋本桃呼 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034219727070036169)
-- [籾山ひめり 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034580391928152068)
-- [イベントレポート - Music Culture X](https://x.com/MusicCultureinf/status/2034564021035077961)
-- [松本ももな 写真 - Music Culture X](https://x.com/MusicCultureinf/status/2034580228853686424)
-- [イベントレポート - ACTRESS PRESS](https://x.com/actresspress/status/2034475845335777446)
-- [イベントレポート - モデルプレス X](https://x.com/modelpress/status/2033378886113988917)
-- [松本ももな 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2034108165982421462)
-- [橋本桃呼 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2034100114067952013)
-- [籾山ひめり 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2033866719568224268)
-- [イベントレポート - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2033508524018507905)
-- [ダイジェスト 高嶺のなでしこライブ- vois X](https://x.com/voisjp/status/2033340104400634174)
-- [ダイジェスト 元ラスアイ・阿部菜々実＆橋本桃呼がペアでランウェイ - vois X](https://x.com/voisjp/status/2033107303986295020)
-- [ランウェイステージ出演報告 - 公式 X](https://x.com/takanenofficial/status/2033113476126707854)
-- [出演報告、ダイジェスト動画があり - 公式 X](https://x.com/takanenofficial/status/2033106757715980520)
-- [松本ももな出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033072821849698755)
-- [籾山ひめり出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033051177101963657)
-- [東山恵里沙出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033038114378363284)
-- [橋本桃呼出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033016688090951797)
-- [プロフィール帳展示・配布告知 - 公式 X](https://x.com/takanenofficial/status/2033046197917962344)
-- [きょうのたかねこ](https://x.com/takanenofficial/status/2032970035765936608)
-- [まじかるベリーベリー ブースのお知らせ - 公式 X](https://x.com/takanenofficial/status/2032293203739836625)
-- [配信告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2030917025485435127)
-- [公式グッズ販売](https://goodsmake.jp/collections/irc-store)
-- [IRC APP会員共通先行(抽選)](https://app.idolrunwaycollection.jp/ja/presale-tickets-irc2026)
-- [告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/1994240772775006321)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1994226342322426218)
+  - [インタービュー公開告知 - BEEEMニュース X](https://x.com/BEEEEM_NEWS/status/2035921980809990375)
+  - [LIVE PERFORMANCE 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034588199499293095)
+  - [松本ももな 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034586644935049247)
+  - [橋本桃呼 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034219727070036169)
+  - [籾山ひめり 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034580391928152068)
+  - [イベントレポート - Music Culture X](https://x.com/MusicCultureinf/status/2034564021035077961)
+  - [松本ももな 写真 - Music Culture X](https://x.com/MusicCultureinf/status/2034580228853686424)
+  - [イベントレポート - ACTRESS PRESS](https://x.com/actresspress/status/2034475845335777446)
+  - [イベントレポート - モデルプレス X](https://x.com/modelpress/status/2033378886113988917)
+  - [松本ももな 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2034108165982421462)
+  - [橋本桃呼 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2034100114067952013)
+  - [籾山ひめり 写真 - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2033866719568224268)
+  - [イベントレポート - 蜜柑通信 X](https://x.com/MIKAN_HENSHUBU/status/2033508524018507905)
+  - [ダイジェスト 高嶺のなでしこライブ- vois X](https://x.com/voisjp/status/2033340104400634174)
+  - [ダイジェスト 元ラスアイ・阿部菜々実＆橋本桃呼がペアでランウェイ - vois X](https://x.com/voisjp/status/2033107303986295020)
+  - [ランウェイステージ出演報告 - 公式 X](https://x.com/takanenofficial/status/2033113476126707854)
+  - [出演報告、ダイジェスト動画があり - 公式 X](https://x.com/takanenofficial/status/2033106757715980520)
+  - [松本ももな出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033072821849698755)
+  - [籾山ひめり出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033051177101963657)
+  - [東山恵里沙出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033038114378363284)
+  - [橋本桃呼出演リアルタイム告知 - 公式 X](https://x.com/takanenofficial/status/2033016688090951797)
+  - [プロフィール帳展示・配布告知 - 公式 X](https://x.com/takanenofficial/status/2033046197917962344)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2032970035765936608)
+  - [まじかるベリーベリー ブースのお知らせ - 公式 X](https://x.com/takanenofficial/status/2032293203739836625)
+  - [配信告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2030917025485435127)
+  - [公式グッズ販売](https://goodsmake.jp/collections/irc-store)
+  - [IRC APP会員共通先行(抽選)](https://app.idolrunwaycollection.jp/ja/presale-tickets-irc2026)
+  - [告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/1994240772775006321)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1994226342322426218)
 `;

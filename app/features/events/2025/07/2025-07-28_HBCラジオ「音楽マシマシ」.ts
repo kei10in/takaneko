@@ -22,9 +22,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=HBC&t=20250728223000)
-- [番組 X 告知](https://x.com/mashi_hbc/status/1949764890526400973)
-- [公式 X 告知](https://x.com/takanenofficial/status/1949303856611184669)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=HBC&t=20250728223000)
+  - [番組 X 告知](https://x.com/mashi_hbc/status/1949764890526400973)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1949303856611184669)
 `;

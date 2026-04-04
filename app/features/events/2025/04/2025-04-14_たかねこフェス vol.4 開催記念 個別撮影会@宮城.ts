@@ -74,12 +74,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ニュース - 振替のお知らせ：橋本桃呼・葉月紗蘭　高嶺のなでしこ 「高嶺のなでしこ 〜たかねこフェスvol.4 出張編〜 開催記念『個別TikTok撮影会』『個別2ショット撮影会』」](https://takanenonadeshiko.jp/?p=3623)
-- [公式ニュース - 橋本桃呼・葉月紗蘭のイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3597)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1911419105913282983)
-- [公式ニュース詳細告知](https://takanenonadeshiko.jp/?p=3583)
-- [公式 X 告知](https://x.com/takanenofficial/status/1896836771402702866)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3456)
+  - [公式ニュース - 振替のお知らせ：橋本桃呼・葉月紗蘭　高嶺のなでしこ 「高嶺のなでしこ 〜たかねこフェスvol.4 出張編〜 開催記念『個別TikTok撮影会』『個別2ショット撮影会』」](https://takanenonadeshiko.jp/?p=3623)
+  - [公式ニュース - 橋本桃呼・葉月紗蘭のイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3597)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1911419105913282983)
+  - [公式ニュース詳細告知](https://takanenonadeshiko.jp/?p=3583)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1896836771402702866)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3456)
 `;

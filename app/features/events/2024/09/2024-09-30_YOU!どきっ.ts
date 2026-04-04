@@ -19,13 +19,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- 放送局: yab 山口朝日放送
-- 放送時間: 15:55 〜
+  - 放送局: yab 山口朝日放送
+  - 放送時間: 15:55 〜
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1840557175317684325)
-- [番組サイト](https://www.yab.co.jp/youdoki)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1840557175317684325)
+  - [番組サイト](https://www.yab.co.jp/youdoki)
 `;

@@ -35,8 +35,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 放送終了報告](https://x.com/takanenofficial/status/1743348783449325885)
-- [公式 X 告知](https://x.com/takanenofficial/status/1742901683422961990)
+  - [公式 X 放送終了報告](https://x.com/takanenofficial/status/1743348783449325885)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1742901683422961990)
 `;

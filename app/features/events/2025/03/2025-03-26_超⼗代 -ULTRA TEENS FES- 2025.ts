@@ -56,28 +56,28 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信
+  ## 配信
 
-- TikTok Live
+  - TikTok Live
   - [TikTok アカウント](https://www.tiktok.com/@chojudai)
   - https://x.com/CHOJUDAI_JAPAN/status/1902632176992317481
-- Lemino
+  - Lemino
   - [配信ページ](https://lemino.docomo.ne.jp/contents/Y3JpZDovL3BsYWxhLmlwdHZmLmpwL2dyb3VwL2IxMDMzNDc=)
   - https://x.com/CHOJUDAI_JAPAN/status/1902269183934787756
   - https://x.com/Lemino_live/status/1902269277471961468
 
-## タイムテーブル
+  ## タイムテーブル
 
-https://event.chojudai.com/#timetable
+  https://event.chojudai.com/#timetable
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1904511107185954834)
-- [公式 X 日向端ひな・籾山ひめり 出演告知](https://x.com/takanenofficial/status/1891775953535397889)
-- [公式 X 高嶺のなでしこ 出演告知](https://x.com/takanenofficial/status/1891760909413986560)
-- [公式 X 松本ももな 出演告知](https://x.com/takanenofficial/status/1879800763062386889)
-- [超十代 -ULTRA TEENS FES- 公式 X タイムテーブル告知](https://x.com/CHOJUDAI_JAPAN/status/1904081589862338796)
-- [超十代 -ULTRA TEENS FES- 公式 X 日向端ひな・籾山ひめり 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1891774750646730828)
-- [超十代 -ULTRA TEENS FES- 公式 X 高嶺のなでしこ 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1891759770643915117)
-- [超十代 -ULTRA TEENS FES- 公式 X 松本ももな 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1879802558816108983)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1904511107185954834)
+  - [公式 X 日向端ひな・籾山ひめり 出演告知](https://x.com/takanenofficial/status/1891775953535397889)
+  - [公式 X 高嶺のなでしこ 出演告知](https://x.com/takanenofficial/status/1891760909413986560)
+  - [公式 X 松本ももな 出演告知](https://x.com/takanenofficial/status/1879800763062386889)
+  - [超十代 -ULTRA TEENS FES- 公式 X タイムテーブル告知](https://x.com/CHOJUDAI_JAPAN/status/1904081589862338796)
+  - [超十代 -ULTRA TEENS FES- 公式 X 日向端ひな・籾山ひめり 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1891774750646730828)
+  - [超十代 -ULTRA TEENS FES- 公式 X 高嶺のなでしこ 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1891759770643915117)
+  - [超十代 -ULTRA TEENS FES- 公式 X 松本ももな 出演告知](https://x.com/CHOJUDAI_JAPAN/status/1879802558816108983)
 `;

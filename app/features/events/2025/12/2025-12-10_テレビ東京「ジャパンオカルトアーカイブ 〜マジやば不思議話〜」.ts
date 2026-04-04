@@ -23,28 +23,28 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演者
+  ## 出演者
 
-### MC
+  ### MC
 
-- 芝大輔 (モグライダー)
-- コヤッキー
+  - 芝大輔 (モグライダー)
+  - コヤッキー
 
-### ゲスト
+  ### ゲスト
 
-- 濱口優
-- 吉田悠軌
-- ぁみ
-- ともしげ (モグライダー)
-- シークエンスはやとも
-- ウマヅラ
-- 小栗有以 (AKB48) #1, #2
-- 城月菜央 (高嶺のなでしこ) #3, #4
+  - 濱口優
+  - 吉田悠軌
+  - ぁみ
+  - ともしげ (モグライダー)
+  - シークエンスはやとも
+  - ウマヅラ
+  - 小栗有以 (AKB48) #1, #2
+  - 城月菜央 (高嶺のなでしこ) #3, #4
 
-## リンク
+  ## リンク
 
-- [TVer](https://tver.jp/series/sre3ngpc3u)
-- [本日放送告知 - 公式 X](https://x.com/takanenofficial/status/1998758350935437751)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1993617232384180631)
-- [告知 - 番組 X](https://x.com/JPoccult/status/1989090908554379706)
+  - [TVer](https://tver.jp/series/sre3ngpc3u)
+  - [本日放送告知 - 公式 X](https://x.com/takanenofficial/status/1998758350935437751)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1993617232384180631)
+  - [告知 - 番組 X](https://x.com/JPoccult/status/1989090908554379706)
 `;

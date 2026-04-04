@@ -19,17 +19,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- FM 大阪 毎週土曜日 19:00 〜 19:30
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
 
-[![ビクターオオサカ X 告知](/events/2024/2024-11-02_高嶺のなでしこのらじおっちゅーの！_1.jpg)](/events/2024/2024-11-02_高嶺のなでしこのらじおっちゅーの！_1.jpg)
+  [![ビクターオオサカ X 告知](/events/2024/2024-11-02_高嶺のなでしこのらじおっちゅーの！_1.jpg)](/events/2024/2024-11-02_高嶺のなでしこのらじおっちゅーの！_1.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1852648245375230441)
-- [ビクターオオサカ告知](https://x.com/VictorE_osaka/status/1852674531627774214)
-- [Radiko](https://radiko.jp/share/?sid=FMO&t=20241005190000)
-- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
-- [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1852648245375230441)
+  - [ビクターオオサカ告知](https://x.com/VictorE_osaka/status/1852674531627774214)
+  - [Radiko](https://radiko.jp/share/?sid=FMO&t=20241005190000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
 `;

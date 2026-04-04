@@ -51,18 +51,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## BEEEEM 創刊号販売
+  ## BEEEEM 創刊号販売
 
-- 販売開始: 15:00 〜
-- 購入特典: 高嶺のなでしこソロポストカード (9 種ランダム)
-- 抽選: 高嶺のなでしこ全メンバーサイン入りポスター 3 名
+  - 販売開始: 15:00 〜
+  - 購入特典: 高嶺のなでしこソロポストカード (9 種ランダム)
+  - 抽選: 高嶺のなでしこ全メンバーサイン入りポスター 3 名
 
-## リンク
+  ## リンク
 
-- [高嶺のなでしこ【BEEEEM FES vol.1ライブレポート】“気高く美しい華”が舞った、可憐と熱情が交差する瞬間-BEEEEM](https://beeeem.com/article/takanekobf01)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1996529952913793324)
-- [本日のおチェキ](https://x.com/takanekomanager/status/1996536815432687691)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1996217874512564557)
-- [会場で「BEEEEM」創刊号を販売 - BEEEEM ニュース X](https://x.com/BEEEEM_NEWS/status/1993998238123278497)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1986784890608816524)
+  - [高嶺のなでしこ【BEEEEM FES vol.1ライブレポート】“気高く美しい華”が舞った、可憐と熱情が交差する瞬間-BEEEEM](https://beeeem.com/article/takanekobf01)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1996529952913793324)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1996536815432687691)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1996217874512564557)
+  - [会場で「BEEEEM」創刊号を販売 - BEEEEM ニュース X](https://x.com/BEEEEM_NEWS/status/1993998238123278497)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1986784890608816524)
 `;

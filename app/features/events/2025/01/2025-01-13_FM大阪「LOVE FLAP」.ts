@@ -23,11 +23,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/LOVEFLAP/status/1878636242625347633)
-- [番組 X 放送後 1](https://x.com/LOVEFLAP/status/1878675138427920448)
-- [番組 X 放送後 2](https://x.com/LOVEFLAP/status/1878683668836937896)
-- [Radiko 出演](https://radiko.jp/share?sid=FMO&t=20250113130000)
-- [番組サイト](https://www.fmosaka.net/_sites/16782357)
+  - [番組 X 告知](https://x.com/LOVEFLAP/status/1878636242625347633)
+  - [番組 X 放送後 1](https://x.com/LOVEFLAP/status/1878675138427920448)
+  - [番組 X 放送後 2](https://x.com/LOVEFLAP/status/1878683668836937896)
+  - [Radiko 出演](https://radiko.jp/share?sid=FMO&t=20250113130000)
+  - [番組サイト](https://www.fmosaka.net/_sites/16782357)
 `;

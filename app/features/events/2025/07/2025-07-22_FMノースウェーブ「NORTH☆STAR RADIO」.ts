@@ -26,12 +26,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 15:30 - 15:59
+  番組放送枠 15:30 - 15:59
 
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20250722153000)
-- [公式 X 告知](https://x.com/takanenofficial/status/1943267755131834778)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20250722153000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1943267755131834778)
 `;

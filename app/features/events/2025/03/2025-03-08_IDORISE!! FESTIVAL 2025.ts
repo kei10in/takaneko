@@ -56,27 +56,27 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演
+  ## 出演
 
-- **会場 -** Spotify O-WEST
-- **時間 -** 14:45 〜 15:15
-- **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY1【O-WEST会場】](https://live.nicovideo.jp/watch/lv347131303#3:42:55)
+  - **会場 -** Spotify O-WEST
+  - **時間 -** 14:45 〜 15:15
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY1【O-WEST会場】](https://live.nicovideo.jp/watch/lv347131303#3:42:55)
 
-## 物販
+  ## 物販
 
-- **会場 -** Spotify O-WEST 2Fロビー
-- **時間 -** 15:30 〜 16:00
+  - **会場 -** Spotify O-WEST 2Fロビー
+  - **時間 -** 15:30 〜 16:00
 
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1898257134976151678)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1897967984800420187)
-- [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
-- [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
-- [イベント公式サイト](https://idorisefes.jp/)
-- [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
-- [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1898257134976151678)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1897967984800420187)
+  - [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
+  - [イベント公式サイト](https://idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
 `;

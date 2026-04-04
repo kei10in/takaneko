@@ -51,8 +51,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ライブレポート](https://prtimes.jp/main/html/rd/p/000000500.000025517.html)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=761)
+  - [ライブレポート](https://prtimes.jp/main/html/rd/p/000000500.000025517.html)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=761)
 `;

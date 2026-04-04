@@ -22,10 +22,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 販売開始: 2025年03月23日 (日) 20:00 〜 順次
-- 開催時間
+  - 販売開始: 2025年03月23日 (日) 20:00 〜 順次
+  - 開催時間
   - ① 18:00 - 18:30
   - ② 18:35 - 19:05
   - ③ 19:10 - 19:40
@@ -33,10 +33,10 @@ export const content = /* md */ `
   - ⑤ 20:25 - 20:55
   - ⑥ 21:00 - 21:30
 
-販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=3499) を参照してください。
+  販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=3499) を参照してください。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3499)
-- [公式 X 告知](https://x.com/takanenofficial/status/1903401281684980103)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3499)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1903401281684980103)
 `;

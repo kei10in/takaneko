@@ -19,13 +19,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催内容
+  ## 開催内容
 
-高嶺のなでしこのアイドル授業中 公開収録
+  高嶺のなでしこのアイドル授業中 公開収録
 
-- 2024年9月22日(日) 12:35 〜
+  - 2024年9月22日(日) 12:35 〜
 
-## リンク
+  ## リンク
 
-- [MUSIC BIRD 告知](https://x.com/musicbird_fm/status/1837433540948251044)
+  - [MUSIC BIRD 告知](https://x.com/musicbird_fm/status/1837433540948251044)
 `;

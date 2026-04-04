@@ -18,23 +18,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-17分30秒ごろから、デジタル防災企画として取り上げられました。
+  17分30秒ごろから、デジタル防災企画として取り上げられました。
 
-## 放送
+  ## 放送
 
-- 放送局: フジテレビ
-- 放送時間: 26:15 〜 27:15 (9/1 02:15 〜 03:15)
+  - 放送局: フジテレビ
+  - 放送時間: 26:15 〜 27:15 (9/1 02:15 〜 03:15)
 
-## 再放送情報
+  ## 再放送情報
 
-- フジテレビTWO (CS): 9/3(火) 21:00 〜 22:00
-- BSフジ: 9/7 (土) 25:00 〜 26:00
+  - フジテレビTWO (CS): 9/3(火) 21:00 〜 22:00
+  - BSフジ: 9/7 (土) 25:00 〜 26:00
 
-## リンク
+  ## リンク
 
-- [TIF 公式 X 告知](https://x.com/TIP_TIF_staff/status/1826892582229831784)
-- [TIF 公式サイト](https://official.idolfes.com/s/tif2024/news/detail/10133)
-- [フジテレビ 番組サイト](https://www.fujitv.co.jp/tif_playback/)
+  - [TIF 公式 X 告知](https://x.com/TIP_TIF_staff/status/1826892582229831784)
+  - [TIF 公式サイト](https://official.idolfes.com/s/tif2024/news/detail/10133)
+  - [フジテレビ 番組サイト](https://www.fujitv.co.jp/tif_playback/)
 `;

@@ -36,14 +36,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-ROUND1 × JOYSOUND コラボキャンペーンのうち「JOYSOUNDカラオケ歌唱キャンペーン」の W チャンスに当選すると参加できるカラオケファンミ。
+  ROUND1 × JOYSOUND コラボキャンペーンのうち「JOYSOUNDカラオケ歌唱キャンペーン」の W チャンスに当選すると参加できるカラオケファンミ。
 
-10 組 20 名が参加。
+  10 組 20 名が参加。
 
-## リンク
+  ## リンク
 
-- [開催報告 - 公式 X](https://x.com/takanenofficial/status/1999471858488607027)
-- [キャンペーン告知 - 公式 X](https://x.com/takanenofficial/status/1923302402406641779)
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/1999471858488607027)
+  - [キャンペーン告知 - 公式 X](https://x.com/takanenofficial/status/1923302402406641779)
 `;

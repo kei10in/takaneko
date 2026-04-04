@@ -26,17 +26,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-ラジオNIKKEI 第1 18:00 〜 18:30
+  ラジオNIKKEI 第1 18:00 〜 18:30
 
-[radiko](https://radiko.jp/#RN1)
+  [radiko](https://radiko.jp/#RN1)
 
-## リンク
+  ## リンク
 
-- [radiko news](https://news.radiko.jp/article/station/RN1/115642/)
-- [番組 X 直前告知](https://x.com/radioinews/status/1864214708619993523)
-- [公式 X 告知](https://x.com/takanenofficial/status/1862445888096149602)
-- [番組 X 告知](https://x.com/radioinews/status/1862330650562294041)
-- [radiko](https://radiko.jp/#RN1)
+  - [radiko news](https://news.radiko.jp/article/station/RN1/115642/)
+  - [番組 X 直前告知](https://x.com/radioinews/status/1864214708619993523)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862445888096149602)
+  - [番組 X 告知](https://x.com/radioinews/status/1862330650562294041)
+  - [radiko](https://radiko.jp/#RN1)
 `;

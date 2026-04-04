@@ -34,9 +34,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1972285168862863582)
-- [公式 X 告知](https://x.com/takanenofficial/status/1965355802509869130)
-- [アイふた X 告知](https://x.com/l9_idol/status/1965341036668240345)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1972285168862863582)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1965355802509869130)
+  - [アイふた X 告知](https://x.com/l9_idol/status/1965341036668240345)
 `;

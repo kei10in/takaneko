@@ -73,9 +73,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1922260541734523085)
-- [公式ニュース 開催告知](https://takanenonadeshiko.jp/?p=3375)
-- [公式 X 開催告知](https://x.com/takanenofficial/status/1890357852654432475)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1922260541734523085)
+  - [公式ニュース 開催告知](https://takanenonadeshiko.jp/?p=3375)
+  - [公式 X 開催告知](https://x.com/takanenofficial/status/1890357852654432475)
 `;

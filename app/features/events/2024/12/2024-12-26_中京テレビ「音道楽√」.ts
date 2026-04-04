@@ -16,12 +16,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-2024年12月20日 読売テレビ放送分と同じ内容です。
+  2024年12月20日 読売テレビ放送分と同じ内容です。
 
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/otodoraku/status/1868581844079272295)
-- [番組 TVer](https://tver.jp/series/srz8y0eytz)
+  - [番組 X 告知](https://x.com/otodoraku/status/1868581844079272295)
+  - [番組 TVer](https://tver.jp/series/srz8y0eytz)
 `;

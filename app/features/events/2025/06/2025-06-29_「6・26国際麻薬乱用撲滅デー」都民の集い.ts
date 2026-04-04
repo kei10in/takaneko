@@ -50,24 +50,24 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 催し物
+  ## 催し物
 
-1. 式典（主催者・共催者挨拶等）
-2. 「高嶺のなでしこ」によるステージライブ
-3. 警察犬デモンストレーション
-4. 薬物乱用防止啓発動画放映
+  1. 式典（主催者・共催者挨拶等）
+  2. 「高嶺のなでしこ」によるステージライブ
+  3. 警察犬デモンストレーション
+  4. 薬物乱用防止啓発動画放映
 
-## 企画展示等
+  ## 企画展示等
 
-1. 啓発リーフレット・グッズ配布
-2. 国連支援募金活動
-3. 着ぐるみ（「ダメ。ゼッタイ。」君、ピーポくん）による啓発活動
-4. 警視庁キャラバンカーでの啓発（薬物見本など）
+  1. 啓発リーフレット・グッズ配布
+  2. 国連支援募金活動
+  3. 着ぐるみ（「ダメ。ゼッタイ。」君、ピーポくん）による啓発活動
+  4. 警視庁キャラバンカーでの啓発（薬物見本など）
 
-## リンク
+  ## リンク
 
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1939126674685391146)
-- [公式 X 告知](https://x.com/takanenofficial/status/1934903856657518964)
-- [東京都 子供・教育 X 告知](https://x.com/tocho_kyoiku/status/1932996350628479416)
-- [「ダメ。ゼッタイ。」普及運動](https://www.hokeniryo.metro.tokyo.lg.jp/anzen/kenkou_anzen/stop/fukyu)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1939126674685391146)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1934903856657518964)
+  - [東京都 子供・教育 X 告知](https://x.com/tocho_kyoiku/status/1932996350628479416)
+  - [「ダメ。ゼッタイ。」普及運動](https://www.hokeniryo.metro.tokyo.lg.jp/anzen/kenkou_anzen/stop/fukyu)
 `;

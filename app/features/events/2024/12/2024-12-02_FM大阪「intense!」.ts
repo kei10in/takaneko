@@ -29,21 +29,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM大阪 16:00 〜
+  FM大阪 16:00 〜
 
-17:00 代に出演予定
+  17:00 代に出演予定
 
-[radiko](https://radiko.jp/#!/live/FMO)
+  [radiko](https://radiko.jp/#!/live/FMO)
 
-## リンク
+  ## リンク
 
-- [番組 X 出演後告知](https://x.com/intense851/status/1863503058346656044)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1863494636075106738)
-- [公式 X 告知](https://x.com/takanenofficial/status/1862806277732106562)
-- [ビクターオオサカ X 告知](https://x.com/VictorE_osaka/status/1863493776112844884)
-- [番組 X](https://x.com/intense851)
-- [番組サイト](https://www.fmosaka.net/_sites/16783666)
-- [radiko](https://radiko.jp/#!/live/FMO)
+  - [番組 X 出演後告知](https://x.com/intense851/status/1863503058346656044)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1863494636075106738)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862806277732106562)
+  - [ビクターオオサカ X 告知](https://x.com/VictorE_osaka/status/1863493776112844884)
+  - [番組 X](https://x.com/intense851)
+  - [番組サイト](https://www.fmosaka.net/_sites/16783666)
+  - [radiko](https://radiko.jp/#!/live/FMO)
 `;

@@ -22,22 +22,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演
+  コメント出演
 
-出演時間: 20:50 ごろ 〜 20:55 ごろ
+  出演時間: 20:50 ごろ 〜 20:55 ごろ
 
-FM AICHI / エフエム滋賀 / エフエム石川 3 局ネット放送。
+  FM AICHI / エフエム滋賀 / エフエム石川 3 局ネット放送。
 
-- FM AICHI: 12/25 (木) 20:30 〜
-- エフエム滋賀: 12/26 (金) 20:00 〜
-- エフエム石川: 12/27 (土) 20:00 〜
+  - FM AICHI: 12/25 (木) 20:30 〜
+  - エフエム滋賀: 12/26 (金) 20:00 〜
+  - エフエム石川: 12/27 (土) 20:00 〜
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMAICHI&t=20251225205055)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20251225203000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2004054652162396590)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMAICHI&t=20251225205055)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20251225203000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2004054652162396590)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
 `;

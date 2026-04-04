@@ -32,9 +32,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [music x serendipity | LOVE FM | 2025/04/02/水 18:00-19:00 (radiko)](https://radiko.jp/share/?sid=LOVEFM&t=20250402180000)
-- [公式 X 告知](https://x.com/takanenofficial/status/1907360993140977889)
-- [番組 X 告知](https://x.com/761musics/status/1907298856213324107)
+  - [music x serendipity | LOVE FM | 2025/04/02/水 18:00-19:00 (radiko)](https://radiko.jp/share/?sid=LOVEFM&t=20250402180000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1907360993140977889)
+  - [番組 X 告知](https://x.com/761musics/status/1907298856213324107)
 `;

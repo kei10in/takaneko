@@ -29,13 +29,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://eplus.jp/marquee-matsuri)
+  [🎫チケット](https://eplus.jp/marquee-matsuri)
 
-出演: 19:45 〜 20:10
+  出演: 19:45 〜 20:10
 
-## リンク
+  ## リンク
 
-- [MARQUEE 祭り X](https://x.com/MARQUEE_matsuri/status/1821837900776161384)
+  - [MARQUEE 祭り X](https://x.com/MARQUEE_matsuri/status/1821837900776161384)
 `;

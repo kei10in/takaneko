@@ -91,23 +91,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 注意
+  ## 注意
 
-「全員ショット撮影会」から「グループショット撮影会」に変更されています。
+  「全員ショット撮影会」から「グループショット撮影会」に変更されています。
 
-詳細は[X での告知](https://x.com/takanenofficial/status/1833864327847465429)と[公式ニュース](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923re/)を参照してください。
+  詳細は[X での告知](https://x.com/takanenofficial/status/1833864327847465429)と[公式ニュース](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923re/)を参照してください。
 
-### イベント詳細
+  ### イベント詳細
 
-- [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923/)
-- [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/21.html)
+  - [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0923/)
+  - [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/21.html)
 
-## リンク
+  ## リンク
 
-- [籾山ひめりイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=2473)
-- [ヴィレッジヴァンガード イベント情報](https://www.village-v.co.jp/news/event/19419): 待機列の地図画像があります。
-- [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
-- [公式 X - イベント詳細告知](https://x.com/takanenofficial/status/1833865384518107256)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2366)
-- [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [籾山ひめりイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=2473)
+  - [ヴィレッジヴァンガード イベント情報](https://www.village-v.co.jp/news/event/19419): 待機列の地図画像があります。
+  - [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
+  - [公式 X - イベント詳細告知](https://x.com/takanenofficial/status/1833865384518107256)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2366)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

@@ -26,9 +26,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/metchagifu/status/1950750052047331572)
-- [公式 X 告知](https://x.com/takanenofficial/status/1950448856816087238)
-- [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
+  - [番組 X 告知](https://x.com/metchagifu/status/1950750052047331572)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1950448856816087238)
+  - [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
 `;

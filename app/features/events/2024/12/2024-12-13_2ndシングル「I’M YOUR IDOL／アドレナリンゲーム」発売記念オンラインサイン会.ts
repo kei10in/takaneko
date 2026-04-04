@@ -39,19 +39,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-オンラインサイン会
+  オンラインサイン会
 
-### 販売期間
+  ### 販売期間
 
-- 1 次受付 (抽選): https://limista.jp/projects/5547
-- 2 次受付 (先着): https://limista.jp/projects/5548
+  - 1 次受付 (抽選): https://limista.jp/projects/5547
+  - 2 次受付 (先着): https://limista.jp/projects/5548
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2891)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3041)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1867487182929486198)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1864642165261127840)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2891)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3041)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1867487182929486198)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1864642165261127840)
 `;

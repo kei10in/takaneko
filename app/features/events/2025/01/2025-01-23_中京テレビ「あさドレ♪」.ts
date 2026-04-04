@@ -19,18 +19,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- 放送局: 中京テレビ
-- 放送時間: 05:50 〜
+  - 放送局: 中京テレビ
+  - 放送時間: 05:50 〜
 
-『身じたく天気』コーナーのリポーターを担当
+  『身じたく天気』コーナーのリポーターを担当
 
-## リンク
+  ## リンク
 
-- [公式 X 予定変更告知](https://x.com/takanenofficial/status/1881255367587557607)
-- [番組 X 予定変更告知](https://x.com/asadore_CTV/status/1881250331889402263)
-- [公式 X 告知](https://x.com/takanenofficial/status/1878307779473297438)
-- [番組サイト](https://ctv.co.jp/asadore/)
-- [TVer](https://tver.jp/series/srehapgls0)
+  - [公式 X 予定変更告知](https://x.com/takanenofficial/status/1881255367587557607)
+  - [番組 X 予定変更告知](https://x.com/asadore_CTV/status/1881250331889402263)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1878307779473297438)
+  - [番組サイト](https://ctv.co.jp/asadore/)
+  - [TVer](https://tver.jp/series/srehapgls0)
 `;

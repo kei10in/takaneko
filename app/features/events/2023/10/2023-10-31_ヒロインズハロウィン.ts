@@ -31,8 +31,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 葉月紗蘭欠席のお知らせ](https://x.com/takanenofficial/status/1719310802866635200)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1409)
+  - [公式 X 葉月紗蘭欠席のお知らせ](https://x.com/takanenofficial/status/1719310802866635200)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1409)
 `;

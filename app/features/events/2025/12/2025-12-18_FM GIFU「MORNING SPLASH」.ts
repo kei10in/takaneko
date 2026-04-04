@@ -22,18 +22,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演
+  コメント出演
 
-出演時間: 9:34頃〜9:40頃
+  出演時間: 9:34頃〜9:40頃
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMGIFU&t=20251218093405)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20251218073000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2001272415427711040)
-- [告知 - 放送局 X](https://x.com/FMGIFU/status/2001154434966151305)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2001245995766874308)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMGIFU&t=20251218093405)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20251218073000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2001272415427711040)
+  - [告知 - 放送局 X](https://x.com/FMGIFU/status/2001154434966151305)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2001245995766874308)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
 `;

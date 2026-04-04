@@ -49,14 +49,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 詳細
+  ## 詳細
 
-- 19:45 〜 20:20 「夜のひと笑い」の枠でコラボ出演。「可愛くてごめん」を披露。
+  - 19:45 〜 20:20 「夜のひと笑い」の枠でコラボ出演。「可愛くてごめん」を披露。
 
-## リンク
+  ## リンク
 
-- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1891862303257014604)
-- [タイムテーブル告知](https://x.com/andparade_jp/status/1890286811559391432)
-- [公式 X 告知](https://x.com/takanenofficial/status/1880903033800040476)
-- [イベント公式 X 告知](https://x.com/andparade_jp/status/1880610926430495100)
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1891862303257014604)
+  - [タイムテーブル告知](https://x.com/andparade_jp/status/1890286811559391432)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1880903033800040476)
+  - [イベント公式 X 告知](https://x.com/andparade_jp/status/1880610926430495100)
 `;

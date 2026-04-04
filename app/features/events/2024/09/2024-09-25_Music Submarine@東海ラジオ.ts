@@ -13,16 +13,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-東海ラジオ 26:00 〜
+  東海ラジオ 26:00 〜
 
-[radiko](http://radiko.jp/#TOKAIRADIO)
+  [radiko](http://radiko.jp/#TOKAIRADIO)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1838873609777099078)
-- [番組 X 告知](https://x.com/music_submarine/status/1838850937915421059)
-- [番組サイト](https://www.tokairadio.co.jp/program/submarine/)
-- [radiko](http://radiko.jp/#TOKAIRADIO)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1838873609777099078)
+  - [番組 X 告知](https://x.com/music_submarine/status/1838850937915421059)
+  - [番組サイト](https://www.tokairadio.co.jp/program/submarine/)
+  - [radiko](http://radiko.jp/#TOKAIRADIO)
 `;

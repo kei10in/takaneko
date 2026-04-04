@@ -22,16 +22,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演
+  コメント出演
 
-出演時間: 13:39 頃 〜 13:46 頃
+  出演時間: 13:39 頃 〜 13:46 頃
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20251220133915)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20251220130000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2002189709670297648)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20251220133915)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20251220130000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2002189709670297648)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
 `;

@@ -21,16 +21,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM大阪 20:00 〜
+  FM大阪 20:00 〜
 
-[radiko 出演会](https://radiko.jp/share?sid=FMO&t=20241213200000)
+  [radiko 出演会](https://radiko.jp/share?sid=FMO&t=20241213200000)
 
-## リンク
+  ## リンク
 
-- [radiko 出演会](https://radiko.jp/share?sid=FMO&t=20241213200000)
-- [公式 X 告知](https://x.com/takanenofficial/status/1867517319125356656)
-- [番組 X 告知](https://x.com/akaneclub851/status/1867442723676205092)
-- [radiko 放送局](https://radiko.jp/#FMO)
+  - [radiko 出演会](https://radiko.jp/share?sid=FMO&t=20241213200000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1867517319125356656)
+  - [番組 X 告知](https://x.com/akaneclub851/status/1867442723676205092)
+  - [radiko 放送局](https://radiko.jp/#FMO)
 `;

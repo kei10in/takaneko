@@ -18,18 +18,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送:
+  ## 放送:
 
-- 全国のコミュニティ FM: 9/7 (土) 12:30 〜 12:55
+  - 全国のコミュニティ FM: 9/7 (土) 12:30 〜 12:55
 
-## 出演:
+  ## 出演:
 
-- 春野莉々
-- 城月菜央
+  - 春野莉々
+  - 城月菜央
 
-## リンク
+  ## リンク
 
-- [スマートフォンでの聴き方](https://x.com/Radimo_info/status/1776220140100878439)
-- [高嶺のなでしこのアイドル授業中！ | MUSIC BIRD-全国のコミュニティFM向け番組配信サービス](https://musicbird.jp/cfm/timetable/takaneko/)
-- [Spotify でのアーカイブ配信](https://open.spotify.com/show/0SClNfJIdHTUH615FeFKSa?si=765898e4f6774115)
+  - [スマートフォンでの聴き方](https://x.com/Radimo_info/status/1776220140100878439)
+  - [高嶺のなでしこのアイドル授業中！ | MUSIC BIRD-全国のコミュニティFM向け番組配信サービス](https://musicbird.jp/cfm/timetable/takaneko/)
+  - [Spotify でのアーカイブ配信](https://open.spotify.com/show/0SClNfJIdHTUH615FeFKSa?si=765898e4f6774115)
 `;

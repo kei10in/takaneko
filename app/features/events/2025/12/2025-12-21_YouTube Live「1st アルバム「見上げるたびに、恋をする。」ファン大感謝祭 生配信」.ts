@@ -43,13 +43,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-1st アルバム「見上げるたびに、恋をする。」ファン大感謝祭 生配信と抽選会を実施
+  1st アルバム「見上げるたびに、恋をする。」ファン大感謝祭 生配信と抽選会を実施
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2002370905259868546)
-- [抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4859)
-- [イベント詳細告知 - 公式ニュース](https://x.com/takanenofficial/status/2001166719063404742)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2002370905259868546)
+  - [抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4859)
+  - [イベント詳細告知 - 公式ニュース](https://x.com/takanenofficial/status/2001166719063404742)
 `;

@@ -24,28 +24,28 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-J-MELO 再放送 が再放送されます。
+  J-MELO 再放送 が再放送されます。
 
-**日程:**
+  **日程:**
 
-- 2025年 01 月 12 日 11:10 〜 11:40
-- 2025年 01 月 13 日 00:10 〜 00:40
-- 2025年 01 月 13 日 05:10 〜 05:40
-- 2025年 01 月 13 日 18:30 〜 19:00
+  - 2025年 01 月 12 日 11:10 〜 11:40
+  - 2025年 01 月 13 日 00:10 〜 00:40
+  - 2025年 01 月 13 日 05:10 〜 05:40
+  - 2025年 01 月 13 日 18:30 〜 19:00
 
-高嶺のなでしこは、
+  高嶺のなでしこは、
 
-- 🎵可愛くてごめん
-- 🎵モテチェン！
+  - 🎵可愛くてごめん
+  - 🎵モテチェン！
 
-を披露
+  を披露
 
-[番組 HP](https://www.nhk.or.jp/j-melo/nhkworld/) または [NHK WORLD JAPAN Live TV](https://www3.nhk.or.jp/nhkworld/en/live/) から視聴できます。
+  [番組 HP](https://www.nhk.or.jp/j-melo/nhkworld/) または [NHK WORLD JAPAN Live TV](https://www3.nhk.or.jp/nhkworld/en/live/) から視聴できます。
 
-## リンク
+  ## リンク
 
-- [NHK MUSIC X 告知](https://x.com/nhk_musicjp/status/1878019217880170755)
-- [番組サイト](https://www.nhk.or.jp/j-melo/nhkworld/)
+  - [NHK MUSIC X 告知](https://x.com/nhk_musicjp/status/1878019217880170755)
+  - [番組サイト](https://www.nhk.or.jp/j-melo/nhkworld/)
 `;

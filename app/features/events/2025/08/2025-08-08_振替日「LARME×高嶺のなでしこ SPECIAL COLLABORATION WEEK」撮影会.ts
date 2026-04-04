@@ -31,20 +31,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## タイムスケジュール
+  ## タイムスケジュール
 
-- 11:00-12:00 (受付終了 11:40)『個別2ショット撮影会』振替
-- 13:40-14:40 (受付終了 14:20)『個別TikTok撮影会』振替
-- 16:10-17:10 (受付終了 16:50)『個別2ショット撮影会』 振替
+  - 11:00-12:00 (受付終了 11:40)『個別2ショット撮影会』振替
+  - 13:40-14:40 (受付終了 14:20)『個別TikTok撮影会』振替
+  - 16:10-17:10 (受付終了 16:50)『個別2ショット撮影会』 振替
 
-## リンク
+  ## リンク
 
-- [振替・返品のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4035)
-- [松本ももなのイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3929)
-- [公式ニュース 当日券販売のお知らせ](https://takanenonadeshiko.jp/?p=3917)
-- [公式ニュース イベント詳細](https://takanenonadeshiko.jp/?p=3922)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1938593310605725739)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3809)
-- [公式 X 内容告知](https://x.com/takanenofficial/status/1927279932029202675)
-- [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
+  - [振替・返品のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4035)
+  - [松本ももなのイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3929)
+  - [公式ニュース 当日券販売のお知らせ](https://takanenonadeshiko.jp/?p=3917)
+  - [公式ニュース イベント詳細](https://takanenonadeshiko.jp/?p=3922)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1938593310605725739)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3809)
+  - [公式 X 内容告知](https://x.com/takanenofficial/status/1927279932029202675)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
 `;

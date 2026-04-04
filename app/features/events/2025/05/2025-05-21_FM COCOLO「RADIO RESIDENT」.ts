@@ -30,16 +30,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM COCOLO 21:00 〜
+  FM COCOLO 21:00 〜
 
-- [Radiko 出演回](https://radiko.jp/share/?sid=CCL&t=20250521210000)
-- [Radiko 出演時間帯](https://radiko.jp/share/?sid=CCL&t=20250521213035)
+  - [Radiko 出演回](https://radiko.jp/share/?sid=CCL&t=20250521210000)
+  - [Radiko 出演時間帯](https://radiko.jp/share/?sid=CCL&t=20250521213035)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1925129441312739397)
-- [Radiko](https://radiko.jp/share/?sid=CCL&t=20250521210000)
-- [番組 X 告知](https://x.com/fmbeyondborders/status/1925065657462509807)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1925129441312739397)
+  - [Radiko](https://radiko.jp/share/?sid=CCL&t=20250521210000)
+  - [番組 X 告知](https://x.com/fmbeyondborders/status/1925065657462509807)
 `;

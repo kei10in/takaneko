@@ -34,23 +34,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://eplus.jp/kagayaki-fes)
-- **出演:** 17:15 〜 17:45 本多の森 北電ホール
-- **配信:** [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345611409)。タイムシフト視聴は 10/8 23:59 まで。
-- **タイムテーブル:**
+  - [🎫チケット](https://eplus.jp/kagayaki-fes)
+  - **出演:** 17:15 〜 17:45 本多の森 北電ホール
+  - **配信:** [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345611409)。タイムシフト視聴は 10/8 23:59 まで。
+  - **タイムテーブル:**
 
   [![タイムテーブ](/events/2024/2024-09-08_かがやきフェス2024_タイムテーブル.jpg)](/events/2024/2024-09-08_かがやきフェス2024_タイムテーブル.jpg)
 
-- **物販:**
+  - **物販:**
 
   [![物販情報](/events/2024/2024-09-08_かがやきフェス2024_物販情報.jpg)](/events/2024/2024-09-08_かがやきフェス2024_物販情報.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/%e3%81%8b%e3%81%8c%e3%82%84%e3%81%8d%e3%83%95%e3%82%a7%e3%82%b92024/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1795417668067168437)
-- [公式 X 物販告知](https://x.com/takanenofficial/status/1832380833724035343)
-- [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345611409)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/%e3%81%8b%e3%81%8c%e3%82%84%e3%81%8d%e3%83%95%e3%82%a7%e3%82%b92024/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1795417668067168437)
+  - [公式 X 物販告知](https://x.com/takanenofficial/status/1832380833724035343)
+  - [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345611409)
 `;

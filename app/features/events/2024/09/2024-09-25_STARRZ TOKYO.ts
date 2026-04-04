@@ -33,18 +33,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://w.pia.jp/t/starrz-tokyo/)
-- **出演:** 16:37 〜 17:02
-- **配信:** [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345701167)
-- **タイムテーブル:** [告知](https://x.com/i/bookmarks?post_id=1831980736469233759)
+  - [🎫チケット](https://w.pia.jp/t/starrz-tokyo/)
+  - **出演:** 16:37 〜 17:02
+  - **配信:** [ニコニコ生放送](https://live.nicovideo.jp/watch/lv345701167)
+  - **タイムテーブル:** [告知](https://x.com/i/bookmarks?post_id=1831980736469233759)
 
   [![タイムテーブ](/events/2024/2024-09-25_STARRZ%20TOKYO_タイムテーブル.jpg)](/events/2024/2024-09-25_STARRZ%20TOKYO_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/starrz-tokyo/)
-- [モデルプレス X](https://x.com/modelpress/status/1824406111170204083)
-- [モデルプレス](https://mdpr.jp/interview/detail/4351681)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/starrz-tokyo/)
+  - [モデルプレス X](https://x.com/modelpress/status/1824406111170204083)
+  - [モデルプレス](https://mdpr.jp/interview/detail/4351681)
 `;

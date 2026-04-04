@@ -29,19 +29,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://ticket.rakuten.co.jp/music/jpop/idle/RTLEDSS/)
-- **出演:** 13:30 〜 13:55 Spotify O-EAST
-- **タイムテーブル:** [タイムテーブル告知](https://x.com/Kastella_OFC/status/1838083503956824284)
+  - [🎫チケット](https://ticket.rakuten.co.jp/music/jpop/idle/RTLEDSS/)
+  - **出演:** 13:30 〜 13:55 Spotify O-EAST
+  - **タイムテーブル:** [タイムテーブル告知](https://x.com/Kastella_OFC/status/1838083503956824284)
 
   [![タイムテーブル](/events/2024/2024-10-02_大青春祭2024_タイムテーブル.jpg)](/events/2024/2024-10-02_大青春祭2024_タイムテーブル.jpg)
 
-- **物販:** 14:10 〜
+  - **物販:** 14:10 〜
 
   [![物販](/events/2024/2024-10-02_大青春祭2024_物販.jpg)](/events/2024/2024-10-02_大青春祭2024_物販.jpg)
 
-## リンク
+  ## リンク
 
-- [かすみ草とステラ X](https://x.com/Kastella_OFC/status/1824732920558583925)
+  - [かすみ草とステラ X](https://x.com/Kastella_OFC/status/1824732920558583925)
 `;

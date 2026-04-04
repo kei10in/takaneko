@@ -22,14 +22,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演
+  コメント出演
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=HBC&t=20250804221830)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=HBC&t=20250804220000)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1952218081318601186)
-- [公式 X 告知](https://x.com/takanenofficial/status/1943270071649947814)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=HBC&t=20250804221830)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=HBC&t=20250804220000)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1952218081318601186)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1943270071649947814)
 `;

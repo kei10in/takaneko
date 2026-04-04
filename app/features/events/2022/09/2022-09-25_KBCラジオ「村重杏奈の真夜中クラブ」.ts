@@ -22,8 +22,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?t=20220926012000&sid=KBC)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1573968080190943232)
+  - [radiko 番組放送回](https://radiko.jp/share/?t=20220926012000&sid=KBC)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1573968080190943232)
 `;

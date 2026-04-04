@@ -19,13 +19,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-2024年9月24日に発売される「"TOKYO RESIDENT" Issue:002」のサイン & お渡し会が開催されます。
+  2024年9月24日に発売される「"TOKYO RESIDENT" Issue:002」のサイン & お渡し会が開催されます。
 
-- **日時:** 2024年9月20日 19時〜20時
+  - **日時:** 2024年9月20日 19時〜20時
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1834925307163218400)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1834925307163218400)
 `;

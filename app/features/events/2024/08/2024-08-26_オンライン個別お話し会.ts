@@ -18,8 +18,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/「高嶺のなでしこ-2nd-ファンミーティング〜成長発/)
-- [公式ニュース](https://takanenonadeshiko.jp/✿高嶺のなでしこメンバーとオンライン個別お-18/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/「高嶺のなでしこ-2nd-ファンミーティング〜成長発/)
+  - [公式ニュース](https://takanenonadeshiko.jp/✿高嶺のなでしこメンバーとオンライン個別お-18/)
 `;

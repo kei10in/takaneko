@@ -19,15 +19,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 Instagram](https://www.instagram.com/p/CriYVuoJk0I/)
-- [番組 X 記事告知](https://x.com/radioinews/status/1651793708780773376)
-- [番組 X 告知 (動画あり)](https://x.com/radioinews/status/1651546011750510593)
-- [番組 X インスタ告知](https://x.com/radioinews/status/1651542644194168833)
-- [番組 X プレゼント告知](https://x.com/radioinews/status/1651520728389521409)
-- [番組 X 告知](https://x.com/radioinews/status/1651503281250910208)
-- [番組 X 予告](https://x.com/radioinews/status/1651177676970024961)
-- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=954)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=915)
+  - [番組 Instagram](https://www.instagram.com/p/CriYVuoJk0I/)
+  - [番組 X 記事告知](https://x.com/radioinews/status/1651793708780773376)
+  - [番組 X 告知 (動画あり)](https://x.com/radioinews/status/1651546011750510593)
+  - [番組 X インスタ告知](https://x.com/radioinews/status/1651542644194168833)
+  - [番組 X プレゼント告知](https://x.com/radioinews/status/1651520728389521409)
+  - [番組 X 告知](https://x.com/radioinews/status/1651503281250910208)
+  - [番組 X 予告](https://x.com/radioinews/status/1651177676970024961)
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=954)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=915)
 `;

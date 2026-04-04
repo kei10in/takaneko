@@ -68,22 +68,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ミニファイブ & グループ握手会
+  ミニファイブ & グループ握手会
 
-CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+  CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
 
-- CD 販売開始: 12:00 〜
-- CD 販売受付場所: ダイバーシティ東京 プラザ フェスティバル広場 CD販売ブース
+  - CD 販売開始: 12:00 〜
+  - CD 販売受付場所: ダイバーシティ東京 プラザ フェスティバル広場 CD販売ブース
 
-## リンク
+  ## リンク
 
-- [オリコン デイリーランキング 1 位報告 - 公式 X](https://x.com/takanenofficial/status/2001238443267932254)
-- [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2001198614597755070)
-- [イベントレポート - 公式プレス](https://prtimes.jp/main/html/rd/p/000000842.000025517.html)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2000921351994167694)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4836)
-- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1999449154230321659)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1987857784462045416)
+  - [オリコン デイリーランキング 1 位報告 - 公式 X](https://x.com/takanenofficial/status/2001238443267932254)
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2001198614597755070)
+  - [イベントレポート - 公式プレス](https://prtimes.jp/main/html/rd/p/000000842.000025517.html)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2000921351994167694)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4836)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1999449154230321659)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1987857784462045416)
 `;

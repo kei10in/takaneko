@@ -35,8 +35,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組ホームページ](https://www.fujitv.co.jp/FNS/2023/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1730693710516760776)
+  - [番組ホームページ](https://www.fujitv.co.jp/FNS/2023/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1730693710516760776)
 `;

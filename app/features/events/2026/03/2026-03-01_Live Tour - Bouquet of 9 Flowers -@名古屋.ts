@@ -120,18 +120,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [参戦報告 - 渡邊 晶子 X](https://x.com/wtnb_shoko/status/2029350884053008417)
-- [ライブ感想 & 「美しく生きろ」O.A - FM AICHI「MORNING BREEZE」2026年03月05日 (木) 09:05:15 〜](https://radiko.jp/#!/ts/FMAICHI/20260305090515)
-- [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2029164962388865193)
-- [開催報告 - 公式 X](https://x.com/takanenofficial/status/2028108291642134829)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2027715406589513801)
-- [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2027685214320001088)
-- [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2027692757519900985)
-- [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
-- [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
-- [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
+  - [参戦報告 - 渡邊 晶子 X](https://x.com/wtnb_shoko/status/2029350884053008417)
+  - [ライブ感想 & 「美しく生きろ」O.A - FM AICHI「MORNING BREEZE」2026年03月05日 (木) 09:05:15 〜](https://radiko.jp/#!/ts/FMAICHI/20260305090515)
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2029164962388865193)
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2028108291642134829)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2027715406589513801)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2027685214320001088)
+  - [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2027692757519900985)
+  - [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
+  - [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
+  - [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
 `;

@@ -30,18 +30,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 18:00 - 19:00
+  番組放送枠 18:00 - 19:00
 
-18:00 ごろ出演予定
+  18:00 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=LOVEFM&t=20250710180000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=LOVEFM&t=20250710180000)
-- [YouTube Live アーカイブ](https://www.youtube.com/watch?v=TShU5anWuPE)
-- [番組 X 報告ポスト](https://x.com/761musics/status/1943271604546605070)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232952646930556)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=LOVEFM&t=20250710180000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=LOVEFM&t=20250710180000)
+  - [YouTube Live アーカイブ](https://www.youtube.com/watch?v=TShU5anWuPE)
+  - [番組 X 報告ポスト](https://x.com/761musics/status/1943271604546605070)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232952646930556)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

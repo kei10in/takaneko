@@ -28,16 +28,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [LARME 公式 X - 開催後ポスト](https://x.com/larmemagazine/status/1938610532652855733)
-- [Scketto プロジェクト公式 X - 動画あり](https://x.com/scketto1/status/1938726111661400485)
-- [高嶺のなでしこ、LARMEコラボのスペシャルファッションショーでランウェイをウォーキング！華麗な衣装と仕草で女性ファンを魅了 | asageiMUSE](https://asageimuse.com/excerpt/26588)
-- [高嶺のなでしこ、「LARME」とタイアップファッションショー開催 松本ももな「本当に幸せな時間でした」 - GirlsNews](https://girlsnews.tv/unit/471788)
-- [イベントレポート](https://encount.press/archives/818026/)
-- [PR TIMES](https://prtimes.jp/main/html/rd/p/000000769.000025517.html)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3759)
-- [応募商品ページ](https://takanenonadeshiko-ec.com/products/受注生産-数量限定-larme-065-特装版-larme-嶺のなでしこ-スペシャルファッションショーご招待応募-女性限定)
-- [LARME 公式 X 告知](https://x.com/larmemagazine/status/1923332991427997971)
-- [公式 X 告知](https://x.com/takanenofficial/status/1923332603916263507)
+  - [LARME 公式 X - 開催後ポスト](https://x.com/larmemagazine/status/1938610532652855733)
+  - [Scketto プロジェクト公式 X - 動画あり](https://x.com/scketto1/status/1938726111661400485)
+  - [高嶺のなでしこ、LARMEコラボのスペシャルファッションショーでランウェイをウォーキング！華麗な衣装と仕草で女性ファンを魅了 | asageiMUSE](https://asageimuse.com/excerpt/26588)
+  - [高嶺のなでしこ、「LARME」とタイアップファッションショー開催 松本ももな「本当に幸せな時間でした」 - GirlsNews](https://girlsnews.tv/unit/471788)
+  - [イベントレポート](https://encount.press/archives/818026/)
+  - [PR TIMES](https://prtimes.jp/main/html/rd/p/000000769.000025517.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3759)
+  - [応募商品ページ](https://takanenonadeshiko-ec.com/products/受注生産-数量限定-larme-065-特装版-larme-嶺のなでしこ-スペシャルファッションショーご招待応募-女性限定)
+  - [LARME 公式 X 告知](https://x.com/larmemagazine/status/1923332991427997971)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1923332603916263507)
 `;

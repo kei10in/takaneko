@@ -57,9 +57,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 物販告知](https://x.com/takanenofficial/status/1880570832134578216)
-- [Appare! X 配信告知](https://x.com/official_appare/status/1880605285175497010)
-- [Appare! X 告知](https://x.com/official_appare/status/1873670468768796965)
+  - [公式 X 物販告知](https://x.com/takanenofficial/status/1880570832134578216)
+  - [Appare! X 配信告知](https://x.com/official_appare/status/1880605285175497010)
+  - [Appare! X 告知](https://x.com/official_appare/status/1873670468768796965)
 `;

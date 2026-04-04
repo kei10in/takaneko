@@ -35,20 +35,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演情報
+  ## 出演情報
 
-10月3日 DAY1 第二部 19:03 〜 19:33
+  10月3日 DAY1 第二部 19:03 〜 19:33
 
-- [🎫チケット](https://ticket.lcacg.cn/ja/tif-asia-tour-2024-in-shanghai/)
-- タイムテーブル
+  - [🎫チケット](https://ticket.lcacg.cn/ja/tif-asia-tour-2024-in-shanghai/)
+  - タイムテーブル
 
   [![タイムテーブル](/events/2024/2024-10-03_TIF%20ASIA%20TOUR%202024%20in%20Shanghai_タイムテーブル.jpg)](/events/2024/2024-10-03_TIF%20ASIA%20TOUR%202024%20in%20Shanghai_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1831693786579374441)
-- [TIF ASIA TOUR 公式 X 告知](https://x.com/TIFAsiaTour/status/1831648721940955358)
-- [TIF ASIA TOUR 公式 X 詳細発表](https://x.com/TIFAsiaTour/status/1835649839906058589)
-- [TIF ASIA TOUR 公式 X チケット告知](https://x.com/TIFAsiaTour/status/1835650087789154341)
-- [イベント詳細](https://www.facebook.com/TIFASIATOUR.DS)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1831693786579374441)
+  - [TIF ASIA TOUR 公式 X 告知](https://x.com/TIFAsiaTour/status/1831648721940955358)
+  - [TIF ASIA TOUR 公式 X 詳細発表](https://x.com/TIFAsiaTour/status/1835649839906058589)
+  - [TIF ASIA TOUR 公式 X チケット告知](https://x.com/TIFAsiaTour/status/1835650087789154341)
+  - [イベント詳細](https://www.facebook.com/TIFASIATOUR.DS)
 `;

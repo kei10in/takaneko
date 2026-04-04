@@ -27,18 +27,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-[🎫チケット](https://ticketvillage.jp/events/12876)
+  [🎫チケット](https://ticketvillage.jp/events/12876)
 
-出演: 12:50 〜 13:05
+  出演: 12:50 〜 13:05
 
-物販: 15:30 〜 / C ブース / ミニフォトカード (白ワンピースver)
+  物販: 15:30 〜 / C ブース / ミニフォトカード (白ワンピースver)
 
-[<img src="/events/2024/2024-08-17_でびぱっぱ〜東の陣〜 タイムテーブル.jpg" alt="タイムテーブル" />](https://x.com/devilanthem/status/1822994524240806073)
+  [<img src="/events/2024/2024-08-17_でびぱっぱ〜東の陣〜 タイムテーブル.jpg" alt="タイムテーブル" />](https://x.com/devilanthem/status/1822994524240806073)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2217)
-- [公式 X](https://x.com/takanenofficial/status/1787739224416121292)
-- [物販情報](https://x.com/takanenofficial/status/1824400834924339393)
-- [Devil ANTHEM. 公式 X](https://x.com/devilanthem/status/1822994524240806073)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2217)
+  - [公式 X](https://x.com/takanenofficial/status/1787739224416121292)
+  - [物販情報](https://x.com/takanenofficial/status/1824400834924339393)
+  - [Devil ANTHEM. 公式 X](https://x.com/devilanthem/status/1822994524240806073)
 `;

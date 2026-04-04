@@ -26,17 +26,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- FM 大阪 毎週土曜日 19:00 〜 19:30
-- [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250118190000)
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250118190000)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1880533083696296088)
-- [FM 大阪 X 告知](https://x.com/fmosaka851/status/1880523359416713228)
-- [Radiko](https://radiko.jp/share?sid=FMO&t=20250118190000)
-- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
-- [番組サイト](https://www.fmosaka.net/_ct/17722199)
-- [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1880533083696296088)
+  - [FM 大阪 X 告知](https://x.com/fmosaka851/status/1880523359416713228)
+  - [Radiko](https://radiko.jp/share?sid=FMO&t=20250118190000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
 `;

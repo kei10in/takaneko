@@ -46,9 +46,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1949110006978420842)
-- [Tリーグ公式 告知](https://x.com/TLEAGUE_PR/status/1944607791030661167)
-- [公式 X 告知](https://x.com/takanenofficial/status/1944637990543716670)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1949110006978420842)
+  - [Tリーグ公式 告知](https://x.com/TLEAGUE_PR/status/1944607791030661167)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1944637990543716670)
 `;

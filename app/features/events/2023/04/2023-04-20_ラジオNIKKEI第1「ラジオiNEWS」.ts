@@ -18,14 +18,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 Instagram](https://www.instagram.com/p/CrQW5bnLEu7/)
-- [番組 X 記事告知](https://x.com/radioinews/status/1649229366516412416)
-- [番組 X 告知 (動画あり)](https://x.com/radioinews/status/1649013778477113345)
-- [番組 X インスタ告知](https://x.com/radioinews/status/1649005976782258176)
-- [番組 X プレゼント告知](https://x.com/radioinews/status/1648989203177549824)
-- [番組 X 告知](https://x.com/radioinews/status/1648966046152544257)
-- [番組 X 予告](https://x.com/radioinews/status/1648635113109061632)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=914)
+  - [番組 Instagram](https://www.instagram.com/p/CrQW5bnLEu7/)
+  - [番組 X 記事告知](https://x.com/radioinews/status/1649229366516412416)
+  - [番組 X 告知 (動画あり)](https://x.com/radioinews/status/1649013778477113345)
+  - [番組 X インスタ告知](https://x.com/radioinews/status/1649005976782258176)
+  - [番組 X プレゼント告知](https://x.com/radioinews/status/1648989203177549824)
+  - [番組 X 告知](https://x.com/radioinews/status/1648966046152544257)
+  - [番組 X 予告](https://x.com/radioinews/status/1648635113109061632)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=914)
 `;

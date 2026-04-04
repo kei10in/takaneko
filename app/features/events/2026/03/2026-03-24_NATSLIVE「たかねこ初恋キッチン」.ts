@@ -47,26 +47,26 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-生配信。ライブ観覧あり。
+  生配信。ライブ観覧あり。
 
-配信の視聴には NATSLIVE アプリのインストールが必要です。
+  配信の視聴には NATSLIVE アプリのインストールが必要です。
 
-## アーカイブ配信
+  ## アーカイブ配信
 
-無料会員は配信後 7 日間アーカイブ視聴可能。
+  無料会員は配信後 7 日間アーカイブ視聴可能。
 
-ゴールド会員は配信後 1 年間アーカイブ視聴可能。
+  ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-## グッズの販売期間
+  ## グッズの販売期間
 
-2026年03月24日 19:00 〜 2026年03月25日 18:59
+  2026年03月24日 19:00 〜 2026年03月25日 18:59
 
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2036405268284842490)
-- [直前告知 - 公式 X](https://x.com/takanenofficial/status/2036382227333026033)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2028777478119207258)
-- [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2028711977887937004)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2036405268284842490)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2036382227333026033)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2028777478119207258)
+  - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2028711977887937004)
 `;

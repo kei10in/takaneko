@@ -24,17 +24,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-高嶺のなでしこタオルが販売されています。
-タオルの詳細については[こちら](https://www.giants.jp/news/24398/)。
+  高嶺のなでしこタオルが販売されています。
+  タオルの詳細については[こちら](https://www.giants.jp/news/24398/)。
 
-[![タオル](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)
+  [![タオル](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)](/events/2024/2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス_タオル.webp)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1829436442592121198)
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/読売ジャイアンツ対東京ヤクルトスワローズ公式/)
-- [ジャイアンツ ニュース](https://www.giants.jp/news/24398/)
-- [岐阜公式戦 (9/5)](https://www.giants.jp/column/2024games/2024gifu/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1829436442592121198)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/読売ジャイアンツ対東京ヤクルトスワローズ公式/)
+  - [ジャイアンツ ニュース](https://www.giants.jp/news/24398/)
+  - [岐阜公式戦 (9/5)](https://www.giants.jp/column/2024games/2024gifu/)
 `;

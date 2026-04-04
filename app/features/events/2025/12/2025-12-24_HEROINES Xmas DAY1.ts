@@ -51,10 +51,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト - HEROINES FES X](https://x.com/HEROINES_FES/status/2003779743204946388)
-- [本日のおチェキ](https://x.com/takanekomanager/status/2003790419537408327)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2003445522032730352)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1993985677588091229)
+  - [ダイジェスト - HEROINES FES X](https://x.com/HEROINES_FES/status/2003779743204946388)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2003790419537408327)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2003445522032730352)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1993985677588091229)
 `;

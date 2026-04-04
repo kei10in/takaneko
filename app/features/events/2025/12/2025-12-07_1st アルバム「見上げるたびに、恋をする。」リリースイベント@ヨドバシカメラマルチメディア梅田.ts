@@ -110,22 +110,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ミニライブ & グループ握手会
+  ミニライブ & グループ握手会
 
-CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+  CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
 
-- CD 販売開始: 09:30 〜
-- CD 販売受付場所: ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール CD販売ブース
+  - CD 販売開始: 09:30 〜
+  - CD 販売受付場所: ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール CD販売ブース
 
-## リンク
+  ## リンク
 
-- [イベント終了報告 - ヨドバシ 梅田店 X](https://x.com/yodobashi_umed/status/1997623737894777048)
-- [2 部終了報告 - 公式 X](https://x.com/takanenofficial/status/1997607112499679667)
-- [1 部終了報告- 公式 X](https://x.com/takanenofficial/status/1997559224487051447)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1997319351540892097)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4668)
-- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1994013333851087271)
-- [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
+  - [イベント終了報告 - ヨドバシ 梅田店 X](https://x.com/yodobashi_umed/status/1997623737894777048)
+  - [2 部終了報告 - 公式 X](https://x.com/takanenofficial/status/1997607112499679667)
+  - [1 部終了報告- 公式 X](https://x.com/takanenofficial/status/1997559224487051447)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1997319351540892097)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4668)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1994013333851087271)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
 `;

@@ -73,14 +73,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/1982337793469665629)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1982073460470993071)
-- [出演順告知 - LARME X](https://x.com/larmemagazine/status/1981251890114678999)
-- [グッズ販売について - LARME X](https://x.com/larmemagazine/status/1979145080993661280)
-- [グッズ詳細 - LARME Instagram](https://www.instagram.com/p/DPtPDlvkmi_)
-- [グッズ告知 - LARME X](https://x.com/larmemagazine/status/1977338129725182389)
-- [配信告知 - LARME X](https://x.com/larmemagazine/status/1977208348463579632)
-- [公式 X 告知](https://x.com/takanenofficial/status/1953788602363650154)
+  - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/1982337793469665629)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1982073460470993071)
+  - [出演順告知 - LARME X](https://x.com/larmemagazine/status/1981251890114678999)
+  - [グッズ販売について - LARME X](https://x.com/larmemagazine/status/1979145080993661280)
+  - [グッズ詳細 - LARME Instagram](https://www.instagram.com/p/DPtPDlvkmi_)
+  - [グッズ告知 - LARME X](https://x.com/larmemagazine/status/1977338129725182389)
+  - [配信告知 - LARME X](https://x.com/larmemagazine/status/1977208348463579632)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1953788602363650154)
 `;

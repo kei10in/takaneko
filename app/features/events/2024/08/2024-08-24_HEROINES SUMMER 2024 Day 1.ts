@@ -29,21 +29,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://ticketdive.com/event/heroinessummer2024)
+  [🎫チケット](https://ticketdive.com/event/heroinessummer2024)
 
-出演: HOLA STAGE 17:10 〜 17:35
+  出演: HOLA STAGE 17:10 〜 17:35
 
-物販: ミニフォトカード (白ワンピースver)
+  物販: ミニフォトカード (白ワンピースver)
 
-[タイムテーブル](https://x.com/heroines_idol/status/1822247031710343567)
+  [タイムテーブル](https://x.com/heroines_idol/status/1822247031710343567)
 
-![タイムテーブル](/events/2024/2024-08-24_HEROINES%20SUMMER%202024%20Day1%20タイムテーブル.jpg)
+  ![タイムテーブル](/events/2024/2024-08-24_HEROINES%20SUMMER%202024%20Day1%20タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/heroines-summer-2024/)
-- [HEROINES 公式 X タイムテーブル](https://x.com/heroines_idol/status/1822247031710343567)
-- [公式 X 物販情報](https://x.com/takanenofficial/status/1826982854842368075)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/heroines-summer-2024/)
+  - [HEROINES 公式 X タイムテーブル](https://x.com/heroines_idol/status/1822247031710343567)
+  - [公式 X 物販情報](https://x.com/takanenofficial/status/1826982854842368075)
 `;

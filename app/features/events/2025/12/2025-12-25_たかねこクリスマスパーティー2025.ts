@@ -112,12 +112,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2004184426763473170)
-- [配信告知 - 公式 X](https://x.com/takanenofficial/status/2001955669096714431)
-- [一般チケット告知 (動画あり) - 公式 X](https://x.com/takanenofficial/status/2002604945388810595)
-- [一般チケット告知 - 公式 X](https://x.com/takanenofficial/status/1980484186008936839)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4303)
-- [FC 先行チケット](https://takanekofc.com/topics/public/_/vnui2qh8mbpnp958.html)
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2004184426763473170)
+  - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2001955669096714431)
+  - [一般チケット告知 (動画あり) - 公式 X](https://x.com/takanenofficial/status/2002604945388810595)
+  - [一般チケット告知 - 公式 X](https://x.com/takanenofficial/status/1980484186008936839)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4303)
+  - [FC 先行チケット](https://takanekofc.com/topics/public/_/vnui2qh8mbpnp958.html)
 `;

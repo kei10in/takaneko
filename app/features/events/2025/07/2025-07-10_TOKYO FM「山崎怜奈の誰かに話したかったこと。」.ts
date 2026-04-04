@@ -30,18 +30,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 13:00 - 14:55
+  番組放送枠 13:00 - 14:55
 
-14:00 ごろ出演予定
+  14:00 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMT&t=20250710140000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMT&t=20250710130000)
-- [番組 X 報告ポスト](https://x.com/darehanaTFM/status/1943178673378726152)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943171457087082881)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
-- [番組 X 告知](https://x.com/darehanaTFM/status/1940649959583543564)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMT&t=20250710140000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMT&t=20250710130000)
+  - [番組 X 報告ポスト](https://x.com/darehanaTFM/status/1943178673378726152)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943171457087082881)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [番組 X 告知](https://x.com/darehanaTFM/status/1940649959583543564)
 `;

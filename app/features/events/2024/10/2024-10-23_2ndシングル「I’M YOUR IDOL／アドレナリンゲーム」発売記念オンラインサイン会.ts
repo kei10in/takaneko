@@ -47,21 +47,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 購入先
+  ## 購入先
 
-【1次販売（抽選）】サイン会
+  【1次販売（抽選）】サイン会
 
-https://limista.com/projects/5382
+  https://limista.com/projects/5382
 
-【2次販売（先着）】サイン会
+  【2次販売（先着）】サイン会
 
-https://limista.com/shipping_groups/5390/projects/5384
+  https://limista.com/shipping_groups/5390/projects/5384
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1847208229866217667)
-- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「iʼm-your-idol-アドレナリンゲ/)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2686)
-- [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/28.html)
-- [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1847208229866217667)
+  - [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「iʼm-your-idol-アドレナリンゲ/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2686)
+  - [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/28.html)
+  - [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

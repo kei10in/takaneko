@@ -113,13 +113,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ニュース - 春野莉々欠席](https://takanenonadeshiko.jp/?p=3338)
-- [ビクターエンタテイメント ニュース - 春野莉々欠席](https://www.jvcmusic.co.jp/-/News/A028511/72.html)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1885697159242359068)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3232)
-- [公式 X 告知](https://x.com/takanenofficial/status/1879853617718714622)
-- [ビクターオンラインストア イベント詳細](https://victor-store.jp/special/takaneko20250202_talk)
-- [ビクターオンラインストア X 告知](https://x.com/vos_jn/status/1879851297874350141)
+  - [公式ニュース - 春野莉々欠席](https://takanenonadeshiko.jp/?p=3338)
+  - [ビクターエンタテイメント ニュース - 春野莉々欠席](https://www.jvcmusic.co.jp/-/News/A028511/72.html)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1885697159242359068)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3232)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1879853617718714622)
+  - [ビクターオンラインストア イベント詳細](https://victor-store.jp/special/takaneko20250202_talk)
+  - [ビクターオンラインストア X 告知](https://x.com/vos_jn/status/1879851297874350141)
 `;

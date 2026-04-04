@@ -76,11 +76,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X グッズ情報](https://x.com/takanenofficial/status/1871163856141066310)
-- [公式 X 配信告知](https://x.com/takanenofficial/status/1870786362334396889)
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/2302/)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2284)
-- [FC トピック: 「たかねこクリスマスパーティー2024」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/zqk2dn6w4iiywpm4.html)
+  - [公式 X グッズ情報](https://x.com/takanenofficial/status/1871163856141066310)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1870786362334396889)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/2302/)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2284)
+  - [FC トピック: 「たかねこクリスマスパーティー2024」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/zqk2dn6w4iiywpm4.html)
 `;

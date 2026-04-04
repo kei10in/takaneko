@@ -29,11 +29,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-2025年03月28日に行われた公開収録「GIRLS♥GIRLS♥GIRLS =FULL BOOST= みんなで超♡まっ茶り公開収録タイム！ 1部」が放送されます。
+  2025年03月28日に行われた公開収録「GIRLS♥GIRLS♥GIRLS =FULL BOOST= みんなで超♡まっ茶り公開収録タイム！ 1部」が放送されます。
 
-## リンク
+  ## リンク
 
-- [GIRLS GIRLS GIRLS =FULL BOOST=吉川ひよりの超まっ茶りタイム！ | FM FUJI | 2025/03/31/月 20:00-20:56](https://radiko.jp/share/?sid=FM-FUJI&t=20250331200000)
-- [公式 X 告知](https://x.com/takanenofficial/status/1906685457683169661)
-- [番組 X 告知](https://x.com/macha_timepiyo/status/1906602665255317505)
+  - [GIRLS GIRLS GIRLS =FULL BOOST=吉川ひよりの超まっ茶りタイム！ | FM FUJI | 2025/03/31/月 20:00-20:56](https://radiko.jp/share/?sid=FM-FUJI&t=20250331200000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1906685457683169661)
+  - [番組 X 告知](https://x.com/macha_timepiyo/status/1906602665255317505)
 `;

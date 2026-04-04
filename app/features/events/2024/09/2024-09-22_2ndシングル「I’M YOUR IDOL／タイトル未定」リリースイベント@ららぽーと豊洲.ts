@@ -91,16 +91,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント詳細
+  ## イベント詳細
 
-- [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0922/)
-- [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/20.html)
+  - [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0922/)
+  - [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/20.html)
 
-## リンク
+  ## リンク
 
-- [籾山ひめりイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=2473)
-- [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
-- [公式 X - イベント詳細告知](https://x.com/takanenofficial/status/1833865384518107256)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2355)
-- [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [籾山ひめりイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=2473)
+  - [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
+  - [公式 X - イベント詳細告知](https://x.com/takanenofficial/status/1833865384518107256)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2355)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

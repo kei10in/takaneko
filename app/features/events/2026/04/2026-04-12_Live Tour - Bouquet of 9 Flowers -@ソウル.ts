@@ -52,11 +52,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5086)
-- [詳細告知](https://x.com/takanenofficial/status/2028810120218685640)
-- [アジア公演開催地決定 - 公式ニュース](https://takanenonadeshiko.jp/?p=4969)
-- [開催地告知 - 公式 X](https://x.com/takanenofficial/status/2022506121874075763)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5086)
+  - [詳細告知](https://x.com/takanenofficial/status/2028810120218685640)
+  - [アジア公演開催地決定 - 公式ニュース](https://takanenonadeshiko.jp/?p=4969)
+  - [開催地告知 - 公式 X](https://x.com/takanenofficial/status/2022506121874075763)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
 `;

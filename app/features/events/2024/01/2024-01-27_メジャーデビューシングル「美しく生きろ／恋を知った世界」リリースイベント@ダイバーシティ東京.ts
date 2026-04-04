@@ -60,13 +60,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-ミニライブ＆グループ握手会
+  ミニライブ＆グループ握手会
 
-## リンク
+  ## リンク
 
-- [公式ニュース 欠席について](https://takanenonadeshiko.jp/?p=1715)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1669)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1724)
+  - [公式ニュース 欠席について](https://takanenonadeshiko.jp/?p=1715)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1669)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1724)
 `;

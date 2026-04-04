@@ -22,13 +22,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演
+  コメント出演
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20250809133745)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20250809130000)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1952172639377637522)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20250809133745)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20250809130000)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1952172639377637522)
 `;

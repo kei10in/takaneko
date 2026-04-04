@@ -30,13 +30,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [放送後報告 - FM 大阪 X](https://x.com/fmosaka851/status/1998569037249540268)
-- [当日告知 - FM 大阪 X](https://x.com/fmosaka851/status/1998347118214307959)
-- [当日告知 - 公式 X](https://x.com/takanenofficial/status/1998361996987679202)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20251210010000)
-- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
-- [告知 - FM 大阪 X](https://x.com/fmosaka851/status/1996504750175695196)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1996507289478664258)
+  - [放送後報告 - FM 大阪 X](https://x.com/fmosaka851/status/1998569037249540268)
+  - [当日告知 - FM 大阪 X](https://x.com/fmosaka851/status/1998347118214307959)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/1998361996987679202)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20251210010000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [告知 - FM 大阪 X](https://x.com/fmosaka851/status/1996504750175695196)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1996507289478664258)
 `;

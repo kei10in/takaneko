@@ -28,23 +28,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 番組内容
+  ## 番組内容
 
-3月26日に実施イベント「ドコモ超十代2025」より、高嶺のなでしこ・IS:SUEのライブパフォーマンスを放送！
+  3月26日に実施イベント「ドコモ超十代2025」より、高嶺のなでしこ・IS:SUEのライブパフォーマンスを放送！
 
-## 出演者
+  ## 出演者
 
-- 高嶺のなでしこ
-- IS:SUE
-- 佐藤咲菜、東恩納瑠花 (LINKL PLANET)
-- 関根さらら
-- GO！皆川
-- 藤平紀歩 (ミスサークルコンテスト2024ファイナリスト)
-- 稲垣瑠奈 (フレッシュキャンパスコンテスト2024グランプリ)
+  - 高嶺のなでしこ
+  - IS:SUE
+  - 佐藤咲菜、東恩納瑠花 (LINKL PLANET)
+  - 関根さらら
+  - GO！皆川
+  - 藤平紀歩 (ミスサークルコンテスト2024ファイナリスト)
+  - 稲垣瑠奈 (フレッシュキャンパスコンテスト2024グランプリ)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1911253105250906206)
-- [ぽっかる X 告知](https://x.com/bs4_pocul_tour2/status/1911354660839166296)
-- [番組サイト](https://www.bs4.jp/popculture/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1911253105250906206)
+  - [ぽっかる X 告知](https://x.com/bs4_pocul_tour2/status/1911354660839166296)
+  - [番組サイト](https://www.bs4.jp/popculture/)
 `;

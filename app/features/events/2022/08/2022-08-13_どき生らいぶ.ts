@@ -19,9 +19,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-山口朝日放送
+  山口朝日放送
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=361)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=361)
 `;

@@ -18,20 +18,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-別番組放送のため 2025年 2 月 9 日 21:30 〜 20:00 に日程変更されました。
+  別番組放送のため 2025年 2 月 9 日 21:30 〜 20:00 に日程変更されました。
 
-[FM 大阪 X 放送時間変更のお知らせ](https://x.com/fmosaka851/status/1885636714464481650)
+  [FM 大阪 X 放送時間変更のお知らせ](https://x.com/fmosaka851/status/1885636714464481650)
 
-- FM 大阪 毎週土曜日 19:00 〜 19:30
-- [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250208190000)
+  - FM 大阪 毎週土曜日 19:00 〜 19:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250208190000)
 
-## リンク
+  ## リンク
 
-- [FM 大阪 X 放送時間変更のお知らせ](https://x.com/fmosaka851/status/1885636714464481650)
-- [Radiko](https://radiko.jp/share?sid=FMO&t=20250208190000)
-- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
-- [番組サイト](https://www.fmosaka.net/_ct/17722199)
-- [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+  - [FM 大阪 X 放送時間変更のお知らせ](https://x.com/fmosaka851/status/1885636714464481650)
+  - [Radiko](https://radiko.jp/share?sid=FMO&t=20250208190000)
+  - [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+  - [番組サイト](https://www.fmosaka.net/_ct/17722199)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
 `;

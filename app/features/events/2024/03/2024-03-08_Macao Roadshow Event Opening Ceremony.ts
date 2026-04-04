@@ -35,9 +35,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-Macao Japan Spring Festival 2024 公式アンバサダー就任式
+  Macao Japan Spring Festival 2024 公式アンバサダー就任式
 
-## リンク
+  ## リンク
 
-- [プレス](https://prtimes.jp/main/html/rd/p/000000577.000025517.html)
+  - [プレス](https://prtimes.jp/main/html/rd/p/000000577.000025517.html)
 `;

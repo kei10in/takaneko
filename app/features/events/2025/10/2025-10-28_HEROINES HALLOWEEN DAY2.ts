@@ -58,12 +58,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演者紹介 - HEROINES FES X](https://x.com/HEROINES_FES/status/1983107393866396109)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1983127010496131520)
-- [本日のおチェキ](https://x.com/takanekomanager/status/1983106620847731080)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1982764255834456293)
-- [タイムテーブル告知 - HEROINES X](https://x.com/heroines_idol/status/1978053324352934339)
-- [公式 X 告知](https://x.com/takanenofficial/status/1972254983405158857)
+  - [出演者紹介 - HEROINES FES X](https://x.com/HEROINES_FES/status/1983107393866396109)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1983127010496131520)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1983106620847731080)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1982764255834456293)
+  - [タイムテーブル告知 - HEROINES X](https://x.com/heroines_idol/status/1978053324352934339)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1972254983405158857)
 `;

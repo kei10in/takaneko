@@ -32,14 +32,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-2024年11月15日のオンラインサイン会の振替日です。
+  2024年11月15日のオンラインサイン会の振替日です。
 
-## リンク
+  ## リンク
 
-- [再延期について - 公式ニュース](https://takanenonadeshiko.jp/?p=3130)
-- [振替について - 公式ニュース](https://takanenonadeshiko.jp/?p=3083)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2793)
-- [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [再延期について - 公式ニュース](https://takanenonadeshiko.jp/?p=3130)
+  - [振替について - 公式ニュース](https://takanenonadeshiko.jp/?p=3083)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2793)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

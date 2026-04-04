@@ -22,10 +22,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20250718204915)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20250718200000)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1946148177926660235)
-- [番組 X 告知](https://x.com/akaneclub851/status/1946039535563153804)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20250718204915)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20250718200000)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1946148177926660235)
+  - [番組 X 告知](https://x.com/akaneclub851/status/1946039535563153804)
 `;

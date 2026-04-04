@@ -26,10 +26,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20250718193000)
-- [高橋萌 X 報告ポスト](https://x.com/s2moemoe/status/1946171945634116065)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1946140604456423456)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1944532291537293562)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20250718193000)
+  - [高橋萌 X 報告ポスト](https://x.com/s2moemoe/status/1946171945634116065)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1946140604456423456)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1944532291537293562)
 `;

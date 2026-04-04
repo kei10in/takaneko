@@ -55,27 +55,27 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-団体サイン会
+  団体サイン会
 
-抽選で合計 60 名 (各部 30 名) を招待。
-CD 2 枚予約で、1 口応募可能。
+  抽選で合計 60 名 (各部 30 名) を招待。
+  CD 2 枚予約で、1 口応募可能。
 
-## 応募
+  ## 応募
 
-応募は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251214)で受付。
+  応募は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251214)で受付。
 
-- **受付期間:**
+  - **受付期間:**
   - 2025年12月3日(水) 16:00 〜 2025年12月9日(火) 23:59 まで
   - コンビニ支払いの場合は 2025年12月7日(日) 18:00 まで
-- **抽選結果:** 2025年12月10日(水) 18:00 頃当選者のみにメールで案内。
+  - **抽選結果:** 2025年12月10日(水) 18:00 頃当選者のみにメールで案内。
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1999811542075031681)
-- [ビクターオンラインストア](https://victor-store.jp/special/takaneko20251214)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4792)
-- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1996138586916487528)
-- [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1999811542075031681)
+  - [ビクターオンラインストア](https://victor-store.jp/special/takaneko20251214)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4792)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1996138586916487528)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
 `;

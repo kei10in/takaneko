@@ -14,14 +14,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- 放送局: TBS (関東ローカル)
-- 放送時間: 25:35 〜
+  - 放送局: TBS (関東ローカル)
+  - 放送時間: 25:35 〜
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1838209206522118591)
-- [番組 X 告知](https://x.com/zenryoku_appeal/status/1837325888276627478)
-- [番組サイト](https://www.tbs.co.jp/zenryoku_appeal/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1838209206522118591)
+  - [番組 X 告知](https://x.com/zenryoku_appeal/status/1837325888276627478)
+  - [番組サイト](https://www.tbs.co.jp/zenryoku_appeal/)
 `;

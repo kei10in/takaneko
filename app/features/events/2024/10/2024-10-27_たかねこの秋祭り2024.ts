@@ -43,19 +43,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-### 第 1 部
+  ### 第 1 部
 
-たかねこキュンキュン学園 & ミニライブ
+  たかねこキュンキュン学園 & ミニライブ
 
-### 第 2 部
+  ### 第 2 部
 
-たかねこカラオケパーティー
+  たかねこカラオケパーティー
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/10月252627日「たかねこの秋祭り2024〜fc-limited〜」開催決定！/)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
-- [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/10月252627日「たかねこの秋祭り2024〜fc-limited〜」開催決定！/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
+  - [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
 `;

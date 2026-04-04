@@ -14,12 +14,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-> MARQUEE（マーキー）最新号Vol.155 8/23発売！<br/>
-> 高嶺のなでしこ<br/>
-> feat.星谷美来 松本ももな 籾山ひめり 振付の一部を籾山がこだわりを持って担当した夏の配信シングル「モテチェン!」が最上級キャッチーでポップだったたかねこ。メジャーデビューからこれまでの心境変化をお聞きしました
+  > MARQUEE（マーキー）最新号Vol.155 8/23発売！<br/>
+  > 高嶺のなでしこ<br/>
+  > feat.星谷美来 松本ももな 籾山ひめり 振付の一部を籾山がこだわりを持って担当した夏の配信シングル「モテチェン!」が最上級キャッチーでポップだったたかねこ。メジャーデビューからこれまでの心境変化をお聞きしました
 
-## リンク
+  ## リンク
 
-- [MARQUEE](http://www.marquee-mag.com/)
-- [MARQUEE X ポスト](https://x.com/MARQUEE_info/status/1821039376912281941)
+  - [MARQUEE](http://www.marquee-mag.com/)
+  - [MARQUEE X ポスト](https://x.com/MARQUEE_info/status/1821039376912281941)
 `;

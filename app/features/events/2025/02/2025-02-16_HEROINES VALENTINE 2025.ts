@@ -47,10 +47,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト 2](https://x.com/takanenofficial/status/1891081364780323169)
-- [ダイジェスト 1](https://x.com/HEROINES_FES/status/1891053289157865745)
-- [タイムテーブル告知](https://x.com/heroines_idol/status/1884910505242042508)
-- [公式 X 告知](https://x.com/takanenofficial/status/1879143933671788923)
+  - [ダイジェスト 2](https://x.com/takanenofficial/status/1891081364780323169)
+  - [ダイジェスト 1](https://x.com/HEROINES_FES/status/1891053289157865745)
+  - [タイムテーブル告知](https://x.com/heroines_idol/status/1884910505242042508)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1879143933671788923)
 `;

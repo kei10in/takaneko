@@ -51,9 +51,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1929145045749514499)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1928798634415440155)
-- [iLiFE! 公式 X 告知](https://x.com/iLiFE_official/status/1918941504929767716)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1929145045749514499)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1928798634415440155)
+  - [iLiFE! 公式 X 告知](https://x.com/iLiFE_official/status/1918941504929767716)
 `;

@@ -30,33 +30,33 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催告知
+  ## 開催告知
 
-[🎫チケット](https://www.e-radio.co.jp/pg_news/1/)
+  [🎫チケット](https://www.e-radio.co.jp/pg_news/1/)
 
-**出演:** 17:05 〜 17:30
+  **出演:** 17:05 〜 17:30
 
-**物販情報:**
+  **物販情報:**
 
-- シガコレ推しコラボ缶:<br/>
-  https://x.com/idol770/status/1846144217636286740
-- ミニフォトカード「高嶺のなでしこ2024衣装」ver.:<br/>
-  https://x.com/takanenofficial/status/1854891642735726841
-- 本日のおチェキ<br/>
-  https://x.com/takanekomanager/status/1855183591657083391
+  - シガコレ推しコラボ缶:<br/>
+    https://x.com/idol770/status/1846144217636286740
+  - ミニフォトカード「高嶺のなでしこ2024衣装」ver.:<br/>
+    https://x.com/takanenofficial/status/1854891642735726841
+  - 本日のおチェキ<br/>
+    https://x.com/takanekomanager/status/1855183591657083391
 
-事前購入、当日受け取りです。
+  事前購入、当日受け取りです。
 
-**[タイムテーブル:](https://x.com/idol770/status/1846823905584955634)**
+  **[タイムテーブル:](https://x.com/idol770/status/1846823905584955634)**
 
-[![タイムテーブル](/events/2024/2024-11-09_UtaTen%20presents%20SHIGA%20IDOL%20COLLECTION%202024_タイムテーブル.jpg)](/events/2024/2024-11-09_UtaTen%20presents%20SHIGA%20IDOL%20COLLECTION%202024_タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-11-09_UtaTen%20presents%20SHIGA%20IDOL%20COLLECTION%202024_タイムテーブル.jpg)](/events/2024/2024-11-09_UtaTen%20presents%20SHIGA%20IDOL%20COLLECTION%202024_タイムテーブル.jpg)
 
-**配信:** ニコニコ生放送 https://live.nicovideo.jp/watch/lv346122072
+  **配信:** ニコニコ生放送 https://live.nicovideo.jp/watch/lv346122072
 
-## リンク
+  ## リンク
 
-- [シガコレ X タイムテーブル](https://x.com/idol770/status/1846823905584955634)
+  - [シガコレ X タイムテーブル](https://x.com/idol770/status/1846823905584955634)
 
-* [シガコレ公式告知](https://x.com/idol770/status/1828673886285889978)
-* [公式 X 告知](https://x.com/takanenofficial/status/1828736818445160951)
+  * [シガコレ公式告知](https://x.com/idol770/status/1828673886285889978)
+  * [公式 X 告知](https://x.com/takanenofficial/status/1828736818445160951)
 `;

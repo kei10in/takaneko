@@ -52,9 +52,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1956698764846227761)
-- [Club Que Será Será](https://www.summersonic.com/attractions/detail/club-que-sera-sera/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1950166986782122143)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1956698764846227761)
+  - [Club Que Será Será](https://www.summersonic.com/attractions/detail/club-que-sera-sera/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1950166986782122143)
 `;

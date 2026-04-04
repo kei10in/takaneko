@@ -30,16 +30,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-スタジオゲストとして 13:30 〜 ごろ出演。
+  スタジオゲストとして 13:30 〜 ごろ出演。
 
-## リンク
+  ## リンク
 
-- [radiko 出演したところから再生](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251121133535)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251121130000)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1991733524676948173)
-- [ゲスト報告 - 番組 X](https://x.com/ohmy1332/status/1991775969796059175)
-- [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1991719195328016508)
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1991645345584173478)
+  - [radiko 出演したところから再生](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251121133535)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=TOKAIRADIO&t=20251121130000)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1991733524676948173)
+  - [ゲスト報告 - 番組 X](https://x.com/ohmy1332/status/1991775969796059175)
+  - [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1991719195328016508)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1991645345584173478)
 `;

@@ -26,10 +26,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250730203000)
-- [番組 X 報告ポスト](https://x.com/nakaniwa_studio/status/1950541891679945086)
-- [番組 X 告知](https://x.com/nakaniwa_studio/status/1950481499658056037)
-- [公式 X 告知](https://x.com/takanenofficial/status/1950496792140984759)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250730203000)
+  - [番組 X 報告ポスト](https://x.com/nakaniwa_studio/status/1950541891679945086)
+  - [番組 X 告知](https://x.com/nakaniwa_studio/status/1950481499658056037)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1950496792140984759)
 `;

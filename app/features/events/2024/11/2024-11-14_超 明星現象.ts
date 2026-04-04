@@ -33,21 +33,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://ticketdive.com/event/chomyojo_1114)
-- **出演:** 20:05 〜 20:35
-- **配信:** 未定
-- **タイムテーブル:**<br/>
-  https://x.com/cho_myojo/status/1854841391827845433<br/>
-  [![タイムテーブル](/events/2024/2024-11-14_超%20明星現象_タイムテーブル.jpg)](/events/2024/2024-11-14_超%20明星現象_タイムテーブル.jpg)
-- **物販:** ミニフォトカード「高嶺のなでしこ2024衣装」ver.<br/>
-  https://x.com/takanenofficial/status/1856872175686619551<br/>
-- **本日のおチェキ:**<br/>
-  https://x.com/takanekomanager/status/1857042771053322401
+  - [🎫チケット](https://ticketdive.com/event/chomyojo_1114)
+  - **出演:** 20:05 〜 20:35
+  - **配信:** 未定
+  - **タイムテーブル:**<br/>
+    https://x.com/cho_myojo/status/1854841391827845433<br/>
+    [![タイムテーブル](/events/2024/2024-11-14_超%20明星現象_タイムテーブル.jpg)](/events/2024/2024-11-14_超%20明星現象_タイムテーブル.jpg)
+  - **物販:** ミニフォトカード「高嶺のなでしこ2024衣装」ver.<br/>
+    https://x.com/takanenofficial/status/1856872175686619551<br/>
+  - **本日のおチェキ:**<br/>
+    https://x.com/takanekomanager/status/1857042771053322401
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1843977310120390722)
-- [イベント公式 X 告知](https://x.com/cho_myojo/status/1843235598666227948)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843977310120390722)
+  - [イベント公式 X 告知](https://x.com/cho_myojo/status/1843235598666227948)
 `;

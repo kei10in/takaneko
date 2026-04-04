@@ -89,11 +89,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [完売御礼 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/2030556262409330829)
-- [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2030303038687342839)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
-- [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
+  - [完売御礼 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/2030556262409330829)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2030303038687342839)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
+  - [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
 `;

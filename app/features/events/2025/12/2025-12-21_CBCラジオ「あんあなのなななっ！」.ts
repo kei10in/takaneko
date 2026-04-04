@@ -26,19 +26,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-インタビュー出演。
+  インタビュー出演。
 
-インタビュー放送後もパーソナリティからの THE FIRST TAKE 出演に関するコメントあり。
+  インタビュー放送後もパーソナリティからの THE FIRST TAKE 出演に関するコメントあり。
 
-出演時間: 14:35 〜 14:53 ごろ
+  出演時間: 14:35 〜 14:53 ごろ
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251221143505)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251221130000)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2002625586439901300)
-- [直前告知 - 番組 X](https://x.com/nanana1053/status/2002580990884274504)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2002360743287795738)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251221143505)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251221130000)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2002625586439901300)
+  - [直前告知 - 番組 X](https://x.com/nanana1053/status/2002580990884274504)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2002360743287795738)
 `;

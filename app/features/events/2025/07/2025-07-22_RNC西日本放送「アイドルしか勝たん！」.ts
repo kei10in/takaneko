@@ -22,12 +22,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-リモート出演
+  リモート出演
 
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share?sid=RNC&t=20250722233000)
-- [番組 X 告知](https://x.com/idol_rnc/status/1946557736390652214)
+  - [radiko 番組放送回](https://radiko.jp/share?sid=RNC&t=20250722233000)
+  - [番組 X 告知](https://x.com/idol_rnc/status/1946557736390652214)
 `;

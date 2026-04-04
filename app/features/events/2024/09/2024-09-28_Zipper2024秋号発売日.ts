@@ -19,12 +19,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 雑誌情報
+  ## 雑誌情報
 
-[![高嶺のなでしこ](/events/2024/2024-09-28_Zipper2024秋号_高嶺のなでしこ.jpg)](/events/2024/2024-09-28_Zipper2024秋号_高嶺のなでしこ.jpg)
+  [![高嶺のなでしこ](/events/2024/2024-09-28_Zipper2024秋号_高嶺のなでしこ.jpg)](/events/2024/2024-09-28_Zipper2024秋号_高嶺のなでしこ.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知 (高嶺のなでしこ)](https://x.com/takanenofficial/status/1839892810696405084)
-- [公式 X 告知 (籾山ひめり単独)](https://x.com/takanenofficial/status/1839892835648340436)
+  - [公式 X 告知 (高嶺のなでしこ)](https://x.com/takanenofficial/status/1839892810696405084)
+  - [公式 X 告知 (籾山ひめり単独)](https://x.com/takanenofficial/status/1839892835648340436)
 `;

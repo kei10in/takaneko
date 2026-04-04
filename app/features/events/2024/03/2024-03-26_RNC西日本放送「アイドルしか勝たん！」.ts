@@ -22,11 +22,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-コメント出演
+  コメント出演
 
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/idol_rnc/status/1772241266106863647)
+  - [番組 X 告知](https://x.com/idol_rnc/status/1772241266106863647)
 `;

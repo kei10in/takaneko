@@ -26,17 +26,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-インタビュー出演
+  インタビュー出演
 
-主演時間: 17:12:45 〜
+  主演時間: 17:12:45 〜
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20251216171245)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20251216160000)
-- [出演報告 - 番組 X](https://x.com/intense851/status/2000847074389319960)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2000858859750207873)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2000755258071335261)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20251216171245)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20251216160000)
+  - [出演報告 - 番組 X](https://x.com/intense851/status/2000847074389319960)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2000858859750207873)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2000755258071335261)
 `;

@@ -16,13 +16,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-コメント出演
+  コメント出演
 
-## リンク
+  ## リンク
 
-- [radiko 放送回](https://radiko.jp/share?sid=FMAICHI&t=20241225170000)
-- [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1871416460872241233)
-- [radiko](https://radiko.jp/#FMAICHI)
+  - [radiko 放送回](https://radiko.jp/share?sid=FMAICHI&t=20241225170000)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1871416460872241233)
+  - [radiko](https://radiko.jp/#FMAICHI)
 `;

@@ -22,16 +22,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演。
+  コメント出演。
 
-出演時間: 19:35頃 〜 19:46頃
+  出演時間: 19:35頃 〜 19:46頃
 
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20251217193500)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20251217190000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2001174268495958467)
-- [告知 - 番組 X](https://x.com/RadioGroove825/status/1999086012211880244)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20251217193500)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20251217190000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2001174268495958467)
+  - [告知 - 番組 X](https://x.com/RadioGroove825/status/1999086012211880244)
 `;

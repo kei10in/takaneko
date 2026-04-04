@@ -39,14 +39,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 販売期間
+  ## 販売期間
 
-- 1 次受付 (抽選): https://limista.jp/projects/5498
-- 2 次受付 (先着): https://limista.jp/projects/5499
+  - 1 次受付 (抽選): https://limista.jp/projects/5498
+  - 2 次受付 (先着): https://limista.jp/projects/5499
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2885)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2904)
-- [公式 X 告知](https://x.com/takanenofficial/status/1858820011038503237)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2885)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2904)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1858820011038503237)
 `;

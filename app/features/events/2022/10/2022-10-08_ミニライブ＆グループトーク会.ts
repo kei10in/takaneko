@@ -30,13 +30,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-2022年9月19日に開催予定だった「ミニライブ＆グループトーク会」が、台風の影響により10月8日に延期されました。
+  2022年9月19日に開催予定だった「ミニライブ＆グループトーク会」が、台風の影響により10月8日に延期されました。
 
-https://takanenonadeshiko.jp/?p=449
+  https://takanenonadeshiko.jp/?p=449
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=492)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
-- [欠席告知](https://takanenonadeshiko.jp/?p=498)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=492)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=438)
+  - [欠席告知](https://takanenonadeshiko.jp/?p=498)
 `;

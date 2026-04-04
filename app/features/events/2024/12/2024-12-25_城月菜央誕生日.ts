@@ -7,6 +7,4 @@ export const meta: EventMetaDescriptor = {
   region: "🎂",
 };
 
-export const content = /* md */ `
-
-`;
+export const content = /* md */ ``;

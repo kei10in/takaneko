@@ -26,16 +26,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 18:00 - 20:25
+  番組放送枠 18:00 - 20:25
 
-19:10 ごろ出演予定
+  19:10 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710191140)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710180000)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943251361518489852)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710191140)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710180000)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943251361518489852)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

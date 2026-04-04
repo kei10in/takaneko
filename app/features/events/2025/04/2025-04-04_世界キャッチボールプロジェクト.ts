@@ -29,9 +29,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-当日スケジュールの詳細は[こちら](https://www.wcb2025.com/プロジェクト概要)。
+  当日スケジュールの詳細は[こちら](https://www.wcb2025.com/プロジェクト概要)。
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1901137655943086108)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1901137655943086108)
 `;

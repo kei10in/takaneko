@@ -16,19 +16,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM 福井 17:45 〜
+  FM 福井 17:45 〜
 
-18:00 台 コメント出演
+  18:00 台 コメント出演
 
-[radiko](https://radiko.jp/#FMFUKUI)
+  [radiko](https://radiko.jp/#FMFUKUI)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1866014921307324877)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1865973735968461276)
-- [番組 X 告知](https://x.com/updateevening2/status/1865951231908466938)
-- [番組 HP](https://blog.fmfukui.jp/update/)
-- [radiko](https://radiko.jp/#FMFUKUI)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866014921307324877)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1865973735968461276)
+  - [番組 X 告知](https://x.com/updateevening2/status/1865951231908466938)
+  - [番組 HP](https://blog.fmfukui.jp/update/)
+  - [radiko](https://radiko.jp/#FMFUKUI)
 `;

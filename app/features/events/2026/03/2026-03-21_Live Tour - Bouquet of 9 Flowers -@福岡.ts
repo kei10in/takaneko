@@ -110,18 +110,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2036412770758115501)
-- [開催報告 - 公式 X](https://x.com/takanenofficial/status/2035363353640763894)
-- [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2035185879355154714)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2034985861050507559)
-- [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2034940514173329635)
-- [ツアーグッズサイン入れについて (対象者への事前アンケートあり) - 公式ニュース](https://takanenonadeshiko.jp/?p=5126)
-- [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
-- [ツアーグッズサイン入れについての告知 - 公式 X](https://x.com/takanenofficial/status/2034208199151087926)
-- [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
-- [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2036412770758115501)
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2035363353640763894)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2035185879355154714)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2034985861050507559)
+  - [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2034940514173329635)
+  - [ツアーグッズサイン入れについて (対象者への事前アンケートあり) - 公式ニュース](https://takanenonadeshiko.jp/?p=5126)
+  - [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
+  - [ツアーグッズサイン入れについての告知 - 公式 X](https://x.com/takanenofficial/status/2034208199151087926)
+  - [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
+  - [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
 `;

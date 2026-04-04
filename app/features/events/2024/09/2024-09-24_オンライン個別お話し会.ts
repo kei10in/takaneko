@@ -19,13 +19,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 開催日: 2024年9月24日 18:00 〜 21:30
-- 販売開始: 2024年9月22日 21:00
+  - 開催日: 2024年9月24日 18:00 〜 21:30
+  - 販売開始: 2024年9月22日 21:00
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/✿高嶺のなでしこメンバーとオンライン個別お-19/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1837469924304080910)
+  - [公式ニュース](https://takanenonadeshiko.jp/✿高嶺のなでしこメンバーとオンライン個別お-19/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1837469924304080910)
 `;

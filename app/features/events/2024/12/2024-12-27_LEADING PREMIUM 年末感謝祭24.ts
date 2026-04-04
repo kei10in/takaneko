@@ -59,9 +59,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [タイムテーブル 告知](https://x.com/Leadi_events/status/1870394427669438791)
-- [公式 X 告知](https://x.com/takanenofficial/status/1862451439957942763)
-- [リーディ イベント部 X 告知](https://x.com/Leadi_events/status/1861364284304814358)
+  - [タイムテーブル 告知](https://x.com/Leadi_events/status/1870394427669438791)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862451439957942763)
+  - [リーディ イベント部 X 告知](https://x.com/Leadi_events/status/1861364284304814358)
 `;

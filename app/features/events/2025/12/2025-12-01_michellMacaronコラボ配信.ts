@@ -54,33 +54,33 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信内告知
+  ## 配信内告知
 
-### 店頭販売
+  ### 店頭販売
 
-- 日時: 2025年12月13日(土) 10:00 〜 21:00 / 12月14日(日) 10:00 〜 21:00
-- 場所: 名古屋パルコ 西館 3F michellMacaron ポップアップストア
-- サイン入りポストカードを展示
-- https://mycolor.jp/michellmacaron/popup
+  - 日時: 2025年12月13日(土) 10:00 〜 21:00 / 12月14日(日) 10:00 〜 21:00
+  - 場所: 名古屋パルコ 西館 3F michellMacaron ポップアップストア
+  - サイン入りポストカードを展示
+  - https://mycolor.jp/michellmacaron/popup
 
-### プレゼント企画
+  ### プレゼント企画
 
-- 高嶺のなでしこメンバーサイン入りチェキを各1名にプレゼント
-- 詳細: https://x.com/michellMacar0n/status/1995432577415745895
+  - 高嶺のなでしこメンバーサイン入りチェキを各1名にプレゼント
+  - 詳細: https://x.com/michellMacar0n/status/1995432577415745895
 
-### 1st アルバム リリイベで着用
+  ### 1st アルバム リリイベで着用
 
-- 日時: 2025年12月13日(土)
-- イベント: [1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿]
-- 内容: 個別 2 ショット撮影会
-- michellMacaron コラボアイテムを着用予定
+  - 日時: 2025年12月13日(土)
+  - イベント: [1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿]
+  - 内容: 個別 2 ショット撮影会
+  - michellMacaron コラボアイテムを着用予定
 
-[1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿]: /events/2025-12-13_1st%20アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿
+  [1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿]: /events/2025-12-13_1st%20アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿
 
-## リンク
+  ## リンク
 
-- [アーカイブ 2025年12月14日まで - 高嶺のなでしこ Instagram Live ](https://www.instagram.com/takanenofficial/reel/DRt5i29EuYm/)
-- [アーカイブ 2025年12月14日まで - michellMacaron Instagram Live](https://www.instagram.com/michellmacaron_official/reel/DRt6-gWkpQH)
-- [告知 - michellMacaron X](https://x.com/michellMacar0n/status/1993244097059172668)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1994728096537481608)
+  - [アーカイブ 2025年12月14日まで - 高嶺のなでしこ Instagram Live ](https://www.instagram.com/takanenofficial/reel/DRt5i29EuYm/)
+  - [アーカイブ 2025年12月14日まで - michellMacaron Instagram Live](https://www.instagram.com/michellmacaron_official/reel/DRt6-gWkpQH)
+  - [告知 - michellMacaron X](https://x.com/michellMacar0n/status/1993244097059172668)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1994728096537481608)
 `;

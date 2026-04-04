@@ -40,12 +40,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-アイドルグループ「フューチャーサイダー」のカラオケイベントにゲスト出演。
+  アイドルグループ「フューチャーサイダー」のカラオケイベントにゲスト出演。
 
-## リンク
+  ## リンク
 
-- [ゲスト出演報告 - フューチャーサイダー公式 X](https://x.com/chaider_info/status/2011090013153566941)
-- [イベント告知 - フューチャーサイダー公式 X](https://x.com/chaider_info/status/2010915229342056528)
+  - [ゲスト出演報告 - フューチャーサイダー公式 X](https://x.com/chaider_info/status/2011090013153566941)
+  - [イベント告知 - フューチャーサイダー公式 X](https://x.com/chaider_info/status/2010915229342056528)
 `;

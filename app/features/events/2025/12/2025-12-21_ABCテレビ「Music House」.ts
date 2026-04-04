@@ -22,12 +22,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-インタビュー出演
+  インタビュー出演
 
-## リンク
+  ## リンク
 
-- [告知 - TVer新着 X](https://x.com/TVer_info/status/2002983166911602937)
-- [告知 - 番組 X](https://x.com/musichouse_ABC/status/2001600704650318278)
+  - [告知 - TVer新着 X](https://x.com/TVer_info/status/2002983166911602937)
+  - [告知 - 番組 X](https://x.com/musichouse_ABC/status/2001600704650318278)
 `;

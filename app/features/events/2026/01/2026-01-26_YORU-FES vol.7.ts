@@ -65,12 +65,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2015750643848552786)
-- [出演報告 - YORU-FES X](https://x.com/YORUFES_info/status/2015771748864819646)
-- [本日のおチェキ](https://x.com/takanekomanager/status/2015732831536984563)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2015401768163889269)
-- [タイムテーブル告知 - YORU-FES X](https://x.com/YORUFES_info/status/2013936703602581650)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1996935087783661610)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2015750643848552786)
+  - [出演報告 - YORU-FES X](https://x.com/YORUFES_info/status/2015771748864819646)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2015732831536984563)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2015401768163889269)
+  - [タイムテーブル告知 - YORU-FES X](https://x.com/YORUFES_info/status/2013936703602581650)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1996935087783661610)
 `;

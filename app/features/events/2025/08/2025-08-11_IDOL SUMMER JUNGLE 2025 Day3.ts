@@ -52,10 +52,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1954699555355918566)
-- [公式 X 告知](https://x.com/takanenofficial/status/1936318217150156834)
-- [イベント公式 X タイムテーブル告知](https://x.com/samajan_idol/status/1950859012129374478)
-- [イベント公式 X 告知](https://x.com/samajan_idol/status/1936003978204266560)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1954699555355918566)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1936318217150156834)
+  - [イベント公式 X タイムテーブル告知](https://x.com/samajan_idol/status/1950859012129374478)
+  - [イベント公式 X 告知](https://x.com/samajan_idol/status/1936003978204266560)
 `;

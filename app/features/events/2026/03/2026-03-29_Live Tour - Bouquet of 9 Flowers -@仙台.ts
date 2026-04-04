@@ -110,16 +110,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [開催報告 - 公式 X](https://x.com/takanenofficial/status/2038236153334432064)
-- [スタンプラリーについてのお知らせ - 公式 X](https://x.com/takanenofficial/status/2038096308070916262)
-- [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2038084982283882865)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2037884914193055883)
-- [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2037877364580032987)
-- [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
-- [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
-- [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2038236153334432064)
+  - [スタンプラリーについてのお知らせ - 公式 X](https://x.com/takanenofficial/status/2038096308070916262)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2038084982283882865)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2037884914193055883)
+  - [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2037877364580032987)
+  - [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
+  - [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
+  - [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
 `;

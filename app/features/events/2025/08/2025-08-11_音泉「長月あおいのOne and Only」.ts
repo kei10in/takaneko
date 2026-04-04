@@ -22,11 +22,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-第4回に音声メッセージで出演。
+  第4回に音声メッセージで出演。
 
-## リンク
+  ## リンク
 
-- [番組 X 報告](https://x.com/onsenradio/status/1954871976532816274)
+  - [番組 X 報告](https://x.com/onsenradio/status/1954871976532816274)
 `;

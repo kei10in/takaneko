@@ -18,18 +18,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信情報
+  ## 配信情報
 
-やついフェス2024 がニコニコ生放送で配信されます。
+  やついフェス2024 がニコニコ生放送で配信されます。
 
-### 配信される公演
+  ### 配信される公演
 
-やついフェス2024
+  やついフェス2024
 
-- 公演日: 6月15日(土)、16日(日)
-- 公式HP: https://yatsui-fes.com/
+  - 公演日: 6月15日(土)、16日(日)
+  - 公式HP: https://yatsui-fes.com/
 
-## リンク
+  ## リンク
 
-- [ニコニコ生放送 配信ページ](https://live.nicovideo.jp/watch/lv345741241)
+  - [ニコニコ生放送 配信ページ](https://live.nicovideo.jp/watch/lv345741241)
 `;

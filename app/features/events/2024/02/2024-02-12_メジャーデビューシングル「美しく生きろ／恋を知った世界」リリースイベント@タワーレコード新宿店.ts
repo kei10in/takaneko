@@ -58,8 +58,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1771)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1784)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1771)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1784)
 `;

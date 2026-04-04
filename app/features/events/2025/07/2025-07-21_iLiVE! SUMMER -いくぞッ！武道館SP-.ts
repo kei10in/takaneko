@@ -57,11 +57,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [iLiVE! 公式 X ダイジェスト](https://x.com/info_iLiVE/status/1947275035950952828)
-- [本日のおチェキ](https://x.com/takanekomanager/status/1947221234812674559)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1946911719600898222)
-- [星谷美来欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/1946185688690340196)
-- [公式 X 告知](https://x.com/takanenofficial/status/1933826864835067983)
+  - [iLiVE! 公式 X ダイジェスト](https://x.com/info_iLiVE/status/1947275035950952828)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1947221234812674559)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1946911719600898222)
+  - [星谷美来欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/1946185688690340196)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1933826864835067983)
 `;

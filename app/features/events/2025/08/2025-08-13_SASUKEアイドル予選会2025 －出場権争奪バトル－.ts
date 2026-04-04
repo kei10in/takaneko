@@ -48,19 +48,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1955246879035527657)
-- [SASUKE 公式 X 意気込み動画](https://x.com/sasuke_tbs/status/1944200101775520211)
-- [公式 X 応援メンバー告知](https://x.com/takanenofficial/status/1943869193692295625)
-- [公式 X 出演告知](https://x.com/takanenofficial/status/1942199454150570122)
-- [SASUKE 公式 X 出場者発表](https://x.com/sasuke_tbs/status/1942177096966770782)
-- [SASUKE 公式 X 涼海すう出場告知](https://x.com/sasuke_tbs/status/1942170666469654622)
-- [YouTube -【LIVE】SASUKEアイドル予選会2025 ―出場権争奪バトル― ★出場女性アイドル生発表★ ](https://www.youtube.com/watch?v=x-FW2ouPi-g)
-- [SASUKE 公式 X ポスト](https://x.com/sasuke_tbs/status/1942087605895713041)
-- [音楽ナタリー](https://natalie.mu/music/news/631223)
-- [音楽ナタリー X ポスト](https://x.com/natalie_mu/status/1942086969519214649)
-- [ORICON NEWS](https://www.oricon.co.jp/news/2394476/full/)
-- [ORICON NEWS X ポスト](https://x.com/oricon/status/1942093731232182719)
-- [TBS 番組サイト 告知記事](https://www.tbs.co.jp/sasuke_rising/archive/20250707/)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1955246879035527657)
+  - [SASUKE 公式 X 意気込み動画](https://x.com/sasuke_tbs/status/1944200101775520211)
+  - [公式 X 応援メンバー告知](https://x.com/takanenofficial/status/1943869193692295625)
+  - [公式 X 出演告知](https://x.com/takanenofficial/status/1942199454150570122)
+  - [SASUKE 公式 X 出場者発表](https://x.com/sasuke_tbs/status/1942177096966770782)
+  - [SASUKE 公式 X 涼海すう出場告知](https://x.com/sasuke_tbs/status/1942170666469654622)
+  - [YouTube -【LIVE】SASUKEアイドル予選会2025 ―出場権争奪バトル― ★出場女性アイドル生発表★ ](https://www.youtube.com/watch?v=x-FW2ouPi-g)
+  - [SASUKE 公式 X ポスト](https://x.com/sasuke_tbs/status/1942087605895713041)
+  - [音楽ナタリー](https://natalie.mu/music/news/631223)
+  - [音楽ナタリー X ポスト](https://x.com/natalie_mu/status/1942086969519214649)
+  - [ORICON NEWS](https://www.oricon.co.jp/news/2394476/full/)
+  - [ORICON NEWS X ポスト](https://x.com/oricon/status/1942093731232182719)
+  - [TBS 番組サイト 告知記事](https://www.tbs.co.jp/sasuke_rising/archive/20250707/)
 `;

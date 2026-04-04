@@ -58,8 +58,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [エンドロール公開 - 公式 X](https://x.com/takanenofficial/status/1781311255716007939)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1882)
+  - [エンドロール公開 - 公式 X](https://x.com/takanenofficial/status/1781311255716007939)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1882)
 `;

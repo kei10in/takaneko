@@ -58,15 +58,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-映画「おばあちゃんのかかりつけ医」の特別上映です。
-高嶺のなでしこメンバーの出演はなさそうです。
+  映画「おばあちゃんのかかりつけ医」の特別上映です。
+  高嶺のなでしこメンバーの出演はなさそうです。
 
-## リンク
+  ## リンク
 
-- [日向端ひな コメント動画 - ふるさと映画祭 X](https://x.com/furusatoeigafes/status/2033474577301635073)
-- [🍭 高嶺のなでしこ・日向端ひな初主演映画、3月20日に特別上映決定！ - Pop'n'Roll(ポップンロール)](https://popnroll.tv/articles/45202)
-- [告知 - ふるさと映画祭 X](https://x.com/furusatoeigafes/status/2029919271938314594)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2033877428188102869)
+  - [日向端ひな コメント動画 - ふるさと映画祭 X](https://x.com/furusatoeigafes/status/2033474577301635073)
+  - [🍭 高嶺のなでしこ・日向端ひな初主演映画、3月20日に特別上映決定！ - Pop'n'Roll(ポップンロール)](https://popnroll.tv/articles/45202)
+  - [告知 - ふるさと映画祭 X](https://x.com/furusatoeigafes/status/2029919271938314594)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2033877428188102869)
 `;

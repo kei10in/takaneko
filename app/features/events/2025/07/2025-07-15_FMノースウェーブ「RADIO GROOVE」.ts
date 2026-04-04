@@ -26,17 +26,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 19:00 - 21:00
+  番組放送枠 19:00 - 21:00
 
-コメント出演
+  コメント出演
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715193500)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715190000)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1945045679115764111)
-- [公式 X 告知](https://x.com/takanenofficial/status/1943267755131834778)
-- [番組 X 告知](https://x.com/RadioGroove825/status/1943279111662899457)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715193500)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715190000)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1945045679115764111)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1943267755131834778)
+  - [番組 X 告知](https://x.com/RadioGroove825/status/1943279111662899457)
 `;

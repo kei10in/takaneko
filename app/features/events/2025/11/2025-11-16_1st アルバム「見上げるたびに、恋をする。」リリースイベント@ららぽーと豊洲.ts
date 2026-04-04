@@ -95,22 +95,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ミニライブ & グループ握手会
+  ミニライブ & グループ握手会
 
-CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+  CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
 
-- CD 販売開始: 10:00 〜
-- CD 販売受付場所: ららぽーと豊洲 シーサイドデッキメインステージ CD販売ブース
+  - CD 販売開始: 10:00 〜
+  - CD 販売受付場所: ららぽーと豊洲 シーサイドデッキメインステージ CD販売ブース
 
-## リンク
+  ## リンク
 
-- [1 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1989940172155490669)
-- [2 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1990013325070270929)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1989672230377185694)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4580)
-- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1987490353482490061)
-- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
-- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+  - [1 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1989940172155490669)
+  - [2 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1990013325070270929)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1989672230377185694)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4580)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1987490353482490061)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
 `;

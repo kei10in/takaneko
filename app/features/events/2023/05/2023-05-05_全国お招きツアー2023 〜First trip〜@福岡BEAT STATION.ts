@@ -67,9 +67,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 開催報告](https://x.com/takanenofficial/status/1654464175182340098)
-- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=754)
+  - [公式 X 開催報告](https://x.com/takanenofficial/status/1654464175182340098)
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=754)
 `;

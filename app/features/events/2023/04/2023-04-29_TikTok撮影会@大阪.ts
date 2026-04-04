@@ -100,10 +100,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=960)
-- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=954)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=788)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=919)
+  - [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=960)
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=954)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=788)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=919)
 `;

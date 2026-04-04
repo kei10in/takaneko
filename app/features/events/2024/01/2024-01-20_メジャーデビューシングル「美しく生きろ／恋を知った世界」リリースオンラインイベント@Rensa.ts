@@ -53,12 +53,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-ペア握手会
+  ペア握手会
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1672)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1699)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1672)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1699)
 `;

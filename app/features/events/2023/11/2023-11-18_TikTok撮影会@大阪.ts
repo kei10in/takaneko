@@ -138,10 +138,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1517)
-- [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1519)
-- [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1724755468772655178)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1719595896139309473)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1517)
+  - [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1519)
+  - [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1724755468772655178)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1719595896139309473)
 `;

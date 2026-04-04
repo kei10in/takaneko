@@ -65,37 +65,37 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 楽曲について
+  ## 楽曲について
 
-- ホワイトチョコチーム: 葉月紗蘭、春野莉々、東山恵里沙、日向端ひな、松本ももな
-- ビターチョコチーム: 城月菜央、涼海すう、橋本桃呼、星谷美来、籾山ひめり
+  - ホワイトチョコチーム: 葉月紗蘭、春野莉々、東山恵里沙、日向端ひな、松本ももな
+  - ビターチョコチーム: 城月菜央、涼海すう、橋本桃呼、星谷美来、籾山ひめり
 
-「センパイ。」は 1half のみの披露。ホワイトチョコチーム。
+  「センパイ。」は 1half のみの披露。ホワイトチョコチーム。
 
-「すきっちゅーの！」はビターチョコチーム。
+  「すきっちゅーの！」はビターチョコチーム。
 
-## 来場者プレゼント
+  ## 来場者プレゼント
 
-- 公演オリジナルショッパーに入れた、コージー本舗の人気商品の詰め合わせ
-- [ベルクと明治の人気商品を来場者全員にプレゼント](https://x.com/takanenofficial/status/1885478174215331858)
+  - 公演オリジナルショッパーに入れた、コージー本舗の人気商品の詰め合わせ
+  - [ベルクと明治の人気商品を来場者全員にプレゼント](https://x.com/takanenofficial/status/1885478174215331858)
 
-## 配信情報
+  ## 配信情報
 
-CS テレ朝チャンネル ch1 で 2025年2月15日 (金) 18:00 〜 独占生中継。
+  CS テレ朝チャンネル ch1 で 2025年2月15日 (金) 18:00 〜 独占生中継。
 
-スカパー！番組配信でも配信されます。
+  スカパー！番組配信でも配信されます。
 
-## リンク
+  ## リンク
 
-- [公式 X 来場者プレゼントまとめ](https://x.com/takanenofficial/status/1889983064568463530)
-- [公式 X 会場限定SNSキャンペーン](https://x.com/takanenofficial/status/1889980409112600677)
-- [FC ニュース プレゼントキャンペーン&抽選会実施](https://takanekofc.com/news/public/_/d78d7cuops670uqi.html)
-- [ベルク コラボキャンペーン告知](https://x.com/takanenofficial/status/1885478174215331858)
-- [テレ朝ホームページ チェキプレゼント (Instagram)](https://ex-maniacs.tv-asahi.co.jp/ch/ex_maniacs/post-51877/)
-- [テレ朝ホームページ チェキプレゼント (X)](https://ex-maniacs.tv-asahi.co.jp/ch/ex_maniacs/post-51852/)
-- [テレ朝ホームページ 独占生中継のお知らせ](https://www.tv-asahi.co.jp/ch/contents/variety/0765/)
-- [PR Times 来場者プレゼント 告知 ](https://prtimes.jp/main/html/rd/p/000000706.000025517.html)
-- [CSテレ朝チャンネル X 配信告知](https://x.com/tvasahi_cs/status/1887796172619948175)
-- [公式ニュース公演詳細発表](https://takanenonadeshiko.jp/?p=2805)
-- [公式ニュース開催告知](https://takanenonadeshiko.jp/?p=2629)
+  - [公式 X 来場者プレゼントまとめ](https://x.com/takanenofficial/status/1889983064568463530)
+  - [公式 X 会場限定SNSキャンペーン](https://x.com/takanenofficial/status/1889980409112600677)
+  - [FC ニュース プレゼントキャンペーン&抽選会実施](https://takanekofc.com/news/public/_/d78d7cuops670uqi.html)
+  - [ベルク コラボキャンペーン告知](https://x.com/takanenofficial/status/1885478174215331858)
+  - [テレ朝ホームページ チェキプレゼント (Instagram)](https://ex-maniacs.tv-asahi.co.jp/ch/ex_maniacs/post-51877/)
+  - [テレ朝ホームページ チェキプレゼント (X)](https://ex-maniacs.tv-asahi.co.jp/ch/ex_maniacs/post-51852/)
+  - [テレ朝ホームページ 独占生中継のお知らせ](https://www.tv-asahi.co.jp/ch/contents/variety/0765/)
+  - [PR Times 来場者プレゼント 告知 ](https://prtimes.jp/main/html/rd/p/000000706.000025517.html)
+  - [CSテレ朝チャンネル X 配信告知](https://x.com/tvasahi_cs/status/1887796172619948175)
+  - [公式ニュース公演詳細発表](https://takanenonadeshiko.jp/?p=2805)
+  - [公式ニュース開催告知](https://takanenonadeshiko.jp/?p=2629)
 `;

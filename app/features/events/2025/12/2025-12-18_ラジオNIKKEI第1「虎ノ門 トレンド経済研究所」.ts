@@ -26,15 +26,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-ゲスト出演。
+  ゲスト出演。
 
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20251218180000)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2001615987804901647)
-- [告知 - 番組 X](https://x.com/radioinews/status/2001170908552237240)
-- [告知 - ラジオNIKKEI X](https://x.com/radionikkei_jp/status/1999417346251980857)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1999332164866035824)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20251218180000)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2001615987804901647)
+  - [告知 - 番組 X](https://x.com/radioinews/status/2001170908552237240)
+  - [告知 - ラジオNIKKEI X](https://x.com/radionikkei_jp/status/1999417346251980857)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1999332164866035824)
 `;

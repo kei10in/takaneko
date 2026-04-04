@@ -15,8 +15,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [橋本桃呼 X](https://x.com/MomokoHashimoto/status/1938613832257261682)
-- [公式 X](https://x.com/takanenofficial/status/1938613516640133310)
+  - [橋本桃呼 X](https://x.com/MomokoHashimoto/status/1938613832257261682)
+  - [公式 X](https://x.com/takanenofficial/status/1938613516640133310)
 `;

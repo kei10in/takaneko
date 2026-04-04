@@ -22,8 +22,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [葉月紗蘭 X 告知](https://x.com/saara_hazuki/status/1971530503309386125)
-- [公式 X 告知](https://x.com/takanenofficial/status/1971530195074199857)
+  - [葉月紗蘭 X 告知](https://x.com/saara_hazuki/status/1971530503309386125)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1971530195074199857)
 `;

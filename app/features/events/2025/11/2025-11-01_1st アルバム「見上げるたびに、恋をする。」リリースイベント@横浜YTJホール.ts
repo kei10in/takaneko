@@ -80,32 +80,32 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別握手会
+  個別握手会
 
-CD 1 枚予約で、「個別握手会参加券」を 2 枚配布。
+  CD 1 枚予約で、「個別握手会参加券」を 2 枚配布。
 
-### 事前予約
+  ### 事前予約
 
-事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251101)で受付。
+  事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20251101)で受付。
 
-- **受付期間:** 10月17日(金) 18:00 〜 10月23日(木) 23:59
-- **抽選結果:** 10月27日(月) 18:00 以降順次発表予定
-- **当選分支払い期限:** 10月29日(水) 23:59 まで
+  - **受付期間:** 10月17日(金) 18:00 〜 10月23日(木) 23:59
+  - **抽選結果:** 10月27日(月) 18:00 以降順次発表予定
+  - **当選分支払い期限:** 10月29日(水) 23:59 まで
 
-### 当日受付
+  ### 当日受付
 
-- 当日 CD 予約販売開始: 10:00 〜
-- 事前 CD 予約販売当選者・特典券引換: 10:00 〜
+  - 当日 CD 予約販売開始: 10:00 〜
+  - 事前 CD 予約販売当選者・特典券引換: 10:00 〜
 
-## リンク
+  ## リンク
 
-- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
-- [当日券・衣装告知 - 公式 X](https://x.com/takanenofficial/status/1984070354772619636)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4457)
-- [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20251101)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
-- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
-- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+  - [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
+  - [当日券・衣装告知 - 公式 X](https://x.com/takanenofficial/status/1984070354772619636)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4457)
+  - [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20251101)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
 `;

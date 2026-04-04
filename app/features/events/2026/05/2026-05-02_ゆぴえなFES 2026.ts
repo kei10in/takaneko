@@ -40,7 +40,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2038977194295455813)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2038977194295455813)
 `;

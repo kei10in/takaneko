@@ -30,17 +30,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送時間 15:38 - 19:00
+  番組放送時間 15:38 - 19:00
 
-17:30 ごろ出演予定
+  17:30 ごろ出演予定
 
-番組内コーナー「奥さんお絵かきですよ」に出演
+  番組内コーナー「奥さんお絵かきですよ」に出演
 
-## リンク
+  ## リンク
 
-- [ビクターサッポロ X 直前ポスト](https://x.com/victor_sapporo/status/1943214296160456799)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232511188037764)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [ビクターサッポロ X 直前ポスト](https://x.com/victor_sapporo/status/1943214296160456799)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943232511188037764)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

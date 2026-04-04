@@ -44,14 +44,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-出演を見合わせ。
+  出演を見合わせ。
 
-## リンク
+  ## リンク
 
-- [出演見合わせについて](https://takanenonadeshiko.jp/?p=3112)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2785)
-- [公式 X 告知](https://x.com/takanenofficial/status/1852689618702909948)
-- [TikTok LIVE Japan X 告知](https://x.com/tiktoklive_jp/status/1852274384905621972)
+  - [出演見合わせについて](https://takanenonadeshiko.jp/?p=3112)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2785)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1852689618702909948)
+  - [TikTok LIVE Japan X 告知](https://x.com/tiktoklive_jp/status/1852274384905621972)
 `;

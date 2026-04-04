@@ -29,10 +29,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [Radiko](https://radiko.jp/share?t=20250228233000&sid=RN1)
-- [公式 X 告知](https://x.com/takanenofficial/status/1895028598530056369)
-- [番組サイト](https://www.radionikkei.jp/idol_generation/)
-- [番組 X 告知](https://x.com/rn_idol/status/1894991260441813259)
+  - [Radiko](https://radiko.jp/share?t=20250228233000&sid=RN1)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1895028598530056369)
+  - [番組サイト](https://www.radionikkei.jp/idol_generation/)
+  - [番組 X 告知](https://x.com/rn_idol/status/1894991260441813259)
 `;

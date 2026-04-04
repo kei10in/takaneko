@@ -26,10 +26,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日オンエア - 公式 X](https://x.com/takanenofficial/status/1999378120441495951)
-- [告知 - アイドルジェネレーション X](https://x.com/rn_idol/status/1998641525979545809)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1998664241046499661)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20251212230000)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/1999378120441495951)
+  - [告知 - アイドルジェネレーション X](https://x.com/rn_idol/status/1998641525979545809)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1998664241046499661)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20251212230000)
 `;

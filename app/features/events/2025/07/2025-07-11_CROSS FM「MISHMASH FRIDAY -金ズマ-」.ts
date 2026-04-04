@@ -30,17 +30,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 16:30 - 18:00
+  番組放送枠 16:30 - 18:00
 
-17:30 ごろ出演予定
+  17:30 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CROSSFM&t=20250711173045)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CROSSFM&t=20250711163000)
-- [番組 X 報告ポスト](https://x.com/SASHI_MISHMA/status/1943626849877442572)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943587736415543390)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CROSSFM&t=20250711173045)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CROSSFM&t=20250711163000)
+  - [番組 X 報告ポスト](https://x.com/SASHI_MISHMA/status/1943626849877442572)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943587736415543390)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

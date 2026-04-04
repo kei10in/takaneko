@@ -38,16 +38,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-リリース記念対面団体サイン会
+  リリース記念対面団体サイン会
 
-予約サイト: https://victor-store.jp/special/takaneko20241210
+  予約サイト: https://victor-store.jp/special/takaneko20241210
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2888)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2996)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
-- [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2888)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2996)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

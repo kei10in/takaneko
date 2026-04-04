@@ -22,12 +22,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-- 東山恵里沙、松本ももな、籾山ひめりへのインタビュー
-- 「可愛くてごめん」Zoff presents “EYEがむぎゅっと”フェス
+  - 東山恵里沙、松本ももな、籾山ひめりへのインタビュー
+  - 「可愛くてごめん」Zoff presents “EYEがむぎゅっと”フェス
 
-## リンク
+  ## リンク
 
-- [番組サイト](https://www.bs4.jp/popculture/)
+  - [番組サイト](https://www.bs4.jp/popculture/)
 `;

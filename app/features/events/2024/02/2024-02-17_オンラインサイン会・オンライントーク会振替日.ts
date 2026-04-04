@@ -38,8 +38,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [振替実施日時のご案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=1727)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1741)
+  - [振替実施日時のご案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=1727)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1741)
 `;

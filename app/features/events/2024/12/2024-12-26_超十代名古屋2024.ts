@@ -24,8 +24,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1861711575075414258)
-- [超十代 X 告知](https://x.com/CHOJUDAI_JAPAN/status/1861696478508642632)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1861711575075414258)
+  - [超十代 X 告知](https://x.com/CHOJUDAI_JAPAN/status/1861696478508642632)
 `;

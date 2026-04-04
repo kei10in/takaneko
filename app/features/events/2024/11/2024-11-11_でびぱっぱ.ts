@@ -34,21 +34,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://ticketvillage.jp/events/13067)
-- **出演:** 18:55 〜 19:25
-- **配信:** 未定
-- **[タイムテーブル](https://x.com/devilanthem/status/1850840049337688381):**<br/>
-  [![タイムテーブル](/events/2024/2024-11-11_でびぱっぱ_タイムテーブル.jpg)](/events/2024/2024-11-11_でびぱっぱ_タイムテーブル.jpg)
-- **物販:**- ミニフォトカード「高嶺のなでしこ2024衣装」ver.<br/>
-  https://x.com/takanenofficial/status/1855536378769277112
-- **本日のおチェキ:**<br/>
-  https://x.com/takanekomanager/status/1855934760847323245
+  - [🎫チケット](https://ticketvillage.jp/events/13067)
+  - **出演:** 18:55 〜 19:25
+  - **配信:** 未定
+  - **[タイムテーブル](https://x.com/devilanthem/status/1850840049337688381):**<br/>
+    [![タイムテーブル](/events/2024/2024-11-11_でびぱっぱ_タイムテーブル.jpg)](/events/2024/2024-11-11_でびぱっぱ_タイムテーブル.jpg)
+  - **物販:**- ミニフォトカード「高嶺のなでしこ2024衣装」ver.<br/>
+    https://x.com/takanenofficial/status/1855536378769277112
+  - **本日のおチェキ:**<br/>
+    https://x.com/takanekomanager/status/1855934760847323245
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1838443314892411325)
-- [Devil ANTTHEM. 公式 X 告知](https://x.com/devilanthem/status/1834547727029666047)
-- [タイムテーブル告知](https://x.com/devilanthem/status/1850840049337688381)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1838443314892411325)
+  - [Devil ANTTHEM. 公式 X 告知](https://x.com/devilanthem/status/1834547727029666047)
+  - [タイムテーブル告知](https://x.com/devilanthem/status/1850840049337688381)
 `;

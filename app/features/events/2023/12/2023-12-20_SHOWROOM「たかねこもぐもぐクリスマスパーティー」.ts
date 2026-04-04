@@ -35,10 +35,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-「SHOWROOM10周年記念特番 たかねこ肉肉祭」購入者限定配信<br/>
-🎄たかねこもぐもぐクリスマスパーティー🎄
+  「SHOWROOM10周年記念特番 たかねこ肉肉祭」購入者限定配信<br/>
+  🎄たかねこもぐもぐクリスマスパーティー🎄
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1737121915524059492)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1737121915524059492)
 `;

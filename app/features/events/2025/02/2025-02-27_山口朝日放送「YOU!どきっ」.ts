@@ -29,9 +29,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1894968209536885161)
-- [番組 X ポスト](https://x.com/youdoki_yab/status/1895038934482330005)
-- [山口朝日放送 X 告知](https://x.com/yab_beep/status/1894920163184808003)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1894968209536885161)
+  - [番組 X ポスト](https://x.com/youdoki_yab/status/1895038934482330005)
+  - [山口朝日放送 X 告知](https://x.com/yab_beep/status/1894920163184808003)
 `;

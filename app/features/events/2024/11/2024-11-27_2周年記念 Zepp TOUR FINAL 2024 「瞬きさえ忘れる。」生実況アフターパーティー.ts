@@ -21,13 +21,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-ニコニコ生放送で生配信
+  ニコニコ生放送で生配信
 
-https://live.nicovideo.jp/watch/lv346343403
+  https://live.nicovideo.jp/watch/lv346343403
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1859929968513573100)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1859929968513573100)
 `;

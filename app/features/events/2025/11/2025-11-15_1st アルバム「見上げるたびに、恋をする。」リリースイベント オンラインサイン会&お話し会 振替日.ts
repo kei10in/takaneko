@@ -51,38 +51,38 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-2025年11月08日の「オンラインサイン会&お話し会」の振替日です。
+  2025年11月08日の「オンラインサイン会&お話し会」の振替日です。
 
-## オンラインサイン会
+  ## オンラインサイン会
 
-星谷美来 SHOWROOM アカウントで実施されるオンラインサイン会です。
-たかねこ版 1 枚 (3300円) でオリジナルミニ色紙へのサイン一枚です。
+  星谷美来 SHOWROOM アカウントで実施されるオンラインサイン会です。
+  たかねこ版 1 枚 (3300円) でオリジナルミニ色紙へのサイン一枚です。
 
-🕓 18:20 〜 19:20 (販売期限 18:30 まで)
+  🕓 18:20 〜 19:20 (販売期限 18:30 まで)
 
-[購入ページ](https://limista.com/shipping_groups/6865/projects/6863)
+  [購入ページ](https://limista.com/shipping_groups/6865/projects/6863)
 
-## オンラインお話し会
+  ## オンラインお話し会
 
-リミトークでのオンラインお話し会です。
-たかねこ版 1 枚 (3300円) で 30 秒です。
+  リミトークでのオンラインお話し会です。
+  たかねこ版 1 枚 (3300円) で 30 秒です。
 
-🕓 19:30 〜 20:30 (受付時間 19:20 〜 19:50、購入期限 19:40 まで)
+  🕓 19:30 〜 20:30 (受付時間 19:20 〜 19:50、購入期限 19:40 まで)
 
-[購入ページ](https://limista.com/shipping_groups/6865/projects/6864)
+  [購入ページ](https://limista.com/shipping_groups/6865/projects/6864)
 
-## リンク
+  ## リンク
 
-- [星谷美来のオンラインイベントの振替に関するお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4568)
-- [振替案内 - 公式 X](https://x.com/takanenofficial/status/1987131783239115017)
-- [星谷美来のイベント欠席に関するお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4549)
-- [星谷美来のイベント欠席に関するお知らせ - 公式 X ](https://x.com/takanenofficial/status/1986946810745897129)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1986773125904683030)
-- [オンラインサイン会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4503)
-- [オンラインお話し会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4500)
-- [イベント詳細告知 - 公式ニュース](https://x.com/takanenofficial/status/1983873073322586470)
-- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
-- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+  - [星谷美来のオンラインイベントの振替に関するお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4568)
+  - [振替案内 - 公式 X](https://x.com/takanenofficial/status/1987131783239115017)
+  - [星谷美来のイベント欠席に関するお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4549)
+  - [星谷美来のイベント欠席に関するお知らせ - 公式 X ](https://x.com/takanenofficial/status/1986946810745897129)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1986773125904683030)
+  - [オンラインサイン会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4503)
+  - [オンラインお話し会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4500)
+  - [イベント詳細告知 - 公式ニュース](https://x.com/takanenofficial/status/1983873073322586470)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
 `;

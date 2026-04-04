@@ -33,16 +33,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-前半は無料視聴可能。
+  前半は無料視聴可能。
 
-後半はチャンネル会員登録 (550円) で視聴可能。
+  後半はチャンネル会員登録 (550円) で視聴可能。
 
-入会は👇<br/>
-https://ch.nicovideo.jp/mayama300/join
+  入会は👇<br/>
+  https://ch.nicovideo.jp/mayama300/join
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1903426469797450099)
-- [番組 X 告知 2](https://x.com/mayaani300/status/1904850825677074558)
-- [番組 X 告知](https://x.com/mayaani300/status/1903401280178905216)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1903426469797450099)
+  - [番組 X 告知 2](https://x.com/mayaani300/status/1904850825677074558)
+  - [番組 X 告知](https://x.com/mayaani300/status/1903401280178905216)
 `;

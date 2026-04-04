@@ -13,6 +13,4 @@ export const meta: EventMetaDescriptor = {
   ],
 };
 
-export const content = /* md */ `
-
-`;
+export const content = /* md */ ``;

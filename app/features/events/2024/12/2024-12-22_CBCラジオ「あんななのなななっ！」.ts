@@ -22,10 +22,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 放送回](https://radiko.jp/share?sid=CBC&t=20241222130000)
-- [番組 X 次回予告](https://x.com/nanana1053/status/1868198382462026157)
-- [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1868430846610604124)
-- [radiko](https://radiko.jp/#CBC)
+  - [radiko 放送回](https://radiko.jp/share?sid=CBC&t=20241222130000)
+  - [番組 X 次回予告](https://x.com/nanana1053/status/1868198382462026157)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1868430846610604124)
+  - [radiko](https://radiko.jp/#CBC)
 `;

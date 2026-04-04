@@ -60,11 +60,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1997283707942736032)
-- [本日のおチェキ](https://x.com/takanekomanager/status/1997279877553414159)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1996951476753592460)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1985995599209193576)
-- [告知 - KOOmic idol Festa！ X](https://x.com/KOOmicidolFesta/status/1985734659016442335)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1997283707942736032)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1997279877553414159)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1996951476753592460)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1985995599209193576)
+  - [告知 - KOOmic idol Festa！ X](https://x.com/KOOmicidolFesta/status/1985734659016442335)
 `;

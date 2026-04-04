@@ -29,10 +29,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [Radiko](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250327151640)
-- [公式 X 告知](https://x.com/takanenofficial/status/1905138999867662749)
-- [番組 X 告知](https://x.com/digfukuoka/status/1905095917310738569)
-- [FM FUKUOKA X 告知](https://x.com/fmfukuoka/status/1905050887984435582)
+  - [Radiko](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250327151640)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1905138999867662749)
+  - [番組 X 告知](https://x.com/digfukuoka/status/1905095917310738569)
+  - [FM FUKUOKA X 告知](https://x.com/fmfukuoka/status/1905050887984435582)
 `;

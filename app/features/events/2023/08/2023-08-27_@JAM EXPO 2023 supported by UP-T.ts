@@ -44,10 +44,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-ヌマトークにも出演。
+  ヌマトークにも出演。
 
-## リンク
+  ## リンク
 
-- [公式 X 日向端ひな欠席のお知らせ](https://x.com/takanenofficial/status/1695633320095453452)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1089)
+  - [公式 X 日向端ひな欠席のお知らせ](https://x.com/takanenofficial/status/1695633320095453452)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1089)
 `;

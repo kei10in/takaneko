@@ -33,17 +33,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://monogatari.fun/#tickets)
-- 出演: 12:45 〜
+  - [🎫チケット](https://monogatari.fun/#tickets)
+  - 出演: 12:45 〜
 
-**[タイムテーブル](https://x.com/MAKEAMONOGATARI/status/1834566612835504306):**
+  **[タイムテーブル](https://x.com/MAKEAMONOGATARI/status/1834566612835504306):**
 
-[![タイムテーブル](/events/2024/2024-10-13_MAKE%20A%20MONOGATARI%202024_タイムテーブル.jpg)](/events/2024/2024-10-13_MAKE%20A%20MONOGATARI%202024_タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-10-13_MAKE%20A%20MONOGATARI%202024_タイムテーブル.jpg)](/events/2024/2024-10-13_MAKE%20A%20MONOGATARI%202024_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1831308808330912198)
-- [MAKE A MONOGATARI 公式 X 告知](https://x.com/MAKEAMONOGATARI/status/1797825610175447054)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1831308808330912198)
+  - [MAKE A MONOGATARI 公式 X 告知](https://x.com/MAKEAMONOGATARI/status/1797825610175447054)
 `;

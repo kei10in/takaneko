@@ -19,7 +19,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [雑誌 X 告知](https://x.com/TopYell/status/1840355974076567716)
+  - [雑誌 X 告知](https://x.com/TopYell/status/1840355974076567716)
 `;

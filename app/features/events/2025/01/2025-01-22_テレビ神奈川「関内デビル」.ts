@@ -25,19 +25,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- 放送局: tvk
-- 放送時間: 23:00 〜
+  - 放送局: tvk
+  - 放送時間: 23:00 〜
 
-毎週水曜日の番組内コーナー「たかねこクエスト」
+  毎週水曜日の番組内コーナー「たかねこクエスト」
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1882043034520748168)
-- [番組 X 告知](https://x.com/tvk_kannaidevil/status/1881899589130748344)
-- [HADO X 告知](https://x.com/hado_info/status/1879053290123772389)
-- [HADO 公式サイト ニュース](https://hado-official.com/news/9307/)
-- [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
-- [TVer](https://tver.jp/series/srehapgls0)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1882043034520748168)
+  - [番組 X 告知](https://x.com/tvk_kannaidevil/status/1881899589130748344)
+  - [HADO X 告知](https://x.com/hado_info/status/1879053290123772389)
+  - [HADO 公式サイト ニュース](https://hado-official.com/news/9307/)
+  - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+  - [TVer](https://tver.jp/series/srehapgls0)
 `;

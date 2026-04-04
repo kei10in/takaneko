@@ -22,15 +22,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 開催日: 2024年11月22日 (金) 18:00 〜 21:30
-- 販売開始: 2024年11月19日 (火) 18:00 〜
+  - 開催日: 2024年11月22日 (金) 18:00 〜 21:30
+  - 販売開始: 2024年11月19日 (火) 18:00 〜
 
-受付開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=2897) を参照してください。
+  受付開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=2897) を参照してください。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2897)
-- [公式 X 告知](https://x.com/takanenofficial/status/1858502921501229138)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2897)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1858502921501229138)
 `;

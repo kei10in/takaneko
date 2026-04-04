@@ -16,17 +16,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-レディオキューブFM三重 13:55 〜 14:00
+  レディオキューブFM三重 13:55 〜 14:00
 
-コメント出演
+  コメント出演
 
-[radiko](https://radiko.jp/#FMMIE)
+  [radiko](https://radiko.jp/#FMMIE)
 
-## リンク
+  ## リンク
 
-- [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
-- [radiko 番組ページ](https://radiko.jp/r_seasons/10002284)
-- [radiko](https://radiko.jp/#FMMIE)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
+  - [radiko 番組ページ](https://radiko.jp/r_seasons/10002284)
+  - [radiko](https://radiko.jp/#FMMIE)
 `;

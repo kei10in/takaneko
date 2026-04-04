@@ -72,17 +72,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-ファッションショーに、涼海すう / 春野莉々 / 星谷美来 が出演
+  ファッションショーに、涼海すう / 春野莉々 / 星谷美来 が出演
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1902329264143540371)
-- [公式 X 告知](https://x.com/takanenofficial/status/1875157693704585360)
-- [公式 X ファッションショー出演告知](https://x.com/takanenofficial/status/1880182020027867547)
-- [KOLLABS X タイムテーブル・物販・特典会告知](https://x.com/kollabs_/status/1900471982187241801)
-- [KOLLABS X 生配信告知](https://x.com/kollabs_/status/1900095122987245918)
-- [KOLLABS X タイムテーブル告知](https://x.com/kollabs_/status/1895398536579313909)
-- [KOLLABS X 告知 1](https://x.com/kollabs_/status/1873295468417229297)
-- [KOLLABS X 告知 2](https://x.com/kollabs_/status/1873295468417229297)
-- [KOLLABS X 告知 3 ファッションショーモデル解禁](https://x.com/kollabs_/status/1880178579289587855)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1902329264143540371)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1875157693704585360)
+  - [公式 X ファッションショー出演告知](https://x.com/takanenofficial/status/1880182020027867547)
+  - [KOLLABS X タイムテーブル・物販・特典会告知](https://x.com/kollabs_/status/1900471982187241801)
+  - [KOLLABS X 生配信告知](https://x.com/kollabs_/status/1900095122987245918)
+  - [KOLLABS X タイムテーブル告知](https://x.com/kollabs_/status/1895398536579313909)
+  - [KOLLABS X 告知 1](https://x.com/kollabs_/status/1873295468417229297)
+  - [KOLLABS X 告知 2](https://x.com/kollabs_/status/1873295468417229297)
+  - [KOLLABS X 告知 3 ファッションショーモデル解禁](https://x.com/kollabs_/status/1880178579289587855)
 `;

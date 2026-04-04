@@ -30,17 +30,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 15:00 - 17:00
+  番組放送枠 15:00 - 17:00
 
-16:00 ごろ出演予定
+  16:00 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710160010)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710150000)
-- [番組 X 報告ポスト](https://x.com/kmpdayo/status/1943285684338381298)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943199791950803174)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710160010)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=KISSFMKOBE&t=20250710150000)
+  - [番組 X 報告ポスト](https://x.com/kmpdayo/status/1943285684338381298)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943199791950803174)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

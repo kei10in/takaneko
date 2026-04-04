@@ -105,30 +105,30 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 個別 TikTok 撮影会
+  ## 個別 TikTok 撮影会
 
-1. メランコリックハニー マイダーリンver. お客様込み
-1. メランコリックハニー マイダーリンver. メンバーのみ
-1. メランコリックハニー マイダーリンver. 自撮り
-1. 初恋のひと。ハート合わせチャレンジ お客様込み
-1. 初恋のひと。ハート合わせチャレンジ メンバーのみ
-1. 初恋のひと。ハート合わせチャレンジ 自撮り
-1. 初恋のこたえ。 サビver. お客様込み
-1. 初恋のこたえ。 サビver. メンバーのみ
-1. 初恋のこたえ。 サビver. 自撮り
+  1. メランコリックハニー マイダーリンver. お客様込み
+  1. メランコリックハニー マイダーリンver. メンバーのみ
+  1. メランコリックハニー マイダーリンver. 自撮り
+  1. 初恋のひと。ハート合わせチャレンジ お客様込み
+  1. 初恋のひと。ハート合わせチャレンジ メンバーのみ
+  1. 初恋のひと。ハート合わせチャレンジ 自撮り
+  1. 初恋のこたえ。 サビver. お客様込み
+  1. 初恋のこたえ。 サビver. メンバーのみ
+  1. 初恋のこたえ。 サビver. 自撮り
 
-**振り付け動画**
+  **振り付け動画**
 
-- メランコリックハニー マイダーリンver.<br/>
-  https://vt.tiktok.com/ZShjexPQG/
-- 初恋のひと。ハート合わせチャレンジ<br/>
-  https://www.tiktok.com/@takanenofficial/video/7252290793333886210
-- 初恋のこたえ。サビver.<br/>
-  https://vt.tiktok.com/ZSS4S21Eg/
+  - メランコリックハニー マイダーリンver.<br/>
+    https://vt.tiktok.com/ZShjexPQG/
+  - 初恋のひと。ハート合わせチャレンジ<br/>
+    https://www.tiktok.com/@takanenofficial/video/7252290793333886210
+  - 初恋のこたえ。サビver.<br/>
+    https://vt.tiktok.com/ZSS4S21Eg/
 
-## リンク
+  ## リンク
 
-- [公式ニュース - イベント詳細](https://takanenonadeshiko.jp/?p=4116)
-- [「高嶺のなでしこ「3rd ファンミーティング〜私たちの宣言式〜」 開催記念 『個別2ショット会』・『個別TikTok撮影会』 キャラアニ・チャンス予約販売のご案内 – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4014)
-- [公式 X 告知](https://x.com/takanenofficial/status/1944678308719046765)
+  - [公式ニュース - イベント詳細](https://takanenonadeshiko.jp/?p=4116)
+  - [「高嶺のなでしこ「3rd ファンミーティング〜私たちの宣言式〜」 開催記念 『個別2ショット会』・『個別TikTok撮影会』 キャラアニ・チャンス予約販売のご案内 – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4014)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1944678308719046765)
 `;

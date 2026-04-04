@@ -30,8 +30,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1576166294373531648)
-- [livepocket](https://t.livepocket.jp/e/tgg_1021)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1576166294373531648)
+  - [livepocket](https://t.livepocket.jp/e/tgg_1021)
 `;

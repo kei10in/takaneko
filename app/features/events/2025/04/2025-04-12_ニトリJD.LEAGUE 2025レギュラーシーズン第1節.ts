@@ -31,9 +31,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1910694335999340940)
-- [公式 X 告知](https://x.com/takanenofficial/status/1906648970400805015)
-- [JD.LEAGUE イベントページ](https://jdleague.jp/news/detail/3144/)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1910694335999340940)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1906648970400805015)
+  - [JD.LEAGUE イベントページ](https://jdleague.jp/news/detail/3144/)
 `;

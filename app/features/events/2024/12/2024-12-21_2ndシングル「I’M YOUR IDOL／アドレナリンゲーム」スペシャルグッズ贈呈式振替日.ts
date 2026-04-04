@@ -35,19 +35,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-2024年12月15日のスペシャルグッズ贈呈式の振替日です。
+  2024年12月15日のスペシャルグッズ贈呈式の振替日です。
 
-詳細: https://takanenonadeshiko.jp/?p=3101
+  詳細: https://takanenonadeshiko.jp/?p=3101
 
-会場が「渋谷ファーストタワー 10F」に変更されています: https://takanenonadeshiko.jp/?p=3130
+  会場が「渋谷ファーストタワー 10F」に変更されています: https://takanenonadeshiko.jp/?p=3130
 
-## リンク
+  ## リンク
 
-- [公式ニュース 振替について](https://takanenonadeshiko.jp/?p=3101)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2893)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3004)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
-- [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [公式ニュース 振替について](https://takanenonadeshiko.jp/?p=3101)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2893)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3004)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

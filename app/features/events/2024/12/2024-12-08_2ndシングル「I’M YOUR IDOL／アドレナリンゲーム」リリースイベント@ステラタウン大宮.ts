@@ -87,17 +87,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 予約について
+  ## 予約について
 
-- CD予約開始時間: 9:30 〜
-- CD予約受付場所: ステラタウン大宮 1F屋外メローペ広場CD販売ブース
+  - CD予約開始時間: 9:30 〜
+  - CD予約受付場所: ステラタウン大宮 1F屋外メローペ広場CD販売ブース
 
-## リンク
+  ## リンク
 
-- [1 部ダイジェスト](https://x.com/takanenofficial/status/1865706816874926094)
-- [2 部ダイジェスト](https://x.com/takanenofficial/status/1865708341525409913)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2887)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2994)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
-- [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [1 部ダイジェスト](https://x.com/takanenofficial/status/1865706816874926094)
+  - [2 部ダイジェスト](https://x.com/takanenofficial/status/1865708341525409913)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2887)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2994)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

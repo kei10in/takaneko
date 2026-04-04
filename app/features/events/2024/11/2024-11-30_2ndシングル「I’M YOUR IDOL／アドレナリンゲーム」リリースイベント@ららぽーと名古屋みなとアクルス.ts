@@ -92,13 +92,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 予約方法
+  ## 予約方法
 
-- CD予約開始時間: 9:30 〜
-- CD予約受付場所: ららぽーと名古屋みなとアクルス・デカゴン
+  - CD予約開始時間: 9:30 〜
+  - CD予約受付場所: ららぽーと名古屋みなとアクルス・デカゴン
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2946)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1860172462383841735)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2946)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1860172462383841735)
 `;

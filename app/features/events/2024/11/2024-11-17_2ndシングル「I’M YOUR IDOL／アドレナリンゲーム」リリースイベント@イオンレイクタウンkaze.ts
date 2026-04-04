@@ -90,17 +90,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-CD予約開始時間: 当日 10:00 〜
+  CD予約開始時間: 当日 10:00 〜
 
-CD予約受付場所: イオンレイクタウン kaze 翼の広場 CD販売ブースにて
+  CD予約受付場所: イオンレイクタウン kaze 翼の広場 CD販売ブースにて
 
-イオン開店前は、1階F入口付近に待機列を形成予定。
+  イオン開店前は、1階F入口付近に待機列を形成予定。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2825)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2591)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1855196348448116755)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2825)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2591)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1855196348448116755)
 `;

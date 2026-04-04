@@ -67,17 +67,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-**事前 CD 予約:**
+  **事前 CD 予約:**
 
-- [VICTOR ONLINE STORE](https://victor-store.jp/special/takaneko20241104)
+  - [VICTOR ONLINE STORE](https://victor-store.jp/special/takaneko20241104)
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2730)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2585)
-- [ビクターオンラインストア](https://victor-store.jp/special/takaneko20241104)
-- [ビクター X 告知](https://x.com/vos_jn/status/1849784777622290711)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1849768429156434200)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2730)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2585)
+  - [ビクターオンラインストア](https://victor-store.jp/special/takaneko20241104)
+  - [ビクター X 告知](https://x.com/vos_jn/status/1849784777622290711)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1849768429156434200)
 `;

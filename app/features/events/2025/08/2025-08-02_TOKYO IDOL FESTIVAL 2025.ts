@@ -83,11 +83,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト](https://x.com/takanenofficial/status/1951570661287313700)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1951278102664884319)
-- [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
-- [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
-- [ぐんまちゃんアイドルフェスティバル X 告知](https://x.com/gunmachan_GIF/status/1948654814260297859)
+  - [ダイジェスト](https://x.com/takanenofficial/status/1951570661287313700)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1951278102664884319)
+  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
+  - [ぐんまちゃんアイドルフェスティバル X 告知](https://x.com/gunmachan_GIF/status/1948654814260297859)
 `;

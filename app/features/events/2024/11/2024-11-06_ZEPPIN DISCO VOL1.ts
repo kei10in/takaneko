@@ -29,14 +29,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://tiget.net/events/351607)
-- 出演: 20:20 〜 20:45
-- [タイムテーブル](https://x.com/ZEPPIN_DISCO/status/1851247623019405680):<br />
-  [![タイムテーブル](/events/2024/2024-11-06_ZEPPIN%20DISCO%20VOL.1_タイムテーブル.jpg)](/events/2024/2024-11-06_ZEPPIN%20DISCO%20VOL.1_タイムテーブル.jpg)
+  - [🎫チケット](https://tiget.net/events/351607)
+  - 出演: 20:20 〜 20:45
+  - [タイムテーブル](https://x.com/ZEPPIN_DISCO/status/1851247623019405680):<br />
+    [![タイムテーブル](/events/2024/2024-11-06_ZEPPIN%20DISCO%20VOL.1_タイムテーブル.jpg)](/events/2024/2024-11-06_ZEPPIN%20DISCO%20VOL.1_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1843244921681289562)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843244921681289562)
 `;

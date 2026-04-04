@@ -33,10 +33,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [福を架ける少女 X 放送内容紹介](https://x.com/fukujo_official/status/1907015702500016186)
-- [橋本桃呼 X ポスト](https://x.com/MomokoHashimoto/status/1904851613044318467)
-- [桜田七夕 X ポスト](https://x.com/nayuyu25/status/1904812548395774177)
-- [番組サイト](https://www.tnc.co.jp/store/)
+  - [福を架ける少女 X 放送内容紹介](https://x.com/fukujo_official/status/1907015702500016186)
+  - [橋本桃呼 X ポスト](https://x.com/MomokoHashimoto/status/1904851613044318467)
+  - [桜田七夕 X ポスト](https://x.com/nayuyu25/status/1904812548395774177)
+  - [番組サイト](https://www.tnc.co.jp/store/)
 `;

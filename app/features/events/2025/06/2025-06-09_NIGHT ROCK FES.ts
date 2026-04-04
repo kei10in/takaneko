@@ -68,11 +68,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1932020358087102698)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1931712820477079930)
-- [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1931622222445035665)
-- [タイムテーブル告知](https://x.com/Yoruamiofficial/status/1920811767183147401)
-- [公式 X 告知](https://x.com/takanenofficial/status/1918987742316240932)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1932020358087102698)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1931712820477079930)
+  - [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1931622222445035665)
+  - [タイムテーブル告知](https://x.com/Yoruamiofficial/status/1920811767183147401)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1918987742316240932)
 `;

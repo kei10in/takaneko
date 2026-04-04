@@ -22,9 +22,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMMIE&t=20251227135500)
-- [当日告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2004753368309473548)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMMIE&t=20251227135500)
+  - [当日告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2004753368309473548)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
 `;

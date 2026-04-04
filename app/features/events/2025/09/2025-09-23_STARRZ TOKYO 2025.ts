@@ -67,14 +67,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [モデルプレス ファッションショーレポート](https://mdpr.jp/news/detail/4649302)
-- [モデルプレス 舞台裏インタビュー](https://mdpr.jp/interview/detail/4649523)
-- [モデルプレス ニュース](https://mdpr.jp/music/detail/4647752)
-- [公式 X 告知](https://x.com/takanenofficial/status/1943612602111643962)
-- [STARRZ TOKYO 2025 X タイムテーブル公開](https://x.com/starrz_tokyo/status/1969603358152687808)
-- [STARRZ TOKYO 2025 X 出演者情報 涼海すう](https://x.com/starrz_tokyo/status/1960630447337300292)
-- [STARRZ TOKYO 2025 X 出演者情報 籾山ひめり](https://x.com/starrz_tokyo/status/1960635298846814355)
-- [STARRZ TOKYO 2025 X 追加モデル情報](https://x.com/starrz_tokyo/status/1960628354748498185)
+  - [モデルプレス ファッションショーレポート](https://mdpr.jp/news/detail/4649302)
+  - [モデルプレス 舞台裏インタビュー](https://mdpr.jp/interview/detail/4649523)
+  - [モデルプレス ニュース](https://mdpr.jp/music/detail/4647752)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1943612602111643962)
+  - [STARRZ TOKYO 2025 X タイムテーブル公開](https://x.com/starrz_tokyo/status/1969603358152687808)
+  - [STARRZ TOKYO 2025 X 出演者情報 涼海すう](https://x.com/starrz_tokyo/status/1960630447337300292)
+  - [STARRZ TOKYO 2025 X 出演者情報 籾山ひめり](https://x.com/starrz_tokyo/status/1960635298846814355)
+  - [STARRZ TOKYO 2025 X 追加モデル情報](https://x.com/starrz_tokyo/status/1960628354748498185)
 `;

@@ -56,8 +56,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1954172084885569894)
-- [公式 X 告知](https://x.com/takanenofficial/status/1938432124614545589)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1954172084885569894)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1938432124614545589)
 `;

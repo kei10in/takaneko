@@ -41,11 +41,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要欄
+  ## 概要欄
 
-> 新年あけましておめでとうございます🎍<br/> #たかねこ新年会2026 で一緒に「たかねこ始め」しましょう🐈‍⬛🌸
+  > 新年あけましておめでとうございます🎍<br/> #たかねこ新年会2026 で一緒に「たかねこ始め」しましょう🐈‍⬛🌸
 
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2008478655408668845)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2008478655408668845)
 `;

@@ -44,17 +44,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-I’M YOUR IDOL MV コメンタリー & MV 衣装グループ撮影会
+  I’M YOUR IDOL MV コメンタリー & MV 衣装グループ撮影会
 
-1. 「I’M YOUR IDOL」 Music Videoをメンバーと一緒に観覧 & メンバーからのコメント
-1. 各部参加メンバーと一緒にグループ撮影会
+  1. 「I’M YOUR IDOL」 Music Videoをメンバーと一緒に観覧 & メンバーからのコメント
+  1. 各部参加メンバーと一緒にグループ撮影会
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2832)
-- [VICTOR ONLINE STORE](https://victor-store.jp/special/takaneko20241120)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1855922180187365790)
-- [ビクターオンラインストア X 告知](https://x.com/vos_jn/status/1855899517239062547)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2832)
+  - [VICTOR ONLINE STORE](https://victor-store.jp/special/takaneko20241120)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1855922180187365790)
+  - [ビクターオンラインストア X 告知](https://x.com/vos_jn/status/1855899517239062547)
 `;

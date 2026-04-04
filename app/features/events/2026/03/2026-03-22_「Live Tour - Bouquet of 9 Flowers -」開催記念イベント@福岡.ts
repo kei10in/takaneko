@@ -85,10 +85,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [きょうのたかねこ (当日券情報)](https://x.com/takanenofficial/status/2035389725947953160)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
-- [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
+  - [きょうのたかねこ (当日券情報)](https://x.com/takanenofficial/status/2035389725947953160)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5013)
+  - [予約販売案内 - 公式ニュース](https://takanenonadeshiko.jp/?p=4932)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2012480034624451019)
 `;

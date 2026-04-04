@@ -18,17 +18,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送:
+  ## 放送:
 
-- 全国のコミュニティ FM: 8/17 (土) 12:30 〜 12:55
+  - 全国のコミュニティ FM: 8/17 (土) 12:30 〜 12:55
 
-## 出演:
+  ## 出演:
 
-- 松本ももな
-- 籾山ひめり
+  - 松本ももな
+  - 籾山ひめり
 
-## リンク
+  ## リンク
 
-- [スマートフォンでの聴き方](https://x.com/Radimo_info/status/1776220140100878439)
-- [高嶺のなでしこのアイドル授業中！ | MUSIC BIRD-全国のコミュニティFM向け番組配信サービス](https://musicbird.jp/cfm/timetable/takaneko/)
+  - [スマートフォンでの聴き方](https://x.com/Radimo_info/status/1776220140100878439)
+  - [高嶺のなでしこのアイドル授業中！ | MUSIC BIRD-全国のコミュニティFM向け番組配信サービス](https://musicbird.jp/cfm/timetable/takaneko/)
 `;

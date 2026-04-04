@@ -27,10 +27,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/黒フェス2024〜白黒歌合戦〜/)
-- [黒フェス 公式サイト](http://kurofes.net/)
-- [黒フェス 公式 X](https://x.com/kurofest)
-- [黒フェス 公式 X 告知](https://x.com/kurofest/status/1795741873199276352)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/黒フェス2024〜白黒歌合戦〜/)
+  - [黒フェス 公式サイト](http://kurofes.net/)
+  - [黒フェス 公式 X](https://x.com/kurofest)
+  - [黒フェス 公式 X 告知](https://x.com/kurofest/status/1795741873199276352)
 `;

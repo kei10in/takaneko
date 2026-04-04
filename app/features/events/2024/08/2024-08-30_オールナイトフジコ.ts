@@ -18,13 +18,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-お台場冒険王 公開収録 後編🚩
+  お台場冒険王 公開収録 後編🚩
 
-- 放送局: フジテレビ
-- 放送時間: 24:55 〜 25:55 (8/31 00:55 〜 01:55)
+  - 放送局: フジテレビ
+  - 放送時間: 24:55 〜 25:55 (8/31 00:55 〜 01:55)
 
-## リンク
+  ## リンク
 
-- [番組 TVer](https://tver.jp/series/srrw69kkz7)
-- [フジテレビ 番組サイト](https://www.fujitv.co.jp/allnight-fujiko/index.html)
+  - [番組 TVer](https://tver.jp/series/srrw69kkz7)
+  - [フジテレビ 番組サイト](https://www.fujitv.co.jp/allnight-fujiko/index.html)
 `;

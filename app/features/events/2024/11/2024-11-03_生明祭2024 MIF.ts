@@ -32,21 +32,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 日時: 11 月 3 日 (日) 14:10 〜 15:10
-- 場所: メインステージ
+  - 日時: 11 月 3 日 (日) 14:10 〜 15:10
+  - 場所: メインステージ
 
-物販あり
+  物販あり
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1844324709053485358)
-- [生明祭 X 告知](https://x.com/ikumeisai/status/1844301815816638508)
-- [生明祭 2024 インスタグラム 出演情報](https://www.instagram.com/p/DA01PBXSgdo/)
-- [MIF](https://ikumeisai.jp/?page_id=1248)
-- [生明祭](https://ikumeisai.jp/)
-- [生明祭 X](https://x.com/ikumeisai)
-- [生明祭 YouTube](https://www.youtube.com/@ikumeipr)
-- [公式 X セットリスト](https://x.com/takanenofficial/status/1852993097795580174)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1844324709053485358)
+  - [生明祭 X 告知](https://x.com/ikumeisai/status/1844301815816638508)
+  - [生明祭 2024 インスタグラム 出演情報](https://www.instagram.com/p/DA01PBXSgdo/)
+  - [MIF](https://ikumeisai.jp/?page_id=1248)
+  - [生明祭](https://ikumeisai.jp/)
+  - [生明祭 X](https://x.com/ikumeisai)
+  - [生明祭 YouTube](https://www.youtube.com/@ikumeipr)
+  - [公式 X セットリスト](https://x.com/takanenofficial/status/1852993097795580174)
 `;

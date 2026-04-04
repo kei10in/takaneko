@@ -34,15 +34,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送時間 09:50 - 11:14
+  番組放送時間 09:50 - 11:14
 
-09:50 ごろ出演予定
+  09:50 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [公式 X 報告ポスト](https://x.com/takanenofficial/status/1943516869241213394)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
+  - [公式 X 報告ポスト](https://x.com/takanenofficial/status/1943516869241213394)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
 `;

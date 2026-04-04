@@ -48,10 +48,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1960594049733419274)
-- [LIVESTAR ニュース](https://avex.jp/livestar/?p=13063)
-- [公式 X 告知](https://x.com/takanenofficial/status/1934566763884388776)
-- [LIVESTAR X 開催告知](https://x.com/LIVESTARinc/status/1934460930433446204)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1960594049733419274)
+  - [LIVESTAR ニュース](https://avex.jp/livestar/?p=13063)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1934566763884388776)
+  - [LIVESTAR X 開催告知](https://x.com/LIVESTARinc/status/1934460930433446204)
 `;

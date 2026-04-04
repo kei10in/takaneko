@@ -44,10 +44,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1985685383812956200)
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1985548848484532498)
-- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984961186103009747)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1978377808893133153)
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1985685383812956200)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1985548848484532498)
+  - [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984961186103009747)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1978377808893133153)
 `;

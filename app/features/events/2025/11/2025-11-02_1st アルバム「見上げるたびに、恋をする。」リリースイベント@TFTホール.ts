@@ -87,37 +87,37 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別 2 ショット撮影会・会場限定抽選会
+  個別 2 ショット撮影会・会場限定抽選会
 
-CD 1 枚予約で、「個別2ショット撮影会参加券」を 1 枚、「抽選会参加券」を 2 枚配布。
+  CD 1 枚予約で、「個別2ショット撮影会参加券」を 1 枚、「抽選会参加券」を 2 枚配布。
 
-会場限定で、「メランコリックハニー」と「アイドル衣装」の Music Video 撮影現場で撮られた
-「写ルンです (L版サイズ) 」 (全30種、各種1枚限定)が当たる抽選会を開催。
+  会場限定で、「メランコリックハニー」と「アイドル衣装」の Music Video 撮影現場で撮られた
+  「写ルンです (L版サイズ) 」 (全30種、各種1枚限定)が当たる抽選会を開催。
 
-### 事前予約
+  ### 事前予約
 
-事前予約は[楽天ブックス](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)で受付。
+  事前予約は[楽天ブックス](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)で受付。
 
-- **受付期間:** 10月17日(金) 18:00 〜 10月22日(水) 23:59
-- **抽選結果:** 10月24日(金) 中にメールで通知
+  - **受付期間:** 10月17日(金) 18:00 〜 10月22日(水) 23:59
+  - **抽選結果:** 10月24日(金) 中にメールで通知
 
-## 当日販売
+  ## 当日販売
 
-当日販売は[楽天ブックス](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)でオンライン受付。
+  当日販売は[楽天ブックス](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)でオンライン受付。
 
-- **受付開始時間:** 11月02日(日) 10:00 〜
+  - **受付開始時間:** 11月02日(日) 10:00 〜
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1984606352061214966)
-- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
-- [当日券・会場限定抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4508)
-- [当日券告知 - 公式 X](https://x.com/takanenofficial/status/1983884419929894996)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4460)
-- [楽天ブックス特設ページ](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
-- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
-- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1984606352061214966)
+  - [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
+  - [当日券・会場限定抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4508)
+  - [当日券告知 - 公式 X](https://x.com/takanenofficial/status/1983884419929894996)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4460)
+  - [楽天ブックス特設ページ](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
 `;

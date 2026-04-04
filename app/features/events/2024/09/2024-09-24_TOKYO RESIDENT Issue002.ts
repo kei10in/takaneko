@@ -18,15 +18,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 掲載情報
+  ## 掲載情報
 
-**掲載:**
+  **掲載:**
 
-- 籾山ひめり
+  - 籾山ひめり
 
-[![DUAL WORLD](/events/2024/2024-09-24_TOKYO%20RESIDENT%20Issue002_2.jpg)](/events/2024/2024-09-24_TOKYO%20RESIDENT%20Issue002_2.jpg)
+  [![DUAL WORLD](/events/2024/2024-09-24_TOKYO%20RESIDENT%20Issue002_2.jpg)](/events/2024/2024-09-24_TOKYO%20RESIDENT%20Issue002_2.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1834925133045415945)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1834925133045415945)
 `;

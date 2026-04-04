@@ -42,15 +42,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-- **🎫チケット:**
+  - **🎫チケット:**
   - 終日立会チケット - [X の告知を参照](https://x.com/setonomegane/status/1877657512184512588)
   - コーナー立ち合いチケット - [X の告知を参照](https://x.com/setonomegane/status/1877725394184364259)
-- **出演時間:** 16:00 〜 「ウィンターカップ」に出演
+  - **出演時間:** 16:00 〜 「ウィンターカップ」に出演
 
-## リンク
+  ## リンク
 
-- [TEAM SHACHI 公式 YouTube](https://www.youtube.com/c/teamshachich)
-- [公式 X 告知](https://x.com/takanenofficial/status/1877664180674891846)
+  - [TEAM SHACHI 公式 YouTube](https://www.youtube.com/c/teamshachich)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1877664180674891846)
 `;

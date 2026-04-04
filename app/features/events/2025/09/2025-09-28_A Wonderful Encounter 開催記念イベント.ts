@@ -79,26 +79,26 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 個別 TikTok 撮影会 楽曲
+  ## 個別 TikTok 撮影会 楽曲
 
-1. [女の子は強い サビver.] お客様込み
-1. [女の子は強い サビver.] メンバーのみ
-1. [女の子は強い サビver.] 自撮り
-1. [初恋のひと。ハート合わせチャレンジ] お客様込み
-1. [初恋のひと。ハート合わせチャレンジ] メンバーのみ
-1. [初恋のひと。ハート合わせチャレンジ] 自撮り
-1. [初恋のこたえ。サビver.] お客様込み
-1. [初恋のこたえ。サビver.] メンバーのみ
-1. [初恋のこたえ。サビver.] 自撮り
+  1. [女の子は強い サビver.] お客様込み
+  1. [女の子は強い サビver.] メンバーのみ
+  1. [女の子は強い サビver.] 自撮り
+  1. [初恋のひと。ハート合わせチャレンジ] お客様込み
+  1. [初恋のひと。ハート合わせチャレンジ] メンバーのみ
+  1. [初恋のひと。ハート合わせチャレンジ] 自撮り
+  1. [初恋のこたえ。サビver.] お客様込み
+  1. [初恋のこたえ。サビver.] メンバーのみ
+  1. [初恋のこたえ。サビver.] 自撮り
 
-[女の子は強い サビver.]: https://www.tiktok.com/@takanenofficial/video/7191058072507354369
-[初恋のひと。ハート合わせチャレンジ]: https://www.tiktok.com/@takanenofficial/video/7252290793333886210
-[初恋のこたえ。サビver.]: https://www.tiktok.com/@takanenofficial/video/7523945603311619346
+  [女の子は強い サビver.]: https://www.tiktok.com/@takanenofficial/video/7191058072507354369
+  [初恋のひと。ハート合わせチャレンジ]: https://www.tiktok.com/@takanenofficial/video/7252290793333886210
+  [初恋のこたえ。サビver.]: https://www.tiktok.com/@takanenofficial/video/7523945603311619346
 
-## リンク
+  ## リンク
 
-- [当日券のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4397)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4395)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=4152)
-- [公式 X 告知](https://x.com/takanenofficial/status/1962787607114588354)
+  - [当日券のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4397)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4395)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=4152)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1962787607114588354)
 `;

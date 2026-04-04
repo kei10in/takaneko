@@ -30,16 +30,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送時間 05:20 - 06:54
+  番組放送時間 05:20 - 06:54
 
-05:30 ごろ出演予定
+  05:30 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943402411906785282)
-- [番組 X 前日告知](https://x.com/barihaya/status/1943280940614324415)
-- [番組 X 告知 (動画付き)](https://x.com/barihaya/status/1943197090630225981)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943402411906785282)
+  - [番組 X 前日告知](https://x.com/barihaya/status/1943280940614324415)
+  - [番組 X 告知 (動画付き)](https://x.com/barihaya/status/1943197090630225981)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

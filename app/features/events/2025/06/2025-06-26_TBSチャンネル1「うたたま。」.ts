@@ -38,18 +38,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-CS TBSチャンネル1で放送される「うたたま。」に高嶺のなでしこが出演します。
+  CS TBSチャンネル1で放送される「うたたま。」に高嶺のなでしこが出演します。
 
-SPOOX では放送回を 275 円（税込）で視聴可能です。
+  SPOOX では放送回を 275 円（税込）で視聴可能です。
 
-## リンク
+  ## リンク
 
-- [TikTok 告知 (番組 X)](https://x.com/utatamaofficial/status/1937130657756643740)
-- [公式 X 告知](https://x.com/takanenofficial/status/1933117086034997726)
-- [番組 X 告知 2](https://x.com/utatamaofficial/status/1933086933879849293)
-- [SPOOX 放送回 個別ページ](https://spoox.skyperfectv.co.jp/watch/2937974)
-- [スカパー！番組ページ](https://www.skyperfectv.co.jp/program/st/promo/utatama/)
-- [番組 X 告知](https://x.com/utatamaofficial/status/1928109394312429814)
+  - [TikTok 告知 (番組 X)](https://x.com/utatamaofficial/status/1937130657756643740)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1933117086034997726)
+  - [番組 X 告知 2](https://x.com/utatamaofficial/status/1933086933879849293)
+  - [SPOOX 放送回 個別ページ](https://spoox.skyperfectv.co.jp/watch/2937974)
+  - [スカパー！番組ページ](https://www.skyperfectv.co.jp/program/st/promo/utatama/)
+  - [番組 X 告知](https://x.com/utatamaofficial/status/1928109394312429814)
 `;

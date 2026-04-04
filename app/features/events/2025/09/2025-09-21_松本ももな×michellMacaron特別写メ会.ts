@@ -35,14 +35,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-女性限定イベント
+  女性限定イベント
 
-![内容](/events/2025/2025-09-21_松本ももな×michellMacaron特別写メ会_1.jpg)
+  ![内容](/events/2025/2025-09-21_松本ももな×michellMacaron特別写メ会_1.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1959928772511367640)
-- [michellMacaron X 告知](https://x.com/michellMacar0n/status/1959905094184636837)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1959928772511367640)
+  - [michellMacaron X 告知](https://x.com/michellMacar0n/status/1959905094184636837)
 `;

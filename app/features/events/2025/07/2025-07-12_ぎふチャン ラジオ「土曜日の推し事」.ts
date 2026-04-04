@@ -30,11 +30,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20250712072740)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20250712072000)
-- [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943792418081394697)
-- [番組 X 前日告知](https://x.com/oshigoto1431/status/1943514804192215248)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20250712072740)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20250712072000)
+  - [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943792418081394697)
+  - [番組 X 前日告知](https://x.com/oshigoto1431/status/1943514804192215248)
 `;

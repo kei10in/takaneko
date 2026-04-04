@@ -51,16 +51,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-FASHION STAGE に出演
+  FASHION STAGE に出演
 
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2032827089389555936)
-- [#あしたのたかねこ](https://x.com/HEROINES_FES/status/2032061892123115825)
-- [当日券 販売決定のお知らせ - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032344414576845014)
-- [タイムテーブル発表 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032050391794286786)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2021939850849788404)
-- [告知 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2021902108044538059)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2032827089389555936)
+  - [#あしたのたかねこ](https://x.com/HEROINES_FES/status/2032061892123115825)
+  - [当日券 販売決定のお知らせ - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032344414576845014)
+  - [タイムテーブル発表 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2032050391794286786)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2021939850849788404)
+  - [告知 - IDOL FILE 編集部 X](https://x.com/idolfile_jp/status/2021902108044538059)
 `;

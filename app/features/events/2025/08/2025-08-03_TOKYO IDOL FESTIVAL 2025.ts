@@ -77,10 +77,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト](https://x.com/takanenofficial/status/1951946574973825089)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1951641692257525950)
-- [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
-- [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
+  - [ダイジェスト](https://x.com/takanenofficial/status/1951946574973825089)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1951641692257525950)
+  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
 `;

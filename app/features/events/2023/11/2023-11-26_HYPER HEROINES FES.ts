@@ -31,8 +31,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [新幹線事件](https://x.com/takanekomanager/status/1728688876322275784)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1545)
+  - [新幹線事件](https://x.com/takanekomanager/status/1728688876322275784)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1545)
 `;

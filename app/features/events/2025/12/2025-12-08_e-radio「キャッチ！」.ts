@@ -34,17 +34,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 16:00 〜 リモート出演
+  番組放送枠 16:00 〜 リモート出演
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=E-RADIO&t=20251208160000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=E-RADIO&t=20251208160000)
-- [出演報告 - ビクターオオサカ X](https://x.com/VictorE_osaka/status/1997964621903515795)
-- [出演報告 - e-radio X](https://x.com/eradio_official/status/1997966375235793012)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1997956411121365164)
-- [直前告知 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/1997923852484325453)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1997886353522950651)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=E-RADIO&t=20251208160000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=E-RADIO&t=20251208160000)
+  - [出演報告 - ビクターオオサカ X](https://x.com/VictorE_osaka/status/1997964621903515795)
+  - [出演報告 - e-radio X](https://x.com/eradio_official/status/1997966375235793012)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1997956411121365164)
+  - [直前告知 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/1997923852484325453)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1997886353522950651)
 `;

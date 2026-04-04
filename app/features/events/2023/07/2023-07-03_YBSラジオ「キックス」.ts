@@ -35,9 +35,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1675740342551998466)
-- [番組 X 告知](https://x.com/ybs_kks/status/1675725374691618817)
-- [番組ホームページ](https://www.ybs.jp/kks/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1675740342551998466)
+  - [番組 X 告知](https://x.com/ybs_kks/status/1675725374691618817)
+  - [番組ホームページ](https://www.ybs.jp/kks/)
 `;

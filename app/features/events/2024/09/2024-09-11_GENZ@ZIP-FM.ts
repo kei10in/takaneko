@@ -18,19 +18,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-ZIP-FM 23:00 〜 GENZ
+  ZIP-FM 23:00 〜 GENZ
 
-**出演:**
+  **出演:**
 
-- 葉月紗蘭
-- 東山恵里沙
+  - 葉月紗蘭
+  - 東山恵里沙
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1833130744597688645)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1832916827682578814)
-- [番組サイト](https://zip-fm.co.jp/programs/65df4c37-eb34-4619-85e7-fd79bc1a45cc)
-- [radiko](https://radiko.jp/index/ZIP-FM/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1833130744597688645)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1832916827682578814)
+  - [番組サイト](https://zip-fm.co.jp/programs/65df4c37-eb34-4619-85e7-fd79bc1a45cc)
+  - [radiko](https://radiko.jp/index/ZIP-FM/)
 `;

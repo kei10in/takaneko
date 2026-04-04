@@ -66,10 +66,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ニュース 詳細](https://takanenonadeshiko.jp/?p=3413)
-- [公式ニュース 当日券情報](https://takanenonadeshiko.jp/?p=3359)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2961)
-- [公式 X 告知](https://x.com/takanenofficial/status/1861681451043107206)
+  - [公式ニュース 詳細](https://takanenonadeshiko.jp/?p=3413)
+  - [公式ニュース 当日券情報](https://takanenonadeshiko.jp/?p=3359)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2961)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1861681451043107206)
 `;

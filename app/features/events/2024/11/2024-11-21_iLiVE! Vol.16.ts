@@ -50,8 +50,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1849390383899574648)
-- [iLiVE! 公式 X 告知](https://x.com/info_iLiVE/status/1849390385057128497)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1849390383899574648)
+  - [iLiVE! 公式 X 告知](https://x.com/info_iLiVE/status/1849390385057128497)
 `;

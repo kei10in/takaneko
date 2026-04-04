@@ -22,7 +22,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=HFM&t=20250726123000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=HFM&t=20250726123000)
 `;

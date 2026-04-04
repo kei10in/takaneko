@@ -70,14 +70,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-CD 予約開始時間: 10:00
+  CD 予約開始時間: 10:00
 
-## リンク
+  ## リンク
 
-- [内容変更のお知らせ](https://takanenonadeshiko.jp/?p=2778)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2737)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2582)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1849768429156434200)
+  - [内容変更のお知らせ](https://takanenonadeshiko.jp/?p=2778)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2737)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2582)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1849768429156434200)
 `;

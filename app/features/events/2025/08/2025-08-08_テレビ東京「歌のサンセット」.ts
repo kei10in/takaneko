@@ -25,19 +25,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演者
+  ## 出演者
 
-**【ゲスト】**
+  **【ゲスト】**
 
-- ukka
-- 高嶺のなでしこ
-- 超ときめき宣伝部
-- 22/7
-- ≒JOY
-- yousti
+  - ukka
+  - 高嶺のなでしこ
+  - 超ときめき宣伝部
+  - 22/7
+  - ≒JOY
+  - yousti
 
-## リンク
+  ## リンク
 
-- [番組 TVer](https://tver.jp/series/srn2y74uo7)
-- [公式 X 告知](https://x.com/takanenofficial/status/1953682584174498175)
+  - [番組 TVer](https://tver.jp/series/srn2y74uo7)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1953682584174498175)
 `;

@@ -62,22 +62,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-**🎫チケット:**
+  **🎫チケット:**
 
-- [FC先行](https://takanekofc.com/topics/members/takaneko/5hxl2z6je7u7er5y.html)
+  - [FC先行](https://takanekofc.com/topics/members/takaneko/5hxl2z6je7u7er5y.html)
 
-## リンク
+  ## リンク
 
-- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1894019972105490664)
-- [イベント公式 X 松本ももな フリースロー企画告知](https://x.com/idolfeswithroar/status/1893212478676533379)
-- [イベント公式 X タイムテーブル公開](https://x.com/idolfeswithroar/status/1892048038094406053)
-- [イベント公式 X メンバーによる告知](https://x.com/idolfeswithroar/status/1887792849388978638)
-- [イベント公式 X グッズ告知 2](https://x.com/idolfeswithroar/status/1885994808889754073)
-- [イベント公式 X グッズ告知](https://x.com/idolfeswithroar/status/1872934940339470349)
-- [公式 X 告知 2](https://x.com/takanenofficial/status/1892099301553090857)
-- [公式 X 告知](https://x.com/takanenofficial/status/1857294961558827233)
-- [キャンペーン告知](https://x.com/idolfeswithroar/status/1857259465072115828)
-- [イベント公式 X](https://x.com/idolfeswithroar/)
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1894019972105490664)
+  - [イベント公式 X 松本ももな フリースロー企画告知](https://x.com/idolfeswithroar/status/1893212478676533379)
+  - [イベント公式 X タイムテーブル公開](https://x.com/idolfeswithroar/status/1892048038094406053)
+  - [イベント公式 X メンバーによる告知](https://x.com/idolfeswithroar/status/1887792849388978638)
+  - [イベント公式 X グッズ告知 2](https://x.com/idolfeswithroar/status/1885994808889754073)
+  - [イベント公式 X グッズ告知](https://x.com/idolfeswithroar/status/1872934940339470349)
+  - [公式 X 告知 2](https://x.com/takanenofficial/status/1892099301553090857)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857294961558827233)
+  - [キャンペーン告知](https://x.com/idolfeswithroar/status/1857259465072115828)
+  - [イベント公式 X](https://x.com/idolfeswithroar/)
 `;

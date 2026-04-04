@@ -23,33 +23,33 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-> アイドルに卒業後の方向性をアドバイスするYukiya。
->
-> 彼の元には、進路に悩むアイドルが連日訪れる。
->
-> そんな彼の決まり文句は、「ROCKだね」。
->
-> アイドル時代のキラキラとは真逆の“ROCK”へ転身させることが彼の持ち味で・・・。
+  > アイドルに卒業後の方向性をアドバイスするYukiya。
+  >
+  > 彼の元には、進路に悩むアイドルが連日訪れる。
+  >
+  > そんな彼の決まり文句は、「ROCKだね」。
+  >
+  > アイドル時代のキラキラとは真逆の“ROCK”へ転身させることが彼の持ち味で・・・。
 
-## 出演者
+  ## 出演者
 
-- 秋山 竜次 (ロバート)
+  - 秋山 竜次 (ロバート)
 
-## スタッフ
+  ## スタッフ
 
-**プロデューサー**
+  **プロデューサー**
 
-- 入口 拓矢
+  - 入口 拓矢
 
-**制作協力**
+  **制作協力**
 
-- FCC
+  - FCC
 
-## リンク
+  ## リンク
 
-- [FOD](https://fod.fujitv.co.jp/title/70wy/)
-- [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
-- [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
+  - [FOD](https://fod.fujitv.co.jp/title/70wy/)
+  - [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
+  - [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
 `;

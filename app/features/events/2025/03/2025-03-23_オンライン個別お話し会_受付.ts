@@ -24,9 +24,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 販売開始: 2025年03月23日 (日) 20:00 〜 順次
+  - 販売開始: 2025年03月23日 (日) 20:00 〜 順次
   - 20:00 〜 涼海すう
   - 20:10 〜 橋本桃呼
   - 20:20 〜 春野莉々
@@ -39,14 +39,14 @@ export const content = /* md */ `
   - 21:20 〜 日向端ひな
   - 21:30 〜 籾山ひめり
 
-- 開催日:
+  - 開催日:
   - 2025年3月27日 (木) 18:00 〜 21:30 涼海 / 橋本 / 春野 / 星谷 / 松本
   - 2025年3月28日 (金) 18:00 〜 21:30 城月 / 葉月 / 東山 / 日向端 / 籾山
 
-販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=34993) を参照してください。
+  販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=34993) を参照してください。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3499)
-- [公式 X 告知](https://x.com/takanenofficial/status/1903401281684980103)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3499)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1903401281684980103)
 `;

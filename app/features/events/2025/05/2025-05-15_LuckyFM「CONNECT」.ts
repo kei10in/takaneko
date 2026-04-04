@@ -22,15 +22,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-コメント出演
+  コメント出演
 
-- Lucky FM 茨城放送 18:14 〜
-- [Radiko 放送回](https://radiko.jp/share?sid=IBS&t=20250515181400)
+  - Lucky FM 茨城放送 18:14 〜
+  - [Radiko 放送回](https://radiko.jp/share?sid=IBS&t=20250515181400)
 
-## リンク
+  ## リンク
 
-- [Radiko](https://radiko.jp/share?sid=IBS&t=20250515181400)
-- [番組 X 告知](https://x.com/co_luckyfm/status/1922891283133035006)
+  - [Radiko](https://radiko.jp/share?sid=IBS&t=20250515181400)
+  - [番組 X 告知](https://x.com/co_luckyfm/status/1922891283133035006)
 `;

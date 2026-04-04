@@ -49,10 +49,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1887366889300762922)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1886716340515356876)
-- [公式 X 配信告知](https://x.com/takanenofficial/status/1885254252526002648)
-- [公式 X 告知](https://x.com/takanenofficial/status/1882767871031599339)
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1887366889300762922)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1886716340515356876)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1885254252526002648)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1882767871031599339)
 `;

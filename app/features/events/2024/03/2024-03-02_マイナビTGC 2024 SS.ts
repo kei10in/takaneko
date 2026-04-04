@@ -41,9 +41,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [イベント公式サイト](https://tgc.girlswalker.com/24ss/)
-- [公式 X 出演報告](https://x.com/takanenofficial/status/1763793066224406604)
-- [公式 X 告知](https://x.com/takanenofficial/status/1760522362485891104)
+  - [イベント公式サイト](https://tgc.girlswalker.com/24ss/)
+  - [公式 X 出演報告](https://x.com/takanenofficial/status/1763793066224406604)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1760522362485891104)
 `;

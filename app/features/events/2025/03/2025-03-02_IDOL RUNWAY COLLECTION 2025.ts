@@ -44,34 +44,34 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 企画 - 推しセトリセレクション
+  ## 企画 - 推しセトリセレクション
 
-- [投票ページ](https://yoake-space.jp/ja/contest/C00041)
-- [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1882225593892381013)
-- [公式 X 告知](https://x.com/takanenofficial/status/1882228131077280185)
+  - [投票ページ](https://yoake-space.jp/ja/contest/C00041)
+  - [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1882225593892381013)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1882228131077280185)
 
-## 企画 - ベストアイドルドレッサー賞
+  ## 企画 - ベストアイドルドレッサー賞
 
-メイク部門に松本ももながエントリー。
+  メイク部門に松本ももながエントリー。
 
-ファッション部門には城月菜央と松本ももながエントリー。
+  ファッション部門には城月菜央と松本ももながエントリー。
 
-- [メイク部門 投票ページ](https://yoake-space.jp/ja/contest/C00044)
-- [ファッション部門 投票ページ](https://yoake-space.jp/ja/contest/C00045)
-- [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1882229608193671559)
+  - [メイク部門 投票ページ](https://yoake-space.jp/ja/contest/C00044)
+  - [ファッション部門 投票ページ](https://yoake-space.jp/ja/contest/C00045)
+  - [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1882229608193671559)
 
-## 出演 - ファッションステージ
+  ## 出演 - ファッションステージ
 
-- [公式 X 出演告知](https://x.com/takanenofficial/status/1889974042435928362)
-- [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1889965115761729672)
+  - [公式 X 出演告知](https://x.com/takanenofficial/status/1889974042435928362)
+  - [IDOL RUNWAY COLLECTION X 告知](https://x.com/idolrunwaycolle/status/1889965115761729672)
 
-## リンク
+  ## リンク
 
-- [高嶺のなでしこ、ランウェイ挑戦！橋本桃呼「本人は“おりぼんの擬人化”って自分のことを言っているんですけど…」｜entax（エンタックス）](https://www.entax.news/post/202503211900.html)
-- [高嶺のなでしこ TikTok ランウェイ](https://www.tiktok.com/@takanenofficial/video/7477156686470434055)
-- [たかねこLIVE映像](https://x.com/takanenofficial/status/1896093951855378581)
-- [SHOWROOM X 配信告知](https://x.com/SHOWROOM_jp/status/1896017616684343757)
-- [YOAKE SPACE](https://yoake-space.jp)
-- [公式 X 告知](https://x.com/takanenofficial/status/1866423903431819731)
-- [イベント公式 X 告知](https://x.com/idolrunwaycolle/status/1866422654196179432)
+  - [高嶺のなでしこ、ランウェイ挑戦！橋本桃呼「本人は“おりぼんの擬人化”って自分のことを言っているんですけど…」｜entax（エンタックス）](https://www.entax.news/post/202503211900.html)
+  - [高嶺のなでしこ TikTok ランウェイ](https://www.tiktok.com/@takanenofficial/video/7477156686470434055)
+  - [たかねこLIVE映像](https://x.com/takanenofficial/status/1896093951855378581)
+  - [SHOWROOM X 配信告知](https://x.com/SHOWROOM_jp/status/1896017616684343757)
+  - [YOAKE SPACE](https://yoake-space.jp)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866423903431819731)
+  - [イベント公式 X 告知](https://x.com/idolrunwaycolle/status/1866422654196179432)
 `;

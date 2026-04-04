@@ -23,11 +23,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-高嶺のなでしこがカメオ出演
+  高嶺のなでしこがカメオ出演
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1958927594273087569)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1958927594273087569)
 `;

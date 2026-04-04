@@ -30,18 +30,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 22:00 - 24:00
+  番組放送枠 22:00 - 24:00
 
-23:30 ごろ出演予定
+  23:30 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20250710233005)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20250710220000)
-- [番組 X 報告ポスト](https://x.com/oshi_mashi/status/1943323784771178723)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943311804714881119)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
-- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20250710233005)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20250710220000)
+  - [番組 X 報告ポスト](https://x.com/oshi_mashi/status/1943323784771178723)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943311804714881119)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
 `;

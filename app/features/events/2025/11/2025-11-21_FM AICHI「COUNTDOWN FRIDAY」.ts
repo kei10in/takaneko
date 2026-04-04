@@ -30,17 +30,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-スタジオゲストとして 16:30 〜 ごろ出演。
+  スタジオゲストとして 16:30 〜 ごろ出演。
 
-## リンク
+  ## リンク
 
-- [radiko 出演したところから再生](https://radiko.jp/share/?sid=FMAICHI&t=20251121162915)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20251121150000)
-- [ゲスト報告 - COUNTDOWN FRIDAY X](https://x.com/countdown807/status/1991779932591345759)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1991790214277370138)
-- [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1991768136832700846)
-- [告知 - FM AICHI X](https://x.com/FMAICHI/status/1991453971232227471)
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1991645345584173478)
+  - [radiko 出演したところから再生](https://radiko.jp/share/?sid=FMAICHI&t=20251121162915)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20251121150000)
+  - [ゲスト報告 - COUNTDOWN FRIDAY X](https://x.com/countdown807/status/1991779932591345759)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1991790214277370138)
+  - [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1991768136832700846)
+  - [告知 - FM AICHI X](https://x.com/FMAICHI/status/1991453971232227471)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1991645345584173478)
 `;

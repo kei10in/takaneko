@@ -36,10 +36,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-配信あり
+  配信あり
 
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1574690221639184384)
-- [告知 - 渋谷LOFT9アイドルクラブ X](https://x.com/l9_idol/status/1574686067688583171)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1574690221639184384)
+  - [告知 - 渋谷LOFT9アイドルクラブ X](https://x.com/l9_idol/status/1574686067688583171)
 `;

@@ -47,11 +47,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1888174266971275591)
-- [Ma’Scar’Piece X タイムテーブル 変更告知](https://x.com/mascarpiece/status/1887845028766286329)
-- [Ma’Scar’Piece X タイムテーブル告知](https://x.com/mascarpiece/status/1885568813267378458)
-- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1885570041300869466)
-- [公式 X 告知](https://x.com/takanenofficial/status/1872961157897830618)
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1888174266971275591)
+  - [Ma’Scar’Piece X タイムテーブル 変更告知](https://x.com/mascarpiece/status/1887845028766286329)
+  - [Ma’Scar’Piece X タイムテーブル告知](https://x.com/mascarpiece/status/1885568813267378458)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1885570041300869466)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1872961157897830618)
 `;

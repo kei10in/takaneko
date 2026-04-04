@@ -99,15 +99,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-個別握手会
+  個別握手会
 
-## リンク
+  ## リンク
 
-- [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1616)
-- [当日販売のお知らせ - 公式 X](https://x.com/takanenofficial/status/1737778918000873494)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1593)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1585)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1735189322071200006)
+  - [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1616)
+  - [当日販売のお知らせ - 公式 X](https://x.com/takanenofficial/status/1737778918000873494)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1593)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1585)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1735189322071200006)
 `;

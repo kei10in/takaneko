@@ -33,20 +33,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別握手会
+  個別握手会
 
-2025年11月01日(土) 1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホールの振替日です。
+  2025年11月01日(土) 1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホールの振替日です。
 
-## リンク
+  ## リンク
 
-- [振替日詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4521)
-- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
-- [当日券・衣装告知 - 公式 X](https://x.com/takanenofficial/status/1984070354772619636)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4457)
-- [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20251101)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
-- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
-- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+  - [振替日詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4521)
+  - [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984199930744082895)
+  - [当日券・衣装告知 - 公式 X](https://x.com/takanenofficial/status/1984070354772619636)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4457)
+  - [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20251101)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1979125412752949412)
+  - [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
 `;

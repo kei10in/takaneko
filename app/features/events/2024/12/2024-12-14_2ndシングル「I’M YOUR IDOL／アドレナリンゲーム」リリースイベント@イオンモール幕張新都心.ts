@@ -92,16 +92,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ミニライブ & グループ握手会
+  ミニライブ & グループ握手会
 
-- CD予約開始時間: 9:30 〜
-- CD予約受付場所: イオンモール幕張新都心 グランドモール1F グランドスクエアCD販売ブース
+  - CD予約開始時間: 9:30 〜
+  - CD予約受付場所: イオンモール幕張新都心 グランドモール1F グランドスクエアCD販売ブース
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2892)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3048)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1864642165261127840)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2892)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3048)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1864642165261127840)
 `;

@@ -22,15 +22,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演。
+  コメント出演。
 
-出演時間: 21:05 ごろ 〜 21:13 ごろ
+  出演時間: 21:05 ごろ 〜 21:13 ごろ
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251224210535)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251224203000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2003692111066177663)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251224210535)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20251224203000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2003692111066177663)
 `;

@@ -29,28 +29,28 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://ticketdive.com/event/heroinessummer2024)
+  [🎫チケット](https://ticketdive.com/event/heroinessummer2024)
 
-出演: 19:35 〜 20:00 花火ステージ (Spotify O-EAST)
+  出演: 19:35 〜 20:00 花火ステージ (Spotify O-EAST)
 
-物販: 20:15 〜 / ミニフォトカード (白ワンピースver)
+  物販: 20:15 〜 / ミニフォトカード (白ワンピースver)
 
-[ニコ生配信](https://live.nicovideo.jp/watch/lv345611141)
+  [ニコ生配信](https://live.nicovideo.jp/watch/lv345611141)
 
-### 楽屋トーク
+  ### 楽屋トーク
 
-- [楽屋トーク告知](https://x.com/official_appare/status/1828042851860762989)
+  - [楽屋トーク告知](https://x.com/official_appare/status/1828042851860762989)
 
-- [楽屋トーク タイムテーブル](https://x.com/official_appare/status/1828228143808946343)
+  - [楽屋トーク タイムテーブル](https://x.com/official_appare/status/1828228143808946343)
 
-[![タイムテーブル](/events/2024/2024-08-27_エンドレスサマー2024_タイムテーブル.jpg)](/events/2024/2024-08-27_エンドレスサマー2024_タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-08-27_エンドレスサマー2024_タイムテーブル.jpg)](/events/2024/2024-08-27_エンドレスサマー2024_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/エンドレスサマー2024/)
-- [公式 X](https://x.com/takanenofficial/status/1817417447747543043)
-- [Appare! 公式 X](https://x.com/official_appare/status/1816081015502430251)
-- [Appare! 公式 X タイムテーブル](https://x.com/official_appare/status/1825867137715786161)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/エンドレスサマー2024/)
+  - [公式 X](https://x.com/takanenofficial/status/1817417447747543043)
+  - [Appare! 公式 X](https://x.com/official_appare/status/1816081015502430251)
+  - [Appare! 公式 X タイムテーブル](https://x.com/official_appare/status/1825867137715786161)
 `;

@@ -31,16 +31,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://ticketdive.com/event/nanafes1013)
+  [🎫チケット](https://ticketdive.com/event/nanafes1013)
 
-**[タイムテーブル](https://x.com/yamada7dayo/status/1841432967576719804):**
+  **[タイムテーブル](https://x.com/yamada7dayo/status/1841432967576719804):**
 
-[![タイムテーブル](/events/2024/2024-10-13_ナナフェス_タイムテーブル.jpg)](/events/2024/2024-10-13_ナナフェス_タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-10-13_ナナフェス_タイムテーブル.jpg)](/events/2024/2024-10-13_ナナフェス_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [山田菜々 X 告知](https://x.com/yamada7dayo/status/1827705383206695080)
-- [公式 X 告知](https://x.com/takanenofficial/status/1828321601592717819)
+  - [山田菜々 X 告知](https://x.com/yamada7dayo/status/1827705383206695080)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1828321601592717819)
 `;

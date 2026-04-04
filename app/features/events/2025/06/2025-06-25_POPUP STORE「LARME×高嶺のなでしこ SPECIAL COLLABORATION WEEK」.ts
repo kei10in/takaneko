@@ -33,27 +33,27 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## フォトパネル展示
+  ## フォトパネル展示
 
-- 6月25日 (水) 11:00 〜 20:00
-- 6月26日 (木) 11:00 〜 20:00
-- 6月27日 (金) 11:00 〜 18:00
-- 6月28日 (土) イベントのため終日展示なし
-- 6月29日 (日) 11:00 〜 15:00
+  - 6月25日 (水) 11:00 〜 20:00
+  - 6月26日 (木) 11:00 〜 20:00
+  - 6月27日 (金) 11:00 〜 18:00
+  - 6月28日 (土) イベントのため終日展示なし
+  - 6月29日 (日) 11:00 〜 15:00
 
-## POP-UP SHOP
+  ## POP-UP SHOP
 
-- 6月25日 (水) 11:00 〜 20:00
-- 6月26日 (木) 11:00 〜 20:00
-- 6月27日 (金) 11:00 〜 18:00
-- 6月28日 (土) 11:00 〜 20:00
-- 6月29日 (日) 11:00 〜 20:00
+  - 6月25日 (水) 11:00 〜 20:00
+  - 6月26日 (木) 11:00 〜 20:00
+  - 6月27日 (金) 11:00 〜 18:00
+  - 6月28日 (土) 11:00 〜 20:00
+  - 6月29日 (日) 11:00 〜 20:00
 
-## リンク
+  ## リンク
 
-- [公式 X 支払い方法の案内](https://x.com/takanenofficial/status/1937811822691967431)
-- [公式 X キャンペーン告知](https://x.com/takanenofficial/status/1937015259081937235)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3898)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1935926083544924626)
-- [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
+  - [公式 X 支払い方法の案内](https://x.com/takanenofficial/status/1937811822691967431)
+  - [公式 X キャンペーン告知](https://x.com/takanenofficial/status/1937015259081937235)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3898)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1935926083544924626)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
 `;

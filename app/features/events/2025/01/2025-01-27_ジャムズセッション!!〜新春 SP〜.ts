@@ -55,12 +55,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1883840632172798337)
-- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1883870479175541193)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1883462416299880643)
-- [公式 X 告知](https://x.com/takanenofficial/status/1879498794297155976)
-- [Jams Collection X タイムテーブル 修正後](https://x.com/JamsCollection/status/1880182104740483358)
-- [Jams Collection X タイムテーブル 修正前](https://x.com/JamsCollection/status/1879778341907202342)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1883840632172798337)
+  - [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1883870479175541193)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1883462416299880643)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1879498794297155976)
+  - [Jams Collection X タイムテーブル 修正後](https://x.com/JamsCollection/status/1880182104740483358)
+  - [Jams Collection X タイムテーブル 修正前](https://x.com/JamsCollection/status/1879778341907202342)
 `;

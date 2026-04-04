@@ -24,15 +24,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 販売開始: 2025年01月13日 (月) 18:00 〜 順次
-- 開催日: 2025年01月18日 (土) 12:00 〜 19:30
+  - 販売開始: 2025年01月13日 (月) 18:00 〜 順次
+  - 開催日: 2025年01月18日 (土) 12:00 〜 19:30
 
-販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=3204) を参照してください。
+  販売開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=3204) を参照してください。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3204)
-- [公式 X 告知](https://x.com/takanenofficial/status/1878411672093855796)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3204)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1878411672093855796)
 `;

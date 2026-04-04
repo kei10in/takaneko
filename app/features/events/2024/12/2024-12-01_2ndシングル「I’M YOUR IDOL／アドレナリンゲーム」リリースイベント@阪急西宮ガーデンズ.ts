@@ -91,13 +91,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 予約方法
+  ## 予約方法
 
-- CD予約開始時間: 10:00 〜
-- CD予約受付場所: 阪急西宮ガーデンズ 本館4Fスカイガーデン 特設ブース
+  - CD予約開始時間: 10:00 〜
+  - CD予約受付場所: 阪急西宮ガーデンズ 本館4Fスカイガーデン 特設ブース
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2951)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1860172462383841735)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2951)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1860172462383841735)
 `;

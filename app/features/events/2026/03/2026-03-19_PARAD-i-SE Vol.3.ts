@@ -59,12 +59,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2034602241295020156)
-- [本日のおチェキ](https://x.com/takanekomanager/status/2034599888215007420)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2034250969152925833)
-- [配信告知 - パラディーク X](https://x.com/para_deeq/status/2034208189072494800)
-- [タイムテーブル解禁 - パラディーク X](https://x.com/para_deeq/status/2029859546035036603)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2022974786624737308)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2034602241295020156)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2034599888215007420)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2034250969152925833)
+  - [配信告知 - パラディーク X](https://x.com/para_deeq/status/2034208189072494800)
+  - [タイムテーブル解禁 - パラディーク X](https://x.com/para_deeq/status/2029859546035036603)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2022974786624737308)
 `;

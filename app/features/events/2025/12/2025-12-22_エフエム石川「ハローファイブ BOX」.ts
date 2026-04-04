@@ -22,9 +22,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=HELLOFIVE&t=20251222205500)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2003367471902757247)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=HELLOFIVE&t=20251222205500)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2003367471902757247)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2002876743930261632)
 `;

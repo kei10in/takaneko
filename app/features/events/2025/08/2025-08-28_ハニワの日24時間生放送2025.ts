@@ -45,12 +45,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信時間
+  ## 配信時間
 
-2025月8日28日 (木) 21:00 〜 2025月8日29日 (金) 21:00
+  2025月8日28日 (木) 21:00 〜 2025月8日29日 (金) 21:00
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1960326612148486655)
-- [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/1960311268650459263)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1960326612148486655)
+  - [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/1960311268650459263)
 `;

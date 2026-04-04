@@ -44,12 +44,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-- 16:00 CD予約開始
+  - 16:00 CD予約開始
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2857)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2857)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

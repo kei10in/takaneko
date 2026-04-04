@@ -20,15 +20,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- 開催日: 2024年10月24日 (木) 18:00 〜 21:30
-- 販売開始: 2024年10月20日 (日) 19:00
+  - 開催日: 2024年10月24日 (木) 18:00 〜 21:30
+  - 販売開始: 2024年10月20日 (日) 19:00
 
-受付開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=2694) を参照してください。
+  受付開始時間は [開催詳細](https://takanenonadeshiko.jp/?p=2694) を参照してください。
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2694)
-- [公式 X 告知](https://x.com/takanenofficial/status/1847586229333991835)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2694)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1847586229333991835)
 `;

@@ -29,7 +29,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [橋本桃呼 X 告知](https://x.com/MomokoHashimoto/status/1909106484073664812)
+  - [橋本桃呼 X 告知](https://x.com/MomokoHashimoto/status/1909106484073664812)
 `;

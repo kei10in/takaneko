@@ -23,13 +23,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-- 12 月 10 日 (火) 21:00 〜 12 月 15 日 (日) 20:00 まで、リミスタで抽選会
-- 12 月 15 日 (日) 19:00 〜 YouTube Live で W チャンス抽選会
+  - 12 月 10 日 (火) 21:00 〜 12 月 15 日 (日) 20:00 まで、リミスタで抽選会
+  - 12 月 15 日 (日) 19:00 〜 YouTube Live で W チャンス抽選会
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3074)
-- [公式 X 告知](https://x.com/takanenofficial/status/1866459850659795337)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3074)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866459850659795337)
 `;

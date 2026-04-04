@@ -22,16 +22,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-ラジオ大阪 17:00 〜
+  ラジオ大阪 17:00 〜
 
-- [radiko](https://radiko.jp/#CRK)
-- [radiko 放送回](https://radiko.jp/share?sid=CRK&t=20241207170000)
+  - [radiko](https://radiko.jp/#CRK)
+  - [radiko 放送回](https://radiko.jp/share?sid=CRK&t=20241207170000)
 
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/DjkooReboot/status/1865293220386869747)
-- [番組 HP](https://djkoo-rtw.com/)
-- [radiko](https://radiko.jp/#CRK)
+  - [番組 X 告知](https://x.com/DjkooReboot/status/1865293220386869747)
+  - [番組 HP](https://djkoo-rtw.com/)
+  - [radiko](https://radiko.jp/#CRK)
 `;

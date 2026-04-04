@@ -38,27 +38,27 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-スペシャル MC: 納言 すすきみゆき [@nagonmiyuki](https://twitter.com/nagonmiyuki) / あべ [@G5HHC4FYSi2NVpd](https://twitter.com/G5HHC4FYSi2NVpd)
+  スペシャル MC: 納言 すすきみゆき [@nagonmiyuki](https://twitter.com/nagonmiyuki) / あべ [@G5HHC4FYSi2NVpd](https://twitter.com/G5HHC4FYSi2NVpd)
 
-スペシャルゲスト: 岡田結実 [@YUIokada_415](https://twitter.com/YUIokada_415)
+  スペシャルゲスト: 岡田結実 [@YUIokada_415](https://twitter.com/YUIokada_415)
 
-### 第 1 部
+  ### 第 1 部
 
-たかねコレクション2024 A/W & ミニライブ
+  たかねコレクション2024 A/W & ミニライブ
 
-女性限定
+  女性限定
 
-### 第 2 部
+  ### 第 2 部
 
-たかねコレクション2024 A/W & ミニライブ
+  たかねコレクション2024 A/W & ミニライブ
 
-男性限定
+  男性限定
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/10月252627日「たかねこの秋祭り2024〜fc-limited〜」開催決定！/)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
-- [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/10月252627日「たかねこの秋祭り2024〜fc-limited〜」開催決定！/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
+  - [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
 `;

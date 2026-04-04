@@ -69,20 +69,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-詳細は[特設サイト](https://tower.jp/article/feature_item/2024/09/30/0702)を参照
+  詳細は[特設サイト](https://tower.jp/article/feature_item/2024/09/30/0702)を参照
 
-[![イベント詳細](/events/2024/2024-10-12_2nd%20シングル「I’M%20YOUR%20IDOL／アドレナリンゲーム」リリースイベント@東京_2.png)](/events/2024/2024-10-12_2nd%20シングル「I’M%20YOUR%20IDOL／アドレナリンゲーム」リリースイベント@東京_2.png)
+  [![イベント詳細](/events/2024/2024-10-12_2nd%20シングル「I’M%20YOUR%20IDOL／アドレナリンゲーム」リリースイベント@東京_2.png)](/events/2024/2024-10-12_2nd%20シングル「I’M%20YOUR%20IDOL／アドレナリンゲーム」リリースイベント@東京_2.png)
 
-## リンク
+  ## リンク
 
-- [衣装 & 当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1844717310487167441)
-- [特設サイト](https://tower.jp/article/feature_item/2024/09/30/0702)
-- [公式サイト ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ/)
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ/)
-- [タワーレコード イベント X 告知](https://x.com/TOWER_Events/status/1841048042998280695)
-- [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/25.html)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1841040836337050069)
-- [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [衣装 & 当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1844717310487167441)
+  - [特設サイト](https://tower.jp/article/feature_item/2024/09/30/0702)
+  - [公式サイト ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ/)
+  - [タワーレコード イベント X 告知](https://x.com/TOWER_Events/status/1841048042998280695)
+  - [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/25.html)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1841040836337050069)
+  - [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

@@ -16,8 +16,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1811709769033613694)
-- [公式ニュース](https://takanenonadeshiko.jp/「高嶺のなでしこ全国ツアー2024わたし色に染ま-5/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1811709769033613694)
+  - [公式ニュース](https://takanenonadeshiko.jp/「高嶺のなでしこ全国ツアー2024わたし色に染ま-5/)
 `;

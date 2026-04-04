@@ -15,18 +15,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-ぎふチャン 12:00 〜
+  ぎふチャン 12:00 〜
 
-ゲストコメント 13:36 ～
+  ゲストコメント 13:36 ～
 
-[radiko](https://radiko.jp/#GBS)
+  [radiko](https://radiko.jp/#GBS)
 
-## リンク
+  ## リンク
 
-- [番組 X 直前告知](https://x.com/wgcd1431/status/1867760346674737277)
-- [番組 X 告知](https://x.com/wgcd1431/status/1867419636935143908)
-- [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
-- [radiko](https://radiko.jp/#GBS)
+  - [番組 X 直前告知](https://x.com/wgcd1431/status/1867760346674737277)
+  - [番組 X 告知](https://x.com/wgcd1431/status/1867419636935143908)
+  - [ビクターナゴヤ X アーティスト情報](https://x.com/victor_nagoya/status/1865912984557834711)
+  - [radiko](https://radiko.jp/#GBS)
 `;

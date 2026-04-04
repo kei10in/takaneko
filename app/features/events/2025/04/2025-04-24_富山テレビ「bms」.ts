@@ -30,7 +30,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組 X 告知](https://x.com/bms_bbt/status/1913053270526058860)
+  - [番組 X 告知](https://x.com/bms_bbt/status/1913053270526058860)
 `;

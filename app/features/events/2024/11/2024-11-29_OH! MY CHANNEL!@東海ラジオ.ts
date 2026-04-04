@@ -21,23 +21,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-東海ラジオ 13:00 〜
+  東海ラジオ 13:00 〜
 
-13:30 ごろ出演予定
+  13:30 ごろ出演予定
 
-[radiko](http://radiko.jp/#TOKAIRADIO)
+  [radiko](http://radiko.jp/#TOKAIRADIO)
 
-## リンク
+  ## リンク
 
-- [番組 X 放送後](https://x.com/ohmy1332/status/1862375817319522527)
-- [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1862345801105907806)
-- [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862350773088395287)
-- [公式 X 告知](https://x.com/takanenofficial/status/1860508637166469613)
-- [番組 X 告知](https://x.com/ohmy1332/status/1860498680262148133)
-- [番組サイト](https://www.tokairadio.co.jp/program/ohmy/)
-- [radiko](http://radiko.jp/#TOKAIRADIO)
-- [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
+  - [番組 X 放送後](https://x.com/ohmy1332/status/1862375817319522527)
+  - [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1862345801105907806)
+  - [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862350773088395287)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1860508637166469613)
+  - [番組 X 告知](https://x.com/ohmy1332/status/1860498680262148133)
+  - [番組サイト](https://www.tokairadio.co.jp/program/ohmy/)
+  - [radiko](http://radiko.jp/#TOKAIRADIO)
+  - [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
 `;

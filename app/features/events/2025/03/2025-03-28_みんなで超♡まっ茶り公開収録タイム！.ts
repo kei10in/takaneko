@@ -30,8 +30,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1902918102125539330)
-- [番組 X 告知](https://x.com/macha_timepiyo/status/1902661804725314007)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1902918102125539330)
+  - [番組 X 告知](https://x.com/macha_timepiyo/status/1902661804725314007)
 `;

@@ -36,8 +36,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式モバイルアプリ](https://mawaloop.link.fespli.com/)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2036026532737765462)
+  - [公式モバイルアプリ](https://mawaloop.link.fespli.com/)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2036026532737765462)
 `;

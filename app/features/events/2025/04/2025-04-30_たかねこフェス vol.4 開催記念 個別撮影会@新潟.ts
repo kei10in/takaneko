@@ -74,10 +74,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ニュース - 星谷美来のイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3645)
-- [公式ニュース詳細告知](https://takanenonadeshiko.jp/?p=3583)
-- [公式 X 告知](https://x.com/takanenofficial/status/1896836771402702866)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3456)
+  - [公式ニュース - 星谷美来のイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3645)
+  - [公式ニュース詳細告知](https://takanenonadeshiko.jp/?p=3583)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1896836771402702866)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3456)
 `;

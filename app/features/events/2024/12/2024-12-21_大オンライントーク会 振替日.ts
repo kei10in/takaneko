@@ -22,15 +22,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-2024年12月15日のオンライントーク会の振替日です。
+  2024年12月15日のオンライントーク会の振替日です。
 
-詳細: https://takanenonadeshiko.jp/?p=3101
+  詳細: https://takanenonadeshiko.jp/?p=3101
 
-## リンク
+  ## リンク
 
-- [公式ニュース 振替について](https://takanenonadeshiko.jp/?p=3101)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3069)
-- [公式 X 告知](https://x.com/takanenofficial/status/1866459850659795337)
+  - [公式ニュース 振替について](https://takanenonadeshiko.jp/?p=3101)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3069)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866459850659795337)
 `;

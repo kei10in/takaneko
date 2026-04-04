@@ -22,11 +22,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-生出演。
+  生出演。
 
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1760542373292237295)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1760542373292237295)
 `;

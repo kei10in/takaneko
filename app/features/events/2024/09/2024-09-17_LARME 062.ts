@@ -14,18 +14,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 掲載情報
+  ## 掲載情報
 
-**掲載:**
+  **掲載:**
 
-- 橋本桃呼
-- 松本ももな
+  - 橋本桃呼
+  - 松本ももな
 
-チェキプレゼントあり。
+  チェキプレゼントあり。
 
-[![松本ももな](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)
+  [![松本ももな](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)
 
-## リンク
+  ## リンク
 
-- [公式 X](https://x.com/takanenofficial/status/1835982088459460894)
+  - [公式 X](https://x.com/takanenofficial/status/1835982088459460894)
 `;

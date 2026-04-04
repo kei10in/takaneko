@@ -24,37 +24,37 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 番組概要
+  ## 番組概要
 
-夏のアイドルフェス「超NATSUZOME2025」今週も旬なアイドルのステージパフォーマンス・インタビュー<br/>
-▽＠JAMナビゲートユニットname:CMH登場<br/>
-▽こがちゃんちゃん×黒嵜菜々子
+  夏のアイドルフェス「超NATSUZOME2025」今週も旬なアイドルのステージパフォーマンス・インタビュー<br/>
+  ▽＠JAMナビゲートユニットname:CMH登場<br/>
+  ▽こがちゃんちゃん×黒嵜菜々子
 
-## 番組内容
+  ## 番組内容
 
-超NATSUZOME2025ダイジェスト<br/>
-▽虹コン、Apparre！、高嶺のなでしこ、OCHA NORMA、AVAM、#2i2、Chum Toto<br/>
-▽name:CMH３人お互いの印象<br/>
-▽CiONの景気の良い話？<br/>
-▽こがちゃんちゃんの秘密の森ではアイドルグループ「Root mimi」のプロデューサー兼アイドル黒嵜菜々子が来店<br/>
-▽LINKL PLANET最新MV
+  超NATSUZOME2025ダイジェスト<br/>
+  ▽虹コン、Apparre！、高嶺のなでしこ、OCHA NORMA、AVAM、#2i2、Chum Toto<br/>
+  ▽name:CMH３人お互いの印象<br/>
+  ▽CiONの景気の良い話？<br/>
+  ▽こがちゃんちゃんの秘密の森ではアイドルグループ「Root mimi」のプロデューサー兼アイドル黒嵜菜々子が来店<br/>
+  ▽LINKL PLANET最新MV
 
-## 出演者
+  ## 出演者
 
-- 虹のコンキスタドール
-- Appare！
-- 高嶺のなでしこ
-- OCHA NORMA
-- AVAM
-- #2i2
-- Chum Toto
-- name:CMH（有岡ちひろ・栗原舞優・吉澤悠華）
-- CiON
-- こがちゃんちゃん
-- 黒嵜菜々子（Root mimi）
-- LINKL PLANET
+  - 虹のコンキスタドール
+  - Appare！
+  - 高嶺のなでしこ
+  - OCHA NORMA
+  - AVAM
+  - #2i2
+  - Chum Toto
+  - name:CMH（有岡ちひろ・栗原舞優・吉澤悠華）
+  - CiON
+  - こがちゃんちゃん
+  - 黒嵜菜々子（Root mimi）
+  - LINKL PLANET
 
-## リンク
+  ## リンク
 
-- [番組サイト](https://www.bs4.jp/popculture/)
+  - [番組サイト](https://www.bs4.jp/popculture/)
 `;

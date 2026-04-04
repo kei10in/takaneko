@@ -44,17 +44,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 購入先
+  ## 購入先
 
-■オンライントーク
+  ■オンライントーク
 
-https://limista.com/shipping_groups/5390/projects/5386
+  https://limista.com/shipping_groups/5390/projects/5386
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1847208229866217667)
-- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「iʼm-your-idol-アドレナリンゲ-3/)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2463)
-- [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/28.html)
-- [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1847208229866217667)
+  - [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2ndシングル「iʼm-your-idol-アドレナリンゲ-3/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2463)
+  - [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/28.html)
+  - [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

@@ -23,38 +23,38 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- TOKYO FM 毎週火曜日 27:00 〜 27:30
-- [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20251008030000)
-- [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smatBZuqZ22LNSrvWhPpHnR7)
-- [メンバーシップ限定 アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smRUcmimwSHFXGStGY4KSmfm)
+  - TOKYO FM 毎週火曜日 27:00 〜 27:30
+  - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20251008030000)
+  - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smatBZuqZ22LNSrvWhPpHnR7)
+  - [メンバーシップ限定 アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smRUcmimwSHFXGStGY4KSmfm)
 
-## 番組説明
+  ## 番組説明
 
-毎週火曜日深夜3時に開演！高嶺のなでしこがお届けするラジオの中の定期公演「たかねこナイト」。
+  毎週火曜日深夜3時に開演！高嶺のなでしこがお届けするラジオの中の定期公演「たかねこナイト」。
 
-メインMCの東山恵里沙が週替わりメンバーとともに、
-楽曲とトークを織り交ぜて展開していく対バンライブのようなラジオ番組です。
+  メインMCの東山恵里沙が週替わりメンバーとともに、
+  楽曲とトークを織り交ぜて展開していく対バンライブのようなラジオ番組です。
 
-放送後には、メンバーシップ限定の「アンコール」パートも配信。
+  放送後には、メンバーシップ限定の「アンコール」パートも配信。
 
-声出す準備はできていますか？是非ペンライトを片手にお楽しみください！
+  声出す準備はできていますか？是非ペンライトを片手にお楽しみください！
 
-- 番組Webサイト: https://audee-membership.jp/takanenonadeshiko
-- メッセージフォーム: https://www.tfm.co.jp/f/takanenonadeshiko/message
+  - 番組Webサイト: https://audee-membership.jp/takanenonadeshiko
+  - メッセージフォーム: https://www.tfm.co.jp/f/takanenonadeshiko/message
 
-X ハッシュタグは「[#たかねこナイト]」
+  X ハッシュタグは「[#たかねこナイト]」
 
-[#たかねこナイト]: http://x.com/search?q=%23たかねこナイト
+  [#たかねこナイト]: http://x.com/search?q=%23たかねこナイト
 
-## リンク
+  ## リンク
 
-- [たかねこナイト〜第一回公演〜](https://audee-membership.jp/takanenonadeshiko/audio/smatBZuqZ22LNSrvWhPpHnR7)
-- [【メンバーシップ限定】たかねこナイト〜第一回公演〜アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smRUcmimwSHFXGStGY4KSmfm)
-- [Radiko](https://radiko.jp/share?sid=FMT&t=20251008030000)
-- [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
-- [ポッドキャストメンバーシップ X 告知 (動画あり)](https://x.com/PodcastsMs_jp/status/1975440960633942098)
-- [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
-- [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
+  - [たかねこナイト〜第一回公演〜](https://audee-membership.jp/takanenonadeshiko/audio/smatBZuqZ22LNSrvWhPpHnR7)
+  - [【メンバーシップ限定】たかねこナイト〜第一回公演〜アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smRUcmimwSHFXGStGY4KSmfm)
+  - [Radiko](https://radiko.jp/share?sid=FMT&t=20251008030000)
+  - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
+  - [ポッドキャストメンバーシップ X 告知 (動画あり)](https://x.com/PodcastsMs_jp/status/1975440960633942098)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
+  - [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
 `;

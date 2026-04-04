@@ -23,31 +23,31 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-> ビュッフェ会場でよく見る「ローストビーフの行列」。
->
-> これを解消するため、他の料理に意識を向けさせるお芝居をしている団体が、“劇団ビュッフェ”。
->
-> 仲睦まじく見える家族だが、実はある事実が・・・。
+  > ビュッフェ会場でよく見る「ローストビーフの行列」。
+  >
+  > これを解消するため、他の料理に意識を向けさせるお芝居をしている団体が、“劇団ビュッフェ”。
+  >
+  > 仲睦まじく見える家族だが、実はある事実が・・・。
 
-## 出演者
+  ## 出演者
 
-- 秋山 竜次 (ロバート)
+  - 秋山 竜次 (ロバート)
 
-## スタッフ
+  ## スタッフ
 
-**プロデューサー**
+  **プロデューサー**
 
-- 入口 拓矢
+  - 入口 拓矢
 
-**制作協力**
+  **制作協力**
 
-- FCC
+  - FCC
 
-## リンク
+  ## リンク
 
-- [FOD](https://fod.fujitv.co.jp/title/70wy/)
-- [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
-- [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
+  - [FOD](https://fod.fujitv.co.jp/title/70wy/)
+  - [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
+  - [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
 `;

@@ -20,15 +20,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-[![涼海すう](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)
+  [![涼海すう](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)
 
-[![高嶺のなでしこ](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)
+  [![高嶺のなでしこ](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)
 
-## リンク
+  ## リンク
 
-- [MARQUEE](http://www.marquee-mag.com/)
-- [MARQUEE X 告知 涼海すう](https://x.com/MARQUEE_info/status/1855807369135226942)
-- [MARQUEE X 告知 高嶺のなでしこ](https://x.com/MARQUEE_info/status/1855807230689554723)
-- [公式 X 告知 涼海すう](https://x.com/takanenofficial/status/1855890718096806391)
-- [公式 X 告知 高嶺のなでしこ](https://x.com/takanenofficial/status/1855890751894471105)
+  - [MARQUEE](http://www.marquee-mag.com/)
+  - [MARQUEE X 告知 涼海すう](https://x.com/MARQUEE_info/status/1855807369135226942)
+  - [MARQUEE X 告知 高嶺のなでしこ](https://x.com/MARQUEE_info/status/1855807230689554723)
+  - [公式 X 告知 涼海すう](https://x.com/takanenofficial/status/1855890718096806391)
+  - [公式 X 告知 高嶺のなでしこ](https://x.com/takanenofficial/status/1855890751894471105)
 `;

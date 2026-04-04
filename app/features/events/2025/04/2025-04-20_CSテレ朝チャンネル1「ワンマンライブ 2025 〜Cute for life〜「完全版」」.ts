@@ -29,11 +29,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-> 国立代々木競技場第二体育館でのワンマンライブに
->
-> 公演当日のオフショットを加えた「完全版」！
+  > 国立代々木競技場第二体育館でのワンマンライブに
+  >
+  > 公演当日のオフショットを加えた「完全版」！
 
-## リンク
+  ## リンク
 
-- [CSテレ朝チャンネル X 告知](https://x.com/tvasahi_cs/status/1902268809563845087)
+  - [CSテレ朝チャンネル X 告知](https://x.com/tvasahi_cs/status/1902268809563845087)
 `;

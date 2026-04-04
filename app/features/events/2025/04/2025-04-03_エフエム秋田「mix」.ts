@@ -32,10 +32,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-15:41 〜 15:48 ごろまでコメント出演
+  15:41 〜 15:48 ごろまでコメント出演
 
-## リンク
+  ## リンク
 
-- [mix | エフエム秋田 | 2025/04/03/木 15:00-15:55 (radiko)](https://radiko.jp/share/?sid=AFM&t=20250403154150)
-- [番組 X ポスト](https://x.com/mixafm/status/1907685749102883022)
+  - [mix | エフエム秋田 | 2025/04/03/木 15:00-15:55 (radiko)](https://radiko.jp/share/?sid=AFM&t=20250403154150)
+  - [番組 X ポスト](https://x.com/mixafm/status/1907685749102883022)
 `;

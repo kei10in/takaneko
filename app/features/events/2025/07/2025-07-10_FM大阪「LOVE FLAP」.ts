@@ -34,18 +34,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 13:00 - 14:00
+  番組放送枠 13:00 - 14:00
 
-13:00 ごろ出演予定
+  13:00 ごろ出演予定
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20250710130000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20250710130000)
-- [FM大阪 X 報告ポスト](https://x.com/fmosaka851/status/1943179554488803344)
-- [番組 X 報告ポスト](https://x.com/LOVEFLAP/status/1943164829591888191)
-- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943157475030765940)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20250710130000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20250710130000)
+  - [FM大阪 X 報告ポスト](https://x.com/fmosaka851/status/1943179554488803344)
+  - [番組 X 報告ポスト](https://x.com/LOVEFLAP/status/1943164829591888191)
+  - [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943157475030765940)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
 `;

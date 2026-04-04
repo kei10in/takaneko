@@ -73,42 +73,42 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演
+  ## 出演
 
-### 一回目
+  ### 一回目
 
-- **会場 -** Spotify O-Crest
-- **時間 -** 12:50 〜 13:15
-- **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-Crest会場】](https://live.nicovideo.jp/watch/lv347131387)
+  - **会場 -** Spotify O-Crest
+  - **時間 -** 12:50 〜 13:15
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-Crest会場】](https://live.nicovideo.jp/watch/lv347131387)
 
-### トークステージ
+  ### トークステージ
 
-- **会場 -** LOFT9 Shibuya
-- **時間 -** 16:40 〜 17:05
-- **出演 -** 城月菜央、東山恵里沙
-- **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【LOFT9 Shibuya会場】](https://live.nicovideo.jp/watch/lv347131391)
+  - **会場 -** LOFT9 Shibuya
+  - **時間 -** 16:40 〜 17:05
+  - **出演 -** 城月菜央、東山恵里沙
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【LOFT9 Shibuya会場】](https://live.nicovideo.jp/watch/lv347131391)
 
-### 二回目
+  ### 二回目
 
-- **会場 -** Spotify O-EAST
-- **時間 -** 18:45 〜 19:15
-- **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-EAST会場】](https://live.nicovideo.jp/watch/lv347131375)
+  - **会場 -** Spotify O-EAST
+  - **時間 -** 18:45 〜 19:15
+  - **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY2【O-EAST会場】](https://live.nicovideo.jp/watch/lv347131375)
 
-## 物販
+  ## 物販
 
-- **会場 -** ピットデザイン道玄坂 第2駐車場
-- **時間 -** 19:30 〜 20:00
+  - **会場 -** ピットデザイン道玄坂 第2駐車場
+  - **時間 -** 19:30 〜 20:00
 
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1898681522237935975)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1898312771009487340)
-- [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
-- [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
-- [イベント公式サイト](https://idorisefes.jp/)
-- [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
-- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
-- [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1898681522237935975)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1898312771009487340)
+  - [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
+  - [イベント公式サイト](https://idorisefes.jp/)
+  - [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
+  - [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
 `;

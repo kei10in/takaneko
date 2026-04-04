@@ -26,10 +26,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20250724180000)
-- [radiko news](https://news.radiko.jp/article/station/RN1/124557/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1948292190226038893)
-- [虎ノ門 トレンド経済研究所 X 告知](https://x.com/radioinews/status/1948250568641962138)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20250724180000)
+  - [radiko news](https://news.radiko.jp/article/station/RN1/124557/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1948292190226038893)
+  - [虎ノ門 トレンド経済研究所 X 告知](https://x.com/radioinews/status/1948250568641962138)
 `;

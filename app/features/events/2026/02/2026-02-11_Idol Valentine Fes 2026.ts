@@ -58,9 +58,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2021545160954556628)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2021199974281748644)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2004401787181453628)
+  - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2021545160954556628)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2021199974281748644)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2004401787181453628)
 `;

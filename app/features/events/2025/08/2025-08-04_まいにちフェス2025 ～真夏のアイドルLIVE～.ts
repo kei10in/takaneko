@@ -61,12 +61,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1950424896665980973)
-- [動画、はじめてみました X タイムテーブル告知](https://x.com/douhaji_ex/status/1945007925958676527)
-- [動はじ X 特典会・物販タイムテーブル](https://x.com/douhaji_ex/status/1950496595516215686)
-- [音楽ナタリー](https://natalie.mu/music/news/631162)
-- [音楽ナタリー X ポスト](https://x.com/natalie_mu/status/1941980539726274909)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942033346151997880)
+  - [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1950424896665980973)
+  - [動画、はじめてみました X タイムテーブル告知](https://x.com/douhaji_ex/status/1945007925958676527)
+  - [動はじ X 特典会・物販タイムテーブル](https://x.com/douhaji_ex/status/1950496595516215686)
+  - [音楽ナタリー](https://natalie.mu/music/news/631162)
+  - [音楽ナタリー X ポスト](https://x.com/natalie_mu/status/1941980539726274909)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942033346151997880)
 `;

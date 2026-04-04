@@ -30,8 +30,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [葉月紗蘭のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1473)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1455)
+  - [葉月紗蘭のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1473)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1455)
 `;

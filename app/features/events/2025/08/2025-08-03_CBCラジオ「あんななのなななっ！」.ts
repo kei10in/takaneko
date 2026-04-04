@@ -26,10 +26,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20250803130000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20250803131800)
-- [公式 X 告知](https://x.com/takanenofficial/status/1951851855770001818)
-- [番組 X 告知](https://x.com/nanana1053/status/1951852305965277671)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20250803130000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20250803131800)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1951851855770001818)
+  - [番組 X 告知](https://x.com/nanana1053/status/1951852305965277671)
 `;

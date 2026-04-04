@@ -47,9 +47,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1990412580746154111)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1983811120994689420)
-- [告知 - MARQUEE祭 X](https://x.com/MARQUEE_matsuri/status/1976580968543912083)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1990412580746154111)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1983811120994689420)
+  - [告知 - MARQUEE祭 X](https://x.com/MARQUEE_matsuri/status/1976580968543912083)
 `;

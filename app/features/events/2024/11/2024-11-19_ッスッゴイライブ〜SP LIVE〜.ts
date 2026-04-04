@@ -53,7 +53,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ッスッゴイライブ 公式 X 告知](https://x.com/ssuggoi_live/status/1834925093157564786)
+  - [ッスッゴイライブ 公式 X 告知](https://x.com/ssuggoi_live/status/1834925093157564786)
 `;

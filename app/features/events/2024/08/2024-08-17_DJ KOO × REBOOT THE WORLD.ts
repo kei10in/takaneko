@@ -12,13 +12,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送:
+  ## 放送:
 
-- ラジオ関西: 8/17 (土) 17:00 〜 17:30
-- ラジオNIKKEI: 8/22 (木) 22:30 〜 23:00
+  - ラジオ関西: 8/17 (土) 17:00 〜 17:30
+  - ラジオNIKKEI: 8/22 (木) 22:30 〜 23:00
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2311)
-- [番組 HP](https://djkoo-rtw.com/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2311)
+  - [番組 HP](https://djkoo-rtw.com/)
 `;

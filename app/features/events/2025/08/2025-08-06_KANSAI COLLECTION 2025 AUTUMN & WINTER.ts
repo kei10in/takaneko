@@ -30,9 +30,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [松本ももな 出演キャンセルのお知らせ](https://x.com/takanenofficial/status/1952928105464807547)
-- [公式 X 告知](https://x.com/takanenofficial/status/1923306258611818580)
-- [関西コレクション X 告知](https://x.com/kan_kore/status/1923302925616676908)
+  - [松本ももな 出演キャンセルのお知らせ](https://x.com/takanenofficial/status/1952928105464807547)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1923306258611818580)
+  - [関西コレクション X 告知](https://x.com/kan_kore/status/1923302925616676908)
 `;

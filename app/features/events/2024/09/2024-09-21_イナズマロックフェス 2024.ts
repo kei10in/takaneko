@@ -32,18 +32,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演情報
+  ## 出演情報
 
-フリーエリアでの出演のため無料です。
+  フリーエリアでの出演のため無料です。
 
-- 出演: 風神ステージ 16:50 〜
+  - 出演: 風神ステージ 16:50 〜
 
-[タイムテーブル:](https://x.com/irf_official/status/1829685536786956333)
+  [タイムテーブル:](https://x.com/irf_official/status/1829685536786956333)
 
-[![タイムテーブル](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)](/events/2024/2024-09-21_イナズマロックフェス2024%20タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/イナズマロックフェス/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1819206657236521133)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/イナズマロックフェス/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1819206657236521133)
 `;

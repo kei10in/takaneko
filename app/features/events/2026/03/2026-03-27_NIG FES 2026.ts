@@ -59,13 +59,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2037513152204808508)
-- [本日のおチェキ](https://x.com/takanekomanager/status/2037492369214648749)
-- [直前意気込み動画 - NIG FES X](https://x.com/NIG_officialX/status/2037481041670418623)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2037145040842002442)
-- [意気込み動画 - NIG FES X](https://x.com/NIG_officialX/status/2037122390745104736)
-- [タイムテーブル公開 - NIG FES X](https://x.com/NIG_officialX/status/2034935449739808802)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2024413371647578253)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2037513152204808508)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2037492369214648749)
+  - [直前意気込み動画 - NIG FES X](https://x.com/NIG_officialX/status/2037481041670418623)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2037145040842002442)
+  - [意気込み動画 - NIG FES X](https://x.com/NIG_officialX/status/2037122390745104736)
+  - [タイムテーブル公開 - NIG FES X](https://x.com/NIG_officialX/status/2034935449739808802)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2024413371647578253)
 `;

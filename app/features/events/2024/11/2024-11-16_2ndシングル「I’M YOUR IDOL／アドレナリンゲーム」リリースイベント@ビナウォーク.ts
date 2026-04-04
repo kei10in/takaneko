@@ -89,15 +89,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-CD予約開始時間: 当日 10:00 〜
+  CD予約開始時間: 当日 10:00 〜
 
-CD予約受付場所: ビナウォーク 5番館 ビナステップ CD販売ブースにて
+  CD予約受付場所: ビナウォーク 5番館 ビナステップ CD販売ブースにて
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2826)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2589)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1855196348448116755)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2826)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2589)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1855196348448116755)
 `;

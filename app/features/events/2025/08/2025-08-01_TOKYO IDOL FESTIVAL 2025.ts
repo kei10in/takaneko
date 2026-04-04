@@ -119,10 +119,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [トーク企画出演者発表 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1948655073476952571)
-- [TEAM SHACHI リスペクトステージ告知 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1945408071397781955)
-- [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
-- [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
+  - [トーク企画出演者発表 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1948655073476952571)
+  - [TEAM SHACHI リスペクトステージ告知 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1945408071397781955)
+  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/1943218640452817261)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1909889143318188503)
 `;

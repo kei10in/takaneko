@@ -21,23 +21,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM AICHI 15:00 〜
+  FM AICHI 15:00 〜
 
-16:30 ごろ出演予定
+  16:30 ごろ出演予定
 
-[radiko](https://radiko.jp/#!/live/FMAICHI)
+  [radiko](https://radiko.jp/#!/live/FMAICHI)
 
-## リンク
+  ## リンク
 
-- [番組 X 放送後](https://x.com/countdown807/status/1862406355166056667)
-- [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
-- [公式 X 直前告知](https://x.com/takanenofficial/status/1862393602628100108)
-- [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862390913584308677)
-- [公式 X 告知](https://x.com/takanenofficial/status/1861288778947837982)
-- [番組 X](https://x.com/countdown807)
-- [番組サイト](https://fma.co.jp/f/prg/countdownfriday/)
-- [radiko](https://radiko.jp/#!/live/FMAICHI)
-- [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
+  - [番組 X 放送後](https://x.com/countdown807/status/1862406355166056667)
+  - [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
+  - [公式 X 直前告知](https://x.com/takanenofficial/status/1862393602628100108)
+  - [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862390913584308677)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1861288778947837982)
+  - [番組 X](https://x.com/countdown807)
+  - [番組サイト](https://fma.co.jp/f/prg/countdownfriday/)
+  - [radiko](https://radiko.jp/#!/live/FMAICHI)
+  - [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
 `;

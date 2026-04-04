@@ -27,17 +27,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組放送枠 20:00 - 21:00
+  番組放送枠 20:00 - 21:00
 
-インタビュー出演
+  インタビュー出演
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=AIR-G&t=20250711202015)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=AIR-G&t=20250711200000)
-- [番組 X 前日告知](https://x.com/airg_ima/status/1943285940514099715)
-- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
-- [番組 X 告知](https://x.com/airg_ima/status/1941119870432944496)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=AIR-G&t=20250711202015)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=AIR-G&t=20250711200000)
+  - [番組 X 前日告知](https://x.com/airg_ima/status/1943285940514099715)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+  - [番組 X 告知](https://x.com/airg_ima/status/1941119870432944496)
 `;

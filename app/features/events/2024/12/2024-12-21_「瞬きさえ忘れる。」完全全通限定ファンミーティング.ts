@@ -30,17 +30,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-2024月18日に延期が発表されました。開催は 2025 年以降を予定しています。
+  2024月18日に延期が発表されました。開催は 2025 年以降を予定しています。
 
-https://x.com/takanenofficial/status/1869321716721242609
+  https://x.com/takanenofficial/status/1869321716721242609
 
-https://takanenonadeshiko.jp/?p=3130
+  https://takanenonadeshiko.jp/?p=3130
 
-## リンク
+  ## リンク
 
-- [延期について - 公式ニュース](https://takanenonadeshiko.jp/?p=3130)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3089)
-- [公式 X 告知](https://x.com/takanenofficial/status/1867572814125105250)
+  - [延期について - 公式ニュース](https://takanenonadeshiko.jp/?p=3130)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3089)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1867572814125105250)
 `;

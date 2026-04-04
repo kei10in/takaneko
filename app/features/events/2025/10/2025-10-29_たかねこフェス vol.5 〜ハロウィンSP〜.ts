@@ -80,32 +80,32 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演者紹介ポスト
+  ## 出演者紹介ポスト
 
-- [福を架ける少女🌈](https://x.com/takanenofficial/status/1983388322153320584)
-- [高嶺のなでしこ🐈‍⬛](https://x.com/takanenofficial/status/1983395074869203056)
-- [Ma'Scar'Piece🏴](https://x.com/takanenofficial/status/1983406379432825185)
-- [なみだ色の消しごむ🇪🇪](https://x.com/takanenofficial/status/1983408433303826798)
-- [ハルニシオン🌼](https://x.com/takanenofficial/status/1983410971344519564)
-- [フューチャーサイダー🫧](https://x.com/takanenofficial/status/1983418521167302673)
-- [可憐なアイボリー🐘](https://x.com/takanenofficial/status/1983426272576582088)
-- [ばってん少女隊👻](https://x.com/takanenofficial/status/1983432362487660792)
-- [夜光性アミューズ🌙](https://x.com/takanenofficial/status/1983439912130220517)
-- [AVAM❤️‍🩹](https://x.com/takanenofficial/status/1983467547484995788)
-- [Appare!🪭](https://x.com/takanenofficial/status/1983467496008290401)
-- [Merry BAD TUNE. 🦄](https://x.com/takanenofficial/status/1983467451972268438)
-- [OCHANORMA🍵](https://x.com/takanenofficial/status/1983472627663450603)
-- [Devil ANTHEM.👿](https://x.com/takanenofficial/status/1983497139612266733)
-- [TEAMSHACHI🏯](https://x.com/takanenofficial/status/1983497308164538673)
+  - [福を架ける少女🌈](https://x.com/takanenofficial/status/1983388322153320584)
+  - [高嶺のなでしこ🐈‍⬛](https://x.com/takanenofficial/status/1983395074869203056)
+  - [Ma'Scar'Piece🏴](https://x.com/takanenofficial/status/1983406379432825185)
+  - [なみだ色の消しごむ🇪🇪](https://x.com/takanenofficial/status/1983408433303826798)
+  - [ハルニシオン🌼](https://x.com/takanenofficial/status/1983410971344519564)
+  - [フューチャーサイダー🫧](https://x.com/takanenofficial/status/1983418521167302673)
+  - [可憐なアイボリー🐘](https://x.com/takanenofficial/status/1983426272576582088)
+  - [ばってん少女隊👻](https://x.com/takanenofficial/status/1983432362487660792)
+  - [夜光性アミューズ🌙](https://x.com/takanenofficial/status/1983439912130220517)
+  - [AVAM❤️‍🩹](https://x.com/takanenofficial/status/1983467547484995788)
+  - [Appare!🪭](https://x.com/takanenofficial/status/1983467496008290401)
+  - [Merry BAD TUNE. 🦄](https://x.com/takanenofficial/status/1983467451972268438)
+  - [OCHANORMA🍵](https://x.com/takanenofficial/status/1983472627663450603)
+  - [Devil ANTHEM.👿](https://x.com/takanenofficial/status/1983497139612266733)
+  - [TEAMSHACHI🏯](https://x.com/takanenofficial/status/1983497308164538673)
 
-## リンク
+  ## リンク
 
-- [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/1992186307041489316)
-- [開催報告 - 公式 X](https://x.com/takanenofficial/status/1983515606432583922)
-- [本日のおチェキ 1](https://x.com/takanekomanager/status/1983395431184056393)
-- [本日のおチェキ 2](https://x.com/takanekomanager/status/1983497821958320616)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1983183248340726097)
-- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1979110138087706954)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=4094)
-- [公式 X 告知](https://x.com/takanenofficial/status/1971183005201990123)
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/1992186307041489316)
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/1983515606432583922)
+  - [本日のおチェキ 1](https://x.com/takanekomanager/status/1983395431184056393)
+  - [本日のおチェキ 2](https://x.com/takanekomanager/status/1983497821958320616)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1983183248340726097)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1979110138087706954)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=4094)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1971183005201990123)
 `;

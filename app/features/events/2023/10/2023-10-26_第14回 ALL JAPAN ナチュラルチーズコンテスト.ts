@@ -35,10 +35,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [こくちーず](https://www.kokuchpro.com/event/42c0e5ebb395028abb51fea7f58f2fbe/)
-- [中央酪農会議HP イベントページ](https://www.dairy.co.jp/cheesecontes/index2023.html)
-- [MILK JAPAN X 告知](https://x.com/milk_japan2021/status/1714583180358107341)
-- [公式 X 応募方法告知](https://x.com/takanenofficial/status/1714529465722921284)
+  - [こくちーず](https://www.kokuchpro.com/event/42c0e5ebb395028abb51fea7f58f2fbe/)
+  - [中央酪農会議HP イベントページ](https://www.dairy.co.jp/cheesecontes/index2023.html)
+  - [MILK JAPAN X 告知](https://x.com/milk_japan2021/status/1714583180358107341)
+  - [公式 X 応募方法告知](https://x.com/takanenofficial/status/1714529465722921284)
 `;

@@ -22,17 +22,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-リモート生出演。
+  リモート生出演。
 
-出演時間: 18:19 頃 〜
+  出演時間: 18:19 頃 〜
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/#!/ts/AIR-G/20251219181945)
-- [radiko 番組放送回](https://radiko.jp/#!/ts/AIR-G/20251219180000)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2001952041925754930)
-- [告知 - 番組 X](https://x.com/airg_ima/status/2001609546310259135)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2001636061299298500)
+  - [radiko 出演時間](https://radiko.jp/#!/ts/AIR-G/20251219181945)
+  - [radiko 番組放送回](https://radiko.jp/#!/ts/AIR-G/20251219180000)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2001952041925754930)
+  - [告知 - 番組 X](https://x.com/airg_ima/status/2001609546310259135)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2001636061299298500)
 `;

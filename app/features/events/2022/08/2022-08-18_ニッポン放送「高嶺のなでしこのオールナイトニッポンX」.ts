@@ -19,8 +19,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ニッポン放送 X 告知](https://x.com/1242_PR/status/1560277852125560832)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=359)
+  - [ニッポン放送 X 告知](https://x.com/1242_PR/status/1560277852125560832)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=359)
 `;

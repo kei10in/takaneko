@@ -47,10 +47,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1903304899015917996)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1903040165964337353)
-- [公式 X 告知](https://x.com/takanenofficial/status/1894960696640880749)
-- [茨城ロボッツ X 告知](https://x.com/ibarakirobots/status/1894945600044741010)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1903304899015917996)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1903040165964337353)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1894960696640880749)
+  - [茨城ロボッツ X 告知](https://x.com/ibarakirobots/status/1894945600044741010)
 `;

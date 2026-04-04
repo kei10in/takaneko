@@ -87,15 +87,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-ミニライブ & グループ握手会
+  ミニライブ & グループ握手会
 
-- CD予約開始時間: 9:30 〜
-- CD予約受付場所: ららぽーと湘南平塚 空の広場CD販売ブース
+  - CD予約開始時間: 9:30 〜
+  - CD予約受付場所: ららぽーと湘南平塚 空の広場CD販売ブース
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2861)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2861)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

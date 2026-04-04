@@ -104,9 +104,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1961)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1913)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1923)
+  - [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1961)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1913)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1923)
 `;

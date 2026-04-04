@@ -22,16 +22,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-春野莉々 1日警察署長
+  春野莉々 1日警察署長
 
-- 詐欺防止活動: 11:00 〜 ベルシャイン駒ケ根店
-- 駒ケ根市 交通安全 暴力追放市民のつどい: 13:30 開場、14:00 開演
+  - 詐欺防止活動: 11:00 〜 ベルシャイン駒ケ根店
+  - 駒ケ根市 交通安全 暴力追放市民のつどい: 13:30 開場、14:00 開演
   - 対談「〜交通事故、詐欺額に遭わないいために〜」に出演
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1843486506775916680)
-- [長野県警察 X 告知](https://x.com/police_nagano/status/1843864557573521546)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843486506775916680)
+  - [長野県警察 X 告知](https://x.com/police_nagano/status/1843864557573521546)
 `;

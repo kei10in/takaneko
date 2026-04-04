@@ -34,6 +34,4 @@ export const meta: EventMetaDescriptor = {
   updatedAt: "2025-06-21",
 };
 
-export const content = /* md */ `
-## リンク
-`;
+export const content = /* md */ ` ## リンク `;

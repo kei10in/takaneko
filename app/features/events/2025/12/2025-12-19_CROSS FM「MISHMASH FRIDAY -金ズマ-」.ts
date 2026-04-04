@@ -22,15 +22,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演。
+  コメント出演。
 
-出演時間: 18:36頃 〜 18:42頃
+  出演時間: 18:36頃 〜 18:42頃
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CROSSFM&t=20251219183650)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CROSSFM&t=20251219180000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/200184242369825212)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CROSSFM&t=20251219183650)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CROSSFM&t=20251219180000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/200184242369825212)
 `;

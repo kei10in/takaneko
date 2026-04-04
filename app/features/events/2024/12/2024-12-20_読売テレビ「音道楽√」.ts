@@ -22,11 +22,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1870031390504522080)
-- [番組 X 告知 3](https://x.com/otodoraku/status/1869668997064773966)
-- [番組 X 告知 2](https://x.com/otodoraku/status/1869669001850134551)
-- [番組 X 告知](https://x.com/otodoraku/status/1868581844079272295)
-- [番組 TVer](https://tver.jp/series/srz8y0eytz)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1870031390504522080)
+  - [番組 X 告知 3](https://x.com/otodoraku/status/1869668997064773966)
+  - [番組 X 告知 2](https://x.com/otodoraku/status/1869669001850134551)
+  - [番組 X 告知](https://x.com/otodoraku/status/1868581844079272295)
+  - [番組 TVer](https://tver.jp/series/srz8y0eytz)
 `;

@@ -35,8 +35,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 城月菜央欠席のお知らせ](https://x.com/takanenofficial/status/1713383008286495061)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1387)
+  - [公式 X 城月菜央欠席のお知らせ](https://x.com/takanenofficial/status/1713383008286495061)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1387)
 `;

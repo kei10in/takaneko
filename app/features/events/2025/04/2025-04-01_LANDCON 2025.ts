@@ -57,24 +57,24 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 配信
+  ## 配信
 
-[ABEMA](https://abema.app/DmjU) で配信予定。見逃し配信あり。
+  [ABEMA](https://abema.app/DmjU) で配信予定。見逃し配信あり。
 
-一般チケット 4400 円。
+  一般チケット 4400 円。
 
-## ファッションショー
+  ## ファッションショー
 
-松本ももな、籾山ひめりが出演。
+  松本ももな、籾山ひめりが出演。
 
-## リンク
+  ## リンク
 
-- [モデルプレス X 舞台裏](https://x.com/modelpress/status/1907374951491080486)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1906700705123197254)
-- [イベント サイト](https://landcon.jp/tokyo2025/)
-- [公式 X 告知 2](https://x.com/takanenofficial/status/1903423963449131229)
-- [公式 X 告知](https://x.com/takanenofficial/status/1887792300606284051)
-- [モデルプレス ニュース](https://mdpr.jp/news/detail/4490377)
-- [モデルプレス X 告知](https://x.com/modelpress/status/1887788665113551137)
-- [イベント公式 X](https://x.com/weareland_)
+  - [モデルプレス X 舞台裏](https://x.com/modelpress/status/1907374951491080486)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1906700705123197254)
+  - [イベント サイト](https://landcon.jp/tokyo2025/)
+  - [公式 X 告知 2](https://x.com/takanenofficial/status/1903423963449131229)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1887792300606284051)
+  - [モデルプレス ニュース](https://mdpr.jp/news/detail/4490377)
+  - [モデルプレス X 告知](https://x.com/modelpress/status/1887788665113551137)
+  - [イベント公式 X](https://x.com/weareland_)
 `;

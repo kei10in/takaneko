@@ -32,14 +32,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://eplus.jp/fukufes/)
-- 出演: 19:20 〜 19:55
-- 配信: ニコニコ生放送 https://live.nicovideo.jp/watch/lv346171365
+  - [🎫チケット](https://eplus.jp/fukufes/)
+  - 出演: 19:20 〜 19:55
+  - 配信: ニコニコ生放送 https://live.nicovideo.jp/watch/lv346171365
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1843992581916786985)
-- [フクフェス公式 X 告知](https://x.com/fukufesvol1/status/1843984767638741168)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1843992581916786985)
+  - [フクフェス公式 X 告知](https://x.com/fukufesvol1/status/1843984767638741168)
 `;

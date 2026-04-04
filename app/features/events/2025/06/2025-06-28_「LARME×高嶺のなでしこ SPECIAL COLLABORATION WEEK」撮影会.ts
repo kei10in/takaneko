@@ -75,13 +75,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [松本ももなのイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3929)
-- [公式ニュース 当日券販売のお知らせ](https://takanenonadeshiko.jp/?p=3917)
-- [公式ニュース イベント詳細](https://takanenonadeshiko.jp/?p=3922)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1938593310605725739)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3809)
-- [公式 X 内容告知](https://x.com/takanenofficial/status/1927279932029202675)
-- [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
+  - [松本ももなのイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3929)
+  - [公式ニュース 当日券販売のお知らせ](https://takanenonadeshiko.jp/?p=3917)
+  - [公式ニュース イベント詳細](https://takanenonadeshiko.jp/?p=3922)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1938593310605725739)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3809)
+  - [公式 X 内容告知](https://x.com/takanenofficial/status/1927279932029202675)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1922615844942852295)
 `;

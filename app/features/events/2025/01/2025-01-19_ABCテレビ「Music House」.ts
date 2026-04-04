@@ -31,10 +31,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1882027971973947832)
-- [番組 X 見逃し配信告知](https://x.com/musichouse_ABC/status/1881234789883420864)
-- [番組 X 告知](https://x.com/musichouse_ABC/status/1879820793850601564)
-- [TVer](https://tver.jp/episodes/epmndi9v26)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1882027971973947832)
+  - [番組 X 見逃し配信告知](https://x.com/musichouse_ABC/status/1881234789883420864)
+  - [番組 X 告知](https://x.com/musichouse_ABC/status/1879820793850601564)
+  - [TVer](https://tver.jp/episodes/epmndi9v26)
 `;

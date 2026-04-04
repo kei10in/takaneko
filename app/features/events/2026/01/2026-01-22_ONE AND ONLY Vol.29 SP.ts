@@ -60,11 +60,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [開催報告 - ONE AND ONLY X](https://x.com/info_oneandonly/status/2016728438556741763)
-- [本日のおチェキ](https://x.com/takanekomanager/status/2014306724539515024)
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2014308433055601064)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2013952218228260988)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2003424093224227191)
+  - [開催報告 - ONE AND ONLY X](https://x.com/info_oneandonly/status/2016728438556741763)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2014306724539515024)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2014308433055601064)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2013952218228260988)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2003424093224227191)
 `;

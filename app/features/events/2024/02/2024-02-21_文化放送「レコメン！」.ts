@@ -19,9 +19,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [番組レポ](https://www.joqr.co.jp/ic/article/116439/)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1798)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1760301396505895155)
+  - [番組レポ](https://www.joqr.co.jp/ic/article/116439/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1798)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1760301396505895155)
 `;

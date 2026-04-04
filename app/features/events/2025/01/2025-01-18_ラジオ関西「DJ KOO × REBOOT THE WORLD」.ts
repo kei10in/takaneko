@@ -26,18 +26,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-「DJKOO REBOOT THE WORLD」内「エイアイカ・千聖 の教えて！ちぃとーく」に出演
+  「DJKOO REBOOT THE WORLD」内「エイアイカ・千聖 の教えて！ちぃとーく」に出演
 
-- [radiko 放送回](https://radiko.jp/share?sid=CRK&t=20250118170000)
-- [radiko 出演コーナー開始位置](https://radiko.jp/share?sid=CRK&t=20250118171825)
+  - [radiko 放送回](https://radiko.jp/share?sid=CRK&t=20250118170000)
+  - [radiko 出演コーナー開始位置](https://radiko.jp/share?sid=CRK&t=20250118171825)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1880517984281911745)
-- [番組 X 告知](https://x.com/DjkooReboot/status/1880472656656683040)
-- [エイアイカ公式 X 告知](https://x.com/aiika__official/status/1880438319836016753)
-- [番組 HP](https://djkoo-rtw.com/)
-- [radiko](https://radiko.jp/share?sid=CRK&t=20250118170000)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1880517984281911745)
+  - [番組 X 告知](https://x.com/DjkooReboot/status/1880472656656683040)
+  - [エイアイカ公式 X 告知](https://x.com/aiika__official/status/1880438319836016753)
+  - [番組 HP](https://djkoo-rtw.com/)
+  - [radiko](https://radiko.jp/share?sid=CRK&t=20250118170000)
 `;

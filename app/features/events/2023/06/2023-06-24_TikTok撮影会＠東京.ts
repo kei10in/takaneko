@@ -99,9 +99,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=1072)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=788)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=924)
+  - [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=1072)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=788)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=924)
 `;

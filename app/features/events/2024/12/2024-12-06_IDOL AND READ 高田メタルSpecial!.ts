@@ -24,10 +24,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [IDOL AND READ X 取材レポート](https://x.com/idol_and_read/status/1863873844664303895)
-- [公式 X 告知](https://x.com/takanenofficial/status/1856562638035321325)
-- [IDOL AND READ X 告知](https://x.com/idol_and_read/status/1855898837535093093)
-- [シンコーミュージック・エンタテイメント 商品ページ](https://www.shinko-music.co.jp/item/pid0655540/)
+  - [IDOL AND READ X 取材レポート](https://x.com/idol_and_read/status/1863873844664303895)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1856562638035321325)
+  - [IDOL AND READ X 告知](https://x.com/idol_and_read/status/1855898837535093093)
+  - [シンコーミュージック・エンタテイメント 商品ページ](https://www.shinko-music.co.jp/item/pid0655540/)
 `;

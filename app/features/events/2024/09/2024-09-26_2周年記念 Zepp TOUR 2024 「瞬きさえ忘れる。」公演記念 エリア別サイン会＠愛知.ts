@@ -36,14 +36,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://ch.chara-ani.com/member_menu.aspx)
+  [🎫チケット](https://ch.chara-ani.com/member_menu.aspx)
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2335)
-- [公式 X 告知](https://x.com/takanenofficial/status/1828356791119585411)
-- [公式ニュース 2次受付](https://takanenonadeshiko.jp/?p=2340)
-- [公式 X 告知 2次受付](https://x.com/takanenofficial/status/1830542644227027233)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2335)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1828356791119585411)
+  - [公式ニュース 2次受付](https://takanenonadeshiko.jp/?p=2340)
+  - [公式 X 告知 2次受付](https://x.com/takanenofficial/status/1830542644227027233)
 `;

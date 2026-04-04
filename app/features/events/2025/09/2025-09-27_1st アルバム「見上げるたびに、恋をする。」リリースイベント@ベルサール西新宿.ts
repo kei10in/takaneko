@@ -86,31 +86,31 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別 2 ショット撮影会
+  個別 2 ショット撮影会
 
-CD 1 枚予約で、「個別2ショット撮影会参加券」を 1 枚を配布。
+  CD 1 枚予約で、「個別2ショット撮影会参加券」を 1 枚を配布。
 
-### 事前予約
+  ### 事前予約
 
-事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20250927)で受付。
+  事前予約は[ビクターオンラインストア](https://victor-store.jp/special/takaneko20250927)で受付。
 
-- **受付期間:** 9月12日(金) 21:00 〜 9月21日(日) 23:59
-- **抽選結果:** 9月22日(月) 18:00 以降順次発表予定
-- **当選分支払い期限:** 9月25日(木) 23:59 まで
+  - **受付期間:** 9月12日(金) 21:00 〜 9月21日(日) 23:59
+  - **抽選結果:** 9月22日(月) 18:00 以降順次発表予定
+  - **当選分支払い期限:** 9月25日(木) 23:59 まで
 
-### 当日受付
+  ### 当日受付
 
-- 当日 CD 予約販売開始: 10:00 〜
-- 事前 CD 予約販売当選者・特典券引換: 10:00 〜
+  - 当日 CD 予約販売開始: 10:00 〜
+  - 事前 CD 予約販売当選者・特典券引換: 10:00 〜
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1971552839018414133)
-- [衣装＆当日販売決定 - 公式 X](https://x.com/takanenofficial/status/1971176693357502479)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=4335)
-- [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20250927)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1966483237561381160)
-- [2025年12月17日(水)高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリース決定！！ - 公式ニュース](https://takanenonadeshiko.jp/?p=4248)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1971552839018414133)
+  - [衣装＆当日販売決定 - 公式 X](https://x.com/takanenofficial/status/1971176693357502479)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=4335)
+  - [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20250927)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1966483237561381160)
+  - [2025年12月17日(水)高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリース決定！！ - 公式ニュース](https://takanenonadeshiko.jp/?p=4248)
 `;

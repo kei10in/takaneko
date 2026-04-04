@@ -100,14 +100,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 補足
+  ## 補足
 
-橋本桃呼参加予定の枠は中止になっています。
+  橋本桃呼参加予定の枠は中止になっています。
 
-## リンク
+  ## リンク
 
-- [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=982)
-- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=788)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=920)
+  - [当日券・衣装について - 公式ニュース](https://takanenonadeshiko.jp/?p=982)
+  - [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=788)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=920)
 `;

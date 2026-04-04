@@ -75,21 +75,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-mori Fes.2025 でリリース記念イベント ミニライブ & グループ握手会 を開催
+  mori Fes.2025 でリリース記念イベント ミニライブ & グループ握手会 を開催
 
-- CD 予約開始時間: 09:30 〜
-- CD 予約受付場所: イオンレイクタウンmori FOREST STAGE (G駐車場屋外特設ステージ) CD 販売ブースにて
+  - CD 予約開始時間: 09:30 〜
+  - CD 予約受付場所: イオンレイクタウンmori FOREST STAGE (G駐車場屋外特設ステージ) CD 販売ブースにて
 
-CD 1 枚予約で、整理番号付きミニライブ優先観覧エリア入場券 1 枚と A グループ or B グループの握手会参加券を 2 枚を配布。
+  CD 1 枚予約で、整理番号付きミニライブ優先観覧エリア入場券 1 枚と A グループ or B グループの握手会参加券を 2 枚を配布。
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1969026212308611399)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=4330)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1966483237561381160)
-- [イベント詳細 - イオンレイクタウンmori 公式ホームページ.](https://www.aeon-laketown.jp/mori/event/event_e61871_as.html)
-- [2025年12月17日(水)高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリース決定！！ - 公式ニュース](https://takanenonadeshiko.jp/?p=4248)
-- [公式 X mori Fes.2025 告知](https://x.com/takanenofficial/status/1963123642956439611)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1969026212308611399)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=4330)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1966483237561381160)
+  - [イベント詳細 - イオンレイクタウンmori 公式ホームページ.](https://www.aeon-laketown.jp/mori/event/event_e61871_as.html)
+  - [2025年12月17日(水)高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリース決定！！ - 公式ニュース](https://takanenonadeshiko.jp/?p=4248)
+  - [公式 X mori Fes.2025 告知](https://x.com/takanenofficial/status/1963123642956439611)
 `;

@@ -41,14 +41,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [開催レポート ザテレビジョン](https://x.com/thetvjp/status/1893958384657027518)
-- [開催レポート TVLIFE](https://x.com/tv_life/status/1893949749952139771)
-- [関内デビル公式 X 開催後報告](https://x.com/tvk_kannaidevil/status/1893641666248282276)
-- [tvk X 開催後 2](https://x.com/tvk_3ch/status/1893652143745196084)
-- [tvk X 開催後 1](https://x.com/tvk_3ch/status/1893636619238023379)
-- [公式 X 告知](https://x.com/takanenofficial/status/1859197516144890154)
-- [関内デビル公式 X 終了報告](https://x.com/tvk_kannaidevil/status/1893641666248282276)
-- [関内デビル公式 X 告知](https://x.com/tvk_kannaidevil/status/1859189961712644447)
+  - [開催レポート ザテレビジョン](https://x.com/thetvjp/status/1893958384657027518)
+  - [開催レポート TVLIFE](https://x.com/tv_life/status/1893949749952139771)
+  - [関内デビル公式 X 開催後報告](https://x.com/tvk_kannaidevil/status/1893641666248282276)
+  - [tvk X 開催後 2](https://x.com/tvk_3ch/status/1893652143745196084)
+  - [tvk X 開催後 1](https://x.com/tvk_3ch/status/1893636619238023379)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1859197516144890154)
+  - [関内デビル公式 X 終了報告](https://x.com/tvk_kannaidevil/status/1893641666248282276)
+  - [関内デビル公式 X 告知](https://x.com/tvk_kannaidevil/status/1859189961712644447)
 `;

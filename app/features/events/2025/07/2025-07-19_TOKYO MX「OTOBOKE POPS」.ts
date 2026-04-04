@@ -26,23 +26,23 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-メインMC島谷ひとみ、MC 大地洋輔（ダイノジ）、橘ゆりか、杉枝真結、菅原りこでお送りします。<br/>
-ゲストに旬なアーティストをお招きし、それぞれの音楽性や人間性を深掘りしていきます！
+  メインMC島谷ひとみ、MC 大地洋輔（ダイノジ）、橘ゆりか、杉枝真結、菅原りこでお送りします。<br/>
+  ゲストに旬なアーティストをお招きし、それぞれの音楽性や人間性を深掘りしていきます！
 
-今週のゲストは、高嶺のなでしこより、橋本桃呼、東山恵里沙、松本ももなが登場！<br/>
-5曲連続配信リリース第四弾 「ライフクエスト」をリリース！
-「晩酌の流儀4 ～夏編～」のエンディングテーマとして起用されており、日常の葛藤や困難を前向きに乗り越えていく主人公の人生を表現した楽曲となっています。
+  今週のゲストは、高嶺のなでしこより、橋本桃呼、東山恵里沙、松本ももなが登場！<br/>
+  5曲連続配信リリース第四弾 「ライフクエスト」をリリース！
+  「晩酌の流儀4 ～夏編～」のエンディングテーマとして起用されており、日常の葛藤や困難を前向きに乗り越えていく主人公の人生を表現した楽曲となっています。
 
-OTOBOKE POPS PICKでは、KroiをPICK UP予定！<br/>
-乞うご期待！！
+  OTOBOKE POPS PICKでは、KroiをPICK UP予定！<br/>
+  乞うご期待！！
 
-## リンク
+  ## リンク
 
-- [音ポケPOPS X 告知 Instagram のお知らせ](https://x.com/otobokepops/status/1946767024702542002)
-- [音ポケPOPS X 告知 収録語の感想動画付き](https://x.com/otobokepops/status/1946404629912097209)
-- [音ポケPOPS X 告知 ダイジェスト動画付き](https://x.com/otobokepops/status/1946042241585492260)
-- [音ポケPOPS X 告知 コメント動画付き](https://x.com/otobokepops/status/1945317470879014945)
-- [番組 X 告知](https://x.com/otobokepops/status/1944592696636813517)
+  - [音ポケPOPS X 告知 Instagram のお知らせ](https://x.com/otobokepops/status/1946767024702542002)
+  - [音ポケPOPS X 告知 収録語の感想動画付き](https://x.com/otobokepops/status/1946404629912097209)
+  - [音ポケPOPS X 告知 ダイジェスト動画付き](https://x.com/otobokepops/status/1946042241585492260)
+  - [音ポケPOPS X 告知 コメント動画付き](https://x.com/otobokepops/status/1945317470879014945)
+  - [番組 X 告知](https://x.com/otobokepops/status/1944592696636813517)
 `;

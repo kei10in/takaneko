@@ -29,21 +29,21 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-[🎫チケット](https://ticketdive.com/event/ilive0822)
+  [🎫チケット](https://ticketdive.com/event/ilive0822)
 
-出演: 19:35 〜 20:00
+  出演: 19:35 〜 20:00
 
-物販: ミニフォトカード (白ワンピースver)
+  物販: ミニフォトカード (白ワンピースver)
 
-[タイムテーブル](https://x.com/info_iLiVE/status/1819312191012483535)
+  [タイムテーブル](https://x.com/info_iLiVE/status/1819312191012483535)
 
-[![タイムテーブル](/events/2024/2024-08-22_iLiVE!SUMMER_タイムテーブル.jpg)](/events/2024/2024-08-22_iLiVE!SUMMER_タイムテーブル.jpg)
+  [![タイムテーブル](/events/2024/2024-08-22_iLiVE!SUMMER_タイムテーブル.jpg)](/events/2024/2024-08-22_iLiVE!SUMMER_タイムテーブル.jpg)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/ilive-summer/)
-- [公式 X](https://x.com/takanenofficial/status/1806315344258355524)
-- [物販情報](https://x.com/takanenofficial/status/1826237839912427741)
-- [iLiVE!公式 X](https://x.com/info_iLiVE/status/1805904587142135909)
-- [iLiVE!公式 X タイムテーブル](https://x.com/info_iLiVE/status/1819312191012483535)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/ilive-summer/)
+  - [公式 X](https://x.com/takanenofficial/status/1806315344258355524)
+  - [物販情報](https://x.com/takanenofficial/status/1826237839912427741)
+  - [iLiVE!公式 X](https://x.com/info_iLiVE/status/1805904587142135909)
+  - [iLiVE!公式 X タイムテーブル](https://x.com/info_iLiVE/status/1819312191012483535)
 `;

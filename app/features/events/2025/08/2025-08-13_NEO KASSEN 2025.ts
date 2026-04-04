@@ -60,12 +60,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [ダイジェスト](https://x.com/takanenofficial/status/1955478903386149242)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1955246879035527657)
-- [時間入りタイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949040439962853606)
-- [タイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949023971212755314)
-- [公式 X 告知](https://x.com/takanenofficial/status/1915722458558288164)
-- [イベントサイト](https://neojaponism.com/neokassen/2025)
+  - [ダイジェスト](https://x.com/takanenofficial/status/1955478903386149242)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1955246879035527657)
+  - [時間入りタイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949040439962853606)
+  - [タイムテーブル公開 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/1949023971212755314)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1915722458558288164)
+  - [イベントサイト](https://neojaponism.com/neokassen/2025)
 `;

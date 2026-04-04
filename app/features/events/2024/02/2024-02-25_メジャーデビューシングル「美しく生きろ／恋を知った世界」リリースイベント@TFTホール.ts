@@ -68,11 +68,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [リリースイベント感想お礼動画 (握手会の私服を着用) - 公式 X](https://x.com/takanenofficial/status/1761691476776591731)
-- [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1873)
-- [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1760273183800992231)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=1734)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1739)
+  - [リリースイベント感想お礼動画 (握手会の私服を着用) - 公式 X](https://x.com/takanenofficial/status/1761691476776591731)
+  - [当日販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=1873)
+  - [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/1760273183800992231)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=1734)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1739)
 `;

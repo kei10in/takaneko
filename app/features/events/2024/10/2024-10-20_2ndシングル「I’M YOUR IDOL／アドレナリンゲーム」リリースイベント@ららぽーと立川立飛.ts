@@ -91,20 +91,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-- CD 予約開始時間: 10:00
+  - CD 予約開始時間: 10:00
 
-[ビクターによるニュース](https://www.jvcmusic.co.jp/-/News/A028511/27.html)と[高嶺のなでしこ公式サイトでのニュース](https://takanenonadeshiko.jp/高嶺のなでしこ2ndシングル「im-your-idol-アドレナリンゲ/)でグループ握手会のグループが異なっています。
-ご注意ください。
+  [ビクターによるニュース](https://www.jvcmusic.co.jp/-/News/A028511/27.html)と[高嶺のなでしこ公式サイトでのニュース](https://takanenonadeshiko.jp/高嶺のなでしこ2ndシングル「im-your-idol-アドレナリンゲ/)でグループ握手会のグループが異なっています。
+  ご注意ください。
 
-## リンク
+  ## リンク
 
-- [タワーレコード X 告知](https://x.com/TOWER_Tachi2/status/1847086383506378880)
-- [タワーレコード詳細告知](https://tower.jp/store/event/2024/10/139004)
-- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ2ndシングル「im-your-idol-アドレナリンゲ/)
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ-2/)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1841040836337050069)
-- [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/27.html)
-- [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [タワーレコード X 告知](https://x.com/TOWER_Tachi2/status/1847086383506378880)
+  - [タワーレコード詳細告知](https://tower.jp/store/event/2024/10/139004)
+  - [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ2ndシングル「im-your-idol-アドレナリンゲ/)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2ndシングル「im-your-idol-アドレナリンゲ-2/)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1841040836337050069)
+  - [ビクター エンターテイメント ニュース 詳細告知](https://www.jvcmusic.co.jp/-/News/A028511/27.html)
+  - [ビクター エンターテイメント ニュース 開催告知](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

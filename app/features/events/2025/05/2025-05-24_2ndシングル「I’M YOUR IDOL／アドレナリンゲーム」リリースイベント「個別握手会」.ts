@@ -108,25 +108,25 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-個別握手会
+  個別握手会
 
-- 当日 CD 販売開始: 10:00 〜
-- 事前 CD 販売当選者・特典券引換: 10:00 〜
+  - 当日 CD 販売開始: 10:00 〜
+  - 事前 CD 販売当選者・特典券引換: 10:00 〜
 
-**👗衣装**
+  **👗衣装**
 
-- 1 - 2 部: I’M YOUR IDOL MV衣装🤍
-- 3 - 4 部: アドレナリンゲーム MV白黒衣装🕶️
-- 5 - 6 部: ピンク衣装💗
+  - 1 - 2 部: I’M YOUR IDOL MV衣装🤍
+  - 3 - 4 部: アドレナリンゲーム MV白黒衣装🕶️
+  - 5 - 6 部: ピンク衣装💗
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1925884431870337114)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1925114355215200340)
-- [公式ニュース 当日券情報](https://takanenonadeshiko.jp/?p=3793)
-- [公式 X 告知](https://x.com/takanenofficial/status/1920795893806362863)
-- [公式ニュース告知](https://takanenonadeshiko.jp/?p=3718)
-- [ビクターイベントサイト](https://victor-store.jp/special/takaneko20250524)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1925884431870337114)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1925114355215200340)
+  - [公式ニュース 当日券情報](https://takanenonadeshiko.jp/?p=3793)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1920795893806362863)
+  - [公式ニュース告知](https://takanenonadeshiko.jp/?p=3718)
+  - [ビクターイベントサイト](https://victor-store.jp/special/takaneko20250524)
 `;

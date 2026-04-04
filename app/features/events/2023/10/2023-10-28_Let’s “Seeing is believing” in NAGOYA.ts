@@ -35,7 +35,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1427)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1427)
 `;

@@ -74,11 +74,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1911034063151837216)
-- [公式 X グッズ販売時間告知](https://x.com/takanenofficial/status/1911221590307881421)
-- [公式 X グッズ告知](https://x.com/takanenofficial/status/1908444525334585657)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3362)
-- [公式 X 開催告知](https://x.com/takanenofficial/status/1866754911347892258)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1911034063151837216)
+  - [公式 X グッズ販売時間告知](https://x.com/takanenofficial/status/1911221590307881421)
+  - [公式 X グッズ告知](https://x.com/takanenofficial/status/1908444525334585657)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3362)
+  - [公式 X 開催告知](https://x.com/takanenofficial/status/1866754911347892258)
 `;

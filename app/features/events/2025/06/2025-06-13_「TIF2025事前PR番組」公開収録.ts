@@ -35,7 +35,7 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式ファンクラブ Topics](https://takanekofc.com/topics/public/_/pfpocajq92bcxl2g.html)
+  - [公式ファンクラブ Topics](https://takanekofc.com/topics/public/_/pfpocajq92bcxl2g.html)
 `;

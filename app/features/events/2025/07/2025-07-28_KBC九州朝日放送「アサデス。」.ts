@@ -26,13 +26,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送内容
+  ## 放送内容
 
-朝6時25頃放送予定
+  朝6時25頃放送予定
 
-## リンク
+  ## リンク
 
-- [番組 Instagram](https://www.instagram.com/p/DMm0BW8yOyR/)
-- [公式 X 告知](https://x.com/takanenofficial/status/1949424605451395211)
-- [番組 X 告知](https://x.com/asadesu0600/status/1949379478712705494)
+  - [番組 Instagram](https://www.instagram.com/p/DMm0BW8yOyR/)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1949424605451395211)
+  - [番組 X 告知](https://x.com/asadesu0600/status/1949379478712705494)
 `;

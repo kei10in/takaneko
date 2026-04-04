@@ -73,9 +73,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1962002435368706405)
-- [@JAM 公式 X タイムテーブル告知](https://x.com/at_jam/status/1958363428944298038)
-- [公式 X 告知](https://x.com/takanenofficial/status/1944630437420396998)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1962002435368706405)
+  - [@JAM 公式 X タイムテーブル告知](https://x.com/at_jam/status/1958363428944298038)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1944630437420396998)
 `;

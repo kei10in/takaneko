@@ -22,8 +22,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2009218525991457276)
-- [告知動画 - 小倉淳 X](https://x.com/ogurajunoguraju/status/2008440980048126248)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2009218525991457276)
+  - [告知動画 - 小倉淳 X](https://x.com/ogurajunoguraju/status/2008440980048126248)
 `;

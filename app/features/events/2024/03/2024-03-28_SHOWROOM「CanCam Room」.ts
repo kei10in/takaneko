@@ -35,9 +35,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-CanCam モデルの 菜波 さんが MC を務める CanCam Room に 城月菜央 が出演。
+  CanCam モデルの 菜波 さんが MC を務める CanCam Room に 城月菜央 が出演。
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1772240937919381782)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1772240937919381782)
 `;

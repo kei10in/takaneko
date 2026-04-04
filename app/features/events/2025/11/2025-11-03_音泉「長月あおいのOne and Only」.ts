@@ -38,14 +38,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-第10回にゲスト出演。
+  第10回にゲスト出演。
 
-## リンク
+  ## リンク
 
-- [配信開始告知 - 公式 X](https://x.com/takanenofficial/status/1985331168297017368)
-- [配信開始告知 - インターネットラジオステーション音泉 X](https://x.com/onsenradio/status/1985302183538041094)
-- [公式 X 告知](https://x.com/takanenofficial/status/1980274075714125906)
-- [音泉 X 告知](https://x.com/onsenradio/status/1980240077901971855)
+  - [配信開始告知 - 公式 X](https://x.com/takanenofficial/status/1985331168297017368)
+  - [配信開始告知 - インターネットラジオステーション音泉 X](https://x.com/onsenradio/status/1985302183538041094)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1980274075714125906)
+  - [音泉 X 告知](https://x.com/onsenradio/status/1980240077901971855)
 `;

@@ -19,19 +19,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-- 放送局: tvk
-- 放送時間: 23:00 〜
+  - 放送局: tvk
+  - 放送時間: 23:00 〜
 
-毎週水曜日の番組内コーナー「たかねこクエスト」
+  毎週水曜日の番組内コーナー「たかねこクエスト」
 
-「ウォーキングとポージングを学び、成長しよう！」前編🎞️
+  「ウォーキングとポージングを学び、成長しよう！」前編🎞️
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1839670077475750236)
-- [番組 X 告知](https://x.com/tvk_kannaidevil/status/1839681149490131253)
-- [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
-- [TVer](https://tver.jp/series/srehapgls0)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1839670077475750236)
+  - [番組 X 告知](https://x.com/tvk_kannaidevil/status/1839681149490131253)
+  - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+  - [TVer](https://tver.jp/series/srehapgls0)
 `;

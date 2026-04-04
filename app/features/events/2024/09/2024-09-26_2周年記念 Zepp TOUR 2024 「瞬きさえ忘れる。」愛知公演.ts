@@ -64,18 +64,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-🎫 チケット:
+  🎫 チケット:
 
-- e+ - https://eplus.jp/takanenonadeshiko
-- ローチケ - https://l-tike.com/takanenonadeshiko
-- チケットぴあ - https://t.pia.jp/t/takanenonadeshiko
+  - e+ - https://eplus.jp/takanenonadeshiko
+  - ローチケ - https://l-tike.com/takanenonadeshiko
+  - チケットぴあ - https://t.pia.jp/t/takanenonadeshiko
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
-- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
-- [FC トピック: 高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/qtayqeijui6ozym1.html)
-- [チケット一般販売告知](https://x.com/takanenofficial/status/1829685588209090780)
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
+  - [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
+  - [FC トピック: 高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/qtayqeijui6ozym1.html)
+  - [チケット一般販売告知](https://x.com/takanenofficial/status/1829685588209090780)
 `;

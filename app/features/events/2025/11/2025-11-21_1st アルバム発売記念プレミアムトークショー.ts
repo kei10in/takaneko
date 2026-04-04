@@ -36,8 +36,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1985648418904293482)
-- [告知 - d garden 名古屋栄店](https://x.com/dgnagoyasakae/status/1985633124051808664)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1985648418904293482)
+  - [告知 - d garden 名古屋栄店](https://x.com/dgnagoyasakae/status/1985633124051808664)
 `;

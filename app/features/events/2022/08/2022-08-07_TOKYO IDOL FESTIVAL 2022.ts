@@ -46,12 +46,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 出演
+  ## 出演
 
-- 16:00-16:15 (SMILE GARDEN ステージ)
-- 18:15-18:30 (ENJOY STADIUM ステージ)
+  - 16:00-16:15 (SMILE GARDEN ステージ)
+  - 18:15-18:30 (ENJOY STADIUM ステージ)
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=241)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=241)
 `;

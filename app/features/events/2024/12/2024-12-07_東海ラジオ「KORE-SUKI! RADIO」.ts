@@ -34,17 +34,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-東海ラジオ 20:30 〜
+  東海ラジオ 20:30 〜
 
-[radiko](https://radiko.jp/#TOKAIRADIO)
+  [radiko](https://radiko.jp/#TOKAIRADIO)
 
-## リンク
+  ## リンク
 
-- [番組 X 直前告知](https://x.com/kore_suki_radio/status/1865335539882148181)
-- [番組 X 告知](https://x.com/kore_suki_radio/status/1864980651235037613)
-- [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1865306459015385271)
-- [パーソナリティ X 告知](https://x.com/MIYOMARUKO/status/1865187017744871751)
-- [radiko](https://radiko.jp/#TOKAIRADIO)
+  - [番組 X 直前告知](https://x.com/kore_suki_radio/status/1865335539882148181)
+  - [番組 X 告知](https://x.com/kore_suki_radio/status/1864980651235037613)
+  - [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1865306459015385271)
+  - [パーソナリティ X 告知](https://x.com/MIYOMARUKO/status/1865187017744871751)
+  - [radiko](https://radiko.jp/#TOKAIRADIO)
 `;

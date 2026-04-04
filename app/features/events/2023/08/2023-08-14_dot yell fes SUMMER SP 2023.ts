@@ -33,8 +33,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 橋本桃呼欠席のお知らせ](https://x.com/takanenofficial/status/1691009035401867265)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1230)
+  - [公式 X 橋本桃呼欠席のお知らせ](https://x.com/takanenofficial/status/1691009035401867265)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1230)
 `;

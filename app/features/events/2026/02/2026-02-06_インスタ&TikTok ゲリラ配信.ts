@@ -36,12 +36,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-インスタ ライブ & TikTok ライブのゲリラ配信
+  インスタ ライブ & TikTok ライブのゲリラ配信
 
-## リンク
+  ## リンク
 
-- [配信報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/2019725328130912521)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2019709031523491890)
+  - [配信報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/2019725328130912521)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2019709031523491890)
 `;

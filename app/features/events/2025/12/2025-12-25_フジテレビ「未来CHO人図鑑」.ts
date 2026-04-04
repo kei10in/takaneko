@@ -23,31 +23,31 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-> ビュッフェの時によく見る9つに分かれたお皿。
->
-> このお皿の使い方を教えるため、全国のビュッフェ会場で活動する女性がいる。
->
-> しかしこのお皿には、とある“難点”があって・・・。
+  > ビュッフェの時によく見る9つに分かれたお皿。
+  >
+  > このお皿の使い方を教えるため、全国のビュッフェ会場で活動する女性がいる。
+  >
+  > しかしこのお皿には、とある“難点”があって・・・。
 
-## 出演者
+  ## 出演者
 
-- 秋山 竜次 (ロバート)
+  - 秋山 竜次 (ロバート)
 
-## スタッフ
+  ## スタッフ
 
-**プロデューサー**
+  **プロデューサー**
 
-- 入口 拓矢
+  - 入口 拓矢
 
-**制作協力**
+  **制作協力**
 
-- FCC
+  - FCC
 
-## リンク
+  ## リンク
 
-- [FOD](https://fod.fujitv.co.jp/title/70wy/)
-- [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
-- [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
+  - [FOD](https://fod.fujitv.co.jp/title/70wy/)
+  - [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
+  - [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
 `;

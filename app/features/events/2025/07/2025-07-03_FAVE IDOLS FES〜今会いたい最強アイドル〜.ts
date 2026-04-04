@@ -47,14 +47,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1940395032348876839)
-- [FAVE IDOLS 公式 X 出演者動画コメント](https://x.com/faveconnect/status/1940395035457147046)
-- [FC限定トレカプレゼントキャンペーン告知](https://x.com/faveconnect/status/1937798120857104722)
-- [FC限定トレカプレゼントキャンペーン](https://store.faveconnect.com/news/public/_/943z0wiatm9rgfly.html)
-- [開場・開演時間変更のお知らせ](https://x.com/faveconnect/status/1938155684350333002)
-- [タイムテーブル告知](https://x.com/faveconnect/status/1936050142173708494)
-- [公式 X 告知](https://x.com/takanenofficial/status/1927953071977680908)
-- [FAVE IDOLS 公式 X 告知](https://x.com/faveconnect/status/1927667487803683103)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1940395032348876839)
+  - [FAVE IDOLS 公式 X 出演者動画コメント](https://x.com/faveconnect/status/1940395035457147046)
+  - [FC限定トレカプレゼントキャンペーン告知](https://x.com/faveconnect/status/1937798120857104722)
+  - [FC限定トレカプレゼントキャンペーン](https://store.faveconnect.com/news/public/_/943z0wiatm9rgfly.html)
+  - [開場・開演時間変更のお知らせ](https://x.com/faveconnect/status/1938155684350333002)
+  - [タイムテーブル告知](https://x.com/faveconnect/status/1936050142173708494)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1927953071977680908)
+  - [FAVE IDOLS 公式 X 告知](https://x.com/faveconnect/status/1927667487803683103)
 `;

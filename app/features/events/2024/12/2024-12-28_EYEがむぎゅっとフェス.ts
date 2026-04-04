@@ -46,10 +46,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1862330713502363930)
-- [Zoff X イベント告知](https://x.com/Zoff_INFO/status/1862078671617659256)
-- [Zoff X 出演告知](https://x.com/Zoff_INFO/status/1862318120234537054)
-- [Zoff X スケジュール告知](https://x.com/Zoff_INFO/status/1862421244160659552)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1862330713502363930)
+  - [Zoff X イベント告知](https://x.com/Zoff_INFO/status/1862078671617659256)
+  - [Zoff X 出演告知](https://x.com/Zoff_INFO/status/1862318120234537054)
+  - [Zoff X スケジュール告知](https://x.com/Zoff_INFO/status/1862421244160659552)
 `;

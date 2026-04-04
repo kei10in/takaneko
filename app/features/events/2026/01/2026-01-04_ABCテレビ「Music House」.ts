@@ -22,13 +22,13 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-楽曲紹介のみ。
+  楽曲紹介のみ。
 
-## リンク
+  ## リンク
 
-- [TVer 見逃し配信](https://tver.jp/episodes/epeat1bjei)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2007776577514598448)
-- [告知 - 番組 X](https://x.com/musichouse_ABC/status/2005458222694670687)
+  - [TVer 見逃し配信](https://tver.jp/episodes/epeat1bjei)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2007776577514598448)
+  - [告知 - 番組 X](https://x.com/musichouse_ABC/status/2005458222694670687)
 `;

@@ -44,9 +44,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2038972794462228965)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/2038587052225073367)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2029833179818078505)
+  - [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2038972794462228965)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2038587052225073367)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2029833179818078505)
 `;

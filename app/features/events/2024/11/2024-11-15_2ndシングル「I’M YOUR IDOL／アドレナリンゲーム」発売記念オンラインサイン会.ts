@@ -39,14 +39,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## その他
+  ## その他
 
-2024年11月6日 (水) から 2024年11月15日 (金) に日程変更。
+  2024年11月6日 (水) から 2024年11月15日 (金) に日程変更。
 
-https://x.com/takanenofficial/status/1852697174175302054
+  https://x.com/takanenofficial/status/1852697174175302054
 
-## リンク
+  ## リンク
 
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2793)
-- [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2793)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

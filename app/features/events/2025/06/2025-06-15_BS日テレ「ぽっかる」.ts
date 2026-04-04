@@ -29,35 +29,35 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 番組概要
+  ## 番組概要
 
-超NATSUZOME2025出演者インタビューAppare！・OCHA NORMA・高嶺のなでしこ
-▽ジャムムをきゅるしてコラボ曲披露！
-▽リンプラファンミ密着
-▽アニソンDJイベントTOKYO RAMBLE
+  超NATSUZOME2025出演者インタビューAppare！・OCHA NORMA・高嶺のなでしこ
+  ▽ジャムムをきゅるしてコラボ曲披露！
+  ▽リンプラファンミ密着
+  ▽アニソンDJイベントTOKYO RAMBLE
 
-## 番組詳細
+  ## 番組詳細
 
-きゅるしてがジャムムとのコラボ楽曲を初披露!
-▽7月5日・6日開催アイドルフェス「超NATSUZOME2025」出演グループインタビューAppare！・OCHA NORMA・たかねこ
-▽リンプラ新曲発表ファンミに密着
-▽アニクライベント「TOKYO RAMBLE」開催!アイドル・声優・インフルエンサーがDJ初挑戦!
-▽moxymill新曲インタビュー
+  きゅるしてがジャムムとのコラボ楽曲を初披露!
+  ▽7月5日・6日開催アイドルフェス「超NATSUZOME2025」出演グループインタビューAppare！・OCHA NORMA・たかねこ
+  ▽リンプラ新曲発表ファンミに密着
+  ▽アニクライベント「TOKYO RAMBLE」開催!アイドル・声優・インフルエンサーがDJ初挑戦!
+  ▽moxymill新曲インタビュー
 
-## 出演者
+  ## 出演者
 
-- きゅるりんってしてみて
-- LINKL PLANET
-- moxymill
-- マキシマムえいたそ☆成瀬瑛美/小峯愛未/まいきち/神志名和音(ラビットビット)
-- 永堀ゆめ・橋本あみ (Appare!)
-- 斉藤円香・米村姫良々 (OCHA NORMA)
-- 橋本桃呼・東山恵里沙・籾山ひめり (高嶺のなでしこ)
+  - きゅるりんってしてみて
+  - LINKL PLANET
+  - moxymill
+  - マキシマムえいたそ☆成瀬瑛美/小峯愛未/まいきち/神志名和音(ラビットビット)
+  - 永堀ゆめ・橋本あみ (Appare!)
+  - 斉藤円香・米村姫良々 (OCHA NORMA)
+  - 橋本桃呼・東山恵里沙・籾山ひめり (高嶺のなでしこ)
 
-## リンク
+  ## リンク
 
-- [番組 X 告知 (動画あり)](https://x.com/bs4_pocul_tour2/status/1934044685011767339)
-- [テレビ王国](https://www.tvkingdom.jp/schedule/200141202506160030.action)
-- [J:COM番組ガイド](https://tvguide.myjcom.jp/program/888244/)
-- [番組サイト](https://www.bs4.jp/popculture/)
+  - [番組 X 告知 (動画あり)](https://x.com/bs4_pocul_tour2/status/1934044685011767339)
+  - [テレビ王国](https://www.tvkingdom.jp/schedule/200141202506160030.action)
+  - [J:COM番組ガイド](https://tvguide.myjcom.jp/program/888244/)
+  - [番組サイト](https://www.bs4.jp/popculture/)
 `;

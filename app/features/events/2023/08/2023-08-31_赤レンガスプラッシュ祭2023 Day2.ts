@@ -32,8 +32,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [日向端ひな欠席のお知らせ](https://x.com/takanenofficial/status/1696825196840431795)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1186)
+  - [日向端ひな欠席のお知らせ](https://x.com/takanenofficial/status/1696825196840431795)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1186)
 `;

@@ -60,16 +60,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [中の人がフェスに遊びに行ったよ！ - ビクターエンタテインメント X](https://x.com/VictorMusic/status/1960990755486593055)
-- [公式 X ダイジェスト](https://x.com/takanenofficial/status/1954064369895321770)
-- [【SetList + Live Photos】高嶺のなでしこ - LuckyFes 2025](https://luckyfes.com/2025/08/09/5353/)
-- [出演前コメント](https://x.com/luckyfm_fes/status/1954043196088144242)
-- [LuckyFes 集合写真](https://x.com/luckyfm_fes/status/1954118404215914703)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1953811383990231415)
-- [撮影可否についてのお知らせ](https://x.com/luckyfm_fes/status/1938069711998075092)
-- [LuckyFest X タイムテーブル告知](https://x.com/luckyfm_fes/status/1932271509390696789)
-- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1932283741814292841)
-- [公式 X 告知](https://x.com/takanenofficial/status/1907269275259383894)
+  - [中の人がフェスに遊びに行ったよ！ - ビクターエンタテインメント X](https://x.com/VictorMusic/status/1960990755486593055)
+  - [公式 X ダイジェスト](https://x.com/takanenofficial/status/1954064369895321770)
+  - [【SetList + Live Photos】高嶺のなでしこ - LuckyFes 2025](https://luckyfes.com/2025/08/09/5353/)
+  - [出演前コメント](https://x.com/luckyfm_fes/status/1954043196088144242)
+  - [LuckyFes 集合写真](https://x.com/luckyfm_fes/status/1954118404215914703)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1953811383990231415)
+  - [撮影可否についてのお知らせ](https://x.com/luckyfm_fes/status/1938069711998075092)
+  - [LuckyFest X タイムテーブル告知](https://x.com/luckyfm_fes/status/1932271509390696789)
+  - [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1932283741814292841)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1907269275259383894)
 `;

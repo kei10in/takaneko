@@ -70,14 +70,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [オフィシャル ライブレポート](https://prtimes.jp/main/html/rd/p/000000806.000025517.html)
-- [音楽ナタリー ライブレポート](https://natalie.mu/music/news/639339)
-- [ENCOUNT ライブレポート](https://encount.press/archives/855455/)
-- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4158)
-- [チケット当日引換券について - 公式ニュース](https://takanenonadeshiko.jp/?p=4190)
-- [公式 X 配信告知](https://x.com/takanenofficial/status/1963165525435199877)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3386)
-- [公式 X 告知](https://x.com/takanenofficial/status/1890358265885655133)
+  - [オフィシャル ライブレポート](https://prtimes.jp/main/html/rd/p/000000806.000025517.html)
+  - [音楽ナタリー ライブレポート](https://natalie.mu/music/news/639339)
+  - [ENCOUNT ライブレポート](https://encount.press/archives/855455/)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4158)
+  - [チケット当日引換券について - 公式ニュース](https://takanenonadeshiko.jp/?p=4190)
+  - [公式 X 配信告知](https://x.com/takanenofficial/status/1963165525435199877)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3386)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1890358265885655133)
 `;

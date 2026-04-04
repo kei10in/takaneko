@@ -35,22 +35,22 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-[🎫チケット](https://w.pia.jp/t/larmefes-vol1/)
+  [🎫チケット](https://w.pia.jp/t/larmefes-vol1/)
 
-**タイムテーブル:**
+  **タイムテーブル:**
 
-[![タイムテーブル](/events/2024/2024-10-05_LARME%20fes%20vol.1_タイムテーブル.webp)](/events/2024/2024-10-05_LARME%20fes%20vol.1_タイムテーブル.webp)
+  [![タイムテーブル](/events/2024/2024-10-05_LARME%20fes%20vol.1_タイムテーブル.webp)](/events/2024/2024-10-05_LARME%20fes%20vol.1_タイムテーブル.webp)
 
-**出演:**
+  **出演:**
 
-- 17:10 〜 17:40 モデルランウェイ Angelic Pretty ステージ 松本ももな
-- 17:45 〜 18:15 アーティストライブ 高嶺のなでしこ2ndシングル
-- 19:20 〜 19:50 モデルランウェイ sugar nine ステージ 松本ももな
+  - 17:10 〜 17:40 モデルランウェイ Angelic Pretty ステージ 松本ももな
+  - 17:45 〜 18:15 アーティストライブ 高嶺のなでしこ2ndシングル
+  - 19:20 〜 19:50 モデルランウェイ sugar nine ステージ 松本ももな
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1826565067091181773)
-- [LARME X 告知](https://x.com/larmemagazine/status/1826213675654697384)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1826565067091181773)
+  - [LARME X 告知](https://x.com/larmemagazine/status/1826213675654697384)
 `;

@@ -35,8 +35,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [radiko](https://radiko.jp/share/?sid=FMO&t=20250624200000)
-- [松本ももな X 告知](https://x.com/momonamatsumoto/status/1937452811492692333)
+  - [radiko](https://radiko.jp/share/?sid=FMO&t=20250624200000)
+  - [松本ももな X 告知](https://x.com/momonamatsumoto/status/1937452811492692333)
 `;

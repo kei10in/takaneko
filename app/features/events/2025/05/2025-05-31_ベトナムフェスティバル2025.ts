@@ -62,11 +62,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [本日のおチェキ](https://x.com/takanekomanager/status/1928740367605588379)
-- [グッズ販売告知](https://x.com/takanenofficial/status/1928694311903780975)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1928428717350547781)
-- [公式 X 告知](https://x.com/takanenofficial/status/1901491208729596306)
-- [ベトナムフェスティバル 公式 X 告知](https://x.com/vf_supporters/status/1901454187973763236)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1928740367605588379)
+  - [グッズ販売告知](https://x.com/takanenofficial/status/1928694311903780975)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1928428717350547781)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1901491208729596306)
+  - [ベトナムフェスティバル 公式 X 告知](https://x.com/vf_supporters/status/1901454187973763236)
 `;

@@ -7,20 +7,20 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-最初の告知のみ。
+  最初の告知のみ。
 
-## 放送
+  ## 放送
 
-- 放送局: フジテレビ系
-- 放送時間: 19:00 〜 23:00
+  - 放送局: フジテレビ系
+  - 放送時間: 19:00 〜 23:00
 
-[TVer](https://tver.jp/series/sr8y9zb5qo)
+  [TVer](https://tver.jp/series/sr8y9zb5qo)
 
-## リンク
+  ## リンク
 
-- [番組サイト](https://www.fujitv.co.jp/dokkirigp/)
-- [フジテレビ ニュース](https://www.fujitv.co.jp/fujitv/news/20240983.html)
-- [オリコン X ポスト](https://x.com/oricon/status/1821645055159099546)
+  - [番組サイト](https://www.fujitv.co.jp/dokkirigp/)
+  - [フジテレビ ニュース](https://www.fujitv.co.jp/fujitv/news/20240983.html)
+  - [オリコン X ポスト](https://x.com/oricon/status/1821645055159099546)
 `;

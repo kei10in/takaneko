@@ -86,11 +86,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [「HoneyWorks Presents ハニフェス2025 ～女子校文化祭 日比谷～」ダイジェスト映像 - YouTube](https://www.youtube.com/watch?v=JjqeXaQe578)
-- [本日のおチェキ](https://x.com/takanekomanager/status/1967430088431185921)
-- [きょうのたかねこ](https://x.com/takanenofficial/status/1967412278577213652)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3905)
-- [公式 X 告知](https://x.com/takanenofficial/status/1937088247886127355)
+  - [「HoneyWorks Presents ハニフェス2025 ～女子校文化祭 日比谷～」ダイジェスト映像 - YouTube](https://www.youtube.com/watch?v=JjqeXaQe578)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/1967430088431185921)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/1967412278577213652)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3905)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1937088247886127355)
 `;

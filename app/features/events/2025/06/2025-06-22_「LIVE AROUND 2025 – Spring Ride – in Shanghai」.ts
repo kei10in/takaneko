@@ -67,12 +67,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-- **開場 -** 17:00 (CST) / 18:00 (JST)
-- **開演 -** 18:00 (CST) / 19:00 (JST)
+  - **開場 -** 17:00 (CST) / 18:00 (JST)
+  - **開演 -** 18:00 (CST) / 19:00 (JST)
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1936416440300732506)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3512)
-- [公式 X 告知](https://x.com/takanenofficial/status/1906662764279738773)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1936416440300732506)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3512)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1906662764279738773)
 `;

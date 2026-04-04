@@ -26,15 +26,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-- [radiko](https://radiko.jp/#RN1)
-- [radio 放送回](https://radiko.jp/share?sid=RN1&t=20241219223000)
+  - [radiko](https://radiko.jp/#RN1)
+  - [radio 放送回](https://radiko.jp/share?sid=RN1&t=20241219223000)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1869699201019584594)
-- [番組 X 告知](https://x.com/DjkooReboot/status/1867819050845581634)
-- [番組 HP](https://djkoo-rtw.com/)
-- [radiko](https://radiko.jp/#RN1)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1869699201019584594)
+  - [番組 X 告知](https://x.com/DjkooReboot/status/1867819050845581634)
+  - [番組 HP](https://djkoo-rtw.com/)
+  - [radiko](https://radiko.jp/#RN1)
 `;

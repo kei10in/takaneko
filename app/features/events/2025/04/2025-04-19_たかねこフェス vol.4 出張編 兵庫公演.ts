@@ -74,19 +74,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 神戸会場限定キラキラトレカ 松本ももな の印刷不備について
+  ## 神戸会場限定キラキラトレカ 松本ももな の印刷不備について
 
-神戸会場限定キラキラトレカ 松本ももな に印刷不備があったため途中で販売を停止。
-裏面のメッセージが印刷されていない、というもの。
+  神戸会場限定キラキラトレカ 松本ももな に印刷不備があったため途中で販売を停止。
+  裏面のメッセージが印刷されていない、というもの。
 
-一部のファンには販売された。
+  一部のファンには販売された。
 
-## リンク
+  ## リンク
 
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1913231060776915413)
-- [神戸会場限定キラキラトレカ 松本ももな 印刷不備について](https://x.com/takanenofficial/status/1913422321840476257)
-- [公式 X グッズ販売時間告知](https://x.com/takanenofficial/status/1913392115570381053)
-- [公式 X グッズ告知](https://x.com/takanenofficial/status/1908444525334585657)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3362)
-- [公式 X 開催告知](https://x.com/takanenofficial/status/1866754911347892258)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1913231060776915413)
+  - [神戸会場限定キラキラトレカ 松本ももな 印刷不備について](https://x.com/takanenofficial/status/1913422321840476257)
+  - [公式 X グッズ販売時間告知](https://x.com/takanenofficial/status/1913392115570381053)
+  - [公式 X グッズ告知](https://x.com/takanenofficial/status/1908444525334585657)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3362)
+  - [公式 X 開催告知](https://x.com/takanenofficial/status/1866754911347892258)
 `;

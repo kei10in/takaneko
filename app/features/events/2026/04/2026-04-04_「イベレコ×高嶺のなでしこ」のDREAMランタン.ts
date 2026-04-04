@@ -37,8 +37,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2034424687489585490)
-- [告知 - イベント公式 X](https://x.com/tv_asahi_fes/status/2034582700720615664)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2034424687489585490)
+  - [告知 - イベント公式 X](https://x.com/tv_asahi_fes/status/2034582700720615664)
 `;

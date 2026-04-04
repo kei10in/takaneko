@@ -30,16 +30,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-番組生出演
+  番組生出演
 
-出演時間: 13:56 〜
+  出演時間: 13:56 〜
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=FMT&t=20251216135600)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=FMT&t=20251216130000)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1999109414951809225)
-- [告知 - 番組 X](https://x.com/darehanaTFM/status/1998994404904743268)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMT&t=20251216135600)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMT&t=20251216130000)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1999109414951809225)
+  - [告知 - 番組 X](https://x.com/darehanaTFM/status/1998994404904743268)
 `;

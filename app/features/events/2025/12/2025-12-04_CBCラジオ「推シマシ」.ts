@@ -22,14 +22,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 内容
+  ## 内容
 
-コメント出演。
+  コメント出演。
 
-## リンク
+  ## リンク
 
-- [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251204230000)
-- [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251204220000)
-- [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1995266594985959907)
-- [告知 - 公式 X](https://x.com/takanenofficial/status/1996557705830604839)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251204230000)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251204220000)
+  - [告知 - ビクターナゴヤ](https://x.com/victor_nagoya/status/1995266594985959907)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1996557705830604839)
 `;

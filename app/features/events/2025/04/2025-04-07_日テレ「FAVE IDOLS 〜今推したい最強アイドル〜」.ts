@@ -33,43 +33,43 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 番組概要
+  ## 番組概要
 
-> この番組は、群雄割拠のライブアイドル界において、
-> 「いま推すべき人気急上昇中のアイドル」=【FAVE IDOLS】に注目し、
-> その魅力を余すことなく紹介する音楽バラエティー番組です。
->
-> MCはレジェンドアイドルであり、自身も大のアイドル好き！
-> 元AKB48の柏木由紀。
->
-> 人気楽曲のパフォーマンスはもちろん、トークやゲーム企画まで！
-> アイドルの魅力を存分に楽しめる内容が満載！
->
-> そんな番組をお届けいたします。
+  > この番組は、群雄割拠のライブアイドル界において、
+  > 「いま推すべき人気急上昇中のアイドル」=【FAVE IDOLS】に注目し、
+  > その魅力を余すことなく紹介する音楽バラエティー番組です。
+  >
+  > MCはレジェンドアイドルであり、自身も大のアイドル好き！
+  > 元AKB48の柏木由紀。
+  >
+  > 人気楽曲のパフォーマンスはもちろん、トークやゲーム企画まで！
+  > アイドルの魅力を存分に楽しめる内容が満載！
+  >
+  > そんな番組をお届けいたします。
 
-## 出演者
+  ## 出演者
 
-- iLiFE!
-- Appare!
-- JamsCollection
-- 高嶺のなでしこ
-- Peel the Apple
-- MC: 柏木由紀
-- 進行: 川畑一志
+  - iLiFE!
+  - Appare!
+  - JamsCollection
+  - 高嶺のなでしこ
+  - Peel the Apple
+  - MC: 柏木由紀
+  - 進行: 川畑一志
 
-## スタッフ
+  ## スタッフ
 
-- **〈プロデューサー〉** 毛利忍・町田昌美・中村光祐・五十嵐邦延
-- **〈演出〉** 福田達朗
-- **〈制作協力〉** サルベージ
-- **〈製作著作〉** 日本テレビ
+  - **〈プロデューサー〉** 毛利忍・町田昌美・中村光祐・五十嵐邦延
+  - **〈演出〉** 福田達朗
+  - **〈制作協力〉** サルベージ
+  - **〈製作著作〉** 日本テレビ
 
-## リンク
+  ## リンク
 
-- [FAVE IDOLS X カウントダウン 高嶺のなでしこ](https://x.com/faveconnect/status/1908716295883022488)
-- [公式 X 告知](https://x.com/takanenofficial/status/1904382758585237517)
-- [日テレ番組サイト](https://www.ntv.co.jp/faveidols/)
-- [日テレ記事](https://www.ntv.co.jp/faveidols/articles/47561dbyxfvxzgweau19.html)
-- [Oricon ニュース](https://x.com/oricon/status/1904367679211028751)
-- [FaveConnect X 告知](https://x.com/faveconnect/status/1904367646357033277)
+  - [FAVE IDOLS X カウントダウン 高嶺のなでしこ](https://x.com/faveconnect/status/1908716295883022488)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1904382758585237517)
+  - [日テレ番組サイト](https://www.ntv.co.jp/faveidols/)
+  - [日テレ記事](https://www.ntv.co.jp/faveidols/articles/47561dbyxfvxzgweau19.html)
+  - [Oricon ニュース](https://x.com/oricon/status/1904367679211028751)
+  - [FaveConnect X 告知](https://x.com/faveconnect/status/1904367646357033277)
 `;

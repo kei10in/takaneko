@@ -22,8 +22,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 番組 X](https://x.com/asadore_CTV/status/2003027869648511135)
-- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2003057938903253102)
+  - [告知 - 番組 X](https://x.com/asadore_CTV/status/2003027869648511135)
+  - [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2003057938903253102)
 `;

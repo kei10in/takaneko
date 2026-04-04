@@ -49,11 +49,11 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1985274919391740226)
-- [#あしたのたかねこ](https://x.com/takanenofficial/status/1984938610605592757)
-- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984961186103009747)
-- [終演後 抽選プレゼント告知 - イベント公式](https://x.com/edogawaaudition/status/1979502990370525579)
-- [公式 X 告知](https://x.com/takanenofficial/status/1943603936738333084)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/1985274919391740226)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/1984938610605592757)
+  - [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984961186103009747)
+  - [終演後 抽選プレゼント告知 - イベント公式](https://x.com/edogawaaudition/status/1979502990370525579)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1943603936738333084)
 `;

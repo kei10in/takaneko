@@ -40,14 +40,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## イベント概要
+  ## イベント概要
 
-スペシャルグッズ贈呈式
+  スペシャルグッズ贈呈式
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2893)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3004)
-- [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
-- [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2893)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3004)
+  - [公式 X 詳細告知](https://x.com/takanenofficial/status/1862421379460866133)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
 `;

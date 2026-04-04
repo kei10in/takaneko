@@ -55,19 +55,19 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-### 支払い方法:
+  ### 支払い方法:
 
-現金･クレジットカード・一部電子マネー・QRコード
+  現金･クレジットカード・一部電子マネー・QRコード
 
-### イベント詳細:
+  ### イベント詳細:
 
-- [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0916/)
-- [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/19.html)
+  - [イベント詳細 - 高嶺のなでしこ公式](https://takanenonadeshiko.jp/2ndsgreleaseevent_0916/)
+  - [イベント詳細 - ビクター エンターテイメント](https://www.jvcmusic.co.jp/-/News/A028511/19.html)
 
-## リンク
+  ## リンク
 
-- [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
-- [公式 X - イベント詳細告知]()
-- [公式スケジュール](https://takanenonadeshiko.jp/events/event/2ndシングル「タイトル未定」リリースイベント/)
-- [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
+  - [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
+  - [公式 X - イベント詳細告知]()
+  - [公式スケジュール](https://takanenonadeshiko.jp/events/event/2ndシングル「タイトル未定」リリースイベント/)
+  - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

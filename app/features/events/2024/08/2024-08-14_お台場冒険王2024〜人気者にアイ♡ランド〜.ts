@@ -9,10 +9,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## お台場冒険王2024〜人気者にアイ♡ランド〜
+  ## お台場冒険王2024〜人気者にアイ♡ランド〜
 
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2317)
-- [公式 FC トピック](https://takanekofc.com/topics/public/_/34ro17j62egbudz3.html)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2317)
+  - [公式 FC トピック](https://takanekofc.com/topics/public/_/34ro17j62egbudz3.html)
 `;

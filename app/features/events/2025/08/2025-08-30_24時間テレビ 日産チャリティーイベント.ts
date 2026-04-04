@@ -66,9 +66,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1960628560193790067)
-- [24時間テレビ X タイムスケジュール告知](https://x.com/24hourTV/status/1961005852296659101)
-- [24時間テレビ X 出演者情報](https://x.com/24hourTV/status/1960583056328135026)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1960628560193790067)
+  - [24時間テレビ X タイムスケジュール告知](https://x.com/24hourTV/status/1961005852296659101)
+  - [24時間テレビ X 出演者情報](https://x.com/24hourTV/status/1960583056328135026)
 `;

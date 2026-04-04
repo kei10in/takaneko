@@ -21,17 +21,17 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FMノースウェーブ 19:00 〜
+  FMノースウェーブ 19:00 〜
 
-19:30 〜 コメント出演
+  19:30 〜 コメント出演
 
-[radiko](https://radiko.jp/#NORTHWAVE)
+  [radiko](https://radiko.jp/#NORTHWAVE)
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1866392450753073599)
-- [番組 X 告知](https://x.com/RadioGroove825/status/1864641467970670716)
-- [radiko](https://radiko.jp/#NORTHWAVE)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1866392450753073599)
+  - [番組 X 告知](https://x.com/RadioGroove825/status/1864641467970670716)
+  - [radiko](https://radiko.jp/#NORTHWAVE)
 `;

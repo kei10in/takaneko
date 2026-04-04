@@ -111,10 +111,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [「TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL」追加公演決定！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4029)
-- [公式 X 追加公演告知](https://x.com/takanenofficial/status/1945046207354605707)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3924)
-- [公式 X 告知](https://x.com/takanenofficial/status/1938583475768168797)
+  - [「TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL」追加公演決定！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4029)
+  - [公式 X 追加公演告知](https://x.com/takanenofficial/status/1945046207354605707)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3924)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1938583475768168797)
 `;

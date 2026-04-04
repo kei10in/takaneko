@@ -74,30 +74,30 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 個別 TikTok 撮影会
+  ## 個別 TikTok 撮影会
 
-1. メランコリックハニー サビ通常ver. お客様込み
-1. メランコリックハニー サビ通常ver. メンバーのみ
-1. メランコリックハニー サビ通常ver. 自撮り
-1. メランコリックハニー マイダーリンver. お客様込み
-1. メランコリックハニー マイダーリンver. メンバーのみ
-1. メランコリックハニー マイダーリンver. 自撮り
-1. 美しく生きろ サビver. お客様込み
-1. 美しく生きろ サビver. メンバーのみ
-1. 美しく生きろ サビver. 自撮り
+  1. メランコリックハニー サビ通常ver. お客様込み
+  1. メランコリックハニー サビ通常ver. メンバーのみ
+  1. メランコリックハニー サビ通常ver. 自撮り
+  1. メランコリックハニー マイダーリンver. お客様込み
+  1. メランコリックハニー マイダーリンver. メンバーのみ
+  1. メランコリックハニー マイダーリンver. 自撮り
+  1. 美しく生きろ サビver. お客様込み
+  1. 美しく生きろ サビver. メンバーのみ
+  1. 美しく生きろ サビver. 自撮り
 
-**振り付け動画**
+  **振り付け動画**
 
-- メランコリックハニー サビ通常ver.<br/>
-  https://vt.tiktok.com/ZSrHRqEqt/
-- メランコリックハニー マイダーリンver.<br/>
-  https://vt.tiktok.com/ZShjexPQG/
-- 美しく生きろ サビver.<br/>
-  https://vt.tiktok.com/ZShje3kfK/
+  - メランコリックハニー サビ通常ver.<br/>
+    https://vt.tiktok.com/ZSrHRqEqt/
+  - メランコリックハニー マイダーリンver.<br/>
+    https://vt.tiktok.com/ZShjexPQG/
+  - 美しく生きろ サビver.<br/>
+    https://vt.tiktok.com/ZShje3kfK/
 
-## リンク
+  ## リンク
 
-- [公式ニュース 詳細告知](https://takanenonadeshiko.jp/?p=3702)
-- [公式 X 告知](https://x.com/takanenofficial/status/1909154203425251411)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=3562)
+  - [公式ニュース 詳細告知](https://takanenonadeshiko.jp/?p=3702)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1909154203425251411)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=3562)
 `;

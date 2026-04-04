@@ -39,8 +39,8 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [告知 - 公式 X](https://x.com/takanenofficial/status/2029399016862302406)
-- [イベント詳細](https://www.ibarakirobots.win/news/20260305_01_event/)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2029399016862302406)
+  - [イベント詳細](https://www.ibarakirobots.win/news/20260305_01_event/)
 `;

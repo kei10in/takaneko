@@ -37,18 +37,18 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 開催情報
+  ## 開催情報
 
-- [🎫チケット](https://ticketdive.com/event/heroineshalloween2410)
-- **出演:** 20:30 〜
-- **[タイムテーブル](https://x.com/iLiFE_STAFF/status/1850086524479836618):**<br/>
-  [![タイムテーブル](/events/2024/2024-10-29_HEROINES%20HALLOWEEN%20DAY%201_タイムテーブル.jpg)](/events/2024/2024-10-29_HEROINES%20HALLOWEEN%20DAY%201_タイムテーブル.jpg)
-- **配信:** https://www.youtube.com/live/iERsNxoy71Y
-- **物販:** なし？
+  - [🎫チケット](https://ticketdive.com/event/heroineshalloween2410)
+  - **出演:** 20:30 〜
+  - **[タイムテーブル](https://x.com/iLiFE_STAFF/status/1850086524479836618):**<br/>
+    [![タイムテーブル](/events/2024/2024-10-29_HEROINES%20HALLOWEEN%20DAY%201_タイムテーブル.jpg)](/events/2024/2024-10-29_HEROINES%20HALLOWEEN%20DAY%201_タイムテーブル.jpg)
+  - **配信:** https://www.youtube.com/live/iERsNxoy71Y
+  - **物販:** なし？
 
-## リンク
+  ## リンク
 
-- [公式 X 告知](https://x.com/takanenofficial/status/1836631345998725536)
-- [HEROINES X 告知](https://x.com/heroines_idol/status/1834172532586586139)
-- [タイムテーブル告知](https://x.com/iLiFE_STAFF/status/1850086524479836618)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1836631345998725536)
+  - [HEROINES X 告知](https://x.com/heroines_idol/status/1834172532586586139)
+  - [タイムテーブル告知](https://x.com/iLiFE_STAFF/status/1850086524479836618)
 `;

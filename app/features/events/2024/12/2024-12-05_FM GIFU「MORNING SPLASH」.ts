@@ -16,14 +16,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送予定
+  ## 放送予定
 
-FM GIFU 7:30 〜
+  FM GIFU 7:30 〜
 
-[radiko](https://radiko.jp/#FMGIFU)
+  [radiko](https://radiko.jp/#FMGIFU)
 
-## リンク
+  ## リンク
 
-- [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1864258935722819759)
-- [radiko](https://radiko.jp/#FMGIFU)
+  - [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1864258935722819759)
+  - [radiko](https://radiko.jp/#FMGIFU)
 `;

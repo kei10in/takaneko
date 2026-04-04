@@ -31,15 +31,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 概要
+  ## 概要
 
-- 地上波: 12月27日 (金) 深夜1時40分 〜 放送
-- アベマ: 12月27日 (金) 深夜2時10分 〜 配信開始
+  - 地上波: 12月27日 (金) 深夜1時40分 〜 放送
+  - アベマ: 12月27日 (金) 深夜2時10分 〜 配信開始
 
-## リンク
+  ## リンク
 
-- [日向端ひな X 告知](https://x.com/hina_hinahata/status/1872289532391182430)
-- [公式 X 告知](https://x.com/takanenofficial/status/1872244725509714370)
-- [しくじり先生 X 告知](https://x.com/shikuzirit/status/1872220814931534228)
-- [AbemaTV しくじり先生 俺みたいになるな!!](https://abema.tv/video/episode/88-77)
+  - [日向端ひな X 告知](https://x.com/hina_hinahata/status/1872289532391182430)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1872244725509714370)
+  - [しくじり先生 X 告知](https://x.com/shikuzirit/status/1872220814931534228)
+  - [AbemaTV しくじり先生 俺みたいになるな!!](https://abema.tv/video/episode/88-77)
 `;

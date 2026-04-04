@@ -16,10 +16,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式 X 告知 2](https://x.com/takanenofficial/status/1869714297938645395)
-- [番組 X 告知](https://x.com/ueda_channel/status/1869692149731574094)
-- [公式 X 告知](https://x.com/takanenofficial/status/1869339605813821493)
-- [番組 TVer](https://tver.jp/series/srkk409ntx)
+  - [公式 X 告知 2](https://x.com/takanenofficial/status/1869714297938645395)
+  - [番組 X 告知](https://x.com/ueda_channel/status/1869692149731574094)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1869339605813821493)
+  - [番組 TVer](https://tver.jp/series/srkk409ntx)
 `;

@@ -21,9 +21,9 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [春野莉々のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1646)
-- [星谷美来のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1643)
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=1637)
+  - [春野莉々のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1646)
+  - [星谷美来のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1643)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=1637)
 `;
