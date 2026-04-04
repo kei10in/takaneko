@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL SQUARE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-11-05",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  absent: ["葉月紗蘭"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "すきっちゅーの！",
+      "#超絶かわいい",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1721088371223941524",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [葉月紗蘭のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1473)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1455)
+`;

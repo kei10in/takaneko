@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "獨医祭",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-10-07",
+  region: "栃木",
+  location: "獨協医科大学 関湊記念ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "決戦スピリット",
+      "MC",
+      "可愛くてごめん",
+      "ユメムスビ",
+      "すきっちゅーの！",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1710587728386269570",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1363)
+`;

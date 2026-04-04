@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "日テレプラス秋のアイドル祭り Supported by U-ZONE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-09-15",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: [],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "すきっちゅーの！",
+      "17歳",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "決戦スピリット",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1702667379707396385",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1292)
+`;

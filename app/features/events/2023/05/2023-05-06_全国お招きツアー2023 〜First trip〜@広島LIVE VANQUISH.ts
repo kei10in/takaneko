@@ -1,0 +1,99 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "全国お招きツアー2023 〜First trip〜@広島LIVE VANQUISH",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2023-05-06",
+  region: "広島",
+  location: "LIVE VANQUISH",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "第一部 楽曲交換",
+      setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん (STU48)", "夢力 (高嶺のなでしこ)"],
+      links: [
+        {
+          text: "https://x.com/twtszk/status/1654753024244609026",
+          url: "https://x.com/twtszk/status/1654753024244609026",
+        },
+      ],
+    },
+    {
+      title: "第一部",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "Overture",
+        "革命の女王",
+        "誇り高きアイドル",
+        "アンチファン",
+        "女の子は強い",
+        "MC",
+        "#超絶かわいい",
+        "可愛くてごめん",
+        "ユメムスビ",
+        "MC",
+        "美しく生きろ",
+        "ファンサ",
+        "僕は君になれない",
+      ],
+      links: [
+        {
+          text: "https://x.com/twtszk/status/1654753024244609026",
+          url: "https://x.com/twtszk/status/1654753024244609026",
+        },
+      ],
+    },
+    {
+      title: "第二部 楽曲交換",
+      setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん (STU48)", "夢力 (高嶺のなでしこ)"],
+      links: [
+        {
+          text: "https://x.com/twtszk/status/1654796029525655553",
+          url: "https://x.com/twtszk/status/1654796029525655553",
+        },
+      ],
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "Overture",
+        "革命の女王",
+        "誇り高きアイドル",
+        "アンチファン",
+        "女の子は強い",
+        "MC",
+        "#超絶かわいい",
+        "可愛くてごめん",
+        "乙女どもよ。",
+        "MC",
+        "美しく生きろ",
+        "ファンサ",
+        "僕は君になれない",
+      ],
+      links: [
+        {
+          text: "https://x.com/twtszk/status/1654796029525655553",
+          url: "https://x.com/twtszk/status/1654796029525655553",
+        },
+      ],
+    },
+  ],
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 開催報告](https://x.com/takanenofficial/status/1654843504261238786)
+- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
+- [籾山ひめりの欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=986)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=756)
+`;

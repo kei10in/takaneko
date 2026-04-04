@@ -1,0 +1,62 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-04",
+  region: "東京",
+  location: "お台場・青海周辺エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "HOT STAGE",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "決戦スピリット",
+        "誇り高きアイドル",
+        "女の子は強い",
+        "MC",
+        "初恋のひと。",
+        "可愛くてごめん",
+        "#超絶かわいい",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1687342127272120320",
+    },
+    {
+      title: "SMILE GARDEN",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "ころころガール",
+        "ファンサ (iLiFE!)",
+        "可愛くてごめん (iLiFE! コラボ)",
+        "アイドルライフスターターパック (iLiFE! コラボ)",
+      ],
+    },
+    {
+      title: "FESTIVAL STAGE",
+      setlist: [
+        "衣装:「初恋のひと。」制服衣装",
+        "初恋のひと。",
+        "男の子の目的は何？",
+        "#超絶かわいい",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1687450376868671488",
+    },
+  ],
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1189)
+`;

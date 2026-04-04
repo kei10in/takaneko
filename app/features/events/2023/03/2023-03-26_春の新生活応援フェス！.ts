@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "春の新生活応援フェス！",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-03-26",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "可愛くてごめん",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "MC",
+      "アンチファン",
+      "誇り高きアイドル",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1639949644464795658",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=786)
+`;

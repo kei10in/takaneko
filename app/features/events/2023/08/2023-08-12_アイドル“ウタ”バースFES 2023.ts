@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アイドル“ウタ”バースFES 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-12",
+  region: "東京",
+  location: "六本木ヒルズアリーナ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "決戦スピリット",
+      "乙女どもよ。",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1690335426924740608",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1085)
+`;

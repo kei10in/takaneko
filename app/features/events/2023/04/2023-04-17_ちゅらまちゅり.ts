@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ちゅらまちゅり",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-04-17",
+  region: "東京",
+  location: "渋谷WWW X",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "乙女どもよ。",
+      "MC",
+      "女の子は強い",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1647936002521182208",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [橋本桃呼欠席のお知らせ](https://takanenonadeshiko.jp/?p=952)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=770)
+`;

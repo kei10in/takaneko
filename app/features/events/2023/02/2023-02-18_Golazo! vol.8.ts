@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Golazo! vol.8",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-18",
+  region: "宮城",
+  location: "仙台Rensa",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "女の子は強い",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "ユメムスビ",
+      "MC",
+      "アンチファン",
+      "乙女どもよ。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1626855402968330240",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=655)
+`;

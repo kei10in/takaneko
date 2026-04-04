@@ -1,0 +1,44 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "第14回 ALL JAPAN ナチュラルチーズコンテスト",
+  category: "OTHER",
+  liveType: "GUEST",
+  date: "2023-10-26",
+  open: undefined,
+  start: "17:00",
+  end: "17:30",
+  region: "東京",
+  location: "ホテルメトロポリタン エドモント",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "中央酪農会議HP イベントページ",
+    url: "https://www.dairy.co.jp/cheesecontes/index2023.html",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: ["衣装:T シャツ (MILK JAPAN)", "いつか私がママになったら"],
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [こくちーず](https://www.kokuchpro.com/event/42c0e5ebb395028abb51fea7f58f2fbe/)
+- [中央酪農会議HP イベントページ](https://www.dairy.co.jp/cheesecontes/index2023.html)
+- [MILK JAPAN X 告知](https://x.com/milk_japan2021/status/1714583180358107341)
+- [公式 X 応募方法告知](https://x.com/takanenofficial/status/1714529465722921284)
+`;

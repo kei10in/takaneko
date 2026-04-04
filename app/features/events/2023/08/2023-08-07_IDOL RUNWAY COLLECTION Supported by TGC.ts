@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL RUNWAY COLLECTION Supported by TGC",
+  category: "OTHER",
+  liveType: "GUEST",
+  date: "2023-08-07",
+  region: "東京",
+  location: "国立代々木競技場 第二体育館",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "初恋のひと。",
+      "ファンサ",
+      "決戦スピリット",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1688529710501027840",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1179)
+`;

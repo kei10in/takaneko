@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NEO KASSEN 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-17",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+      ref: "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+      tags: ["timetable"],
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "アンチファン",
+      "誇り高きアイドル",
+      "乙女どもよ。",
+      "MC",
+      "革命の女王",
+      "ファンサ",
+      "決戦スピリット",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1692111615884452084",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1190)
+`;

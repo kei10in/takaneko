@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TIF2023 “超”決起集会",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-01",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "革命の女王",
+      "決戦スピリット",
+      "月曜日の憂鬱",
+      "MC",
+      "ヒロインは平均以下。",
+      "#超絶かわいい",
+      "ファンサ",
+      "MC",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1686328997007990785",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1083)
+`;

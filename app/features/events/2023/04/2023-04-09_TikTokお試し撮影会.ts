@@ -1,0 +1,61 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TikTokお試し撮影会",
+  category: "EVENT",
+  date: "2023-04-09",
+  region: "東京",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2023/2023-04-09_TikTokお試し撮影会.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=916",
+    },
+  ],
+  meetAndGreet: {
+    sessions: [
+      {
+        title: "1 部",
+        start: "17:30",
+        end: "18:00",
+        lanes: [["城月菜央", "星谷美来"]],
+        costume: "アンチファン衣装",
+      },
+      {
+        title: "2 部",
+        start: "18:00",
+        end: "18:30",
+        lanes: [["涼海すう", "籾山ひめり"]],
+        costume: "アンチファン衣装",
+      },
+      {
+        title: "3 部",
+        start: "18:30",
+        end: "19:00",
+        lanes: [["橋本桃呼", "日向端ひな"]],
+        costume: "アンチファン衣装",
+      },
+      {
+        title: "4 部",
+        start: "19:00",
+        end: "19:30",
+        lanes: [["葉月紗蘭", "松本ももな"]],
+        costume: "アンチファン衣装",
+      },
+      {
+        title: "5 部",
+        start: "19:30",
+        end: "20:00",
+        lanes: [["春野莉々", "東山恵里沙"]],
+        costume: "アンチファン衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-13",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=916)
+`;

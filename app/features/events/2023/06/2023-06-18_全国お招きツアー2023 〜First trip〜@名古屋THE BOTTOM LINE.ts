@@ -1,0 +1,54 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "全国お招きツアー2023 〜First trip〜@名古屋THE BOTTOM LINE",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2023-06-18",
+  region: "愛知",
+  location: "THE BOTTOM LINE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "コラボパフォーマンス",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "可愛くてごめん (TEAM SHACHI コラボ)",
+        "抱きしめてアンセム (TEAM SHACHI コラボ)",
+      ],
+    },
+    {
+      title: "本編",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "Overture",
+        "革命の女王",
+        "誇り高きアイドル",
+        "アンチファン",
+        "女の子は強い",
+        "MC",
+        "#超絶かわいい",
+        "可愛くてごめん",
+        "START (TEAM SHACHI cover)",
+        "MC",
+        "美しく生きろ",
+        "ファンサ",
+        "僕は君になれない",
+      ],
+    },
+  ],
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 開催報告](https://x.com/takanenofficial/status/1670469049049026562)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=757)
+`;

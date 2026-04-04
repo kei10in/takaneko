@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@中野ZERO大ホール",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2023-12-16",
+  region: "東京",
+  location: "中野 ZERO 大ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    title: "ミニライブ",
+    start: "21:00",
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "いつか私がママになったら",
+      "可愛くてごめん",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1736013822266327364",
+  },
+  meetAndGreet: {
+    title: "ペア握手会",
+    sessions: [
+      {
+        title: "1 部 ペア握手会",
+        start: "18:30",
+        end: "19:10",
+        lanes: [
+          ["涼海すう", "松本ももな"],
+          ["城月菜央", "葉月紗蘭"],
+          ["橋本桃呼", "東山恵里沙"],
+          ["春野莉々", "籾山ひめり"],
+          ["日向端ひな", "星谷美来"],
+        ],
+        costume: "美しく生きろ衣装",
+      },
+      {
+        title: "2 部 ペア握手会",
+        start: "19:25",
+        end: "21:05",
+        lanes: [
+          ["涼海すう", "星谷美来"],
+          ["城月菜央", "春野莉々"],
+          ["橋本桃呼", "日向端ひな"],
+          ["葉月紗蘭", "松本ももな"],
+          ["東山恵里沙", "籾山ひめり"],
+        ],
+        costume: "美しく生きろ衣装",
+      },
+    ],
+  },
+  updatedAt: "2026-03-14",
+};
+
+export const content = /* md */ `
+## 内容
+
+ミニライブ＆メンバーペア握手会
+
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1586)
+`;

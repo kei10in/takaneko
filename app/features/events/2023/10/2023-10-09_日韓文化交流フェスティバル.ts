@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "日韓文化交流フェスティバル",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-10-09",
+  region: "福岡",
+  location: "宗像ユリックス 芝生広場",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "すきっちゅーの！",
+      "MC",
+      "決戦スピリット",
+      "誇り高きアイドル",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1711351010323812429",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1360)
+`;

@@ -1,0 +1,75 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "全国お招きツアー2023 〜First trip〜@福岡BEAT STATION",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2023-05-05",
+  region: "福岡",
+  location: "福岡 BEAT STATION",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "第一部 楽曲交換",
+      setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん (LinQ)", "HANABI!! (高嶺のなでしこ)"],
+    },
+    {
+      title: "第一部",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "Overture",
+        "革命の女王",
+        "誇り高きアイドル",
+        "アンチファン",
+        "女の子は強い",
+        "MC",
+        "#超絶かわいい",
+        "可愛くてごめん",
+        "男の子の目的は何？",
+        "MC",
+        "美しく生きろ",
+        "ファンサ",
+        "僕は君になれない",
+      ],
+    },
+    {
+      title: "第二部 楽曲交換",
+      setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん (LinQ)", "HANABI!! (高嶺のなでしこ)"],
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "衣装:全国お招きツアー衣装",
+        "Overture",
+        "革命の女王",
+        "誇り高きアイドル",
+        "アンチファン",
+        "女の子は強い",
+        "MC",
+        "#超絶かわいい",
+        "可愛くてごめん",
+        "乙女どもよ。",
+        "MC",
+        "美しく生きろ",
+        "ファンサ",
+        "僕は君になれない",
+      ],
+    },
+  ],
+  updatedAt: "2025-06-17",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 開催報告](https://x.com/takanenofficial/status/1654464175182340098)
+- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=754)
+`;

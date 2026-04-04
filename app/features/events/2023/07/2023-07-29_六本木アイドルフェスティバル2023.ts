@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "六本木アイドルフェスティバル2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-07-29",
+  region: "東京",
+  location: "六本木ヒルズアリーナ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "愛を知る (ラストアイドル cover)",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1685207953610268672",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1082)
+`;

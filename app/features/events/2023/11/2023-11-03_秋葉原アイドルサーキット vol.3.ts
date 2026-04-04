@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "秋葉原アイドルサーキット vol.3",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-11-03",
+  region: "東京",
+  location: "神田明神ホール",
+  present: ["高嶺のなでしこ"],
+  absent: ["葉月紗蘭"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "革命の女王",
+      "誇り高きアイドル",
+      "初恋のひと。",
+      "決戦スピリット",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1720382493025804737",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [葉月紗蘭のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1473)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1462)
+`;

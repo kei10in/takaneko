@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "RIZIN.45",
+  category: "OTHER",
+  date: "2023-12-31",
+  region: "埼玉",
+  location: "さいたまスーパーアリーナ",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [春野莉々のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1646)
+- [星谷美来のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1643)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1637)
+`;

@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "File No.0001『マエストロには背を向けよ』",
+  category: "LIVE",
+  date: "2023-05-03",
+  region: "東京",
+  location: "Mixalive TOKYO 6F Theater Mixa",
+  present: ["橋本桃呼", "松本ももな", "籾山ひめり"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [橋本桃呼の活動に関するご報告](https://takanenonadeshiko.jp/?p=966)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=928)
+`;

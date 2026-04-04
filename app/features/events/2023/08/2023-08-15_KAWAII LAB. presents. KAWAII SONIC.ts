@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KAWAII LAB. presents. KAWAII SONIC",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-08-15",
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "#超絶かわいい",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "僕は君になれない",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1691437599842578433",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 橋本桃呼欠席のお知らせ](https://x.com/takanenofficial/status/1691009035401867265)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1212)
+`;

@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL WAVE in TOKYO",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-12-29",
+  region: "東京",
+  location: "国立代々木競技場 第二体育館",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "決戦スピリット",
+      "可愛くてごめん",
+      "ファンサ",
+      "美しく生きろ",
+      "MC",
+    ],
+    links: [
+      {
+        text: "https://x.com/10yosaki_su/status/1740674883322052666",
+        url: "https://x.com/10yosaki_su/status/1740674883322052666",
+      },
+    ],
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [春野莉々のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1646)
+- [星谷美来のインフルエンザ感染に関するご報告](https://takanenonadeshiko.jp/?p=1643)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1606)
+`;

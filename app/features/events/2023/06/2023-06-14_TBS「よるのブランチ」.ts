@@ -1,0 +1,27 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TBS「よるのブランチ」",
+  category: "TV",
+  date: "2023-06-14",
+  start: "23:56",
+  region: "テレビ",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
+  images: [
+    {
+      path: "/events/2023/2023-06-14_TBS「よるのブランチ」.jpg",
+      ref: "https://x.com/takanenofficial/status/1666747094315708417",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1666747094315708417)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1052)
+`;

@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-01-15",
+  region: "東京",
+  location: "Spotify O-WEST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "誇り高きアイドル",
+      "アンチファン",
+      "女の子は強い",
+      "MC",
+      "ユメムスビ",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1614574046481645568",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=657)
+`;

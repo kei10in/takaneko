@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ツインテールフェス 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-02",
+  region: "東京",
+  location: "Spotify  O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "女の子は強い",
+      "可愛くてごめん",
+      "乙女どもよ。",
+      "MC",
+      "アンチファン",
+      "誇り高きアイドル",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1621066625054306311",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=619)
+`;

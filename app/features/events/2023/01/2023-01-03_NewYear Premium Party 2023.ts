@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NewYear Premium Party 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-01-03",
+  region: "東京",
+  location: "Zepp DiverCity",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "アンチファン",
+      "女の子は強い",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1610217920801681408",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1594571312290111488)
+`;

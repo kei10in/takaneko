@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超NATSUZOME2023 Day1",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-07-01",
+  region: "千葉",
+  location: "幕張海浜公園Gブロック",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    title: "SOMARI ステージ",
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "#超絶かわいい",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1675073063820599297",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1013)
+`;

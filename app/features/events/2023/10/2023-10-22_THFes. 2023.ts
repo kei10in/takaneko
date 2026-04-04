@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "THFes. 2023",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-10-22",
+  region: "茨城",
+  location: "つくばFC万博グラウンド",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:全国お招きツアー衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "すきっちゅーの！",
+      "17歳",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1715997886448848972",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1390)
+`;

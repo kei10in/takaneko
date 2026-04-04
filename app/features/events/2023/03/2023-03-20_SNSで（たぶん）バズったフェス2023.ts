@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SNSで（たぶん）バズったフェス2023",
+  title: "NABE presents 「SNSで（たぶん）バズったフェス2023」",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-03-20",
+  region: "東京",
+  location: "新宿住友ビル 新宿住友ホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: ["衣装:アンチファン衣装", "可愛くてごめん", "アンチファン", "女の子は強い"],
+    url: "https://x.com/Mikuru_hositani/status/1637766013273120768",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=724)
+`;

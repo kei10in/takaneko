@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SHOWROOM「緊急生配信」",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2023-04-03",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 直前告知](https://x.com/takanenofficial/status/1642829630976720896)
+- [公式 X 告知](https://x.com/takanenofficial/status/1642466911739949056)
+`;

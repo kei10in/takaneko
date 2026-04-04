@@ -1,0 +1,54 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "DDD 〜Discovery iDol OKINAWA〜 3rd depot",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-26",
+  region: "沖縄",
+  location: "Livehouse Output",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "第一部",
+      setlist: [
+        "衣装:アンチファン衣装",
+        "アンチファン",
+        "乙女どもよ。",
+        "MC",
+        "男の子の目的は何？",
+        "ユメムスビ",
+        "可愛くてごめん",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1629722949195563008",
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "衣装:アンチファン衣装",
+        "アンチファン",
+        "男の子の目的は何？",
+        "ユメムスビ",
+        "MC",
+        "女の子は強い",
+        "可愛くてごめん",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1629804380848521217",
+    },
+  ],
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=711)
+`;

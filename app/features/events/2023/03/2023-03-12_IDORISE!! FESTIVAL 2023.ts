@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDORISE!! FESTIVAL 2023 Day2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-03-12",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "イベント サイト",
+    url: "https://2023.idorisefes.jp/",
+  },
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "女の子は強い",
+      "MC",
+      "アンチファン",
+      "誇り高きアイドル",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1634867404525436929",
+  },
+  updatedAt: "2025-06-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=621)
+`;

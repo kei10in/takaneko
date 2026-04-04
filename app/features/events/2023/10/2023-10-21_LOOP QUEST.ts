@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LOOP QUEST",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-10-21",
+  region: "大阪",
+  location: "Zepp Namba",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "すきっちゅーの！",
+      "#超絶かわいい",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "僕は君になれない",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1715648366653411406",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1359)
+`;

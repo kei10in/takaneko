@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KASSEN",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2023-02-23",
+  region: "東京",
+  location: "新宿BLAZE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "誇り高きアイドル",
+      "アンチファン",
+      "乙女どもよ。",
+      "MC",
+      "女の子は強い",
+      "可愛くてごめん",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1628688988176515073",
+  },
+  updatedAt: "2024-11-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=695)
+`;
