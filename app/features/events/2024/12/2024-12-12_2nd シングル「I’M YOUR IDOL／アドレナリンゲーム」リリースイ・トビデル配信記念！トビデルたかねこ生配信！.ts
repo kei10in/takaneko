@@ -1,0 +1,75 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "トビデルたかねこ生配信！",
+  title:
+    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+  category: "LIVE",
+  liveType: "RELEASE_EVENT",
+  date: "2024-12-12",
+  open: "19:00",
+  start: "19:30",
+  region: "東京",
+  location: "Studio Mixa",
+  images: [
+    {
+      path: "/events/2024/2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！.jpg",
+      ref: "https://x.com/takanenofficial/status/1862428956982747203",
+    },
+  ],
+  link: {
+    text: "イベント詳細ページ",
+    url: "https://www.jvcmusic.co.jp/-/News/A028511/63.html",
+  },
+  streamings: {
+    text: "LINE VOOM",
+    url: "https://lin.ee/AhFRyzZ/lntl/pr",
+  },
+  acts: {
+    setlist: [
+      "衣装: I’M YOUR IDOL 衣装",
+      "I’M YOUR IDOL",
+      "アドレナリンゲーム",
+      "MC:トビデル企画",
+      "美しく生きろ",
+      "恋を知った世界",
+      "MC",
+      "初恋のひと。",
+      "MC",
+      "可愛くてごめん",
+      "MC:クロージング",
+    ],
+  },
+  updatedAt: "2024-11-29",
+};
+
+export const content = /* md */ `
+## 要約
+
+- ソフトバンク提供 3D 体験サービス「トビデル」での映像配信が決定
+
+- 映像配信を記念して、LINE VOOM で番組「トビデルたかねこ生配信！」を開催
+
+- CD 予約で抽選で 200 名を生配信会場に招待。
+
+  https://victor-store.jp/special/takaneko20241212
+
+- ソフトバンク池袋東口駅店で「トビデル 3D 保護ガラス」を購入すると抽選で 30 名を生配信会場に招待。
+
+  期間: 2024年12月2日 (月) 〜 2024年12月11日 (水)
+
+  https://x.com/5GLAB_JP/status/1862421242890133951
+
+- イベント当日に会場で「トビデル 3D 保護ガラス」を購入すると
+  - 抽選で 30 名にメンバーサイン入り保護ガラスをプレゼント
+  - 購入者全員に限定映像をプレゼント
+
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2890)
+- [公式 X 詳細告知](https://x.com/takanenofficial/status/1862428956982747203)
+- [ビクターニュース](https://www.jvcmusic.co.jp/-/News/A028511/63.html)
+- [予約ページ](https://victor-store.jp/special/takaneko20241212)
+- [5G LAB X キャンペーン告知](https://x.com/5GLAB_JP/status/1862421242890133951)
+- [公式 X 告知](https://x.com/takanenofficial/status/1857349224863813931)
+`;

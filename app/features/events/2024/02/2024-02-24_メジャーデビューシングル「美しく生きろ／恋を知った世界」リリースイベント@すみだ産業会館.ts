@@ -1,0 +1,50 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@すみだ産業会館",
+  category: "EVENT",
+  date: "2024-02-24",
+  region: "東京",
+  location: "すみだ産業会館",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=1729",
+  },
+  meetAndGreet: {
+    title: "対面団体サイン会",
+    sessions: [
+      {
+        title: "1 部",
+        open: "10:30",
+        start: "11:30",
+        end: "12:30",
+        costume: "美しく生きろ衣装",
+        lanes: [],
+      },
+      {
+        title: "2 部",
+        open: "12:30",
+        start: "13:20",
+        end: "14:20",
+        costume: "美しく生きろ衣装",
+        lanes: [],
+      },
+    ],
+  },
+  updatedAt: "2026-03-20",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式ニュース](https://takanenonadeshiko.jp/?p=1729)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1740)
+`;

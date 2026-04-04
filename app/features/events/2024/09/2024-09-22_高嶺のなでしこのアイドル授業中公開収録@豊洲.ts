@@ -1,0 +1,31 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこのアイドル授業中 公開収録",
+  category: "EVENT",
+  date: "2024-09-22",
+  location: "ららぽーと豊洲 シーサイドデッキメインステージ",
+  region: "東京",
+  images: [
+    {
+      path: "/events/2024/2024-09-22_高嶺のなでしこのアイドル授業中公開収録@豊洲.jpg",
+      ref: "https://takanenonadeshiko.jp/2ndsgreleaseevent_0922/",
+    },
+  ],
+  link: {
+    text: "MUSIC BIRD 告知",
+    url: "https://x.com/musicbird_fm/status/1837433540948251044",
+  },
+};
+
+export const content = /* md */ `
+## 開催内容
+
+高嶺のなでしこのアイドル授業中 公開収録
+
+- 2024年9月22日(日) 12:35 〜
+
+## リンク
+
+- [MUSIC BIRD 告知](https://x.com/musicbird_fm/status/1837433540948251044)
+`;

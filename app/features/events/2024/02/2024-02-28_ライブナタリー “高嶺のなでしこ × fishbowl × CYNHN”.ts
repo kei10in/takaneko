@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-02-28",
+  region: "東京",
+  location: "duo MUSIC EXCHANGE",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "女の子は強い",
+      "恋を知った世界",
+      "MC",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "すきっちゅーの！",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1762822434271772984",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1718)
+`;

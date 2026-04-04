@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこのらじおっちゅーの！",
+  category: "RADIO",
+  date: "2024-10-26",
+  region: "ラジオ",
+  present: ["涼海すう", "橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2024/2024-10-26_高嶺のなでしこのらじおっちゅーの！.jpg",
+      ref: "https://x.com/fmosaka851/status/1850075269245395007",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/fmosaka851/status/1850075269245395007",
+  },
+};
+
+export const content = /* md */ `
+## 放送
+
+- FM 大阪 毎週土曜日 19:00 〜 19:30
+
+[![高嶺のなでしこ公式 X 告知](/events/2024/2024-10-26_高嶺のなでしこのらじおっちゅーの！_2.jpg)](/events/2024/2024-10-26_高嶺のなでしこのらじおっちゅーの！_2.jpg)
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1850107601884729558)
+- [ビクターオオサカ告知](https://x.com/VictorE_osaka/status/1850126109167489071)
+- [Radiko](https://radiko.jp/share/?sid=FMO&t=20241005190000)
+- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+- [番組サイト](https://www.fmosaka.net/_ct/17722199)
+`;

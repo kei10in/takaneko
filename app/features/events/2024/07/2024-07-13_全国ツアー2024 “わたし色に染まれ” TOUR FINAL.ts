@@ -1,0 +1,66 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "全国ツアー2024 “わたし色に染まれ” TOUR FINAL",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-07-13",
+  region: "東京",
+  location: "TOKYO DOME CITY HALL",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "影ナレ: 籾山ひめり、涼海すう",
+      "衣装:「初恋のひと。」制服衣装",
+      "Overture",
+      "初恋のひと。",
+      "センパイ。",
+      "アンチファン",
+      "女の子は強い",
+      "企画: メンバー紹介 ダンス ソロ",
+      "衣装:わたし色に染まれ衣装",
+      "可愛くてごめん",
+      "MC",
+      "センチメンタル・ジャーニー (松本伊代 コラボ)",
+      "MC",
+      "推しの魔法",
+      "男の子の目的は何？",
+      "ヒロインは平均以下。",
+      "私より好きでいて",
+      "すきっちゅーの！",
+      "メイド☆至上主義",
+      "MC",
+      "幕間:インタビュー映像",
+      "衣装:全国お招きツアー衣装",
+      "革命の女王",
+      "美しく生きろ",
+      "決戦スピリット",
+      "月曜日の憂鬱",
+      "僕は君になれない",
+      "MC",
+      "恋を知った世界",
+      "MC",
+      "アンコール",
+      "衣装:「モテチェン！」MV 衣装",
+      "モテチェン！",
+      "MC",
+      "#超絶かわいい",
+      "LOVE ANTHEM",
+      "MC",
+      "ファンサ",
+    ],
+  },
+  updateAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1883)
+`;

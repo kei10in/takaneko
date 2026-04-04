@@ -1,0 +1,30 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "まいにちフェス 2024 produced by au",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-15",
+  region: "東京",
+  location: "六本木ヒルズアリーナ",
+  present: ["高嶺のなでしこ"],
+  acts: {
+    setlist: [
+      "衣装: わたし色に染まれ衣装",
+      "モテチェン！",
+      "青いペディキュア (Jams Collection cover)",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "僕は君になれない",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1824039779551609125",
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2318)
+`;

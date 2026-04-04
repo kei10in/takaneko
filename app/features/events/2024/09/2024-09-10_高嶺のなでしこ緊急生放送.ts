@@ -1,0 +1,47 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこ緊急生放送",
+  category: "STREAMING",
+  date: "2024-09-10",
+  region: "配信",
+  images: [
+    {
+      path: "/events/2024/2024-09-10_高嶺のなでしこ緊急生放送.jpg",
+      ref: "https://x.com/takanenofficial/status/1833477083353518203",
+    },
+  ],
+  link: {
+    text: "SHOWROOM チャンネル",
+    url: "https://www.showroom-live.com/r/takanenonadeshiko_official",
+  },
+};
+
+export const content = /* md */ `
+## 内容
+
+高嶺のなでしこ SHOWROOM 不定期月 1 レギュラー企画「月イチきまぐれ！たかねの対バン！(仮) 」の放送決定。
+
+- 涼海すう [配信後ポスト](https://x.com/su_suzumi_/status/1833490660470771882)
+- 葉月紗蘭 [配信後ポスト](https://x.com/saara_hazuki/status/1833490920781533355)
+- 春野莉々 [配信後ポスト](https://x.com/riri_haruno/status/1833493579542700038)
+- 東山恵里沙 [配信後ポスト](https://x.com/erisahigasiyama/status/1833489958163931595)
+- SHOWROOM [配信後ポスト](https://x.com/SHOWROOM_jp/status/1833498832791106028)
+
+[![配信後](/events/2024/2024-09-10_高嶺のなでしこ緊急生放送_配信後.jpg)](/events/2024/2024-09-10_高嶺のなでしこ緊急生放送_配信後.jpg)
+
+## 配信予定
+
+21:00 〜 高嶺のなでしこ公式 SHOWROOM にて緊急生放送。
+
+### 出演メンバー
+
+- 涼海すう
+- 葉月紗蘭
+- 春野莉々
+- 東山恵里沙
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1833362271239868597)
+`;

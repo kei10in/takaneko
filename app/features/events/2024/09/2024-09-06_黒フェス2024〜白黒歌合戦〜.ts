@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "黒フェス2024〜白黒歌合戦〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-09-06",
+  location: "豊洲 PIT",
+  region: "東京",
+  images: [
+    {
+      path: "/events/2024/2024-09-06_黒フェス2024〜白黒歌合戦〜.jpg",
+      ref: "https://x.com/kurofest/status/1795741873199276352",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:アンチファン衣装",
+      "可愛くてごめん",
+      "モテチェン！",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1832042856669933589",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/events/event/黒フェス2024〜白黒歌合戦〜/)
+- [黒フェス 公式サイト](http://kurofes.net/)
+- [黒フェス 公式 X](https://x.com/kurofest)
+- [黒フェス 公式 X 告知](https://x.com/kurofest/status/1795741873199276352)
+`;

@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "柚姫の部屋フェス2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-28",
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "すきっちゅーの！",
+      "男の子の目的は何？",
+      "MC",
+      "LOVE ANTHEM",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1817544806949892199",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2216)
+`;

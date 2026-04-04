@@ -1,0 +1,23 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM FUKUOKA「Neo notes,」",
+  category: "RADIO",
+  date: "2024-12-16",
+  start: "20:30",
+  end: "21:55",
+  region: "ラジオ",
+  link: {
+    text: "番組サイト",
+    url: "https://fmfukuoka.co.jp/program/neo_notes/",
+  },
+  present: ["城月菜央", "籾山ひめり"],
+  updatedAt: "2024-12-16",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [番組 X 告知](https://x.com/neo_notes_/status/1868581844461220125)
+- [radiko](https://radiko.jp/#FMFUKUOKA)
+`;

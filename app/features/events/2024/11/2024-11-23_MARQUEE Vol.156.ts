@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Vol.156",
+  category: "MAGAZINE",
+  date: "2024-11-23",
+  region: "雑誌",
+  images: [
+    {
+      path: "/events/2024/2024-11-23_MARQUEE Vol.156.jpg",
+      ref: "https://x.com/takanenofficial/status/1855890718096806391",
+    },
+  ],
+  link: {
+    text: "MARQUEE Web サイト",
+    url: "http://www.marquee-mag.com/",
+  },
+  present: ["涼海すう", "日向端ひな", "星谷美来", "松本ももな"],
+  updatedAt: "2024-11-23",
+};
+
+export const content = /* md */ `
+[![涼海すう](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_1.jpg)
+
+[![高嶺のなでしこ](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)](/events/2024/2024-11-23_MARQUEE%20Vol.156_2.jpg)
+
+## リンク
+
+- [MARQUEE](http://www.marquee-mag.com/)
+- [MARQUEE X 告知 涼海すう](https://x.com/MARQUEE_info/status/1855807369135226942)
+- [MARQUEE X 告知 高嶺のなでしこ](https://x.com/MARQUEE_info/status/1855807230689554723)
+- [公式 X 告知 涼海すう](https://x.com/takanenofficial/status/1855890718096806391)
+- [公式 X 告知 高嶺のなでしこ](https://x.com/takanenofficial/status/1855890751894471105)
+`;

@@ -1,0 +1,58 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "dot yell fes 4マン SP",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-05-31",
+  open: "16:30",
+  start: "17:30",
+  end: undefined,
+  region: "東京",
+  location: "Zepp Shinjuku",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-05-31_dot yell fes 4マン SP.jpg",
+      ref: "https://x.com/takanenofficial/status/1791461249403982233",
+    },
+    {
+      path: "/events/2024/2024-05-31_dot yell fes 4マン SP_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1791461249403982233",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/dotyellfes_4manSP",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    start: "18:05",
+    end: "18:35",
+    setlist: [
+      "衣装:美しく生きろ衣装 (上着なし)",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "ヒロインは平均以下。",
+      "月曜日の憂鬱",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1796496819633180754",
+  },
+  updatedAt: "2025-06-15",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1791461249403982233)
+`;

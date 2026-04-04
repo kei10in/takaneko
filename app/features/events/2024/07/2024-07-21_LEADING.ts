@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LEADING",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-21",
+  region: "東京",
+  location: "品川インターシティーホール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "乙女どもよ。",
+      "初恋のひと。",
+      "MC",
+      "モテチェン！",
+      "男の子の目的は何？",
+      "可愛くてごめん",
+      "推しの魔法",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1814948983040835653",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2214)
+`;

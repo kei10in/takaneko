@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "でびぱっぱ冬祭 in 野音",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-21",
+  region: "東京",
+  location: "日比谷公園野外大音楽堂",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1749039756657463699",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1613)
+`;

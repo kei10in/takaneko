@@ -1,0 +1,14 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "葉月紗蘭誕生日",
+  category: "BIRTHDAY",
+  date: "2024-03-03",
+  region: "誕生日",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1909)
+`;

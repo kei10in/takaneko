@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "謹賀新年！アイドル初夢ライブ supported by @JAM",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-03",
+  region: "東京",
+  location: "Zepp Diver City",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "美しく生きろ",
+      "女の子は強い",
+      "MC",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1742521686128521365",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1591)
+`;

@@ -1,0 +1,83 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」東京公演",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-10-06",
+  location: "Zepp Diver City TOKYO",
+  region: "東京",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-09-15_Zepp TOUR 2024 「瞬きさえ忘れる。」.jpg",
+      ref: "https://x.com/takanenofficial/status/1829685588209090780",
+    },
+  ],
+  acts: {
+    setlist: [
+      "影ナレ: 東山恵里沙、松本ももな",
+      "衣装:美しく生きろ衣装",
+      "Overture",
+      "誇り高きアイドル",
+      "決戦スピリット",
+      "革命の女王",
+      "美しく生きろ",
+      "MC",
+      "可愛くてごめん",
+      "推しの魔法",
+      "私より好きでいて",
+      "ヒロインは平均以下。",
+      "MC: コール&レスポンス: 城月菜央",
+      "小悪魔だってかまわない！: 城月菜央、橋本桃呼、東山恵里沙、星谷美来",
+      "ラブホイッスル: 涼海すう、葉月紗蘭、春野莉々、日向端ひな、籾山ひめり",
+      "衣装:I’M YOUR IDOL 衣装",
+      "死ぬまでダーリン: 松本ももな",
+      "MC: 瞬き禁止レスタイム 50秒: 城月菜央、60秒: 松本ももな",
+      "アンチファン",
+      "LOVE ANTHEM",
+      "モテチェン！",
+      "女の子は強い",
+      "MC",
+      "僕は君になれない",
+      "乙女どもよ。",
+      "月曜日の憂鬱",
+      "センパイ。",
+      "恋を知った世界",
+      "MC: 語り: 籾山ひめり",
+      "I’M YOUR IDOL",
+      "アンコール",
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "アドレナリンゲーム",
+      "MC: 緊急告知",
+      "ファンサ",
+      "MC: 集合写真, TikTok",
+      "初恋のひと。",
+      "MC",
+    ],
+    links: [
+      {
+        text: "https://x.com/_MARIC/status/1843081784244031505",
+        url: "https://x.com/_MARIC/status/1843081784244031505",
+      },
+    ],
+  },
+  updatedAt: "2025-06-13",
+};
+
+export const content = /* md */ `
+## 開催情報
+
+🎫 チケット:
+
+- e+ - https://eplus.jp/takanenonadeshiko
+- ローチケ - https://l-tike.com/takanenonadeshiko
+- チケットぴあ - https://t.pia.jp/t/takanenonadeshiko
+
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/events/event/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
+- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ-2周年記念-zepp-tour-2024-「瞬きさえ忘れる。/)
+- [FC トピック: 高嶺のなでしこ 2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/qtayqeijui6ozym1.html)
+- [チケット一般販売告知](https://x.com/takanenofficial/status/1829685588209090780)
+`;

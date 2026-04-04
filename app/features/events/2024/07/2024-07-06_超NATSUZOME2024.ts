@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超NATSUZOME2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-06",
+  region: "千葉",
+  location: "幕張海浜公園Gブロック",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-07-06_超NATSUZOME2024.jpg",
+      ref: "https://x.com/natsuzome_info/status/1794987001822802279",
+    },
+    {
+      path: "/events/2024/2024-07-06_超NATSUZOME2024_タイムテーブル.jpg",
+      ref: "https://natsuzome.info/",
+      tags: ["timetable"],
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "初恋のひと。",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1809548851273236699",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2149)
+`;

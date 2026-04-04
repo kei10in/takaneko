@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDORISE!! FESTIVAL 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-03-10",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-03-09_IDORISE!! FESTIVAL 2024.jpg",
+      ref: "https://2024.idorisefes.jp/",
+    },
+    {
+      path: "/events/2024/2024-03-09_IDORISE!! FESTIVAL 2024_タイムテーブル.jpg",
+      ref: "https://2024.idorisefes.jp/",
+    },
+    {
+      path: "/events/2024/2024-03-10_IDORISE!! FESTIVAL 2024_タイムテーブル.jpg",
+      ref: "https://2024.idorisefes.jp/",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://2024.idorisefes.jp/",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    start: "19:20",
+    end: "19:55",
+    setlist: [
+      "衣装: 美しく生きろ衣装",
+      "決戦スピリット",
+      "初恋のひと。",
+      "恋を知った世界",
+      "MC",
+      "月曜日の憂鬱",
+      "可愛くてごめん",
+      "#超絶かわいい",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1766798068916306046",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1709)
+`;

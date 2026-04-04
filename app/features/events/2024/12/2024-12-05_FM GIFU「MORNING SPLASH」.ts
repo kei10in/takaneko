@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM GIFU「MORNING SPLASH」",
+  category: "RADIO",
+  date: "2024-12-05",
+  start: "7:30",
+  region: "ラジオ",
+  images: [],
+  link: {
+    text: "番組 X",
+    url: "https://x.com/fm_gifu_ms",
+  },
+  present: ["東山恵里沙", "涼海すう"],
+  updatedAt: "2024-12-05",
+};
+
+export const content = /* md */ `
+## 放送予定
+
+FM GIFU 7:30 〜
+
+[radiko](https://radiko.jp/#FMGIFU)
+
+## リンク
+
+- [ビクターナゴヤ 告知](https://x.com/victor_nagoya/status/1864258935722819759)
+- [radiko](https://radiko.jp/#FMGIFU)
+`;

@@ -1,0 +1,56 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO IDOL FESTIVAL 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-02",
+  region: "東京",
+  location: "お台場・青海周辺エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "TIF 2024",
+    url: "https://official.idolfes.com/s/tif2024/",
+  },
+  acts: [
+    {
+      title: "HEAT GARAGE",
+      setlist: [
+        "衣装:美しく生きろ衣装",
+        "初恋のひと。",
+        "センパイ。",
+        "MC",
+        "美しく生きろ",
+        "LOVE ANTHEM",
+        "僕は君になれない",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1819309204580253952",
+    },
+    {
+      title: "DOLL FACTORY",
+      setlist: [
+        "衣装:僕は君になれない衣装",
+        "ヒロインは平均以下。",
+        "私より好きでいて",
+        "モテチェン！",
+        "推しの魔法",
+        "ファンサ",
+        "MC",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1819359388622274654",
+    },
+  ],
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2159)
+`;

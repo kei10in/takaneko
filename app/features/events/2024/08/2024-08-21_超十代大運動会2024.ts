@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超十代大運動会2024",
+  category: "LIVE",
+  date: "2024-08-21",
+  region: "東京",
+  location: "国立代々木競技場第二体育館",
+  images: [
+    {
+      path: "/events/2024/2024-08-21_超十代大運動会2024.jpg",
+      ref: "https://x.com/CHOJUDAI_JAPAN/status/1824378880909775194",
+    },
+  ],
+};
+
+export const content = /* md */ `
+「超十代大運動会2024」の公開収録です。
+
+## 出演
+
+- 涼海すう
+- 日向端ひな
+- 松本ももな
+- 籾山ひめり
+
+[チーム分け](https://x.com/CHOJUDAI_JAPAN/status/1824735646193418476)
+
+[![チーム分け](/events/2024/2024-08-21_超十代大運動会2024_チーム分け.jpg)](/events/2024/2024-08-21_超十代大運動会2024_チーム分け.jpg)
+
+## リンク
+
+- [公式 X](https://x.com/takanenofficial/status/1824378099427086505)
+- [超十代公式 X](https://x.com/CHOJUDAI_JAPAN/status/1824378880909775194)
+- [チーム分け](https://x.com/CHOJUDAI_JAPAN/status/1824735646193418476)
+`;

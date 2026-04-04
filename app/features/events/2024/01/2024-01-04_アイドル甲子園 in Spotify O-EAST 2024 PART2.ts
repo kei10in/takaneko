@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "アイドル甲子園 in Spotify O-EAST 2024 PART2",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-04",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "#超絶かわいい",
+      "MC",
+      "すきっちゅーの！",
+      "ファンサ",
+      "決戦スピリット",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1742894633515131124",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1561)
+`;

@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "お台場冒険王2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-27",
+  region: "東京",
+  location: "フジテレビ本社屋エリア",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "可愛くてごめん",
+      "モテチェン！",
+      "すきっちゅーの！",
+      "MC",
+      "美しく生きろ",
+      "決戦スピリット",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1817055973657505944",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2269)
+`;

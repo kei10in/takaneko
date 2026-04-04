@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! premium",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-01-17",
+  region: "東京",
+  location: "Zepp DiverCity",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "ヒロインは平均以下。",
+      "MC",
+      "月曜日の憂鬱",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1747570626192363544",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1692)
+`;

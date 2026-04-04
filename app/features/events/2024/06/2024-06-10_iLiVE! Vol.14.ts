@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! Vol.14",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-06-10",
+  region: "東京",
+  location: "EX THEATER ROPPOINGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 僕は君になれない衣装",
+      "ファンサ",
+      "MC",
+      "可愛くてごめん",
+      "メイド☆至上主義",
+      "推しの魔法",
+      "#超絶かわいい",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1800120907610071370",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2064)
+`;

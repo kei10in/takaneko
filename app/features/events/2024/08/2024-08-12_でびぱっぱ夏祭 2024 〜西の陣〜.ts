@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "でびぱっぱ夏祭 2024 〜西の陣〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-08-12",
+  region: "大阪",
+  location: "大阪城野外音楽堂",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "決戦スピリット",
+      "月曜日の憂鬱",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1822961164944560191",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2217)
+`;

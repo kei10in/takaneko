@@ -1,0 +1,25 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Vol.155",
+  category: "MAGAZINE",
+  date: "2024-08-23",
+  region: "雑誌",
+  images: [
+    {
+      path: "/events/2024/2024-08-23_MARQUEE Vol.155.jpg",
+      ref: "http://www.marquee-mag.com/",
+    },
+  ],
+};
+
+export const content = /* md */ `
+> MARQUEE（マーキー）最新号Vol.155 8/23発売！<br/>
+> 高嶺のなでしこ<br/>
+> feat.星谷美来 松本ももな 籾山ひめり 振付の一部を籾山がこだわりを持って担当した夏の配信シングル「モテチェン!」が最上級キャッチーでポップだったたかねこ。メジャーデビューからこれまでの心境変化をお聞きしました
+
+## リンク
+
+- [MARQUEE](http://www.marquee-mag.com/)
+- [MARQUEE X ポスト](https://x.com/MARQUEE_info/status/1821039376912281941)
+`;

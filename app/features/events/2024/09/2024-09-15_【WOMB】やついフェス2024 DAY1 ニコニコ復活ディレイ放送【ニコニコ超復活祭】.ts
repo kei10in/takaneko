@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "【WOMB】やついフェス2024 DAY1 ニコニコ復活ディレイ放送【ニコニコ超復活祭】",
+  category: "WEB",
+  date: "2024-09-15",
+  region: "Web",
+  images: [
+    {
+      path: "/events/2024/2024-09-15_【WOMB】やついフェス2024 DAY1 ニコニコ復活ディレイ放送【ニコニコ超復活祭】.jpg",
+      ref: "https://yatsui-fes.com/",
+    },
+  ],
+  link: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv345741241",
+  },
+};
+
+export const content = /* md */ `
+## 配信情報
+
+やついフェス2024 がニコニコ生放送で配信されます。
+
+### 配信される公演
+
+やついフェス2024
+
+- 公演日: 6月15日(土)、16日(日)
+- 公式HP: https://yatsui-fes.com/
+
+## リンク
+
+- [ニコニコ生放送 配信ページ](https://live.nicovideo.jp/watch/lv345741241)
+`;

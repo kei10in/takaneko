@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ハニワ24時間生放送2024",
+  category: "WEB",
+  date: "2024-08-28",
+  region: "Web",
+  link: {
+    text: "YouTube Live",
+    url: "https://www.youtube.com/live/Wjlo8uSznvs",
+  },
+  images: [
+    {
+      path: "/events/2024/2024-08-28_ハニワ24時間生放送2024.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/1825865615757947398",
+    },
+  ],
+};
+
+export const content = /* md */ `
+2024月8日27日 (火) 21:00 〜 2024月8日28日 (水) 21:00
+
+## ニコニコ生放送
+
+https://live.nicovideo.jp/watch/lv345612
+
+[ニコ生配信告知](https://x.com/HoneyWorks_828/status/1826892138803589363)
+
+## リンク
+
+- [ハニワ公式 X 告知](https://x.com/HoneyWorks_828/status/1825865367035720113)
+- [ハニワ公式 X タイムシート](https://x.com/HoneyWorks_828/status/1825865615757947398)
+`;

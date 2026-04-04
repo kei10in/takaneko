@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ツインテールフェス 2024",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-02-02",
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-02-02_ツインテールフェス2024.jpg",
+      ref: "https://shibuya-o.com/east/schedule/ツインテールフェス-2024/",
+    },
+    {
+      path: "/events/2024/2024-02-02_ツインテールフェス2024_ラインナップ.jpg",
+      ref: "https://shibuya-o.com/east/schedule/ツインテールフェス-2024/",
+    },
+    {
+      path: "/events/2024/2024-02-02_ツインテールフェス2024_タイムテーブル.jpg",
+      ref: "https://shibuya-o.com/east/schedule/ツインテールフェス-2024/",
+      tags: ["timetable"],
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装 (上着なし)",
+      "男の子の目的は何？",
+      "女の子は強い",
+      "MC",
+      "すきっちゅーの！",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1753317300806271459",
+  },
+  updatedAt: "2025-06-22",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1663)
+`;

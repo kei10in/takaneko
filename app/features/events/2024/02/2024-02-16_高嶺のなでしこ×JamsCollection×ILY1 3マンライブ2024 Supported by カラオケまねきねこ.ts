@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこ×JamsCollection×ILY:1 3マンライブ2024 Supported by カラオケまねきねこ",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-02-16",
+  region: "東京",
+  location: "EX THEATER ROPPONGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 美しく生きろ衣装",
+      "美しく生きろ",
+      "革命の女王",
+      "決戦スピリット",
+      "MC",
+      "すきっちゅーの！",
+      "ヒロインは平均以下。",
+      "#超絶かわいい",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1758482675474837650",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1659)
+`;

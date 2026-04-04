@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Vocal & Dance Collection Live Vol.6",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-05-14",
+  region: "東京",
+  location: "Veats Shibuya",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:美しく生きろ衣装",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "可愛くてごめん",
+      "推しの魔法",
+      "初恋のひと。",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1790370098693406746",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1981)
+`;

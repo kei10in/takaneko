@@ -1,0 +1,31 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LARME 062",
+  category: "MAGAZINE",
+  date: "2024-09-17",
+  region: "雑誌",
+  images: [
+    {
+      path: "/events/2024/2024-09-17_LARME 062_橋本桃呼.jpg",
+      ref: "https://x.com/takanenofficial/status/1835982088459460894",
+    },
+  ],
+};
+
+export const content = /* md */ `
+## 掲載情報
+
+**掲載:**
+
+- 橋本桃呼
+- 松本ももな
+
+チェキプレゼントあり。
+
+[![松本ももな](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)](/events/2024/2024-09-17_LARME%20062_松本ももな.jpg)
+
+## リンク
+
+- [公式 X](https://x.com/takanenofficial/status/1835982088459460894)
+`;

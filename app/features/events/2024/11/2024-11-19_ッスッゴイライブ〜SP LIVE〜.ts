@@ -1,0 +1,59 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ッスッゴイライブ〜SP LIVE〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-11-19",
+  location: "豊洲 PIT",
+  region: "東京",
+  images: [
+    {
+      path: "/events/2024/2024-11-19_ッスッゴイライブ〜SP LIVE〜.jpg",
+      ref: "https://x.com/ssuggoi_live/status/1834925093157564786",
+    },
+    {
+      path: "/events/2024/2024-11-19_ッスッゴイライブ〜SP LIVE〜_タイムテーブル.jpg",
+      ref: "https://x.com/ssuggoi_live/status/1855218790977732782",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "ッスッゴイライブ 公式 X 告知",
+    url: "https://x.com/ssuggoi_live/status/1834925093157564786",
+  },
+  ticket: "https://w.pia.jp/t/ssuggoi-live/",
+  streamings: {
+    text: "17LIVE",
+    url: "https://17appv2.onelink.me/D7OH/vgwenrsp",
+  },
+  goods: {
+    time: ["16:35", "17:35"],
+    lineup: ["ミニフォトカード「高嶺のなでしこ2024」ver."],
+    url: "https://x.com/takanenofficial/status/1858524389933006865",
+  },
+  acts: [
+    {
+      start: "15:55",
+      end: "16:20",
+      setlist: [
+        "衣装:高嶺のなでしこ 2024 衣装",
+        "美しく生きろ",
+        "アドレナリンゲーム",
+        "MC",
+        "ヒロインは平均以下。",
+        "推しの魔法",
+        "決戦スピリット",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1858787231781314884",
+    },
+  ],
+  updatedAt: "2024-11-20",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [ッスッゴイライブ 公式 X 告知](https://x.com/ssuggoi_live/status/1834925093157564786)
+`;

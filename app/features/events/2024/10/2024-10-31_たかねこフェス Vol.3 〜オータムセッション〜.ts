@@ -1,0 +1,74 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこフェス〜オータムセッション〜 たかねこLiFE!",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2024-10-31",
+  region: "東京",
+  location: "EX THEATER ROPPONGI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-10-31_たかねこフェス〜オータムセッション〜 たかねこLiFE!.jpg",
+      ref: "https://x.com/takanenofficial/status/1841810579058503890",
+    },
+  ],
+  link: {
+    text: "開催告知",
+    url: "https://takanenonadeshiko.jp/高嶺のなでしこ「たかねこフェス〜オータムセッ/",
+  },
+  acts: {
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "会いにKiTE! (iLiFE! cover)",
+      "推しの魔法",
+      "ヒロインは平均以下。",
+      "可愛くてごめん",
+      "MC",
+      "革命の女王",
+      "アドレナリンゲーム",
+      "決戦スピリット",
+      "MC",
+      "美しく生きろ",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    links: [
+      {
+        text: "https://x.com/_MARIC/status/1852218145278431698",
+        url: "https://x.com/_MARIC/status/1852218145278431698",
+      },
+    ],
+  },
+  updateAt: "2025-06-16",
+};
+
+export const content = /* md */ `
+## 概要
+
+開場: 17:30 / 開演: 18:30
+
+**出演:**
+
+- 高嶺のなでしこ
+- iLiFE!
+
+**オープニングアクト:**
+
+- iLiFE! 候補生
+- Ma’Scar’Piece
+
+**🎫チケット:**
+
+- イープラス - https://eplus.jp/takanenonadeshiko/
+- ローソンチケット - https://l-tike.com/takanenonadeshiko/
+- チケットぴあ - https://w.pia.jp/t/takanenonadeshiko/
+
+## リンク
+
+- [公式ニュース](https://takanenonadeshiko.jp/高嶺のなでしこ「たかねこフェス〜オータムセッ/)
+- [公式 X 告知](https://x.com/takanenofficial/status/1841810579058503890)
+- [公式スケジュール](https://takanenonadeshiko.jp/events/event/たかねこフェス-vol-3-〜オータムセッション〜/)
+- [FC トピック: 「たかねこフェス Vol.3 〜オータムセッション〜」詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/1apm8ld2y4eka6re.html)
+`;

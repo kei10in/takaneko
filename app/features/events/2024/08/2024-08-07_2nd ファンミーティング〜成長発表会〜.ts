@@ -1,0 +1,76 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "2nd ファンミーティング〜成長発表会〜",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-08-07",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: [
+    {
+      title: "第一部",
+      setlist: [
+        "影ナレ: 松本ももな、東山恵里沙",
+        "衣装:わたし色に染まれ衣装",
+        "Overture",
+        "ファンサ",
+        "初恋のひと。",
+        "可愛くてごめん",
+        "MC",
+        "企画:たかねこ借りファン競争",
+        "モテチェン！",
+        "推しの魔法",
+        "MC",
+        "企画:酪農応援プロジェクト新企画アピール選手権",
+        "いつか私がママになったら",
+        "MC",
+        "企画:JOYSOUND サビカラ配信記念 高嶺のサビドン",
+        "LOVE ANTHEM",
+        "決戦スピリット",
+        "MC",
+        "美しく生きろ",
+        "MC",
+      ],
+    },
+    {
+      title: "第二部",
+      setlist: [
+        "影ナレ: 葉月紗蘭、城月菜央",
+        "衣装:T シャツ (2nd ファンミ ver.)",
+        "Overture",
+        "女の子は強い",
+        "初恋のひと。",
+        "美しく生きろ",
+        "MC",
+        "企画:たかねこ借りファン競争",
+        "モテチェン！",
+        "ユメムスビ",
+        "MC",
+        "企画:酪農応援プロジェクト新企画アピール選手権",
+        "いつか私がママになったら",
+        "MC",
+        "企画:JOYSOUND サビカラ配信記念 高嶺のサビドン",
+        "僕は君になれない",
+        "恋を知った世界",
+        "MC",
+        "ファンサ",
+        "MC",
+      ],
+    },
+  ],
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2022)
+`;

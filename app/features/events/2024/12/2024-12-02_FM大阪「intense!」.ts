@@ -1,0 +1,49 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「intense!」",
+  category: "RADIO",
+  date: "2024-12-02",
+  start: "16:00",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-02_FM大阪「intense!」.jpg",
+      ref: "https://x.com/intense851/status/1863503058346656044",
+    },
+    {
+      path: "/events/2024/2024-12-02_FM大阪「intense!」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1863494636075106738",
+    },
+    {
+      path: "/events/2024/2024-12-02_FM大阪「intense!」_3.jpg",
+      ref: "https://x.com/VictorE_osaka/status/1863493776112844884",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.fmosaka.net/_sites/16783666",
+  },
+  present: ["涼海すう", "東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-12-02",
+};
+
+export const content = /* md */ `
+## 放送予定
+
+FM大阪 16:00 〜
+
+17:00 代に出演予定
+
+[radiko](https://radiko.jp/#!/live/FMO)
+
+## リンク
+
+- [番組 X 出演後告知](https://x.com/intense851/status/1863503058346656044)
+- [公式 X 直前告知](https://x.com/takanenofficial/status/1863494636075106738)
+- [公式 X 告知](https://x.com/takanenofficial/status/1862806277732106562)
+- [ビクターオオサカ X 告知](https://x.com/VictorE_osaka/status/1863493776112844884)
+- [番組 X](https://x.com/intense851)
+- [番組サイト](https://www.fmosaka.net/_sites/16783666)
+- [radiko](https://radiko.jp/#!/live/FMO)
+`;

@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超アイドルまにあ!!!",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-07-31",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装: 僕は君になれない衣装",
+      "女の子は強い",
+      "センパイ。",
+      "MC",
+      "モテチェン！",
+      "可愛くてごめん",
+      "ファンサ",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1818635528964915542",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2223)
+`;

@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SACOFES. UNIVERSE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-04-21",
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "可愛くてごめん",
+      "男の子の目的は何？",
+      "可愛いって言われたい: 城月菜央、涼海すう、葉月紗蘭、星谷美来、松本ももな",
+      "すきっちゅーの！",
+      "MC",
+      "17歳",
+      "ヒロインは平均以下。",
+      "月曜日の憂鬱",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1781978195421790482",
+  },
+  updatedAt: "2025-06-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1901)
+`;

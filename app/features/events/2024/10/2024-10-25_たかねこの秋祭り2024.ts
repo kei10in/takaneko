@@ -1,0 +1,44 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこの秋祭り2024 〜FC limited〜",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2024-10-25",
+  region: "東京",
+  location: "SHIBUYA PLEASURE PLEASURE",
+  present: ["高嶺のなでしこ"],
+  acts: [
+    {
+      title: "ミニライブ",
+      setlist: [
+        "衣装:I’M YOUR IDOL 衣装",
+        "I’M YOUR IDOL",
+        "美しく生きろ",
+        "MC",
+        "男の子の目的は何？",
+        "MC",
+        "LOVE ANTHEM",
+        "アドレナリンゲーム",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1849802042145169873",
+    },
+  ],
+};
+
+export const content = /* md */ `
+### カラオケ
+
+[@\_MARIC さん ポスト](https://x.com/_MARIC/status/1849793286145442218)
+
+## 概要
+
+たかねこカラオケパーティー
+
+## リンク
+
+- [公式ニュース](https://takanenonadeshiko.jp/?p=2286)
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=2301)
+- [FC トピック: 「たかねこの秋祭り2024〜FC limited〜」FC先行 詳細およびチケット購入時のお願いとご注意](https://takanekofc.com/topics/public/_/f25fb2r3umt2tnf6.html)
+`;

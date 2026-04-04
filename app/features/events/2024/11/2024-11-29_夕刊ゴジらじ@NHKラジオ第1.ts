@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NHKラジオ第1「夕刊ゴジらじ」",
+  category: "RADIO",
+  date: "2024-11-29",
+  start: "17:00",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-11-29_夕刊ゴジらじ@NHKラジオ第1.jpg",
+      ref: "https://x.com/takanenofficial/status/1862414280974553477",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.nhk.jp/p/nagoya-gojiradi/rs/KVZP971NR3/",
+  },
+  present: ["葉月紗蘭", "東山恵里沙", "籾山ひめり"],
+  updatedAt: "2024-11-29",
+};
+
+export const content = /* md */ `
+## 放送予定
+
+NHKラジオ第1 17:00 〜
+
+17:30 ごろ出演予定
+
+[radiko](https://radiko.jp/#!/live/JOCK)
+
+## リンク
+
+- [ビクターナゴヤ X 放送後](https://x.com/victor_nagoya/status/1862458663501537760)
+- [公式 X 直前告知](https://x.com/takanenofficial/status/1862414280974553477)
+- [ビクターナゴヤ X 直前告知](https://x.com/victor_nagoya/status/1862410668449886297)
+- [公式 X 告知](https://x.com/takanenofficial/status/1861666270803792357)
+- [番組 X](https://x.com/nhk_gojiradi)
+- [番組サイト](https://www.nhk.jp/p/nagoya-gojiradi/rs/KVZP971NR3/)
+- [radiko](https://radiko.jp/#!/live/JOCK)
+- [ビクターナゴヤ X 出演告知](https://x.com/victor_nagoya/status/1862312195062997057)
+`;

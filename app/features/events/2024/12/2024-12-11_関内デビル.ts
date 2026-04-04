@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "関内デビル",
+  category: "TV",
+  date: "2024-12-11",
+  region: "テレビ",
+  images: [
+    {
+      path: "/events/2024/2024-12-11_関内デビル.jpg",
+      ref: "https://x.com/tvk_kannaidevil/status/1866679306065416632",
+    },
+    {
+      path: "/events/2024/2024-12-11_関内デビル_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1866855501503533430",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tvk-yokohama.com/kannaidevil/",
+  },
+  updatedAt: "2024-12-12",
+};
+
+export const content = /* md */ `
+## 放送
+
+- 放送局: tvk
+- 放送時間: 23:00 〜
+
+毎週水曜日の番組内コーナー「たかねこクエスト」
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1866855501503533430)
+- [番組 X 告知](https://x.com/tvk_kannaidevil/status/1866679306065416632)
+- [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+- [TVer](https://tver.jp/series/srehapgls0)
+`;

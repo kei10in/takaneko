@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "まいにち賞レース つめ込みモノマネGP",
+  category: "WEB",
+  date: "2024-08-30",
+  region: "Web",
+  images: [
+    {
+      path: "/events/2024/2024-08-30_まいにち賞レース つめ込みモノマネGP.jpg",
+      ref: "https://x.com/himeri_momiyama/status/1829458020767801479",
+    },
+  ],
+  link: {
+    text: "動画",
+    url: "https://youtu.be/jmGEMZg45xc?si=zQwq8wSgmQaWAFl1",
+  },
+};
+
+export const content = /* md */ `
+出演: 籾山ひめり
+
+{/* まいにちフェス 2024 、籾山ひめりの出演で公表されました。 */}
+
+## リンク
+
+- [動画、はじめてみました【テレビ朝日公式】](https://youtube.com/@utabara_5ch)
+- [公式 X 告知](https://x.com/takanenofficial/status/1829376023622041762)
+`;

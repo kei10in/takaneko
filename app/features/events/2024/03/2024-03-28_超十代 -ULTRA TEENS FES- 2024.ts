@@ -1,0 +1,26 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超十代 -ULTRA TEENS FES- 2024",
+  title: "ミュゼプラチナム presents 超十代 -ULTRA TEENS FES- 2024@TOKYO",
+  category: "OTHER",
+  date: "2024-03-28",
+  region: "東京",
+  location: "渋谷ヒカリエホール",
+  present: ["松本ももな", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式スケジュール](https://takanenonadeshiko.jp/?p=1804)
+`;

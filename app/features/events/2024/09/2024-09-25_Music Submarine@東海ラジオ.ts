@@ -1,0 +1,28 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "東海ラジオ Music Submarine",
+  category: "RADIO",
+  date: "2024-09-25",
+  region: "ラジオ",
+  link: {
+    text: "番組サイト",
+    url: "https://www.tokairadio.co.jp/program/submarine/",
+  },
+  present: ["日向端ひな", "籾山ひめり"],
+};
+
+export const content = /* md */ `
+## 放送予定
+
+東海ラジオ 26:00 〜
+
+[radiko](http://radiko.jp/#TOKAIRADIO)
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1838873609777099078)
+- [番組 X 告知](https://x.com/music_submarine/status/1838850937915421059)
+- [番組サイト](https://www.tokairadio.co.jp/program/submarine/)
+- [radiko](http://radiko.jp/#TOKAIRADIO)
+`;

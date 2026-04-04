@@ -1,0 +1,26 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "芸能人が本気で考えた!ドッキリGP ドッキリは地球を救うのか? 4時間テレビ",
+  category: "TV",
+  date: "2024-08-31",
+};
+
+export const content = /* md */ `
+## 内容
+
+最初の告知のみ。
+
+## 放送
+
+- 放送局: フジテレビ系
+- 放送時間: 19:00 〜 23:00
+
+[TVer](https://tver.jp/series/sr8y9zb5qo)
+
+## リンク
+
+- [番組サイト](https://www.fujitv.co.jp/dokkirigp/)
+- [フジテレビ ニュース](https://www.fujitv.co.jp/fujitv/news/20240983.html)
+- [オリコン X ポスト](https://x.com/oricon/status/1821645055159099546)
+`;

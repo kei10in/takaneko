@@ -1,0 +1,44 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HEROINES COUNTDOWN",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2024-12-28",
+  region: "東京",
+  location: "KANDA SQUARE HALL",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-12-28_HEROINES COUNTDOWN.jpg",
+      ref: "https://x.com/takanenofficial/status/1862458990657249469",
+    },
+    {
+      path: "/events/2024/2024-12-28_HEROINES COUNTDOWN_タイムテーブル.jpg",
+      ref: "https://x.com/heroines_idol/status/1868234551023059410",
+      tags: ["timetable"],
+    },
+  ],
+  ticket: "https://ticketdive.com/event/heroinescountdown241228_29",
+  streamings: undefined,
+  acts: {
+    start: "19:25",
+    end: "19:50",
+    setlist: [
+      "衣装:わたし色に染まれ衣装",
+      "美しく生きろ",
+      "恋を知った世界",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "I’M YOUR IDOL",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1872965664887193953",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1862458990657249469)
+`;

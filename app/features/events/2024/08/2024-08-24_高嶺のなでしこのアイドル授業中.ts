@@ -1,0 +1,36 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "高嶺のなでしこのアイドル授業中",
+  category: "RADIO",
+  date: "2024-08-24",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-08-24_高嶺のなでしこのアイドル授業中.jpg",
+      ref: "https://x.com/musicbird_fm/status/1823582306407473577",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/VictorMusic/status/1826091861599228275",
+  },
+};
+
+export const content = /* md */ `
+## 放送:
+
+- 全国のコミュニティ FM: 8/24 (土) 12:30 〜 12:55
+
+## 出演:
+
+- 涼海すう
+- 橋本桃呼
+- ゲスト: [ときのそら](https://x.com/tokino_sora)
+
+## リンク
+
+- [スマートフォンでの聴き方](https://x.com/Radimo_info/status/1776220140100878439)
+- [高嶺のなでしこのアイドル授業中！ | MUSIC BIRD-全国のコミュニティFM向け番組配信サービス](https://musicbird.jp/cfm/timetable/takaneko/)
+- [ビクターエンタテインメント X](https://x.com/VictorMusic/status/1826091861599228275)
+`;

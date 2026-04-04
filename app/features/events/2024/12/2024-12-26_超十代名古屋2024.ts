@@ -1,0 +1,31 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "超十代名古屋2024",
+  title: "超十代 -ULTRA TEENS FES- 2024@NAGOYA",
+  category: "OTHER",
+  date: "2024-12-26",
+  region: "愛知",
+  location: "ポートメッセ名古屋コンベンションセンター",
+  present: ["涼海すう"],
+  images: [
+    {
+      path: "/events/2024/2024-12-26_超十代名古屋2024.jpg",
+      ref: "https://x.com/takanenofficial/status/1861711575075414258",
+    },
+  ],
+  streamings: {
+    text: "超十代公式 TikTok",
+    url: "https://www.tiktok.com/@chojudai",
+  },
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1861711575075414258)
+- [超十代 X 告知](https://x.com/CHOJUDAI_JAPAN/status/1861696478508642632)
+`;

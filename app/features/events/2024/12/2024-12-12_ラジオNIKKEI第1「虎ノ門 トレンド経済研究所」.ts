@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI第1「虎ノ門 トレンド経済研究所」",
+  category: "RADIO",
+  date: "2024-12-12",
+  start: "18:00",
+  end: "18:30",
+  region: "ラジオ",
+  images: [
+    {
+      path: "/events/2024/2024-12-12_ラジオNIKKEI第1「虎ノ門 トレンド経済研究所」.jpg",
+      ref: "https://x.com/radioinews/status/1866703124582551886",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.radionikkei.jp/toraken/",
+  },
+  present: ["松本ももな", "籾山ひめり"],
+  updatedAt: "2024-12-12",
+};
+
+export const content = /* md */ `
+## 放送予定
+
+ラジオNIKKEI 第1 18:00 〜 18:30
+
+[radiko](https://radiko.jp/#RN1)
+
+## リンク
+
+- [radiko news](https://news.radiko.jp/article/station/RN1/115927/)
+- [番組 X 直前告知](https://x.com/radioinews/status/1866703124582551886)
+- [公式 X 告知](https://x.com/takanenofficial/status/1862445888096149602)
+- [番組 X 告知](https://x.com/radioinews/status/1862330650562294041)
+- [radiko](https://radiko.jp/#RN1)
+`;
