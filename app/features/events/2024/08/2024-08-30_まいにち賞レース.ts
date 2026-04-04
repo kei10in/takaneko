@@ -18,12 +18,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-出演: 籾山ひめり
+  出演: 籾山ひめり
 
-{/* まいにちフェス 2024 、籾山ひめりの出演で公表されました。 */}
+  <!-- まいにちフェス 2024 、籾山ひめりの出演で公表されました。 -->
 
-## リンク
+  ## リンク
 
-- [動画、はじめてみました【テレビ朝日公式】](https://youtube.com/@utabara_5ch)
-- [公式 X 告知](https://x.com/takanenofficial/status/1829376023622041762)
+  - [動画、はじめてみました【テレビ朝日公式】](https://youtube.com/@utabara_5ch)
+  - [公式 X 告知](https://x.com/takanenofficial/status/1829376023622041762)
 `;

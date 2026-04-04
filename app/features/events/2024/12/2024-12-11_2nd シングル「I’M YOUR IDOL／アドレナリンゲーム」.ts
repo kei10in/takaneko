@@ -9,12 +9,12 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## リンク
+  ## リンク
 
-- [公式スケジュール](https://takanenonadeshiko.jp/?p=2320)
-- [公式ニュース](https://takanenonadeshiko.jp/?p=2294)
+  - [公式スケジュール](https://takanenonadeshiko.jp/?p=2320)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=2294)
 
-{/* ビクターの特典関係のリンク */}
-{/* ビクターの特典関係のリンク */}
-{/* ビクターの特典関係のリンク */}
+  <!-- ビクターの特典関係のリンク -->
+  <!-- ビクターの特典関係のリンク -->
+  <!-- ビクターの特典関係のリンク -->
 `;

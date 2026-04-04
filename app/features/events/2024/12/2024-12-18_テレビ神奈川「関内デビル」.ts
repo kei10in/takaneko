@@ -19,15 +19,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
-## 放送
+  ## 放送
 
-毎週水曜日の番組内コーナー「たかねこクエスト」
+  毎週水曜日の番組内コーナー「たかねこクエスト」
 
-## リンク
+  ## リンク
 
-{/* - [公式 X 告知]() */}
+  <!-- - [公式 X 告知]() -->
 
-- [番組 X 告知](https://x.com/tvk_kannaidevil/status/1869216018952012248)
-- [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
-- [TVer](https://tver.jp/series/srehapgls0)
+  - [番組 X 告知](https://x.com/tvk_kannaidevil/status/1869216018952012248)
+  - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+  - [TVer](https://tver.jp/series/srehapgls0)
 `;
