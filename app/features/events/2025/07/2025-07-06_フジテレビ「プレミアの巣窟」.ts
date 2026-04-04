@@ -1,0 +1,86 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フジテレビ「プレミアの巣窟」",
+  category: "TV",
+  liveType: undefined,
+  date: "2025-07-06",
+  open: undefined,
+  start: "25:55",
+  end: "26:20",
+  region: "テレビ",
+  location: "",
+  present: ["城月菜央"],
+  images: [
+    {
+      path: "/events/2025/2025-07-06_フジテレビ「プレミアの巣窟」.jpg",
+      ref: "https://x.com/premier_fujitv/status/1939489063452778868",
+    },
+    {
+      path: "/events/2025/2025-07-06_フジテレビ「プレミアの巣窟」_1.jpg",
+      ref: "https://x.com/premier_fujitv/status/1947968695592235472",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.fujitv.co.jp/soukutsu/index.html",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-07-01",
+};
+
+export const content = /* md */ `
+## エンタメサーチバラエティ プレミアの巣窟＜サンデーMIDNIGHT＞
+
+天野ひろゆき＆国本梨紗がイベントの魅力を独自の目線で紹介！ゲストを交えた制作秘話など盛り沢山でお届けします！フジテレビオンデマンドでも見逃し配信中！
+
+## 放送内容詳細
+
+＜サンデーMIDNIGHT＞
+
+ミュージカル、演劇、歌舞伎、美術展、展覧会、音楽LIVE、コンサート、オーケストラ、サーカス、スポーツなど、あなたの毎日を楽しくするイベント情報をお届けします。
+
+## 出演者
+
+### 【MC】
+
+- 天野ひろゆき
+
+### 【アシスタント】
+
+- 国本梨紗
+
+## スタッフ
+
+### 【企画】
+
+- 宮崎鉄平（フジテレビ）
+
+### 【プロデューサー】
+
+- 河野友加
+- 花立慎一
+
+### 【ディレクター】
+
+- 中島伸二
+- 木下大樹
+
+### 【制作】
+
+- フジテレビ
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1939647605006585865)
+- [番組 X 告知](https://x.com/premier_fujitv/status/1939489063452778868)
+`;

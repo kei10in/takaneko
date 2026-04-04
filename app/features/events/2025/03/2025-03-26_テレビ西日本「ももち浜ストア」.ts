@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "テレビ西日本「ももち浜ストア」",
+  category: "TV",
+  date: "2025-03-26",
+  open: undefined,
+  start: "09:50",
+  end: "11:15",
+  region: "テレビ",
+  location: "",
+  present: ["橋本桃呼"],
+  images: [
+    {
+      path: "/events/2025/2025-03-26_テレビ西日本「ももち浜ストア」.jpg",
+      ref: "https://x.com/nayuyu25/status/1904812548395774177",
+    },
+    {
+      path: "/events/2025/2025-03-26_テレビ西日本「ももち浜ストア」_1.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/1904851613044318467",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-03-30",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [福を架ける少女 X 放送内容紹介](https://x.com/fukujo_official/status/1907015702500016186)
+- [橋本桃呼 X ポスト](https://x.com/MomokoHashimoto/status/1904851613044318467)
+- [桜田七夕 X ポスト](https://x.com/nayuyu25/status/1904812548395774177)
+- [番組サイト](https://www.tnc.co.jp/store/)
+`;

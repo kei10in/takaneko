@@ -1,0 +1,67 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KOOmic idol Festa",
+  title: "DJ KOO presents 「KOOmic idol Festa」",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-03-29",
+  open: "11:30",
+  start: "12:00",
+  end: undefined,
+  region: "東京",
+  location: "品川ステラボール",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-03-29_KOOmic idol Festa.jpg",
+      ref: "https://x.com/DJKOO_official/status/1885275599671022046",
+    },
+    {
+      path: "/events/2025/2025-03-29_KOOmic idol Festa_タイムテーブル.jpg",
+      ref: "https://x.com/DJKOO_official/status/1901938140216168816",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-03-29_KOOmic idol Festa_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1905950742189658620",
+    },
+  ],
+  link: {
+    text: "イベント告知ページ",
+    url: "https://avex.jp/djkoo/news/detail.php?id=1122634",
+  },
+  ticket: "https://t.livepocket.jp/e/koofes_spring",
+  streamings: undefined,
+  goods: {
+    lineup: ["ミニフォトカード「ピンク衣装」"],
+    url: "https://x.com/takanenofficial/status/1905605802871660667",
+  },
+  acts: {
+    start: "20:00",
+    end: "20:30",
+    setlist: [
+      "衣装: ピンク衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "アドレナリンゲーム",
+      "MC",
+      "可愛くてごめん",
+      "Cute for life",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1905967157605011521",
+  },
+  updatedAt: "2025-03-30",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [本日のおチェキ](https://x.com/takanekomanager/status/1905950742189658620)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1905605802871660667)
+- [公式 X 告知](https://x.com/takanenofficial/status/1885334785775853578)
+- [DK KOO X タイムテーブル告知](https://x.com/DJKOO_official/status/1901938140216168816)
+- [DJ KOO X 告知](https://x.com/DJKOO_official/status/1885275599671022046)
+`;

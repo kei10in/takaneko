@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YouTube Live「1st アルバム「見上げるたびに、恋をする。」ファン大感謝祭 生配信」",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2025-12-21",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-12-21_YouTube Live「1st アルバム「見上げるたびに、恋をする。」ファン大感謝祭 生配信」.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4859",
+    },
+  ],
+  link: {
+    text: "配信詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4859",
+  },
+  ticket: "",
+  streamings: [
+    {
+      text: "「見上げるたびに、恋をする。」ファン大感謝祭 生配信",
+      url: "https://www.youtube.com/live/7a00DIAJC8A",
+    },
+  ],
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      setlist: [],
+      url: "",
+    },
+  ],
+  updatedAt: "2025-12-20",
+};
+
+export const content = /* md */ `
+## 概要
+
+1st アルバム「見上げるたびに、恋をする。」ファン大感謝祭 生配信と抽選会を実施
+
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2002370905259868546)
+- [抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4859)
+- [イベント詳細告知 - 公式ニュース](https://x.com/takanenofficial/status/2001166719063404742)
+`;

@@ -1,0 +1,54 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
+  category: "OTHER",
+  liveType: "GUEST",
+  date: "2025-07-27",
+  open: "12:00",
+  start: "14:00",
+  end: undefined,
+  region: "東京",
+  location: "国立代々木競技場 第二体育館",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-07-27_ノジマTリーグ 2025-2026 シーズン 女子開幕戦.jpg",
+      ref: "https://tleague.jp/ticket/2025-26_opening/",
+    },
+    {
+      path: "/events/2025/2025-07-27_ノジマTリーグ 2025-2026 シーズン 女子開幕戦_タイムテーブル.jpg",
+      ref: "https://x.com/TLEAGUE_PR/status/1948357653014397240",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://tleague.jp/ticket/2025-26_opening/",
+  },
+  ticket: "https://l-tike.com/st1/20250726-27m/sitetop",
+  streamings: {
+    text: "Tリーグ公式 YouTube Live",
+    url: "https://www.youtube.com/watch?v=JK3sm50DW10",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    start: "13:40",
+    end: "13:50",
+    setlist: ["衣装:高嶺のなでしこ 2024 衣装", "決戦スピリット", "MC", "美しく生きろ", "MC"],
+    url: "",
+  },
+  updatedAt: "2025-07-27",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1949110006978420842)
+- [Tリーグ公式 告知](https://x.com/TLEAGUE_PR/status/1944607791030661167)
+- [公式 X 告知](https://x.com/takanenofficial/status/1944637990543716670)
+`;

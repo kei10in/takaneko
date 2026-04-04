@@ -1,0 +1,43 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「悪鬼のウイルス」完成披露上映会",
+  category: "OTHER",
+  date: "2025-01-12",
+  region: "東京",
+  location: "丸の内 TOEI",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "イベント詳細",
+    url: "https://www.tumblr.com/tobooks/770395610496024576/",
+  },
+  links: [
+    {
+      text: "イベント詳細",
+      url: "https://www.tumblr.com/tobooks/770395610496024576/",
+    },
+    {
+      text: "悪鬼のウイルス公式 X 告知",
+      url: "https://x.com/demonvirus2025/status/1870125928267034780",
+    },
+    {
+      text: "公式 X 告知",
+      url: "https://x.com/takanenofficial/status/1870378708122718282",
+    },
+  ],
+  ticket: "https://w.pia.jp/t/demon-virus/",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+};
+
+export const content = /* md */ `
+
+`;

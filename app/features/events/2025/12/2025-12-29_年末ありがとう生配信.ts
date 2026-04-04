@@ -1,0 +1,62 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "年末ありがとう生配信",
+  category: "STREAMING",
+  date: "2025-12-29",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-29_年末ありがとう生配信.jpg",
+      ref: "https://x.com/takanenofficial/status/2005111463145525252",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: [
+    {
+      text: "YouTube Live",
+      url: "https://www.youtube.com/live/RpWjHaYWoM4",
+    },
+  ],
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2025-12-29",
+};
+
+export const content = /* md */ `
+## 内容
+
+今年の感謝を伝えよう！ 年末ありがとう生配信
+
+- 1 年の振り返り
+- お世話になった方々への生電話
+- ファンへのメッセージ
+
+**生電話出演者:**
+
+- 流れ星 ちゅうえい
+- 村重杏奈
+- 三拍子 久保孝真
+- 元 TEAM SHACHI 大黒柚姫
+
+## リンク
+
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2005111463145525252)
+`;

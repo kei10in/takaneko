@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "UHB 北海道文化放送「TANTO MUSIK」",
+  category: "TV",
+  date: "2025-07-29",
+  start: "25:10",
+  end: "25:20",
+  region: "テレビ",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-29_UHB 北海道文化放送「TANTO MUSIK」.jpg",
+      ref: "https://x.com/takanenofficial/status/1947861799145246979",
+    },
+    {
+      path: "/events/2025/2025-07-29_UHB 北海道文化放送「TANTO MUSIK」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1950149409452306459",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.uhb.jp/program/tantomusik/",
+  },
+  updatedAt: "2025-07-29",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1950149409452306459)
+- [番組 X 告知](https://x.com/takanenofficial/status/1947861799145246979)
+`;

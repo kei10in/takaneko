@@ -1,0 +1,59 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "駒木祭 in「江戸川ガールズアワード」",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-11-03",
+  open: "13:00",
+  start: "13:30",
+  end: undefined,
+  region: "千葉",
+  location: "江戸川大学 駒木キャンパス 第二体育館",
+  present: ["高嶺のなでしこ2"],
+  absent: ["東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-11-03_駒木祭 in「江戸川ガールズアワード」.jpg",
+      ref: "https://x.com/komagisai/status/1981224420237856801",
+    },
+    {
+      path: "/events/2025/2025-11-03_駒木祭 in「江戸川ガールズアワード」_プレゼント.jpg",
+      ref: "https://x.com/edogawaaudition/status/1979502990370525579",
+    },
+  ],
+  link: {
+    text: "江戸川大学 イベントサイト",
+    url: "https://www.edogawa-u.ac.jp/nextage_audition/",
+  },
+  ticket:
+    "https://docs.google.com/forms/d/e/1FAIpQLSexIj766hwa2c1OYaEqrqtN_VOmKoRjXATSdlaRrWclAxCf6g/viewform",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "可愛くてごめん",
+      "すきっちゅーの！",
+      "初恋のひと。",
+      "花は誓いを忘れない",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1985276398131360242",
+  },
+  updatedAt: "2025-11-04",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1985274919391740226)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1984938610605592757)
+- [東山恵里沙のイベント欠席に関するお知らせ](https://x.com/takanenofficial/status/1984961186103009747)
+- [終演後 抽選プレゼント告知 - イベント公式](https://x.com/edogawaaudition/status/1979502990370525579)
+- [公式 X 告知](https://x.com/takanenofficial/status/1943603936738333084)
+`;

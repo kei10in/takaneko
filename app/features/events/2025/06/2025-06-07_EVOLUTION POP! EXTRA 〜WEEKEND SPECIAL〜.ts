@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-06-07",
+  open: "12:15",
+  start: "13:00",
+  end: "14:40",
+  region: "東京",
+  location: "恵比寿 LIQUIDROOM",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-06-07_EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜.jpg",
+      ref: "https://x.com/takanenofficial/status/1918268182831513791",
+    },
+    {
+      path: "/events/2025/2025-06-07_EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1930489785329844574",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-06-07_EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1931229746026950718",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://w.pia.jp/t/evolutionpop/",
+  streamings: undefined,
+  goods: {
+    time: ["14:45", "16:15"],
+    lineup: ["ミニフォトカード「アイドル衣装」/ チェキ"],
+    url: "https://x.com/takanenofficial/status/1930957890657124380",
+  },
+  acts: {
+    start: "13:45",
+    end: "14:30",
+    setlist: [
+      "衣装: I’M YOUR IDOL 衣装",
+      "センパイ。",
+      "初恋のひと。",
+      "MC",
+      "メランコリックハニー",
+      "推しの魔法",
+      "可愛くてごめん",
+      "MC",
+      "花 (タイトル未定 cover)",
+      "恋を知った世界",
+      "MC",
+      "アイドル衣装",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    links: ["https://x.com/_MARIC/status/1931258530427793790"],
+  },
+  updatedAt: "2025-06-08",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [本日のおチェキ](https://x.com/takanekomanager/status/1931229746026950718)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1930957890657124380)
+- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1930489785329844574)
+- [公式 X 告知](https://x.com/takanenofficial/status/1918268182831513791)
+`;

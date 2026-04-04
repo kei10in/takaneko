@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「高嶺のなでしこのらじおっちゅーの！」",
+  category: "RADIO",
+  date: "2025-03-08",
+  start: "19:00",
+  end: "19:30",
+  region: "ラジオ",
+  present: ["涼海すう", "春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-03-08_FM大阪「高嶺のなでしこのらじおっちゅーの！」.jpg",
+      ref: "https://x.com/fmosaka851/status/1842475434778542285",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/fmosaka851/status/1898284951348314545",
+  },
+  updatedAt: "2025-03-09",
+};
+
+export const content = /* md */ `
+## 放送
+
+- FM 大阪 毎週土曜日 19:00 〜 19:30
+- [Radiko 放送回](https://radiko.jp/share?sid=FMO&t=20250308190000)
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1898297641340998098)
+- [FM 大阪 X 告知](https://x.com/fmosaka851/status/1898284951348314545)
+- [Radiko](https://radiko.jp/share?sid=FMO&t=20250308190000)
+- [メッセージ投稿フォーム](https://fmosaka.futureartist.net/enquete/354047)
+- [番組サイト](https://www.fmosaka.net/_ct/17722199)
+- [公式 X 告知](https://x.com/takanenofficial/status/1836979149044600863)
+`;

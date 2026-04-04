@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM福岡「ナカニワスタジオ」",
+  category: "RADIO",
+  date: "2025-07-30",
+  start: "20:30",
+  end: "21:55",
+  region: "ラジオ",
+  present: ["橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-30_FM福岡「ナカニワスタジオ」.jpg",
+      ref: "https://x.com/takanenofficial/status/1950496792140984759",
+    },
+    {
+      path: "/events/2025/2025-07-30_FM福岡「ナカニワスタジオ」_2.jpg",
+      ref: "https://x.com/nakaniwa_studio/status/1950541891679945086",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.fmfukuoka.co.jp/program/nakaniwa/",
+  },
+  updatedAt: "2025-07-30",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250730203000)
+- [番組 X 報告ポスト](https://x.com/nakaniwa_studio/status/1950541891679945086)
+- [番組 X 告知](https://x.com/nakaniwa_studio/status/1950481499658056037)
+- [公式 X 告知](https://x.com/takanenofficial/status/1950496792140984759)
+`;

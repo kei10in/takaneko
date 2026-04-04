@@ -1,0 +1,74 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ぐんまちゃんアイドルフェスティバル",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-13",
+  open: "10:00",
+  start: "11:00",
+  end: undefined,
+  region: "群馬",
+  location: "群馬県庁県民広場前",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-13_ぐんまちゃんアイドルフェスティバル.jpg",
+      ref: "https://x.com/takanenofficial/status/1941039333747970162",
+    },
+    {
+      path: "/events/2025/2025-10-13_ぐんまちゃんアイドルフェスティバル_タイムテーブル2.jpg",
+      ref: "https://x.com/gunmachan_GIF/status/1975154457739739225",
+    },
+    {
+      path: "/events/2025/2025-10-13_ぐんまちゃんアイドルフェスティバル_タイムテーブル.jpg",
+      ref: "https://x.com/gunmachan_GIF/status/1973674417805983750",
+    },
+    {
+      path: "/events/2025/2025-10-13_ぐんまちゃんアイドルフェスティバル_詳細タイムテーブル.jpg",
+      ref: "https://x.com/gunmachan_GIF/status/1976573498547196162",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://gunmachan-idolfes.com/",
+  },
+  ticket: "https://ticketvillage.jp/events/13466",
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv348853884",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    start: "17:15",
+    end: "17:45",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "花は誓いを忘れない",
+      "乙女どもよ。",
+      "決戦スピリット",
+      "MC",
+      "初恋のこたえ。",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1977687244464132121",
+  },
+  updatedAt: "2025-10-13",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1977366165417533800)
+- [ぐんまちゃんアイドルフェスティバル X 出演直前](https://x.com/gunmachan_GIF/status/1977648539468767674)
+- [全体タイムテーブル告知 - ぐんまちゃんアイドルフェスティバル X](https://x.com/gunmachan_GIF/status/1975154457739739225)
+- [タイムテーブル告知 - ぐんまちゃんアイドルフェスティバル X](https://x.com/gunmachan_GIF/status/1973674417805983750)
+- [公式 X 告知](https://x.com/takanenofficial/status/1941039333747970162)
+- [イベント公式 X 告知](https://x.com/gunmachan_GIF/status/1941014178137100801)
+`;

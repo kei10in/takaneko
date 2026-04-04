@@ -1,0 +1,63 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこLiFE!",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-07-07",
+  open: "17:30",
+  start: "18:00",
+  end: undefined,
+  region: "東京",
+  location: "Zepp Haneda",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-07-07_たかねこLiFE!.jpg",
+      ref: "https://x.com/takanenofficial/status/1937821877214601323",
+    },
+    {
+      path: "/events/2025/2025-07-07_たかねこLiFE!_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1942175271672827983",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/takanekolife0707",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「アイドル衣装衣装」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1941829561156829643",
+  },
+  acts: {
+    setlist: [
+      "衣装: アンチファン衣装",
+      "17歳",
+      "センパイ。",
+      "初恋のこたえ。",
+      "MC",
+      "アンチファン",
+      "革命の女王",
+      "決戦スピリット",
+      "MC",
+      "初恋のひと。",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/himeri_momiyama/status/1942184153178620366",
+  },
+  updatedAt: "2025-07-07",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [本日のおチェキ](https://x.com/takanekomanager/status/1942175271672827983)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1941829561156829643)
+- [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1941833347619225793)
+- [公式 X 告知](https://x.com/takanenofficial/status/1937821877214601323)
+`;

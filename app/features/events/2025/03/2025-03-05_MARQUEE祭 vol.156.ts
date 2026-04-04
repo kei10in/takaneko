@@ -1,0 +1,59 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE祭 vol.156",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-03-05",
+  open: "14:00",
+  start: "14:30",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-03-05_MARQUEE祭 vol.156.jpg",
+      ref: "https://x.com/takanenofficial/status/1882632288992981226",
+    },
+    {
+      path: "/events/2025/2025-03-05_MARQUEE祭 vol.156.jpg",
+      ref: "https://x.com/takanenofficial/status/1882632288992981226",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "公式 X 告知",
+    url: "https://x.com/takanenofficial/status/1882632288992981226",
+  },
+  ticket: "https://eplus.jp/sf/word/0000131445",
+  streamings: undefined,
+  goods: {
+    time: ["20:05", "21:05"],
+    lineup: ["ミニフォトカード「ピンク衣装」"],
+  },
+  acts: {
+    start: "19:25",
+    end: "19:50",
+    setlist: [
+      "衣装: ピンク衣装",
+      "美しく生きろ",
+      "乙女どもよ。",
+      "MC",
+      "小悪魔だってかまわない！",
+      "メイド☆至上主義",
+      "すきっちゅーの！",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1897248951671382187",
+  },
+  updatedAt: "2022-03-05",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#たかねこだいじぇすと](https://x.com/takanenofficial/status/1897281117008576596)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1896863420622000451)
+- [公式 X 告知](https://x.com/takanenofficial/status/1882632288992981226)
+`;

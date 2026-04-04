@@ -1,0 +1,81 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "@JAM EXPO 2025",
+  title: "@JAM EXPO 2025 supported by UP-T",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-31",
+  open: undefined,
+  start: "09:40",
+  end: undefined,
+  region: "神奈川",
+  location: "横浜アリーナ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-31_@JAM EXPO 2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1944630437420396998",
+    },
+    {
+      path: "/events/2025/2025-08-31_@JAM EXPO 2025_タイムテーブル.jpg",
+      ref: "https://x.com/at_jam/status/1958363428944298038",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-08-31_@JAM EXPO 2025_特典会タイムテーブル.jpg",
+      ref: "https://x.com/at_jam/status/1958363428944298038",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://atjam.jp/expo2025",
+  },
+  ticket: "https://atjam.jp/expo2025/ticket",
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv348491832",
+  },
+  goods: {
+    time: ["14:50", "15:50"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1962002435368706405",
+  },
+  acts: [
+    {
+      title: "Zipper ファッションショー",
+      start: "15:55",
+      end: "16:15",
+      description: `
+        会場: ストロベリーステージ
+        
+        出演: 籾山ひめり
+      `,
+    },
+    {
+      title: "ストロベリーステージ",
+      start: "18:20",
+      end: "18:45",
+      setlist: [
+        "衣装:2025 夏衣装",
+        "初恋のこたえ。",
+        "可愛くてごめん",
+        "MC",
+        "この世界は嘘でできている",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1962113441638105165",
+    },
+  ],
+  updatedAt: "2025-08-25",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [きょうのたかねこ](https://x.com/takanenofficial/status/1962002435368706405)
+- [@JAM 公式 X タイムテーブル告知](https://x.com/at_jam/status/1958363428944298038)
+- [公式 X 告知](https://x.com/takanenofficial/status/1944630437420396998)
+`;

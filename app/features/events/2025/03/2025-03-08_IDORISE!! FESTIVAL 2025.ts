@@ -1,0 +1,82 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDORISE!! FESTIVAL 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-03-08",
+  region: "東京",
+  location: "Spotify O-WEST",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025.jpg",
+      ref: "https://x.com/idorise_info/status/1852244371309236606",
+    },
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025_出演日程.jpg",
+      ref: "https://x.com/idorise_info/status/1870001412232642891",
+    },
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025_タイムテーブル.jpg",
+      ref: "https://x.com/idorise_info/status/1892831626146828416",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-03-08_IDORISE!! FESTIVAL 2025_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1898257134976151678",
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://idorisefes.jp/",
+  },
+  ticket: "https://eplus.jp/idorise2025/",
+  streamings: {
+    text: "ニコ生 アイドル専門チャンネル「ニコドル」",
+    url: "https://ch.nicovideo.jp/idol-niconama/blomaga/ar2211755",
+  },
+  goods: {
+    lineup: ["ミニフォトカード「ピンク衣装」"],
+  },
+  acts: {
+    setlist: [
+      "衣装: わたし色に染まれ衣装",
+      "女の子は強い",
+      "男の子の目的は何？",
+      "ヒロインは平均以下。",
+      "MC",
+      "小悪魔だってかまわない！",
+      "推しの魔法",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1898266453897625902",
+  },
+  updatedAt: "2025-03-09",
+};
+
+export const content = /* md */ `
+## 出演
+
+- **会場 -** Spotify O-WEST
+- **時間 -** 14:45 〜 15:15
+- **配信 -** [IDORISE FESTIVAL2025 独占生中継 DAY1【O-WEST会場】](https://live.nicovideo.jp/watch/lv347131303#3:42:55)
+
+## 物販
+
+- **会場 -** Spotify O-WEST 2Fロビー
+- **時間 -** 15:30 〜 16:00
+
+## リンク
+
+- [本日のおチェキ](https://x.com/takanekomanager/status/1898257134976151678)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1897967984800420187)
+- [IDORISE!! FESTIVAL 2025 (予定地)](https://2025.idorisefes.jp/)
+- [IDORISE!! FESTIVAL 2024](https://2024.idorisefes.jp/)
+- [イベント公式サイト](https://idorisefes.jp/)
+- [IDORISE!! FESTIVAL 2025 公式 X ニコ生配信告知](https://x.com/idorise_info/status/1895760929419350123)
+- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル最終](https://x.com/idorise_info/status/1897181772687007768)
+- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブルまとめ](https://x.com/idorise_info/status/1895436192189186218)
+- [IDORISE!! FESTIVAL 2025 公式 X タイムテーブル告知](https://x.com/idorise_info/status/1892831626146828416)
+- [公式 X 告知](https://x.com/takanenofficial/status/1852553733986828532)
+`;

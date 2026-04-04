@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM北海道「IMAREAL」",
+  category: "RADIO",
+  date: "2025-12-19",
+  start: "18:00",
+  end: "22:00",
+  region: "ラジオ",
+  present: ["涼海すう", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-12-19_FM北海道「IMAREAL」.jpg",
+      ref: "https://x.com/takanenofficial/status/2001952041925754930",
+    },
+  ],
+  link: {
+    text: "IMAREAL｜AIR-G' FM北海道 80.4",
+    url: "https://www.air-g.co.jp/ima/",
+  },
+  updatedAt: "2025-12-19",
+};
+
+export const content = /* md */ `
+## 内容
+
+リモート生出演。
+
+出演時間: 18:19 頃 〜
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/#!/ts/AIR-G/20251219181945)
+- [radiko 番組放送回](https://radiko.jp/#!/ts/AIR-G/20251219180000)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2001952041925754930)
+- [告知 - 番組 X](https://x.com/airg_ima/status/2001609546310259135)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2001636061299298500)
+`;

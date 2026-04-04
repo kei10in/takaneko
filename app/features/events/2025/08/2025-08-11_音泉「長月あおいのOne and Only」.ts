@@ -1,0 +1,32 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "音泉「長月あおいのOne and Only 第4回」",
+  category: "STREAMING",
+  date: "2025-08-11",
+  start: "",
+  end: "",
+  region: "Web",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.onsen.ag/program/aoi",
+  },
+  updatedAt: "2025-08-14",
+};
+
+export const content = /* md */ `
+## 内容
+
+第4回に音声メッセージで出演。
+
+## リンク
+
+- [番組 X 報告](https://x.com/onsenradio/status/1954871976532816274)
+`;

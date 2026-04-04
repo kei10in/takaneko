@@ -1,0 +1,50 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「瞬きさえ忘れる。」完全全通限定ファンミーティング",
+  title:
+    "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」スタンプラリー企画 ＜完全全通限定ファンミーティング＞",
+  category: "EVENT",
+  date: "2025-02-22",
+  open: "16:00",
+  start: "16:30",
+  region: "東京",
+  location: "渋谷キャストスペース",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2024/2024-12-21_「瞬きさえ忘れる。」完全全通限定ファンミーティング.jpg",
+      ref: "https://x.com/takanenofficial/status/1867572814125105250",
+    },
+  ],
+  link: {
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=3335",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  costume: "T シャツ (瞬きさえ忘れる ver.) + コーチジャケット (瞬きさえ忘れる ver.)",
+  updatedAt: "2026-04-02",
+};
+
+export const content = /* md */ `
+## 概要
+
+| 時間                                 | 内容                                          |
+| ------------------------------------ | --------------------------------------------- |
+| **14:00 〜 15:30**                   | 2/22限定ファンミくじ販売                      |
+| **15:30 〜 16:00**                   | ツアーグッズサイン入れ (5会場特典) の引き換え |
+| **16:00 〜 公演終了後1時間経過まで** | 開場後2/22限定ファンミくじ販売                |
+| **16:30 〜**                         | 公演開始                                      |
+
+## リンク
+
+- [公式ニュース - 振替日について](https://takanenonadeshiko.jp/?p=3335)
+- [公式 X 振替日告知](https://x.com/takanenofficial/status/1885302030975328526)
+- [延期について - 公式ニュース](https://takanenonadeshiko.jp/?p=3130)
+- [公式ニュース](https://takanenonadeshiko.jp/?p=3089)
+- [公式 X 告知](https://x.com/takanenofficial/status/1867572814125105250)
+`;

@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM大阪「KANSAI COLLECTION 2025 AUTUMN&WINTER」",
+  category: "RADIO",
+  liveType: undefined,
+  date: "2025-06-24",
+  open: undefined,
+  start: "20:00",
+  end: "20:30",
+  region: "ラジオ",
+  location: "",
+  present: ["松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-06-24_FM大阪「KANSAI COLLECTION 2025 AUTUMN&WINTER」.jpg",
+      ref: "https://x.com/momonamatsumoto/status/1937452811492692333",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-26",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [radiko](https://radiko.jp/share/?sid=FMO&t=20250624200000)
+- [松本ももな X 告知](https://x.com/momonamatsumoto/status/1937452811492692333)
+`;

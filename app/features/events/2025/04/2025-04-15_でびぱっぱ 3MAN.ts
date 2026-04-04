@@ -1,0 +1,51 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "でびぱっぱ 3MAN",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-04-15",
+  open: "19:00",
+  start: "19:30",
+  end: undefined,
+  region: "東京",
+  location: "SHIBUYA CLUB QUATTRO",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼", "葉月紗蘭"],
+  images: [
+    {
+      path: "/events/2025/2025-04-15_でびぱっぱ 3MAN.jpg",
+      ref: "https://x.com/devilanthem/status/1896878305472807190",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketvillage.jp/events/13288",
+  streamings: undefined,
+  acts: {
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "革命の女王",
+      "アドレナリンゲーム",
+      "LOVE ANTHEM",
+      "MC",
+      "決戦スピリット",
+      "初恋のひと。",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1912125017955205286",
+  },
+  updatedAt: "2025-04-15",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式ニュース - 橋本桃呼・葉月紗蘭のイベント欠席に関するお知らせ](https://takanenonadeshiko.jp/?p=3602)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1911760279853285526)
+- [公式 X 告知](https://x.com/takanenofficial/status/1896878384149672064)
+- [Devil ANTHEM. 公式 X 告知](https://x.com/devilanthem/status/1896878305472807190)
+`;

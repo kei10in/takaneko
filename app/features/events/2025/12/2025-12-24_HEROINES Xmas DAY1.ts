@@ -1,0 +1,60 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HEROINES Xmas DAY1",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-12-24",
+  open: "12:30",
+  start: "13:00",
+  end: undefined,
+  region: "東京",
+  location: "Kanadevia Hall",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-12-24_HEROINES Xmas DAY1.jpg",
+      ref: "https://x.com/takanenofficial/status/2003445522032730352",
+    },
+    {
+      path: "/events/2025/2025-12-24_HEROINES Xmas DAY1_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2003790419537408327",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/heroinesxmas251224_25",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「クリスマス2025」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1996217874512564557",
+  },
+  acts: {
+    start: "18:45",
+    end: "19:10",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "可愛くてごめん",
+      "病名恋ワズライ",
+      "MC",
+      "女の子は強い",
+      "初恋のこたえ。",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2003784064898347367",
+  },
+  updatedAt: "2025-12-25",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [ダイジェスト - HEROINES FES X](https://x.com/HEROINES_FES/status/2003779743204946388)
+- [本日のおチェキ](https://x.com/takanekomanager/status/2003790419537408327)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2003445522032730352)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1993985677588091229)
+`;

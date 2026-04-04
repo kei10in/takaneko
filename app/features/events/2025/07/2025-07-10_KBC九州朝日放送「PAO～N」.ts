@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KBC九州朝日放送「PAO～N」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "14:05",
+  end: undefined,
+  region: "ラジオ",
+  present: ["橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_KBC九州朝日放送「PAO～N」.png",
+      ref: "https://kbc.co.jp/pao-n/",
+    },
+    {
+      path: "/events/2025/2025-07-10_KBC九州朝日放送「PAO～N」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943173703400853544",
+    },
+    {
+      path: "/events/2025/2025-07-10_KBC九州朝日放送「PAO～N」_2.jpg",
+      ref: "https://x.com/kbc_paon/status/1943178389021691958",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://kbc.co.jp/pao-n/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 14:00 - 15:00
+
+14:05 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=KBC&t=20250710140500)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=KBC&t=20250710140000)
+- [番組 X 報告ポスト](https://x.com/kbc_paon/status/1943178389021691958)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943173703400853544)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

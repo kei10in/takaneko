@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "KANSAI COLLECTION 2025 AUTUMN & WINTER",
+  status: "WITHDRAWN",
+  category: "OTHER",
+  date: "2025-08-06",
+  open: "11:30",
+  start: "13:00",
+  end: undefined,
+  region: "大阪",
+  location: "京セラドーム大阪",
+  present: ["松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-08-06_KANSAI COLLECTION 2025 AUTUMN & WINTER.jpg",
+      ref: "https://x.com/takanenofficial/status/1923306258611818580",
+    },
+  ],
+  link: {
+    text: "関西コレクション公式サイト",
+    url: "https://www.kansai-collection.net/",
+  },
+  ticket: "https://www.kansai-collection.net/ticket/",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-08-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [松本ももな 出演キャンセルのお知らせ](https://x.com/takanenofficial/status/1952928105464807547)
+- [公式 X 告知](https://x.com/takanenofficial/status/1923306258611818580)
+- [関西コレクション X 告知](https://x.com/kan_kore/status/1923302925616676908)
+`;

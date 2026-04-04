@@ -1,0 +1,116 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フジテレビ「TIF presents ONE SONG FES.」",
+  category: "TV",
+  liveType: undefined,
+  date: "2025-07-25",
+  open: undefined,
+  start: "25:45",
+  end: "26:45",
+  region: "テレビ",
+  location: "",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-07-25_フジテレビ「TIF presents ONE SONG FES.」.jpg",
+      ref: "https://x.com/takanenofficial/status/1939881934177673394",
+    },
+    {
+      path: "/events/2025/2025-07-25_フジテレビ「TIF presents ONE SONG FES.」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/1939881934177673394",
+    },
+    {
+      path: "/events/2025/2025-07-25_フジテレビ「TIF presents ONE SONG FES.」_3.jpg",
+      ref: "https://x.com/takanenofficial/status/1939881934177673394",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://official.idolfes.com/s/tif2025/page/broadcast",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  showNotes: {
+    played: ["美しく生きろ"],
+  },
+  updatedAt: "2025-07-01",
+};
+
+export const content = /* md */ `
+## 放送内容
+
+みなさんにアイドルの夏を一足早くお届けします！
+
+8月1日(金)、2日(土)、3日(日)に開催するTOKYO IDOL FESTIVAL 2025の会場に足を運びたくなるとっておきの「ONE SONG」をTIF直前二夜にわたって放送！
+
+### 出演者
+
+#### 【MC】
+
+- 徳井健太(平成ノブシコブシ)
+- 吉田尚記(ニッポン放送アナウンサー)
+
+#### 【進行】
+
+- 原田葵(フジテレビアナウンサー)
+
+#### 【DAY1】
+
+- 衛星とカラテア「♪Stardust story」
+- かすみ草とステラ「♪青より青く」
+- タイトル未定「♪青春群像」
+- ドラマチックレコード「♪君はソナチネ」
+- ラフ×ラフ「♪君ときゅんと♡」
+
+#### 【DAY2】
+
+- いぎなり東北産「♪沼れ!マイラバー」
+- Juice=Juice「♪「ひとりで生きられそう」って それってねえ、褒めているの?」
+- SWEET STEADY「♪ぱじゃまぱーてぃー!」
+- 高嶺のなでしこ「♪美しく生きろ」
+- 僕が見たかった青空「♪暗闇の哲学者」
+- （50音順）
+
+#### 【コメント出演】
+
+TIF2025PR大使 日比野芽奈(ラフ×ラフ) ／ 熊澤風花(Task have Fun) ／ 春瀬もも(衛星とカラテア)
+
+### スタッフ
+
+#### 【チーフプロデューサー】
+
+- 菊竹 龍
+
+#### 【企画・演出】
+
+- 島田 和正
+
+#### 【プロデューサー】
+
+- 太田 秀司
+
+#### 【制作協力】
+
+- ジーヤマ
+
+#### 【制作著作】
+
+- フジテレビジョン
+
+## リンク
+
+- [FOD](https://fod.fujitv.co.jp/title/200m/200m810005/)
+- [今年も放送決定!!「TIF presents ONE SONG FES. 」DAY2出演アイドルからのコメントが到着！](https://www.youtube.com/watch?v=YXundEwrTLY)
+- [公式 X 告知](https://x.com/takanenofficial/status/1939881934177673394)
+- [TIP & TIF 公式 X 告知](https://x.com/TIP_TIF_staff/status/1939881657504563680)
+- [フジテレビ番組サイト](https://www.fujitv.co.jp/onesongfes/)
+`;

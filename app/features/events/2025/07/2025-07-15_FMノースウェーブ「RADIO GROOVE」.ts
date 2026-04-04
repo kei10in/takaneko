@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FMノースウェーブ「RADIO GROOVE」",
+  category: "RADIO",
+  date: "2025-07-15",
+  start: "19:30",
+  end: undefined,
+  region: "ラジオ",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-15_FMノースウェーブ「RADIO GROOVE」.jpg",
+      ref: "https://x.com/RadioGroove825/status/1943279111662899457",
+    },
+    {
+      path: "/events/2025/2025-07-15_FMノースウェーブ「RADIO GROOVE」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1945045679115764111",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.fmnorth.co.jp/radiogroove/",
+  },
+  updatedAt: "2025-07-16",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 19:00 - 21:00
+
+コメント出演
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715193500)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20250715190000)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1945045679115764111)
+- [公式 X 告知](https://x.com/takanenofficial/status/1943267755131834778)
+- [番組 X 告知](https://x.com/RadioGroove825/status/1943279111662899457)
+`;

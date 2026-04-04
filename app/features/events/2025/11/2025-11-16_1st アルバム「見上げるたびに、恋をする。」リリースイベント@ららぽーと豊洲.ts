@@ -1,0 +1,116 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2025-11-16",
+  open: "10:00",
+  start: "12:30",
+  end: undefined,
+  region: "東京",
+  location: "ららぽーと豊洲 シーサイドデッキ メインステージ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-11-16_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4580",
+    },
+    {
+      path: "/events/2025/2025-11-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1976256516203413760",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4580",
+  },
+  acts: [
+    {
+      title: "1 部 ミニライブ",
+      open: "12:10",
+      start: "12:30",
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "可愛くてごめん",
+        "メランコリックハニー",
+        "MC",
+        "初恋のこたえ。",
+        "MC",
+        "花は誓いを忘れない",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1989994612274942165",
+    },
+    {
+      title: "1 部 グループ握手会",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "葉月紗蘭", "東山恵里沙", "星谷美来", "松本ももな"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "橋本桃呼", "日向端ひな", "籾山ひめり"],
+          },
+        ],
+      },
+    },
+    {
+      title: "2 部 ミニライブ",
+      open: "15:40",
+      start: "16:00",
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "花は誓いを忘れない",
+        "この世界は嘘でできている",
+        "MC",
+        "恋を知った世界",
+        "MC",
+        "アイドル衣装",
+        "ファンサ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1989994612274942165",
+    },
+    {
+      title: "2 部 グループ握手会",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["涼海すう", "葉月紗蘭", "東山恵里沙", "松本ももな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["城月菜央", "橋本桃呼", "日向端ひな", "星谷美来"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-04-03",
+};
+
+export const content = /* md */ `
+## イベント概要
+
+ミニライブ & グループ握手会
+
+CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+
+- CD 販売開始: 10:00 〜
+- CD 販売受付場所: ららぽーと豊洲 シーサイドデッキメインステージ CD販売ブース
+
+## リンク
+
+- [1 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1989940172155490669)
+- [2 部 ダイジェスト - 公式 X](https://x.com/takanenofficial/status/1990013325070270929)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1989672230377185694)
+- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4580)
+- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1987490353482490061)
+- [高嶺のなでしこ1st ALBUM「見上げるたびに、恋をする。」リリースイベント 第2弾スケジュール公開！ – 【公式】高嶺のなでしこ](https://takanenonadeshiko.jp/?p=4419)
+- [公式 X 告知](https://x.com/takanenofficial/status/1976256516203413760)
+`;

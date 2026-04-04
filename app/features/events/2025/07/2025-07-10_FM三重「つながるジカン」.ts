@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM三重「つながるジカン」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "18:30",
+  end: undefined,
+  region: "ラジオ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_FM三重「つながるジカン」.jpg",
+      ref: "https://fmmie.jp/program/tsunagaruzikan/",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM三重「つながるジカン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943239687772213355",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://fmmie.jp/program/tsunagaruzikan/",
+  },
+  updatedAt: "2025-07-07",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 17:00 - 18:55
+
+18:30 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=FMMIE&t=20250710183155)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=FMMIE&t=20250710170000)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943239687772213355)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+- [ビクターナゴヤ X 告知](https://x.com/victor_nagoya/status/1941995578285543430)
+`;

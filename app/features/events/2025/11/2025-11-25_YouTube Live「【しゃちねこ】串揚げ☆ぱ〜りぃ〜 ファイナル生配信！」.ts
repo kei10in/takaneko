@@ -1,0 +1,45 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "YouTube Live「【しゃちねこ】串揚げ☆ぱ〜りぃ〜 ファイナル生配信！」",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2025-11-25",
+  open: undefined,
+  start: "20:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-11-25_YouTube Live「【しゃちねこ】串揚げ☆ぱ〜りぃ〜 ファイナル生配信！」.jpg",
+      ref: "https://x.com/takanenofficial/status/1992208944304099536",
+    },
+  ],
+  link: {
+    text: "",
+    url: "https://www.youtube.com/live/DRauiprkh-Q",
+  },
+  ticket: "",
+  streamings: {
+    text: "YouTube Live",
+    url: "https://www.youtube.com/live/DRauiprkh-Q",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2025-11-22",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1992208944304099536)
+`;

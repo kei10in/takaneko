@@ -1,0 +1,62 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SBC信越放送「桜だ！イチゴだ！信州の春スイーツめぐり」",
+  category: "TV",
+  date: "2025-03-23",
+  open: undefined,
+  start: "16:24",
+  end: "16:30",
+  region: "テレビ",
+  location: "",
+  present: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-03-23_SBC信越放送「桜だ！イチゴだ！信州の春スイーツめぐり」.jpg",
+      ref: "https://x.com/riri_haruno/status/1903732165994819622",
+    },
+  ],
+  link: {
+    text: "番組公式 HP",
+    url: "https://sbc21.co.jp/",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-03-20",
+};
+
+export const content = /* md */ `
+## 番組概要
+
+信州の店が提供する「春スイーツ」を特集する。
+旬のイチゴと生クリームを包んだ桜餅、地元の新鮮なイチゴを惜しげもなく盛り付けたパンケーキが登場。
+
+## 番組内容
+
+信州の店が提供する「春スイーツ」を特集する。
+善光寺の北側にある和菓子店で見つけたのは、旬のイチゴと生クリームを包んだ桜餅。
+３０年ほど前に誕生したロングセラー商品は、和と洋が１つになった新しい味わいだ。
+同じく長野市からは、地元の新鮮なイチゴを惜しげもなく盛り付けたパンケーキが登場。
+イチゴの瑞々しい味わいはもちろん、インパクトある見た目も楽しめる一皿だ。
+
+## SHOWROOM オーディション「SBC信越放送＼女子旅・初春／グルメ情報番組メイン出演者オーディション」
+
+> 初春の信州グルメを紹介する女子旅情報番組のメイン出演者を大募集！番組のメイン出演者として、春間近の信州で旬のグルメを紹介してみませんか？
+>
+> TBS系列SBC信越放送では、リポーター・タレントとして、旅好き・グルメ好きな女性SHOWROOMライバーを大募集します！
+
+## リンク
+
+- [春野莉々 X ポスト](https://x.com/riri_haruno/status/1903732165994819622)
+- [SBC信越放送 番組紹介](https://sbc21.co.jp/tv/schedule.php?p=918686&s=0x7820&e=607&ed=20250316)
+- [春野莉々 X グランプリ獲得報告](https://x.com/riri_haruno/status/1897645104242020368)
+- [SHOWROOM イベントページ](https://www.showroom-live.com/event/sbcspring1)
+- [番組公式 HP](https://sbc21.co.jp/)
+- [番組公式 X](https://x.com/sbctv6ch)
+- [番組公式 Instagram](https://www.instagram.com/sbctv6ch/)
+- [番組公式 Facebook](https://ja-jp.facebook.com/SBC6ch/)
+- [SBC 信州放送公式 YouTube](https://www.youtube.com/user/6sbc)
+`;

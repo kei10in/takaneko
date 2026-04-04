@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フジテレビ「未来CHO人図鑑」",
+  title: "フジテレビ「未来CHO人図鑑 アイドル突然ROCKコンサル Yukiya（1）」",
+  category: "TV",
+  date: "2025-11-20",
+  start: "22:54",
+  end: "23:00",
+  region: "テレビ",
+  present: ["橋本桃呼", "星谷美来", "松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-11-06_フジテレビ「未来CHO人図鑑」.jpg",
+      ref: "https://www.fujitv.co.jp/b_hp/miraichojinzukan/index.html",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.fujitv.co.jp/b_hp/miraichojinzukan/index.html",
+  },
+  updatedAt: "2025-11-25",
+};
+
+export const content = /* md */ `
+## 概要
+
+> アイドルに卒業後の方向性をアドバイスするYukiya。
+>
+> 彼の元には、進路に悩むアイドルが連日訪れる。
+>
+> そんな彼の決まり文句は、「ROCKだね」。
+>
+> アイドル時代のキラキラとは真逆の“ROCK”へ転身させることが彼の持ち味で・・・。
+
+## 出演者
+
+- 秋山 竜次 (ロバート)
+
+## スタッフ
+
+**プロデューサー**
+
+- 入口 拓矢
+
+**制作協力**
+
+- FCC
+
+## リンク
+
+- [FOD](https://fod.fujitv.co.jp/title/70wy/)
+- [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
+- [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
+`;

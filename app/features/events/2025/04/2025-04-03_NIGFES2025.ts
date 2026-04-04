@@ -1,0 +1,60 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "NIGFES2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-04-03",
+  open: "12:30",
+  start: "13:00",
+  end: undefined,
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-04-02_NIGFES2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1900124702917656973",
+    },
+    {
+      path: "/events/2025/2025-04-02_NIGFES2025_タイムテーブル.jpg",
+      ref: "https://x.com/NIG_officialX/status/1903031386698830271",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://nig.mixch.tv/nig-fes-2025",
+  },
+  ticket: "https://ticket.rakuten.co.jp/music/jpop/RTDCNFB/",
+  streamings: {
+    text: "楽天 TV",
+    url: "https://live.tv.rakuten.co.jp/content/503647/",
+  },
+  acts: {
+    start: "19:40",
+    end: "20:10",
+    setlist: [
+      "衣装: ピンク衣装",
+      "初恋のひと。",
+      "女の子は強い",
+      "恋を知った世界",
+      "MC",
+      "ファンサ",
+      "決戦スピリット",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1907769205518442775",
+  },
+  updatedAt: "2025-04-05",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 振り返り](https://x.com/takanenofficial/status/1907798934757716133)
+- [NIGフェス X 意気込み紹介](https://x.com/NIG_officialX/status/1907744555203731688)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1907429085858701346)
+- [タイムテーブル 告知](https://x.com/NIG_officialX/status/1903031386698830271)
+- [公式 X 告知](https://x.com/takanenofficial/status/1900124702917656973)
+`;

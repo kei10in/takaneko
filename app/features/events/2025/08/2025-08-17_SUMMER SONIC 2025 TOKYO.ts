@@ -1,0 +1,60 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "SUMMER SONIC 2025 TOKYO",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-17",
+  open: "09:00",
+  start: "11:00",
+  end: undefined,
+  region: "千葉",
+  location: "ZOZOマリンスタジアム＆幕張メッセ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-17_SUMMER SONIC 2025 TOKYO.jpg",
+      ref: "https://x.com/takanenofficial/status/1950166986782122143",
+    },
+    {
+      path: "/events/2025/2025-08-17_SUMMER SONIC 2025 TOKYO_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1955932474024120333",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://www.summersonic.com/",
+  },
+  ticket: "https://www.summersonic.com/tickets/tokyo/",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    title: "Club Que Será Será",
+    start: "12:30",
+    end: "12:55",
+    setlist: [
+      "衣装:2025 夏衣装",
+      "可愛くてごめん",
+      "ファンサ",
+      "MC",
+      "この世界は嘘でできている",
+      "決戦スピリット",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1956957649628791032",
+  },
+  updatedAt: "2025-08-17",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1956698764846227761)
+- [Club Que Será Será](https://www.summersonic.com/attractions/detail/club-que-sera-sera/)
+- [公式 X 告知](https://x.com/takanenofficial/status/1950166986782122143)
+`;

@@ -1,0 +1,39 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "テレビ神奈川「関内デビル」",
+  category: "TV",
+  date: "2025-03-05",
+  start: "23:00",
+  region: "テレビ",
+  images: [
+    {
+      path: "/events/2025/2025-03-05_テレビ神奈川「関内デビル」.jpg",
+      ref: "https://x.com/tvk_kannaidevil/status/1897119887388234078",
+    },
+    {
+      path: "/events/2025/2025-03-05_テレビ神奈川「関内デビル」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1897263325320257800",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.tvk-yokohama.com/kannaidevil/",
+  },
+};
+
+export const content = /* md */ `
+## 放送
+
+- 放送局: tvk
+- 放送時間: 23:00 〜
+
+毎週水曜日の番組内コーナー「たかねこクエスト」
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1897263325320257800)
+- [番組 X 告知](https://x.com/tvk_kannaidevil/status/1897119887388234078)
+- [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
+- [TVer](https://tver.jp/series/srehapgls0)
+`;

@@ -1,0 +1,30 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HBCラジオ「音楽マシマシ」",
+  category: "RADIO",
+  date: "2025-07-28",
+  start: "22:30",
+  end: "23:00",
+  region: "ラジオ",
+  present: ["城月菜央", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2025/2025-07-28_HBCラジオ「音楽マシマシ」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1949303856611184669",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.hbc.co.jp/radio/mashimashi/",
+  },
+  updatedAt: "2025-07-27",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [radiko 番組放送回](https://radiko.jp/share/?sid=HBC&t=20250728223000)
+- [番組 X 告知](https://x.com/mashi_hbc/status/1949764890526400973)
+- [公式 X 告知](https://x.com/takanenofficial/status/1949303856611184669)
+`;

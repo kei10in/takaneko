@@ -1,0 +1,38 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI第1「アイドルジェネレーション」",
+  category: "RADIO",
+  date: "2025-02-28",
+  open: undefined,
+  start: "23:30",
+  end: "24:30",
+  region: "ラジオ",
+  location: "",
+  present: ["城月菜央", "葉月紗蘭"],
+  images: [
+    {
+      path: "/events/2025/2025-02-28_ラジオNIKKEI第1「アイドルジェネレーション」.jpg",
+      ref: "https://x.com/rn_idol/status/1894991260441813259",
+    },
+  ],
+  link: {
+    text: "告知",
+    url: "https://x.com/rn_idol/status/1894991260441813259",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-02-27",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [Radiko](https://radiko.jp/share?t=20250228233000&sid=RN1)
+- [公式 X 告知](https://x.com/takanenofficial/status/1895028598530056369)
+- [番組サイト](https://www.radionikkei.jp/idol_generation/)
+- [番組 X 告知](https://x.com/rn_idol/status/1894991260441813259)
+`;

@@ -1,0 +1,63 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "テレビ朝日・六本木ヒルズ SUMMER FES",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2025-08-10",
+  open: "11:00",
+  start: "12:00",
+  end: undefined,
+  region: "東京",
+  location: "コカ・コーラ SUMMER FES LIVEアリーナ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-10_テレビ朝日・六本木ヒルズ SUMMER FES.jpg",
+      ref: "https://x.com/takanenofficial/status/1938432124614545589",
+    },
+  ],
+  link: {
+    text: "イベント サイト (チケット情報あり)",
+    url: "https://www.tv-asahi.co.jp/summerstation/arena/music/",
+  },
+  ticket: "https://ticket.tv-asahi.co.jp/ex/project/takanenonadeshiko_25",
+  streamings: {
+    text: "テレ朝動画 (有料)",
+    url: "https://www.tv-asahi.co.jp/douga_mv/tvasahisummer2025/",
+  },
+  goods: {
+    time: ["10:00", "10:45"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1954172084885569894",
+  },
+  acts: {
+    setlist: [
+      "衣装:2025 夏衣装",
+      "僕は君になれない",
+      "アイドル衣装",
+      "I’M YOUR IDOL",
+      "MC",
+      "可愛くてごめん",
+      "メランコリックハニー",
+      "眩しすぎる流れ星 (ラストアイドル cover)",
+      "MC",
+      "初恋のひと。",
+      "初恋のこたえ。",
+      "MC",
+      "この世界は嘘でできている",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "",
+  },
+  updatedAt: "2025-08-10",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1954172084885569894)
+- [公式 X 告知](https://x.com/takanenofficial/status/1938432124614545589)
+`;

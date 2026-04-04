@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「たかねこナイト」特別公演 生配信スペシャル",
+  category: "STREAMING",
+  liveType: undefined,
+  date: "2025-12-16",
+  open: undefined,
+  start: "19:00",
+  end: undefined,
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-12-16_「たかねこナイト」特別公演 生配信スペシャル.jpg",
+      ref: "https://x.com/takanenofficial/status/2006168429523525748",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "",
+  streamings: {
+    text: "「たかねこナイト」番組サイト",
+    url: "https://audee-membership.jp/takanenonadeshiko/live/smQGSqaKuGHbcaWMmPTfAZPD",
+  },
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2026-01-03",
+};
+
+export const content = /* md */ `
+## 内容
+
+> 高嶺のなでしこの1st Album『見上げるたびに、恋をする。』
+> フラゲ日である12月16日（火）19時00分から、
+> TOKYO FM「高嶺のなでしこ ラジオ定期公演「たかねこナイト」」番組サイトにて、
+> たかねこメンバー全員出演による映像生配信の実施が決定致しました！
+>
+> PART①は、たかねこメンバーがクリスマスプレゼントを賭けた対決企画に挑戦。
+> 皆さんからの応援コメントも勝敗のカギを握っています。当日は是非リアタイ視聴を！
+>
+> そして、番組メンバーシップ会員限定のPART②では、
+> たかねこメンバーのワチャワチャした打ち上げトークが楽しめるほか、
+> メンバーシップ会員【全員クリスマスプレゼント】のお知らせも！
+>
+> 高嶺のなでしこ1st Album『見上げるたびに、恋をする。』のリリースをお祝いする
+> 一夜限りの生配信クリスマスパーティー。是非一緒に楽しみましょう！
+>
+> 生配信は、会員の方ならどなたでもご覧いただけます！
+> 冒頭部分は、会員でない方でも視聴可能ですので、
+> まだ、ラジオ定期公演「たかねこナイト」未体験の方も、お待ちしております！
+
+## リンク
+
+- [アーカイブ - Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/video/smKgaPvu2B4LrmzrhD6Ek6Ex)
+- [アーカイブ配信開始告知動画 - Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/video/sm4dQ8wU4FSLVh4GK9mtigZH)
+- [アーカイブ配信告知 - 公式 X](https://x.com/takanenofficial/status/2006168429523525748)
+- [配信後ポスト - 公式 X](https://x.com/takanenofficial/status/2000899210942824702)
+- [事前アンケート - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/1999403981748224006)
+- [告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/1998460134251704831)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1998634376272486869)
+`;

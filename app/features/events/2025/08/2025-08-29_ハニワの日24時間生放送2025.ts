@@ -1,0 +1,56 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ハニワの日24時間生放送2025",
+  category: "STREAMING",
+  date: "2025-08-29",
+  start: undefined,
+  end: "21:00",
+  region: "Web",
+  location: "",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-28_ハニワの日24時間生放送2025.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/1960311268650459263",
+    },
+    {
+      path: "/events/2025/2025-08-28_ハニワの日24時間生放送2025_タイムシート.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/1960311268650459263",
+      tags: ["timetable"],
+    },
+  ],
+  link: undefined,
+  ticket: "",
+  streamings: [
+    {
+      text: "YouTube Live",
+      url: "https://www.youtube.com/live/OfH9kHp_PLE",
+    },
+    {
+      text: "ニコニコ生放送",
+      url: "https://live.nicovideo.jp/watch/lv348408773",
+    },
+  ],
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2025-08-26",
+};
+
+export const content = /* md */ `
+## 配信時間
+
+2025月8日28日 (木) 21:00 〜 2025月8日29日 (金) 21:00
+
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1960326612148486655)
+- [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/1960311268650459263)
+`;

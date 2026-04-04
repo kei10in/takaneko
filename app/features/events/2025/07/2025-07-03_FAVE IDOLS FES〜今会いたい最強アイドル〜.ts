@@ -1,0 +1,60 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FAVE IDOLS FES〜今会いたい最強アイドル〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-07-03",
+  open: "10:00",
+  start: "10:30",
+  end: undefined,
+  region: "東京",
+  location: "恵比寿ガーデンホール",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々"],
+  images: [
+    {
+      path: "/events/2025/2025-07-03_FAVE IDOLS FES〜今会いたい最強アイドル〜.jpg",
+      ref: "https://x.com/faveconnect/status/1927667487803683103",
+    },
+    {
+      path: "/events/2025/2025-07-03_FAVE IDOLS FES〜今会いたい最強アイドル〜_タイムテーブル.jpg",
+      ref: "https://x.com/faveconnect/status/1936050142173708494",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "FaveConnect ニュース",
+    url: "https://store.faveconnect.com/news/public/_/51qy95rwjnl05iaq.html",
+  },
+  ticket: "https://ticketdive.com/event/0703_fave",
+  streamings: undefined,
+  acts: {
+    start: "20:25",
+    end: "21:00",
+    setlist: [
+      "衣装:ピンク衣装",
+      "初恋のこたえ。",
+      "恋を知った世界",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1940764938345369841",
+  },
+  updatedAt: "2025-07-05",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1940395032348876839)
+- [FAVE IDOLS 公式 X 出演者動画コメント](https://x.com/faveconnect/status/1940395035457147046)
+- [FC限定トレカプレゼントキャンペーン告知](https://x.com/faveconnect/status/1937798120857104722)
+- [FC限定トレカプレゼントキャンペーン](https://store.faveconnect.com/news/public/_/943z0wiatm9rgfly.html)
+- [開場・開演時間変更のお知らせ](https://x.com/faveconnect/status/1938155684350333002)
+- [タイムテーブル告知](https://x.com/faveconnect/status/1936050142173708494)
+- [公式 X 告知](https://x.com/takanenofficial/status/1927953071977680908)
+- [FAVE IDOLS 公式 X 告知](https://x.com/faveconnect/status/1927667487803683103)
+`;

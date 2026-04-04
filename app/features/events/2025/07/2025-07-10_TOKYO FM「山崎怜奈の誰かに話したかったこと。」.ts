@@ -1,0 +1,47 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO FM「山崎怜奈の誰かに話したかったこと。」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "14:00",
+  end: undefined,
+  region: "ラジオ",
+  present: ["星谷美来", "松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_TOKYO FM「山崎怜奈の誰かに話したかったこと。」.png",
+      ref: "https://tfm.co.jp/darehana/",
+    },
+    {
+      path: "/events/2025/2025-07-10_TOKYO FM「山崎怜奈の誰かに話したかったこと。」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943171457087082881",
+    },
+    {
+      path: "/events/2025/2025-07-10_TOKYO FM「山崎怜奈の誰かに話したかったこと。」_2.jpg",
+      ref: "https://x.com/darehanaTFM/status/1943178673378726152",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://tfm.co.jp/darehana/",
+  },
+  updatedAt: "2025-07-05",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 13:00 - 14:55
+
+14:00 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=FMT&t=20250710140000)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=FMT&t=20250710130000)
+- [番組 X 報告ポスト](https://x.com/darehanaTFM/status/1943178673378726152)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943171457087082881)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+- [番組 X 告知](https://x.com/darehanaTFM/status/1940649959583543564)
+`;

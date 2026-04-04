@@ -1,0 +1,76 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "でびぱっぱ夏祭 2025〜東の陣〜",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-16",
+  open: "9:45",
+  start: "10:30",
+  end: undefined,
+  region: "福島",
+  location: "三崎公園野外音楽堂",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-16_でびぱっぱ夏祭 2025〜東の陣〜.jpg",
+      ref: "https://x.com/takanenofficial/status/1923653464875253802",
+    },
+    {
+      path: "/events/2025/2025-08-16_でびぱっぱ夏祭 2025〜東の陣〜_1.jpg",
+      ref: "https://x.com/devilanthem/status/1952310356577243531",
+    },
+    {
+      path: "/events/2025/2025-08-16_でびぱっぱ夏祭 2025〜東の陣〜_タイムテーブル.jpg",
+      ref: "https://x.com/devilanthem/status/1952310356577243531",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketvillage.jp/events/13404",
+  streamings: undefined,
+  goods: {
+    time: ["16:40", "17:40"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1956355267202867532",
+  },
+  acts: [
+    {
+      title: "1 ステージ目",
+      start: "13:35",
+      end: "13:50",
+      setlist: [
+        "衣装:高嶺のなでしこ 2024 衣装",
+        "可愛くてごめん",
+        "推しの魔法",
+        "小悪魔だってかまわない！",
+        "#超絶かわいい",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1956677790587343087",
+    },
+    {
+      title: "2 ステージ目",
+      start: "18:25",
+      end: "18:45",
+      setlist: [
+        "衣装:高嶺のなでしこ 2024 衣装",
+        "初恋のこたえ。",
+        "ファンサ",
+        "決戦スピリット",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1956677790587343087",
+    },
+  ],
+  updatedAt: "2025-08-16",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1956355267202867532)
+- [公式 X 告知](https://x.com/takanenofficial/status/1923653464875253802)
+`;

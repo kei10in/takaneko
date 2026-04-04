@@ -1,0 +1,56 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HEROINES VALENTINE 2025",
+  title: "TOKYO DOME presents HEROINES VALENTINE 2025",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-02-16",
+  region: "東京",
+  location: "TOKYO DOME CITY HALL",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-02-16_HEROINES VALENTINE 2025.jpg",
+      ref: "https://x.com/takanenofficial/status/1879143933671788923",
+    },
+    {
+      path: "/events/2025/2025-02-16_HEROINES VALENTINE 2025_タイムテーブル.jpg",
+      ref: "https://x.com/heroines_idol/status/1884910505242042508",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/heroinesvalentine2025",
+  streamings: undefined,
+  goods: {
+    time: ["17:50", "18:50"],
+  },
+  acts: {
+    start: "17:15",
+    end: "17:40",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "美しく生きろ",
+      "決戦スピリット",
+      "MC",
+      "小悪魔だってかまわない！",
+      "ファンサ",
+      "恋を知った世界",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1891069349160787996",
+  },
+  updatedAt: "2025-02-16",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [ダイジェスト 2](https://x.com/takanenofficial/status/1891081364780323169)
+- [ダイジェスト 1](https://x.com/HEROINES_FES/status/1891053289157865745)
+- [タイムテーブル告知](https://x.com/heroines_idol/status/1884910505242042508)
+- [公式 X 告知](https://x.com/takanenofficial/status/1879143933671788923)
+`;

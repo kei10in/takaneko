@@ -1,0 +1,75 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "LuckyFes'25",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-09",
+  open: "08:00",
+  start: "10:00",
+  end: undefined,
+  region: "茨城",
+  location: "国営ひたち海浜公園",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-09_LuckyFes'25.jpg",
+      ref: "https://x.com/takanenofficial/status/1907269275259383894",
+    },
+    {
+      path: "/events/2025/2025-08-09_LuckyFes'25_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1907269275259383894",
+    },
+    {
+      path: "/events/2025/2025-08-09_LuckyFes'25_タイムテーブル撮影可能情報付.jpg",
+      ref: "https://x.com/luckyfm_fes/status/1938069711998075092",
+    },
+    {
+      path: "/events/2025/2025-08-09_LuckyFes'25_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1932283741814292841",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベントサイト",
+    url: "https://luckyfes.com/",
+  },
+  ticket: "https://luckyfes.com/ticket/",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: ["グループTシャツ"],
+    url: "https://x.com/takanenofficial/status/1953804671354909064",
+  },
+  acts: {
+    start: "14:00",
+    end: "14:30",
+    setlist: [
+      "衣装:2025 夏衣装",
+      "初恋のこたえ。",
+      "可愛くてごめん",
+      "MC",
+      "この世界は嘘でできている",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1954096579075617262",
+  },
+  updatedAt: "2025-08-09",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [中の人がフェスに遊びに行ったよ！ - ビクターエンタテインメント X](https://x.com/VictorMusic/status/1960990755486593055)
+- [公式 X ダイジェスト](https://x.com/takanenofficial/status/1954064369895321770)
+- [【SetList + Live Photos】高嶺のなでしこ - LuckyFes 2025](https://luckyfes.com/2025/08/09/5353/)
+- [出演前コメント](https://x.com/luckyfm_fes/status/1954043196088144242)
+- [LuckyFes 集合写真](https://x.com/luckyfm_fes/status/1954118404215914703)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1953811383990231415)
+- [撮影可否についてのお知らせ](https://x.com/luckyfm_fes/status/1938069711998075092)
+- [LuckyFest X タイムテーブル告知](https://x.com/luckyfm_fes/status/1932271509390696789)
+- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1932283741814292841)
+- [公式 X 告知](https://x.com/takanenofficial/status/1907269275259383894)
+`;

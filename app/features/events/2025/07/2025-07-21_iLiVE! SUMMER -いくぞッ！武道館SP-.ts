@@ -1,0 +1,67 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "iLiVE! SUMMER -いくぞッ！武道館SP-",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-07-21",
+  open: "11:00",
+  start: "11:40",
+  end: undefined,
+  region: "東京",
+  location: "立川ステージガーデン",
+  present: ["高嶺のなでしこ"],
+  absent: ["春野莉々", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-07-21_iLiVE! SUMMER -いくぞッ！武道館SP-.jpg",
+      ref: "https://x.com/takanenofficial/status/1933826864835067983",
+    },
+    {
+      path: "/events/2025/2025-07-21_iLiVE! SUMMER -いくぞッ！武道館SP-_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/1946911719600898222",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-07-21_iLiVE! SUMMER -いくぞッ！武道館SP-_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/1947221234812674559",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://t-dv.com/ilive250721",
+  streamings: undefined,
+  goods: {
+    time: ["17:55"],
+    lineup: ["ミニフォトカード「アイドル衣装衣装」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/1946911719600898222",
+  },
+  acts: {
+    start: "17:20",
+    end: "17:45",
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "推しの魔法",
+      "MC",
+      "美しく生きろ",
+      "ファンサ",
+      "初恋のこたえ。",
+    ],
+    url: "https://x.com/himeri_momiyama/status/1947233071670948105",
+  },
+  updatedAt: "2025-07-21",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [iLiVE! 公式 X ダイジェスト](https://x.com/info_iLiVE/status/1947275035950952828)
+- [本日のおチェキ](https://x.com/takanekomanager/status/1947221234812674559)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1946911719600898222)
+- [星谷美来欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/1946185688690340196)
+- [公式 X 告知](https://x.com/takanenofficial/status/1933826864835067983)
+`;

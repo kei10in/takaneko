@@ -1,0 +1,65 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-15",
+  open: "12:00",
+  start: "12:30",
+  end: undefined,
+  region: "神奈川",
+  location: "KT Zepp Yokohama",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-15_Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～.jpg",
+      ref: "https://x.com/takanenofficial/status/1943981184012497062",
+    },
+    {
+      path: "/events/2025/2025-08-15_Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1949062153350348802",
+    },
+    {
+      path: "/events/2025/2025-08-15_Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～_タイムテーブル.jpg",
+      ref: "https://x.com/mascarpiece/status/1953826135973724544",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketvillage.jp/events/13485",
+  streamings: undefined,
+  goods: {
+    time: ["18:20", "19:30"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1955974073663807803",
+  },
+  acts: {
+    start: "17:40",
+    end: "18:10",
+    setlist: [
+      "衣装:僕は君になれない衣装",
+      "女の子は強い",
+      "ヒロインは平均以下。",
+      "推しの魔法",
+      "可愛くてごめん",
+      "MC",
+      "初恋のこたえ。",
+      "I’M YOUR IDOL",
+      "初恋のひと。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1956294983092461969",
+  },
+  updatedAt: "2025-08-14",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1955974073663807803)
+- [公式 X チケット情報](https://x.com/takanenofficial/status/1949062153350348802)
+- [公式 X 告知](https://x.com/takanenofficial/status/1943981184012497062)
+`;

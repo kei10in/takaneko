@@ -1,0 +1,44 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "CBCラジオ「あんななのなななっ！」",
+  category: "RADIO",
+  date: "2025-12-21",
+  start: "13:00",
+  end: "15:00",
+  region: "ラジオ",
+  present: ["橋本桃呼", "東山恵里沙", "松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-12-21_CBCラジオ「あんあなのなななっ！」.jpg",
+      ref: "https://x.com/takanenofficial/status/2002625586439901300",
+    },
+    {
+      path: "/events/2025/2025-12-21_CBCラジオ「あんあなのなななっ！」_1.jpg",
+      ref: "https://x.com/nanana1053/status/2002580990884274504",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://hicbc.com/radio/nanana/",
+  },
+  updatedAt: "2025-12-21",
+};
+
+export const content = /* md */ `
+## 概要
+
+インタビュー出演。
+
+インタビュー放送後もパーソナリティからの THE FIRST TAKE 出演に関するコメントあり。
+
+出演時間: 14:35 〜 14:53 ごろ
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=CBC&t=20251221143505)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=CBC&t=20251221130000)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2002625586439901300)
+- [直前告知 - 番組 X](https://x.com/nanana1053/status/2002580990884274504)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2002360743287795738)
+`;

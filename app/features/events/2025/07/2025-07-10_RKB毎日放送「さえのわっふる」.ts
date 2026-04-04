@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "RKB毎日放送「#さえのわっふる」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "16:00",
+  end: undefined,
+  region: "ラジオ",
+  present: ["橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_RKB毎日放送「さえのわっふる」.jpg",
+      ref: "https://rkb.jp/radio/waffle/",
+    },
+    {
+      path: "/events/2025/2025-07-10_RKB毎日放送「さえのわっふる」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943204998038589519",
+    },
+    {
+      path: "/events/2025/2025-07-10_RKB毎日放送「さえのわっふる」_2.jpg",
+      ref: "https://x.com/rkbwa/status/1943208981817942319",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://rkb.jp/radio/waffle/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 15:39 - 17:00
+
+16:00 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=RKB&t=20250710160000)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=RKB&t=20250710153900)
+- [番組 X 報告ポスト](https://x.com/rkbwa/status/1943208981817942319)
+- [公式 X 出演中ポスト](https://x.com/takanenofficial/status/1943204998038589519)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

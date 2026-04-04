@@ -1,0 +1,61 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL SUMMER JUNGLE 2025 Day3",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-11",
+  open: "09:00",
+  start: "10:00",
+  end: undefined,
+  region: "東京",
+  location: "お台場R地区",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-08-10_IDOL SUMMER JUNGLE 2025.jpg",
+      ref: "https://x.com/samajan_idol/status/1936003978204266560",
+    },
+    {
+      path: "/events/2025/2025-08-11_IDOL SUMMER JUNGLE 2025 Day3_タイムテーブル.jpg",
+      ref: "https://x.com/samajan_idol/status/1950859012129374478",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/idolsummerjungle2025",
+  streamings: undefined,
+  goods: {
+    time: ["15:00", "16:00"],
+    lineup: ["外部イベント出演時限定チケット"],
+    url: "https://x.com/takanenofficial/status/1954699555355918566",
+  },
+  acts: {
+    title: "TIGER STAGE",
+    start: "19:30",
+    end: "19:55",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "恋を知った世界",
+      "決戦スピリット",
+      "MC",
+      "美しく生きろ",
+      "ファンサ",
+      "初恋のこたえ。",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1954876119326535934",
+  },
+  updatedAt: "2025-08-11",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [きょうのたかねこ](https://x.com/takanenofficial/status/1954699555355918566)
+- [公式 X 告知](https://x.com/takanenofficial/status/1936318217150156834)
+- [イベント公式 X タイムテーブル告知](https://x.com/samajan_idol/status/1950859012129374478)
+- [イベント公式 X 告知](https://x.com/samajan_idol/status/1936003978204266560)
+`;

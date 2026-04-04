@@ -1,0 +1,53 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "フジテレビ「未来CHO人図鑑」",
+  title: "フジテレビ「未来CHO人図鑑 劇団ビュッフェ 河辺亨（2）」",
+  category: "TV",
+  date: "2025-11-13",
+  start: "22:54",
+  end: "23:00",
+  region: "テレビ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-11-06_フジテレビ「未来CHO人図鑑」.jpg",
+      ref: "https://www.fujitv.co.jp/b_hp/miraichojinzukan/index.html",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.fujitv.co.jp/b_hp/miraichojinzukan/index.html",
+  },
+  updatedAt: "2025-11-15",
+};
+
+export const content = /* md */ `
+## 概要
+
+> ビュッフェ会場でよく見る「ローストビーフの行列」。
+>
+> これを解消するため、他の料理に意識を向けさせるお芝居をしている団体が、“劇団ビュッフェ”。
+>
+> 仲睦まじく見える家族だが、実はある事実が・・・。
+
+## 出演者
+
+- 秋山 竜次 (ロバート)
+
+## スタッフ
+
+**プロデューサー**
+
+- 入口 拓矢
+
+**制作協力**
+
+- FCC
+
+## リンク
+
+- [FOD](https://fod.fujitv.co.jp/title/70wy/)
+- [TVer 見逃し配信](https://tver.jp/series/sr7380ntn4)
+- [出演告知 - 公式 X](https://x.com/takanenofficial/status/1986021141732102577)
+`;

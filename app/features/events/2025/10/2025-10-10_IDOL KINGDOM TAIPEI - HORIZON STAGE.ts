@@ -1,0 +1,52 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "IDOL KINGDOM TAIPEI - HORIZON STAGE",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-10-10",
+  open: "11:00",
+  start: "11:30",
+  end: undefined,
+  region: "台湾",
+  location: "MOONDOG",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-10-10_HORIZON STAGE.jpg",
+      ref: "https://x.com/takanenofficial/status/1975531555637657839",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://tickets.funone.io/activity/activity_detail/erUlvCAQQdht6e",
+  streamings: undefined,
+  acts: {
+    start: "14:30",
+    end: "15:00",
+    setlist: [
+      "衣装:2025 夏衣装",
+      "可愛くてごめん",
+      "メランコリックハニー",
+      "ヒロインは平均以下。",
+      "MC",
+      "僕は君になれない",
+      "誇り高きアイドル",
+      "恋を知った世界",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1976655620876177832",
+  },
+  updatedAt: "2025-10-12",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1976263914091397592)
+- [公式 X タイムテーブル告知](https://x.com/takanenofficial/status/1975531555637657839)
+- [公式 X 告知](https://x.com/takanenofficial/status/1926243059072639477)
+`;

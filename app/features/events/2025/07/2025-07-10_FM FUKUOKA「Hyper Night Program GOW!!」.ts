@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "FM FUKUOKA「Hyper Night Program GOW!!」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "19:10",
+  end: undefined,
+  region: "ラジオ",
+  present: ["橋本桃呼", "日向端ひな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_FM FUKUOKA「Hyper Night Program GOW!!」.jpg",
+      ref: "https://fmfukuoka.co.jp/program/gow/",
+    },
+    {
+      path: "/events/2025/2025-07-10_FM FUKUOKA「Hyper Night Program GOW!!」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943251361518489852",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://fmfukuoka.co.jp/gow/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 18:00 - 20:25
+
+19:10 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710191140)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=FMFUKUOKA&t=20250710180000)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943251361518489852)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

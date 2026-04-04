@@ -1,0 +1,40 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ぎふチャン ラジオ「土曜日の推し事」",
+  category: "RADIO",
+  date: "2025-07-12",
+  start: "07:20",
+  end: "07:45",
+  region: "ラジオ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-07-12_ぎふチャン「土曜日の推し事」.jpg",
+      ref: "https://x.com/oshigoto1431/status/1943514804192215248",
+    },
+    {
+      path: "/events/2025/2025-07-12_ぎふチャン「土曜日の推し事」_0.jpg",
+      ref: "https://x.com/oshigoto1431/status/1943514804192215248",
+    },
+    {
+      path: "/events/2025/2025-07-12_ぎふチャン「土曜日の推し事」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943792418081394697",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.zf-web.com/radio/regular/oshigoto/post.html",
+  },
+  updatedAt: "2025-07-11",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20250712072740)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20250712072000)
+- [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943792418081394697)
+- [番組 X 前日告知](https://x.com/oshigoto1431/status/1943514804192215248)
+`;

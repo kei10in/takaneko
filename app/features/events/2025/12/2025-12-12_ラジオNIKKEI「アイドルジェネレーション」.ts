@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI「アイドルジェネレーション」",
+  category: "RADIO",
+  date: "2025-12-12",
+  start: "23:00",
+  end: "24:00",
+  region: "ラジオ",
+  present: ["日向端ひな", "星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-12-12_ラジオNIKKEI「アイドルジェネレーション」.jpg",
+      ref: "https://x.com/rn_idol/status/1998641525979545809",
+    },
+    {
+      path: "/events/2025/2025-12-12_ラジオNIKKEI「アイドルジェネレーション」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1999378120441495951",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.radionikkei.jp/idol_generation/",
+  },
+  updatedAt: "2025-12-12",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [本日オンエア - 公式 X](https://x.com/takanenofficial/status/1999378120441495951)
+- [告知 - アイドルジェネレーション X](https://x.com/rn_idol/status/1998641525979545809)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1998664241046499661)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20251212230000)
+`;

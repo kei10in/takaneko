@@ -1,0 +1,37 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "岐阜放送「ときめきステーション ダブジェネカウントダウン」",
+  category: "RADIO",
+  date: "2025-12-20",
+  start: "13:00",
+  end: "14:00",
+  region: "ラジオ",
+  present: ["松本ももな", "東山恵里沙"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://www.zf-web.com/radio/regular/wgc/post.html",
+  },
+  updatedAt: "2025-12-20",
+};
+
+export const content = /* md */ `
+## 内容
+
+コメント出演
+
+出演時間: 13:39 頃 〜 13:46 頃
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20251220133915)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20251220130000)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2002189709670297648)
+- [告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2000420865595592722)
+`;

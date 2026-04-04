@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "「TIF2025事前PR番組」公開収録",
+  category: "OTHER",
+  liveType: undefined,
+  date: "2025-06-13",
+  open: undefined,
+  start: "16:00",
+  end: "22:00",
+  region: "東京",
+  location: "お台場",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "公式ファンクラブ Topics",
+    url: "https://takanekofc.com/topics/public/_/pfpocajq92bcxl2g.html",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-06-12",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式ファンクラブ Topics](https://takanekofc.com/topics/public/_/pfpocajq92bcxl2g.html)
+`;

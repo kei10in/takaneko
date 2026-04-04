@@ -1,0 +1,55 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "MARQUEE Fes. -day1-",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-11-17",
+  open: "14:00",
+  start: "14:30",
+  end: undefined,
+  region: "東京",
+  location: "Spotify O-EAST",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-11-17_MARQUEE Fes. -day1-.jpg",
+      ref: "https://x.com/MARQUEE_matsuri/status/1976580968543912083",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://eplus.jp/sf/word/0000131445",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    start: "20:15",
+    end: "20:40",
+    setlist: [
+      "衣装:I’M YOUR IDOL 衣装",
+      "美しく生きろ",
+      "花は誓いを忘れない",
+      "MC",
+      "初恋のこたえ。",
+      "ファンサ",
+      "I’M YOUR IDOL",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/1990396379181547544",
+  },
+  updatedAt: "2025-11-17",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/1990412580746154111)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1983811120994689420)
+- [告知 - MARQUEE祭 X](https://x.com/MARQUEE_matsuri/status/1976580968543912083)
+`;

@@ -1,0 +1,34 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ぎふチャン テレビ「めっちゃぎふわかるてれび」",
+  category: "TV",
+  date: "2025-08-01",
+  start: "21:05",
+  end: "21:54",
+  region: "テレビ",
+  present: ["葉月紗蘭", "東山恵里沙"],
+  images: [
+    {
+      path: "/events/2025/2025-08-01_ぎふチャン テレビ「めっちゃぎふわかるてれび」.jpg",
+      ref: "https://x.com/takanenofficial/status/1950448856816087238",
+    },
+    {
+      path: "/events/2025/2025-08-01_ぎふチャン テレビ「めっちゃぎふわかるてれび」_2.jpg",
+      ref: "https://x.com/metchagifu/status/1950750052047331572",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.zf-web.com/tv/variety/metchagifu/post.html",
+  },
+  updatedAt: "2025-08-02",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [番組 X 告知](https://x.com/metchagifu/status/1950750052047331572)
+- [公式 X 告知](https://x.com/takanenofficial/status/1950448856816087238)
+- [ブログ - 東千春の晴れのち晴れ](https://www.zf-web.com/blog/azumachiharu/post-1189.html)
+`;

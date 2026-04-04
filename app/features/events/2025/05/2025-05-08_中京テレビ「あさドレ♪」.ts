@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "中京テレビ「あさドレ♪」",
+  category: "TV",
+  date: "2025-05-08",
+  open: undefined,
+  start: "05:50",
+  end: "06:50",
+  region: "テレビ",
+  location: "",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "あさドレ♪ 番組ホームページ",
+    url: "https://www.ctv.co.jp/asadore/",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  updatedAt: "2025-05-07",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式 X 告知](https://x.com/takanenofficial/status/1920073583315030396)
+`;

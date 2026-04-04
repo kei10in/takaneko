@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "まいにちフェス2025 ～真夏のアイドルLIVE～",
+  title: " まいにちフェス2025 ～真夏のアイドルLIVE～ produced by au",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2025-08-04",
+  open: "16:45",
+  start: "17:30",
+  end: undefined,
+  region: "東京",
+  location: "SUMMER FES LIVEアリーナ（六本木ヒルズアリーナ）",
+  present: ["高嶺のなでしこ2"],
+  absent: ["星谷美来"],
+  images: [
+    {
+      path: "/events/2025/2025-08-04_まいにちフェス2025 ～真夏のアイドルLIVE～.jpg",
+      ref: "https://x.com/takanenofficial/status/1942033346151997880",
+    },
+    {
+      path: "/events/2025/2025-08-04_まいにちフェス2025 ～真夏のアイドルLIVE～_タイムテーブル.jpg",
+      ref: "https://x.com/douhaji_ex/status/1945007925958676527",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2025/2025-08-04_まいにちフェス2025 ～真夏のアイドルLIVE～_特典会・物販タイムテーブル.jpg",
+      ref: "https://x.com/douhaji_ex/status/1950496595516215686",
+      tags: ["timetable"],
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://www.tv-asahi.co.jp/summerstation/arena/special/everydayfes_idol/",
+  },
+  ticket: "https://ticket.tv-asahi.co.jp/ex/project/everydayfes2_25",
+  streamings: {
+    text: "YouTube Live",
+    url: "https://www.youtube.com/live/lMoqrcO6cfY",
+  },
+  goods: {
+    time: ["17:30", "18:30"],
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    start: "19:00",
+    end: "19:25",
+    setlist: [
+      "衣装: 2025 夏衣装",
+      "初恋のひと。",
+      "初恋のこたえ。",
+      "MC",
+      "美しく生きろ",
+      "決戦スピリット",
+      "ファンサ",
+    ],
+    url: "",
+  },
+  updatedAt: "2025-08-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [星谷美来欠席のお知らせ](https://x.com/takanenofficial/status/1950424896665980973)
+- [動画、はじめてみました X タイムテーブル告知](https://x.com/douhaji_ex/status/1945007925958676527)
+- [動はじ X 特典会・物販タイムテーブル](https://x.com/douhaji_ex/status/1950496595516215686)
+- [音楽ナタリー](https://natalie.mu/music/news/631162)
+- [音楽ナタリー X ポスト](https://x.com/natalie_mu/status/1941980539726274909)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942033346151997880)
+`;

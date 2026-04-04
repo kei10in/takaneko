@@ -1,0 +1,35 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ラジオNIKKEI第1「虎ノ門 トレンド経済研究所」",
+  category: "RADIO",
+  date: "2025-07-24",
+  start: "18:00",
+  end: "18:30",
+  region: "ラジオ",
+  present: ["星谷美来", "松本ももな"],
+  images: [
+    {
+      path: "/events/2025/2025-07-24_ラジオNIKKEI第1「虎ノ門 トレンド経済研究所」.jpg",
+      ref: "https://x.com/takanenofficial/status/1948292190226038893",
+    },
+    {
+      path: "/events/2025/2025-07-24_ラジオNIKKEI第1「虎ノ門 トレンド経済研究所」_1.jpg",
+      ref: "https://news.radiko.jp/article/station/RN1/124557/",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.radionikkei.jp/toraken/",
+  },
+  updatedAt: "2025-07-26",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [radiko 番組放送回](https://radiko.jp/share/?sid=RN1&t=20250724180000)
+- [radiko news](https://news.radiko.jp/article/station/RN1/124557/)
+- [公式 X 告知](https://x.com/takanenofficial/status/1948292190226038893)
+- [虎ノ門 トレンド経済研究所 X 告知](https://x.com/radioinews/status/1948250568641962138)
+`;

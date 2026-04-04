@@ -1,0 +1,46 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "e-radio「キャッチ！」",
+  category: "RADIO",
+  date: "2025-07-10",
+  start: "14:23",
+  end: undefined,
+  region: "ラジオ",
+  present: ["涼海すう"],
+  images: [
+    {
+      path: "/events/2025/2025-07-10_e-radio「キャッチ！」.jpg",
+      ref: "https://www.e-radio.co.jp/",
+    },
+    {
+      path: "/events/2025/2025-07-10_e-radio「キャッチ！」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/1943179894701072534",
+    },
+    {
+      path: "/events/2025/2025-07-10_e-radio「キャッチ！」_2.jpg",
+      ref: "https://x.com/eradio_official/status/1943286724869902712",
+    },
+  ],
+  link: {
+    text: "放送局サイト",
+    url: "https://www.e-radio.co.jp/",
+  },
+  updatedAt: "2025-07-09",
+};
+
+export const content = /* md */ `
+## 内容
+
+番組放送枠 14:00 - 14:53
+
+14:23 ごろ出演予定
+
+## リンク
+
+- [radiko 出演時間](https://radiko.jp/share/?sid=E-RADIO&t=20250710142200)
+- [radiko 番組放送回](https://radiko.jp/share/?sid=E-RADIO&t=20250710140000)
+- [番組 X 報告ポスト](https://x.com/eradio_official/status/1943286724869902712)
+- [公式 X 直前ポスト](https://x.com/takanenofficial/status/1943179894701072534)
+- [公式 X 告知](https://x.com/takanenofficial/status/1942871358289195370)
+`;

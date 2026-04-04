@@ -1,0 +1,41 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "エフエム秋田「mix」",
+  category: "RADIO",
+  date: "2025-04-03",
+  open: undefined,
+  start: "15:00",
+  end: "15:55",
+  region: "ラジオ",
+  location: "",
+  present: ["城月菜央", "松本ももな", "籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "radiko",
+    url: "https://radiko.jp/share/?sid=AFM&t=20250403154150",
+  },
+  ticket: "",
+  streamings: undefined,
+  acts: {
+    url: "",
+  },
+  showNotes: {
+    played: ["Cute for life"],
+  },
+  updatedAt: "2025-04-03",
+};
+
+export const content = /* md */ `
+15:41 〜 15:48 ごろまでコメント出演
+
+## リンク
+
+- [mix | エフエム秋田 | 2025/04/03/木 15:00-15:55 (radiko)](https://radiko.jp/share/?sid=AFM&t=20250403154150)
+- [番組 X ポスト](https://x.com/mixafm/status/1907685749102883022)
+`;

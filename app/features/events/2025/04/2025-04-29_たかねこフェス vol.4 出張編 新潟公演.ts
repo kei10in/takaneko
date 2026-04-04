@@ -1,0 +1,81 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "たかねこフェス vol.4 出張編 新潟公演",
+  category: "LIVE",
+  liveType: "HOSTED",
+  date: "2025-04-29",
+  region: "新潟",
+  location: "新潟LOTS ",
+  present: ["高嶺のなでしこ"],
+  images: [
+    {
+      path: "/events/2025/2025-04-06_たかねこフェス vol.4 出張編.jpg",
+      ref: "https://x.com/JamsCollection/status/1890370497122300288",
+    },
+  ],
+  ticket: "https://eplus.jp/takanenonadeshiko/",
+  streamings: undefined,
+  acts: [
+    {
+      title: "第一部",
+      open: "12:30",
+      start: "13:30",
+      description: "出演: OCHA NORMA",
+      setlist: [
+        "衣装: 2025 春衣装",
+        "初恋のひと。",
+        "小悪魔だってかまわない！",
+        "可愛くてごめん",
+        "MC",
+        "メランコリックハニー",
+        "Cute for life",
+        "MC",
+        "I’M YOUR IDOL",
+        "決戦スピリット",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: [
+        {
+          text: "https://x.com/_MARIC/status/1917505518425497747",
+          url: "https://x.com/_MARIC/status/1917505518425497747",
+        },
+      ],
+    },
+    {
+      title: "第二部",
+      open: "16:00",
+      start: "17:00",
+      description: "出演: きゅるりんってしてみて",
+      setlist: [
+        "衣装: 2025 春衣装",
+        "初恋のひと。",
+        "病名恋ワズライ",
+        "可愛くてごめん",
+        "MC",
+        "メランコリックハニー",
+        "Cute for life",
+        "MC",
+        "I’M YOUR IDOL",
+        "決戦スピリット",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: [
+        {
+          text: "https://x.com/_MARIC/status/1917505518425497747",
+          url: "https://x.com/_MARIC/status/1917505518425497747",
+        },
+      ],
+    },
+  ],
+  updatedAt: "2025-06-12",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [公式ニュース](https://takanenonadeshiko.jp/?p=3362)
+- [公式 X 開催告知](https://x.com/takanenofficial/status/1866754911347892258)
+`;

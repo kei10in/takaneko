@@ -1,0 +1,131 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary:
+    "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ヨドバシカメラマルチメディア梅田",
+  category: "EVENT",
+  liveType: "RELEASE_EVENT",
+  date: "2025-12-07",
+  open: "09:30",
+  start: "12:30",
+  end: undefined,
+  region: "大阪",
+  location: "ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2025/2025-12-07_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ヨドバシカメラマルチメディア梅田.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4668",
+    },
+    {
+      path: "/events/2025/2025-12-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1987857784462045416",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4668",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      title: "1 部 ミニライブ",
+      open: "12:10",
+      start: "12:30",
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "可愛くてごめん",
+        "ヒロインは平均以下。",
+        "MC",
+        "花は誓いを忘れない",
+        "MC",
+        "初恋のこたえ。",
+        "美しく生きろ",
+      ],
+      url: "",
+      links: [
+        {
+          text: "公式 X",
+          url: "https://x.com/takanenofficial/status/1997559224487051447",
+        },
+      ],
+    },
+    {
+      title: "1 部 グループ握手会",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "日向端ひな", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["城月菜央", "涼海すう", "星谷美来", "松本ももな"],
+          },
+        ],
+      },
+    },
+    {
+      title: "2 部 ミニライブ",
+      open: "15:40",
+      start: "16:00",
+      setlist: [
+        "衣装:見上げるたびに、恋をする。衣装",
+        "花は誓いを忘れない",
+        "アドレナリンゲーム",
+        "MC",
+        "病名恋ワズライ",
+        "MC",
+        "この世界は嘘でできている",
+        "ファンサ",
+        "恋を知った世界",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/1997614488590377455",
+    },
+    {
+      title: "2 部 グループ握手会",
+      meetAndGreet: {
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: [
+          {
+            label: "A レーン",
+            members: ["城月菜央", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
+          },
+          {
+            label: "B レーン",
+            members: ["涼海すう", "橋本桃呼", "日向端ひな", "松本ももな"],
+          },
+        ],
+      },
+    },
+  ],
+  updatedAt: "2026-04-04",
+};
+
+export const content = /* md */ `
+## イベント概要
+
+ミニライブ & グループ握手会
+
+CD 一枚購入で「整理番号付き優先エリア入場券」 1 枚と希望のグループの「グループ握手会参加券」を 2 枚配布。
+
+- CD 販売開始: 09:30 〜
+- CD 販売受付場所: ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール CD販売ブース
+
+## リンク
+
+- [イベント終了報告 - ヨドバシ 梅田店 X](https://x.com/yodobashi_umed/status/1997623737894777048)
+- [2 部終了報告 - 公式 X](https://x.com/takanenofficial/status/1997607112499679667)
+- [1 部終了報告- 公式 X](https://x.com/takanenofficial/status/1997559224487051447)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/1997319351540892097)
+- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4668)
+- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1994013333851087271)
+- [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
+`;
