@@ -49,7 +49,7 @@ describe("EventRepository", () => {
   });
 
   describe("selectEventModuleBySlug", () => {
-    it("should return module for mdx file by slug", () => {
+    it("should return module for event file by slug", () => {
       const slug = "2025-08-13_NEO KASSEN 2025";
       const result = Events.selectEventModuleBySlug(slug);
 

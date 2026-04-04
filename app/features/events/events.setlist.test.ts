@@ -29,7 +29,7 @@ describe("all setlist items", async () => {
           item.songTitle.startsWith("影ナレ")
         );
       })
-      .map(({ slug }) => path.basename(slug, ".mdx"));
+      .map(({ slug }) => path.basename(slug));
 
     if (badItems.length > 0) {
       throw new Error(
@@ -55,7 +55,7 @@ describe("all setlist items", async () => {
 
         return !isKnown;
       })
-      .map(({ slug }) => path.basename(slug, ".mdx"));
+      .map(({ slug }) => path.basename(slug));
 
     if (badItems.length > 0) {
       throw new Error(
@@ -80,7 +80,7 @@ describe("all events with setlist", async () => {
 
     if (badEvents.length > 0) {
       const message = `Found ${badEvents.length} events without liveType:\n${badEvents
-        .map((e) => `- ${path.basename(e.slug, ".mdx")}`)
+        .map((e) => `- ${path.basename(e.slug)}`)
         .join("\n")}`;
       throw new Error(message);
     }

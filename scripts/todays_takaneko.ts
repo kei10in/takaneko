@@ -59,7 +59,7 @@ const findEventFiles = async (date: NaiveDate) => {
 
   const scriptDir = import.meta.dirname;
   const files = await glob(
-    `${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.{mdx,tsx}`,
+    `${scriptDir}/../app/features/events/${year}/${month}/${prefix}_*.{ts,tsx,mdx}`,
   );
 
   return files;
