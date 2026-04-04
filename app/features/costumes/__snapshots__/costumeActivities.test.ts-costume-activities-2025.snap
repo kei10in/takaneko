@@ -1,0 +1,3632 @@
+[
+  {
+    "costumeName": "Bouquet of 9 Flowers 衣装",
+    "costumeSlug": "Bouquet of 9 Flowers 衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "見上げるたびに、恋をする。衣装",
+    "costumeSlug": "見上げるたびに恋をする衣装",
+    "count": 19,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-12-28",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-12-28_LEADING PREMIUM 年末感謝祭'25",
+          "summary": "LEADING PREMIUM 年末感謝祭'25",
+          "title": "LEADING PREMIUM 年末感謝祭'25",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-12-24",
+          "liveType": "GUEST",
+          "location": "Kanadevia Hall",
+          "region": "東京",
+          "slug": "2025-12-24_HEROINES Xmas DAY1",
+          "summary": "HEROINES Xmas DAY1",
+          "title": "HEROINES Xmas DAY1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-17",
+          "liveType": "RELEASE_EVENT",
+          "location": "ダイバーシティ東京 プラザ 2F フェスティバル広場",
+          "region": "東京",
+          "slug": "2025-12-17_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "1 部 ミニライブ",
+          },
+          {
+            "actTitle": "2 部 ミニライブ",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-07",
+          "liveType": "RELEASE_EVENT",
+          "location": "ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール",
+          "region": "大阪",
+          "slug": "2025-12-07_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ヨドバシカメラマルチメディア梅田",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ヨドバシカメラマルチメディア梅田",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ヨドバシカメラマルチメディア梅田",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-12-06",
+          "liveType": "GUEST",
+          "location": "品川プリンス ステラボール",
+          "region": "東京",
+          "slug": "2025-12-06_KOOmic idol Festa vol.2",
+          "summary": "KOOmic idol Festa vol.2",
+          "title": "KOOmic idol Festa vol.2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "1 部 ミニライブ",
+          },
+          {
+            "actTitle": "2 部 ミニライブ",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-22",
+          "liveType": "RELEASE_EVENT",
+          "location": "プライムツリー赤池 1F プライムホール",
+          "region": "愛知",
+          "slug": "2025-11-22_1st アルバム「見上げるたびに、恋をする。」リリースイベント@プライムツリー赤池",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@プライムツリー赤池",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@プライムツリー赤池",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "1 部 ミニライブ",
+          },
+          {
+            "actTitle": "2 部 ミニライブ",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-16",
+          "liveType": "RELEASE_EVENT",
+          "location": "ららぽーと豊洲 シーサイドデッキ メインステージ",
+          "region": "東京",
+          "slug": "2025-11-16_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-11-04",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-11-04_第22回 東京国際ミュージック・マーケット (22ndTIMM) ショーケースライブ",
+          "summary": "第22回 東京国際ミュージック・マーケット (22ndTIMM) ショーケースライブ",
+          "title": "第22回 東京国際ミュージック・マーケット (22ndTIMM) ショーケースライブ",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-11-03",
+          "liveType": "GUEST",
+          "location": "江戸川大学 駒木キャンパス 第二体育館",
+          "region": "千葉",
+          "slug": "2025-11-03_駒木祭 in「江戸川ガールズアワード」",
+          "summary": "駒木祭 in「江戸川ガールズアワード」",
+          "title": "駒木祭 in「江戸川ガールズアワード」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "2 ステージ目",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-29",
+          "liveType": "HOSTED",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-10-29_たかねこフェス vol.5 〜ハロウィンSP〜",
+          "summary": "たかねこフェス vol.5 〜ハロウィンSP〜",
+          "title": "たかねこフェス vol.5 〜ハロウィンSP〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-22",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-10-22_MARQUEE Fes",
+          "summary": "MARQUEE Fes.",
+          "title": "MARQUEE Fes.",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-16",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-10-16_iLiVE! HALLOWEEN",
+          "summary": "iLiVE! HALLOWEEN",
+          "title": "iLiVE! HALLOWEEN",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-13",
+          "liveType": "GUEST",
+          "location": "群馬県庁県民広場前",
+          "region": "群馬",
+          "slug": "2025-10-13_ぐんまちゃんアイドルフェスティバル",
+          "summary": "ぐんまちゃんアイドルフェスティバル",
+          "title": "ぐんまちゃんアイドルフェスティバル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ライブ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-23",
+          "liveType": "GUEST",
+          "location": "日本工学院アリーナ",
+          "region": "東京",
+          "slug": "2025-09-23_STARRZ TOKYO 2025",
+          "summary": "STARRZ TOKYO 2025",
+          "title": "STARRZ TOKYO 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ミニライブ",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-20",
+          "liveType": "RELEASE_EVENT",
+          "location": "イオンレイクタウンmori FOREST STAGE",
+          "region": "埼玉",
+          "slug": "2025-09-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-07",
+          "liveType": "SOLO",
+          "location": "幕張イベントホール",
+          "region": "千葉",
+          "slug": "2025-09-07_A Wonderful Encounter",
+          "summary": "A Wonderful Encounter",
+          "title": "3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-21",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-12-21_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-20",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL A)",
+          "region": "東京",
+          "slug": "2025-12-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-13",
+          "liveType": undefined,
+          "location": "ベルサール西新宿 イベントホール",
+          "region": "東京",
+          "slug": "2025-12-13_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-29",
+          "liveType": undefined,
+          "location": "ソニックシティ 第 1 展示場",
+          "region": "埼玉",
+          "slug": "2025-11-29_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-24",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-11-24_1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@大崎ブライトコアホール",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-21",
+          "liveType": undefined,
+          "location": "",
+          "region": "愛知",
+          "slug": "2025-11-21_1st アルバム発売記念プレミアムトークショー",
+          "summary": "1st アルバム発売記念プレミアムトークショー",
+          "title": "1st アルバム発売記念プレミアムトークショー",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-15",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-11-15_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-09",
+          "liveType": undefined,
+          "location": "TOC有明",
+          "region": "東京",
+          "slug": "2025-11-09_1st アルバム「見上げるたびに、恋をする。」リリースイベント@TOC有明",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TOC有明",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TOC有明",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-02",
+          "liveType": undefined,
+          "location": "TFTホール",
+          "region": "東京",
+          "slug": "2025-11-02_1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-01",
+          "liveType": undefined,
+          "location": "横浜YTJホール",
+          "region": "神奈川",
+          "slug": "2025-11-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-05",
+          "liveType": undefined,
+          "location": "",
+          "region": "WEB",
+          "slug": "2025-10-05_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-04",
+          "liveType": undefined,
+          "location": "サンシャインシティ 展示ホールD-3",
+          "region": "東京",
+          "slug": "2025-10-04_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-27",
+          "liveType": undefined,
+          "location": "ベルサール西新宿 イベントホール",
+          "region": "東京",
+          "slug": "2025-09-27_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "2025 夏衣装",
+    "costumeSlug": "2025夏衣装",
+    "count": 15,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-11",
+          "liveType": "GUEST",
+          "location": "台北 統一時代百貨夢廣場",
+          "region": "台湾",
+          "slug": "2025-10-11_IDOL KINGDOM TAIPEI",
+          "summary": "IDOL KINGDOM TAIPEI",
+          "title": "IDOL KINGDOM TAIPEI",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-10",
+          "liveType": "GUEST",
+          "location": "台北 統一時代百貨夢廣場",
+          "region": "台湾",
+          "slug": "2025-10-10_IDOL KINGDOM TAIPEI",
+          "summary": "IDOL KINGDOM TAIPEI",
+          "title": "IDOL KINGDOM TAIPEI",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-10",
+          "liveType": "GUEST",
+          "location": "MOONDOG",
+          "region": "台湾",
+          "slug": "2025-10-10_IDOL KINGDOM TAIPEI - HORIZON STAGE",
+          "summary": "IDOL KINGDOM TAIPEI - HORIZON STAGE",
+          "title": "IDOL KINGDOM TAIPEI - HORIZON STAGE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-07",
+          "liveType": "SOLO",
+          "location": "幕張イベントホール",
+          "region": "千葉",
+          "slug": "2025-09-07_A Wonderful Encounter",
+          "summary": "A Wonderful Encounter",
+          "title": "3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ストロベリーステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-31",
+          "liveType": "GUEST",
+          "location": "横浜アリーナ",
+          "region": "神奈川",
+          "slug": "2025-08-31_@JAM EXPO 2025",
+          "summary": "@JAM EXPO 2025",
+          "title": "@JAM EXPO 2025 supported by UP-T",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-27",
+          "liveType": "GUEST",
+          "location": "Zepp Haneda",
+          "region": "東京",
+          "slug": "2025-08-27_YELL LIVE 2025",
+          "summary": "YELL LIVE 2025",
+          "title": "YELL LIVE 2025 powered by TikTok LIVE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-24",
+          "liveType": "SOLO",
+          "location": "YES24 WANDERLOCH HALL",
+          "region": "ソウル",
+          "slug": "2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+          "summary": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+          "title": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "Club Que Será Será",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-17",
+          "liveType": "GUEST",
+          "location": "ZOZOマリンスタジアム＆幕張メッセ",
+          "region": "千葉",
+          "slug": "2025-08-17_SUMMER SONIC 2025 TOKYO",
+          "summary": "SUMMER SONIC 2025 TOKYO",
+          "title": "SUMMER SONIC 2025 TOKYO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-10",
+          "liveType": "SOLO",
+          "location": "コカ・コーラ SUMMER FES LIVEアリーナ",
+          "region": "東京",
+          "slug": "2025-08-10_テレビ朝日・六本木ヒルズ SUMMER FES",
+          "summary": "テレビ朝日・六本木ヒルズ SUMMER FES",
+          "title": "テレビ朝日・六本木ヒルズ SUMMER FES",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-09",
+          "liveType": "GUEST",
+          "location": "国営ひたち海浜公園",
+          "region": "茨城",
+          "slug": "2025-08-09_LuckyFes'25",
+          "summary": "LuckyFes'25",
+          "title": "LuckyFes'25",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-07",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜",
+          "summary": "3rd ファンミーティング 〜私たちの宣言式〜",
+          "title": "3rd ファンミーティング 〜私たちの宣言式〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-04",
+          "liveType": "GUEST",
+          "location": "SUMMER FES LIVEアリーナ（六本木ヒルズアリーナ）",
+          "region": "東京",
+          "slug": "2025-08-04_まいにちフェス2025 ～真夏のアイドルLIVE～",
+          "summary": "まいにちフェス2025 ～真夏のアイドルLIVE～",
+          "title": " まいにちフェス2025 ～真夏のアイドルLIVE～ produced by au",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "UP-T HOT STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-02",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-02_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-08-08",
+          "liveType": undefined,
+          "location": "TFTホール 1000",
+          "region": "東京",
+          "slug": "2025-08-08_3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント",
+          "summary": "3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント",
+          "title": "高嶺のなでしこ「3rd ファンミーティング〜私たちの宣言式〜」 開催記念 『個別2ショット会』・『個別TikTok撮影会』",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "アイドル衣装衣装",
+    "costumeSlug": "アイドル衣装衣装",
+    "count": 3,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-14",
+          "liveType": "SOLO",
+          "location": "LINE CUBE SHIBUYA",
+          "region": "東京",
+          "slug": "2025-05-14_東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "summary": "東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – ツアーファイナル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-11",
+          "liveType": "SOLO",
+          "location": "NHK大阪ホール",
+          "region": "大阪",
+          "slug": "2025-05-11_東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 大阪公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-06",
+          "liveType": "SOLO",
+          "location": "岡谷鋼機名古屋公会堂 大ホール",
+          "region": "愛知",
+          "slug": "2025-05-06_東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 愛知公演",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-27",
+          "liveType": undefined,
+          "location": "ベルサール西新宿 イベントホール",
+          "region": "東京",
+          "slug": "2025-09-27_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-18",
+          "liveType": undefined,
+          "location": "東京流通センター Bホール",
+          "region": "東京",
+          "slug": "2025-05-18_東名阪ツアー2025 – Spring Ride – 開催記念イベント@東京",
+          "summary": "東名阪ツアー2025 – Spring Ride – 開催記念イベント@東京",
+          "title": "「高嶺のなでしこ 東名阪ツアー2025 – Spring Ride –」開催記念 『個別サイン会』・『個別TikTok撮影会』@東京",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-10",
+          "liveType": undefined,
+          "location": "難波御堂筋ホール ホール7",
+          "region": "大阪",
+          "slug": "2025-05-10_東名阪ツアー2025 – Spring Ride – 開催記念イベント@大阪",
+          "summary": "東名阪ツアー2025 – Spring Ride – 開催記念イベント@大阪",
+          "title": "「高嶺のなでしこ 東名阪ツアー2025 – Spring Ride –」開催記念 『個別サイン会』・『個別TikTok撮影会』@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "2025 春衣装",
+    "costumeSlug": "2025春衣装",
+    "count": 23,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "上半部",
+          },
+          {
+            "actTitle": "下半部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-18",
+          "liveType": "GUEST",
+          "location": "Portal 212",
+          "region": "香港",
+          "slug": "2025-10-18_Joy∞Stage - アイドル交差点・香港",
+          "summary": "Joy∞Stage - アイドル交差点・香港",
+          "title": "Joy∞Stage - アイドル交差点・香港",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "カラオケコラボ",
+          },
+          {
+            "actTitle": "ステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-27",
+          "liveType": "GUEST",
+          "location": "六本木ヒルズアリーナ",
+          "region": "東京",
+          "slug": "2025-07-27_六本木アイドルフェスティバル2025 Day2",
+          "summary": "六本木アイドルフェスティバル2025 Day2",
+          "title": "六本木アイドルフェスティバル2025 Day2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-06",
+          "liveType": "GUEST",
+          "location": "幕張海浜公園 G ブロック特設会場",
+          "region": "千葉",
+          "slug": "2025-07-06_超NATSUZOME 2025",
+          "summary": "超NATSUZOME 2025",
+          "title": "超NATSUZOME 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-06-29",
+          "liveType": "GUEST",
+          "location": "池袋西口公園野外劇場",
+          "region": "東京",
+          "slug": "2025-06-29_「6・26国際麻薬乱用撲滅デー」都民の集い",
+          "summary": "「6・26国際麻薬乱用撲滅デー」都民の集い",
+          "title": "「6・26国際麻薬乱用撲滅デー」都民の集い",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-22",
+          "liveType": "SOLO",
+          "location": "バンダイナムコ上海文化センター 夢想劇場",
+          "region": "上海",
+          "slug": "2025-06-22_「LIVE AROUND 2025 – Spring Ride – in Shanghai」",
+          "summary": "LIVE AROUND 2025 – Spring Ride – in Shanghai",
+          "title": "高嶺のなでしこ LIVE AROUND 2025 – Spring Ride – in Shanghai",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-20",
+          "liveType": "SOLO",
+          "location": "MAO Livehouse 広州中大",
+          "region": "広州",
+          "slug": "2025-06-20_「LIVE AROUND 2025 – Spring Ride – in Guangzhou」",
+          "summary": "LIVE AROUND 2025 – Spring Ride – in Guangzhou",
+          "title": "高嶺のなでしこ LIVE AROUND 2025 – Spring Ride – in Guangzhou",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-08",
+          "liveType": "GUEST",
+          "location": "KBSホール",
+          "region": "京都",
+          "slug": "2025-06-08_POPPIN’BASE in KYOTO 2025",
+          "summary": "POPPIN' BASE in KYOTO 2025",
+          "title": "OSAKA GIGANTIC MUSIC FESTIVAL Special Live 「POPPIN' BASE in KYOTO 2025」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-31",
+          "liveType": "GUEST",
+          "location": "代々木公園イベント広場",
+          "region": "東京",
+          "slug": "2025-05-31_ベトナムフェスティバル2025",
+          "summary": "ベトナムフェスティバル2025",
+          "title": "ベトナムフェスティバル2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "野外ステージ",
+          },
+          {
+            "actTitle": "Zepp Shinjuku",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-04",
+          "liveType": "GUEST",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2025-05-04_歌舞伎町UP GATE↑↑2025",
+          "summary": "歌舞伎町UP GATE↑↑2025",
+          "title": "歌舞伎町UP GATE↑↑2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-29",
+          "liveType": "HOSTED",
+          "location": "新潟LOTS ",
+          "region": "新潟",
+          "slug": "2025-04-29_たかねこフェス vol.4 出張編 新潟公演",
+          "summary": "たかねこフェス vol.4 出張編 新潟公演",
+          "title": "たかねこフェス vol.4 出張編 新潟公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-27",
+          "liveType": "HOSTED",
+          "location": "広島クラブクアトロ",
+          "region": "広島",
+          "slug": "2025-04-27_たかねこフェス vol.4 出張編 広島公演",
+          "summary": "たかねこフェス vol.4 出張編 広島公演",
+          "title": "たかねこフェス vol.4 出張編 広島公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-19",
+          "liveType": "HOSTED",
+          "location": "神戸 Harbor Studio",
+          "region": "兵庫",
+          "slug": "2025-04-19_たかねこフェス vol.4 出張編 兵庫公演",
+          "summary": "たかねこフェス vol.4 出張編 兵庫公演",
+          "title": "たかねこフェス vol.4 出張編 兵庫公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-13",
+          "liveType": "HOSTED",
+          "location": "仙台PIT",
+          "region": "宮城",
+          "slug": "2025-04-13_たかねこフェス vol.4 出張編 宮城公演",
+          "summary": "たかねこフェス vol.4 出張編 宮城公演",
+          "title": "たかねこフェス vol.4 出張編 宮城公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2025-04-12",
+          "liveType": "GUEST",
+          "location": "大垣市北公園野球場",
+          "region": "岐阜",
+          "slug": "2025-04-12_ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
+          "summary": "ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
+          "title": "ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-06",
+          "liveType": "HOSTED",
+          "location": "福岡トヨタホールスカラエスパシオ",
+          "region": "福岡",
+          "slug": "2025-04-06_たかねこフェス vol.4 出張編 福岡公演",
+          "summary": "たかねこフェス vol.4 出張編 福岡公演",
+          "title": "たかねこフェス vol.4 出張編 福岡公演",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-15",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-11-15_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会 振替日",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会 振替日",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会 振替日",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-08",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-11-08_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-27",
+          "liveType": undefined,
+          "location": "ベルサール西新宿 イベントホール",
+          "region": "東京",
+          "slug": "2025-09-27_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ベルサール西新宿",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-05",
+          "liveType": undefined,
+          "location": "ミッドランドホール",
+          "region": "愛知",
+          "slug": "2025-05-05_東名阪ツアー2025 – Spring Ride – 開催記念イベント@愛知",
+          "summary": "東名阪ツアー2025 – Spring Ride – 開催記念イベント@愛知",
+          "title": "「高嶺のなでしこ 東名阪ツアー2025 – Spring Ride –」開催記念 『個別サイン会』・『個別TikTok撮影会』@愛知",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-04-30",
+          "liveType": undefined,
+          "location": "新潟県民会館 ギャラリー",
+          "region": "新潟",
+          "slug": "2025-04-30_たかねこフェス vol.4 開催記念 個別撮影会@新潟",
+          "summary": "たかねこフェス vol.4 開催記念 個別撮影会@新潟",
+          "title": "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-04-26",
+          "liveType": undefined,
+          "location": "BLUELIVE HIROSHIMA",
+          "region": "広島",
+          "slug": "2025-04-26_たかねこフェス vol.4 開催記念 個別撮影会@広島",
+          "summary": "たかねこフェス vol.4 開催記念 個別撮影会@広島",
+          "title": "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-04-20",
+          "liveType": undefined,
+          "location": "神戸サンボーホール 1階 大展示場",
+          "region": "兵庫",
+          "slug": "2025-04-20_たかねこフェス vol.4 開催記念 個別撮影会@兵庫",
+          "summary": "たかねこフェス vol.4 開催記念 個別撮影会@兵庫",
+          "title": "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-04-14",
+          "liveType": undefined,
+          "location": "仙台PIT",
+          "region": "宮城",
+          "slug": "2025-04-14_たかねこフェス vol.4 開催記念 個別撮影会@宮城",
+          "summary": "たかねこフェス vol.4 開催記念 個別撮影会@宮城",
+          "title": "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "ピンク衣装",
+    "costumeSlug": "ピンク衣装",
+    "count": 12,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-03",
+          "liveType": "GUEST",
+          "location": "恵比寿ガーデンホール",
+          "region": "東京",
+          "slug": "2025-07-03_FAVE IDOLS FES〜今会いたい最強アイドル〜",
+          "summary": "FAVE IDOLS FES〜今会いたい最強アイドル〜",
+          "title": "FAVE IDOLS FES〜今会いたい最強アイドル〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-01",
+          "liveType": "GUEST",
+          "location": "Zepp DiverCity",
+          "region": "東京",
+          "slug": "2025-06-01_iLiVE! vol.17",
+          "summary": "iLiVE! vol.17",
+          "title": "iLiVE! vol.17",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-03",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-04-03_NIGFES2025",
+          "summary": "NIGFES2025",
+          "title": "NIGFES2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-01",
+          "liveType": "GUEST",
+          "location": "有明アリーナ",
+          "region": "東京",
+          "slug": "2025-04-01_LANDCON 2025",
+          "summary": "LANDCON 2025",
+          "title": "LANDCON 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-29",
+          "liveType": "GUEST",
+          "location": "品川ステラボール",
+          "region": "東京",
+          "slug": "2025-03-29_KOOmic idol Festa",
+          "summary": "KOOmic idol Festa",
+          "title": "DJ KOO presents 「KOOmic idol Festa」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2025-03-26",
+          "liveType": "GUEST",
+          "location": "国立代々木競技場第一体育館",
+          "region": "東京",
+          "slug": "2025-03-26_超⼗代 -ULTRA TEENS FES- 2025",
+          "summary": "超⼗代 -ULTRA TEENS FES- 2025",
+          "title": "超⼗代 -ULTRA TEENS FES- 2025 10th Anniversary presented by docomo",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "Spotify O-EAST",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-09",
+          "liveType": "GUEST",
+          "location": "Spotify O-Crest, Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-03-09_IDORISE!! FESTIVAL 2025",
+          "summary": "IDORISE!! FESTIVAL 2025",
+          "title": "IDORISE!! FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-05",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-03-05_MARQUEE祭 vol.156",
+          "summary": "MARQUEE祭 vol.156",
+          "title": "MARQUEE祭 vol.156",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-02",
+          "liveType": "GUEST",
+          "location": "国立代々木競技場 第一体育館",
+          "region": "東京",
+          "slug": "2025-03-02_IDOL RUNWAY COLLECTION 2025",
+          "summary": "IDOL RUNWAY COLLECTION 2025",
+          "title": "IDOL RUNWAY COLLECTION 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-23",
+          "liveType": "GUEST",
+          "location": "神奈川県民ホール 大ホール",
+          "region": "神奈川",
+          "slug": "2025-02-23_関内デビルフェスティヴォ〜",
+          "summary": "関内デビルフェスティヴォ〜",
+          "title": "関内デビルフェスティヴォ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-18",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-02-18_AND PARADE MUSIC FES",
+          "summary": "AND PARADE MUSIC FES",
+          "title": "AND PARADE MUSIC FES",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-04",
+          "liveType": undefined,
+          "location": "サンシャインシティ 展示ホールD-3",
+          "region": "東京",
+          "slug": "2025-10-04_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-24",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL B)",
+          "region": "東京",
+          "slug": "2025-05-24_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "summary": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "title": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-04-05",
+          "liveType": undefined,
+          "location": "福岡タワー タワーホール1",
+          "region": "福岡",
+          "slug": "2025-04-05_たかねこフェス vol.4 開催記念 個別撮影会@福岡",
+          "summary": "たかねこフェス vol.4 開催記念 個別撮影会@福岡",
+          "title": "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-15",
+          "liveType": undefined,
+          "location": "池袋・サンシャインシティ 展示ホールA",
+          "region": "東京",
+          "slug": "2025-02-15_Cute for life開催記念撮影会",
+          "summary": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
+          "title": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装",
+    "costumeSlug": "高嶺のなでしこ2024衣装",
+    "count": 18,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-09",
+          "liveType": "GUEST",
+          "location": "WWW X",
+          "region": "東京",
+          "slug": "2025-09-09_超 明星現象 2025",
+          "summary": "超 明星現象 2025",
+          "title": "超 明星現象 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "1 ステージ目",
+          },
+          {
+            "actTitle": "2 ステージ目",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-16",
+          "liveType": "GUEST",
+          "location": "三崎公園野外音楽堂",
+          "region": "福島",
+          "slug": "2025-08-16_でびぱっぱ夏祭 2025〜東の陣〜",
+          "summary": "でびぱっぱ夏祭 2025〜東の陣〜",
+          "title": "でびぱっぱ夏祭 2025〜東の陣〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "KASSEN Spotify O-EAST",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-13",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-08-13_NEO KASSEN 2025",
+          "summary": "NEO KASSEN 2025",
+          "title": "NEO KASSEN 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "TIGER STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-11",
+          "liveType": "GUEST",
+          "location": "お台場R地区",
+          "region": "東京",
+          "slug": "2025-08-11_IDOL SUMMER JUNGLE 2025 Day3",
+          "summary": "IDOL SUMMER JUNGLE 2025 Day3",
+          "title": "IDOL SUMMER JUNGLE 2025 Day3",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2025-07-27",
+          "liveType": "GUEST",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-07-27_ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
+          "summary": "ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
+          "title": "ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-09",
+          "liveType": "GUEST",
+          "location": "CLUB CITTA'",
+          "region": "東京",
+          "slug": "2025-06-09_NIGHT ROCK FES",
+          "summary": "NIGHT ROCK FES",
+          "title": "NIGHT ROCK FES",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-25",
+          "liveType": "GUEST",
+          "location": "Zepp Diver City",
+          "region": "東京",
+          "slug": "2025-05-25_@JAM 2025 Day2 〜SUPER LIVE〜",
+          "summary": "@JAM 2025 Day2 〜SUPER LIVE〜",
+          "title": "@JAM 2025 Day2 〜SUPER LIVE〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-15",
+          "liveType": "GUEST",
+          "location": "SHIBUYA CLUB QUATTRO",
+          "region": "東京",
+          "slug": "2025-04-15_でびぱっぱ 3MAN",
+          "summary": "でびぱっぱ 3MAN",
+          "title": "でびぱっぱ 3MAN",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-04-10",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-04-10_LEADING IN 〜いどみん生誕祭2025〜",
+          "summary": "LEADING IN 〜いどみん生誕祭2025〜",
+          "title": "LEADING IN 〜いどみん生誕祭2025〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-20",
+          "liveType": "GUEST",
+          "location": "京都 KBS HALL",
+          "region": "京都",
+          "slug": "2025-03-20_KOLLABS",
+          "summary": "KOLLABS",
+          "title": "KOLLABS",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "Spotify O-Crest",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-09",
+          "liveType": "GUEST",
+          "location": "Spotify O-Crest, Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-03-09_IDORISE!! FESTIVAL 2025",
+          "summary": "IDORISE!! FESTIVAL 2025",
+          "title": "IDORISE!! FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-16",
+          "liveType": "GUEST",
+          "location": "TOKYO DOME CITY HALL",
+          "region": "東京",
+          "slug": "2025-02-16_HEROINES VALENTINE 2025",
+          "summary": "HEROINES VALENTINE 2025",
+          "title": "TOKYO DOME presents HEROINES VALENTINE 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-08",
+          "liveType": "GUEST",
+          "location": "GARDEN 新木場 FACTORY",
+          "region": "東京",
+          "slug": "2025-02-08_Scratch vol.1",
+          "summary": "Scratch vol.1",
+          "title": "Scratch vol.1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-01-30",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2025-01-30_ZEPPIN DISCO vol.2",
+          "summary": "ZEPPIN DISCO vol.2",
+          "title": "ZEPPIN DISCO vol.2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-01-28",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-01-28_ShiShiFes",
+          "summary": "ShiShi Fes",
+          "title": "ShiShi Fes",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-01-27",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-01-27_ジャムズセッション!!〜新春 SP〜",
+          "summary": "ジャムズセッション!!〜新春 SP〜",
+          "title": "ジャムズセッション!!〜新春 SP〜",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "I’M YOUR IDOL 衣装",
+    "costumeSlug": "IM YOUR IDOL衣装",
+    "count": 5,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-11-17",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-11-17_MARQUEE Fes. -day1-",
+          "summary": "MARQUEE Fes. -day1-",
+          "title": "MARQUEE Fes. -day1-",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-07",
+          "liveType": "GUEST",
+          "location": "恵比寿 LIQUIDROOM",
+          "region": "東京",
+          "slug": "2025-06-07_EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
+          "summary": "EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
+          "title": "EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-01-19",
+          "liveType": "GUEST",
+          "location": "品川グランドホール",
+          "region": "東京",
+          "slug": "2025-01-19_Appare!のなでしこ vol.2",
+          "summary": "Appare!のなでしこ vol.2",
+          "title": "『Appare!のなでしこ〜Appare!×高嶺のなでしこ 2マンライブ！〜』vol.2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-01-04",
+          "liveType": "GUEST",
+          "location": "EX THEATER ROPPONGI",
+          "region": "東京",
+          "slug": "2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル",
+          "summary": "ニューイヤーだよ！六本木アイドルフェスティバル",
+          "title": "ニューイヤーだよ！六本木アイドルフェスティバル",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-29",
+          "liveType": undefined,
+          "location": "ソニックシティ 第 1 展示場",
+          "region": "埼玉",
+          "slug": "2025-11-29_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-02",
+          "liveType": undefined,
+          "location": "サンライズビル大阪 サンライズホールC",
+          "region": "大阪",
+          "slug": "2025-02-02_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別対面お話し会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別対面お話し会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別対面お話し会 & スペシャル抽選会」@サンライズホールC",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "わたし色に染まれ衣装",
+    "costumeSlug": "わたし色に染まれ衣装",
+    "count": 5,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "SKY STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-01",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-01_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-26",
+          "liveType": "GUEST",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2025-07-26_アニソフィアフェス2025 Summer",
+          "summary": "アニソフィアフェス2025 Summer",
+          "title": "アニソフィアフェス2025 Summer",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-26",
+          "liveType": "GUEST",
+          "location": "品川インターシティホール",
+          "region": "東京",
+          "slug": "2025-07-26_TOKYO GIRLS GIRLS ~ 5th Anniversary ~",
+          "summary": "TOKYO GIRLS GIRLS ~ 5th Anniversary ~",
+          "title": "TOKYO GIRLS GIRLS ~ 5th Anniversary ~",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-08",
+          "liveType": "GUEST",
+          "location": "Spotify O-WEST",
+          "region": "東京",
+          "slug": "2025-03-08_IDORISE!! FESTIVAL 2025",
+          "summary": "IDORISE!! FESTIVAL 2025",
+          "title": "IDORISE!! FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-05",
+          "liveType": "GUEST",
+          "location": "Spotify O-WEST",
+          "region": "東京",
+          "slug": "2025-02-05_たかねこライフ！",
+          "summary": "たかねこライフ！",
+          "title": "EVOLUTION POP! Vol.79 〜たかねこライフ！ Premium〜",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "美しく生きろ衣装 (上着なし)",
+    "costumeSlug": "美しく生きろ衣装 (上着なし)",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "美しく生きろ衣装",
+    "costumeSlug": "美しく生きろ衣装",
+    "count": 4,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-12-04",
+          "liveType": "GUEST",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2025-12-04_BEEEEM FES vol.1",
+          "summary": "BEEEEM FES vol.1",
+          "title": "BEEEEM FES vol.1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-07",
+          "liveType": "SOLO",
+          "location": "幕張イベントホール",
+          "region": "千葉",
+          "slug": "2025-09-07_A Wonderful Encounter",
+          "summary": "A Wonderful Encounter",
+          "title": "3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-07",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜",
+          "summary": "3rd ファンミーティング 〜私たちの宣言式〜",
+          "title": "3rd ファンミーティング 〜私たちの宣言式〜",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-28",
+          "liveType": undefined,
+          "location": "東京流通センター 第二展示場 Fホール",
+          "region": "東京",
+          "slug": "2025-09-28_A Wonderful Encounter 開催記念イベント",
+          "summary": "A Wonderful Encounter 開催記念イベント",
+          "title": "高嶺のなでしこ 3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "僕は君になれない衣装",
+    "costumeSlug": "僕は君になれない衣装",
+    "count": 5,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-30",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-10-30_Appare! HALLOWEEN FES. 2025",
+          "summary": "Appare! HALLOWEEN FES. 2025",
+          "title": "Appare! HALLOWEEN FES. 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "花火ステージ Spotify O-EAST",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-26",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2025-08-26_エンドレスサマー2025",
+          "summary": "エンドレスサマー2025",
+          "title": "エンドレスサマー2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-15",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2025-08-15_Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
+          "summary": "Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
+          "title": "Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "SKY STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-03",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-03_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-21",
+          "liveType": "GUEST",
+          "location": "立川ステージガーデン",
+          "region": "東京",
+          "slug": "2025-07-21_iLiVE! SUMMER -いくぞッ！武道館SP-",
+          "summary": "iLiVE! SUMMER -いくぞッ！武道館SP-",
+          "title": "iLiVE! SUMMER -いくぞッ！武道館SP-",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "全国お招きツアー衣装",
+    "costumeSlug": "全国お招きツアー衣装",
+    "count": 5,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "DOLL FACTORY",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-01",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-01_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "カラオケコラボ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-27",
+          "liveType": "GUEST",
+          "location": "六本木ヒルズアリーナ",
+          "region": "東京",
+          "slug": "2025-07-27_六本木アイドルフェスティバル2025 Day2",
+          "summary": "六本木アイドルフェスティバル2025 Day2",
+          "title": "六本木アイドルフェスティバル2025 Day2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-14",
+          "liveType": "SOLO",
+          "location": "LINE CUBE SHIBUYA",
+          "region": "東京",
+          "slug": "2025-05-14_東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "summary": "東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – ツアーファイナル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-11",
+          "liveType": "SOLO",
+          "location": "NHK大阪ホール",
+          "region": "大阪",
+          "slug": "2025-05-11_東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 大阪公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-06",
+          "liveType": "SOLO",
+          "location": "岡谷鋼機名古屋公会堂 大ホール",
+          "region": "愛知",
+          "slug": "2025-05-06_東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 愛知公演",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "アンチファン衣装",
+    "costumeSlug": "アンチファン衣装",
+    "count": 3,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-28",
+          "liveType": "GUEST",
+          "location": "ZeppDiverCity)",
+          "region": "東京",
+          "slug": "2025-10-28_HEROINES HALLOWEEN DAY2",
+          "summary": "HEROINES HALLOWEEN DAY2",
+          "title": "HEROINES HALLOWEEN DAY2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "SMILE GARDEN",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-03",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-03_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-07",
+          "liveType": "GUEST",
+          "location": "Zepp Haneda",
+          "region": "東京",
+          "slug": "2025-07-07_たかねこLiFE!",
+          "summary": "たかねこLiFE!",
+          "title": "たかねこLiFE!",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「ハニフェス 2025」制服衣装",
+    "costumeSlug": "ハニフェス2025制服衣装",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "全員",
+          },
+          {
+            "actTitle": "高嶺のなでしこブロック",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-15",
+          "liveType": "GUEST",
+          "location": "日比谷野外音楽堂",
+          "region": "東京",
+          "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "summary": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "title": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+    "costumeSlug": "ホワイトチョコ-ビターチョコ制服衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-25",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-10-25_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-04",
+          "liveType": undefined,
+          "location": "サンシャインシティ 展示ホールD-3",
+          "region": "東京",
+          "slug": "2025-10-04_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「アイのウイルス」制服衣装",
+    "costumeSlug": "アイのウイルス制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「センパイ。」制服衣装",
+    "costumeSlug": "センパイ制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「恋を知った世界」制服衣装",
+    "costumeSlug": "恋を知った世界制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「初恋のひと。」制服衣装",
+    "costumeSlug": "初恋のひと制服衣装",
+    "count": 4,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-07",
+          "liveType": "SOLO",
+          "location": "幕張イベントホール",
+          "region": "千葉",
+          "slug": "2025-09-07_A Wonderful Encounter",
+          "summary": "A Wonderful Encounter",
+          "title": "3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "浮島 STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-02",
+          "liveType": "GUEST",
+          "location": "",
+          "region": "東京",
+          "slug": "2025-08-02_TOKYO IDOL FESTIVAL 2025",
+          "summary": "TOKYO IDOL FESTIVAL 2025",
+          "title": "TOKYO IDOL FESTIVAL 2025",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-22",
+          "liveType": "SOLO",
+          "location": "バンダイナムコ上海文化センター 夢想劇場",
+          "region": "上海",
+          "slug": "2025-06-22_「LIVE AROUND 2025 – Spring Ride – in Shanghai」",
+          "summary": "LIVE AROUND 2025 – Spring Ride – in Shanghai",
+          "title": "高嶺のなでしこ LIVE AROUND 2025 – Spring Ride – in Shanghai",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-06-20",
+          "liveType": "SOLO",
+          "location": "MAO Livehouse 広州中大",
+          "region": "広州",
+          "slug": "2025-06-20_「LIVE AROUND 2025 – Spring Ride – in Guangzhou」",
+          "summary": "LIVE AROUND 2025 – Spring Ride – in Guangzhou",
+          "title": "高嶺のなでしこ LIVE AROUND 2025 – Spring Ride – in Guangzhou",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-09-28",
+          "liveType": undefined,
+          "location": "東京流通センター 第二展示場 Fホール",
+          "region": "東京",
+          "slug": "2025-09-28_A Wonderful Encounter 開催記念イベント",
+          "summary": "A Wonderful Encounter 開催記念イベント",
+          "title": "高嶺のなでしこ 3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「ヒロインは平均以下。」制服衣装",
+    "costumeSlug": "ヒロインは平均以下制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「女の子は強い」制服衣装",
+    "costumeSlug": "女の子は強い制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「乙女どもよ。」制服衣装",
+    "costumeSlug": "乙女どもよ制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「病名恋ワズライ」衣装",
+    "costumeSlug": "病名恋ワズライ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-27",
+          "liveType": undefined,
+          "location": "TFT ホール 1000",
+          "region": "東京",
+          "slug": "2025-12-27_年末大感謝祭2025",
+          "summary": "年末大感謝祭2025",
+          "title": "年末大感謝祭2025",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」白衣装",
+    "costumeSlug": "この世界は嘘でできている白衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-20",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL A)",
+          "region": "東京",
+          "slug": "2025-12-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-02",
+          "liveType": undefined,
+          "location": "TFTホール",
+          "region": "東京",
+          "slug": "2025-11-02_1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」黒衣装",
+    "costumeSlug": "この世界は嘘でできている黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-20",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL A)",
+          "region": "東京",
+          "slug": "2025-12-20_1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-29",
+          "liveType": undefined,
+          "location": "ソニックシティ 第 1 展示場",
+          "region": "埼玉",
+          "slug": "2025-11-29_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ソニックシティ",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」私服衣装",
+    "costumeSlug": "この世界は嘘でできている私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ライフクエスト」お仕事衣装",
+    "costumeSlug": "ライフクエストお仕事衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-02",
+          "liveType": undefined,
+          "location": "TFTホール",
+          "region": "東京",
+          "slug": "2025-11-02_1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「ライフクエスト」部屋着衣装",
+    "costumeSlug": "ライフクエスト部屋着衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「初恋のこたえ。」浴衣衣装",
+    "costumeSlug": "初恋のこたえ浴衣衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「アイドル衣装」白衣装",
+    "costumeSlug": "アイドル衣装白衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-01",
+          "liveType": undefined,
+          "location": "横浜YTJホール",
+          "region": "神奈川",
+          "slug": "2025-11-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「メランコリックハニー」MV 衣装",
+    "costumeSlug": "メランコリックハニーMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「Cute for life」私服衣装",
+    "costumeSlug": "CuteForLife私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-11-01",
+          "liveType": undefined,
+          "location": "横浜YTJホール",
+          "region": "神奈川",
+          "slug": "2025-11-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「東京サニーパーティー」制服衣装",
+    "costumeSlug": "東京サニーパーティー制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「東京サニーパーティー」パジャマ衣装",
+    "costumeSlug": "東京サニーパーティーパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「小悪魔だってかまわない」衣装",
+    "costumeSlug": "小悪魔だってかまわない衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「I’M YOUR IDOL」MV 衣装",
+    "costumeSlug": "IM YOUR IDOL MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-12-14",
+          "liveType": undefined,
+          "location": "TFTホール 300",
+          "region": "東京",
+          "slug": "2025-12-14_1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TFTホール",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-24",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL B)",
+          "region": "東京",
+          "slug": "2025-05-24_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "summary": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "title": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-01-11",
+          "liveType": undefined,
+          "location": "大崎ブライトコアホール",
+          "region": "東京",
+          "slug": "2025-01-11_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@東京",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@東京",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「アドレナリンゲーム」白黒衣装",
+    "costumeSlug": "アドレナリンゲーム白黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-05-24",
+          "liveType": undefined,
+          "location": "TODA HALL & CONFERENCE TOKYO (HALL B)",
+          "region": "東京",
+          "slug": "2025-05-24_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "summary": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+          "title": "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別握手会」",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「アドレナリンゲーム」ジャージ",
+    "costumeSlug": "アドレナリンゲームジャージ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「LOVE ANTHEM」MV 衣装",
+    "costumeSlug": "LOVE ANTHEM MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "モテチェン！ MV 衣装",
+    "costumeSlug": "モテチェンMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「私より好きでいて」MV 衣装",
+    "costumeSlug": "私より好きでいてMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「メイド☆至上主義」衣装",
+    "costumeSlug": "メイド至上主義衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「推しの魔法」MV 衣装",
+    "costumeSlug": "推しの魔法MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「私は怪物」MV 衣装",
+    "costumeSlug": "私は怪物MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「可愛いっていわれたい」MV 衣装",
+    "costumeSlug": "可愛いっていわれたいMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「いつか私がママになったら」制服衣装",
+    "costumeSlug": "いつか私がママになったら制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「いつか私がママになったら」MV ワンピース衣装",
+    "costumeSlug": "いつか私がママになったらMVワンピース衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「17歳」MV 衣装",
+    "costumeSlug": "17歳MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「すきっちゅーの」私服衣装",
+    "costumeSlug": "すきっちゅーの私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「すきっちゅーの！」パジャマ衣装",
+    "costumeSlug": "すきっちゅーのパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「月曜日の憂鬱」MV 衣装",
+    "costumeSlug": "月曜日の憂鬱MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「決戦スピリット」スポーツウェア 衣装",
+    "costumeSlug": "決戦スピリットスポーツウェア衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「革命の女王」黒衣装",
+    "costumeSlug": "革命の女王黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「僕は君になれない」私服衣装",
+    "costumeSlug": "僕は君になれない私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「男の子の目的は何？」MV 衣装",
+    "costumeSlug": "男の子の目的は何MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-01",
+          "liveType": undefined,
+          "location": "松下IMPホール",
+          "region": "大阪",
+          "slug": "2025-02-01_2ndシングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント個別握手会@大阪",
+          "summary": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント 個別握手会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "可愛くてごめん MV 衣装",
+    "costumeSlug": "可愛くてごめんMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「可愛くてごめん」パジャマ衣装",
+    "costumeSlug": "可愛くてごめんパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ユメムスビ」MV 衣装",
+    "costumeSlug": "ユメムスビMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Bouquet of 9 Flowers ver.)",
+    "costumeSlug": "Tシャツ-Bouquet of 9 Flowers",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (ハニフェス 2025)",
+    "costumeSlug": "Tシャツ-ハニフェス2025",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "アンコール コラボ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-15",
+          "liveType": "GUEST",
+          "location": "日比谷野外音楽堂",
+          "region": "東京",
+          "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "summary": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "title": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Spring Ride ver.)",
+    "costumeSlug": "Tシャツ-Spring Ride",
+    "count": 3,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-14",
+          "liveType": "SOLO",
+          "location": "LINE CUBE SHIBUYA",
+          "region": "東京",
+          "slug": "2025-05-14_東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "summary": "東名阪ツアー2025 – Spring Ride – 東京ツアーファイナル",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – ツアーファイナル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-11",
+          "liveType": "SOLO",
+          "location": "NHK大阪ホール",
+          "region": "大阪",
+          "slug": "2025-05-11_東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 大阪公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 大阪公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-05-06",
+          "liveType": "SOLO",
+          "location": "岡谷鋼機名古屋公会堂 大ホール",
+          "region": "愛知",
+          "slug": "2025-05-06_東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "summary": "東名阪ツアー2025 – Spring Ride – 愛知公演",
+          "title": "高嶺のなでしこ 東名阪ツアー 2025 – Spring Ride – 愛知公演",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (瞬きさえ忘れる。 ver.)",
+    "costumeSlug": "Tシャツ-瞬きさえ忘れる",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (2nd ファンミ ver.)",
+    "costumeSlug": "Tシャツ-2ndファンミ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (わたし色に染まれ ver.)",
+    "costumeSlug": "Tシャツ-わたし色に染まれ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Beginning ver.)",
+    "costumeSlug": "Tシャツ-Beginning",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (CONTEMPO ver.)",
+    "costumeSlug": "Tシャツ-CONTEMPO",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (たかねこちゃん個別デザイン)",
+    "costumeSlug": "Tシャツ-たかねこちゃん個別デザイン",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (たかねこ全国お招きツアー 2023)",
+    "costumeSlug": "Tシャツ-たかねこ全国お招きツアー2023",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (高嶺のなでしこ ver.)",
+    "costumeSlug": "Tシャツ-高嶺のなでしこ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (メンバー個別名前入り)",
+    "costumeSlug": "Tシャツ-メンバー個別名前入り",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-24",
+          "liveType": "SOLO",
+          "location": "YES24 WANDERLOCH HALL",
+          "region": "ソウル",
+          "slug": "2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+          "summary": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+          "title": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "クリスマス 2025 衣装",
+    "costumeSlug": "クリスマス2025衣装",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-12-25",
+          "liveType": "SOLO",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2025-12-25_たかねこクリスマスパーティー2025",
+          "summary": "たかねこクリスマスパーティー2025",
+          "title": "たかねこクリスマスパーティー2025",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "たかねこハロウィン2025 探偵衣装",
+    "costumeSlug": "たかねこハロウィン2025探偵衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "1 ステージ目",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-29",
+          "liveType": "HOSTED",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-10-29_たかねこフェス vol.5 〜ハロウィンSP〜",
+          "summary": "たかねこフェス vol.5 〜ハロウィンSP〜",
+          "title": "たかねこフェス vol.5 〜ハロウィンSP〜",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "LARME Fes'25 衣装",
+    "costumeSlug": "LARMEFes25衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "1 部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-10-26",
+          "liveType": "GUEST",
+          "location": "東京ガーデンシアター",
+          "region": "東京",
+          "slug": "2025-10-26_LARME FES'25",
+          "summary": "LARME FES'25",
+          "title": "LARME FES'25",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+    "costumeSlug": "高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "LIVE & オークション",
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2025-08-30",
+          "liveType": "GUEST",
+          "location": "横浜日産グローバル本社ギャラリー",
+          "region": "神奈川",
+          "slug": "2025-08-30_24時間テレビ 日産チャリティーイベント",
+          "summary": "24時間テレビ 日産チャリティーイベント",
+          "title": "24時間テレビ 日産チャリティーイベント",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2025 浴衣",
+    "costumeSlug": "2025浴衣",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-08-07",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2025-08-07_3rd ファンミーティング 〜私たちの宣言式〜",
+          "summary": "3rd ファンミーティング 〜私たちの宣言式〜",
+          "title": "3rd ファンミーティング 〜私たちの宣言式〜",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-08-08",
+          "liveType": undefined,
+          "location": "TFTホール 1000",
+          "region": "東京",
+          "slug": "2025-08-08_3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント",
+          "summary": "3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント",
+          "title": "高嶺のなでしこ「3rd ファンミーティング〜私たちの宣言式〜」 開催記念 『個別2ショット会』・『個別TikTok撮影会』",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "パジャマ",
+    "costumeSlug": "パジャマ",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "Suupeas / 籾山ひめりコラボ ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-07-26",
+          "liveType": "GUEST",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2025-07-26_アニソフィアフェス2025 Summer",
+          "summary": "アニソフィアフェス2025 Summer",
+          "title": "アニソフィアフェス2025 Summer",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
+    "costumeSlug": "高嶺のなでしこ2024衣装-茨城ロボッツユニフォーム",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-03-22",
+          "liveType": "GUEST",
+          "location": "アダストリアみとアリーナ",
+          "region": "茨城",
+          "slug": "2025-03-22_LuckyFes Half Time Show",
+          "summary": "LuckyFes Half Time Show",
+          "title": "茨城ロボッツ vs アルバルク東京 / LuckyFes Half Time Show",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+    "costumeSlug": "高嶺のなでしこ2024衣装-川崎ブレイブサンダースユニフォーム",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-24",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2025-02-24_ロウルとアイドルフェス",
+          "summary": "ロウルとアイドルフェス",
+          "title": "ロウルとアイドルフェス powered by KAWASAKI BRAVE THUNDERS",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "バレンタイン 2025 衣装",
+    "costumeSlug": "バレンタイン2025衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-02-15",
+          "liveType": undefined,
+          "location": "池袋・サンシャインシティ 展示ホールA",
+          "region": "東京",
+          "slug": "2025-02-15_Cute for life開催記念撮影会",
+          "summary": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
+          "title": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "クリスマス 2024 衣装",
+    "costumeSlug": "クリスマス2024衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "キュンキュン学園制服",
+    "costumeSlug": "キュンキュン学園制服",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "LARME fes vol.1 衣装",
+    "costumeSlug": "LARMEFesVol1衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "読売ジャイアンツ ユニフォーム",
+    "costumeSlug": "読売ジャイアンツユニフォーム",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "京れもん 着物",
+    "costumeSlug": "京れもん着物",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ホワイトサンタ 2023 衣装",
+    "costumeSlug": "ホワイトサンタ2023衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (MILK JAPAN)",
+    "costumeSlug": "Tシャツ-MilkJapan",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2022 サンタ衣装",
+    "costumeSlug": "2022サンタ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ハロウィンコスプレ🎃",
+    "costumeSlug": "ハロウィンコスプレ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+]

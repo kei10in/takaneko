@@ -1,0 +1,2542 @@
+[
+  {
+    "costumeName": "Bouquet of 9 Flowers 衣装",
+    "costumeSlug": "Bouquet of 9 Flowers 衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "見上げるたびに、恋をする。衣装",
+    "costumeSlug": "見上げるたびに恋をする衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2025 夏衣装",
+    "costumeSlug": "2025夏衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "アイドル衣装衣装",
+    "costumeSlug": "アイドル衣装衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2025 春衣装",
+    "costumeSlug": "2025春衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ピンク衣装",
+    "costumeSlug": "ピンク衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装",
+    "costumeSlug": "高嶺のなでしこ2024衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "I’M YOUR IDOL 衣装",
+    "costumeSlug": "IM YOUR IDOL衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "わたし色に染まれ衣装",
+    "costumeSlug": "わたし色に染まれ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "美しく生きろ衣装 (上着なし)",
+    "costumeSlug": "美しく生きろ衣装 (上着なし)",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "美しく生きろ衣装",
+    "costumeSlug": "美しく生きろ衣装",
+    "count": 8,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-29",
+          "liveType": "GUEST",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2023-12-29_IDOL WAVE in TOKYO",
+          "summary": "IDOL WAVE in TOKYO",
+          "title": "IDOL WAVE in TOKYO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-12-17",
+          "liveType": "RELEASE_EVENT",
+          "location": "カメイドクロック",
+          "region": "東京",
+          "slug": "2023-12-17_メジャーデビューシングル「美しく生きろ／タイトル未定」リリースイベント@カメイドクロック",
+          "summary": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@カメイドクロック",
+          "title": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@カメイドクロック",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-17",
+          "liveType": "GUEST",
+          "location": "日比谷野外大音楽堂",
+          "region": "東京",
+          "slug": "2023-12-17_ガラフェス 日比谷野音 デリシャスサンデー",
+          "summary": "ガラフェス 日比谷野音 デリシャスサンデー",
+          "title": "ガラフェス 日比谷野音 デリシャスサンデー",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ミニライブ",
+          },
+        ],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-12-16",
+          "liveType": "RELEASE_EVENT",
+          "location": "中野 ZERO 大ホール",
+          "region": "東京",
+          "slug": "2023-12-16_メジャーデビューシングル「美しく生きろ／タイトル未定」リリースイベント@中野ZERO大ホール",
+          "summary": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@中野ZERO大ホール",
+          "title": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@中野ZERO大ホール",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "オープニング ステージ",
+          },
+          {
+            "actTitle": "メイン ステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-08",
+          "liveType": "HOSTED",
+          "location": "新宿BLAZE",
+          "region": "東京",
+          "slug": "2023-12-08_たかねこフェス Vol.2 〜ウインターセッション2023〜",
+          "summary": "たかねこフェス Vol.2 〜ウインターセッション2023〜",
+          "title": "たかねこフェス Vol.2 〜ウインターセッション2023〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-19",
+          "liveType": "SOLO",
+          "location": "梅田TRAD",
+          "region": "大阪",
+          "slug": "2023-11-19_「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "summary": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "title": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-12-23",
+          "liveType": undefined,
+          "location": "KFC HALL",
+          "region": "東京",
+          "slug": "2023-12-23_メジャーデビューシングル「美しく生きろ／タイトル未定」リリースイベント@KFC HALL",
+          "summary": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@KFC HALL",
+          "title": "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@KFC HALL",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "僕は君になれない衣装",
+    "costumeSlug": "僕は君になれない衣装",
+    "count": 17,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-28",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-12-28_LEADING PREMIUM 年末感謝祭’23",
+          "summary": "LEADING PREMIUM 年末感謝祭’23",
+          "title": "LEADING PREMIUM 年末感謝祭’23",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-18",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2023-12-18_たかねこライフ!",
+          "summary": "たかねこライフ!",
+          "title": "たかねこライフ!",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-15",
+          "liveType": "GUEST",
+          "location": "KANDA SQUARE HALL",
+          "region": "東京",
+          "slug": "2023-12-15_iLiVE! Vol.11",
+          "summary": "iLiVE! Vol.11",
+          "title": "iLiVE! Vol.11",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-10",
+          "liveType": "GUEST",
+          "location": "品川ステラボール",
+          "region": "東京",
+          "slug": "2023-12-10_ッスッゴイライブ 〜5th anniversary SP LIVE〜",
+          "summary": "ッスッゴイライブ 〜5th anniversary SP LIVE〜",
+          "title": "ッスッゴイライブ 〜5th anniversary SP LIVE〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-10",
+          "liveType": "GUEST",
+          "location": "ヒューリックホール東京",
+          "region": "東京",
+          "slug": "2023-12-10_HYPE IDOL! Vol.42",
+          "summary": "HYPE IDOL! Vol.42",
+          "title": "HYPE IDOL! Vol.42",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-26",
+          "liveType": "GUEST",
+          "location": "東武動物公園イベントステージHOLA!",
+          "region": "埼玉",
+          "slug": "2023-11-26_HYPER HEROINES FES",
+          "summary": "HYPER HEROINES FES",
+          "title": "HYPER HEROINES FES",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-19",
+          "liveType": "SOLO",
+          "location": "梅田TRAD",
+          "region": "大阪",
+          "slug": "2023-11-19_「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "summary": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+          "title": "「1周年記念ライブ 〜美しく生きろ〜」追加大阪公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-05",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-11-05_IDOL SQUARE",
+          "summary": "IDOL SQUARE",
+          "title": "IDOL SQUARE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-04",
+          "liveType": "GUEST",
+          "location": "清泉女子大学",
+          "region": "東京",
+          "slug": "2023-11-04_Seisen Festival Concert 2023",
+          "summary": "Seisen Festival Concert 2023",
+          "title": "Seisen Festival Concert 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-28",
+          "liveType": "GUEST",
+          "location": "THE BOTTOM LINE",
+          "region": "愛知",
+          "slug": "2023-10-28_Let’s “Seeing is believing” in NAGOYA",
+          "summary": "Let’s “Seeing is believing” in NAGOYA",
+          "title": "Let’s “Seeing is believing” in NAGOYA",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-21",
+          "liveType": "GUEST",
+          "location": "Zepp Namba",
+          "region": "大阪",
+          "slug": "2023-10-21_LOOP QUEST",
+          "summary": "LOOP QUEST",
+          "title": "LOOP QUEST",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-15",
+          "liveType": "GUEST",
+          "location": "品川グランドホール",
+          "region": "東京",
+          "slug": "2023-10-15_Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+          "summary": "Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+          "title": "Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-09",
+          "liveType": "GUEST",
+          "location": "宗像ユリックス 芝生広場",
+          "region": "福岡",
+          "slug": "2023-10-09_日韓文化交流フェスティバル",
+          "summary": "日韓文化交流フェスティバル",
+          "title": "日韓文化交流フェスティバル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-24",
+          "liveType": "GUEST",
+          "location": "Spotify O-WEST",
+          "region": "東京",
+          "slug": "2023-09-24_ナナランドのスリーマンランド！",
+          "summary": "ナナランドのスリーマンランド！",
+          "title": "ナナランドのスリーマンランド！",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-23",
+          "liveType": "GUEST",
+          "location": "duo MUSIC EXCHANGE",
+          "region": "東京",
+          "slug": "2023-09-23_NAKAYOSHI FES",
+          "summary": "NAKAYOSHI FES.2023",
+          "title": "NAKAYOSHI FES.2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-13",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-09-13_MARQUEE Fes. -day 1-",
+          "summary": "MARQUEE Fes. -day 1-",
+          "title": "MARQUEE Fes. -day 1-",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-11-18",
+          "liveType": undefined,
+          "location": "御堂筋ホール心斎橋",
+          "region": "大阪",
+          "slug": "2023-11-18_TikTok撮影会@大阪",
+          "summary": "TikTok撮影会@大阪",
+          "title": "TikTok撮影会@大阪",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "全国お招きツアー衣装",
+    "costumeSlug": "全国お招きツアー衣装",
+    "count": 61,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-13",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-11-13_MARQUEE Fes. -day 1-",
+          "summary": "MARQUEE Fes. -day 1-",
+          "title": "MARQUEE Fes. -day 1-",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-11-03",
+          "liveType": "GUEST",
+          "location": "神田明神ホール",
+          "region": "東京",
+          "slug": "2023-11-03_秋葉原アイドルサーキット vol.3",
+          "summary": "秋葉原アイドルサーキット vol.3",
+          "title": "秋葉原アイドルサーキット vol.3",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-29",
+          "liveType": "GUEST",
+          "location": "GARDEN新木場FACTORY",
+          "region": "東京",
+          "slug": "2023-10-29_Appare! HALLOWEEN 2023",
+          "summary": "Appare! HALLOWEEN 2023",
+          "title": "Appare! HALLOWEEN 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-22",
+          "liveType": "GUEST",
+          "location": "つくばFC万博グラウンド",
+          "region": "茨城",
+          "slug": "2023-10-22_THFes. 2023",
+          "summary": "THFes. 2023",
+          "title": "THFes. 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-15",
+          "liveType": "GUEST",
+          "location": "品川グランドホール",
+          "region": "東京",
+          "slug": "2023-10-15_Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+          "summary": "Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+          "title": "Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-07",
+          "liveType": "GUEST",
+          "location": "獨協医科大学 関湊記念ホール",
+          "region": "栃木",
+          "slug": "2023-10-07_獨医祭",
+          "summary": "獨医祭",
+          "title": "獨医祭",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-18",
+          "liveType": "GUEST",
+          "location": "EX THEATER ROPPONGI",
+          "region": "東京",
+          "slug": "2023-09-18_Fang Music Fes 02",
+          "summary": "Fang Music Fes #02",
+          "title": "Fang Music Fes #02",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-15",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-09-15_日テレプラス秋のアイドル祭り Supported by U-ZONE",
+          "summary": "日テレプラス秋のアイドル祭り Supported by U-ZONE",
+          "title": "日テレプラス秋のアイドル祭り Supported by U-ZONE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-31",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-08-31_エンドレスサマー2023",
+          "summary": "エンドレスサマー2023",
+          "title": "エンドレスサマー2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ピーチステージ",
+          },
+          {
+            "actTitle": "ブルーベリーステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-27",
+          "liveType": "GUEST",
+          "location": "横浜アリーナ",
+          "region": "神奈川",
+          "slug": "2023-08-27_@JAM EXPO 2023 supported by UP-T",
+          "summary": "@JAM EXPO 2023 supported by UP-T",
+          "title": "@JAM EXPO 2023 supported by UP-T",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-17",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-08-17_NEO KASSEN 2023",
+          "summary": "NEO KASSEN 2023",
+          "title": "NEO KASSEN 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-15",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2023-08-15_『ジャムズセッション!!』-真夏のプレミアム-",
+          "summary": "『ジャムズセッション!!』-真夏のプレミアム-",
+          "title": "『ジャムズセッション!!』-真夏のプレミアム-",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-15",
+          "liveType": "GUEST",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2023-08-15_KAWAII LAB. presents. KAWAII SONIC",
+          "summary": "KAWAII LAB. presents. KAWAII SONIC",
+          "title": "KAWAII LAB. presents. KAWAII SONIC",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-14",
+          "liveType": "GUEST",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2023-08-14_dot yell fes SUMMER SP 2023",
+          "summary": "dot yell fes SUMMER SP 2023",
+          "title": "dot yell fes SUMMER SP 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-12",
+          "liveType": "GUEST",
+          "location": "六本木ヒルズアリーナ",
+          "region": "東京",
+          "slug": "2023-08-12_アイドル“ウタ”バースFES 2023",
+          "summary": "アイドル“ウタ”バースFES 2023",
+          "title": "アイドル“ウタ”バースFES 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-10",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-08-10_Lucky Cats Festival 2023",
+          "summary": "Lucky Cats Festival 2023",
+          "title": "Lucky Cats Festival 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2023-08-07",
+          "liveType": "GUEST",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2023-08-07_IDOL RUNWAY COLLECTION Supported by TGC",
+          "summary": "IDOL RUNWAY COLLECTION Supported by TGC",
+          "title": "IDOL RUNWAY COLLECTION Supported by TGC",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "HOT STAGE",
+          },
+          {
+            "actTitle": "SKY STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-06",
+          "liveType": "GUEST",
+          "location": "お台場・青海周辺エリア",
+          "region": "東京",
+          "slug": "2023-08-06_TOKYO IDOL FESTIVAL 2023",
+          "summary": "TOKYO IDOL FESTIVAL 2023",
+          "title": "TOKYO IDOL FESTIVAL 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "HOT STAGE",
+          },
+          {
+            "actTitle": "SMILE GARDEN",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-04",
+          "liveType": "GUEST",
+          "location": "お台場・青海周辺エリア",
+          "region": "東京",
+          "slug": "2023-08-04_TOKYO IDOL FESTIVAL 2023",
+          "summary": "TOKYO IDOL FESTIVAL 2023",
+          "title": "TOKYO IDOL FESTIVAL 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-01",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-08-01_TIF2023 “超”決起集会",
+          "summary": "TIF2023 “超”決起集会",
+          "title": "TIF2023 “超”決起集会",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-29",
+          "liveType": "GUEST",
+          "location": "六本木ヒルズアリーナ",
+          "region": "東京",
+          "slug": "2023-07-29_六本木アイドルフェスティバル2023",
+          "summary": "六本木アイドルフェスティバル2023",
+          "title": "六本木アイドルフェスティバル2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-23",
+          "liveType": "GUEST",
+          "location": "恵比寿LIQUIDROOM",
+          "region": "東京",
+          "slug": "2023-07-23_青夏",
+          "summary": "青夏",
+          "title": "青夏",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "SPARK STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-17",
+          "liveType": "GUEST",
+          "location": "山中湖交流プラザきらら",
+          "region": "山梨",
+          "slug": "2023-07-17_SPARK 2023 in YAMANAKAKO",
+          "summary": "SPARK 2023 in YAMANAKAKO",
+          "title": "SPARK 2023 in YAMANAKAKO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "YANAGI STAGE",
+          },
+          {
+            "actTitle": "BOTAN STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-16",
+          "liveType": "GUEST",
+          "location": "山中湖交流プラザきらら",
+          "region": "山梨",
+          "slug": "2023-07-16_SPARK 2023 in YAMANAKAKO",
+          "summary": "SPARK 2023 in YAMANAKAKO",
+          "title": "SPARK 2023 in YAMANAKAKO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "YANAGI STAGE",
+          },
+          {
+            "actTitle": "SPARK STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-15",
+          "liveType": "GUEST",
+          "location": "山中湖交流プラザきらら",
+          "region": "山梨",
+          "slug": "2023-07-15_SPARK 2023 in YAMANAKAKO",
+          "summary": "SPARK 2023 in YAMANAKAKO",
+          "title": "SPARK 2023 in YAMANAKAKO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-14",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-07-14_うるトラすフェスタ 2023 〜夏スペシャル in 豊洲PIT〜",
+          "summary": "うるトラすフェスタ 2023 〜夏スペシャル in 豊洲PIT〜",
+          "title": "うるトラすフェスタ 2023 〜夏スペシャル in 豊洲PIT〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "ZOME ステージ",
+          },
+          {
+            "actTitle": "超ステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-02",
+          "liveType": "GUEST",
+          "location": "幕張海浜公園Gブロック",
+          "region": "千葉",
+          "slug": "2023-07-02_超NATSUZOME2023 Day2",
+          "summary": "超NATSUZOME2023 Day2",
+          "title": "超NATSUZOME2023 Day2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "SOMARI ステージ",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-01",
+          "liveType": "GUEST",
+          "location": "幕張海浜公園Gブロック",
+          "region": "千葉",
+          "slug": "2023-07-01_超NATSUZOME2023 Day1",
+          "summary": "超NATSUZOME2023 Day1",
+          "title": "超NATSUZOME2023 Day1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-25",
+          "liveType": "GUEST",
+          "location": "栃木県総合文化センター",
+          "region": "栃木",
+          "slug": "2023-06-25_ASIA MUSIC CARAVAN in Tochigi",
+          "summary": "ASIA MUSIC CARAVAN in Tochigi",
+          "title": "ASIA MUSIC CARAVAN in Tochigi",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-23",
+          "liveType": "HOSTED",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2023-06-23_全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "summary": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "title": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "コラボパフォーマンス",
+          },
+          {
+            "actTitle": "本編",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-18",
+          "liveType": "HOSTED",
+          "location": "THE BOTTOM LINE",
+          "region": "愛知",
+          "slug": "2023-06-18_全国お招きツアー2023 〜First trip〜@名古屋THE BOTTOM LINE",
+          "summary": "全国お招きツアー2023 〜First trip〜@名古屋THE BOTTOM LINE",
+          "title": "全国お招きツアー2023 〜First trip〜@名古屋THE BOTTOM LINE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-12",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-06-12_Queen & Princess SP",
+          "summary": "Queen & Princess SP",
+          "title": "Queen & Princess SP",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-05",
+          "liveType": "GUEST",
+          "location": "Spotify O-WEST",
+          "region": "東京",
+          "slug": "2023-06-05_豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
+          "summary": "豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
+          "title": "豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-03",
+          "liveType": "GUEST",
+          "location": "品川ステラボール",
+          "region": "東京",
+          "slug": "2023-06-03_可憐なアイボリー 1st Live Tour 〜青春リベンジ！〜 東京公演",
+          "summary": "可憐なアイボリー 1st Live Tour 〜青春リベンジ！〜 東京公演",
+          "title": "可憐なアイボリー 1st Live Tour 〜青春リベンジ！〜 東京公演",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-05-28",
+          "liveType": "GUEST",
+          "location": "恵比寿LIQUIDROOM",
+          "region": "東京",
+          "slug": "2023-05-28_BUZZ IDOL! Vol.1",
+          "summary": "BUZZ IDOL! Vol.1",
+          "title": "BUZZ IDOL! Vol.1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-05-21",
+          "liveType": "HOSTED",
+          "location": "新宿KeyStudio",
+          "region": "東京",
+          "slug": "2023-05-21_たかねこフェス特別編「ガールズパーティ2023 春」",
+          "summary": "たかねこフェス特別編「ガールズパーティ2023 春」",
+          "title": "たかねこフェス特別編「ガールズパーティ2023 春」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-05-17",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-05-17_MARQUEE Fes. -day 2-",
+          "summary": "MARQUEE Fes. -day 2-",
+          "title": "MARQUEE Fes. -day 2-",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部 楽曲交換",
+          },
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部 楽曲交換",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-05-06",
+          "liveType": "HOSTED",
+          "location": "LIVE VANQUISH",
+          "region": "広島",
+          "slug": "2023-05-06_全国お招きツアー2023 〜First trip〜@広島LIVE VANQUISH",
+          "summary": "全国お招きツアー2023 〜First trip〜@広島LIVE VANQUISH",
+          "title": "全国お招きツアー2023 〜First trip〜@広島LIVE VANQUISH",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部 楽曲交換",
+          },
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部 楽曲交換",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-05-05",
+          "liveType": "HOSTED",
+          "location": "福岡 BEAT STATION",
+          "region": "福岡",
+          "slug": "2023-05-05_全国お招きツアー2023 〜First trip〜@福岡BEAT STATION",
+          "summary": "全国お招きツアー2023 〜First trip〜@福岡BEAT STATION",
+          "title": "全国お招きツアー2023 〜First trip〜@福岡BEAT STATION",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部 コラボパフォーマンス",
+          },
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部 コラボパフォーマンス",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-04-30",
+          "liveType": "HOSTED",
+          "location": "バナナホール",
+          "region": "大阪",
+          "slug": "2023-04-30_全国お招きツアー2023 〜First trip〜@大阪バナナホール",
+          "summary": "全国お招きツアー2023 〜First trip〜@大阪バナナホール",
+          "title": "全国お招きツアー2023 〜First trip〜@大阪バナナホール",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部 楽曲交換",
+          },
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部 楽曲交換",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-04-23",
+          "liveType": "HOSTED",
+          "location": "仙台 darwin",
+          "region": "宮城",
+          "slug": "2023-04-23_全国お招きツアー2023 〜First trip〜@仙台darwin",
+          "summary": "全国お招きツアー2023 〜First trip〜@仙台darwin",
+          "title": "全国お招きツアー2023 〜First trip〜@仙台darwin",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-06-24",
+          "liveType": undefined,
+          "location": "浅草橋ヒューリックホール",
+          "region": "東京",
+          "slug": "2023-06-24_TikTok撮影会＠東京",
+          "summary": "TikTok撮影会@東京",
+          "title": "TikTok撮影会@東京",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-06-17",
+          "liveType": undefined,
+          "location": "ミッドランドホール",
+          "region": "愛知",
+          "slug": "2023-06-17_TikTok撮影会@愛知",
+          "summary": "TikTok撮影会@愛知",
+          "title": "TikTok撮影会@愛知",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-05-07",
+          "liveType": undefined,
+          "location": "広島RCC文化センター 7F",
+          "region": "広島",
+          "slug": "2023-05-07_TikTok撮影会@広島",
+          "summary": "TikTok撮影会@広島",
+          "title": "TikTok撮影会@広島",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-05-04",
+          "liveType": undefined,
+          "location": "福岡国際会議場 国際会議室501",
+          "region": "福岡",
+          "slug": "2023-05-04_TikTok撮影会@福岡",
+          "summary": "TikTok撮影会@福岡",
+          "title": "TikTok撮影会@福岡",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-04-29",
+          "liveType": undefined,
+          "location": "難波御堂筋ホール ホール7",
+          "region": "大阪",
+          "slug": "2023-04-29_TikTok撮影会@大阪",
+          "summary": "TikTok撮影会@大阪",
+          "title": "TikTok撮影会@大阪",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-04-22",
+          "liveType": undefined,
+          "location": "仙台国際センター展示室3 AB",
+          "region": "宮城",
+          "slug": "2023-04-22_TikTok撮影会@仙台",
+          "summary": "TikTok撮影会@仙台",
+          "title": "TikTok撮影会@仙台",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "アンチファン衣装",
+    "costumeSlug": "アンチファン衣装",
+    "count": 28,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-10-31",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-10-31_ヒロインズハロウィン",
+          "summary": "ヒロインズハロウィン",
+          "title": "ヒロインズハロウィン",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "SMILE GARDEN",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-06",
+          "liveType": "GUEST",
+          "location": "お台場・青海周辺エリア",
+          "region": "東京",
+          "slug": "2023-08-06_TOKYO IDOL FESTIVAL 2023",
+          "summary": "TOKYO IDOL FESTIVAL 2023",
+          "title": "TOKYO IDOL FESTIVAL 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-04-17",
+          "liveType": "GUEST",
+          "location": "渋谷WWW X",
+          "region": "東京",
+          "slug": "2023-04-17_ちゅらまちゅり",
+          "summary": "ちゅらまちゅり",
+          "title": "ちゅらまちゅり",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-26",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-03-26_春の新生活応援フェス！",
+          "summary": "春の新生活応援フェス！",
+          "title": "春の新生活応援フェス！",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-24",
+          "liveType": "GUEST",
+          "location": "TOKYO DOME CITY HALL",
+          "region": "東京",
+          "slug": "2023-03-24_NIG FES 2023",
+          "summary": "NIG FES 2023",
+          "title": "NIG FES 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-21",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-03-21_EVOLUTION POP! EXTRE",
+          "summary": "EVOLUTION POP! EXTRE",
+          "title": "EVOLUTION POP! EXTRE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-20",
+          "liveType": "GUEST",
+          "location": "新宿住友ビル 新宿住友ホール",
+          "region": "東京",
+          "slug": "2023-03-20_SNSで（たぶん）バズったフェス2023",
+          "summary": "SNSで（たぶん）バズったフェス2023",
+          "title": "NABE presents 「SNSで（たぶん）バズったフェス2023」",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-18",
+          "liveType": "GUEST",
+          "location": "神田スクエアホール",
+          "region": "東京",
+          "slug": "2023-03-18_ヒロインズホワイト",
+          "summary": "ヒロインズホワイト",
+          "title": "ヒロインズホワイト",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-12",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-03-12_IDORISE!! FESTIVAL 2023",
+          "summary": "IDORISE!! FESTIVAL 2023 Day2",
+          "title": "IDORISE!! FESTIVAL 2023 Day2",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-03-05",
+          "liveType": "GUEST",
+          "location": "Spotify O-EAST",
+          "region": "東京",
+          "slug": "2023-03-05_MARQUEE祭 Vol.128",
+          "summary": "MARQUEE祭 Vol.128",
+          "title": "MARQUEE祭 Vol.128",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-28",
+          "liveType": "GUEST",
+          "location": "新宿BLAZE",
+          "region": "東京",
+          "slug": "2023-02-28_アイドル甲子園 in 新宿BLAZE",
+          "summary": "アイドル甲子園 in 新宿BLAZE",
+          "title": "アイドル甲子園 in 新宿BLAZE",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-27",
+          "liveType": "GUEST",
+          "location": "渋谷 CLUB QUATTRO",
+          "region": "東京",
+          "slug": "2023-02-27_うるトラすフェスタ vol.12",
+          "summary": "うるトラすフェスタ vol.12",
+          "title": "うるトラすフェスタ vol.12",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-26",
+          "liveType": "GUEST",
+          "location": "Livehouse Output",
+          "region": "沖縄",
+          "slug": "2023-02-26_DDD 〜Discovery iDol OKINAWA〜 3rd depot",
+          "summary": "DDD 〜Discovery iDol OKINAWA〜 3rd depot",
+          "title": "DDD 〜Discovery iDol OKINAWA〜 3rd depot",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-25",
+          "liveType": "GUEST",
+          "location": "新宿BLAZE",
+          "region": "東京",
+          "slug": "2023-02-25_@JAM the Field vol.23",
+          "summary": "@JAM the Field vol.23",
+          "title": "@JAM the Field vol.23",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-23",
+          "liveType": "GUEST",
+          "location": "新宿BLAZE",
+          "region": "東京",
+          "slug": "2023-02-23_KASSEN",
+          "summary": "KASSEN",
+          "title": "KASSEN",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-18",
+          "liveType": "GUEST",
+          "location": "仙台Rensa",
+          "region": "宮城",
+          "slug": "2023-02-18_Golazo! vol.8",
+          "summary": "Golazo! vol.8",
+          "title": "Golazo! vol.8",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-14",
+          "liveType": "HOSTED",
+          "location": "KT Zepp Yokohama",
+          "region": "神奈川",
+          "slug": "2023-02-14_たかねこフェス 〜バレンタインパーティ2023〜",
+          "summary": "たかねこフェス 〜バレンタインパーティ2023〜",
+          "title": "たかねこフェス 〜バレンタインパーティ2023〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-05",
+          "liveType": "GUEST",
+          "location": "KANDA SQUARE HALL",
+          "region": "東京",
+          "slug": "2023-02-05_IDOL SQUARE presents SQUARE PARTY 1",
+          "summary": "IDOL SQUARE presents SQUARE PARTY 1",
+          "title": "IDOL SQUARE presents SQUARE PARTY 1",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-02-02",
+          "liveType": "GUEST",
+          "location": "Spotify  O-EAST",
+          "region": "東京",
+          "slug": "2023-02-02_ツインテールフェス2023",
+          "summary": "ツインテールフェス 2023",
+          "title": "ツインテールフェス 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-22",
+          "liveType": "GUEST",
+          "location": "KeyStudio",
+          "region": "東京",
+          "slug": "2023-01-22_lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
+          "summary": "lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
+          "title": "lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-16",
+          "liveType": "GUEST",
+          "location": "LIQUIDROOM",
+          "region": "東京",
+          "slug": "2023-01-16_iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
+          "summary": "iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
+          "title": "iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-15",
+          "liveType": "GUEST",
+          "location": "Spotify O-WEST",
+          "region": "東京",
+          "slug": "2023-01-15_謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
+          "summary": "謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
+          "title": "謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-08",
+          "liveType": "GUEST",
+          "location": "横浜 MM ブロンテ",
+          "region": "神奈川",
+          "slug": "2023-01-08_@JAM PARTY vol.80",
+          "summary": "@JAM PARTY vol.80",
+          "title": "@JAM PARTY vol.80",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-07",
+          "liveType": "GUEST",
+          "location": "EXシアター六本木",
+          "region": "東京",
+          "slug": "2023-01-07_ニューイヤーだよ！六本木アイドルフェスティバル",
+          "summary": "ニューイヤーだよ！六本木アイドルフェスティバル",
+          "title": "ニューイヤーだよ！六本木アイドルフェスティバル",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-01-03",
+          "liveType": "GUEST",
+          "location": "Zepp DiverCity",
+          "region": "東京",
+          "slug": "2023-01-03_NewYear Premium Party 2023",
+          "summary": "NewYear Premium Party 2023",
+          "title": "NewYear Premium Party 2023",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-04-09",
+          "liveType": undefined,
+          "location": undefined,
+          "region": "東京",
+          "slug": "2023-04-09_TikTokお試し撮影会",
+          "summary": "TikTokお試し撮影会",
+          "title": "TikTokお試し撮影会",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "「ハニフェス 2025」制服衣装",
+    "costumeSlug": "ハニフェス2025制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+    "costumeSlug": "ホワイトチョコ-ビターチョコ制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「アイのウイルス」制服衣装",
+    "costumeSlug": "アイのウイルス制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「センパイ。」制服衣装",
+    "costumeSlug": "センパイ制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「恋を知った世界」制服衣装",
+    "costumeSlug": "恋を知った世界制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「初恋のひと。」制服衣装",
+    "costumeSlug": "初恋のひと制服衣装",
+    "count": 4,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "FESTIVAL STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-04",
+          "liveType": "GUEST",
+          "location": "お台場・青海周辺エリア",
+          "region": "東京",
+          "slug": "2023-08-04_TOKYO IDOL FESTIVAL 2023",
+          "summary": "TOKYO IDOL FESTIVAL 2023",
+          "title": "TOKYO IDOL FESTIVAL 2023",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": "KIKU STAGE",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-07-17",
+          "liveType": "GUEST",
+          "location": "山中湖交流プラザきらら",
+          "region": "山梨",
+          "slug": "2023-07-17_SPARK 2023 in YAMANAKAKO",
+          "summary": "SPARK 2023 in YAMANAKAKO",
+          "title": "SPARK 2023 in YAMANAKAKO",
+        },
+      },
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-23",
+          "liveType": "HOSTED",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2023-06-23_全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "summary": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "title": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ヒロインは平均以下。」制服衣装",
+    "costumeSlug": "ヒロインは平均以下制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「女の子は強い」制服衣装",
+    "costumeSlug": "女の子は強い制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「乙女どもよ。」制服衣装",
+    "costumeSlug": "乙女どもよ制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「病名恋ワズライ」衣装",
+    "costumeSlug": "病名恋ワズライ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」白衣装",
+    "costumeSlug": "この世界は嘘でできている白衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」黒衣装",
+    "costumeSlug": "この世界は嘘でできている黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「この世界は嘘でできている」私服衣装",
+    "costumeSlug": "この世界は嘘でできている私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ライフクエスト」お仕事衣装",
+    "costumeSlug": "ライフクエストお仕事衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ライフクエスト」部屋着衣装",
+    "costumeSlug": "ライフクエスト部屋着衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「初恋のこたえ。」浴衣衣装",
+    "costumeSlug": "初恋のこたえ浴衣衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「アイドル衣装」白衣装",
+    "costumeSlug": "アイドル衣装白衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「メランコリックハニー」MV 衣装",
+    "costumeSlug": "メランコリックハニーMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「Cute for life」私服衣装",
+    "costumeSlug": "CuteForLife私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「東京サニーパーティー」制服衣装",
+    "costumeSlug": "東京サニーパーティー制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「東京サニーパーティー」パジャマ衣装",
+    "costumeSlug": "東京サニーパーティーパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「小悪魔だってかまわない」衣装",
+    "costumeSlug": "小悪魔だってかまわない衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「I’M YOUR IDOL」MV 衣装",
+    "costumeSlug": "IM YOUR IDOL MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「アドレナリンゲーム」白黒衣装",
+    "costumeSlug": "アドレナリンゲーム白黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「アドレナリンゲーム」ジャージ",
+    "costumeSlug": "アドレナリンゲームジャージ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「LOVE ANTHEM」MV 衣装",
+    "costumeSlug": "LOVE ANTHEM MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "モテチェン！ MV 衣装",
+    "costumeSlug": "モテチェンMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「私より好きでいて」MV 衣装",
+    "costumeSlug": "私より好きでいてMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「メイド☆至上主義」衣装",
+    "costumeSlug": "メイド至上主義衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「推しの魔法」MV 衣装",
+    "costumeSlug": "推しの魔法MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「私は怪物」MV 衣装",
+    "costumeSlug": "私は怪物MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「可愛いっていわれたい」MV 衣装",
+    "costumeSlug": "可愛いっていわれたいMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「いつか私がママになったら」制服衣装",
+    "costumeSlug": "いつか私がママになったら制服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「いつか私がママになったら」MV ワンピース衣装",
+    "costumeSlug": "いつか私がママになったらMVワンピース衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「17歳」MV 衣装",
+    "costumeSlug": "17歳MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「すきっちゅーの」私服衣装",
+    "costumeSlug": "すきっちゅーの私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「すきっちゅーの！」パジャマ衣装",
+    "costumeSlug": "すきっちゅーのパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「月曜日の憂鬱」MV 衣装",
+    "costumeSlug": "月曜日の憂鬱MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「決戦スピリット」スポーツウェア 衣装",
+    "costumeSlug": "決戦スピリットスポーツウェア衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「革命の女王」黒衣装",
+    "costumeSlug": "革命の女王黒衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「僕は君になれない」私服衣装",
+    "costumeSlug": "僕は君になれない私服衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「男の子の目的は何？」MV 衣装",
+    "costumeSlug": "男の子の目的は何MV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "可愛くてごめん MV 衣装",
+    "costumeSlug": "可愛くてごめんMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「可愛くてごめん」パジャマ衣装",
+    "costumeSlug": "可愛くてごめんパジャマ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "「ユメムスビ」MV 衣装",
+    "costumeSlug": "ユメムスビMV衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Bouquet of 9 Flowers ver.)",
+    "costumeSlug": "Tシャツ-Bouquet of 9 Flowers",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (ハニフェス 2025)",
+    "costumeSlug": "Tシャツ-ハニフェス2025",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Spring Ride ver.)",
+    "costumeSlug": "Tシャツ-Spring Ride",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (瞬きさえ忘れる。 ver.)",
+    "costumeSlug": "Tシャツ-瞬きさえ忘れる",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (2nd ファンミ ver.)",
+    "costumeSlug": "Tシャツ-2ndファンミ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (わたし色に染まれ ver.)",
+    "costumeSlug": "Tシャツ-わたし色に染まれ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (Beginning ver.)",
+    "costumeSlug": "Tシャツ-Beginning",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (CONTEMPO ver.)",
+    "costumeSlug": "Tシャツ-CONTEMPO",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (たかねこちゃん個別デザイン)",
+    "costumeSlug": "Tシャツ-たかねこちゃん個別デザイン",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (たかねこ全国お招きツアー 2023)",
+    "costumeSlug": "Tシャツ-たかねこ全国お招きツアー2023",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-06-23",
+          "liveType": "HOSTED",
+          "location": "Zepp Shinjuku",
+          "region": "東京",
+          "slug": "2023-06-23_全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "summary": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+          "title": "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2023-05-07",
+          "liveType": undefined,
+          "location": "広島RCC文化センター 7F",
+          "region": "広島",
+          "slug": "2023-05-07_TikTok撮影会@広島",
+          "summary": "TikTok撮影会@広島",
+          "title": "TikTok撮影会@広島",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "T シャツ (高嶺のなでしこ ver.)",
+    "costumeSlug": "Tシャツ-高嶺のなでしこ",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-08-31",
+          "liveType": "GUEST",
+          "location": "横浜赤レンガ倉庫イベント広場B",
+          "region": "神奈川",
+          "slug": "2023-08-31_赤レンガスプラッシュ祭2023 Day2",
+          "summary": "赤レンガスプラッシュ祭2023 Day2",
+          "title": "赤レンガスプラッシュ祭2023 Day2",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (メンバー個別名前入り)",
+    "costumeSlug": "Tシャツ-メンバー個別名前入り",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "クリスマス 2025 衣装",
+    "costumeSlug": "クリスマス2025衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "たかねこハロウィン2025 探偵衣装",
+    "costumeSlug": "たかねこハロウィン2025探偵衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "LARME Fes'25 衣装",
+    "costumeSlug": "LARMEFes25衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
+    "costumeSlug": "高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2025 浴衣",
+    "costumeSlug": "2025浴衣",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "パジャマ",
+    "costumeSlug": "パジャマ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
+    "costumeSlug": "高嶺のなでしこ2024衣装-茨城ロボッツユニフォーム",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース ユニフォーム",
+    "costumeSlug": "高嶺のなでしこ2024衣装-川崎ブレイブサンダースユニフォーム",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "バレンタイン 2025 衣装",
+    "costumeSlug": "バレンタイン2025衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "クリスマス 2024 衣装",
+    "costumeSlug": "クリスマス2024衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "キュンキュン学園制服",
+    "costumeSlug": "キュンキュン学園制服",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "LARME fes vol.1 衣装",
+    "costumeSlug": "LARMEFesVol1衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "読売ジャイアンツ ユニフォーム",
+    "costumeSlug": "読売ジャイアンツユニフォーム",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "京れもん 着物",
+    "costumeSlug": "京れもん着物",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ホワイトサンタ 2023 衣装",
+    "costumeSlug": "ホワイトサンタ2023衣装",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "第一部",
+          },
+          {
+            "actTitle": "第二部",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-12-24",
+          "liveType": "SOLO",
+          "location": "横浜 Bay Hall",
+          "region": "神奈川",
+          "slug": "2023-12-24_たかねこクリスマスパーティー2023",
+          "summary": "たかねこクリスマスパーティー2023",
+          "title": "たかねこクリスマスパーティー2023",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "T シャツ (MILK JAPAN)",
+    "costumeSlug": "Tシャツ-MilkJapan",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "OTHER",
+          "date": "2023-10-26",
+          "liveType": "GUEST",
+          "location": "ホテルメトロポリタン エドモント",
+          "region": "東京",
+          "slug": "2023-10-26_第14回 ALL JAPAN ナチュラルチーズコンテスト",
+          "summary": "第14回 ALL JAPAN ナチュラルチーズコンテスト",
+          "title": "第14回 ALL JAPAN ナチュラルチーズコンテスト",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "2022 サンタ衣装",
+    "costumeSlug": "2022サンタ衣装",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+  {
+    "costumeName": "ハロウィンコスプレ🎃",
+    "costumeSlug": "ハロウィンコスプレ",
+    "count": 0,
+    "lives": [],
+    "meetAndGreets": [],
+  },
+]

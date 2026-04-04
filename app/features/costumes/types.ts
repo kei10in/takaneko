@@ -99,6 +99,7 @@ export const LivesForCostume = z.object({
   costumeName: z.string(),
   count: z.int(),
   lives: z.array(SimpleCostumeActivity),
+  meetAndGreets: z.array(SimpleCostumeActivity),
 });
 
 export type LivesForCostume = z.output<typeof LivesForCostume>;
