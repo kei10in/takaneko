@@ -1,0 +1,29 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "BSよしもと「小倉淳の47フォーカス」",
+  category: "TV",
+  date: "2026-01-09",
+  start: "17:00",
+  end: "18:00",
+  region: "テレビ",
+  present: ["籾山ひめり"],
+  images: [
+    {
+      path: "",
+      ref: "",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://bsy.co.jp/programs/by0000020954",
+  },
+  updatedAt: "2026-01-08",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2009218525991457276)
+- [告知動画 - 小倉淳 X](https://x.com/ogurajunoguraju/status/2008440980048126248)
+`;

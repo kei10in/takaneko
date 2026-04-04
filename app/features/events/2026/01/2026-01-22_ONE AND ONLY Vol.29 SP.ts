@@ -1,0 +1,70 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "ONE AND ONLY Vol.29 SP",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-01-22",
+  open: "14:30",
+  start: "15:15",
+  end: undefined,
+  region: "東京",
+  location: "豊洲PIT",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-01-22_ONE AND ONLY Vol.29 SP.jpg",
+      ref: "https://x.com/takanenofficial/status/2003424093224227191",
+    },
+    {
+      path: "/events/2026/2026-01-22_ONE AND ONLY Vol.29 SP_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2003424093224227191",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2026/2026-01-22_ONE AND ONLY Vol.29 SP_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2014308433055601064",
+    },
+    {
+      path: "/events/2026/2026-01-22_ONE AND ONLY Vol.29 SP_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2014306724539515024",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://l-tike.com/concert/mevent/?mid=732837",
+  streamings: undefined,
+  goods: {
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「晴れ着2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2009440007984169034",
+  },
+  acts: {
+    start: "19:45",
+    end: "20:10",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "可愛くてごめん",
+      "センパイ。",
+      "MC",
+      "初恋のこたえ。",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2014309389071691835",
+  },
+  updatedAt: "2026-02-01",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [開催報告 - ONE AND ONLY X](https://x.com/info_oneandonly/status/2016728438556741763)
+- [本日のおチェキ](https://x.com/takanekomanager/status/2014306724539515024)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2014308433055601064)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2013952218228260988)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2003424093224227191)
+`;

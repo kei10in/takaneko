@@ -1,0 +1,82 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "HEROINES FES 2026",
+  title: "HEROINES FES 2026 DAY1",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-02-27",
+  open: "12:30",
+  start: "13:30",
+  end: undefined,
+  region: "東京",
+  location: "LaLa arena TOKYO-BAY",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-02-27_HEROINES FES 2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2016074472760213923",
+    },
+    {
+      path: "/events/2026/2026-02-27_HEROINES FES 2026_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2024446033410097658",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2026/2026-02-27_HEROINES FES 2026_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2027348110176031006",
+    },
+  ],
+  link: {
+    text: "",
+    url: "",
+  },
+  ticket: "https://ticketdive.com/event/heroinesfes2026",
+  streamings: [
+    {
+      text: "YouTube Live (フルコース / Full Course)",
+      url: "https://www.youtube.com/live/9wjEQ_iA2aw",
+    },
+    {
+      text: "ABEMA (プレミアム限定)",
+      url: "https://abema.tv/live-event/0d6ec91f-726e-4b40-8bce-6f0fa4d434da",
+    },
+  ],
+  goods: {
+    time: ["20:30"],
+    lineup: [
+      "ミニフォトカード「2025 浴衣」 / ミニフォトカード「見上げるたびに、恋をする。衣装」 / チェキ",
+    ],
+    url: "https://x.com/takanenofficial/status/2017579869014790645",
+  },
+  acts: {
+    title: "PRINCESS STAGE",
+    start: "19:50",
+    end: "20:20",
+    setlist: [
+      "衣装:見上げるたびに、恋をする。衣装",
+      "初恋のひと。",
+      "可愛くてごめん",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "恋を知った世界",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2027365823023906852",
+  },
+  updatedAt: "2026-02-27",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [本日のおチェキ](https://x.com/takanekomanager/status/2027348110176031006)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2027363337189920895)
+- [出演者紹介 - HEROINES FES X](https://x.com/HEROINES_FES/status/2027346471520276926)
+- [配信告知 - 公式 X](https://x.com/takanenofficial/status/2027224740545646880)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2026990634461212682)
+- [配信告知 - HEROINES×ABEMA X](https://x.com/HEROINES_ABEMA/status/2026975570371002813)
+- [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2024446033410097658)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2016074472760213923)
+`;

@@ -1,0 +1,33 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "TOKYO MX「5時に夢中！スピンオフ特番『ミルクにモ～夢中！』2026」",
+  category: "TV",
+  date: "2026-03-06",
+  start: "20:55",
+  end: "21:25",
+  region: "テレビ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-03-06_TOKYO MX「5時に夢中！スピンオフ特番『ミルクにモ～夢中！』2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2024703127296102495",
+    },
+  ],
+  link: {
+    text: "番組ホームページ",
+    url: "https://s.mxtv.jp/variety/gojisp_milk2026/",
+  },
+  updatedAt: "2026-03-06",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [ミルクの日のミルクの時間 X 投稿キャンペーン - 公式 X](https://x.com/takanenofficial/status/2029867260190544333)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2029907510539473340)
+- [このあと生放送 - 公式 X](https://x.com/takanenofficial/status/2029882574731104366)
+- [牛乳を飲んで酪農応援！プレゼントキャンペーン サイト](https://rakuno-ouen.jp/2026/)
+- [牛乳を飲んで酪農応援！プレゼントキャンペーン告知 - 公式 X](https://x.com/takanenofficial/status/2027989796635693128)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2024703127296102495)
+`;

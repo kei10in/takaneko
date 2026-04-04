@@ -1,0 +1,134 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンライズビル大阪",
+  category: "EVENT",
+  date: "2026-01-10",
+  open: "10:00",
+  start: "12:30",
+  end: undefined,
+  region: "大阪",
+  location: "サンライズビル大阪 ホールB",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-01-10_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンライズビル大阪.jpg",
+      ref: "https://x.com/takanenofficial/status/1993971941448073727",
+    },
+    {
+      path: "/events/2026/2026-01-10_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンライズビル大阪_2.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4914",
+    },
+    {
+      path: "/events/2026/2026-01-10_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンライズビル大阪_抽選会.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4914",
+    },
+    {
+      path: "/events/2025/2025-12-01_1st アルバム「見上げるたびに、恋をする。」リリースイベント.jpg",
+      ref: "https://x.com/takanenofficial/status/1987857784462045416",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4671",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  meetAndGreet: {
+    title: "個別握手会",
+    sessions: [
+      {
+        title: "1 部",
+        start: "11:30",
+        end: "12:30",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
+      },
+      {
+        title: "2 部",
+        start: "12:40",
+        end: "13:40",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["城月菜央", "涼海すう", "日向端ひな", "松本ももな"],
+      },
+      {
+        title: "3 部",
+        start: "14:30",
+        end: "15:30",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
+      },
+      {
+        title: "4 部",
+        start: "15:40",
+        end: "16:40",
+        costume: "見上げるたびに、恋をする。衣装",
+        lanes: ["城月菜央", "涼海すう", "日向端ひな", "松本ももな"],
+      },
+      {
+        title: "5 部",
+        start: "16:50",
+        end: "17:50",
+        costume: "「この世界は嘘でできている」MV 白衣装",
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
+      },
+      {
+        title: "6 部",
+        start: "18:00",
+        end: "19:00",
+        costume: "「この世界は嘘でできている」MV 白衣装",
+        lanes: ["城月菜央", "涼海すう", "日向端ひな", "松本ももな"],
+      },
+    ],
+  },
+  updatedAt: "2026-04-04",
+};
+
+export const content = /* md */ `
+## イベント概要
+
+個別握手会
+
+CD 1 枚予約で、「個別握手会参加券」を 2 枚配布。
+
+### 事前予約
+
+事前予約は[楽天ブックス](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/event-20260110/)で受付。
+
+- **1 次抽選:** 各部・各メンバー最大 1 枚まで
+  - **受付期間:** 11月27日(木) 18:00 〜 11月30日(日) 23:59
+  - **抽選結果:** 12月03日(水) 中に当選メールを配信
+- **2 次抽選:** 各部・各メンバー最大 3 枚まで
+  - **受付期間:** 12月04日(木) 18:00 〜 12月07日(日) 23:59
+  - **抽選結果:** 12月10日(水) 中に当選メールを配信
+- **3 次抽選:** 各部・各メンバー最大 10 枚まで
+  - **受付期間:** 12月11日(木) 18:00 〜 12月17日(日) 23:59
+  - **抽選結果:** 12月22日(月) 中に当選メールを配信
+
+### 当日受付
+
+- 当日 CD 予約販売開始: 10:00 〜
+- 事前 CD 予約販売当選者・特典券引換: 10:00 〜
+
+## 抽選会
+
+「写ルンです」で撮影した「この世界は嘘でできている」、「花は誓いを忘れない」の MV 撮影時のオフショット写真が当たる抽選会を開催。
+
+## リンク
+
+- [衣装情報 - 公式 X](https://x.com/takanenofficial/status/2009794455059202076)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2009613650034933894)
+- [当日販売 & 会場限定抽選会開催のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=4914)
+- [当日販売 & 会場限定抽選会開催 告知 - 公式 X](https://x.com/takanenofficial/status/2009188331628720539)
+- [楽天ブックス 特設ページ](https://books.rakuten.co.jp/event/cd/takanenonadeshiko/event-20260110/)
+- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4671)
+- [詳細告知 - 公式 X](https://x.com/takanenofficial/status/1993971941448073727)
+- [詳細告知 - 楽天ブックス X](https://x.com/rakutenbooks/status/1993969312340820252)
+- [公式 X 告知](https://x.com/takanenofficial/status/1987857784462045416)
+`;

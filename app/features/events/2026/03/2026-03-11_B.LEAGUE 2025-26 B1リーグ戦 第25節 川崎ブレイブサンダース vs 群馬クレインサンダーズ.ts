@@ -1,0 +1,72 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "B.LEAGUE 2025-26 B1リーグ戦 第25節 川崎ブレイブサンダース vs 群馬クレインサンダーズ",
+  title:
+    "りそなグループ B.LEAGUE 2025-26 B1リーグ戦 第25節 川崎ブレイブサンダース vs 群馬クレインサンダーズ",
+  category: "LIVE",
+  liveType: "GUEST",
+  date: "2026-03-11",
+  open: undefined,
+  start: "19:05",
+  end: undefined,
+  region: "神奈川",
+  location: "東急ドレッセとどろきアリーナ",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-03-11_B.LEAGUE ハーフタイムショー.jpg",
+      ref: "https://x.com/takanenofficial/status/2011372718772367521",
+    },
+    {
+      path: "/takaneko/goods/2026/2026-03-11_生写真「ロウルグッズ」.jpg",
+      ref: "https://x.com/brave_thunders/status/2029482057173270881",
+    },
+  ],
+  link: {
+    text: "3/11 群馬戦 高嶺のなでしこ 来場のお知らせ | 川崎ブレイブサンダース",
+    url: "https://kawasaki-bravethunders.com/news/detail/id=22387",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: ["16:15", "19:00"], // ["試合終了後"]
+    lineup: ["生写真「ロウルグッズ」"],
+    url: "https://x.com/brave_thunders/status/2029482057173270881",
+  },
+  acts: {
+    setlist: [
+      "衣装: 高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
+      "可愛くてごめん",
+      "美しく生きろ",
+    ],
+    links: ["https://x.com/takanenofficial/status/2031705637386854798"],
+  },
+  updatedAt: "2026-03-13",
+};
+
+export const content = /* md */ `
+## 内容
+
+> 『りそなグループ B.LEAGUE 2025-26 B1リーグ戦 第25節
+> 川崎ブレイブサンダース vs 群馬クレインサンダーズ』​に #高嶺のなでしこ のゲスト出演が決定🐈‍⬛🌸
+>
+> ハーフタイムショーにてスペシャルパフォーマンスも
+> させていただきます！🏀✨
+
+## リンク
+
+- [背番号の意味は…？ - 公式 X](https://x.com/takanenofficial/status/2032082929695027312)
+- [OFF SHOT (城月菜央・涼海すう)- 公式 X](https://x.com/takanenofficial/status/2031747002426626303)
+- [OFF SHOT (橋本桃呼・葉月紗蘭)- 公式 X](https://x.com/takanenofficial/status/2031748290681983270)
+- [OFF SHOT (東山恵里沙・日向端ひな)- 公式 X](https://x.com/takanenofficial/status/2031749624021860387)
+- [OFF SHOT (星谷美来・松本ももな)- 公式 X](https://x.com/takanenofficial/status/2031751040857718999)
+- [OFF SHOT (籾山ひめり)- 公式 X](https://x.com/takanenofficial/status/2031754520993161642)
+- [出演報告 - 公式 X](https://x.com/takanenofficial/status/2031705637386854798)
+- [出演者紹介 - HIROINES FES X](https://x.com/HEROINES_FES/status/2032061892123115825)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2031350608427409581)
+- [グッズ販売詳細](https://kawasaki-bravethunders.com/news/detail/id=22387#photo)
+- [グッズ販売告知 - 川崎ブレイブサンダース X](https://x.com/brave_thunders/status/2029482057173270881)
+- [コメント動画- 川崎ブレイブサンダース X](https://x.com/brave_thunders/status/2023623445544595793)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2011372718772367521)
+`;

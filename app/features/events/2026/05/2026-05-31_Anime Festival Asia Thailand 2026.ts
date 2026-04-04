@@ -1,0 +1,42 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Anime Festival Asia Thailand 2026",
+  category: "LIVE",
+  liveType: undefined,
+  date: "2026-05-31",
+  open: undefined,
+  start: undefined,
+  end: undefined,
+  region: "タイ",
+  location: "Queen Sirikit National Convention Center",
+  present: ["橋本桃呼", "松本ももな"],
+  images: [
+    {
+      path: "/events/2026/2026-05-31_Anime Festival Asia Thailand 2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2035193861899985206",
+    },
+  ],
+  link: {
+    text: "イベント公式サイト",
+    url: "https://animefestival.asia/afath26/",
+  },
+  ticket: "",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: {
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2026-03-23",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2035193861899985206)
+`;

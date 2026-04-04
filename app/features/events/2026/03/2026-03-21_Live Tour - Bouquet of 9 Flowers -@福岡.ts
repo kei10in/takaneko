@@ -1,0 +1,127 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "Live Tour - Bouquet of 9 Flowers -@福岡",
+  category: "LIVE",
+  liveType: "SOLO",
+  date: "2026-03-21",
+  open: "14:30",
+  start: "15:00",
+  end: undefined,
+  region: "福岡",
+  location: "Zepp Fukuoka",
+  present: ["高嶺のなでしこ2"],
+  images: [
+    {
+      path: "/events/2026/2026-02-14_Live Tour - Bouquet of 9 Flowers -.jpg",
+      ref: "https://x.com/takanenofficial/status/1991437417895645576",
+    },
+    {
+      path: "/events/2026/2026-02-14_Live Tour - Bouquet of 9 Flowers -_スタンプラリー.jpg",
+      ref: "https://takanenonadeshiko.jp/?p=4763",
+    },
+  ],
+  link: {
+    text: "イベント詳細 - 公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=4626",
+  },
+  ticket: "https://eplus.jp/sf/detail/3709540001",
+  streamings: undefined,
+  goods: {
+    time: undefined,
+    lineup: undefined,
+    url: undefined,
+  },
+  acts: [
+    {
+      title: "第一部",
+      open: "14:30",
+      start: "15:30",
+      setlist: [
+        "影ナレ: 涼海すう、橋本桃呼",
+        "Overture",
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "花は誓いを忘れない",
+        "アイドル衣装",
+        "メランコリックハニー",
+        "初恋のこたえ。",
+        "MC",
+        "僕は君になれない",
+        "病名恋ワズライ",
+        "乙女どもよ。",
+        "男の子の目的は何？",
+        "MC",
+        "初恋のひと。",
+        "推しの魔法",
+        "ヒロインは平均以下。",
+        "決戦スピリット",
+        "この世界は嘘でできている",
+        "MC",
+        "世界は恋に落ちている",
+        "MC",
+        "誇り高きアイドル",
+        "I’M YOUR IDOL",
+        "アンコール",
+        "衣装: T シャツ (Bouquet of 9 Flowers ver.)",
+        "恋を知った世界",
+        "MC: 告知、記念撮影、TikTok 撮影",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/_MARIC/status/2035326141683445825"],
+    },
+    {
+      title: "第二部",
+      open: "18:00",
+      start: "19:00",
+      setlist: [
+        "影ナレ: 葉月紗蘭、日向端ひな",
+        "Overture",
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "花は誓いを忘れない",
+        "アイドル衣装",
+        "ライフクエスト",
+        "初恋のこたえ。",
+        "MC",
+        "僕は君になれない",
+        "病名恋ワズライ",
+        "乙女どもよ。",
+        "男の子の目的は何？",
+        "MC",
+        "初恋のひと。",
+        "推しの魔法",
+        "ヒロインは平均以下。",
+        "決戦スピリット",
+        "この世界は嘘でできている",
+        "MC",
+        "世界は恋に落ちている",
+        "MC",
+        "アンチファン",
+        "I’M YOUR IDOL",
+        "アンコール",
+        "衣装: T シャツ (Bouquet of 9 Flowers ver.)",
+        "恋を知った世界",
+        "MC: 告知、記念撮影、TikTok 撮影",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/_MARIC/status/2035326141683445825"],
+    },
+  ],
+  updatedAt: "2026-03-24",
+};
+
+export const content = /* md */ `
+## リンク
+
+- [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2036412770758115501)
+- [開催報告 - 公式 X](https://x.com/takanenofficial/status/2035363353640763894)
+- [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2035185879355154714)
+- [#あしたのたかねこ](https://x.com/takanenofficial/status/2034985861050507559)
+- [グッズ販売時間 - 公式 X](https://x.com/takanenofficial/status/2034940514173329635)
+- [ツアーグッズサイン入れについて (対象者への事前アンケートあり) - 公式ニュース](https://takanenonadeshiko.jp/?p=5126)
+- [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
+- [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
+- [ツアーグッズサイン入れについての告知 - 公式 X](https://x.com/takanenofficial/status/2034208199151087926)
+- [スタンプラリー更新告知 - 公式X](https://x.com/takanenofficial/status/1998706785805627819)
+- [スタンプラリー告知 - 公式 X](https://x.com/takanenofficial/status/1995795093740290121)
+- [告知 - 公式 X](https://x.com/takanenofficial/status/1991437417895645576)
+`;

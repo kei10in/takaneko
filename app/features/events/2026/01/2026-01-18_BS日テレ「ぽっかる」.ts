@@ -1,0 +1,52 @@
+import { EventMetaDescriptor } from "../../eventMeta";
+
+export const meta: EventMetaDescriptor = {
+  summary: "BS日テレ「ぽっかる」",
+  title: "BS日テレ「ぽっかる #48 高嶺のなでしこ」",
+  category: "TV",
+  date: "2026-01-18",
+  start: "24:30",
+  end: "25:00",
+  region: "テレビ",
+  present: ["高嶺のなでしこ2"],
+  absent: ["籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-01-11_BS日テレ「ぽっかる」.jpg",
+      ref: "https://x.com/takanenofficial/status/2010230584858276165",
+    },
+    {
+      path: "/events/2025/2025-03-16_BS日テレ「ぽっかる」.png",
+      ref: "https://www.bs4.jp/popculture/",
+    },
+  ],
+  link: {
+    text: "番組サイト",
+    url: "https://www.bs4.jp/popculture/",
+  },
+  updatedAt: "2026-01-20",
+};
+
+export const content = /* md */ `
+## 番組概要
+
+全国ツアースタート間近！高嶺のなでしこSP後編<br/>
+▽ツアー告知を懸けたカラオケ連続得点アップチャレンジ。果たして結果は！？<br/>
+▽メンバーそれぞれのツアー公約も発表
+
+## 番組内容
+
+前回３人目の挑戦で失敗してしまったメンバーたち。変顔で再チャレンジ権を掴み臨んだ２周目<br/>
+▽トップバッターの城月菜央から星谷美来、日向端ひな、橋本桃呼、アンカー東山恵里沙のリレーでミッション完遂を目指す！<br/>
+▽ライブ公約では珍公約が続出？
+
+## 出演者
+
+- 高嶺のなでしこ
+
+## リンク
+
+- [告知 - 公式 X](https://x.com/takanenofficial/status/2010230584858276165)
+- [告知 (告知動画あり) - ぽっかる2430tv X](https://x.com/bs4_pocul_tour2/status/2010230193106104733)
+- [番組サイト](https://www.bs4.jp/popculture/)
+`;
