@@ -32,7 +32,10 @@ export const meta: EventMetaDescriptor = {
     url: "",
   },
   ticket: "https://ticketdive.com/event/cho-ilive-2026",
-  streamings: undefined,
+  streamings: {
+    text: "YouTube LIVE",
+    url: "https://www.youtube.com/live/AeVLfq9JvwU?t=15850",
+  },
   goods: {
     time: ["20:55", "22:05"],
     lineup: ["ミニフォトカード「セーラー服2026」 / チェキ"],
