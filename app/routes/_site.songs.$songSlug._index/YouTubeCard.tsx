@@ -49,7 +49,7 @@ const findPrioritizedThumbnail = async (videoId: string): Promise<string | undef
       const url = imgs[p].url;
 
       try {
-        const param = { method: "GET", headers: { Range: "bytes=0-0" }, signal: controller.signal };
+        const param = { method: "HEAD", signal: controller.signal };
         const response = await fetch(url, param);
         state[i] = response.ok ? "success" : "failed";
       } catch (e) {
