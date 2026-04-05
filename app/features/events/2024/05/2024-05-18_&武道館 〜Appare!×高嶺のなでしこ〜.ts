@@ -16,7 +16,7 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: {
     setlist: [
-      "衣装:美しく生きろ衣装 (上着なし)",
+      "衣装:美しく生きろ衣装 (ジャケットなし)",
       "美しく生きろ",
       "決戦スピリット",
       "MC",

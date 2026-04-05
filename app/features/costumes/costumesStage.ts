@@ -110,14 +110,14 @@ export const わたし色に染まれ衣装 = {
   },
 } satisfies StageCostume;
 
-export const 美しく生きろ衣装_上着なし = {
+export const 美しく生きろ衣装_ジャケットなし = {
   kind: "stage",
-  name: "美しく生きろ衣装 (上着なし)",
-  slug: "美しく生きろ衣装 (上着なし)",
+  name: "美しく生きろ衣装 (ジャケットなし)",
+  slug: "美しく生きろ衣装 (ジャケットなし)",
   photoType: "none",
 
   image: {
-    path: "/takaneko/costumes/美しく生きろ衣装 (上着なし).jpg",
+    path: "/takaneko/costumes/美しく生きろ衣装 (ジャケットなし).jpg",
     ref: "https://x.com/HEROINES_FES/status/1786967124738711727",
   },
 } satisfies StageCostume;
@@ -180,7 +180,7 @@ export const AllStageCostumes = [
   高嶺のなでしこ2024衣装,
   ImYourIdol衣装,
   わたし色に染まれ衣装,
-  美しく生きろ衣装_上着なし,
+  美しく生きろ衣装_ジャケットなし,
   美しく生きろ衣装,
   僕は君になれない衣装,
   全国お招きツアー衣装,

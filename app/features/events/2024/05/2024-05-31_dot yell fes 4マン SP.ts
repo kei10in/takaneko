@@ -37,7 +37,7 @@ export const meta: EventMetaDescriptor = {
     start: "18:05",
     end: "18:35",
     setlist: [
-      "衣装:美しく生きろ衣装 (上着なし)",
+      "衣装:美しく生きろ衣装 (ジャケットなし)",
       "美しく生きろ",
       "乙女どもよ。",
       "決戦スピリット",
