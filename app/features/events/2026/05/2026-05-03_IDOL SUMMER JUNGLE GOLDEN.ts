@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "IDOL SUMMER JUNGLE GOLDEN",
   category: "LIVE",
   liveType: "GUEST",
-  date: "2026-05-02",
+  date: "2026-05-03",
   open: "09:00",
   start: "10:00",
   end: undefined,
