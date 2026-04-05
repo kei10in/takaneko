@@ -19,7 +19,7 @@ export const meta: EventMetaDescriptor = {
   ],
   link: {
     text: "イベント公式サイト",
-    url: "https://cafe.natslive.jp/fes/202605",
+    url: "https://cafe.natslive.jp/fes/202605#top-5-3-content",
   },
   ticket: "https://cafe.natslive.jp/fes/202605/tickets",
   streamings: undefined,
@@ -29,16 +29,19 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    title: "初恋キッチン。体育館で会お。",
+    description: "初恋食材をかけたクッキング大運動会",
     start: "12:45",
     end: "13:45",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-25",
+  updatedAt: "2026-04-05",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 (動画付き) - NATSLIVE X](https://x.com/NATSLIVE_app/status/2040398992610091467)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2036661906937938397)
 `;
