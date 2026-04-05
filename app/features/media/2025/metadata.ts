@@ -175,7 +175,7 @@ export const metadata2025: MediaDetails[] = [
     kind: "youtube",
     key: "m3u44cVIaq0",
     title:
-      "＃９【混戦優勝争い】#風見和香 リベンジへ！女王 #伊藤実希 の逆襲は？佐藤莉華 ・塩釜菜那 初出場二人のタイムは？SASUKE出場権を懸けた最終決戦！",
+      "＃９【混戦優勝争い】#風見和香 リベンジへ！女王 #伊藤実希 の逆襲は？佐藤莉華 ・塩釜菜那 初出場二人のタイムは？SASUKE出場権を懸けた最終決戦！ #SASUKEアイドル予選会2025",
     authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
     publishedAt: "2025-12-12",
     mediaUrl: "https://youtu.be/m3u44cVIaq0",
@@ -192,7 +192,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-12-12",
     mediaUrl: "https://utaten.com/specialArticle/index/9685",
     imageUrl:
-      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2026020122",
+      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2026040517",
     category: "article",
     presents: [],
   },
@@ -200,7 +200,7 @@ export const metadata2025: MediaDetails[] = [
     kind: "youtube",
     key: "lvaSQ3VWDUg",
     title: "【高嶺のなでしこ】UtaTen注目アーティスト2025年12月コメント動画",
-    authorName: "UtaTen",
+    authorName: "UtaTen TV 公式チャンネル",
     publishedAt: "2025-12-09",
     mediaUrl: "https://youtu.be/lvaSQ3VWDUg",
     imageUrl: "https://i.ytimg.com/vi/lvaSQ3VWDUg/hqdefault.jpg",
@@ -223,7 +223,7 @@ export const metadata2025: MediaDetails[] = [
     kind: "youtube",
     key: "FJQ2wK1_vho",
     title:
-      "＃8【最終種目】SASUKEタイムレース究極スピード決戦①試されるSASUKE力 衝撃の記録誕生！SASUKE出場権を掴むのは？　#SASUKEアイドル予選会2025",
+      "＃８【最終種目】SASUKEタイムレース究極スピード決戦①試されるSASUKE力 衝撃の記録誕生！SASUKE出場権を掴むのは？　#SASUKEアイドル予選会2025",
     authorName: "SASUKE Ninja Warrior【TBS公式】SASUKEチャンネル",
     publishedAt: "2025-12-05",
     mediaUrl: "https://youtu.be/FJQ2wK1_vho",
@@ -373,6 +373,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/BDGAjmWG0Rs/hqdefault.jpg",
     category: "youtube",
     presents: ["城月菜央", "籾山ひめり"],
+    deleted: true,
   },
   {
     kind: "ogp",
@@ -1209,7 +1210,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-06-22",
     mediaUrl: "https://www.sanspo.com/article/20250622-6HUUHVLQONISZL3HTM2GG2HM2A/",
     imageUrl:
-      "https://www.sanspo.com/resizer/v2/KGZ3OTMTP5NS3AY3VSPLTB3WII.jpg?auth=1236eddc48027d0e6e679a68c5985ad456f834ceb8b38b059d6b2c1ffe96cea5&quality=50&focal=899%2C568&width=1200&height=630",
+      "https://www.sanspo.com/resizer/v2/KGZ3OTMTP5NS3AY3VSPLTB3WII.jpg?auth=1236eddc48027d0e6e679a68c5985ad456f834ceb8b38b059d6b2c1ffe96cea5&quality=50&focal=899%2C568&width=1200&height=675",
     category: "article",
     presents: ["涼海すう", "城月菜央", "籾山ひめり"],
   },
@@ -1602,7 +1603,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-04-20",
     mediaUrl: "https://abema.tv/video/episode/90-979_s1_p310",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1769572818&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/90-979_s1_p310/thumb002.png?height=720&quality=75&version=1775034190&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },

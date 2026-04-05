@@ -21,7 +21,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-12-28",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p293",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1769764019&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p293/thumb002.png?height=720&quality=75&version=1775038702&width=1280",
     category: "video",
     presents: ["日向端ひな"],
   },
@@ -289,7 +289,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-18",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p281",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1769764018&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p281/thumb002.png?height=720&quality=75&version=1775038702&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -326,7 +326,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-10-11",
     mediaUrl: "https://abema.tv/video/episode/88-77_s1_p280",
     imageUrl:
-      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1769764018&width=1280",
+      "https://image.p-c2-x.abema-tv.com/image/programs/88-77_s1_p280/thumb002.png?height=720&quality=75&version=1775038702&width=1280",
     category: "video",
     presents: ["橋本桃呼"],
   },
@@ -1084,7 +1084,7 @@ export const metadata2024: MediaDetails[] = [
     publishedAt: "2024-02-13",
     mediaUrl: "https://www.sanspo.com/article/20240213-DNGFPN44GBO7TA4OQBYGAB4BFU/",
     imageUrl:
-      "https://www.sanspo.com/resizer/v2/HEHZWGSFEVMZVFFSL42WL57U34.jpg?auth=2be87ebb5feadb183cb238d24204297ac527b5593da1a854fa8be9de4d9179db&quality=50&focal=2652%2C759&width=1200&height=630",
+      "https://www.sanspo.com/resizer/v2/HEHZWGSFEVMZVFFSL42WL57U34.jpg?auth=2be87ebb5feadb183cb238d24204297ac527b5593da1a854fa8be9de4d9179db&quality=50&focal=2652%2C759&width=1200&height=675",
     category: "article",
     presents: [],
   },
