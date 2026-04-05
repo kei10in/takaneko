@@ -8,7 +8,7 @@ export const meta: EventMetaDescriptor = {
   start: "27:00",
   end: "27:30",
   region: "ラジオ",
-  present: ["東山恵里沙"],
+  present: ["籾山ひめり"],
   images: [
     {
       path: "",
@@ -30,6 +30,14 @@ export const content = /* md */ `
 
   <!-- - [Podcasts Membership]() -->
   <!-- - [メンバーシップ限定 アンコール]() -->
+
+  ## コラボ放送
+
+  「可憐なアイボリーのカレアイ放送局」とのコラボ放送。
+
+  可憐なアイボリーからは永尾梨央さんが出演。
+
+  永尾梨央さんと籾山ひめりのリーダー × キャプテンコンビでスペシャル対談🎤✨
 
   ## 番組説明
 
@@ -53,6 +61,7 @@ export const content = /* md */ `
 
   - [Radiko](https://radiko.jp/share?sid=FMT&t=20260415030000)
   - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
+  - [コラボ放送告知 - 公式 X](https://x.com/takanenofficial/status/2039998921104306442)
   - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
   - [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
 `;
