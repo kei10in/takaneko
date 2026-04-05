@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "4fGyJySBBg4",
+    title:
+      "【オーディション#1】Popteen専属モデルオーディション開催！ファイナリストに選ばれるのは？【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-04-04",
+    mediaUrl: "https://youtu.be/4fGyJySBBg4",
+    imageUrl: "https://i.ytimg.com/vi/4fGyJySBBg4/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/784581",
     title:
