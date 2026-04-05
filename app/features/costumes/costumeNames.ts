@@ -108,6 +108,7 @@ export type TShirtCostumeName = z.infer<typeof TShirtCostumeName>;
 export const TShirtCostumeNames: string[] = TShirtCostumeName.options;
 
 export const SpecialCostumeName = z.enum([
+  "アクロトーキョー コラボグッズ衣装",
   "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
   "クリスマス 2025 衣装",
   "高嶺のなでしこ×michellMacaron コラボアイテム",

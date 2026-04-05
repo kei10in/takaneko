@@ -19,6 +19,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-04-03_ACRO TOKYO ツーショット撮影会_詳細.jpg",
       ref: "https://x.com/takanenofficial/status/2027300456473739545",
     },
+    {
+      path: "/events/2026/2026-04-03_ACRO TOKYO ツーショット撮影会_開催報告.jpg",
+      ref: "https://x.com/takanekomanager/status/2040051208883474541",
+    },
   ],
   link: {
     text: "",
@@ -31,11 +35,17 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    setlist: [],
-    url: "",
+  meetAndGreet: {
+    sessions: [
+      {
+        start: "18:00",
+        end: "20:30",
+        costume: "アクロトーキョー コラボグッズ衣装",
+        lanes: ["城月菜央", "橋本桃呼"],
+      },
+    ],
   },
-  updatedAt: "2026-02-27",
+  updatedAt: "2026-04-05",
 };
 
 export const content = /* md */ `
@@ -48,6 +58,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 - たかねこまねーじゃー X](https://x.com/takanekomanager/status/2040051208883474541)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2027300456473739545)
   - [告知 - アクロトーキョー X](https://x.com/acrotokyo/status/2027277519733326305)
 `;
