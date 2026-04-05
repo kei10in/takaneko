@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://popteen.co.jp/media/84943/",
+    publishedAt: "2026-04-01",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/784581",
     publishedAt: "2026-04-01",
     category: "article",

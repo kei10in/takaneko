@@ -15,6 +15,18 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://popteen.co.jp/media/84943/",
+    title: "専属モデルオーディション2026♡ファイナリストプロフィール&審査内容を一挙公開！",
+    authorName: "Popteen Media",
+    publishedAt: "2026-04-01",
+    mediaUrl: "https://popteen.co.jp/media/84943/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2026/03/311d2167324271b9b46813799d7411fb-1024x1024.png",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/784581",
     title:
       "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第10回『WEAPONS／ウェポンズ』 | TV LIFE web",
