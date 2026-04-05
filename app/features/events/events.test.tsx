@@ -8,8 +8,9 @@ import { Events } from "./events";
 
 describe("event module", async () => {
   const AllPages = await allPages(NaiveDate.todayInJapan(), Events);
-  const AllAssets = allAssetFiles();
-  const AllPaths = [...AllAssets, ...AllPages.map((e) => e.path)];
+  // Path 比較用の文字列は、macOS のファイルシステムの仕様に合わせて NFC で正規化しておく。
+  const AllAssets = allAssetFiles().map((x) => x.normalize("NFC"));
+  const AllPaths = [...AllAssets, ...AllPages.map((e) => e.path).map((x) => x.normalize("NFC"))];
 
   const allEvents = await Events.importAllEventModules();
 
@@ -49,7 +50,7 @@ describe("event module", async () => {
       }
     });
 
-    it("should contains valid image reference in content", () => {
+    it("should contains valid references in content", () => {
       const Content = event.Content;
       const path = `/events/${event.slug}`;
       const Stub = createRoutesStub([{ path, Component: Content }]);
