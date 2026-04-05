@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-04-09_HANiKAMi Vol.3.jpg",
       ref: "https://x.com/takanenofficial/status/2032373601371090999",
     },
+    {
+      path: "/events/2026/2026-04-09_HANiKAMi Vol.3_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2036408939198169137",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "",
@@ -29,10 +34,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    start: "19:55",
+    end: "20:20",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-13",
+  updatedAt: "2026-04-05",
 };
 
 export const content = /* md */ `
