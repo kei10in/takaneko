@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-04-05_KANSAI COLLECTION 2026 SPRING & SUMMER.jpg",
       ref: "https://x.com/takanenofficial/status/2027315688394866885",
     },
+    {
+      path: "/events/2026/2026-04-05_KANSAI COLLECTION 2026 SPRING & SUMMER_トークショー.jpg",
+      ref: "https://x.com/kan_kore/status/2037455837459780014",
+    },
   ],
   link: {
     text: "イベント ホームページ",
@@ -32,11 +36,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-02-27",
+  updatedAt: "2026-04-05",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [トークショー告知 - 関西コレクション X](https://x.com/kan_kore/status/2037455837459780014)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2040580180859638069)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2027315688394866885)
 `;
