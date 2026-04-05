@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "「イベレコ×高嶺のなでしこ」のDREAMランタン",
   title: "「イベレコ×高嶺のなでしこ」のDREAMランタン by 関電工",
+  status: "CANCELED",
   category: "LIVE",
   liveType: "GUEST",
   date: "2026-04-04",
@@ -33,12 +34,17 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-21",
+  updatedAt: "2026-04-05",
 };
 
 export const content = /* md */ `
+  ## 概要
+
+  荒天のため中止。
+
   ## リンク
 
+  - [公演中止のお知らせ - 公式 X](https://x.com/takanenofficial/status/2040308711240220723)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2034424687489585490)
   - [告知 - イベント公式 X](https://x.com/tv_asahi_fes/status/2034582700720615664)
 `;
