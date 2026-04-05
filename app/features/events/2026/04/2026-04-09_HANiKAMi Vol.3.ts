@@ -17,7 +17,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2032373601371090999",
     },
     {
-      path: "/events/2026/2026-04-09_HANiKAMi Vol.3_タイムテーブル.jpg",
+      path: "/events/2026/2026-04-09_HANiKAMi Vol.3_タイムテーブル.jpg",
       ref: "https://x.com/takanenofficial/status/2036408939198169137",
       tags: ["timetable"],
     },
