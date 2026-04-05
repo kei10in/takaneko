@@ -68,4 +68,16 @@ export const metadata2022: MediaDetails[] = [
     category: "youtube",
     presents: ["籾山ひめり"],
   },
+  {
+    kind: "ogp",
+    key: "https://glassgirl.info/article/post-10574/",
+    title:
+      "松本ももな・カバーガールインタビュー「グループ名を聞いて、それになりたいなって思いました」￼ | ガラスガール",
+    authorName: "ガラスガール",
+    publishedAt: "2022-09-13",
+    mediaUrl: "https://glassgirl.info/article/post-10574/",
+    imageUrl: "https://glassgirl.info/ggwp/wp-content/uploads/2022/09/00_TKD3625-1280x853.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
 ];

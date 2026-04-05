@@ -21,4 +21,10 @@ export const Ogp2022: OgpMediaDescriptor[] = [
     category: "article",
     presents: [],
   },
+  {
+    mediaUrl: "https://glassgirl.info/article/post-10574/",
+    publishedAt: "2022-09-13",
+    category: "article",
+    presents: ["松本ももな"],
+  },
 ];
