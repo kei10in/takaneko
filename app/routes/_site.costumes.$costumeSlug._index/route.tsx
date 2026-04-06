@@ -64,7 +64,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <div className="container mx-auto lg:max-w-5xl">
-        {costume.kind == "stage" && (
+        {(costume.kind == "stage" || costume.kind == "uniform") && costume.image && (
           <div>
             <img
               src={costume.image.path}

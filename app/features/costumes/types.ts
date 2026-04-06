@@ -42,6 +42,8 @@ export interface UniformCostume {
   kind: "uniform";
   name: UniformCostumeName;
   slug: string;
+
+  image?: ImageDescription;
 }
 
 export interface MvCostume {

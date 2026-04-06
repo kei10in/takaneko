@@ -4,12 +4,22 @@ export const ハニフェス2025制服衣装 = {
   kind: "uniform",
   name: "「ハニフェス 2025」制服衣装",
   slug: "ハニフェス2025制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/ハニフェス2025制服.jpg",
+    ref: "https://x.com/MomokoHashimoto/status/1967569067902198269",
+  },
 } satisfies UniformCostume;
 
 export const ホワイトチョコ・ビターチョコ制服衣装 = {
   kind: "uniform",
   name: "ホワイトチョコ・ビターチョコ制服衣装",
   slug: "ホワイトチョコ-ビターチョコ制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/ホワイトチョコ・ビターチョコ制服.webp",
+    ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
+  },
 } satisfies UniformCostume;
 
 export const アイのウイルス制服衣装 = {
