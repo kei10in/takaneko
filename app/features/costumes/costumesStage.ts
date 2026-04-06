@@ -117,7 +117,7 @@ export const 美しく生きろ衣装_ジャケットなし = {
   photoType: "none",
 
   image: {
-    path: "/takaneko/costumes/美しく生きろ衣装 (ジャケットなし).jpg",
+    path: "/takaneko/costumes/美しく生きろ衣装 (ジャケットなし).jpg",
     ref: "https://x.com/HEROINES_FES/status/1786967124738711727",
   },
 } satisfies StageCostume;
