@@ -71,6 +71,7 @@ export type DancePracticeCostumeName = z.infer<typeof DancePracticeCostumeName>;
 export const DancePracticeCostumeNames: string[] = DancePracticeCostumeName.options;
 
 export const UniformCostumeName = z.enum([
+  "「世界は恋に落ちている」制服衣装",
   "「ハニフェス 2025」制服衣装",
   "ホワイトチョコ・ビターチョコ制服衣装",
   "「アイのウイルス」制服衣装",

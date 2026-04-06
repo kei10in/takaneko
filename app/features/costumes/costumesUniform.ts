@@ -1,5 +1,16 @@
 import { UniformCostume } from "./types";
 
+export const 世界は恋に落ちている制服衣装 = {
+  kind: "uniform",
+  name: "「世界は恋に落ちている」制服衣装",
+  slug: "世界は恋に落ちている制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/世界は恋に落ちている制服.jpg",
+    ref: "https://x.com/Mikuru_hositani/status/2033154964026187815",
+  },
+} satisfies UniformCostume;
+
 export const ハニフェス2025制服衣装 = {
   kind: "uniform",
   name: "「ハニフェス 2025」制服衣装",
@@ -65,6 +76,7 @@ export const 乙女どもよ制服衣装 = {
 } satisfies UniformCostume;
 
 export const AllUniformCostumes: UniformCostume[] = [
+  世界は恋に落ちている制服衣装,
   ハニフェス2025制服衣装,
   ホワイトチョコ・ビターチョコ制服衣装,
   アイのウイルス制服衣装,
