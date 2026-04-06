@@ -12,14 +12,14 @@ export const meta: EventMetaDescriptor = {
   location: "NATSLIVE CAFE 表参道",
   present: ["涼海すう", "東山恵里沙", "籾山ひめり"],
   images: [
-    // {
-    //   path: "/events/2026/2026-04-06_たかねこ初恋キッチン_1.jpg",
-    //   ref: "https://x.com/takanenofficial/status/",
-    // },
-    // {
-    //   path: "/events/2026/2026-04-06_たかねこ初恋キッチン_2.jpg",
-    //   ref: "https://x.com/takanenofficial/status/",
-    // },
+    {
+      path: "/events/2026/2026-04-06_たかねこ初恋キッチン_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2041092500518236302",
+    },
+    {
+      path: "/events/2026/2026-04-06_たかねこ初恋キッチン_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2041112828170633330",
+    },
   ],
   link: {
     text: "",
@@ -33,9 +33,9 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「初恋麻婆豆腐。カード A タイプ」 660 円 (税込)",
-      // "レシピカード「初恋麻婆豆腐。カード B タイプ」 660 円 (税込)",
-      // "レシピカード「初恋麻婆豆腐。カード C タイプ」 660 円 (税込)",
+      "レシピカード「初恋親子丼。カード A タイプ」 660 円 (税込)",
+      "レシピカード「初恋親子丼。カード B タイプ」 660 円 (税込)",
+      "レシピカード「初恋親子丼。カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
@@ -59,15 +59,14 @@ export const content = /* md */ `
 
   ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-  <!-- ## グッズの販売期間 -->
+  ## グッズの販売期間
 
-  <!-- 2026年02月25日 19:00 〜 2026年02月26日 18:59 -->
+  2026年04月06日 19:00 〜 2026年04月07日 18:59
 
   ## リンク
 
-  <!-- - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2026632363028172816) -->
-  <!-- - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2026594312780476685) -->
-
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2041112828170633330)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2041092500518236302)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2034880115348304049)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2034872570701652233)
 `;
