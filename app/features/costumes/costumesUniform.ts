@@ -37,18 +37,33 @@ export const アイのウイルス制服衣装 = {
   kind: "uniform",
   name: "「アイのウイルス」制服衣装",
   slug: "アイのウイルス制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/アイのウイルス制服.jpg",
+    ref: "https://x.com/takanenofficial/status/1866800841396814202",
+  },
 } satisfies UniformCostume;
 
 export const センパイ制服衣装 = {
   kind: "uniform",
   name: "「センパイ。」制服衣装",
   slug: "センパイ制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/センパイ制服.jpg",
+    ref: "https://x.com/takanekomanager/status/1799285062254690519",
+  },
 } satisfies UniformCostume;
 
 export const 恋を知った世界制服衣装 = {
   kind: "uniform",
   name: "「恋を知った世界」制服衣装",
   slug: "恋を知った世界制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/恋を知った世界制服.jpg",
+    ref: "https://x.com/Mikuru_hositani/status/1772878202060316684",
+  },
 } satisfies UniformCostume;
 
 export const 初恋のひと制服衣装 = {
