@@ -23,7 +23,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://audee-membership.jp/takanenonadeshiko",
   },
-  updatedAt: "2026-04-01",
+  updatedAt: "2026-04-09",
 };
 
 export const content = /* md */ `
@@ -32,7 +32,7 @@ export const content = /* md */ `
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260401030000)
   - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smAExBBYQp2dWeRupg8ZM5fb)
-  - [メンバーシップ限定 福岡公演突撃インタビュー](https://audee-membership.jp/takanenonadeshiko/audio/smMMqmdA2xW4nrNDQfhYSPre)
+  - [メンバーシップ限定 福岡公演突撃インタビュー](https://audee-membership.jp/takanenonadeshiko/audio/sm3us9sqdKDNPWmftZW2HPsH)
 
   ## 番組説明
 
