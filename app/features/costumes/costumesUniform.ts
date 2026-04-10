@@ -66,28 +66,59 @@ export const 恋を知った世界制服衣装 = {
   },
 } satisfies UniformCostume;
 
+export const いつか私がママになったら制服衣装 = {
+  kind: "uniform",
+  name: "「いつか私がママになったら」制服衣装",
+  slug: "いつか私がママになったら制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/いつか私がママになったら制服.jpg",
+    ref: "https://x.com/takanekomanager/status/1736030695271899326",
+  },
+} satisfies UniformCostume;
+
 export const 初恋のひと制服衣装 = {
   kind: "uniform",
   name: "「初恋のひと。」制服衣装",
   slug: "初恋のひと制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/初恋のひと制服.jpg",
+    ref: "https://x.com/momonamatsumoto/status/1675279136414375937",
+  },
 } satisfies UniformCostume;
 
 export const ヒロインは平均以下制服衣装 = {
   kind: "uniform",
   name: "「ヒロインは平均以下。」制服衣装",
   slug: "ヒロインは平均以下制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/ヒロインは平均以下制服.jpg",
+    ref: "https://x.com/Mikuru_hositani/status/1671690040110616576",
+  },
 } satisfies UniformCostume;
 
 export const 女の子は強い制服衣装 = {
   kind: "uniform",
   name: "「女の子は強い」制服衣装",
   slug: "女の子は強い制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/女の子は強い制服.jpg",
+    ref: "https://x.com/takanekomanager/status/1610104451980988416",
+  },
 } satisfies UniformCostume;
 
 export const 乙女どもよ制服衣装 = {
   kind: "uniform",
   name: "「乙女どもよ。」制服衣装",
   slug: "乙女どもよ制服衣装",
+
+  image: {
+    path: "/takaneko/costumes/uniforms/乙女どもよ制服.jpg",
+    ref: "https://x.com/takanekomanager/status/1593121199894106113",
+  },
 } satisfies UniformCostume;
 
 export const AllUniformCostumes: UniformCostume[] = [
@@ -97,6 +128,7 @@ export const AllUniformCostumes: UniformCostume[] = [
   アイのウイルス制服衣装,
   センパイ制服衣装,
   恋を知った世界制服衣装,
+  いつか私がママになったら制服衣装,
   初恋のひと制服衣装,
   ヒロインは平均以下制服衣装,
   女の子は強い制服衣装,

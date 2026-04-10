@@ -138,12 +138,6 @@ export const 可愛いっていわれたいMV衣装 = {
   slug: "可愛いっていわれたいMV衣装",
 } satisfies MvCostume;
 
-export const いつか私がママになったら制服衣装 = {
-  kind: "mv",
-  name: "「いつか私がママになったら」制服衣装",
-  slug: "いつか私がママになったら制服衣装",
-} satisfies MvCostume;
-
 export const いつか私がママになったらワンピース衣装 = {
   kind: "mv",
   name: "「いつか私がママになったら」MV ワンピース衣装",
@@ -240,7 +234,6 @@ export const AllMvCostumes: MvCostume[] = [
   推しの魔法MV衣装,
   私は怪物MV衣装,
   可愛いっていわれたいMV衣装,
-  いつか私がママになったら制服衣装,
   いつか私がママになったらワンピース衣装,
   _17歳MV衣装,
   すきっちゅーの私服衣装,
