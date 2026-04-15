@@ -22,7 +22,12 @@ export const meta: EventMetaDescriptor = {
     url: "",
   },
   ticket: "",
-  streamings: undefined,
+  streamings: [
+    {
+      text: "YouTube LIVE",
+      url: "https://www.youtube.com/live/t1rcMa7xMYo",
+    },
+  ],
   goods: {
     time: undefined,
     lineup: undefined,
@@ -32,11 +37,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-27",
+  updatedAt: "2026-04-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アーカイブ告知 - Devil ANTHEM. X](https://x.com/devilanthem/status/2044023161604407583)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2044030805073359248)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2037479832557425008)
 `;

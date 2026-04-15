@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "t1rcMa7xMYo",
+    title:
+      "【安藤楓×城月菜央コラボ配信】Road to 6.25Kanadevia Hall 特別企画「Devil ANTHEM. 4月個人配信」",
+    authorName: "Devil ANTHEM.",
+    publishedAt: "2026-04-14",
+    mediaUrl: "https://youtu.be/t1rcMa7xMYo",
+    imageUrl: "https://i.ytimg.com/vi/t1rcMa7xMYo/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "4fGyJySBBg4",
     title:
       "【オーディション#1】Popteen専属モデルオーディション開催！ファイナリストに選ばれるのは？【Popteen】",
