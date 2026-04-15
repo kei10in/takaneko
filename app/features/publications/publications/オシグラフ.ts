@@ -1,5 +1,63 @@
 import { Publication } from "../types";
 
+export const オシグラフVol3: Publication = {
+  slug: "オシグラフ Vol.3",
+  name: "オシグラフ Vol.3",
+  date: "2026-05-15",
+  kind: "magazines", // "books"
+  publisher: "st-YOLO",
+  listPrice: 1500,
+  priceWithTax: 1650,
+  code: [{ kind: "ISBN", value: "978-4434374370" }],
+  url: "https://styolo0307.official.ec/items/119865606",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_表紙.webp",
+      ref: "https://styolo0307.official.ec/items/141771430",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_裏表紙.webp",
+      ref: "https://styolo0307.official.ec/items/141771430",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_付録.webp",
+      ref: "https://styolo0307.official.ec/items/141771430",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_橋本桃呼1.webp",
+      ref: "https://x.com/takanenofficial/status/2044362599161049276",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_橋本桃呼抽選チェキ.webp",
+      ref: "https://x.com/takanenofficial/status/2044362599161049276",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_橋本桃呼抽選サイン色紙.webp",
+      ref: "https://x.com/oshigraph/status/2044357060675154114",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな1.webp",
+      ref: "https://x.com/takanenofficial/status/2044362599161049276",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな抽選チェキ.webp",
+      ref: "https://x.com/takanenofficial/status/2044362599161049276",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな抽選サイン色紙.webp",
+      ref: "https://x.com/oshigraph/status/2044357815934857444",
+    },
+  ],
+  featuredMembers: ["橋本桃呼", "松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/2044362599161049276",
+  links: [
+    {
+      text: "推しグラフ『OSHI GRAPH』 X 告知",
+      url: "https://x.com/oshigraph/status/2044372239278280788",
+    },
+  ],
+};
+
 export const オシグラフVol2: Publication = {
   slug: "オシグラフ Vol.2",
   name: "オシグラフ Vol.2",

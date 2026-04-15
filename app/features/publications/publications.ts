@@ -77,7 +77,7 @@ import {
   Zipper_2025年夏号,
   Zipper_2025年春号,
 } from "./publications/Zipper";
-import { オシグラフVol1, オシグラフVol2 } from "./publications/オシグラフ";
+import { オシグラフVol1, オシグラフVol2, オシグラフVol3 } from "./publications/オシグラフ";
 import { グラビアプレスVol12 } from "./publications/グラビアプレス";
 import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
 import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka";
@@ -185,6 +185,7 @@ const publications: Publication[] = [
   籾山ひめり_木漏れ日,
   オシグラフVol1,
   オシグラフVol2,
+  オシグラフVol3,
   グラビアプレスVol12,
   グラビアンエイジ_VOL2,
   シティ情報Fukuoka_2025年8月号,
