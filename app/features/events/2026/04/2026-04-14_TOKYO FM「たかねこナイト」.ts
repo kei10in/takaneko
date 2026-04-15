@@ -11,15 +11,19 @@ export const meta: EventMetaDescriptor = {
   present: ["籾山ひめり"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2026/2026-04-14_TOKYO FM「たかねこナイト」.jpg",
+      ref: "https://x.com/takanenofficial/status/2044000210485923946",
+    },
+    {
+      path: "/events/2026/2026-04-14_TOKYO FM「たかねこナイト」_1.jpg",
+      ref: "https://x.com/tokyofm/status/2043992809934598203",
     },
   ],
   link: {
     text: "番組サイト",
     url: "https://audee-membership.jp/takanenonadeshiko",
   },
-  updatedAt: "2026-04-01",
+  updatedAt: "2026-04-15",
 };
 
 export const content = /* md */ `
@@ -27,13 +31,12 @@ export const content = /* md */ `
 
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260415030000)
-
-  <!-- - [Podcasts Membership]() -->
-  <!-- - [メンバーシップ限定 アンコール]() -->
+  - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smYM4CT6RX8R5ybndEq5ufBd)
+  - [メンバーシップ限定](https://audee-membership.jp/takanenonadeshiko/audio/smUmfAtfaZTkdBY3uTVogvFM)
 
   ## コラボ放送
 
-  「可憐なアイボリーのカレアイ放送局」とのコラボ放送。
+  「可憐なアイボリーのカレアイ放送局」とのコラボ放送 前編。
 
   可憐なアイボリーからは永尾梨央さんが出演。
 
@@ -60,6 +63,8 @@ export const content = /* md */ `
   ## リンク
 
   - [Radiko](https://radiko.jp/share?sid=FMT&t=20260415030000)
+  - [当日告知 - ポッドキャストメンバーシップ X](https://x.com/tokyofm/status/2043992809934598203)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2044000210485923946)
   - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
   - [コラボ放送告知 - 公式 X](https://x.com/takanenofficial/status/2039998921104306442)
   - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)

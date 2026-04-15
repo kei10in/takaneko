@@ -18,13 +18,13 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://audee-membership.jp/karennaivory",
   },
-  updatedAt: "2026-04-05",
+  updatedAt: "2026-04-15",
 };
 
 export const content = /* md */ `
   ## コラボ放送
 
-  「可憐なアイボリーのカレアイ放送局」とのコラボ放送。
+  「可憐なアイボリーのカレアイ放送局」とのコラボ放送 後編。
 
   可憐なアイボリーからは永尾梨央さんが出演。
 
