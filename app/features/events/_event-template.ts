@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "./eventMeta";
+import { EventMetaDescriptor } from "~/features/events/eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "",
