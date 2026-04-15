@@ -43,27 +43,50 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [
-    // {
-    //   title: "第一部",
-    //   open: "14:30",
-    //   start: "15:30",
-    //   setlist: [],
-    //   url: "",
-    // },
-    // {
-    //   title: "第二部",
-    //   open: "18:00",
-    //   start: "19:00",
-    //   setlist: [],
-    //   url: "",
-    // },
+    {
+      setlist: [
+        "Overture",
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "花は誓いを忘れない",
+        "アイドル衣装",
+        "ライフクエスト",
+        "初恋のこたえ。",
+        "MC",
+        "僕は君になれない",
+        "病名恋ワズライ",
+        "乙女どもよ。",
+        "男の子の目的は何？",
+        "MC",
+        "初恋のひと。",
+        "推しの魔法",
+        "ヒロインは平均以下。",
+        "決戦スピリット",
+        "この世界は嘘でできている",
+        "MC",
+        "世界は恋に落ちている",
+        "MC",
+        "私は、わたしの事が好き。",
+        "可愛くてごめん",
+        "ファンサ",
+        "I’M YOUR IDOL",
+        "アンコール",
+        "衣装: T シャツ (Bouquet of 9 Flowers 韓国限定 ver.)",
+        "恋を知った世界",
+        "MC: 告知、記念撮影、TikTok 撮影",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/_MARIC/status/2043304287292494284"],
+    },
   ],
-  updatedAt: "2026-04-10",
+  updatedAt: "2026-04-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2043328681519858135)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2042963425253298242)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2042965899997483186)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5086)
   - [詳細告知](https://x.com/takanenofficial/status/2028810120218685640)
   - [アジア公演開催地決定 - 公式ニュース](https://takanenonadeshiko.jp/?p=4969)
