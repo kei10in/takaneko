@@ -31,16 +31,18 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    title: "LuckyFes Half Time Show",
     start: "19:45",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-06",
+  updatedAt: "2026-04-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2044049282534375513)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2029399016862302406)
   - [イベント詳細](https://www.ibarakirobots.win/news/20260305_01_event/)
 `;
