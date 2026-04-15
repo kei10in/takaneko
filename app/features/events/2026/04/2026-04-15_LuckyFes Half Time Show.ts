@@ -24,7 +24,12 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.ibarakirobots.win/news/20260305_01_event/",
   },
   ticket: "",
-  streamings: undefined,
+  streamings: [
+    {
+      text: "バスケット LIVE",
+      url: "https://basketball.mb.softbank.jp/lives/505406",
+    },
+  ],
   goods: {
     time: undefined,
     lineup: undefined,
@@ -33,7 +38,11 @@ export const meta: EventMetaDescriptor = {
   acts: {
     title: "LuckyFes Half Time Show",
     start: "19:45",
-    setlist: [],
+    setlist: [
+      "衣装: 高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
+      "決戦スピリット",
+      "ファンサ",
+    ],
     url: "",
   },
   updatedAt: "2026-04-15",
@@ -42,6 +51,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [決戦スピリット - 茨城ロボッツ X](https://x.com/ibarakirobots/status/2044375226843308110)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2044049282534375513)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2029399016862302406)
   - [イベント詳細](https://www.ibarakirobots.win/news/20260305_01_event/)
