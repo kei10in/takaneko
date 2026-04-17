@@ -1,5 +1,12 @@
 [
   {
+    "costumeStats": [],
+    "count": 0,
+    "lives": [],
+    "name": "私は、わたしの事が好き。",
+    "slug": "私はわたしの事が好き",
+  },
+  {
     "costumeStats": [
       {
         "costumeName": "僕は君になれない衣装",
