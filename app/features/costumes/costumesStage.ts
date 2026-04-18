@@ -8,7 +8,7 @@ export const BouquetOf9Flowers衣装: StageCostume = {
   stylist: "浅野 実希",
 
   image: {
-    path: "/takaneko/costumes/Bouquet of 9 Flowers 衣装.webp",
+    path: "/takaneko/costumes/stage/Bouquet of 9 Flowers 衣装.webp",
     ref: "https://x.com/takanenofficial/status/2025548940985450613",
   },
 };
@@ -21,7 +21,7 @@ export const 見上げるたびに恋をする衣装: StageCostume = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/見上げるたびに恋をする衣装.jpg",
+    path: "/takaneko/costumes/stage/見上げるたびに恋をする衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1969310727631405229",
   },
 };
@@ -33,7 +33,7 @@ export const _2025夏衣装 = {
   photoType: "none",
 
   image: {
-    path: "/takaneko/costumes/2025夏衣装.jpg",
+    path: "/takaneko/costumes/stage/2025夏衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1956949177184993322",
   },
 } satisfies StageCostume;
@@ -45,7 +45,7 @@ export const アイドル衣装衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/アイドル衣装衣装.jpg",
+    path: "/takaneko/costumes/stage/アイドル衣装衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1954354766919959033",
   },
 } satisfies StageCostume;
@@ -57,7 +57,7 @@ export const _2025春衣装 = {
   photoType: "artist",
 
   image: {
-    path: "/takaneko/costumes/2025春衣装.jpg",
+    path: "/takaneko/costumes/stage/2025春衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1941822190187598240",
   },
 } satisfies StageCostume;
@@ -69,7 +69,7 @@ export const ピンク衣装 = {
   photoType: "artist",
 
   image: {
-    path: "/takaneko/costumes/ピンク衣装.jpg",
+    path: "/takaneko/costumes/stage/ピンク衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1904382758585237517",
   },
 } satisfies StageCostume;
@@ -81,7 +81,7 @@ export const 高嶺のなでしこ2024衣装 = {
   photoType: "artist",
 
   image: {
-    path: "/takaneko/costumes/高嶺のなでしこ2024衣装.jpg",
+    path: "/takaneko/costumes/stage/高嶺のなでしこ2024衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1852991647099093023",
   },
 } satisfies StageCostume;
@@ -93,7 +93,7 @@ export const ImYourIdol衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/IM YOUR IDOL衣装.jpg",
+    path: "/takaneko/costumes/stage/IM YOUR IDOL衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1835657466379714736",
   },
 } satisfies StageCostume;
@@ -105,7 +105,7 @@ export const わたし色に染まれ衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/わたし色に染まれ衣装.jpg",
+    path: "/takaneko/costumes/stage/わたし色に染まれ衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1803729587526090946",
   },
 } satisfies StageCostume;
@@ -117,7 +117,7 @@ export const 美しく生きろ衣装_ジャケットなし = {
   photoType: "none",
 
   image: {
-    path: "/takaneko/costumes/美しく生きろ衣装 (ジャケットなし).jpg",
+    path: "/takaneko/costumes/stage/美しく生きろ衣装 (ジャケットなし).jpg",
     ref: "https://x.com/HEROINES_FES/status/1786967124738711727",
   },
 } satisfies StageCostume;
@@ -129,7 +129,7 @@ export const 美しく生きろ衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/美しく生きろ衣装.jpg",
+    path: "/takaneko/costumes/stage/美しく生きろ衣装.jpg",
     ref: "https://x.com/takanenofficial/status/1770057723008401798",
   },
 } satisfies StageCostume;
@@ -141,7 +141,7 @@ export const 僕は君になれない衣装 = {
   photoType: "none",
 
   image: {
-    path: "/takaneko/costumes/僕は君になれない衣装.jpg",
+    path: "/takaneko/costumes/stage/僕は君になれない衣装.jpg",
     ref: "https://x.com/momonamatsumoto/status/1715440442505072690",
   },
 } satisfies StageCostume;
@@ -153,7 +153,7 @@ export const 全国お招きツアー衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/全国お招きツアー衣装.jpg",
+    path: "/takaneko/costumes/stage/全国お招きツアー衣装.jpg",
     ref: "https://www.instagram.com/p/CvmtijypJ73/",
   },
 } satisfies StageCostume;
@@ -165,7 +165,7 @@ export const アンチファン衣装 = {
   photoType: "press",
 
   image: {
-    path: "/takaneko/costumes/アンチファン衣装.jpg",
+    path: "/takaneko/costumes/stage/アンチファン衣装.jpg",
     ref: "https://x.com/momonamatsumoto/status/1648624374210248706",
   },
 } satisfies StageCostume;
