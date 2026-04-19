@@ -32,11 +32,12 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-04-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2044672227694854420)
   - [告知 - NEO JAPONISM X](https://x.com/NEOJAPONISMinfo/status/2043600076262838480)
 `;
