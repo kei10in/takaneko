@@ -48,6 +48,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [スタンプラリー企画 12公演来場者限定 楽屋招待詳細について - 公式 X](https://takanenonadeshiko.jp/?p=5197)
   - [たかねこブーケラッピングプロジェクト - 公式ニュース](https://takanenonadeshiko.jp/?p=5190)
   - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
   - [FINAL公演 イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4991)
