@@ -26,6 +26,11 @@ export const 私はわたしの事が好き: SongMetaDescriptor = {
       publishedAt: "2026-04-14",
     },
     {
+      text: "踊ってみた",
+      videoId: "https://www.youtube.com/watch?v=G5sjPEnOZJs",
+      publishedAt: "2026-04-19",
+    },
+    {
       text: "3D ライブ映像 (超かぐや姫！)",
       videoId: "pnb_BVChIaw",
       publishedAt: "2026-03-12",
