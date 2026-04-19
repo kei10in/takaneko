@@ -20,6 +20,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-02-14_Live Tour - Bouquet of 9 Flowers -_スタンプラリー.jpg",
       ref: "https://takanenonadeshiko.jp/?p=4763",
     },
+    {
+      path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト.webp",
+      ref: "https://takanenonadeshiko.jp/?p=5190",
+    },
   ],
   link: {
     text: "イベント詳細 - 公式ニュース",
@@ -38,12 +42,14 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-02-09",
+  updatedAt: "2026-04-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [たかねこブーケラッピングプロジェクト - 公式ニュース](https://takanenonadeshiko.jp/?p=5190)
+  - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
   - [FINAL公演 イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4991)
   - [スタンプラリー詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4763)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4626)
