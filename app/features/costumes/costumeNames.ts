@@ -21,6 +21,7 @@ export type StageCostumeName = z.infer<typeof StageCostumeName>;
 export const StageCostumeNames: string[] = StageCostumeName.options;
 
 export const MvCostumeName = z.enum([
+  "「私は、わたしの事が好き。」MV 衣装",
   "「病名恋ワズライ」衣装",
   "「この世界は嘘でできている」白衣装",
   "「この世界は嘘でできている」黒衣装",
@@ -110,6 +111,7 @@ export type TShirtCostumeName = z.infer<typeof TShirtCostumeName>;
 export const TShirtCostumeNames: string[] = TShirtCostumeName.options;
 
 export const SpecialCostumeName = z.enum([
+  "超かぐや姫！コスプレ衣装",
   "アクロトーキョー コラボグッズ衣装",
   "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
   "クリスマス 2025 衣装",
