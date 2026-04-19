@@ -43,14 +43,16 @@ export const meta: EventMetaDescriptor = {
       "決戦スピリット",
       "ファンサ",
     ],
-    url: "",
+    url: "https://x.com/takanenofficial/status/2044417202963791892",
   },
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-04-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [記念撮影 - 公式 X](https://x.com/takanenofficial/status/2044418129351352526)
+  - [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2044417202963791892)
   - [決戦スピリット - 茨城ロボッツ X](https://x.com/ibarakirobots/status/2044375226843308110)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2044049282534375513)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2029399016862302406)
