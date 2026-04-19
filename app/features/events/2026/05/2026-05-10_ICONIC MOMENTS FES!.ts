@@ -37,11 +37,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-13",
+  updatedAt: "2026-04-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [推しのぼり旗発売告知 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2044717444544266625)
+  - [コメント動画 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2044626842636734824)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2032385150840103077)
 `;
