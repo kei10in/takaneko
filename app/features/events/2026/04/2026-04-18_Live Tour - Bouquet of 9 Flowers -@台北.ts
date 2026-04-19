@@ -63,12 +63,15 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-04-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2045510211780370756)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2045132723958972474)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2045125156868403563)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2043690862094450777)
   - [FC 先行チケット受付](https://takanekofc.com/topics/public/_/umyvcsrvjyj6gg6c.html)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5061)
