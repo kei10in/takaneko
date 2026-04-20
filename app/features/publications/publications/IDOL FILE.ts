@@ -1,5 +1,30 @@
 import { Publication } from "../types";
 
+export const IDOL_FILE_Vol40: Publication = {
+  slug: "IDOL FILE Vol.40",
+  name: "IDOL FILE Vol.40",
+  date: "2026-04-24",
+  kind: "magazines", // "books"
+  publisher: "ロックスエンタテインメント",
+  listPrice: 2000,
+  priceWithTax: 2200,
+  code: [{ kind: "ISBN", value: "	978-4-401-76333-7" }],
+  url: "https://www.shinko-music.co.jp/item/pid0763335/",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-04-24_IDOL FILE Vol.40_表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2046166910803534249",
+    },
+    {
+      path: "/publications/2026/2026-04-24_IDOL FILE Vol.40_裏表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2046166910803534249",
+    },
+  ],
+  featuredMembers: ["葉月紗蘭", "星谷美来"],
+  officialTwitter: "",
+  links: [],
+};
+
 export const IDOL_FILE_Vol39: Publication = {
   slug: "IDOL FILE Vol.39",
   name: "IDOL FILE Vol.39",

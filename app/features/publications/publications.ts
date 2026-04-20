@@ -19,7 +19,12 @@ import {
 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
 import { IDOL_AND_READ_041, IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
-import { IDOL_FILE_Vol35, IDOL_FILE_Vol37, IDOL_FILE_Vol39 } from "./publications/IDOL FILE";
+import {
+  IDOL_FILE_Vol35,
+  IDOL_FILE_Vol37,
+  IDOL_FILE_Vol39,
+  IDOL_FILE_Vol40,
+} from "./publications/IDOL FILE";
 import { KIDDY_LAND_FAN_BOOK } from "./publications/KIDDY LAND FAN BOOK";
 import {
   LARME_054,
@@ -115,6 +120,7 @@ const publications: Publication[] = [
   IDOL_FILE_Vol35,
   IDOL_FILE_Vol37,
   IDOL_FILE_Vol39,
+  IDOL_FILE_Vol40,
   KIDDY_LAND_FAN_BOOK,
   LARME_054,
   LARME_056,
