@@ -92,6 +92,7 @@ export type UniformCostumeName = z.infer<typeof UniformCostumeName>;
 export const UniformCostumeNames: string[] = UniformCostumeName.options;
 
 export const TShirtCostumeName = z.enum([
+  "T シャツ (Bouquet of 9 Flowers 台北限定 ver.)",
   "T シャツ (Bouquet of 9 Flowers 韓国限定 ver.)",
   "T シャツ (Bouquet of 9 Flowers ver.)",
   "T シャツ (ハニフェス 2025)",
