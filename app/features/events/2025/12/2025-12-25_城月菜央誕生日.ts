@@ -39,7 +39,7 @@ export const content = /* md */ `
   - [🤍葉月紗蘭](https://x.com/saara_hazuki/status/2003994395872579809)
   - [🧡東山恵里沙](https://x.com/erisahigasiyama/status/2003843327440162893)
   - [💜日向端ひな](https://x.com/hina_hinahata/status/2003998302048866481)
-  - [❤星谷美来](https://x.com/Mikuru_hositani/status/2004019480855453941)
+  - [❤️星谷美来](https://x.com/Mikuru_hositani/status/2004019480855453941)
   - [🎀松本ももな](https://x.com/momonamatsumoto/status/2004008666417320268)
 
   <!-- - [💙籾山ひめり]() -->

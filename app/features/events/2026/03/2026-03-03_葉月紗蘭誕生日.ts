@@ -40,7 +40,7 @@ export const content = /* md */ `
   <!-- - [🤍葉月紗蘭](https://x.com/saara_hazuki/status/2003994395872579809) -->
   - [🧡東山恵里沙](https://x.com/erisahigasiyama/status/2028486182468997418)
   - [💜日向端ひな](https://x.com/hina_hinahata/status/2028704420536672583)
-  - [❤星谷美来](https://x.com/Mikuru_hositani/status/2028746527972458887)
+  - [❤️星谷美来](https://x.com/Mikuru_hositani/status/2028746527972458887)
   - [🎀松本ももな](https://x.com/momonamatsumoto/status/2028618836761870765)
   - [💙籾山ひめり](https://x.com/himeri_momiyama/status/2028813099390865671)
 `;

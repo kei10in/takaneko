@@ -28,7 +28,7 @@ export const みくるんお守り写真: OfficialGoods = {
   description: dedent`
     恋愛成就・金運 up・健康運 up
     
-    幸せ運びます❤
+    幸せ運びます❤️
     `,
   priceWithTax: 1000,
   images: [
@@ -48,7 +48,7 @@ export const シュシュるん: OfficialGoods = {
     
     ペンライトにうちわにも！
     
-    ヘアゴムでも好きなところに使ってね❤
+    ヘアゴムでも好きなところに使ってね❤️
     
     ライブ中に見つけたらファンサしちゃうぞ🥰
     `,

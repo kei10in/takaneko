@@ -21,10 +21,10 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## 誕生日写真
 
-  - [❤星谷美来 X 1](https://x.com/Mikuru_hositani/status/1986086201284235348)
-  - [❤星谷美来 X 2](https://x.com/Mikuru_hositani/status/1986212811568259121)
-  - [❤星谷美来 X 3](https://x.com/Mikuru_hositani/status/1986447980023710072)
-  - [❤星谷美来 Instagram](https://www.instagram.com/p/DQsxWH6CWOh/)
+  - [❤️星谷美来 X 1](https://x.com/Mikuru_hositani/status/1986086201284235348)
+  - [❤️星谷美来 X 2](https://x.com/Mikuru_hositani/status/1986212811568259121)
+  - [❤️星谷美来 X 3](https://x.com/Mikuru_hositani/status/1986447980023710072)
+  - [❤️星谷美来 Instagram](https://www.instagram.com/p/DQsxWH6CWOh/)
 
   ## 公式 X
 
@@ -39,7 +39,7 @@ export const content = /* md */ `
   - [🤍葉月紗蘭](https://x.com/saara_hazuki/status/1986334037632557071)
   - [🧡東山恵里沙](https://x.com/erisahigasiyama/status/1986088944166211609)
   - [💜日向端ひな](https://x.com/hina_hinahata/status/1986299473988047161)
-  <!-- - [❤星谷美来]() -->
+  <!-- - [❤️星谷美来]() -->
   - [🎀松本ももな](https://x.com/momonamatsumoto/status/1986217446962044997)
   - [💙籾山ひめり](https://x.com/himeri_momiyama/status/1986448217144484087)
 `;
