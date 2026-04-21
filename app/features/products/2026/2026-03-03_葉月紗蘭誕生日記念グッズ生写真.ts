@@ -1,0 +1,38 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const 葉月紗蘭誕生日記念グッズ2026_生写真: RandomGoods = {
+  id: "生写真「葉月紗蘭誕生日記念グッズ 2026」",
+  slug: "生写真「葉月紗蘭誕生日記念グッズ 2026」",
+  name: "生写真「葉月紗蘭誕生日記念グッズ 2026」",
+  year: 2026,
+  series: "葉月紗蘭誕生日記念グッズ 2026",
+  category: "生写真",
+  tradeText: TradeTextType.Numbering,
+  url: "/takaneko/goods/2026/2026-03-03_生写真「葉月紗蘭誕生日記念グッズ 2026」.webp",
+  width: 1200,
+  height: 1200,
+  variants: [
+    { id: 1, name: "葉月紗蘭", description: "" },
+    { id: 2, name: "葉月紗蘭", description: "" },
+    { id: 3, name: "葉月紗蘭", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "葉月紗蘭", description: "" },
+    { id: 6, name: "葉月紗蘭", description: "" },
+    { id: 7, name: "葉月紗蘭", description: "" },
+    { id: 8, name: "葉月紗蘭", description: "" },
+    { id: 9, name: "葉月紗蘭", description: "" },
+    { id: 10, name: "葉月紗蘭", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 121, y: 150, width: 176, height: 260 },
+    { id: 2, x: 387, y: 160, width: 176, height: 260 },
+    { id: 3, x: 643, y: 160, width: 176, height: 260 },
+    { id: 4, x: 899, y: 160, width: 176, height: 260 },
+    { id: 5, x: 123, y: 465, width: 176, height: 260 },
+    { id: 6, x: 389, y: 465, width: 176, height: 260 },
+    { id: 7, x: 645, y: 468, width: 176, height: 260 },
+    { id: 8, x: 901, y: 468, width: 176, height: 260 },
+    { id: 9, x: 130, y: 784, width: 176, height: 260 },
+    { id: 10, x: 393, y: 829, width: 260, height: 176 },
+  ],
+};
