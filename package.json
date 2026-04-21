@@ -89,7 +89,7 @@
     "remark-rehype": "^11.1.2",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.2.2",
-    "ts-morph": "^27.0.2",
+    "ts-morph": "^28.0.0",
     "tsx": "^4.21.0",
     "twitter-text": "^3.1.0",
     "typescript": "^5.9.3",
