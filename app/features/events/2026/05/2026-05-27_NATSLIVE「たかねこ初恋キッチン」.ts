@@ -25,7 +25,7 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  ticket: "",
+  ticket: "https://fortune-cookie.natslive.jp/lotteries/cLh4Bs/entry_sessions/new",
   streamings: {
     text: "NATSLIVE",
     url: "https://natslive.jp/episodes/17718",
@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-19",
+  updatedAt: "2026-04-21",
 };
 
 export const content = /* md */ `
@@ -59,15 +59,16 @@ export const content = /* md */ `
 
   ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-  ## グッズの販売期間
+   <!-- ## グッズの販売期間 -->
 
-  2026年04月06日 19:00 〜 2026年04月07日 18:59
+   <!-- 2026年05月27日 19:00 〜 2026年05月28日 18:59 -->
 
   ## リンク
 
-  <!-- - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2041112828170633330) -->
-  <!-- - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2041092500518236302) -->
+   <!-- - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2041112828170633330) -->
+   <!-- - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2041092500518236302) -->
 
+  - [一般応募スタート - 公式 X](https://x.com/takanenofficial/status/2046524341362335750)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2045442264722559197)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2045381817579061711)
 `;
