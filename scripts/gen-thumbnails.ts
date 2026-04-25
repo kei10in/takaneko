@@ -1,35 +1,61 @@
+import { CompressionType, FilterType, Transformer } from "@napi-rs/image";
+import { createCanvas, Image, loadImage } from "canvas";
 import { globSync } from "glob";
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
-import sharp from "sharp";
 import { isThumbnail, thumbnailDir, thumbnails } from "~/utils/fileConventions";
 
-const isImage = async (filepath: string): Promise<boolean> => {
+const webpQuality = 80;
+const concurrency = Math.max(1, Math.min(os.cpus().length, 8));
+
+const readImageSource = async (filepath: string): Promise<Buffer | undefined> => {
+  const source = await fs.promises.readFile(filepath);
   try {
-    await sharp(filepath).metadata();
-    return true;
-  } catch (err) {
-    return false;
+    const metadata = await new Transformer(source).metadata();
+    if (metadata.width <= 0 || metadata.height <= 0) {
+      return undefined;
+    }
+  } catch {
+    return undefined;
   }
+
+  return source;
 };
 
-const resizeImage = async (baseFile: string, thumbnail: string, width: number, height: number) => {
+const fitInside = (
+  sourceWidth: number,
+  sourceHeight: number,
+  targetWidth: number,
+  targetHeight: number,
+): { width: number; height: number } => {
+  const scale = Math.min(targetWidth / sourceWidth, targetHeight / sourceHeight);
+  return {
+    width: Math.max(1, Math.round(sourceWidth * scale)),
+    height: Math.max(1, Math.round(sourceHeight * scale)),
+  };
+};
+
+const resizeImage = async (
+  sourceImage: Image,
+  thumbnail: string,
+  width: number,
+  height: number,
+): Promise<void> => {
+  const target = fitInside(sourceImage.naturalWidth, sourceImage.naturalHeight, width, height);
   try {
-    const buf = await sharp(baseFile)
-      .resize({ width, height, fit: "inside" })
-      .webp({ quality: 80 })
-      .toBuffer();
-    await fs.promises.writeFile(thumbnail, buf);
+    const canvas = createCanvas(target.width, target.height);
+    const context = canvas.getContext("2d");
+    context.drawImage(sourceImage, 0, 0, target.width, target.height);
+    const resizedPng = canvas.toBuffer("image/png");
+    const webp = await new Transformer(resizedPng).webp(webpQuality);
+    await fs.promises.writeFile(thumbnail, webp);
   } catch (err) {
-    console.error(`Error processing file ${baseFile}:`, err);
+    console.error(`Error processing file ${thumbnail}:`, err);
   }
 };
 
 const processFile = async (filepath: string) => {
-  if (!(await isImage(filepath))) {
-    return;
-  }
-
   // サムネイルの配置場所は Web のパスで計算する
   filepath = filepath.replace(/\\/g, "/");
   const imagePath = filepath.replace("public", "");
@@ -39,11 +65,46 @@ const processFile = async (filepath: string) => {
   // 画像処理はリポジトリ上のパスでやる
   const outputFilePaths = thumbnailPaths.map((x) => `public/${x}`);
 
-  fs.mkdirSync(path.dirname(outputFilePaths[0]), { recursive: true });
+  try {
+    const source = await readImageSource(filepath);
+    if (source === undefined) {
+      return;
+    }
 
-  await resizeImage(filepath, outputFilePaths[0], 240, 240);
-  await resizeImage(filepath, outputFilePaths[1], 480, 480);
-  await resizeImage(filepath, outputFilePaths[2], 720, 720);
+    fs.mkdirSync(path.dirname(outputFilePaths[0]), { recursive: true });
+
+    const decodedPng = await new Transformer(source).rotate().png({
+      compressionType: CompressionType.Fast,
+      filterType: FilterType.NoFilter,
+    });
+    const sourceImage = await loadImage(decodedPng);
+
+    await resizeImage(sourceImage, outputFilePaths[0], 240, 240);
+    await resizeImage(sourceImage, outputFilePaths[1], 480, 480);
+    await resizeImage(sourceImage, outputFilePaths[2], 720, 720);
+  } catch (err) {
+    console.error(`[gen-thumbnails] failed to process source image: ${filepath}`);
+  }
+};
+
+const processWithConcurrency = async (
+  filepaths: string[],
+  limit: number,
+  fn: (filepath: string) => Promise<void>,
+) => {
+  let index = 0;
+  const workers = Array.from({ length: Math.min(limit, filepaths.length) }, async () => {
+    while (true) {
+      const i = index;
+      index += 1;
+      if (i >= filepaths.length) {
+        return;
+      }
+      await fn(filepaths[i]);
+    }
+  });
+
+  await Promise.all(workers);
 };
 
 const main = async () => {
@@ -71,9 +132,7 @@ const main = async () => {
     fs.rmSync(dir, { recursive: true });
   });
 
-  const promises = matchFiles.map(async (filepath) => await processFile(filepath));
-
-  await Promise.all(promises);
+  await processWithConcurrency(matchFiles, concurrency, processFile);
 };
 
 main();
