@@ -2,6 +2,19 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/85625/",
+    title:
+      "専属モデルオーディション2026ファイナルバトル！UP-Tプレゼンツ「おしゃTプロデュースバトル」START♡",
+    authorName: "Popteen Media",
+    publishedAt: "2026-04-24",
+    mediaUrl: "https://popteen.co.jp/media/85625/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2026/04/14f33b0838b42bd08cc16d57105b180f-1024x1024.png",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "youtube",
     key: "jNDtrY7Dv6k",
     title:
@@ -11,6 +24,18 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/jNDtrY7Dv6k",
     imageUrl: "https://i.ytimg.com/vi/jNDtrY7Dv6k/hqdefault.jpg",
     category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.entax.news/post/202604201900.html",
+    title:
+      "『高嶺のなでしこ』メンバー全員が共感した“アイドルならではの事情”とは「○○がすごく必要になった」“十代のうちにやりたいこと”【独自インタビュー】|entax（エンタックス）",
+    authorName: "entax（エンタックス）",
+    publishedAt: "2026-04-20",
+    mediaUrl: "https://www.entax.news/post/202604201900.html",
+    imageUrl: "https://www.entax.news/wp-content/uploads/2026/04/20260414-6Y2A6106_3_re0420top.jpg",
+    category: "article",
     presents: [],
   },
   {
