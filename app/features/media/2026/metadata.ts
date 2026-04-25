@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "jNDtrY7Dv6k",
+    title:
+      "【神回】ゆぴえなが豪華ゲストに突撃！YouTuber、アイドル、アーティスト…夢のコラボが実現しました！！！",
+    authorName: "ゆうぴーまん",
+    publishedAt: "2026-04-20",
+    mediaUrl: "https://youtu.be/jNDtrY7Dv6k",
+    imageUrl: "https://i.ytimg.com/vi/jNDtrY7Dv6k/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     key: "t1rcMa7xMYo",
     title:
       "【安藤楓×城月菜央コラボ配信】Road to 6.25Kanadevia Hall 特別企画「Devil ANTHEM. 4月個人配信」",

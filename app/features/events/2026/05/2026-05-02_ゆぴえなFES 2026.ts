@@ -36,11 +36,12 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-31",
+  updatedAt: "2026-04-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [【神回】ゆぴえなが豪華ゲストに突撃！YouTuber、アイドル、アーティスト…夢のコラボが実現しました！！！ - ゆうぴーまん YouTube](https://youtu.be/jNDtrY7Dv6k?si=xgaNuizSv7cidgxa&t=3330)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2038977194295455813)
 `;
