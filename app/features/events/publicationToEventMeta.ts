@@ -2,7 +2,13 @@ import { Publication } from "../publications/types";
 import { EventMetaDescriptor } from "./eventMeta";
 import { EventType } from "./EventType";
 
-export const convertPublicationToEventMeta = (publication: Publication): EventMetaDescriptor => {
+export const convertPublicationToEventMeta = (
+  publication: Publication | undefined = undefined,
+): EventMetaDescriptor => {
+  if (publication == undefined) {
+    throw new Error("Publication data is required to convert to EventMetaDescriptor");
+  }
+
   return {
     summary: publication.name,
     category: publication.kind == "books" ? EventType.BOOK : EventType.MAGAZINE,
