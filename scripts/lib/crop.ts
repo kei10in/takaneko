@@ -1,6 +1,7 @@
+import { CompressionType, FilterType, Transformer } from "@napi-rs/image";
+import { createCanvas, loadImage, type Image } from "canvas";
 import fs from "node:fs";
 import path from "node:path";
-import sharp from "sharp";
 import {
   CROPPED_MINI_PHOTO_CARD_SIZE,
   CROPPED_PHOTO_SIZE,
@@ -12,13 +13,16 @@ import {
   isRegularTakanekoPhoto,
 } from "~/features/products/productImages";
 import { Xywh } from "~/features/trade/stampPosition";
+import { Size } from "~/utils/types/Size";
+
+const webpQuality = 80;
 
 /**
  * 切り抜いた画像のサイズを取得します。
  * レギュラーの生写真・ミニフォトカードは規定のサイズで切り抜きます。
  * それ以外のランダムグッズは切りぬたサイズそのままです。
  */
-export const getOutputImageSize = (photo: RandomGoods, pos: ImagePosition) => {
+export const getOutputImageSize = (photo: RandomGoods, pos: ImagePosition): Size => {
   if (isRegularTakanekoPhoto(photo)) {
     return CROPPED_PHOTO_SIZE;
   } else if (isRegularTakanekoMiniPhotoCard(photo)) {
@@ -36,13 +40,19 @@ export const getOutputImageSize = (photo: RandomGoods, pos: ImagePosition) => {
 /**
  * ランダムグッズの商品紹介画像をひとつずつの画像に切り抜きます。
  */
-export const crop = async (photo: RandomGoods) => {
-  const src = `public${photo.url}`;
+export const crop = async (photo: RandomGoods): Promise<void> => {
+  const filepath = `public${photo.url}`;
+  const source = await fs.promises.readFile(filepath);
+  const decodedPng = await new Transformer(source).rotate().png({
+    compressionType: CompressionType.Fast,
+    filterType: FilterType.NoFilter,
+  });
+  const sourceImage = await loadImage(decodedPng);
 
   const tasks = photo.positions.map(async (pos) => {
     const size = getOutputImageSize(photo, pos);
     const dest = `public${croppedImagePath(photo.url, pos.id)}`;
-    await cropImage(src, pos, dest, size);
+    await cropImage(sourceImage, pos, dest, size);
   });
 
   await Promise.all(tasks);
@@ -58,21 +68,61 @@ export const crop = async (photo: RandomGoods) => {
  * @param size 切り抜いた画像のサイズ
  */
 const cropImage = async (
-  src: string,
+  sourceImage: Image,
   rect: Xywh,
   dst: string,
-  size: { width: number; height: number },
-) => {
-  if (!fs.existsSync(dst)) {
-    fs.mkdirSync(path.dirname(dst), { recursive: true });
-  }
+  size: Size,
+): Promise<void> => {
+  fs.mkdirSync(path.dirname(dst), { recursive: true });
 
-  // Windows で toFile をすると Segmentation fault になるので、toBuffer と
-  // writeFile を使う
-  const buf = await sharp(src)
-    .extract({ left: rect.x, top: rect.y, width: rect.width, height: rect.height })
-    .resize(size.width, size.height, { fit: "cover" })
-    .toFormat("webp")
-    .toBuffer();
-  await fs.promises.writeFile(dst, buf);
+  const sourceRect = {
+    x: Math.round(rect.x),
+    y: Math.round(rect.y),
+    width: Math.round(rect.width),
+    height: Math.round(rect.height),
+  };
+
+  const extractedCanvas = createCanvas(sourceRect.width, sourceRect.height);
+  const extractedContext = extractedCanvas.getContext("2d");
+  extractedContext.drawImage(
+    sourceImage,
+    sourceRect.x,
+    sourceRect.y,
+    sourceRect.width,
+    sourceRect.height,
+    0,
+    0,
+    sourceRect.width,
+    sourceRect.height,
+  );
+
+  const scale = Math.max(size.width / sourceRect.width, size.height / sourceRect.height);
+  const coverWidth = Math.max(size.width, Math.ceil(sourceRect.width * scale));
+  const coverHeight = Math.max(size.height, Math.ceil(sourceRect.height * scale));
+
+  const coverCanvas = createCanvas(coverWidth, coverHeight);
+  const coverContext = coverCanvas.getContext("2d");
+  coverContext.imageSmoothingEnabled = true;
+  coverContext.imageSmoothingQuality = "high";
+  coverContext.drawImage(extractedCanvas, 0, 0, coverWidth, coverHeight);
+
+  const cropX = Math.floor((coverWidth - size.width) / 2);
+  const cropY = Math.floor((coverHeight - size.height) / 2);
+  const outputCanvas = createCanvas(size.width, size.height);
+  const outputContext = outputCanvas.getContext("2d");
+  outputContext.drawImage(
+    coverCanvas,
+    cropX,
+    cropY,
+    size.width,
+    size.height,
+    0,
+    0,
+    size.width,
+    size.height,
+  );
+
+  const png = outputCanvas.toBuffer("image/png");
+  const webp = await new Transformer(png).webp(webpQuality);
+  await fs.promises.writeFile(dst, webp);
 };
