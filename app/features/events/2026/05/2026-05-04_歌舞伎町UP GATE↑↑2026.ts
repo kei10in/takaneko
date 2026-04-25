@@ -9,7 +9,7 @@ export const meta: EventMetaDescriptor = {
   start: "13:00",
   end: undefined,
   region: "東京",
-  location: "新宿",
+  location: "Zepp Shinjuku",
   present: ["高嶺のなでしこ2"],
   images: [
     {
@@ -19,6 +19,11 @@ export const meta: EventMetaDescriptor = {
     {
       path: "/events/2026/2026-05-04_歌舞伎町UP GATE↑↑2026_1.jpg",
       ref: "https://x.com/takanenofficial/status/2042860595129815306",
+    },
+    {
+      path: "/events/2026/2026-05-04_歌舞伎町UP GATE↑↑2026_タイムテーブル.jpg",
+      ref: "https://x.com/kabuki_upgate/status/2047601455633482102",
+      tags: ["timetable"],
     },
   ],
   link: {
@@ -33,14 +38,17 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    start: "19:40",
+    end: "20:10",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-04-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 歌舞伎町UP GATE↑↑ X](https://x.com/kabuki_upgate/status/2047601455633482102)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2042860595129815306)
 `;
