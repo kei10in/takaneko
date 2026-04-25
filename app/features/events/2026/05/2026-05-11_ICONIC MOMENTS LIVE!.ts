@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-05-11_ICONIC MOMENTS LIVE!.jpg",
       ref: "https://x.com/takanenofficial/status/2030629616218440068",
     },
+    {
+      path: "/events/2026/2026-05-11_ICONIC MOMENTS LIVE!_タイムテーブル.jpg",
+      ref: "https://x.com/IconicM_live/status/2039266527627936233",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント サイト",
@@ -24,27 +29,32 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://iconicmoments.info/ticket/",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["20:05", "21:05"],
     lineup: undefined,
     url: undefined,
   },
   acts: [
     {
       title: "1部 公開収録",
+      start: "13:30",
+      end: "13:50",
       setlist: [],
       url: "",
     },
     {
       title: "2部 LIVE",
+      start: "19:25",
+      end: "19:50",
       setlist: [],
       url: "",
     },
   ],
-  updatedAt: "2026-03-09",
+  updatedAt: "2026-04-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - ICONIC MOMENTS LIVE! X](https://x.com/IconicM_live/status/2039266527627936233)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2030629616218440068)
 `;
