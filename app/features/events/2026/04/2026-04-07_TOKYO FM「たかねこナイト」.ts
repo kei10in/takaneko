@@ -8,7 +8,7 @@ export const meta: EventMetaDescriptor = {
   start: "27:00",
   end: "27:30",
   region: "ラジオ",
-  present: ["東山恵里沙"],
+  present: ["涼海すう", "東山恵里沙", "星谷美来"],
   images: [
     {
       path: "/events/2026/2026-04-07_TOKYO FM「たかねこナイト」.jpg",
@@ -27,7 +27,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://audee-membership.jp/takanenonadeshiko",
   },
-  updatedAt: "2026-04-09",
+  updatedAt: "2026-04-25",
 };
 
 export const content = /* md */ `

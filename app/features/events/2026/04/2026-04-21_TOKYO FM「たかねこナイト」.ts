@@ -8,18 +8,26 @@ export const meta: EventMetaDescriptor = {
   start: "27:00",
   end: "27:30",
   region: "ラジオ",
-  present: ["東山恵里沙"],
+  present: ["城月菜央", "東山恵里沙", "日向端ひな"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2026/2026-04-21_TOKYO FM「たかねこナイト」.jpg",
+      ref: "https://x.com/takanenofficial/status/2046576036440391916",
+    },
+    {
+      path: "/events/2026/2026-04-21_TOKYO FM「たかねこナイト」_1.jpg",
+      ref: "https://x.com/PodcastsMs_jp/status/2046567125259878649",
+    },
+    {
+      path: "/events/2026/2026-04-21_TOKYO FM「たかねこナイト」_2.jpg",
+      ref: "https://x.com/PodcastsMs_jp/status/2046733217924104432",
     },
   ],
   link: {
     text: "番組サイト",
     url: "https://audee-membership.jp/takanenonadeshiko",
   },
-  updatedAt: "2026-04-01",
+  updatedAt: "2026-04-25",
 };
 
 export const content = /* md */ `
@@ -27,9 +35,8 @@ export const content = /* md */ `
 
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260422030000)
-
-  <!-- - [Podcasts Membership]() -->
-  <!-- - [メンバーシップ限定 アンコール]() -->
+  - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/sm8u4nqYCZSbcDmU53TFb67h)
+  - [メンバーシップ限定 ソウル公演突撃インタビュー](https://audee-membership.jp/takanenonadeshiko/audio/smEyCTebwmMHckBWYCKtgE9s)
 
   ## 番組説明
 
@@ -52,6 +59,9 @@ export const content = /* md */ `
   ## リンク
 
   - [Radiko](https://radiko.jp/share?sid=FMT&t=20260422030000)
+  - [メンバーシップ告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/2046733217924104432)
+  - [当日告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/2046567125259878649)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2046576036440391916)
   - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
   - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
   - [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
