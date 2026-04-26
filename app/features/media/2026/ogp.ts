@@ -14,6 +14,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     presents: [],
   },
   {
+    mediaUrl: "https://menkyo-torocca.jp/feature/takanenonadeshiko4.html",
+    publishedAt: "2026-04-13",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/84943/",
     publishedAt: "2026-04-01",
     category: "article",
