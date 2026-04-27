@@ -3,6 +3,4 @@ import { convertPublicationToEventMeta } from "~/features/events/publicationToEv
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta();
 
-export const Content = () => {};
-
-export default Content;
+export const content = /* md */ ``;

@@ -1,4 +1,6 @@
-export const meta = {
+import { EventMetaDescriptor } from "~/features/events/eventMeta";
+
+export const meta: EventMetaDescriptor = {
   summary: "",
   category: "TV",
   date: "2026-",
@@ -19,6 +21,8 @@ export const meta = {
   updatedAt: "",
 };
 
-## リンク
+export const content = /* md */ `
+  ## リンク
 
-- []
+  - []
+`;

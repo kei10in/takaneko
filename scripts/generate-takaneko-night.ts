@@ -1,5 +1,5 @@
 /**
- * Generate "たかねこナイト" radio event MDX files for a specified month.
+ * Generate "たかねこナイト" radio event TypeScript files for a specified month.
  *
  * Usage:
  *   pnpm tsx scripts/generate-takaneko-night.ts 2025-11
@@ -11,13 +11,13 @@ import path from "path";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
 // Constants derived from the template & spec
-const PROGRAM_FILE_SUFFIX = "TOKYO FM「たかねこナイト」.mdx";
+const PROGRAM_FILE_SUFFIX = "TOKYO FM「たかねこナイト」.ts";
 const TEMPLATE_PATH = path.join(
   process.cwd(),
   "app",
   "features",
   "events",
-  "_たかねこナイト-template.mdx",
+  "_たかねこナイト-template.ts",
 );
 
 interface ReplacementVars {

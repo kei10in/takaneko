@@ -1,4 +1,6 @@
-export const meta = {
+import { EventMetaDescriptor } from "~/features/events/eventMeta";
+
+export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
   category: "EVENT",
   liveType: "RELEASE_EVENT",
@@ -33,6 +35,8 @@ export const meta = {
   updatedAt: "",
 };
 
-## リンク
+export const content = /* md */ `
+  ## リンク
 
-- []()
+  - []()
+`;
