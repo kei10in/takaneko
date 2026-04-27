@@ -48,6 +48,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [ファンクラブ抽選会詳細 - たかねこ FC](https://takanekofc.com/news/public/_/3hkvrmy0syormnoz.html)
+  - [ファンクラブ抽選会告知 - 公式 X](https://x.com/takanenofficial/status/2048693635680780330)
   - [スタンプラリー企画 12公演来場者限定 楽屋招待詳細について - 公式 X](https://takanenonadeshiko.jp/?p=5197)
   - [たかねこブーケラッピングプロジェクト - 公式ニュース](https://takanenonadeshiko.jp/?p=5190)
   - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
