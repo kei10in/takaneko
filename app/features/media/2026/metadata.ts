@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "duH-dQ7PV9Y",
+    title:
+      "【オーディション#2】涙の最終審査、その結末は…？専属モデルに選ばれるのは誰だ！？【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-04-25",
+    mediaUrl: "https://youtu.be/duH-dQ7PV9Y",
+    imageUrl: "https://i.ytimg.com/vi/duH-dQ7PV9Y/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://popteen.co.jp/media/85625/",
     title:
