@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Event Files"
+  short_description: "Update app/features/events event files"
+  default_prompt: "Use this skill to create or update files under app/features/events using existing repository patterns."
