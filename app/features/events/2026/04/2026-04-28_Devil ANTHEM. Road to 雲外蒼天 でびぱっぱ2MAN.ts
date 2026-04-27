@@ -24,19 +24,20 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketvillage.jp/events/13691",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「セーラー服2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2048756551872094345",
   },
   acts: {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-02-09",
+  updatedAt: "2026-04-27",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2048756551872094345)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2020822500129587432)
 `;
