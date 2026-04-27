@@ -103,7 +103,6 @@ const cropImage = async (
   const coverCanvas = createCanvas(coverWidth, coverHeight);
   const coverContext = coverCanvas.getContext("2d");
   coverContext.imageSmoothingEnabled = true;
-  coverContext.imageSmoothingQuality = "high";
   coverContext.drawImage(extractedCanvas, 0, 0, coverWidth, coverHeight);
 
   const cropX = Math.floor((coverWidth - size.width) / 2);
