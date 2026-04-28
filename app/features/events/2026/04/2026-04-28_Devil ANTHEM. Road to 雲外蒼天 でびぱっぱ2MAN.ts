@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-04-28_Devil ANTHEM. Road to 雲外蒼天 でびぱっぱ2MAN.jpg",
       ref: "https://x.com/takanenofficial/status/2020822500129587432",
     },
+    {
+      path: "/events/2026/2026-04-28_Devil ANTHEM. Road to 雲外蒼天 でびぱっぱ2MAN_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2049100243258789968",
+    },
   ],
   link: {
     text: "",
@@ -32,12 +36,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-27",
+  updatedAt: "2026-04-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2049100243258789968)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2048756551872094345)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2020822500129587432)
 `;
