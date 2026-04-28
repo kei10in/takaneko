@@ -1,0 +1,36 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const BouquetOf9FlowersFinal_自撮りステッカー: RandomGoods = {
+  id: "Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別デザイン 自撮りステッカー",
+  slug: "ステッカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」",
+  name: "Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別デザイン 自撮りステッカー",
+  year: 2026,
+  series: "",
+  category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-05-06_メンバー個別デザイン自撮りステッカー.png",
+  width: 1200,
+  height: 660,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 16, y: 82, width: 174, height: 227 },
+    { id: 2, x: 254, y: 82, width: 174, height: 227 },
+    { id: 3, x: 485, y: 115, width: 228, height: 172 },
+    { id: 4, x: 770, y: 82, width: 174, height: 227 },
+    { id: 5, x: 1010, y: 82, width: 174, height: 227 },
+    { id: 6, x: 135, y: 347, width: 174, height: 227 },
+    { id: 7, x: 378, y: 347, width: 174, height: 227 },
+    { id: 8, x: 618, y: 351, width: 174, height: 227 },
+    { id: 9, x: 858, y: 350, width: 174, height: 227 },
+  ],
+};

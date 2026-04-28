@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const BouquetOf9FlowersFinal_アンブレラマーカー: RandomGoods = {
+  id: "Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別 アンブレラマーカー",
+  slug: "アンブレラマーカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」",
+  name: "Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別 アンブレラマーカー",
+  year: 2026,
+  series: "",
+  category: "アクリルキーホルダー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-05-06_メンバー個別アンブレラマーカー.png",
+  width: 1200,
+  height: 660,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 21, y: 93, width: 230, height: 230 },
+    { id: 2, x: 252, y: 93, width: 230, height: 230 },
+    { id: 3, x: 485, y: 93, width: 230, height: 230 },
+    { id: 4, x: 716, y: 93, width: 230, height: 230 },
+    { id: 5, x: 948, y: 94, width: 230, height: 230 },
+    { id: 6, x: 132, y: 335, width: 230, height: 230 },
+    { id: 7, x: 366, y: 335, width: 230, height: 230 },
+    { id: 8, x: 602, y: 335, width: 230, height: 230 },
+    { id: 9, x: 838, y: 335, width: 230, height: 230 },
+  ],
+};

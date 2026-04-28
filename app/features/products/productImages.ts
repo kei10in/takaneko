@@ -154,9 +154,13 @@ import { アクロトーキョー_自撮り風生写真 } from "./2026/2026-02-2
 import { 葉月紗蘭誕生日記念グッズ2026_生写真 } from "./2026/2026-03-03_葉月紗蘭誕生日記念グッズ生写真";
 import { セーラー服2026_ミニフォト } from "./2026/2026-03-05_ミニフォトカード「セーラー服2026";
 import { ロウルグッズ_生写真 } from "./2026/2026-03-11_生写真「ロウルグッズ」";
+import { BouquetOf9FlowersFinal_アンブレラマーカー } from "./2026/2026-05-06_アンブレラマーカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」";
+import { BouquetOf9FlowersFinal_自撮りステッカー } from "./2026/2026-05-06_ステッカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  BouquetOf9FlowersFinal_アンブレラマーカー,
+  BouquetOf9FlowersFinal_自撮りステッカー,
   葉月紗蘭誕生日記念グッズ2026_生写真,
   アクロトーキョー_自撮り風生写真,
   アクロトーキョー_ペアアクリルブロック,
@@ -173,6 +177,8 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  BouquetOf9FlowersFinal_アンブレラマーカー,
+  BouquetOf9FlowersFinal_自撮りステッカー,
   ロウルグッズ_生写真,
   セーラー服2026_ミニフォト,
   葉月紗蘭誕生日記念グッズ2026_生写真,

@@ -1,5 +1,11 @@
 # リリース ノート
 
+## 2026-04-28
+
+- トレード画像をつくるやつに、Bouquet of 9 Flowers FINAL の FC 抽選会グッズを追加しました。
+  - Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別 アンブレラマーカー
+  - Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別デザイン 自撮りステッカー
+
 ## 2026-04-21
 
 - トレード画像を作るやつに、生写真「葉月紗蘭誕生日記念グッズ 2026」を追加しました。
