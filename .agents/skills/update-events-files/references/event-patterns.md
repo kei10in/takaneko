@@ -47,20 +47,20 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 
 ## カテゴリ別仕様
 
-## Live
+### Live
 
 - **テンプレート -** `app/features/events/_event-template.ts` を使用する。
 - `category` は `"LIVE"` とする。
 - `region` は開催県名。海外の場合は都市名。
 
-## Radio
+### Radio
 
 - **テンプレート -** `app/features/events/_radio-template.ts`
 - `category` は `"RADIO"` とする。
 - `region` は `"ラジオ"` とする。
 - `TOKYO FM「たかねこナイト」` 系は既存書式（時刻、説明ブロック、Radiko リンク）に合わせる。
 
-## TV
+### TV
 
 - **テンプレート -** `app/features/events/_tv-template.ts` を使用する。
 - `category` は `"TV"` とする。
@@ -68,7 +68,7 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 - 放送時刻が判明している場合は `start` / `end` を定義する。
 - 公式番組ページがある場合は `link` に含める。
 
-## Streaming
+### Streaming
 
 - `category` は `"STREAMING"` とする。
 - `region` は同時期の同カテゴリファイルの表記に合わせる。
@@ -78,6 +78,14 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 
 - `status` に使う値は `RESCHEDULED` / `CANCELED` / `WITHDRAWN` のみとする。
 - `status` を設定した場合、`content` に延期/中止/辞退の説明を記載する。
+
+## その他の特筆すべき仕様
+
+## 本日のおチェキ
+
+- 既存イベントへの追記では、画像ファイル名を `YYYY-MM-DD_イベント名_本日のおチェキ.jpg` とする。
+- `meta.images` にチェキ画像を追加し、`ref` はチェキ投稿 URL を使う。
+- `content` のリンクテキストは単に `本日のおチェキ` とする
 
 ## 品質保証仕様
 
