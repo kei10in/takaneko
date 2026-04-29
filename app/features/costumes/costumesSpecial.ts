@@ -66,6 +66,13 @@ export const LARMEFes25衣装 = {
   kind: "special",
   name: "LARME Fes'25 衣装",
   slug: "LARMEFes25衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/LARMEFes25衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1982417040041464052",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const 高嶺のなでしこ2024衣装_24時間テレビ2025Tシャツ = {
@@ -91,6 +98,19 @@ export const パジャマ = {
   kind: "special",
   name: "パジャマ",
   slug: "パジャマ",
+} satisfies SpecialCostume;
+
+export const LARME高嶺のなでしこ_SPECIAL_COLLABORATION衣装 = {
+  kind: "special",
+  name: "LARME×高嶺のなでしこ SPECIAL COLLABORATION 衣装",
+  slug: "LARME高嶺のなでしこSPECIAL_COLLABORATION衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/LARME高嶺のなでしこSPECIAL_COLLABORATION衣装.jpg",
+      ref: "https://x.com/TP_official_/status/1938585420977279265",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const 高嶺のなでしこ2024衣装_茨城ロボッツユニフォーム = {
@@ -186,6 +206,7 @@ export const AllSpecialCostumes = [
   高嶺のなでしこ2024衣装_24時間テレビ2025Tシャツ,
   _2025浴衣,
   パジャマ,
+  LARME高嶺のなでしこ_SPECIAL_COLLABORATION衣装,
   高嶺のなでしこ2024衣装_茨城ロボッツユニフォーム,
   高嶺のなでしこ2024衣装_川崎ブレイブサンダースユニフォーム,
   バレンタイン2025衣装,
