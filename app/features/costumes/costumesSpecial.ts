@@ -129,6 +129,13 @@ export const バレンタイン2025衣装 = {
   kind: "special",
   name: "バレンタイン 2025 衣装",
   slug: "バレンタイン2025衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/バレンタイン2025衣装.webp",
+      ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const クリスマス2024衣装 = {
@@ -153,6 +160,13 @@ export const 読売ジャイアンツユニフォーム = {
   kind: "special",
   name: "読売ジャイアンツ ユニフォーム",
   slug: "読売ジャイアンツユニフォーム",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/読売ジャイアンツユニフォーム.jpg",
+      ref: "https://x.com/takanenofficial/status/1831614332817568051",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const 京れもん着物 = {
