@@ -4,6 +4,13 @@ export const 病名恋ワズライ衣装 = {
   kind: "mv",
   name: "「病名恋ワズライ」衣装",
   slug: "病名恋ワズライ衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/病名恋ワズライ衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1994685968297988343",
+    },
+  ],
 } satisfies MvCostume;
 
 export const この世界は嘘でできている白衣装 = {
@@ -96,6 +103,13 @@ export const ImYourIdolMV衣装 = {
   kind: "mv",
   name: "「I’M YOUR IDOL」MV 衣装",
   slug: "IM YOUR IDOL MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/IM YOUR IDOL MV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1865221118598221858",
+    },
+  ],
 } satisfies MvCostume;
 
 export const アドレナリンゲーム白黒衣装 = {
@@ -108,6 +122,13 @@ export const アドレナリンゲームジャージ = {
   kind: "mv",
   name: "「アドレナリンゲーム」ジャージ",
   slug: "アドレナリンゲームジャージ",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/アドレナリンゲームジャージ.jpg",
+      ref: "https://x.com/takanekomanager/status/1865278464368218363",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 死ぬまでダーリンMV部屋着 = {

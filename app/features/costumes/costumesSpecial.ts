@@ -53,6 +53,13 @@ export const たかねこハロウィン2025探偵衣装 = {
   kind: "special",
   name: "たかねこハロウィン2025 探偵衣装",
   slug: "たかねこハロウィン2025探偵衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2025探偵衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1983395074869203056",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const LARMEFes25衣装 = {
@@ -71,6 +78,13 @@ export const _2025浴衣 = {
   kind: "special",
   name: "2025 浴衣",
   slug: "2025浴衣",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/2025浴衣.jpg",
+      ref: "https://x.com/takanenofficial/status/1993167765989937226",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const パジャマ = {
