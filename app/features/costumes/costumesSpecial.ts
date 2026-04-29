@@ -129,6 +129,10 @@ export const 京れもん着物 = {
   images: [
     {
       path: "/takaneko/costumes/specials/京れもん着物.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1753054174592565628",
+    },
+    {
+      path: "/takaneko/costumes/specials/京れもん着物_1.jpg",
       ref: "https://x.com/takanekomanager/status/1755465436035223659",
     },
   ],

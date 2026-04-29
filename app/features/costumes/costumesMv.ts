@@ -34,12 +34,26 @@ export const ライフクエスト部屋着衣装 = {
   kind: "mv",
   name: "「ライフクエスト」部屋着衣装",
   slug: "ライフクエスト部屋着衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/ライフクエスト部屋着衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1940438771935371710",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 初恋のこたえ浴衣衣装 = {
   kind: "mv",
   name: "「初恋のこたえ。」浴衣衣装",
   slug: "初恋のこたえ浴衣衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/初恋のこたえ浴衣衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1935325429080220106",
+    },
+  ],
 } satisfies MvCostume;
 
 export const アイドル衣装白衣装 = {
