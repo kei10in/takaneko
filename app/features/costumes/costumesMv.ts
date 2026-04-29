@@ -96,16 +96,58 @@ export const アドレナリンゲームジャージ = {
   slug: "アドレナリンゲームジャージ",
 } satisfies MvCostume;
 
+export const 死ぬまでダーリンMV部屋着 = {
+  kind: "mv",
+  name: "「死ぬまでダーリン」MV 部屋着",
+  slug: "死ぬまでダーリンMV部屋着",
+} satisfies MvCostume;
+
+export const 死ぬまでダーリンMVアイドル衣装 = {
+  kind: "mv",
+  name: "「死ぬまでダーリン」MV アイドル衣装",
+  slug: "死ぬまでダーリンMVアイドル衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/死ぬまでダーリンMVアイドル衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1852154763187798231",
+    },
+  ],
+} satisfies MvCostume;
+
+export const 死ぬまでダーリンMVデート私服 = {
+  kind: "mv",
+  name: "「死ぬまでダーリン」MV デート私服",
+  slug: "死ぬまでダーリンMVデート私服",
+} satisfies MvCostume;
+
 export const LoveAnthemMV衣装 = {
   kind: "mv",
   name: "「LOVE ANTHEM」MV 衣装",
   slug: "LOVE ANTHEM MV衣装",
 } satisfies MvCostume;
 
+export const モテチェンMV制服衣装 = {
+  kind: "mv",
+  name: "「モテチェン！」MV 制服衣装",
+  slug: "モテチェンMV制服衣装",
+} satisfies MvCostume;
+
 export const モテチェンMV衣装 = {
   kind: "mv",
   name: "モテチェン！ MV 衣装",
-  slug: "モテチェンMV衣装",
+  slug: "モテチェンMV私服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/モテチェンMV私服衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1825540186463490502",
+    },
+    {
+      path: "/takaneko/costumes/mv/モテチェンMV私服衣装_2.jpg",
+      ref: "https://x.com/takanekomanager/status/1837814220895015213",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 私より好きでいてMV衣装 = {
@@ -289,7 +331,11 @@ export const AllMvCostumes: MvCostume[] = [
   ImYourIdolMV衣装,
   アドレナリンゲーム白黒衣装,
   アドレナリンゲームジャージ,
+  死ぬまでダーリンMV部屋着,
+  死ぬまでダーリンMVアイドル衣装,
+  死ぬまでダーリンMVデート私服,
   LoveAnthemMV衣装,
+  モテチェンMV制服衣装,
   モテチェンMV衣装,
   私より好きでいてMV衣装,
   メイド至上主義衣装,
