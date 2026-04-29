@@ -40,7 +40,7 @@ export const meta: EventMetaDescriptor = {
       {
         start: "18:00",
         end: "20:30",
-        costume: "アクロトーキョー コラボグッズ衣装",
+        costume: "アクロトーキョー ツーショット撮影会衣装",
         lanes: ["城月菜央", "橋本桃呼"],
       },
     ],
