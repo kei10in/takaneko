@@ -1,5 +1,24 @@
 import { SpecialCostume } from "./types";
 
+export const アクロトーキョーツーショット撮影会衣装 = {
+  kind: "special",
+  name: "アクロトーキョー ツーショット撮影会衣装",
+  slug: "アクロトーキョーツーショット撮影会衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/アクロトーキョーツーショット撮影会衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/2040051208883474541",
+    },
+  ],
+} satisfies SpecialCostume;
+
+export const アクロトーキョーコラボグッズ衣装 = {
+  kind: "special",
+  name: "アクロトーキョー コラボグッズ衣装",
+  slug: "アクロトーキョーコラボグッズ衣装",
+} satisfies SpecialCostume;
+
 export const 高嶺のなでしこ2024衣装_川崎ブレイブサンダース2025_26ユニフォーム = {
   kind: "special",
   name: "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
@@ -140,6 +159,9 @@ export const ハロウィンコスプレ = {
 } satisfies SpecialCostume;
 
 export const AllSpecialCostumes = [
+  アクロトーキョーツーショット撮影会衣装,
+  アクロトーキョーコラボグッズ衣装,
+  高嶺のなでしこ2024衣装_川崎ブレイブサンダース2025_26ユニフォーム,
   クリスマス2025衣装,
   たかねこハロウィン2025探偵衣装,
   LARMEFes25衣装,
