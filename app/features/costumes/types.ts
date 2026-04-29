@@ -29,7 +29,7 @@ export interface StageCostume {
 
   stylist?: string;
 
-  image: ImageDescription;
+  images?: ImageDescription[];
 }
 
 /**
@@ -43,7 +43,7 @@ export interface UniformCostume {
   name: UniformCostumeName;
   slug: string;
 
-  image?: ImageDescription;
+  images?: ImageDescription[];
 }
 
 export interface MvCostume {
@@ -51,7 +51,7 @@ export interface MvCostume {
   name: MvCostumeName;
   slug: string;
 
-  image?: ImageDescription;
+  images?: ImageDescription[];
 }
 
 /**
@@ -63,7 +63,7 @@ export interface TShirtCostume {
   name: TShirtCostumeName;
   slug: string;
 
-  image?: ImageDescription;
+  images?: ImageDescription[];
 }
 
 export interface SpecialCostume {
@@ -71,7 +71,7 @@ export interface SpecialCostume {
   name: SpecialCostumeName;
   slug: string;
 
-  image?: ImageDescription;
+  images?: ImageDescription[];
 }
 
 export type Costume = StageCostume | UniformCostume | MvCostume | TShirtCostume | SpecialCostume;

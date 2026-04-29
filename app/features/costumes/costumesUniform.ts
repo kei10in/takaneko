@@ -5,10 +5,12 @@ export const 世界は恋に落ちている制服衣装 = {
   name: "「世界は恋に落ちている」制服衣装",
   slug: "世界は恋に落ちている制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/世界は恋に落ちている制服.jpg",
-    ref: "https://x.com/Mikuru_hositani/status/2033154964026187815",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/世界は恋に落ちている制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2033154964026187815",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const ハニフェス2025制服衣装 = {
@@ -16,10 +18,12 @@ export const ハニフェス2025制服衣装 = {
   name: "「ハニフェス 2025」制服衣装",
   slug: "ハニフェス2025制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/ハニフェス2025制服.jpg",
-    ref: "https://x.com/MomokoHashimoto/status/1967569067902198269",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/ハニフェス2025制服.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/1967569067902198269",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const ホワイトチョコ・ビターチョコ制服衣装 = {
@@ -27,10 +31,12 @@ export const ホワイトチョコ・ビターチョコ制服衣装 = {
   name: "ホワイトチョコ・ビターチョコ制服衣装",
   slug: "ホワイトチョコ-ビターチョコ制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/ホワイトチョコ・ビターチョコ制服.webp",
-    ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/ホワイトチョコ・ビターチョコ制服.webp",
+      ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const アイのウイルス制服衣装 = {
@@ -38,10 +44,12 @@ export const アイのウイルス制服衣装 = {
   name: "「アイのウイルス」制服衣装",
   slug: "アイのウイルス制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/アイのウイルス制服.jpg",
-    ref: "https://x.com/takanenofficial/status/1866800841396814202",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/アイのウイルス制服.jpg",
+      ref: "https://x.com/takanenofficial/status/1866800841396814202",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const センパイ制服衣装 = {
@@ -49,10 +57,12 @@ export const センパイ制服衣装 = {
   name: "「センパイ。」制服衣装",
   slug: "センパイ制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/センパイ制服.jpg",
-    ref: "https://x.com/takanekomanager/status/1799285062254690519",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/センパイ制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1799285062254690519",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const 恋を知った世界制服衣装 = {
@@ -60,10 +70,12 @@ export const 恋を知った世界制服衣装 = {
   name: "「恋を知った世界」制服衣装",
   slug: "恋を知った世界制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/恋を知った世界制服.jpg",
-    ref: "https://x.com/Mikuru_hositani/status/1772878202060316684",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/恋を知った世界制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1772878202060316684",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const いつか私がママになったら制服衣装 = {
@@ -71,10 +83,12 @@ export const いつか私がママになったら制服衣装 = {
   name: "「いつか私がママになったら」制服衣装",
   slug: "いつか私がママになったら制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/いつか私がママになったら制服.jpg",
-    ref: "https://x.com/takanekomanager/status/1736030695271899326",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/いつか私がママになったら制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1736030695271899326",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const 初恋のひと制服衣装 = {
@@ -82,10 +96,12 @@ export const 初恋のひと制服衣装 = {
   name: "「初恋のひと。」制服衣装",
   slug: "初恋のひと制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/初恋のひと制服.jpg",
-    ref: "https://x.com/momonamatsumoto/status/1675279136414375937",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/初恋のひと制服.jpg",
+      ref: "https://x.com/momonamatsumoto/status/1675279136414375937",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const ヒロインは平均以下制服衣装 = {
@@ -93,10 +109,12 @@ export const ヒロインは平均以下制服衣装 = {
   name: "「ヒロインは平均以下。」制服衣装",
   slug: "ヒロインは平均以下制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/ヒロインは平均以下制服.jpg",
-    ref: "https://x.com/Mikuru_hositani/status/1671690040110616576",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/ヒロインは平均以下制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1671690040110616576",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const 女の子は強い制服衣装 = {
@@ -104,10 +122,12 @@ export const 女の子は強い制服衣装 = {
   name: "「女の子は強い」制服衣装",
   slug: "女の子は強い制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/女の子は強い制服.jpg",
-    ref: "https://x.com/takanekomanager/status/1610104451980988416",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/女の子は強い制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1610104451980988416",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const 乙女どもよ制服衣装 = {
@@ -115,10 +135,12 @@ export const 乙女どもよ制服衣装 = {
   name: "「乙女どもよ。」制服衣装",
   slug: "乙女どもよ制服衣装",
 
-  image: {
-    path: "/takaneko/costumes/uniforms/乙女どもよ制服.jpg",
-    ref: "https://x.com/takanekomanager/status/1593121199894106113",
-  },
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/乙女どもよ制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1593121199894106113",
+    },
+  ],
 } satisfies UniformCostume;
 
 export const AllUniformCostumes: UniformCostume[] = [

@@ -43,6 +43,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { costume } = loaderData;
+  const image = costume.images?.[0];
 
   const { data, isLoading } = useSWR(`costumes/${costume.slug}/lives.json`, async () => {
     const response = await fetch(`/data/costumes/${costume.slug}/lives.json`);
@@ -64,20 +65,11 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   return (
     <div>
       <div className="container mx-auto lg:max-w-5xl">
-        {costume.image && (
+        {image && (
           <div>
-            <img
-              src={costume.image.path}
-              alt={costume.name}
-              className="aspect-4/3 w-full object-cover"
-            />
+            <img src={image.path} alt={costume.name} className="aspect-4/3 w-full object-cover" />
             <p className="p-1 text-right text-xs text-gray-400">
-              <Link
-                to={costume.image.ref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1"
-              >
+              <Link to={image.ref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1">
                 <span>画像の引用元</span>
                 <BsBoxArrowUpRight />
               </Link>
