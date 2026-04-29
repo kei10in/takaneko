@@ -50,6 +50,8 @@ export interface MvCostume {
   kind: "mv";
   name: MvCostumeName;
   slug: string;
+
+  image?: ImageDescription;
 }
 
 /**
@@ -60,12 +62,16 @@ export interface TShirtCostume {
   kind: "tshirt";
   name: TShirtCostumeName;
   slug: string;
+
+  image?: ImageDescription;
 }
 
 export interface SpecialCostume {
   kind: "special";
   name: SpecialCostumeName;
   slug: string;
+
+  image?: ImageDescription;
 }
 
 export type Costume = StageCostume | UniformCostume | MvCostume | TShirtCostume | SpecialCostume;
