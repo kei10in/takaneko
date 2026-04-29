@@ -287,6 +287,13 @@ export const _17歳MV衣装 = {
   kind: "mv",
   name: "「17歳」MV 衣装",
   slug: "17歳MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/17歳MV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1698678015562252672",
+    },
+  ],
 } satisfies MvCostume;
 
 export const すきっちゅーの私服衣装 = {
@@ -305,6 +312,17 @@ export const 月曜日の憂鬱MV衣装 = {
   kind: "mv",
   name: "「月曜日の憂鬱」MV 衣装",
   slug: "月曜日の憂鬱MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/月曜日の憂鬱MV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1685881565237387265",
+    },
+    {
+      path: "/takaneko/costumes/mv/月曜日の憂鬱MV衣装_2.jpg",
+      ref: "https://x.com/takanekomanager/status/1682385680725340164",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 決戦スピリットスポーツウェア衣装 = {

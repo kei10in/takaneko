@@ -28,6 +28,13 @@ export const Tシャツ_2ndファンミ = {
   kind: "tshirt",
   name: "T シャツ (2nd ファンミ ver.)",
   slug: "Tシャツ-2ndファンミ",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-2ndファンミ.jpg",
+      ref: "https://x.com/takanekomanager/status/1822176343917797440",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_わたし色に染まれ = {
@@ -58,6 +65,13 @@ export const Tシャツ_たかねこ全国お招きツアー2023 = {
   kind: "tshirt",
   name: "T シャツ (たかねこ全国お招きツアー 2023)",
   slug: "Tシャツ-たかねこ全国お招きツアー2023",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-たかねこ全国お招きツアー2023.jpg",
+      ref: "https://x.com/takanekomanager/status/1655103283449708544",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_高嶺のなでしこ = {
