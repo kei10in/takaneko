@@ -256,7 +256,7 @@ export const _17歳MV衣装 = {
 
 export const すきっちゅーの私服衣装 = {
   kind: "mv",
-  name: "「すきっちゅーの」私服衣装",
+  name: "「すきっちゅーの！」私服衣装",
   slug: "すきっちゅーの私服衣装",
 } satisfies MvCostume;
 
