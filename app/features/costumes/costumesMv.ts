@@ -130,18 +130,66 @@ export const 私は怪物MV衣装 = {
   kind: "mv",
   name: "「私は怪物」MV 衣装",
   slug: "私は怪物MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/私は怪物MV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1754849409588973602",
+    },
+  ],
 } satisfies MvCostume;
 
-export const 可愛いっていわれたいMV衣装 = {
+// 2ショット撮影会で着用したパンク衣装
+export const 可愛いって言われたいMVパンクロック衣装 = {
   kind: "mv",
-  name: "「可愛いっていわれたい」MV 衣装",
-  slug: "可愛いっていわれたいMV衣装",
+  name: "「可愛いって言われたい」MV パンクロック衣装",
+  slug: "可愛いって言われたいMVパンクロック衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/可愛いって言われたいMVパンクロック衣装.jpg",
+      ref: "https://x.com/momonamatsumoto/status/1753746779378786618",
+    },
+  ],
+} satisfies MvCostume;
+
+export const 可愛いって言われたいMVもこもこ帽子衣装 = {
+  kind: "mv",
+  name: "「可愛いって言われたい」MV もこもこ帽子衣装",
+  slug: "可愛いって言われたいMVもこもこ帽子衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/可愛いって言われたいMVもこもこ帽子衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1753766857474203990",
+    },
+  ],
+} satisfies MvCostume;
+
+export const 可愛いって言われたいMV虹色衣装 = {
+  kind: "mv",
+  name: "「可愛いって言われたい」MV 虹色衣装",
+  slug: "可愛いって言われたいMV虹色衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/可愛いって言われたいMV虹色衣装.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1754129915086254530",
+    },
+  ],
 } satisfies MvCostume;
 
 export const いつか私がママになったらワンピース衣装 = {
   kind: "mv",
   name: "「いつか私がママになったら」MV ワンピース衣装",
   slug: "いつか私がママになったらMVワンピース衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/いつか私がママになったらMVワンピース衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1736201562463391946",
+    },
+  ],
 } satisfies MvCostume;
 
 export const _17歳MV衣装 = {
@@ -233,7 +281,9 @@ export const AllMvCostumes: MvCostume[] = [
   メイド至上主義衣装,
   推しの魔法MV衣装,
   私は怪物MV衣装,
-  可愛いっていわれたいMV衣装,
+  可愛いって言われたいMVパンクロック衣装,
+  可愛いって言われたいMVもこもこ帽子衣装,
+  可愛いって言われたいMV虹色衣装,
   いつか私がママになったらワンピース衣装,
   _17歳MV衣装,
   すきっちゅーの私服衣装,

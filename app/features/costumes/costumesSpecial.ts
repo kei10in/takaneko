@@ -106,6 +106,13 @@ export const 京れもん着物 = {
   kind: "special",
   name: "京れもん 着物",
   slug: "京れもん着物",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/京れもん着物.jpg",
+      ref: "https://x.com/takanekomanager/status/1755465436035223659",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const ホワイトサンタ2023衣装 = {

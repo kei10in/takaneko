@@ -25,11 +25,27 @@ export const meta: EventMetaDescriptor = {
         start: "11:00",
         end: "12:00",
         lanes: [
-          { label: "1レーン", member: "城月菜央", costume: "「可愛いって言われたい」MV 衣装" },
+          {
+            label: "1レーン",
+            member: "城月菜央",
+            costume: "「可愛いって言われたい」MV パンクロック衣装",
+          },
           { label: "2レーン", member: "橋本桃呼", costume: "「私は怪物」MV 衣装" },
-          { label: "3レーン", member: "松本ももな", costume: "「可愛いって言われたい」MV 衣装" },
-          { label: "4レーン", member: "葉月紗蘭", costume: "「可愛いって言われたい」MV 衣装" },
-          { label: "5レーン", member: "星谷美来", costume: "「可愛いって言われたい」MV 衣装" },
+          {
+            label: "3レーン",
+            member: "松本ももな",
+            costume: "「可愛いって言われたい」MV パンクロック衣装",
+          },
+          {
+            label: "4レーン",
+            member: "葉月紗蘭",
+            costume: "「可愛いって言われたい」MV パンクロック衣装",
+          },
+          {
+            label: "5レーン",
+            member: "星谷美来",
+            costume: "「可愛いって言われたい」MV パンクロック衣装",
+          },
         ],
       },
       {
@@ -39,7 +55,11 @@ export const meta: EventMetaDescriptor = {
         lanes: [
           { label: "1レーン", member: "日向端ひな", costume: "「私は怪物」MV 衣装" },
           { label: "2レーン", member: "春野莉々", costume: "「私は怪物」MV 衣装" },
-          { label: "3レーン", member: "涼海すう", costume: "「可愛いって言われたい」MV 衣装" },
+          {
+            label: "3レーン",
+            member: "涼海すう",
+            costume: "「可愛いって言われたい」MV パンクロック衣装",
+          },
           { label: "4レーン", member: "東山恵里沙", costume: "「私は怪物」MV 衣装" },
           { label: "5レーン", member: "籾山ひめり", costume: "「私は怪物」MV 衣装" },
         ],
