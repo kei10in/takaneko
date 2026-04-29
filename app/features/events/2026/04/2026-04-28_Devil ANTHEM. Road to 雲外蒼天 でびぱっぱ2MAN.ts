@@ -33,8 +33,21 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2048756551872094345",
   },
   acts: {
-    setlist: [],
-    url: "",
+    setlist: [
+      "衣装:高嶺のなでしこ 2024 衣装",
+      "初恋のひと。",
+      "初恋のこたえ。",
+      "病名恋ワズライ",
+      "MC",
+      "メランコリックハニー",
+      "#超絶かわいい",
+      "MC",
+      "センパイ。",
+      "ファンサ",
+      "女の子は強い",
+      "美しく生きろ",
+    ],
+    links: ["https://x.com/_MARIC/status/2049158322713248024"],
   },
   updatedAt: "2026-04-28",
 };
