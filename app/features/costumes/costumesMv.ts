@@ -112,6 +112,13 @@ export const 私より好きでいてMV衣装 = {
   kind: "mv",
   name: "「私より好きでいて」MV 衣装",
   slug: "私より好きでいてMV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/私より好きでいてMV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1819364543169982771",
+    },
+  ],
 } satisfies MvCostume;
 
 export const メイド至上主義衣装 = {
