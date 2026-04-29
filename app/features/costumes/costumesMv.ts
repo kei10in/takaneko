@@ -118,6 +118,13 @@ export const メイド至上主義衣装 = {
   kind: "mv",
   name: "「メイド☆至上主義」衣装",
   slug: "メイド至上主義衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/メイド至上主義衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1799050739307991277",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 推しの魔法MV衣装 = {
