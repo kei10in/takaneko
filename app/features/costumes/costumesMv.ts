@@ -324,10 +324,17 @@ export const 月曜日の憂鬱MV衣装 = {
   ],
 } satisfies MvCostume;
 
-export const 決戦スピリットスポーツウェア衣装 = {
+export const 決戦スピリットMV衣装 = {
   kind: "mv",
-  name: "「決戦スピリット」スポーツウェア 衣装",
-  slug: "決戦スピリットスポーツウェア衣装",
+  name: "「決戦スピリット」MV 衣装",
+  slug: "決戦スピリットMV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/決戦スピリットMV衣装.jpg",
+      ref: "https://x.com/takanekomanager/status/1671869378915348481",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 革命の女王黒衣装 = {
@@ -346,6 +353,13 @@ export const 男の子の目的は何MV衣装 = {
   kind: "mv",
   name: "「男の子の目的は何？」MV 衣装",
   slug: "男の子の目的は何MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/男の子の目的は何MV衣装.jpg",
+      ref: "https://x.com/momonamatsumoto/status/1638322673335013376",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 可愛くてごめんMV衣装 = {
@@ -401,7 +415,7 @@ export const AllMvCostumes: MvCostume[] = [
   すきっちゅーの私服衣装,
   すきっちゅーのパジャマ衣装,
   月曜日の憂鬱MV衣装,
-  決戦スピリットスポーツウェア衣装,
+  決戦スピリットMV衣装,
   革命の女王黒衣装,
   僕は君になれない私服衣装,
   男の子の目的は何MV衣装,
