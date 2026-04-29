@@ -35,7 +35,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "3 レーン",
             member: "葉月紗蘭",
-            costume: "乙女どもよ。制服衣装",
+            costume: "「乙女どもよ。」制服衣装",
           },
           {
             label: "4 レーン",
@@ -55,7 +55,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "7 レーン",
             member: "城月菜央",
-            costume: "「すきっちゅーの！」MV 衣装",
+            costume: "「すきっちゅーの！」私服衣装",
           },
         ],
       },
@@ -67,12 +67,12 @@ export const meta: EventMetaDescriptor = {
           {
             label: "1 レーン",
             member: "松本ももな",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "2 レーン",
             member: "星谷美来",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "3 レーン",
@@ -82,7 +82,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "4 レーン",
             member: "籾山ひめり",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "5 レーン",
@@ -108,12 +108,12 @@ export const meta: EventMetaDescriptor = {
           {
             label: "1 レーン",
             member: "松本ももな",
-            costume: "死ぬまでダーリン 部屋着衣装",
+            costume: "「死ぬまでダーリン」MV 部屋着",
           },
           {
             label: "2 レーン",
             member: "東山恵里沙",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "3 レーン",
@@ -128,7 +128,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "5 レーン",
             member: "橋本桃呼",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "6 レーン",
@@ -150,7 +150,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "1 レーン",
             member: "松本ももな",
-            costume: "死ぬまでダーリン 部屋着衣装",
+            costume: "「死ぬまでダーリン」MV 部屋着",
           },
           {
             label: "2 レーン",
@@ -170,7 +170,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "5 レーン",
             member: "春野莉々",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "6 レーン",
@@ -221,7 +221,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "7 レーン",
             member: "籾山ひめり",
-            costume: "モテチェン！制服衣装",
+            costume: "「モテチェン！」MV 制服衣装",
           },
         ],
       },
@@ -275,7 +275,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "1 レーン",
             member: "松本ももな",
-            costume: "死ぬまでダーリン アイドル衣装",
+            costume: "「死ぬまでダーリン」MV アイドル衣装",
           },
           {
             label: "2 レーン",
@@ -290,7 +290,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "4 レーン",
             member: "星谷美来",
-            costume: "アイのウイルス制服衣装",
+            costume: "「アイのウイルス」制服衣装",
           },
           {
             label: "5 レーン",
@@ -413,7 +413,7 @@ export const content = /* md */ `
   - **1 部 -** 私服
   - **2 部 -** アイのウイルス 制服
   - **3 部 -** 死ぬまでダーリン 部屋着
-  - **4 部 -** 死ぬまでダーリン部屋着
+  - **4 部 -** 死ぬまでダーリン 部屋着
   - **5 部 -** アンチファン衣装
   - **6 部 -** 可愛くてごめん MV衣装
   - **7 部 -** 死ぬまでダーリン アイドル衣装

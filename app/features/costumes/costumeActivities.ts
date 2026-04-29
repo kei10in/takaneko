@@ -1,6 +1,6 @@
 import { Act } from "../events/act";
-import { EventType, LiveType } from "../events/EventType";
 import { EventModule } from "../events/eventModule";
+import { EventType, LiveType } from "../events/EventType";
 import { AllCostumes } from "./costumes";
 import { LivesForCostume } from "./types";
 
@@ -101,9 +101,18 @@ const collectMeetAndGreetCostumes = (event: EventModule): Set<string> => {
   add(event.meta.costume);
 
   event.meta.meetAndGreet?.sessions.forEach((session) => {
-    add(session.costume);
+    if (typeof session.costume === "string") {
+      add(session.costume);
+    } else {
+      add(session.costume?.name);
+    }
+
     session.lanes.forEach((lane) => {
-      add(lane.costume);
+      if (typeof lane.costume === "string") {
+        add(lane.costume);
+      } else {
+        add(lane.costume?.name);
+      }
     });
   });
 

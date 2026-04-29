@@ -1,10 +1,18 @@
 import { z } from "zod/v4";
 import { CostumeName } from "../costumes/costumeNames";
 
+export const EventCostume = z.union([
+  CostumeName,
+  z.object({
+    name: CostumeName,
+    label: z.string().optional(),
+  }),
+]);
+
 export const MeetAndGreetLane = z.object({
   label: z.string().optional(),
   members: z.array(z.string()),
-  costume: z.string().optional(),
+  costume: EventCostume.optional(),
 });
 
 export type MeetAndGreetLane = z.output<typeof MeetAndGreetLane>;
@@ -19,7 +27,7 @@ export const MeetAngGreetLanesList = z.union([
       .object({
         label: z.string().optional(),
         member: z.string(),
-        costume: z.string().optional(),
+        costume: EventCostume.optional(),
       })
       .transform(
         (obj): MeetAndGreetLane => ({
@@ -48,15 +56,7 @@ export const MeetAndGreetSession = z.object({
   lastEntry: z.string().optional(),
   // セッションに参加するメンバーのリスト
   lanes: MeetAngGreetLanesList,
-  costume: z
-    .union([
-      CostumeName,
-      z.literal("私服"),
-      z.literal("メンバー私服"),
-      z.literal("メンバー私服 1"),
-      z.literal("メンバー私服 2"),
-    ])
-    .optional(),
+  costume: EventCostume.optional(),
 });
 
 export type MeetAndGreetSession = z.output<typeof MeetAndGreetSession>;

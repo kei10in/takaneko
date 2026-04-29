@@ -17,14 +17,20 @@ export const meta: EventMetaDescriptor = {
         title: "1 部 個別 2 ショット撮影会",
         start: "11:00",
         end: "12:00",
-        costume: "メンバー私服 1",
+        costume: {
+          name: "私服",
+          label: "メンバー私服 1",
+        },
         lanes: ["城月菜央", "橋本桃呼", "松本ももな", "葉月紗蘭", "星谷美来"],
       },
       {
         title: "2 部 個別 2 ショット撮影会",
         start: "12:10",
         end: "13:10",
-        costume: "メンバー私服 2",
+        costume: {
+          name: "私服",
+          label: "メンバー私服 1",
+        },
         lanes: ["日向端ひな", "春野莉々", "涼海すう", "東山恵里沙", "籾山ひめり"],
       },
       {
@@ -45,14 +51,20 @@ export const meta: EventMetaDescriptor = {
         title: "5 部 個別 2 ショット撮影会",
         start: "16:10",
         end: "17:10",
-        costume: "メンバー私服 2",
+        costume: {
+          name: "私服",
+          label: "メンバー私服 2",
+        },
         lanes: ["城月菜央", "橋本桃呼", "松本ももな", "葉月紗蘭", "星谷美来"],
       },
       {
         title: "6 部 個別 2 ショット撮影会",
         start: "17:20",
         end: "18:20",
-        costume: "メンバー私服 2",
+        costume: {
+          name: "私服",
+          label: "メンバー私服 2",
+        },
         lanes: ["日向端ひな", "春野莉々", "涼海すう", "東山恵里沙", "籾山ひめり"],
       },
     ],

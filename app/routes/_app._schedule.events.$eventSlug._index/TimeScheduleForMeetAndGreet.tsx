@@ -34,6 +34,8 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
       <ul className="divide-y divide-gray-100">
         {sessions.map((session, i) => {
           const status = sessionStatus({ currentTime, date, session });
+          const costume =
+            typeof session.costume == "string" ? session.costume : session.costume?.label;
 
           const newLocal = status == "in-progress" && "bg-nadeshiko-100";
           return (
@@ -49,18 +51,20 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
                   {session.costume && (
                     <p className="mb-1 text-sm text-gray-400">
                       <GiAmpleDress className="mr-1 inline" />
-                      <span>{session.costume}</span>
+                      <span>{costume}</span>
                     </p>
                   )}
                   {session.lanes.map((lane, j) => {
                     const memberStr = lane.members
                       .map((n) => `${memberNameToEmoji(n)} ${n}`)
                       .join(" & ");
+                    const costume =
+                      typeof lane.costume == "string" ? lane.costume : lane.costume?.label;
                     return (
                       <div key={j} className="text-sm">
                         {lane.label && <span className="font-semibold">{lane.label}: </span>}
                         <span>{memberStr}</span>
-                        {lane.costume && <span> ({lane.costume})</span>}
+                        {costume && <span> ({costume})</span>}
                       </div>
                     );
                   })}

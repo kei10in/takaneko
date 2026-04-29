@@ -149,6 +149,8 @@ export const SpecialCostumeName = z.enum([
 export type SpecialCostumeName = z.infer<typeof SpecialCostumeName>;
 export const SpecialCostumeNames: string[] = SpecialCostumeName.options;
 
+export const UncategorizedCostumeName = z.enum(["生誕グッズ衣装", "私服"]);
+
 export const CostumeName = z.enum({
   ...StageCostumeName.enum,
   ...UniformCostumeName.enum,
@@ -156,6 +158,7 @@ export const CostumeName = z.enum({
   ...DancePracticeCostumeName.enum,
   ...TShirtCostumeName.enum,
   ...SpecialCostumeName.enum,
+  ...UncategorizedCostumeName.enum,
 });
 export type CostumeName = z.infer<typeof CostumeName>;
 

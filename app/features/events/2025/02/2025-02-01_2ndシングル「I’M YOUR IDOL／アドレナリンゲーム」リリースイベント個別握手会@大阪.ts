@@ -30,7 +30,10 @@ export const meta: EventMetaDescriptor = {
           {
             label: "2 レーン",
             member: "東山恵里沙",
-            costume: "「女の子は強い」 MV パーカー",
+            costume: {
+              name: "「女の子は強い」制服衣装",
+              label: "「女の子は強い」MV パーカー",
+            },
           },
           {
             label: "3 レーン",
@@ -40,12 +43,12 @@ export const meta: EventMetaDescriptor = {
           {
             label: "4 レーン",
             member: "星谷美来",
-            costume: "「メイド☆至上主義」MV 衣装",
+            costume: "「メイド☆至上主義」衣装",
           },
           {
             label: "5 レーン",
             member: "橋本桃呼",
-            costume: "「メイド☆至上主義」MV 衣装",
+            costume: "「メイド☆至上主義」衣装",
           },
           {
             label: "6 レーン",
@@ -104,7 +107,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "2 レーン",
             member: "春野莉々",
-            costume: "「メイド☆至上主義」MV 衣装",
+            costume: "「メイド☆至上主義」衣装",
           },
           {
             label: "3 レーン",
@@ -173,7 +176,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "1 レーン",
             member: "松本ももな",
-            costume: "「すきっちゅーの！」MV 衣装",
+            costume: "「すきっちゅーの！」私服衣装",
           },
           {
             label: "2 レーン",
@@ -183,7 +186,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "3 レーン",
             member: "東山恵里沙",
-            costume: "「メイド☆至上主義」MV 衣装",
+            costume: "「メイド☆至上主義」衣装",
           },
           {
             label: "4 レーン",
@@ -230,7 +233,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "5 レーン",
             member: "春野莉々",
-            costume: "「女の子は強い」MV パーカー",
+            costume: "「女の子は強い」制服衣装",
           },
           {
             label: "6 レーン",
@@ -262,7 +265,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "4 レーン",
             member: "星谷美来",
-            costume: "「すきっちゅーの！」MV 衣装",
+            costume: "「すきっちゅーの！」私服衣装",
           },
           {
             label: "5 レーン",
@@ -272,7 +275,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "6 レーン",
             member: "城月菜央",
-            costume: "「可愛可愛いっていわれたい」MV ボーダー衣装",
+            costume: "「可愛いって言われたい」MV 虹色衣装",
           },
         ],
       },

@@ -65,7 +65,10 @@ export const meta: EventMetaDescriptor = {
           ["城月菜央", "春野莉々"],
           ["星谷美来", "籾山ひめり"],
         ],
-        costume: "メンバー私服",
+        costume: {
+          name: "私服",
+          label: "メンバー私服",
+        },
       },
       {
         title: "5 部",
@@ -78,7 +81,10 @@ export const meta: EventMetaDescriptor = {
           ["葉月紗蘭", "春野莉々"],
           ["東山恵里沙", "籾山ひめり"],
         ],
-        costume: "メンバー私服",
+        costume: {
+          name: "私服",
+          label: "メンバー私服",
+        },
       },
       {
         title: "6 部",
@@ -91,7 +97,10 @@ export const meta: EventMetaDescriptor = {
           ["葉月紗蘭", "日向端ひな"],
           ["東山恵里沙", "星谷美来"],
         ],
-        costume: "メンバー私服",
+        costume: {
+          name: "私服",
+          label: "メンバー私服",
+        },
       },
     ],
   },

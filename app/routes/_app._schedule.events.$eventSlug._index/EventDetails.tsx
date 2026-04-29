@@ -83,11 +83,13 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
                       const memberStr = lane.members
                         .map((n) => `${memberNameToEmoji(n)} ${n}`)
                         .join(" & ");
+                      const costume =
+                        typeof lane.costume === "string" ? lane.costume : lane.costume?.label;
                       return (
                         <div key={j} className="text-sm">
                           {lane.label && <span className="font-semibold">{lane.label}: </span>}
                           <span>{memberStr}</span>
-                          {lane.costume && <span> ({lane.costume})</span>}
+                          {costume && <span> ({costume})</span>}
                         </div>
                       );
                     })}
