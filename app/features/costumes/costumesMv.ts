@@ -230,7 +230,6 @@ export const 私は怪物MV衣装 = {
   ],
 } satisfies MvCostume;
 
-// 2ショット撮影会で着用したパンク衣装
 export const 可愛いって言われたいMVパンクロック衣装 = {
   kind: "mv",
   name: "「可愛いって言われたい」MV パンクロック衣装",
