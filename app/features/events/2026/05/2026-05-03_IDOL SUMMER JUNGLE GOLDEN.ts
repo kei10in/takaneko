@@ -13,8 +13,13 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
-      path: "/events/2026/2026-05-02_IDOL SUMMER JUNGLE GOLDEN.jpg",
+      path: "/events/2026/2026-05-03_IDOL SUMMER JUNGLE GOLDEN.jpg",
       ref: "https://x.com/takanenofficial/status/2040370168195633337",
+    },
+    {
+      path: "/events/2026/2026-05-03_IDOL SUMMER JUNGLE GOLDEN_タイムテーブル.jpg",
+      ref: "https://x.com/samajan_idol/status/2049481212344090774",
+      tags: ["timetable"],
     },
   ],
   link: {
@@ -24,19 +29,22 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketdive.com/event/samajan_golden",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["19:45", "20:15"],
     lineup: undefined,
     url: undefined,
   },
   acts: {
+    start: "19:10",
+    end: "19:35",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-05",
+  updatedAt: "2026-04-30",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - IDOL SUMMER JUNGLE X](https://x.com/samajan_idol/status/2049481212344090774)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2040370168195633337)
 `;
