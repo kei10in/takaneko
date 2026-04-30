@@ -17,6 +17,13 @@ export const アクロトーキョーコラボグッズ衣装 = {
   kind: "special",
   name: "アクロトーキョー コラボグッズ衣装",
   slug: "アクロトーキョーコラボグッズ衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/アクロトーキョーコラボグッズ衣装.jpg",
+      ref: "https://x.com/nao_kizuki/status/2027372841851818181",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const 高嶺のなでしこ2024衣装_茨城ロボッツ2025_26ユニフォーム = {
