@@ -91,6 +91,13 @@ export const Tシャツ_メンバー個別名前入り = {
   kind: "tshirt",
   name: "T シャツ (メンバー個別名前入り)",
   slug: "Tシャツ-メンバー個別名前入り",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-メンバー個別名前入り.jpg",
+      ref: "https://x.com/takanenofficial/status/1695998644896555051",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const AllTShirtCostumes = [

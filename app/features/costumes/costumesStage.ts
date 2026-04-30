@@ -165,6 +165,10 @@ export const 僕は君になれない衣装 = {
   images: [
     {
       path: "/takaneko/costumes/stage/僕は君になれない衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1699767064783917285",
+    },
+    {
+      path: "/takaneko/costumes/stage/僕は君になれない衣装_2.jpg",
       ref: "https://x.com/momonamatsumoto/status/1715440442505072690",
     },
   ],
