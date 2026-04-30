@@ -196,6 +196,13 @@ export const Tシャツ_MilkJapan = {
   kind: "special",
   name: "T シャツ (MILK JAPAN)",
   slug: "Tシャツ-MilkJapan",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/Tシャツ-MilkJapan.jpg",
+      ref: "https://x.com/takanenofficial/status/1846513940710539389",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const _2022サンタ衣装 = {
