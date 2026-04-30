@@ -65,7 +65,7 @@ export const meta: EventMetaDescriptor = {
           ["城月菜央", "星谷美来"],
           ["東山恵里沙", "籾山ひめり"],
         ],
-        costume: "僕は君になれない ダンスプラクティス衣装",
+        costume: "「僕は君になれない」ダンスプラクティス衣装",
       },
       {
         title: "5 部",
@@ -78,7 +78,7 @@ export const meta: EventMetaDescriptor = {
           ["城月菜央", "葉月紗蘭"],
           ["東山恵里沙", "星谷美来"],
         ],
-        costume: "僕は君になれない ダンスプラクティス衣装",
+        costume: "「僕は君になれない」ダンスプラクティス衣装",
       },
       {
         title: "6 部",
@@ -91,7 +91,7 @@ export const meta: EventMetaDescriptor = {
           ["城月菜央", "涼海すう"],
           ["葉月紗蘭", "星谷美来"],
         ],
-        costume: "僕は君になれない ダンスプラクティス衣装",
+        costume: "「僕は君になれない」ダンスプラクティス衣装",
       },
     ],
   },

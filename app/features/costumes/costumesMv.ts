@@ -349,6 +349,19 @@ export const 僕は君になれない私服衣装 = {
   slug: "僕は君になれない私服衣装",
 } satisfies MvCostume;
 
+export const 僕は君になれないダンスプラクティス衣装 = {
+  kind: "mv",
+  name: "「僕は君になれない」ダンスプラクティス衣装",
+  slug: "僕は君になれないダンスプラクティス衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/僕は君になれないダンスプラクティス衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1670720657120968704",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 男の子の目的は何MV衣装 = {
   kind: "mv",
   name: "「男の子の目的は何？」MV 衣装",
@@ -366,6 +379,12 @@ export const 可愛くてごめんMV衣装 = {
   kind: "mv",
   name: "可愛くてごめん MV 衣装",
   slug: "可愛くてごめんMV衣装",
+  images: [
+    {
+      path: "/takaneko/costumes/mv/可愛くてごめんMV衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/1601864416081108994",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 可愛くてごめんパジャマ衣装 = {
@@ -418,6 +437,7 @@ export const AllMvCostumes: MvCostume[] = [
   決戦スピリットMV衣装,
   革命の女王黒衣装,
   僕は君になれない私服衣装,
+  僕は君になれないダンスプラクティス衣装,
   男の子の目的は何MV衣装,
   可愛くてごめんMV衣装,
   可愛くてごめんパジャマ衣装,

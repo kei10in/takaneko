@@ -58,7 +58,9 @@ export const MvCostumeName = z.enum([
   "「月曜日の憂鬱」MV 衣装",
   "「決戦スピリット」MV 衣装",
   "「革命の女王」黒衣装",
+  "「革命の女王」ダンスプラクティス衣装",
   "「僕は君になれない」私服衣装",
+  "「僕は君になれない」ダンスプラクティス衣装",
   "「男の子の目的は何？」MV 衣装",
   "可愛くてごめん MV 衣装",
   "「可愛くてごめん」パジャマ衣装",
@@ -67,14 +69,6 @@ export const MvCostumeName = z.enum([
 
 export type MvCostumeName = z.infer<typeof MvCostumeName>;
 export const MvCostumeNames: string[] = MvCostumeName.options;
-
-export const DancePracticeCostumeName = z.enum([
-  "革命の女王 ダンスプラクティス衣装",
-  "僕は君になれない ダンスプラクティス衣装",
-]);
-
-export type DancePracticeCostumeName = z.infer<typeof DancePracticeCostumeName>;
-export const DancePracticeCostumeNames: string[] = DancePracticeCostumeName.options;
 
 export const UniformCostumeName = z.enum([
   "「世界は恋に落ちている」制服衣装",
@@ -155,7 +149,6 @@ export const CostumeName = z.enum({
   ...StageCostumeName.enum,
   ...UniformCostumeName.enum,
   ...MvCostumeName.enum,
-  ...DancePracticeCostumeName.enum,
   ...TShirtCostumeName.enum,
   ...SpecialCostumeName.enum,
   ...UncategorizedCostumeName.enum,

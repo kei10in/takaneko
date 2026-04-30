@@ -66,7 +66,7 @@ export const meta: EventMetaDescriptor = {
           ["星谷美来", "籾山ひめり"],
           ["涼海すう", "橋本桃呼"],
         ],
-        costume: "革命の女王 ダンスプラクティス衣装",
+        costume: "「革命の女王」ダンスプラクティス衣装",
       },
       {
         title: "5 部",
@@ -79,7 +79,7 @@ export const meta: EventMetaDescriptor = {
           ["城月菜央", "春野莉々"],
           ["葉月紗蘭", "籾山ひめり"],
         ],
-        costume: "革命の女王 ダンスプラクティス衣装",
+        costume: "「革命の女王」ダンスプラクティス衣装",
       },
       {
         title: "6 部",
@@ -92,7 +92,7 @@ export const meta: EventMetaDescriptor = {
           ["春野莉々", "星谷美来"],
           ["橋本桃呼", "籾山ひめり"],
         ],
-        costume: "革命の女王 ダンスプラクティス衣装",
+        costume: "「革命の女王」ダンスプラクティス衣装",
       },
     ],
   },

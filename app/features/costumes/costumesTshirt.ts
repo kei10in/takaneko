@@ -78,6 +78,13 @@ export const Tシャツ_高嶺のなでしこ = {
   kind: "tshirt",
   name: "T シャツ (高嶺のなでしこ ver.)",
   slug: "Tシャツ-高嶺のなでしこ",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-高嶺のなでしこ.jpg",
+      ref: "https://x.com/takanenofficial/status/1617084662207188992",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_メンバー個別名前入り = {
