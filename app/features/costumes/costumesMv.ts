@@ -1,5 +1,11 @@
 import { MvCostume } from "./types";
 
+export const 私はわたしの事が好きMV衣装 = {
+  kind: "mv",
+  name: "「私は、わたしの事が好き。」MV 衣装",
+  slug: "私はわたしの事が好きMV衣装",
+} satisfies MvCostume;
+
 export const 病名恋ワズライ衣装 = {
   kind: "mv",
   name: "「病名恋ワズライ」衣装",
@@ -400,6 +406,7 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
+  私はわたしの事が好きMV衣装,
   病名恋ワズライ衣装,
   この世界は嘘でできている白衣装,
   この世界は嘘でできている黒衣装,
