@@ -52,6 +52,7 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 - **テンプレート -** `app/features/events/_event-template.ts` を使用する。
 - `category` は `"LIVE"` とする。
 - `region` は開催県名。海外の場合は都市名。
+- タイムテーブル画像（`tags: ["timetable"]`）を追加・更新した場合は、読み取れる範囲で `acts.start` / `acts.end` に出演時間を反映する。時間が判別できない場合のみ既存の空値表現を維持する。
 
 ### Radio
 
