@@ -1,5 +1,17 @@
 import { TShirtCostume } from "./types";
 
+export const Tシャツ_BouquetOf9Flowers台湾限定 = {
+  kind: "tshirt",
+  name: "T シャツ (Bouquet of 9 Flowers 台北限定 ver.)",
+  slug: "Tシャツ-Bouquet of 9 Flowers台北限定ver",
+} satisfies TShirtCostume;
+
+export const Tシャツ_BouquetOf9Flowers韓国限定 = {
+  kind: "tshirt",
+  name: "T シャツ (Bouquet of 9 Flowers 韓国限定 ver.)",
+  slug: "Tシャツ-Bouquet of 9 Flowers韓国限定ver",
+} satisfies TShirtCostume;
+
 export const Tシャツ_BouquetOf9Flowers = {
   kind: "tshirt",
   name: "T シャツ (Bouquet of 9 Flowers ver.)",
