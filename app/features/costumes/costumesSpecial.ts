@@ -19,6 +19,19 @@ export const アクロトーキョーコラボグッズ衣装 = {
   slug: "アクロトーキョーコラボグッズ衣装",
 } satisfies SpecialCostume;
 
+export const 高嶺のなでしこ2024衣装_茨城ロボッツ2025_26ユニフォーム = {
+  kind: "special",
+  name: "高嶺のなでしこ 2024 衣装 + 茨城ロボッツ 2025-26 ユニフォーム",
+  slug: "高嶺のなでしこ2024衣装-茨城ロボッツ2025-26ユニフォーム",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装_茨城ロボッツ2025_26ユニフォーム.jpg",
+      ref: "https://x.com/takanenofficial/status/2044418129351352526",
+    },
+  ],
+} satisfies SpecialCostume;
+
 export const 高嶺のなでしこ2024衣装_川崎ブレイブサンダース2025_26ユニフォーム = {
   kind: "special",
   name: "高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
@@ -220,6 +233,7 @@ export const ハロウィンコスプレ = {
 export const AllSpecialCostumes = [
   アクロトーキョーツーショット撮影会衣装,
   アクロトーキョーコラボグッズ衣装,
+  高嶺のなでしこ2024衣装_茨城ロボッツ2025_26ユニフォーム,
   高嶺のなでしこ2024衣装_川崎ブレイブサンダース2025_26ユニフォーム,
   クリスマス2025衣装,
   たかねこハロウィン2025探偵衣装,
