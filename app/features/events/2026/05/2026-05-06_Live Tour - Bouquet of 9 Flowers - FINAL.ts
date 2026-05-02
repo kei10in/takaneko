@@ -21,8 +21,32 @@ export const meta: EventMetaDescriptor = {
       ref: "https://takanenonadeshiko.jp/?p=4763",
     },
     {
+      path: "/takaneko/live-goods/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_グッズメニュー1.jpg",
+      ref: "https://x.com/takanenofficial/status/2050455317973250424",
+      tags: ["merch-list"],
+    },
+    {
+      path: "/takaneko/live-goods/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_グッズメニュー2.jpg",
+      ref: "https://x.com/takanenofficial/status/2050455317973250424",
+      tags: ["merch-list"],
+    },
+    {
+      path: "/takaneko/live-goods/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_グッズメニュー3.jpg",
+      ref: "https://x.com/takanenofficial/status/2050455317973250424",
+      tags: ["merch-list"],
+    },
+    {
+      path: "/takaneko/live-goods/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_グッズメニュー4.jpg",
+      ref: "https://x.com/takanenofficial/status/2050455317973250424",
+      tags: ["merch-list"],
+    },
+    {
       path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト.webp",
       ref: "https://takanenonadeshiko.jp/?p=5190",
+    },
+    {
+      path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト_特典デザイン.jpg",
+      ref: "https://x.com/takanenofficial/status/2050203752817394120",
     },
   ],
   link: {
@@ -34,7 +58,7 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: undefined,
-    url: undefined,
+    url: "https://x.com/takanenofficial/status/2050455317973250424",
   },
   acts: [
     {
@@ -42,15 +66,17 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-04-19",
+  updatedAt: "2026-05-02",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2050455317973250424)
   - [ファンクラブ抽選会詳細 - たかねこ FC](https://takanekofc.com/news/public/_/3hkvrmy0syormnoz.html)
   - [ファンクラブ抽選会告知 - 公式 X](https://x.com/takanenofficial/status/2048693635680780330)
   - [スタンプラリー企画 12公演来場者限定 楽屋招待詳細について - 公式 X](https://takanenonadeshiko.jp/?p=5197)
+  - [たかねこブーケラッピングプロジェクト 特典デザイン公開 - 公式 X](https://x.com/takanenofficial/status/2050203752817394120)
   - [たかねこブーケラッピングプロジェクト - 公式ニュース](https://takanenonadeshiko.jp/?p=5190)
   - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
   - [FINAL公演 イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4991)
