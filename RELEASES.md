@@ -1,5 +1,11 @@
 # リリース ノート
 
+## 2026-05-02
+
+- トレード画像をつくるやつに、Bouquet of 9 Flowers FINAL のグッズを追加しました。
+  - 生写真「Bouquet of 9 Flowers FINAL」
+  - ミニフォトカード「Bouquet of 9 Flowers FINAL」
+
 ## 2026-04-28
 
 - トレード画像をつくるやつに、Bouquet of 9 Flowers FINAL の FC 抽選会グッズを追加しました。

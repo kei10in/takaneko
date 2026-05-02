@@ -156,27 +156,24 @@ import { セーラー服2026_ミニフォト } from "./2026/2026-03-05_ミニフ
 import { ロウルグッズ_生写真 } from "./2026/2026-03-11_生写真「ロウルグッズ」";
 import { BouquetOf9FlowersFinal_アンブレラマーカー } from "./2026/2026-05-06_アンブレラマーカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」";
 import { BouquetOf9FlowersFinal_自撮りステッカー } from "./2026/2026-05-06_ステッカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」";
+import { BouquetOf9FlowersFinal_ミニフォト } from "./2026/2026-05-06_ミニフォトカード「Bouquet of 9 Flowers FINAL」";
+import { BouquetOf9FlowersFinal_生写真 } from "./2026/2026-05-06_生写真「Bouquet of 9 Flowers FINAL」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  BouquetOf9FlowersFinal_生写真,
+  BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
   BouquetOf9FlowersFinal_自撮りステッカー,
-  葉月紗蘭誕生日記念グッズ2026_生写真,
-  アクロトーキョー_自撮り風生写真,
-  アクロトーキョー_ペアアクリルブロック,
-  アクロトーキョー_チェキ風アクリルキーホルダー,
-  アクロトーキョー_アクリルコースター,
-  アクロトーキョー_スマホ型アクリルスタンド,
-  セーラー服2026_ミニフォト,
   BouquetOf9Flowers_生写真,
   BouquetOf9Flowers_ミニフォト,
   BouquetOf9Flowers_缶バッジ,
   BouquetOf9Flowers_目印チャーム,
-  晴れ着2026_生写真,
-  晴れ着2026_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  BouquetOf9FlowersFinal_生写真,
+  BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
   BouquetOf9FlowersFinal_自撮りステッカー,
   ロウルグッズ_生写真,
