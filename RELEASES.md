@@ -5,6 +5,7 @@
 - トレード画像をつくるやつに、Bouquet of 9 Flowers FINAL のグッズを追加しました。
   - 生写真「Bouquet of 9 Flowers FINAL」
   - ミニフォトカード「Bouquet of 9 Flowers FINAL」
+- トレード画像を作るやつに、ミニフォトカード「私は、わたしの事が好き。」を追加しました。
 
 ## 2026-04-28
 

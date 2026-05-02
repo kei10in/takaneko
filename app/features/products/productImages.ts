@@ -158,9 +158,11 @@ import { BouquetOf9FlowersFinal_アンブレラマーカー } from "./2026/2026-
 import { BouquetOf9FlowersFinal_自撮りステッカー } from "./2026/2026-05-06_ステッカー「Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会」";
 import { BouquetOf9FlowersFinal_ミニフォト } from "./2026/2026-05-06_ミニフォトカード「Bouquet of 9 Flowers FINAL」";
 import { BouquetOf9FlowersFinal_生写真 } from "./2026/2026-05-06_生写真「Bouquet of 9 Flowers FINAL」";
+import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_03_ミニフォトカード「私は、わたしの事が好き。」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  私はわたしの事が好き_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
@@ -172,6 +174,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  私はわたしの事が好き_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
