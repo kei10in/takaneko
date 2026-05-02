@@ -45,7 +45,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://takanenonadeshiko.jp/?p=5190",
     },
     {
-      path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト_特典デザイン.jpg",
+      path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト_特典デザイン.jpg",
       ref: "https://x.com/takanenofficial/status/2050203752817394120",
     },
   ],
