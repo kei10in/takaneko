@@ -174,11 +174,11 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
-  私はわたしの事が好き_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
   BouquetOf9FlowersFinal_自撮りステッカー,
+  私はわたしの事が好き_ミニフォト,
   ロウルグッズ_生写真,
   セーラー服2026_ミニフォト,
   葉月紗蘭誕生日記念グッズ2026_生写真,
