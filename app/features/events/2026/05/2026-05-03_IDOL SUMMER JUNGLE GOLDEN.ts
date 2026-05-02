@@ -21,6 +21,11 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/samajan_idol/status/2049481212344090774",
       tags: ["timetable"],
     },
+    {
+      path: "/takaneko/goods/2026/2026-05-03_ミニフォトカード「私は、わたしの事が好き。」.jpg",
+      ref: "https://x.com/takanenofficial/status/2050572292640702767",
+      tags: ["merch-list"],
+    },
   ],
   link: {
     text: "",
@@ -30,8 +35,8 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["19:45", "20:15"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「私は、わたしの事が好き。」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2050572292640702767",
   },
   acts: {
     start: "19:10",
@@ -39,12 +44,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-30",
+  updatedAt: "2026-05-02",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2050572292640702767)
   - [タイムテーブル公開 - IDOL SUMMER JUNGLE X](https://x.com/samajan_idol/status/2049481212344090774)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2040370168195633337)
 `;

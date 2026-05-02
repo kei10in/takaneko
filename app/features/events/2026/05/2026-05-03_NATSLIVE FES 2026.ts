@@ -36,12 +36,21 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-05",
+  updatedAt: "2026-05-02",
 };
 
 export const content = /* md */ `
+  ## コラボ食堂
+
+  初恋ハンバーガー。
+
+  1,650 円 (税込)
+
+  https://cafe.natslive.jp/fes/202605/cafe
+
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2050572292640702767)
   - [告知 (動画付き) - NATSLIVE X](https://x.com/NATSLIVE_app/status/2040398992610091467)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2036661906937938397)
 `;
