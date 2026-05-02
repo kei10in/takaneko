@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/787967",
+    publishedAt: "2026-04-30",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/2049836170243129770",
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/85625/",
     publishedAt: "2026-04-24",
     category: "article",

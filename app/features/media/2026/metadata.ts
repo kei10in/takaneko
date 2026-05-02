@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/787967",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第11回『The Dolls with Attitude』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-04-30",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/787967",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/04/787967_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "duH-dQ7PV9Y",
     title:
