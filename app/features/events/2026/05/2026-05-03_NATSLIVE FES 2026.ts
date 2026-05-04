@@ -11,6 +11,7 @@ export const meta: EventMetaDescriptor = {
   region: "東京",
   location: "戸板女子短期大学 三田キャンパス",
   present: ["高嶺のなでしこ2"],
+  absent: ["東山恵里沙"],
   images: [
     {
       path: "/events/2026/2026-05-03_NATSLIVE FES 2026.jpg",
@@ -36,7 +37,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-05-02",
+  updatedAt: "2026-05-04",
 };
 
 export const content = /* md */ `
@@ -50,6 +51,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2050827808432374109)
+  - [東山恵里沙欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/2050757293105692672)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2050572292640702767)
   - [告知 (動画付き) - NATSLIVE X](https://x.com/NATSLIVE_app/status/2040398992610091467)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2036661906937938397)
