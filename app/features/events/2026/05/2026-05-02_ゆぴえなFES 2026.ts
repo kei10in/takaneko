@@ -11,6 +11,7 @@ export const meta: EventMetaDescriptor = {
   region: "東京",
   location: "立川ステージガーデン",
   present: ["高嶺のなでしこ2"],
+  absent: ["東山恵里沙"],
   images: [
     {
       path: "/events/2026/2026-05-02_ゆぴえなFES 2026.jpg",
@@ -43,12 +44,14 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2050561496535724530",
     },
   ],
-  updatedAt: "2026-05-02",
+  updatedAt: "2026-05-04",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [東山恵里沙欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/2050417546130768341)
+  - [舞台袖 OFF SHOT - ゆぴえなフェス X](https://x.com/YUPIENAFES/status/2051195131949449618)
   - [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2050563813884518415)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2050211152295235971)
   - [【神回】ゆぴえなが豪華ゲストに突撃！YouTuber、アイドル、アーティスト…夢のコラボが実現しました！！！ - ゆうぴーまん YouTube](https://youtu.be/jNDtrY7Dv6k?si=xgaNuizSv7cidgxa&t=3330)
