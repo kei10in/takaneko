@@ -41,6 +41,10 @@ export const meta: EventMetaDescriptor = {
       tags: ["merch-list"],
     },
     {
+      path: "/takaneko/goods/2026/2026-05-06_限定ガチャ「Bouquet of 9 Flowers」.jpg",
+      ref: "https://x.com/takanenofficial/status/2051655656315228302",
+    },
+    {
       path: "/events/2026/2026-05-06_Live Tour - Bouquet of 9 Flowers - FINAL_ブーケラッピングプロジェクト.webp",
       ref: "https://takanenonadeshiko.jp/?p=5190",
     },
@@ -72,6 +76,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [限定ガチャ告知 - 公式 X](https://x.com/takanenofficial/status/2051655656315228302)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2051648105875919261)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2050455317973250424)
   - [ファンクラブ抽選会詳細 - たかねこ FC](https://takanekofc.com/news/public/_/3hkvrmy0syormnoz.html)
