@@ -66,12 +66,13 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-05-02",
+  updatedAt: "2026-05-05",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2051648105875919261)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2050455317973250424)
   - [ファンクラブ抽選会詳細 - たかねこ FC](https://takanekofc.com/news/public/_/3hkvrmy0syormnoz.html)
   - [ファンクラブ抽選会告知 - 公式 X](https://x.com/takanenofficial/status/2048693635680780330)
