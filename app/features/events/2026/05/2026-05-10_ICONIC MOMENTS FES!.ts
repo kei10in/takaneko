@@ -32,7 +32,12 @@ export const meta: EventMetaDescriptor = {
     url: "https://iconicfes.info/",
   },
   ticket: "https://tiget.net/events/473697",
-  streamings: undefined,
+  streamings: [
+    {
+      text: "ニコニコ生放送",
+      url: "https://live.nicovideo.jp/watch/lv350375251",
+    },
+  ],
   goods: {
     time: ["19:50", "20:50"],
     lineup: undefined,
@@ -44,7 +49,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-20",
+  updatedAt: "2026-05-05",
 };
 
 export const content = /* md */ `

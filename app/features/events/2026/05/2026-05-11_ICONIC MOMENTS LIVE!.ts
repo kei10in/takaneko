@@ -27,7 +27,12 @@ export const meta: EventMetaDescriptor = {
     url: "https://iconicmoments.info/",
   },
   ticket: "https://iconicmoments.info/ticket/",
-  streamings: undefined,
+  streamings: [
+    {
+      text: "ニコニコ生放送",
+      url: "https://live.nicovideo.jp/watch/lv350375270",
+    },
+  ],
   goods: {
     time: ["20:05", "21:05"],
     lineup: undefined,
@@ -49,7 +54,7 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-04-25",
+  updatedAt: "2026-05-05",
 };
 
 export const content = /* md */ `
