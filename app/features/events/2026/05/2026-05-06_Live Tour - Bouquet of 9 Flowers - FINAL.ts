@@ -74,6 +74,54 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 概要
+
+  ### 物販について
+
+  - 先行物販（どなたでも購入可能）<br/>
+    ⏰ 13:00〜16:00予定
+
+  - 開場中物販（チケットをお持ちの方のみ）<br/>
+    ⏰ 16:30〜17:30
+
+  - 終演後物販（チケットをお持ちの方のみ）<br/>
+    ⏰ 終演後〜30分程度
+
+  - [🔗 GOODS MENU](https://x.com/takanenofficial/status/2050455317973250424)
+
+  ### 限定ガチャについて
+
+  - 先行物販（どなたでも購入可能）<br/>
+    ⏰ 13:00〜16:00予定
+
+  - 開場中物販（チケットをお持ちの方のみ）<br/>
+    ⏰ 16:30〜17:30
+
+  - [🔗 詳細](https://x.com/takanenofficial/status/2051655656315228302)
+
+  ### FC 限定抽選会について
+
+  - 先行物販（どなたでも購入可能）<br/>
+    ⏰ 13:00〜16:00予定
+
+  - 開場中物販（チケットをお持ちの方のみ）<br/>
+    ⏰ 16:30～17:30
+
+  - [🔗 詳細 - 公式 X](https://x.com/takanenofficial/status/2048693635680780330)
+
+  - [🔗 詳細 - たかねこ FC](https://x.com/takanenofficial/status/2048693635680780330)
+
+  ### ブーケラッピングプロジェクト (まねきねこチケット) について
+
+  - [特典に関するお知らせ](https://x.com/takanenofficial/status/2051640556514640262)
+  - [たかねこブーケラッピングプロジェクト - 公式ニュース](https://takanenonadeshiko.jp/?p=5190)
+  - [たかねこブーケラッピングプロジェクト 特典デザイン公開 - 公式 X](https://x.com/takanenofficial/status/2050203752817394120)
+  - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
+
+  ### 全通特典について
+
+  - https://takanenonadeshiko.jp/?p=5197
+
   ## リンク
 
   - [限定ガチャ告知 - 公式 X](https://x.com/takanenofficial/status/2051655656315228302)
