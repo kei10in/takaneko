@@ -93,7 +93,8 @@ export const content = /* md */ `
   - 終演後物販（チケットをお持ちの方のみ）<br/>
     ⏰ 終演後〜30分程度
 
-  - [🔗 GOODS MENU](https://x.com/takanenofficial/status/2050455317973250424)
+  - [🔗 GOODS MENU](https://x.com/takanenofficial/status/2050455317973250424)<br/>
+    このページの上部の画像をスライドしても確認出来ます。
 
   ### 限定ガチャについて
 
@@ -107,14 +108,9 @@ export const content = /* md */ `
 
   ### FC 限定抽選会について
 
-  - 先行物販（どなたでも購入可能）<br/>
-    ⏰ 13:00〜16:00予定
-
-  - 開場中物販（チケットをお持ちの方のみ）<br/>
-    ⏰ 16:30～17:30
-
+  - ⏰ 13:00〜16:00予定
+  - ⏰ 16:30～17:30
   - [🔗 詳細 - 公式 X](https://x.com/takanenofficial/status/2048693635680780330)
-
   - [🔗 詳細 - たかねこ FC](https://x.com/takanenofficial/status/2048693635680780330)
 
   ### ブーケラッピングプロジェクト (まねきねこチケット) について
