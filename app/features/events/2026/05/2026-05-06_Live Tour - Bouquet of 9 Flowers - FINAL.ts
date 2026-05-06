@@ -76,7 +76,13 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## 概要
 
+  リンク付きでまとまっています。
+
+  - [籾山ひめり X](https://x.com/himeri_momiyama/status/2051683694096879867)
+
   ### 物販について
+
+  スタンプラリー特典の物販ファストパスチケットを持っている人専用の待機列があるとのこと ([出典](https://x.com/himeri_momiyama/status/2051683694096879867))
 
   - 先行物販（どなたでも購入可能）<br/>
     ⏰ 13:00〜16:00予定
@@ -118,9 +124,10 @@ export const content = /* md */ `
   - [たかねこブーケラッピングプロジェクト 特典デザイン公開 - 公式 X](https://x.com/takanenofficial/status/2050203752817394120)
   - [たかねこブーケラッピングプロジェクト 告知 - 公式 X](https://x.com/takanenofficial/status/2045700240754495878)
 
-  ### 全通特典について
+  ### その他
 
-  - https://takanenonadeshiko.jp/?p=5197
+  - [全通特典について](https://takanenonadeshiko.jp/?p=5197)
+  - [まえねこエリアの一部座席変更について](https://takanenonadeshiko.jp/?p=5226)
 
   ## リンク
 
