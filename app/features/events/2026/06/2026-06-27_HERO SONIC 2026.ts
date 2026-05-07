@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-06-27_HERO SONIC 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2047626682396500329",
     },
+    {
+      path: "/events/2026/2026-06-27_HERO SONIC 2026_出演日.jpg",
+      ref: "https://x.com/HEROSONIC2026/status/2052358036736360944",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -32,11 +36,12 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-25",
+  updatedAt: "2026-05-07",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演日発表 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2052358036736360944)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2047626682396500329)
 `;
