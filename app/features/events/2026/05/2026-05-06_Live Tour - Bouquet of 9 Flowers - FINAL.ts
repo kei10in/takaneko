@@ -66,11 +66,45 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
-      setlist: [],
-      url: "",
+      setlist: [
+        "Overture",
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "花は誓いを忘れない",
+        "アイドル衣装",
+        "メランコリックハニー",
+        "ライフクエスト",
+        "初恋のこたえ。",
+        "MC",
+        "女の子は強い",
+        "僕は君になれない",
+        "病名恋ワズライ",
+        "乙女どもよ。",
+        "男の子の目的は何？",
+        "初恋のひと。",
+        "推しの魔法",
+        "ヒロインは平均以下。",
+        "決戦スピリット",
+        "この世界は嘘でできている",
+        "MC",
+        "私は、わたしの事が好き。",
+        "可愛くてごめん",
+        "MC",
+        "世界は恋に落ちている",
+        "誇り高きアイドル",
+        "恋を知った世界",
+        "I’M YOUR IDOL",
+        "アンコール",
+        "衣装: T シャツ (Bouquet of 9 Flowers ver.)",
+        "幕間: エースコック スープはるさめ Web CM",
+        "生きてりゃいい",
+        "MC: 告知、記念撮影、TikTok 撮影",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/_MARIC/status/2052006505495535845"],
     },
   ],
-  updatedAt: "2026-05-05",
+  updatedAt: "2026-05-07",
 };
 
 export const content = /* md */ `
@@ -125,8 +159,18 @@ export const content = /* md */ `
   - [全通特典について](https://takanenonadeshiko.jp/?p=5197)
   - [まえねこエリアの一部座席変更について](https://takanenonadeshiko.jp/?p=5226)
 
+  ### ライブレポート
+
+  - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000898.000025517.html)
+  - [オフィシャルレポート告知 - ツインプラネット X](https://x.com/TP_official_/status/2052317294014218243)
+  - [高嶺のなでしこ、8都市を巡るツアー完走！東京国際フォーラム ホールAで感動のファイナル公演 新曲「生きてりゃいい」初披露も【オフィシャルレポート到着】](https://www.scketto.com/news/20260507)
+  - [高嶺のなでしこ、9人それぞれの魅力的な個性を表現 東京国際フォーラムでツアー完走 | ENCOUNT](https://encount.press/archives/992169/)
+  - [🍭 高嶺のなでしこ、8都市巡るライブツアー完走！ 5月6日東京国際フォーラムでファイナル公演開催 - Pop'n'Roll(ポップンロール)](https://popnroll.tv/articles/45986/)
+
   ## リンク
 
+  - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/2052014312366231824)
+  - [ほら咲いた 高嶺のなでしこ - 公式 X](https://x.com/takanenofficial/status/2052010494072918153)
   - [限定ガチャ告知 - 公式 X](https://x.com/takanenofficial/status/2051655656315228302)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2051648105875919261)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2050455317973250424)
