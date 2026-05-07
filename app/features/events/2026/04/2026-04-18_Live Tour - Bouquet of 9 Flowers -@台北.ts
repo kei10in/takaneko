@@ -82,7 +82,7 @@ export const meta: EventMetaDescriptor = {
         "MC: 告知、記念撮影、TikTok 撮影",
         "美しく生きろ",
       ],
-      url: "https://x.com/_MARIC/status/2045847253408206997",
+      links: ["https://x.com/_MARIC/status/2045847253408206997"],
     },
     {
       title: "第二部",
@@ -118,7 +118,7 @@ export const meta: EventMetaDescriptor = {
         "MC: 告知、記念撮影、TikTok 撮影",
         "美しく生きろ",
       ],
-      url: "https://x.com/_MARIC/status/2045847253408206997",
+      links: ["https://x.com/_MARIC/status/2045847253408206997"],
     },
   ],
   updatedAt: "2026-04-20",
