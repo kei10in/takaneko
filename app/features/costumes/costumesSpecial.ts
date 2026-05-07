@@ -235,6 +235,13 @@ export const ハロウィンコスプレ = {
   kind: "special",
   name: "ハロウィンコスプレ🎃",
   slug: "ハロウィンコスプレ",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/ハロウィンコスプレ.webp",
+      ref: "https://prtimes.jp/main/html/rd/p/000000402.000025517.html",
+    },
+  ],
 } satisfies SpecialCostume;
 
 export const AllSpecialCostumes = [
