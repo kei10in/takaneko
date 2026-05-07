@@ -9,7 +9,11 @@ export const BouquetOf9Flowers衣装: StageCostume = {
 
   images: [
     {
-      path: "/takaneko/costumes/stage/Bouquet of 9 Flowers 衣装.webp",
+      path: "/takaneko/costumes/stage/Bouquet of 9 Flowers 衣装.jpg",
+      ref: "https://x.com/takanenofficial/status/2052010494072918153",
+    },
+    {
+      path: "/takaneko/costumes/stage/Bouquet of 9 Flowers 衣装_2.webp",
       ref: "https://x.com/takanenofficial/status/2025548940985450613",
     },
   ],

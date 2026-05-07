@@ -16,6 +16,13 @@ export const Tシャツ_BouquetOf9Flowers = {
   kind: "tshirt",
   name: "T シャツ (Bouquet of 9 Flowers ver.)",
   slug: "Tシャツ-Bouquet of 9 Flowers",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2052023159805870310",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_ハニフェス2025 = {
