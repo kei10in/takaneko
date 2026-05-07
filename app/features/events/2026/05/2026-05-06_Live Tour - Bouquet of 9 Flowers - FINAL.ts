@@ -171,6 +171,7 @@ export const content = /* md */ `
 
   - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/2052014312366231824)
   - [ほら咲いた 高嶺のなでしこ - 公式 X](https://x.com/takanenofficial/status/2052010494072918153)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2051821904831598971)
   - [限定ガチャ告知 - 公式 X](https://x.com/takanenofficial/status/2051655656315228302)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2051648105875919261)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2050455317973250424)
