@@ -49,12 +49,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-05-05",
+  updatedAt: "2026-05-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [前方エリア入れ替えについて - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2052327590783033776)
   - [タイムテーブル公開 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2046061291001806908)
   - [推しのぼり旗発売告知 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2044717444544266625)
   - [コメント動画 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2044626842636734824)
