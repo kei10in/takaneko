@@ -30,9 +30,16 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 
 - `~/features/events/eventMeta` から `EventMetaDescriptor` を import する。
 - `meta` と `content` を export する。
-- `link` / `goods` / `acts` は、値が空でも既存形式に合わせて保持する。
-- `streamings` は既存仕様に従い、単体オブジェクトまたは配列で表現する。
-- `meetAndGreet` は必要な場合のみ定義する。
+- `meta` (`EventMetaDescriptor` 型) について
+  - `link` / `goods` / `acts` は、値が空でも既存形式に合わせて保持する。
+  - `link` にはイベントや TV、ラジオの公式サイトを記載する。
+  - `ticket` にはチケット購入先の URL を記載する。購入先がない場合は空文字列。
+  - `streamings` は既存仕様に従い、単体オブジェクトまたは配列で表現する。
+  - `meetAndGreet` は必要な場合のみ定義する。
+- `content` について
+  - Markdown で記述する。
+  - 必ず `## リンク` セクションを設ける。リストでイベント関連のリンクを記載する。
+  - 高嶺のなでしこ公式 X による最初の告知は、リンクセクションに "告知 - 公式 X" として記載する。
 - 情報源にない値は推測で補完しない。未確定値は既存の空値表現（例: `url: ""`）を使用する。
 
 ## 出版物連携仕様（`.tsx`）
@@ -53,6 +60,7 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 - `category` は `"LIVE"` とする。
 - `region` は開催県名。海外の場合は都市名。
 - タイムテーブル画像（`tags: ["timetable"]`）を追加・更新した場合は、読み取れる範囲で `acts.start` / `acts.end` に出演時間を反映する。時間が判別できない場合のみ既存の空値表現を維持する。
+- ハッシュタグ #あしたのたかねこ のツイートは、リンクセクションに "#あしたのたかねこ" として追加する。
 
 ### Radio
 
