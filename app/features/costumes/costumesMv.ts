@@ -91,6 +91,17 @@ export const 東京サニーパーティー制服衣装 = {
   kind: "mv",
   name: "「東京サニーパーティー」制服衣装",
   slug: "東京サニーパーティー制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/東京サニーパーティー制服衣装_1.jpg",
+      ref: "https://x.com/erisahigasiyama/status/1905599781965365405",
+    },
+    {
+      path: "/takaneko/costumes/mv/東京サニーパーティー制服衣装_2.jpg",
+      ref: "https://x.com/saara_hazuki/status/1905598409085702554",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 東京サニーパーティーパジャマ衣装 = {
