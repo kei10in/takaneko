@@ -242,19 +242,6 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               </h2>
 
               <ul className="-mx-4 mt-4 grid grid-cols-3 gap-1 space-y-2 sm:grid-cols-4">
-                {isLoading &&
-                  [1, 2, 3].map((x) => (
-                    <li key={x}>
-                      <LiveSkeleton />
-                    </li>
-                  ))}
-                {!isLoading && meetAndGreets.length == 0 && (
-                  <li>
-                    <p className="p-1 text-gray-500">
-                      この衣装に関連する対面イベントが見つかりませんでした。
-                    </p>
-                  </li>
-                )}
                 {galleryImages.map(({ path, ref }, i) => {
                   return (
                     <li key={i}>
