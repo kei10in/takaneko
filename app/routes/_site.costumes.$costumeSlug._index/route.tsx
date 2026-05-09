@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 import {
   BsBoxArrowUpRight,
   BsCalendar,
+  BsCameraFill,
   BsExclamationTriangleFill,
   BsGeo,
   BsMicFill,
@@ -44,6 +45,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 export default function Component({ loaderData }: Route.ComponentProps) {
   const { costume } = loaderData;
   const image = costume.images?.[0];
+  const galleryImages = costume.images?.slice(1) ?? [];
 
   const { data, isLoading } = useSWR(`costumes/${costume.slug}/lives.json`, async () => {
     const response = await fetch(`/data/costumes/${costume.slug}/lives.json`);
@@ -69,7 +71,12 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <div>
             <img src={image.path} alt={costume.name} className="aspect-4/3 w-full object-cover" />
             <p className="p-1 text-right text-xs text-gray-400">
-              <Link to={image.ref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1">
+              <Link
+                to={image.ref}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1"
+              >
                 <span>画像の引用元</span>
                 <BsBoxArrowUpRight />
               </Link>
@@ -218,6 +225,46 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               })}
             </ul>
           </section>
+
+          {galleryImages.length > 0 && (
+            <section className="mt-8">
+              <h2
+                className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}
+              >
+                <span className="flex items-center gap-2">
+                  <BsCameraFill className="inline-block text-gray-400" />
+                  <span>ギャラリー</span>
+                </span>
+              </h2>
+
+              <ul className="mt-4 space-y-2 grid grid-cols-3 gap-1 sm:grid-cols-4 -mx-4">
+                {isLoading &&
+                  [1, 2, 3].map((x) => (
+                    <li key={x}>
+                      <LiveSkeleton />
+                    </li>
+                  ))}
+                {!isLoading && meetAndGreets.length == 0 && (
+                  <li>
+                    <p className="p-1 text-gray-500">
+                      この衣装に関連する対面イベントが見つかりませんでした。
+                    </p>
+                  </li>
+                )}
+                {galleryImages.map(({ path, ref }, i) => {
+                  return (
+                    <li key={i}>
+                      <img
+                        src={path}
+                        alt="コスチュームの他の画像"
+                        className="aspect-square w-full object-cover block"
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          )}
         </section>
       </div>
     </div>
