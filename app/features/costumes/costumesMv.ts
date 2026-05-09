@@ -4,6 +4,13 @@ export const 私はわたしの事が好きMV衣装 = {
   kind: "mv",
   name: "「私は、わたしの事が好き。」MV 衣装",
   slug: "私はわたしの事が好きMV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/私はわたしの事が好きDPV衣装.jpg",
+      ref: "https://x.com/nao_kizuki/status/2044007765925081393",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 病名恋ワズライ衣装 = {
