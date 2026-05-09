@@ -1,4 +1,3 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
 import {
   BsBoxArrowUpRight,
   BsBroadcast,
@@ -23,6 +22,7 @@ import {
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
+import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { validateEventMeta } from "~/features/events/eventMeta";
@@ -287,66 +287,26 @@ export default function EventPage() {
       )}
 
       {meta.images.map((img, i) => (
-        <Dialog
+        <ImagePreviewDialog
           key={i}
           open={location.hash == `#photo-${i}`}
-          className="relative z-50"
           onClose={close}
-        >
-          <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-xs">
-            <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
-              <img
-                alt="プレビュー"
-                className="block h-full max-h-[80svh] w-full object-contain"
-                src={img.path}
-              />
-
-              <p className="p-1 text-right text-xs font-semibold text-white/80">
-                <Link
-                  to={img.ref}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1"
-                >
-                  <span>画像の引用元</span>
-                  <BsBoxArrowUpRight />
-                </Link>
-              </p>
-            </DialogPanel>
-          </div>
-        </Dialog>
+          imageSrc={img.path}
+          imageAlt="プレビュー"
+          sourceUrl={img.ref}
+        />
       ))}
 
       {meta.timetables.map((tt, i) => {
         return (
-          <Dialog
-            open={location.hash == `#timetable-${i}`}
-            className="relative z-50"
-            onClose={close}
+          <ImagePreviewDialog
             key={i}
-          >
-            <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 backdrop-blur-xs">
-              <DialogPanel className="h-fit w-fit overflow-hidden" onClick={close}>
-                <img
-                  alt="プレビュー"
-                  className="block h-full max-h-[80svh] w-full object-contain"
-                  src={tt.path}
-                />
-
-                <p className="p-1 text-right text-xs font-semibold text-white/80">
-                  <Link
-                    to={tt.ref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1"
-                  >
-                    <span>画像の引用元</span>
-                    <BsBoxArrowUpRight />
-                  </Link>
-                </p>
-              </DialogPanel>
-            </div>
-          </Dialog>
+            open={location.hash == `#timetable-${i}`}
+            onClose={close}
+            imageSrc={tt.path}
+            imageAlt="プレビュー"
+            sourceUrl={tt.ref}
+          />
         );
       })}
     </div>
