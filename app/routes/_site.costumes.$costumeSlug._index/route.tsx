@@ -1,3 +1,4 @@
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import {
   BsBoxArrowUpRight,
@@ -8,7 +9,7 @@ import {
   BsMicFill,
   BsPeopleFill,
 } from "react-icons/bs";
-import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
+import { Link, LoaderFunctionArgs, MetaFunction, useLocation, useNavigate } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
@@ -46,6 +47,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
   const { costume } = loaderData;
   const image = costume.images?.[0];
   const galleryImages = costume.images?.slice(1) ?? [];
+  const location = useLocation();
+  const navigate = useNavigate();
+  const closeDialog = () => navigate(".", { replace: true, preventScrollReset: true });
 
   const { data, isLoading } = useSWR(`costumes/${costume.slug}/lives.json`, async () => {
     const response = await fetch(`/data/costumes/${costume.slug}/lives.json`);
@@ -237,7 +241,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                 </span>
               </h2>
 
-              <ul className="mt-4 space-y-2 grid grid-cols-3 gap-1 sm:grid-cols-4 -mx-4">
+              <ul className="-mx-4 mt-4 grid grid-cols-3 gap-1 space-y-2 sm:grid-cols-4">
                 {isLoading &&
                   [1, 2, 3].map((x) => (
                     <li key={x}>
@@ -254,11 +258,49 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                 {galleryImages.map(({ path, ref }, i) => {
                   return (
                     <li key={i}>
-                      <img
-                        src={path}
-                        alt="コスチュームの他の画像"
-                        className="aspect-square w-full object-cover block"
-                      />
+                      <Link to={`#photo-${i}`} replace={true} preventScrollReset={true}>
+                        <img
+                          src={path}
+                          alt="コスチュームの他の画像"
+                          className="block aspect-square w-full object-cover"
+                        />
+                      </Link>
+
+                      <Dialog
+                        key={i}
+                        open={location.hash == `#photo-${i}`}
+                        onClose={closeDialog}
+                        className="relative z-50"
+                      >
+                        <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-xs" />
+                        <div className="fixed inset-0 h-0 overflow-visible">
+                          <DialogPanel
+                            className="flex min-h-lvh min-w-lvw items-center justify-center"
+                            onClick={closeDialog}
+                          >
+                            <div className="relative box-border h-fit w-fit pb-6">
+                              <div className="flex items-center overflow-hidden">
+                                <img
+                                  src={path}
+                                  alt="コスチューム画像の拡大表示"
+                                  className="block max-h-[calc(100lvh-24px)]"
+                                />
+                              </div>
+                              <p className="absolute right-0 bottom-0 p-1 text-right text-xs text-gray-200">
+                                <Link
+                                  to={ref}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="inline-flex items-center gap-1"
+                                >
+                                  <span>画像の引用元</span>
+                                  <BsBoxArrowUpRight />
+                                </Link>
+                              </p>
+                            </div>
+                          </DialogPanel>
+                        </div>
+                      </Dialog>
                     </li>
                   );
                 })}
