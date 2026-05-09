@@ -23,7 +23,11 @@ const template = Handlebars.compile(dedent`
 const TODAY = NaiveDate.todayInJapan();
 
 const main = async () => {
-  const pages = (await allPages(TODAY, Events)).toSorted((a, b) => a.path.localeCompare(b.path));
+  const eventRangeStart = new NaiveDate(TODAY.year - 1, TODAY.month, TODAY.day);
+  const events = (await Events.importAllEventModules()).filter(
+    (event) => NaiveDate.parseUnsafe(event.meta.date).compareTo(eventRangeStart) >= 0,
+  );
+  const pages = (await allPages(TODAY, events)).toSorted((a, b) => a.path.localeCompare(b.path));
 
   const content = template({ pages });
   console.log(content);

@@ -1,6 +1,6 @@
 import { DOMAIN } from "~/constants";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
-import { EventRepository } from "~/features/events/EventRepository";
+import { EventModule } from "~/features/events/eventModule";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { AllMembers } from "~/features/profile/members";
@@ -21,7 +21,7 @@ interface SitemapPath {
 
 export const allPages = async (
   today: NaiveDate,
-  events: EventRepository,
+  events: EventModule[],
 ): Promise<SitemapUrl[]> => {
   const dateRange = [new NaiveDate(2022, 8, 1), new NaiveDate(today.year, today.month + 6, 1)];
   const monthRange = [new NaiveMonth(2022, 8), new NaiveMonth(today.year, today.month + 6)];
@@ -31,7 +31,7 @@ export const allPages = async (
     ...buildMemberPages(),
     ...buildMonthlyPages(monthRange[0], monthRange[1]),
     ...buildDailyPages(dateRange[0], dateRange[1]),
-    ...(await buildEventPages(events)),
+    ...buildEventPages(events),
     ...buildTradeImagePages(),
     ...buildProductPages(),
   ].map((page) => ({ ...page, url: encodeURI(`https://${DOMAIN}${page.path}`) }));
@@ -63,9 +63,8 @@ const buildMonthlyPages = (start: NaiveMonth, end: NaiveMonth): SitemapPath[] =>
   return result;
 };
 
-const buildEventPages = async (events: EventRepository): Promise<SitemapPath[]> => {
-  const ems = await events.importAllEventModules();
-  return ems.map(({ slug, meta }) => ({ path: `/events/${slug}`, lastmod: meta.updatedAt }));
+const buildEventPages = (events: EventModule[]): SitemapPath[] => {
+  return events.map(({ slug, meta }) => ({ path: `/events/${slug}`, lastmod: meta.updatedAt }));
 };
 
 const buildTradeImagePages = () => {
