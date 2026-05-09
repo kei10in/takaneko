@@ -1,4 +1,3 @@
-import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import {
   BsBoxArrowUpRight,
@@ -13,6 +12,7 @@ import { Link, LoaderFunctionArgs, MetaFunction, useLocation, useNavigate } from
 import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb";
+import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { pageHeading, sectionHeading } from "~/components/styles";
 import { AllCostumes } from "~/features/costumes/costumes";
 import { LivesForCostume } from "~/features/costumes/types";
@@ -253,41 +253,13 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                         />
                       </Link>
 
-                      <Dialog
-                        key={i}
+                      <ImagePreviewDialog
                         open={location.hash == `#photo-${i}`}
                         onClose={closeDialog}
-                        className="relative z-50"
-                      >
-                        <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-xs" />
-                        <div className="fixed inset-0 h-0 overflow-visible">
-                          <DialogPanel
-                            className="flex min-h-lvh min-w-lvw items-center justify-center"
-                            onClick={closeDialog}
-                          >
-                            <div className="relative box-border h-fit w-fit pb-6">
-                              <div className="flex items-center overflow-hidden">
-                                <img
-                                  src={path}
-                                  alt="コスチューム画像の拡大表示"
-                                  className="block max-h-[calc(100lvh-24px)]"
-                                />
-                              </div>
-                              <p className="absolute right-0 bottom-0 p-1 text-right text-xs text-gray-200">
-                                <Link
-                                  to={ref}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="inline-flex items-center gap-1"
-                                >
-                                  <span>画像の引用元</span>
-                                  <BsBoxArrowUpRight />
-                                </Link>
-                              </p>
-                            </div>
-                          </DialogPanel>
-                        </div>
-                      </Dialog>
+                        imageSrc={path}
+                        imageAlt="コスチューム画像の拡大表示"
+                        sourceUrl={ref}
+                      />
                     </li>
                   );
                 })}
