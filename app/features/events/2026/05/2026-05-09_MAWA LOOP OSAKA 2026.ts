@@ -67,6 +67,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2053098042375729625)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2053056018771505656)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2052742845833089046)
   - [公式モバイルアプリ](https://mawaloop.link.fespli.com/)
