@@ -17,6 +17,11 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2036026532737765462",
     },
     {
+      path: "/events/2026/2026-05-09_MAWA LOOP OSAKA 2026_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2052742845833089046",
+      tags: ["timetable"],
+    },
+    {
       path: "/takaneko/goods/2026/2026-05-03_ミニフォトカード「私は、わたしの事が好き。」.jpg",
       ref: "https://x.com/takanenofficial/status/2052742845833089046",
       tags: ["merch-item"],
