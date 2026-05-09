@@ -40,8 +40,8 @@ import { EventOverview } from "./EventOverview";
 import { makePageDescription } from "./makePageDescription";
 import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const meta = validateEventMeta(data?.eventMeta);
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+  const meta = validateEventMeta(loaderData?.eventMeta);
 
   const title = meta?.title ?? meta?.summary ?? "スケジュール";
   const description =
