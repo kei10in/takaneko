@@ -78,12 +78,13 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/_MARIC/status/2043304287292494284"],
     },
   ],
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-05-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2053067464486088881)
   - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2043328681519858135)
   - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2042963425253298242)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2042965899997483186)
