@@ -4,6 +4,25 @@ export const Tシャツ_BouquetOf9Flowers台湾限定 = {
   kind: "tshirt",
   name: "T シャツ (Bouquet of 9 Flowers 台北限定 ver.)",
   slug: "Tシャツ-Bouquet of 9 Flowers台北限定ver",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers台湾限定ver_橋本桃呼01.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2045496638022791517",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers台湾限定ver_東山恵里沙01.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2045495188236485066",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers台湾限定ver_日向端ひな01.jpg",
+      ref: "https://x.com/hina_hinahata/status/2045499143825821820",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers台湾限定ver_松本ももな01.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2045510717692862915",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_BouquetOf9Flowers韓国限定 = {
@@ -120,6 +139,8 @@ export const Tシャツ_メンバー個別名前入り = {
 } satisfies TShirtCostume;
 
 export const AllTShirtCostumes = [
+  Tシャツ_BouquetOf9Flowers台湾限定,
+  Tシャツ_BouquetOf9Flowers韓国限定,
   Tシャツ_BouquetOf9Flowers,
   Tシャツ_ハニフェス2025,
   Tシャツ_SpringRide,
