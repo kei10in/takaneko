@@ -61,6 +61,13 @@ export const ライフクエストお仕事衣装 = {
   kind: "mv",
   name: "「ライフクエスト」お仕事衣装",
   slug: "ライフクエストお仕事衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/ライフクエストお仕事衣装.jpg",
+      ref: "https://x.com/himeri_momiyama/status/1984956294831460843",
+    },
+  ],
 } satisfies MvCostume;
 
 export const ライフクエスト部屋着衣装 = {
