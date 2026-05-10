@@ -29,6 +29,17 @@ export const Tシャツ_BouquetOf9Flowers韓国限定 = {
   kind: "tshirt",
   name: "T シャツ (Bouquet of 9 Flowers 韓国限定 ver.)",
   slug: "Tシャツ-Bouquet of 9 Flowers韓国限定ver",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers韓国限定ver_橋本桃呼01.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2043338057034973644",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers韓国限定ver_日向端ひな01.jpg",
+      ref: "https://x.com/hina_hinahata/status/2043311615517569501",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_BouquetOf9Flowers = {
@@ -48,6 +59,13 @@ export const Tシャツ_ハニフェス2025 = {
   kind: "tshirt",
   name: "T シャツ (ハニフェス 2025)",
   slug: "Tシャツ-ハニフェス2025",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-ハニフェス2025.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1967871271603147260",
+    },
+  ],
 } satisfies TShirtCostume;
 
 export const Tシャツ_SpringRide = {
