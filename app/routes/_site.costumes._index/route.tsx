@@ -23,7 +23,7 @@ export const meta: MetaFunction = () => {
 const COSTUME_CATEGORIES: { title: string; costumes: Costume[] }[] = [
   { title: "ステージ衣装", costumes: AllStageCostumes },
   { title: "制服衣装", costumes: AllUniformCostumes },
-  { title: "MV 衣装", costumes: AllMvCostumes },
+  { title: "MV / DPV 衣装", costumes: AllMvCostumes },
   { title: "T シャツ衣装", costumes: AllTShirtCostumes },
 ];
 
