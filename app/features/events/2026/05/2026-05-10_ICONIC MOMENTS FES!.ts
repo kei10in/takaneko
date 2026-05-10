@@ -31,6 +31,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2052742845833089046",
       tags: ["merch-item"],
     },
+    {
+      path: "/events/2026/2026-05-10_ICONIC MOMENTS FES!_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2053429909461320175",
+    },
   ],
   link: {
     text: "イベント サイト",
@@ -51,8 +55,16 @@ export const meta: EventMetaDescriptor = {
   acts: {
     start: "21:05",
     end: "21:30",
-    setlist: [],
-    url: "",
+    setlist: [
+      "衣装: 見上げるたびに、恋をする。衣装",
+      "初恋のこたえ。",
+      "女の子は強い",
+      "MC",
+      "決戦スピリット",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2053461536816193973",
   },
   updatedAt: "2026-05-10",
 };
@@ -60,6 +72,9 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2053462670909812912)
+  - [出演者紹介 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2053450369393684566)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2053429909461320175)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2053120369477972215)
   - [前方エリア入れ替えについて - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2052327590783033776)
   - [タイムテーブル公開 - ICONIC MOMENTS FES！ X](https://x.com/iml_sp/status/2046061291001806908)
