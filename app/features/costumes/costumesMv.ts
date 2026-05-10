@@ -121,6 +121,13 @@ export const 小悪魔だってかまわない衣装 = {
   kind: "mv",
   name: "「小悪魔だってかまわない」衣装",
   slug: "小悪魔だってかまわない衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/小悪魔だってかまわない衣装.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/1888193067079147652",
+    },
+  ],
 } satisfies MvCostume;
 
 export const ImYourIdolMV衣装 = {
