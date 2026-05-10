@@ -21,7 +21,7 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  ticket: "",
+  ticket: "https://livepocket.jp/e/debutante_vol9",
   streamings: undefined,
   goods: {
     time: undefined,
