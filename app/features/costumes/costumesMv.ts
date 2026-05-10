@@ -227,7 +227,7 @@ export const モテチェンMV制服衣装 = {
 
 export const モテチェンMV衣装 = {
   kind: "mv",
-  name: "モテチェン！ MV 衣装",
+  name: "「モテチェン！」MV 衣装",
   slug: "モテチェンMV私服衣装",
 
   images: [
@@ -512,7 +512,7 @@ export const 女の子は強い制服衣装 = {
 
 export const 可愛くてごめんMV衣装 = {
   kind: "mv",
-  name: "可愛くてごめん MV 衣装",
+  name: "「可愛くてごめん」MV 衣装",
   slug: "可愛くてごめんMV衣装",
   images: [
     {
