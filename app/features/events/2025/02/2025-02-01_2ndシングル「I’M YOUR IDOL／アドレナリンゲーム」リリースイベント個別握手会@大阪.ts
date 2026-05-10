@@ -159,7 +159,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "5 レーン",
             member: "春野莉々",
-            costume: "「月曜日の憂鬱」MV 衣装",
+            costume: "「月曜日の憂鬱」衣装",
           },
           {
             label: "6 レーン",
@@ -223,7 +223,7 @@ export const meta: EventMetaDescriptor = {
           {
             label: "3 レーン",
             member: "葉月紗蘭",
-            costume: "「17歳」MV 衣装",
+            costume: "「17歳」衣装",
           },
           {
             label: "4 レーン",

@@ -1,13 +1,13 @@
 import { MvCostume } from "./types";
 
-export const 私はわたしの事が好きMV衣装 = {
+export const 私はわたしの事が好き衣装 = {
   kind: "mv",
-  name: "「私は、わたしの事が好き。」MV 衣装",
-  slug: "私はわたしの事が好きMV衣装",
+  name: "「私は、わたしの事が好き。」衣装",
+  slug: "私はわたしの事が好き衣装",
 
   images: [
     {
-      path: "/takaneko/costumes/mv/私はわたしの事が好きDPV衣装.jpg",
+      path: "/takaneko/costumes/mv/私はわたしの事が好き衣装.jpg",
       ref: "https://x.com/nao_kizuki/status/2044007765925081393",
     },
   ],
@@ -187,10 +187,10 @@ export const 死ぬまでダーリンMVデート私服 = {
   slug: "死ぬまでダーリンMVデート私服",
 } satisfies MvCostume;
 
-export const LoveAnthemMV衣装 = {
+export const LoveAnthem衣装 = {
   kind: "mv",
-  name: "「LOVE ANTHEM」MV 衣装",
-  slug: "LOVE ANTHEM MV衣装",
+  name: "「LOVE ANTHEM」衣装",
+  slug: "LOVE ANTHEM 衣装",
 } satisfies MvCostume;
 
 export const モテチェンMV制服衣装 = {
@@ -242,10 +242,10 @@ export const メイド至上主義衣装 = {
   ],
 } satisfies MvCostume;
 
-export const 推しの魔法MV衣装 = {
+export const 推しの魔法衣装 = {
   kind: "mv",
-  name: "「推しの魔法」MV 衣装",
-  slug: "推しの魔法MV衣装",
+  name: "「推しの魔法」衣装",
+  slug: "推しの魔法衣装",
 } satisfies MvCostume;
 
 export const 私は怪物MV衣装 = {
@@ -313,14 +313,14 @@ export const いつか私がママになったらワンピース衣装 = {
   ],
 } satisfies MvCostume;
 
-export const _17歳MV衣装 = {
+export const _17歳衣装 = {
   kind: "mv",
-  name: "「17歳」MV 衣装",
-  slug: "17歳MV衣装",
+  name: "「17歳」衣装",
+  slug: "17歳衣装",
 
   images: [
     {
-      path: "/takaneko/costumes/mv/17歳MV衣装.jpg",
+      path: "/takaneko/costumes/mv/17歳衣装.jpg",
       ref: "https://x.com/takanekomanager/status/1698678015562252672",
     },
   ],
@@ -338,18 +338,18 @@ export const すきっちゅーのパジャマ衣装 = {
   slug: "すきっちゅーのパジャマ衣装",
 } satisfies MvCostume;
 
-export const 月曜日の憂鬱MV衣装 = {
+export const 月曜日の憂鬱衣装 = {
   kind: "mv",
-  name: "「月曜日の憂鬱」MV 衣装",
-  slug: "月曜日の憂鬱MV衣装",
+  name: "「月曜日の憂鬱」衣装",
+  slug: "月曜日の憂鬱衣装",
 
   images: [
     {
-      path: "/takaneko/costumes/mv/月曜日の憂鬱MV衣装.jpg",
+      path: "/takaneko/costumes/mv/月曜日の憂鬱衣装.jpg",
       ref: "https://x.com/takanekomanager/status/1685881565237387265",
     },
     {
-      path: "/takaneko/costumes/mv/月曜日の憂鬱MV衣装_2.jpg",
+      path: "/takaneko/costumes/mv/月曜日の憂鬱衣装_2.jpg",
       ref: "https://x.com/takanekomanager/status/1682385680725340164",
     },
   ],
@@ -431,7 +431,7 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
-  私はわたしの事が好きMV衣装,
+  私はわたしの事が好き衣装,
   病名恋ワズライ衣装,
   この世界は嘘でできている白衣装,
   この世界は嘘でできている黒衣装,
@@ -451,21 +451,21 @@ export const AllMvCostumes: MvCostume[] = [
   死ぬまでダーリンMV部屋着,
   死ぬまでダーリンMVアイドル衣装,
   死ぬまでダーリンMVデート私服,
-  LoveAnthemMV衣装,
+  LoveAnthem衣装,
   モテチェンMV制服衣装,
   モテチェンMV衣装,
   私より好きでいてMV衣装,
   メイド至上主義衣装,
-  推しの魔法MV衣装,
+  推しの魔法衣装,
   私は怪物MV衣装,
   可愛いって言われたいMVパンクロック衣装,
   可愛いって言われたいMVもこもこ帽子衣装,
   可愛いって言われたいMV虹色衣装,
   いつか私がママになったらワンピース衣装,
-  _17歳MV衣装,
+  _17歳衣装,
   すきっちゅーの私服衣装,
   すきっちゅーのパジャマ衣装,
-  月曜日の憂鬱MV衣装,
+  月曜日の憂鬱衣装,
   決戦スピリットMV衣装,
   革命の女王黒衣装,
   僕は君になれない私服衣装,
