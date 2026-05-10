@@ -20,7 +20,7 @@ export const 世界は恋に落ちている制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/世界は恋に落ちている制服.jpg",
+      path: "/takaneko/costumes/mv/世界は恋に落ちている制服.jpg",
       ref: "https://x.com/Mikuru_hositani/status/2033154964026187815",
     },
   ],
@@ -182,7 +182,7 @@ export const アイのウイルス制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/アイのウイルス制服.jpg",
+      path: "/takaneko/costumes/mv/アイのウイルス制服.jpg",
       ref: "https://x.com/takanenofficial/status/1866800841396814202",
     },
   ],
@@ -275,7 +275,7 @@ export const センパイ制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/センパイ制服.jpg",
+      path: "/takaneko/costumes/mv/センパイ制服.jpg",
       ref: "https://x.com/takanekomanager/status/1799285062254690519",
     },
   ],
@@ -346,7 +346,7 @@ export const 恋を知った世界制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/恋を知った世界制服.jpg",
+      path: "/takaneko/costumes/mv/恋を知った世界制服.jpg",
       ref: "https://x.com/Mikuru_hositani/status/1772878202060316684",
     },
   ],
@@ -359,7 +359,7 @@ export const いつか私がママになったら制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/いつか私がママになったら制服.jpg",
+      path: "/takaneko/costumes/mv/いつか私がママになったら制服.jpg",
       ref: "https://x.com/takanekomanager/status/1736030695271899326",
     },
   ],
@@ -427,7 +427,7 @@ export const 初恋のひと制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/初恋のひと制服.jpg",
+      path: "/takaneko/costumes/mv/初恋のひと制服.jpg",
       ref: "https://x.com/momonamatsumoto/status/1675279136414375937",
     },
   ],
@@ -453,7 +453,7 @@ export const ヒロインは平均以下制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/ヒロインは平均以下制服.jpg",
+      path: "/takaneko/costumes/mv/ヒロインは平均以下制服.jpg",
       ref: "https://x.com/Mikuru_hositani/status/1671690040110616576",
     },
   ],
@@ -504,7 +504,7 @@ export const 女の子は強い制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/女の子は強い制服.jpg",
+      path: "/takaneko/costumes/mv/女の子は強い制服.jpg",
       ref: "https://x.com/takanekomanager/status/1610104451980988416",
     },
   ],
@@ -535,7 +535,7 @@ export const 乙女どもよ制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/乙女どもよ制服.jpg",
+      path: "/takaneko/costumes/mv/乙女どもよ制服.jpg",
       ref: "https://x.com/takanekomanager/status/1593121199894106113",
     },
   ],

@@ -165,7 +165,7 @@ export const ホワイトチョコ・ビターチョコ制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/ホワイトチョコ・ビターチョコ制服.webp",
+      path: "/takaneko/costumes/mv/ホワイトチョコ・ビターチョコ制服.webp",
       ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
     },
   ],
@@ -178,7 +178,7 @@ export const バレンタイン2025衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/specials/バレンタイン2025衣装.webp",
+      path: "/takaneko/costumes/mv/バレンタイン2025衣装.webp",
       ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
     },
   ],
