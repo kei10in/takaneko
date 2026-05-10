@@ -447,7 +447,11 @@ export const 決戦スピリットMV衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/mv/決戦スピリットMV衣装.jpg",
+      path: "/takaneko/costumes/mv/決戦スピリットMV衣装_バレー部.jpg",
+      ref: "https://x.com/hina_hinahata/status/1917216185336451309",
+    },
+    {
+      path: "/takaneko/costumes/mv/決戦スピリットMV衣装_テニス部.jpg",
       ref: "https://x.com/takanekomanager/status/1671869378915348481",
     },
   ],
