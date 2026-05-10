@@ -39,6 +39,10 @@ export const Tシャツ_BouquetOf9Flowers韓国限定 = {
       path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers韓国限定ver_日向端ひな01.jpg",
       ref: "https://x.com/hina_hinahata/status/2043311615517569501",
     },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-Bouquet of 9 Flowers韓国限定ver_籾山ひめり01.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2043337272507158784",
+    },
   ],
 } satisfies TShirtCostume;
 
