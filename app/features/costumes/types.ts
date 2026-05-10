@@ -6,7 +6,6 @@ import {
   SpecialCostumeName,
   StageCostumeName,
   TShirtCostumeName,
-  UniformCostumeName,
 } from "./costumeNames";
 
 export type PhotoType = "artist" | "press" | "none";
@@ -28,20 +27,6 @@ export interface StageCostume {
   photoType: PhotoType;
 
   stylist?: string;
-
-  images?: ImageDescription[];
-}
-
-/**
- * 制服ベースの衣装です。
- * 制服衣装は MV 衣装と分けています。
- * 制服衣装は、ワンマンライブでも着用されることが多いので、MV 衣装とは別に管理します。
- * またリボンなどの小物によるバリエーションがあります。
- */
-export interface UniformCostume {
-  kind: "uniform";
-  name: UniformCostumeName;
-  slug: string;
 
   images?: ImageDescription[];
 }
@@ -74,7 +59,7 @@ export interface SpecialCostume {
   images?: ImageDescription[];
 }
 
-export type Costume = StageCostume | UniformCostume | MvCostume | TShirtCostume | SpecialCostume;
+export type Costume = StageCostume | MvCostume | TShirtCostume | SpecialCostume;
 
 /**
  * 特定の衣装が着用された公演の概要情報を表します。
