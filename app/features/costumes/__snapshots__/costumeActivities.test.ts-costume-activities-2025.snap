@@ -2394,86 +2394,6 @@
     ],
   },
   {
-    "costumeName": "「ハニフェス 2025」制服衣装",
-    "costumeSlug": "ハニフェス2025制服衣装",
-    "count": 2,
-    "lives": [
-      {
-        "acts": [
-          {
-            "actTitle": "全員",
-          },
-          {
-            "actTitle": "高嶺のなでしこブロック",
-          },
-        ],
-        "event": {
-          "category": "LIVE",
-          "date": "2025-09-15",
-          "liveType": "GUEST",
-          "location": "日比谷野外音楽堂",
-          "region": "東京",
-          "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
-          "summary": "ハニフェス 2025 ～女子校文化祭 日比谷～",
-          "title": "ハニフェス 2025 ～女子校文化祭 日比谷～",
-        },
-      },
-    ],
-    "meetAndGreets": [],
-  },
-  {
-    "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
-    "costumeSlug": "ホワイトチョコ-ビターチョコ制服衣装",
-    "count": 1,
-    "lives": [
-      {
-        "acts": [
-          {
-            "actTitle": undefined,
-          },
-        ],
-        "event": {
-          "category": "LIVE",
-          "date": "2025-02-14",
-          "liveType": "SOLO",
-          "location": "国立代々木競技場 第二体育館",
-          "region": "東京",
-          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
-          "summary": "ワンマンライブ 2025 〜Cute for life〜",
-          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
-        },
-      },
-    ],
-    "meetAndGreets": [
-      {
-        "acts": [],
-        "event": {
-          "category": "EVENT",
-          "date": "2025-10-25",
-          "liveType": undefined,
-          "location": "",
-          "region": "Web",
-          "slug": "2025-10-25_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
-          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
-          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
-        },
-      },
-      {
-        "acts": [],
-        "event": {
-          "category": "EVENT",
-          "date": "2025-10-04",
-          "liveType": undefined,
-          "location": "サンシャインシティ 展示ホールD-3",
-          "region": "東京",
-          "slug": "2025-10-04_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
-          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
-          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
-        },
-      },
-    ],
-  },
-  {
     "costumeName": "「初恋のひと。」制服衣装",
     "costumeSlug": "初恋のひと制服衣装",
     "count": 4,
@@ -2754,6 +2674,34 @@
     "meetAndGreets": [],
   },
   {
+    "costumeName": "「ハニフェス 2025」制服衣装",
+    "costumeSlug": "ハニフェス2025制服衣装",
+    "count": 2,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": "全員",
+          },
+          {
+            "actTitle": "高嶺のなでしこブロック",
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-09-15",
+          "liveType": "GUEST",
+          "location": "日比谷野外音楽堂",
+          "region": "東京",
+          "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "summary": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+          "title": "ハニフェス 2025 ～女子校文化祭 日比谷～",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
     "costumeName": "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2025 Tシャツ",
     "costumeSlug": "高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ",
     "count": 1,
@@ -2930,6 +2878,58 @@
           "slug": "2025-02-15_Cute for life開催記念撮影会",
           "summary": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
           "title": "Cute for life開催記念「個別TikTok撮影会」、「個別2ショット撮影会」",
+        },
+      },
+    ],
+  },
+  {
+    "costumeName": "ホワイトチョコ・ビターチョコ制服衣装",
+    "costumeSlug": "ホワイトチョコ-ビターチョコ制服衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2025-02-14",
+          "liveType": "SOLO",
+          "location": "国立代々木競技場 第二体育館",
+          "region": "東京",
+          "slug": "2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+          "summary": "ワンマンライブ 2025 〜Cute for life〜",
+          "title": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-25",
+          "liveType": undefined,
+          "location": "",
+          "region": "Web",
+          "slug": "2025-10-25_1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
+        },
+      },
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2025-10-04",
+          "liveType": undefined,
+          "location": "サンシャインシティ 展示ホールD-3",
+          "region": "東京",
+          "slug": "2025-10-04_1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "summary": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
+          "title": "1st アルバム「見上げるたびに、恋をする。」リリースイベント@サンシャインシティ",
         },
       },
     ],

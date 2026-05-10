@@ -1845,6 +1845,31 @@
     "meetAndGreets": [],
   },
   {
+    "costumeName": "「可愛くてごめん」MV 衣装",
+    "costumeSlug": "可愛くてごめんMV衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2023-09-03",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2023-09-03_1周年記念ライブ 〜美しく生きろ〜",
+          "summary": "1周年記念ライブ 〜美しく生きろ〜",
+          "title": "1周年記念ライブ 〜美しく生きろ〜",
+        },
+      },
+    ],
+    "meetAndGreets": [],
+  },
+  {
     "costumeName": "T シャツ (たかねこちゃん個別デザイン)",
     "costumeSlug": "Tシャツ-たかねこちゃん個別デザイン",
     "count": 1,

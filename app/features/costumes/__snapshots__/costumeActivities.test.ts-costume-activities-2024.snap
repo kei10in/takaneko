@@ -2982,6 +2982,45 @@
     "meetAndGreets": [],
   },
   {
+    "costumeName": "「モテチェン！」MV 衣装",
+    "costumeSlug": "モテチェンMV私服衣装",
+    "count": 1,
+    "lives": [
+      {
+        "acts": [
+          {
+            "actTitle": undefined,
+          },
+        ],
+        "event": {
+          "category": "LIVE",
+          "date": "2024-07-13",
+          "liveType": "SOLO",
+          "location": "TOKYO DOME CITY HALL",
+          "region": "東京",
+          "slug": "2024-07-13_全国ツアー2024 “わたし色に染まれ” TOUR FINAL",
+          "summary": "全国ツアー2024 “わたし色に染まれ” TOUR FINAL",
+          "title": "全国ツアー2024 “わたし色に染まれ” TOUR FINAL",
+        },
+      },
+    ],
+    "meetAndGreets": [
+      {
+        "acts": [],
+        "event": {
+          "category": "EVENT",
+          "date": "2024-07-14",
+          "liveType": undefined,
+          "location": "KFC Hall",
+          "region": "東京",
+          "slug": "2024-07-14_“わたし色に染まれ”開催記念 個別TikTok撮影会",
+          "summary": "“わたし色に染まれ”開催記念 個別TikTok撮影会",
+          "title": "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別TikTok撮影会",
+        },
+      },
+    ],
+  },
+  {
     "costumeName": "「センパイ。」制服衣装",
     "costumeSlug": "センパイ制服衣装",
     "count": 6,
