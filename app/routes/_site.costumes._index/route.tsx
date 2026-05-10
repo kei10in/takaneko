@@ -6,7 +6,6 @@ import { AllMvCostumes } from "~/features/costumes/costumesMv";
 import { AllSpecialCostumes } from "~/features/costumes/costumesSpecial";
 import { AllStageCostumes } from "~/features/costumes/costumesStage";
 import { AllTShirtCostumes } from "~/features/costumes/costumesTshirt";
-import { AllUniformCostumes } from "~/features/costumes/costumesUniform";
 import { Costume } from "~/features/costumes/types";
 import { CostumeCard } from "./CostumeCard";
 
@@ -22,7 +21,6 @@ export const meta: MetaFunction = () => {
 
 const COSTUME_CATEGORIES: { title: string; costumes: Costume[] }[] = [
   { title: "ステージ衣装", costumes: AllStageCostumes },
-  { title: "制服衣装", costumes: AllUniformCostumes },
   { title: "MV / DPV 衣装", costumes: AllMvCostumes },
   { title: "T シャツ衣装", costumes: AllTShirtCostumes },
 ];

@@ -13,6 +13,19 @@ export const 私はわたしの事が好き衣装 = {
   ],
 } satisfies MvCostume;
 
+export const 世界は恋に落ちている制服衣装 = {
+  kind: "mv",
+  name: "「世界は恋に落ちている」制服衣装",
+  slug: "世界は恋に落ちている制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/世界は恋に落ちている制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2033154964026187815",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 病名恋ワズライ衣装 = {
   kind: "mv",
   name: "「病名恋ワズライ」衣装",
@@ -162,6 +175,19 @@ export const アドレナリンゲームジャージ = {
   ],
 } satisfies MvCostume;
 
+export const アイのウイルス制服衣装 = {
+  kind: "mv",
+  name: "「アイのウイルス」制服衣装",
+  slug: "アイのウイルス制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/アイのウイルス制服.jpg",
+      ref: "https://x.com/takanenofficial/status/1866800841396814202",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 死ぬまでダーリンMV部屋着 = {
   kind: "mv",
   name: "「死ぬまでダーリン」MV 部屋着",
@@ -242,6 +268,19 @@ export const メイド至上主義衣装 = {
   ],
 } satisfies MvCostume;
 
+export const センパイ制服衣装 = {
+  kind: "mv",
+  name: "「センパイ。」制服衣装",
+  slug: "センパイ制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/センパイ制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1799285062254690519",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 推しの魔法衣装 = {
   kind: "mv",
   name: "「推しの魔法」衣装",
@@ -296,6 +335,32 @@ export const 可愛いって言われたいMV虹色衣装 = {
     {
       path: "/takaneko/costumes/mv/可愛いって言われたいMV虹色衣装.jpg",
       ref: "https://x.com/Mikuru_hositani/status/1754129915086254530",
+    },
+  ],
+} satisfies MvCostume;
+
+export const 恋を知った世界制服衣装 = {
+  kind: "mv",
+  name: "「恋を知った世界」制服衣装",
+  slug: "恋を知った世界制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/恋を知った世界制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1772878202060316684",
+    },
+  ],
+} satisfies MvCostume;
+
+export const いつか私がママになったら制服衣装 = {
+  kind: "mv",
+  name: "「いつか私がママになったら」制服衣装",
+  slug: "いつか私がママになったら制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/いつか私がママになったら制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1736030695271899326",
     },
   ],
 } satisfies MvCostume;
@@ -355,6 +420,19 @@ export const 月曜日の憂鬱衣装 = {
   ],
 } satisfies MvCostume;
 
+export const 初恋のひと制服衣装 = {
+  kind: "mv",
+  name: "「初恋のひと。」制服衣装",
+  slug: "初恋のひと制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/初恋のひと制服.jpg",
+      ref: "https://x.com/momonamatsumoto/status/1675279136414375937",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 決戦スピリットMV衣装 = {
   kind: "mv",
   name: "「決戦スピリット」MV 衣装",
@@ -364,6 +442,19 @@ export const 決戦スピリットMV衣装 = {
     {
       path: "/takaneko/costumes/mv/決戦スピリットMV衣装.jpg",
       ref: "https://x.com/takanekomanager/status/1671869378915348481",
+    },
+  ],
+} satisfies MvCostume;
+
+export const ヒロインは平均以下制服衣装 = {
+  kind: "mv",
+  name: "「ヒロインは平均以下。」制服衣装",
+  slug: "ヒロインは平均以下制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/ヒロインは平均以下制服.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/1671690040110616576",
     },
   ],
 } satisfies MvCostume;
@@ -406,6 +497,19 @@ export const 男の子の目的は何MV衣装 = {
   ],
 } satisfies MvCostume;
 
+export const 女の子は強い制服衣装 = {
+  kind: "mv",
+  name: "「女の子は強い」制服衣装",
+  slug: "女の子は強い制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/女の子は強い制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1610104451980988416",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 可愛くてごめんMV衣装 = {
   kind: "mv",
   name: "可愛くてごめん MV 衣装",
@@ -424,6 +528,19 @@ export const 可愛くてごめんパジャマ衣装 = {
   slug: "可愛くてごめんパジャマ衣装",
 } satisfies MvCostume;
 
+export const 乙女どもよ制服衣装 = {
+  kind: "mv",
+  name: "「乙女どもよ。」制服衣装",
+  slug: "乙女どもよ制服衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/uniforms/乙女どもよ制服.jpg",
+      ref: "https://x.com/takanekomanager/status/1593121199894106113",
+    },
+  ],
+} satisfies MvCostume;
+
 export const ユメムスビMV衣装 = {
   kind: "mv",
   name: "「ユメムスビ」MV 衣装",
@@ -432,6 +549,7 @@ export const ユメムスビMV衣装 = {
 
 export const AllMvCostumes: MvCostume[] = [
   私はわたしの事が好き衣装,
+  世界は恋に落ちている制服衣装,
   病名恋ワズライ衣装,
   この世界は嘘でできている白衣装,
   この世界は嘘でできている黒衣装,
@@ -448,6 +566,7 @@ export const AllMvCostumes: MvCostume[] = [
   ImYourIdolMV衣装,
   アドレナリンゲーム白黒衣装,
   アドレナリンゲームジャージ,
+  アイのウイルス制服衣装,
   死ぬまでダーリンMV部屋着,
   死ぬまでダーリンMVアイドル衣装,
   死ぬまでダーリンMVデート私服,
@@ -456,22 +575,29 @@ export const AllMvCostumes: MvCostume[] = [
   モテチェンMV衣装,
   私より好きでいてMV衣装,
   メイド至上主義衣装,
+  センパイ制服衣装,
   推しの魔法衣装,
   私は怪物MV衣装,
   可愛いって言われたいMVパンクロック衣装,
   可愛いって言われたいMVもこもこ帽子衣装,
   可愛いって言われたいMV虹色衣装,
+  恋を知った世界制服衣装,
+  いつか私がママになったら制服衣装,
   いつか私がママになったらワンピース衣装,
   _17歳衣装,
   すきっちゅーの私服衣装,
   すきっちゅーのパジャマ衣装,
   月曜日の憂鬱衣装,
+  初恋のひと制服衣装,
   決戦スピリットMV衣装,
+  ヒロインは平均以下制服衣装,
   革命の女王黒衣装,
   僕は君になれない私服衣装,
   僕は君になれないダンスプラクティス衣装,
   男の子の目的は何MV衣装,
+  女の子は強い制服衣装,
   可愛くてごめんMV衣装,
   可愛くてごめんパジャマ衣装,
+  乙女どもよ制服衣装,
   ユメムスビMV衣装,
 ];
