@@ -49,7 +49,7 @@ export const meta: EventMetaDescriptor = {
   ],
   goods: {
     time: ["19:50", "20:50"],
-    lineup: ["ミニフォトカード「私は、わたしの事が好き。」 / チェキ", "まねきねこチケット"],
+    lineup: ["ミニフォトカード「私は、わたしの事が好き。」 / チェキ"],
     url: "https://x.com/takanenofficial/status/2053120369477972215",
   },
   acts: {
