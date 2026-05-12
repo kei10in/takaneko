@@ -114,6 +114,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [高嶺のなでしこに写ルンです渡してみた🌟 IRCの思い出📷💞 (動画あり) - IDOL RUNWAY COLLECTION X](https://x.com/TGCnews/status/2047254152573509925)
   - [インタービュー公開告知 - BEEEMニュース X](https://x.com/BEEEEM_NEWS/status/2035921980809990375)
   - [LIVE PERFORMANCE 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034588199499293095)
   - [松本ももな 写真 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2034586644935049247)
