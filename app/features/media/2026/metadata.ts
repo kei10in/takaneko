@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "kRs6P8ALYFM",
+    title: "個性爆発！「高嶺のなでしこ」の悩みとは【音楽マシマシ 2025.7.28OA】",
+    authorName: "音楽マシマシ",
+    publishedAt: "2026-05-08",
+    mediaUrl: "https://youtu.be/kRs6P8ALYFM",
+    imageUrl: "https://i.ytimg.com/vi/kRs6P8ALYFM/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "籾山ひめり"],
+  },
+  {
     kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/787967",
     title:
@@ -40,6 +51,18 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "l-TqNx3c6DI",
+    title:
+      "【城月菜央】たかねこが合宿免許を10秒PR！～夏休みver～｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2026-04-23",
+    mediaUrl: "https://youtu.be/l-TqNx3c6DI",
+    imageUrl: "https://i.ytimg.com/vi/l-TqNx3c6DI/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "JodRjFhlbpg",
     title:
       "【涼海すう】たかねこが合宿免許を10秒PR！～夏休みver～｜運転免許トロッカ！×高嶺のなでしこ",
@@ -48,7 +71,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/JodRjFhlbpg",
     imageUrl: "https://i.ytimg.com/vi/JodRjFhlbpg/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["涼海すう"],
   },
   {
     kind: "youtube",
@@ -60,7 +83,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/WqKSws79oAM",
     imageUrl: "https://i.ytimg.com/vi/WqKSws79oAM/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["橋本桃呼"],
   },
   {
     kind: "youtube",
@@ -84,7 +107,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/qEWp2StFybI",
     imageUrl: "https://i.ytimg.com/vi/qEWp2StFybI/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["葉月紗蘭"],
   },
   {
     kind: "ogp",
@@ -108,7 +131,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/MePVvltgZH0",
     imageUrl: "https://i.ytimg.com/vi/MePVvltgZH0/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["東山恵里沙"],
   },
   {
     kind: "youtube",
@@ -120,7 +143,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/PZlJ3hLqAKo",
     imageUrl: "https://i.ytimg.com/vi/PZlJ3hLqAKo/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["日向端ひな"],
   },
   {
     kind: "youtube",
@@ -132,19 +155,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/jiL7iOfQde8",
     imageUrl: "https://i.ytimg.com/vi/jiL7iOfQde8/hqdefault.jpg",
     category: "youtube",
-    presents: [],
-  },
-  {
-    kind: "youtube",
-    key: "jiL7iOfQde8",
-    title:
-      "【星谷美来】たかねこが合宿免許を10秒PR！～夏休みver～｜運転免許トロッカ！×高嶺のなでしこ",
-    authorName: "運転免許トロッカ!",
-    publishedAt: "2026-04-15",
-    mediaUrl: "https://youtu.be/jiL7iOfQde8",
-    imageUrl: "https://i.ytimg.com/vi/jiL7iOfQde8/hqdefault.jpg",
-    category: "youtube",
-    presents: [],
+    presents: ["星谷美来"],
   },
   {
     kind: "youtube",
@@ -156,7 +167,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/pj-Peo9qKlU",
     imageUrl: "https://i.ytimg.com/vi/pj-Peo9qKlU/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["松本ももな"],
   },
   {
     kind: "youtube",
@@ -168,7 +179,7 @@ export const metadata2026: MediaDetails[] = [
     mediaUrl: "https://youtu.be/gpdiWijfFXg",
     imageUrl: "https://i.ytimg.com/vi/gpdiWijfFXg/hqdefault.jpg",
     category: "youtube",
-    presents: [],
+    presents: ["籾山ひめり"],
   },
   {
     kind: "youtube",
@@ -181,6 +192,18 @@ export const metadata2026: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/t1rcMa7xMYo/hqdefault.jpg",
     category: "youtube",
     presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
+    key: "5EbcSIIbhFU",
+    title:
+      "【高嶺のなでしこ】夏休みの合宿免許は！｜城月菜央・葉月紗蘭・星谷美来【運転免許トロッカ！】",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2026-04-14",
+    mediaUrl: "https://youtu.be/5EbcSIIbhFU",
+    imageUrl: "https://i.ytimg.com/vi/5EbcSIIbhFU/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "葉月紗蘭", "星谷美来"],
   },
   {
     kind: "ogp",

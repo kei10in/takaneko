@@ -2,19 +2,29 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "kRs6P8ALYFM",
+    publishedAt: "2026-05-08",
+    presents: ["城月菜央", "籾山ひめり"],
+  },
+  {
     videoId: "duH-dQ7PV9Y",
     publishedAt: "2026-04-25",
     presents: ["涼海すう"],
   },
   {
+    videoId: "l-TqNx3c6DI",
+    publishedAt: "2026-04-23",
+    presents: ["城月菜央"],
+  },
+  {
     videoId: "JodRjFhlbpg",
     publishedAt: "2026-04-22",
-    presents: [],
+    presents: ["涼海すう"],
   },
   {
     videoId: "WqKSws79oAM",
     publishedAt: "2026-04-21",
-    presents: [],
+    presents: ["橋本桃呼"],
   },
   {
     videoId: "jNDtrY7Dv6k",
@@ -24,42 +34,42 @@ export const YouTube2026 = [
   {
     videoId: "qEWp2StFybI",
     publishedAt: "2026-04-20",
-    presents: [],
+    presents: ["葉月紗蘭"],
   },
   {
     videoId: "MePVvltgZH0",
     publishedAt: "2026-04-17",
-    presents: [],
+    presents: ["東山恵里沙"],
   },
   {
     videoId: "PZlJ3hLqAKo",
     publishedAt: "2026-04-16",
-    presents: [],
+    presents: ["日向端ひな"],
   },
   {
     videoId: "jiL7iOfQde8",
     publishedAt: "2026-04-15",
-    presents: [],
-  },
-  {
-    videoId: "jiL7iOfQde8",
-    publishedAt: "2026-04-15",
-    presents: [],
+    presents: ["星谷美来"],
   },
   {
     videoId: "pj-Peo9qKlU",
     publishedAt: "2026-04-14",
-    presents: [],
+    presents: ["松本ももな"],
   },
   {
     videoId: "gpdiWijfFXg",
     publishedAt: "2026-04-14",
-    presents: [],
+    presents: ["籾山ひめり"],
   },
   {
     videoId: "t1rcMa7xMYo",
     publishedAt: "2026-04-14",
     presents: ["城月菜央"],
+  },
+  {
+    videoId: "5EbcSIIbhFU",
+    publishedAt: "2026-04-14",
+    presents: ["城月菜央", "葉月紗蘭", "星谷美来"],
   },
   {
     videoId: "4fGyJySBBg4",
