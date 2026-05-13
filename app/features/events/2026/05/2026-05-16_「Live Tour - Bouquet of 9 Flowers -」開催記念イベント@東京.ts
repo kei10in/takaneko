@@ -79,8 +79,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 補足
+
+  Live Tour - Bouquet of 9 Flowers - スタンプラリー企画 特典引換も同時開催されます。
+
+  - https://takanenonadeshiko.jp/?p=5271
+
   ## リンク
 
+  - [Live Tour - Bouquet of 9 Flowers - スタンプラリー企画 特典引換 について - 公式ニュース](https://takanenonadeshiko.jp/?p=5271)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5180)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2044332398431916471)
 `;
