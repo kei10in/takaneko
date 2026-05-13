@@ -8,7 +8,7 @@ export const meta: EventMetaDescriptor = {
   start: "27:00",
   end: "27:30",
   region: "ラジオ",
-  present: ["東山恵里沙"],
+  present: ["城月菜央", "東山恵里沙", "日向端ひな"],
   images: [
     {
       path: "/events/2026/2026-04-28_TOKYO FM「たかねこナイト」.jpg",
