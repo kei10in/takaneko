@@ -13,7 +13,7 @@ export const 私はわたしの事が好き: SongMetaDescriptor = {
 
   videoRelease: "2026-04-14",
   digitalRelease: "2026-04-15",
-  liveDebut: "2025-04-12",
+  liveDebut: "2026-04-12",
 
   tags: [TakanekoVersion, Repertoire],
 
