@@ -21,7 +21,7 @@ import {
   BsThreeDotsVertical,
 } from "react-icons/bs";
 import { Link } from "react-router";
-import { SITE_TITLE } from "~/constants";
+import { SiteName } from "~/constants";
 import { iconButtonPrimary } from "./styles/buttons";
 import { XMarkButton } from "./XMarkButton";
 
@@ -146,7 +146,7 @@ export const Topbar: React.FC = () => {
                     alt="「たかねこの」のロゴ アイコン"
                   />
                 </div>
-                <p className="font-serif text-xl text-gray-600">{SITE_TITLE}</p>
+                <p className="font-serif text-xl text-gray-600">{SiteName}</p>
               </Link>
             </div>
             <div className="ml-auto">

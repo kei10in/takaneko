@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { DOMAIN, SITE_TITLE } from "~/constants";
+import { DOMAIN, OgpSiteName } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -28,7 +28,7 @@ export const meta: Route.MetaFunction = ({ location }) => {
     { title: title },
     { name: "description", content: description },
 
-    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:site_name", content: OgpSiteName },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: image },

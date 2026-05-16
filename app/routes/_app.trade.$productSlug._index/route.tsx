@@ -1,6 +1,6 @@
 import { ClientLoaderFunctionArgs, LoaderFunctionArgs, useLoaderData } from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
-import { DOMAIN, SITE_TITLE } from "~/constants";
+import { DOMAIN, OgpSiteName } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { relativeProductImages } from "~/features/products/relativeProductImages";
 import { useTradeStore } from "~/features/trade/store";
@@ -18,7 +18,7 @@ export const meta: Route.MetaFunction = ({ data, location }) => {
     { title },
     { name: "description", content: description },
 
-    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:site_name", content: OgpSiteName },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: image },

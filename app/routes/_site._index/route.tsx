@@ -4,7 +4,7 @@ import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sectionHeading } from "~/components/styles";
-import { DOMAIN, SITE_TITLE } from "~/constants";
+import { DOMAIN, OgpSiteName, SiteName, SiteTitle } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
 import { dateHref } from "~/features/calendars/utils";
@@ -16,7 +16,7 @@ import { getActiveDateInJapan } from "~/utils/japanTime";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 
 export const meta: MetaFunction = () => {
-  const title = SITE_TITLE;
+  const title = SiteTitle;
   const description =
     "HoneyWorksサウンドプロデュースの10人組アイドルグループ 高嶺のなでしこ (たかねこ) の非公式ファンサイト。トレード画像をつくるやつでは、生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成可能。スケジュールでは、ライブやイベント、テレビ出演などのスケジュールが確認可能。";
   const url = `https://${DOMAIN}/`;
@@ -24,7 +24,7 @@ export const meta: MetaFunction = () => {
   return [
     { title },
     { name: "description", content: description },
-    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:site_name", content: OgpSiteName },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: `${url}/takaneko/site-image.webp` },
@@ -41,7 +41,7 @@ export const meta: MetaFunction = () => {
       "script:ld+json": {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: SITE_TITLE,
+        name: SiteTitle,
         url,
       },
     },
@@ -119,7 +119,7 @@ export default function Index() {
                   >
                     <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
                     <span className="line-clamp-1 text-4xl text-nadeshiko-800 xl:text-6xl">
-                      {SITE_TITLE}
+                      {SiteName}
                     </span>
                   </h1>
                 </div>

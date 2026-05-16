@@ -2,10 +2,10 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { BsBroadcastPin, BsStopwatch } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { DOMAIN, SITE_TITLE } from "~/constants";
-import { formatTitle } from "~/utils/htmlHeader";
+import { DOMAIN, OgpSiteName } from "~/constants";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { formatTitle } from "~/utils/htmlHeader";
 import { RadioAppearances } from "./content";
 
 export const meta: MetaFunction = () => {
@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
     { title },
     { name: "description", content: description },
 
-    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:site_name", content: OgpSiteName },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: `${url}takaneko/site-image.webp` },

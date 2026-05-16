@@ -1,5 +1,5 @@
-import { SITE_TITLE } from "~/constants";
+import { SiteTitle } from "~/constants";
 
 export const formatTitle = (title: string): string => {
-  return `${title} - ${SITE_TITLE}`;
+  return `${title} - ${SiteTitle}`;
 };

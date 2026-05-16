@@ -1,6 +1,6 @@
 import { MetaFunction } from "react-router";
-import { SITE_TITLE } from "~/constants";
 import { Mdx } from "~/components/Mdx";
+import { SiteName } from "~/constants";
 import { formatTitle } from "~/utils/htmlHeader";
 import Terms from "./terms.mdx";
 
@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => {
     { title: formatTitle(`利用規約`) },
     {
       name: "description",
-      content: `「${SITE_TITLE}」の利用規約`,
+      content: `「${SiteName}」の利用規約`,
     },
   ];
 };

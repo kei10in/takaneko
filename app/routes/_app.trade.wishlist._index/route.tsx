@@ -5,7 +5,7 @@ import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { useSearchParams } from "react-router";
 import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { DOMAIN, SITE_TITLE } from "~/constants";
+import { DOMAIN, OgpSiteName } from "~/constants";
 import {
   otherTakanekoRandomGoods,
   regularTakanekoMiniPhotoCards,
@@ -38,7 +38,7 @@ export const meta: Route.MetaFunction = ({ location }) => {
     { title: title },
     { name: "description", content: description },
 
-    { property: "og:site_name", content: SITE_TITLE },
+    { property: "og:site_name", content: OgpSiteName },
     { property: "og:title", content: title },
     { property: "og:description", content: description },
     { property: "og:image", content: image },
