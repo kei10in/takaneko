@@ -37,6 +37,14 @@ export const meta: EventMetaDescriptor = {
         end: "12:00",
         lastEntry: "11:40",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "7 会場 / 13 公演特典 2 ショットチェキ",
+        start: "12:00",
+        end: "",
+        lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
       },
       {
         title: "2 部 個別 2 ショット撮影会",
@@ -44,6 +52,14 @@ export const meta: EventMetaDescriptor = {
         end: "13:10",
         lastEntry: "12:50",
         lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "7 会場 / 13 公演特典 2 ショットチェキ",
+        start: "13:10",
+        end: "",
+        lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
       },
       {
         title: "3 部 個別 TikTok 撮影会",
@@ -51,6 +67,7 @@ export const meta: EventMetaDescriptor = {
         end: "14:20",
         lastEntry: "14:00",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
       },
       {
         title: "4 部 個別 TikTok 撮影会",
@@ -58,6 +75,41 @@ export const meta: EventMetaDescriptor = {
         end: "15:30",
         lastEntry: "15:10",
         lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
+      },
+      {
+        title: "6 会場特典 15 秒動画撮影",
+        start: "15:30",
+        end: "",
+        lanes: [
+          "橋本桃呼",
+          "星谷美来",
+          "東山恵里沙",
+          "日向端ひな",
+          "城月菜央",
+          "涼海すう",
+          "葉月紗蘭",
+          "松本ももな",
+          "籾山ひめり",
+        ],
+        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
+      },
+      {
+        title: "5 会場特典 ツアーグッズサイン入れ",
+        start: "15:45",
+        end: "",
+        lanes: [
+          "橋本桃呼",
+          "星谷美来",
+          "東山恵里沙",
+          "日向端ひな",
+          "城月菜央",
+          "涼海すう",
+          "葉月紗蘭",
+          "松本ももな",
+          "籾山ひめり",
+        ],
+        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
       },
       {
         title: "5 部 個別サイン会",
@@ -65,6 +117,7 @@ export const meta: EventMetaDescriptor = {
         end: "17:20",
         lastEntry: "17:00",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
+        costume: "Bouquet of 9 Flowers 衣装",
       },
       {
         title: "6 部 個別サイン会",
@@ -72,10 +125,11 @@ export const meta: EventMetaDescriptor = {
         end: "18:30",
         lastEntry: "18:10",
         lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
+        costume: "Bouquet of 9 Flowers 衣装",
       },
     ],
   },
-  updatedAt: "2026-04-15",
+  updatedAt: "2026-05-16",
 };
 
 export const content = /* md */ `
@@ -90,35 +144,42 @@ export const content = /* md */ `
   ⏰ **受付:** 10:55 〜 11:40<br/>
   🚀 **開始:** 1 部 受付終了後 〜<br/>
   📷 **特典:** 7 会場 / 13 公演特典 2 ショットチェキ<br/>
+  👗 **衣装:** Bouquet of 9 Flowers 衣装<br/>
   👤 橋本桃呼、星谷美来、東山恵里沙、日向端ひな、城月菜央
 
   ⏰ **受付:** 12:05 〜 12:50<br/>
   🚀 **開始:** 2 部 受付終了後 〜<br/>
   📷 **特典:** 7 会場 / 13 公演特典 2 ショットチェキ<br/>
+  👗 **衣装:** Bouquet of 9 Flowers 衣装<br/>
   👤 涼海すう、籾山ひめり、葉月紗蘭、松本ももな
 
   ⏰ **受付:** 15:10 〜 15:25<br/>
   🚀 **開始:** 4 部 終了後 〜<br/>
   📷 **特典:** 6 会場特典 15秒動画撮影<br/>
+  👗 **衣装:** T シャツ (Bouquet of 9 Flowers ver.)<br/>
   👤 橋本桃呼、星谷美来、東山恵里沙、日向端ひな、城月菜央
 
   ⏰ **受付:** 15:30 〜 15:45<br/>
   🚀 **開始:** 4 部 終了後 〜<br/>
   📷 **特典:** 6 会場特典 15秒動画撮影<br/>
+  👗 **衣装:** T シャツ (Bouquet of 9 Flowers ver.)<br/>
   👤 涼海すう、籾山ひめり、葉月紗蘭、松本ももな
 
   ⏰ **受付:** 15:45 〜 15:55<br/>
   🚀 **開始:** 15 秒動画撮影終了後 〜<br/>
   📷 **特典:** 5 会場特典 ツアーグッズサイン入れ<br/>
+  👗 **衣装:** T シャツ (Bouquet of 9 Flowers ver.)<br/>
   👤 橋本桃呼、星谷美来、東山恵里沙、日向端ひな、城月菜央
 
   ⏰ **受付:** 15:50 〜 16:00<br/>
   🚀 **開始:** 15 秒動画撮影終了後 〜<br/>
   📷 **特典:** 5 会場特典 ツアーグッズサイン入れ<br/>
+  👗 **衣装:** T シャツ (Bouquet of 9 Flowers ver.)<br/>
   👤 涼海すう、籾山ひめり、葉月紗蘭、松本ももな
 
   ## リンク
 
+  - [開催報告 (挨拶動画あり) - 公式 X](https://x.com/takanenofficial/status/2055611825555972381)
   - [Live Tour - Bouquet of 9 Flowers - スタンプラリー企画 特典引換 について - 公式ニュース](https://takanenonadeshiko.jp/?p=5271)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5180)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2044332398431916471)
