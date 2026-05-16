@@ -1,14 +1,14 @@
 import { Link, MetaFunction } from "react-router";
-import { SITE_TITLE } from "~/constants";
 import { pageBox, pageHeading } from "~/components/styles";
 import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { formatTitle } from "~/utils/htmlHeader";
 import { PublicationCard } from "./PublicationCard";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `${SITE_TITLE} - 高嶺のなでしこのファンサイト` },
+    { title: formatTitle("書籍・雑誌") },
     {
       name: "description",
       content:
