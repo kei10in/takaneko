@@ -3,7 +3,7 @@ import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
@@ -12,7 +12,7 @@ import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `グッズ - ${SITE_TITLE}` },
+    { title: formatTitle(`グッズ`) },
     {
       name: "description",
       content:

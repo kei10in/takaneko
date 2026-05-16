@@ -3,11 +3,11 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link, MetaFunction } from "react-router";
 import { pageColumnBox, pageHeading } from "~/components/styles";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `たかねこまねーじゃー プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`たかねこまねーじゃー プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのマネージャーのプロフィールです。",

@@ -2,12 +2,12 @@ import { FaInstagram } from "react-icons/fa6";
 import { Link, MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
 import { sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { MikuruHoshitani } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `星谷 美来 プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`星谷 美来 プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 星谷 美来 のプロフィールです。",

@@ -2,7 +2,7 @@ import { MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { Markdown } from "~/components/Markdown";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
 
@@ -11,7 +11,7 @@ export const meta: MetaFunction = ({ params }) => {
   const collection = findBirthdayGoods(slug);
 
   return [
-    { title: `${collection.name} - ${SITE_TITLE}` },
+    { title: formatTitle(`${collection.name}`) },
     {
       name: "description",
       content: "高嶺のなでしこのグッズの詳細を紹介します。",

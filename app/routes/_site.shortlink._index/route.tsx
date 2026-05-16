@@ -8,13 +8,13 @@ import {
 } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { shortlink, ShortLinkResult } from "~/utils/shortlink";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `短い URL を作るやつ - ${SITE_TITLE}` },
+    { title: formatTitle(`短い URL を作るやつ`) },
     {
       name: "description",
       content:

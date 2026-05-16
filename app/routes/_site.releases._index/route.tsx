@@ -1,11 +1,12 @@
 import { MetaFunction } from "react-router";
-import { Markdown } from "~/components/Markdown";
 import { SITE_TITLE } from "~/constants";
+import { Markdown } from "~/components/Markdown";
+import { formatTitle } from "~/utils/htmlHeader";
 import ReleaseNotes from "../../../RELEASES.md?raw";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `リリース ノート - ${SITE_TITLE}` },
+    { title: formatTitle(`リリース ノート`) },
     {
       name: "description",
       content: `「${SITE_TITLE}」のリリース ノートです。`,

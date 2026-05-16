@@ -2,12 +2,12 @@ import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { MemberProfile } from "~/components/MemberProfile";
 import { sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { HinaHinahata } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `日向端 ひな プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`日向端 ひな プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 日向端 ひな のプロフィールです。",

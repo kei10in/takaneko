@@ -1,11 +1,11 @@
 import { MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { HimeriMomiyama } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `籾山 ひめり プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`籾山 ひめり プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 籾山 ひめり のプロフィールです。",

@@ -2,14 +2,14 @@ import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { formatDataSize } from "~/utils/dataSize";
 import type { Route } from "./+types/route";
 import { DatasetMeta } from "./types";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `データ セット - ${SITE_TITLE}` },
+    { title: formatTitle(`データ セット`) },
     {
       name: "description",
       content:

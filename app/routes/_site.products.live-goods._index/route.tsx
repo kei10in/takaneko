@@ -2,13 +2,13 @@ import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `ライブ・イベント グッズ - ${SITE_TITLE}` },
+    { title: formatTitle(`ライブ・イベント グッズ`) },
     {
       name: "description",
       content:

@@ -1,7 +1,7 @@
 import { Link, MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { LiveGoodsCollection } from "~/features/products/product";
 
@@ -10,7 +10,7 @@ export const meta: MetaFunction = ({ params }) => {
   const live = findLive(slug);
 
   return [
-    { title: `${live.name} ライブグッズ - ${SITE_TITLE}` },
+    { title: formatTitle(`${live.name} ライブグッズ`) },
     {
       name: "description",
       content: "高嶺のなでしこのグッズの詳細を紹介します。",

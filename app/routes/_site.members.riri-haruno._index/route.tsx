@@ -1,11 +1,11 @@
 import { MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { RiriHaruno } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `春野 莉々 プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`春野 莉々 プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 春野 莉々 のプロフィールです。",

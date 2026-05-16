@@ -1,6 +1,6 @@
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
 import { SITE_TITLE } from "~/constants";
+import { pageBox, pageHeading } from "~/components/styles";
 import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { thumbnailSrcSet } from "~/utils/fileConventions";

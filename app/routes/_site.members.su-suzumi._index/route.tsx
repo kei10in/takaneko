@@ -1,11 +1,11 @@
 import { MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { SuSuzumi } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `涼海 すう プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`涼海 すう プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 涼海 すう のプロフィールです。",

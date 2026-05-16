@@ -1,7 +1,7 @@
 import { BsExclamationTriangleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { AllMvCostumes } from "~/features/costumes/costumesMv";
 import { AllSpecialCostumes } from "~/features/costumes/costumesSpecial";
 import { AllStageCostumes } from "~/features/costumes/costumesStage";
@@ -11,7 +11,7 @@ import { CostumeCard } from "./CostumeCard";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `衣装 - ${SITE_TITLE}` },
+    { title: formatTitle(`衣装`) },
     {
       name: "description",
       content: "高嶺のなでしこの衣装一覧",

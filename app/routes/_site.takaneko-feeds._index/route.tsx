@@ -1,12 +1,12 @@
 import { MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
 import { pageBox, pageHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `RSS フィード - ${SITE_TITLE}` },
+    { title: formatTitle(`RSS フィード`) },
     {
       name: "description",
       content: "高嶺のなでしこに関する RSS フィードを集めました。",

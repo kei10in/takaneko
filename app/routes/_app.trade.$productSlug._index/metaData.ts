@@ -1,13 +1,13 @@
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { RandomGoods } from "../../features/products/product";
 import { flattenLineup } from "../../features/products/utils";
 
 export const titleForTradeImagesTool = (product: RandomGoods | undefined) => {
   if (product === undefined) {
-    return `トレード画像をつくるやつ - ${SITE_TITLE}`;
+    return formatTitle(`トレード画像をつくるやつ`);
   }
 
-  return `${product.name} のトレード画像をつくるやつ - ${SITE_TITLE}`;
+  return formatTitle(`${product.name} のトレード画像をつくるやつ`);
 };
 
 export const descriptionForTradeImagesTool = (product: RandomGoods | undefined) => {

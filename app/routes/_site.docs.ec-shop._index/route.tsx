@@ -2,12 +2,12 @@ import { MetaFunction } from "react-router";
 import { Markdown } from "~/components/Markdown";
 import { markdownComponents2 } from "~/components/MdComponents2";
 import { pageBox } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import article from "./article.md?raw";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `高嶺のなでしこオフィシャルショップでログインできない場合の対処方法 - ${SITE_TITLE}` },
+    { title: formatTitle(`高嶺のなでしこオフィシャルショップでログインできない場合の対処方法`) },
     {
       name: "description",
       content:

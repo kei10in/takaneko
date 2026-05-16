@@ -1,11 +1,11 @@
 import { MetaFunction } from "react-router";
 import { Mdx } from "~/components/Mdx";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import Memo from "./memo.mdx";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `メモ - ${SITE_TITLE} - 高嶺のなでしこのファンサイト` },
+    { title: formatTitle("メモ") },
     {
       name: "description",
       content: "メモです",

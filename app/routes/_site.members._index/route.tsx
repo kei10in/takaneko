@@ -3,12 +3,12 @@ import { FaTiktok } from "react-icons/fa6";
 import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { AllMembers } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこ メンバー一覧",

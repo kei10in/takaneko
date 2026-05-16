@@ -1,12 +1,12 @@
 import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { MINI_PHOTO_CARDS } from "~/features/products/photos";
 import { ProductCard } from "../../components/ProductCard";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `ミニフォトカード - ${SITE_TITLE}` },
+    { title: formatTitle(`ミニフォトカード`) },
     {
       name: "description",
       content:

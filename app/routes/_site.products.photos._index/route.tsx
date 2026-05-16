@@ -1,12 +1,12 @@
 import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { PHOTOS } from "~/features/products/photos";
 import { ProductCard } from "../../components/ProductCard";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `生写真 - ${SITE_TITLE}` },
+    { title: formatTitle(`生写真`) },
     {
       name: "description",
       content:

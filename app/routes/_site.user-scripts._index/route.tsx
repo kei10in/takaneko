@@ -2,11 +2,11 @@ import { BsDownload, BsExclamationTriangleFill, BsFiletypeJs } from "react-icons
 import { Link, MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `ユーザー スクリプト - ${SITE_TITLE}` },
+    { title: formatTitle(`ユーザー スクリプト`) },
     {
       name: "description",
       content:

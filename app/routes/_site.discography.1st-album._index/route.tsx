@@ -2,11 +2,11 @@ import { useMemo } from "react";
 import { Link, MetaFunction } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { ECSites } from "./content";
 
 export const meta: MetaFunction = () => {
-  const title = `1st アルバム「見上げるたびに、恋をする。」特典まとめ - ${SITE_TITLE}`;
+  const title = formatTitle("1st アルバム「見上げるたびに、恋をする。」特典まとめ");
   const description =
     "2025年12月17日発売予定の高嶺のなでしこ (たかねこ) 1st アルバム「見上げるたびに、恋をする。」の特典情報をまとめました。";
 

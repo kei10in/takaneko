@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
@@ -11,7 +11,7 @@ import { thumbnailSrcSet } from "~/utils/fileConventions";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `誕生日記念グッズ - ${SITE_TITLE}` },
+    { title: formatTitle(`誕生日記念グッズ`) },
     {
       name: "description",
       content:

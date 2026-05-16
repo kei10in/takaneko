@@ -1,12 +1,12 @@
 import { Link, MetaFunction } from "react-router";
 import { MemberProfile } from "~/components/MemberProfile";
 import { sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { NaoKizuki } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `城月 菜央 プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`城月 菜央 プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 城月 菜央 のプロフィールです。",

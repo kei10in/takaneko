@@ -5,13 +5,13 @@ import { Link, MetaFunction, Outlet } from "react-router";
 import { SecondaryTopbar } from "~/components/SecondaryTopbar";
 import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { MenuContents } from "./MenuContents";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `トレード画像つくるやつ - ${SITE_TITLE}` },
+    { title: formatTitle(`トレード画像つくるやつ`) },
     {
       name: "description",
       content: "生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。",

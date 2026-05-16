@@ -2,12 +2,12 @@ import { MetaFunction } from "react-router";
 import { LinkCard } from "~/components/link-card/LinkCard";
 import { MemberProfile } from "~/components/MemberProfile";
 import { sectionHeading } from "~/components/styles";
-import { SITE_TITLE } from "~/constants";
+import { formatTitle } from "~/utils/htmlHeader";
 import { MomonaMatsumoto } from "../../features/profile/members";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: `松本 ももな プロフィール - ${SITE_TITLE}` },
+    { title: formatTitle(`松本 ももな プロフィール`) },
     {
       name: "description",
       content: "高嶺のなでしこのメンバー 松本 ももな のプロフィールです。",
