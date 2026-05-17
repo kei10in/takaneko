@@ -1,5 +1,5 @@
 import { MetaDescriptor } from "react-router";
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { displayDate } from "~/utils/dateDisplay";
 import { EventMeta } from "./eventMeta";
 
@@ -22,7 +22,7 @@ export const twitterCard = (args: EventMeta): MetaDescriptor[] => {
       },
       {
         name: "twitter:image",
-        content: `https://${DOMAIN}/takanekono-card-schedule.png`,
+        content: `https://${DomainName}/takanekono-card-schedule.png`,
       },
     ],
   );

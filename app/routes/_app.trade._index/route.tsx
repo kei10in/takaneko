@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles";
-import { DOMAIN, OgpSiteName } from "~/constants";
+import { DomainName, OgpSiteName } from "~/constants";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -21,8 +21,8 @@ export const meta: Route.MetaFunction = ({ location }) => {
   const title = formatTitle("トレード画像つくるやつ");
   const description =
     "高嶺のなでしこ (たかねこ) の生写真やミニフォトカードのトレード用画像を作れるウェブアプリケーションです。";
-  const image = `https://${DOMAIN}/takanekono-card-trading-image-generator.png`;
-  const url = `https://${DOMAIN}${location.pathname}`;
+  const image = `https://${DomainName}/takanekono-card-trading-image-generator.png`;
+  const url = `https://${DomainName}${location.pathname}`;
 
   return [
     { title: title },

@@ -1,4 +1,4 @@
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { EventModule } from "~/features/events/eventModule";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
@@ -19,10 +19,7 @@ interface SitemapPath {
   lastmod?: string;
 }
 
-export const allPages = async (
-  today: NaiveDate,
-  events: EventModule[],
-): Promise<SitemapUrl[]> => {
+export const allPages = async (today: NaiveDate, events: EventModule[]): Promise<SitemapUrl[]> => {
   const dateRange = [new NaiveDate(2022, 8, 1), new NaiveDate(today.year, today.month + 6, 1)];
   const monthRange = [new NaiveMonth(2022, 8), new NaiveMonth(today.year, today.month + 6)];
 
@@ -34,7 +31,7 @@ export const allPages = async (
     ...buildEventPages(events),
     ...buildTradeImagePages(),
     ...buildProductPages(),
-  ].map((page) => ({ ...page, url: encodeURI(`https://${DOMAIN}${page.path}`) }));
+  ].map((page) => ({ ...page, url: encodeURI(`https://${DomainName}${page.path}`) }));
 
   return pages;
 };

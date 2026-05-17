@@ -7,7 +7,7 @@ import {
   useLocation,
   useNavigate,
 } from "react-router";
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { validateYearMonth } from "~/features/calendars/utils";
@@ -35,7 +35,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "twitter:site", content: "@takanekofan" },
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
-    { name: "twitter:image", content: `https://${DOMAIN}/takanekono-card-schedule.png` },
+    { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
   ];
 };
 

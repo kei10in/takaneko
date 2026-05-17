@@ -5,7 +5,7 @@ import { BsCardChecklist, BsCheck, BsChevronDown } from "react-icons/bs";
 import { useSearchParams } from "react-router";
 import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { DOMAIN, OgpSiteName } from "~/constants";
+import { DomainName, OgpSiteName } from "~/constants";
 import {
   otherTakanekoRandomGoods,
   regularTakanekoMiniPhotoCards,
@@ -31,8 +31,8 @@ export const meta: Route.MetaFunction = ({ location }) => {
   const title = formatTitle("欲しいやつ");
   const description =
     "高嶺のなでしこ (たかねこ) の生写真やミニフォトカードなどのトレード用画像を作ったついでに欲しいやつをリストアップできます。";
-  const image = `https://${DOMAIN}/takanekono-card-trading-image-generator.png`;
-  const url = `https://${DOMAIN}${location.pathname}`;
+  const image = `https://${DomainName}/takanekono-card-trading-image-generator.png`;
+  const url = `https://${DomainName}${location.pathname}`;
 
   return [
     { title: title },

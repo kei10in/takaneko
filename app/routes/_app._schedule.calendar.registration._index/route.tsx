@@ -2,7 +2,7 @@ import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
 import { formatTitle } from "~/utils/htmlHeader";
 
@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const domain = DOMAIN;
+  const domain = DomainName;
   const cals = [
     {
       name: "すべてのたかねこの予定",

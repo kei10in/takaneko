@@ -4,7 +4,7 @@ import {
   MetaFunction,
   useLoaderData,
 } from "react-router";
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
 import { validateYearMonthDate } from "~/features/calendars/utils";
@@ -32,7 +32,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "twitter:site", content: "@takanekofan" },
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
-    { name: "twitter:image", content: `https://${DOMAIN}/takanekono-card-schedule.png` },
+    { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
   ];
 };
 

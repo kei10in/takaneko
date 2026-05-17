@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { BsBroadcastPin, BsStopwatch } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { DOMAIN, OgpSiteName } from "~/constants";
+import { DomainName, OgpSiteName } from "~/constants";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -12,7 +12,7 @@ export const meta: MetaFunction = () => {
   const title = formatTitle("「この夏、好きになっちゃえばいいのに。」ラジオ出演");
   const description =
     "高嶺のなでしこ (たかねこ) が 7/10, 7/11 に出演する「この夏、好きになっちゃえばいいのに。」に関するラジオ番組をまとめたページです。出演時間や radiko へのリンクをまとめています。";
-  const url = `https://${DOMAIN}/`;
+  const url = `https://${DomainName}/`;
 
   return [
     { title },

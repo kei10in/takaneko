@@ -4,7 +4,7 @@ import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { sectionHeading } from "~/components/styles";
-import { DOMAIN, OgpSiteName, SiteName, SiteTitle } from "~/constants";
+import { DomainName, OgpSiteName, SiteName, SiteTitle } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
 import { dateHref } from "~/features/calendars/utils";
@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
   const title = SiteTitle;
   const description =
     "HoneyWorksサウンドプロデュースの10人組アイドルグループ 高嶺のなでしこ (たかねこ) の非公式ファンサイト。トレード画像をつくるやつでは、生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成可能。スケジュールでは、ライブやイベント、テレビ出演などのスケジュールが確認可能。";
-  const url = `https://${DOMAIN}/`;
+  const url = `https://${DomainName}/`;
 
   return [
     { title },
@@ -48,7 +48,7 @@ export const meta: MetaFunction = () => {
     {
       tagName: "link",
       rel: "canonical",
-      href: `https://${DOMAIN}`,
+      href: `https://${DomainName}`,
     },
   ];
 };

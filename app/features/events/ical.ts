@@ -1,5 +1,5 @@
 import { createEvent, EventAttributes } from "ics";
-import { DOMAIN } from "~/constants";
+import { DomainName } from "~/constants";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { EventMeta } from "./eventMeta";
 
@@ -73,7 +73,7 @@ const icsEventId = async (id: string): Promise<string> => {
   const [dateString, idBody] = id.split("_");
   const hash = (await sha1Hash(idBody)).slice(0, 8);
 
-  return `${dateString}_${hash}@${DOMAIN}`;
+  return `${dateString}_${hash}@${DomainName}`;
 };
 
 const sha1Hash = async (s: string): Promise<string> => {

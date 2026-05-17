@@ -1,6 +1,6 @@
 import { ClientLoaderFunctionArgs, LoaderFunctionArgs, useLoaderData } from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
-import { DOMAIN, OgpSiteName } from "~/constants";
+import { DomainName, OgpSiteName } from "~/constants";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { relativeProductImages } from "~/features/products/relativeProductImages";
 import { useTradeStore } from "~/features/trade/store";
@@ -11,8 +11,8 @@ import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaDa
 export const meta: Route.MetaFunction = ({ data, location }) => {
   const title = titleForTradeImagesTool(data);
   const description = descriptionForTradeImagesTool(data);
-  const image = `https://${DOMAIN}/takanekono-card-trading-image-generator.png`;
-  const url = `https://${DOMAIN}${location.pathname}`;
+  const image = `https://${DomainName}/takanekono-card-trading-image-generator.png`;
+  const url = `https://${DomainName}${location.pathname}`;
 
   return [
     { title },
