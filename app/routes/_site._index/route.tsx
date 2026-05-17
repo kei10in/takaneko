@@ -90,65 +90,70 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <div className="lg:bg-nadeshiko-100">
-        <div className="mx-auto lg:container">
-          <div className="flex min-h-[calc(100svh-var(--header-height))] w-full flex-col lg:min-h-auto lg:flex-row-reverse">
-            <div className="aspect-4/3 w-full min-w-96 lg:min-h-0 lg:w-auto lg:min-w-0 lg:flex-1">
-              <img
-                className={clsx("aspect-4/3 w-full min-w-96 lg:w-auto lg:min-w-0 lg:flex-1")}
-                src="/takaneko/hero.jpg"
-                alt="ヒーロー画像"
-              />
-            </div>
+      <div className="relative h-[calc(100lvh-var(--header-height))] w-screen overflow-hidden">
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+          <img
+            className={clsx(
+              "h-full w-full object-cover",
+              "mask-[linear-gradient(to_bottom,black_0%,black_90%,transparent_100%)]",
+            )}
+            src="/takaneko/hero.jpg"
+            alt="サイトイメージ"
+          />
+        </div>
 
-            <div className="flex w-full flex-1 items-center lg:w-auto lg:flex-none">
-              <div className={clsx("w-full space-y-6 pt-6 pb-10 lg:space-y-8 lg:pb-24 2xl:px-8")}>
-                <div
-                  className={clsx(
-                    "relative",
-                    "before:absolute before:inset-x-0 before:bottom-0 before:mx-auto before:bg-[url(/icon.svg)] before:bg-cover before:bg-no-repeat",
-                    "before:opacity-30",
-                    "before:size-6 before:-translate-x-24.5 before:translate-y-1",
-                    "xl:before:size-9 xl:before:-translate-x-40 xl:before:translate-y-2",
-                  )}
-                >
-                  <h1
-                    className={clsx(
-                      "relative flex flex-col px-8 text-center font-serif text-zinc-600 xl:gap-1",
-                    )}
-                  >
-                    <span className="text-lg xl:text-2xl">高嶺のなでしこの非公式ファンサイト</span>
-                    <span className="line-clamp-1 text-4xl text-nadeshiko-800 xl:text-6xl">
-                      {SiteName}
-                    </span>
-                  </h1>
+        {/* <div className="absolute inset-0 backdrop-blur-[4px]"></div> */}
+
+        <div className="absolute inset-0 bg-linear-to-b from-black/24 via-black/6 to-transparent"></div>
+
+        <div className="relative flex h-full w-full flex-col">
+          <div className="relative flex flex-6 flex-col justify-center">
+            <h1
+              className={clsx(
+                "mx-auto flex w-fit flex-col justify-center gap-2 text-center font-serif",
+              )}
+            >
+              <span className="text-lg font-thin text-white text-shadow-[0_0_0.25rem] text-shadow-black/22">
+                高嶺のなでしこの非公式ファンサイト
+              </span>
+              <span
+                className={clsx(
+                  "line-clamp-1 text-4xl font-thin text-white text-shadow-[0_0_0.25rem] text-shadow-black/30",
+                  "xl:text-5xl",
+                )}
+              >
+                {SiteName}
+              </span>
+            </h1>
+          </div>
+          <div className="flex flex-6 flex-col">
+            <div className="mx-auto flex w-64 flex-1 flex-col items-center justify-end gap-2 px-4 pb-48 text-sm font-semibold select-none">
+              <Link
+                className={clsx(
+                  "flex h-11 w-full items-center rounded-full px-6 text-white",
+                  "border border-white/65 bg-white/30 backdrop-blur-[0.125rem]",
+                  "shadow-[var(--glass-shadow),var(--glass-inset-shadow)]",
+                )}
+                to="/calendar"
+              >
+                <div className="mx-auto flex items-center gap-1">
+                  <BsCalendar className="h-4 w-4 drop-shadow-(--glass-text-shadow)" />
+                  <div className="text-shadow-(--glass-text-shadow)">スケジュール</div>
                 </div>
-
-                <p className="px-8 text-center font-serif text-lg text-zinc-600 xl:text-xl">
-                  たかねこのファンを技術で支援する。
-                </p>
-
-                <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 px-4 text-sm font-semibold select-none">
-                  <Link
-                    className="flex h-9 w-full items-center rounded-full bg-nadeshiko-800 px-4 text-nadeshiko-100"
-                    to="/calendar"
-                  >
-                    <div className="mx-auto flex items-center gap-1">
-                      <BsCalendar className="h-4 w-4" />
-                      <div>スケジュール</div>
-                    </div>
-                  </Link>
-                  <Link
-                    className="flex h-9 w-full items-center rounded-full bg-nadeshiko-800 px-4 text-nadeshiko-100"
-                    to="/trade"
-                  >
-                    <div className="mx-auto flex items-center gap-1">
-                      <BsArrowLeftRight className="h-4 w-4" />
-                      <div>トレード画像つくるやつ</div>
-                    </div>
-                  </Link>
+              </Link>
+              <Link
+                className={clsx(
+                  "flex h-11 w-full items-center rounded-full px-6 text-white",
+                  "border border-white/65 bg-white/30 backdrop-blur-[0.125rem]",
+                  "shadow-[var(--glass-shadow),var(--glass-inset-shadow)]",
+                )}
+                to="/trade"
+              >
+                <div className="mx-auto flex items-center gap-1">
+                  <BsArrowLeftRight className="h-4 w-4 drop-shadow-(--glass-text-shadow)" />
+                  <div className="text-shadow-(--glass-text-shadow)">トレード画像つくるやつ</div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
