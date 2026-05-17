@@ -107,7 +107,7 @@ export default function Index() {
         <div className="absolute inset-0 bg-linear-to-b from-black/24 via-black/6 to-transparent"></div>
 
         <div className="relative flex h-full w-full flex-col">
-          <div className="relative flex flex-6 flex-col justify-center">
+          <div className="relative flex flex-4 flex-col justify-center">
             <h1
               className={clsx(
                 "mx-auto flex w-fit flex-col justify-center gap-2 text-center font-serif",
@@ -127,10 +127,10 @@ export default function Index() {
             </h1>
           </div>
           <div className="flex flex-6 flex-col">
-            <div className="mx-auto flex w-64 flex-1 flex-col items-center justify-end gap-2 px-4 pb-48 text-sm font-semibold select-none">
+            <div className="mx-auto flex w-64 flex-1 flex-col items-center justify-center gap-4 px-4 text-sm font-semibold select-none">
               <Link
                 className={clsx(
-                  "flex h-11 w-full items-center rounded-full px-6 text-white",
+                  "flex h-11 w-full items-center rounded-full px-6 text-white transition-transform hover:scale-105",
                   "border border-white/65 bg-white/30 backdrop-blur-[0.125rem]",
                   "shadow-[var(--glass-shadow),var(--glass-inset-shadow)]",
                 )}
@@ -143,7 +143,7 @@ export default function Index() {
               </Link>
               <Link
                 className={clsx(
-                  "flex h-11 w-full items-center rounded-full px-6 text-white",
+                  "flex h-11 w-full items-center rounded-full px-6 text-white transition-transform hover:scale-105",
                   "border border-white/65 bg-white/30 backdrop-blur-[0.125rem]",
                   "shadow-[var(--glass-shadow),var(--glass-inset-shadow)]",
                 )}
