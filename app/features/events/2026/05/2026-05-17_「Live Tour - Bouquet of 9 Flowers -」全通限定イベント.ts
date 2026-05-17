@@ -17,7 +17,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/1998706785805627819",
     },
     {
-      path: "/events/2026/2026-05-17_「Live Tour - Bouquet of 9 Flowers -」全通限定イベント_限定たかねこくじ.jpg",
+      path: "/events/2026/2026-05-17_「Live Tour - Bouquet of 9 Flowers -」全通限定イベント_限定たかねこくじ.jpg",
       ref: "https://x.com/takanenofficial/status/2054864296505704721",
     },
   ],
