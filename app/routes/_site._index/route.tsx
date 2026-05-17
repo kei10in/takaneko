@@ -90,23 +90,27 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <div className="relative h-lvh w-screen overflow-hidden">
+      {/*
+       * Aspect 比が 3/4 以上になったら、縦方向を伸ばしています。
+       * 画像か部分をフェードさせるために、フェード用の高さを確保するためです。
+       */}
+      <div className="relative h-lvh w-screen overflow-hidden [@media_(min-aspect-ratio:3/4)]:h-[116lvh]">
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
           <img
             className={clsx(
               "h-full w-full object-cover",
               "mask-[linear-gradient(to_bottom,black_0%,black_94%,transparent_100%)]",
+              "[@media_(min-aspect-ratio:3/4)]:mask-[linear-gradient(to_bottom,black_0%,black_80%,transparent_100%)]",
             )}
             src="/takaneko/hero.jpg"
             alt="サイトイメージ"
           />
         </div>
 
-        {/* <div className="absolute inset-0 backdrop-blur-[4px]"></div> */}
-
         <div className="absolute inset-0 bg-linear-to-b from-black/24 via-black/6 to-transparent"></div>
 
-        <div className="relative flex h-full w-full flex-col">
+        {/* フェード用の領域に染み出さないように max-h-lvh を指定しています。 */}
+        <div className="relative flex h-full max-h-lvh w-full flex-col">
           <div className="relative flex flex-4 flex-col justify-center">
             <h1
               className={clsx(
