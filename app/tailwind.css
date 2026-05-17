@@ -84,6 +84,15 @@
       }
     }
   }
+
+  .lp-section-heading {
+    @apply text-3xl text-gray-900;
+  }
+
+  .graceful-link {
+    @apply w-fit rounded-full px-8 py-2 font-semibold text-nadeshiko-50;
+    @apply bg-linear-50 from-nadeshiko-800/60 from-0% via-nadeshiko-800 via-40% to-nadeshiko-800/30 to-100%;
+  }
 }
 
 @layer utilities {

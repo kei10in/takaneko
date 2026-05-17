@@ -1,9 +1,8 @@
 import { clsx } from "clsx";
-import { BsArrowLeftRight, BsBoxArrowUpRight, BsCalendar, BsChevronRight } from "react-icons/bs";
+import { BsArrowLeftRight, BsCalendar, BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { sectionHeading } from "~/components/styles";
 import { DomainName, OgpSiteName, SiteName, SiteTitle } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
@@ -154,30 +153,10 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto mt-12 lg:mt-24 lg:max-w-5xl">
-        <section className="mx-auto w-full max-w-md space-y-16 pb-12 lg:max-w-3xl">
-          <section className="space-y-4">
-            <h2 className={sectionHeading("flex items-center gap-2 px-4")}>
-              <BsCalendar className="inline-block text-gray-400" />
-              <span>スケジュール</span>
-            </h2>
-
-            <p className="px-4">
-              ライブやイベント、テレビ出演などのスケジュールを確認することができます。スケジュールは必ず
-              <a href="https://takanenonadeshiko.jp/schedule/">
-                公式のスケジュール
-                <BsBoxArrowUpRight className="mx-1 inline-block text-gray-500" />
-              </a>
-              や X での告知を確認してください。
-            </p>
-
-            <Link
-              className="mt-2! ml-auto block w-fit px-4 text-sm text-nadeshiko-800"
-              to="/calendar"
-            >
-              <span>すべてのスケジュール</span>
-              <BsChevronRight className="ml-1 inline-block" />
-            </Link>
+      <div className="container mx-auto my-24 lg:max-w-5xl">
+        <section className="mx-auto w-full max-w-md space-y-24 lg:max-w-3xl">
+          <section className="space-y-6">
+            <h2 className="lp-section-heading mx-4">スケジュール</h2>
 
             <Swiper
               className={clsx(
@@ -218,14 +197,17 @@ export default function Index() {
                 );
               })}
             </Swiper>
+
+            <div className="w-full">
+              <Link className="graceful-link mx-auto block" to="/calendar">
+                すべてのスケジュール
+              </Link>
+            </div>
           </section>
 
-          <section className="space-y-4 px-4">
-            <h2 className={sectionHeading("flex items-center gap-2")}>
-              <BsArrowLeftRight className="inline-block text-gray-400" />
-              <span>トレード画像つくるやつ</span>
-            </h2>
-            <p>
+          <section className="space-y-6 px-4">
+            <h2 className="lp-section-heading">トレード画像つくるやつ</h2>
+            <p className="text-gray-500">
               これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
             </p>
             <div className="items-bottom flex justify-between">
@@ -239,10 +221,7 @@ export default function Index() {
             <RandomGoodsList items={recentProducts} />
 
             <div className="w-full">
-              <Link
-                className="mx-auto block w-fit rounded-full bg-nadeshiko-800 px-8 py-2 font-semibold text-nadeshiko-50"
-                to="/trade"
-              >
+              <Link className="graceful-link mx-auto block" to="/trade">
                 すべてのグッズ
               </Link>
             </div>
