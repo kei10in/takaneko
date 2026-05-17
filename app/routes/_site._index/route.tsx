@@ -141,7 +141,7 @@ export default function Index() {
                 to="/calendar"
               >
                 <div className="mx-auto flex items-center gap-1">
-                  <BsCalendar className="h-4 w-4 drop-shadow-(--glass-text-shadow)" />
+                  <BsCalendar className="h-4 w-4 overflow-visible filter-(--glass-drop-shadow)" />
                   <div className="text-shadow-(--glass-text-shadow)">スケジュール</div>
                 </div>
               </Link>
@@ -154,7 +154,7 @@ export default function Index() {
                 to="/trade"
               >
                 <div className="mx-auto flex items-center gap-1">
-                  <BsArrowLeftRight className="h-4 w-4 drop-shadow-(--glass-text-shadow)" />
+                  <BsArrowLeftRight className="h-4 w-4 overflow-visible filter-(--glass-drop-shadow)" />
                   <div className="text-shadow-(--glass-text-shadow)">トレード画像つくるやつ</div>
                 </div>
               </Link>
