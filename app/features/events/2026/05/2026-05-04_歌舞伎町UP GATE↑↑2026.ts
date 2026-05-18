@@ -79,6 +79,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [ライブレポート - BEEEEM ニュース](https://beeeem.com/article/takaneko-kabuki-upgate)
+  - [ライブレポート告知 - BEEEEM ニュース X](https://x.com/BEEEEM_NEWS/status/2054864297604661745)
   - [出演者紹介 - 歌舞伎町UP GATE↑↑ X](https://x.com/kabuki_upgate/status/2051263068596801826)
   - [出演報告 Zepp Shinjuku (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2051299273627816373)
   - [出演報告 歌舞伎町タワーステージ (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2051226276514717940)
