@@ -32,11 +32,12 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-17",
+  updatedAt: "2026-05-18",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演者コメント動画 - SMILE PLUS 2026 X](https://x.com/sfp_smileplus/status/2056253500607361336)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2033855865761984664)
 `;
