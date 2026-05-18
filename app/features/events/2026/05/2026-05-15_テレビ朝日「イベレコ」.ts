@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://www.tv-asahi.co.jp/pr/sphone/20260515_12065.html",
   },
-  updatedAt: "2026-05-12",
+  updatedAt: "2026-05-18",
 };
 
 export const content = /* md */ `
@@ -54,6 +54,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [前日告知 - イベレコ X](https://x.com/tvasahi_event/status/2054849200894910771)
   - [告知 (告知動画あり) - イベレコ X](https://x.com/tvasahi_event/status/2053671436796281000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2054124422244569289)
 `;
