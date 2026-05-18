@@ -28,7 +28,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
             return null;
           }
 
-          const { title, open, start, end, description, setlist, links, meetAndGreet } = act;
+          const { title, open, start, end, description, setlist, note, links, meetAndGreet } = act;
 
           const startTitle =
             open && start && end
@@ -70,6 +70,8 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
                 {description && <Markdown>{description}</Markdown>}
 
                 {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
+
+                {note && <Markdown>{note}</Markdown>}
 
                 {meetAndGreet && (
                   <div className="space-y-1.5">

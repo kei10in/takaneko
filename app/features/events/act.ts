@@ -2,9 +2,9 @@ import { z } from "zod/v4";
 
 import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { MemberIdEnum } from "../profile/types";
 import { parseSetlist } from "./setlist";
 import { MeetAngGreetLanesList } from "./timeSchedule";
-import { MemberIdEnum } from "../profile/types";
 
 export const Act = z
   .object({
@@ -26,6 +26,15 @@ export const Act = z
       .transform((x) => parseSetlist(x))
       .optional()
       .default([]),
+
+    /**
+     * セットリストの後に表示される、備考欄の内容を表すフィールドです。
+     * Markdown 形式で記述できます。
+     */
+    note: z
+      .string()
+      .transform((v) => dedent(v))
+      .optional(),
 
     // グループ握手会向けのフィールドです。
     meetAndGreet: z.object({ costume: z.string(), lanes: MeetAngGreetLanesList }).optional(),
