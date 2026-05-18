@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "「Live Tour - Bouquet of 9 Flowers -」全通限定イベント",
   category: "EVENT",
-  liveType: undefined,
+  liveType: "SOLO",
   date: "2026-05-17",
   open: "16:30",
   start: "17:00",
@@ -34,11 +34,42 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
-      setlist: [],
-      url: "",
+      setlist: [
+        "影ナレ: 涼海すう、葉月紗蘭",
+        "Overture",
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "花は誓いを忘れない",
+        "初恋のこたえ。",
+        "女の子は強い",
+        "MC",
+        "生きてりゃいい", // 撮影可能
+        "企画: ツアーで絆を深めたのはどっち 全通愛★決定戦",
+        "企画: 全員ジェスチャーゲーム",
+        "企画: ガチ恋口上ゲーム (恋を知った世界 / 初恋のひと。)",
+        "企画: ラストワンチャレンジ",
+        "私は、わたしの事が好き。",
+        "小悪魔だってかまわない！",
+        "月曜日の憂鬱",
+        "MC",
+        "I’M YOUR IDOL",
+        "誇り高きアイドル",
+        "美しく生きろ",
+        "MC: メンバー撮影、挨拶客降り",
+        "アンコール",
+        "月曜日の憂鬱",
+        "MC",
+      ],
+      links: ["https://x.com/_MARIC/status/2055971324389105718"],
+    },
+    {
+      title: "撮影会 & お見送り",
+      meetAndGreet: {
+        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
+        lanes: [],
+      },
     },
   ],
-  updatedAt: "2026-05-15",
+  updatedAt: "2026-05-18",
 };
 
 export const content = /* md */ `
@@ -48,7 +79,12 @@ export const content = /* md */ `
   📷 **特典:** 5 会場特典 ツアーグッズサイン入れ<br/>
 
   🚀 **開始:** 限定イベント終演後<br/>
-  📷 **特典:** 6 会場特典 15秒動画撮影、7 会場 / 13 公演特典 2 ショットチェキ <br/>
+  📷 **特典:** 6 会場特典 15秒動画撮影<br/>
+  👗 **衣装:** T シャツ (Bouquet of 9 Flowers ver.)
+
+  🚀 **開始:** 限定イベント終演後<br/>
+  📷 **特典:** 7 会場 / 13 公演特典 2 ショットチェキ <br/>
+  👗 **衣装:** Bouquet of 9 Flowers 衣装
 
   ## リンク
 
