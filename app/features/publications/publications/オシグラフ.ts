@@ -44,6 +44,10 @@ export const オシグラフVol3: Publication = {
       ref: "https://x.com/oshigraph/status/2054501910707847508",
     },
     {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_橋本桃呼6.jpg",
+      ref: "https://x.com/oshigraph/status/2054849205513117828",
+    },
+    {
       path: "/publications/2026/2026-05-15_オシグラフ Vol.3_橋本桃呼抽選チェキ.webp",
       ref: "https://x.com/takanenofficial/status/2044362599161049276",
     },
@@ -70,6 +74,10 @@ export const オシグラフVol3: Publication = {
     {
       path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな5.jpg",
       ref: "https://x.com/oshigraph/status/2054501919423348891",
+    },
+    {
+      path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな6.jpg",
+      ref: "https://x.com/oshigraph/status/2054849210818695626",
     },
     {
       path: "/publications/2026/2026-05-15_オシグラフ Vol.3_松本ももな抽選チェキ.webp",
