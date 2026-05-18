@@ -44,7 +44,7 @@ export const meta: EventMetaDescriptor = {
         start: "12:00",
         end: "",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
-        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
+        costume: "Bouquet of 9 Flowers 衣装",
       },
       {
         title: "2 部 個別 2 ショット撮影会",
@@ -59,7 +59,7 @@ export const meta: EventMetaDescriptor = {
         start: "13:10",
         end: "",
         lanes: ["涼海すう", "葉月紗蘭", "松本ももな", "籾山ひめり"],
-        costume: "T シャツ (Bouquet of 9 Flowers ver.)",
+        costume: "Bouquet of 9 Flowers 衣装",
       },
       {
         title: "3 部 個別 TikTok 撮影会",
@@ -129,7 +129,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-05-16",
+  updatedAt: "2026-05-17",
 };
 
 export const content = /* md */ `
