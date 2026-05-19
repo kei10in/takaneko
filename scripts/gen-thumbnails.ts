@@ -64,6 +64,10 @@ const processFile = async (filepath: string) => {
 
   // 画像処理はリポジトリ上のパスでやる
   const outputFilePaths = thumbnailPaths.map((x) => `public/${x}`);
+  const targets = outputFilePaths.filter((thumbnailPath) => !fs.existsSync(thumbnailPath));
+  if (targets.length === 0) {
+    return;
+  }
 
   try {
     const source = await readImageSource(filepath);
@@ -79,9 +83,15 @@ const processFile = async (filepath: string) => {
     });
     const sourceImage = await loadImage(decodedPng);
 
-    await resizeImage(sourceImage, outputFilePaths[0], 240, 240);
-    await resizeImage(sourceImage, outputFilePaths[1], 480, 480);
-    await resizeImage(sourceImage, outputFilePaths[2], 720, 720);
+    if (targets.includes(outputFilePaths[0])) {
+      await resizeImage(sourceImage, outputFilePaths[0], 240, 240);
+    }
+    if (targets.includes(outputFilePaths[1])) {
+      await resizeImage(sourceImage, outputFilePaths[1], 480, 480);
+    }
+    if (targets.includes(outputFilePaths[2])) {
+      await resizeImage(sourceImage, outputFilePaths[2], 720, 720);
+    }
   } catch (err) {
     console.error(`[gen-thumbnails] failed to process source image: ${filepath}`);
   }
@@ -108,6 +118,7 @@ const processWithConcurrency = async (
 };
 
 const main = async () => {
+  const rebuild = process.argv.includes("--rebuild");
   const targetGlobs = [
     "./public/publications/**/*",
     "./public/takaneko/birthday-goods/**/*",
@@ -120,17 +131,19 @@ const main = async () => {
     (filepath) => !isThumbnail(filepath),
   );
 
-  const thumbnailDirs = new Set(
-    matchFiles.map((filepath) => {
-      return thumbnailDir(filepath.replace(/\\/g, "/"));
-    }),
-  );
-  thumbnailDirs.forEach((dir) => {
-    if (!fs.existsSync(dir)) {
-      return;
-    }
-    fs.rmSync(dir, { recursive: true });
-  });
+  if (rebuild) {
+    const thumbnailDirs = new Set(
+      matchFiles.map((filepath) => {
+        return thumbnailDir(filepath.replace(/\\/g, "/"));
+      }),
+    );
+    thumbnailDirs.forEach((dir) => {
+      if (!fs.existsSync(dir)) {
+        return;
+      }
+      fs.rmSync(dir, { recursive: true });
+    });
+  }
 
   await processWithConcurrency(matchFiles, concurrency, processFile);
 };
