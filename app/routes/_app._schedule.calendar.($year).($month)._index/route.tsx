@@ -107,6 +107,7 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
   )
     .flat()
     .filter(eventFilter.predicate)
+    .toSorted((a, b) => compareEventMeta(a.meta, b.meta))
     .map(calendarEventFromEventModule);
 
   return { year, month, day, filter: t, events };
