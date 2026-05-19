@@ -40,7 +40,7 @@ export const eventTypeToEmoji = (category: EventType): string => {
     case EventType.LIVE:
       return "🎤";
     case EventType.EVENT:
-      return "🐈‍⬛";
+      return "🌸";
     case EventType.STREAMING:
       return "🎥";
     case EventType.RELEASE:
@@ -65,9 +65,9 @@ export const eventTypeToEmoji = (category: EventType): string => {
 export const eventTypeToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
-      return "bg-zinc-500";
+      return "bg-nadeshiko-700";
     case EventType.EVENT:
-      return "bg-pink-400";
+      return "bg-gray-800";
     case EventType.STREAMING:
       return "bg-orange-400";
     case EventType.RELEASE:
@@ -75,9 +75,9 @@ export const eventTypeToColor = (category: EventType): string => {
     case EventType.BIRTHDAY:
       return "bg-red-600";
     case EventType.TV:
-      return "bg-emerald-400";
+      return "bg-sky-500";
     case EventType.RADIO:
-      return "bg-sky-400";
+      return "bg-sky-500";
     case EventType.WEB:
       return "bg-blue-600";
     case EventType.BOOK:
@@ -85,7 +85,7 @@ export const eventTypeToColor = (category: EventType): string => {
     case EventType.MAGAZINE:
       return "bg-indigo-400";
     case EventType.OTHER:
-      return "bg-amber-900";
+      return "bg-amber-700";
   }
 };
 
