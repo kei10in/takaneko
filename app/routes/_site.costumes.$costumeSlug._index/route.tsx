@@ -3,7 +3,6 @@ import {
   BsBoxArrowUpRight,
   BsCalendar,
   BsCameraFill,
-  BsExclamationTriangleFill,
   BsGeo,
   BsMicFill,
   BsPeopleFill,
@@ -99,14 +98,6 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
         <section className="space-y-8 px-4 py-8">
           <h1 className={pageHeading()}>{costume.name}</h1>
-
-          <div className="space-y-1 rounded-lg border border-amber-400 bg-amber-50 px-4 py-2">
-            <p>
-              <BsExclamationTriangleFill className="inline text-amber-400" />
-              <span className="ml-2">工事中</span>
-            </p>
-            <p>このページは作成中です。</p>
-          </div>
 
           <section className="mt-8">
             <h2
