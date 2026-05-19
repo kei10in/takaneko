@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "GUEST",
   date: "2026-05-23",
-  open: undefined,
-  start: undefined,
+  open: "09:30",
+  start: "10:00",
   end: undefined,
   region: "神奈川",
   location: "さがみ湖MORIMORI",
@@ -16,6 +16,23 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2048743967299358956",
     },
+    {
+      path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026_タイムテーブル.jpg",
+      ref: "https://x.com/Girls_Girlsinfo/status/2055966561685684577",
+      tags: ["timetable"],
+    },
+    {
+      path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026_特典会タイムテーブル.jpg",
+      ref: "https://x.com/Girls_Girlsinfo/status/2055966561685684577",
+    },
+    {
+      path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026_エリアマップ.jpg",
+      ref: "https://x.com/Girls_Girlsinfo/status/2056691335793410473",
+    },
+    {
+      path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026_出演者日割り.jpg",
+      ref: "https://x.com/Girls_Girlsinfo/status/2055966561685684577",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -24,19 +41,37 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://tiget.net/events/483124",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["15:10", "16:30"], // ["20:00", "21:20"],
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    setlist: [],
-    url: "",
-  },
-  updatedAt: "2026-04-27",
+  acts: [
+    {
+      title: "FOREST STAGE",
+      start: "14:30",
+      end: "14:50",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "MORI MORI STAGE",
+      start: "18:55",
+      end: "19:20",
+      setlist: [],
+      url: "",
+    },
+  ],
+  updatedAt: "2026-05-19",
 };
 
 export const content = /* md */ `
+  ## 参加者向け 出演時間・出演場所まとめ
+
+  https://x.com/yamayankee/status/2056708186502303993
+
   ## リンク
 
+  - [エリアマップ解禁 - GIRLS GIRLS X](https://x.com/Girls_Girlsinfo/status/2056691335793410473)
+  - [タイムテーブルまとめ - GIRLS GIRLS X](https://x.com/Girls_Girlsinfo/status/2055966561685684577)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2048743967299358956)
 `;
