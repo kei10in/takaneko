@@ -2,8 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "NATSLIVE FES 2026",
-  category: "LIVE",
-  liveType: "GUEST",
+  category: "OTHER",
+  liveType: undefined,
   date: "2026-05-03",
   open: "10:00",
   start: "11:00",
