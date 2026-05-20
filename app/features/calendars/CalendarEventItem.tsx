@@ -13,7 +13,7 @@ interface Props {
 
 export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const { category, summary, location, region, thumbnail, time } = props;
-  const color = eventTypeToColor(category);
+  const color = `bg-${eventTypeToColor(category)}`;
 
   const place = location || region;
 
