@@ -11,18 +11,36 @@ export type CalendarEvent = {
   category: EventType;
   region: string | undefined;
   location: string | undefined;
+  thumbnail?: string | undefined;
+  time?: string | undefined;
 };
 
 export const calendarEventFromEventModule = (e: EventModule): CalendarEvent => {
-  return {
-    slug: e.slug,
-    date: e.meta.date,
-    summary: e.meta.summary,
-    status: e.meta.status,
-    category: e.meta.category,
-    region: e.meta.region,
-    location: e.meta.location,
-  };
+  if (e.meta.category == EventType.RADIO || e.meta.category == EventType.TV) {
+    return {
+      slug: e.slug,
+      date: e.meta.date,
+      summary: e.meta.summary,
+      status: e.meta.status,
+      category: e.meta.category,
+      region: e.meta.region,
+      location: e.meta.location,
+      thumbnail: e.meta.images?.[0]?.path,
+      // ラジオとテレビは放送時間が重要になるため、時間も表示します。
+      time: `${e.meta.start} 〜 ${e.meta.end}`,
+    };
+  } else {
+    return {
+      slug: e.slug,
+      date: e.meta.date,
+      summary: e.meta.summary,
+      status: e.meta.status,
+      category: e.meta.category,
+      region: e.meta.region,
+      location: e.meta.location,
+      thumbnail: e.meta.images?.[0]?.path,
+    };
+  }
 };
 
 /**

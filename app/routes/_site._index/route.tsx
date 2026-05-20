@@ -184,6 +184,8 @@ export default function Index() {
                               summary={event.summary}
                               location={event.location}
                               region={event.region}
+                              thumbnail={event.thumbnail}
+                              time={event.time}
                             />
                           ))
                         ) : (

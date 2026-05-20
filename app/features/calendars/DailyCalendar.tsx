@@ -70,6 +70,8 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
                 summary={event.summary}
                 location={event.location}
                 region={event.region}
+                thumbnail={event.thumbnail}
+                time={event.time}
               />
             ))
           ) : (

@@ -51,7 +51,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
         return (
           <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
             <div className={clsx(eventsInDate.length == 0 && "hidden")}>
-              <div className={clsx("px-2 pt-4 text-lg font-bold", classNameForDate)}>
+              <div className={clsx("pt-4 text-lg font-bold", classNameForDate)}>
                 <Link to={dateHref(dt)}>{date}</Link>
               </div>
               <div>
@@ -63,6 +63,8 @@ export const EventList: React.FC<Props> = (props: Props) => {
                     summary={event.summary}
                     location={event.location}
                     region={event.region}
+                    thumbnail={event.thumbnail}
+                    time={event.time}
                   />
                 ))}
               </div>
