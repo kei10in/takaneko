@@ -160,21 +160,22 @@ export default function Index() {
 
             <Swiper
               className={clsx(
+                "px-3",
                 "[&_.swiper-pagination-bullet]:bg-black",
                 "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
               )}
               modules={[A11y]}
-              slidesPerView={1.15}
+              slidesPerView={1.05}
             >
               {events.map(({ year, month, day, events }, i) => {
                 const date = new NaiveDate(year, month, day);
                 return (
                   <SwiperSlide key={i}>
-                    <div className="pl-4">
+                    <div className="px-1">
                       <p className="mb-4 font-semibold text-gray-400">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                       </p>
-                      <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
+                      <div className="h-64 space-y-4 overflow-y-auto rounded-lg border border-gray-200 px-4 py-4">
                         {events.length !== 0 ? (
                           events.map((event) => (
                             <LinkCalendarEventItem

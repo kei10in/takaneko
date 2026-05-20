@@ -18,9 +18,9 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const place = location || region;
 
   return (
-    <div className="flex min-h-22 gap-2 py-2 pl-1.5">
+    <div className="flex min-h-22 gap-2">
       <div className={clsx("w-1 flex-none self-stretch rounded-full", color)} />
-      <div className="flex min-w-0 flex-1 flex-col justify-between gap-1">
+      <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 py-1">
         <p className="space-x-1">
           <span>{eventTypeToEmoji(category)}</span>
           <span>{summary}</span>
@@ -45,9 +45,9 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
         </div>
       </div>
       {thumbnail && (
-        <div>
+        <div className="py-1">
           <img
-            className="aspect-4/3 w-24 overflow-hidden rounded object-cover shadow-md"
+            className="aspect-4/3 h-20 overflow-hidden rounded object-cover shadow-md"
             src={thumbnail}
             alt={summary}
           />

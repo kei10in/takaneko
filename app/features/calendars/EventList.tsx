@@ -50,11 +50,11 @@ export const EventList: React.FC<Props> = (props: Props) => {
 
         return (
           <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
-            <div className={clsx(eventsInDate.length == 0 && "hidden")}>
-              <div className={clsx("pt-4 text-lg font-bold", classNameForDate)}>
+            <div className={clsx(eventsInDate.length == 0 && "hidden", "space-y-2 py-6")}>
+              <h3 className={clsx("text-xl font-bold", classNameForDate)}>
                 <Link to={dateHref(dt)}>{date}</Link>
-              </div>
-              <div>
+              </h3>
+              <div className="space-y-4">
                 {eventsInDate.map((event) => (
                   <LinkCalendarEventItem
                     key={event.slug}

@@ -60,7 +60,7 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
           </div>
         </div>
 
-        <div>
+        <div className="space-y-4">
           {events.length !== 0 ? (
             events.map((event) => (
               <LinkCalendarEventItem
