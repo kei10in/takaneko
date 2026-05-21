@@ -153,14 +153,15 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto my-24">
-        <section className="mx-auto w-full space-y-24 lg:max-w-7xl">
-          <section className="space-y-6">
-            <h2 className="lp-section-heading mx-4">スケジュール</h2>
+      <div>
+        <section className="space-y-6 py-18">
+          <h2 className="lp-section-heading mx-auto px-4 lg:max-w-7xl">スケジュール</h2>
 
+          {/* Swiper からはみ出た部分をウィンドウの幅に収める */}
+          <div className="overflow-clip">
             <Swiper
               className={clsx(
-                "px-3",
+                "mx-auto overflow-visible px-3 lg:max-w-7xl",
                 "[&_.swiper-pagination-bullet]:bg-black",
                 "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
               )}
@@ -200,35 +201,35 @@ export default function Index() {
                 );
               })}
             </Swiper>
+          </div>
 
-            <div className="w-full">
-              <Link className="graceful-link mx-auto block" to="/calendar">
-                すべてのスケジュール
-              </Link>
-            </div>
-          </section>
+          <div className="w-full">
+            <Link className="graceful-link mx-auto block" to="/calendar">
+              すべてのスケジュール
+            </Link>
+          </div>
+        </section>
 
-          <section className="space-y-6 px-4">
-            <h2 className="lp-section-heading">トレード画像つくるやつ</h2>
-            <p className="text-gray-500">
-              これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
-            </p>
-            <div className="items-bottom flex justify-between">
-              <p className="font-semibold text-gray-400">最近のグッズ:</p>
-              <Link className="block text-sm text-nadeshiko-800" to="/trade">
-                <span>すべてのグッズ</span>
-                <BsChevronRight className="ml-1 inline-block" />
-              </Link>
-            </div>
+        <section className="mx-auto space-y-6 py-18 lg:max-w-7xl">
+          <h2 className="lp-section-heading px-4">トレード画像つくるやつ</h2>
+          <p className="px-4 text-gray-500">
+            これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
+          </p>
+          <div className="items-bottom flex justify-between px-4">
+            <p className="font-semibold text-gray-400">最近のグッズ:</p>
+            <Link className="block text-sm text-nadeshiko-800" to="/trade">
+              <span>すべてのグッズ</span>
+              <BsChevronRight className="ml-1 inline-block" />
+            </Link>
+          </div>
 
-            <RandomGoodsList items={recentProducts} />
+          <RandomGoodsList items={recentProducts} />
 
-            <div className="w-full">
-              <Link className="graceful-link mx-auto block" to="/trade">
-                すべてのグッズ
-              </Link>
-            </div>
-          </section>
+          <div className="w-full">
+            <Link className="graceful-link mx-auto block" to="/trade">
+              すべてのグッズ
+            </Link>
+          </div>
         </section>
       </div>
     </div>
