@@ -153,8 +153,8 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto my-24 lg:max-w-5xl">
-        <section className="mx-auto w-full max-w-md space-y-24 lg:max-w-3xl">
+      <div className="container mx-auto my-24">
+        <section className="mx-auto w-full space-y-24 lg:max-w-7xl">
           <section className="space-y-6">
             <h2 className="lp-section-heading mx-4">スケジュール</h2>
 
@@ -165,12 +165,12 @@ export default function Index() {
                 "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
               )}
               modules={[A11y]}
-              slidesPerView={1.05}
+              slidesPerView="auto"
             >
               {events.map(({ year, month, day, events }, i) => {
                 const date = new NaiveDate(year, month, day);
                 return (
-                  <SwiperSlide key={i}>
+                  <SwiperSlide key={i} className="w-90/100 max-w-90/100 sm:w-120 sm:max-w-120">
                     <div className="px-1">
                       <p className="mb-4 font-semibold text-gray-400">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
