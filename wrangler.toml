@@ -81,7 +81,7 @@ directory = "./public"
 
 [env.preview.vars]
 # API_KEY = "xyz789"
-PNPM_VERSION = "10.7.0"
+PNPM_VERSION = "11.0.0"
 
 # [[env.preview.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
@@ -91,7 +91,7 @@ PNPM_VERSION = "10.7.0"
 
 [env.production.vars]
 # API_KEY = "abc123"
-PNPM_VERSION = "10.7.0"
+PNPM_VERSION = "11.0.0"
 
 # [[env.production.kv_namespaces]]
 # binding = "MY_KV_NAMESPACE"
