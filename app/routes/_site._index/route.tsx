@@ -89,7 +89,7 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <div className="relative h-lvh w-screen overflow-hidden">
+      <div className="relative h-lvh overflow-hidden">
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
           <img
             className={clsx("h-full w-full object-cover")}
