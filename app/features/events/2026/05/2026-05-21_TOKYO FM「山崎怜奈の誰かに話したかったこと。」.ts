@@ -42,5 +42,6 @@ export const content = /* md */ `
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2057373820206698549)
   - [直前告知 - 番組 X](https://x.com/darehanaTFM/status/2057321234681979387)
   - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2057317441563410852)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2056948025742733499)
   - [告知 - 山崎怜奈の誰かに話したかったこと。X](https://x.com/darehanaTFM/status/2054837538456756290)
 `;
