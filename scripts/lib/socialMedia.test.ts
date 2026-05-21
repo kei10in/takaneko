@@ -62,7 +62,7 @@ describe("createAnnouncePost", () => {
 
     expect(posts).toHaveLength(1);
     expect(posts[0]).toBe(dedent`
-      🌸きょうの #たかねこの予定🐈‍⬛
+      🐈‍⬛きょうの #たかねこの予定🌸
 
       🎤3rd ファンミーティング 〜私たちの宣言式〜
       📍豊洲PIT
@@ -79,14 +79,14 @@ describe("createAnnouncePost", () => {
     expect(posts).toHaveLength(1);
 
     expect(posts[0]).toBe(dedent`
-      🌸きょうの #たかねこの予定🐈‍⬛
+      🐈‍⬛きょうの #たかねこの予定🌸
 
-      🐈‍⬛振替日「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」撮影会
+      🌸振替日「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」撮影会
 
       📺テレビ東京「歌のサンセット」
       ⏰17:30〜17:55
 
-      🐈‍⬛3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント
+      🌸3rd ファンミーティング〜私たちの宣言式〜 開催記念イベント
 
       https://takanekofan.app/calendar/2025/08/08
       `);

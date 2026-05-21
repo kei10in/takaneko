@@ -34,7 +34,7 @@ export const formatEventForSocialMedia = (event: EventMeta) => {
   }
 };
 
-const HEADER = "🌸きょうの #たかねこの予定🐈‍⬛";
+const HEADER = "🐈‍⬛きょうの #たかねこの予定🌸";
 
 export const createAnnouncePost = async (
   events: EventMeta[],
