@@ -33,6 +33,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-05-23_GIRLS GIRLS FESTIVAL 2026_出演者日割り.jpg",
       ref: "https://x.com/Girls_Girlsinfo/status/2055966561685684577",
     },
+    {
+      path: "/takaneko/goods/2026/2026-05-03_ミニフォトカード「私は、わたしの事が好き。」.jpg",
+      ref: "https://x.com/takanenofficial/status/2057793611853340706",
+      tags: ["merch-item"],
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -71,6 +76,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2057793611853340706)
   - [エリアマップ解禁 - GIRLS GIRLS X](https://x.com/Girls_Girlsinfo/status/2056691335793410473)
   - [タイムテーブルまとめ - GIRLS GIRLS X](https://x.com/Girls_Girlsinfo/status/2055966561685684577)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2048743967299358956)
