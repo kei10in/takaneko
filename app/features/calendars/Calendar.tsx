@@ -113,7 +113,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         </Swiper>
       </div>
 
-      <div className={clsx("px-4 lg:flex lg:w-96 lg:flex-none lg:flex-col")}>
+      <div className={clsx("px-4 lg:flex lg:w-110 lg:flex-none lg:flex-col")}>
         <div
           id="events-list"
           className={clsx(
