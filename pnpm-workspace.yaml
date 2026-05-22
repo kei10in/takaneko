@@ -1,12 +1,7 @@
 packages:
   - .
+onlyBuiltDependencies:
+  - canvas
 minimumReleaseAge: 4320
 overrides:
   tar-fs: ^2.1.4
-allowBuilds:
-  canvas: true
-  core-js: false
-  esbuild: true
-  sharp: true
-  unrs-resolver: false
-  workerd: true
