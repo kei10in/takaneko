@@ -18,7 +18,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const place = location || region;
 
   return (
-    <div className="flex min-h-22 gap-2">
+    <div className="@container flex min-h-22 gap-2">
       <div className={clsx("w-1 flex-none self-stretch rounded-full", color)} />
       <div className="flex min-w-0 flex-1 flex-col justify-between gap-1 py-1">
         <p className="space-x-1">
@@ -45,7 +45,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
         </div>
       </div>
       {thumbnail && (
-        <div className="py-1">
+        <div className="flex items-center">
           <img
             className="aspect-4/3 h-20 overflow-hidden rounded object-cover shadow-md"
             src={thumbnail}

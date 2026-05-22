@@ -171,7 +171,7 @@ export default function Index() {
               {events.map(({ year, month, day, events }, i) => {
                 const date = new NaiveDate(year, month, day);
                 return (
-                  <SwiperSlide key={i} className="w-90/100 max-w-90/100 sm:w-120 sm:max-w-120">
+                  <SwiperSlide key={i} className="w-96/100 max-w-96/100 sm:w-120 sm:max-w-120">
                     <div className="px-1">
                       <p className="mb-4 font-semibold text-gray-400">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
