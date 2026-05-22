@@ -89,7 +89,7 @@ export default function Index() {
 
   return (
     <div className="bg-white">
-      <div className="relative h-lvh w-screen overflow-hidden">
+      <div className="relative h-lvh overflow-hidden">
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
           <img
             className={clsx("h-full w-full object-cover")}
@@ -153,28 +153,30 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="container mx-auto my-24 lg:max-w-5xl">
-        <section className="mx-auto w-full max-w-md space-y-24 lg:max-w-3xl">
-          <section className="space-y-6">
-            <h2 className="lp-section-heading mx-4">スケジュール</h2>
+      <div>
+        <section className="space-y-6 py-18">
+          <h2 className="lp-section-heading mx-auto px-4 lg:max-w-7xl">スケジュール</h2>
 
+          {/* Swiper からはみ出た部分をウィンドウの幅に収める */}
+          <div className="overflow-clip">
             <Swiper
               className={clsx(
+                "mx-auto overflow-visible px-3 lg:max-w-7xl",
                 "[&_.swiper-pagination-bullet]:bg-black",
                 "[&_.swiper-pagination-bullet-active]:bg-nadeshiko-800!",
               )}
               modules={[A11y]}
-              slidesPerView={1.15}
+              slidesPerView="auto"
             >
               {events.map(({ year, month, day, events }, i) => {
                 const date = new NaiveDate(year, month, day);
                 return (
-                  <SwiperSlide key={i}>
-                    <div className="pl-4">
+                  <SwiperSlide key={i} className="w-96/100 max-w-96/100 sm:w-120 sm:max-w-120">
+                    <div className="px-1">
                       <p className="mb-4 font-semibold text-gray-400">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                       </p>
-                      <div className="h-56 overflow-y-auto rounded-lg border border-gray-200 px-2 py-4">
+                      <div className="h-64 space-y-4 overflow-y-auto rounded-lg border border-gray-200 px-4 py-4">
                         {events.length !== 0 ? (
                           events.map((event) => (
                             <LinkCalendarEventItem
@@ -184,6 +186,8 @@ export default function Index() {
                               summary={event.summary}
                               location={event.location}
                               region={event.region}
+                              thumbnail={event.thumbnail}
+                              time={event.time}
                             />
                           ))
                         ) : (
@@ -197,35 +201,35 @@ export default function Index() {
                 );
               })}
             </Swiper>
+          </div>
 
-            <div className="w-full">
-              <Link className="graceful-link mx-auto block" to="/calendar">
-                すべてのスケジュール
-              </Link>
-            </div>
-          </section>
+          <div className="w-full">
+            <Link className="graceful-link mx-auto block" to="/calendar">
+              すべてのスケジュール
+            </Link>
+          </div>
+        </section>
 
-          <section className="space-y-6 px-4">
-            <h2 className="lp-section-heading">トレード画像つくるやつ</h2>
-            <p className="text-gray-500">
-              これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
-            </p>
-            <div className="items-bottom flex justify-between">
-              <p className="font-semibold text-gray-400">最近のグッズ:</p>
-              <Link className="block text-sm text-nadeshiko-800" to="/trade">
-                <span>すべてのグッズ</span>
-                <BsChevronRight className="ml-1 inline-block" />
-              </Link>
-            </div>
+        <section className="mx-auto space-y-6 py-18 lg:max-w-7xl">
+          <h2 className="lp-section-heading px-4">トレード画像つくるやつ</h2>
+          <p className="px-4 text-gray-500">
+            これまで発売された生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成できます。
+          </p>
+          <div className="items-bottom flex justify-between px-4">
+            <p className="font-semibold text-gray-400">最近のグッズ:</p>
+            <Link className="block text-sm text-nadeshiko-800" to="/trade">
+              <span>すべてのグッズ</span>
+              <BsChevronRight className="ml-1 inline-block" />
+            </Link>
+          </div>
 
-            <RandomGoodsList items={recentProducts} />
+          <RandomGoodsList items={recentProducts} />
 
-            <div className="w-full">
-              <Link className="graceful-link mx-auto block" to="/trade">
-                すべてのグッズ
-              </Link>
-            </div>
-          </section>
+          <div className="w-full">
+            <Link className="graceful-link mx-auto block" to="/trade">
+              すべてのグッズ
+            </Link>
+          </div>
         </section>
       </div>
     </div>

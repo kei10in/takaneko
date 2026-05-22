@@ -65,27 +65,27 @@ export const eventTypeToEmoji = (category: EventType): string => {
 export const eventTypeToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
-      return "bg-nadeshiko-700";
+      return "nadeshiko-700";
     case EventType.EVENT:
-      return "bg-gray-800";
+      return "gray-800";
     case EventType.STREAMING:
-      return "bg-orange-400";
+      return "orange-400";
     case EventType.RELEASE:
-      return "bg-fuchsia-500";
+      return "fuchsia-500";
     case EventType.BIRTHDAY:
-      return "bg-red-600";
+      return "red-600";
     case EventType.TV:
-      return "bg-sky-500";
+      return "sky-500";
     case EventType.RADIO:
-      return "bg-sky-500";
+      return "sky-500";
     case EventType.WEB:
-      return "bg-blue-600";
+      return "blue-600";
     case EventType.BOOK:
-      return "bg-indigo-400";
+      return "indigo-400";
     case EventType.MAGAZINE:
-      return "bg-indigo-400";
+      return "indigo-400";
     case EventType.OTHER:
-      return "bg-amber-700";
+      return "amber-700";
   }
 };
 
