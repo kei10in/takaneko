@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://www.tv-asahi.co.jp/pr/sphone/20260515_12065.html",
   },
-  updatedAt: "2026-05-12",
+  updatedAt: "2026-05-22",
 };
 
 export const content = /* md */ `
@@ -28,13 +28,13 @@ export const content = /* md */ `
   >
   > テレビ朝日イチオシの「イベ」ントを「レコ」メンドするエンタメ情報番組「イベレコ」。
   > 番組キャラクター“イベレコ王子"と一緒に、おすすめイベントを深掘りしちゃいます!
-  > 『mirror, mirror, mirror mika ninagawa』特集では、ABEMA『今日、好きになりました。』の“しゅんゆま"カップルが、下北沢の街を歩きながら展覧会コラボの4つの店舗を巡ります!
+  > 5月後半のゲストは、高嶺のなでしこのメンバーから、東山恵里沙さん、松本ももなさん、籾山ひめりさん!
   >
   > **◇出演者**
   >
-  > 【VTR出演】倉澤俊、谷村優真
+  > 【5月後半ゲスト】東山恵里沙、松本ももな、籾山ひめり(高嶺のなでしこ)
   >
-  > 【マンスリーゲスト】東山恵里沙、松本ももな、籾山ひめり(高嶺のなでしこ)
+  > 【VTR出演】倉澤俊、谷村優真
   >
   > 【声の出演】佐々木亮太(テレビ朝日アナウンサー)
   >
@@ -54,6 +54,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [当日告知 - イベレコ X](https://x.com/tvasahi_event/status/2057748308278358191)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2057764744287895767)
   - [告知 (告知動画あり) - イベレコ X](https://x.com/tvasahi_event/status/2053671436796281000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2054124422244569289)
 `;
