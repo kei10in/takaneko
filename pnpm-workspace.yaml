@@ -3,5 +3,3 @@ packages:
 onlyBuiltDependencies:
   - canvas
 minimumReleaseAge: 4320
-overrides:
-  tar-fs: ^2.1.4
