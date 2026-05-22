@@ -167,6 +167,7 @@ export const content = /* md */ `
   - [高嶺のなでしこ、9人それぞれの魅力的な個性を表現 東京国際フォーラムでツアー完走 | ENCOUNT](https://encount.press/archives/992169/)
   - [🍭 高嶺のなでしこ、8都市巡るライブツアー完走！ 5月6日東京国際フォーラムでファイナル公演開催 - Pop'n'Roll(ポップンロール)](https://popnroll.tv/articles/45986/)
   - [高嶺のなでしこ、東京国際フォーラムで咲かせた大輪の花 9人の多彩な個性で魅せたツアー最終公演（ライブレポート / 写真9枚） - 音楽ナタリー](https://natalie.mu/music/news/671247)
+  - [高嶺のなでしこ | Skream! ライヴ・レポート 邦楽ロック・洋楽ロック ポータルサイト](https://skream.jp/livereport/2026/05/takanenonadeshiko.php)
 
   ## リンク
 
