@@ -33,7 +33,7 @@ URL: https://takanekofan.app/
 ### 必要環境
 
 - Node.js 22
-- pnpm 11
+- pnpm 10
 
 ### インストール
 
