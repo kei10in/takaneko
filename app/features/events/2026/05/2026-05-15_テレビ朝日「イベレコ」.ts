@@ -54,7 +54,7 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [TVer 配信](https://tver.jp/episodes/ep7ilawm5j)
+  - [TVer 放送回](https://tver.jp/episodes/ep7ilawm5j)
   - [前日告知 - イベレコ X](https://x.com/tvasahi_event/status/2054849200894910771)
   - [告知 (告知動画あり) - イベレコ X](https://x.com/tvasahi_event/status/2053671436796281000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2054124422244569289)

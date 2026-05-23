@@ -54,6 +54,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [TVer 放送回](https://tver.jp/episodes/epsnc6rvzd)
   - [当日告知 - イベレコ X](https://x.com/tvasahi_event/status/2057748308278358191)
   - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2057764744287895767)
   - [告知 (告知動画あり) - イベレコ X](https://x.com/tvasahi_event/status/2053671436796281000)
