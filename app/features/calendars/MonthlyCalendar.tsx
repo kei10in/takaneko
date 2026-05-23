@@ -41,13 +41,16 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
       </thead>
       <tbody>
         {calendarMonth.map((week, i) => (
-          <tr key={i} className="border-y border-gray-300">
+          <tr key={i}>
             {week.map(({ date, events }, j) => {
               const dateString = date.toString();
               // カレンダーの始まりや終わりに含まれる、前や次の月の日付かどうか
               const currentMonth = date.naiveMonth().equals(month);
               return (
-                <td key={j} className="border-b border-gray-300 p-0">
+                <td
+                  key={j}
+                  className="box-border h-(--calendar-cell-height) max-h-(--calendar-cell-height) overflow-hidden border-b border-b-gray-300 p-0"
+                >
                   {disabled || events.length == 0 || !currentMonth ? (
                     <div className="w-full">
                       <CalendarCell
