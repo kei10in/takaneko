@@ -1,9 +1,6 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
-import { BsList } from "react-icons/bs";
 import { Link, Outlet } from "react-router";
-import { SecondaryTopbar } from "~/components/SecondaryTopbar";
-import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
 
 export default function Index() {
@@ -12,30 +9,6 @@ export default function Index() {
 
   return (
     <div>
-      <SecondaryTopbar>
-        <div className="flex h-full items-center justify-between">
-          <p className="text-base font-bold text-gray-600">
-            <Link to="/calendar">スケジュール</Link>
-          </p>
-
-          <div className="hidden lg:block">
-            <ul className="flex items-center gap-8 text-sm font-bold text-gray-500">
-              <li>
-                <Link to="/calendar/registration" onClick={close}>
-                  アプリに登録
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex-none lg:hidden">
-            <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
-              <BsList className="h-6 w-6" />
-            </button>
-          </div>
-        </div>
-      </SecondaryTopbar>
-
       <Outlet />
 
       <Dialog
