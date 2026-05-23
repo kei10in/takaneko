@@ -24,5 +24,6 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMO&t=20260522201910)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20260522200000)
 `;
