@@ -35,8 +35,8 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
         <div
           data-today={today ? true : undefined}
           className={clsx(
-            "mx-auto flex h-[1.125rem] w-[1.125rem] items-center justify-center rounded-full text-xs",
-            "lg:h-[1.25rem] lg:w-[1.25rem] lg:text-sm",
+            "mx-auto flex h-4.5 w-4.5 items-center justify-center rounded-full text-xs",
+            "lg:h-5 lg:w-5 lg:text-sm",
             "data-today:bg-nadeshiko-900 data-today:text-white",
           )}
         >
@@ -48,8 +48,8 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
         <div
           key={index}
           className={clsx(
-            "h-[1.125rem] text-center text-xs leading-normal lg:block",
-            "lg:h-[1.25rem] lg:text-sm",
+            "h-4.5 text-center text-xs leading-normal lg:block",
+            "lg:h-5 lg:text-sm",
             index != 0 && "hidden",
             !currentMonth && "text-gray-300",
           )}
