@@ -28,7 +28,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
   } = props;
 
   return (
-    <div className="mx-2 flex items-center justify-between py-2">
+    <div className="mx-2 flex h-(--calendar-controller-height) items-center justify-between">
       <Link
         className="inset-focus flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
         to={hrefToday}
