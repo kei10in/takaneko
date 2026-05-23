@@ -99,9 +99,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           }}
           className={clsx(
             "transition-all lg:h-auto",
-            weeksInMonth == 4 && "h-51.25",
-            weeksInMonth == 5 && "h-63",
-            weeksInMonth == 6 && "h-74.75",
+            weeksInMonth == 4 && "h-(--calendar-height-for-4-weeks)",
+            weeksInMonth == 5 && "h-(--calendar-height-for-5-weeks)",
+            weeksInMonth == 6 && "h-(--calendar-height-for-6-weeks)",
           )}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
@@ -117,9 +117,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <div
           id="events-list"
           className={clsx(
-            weeksInMonth == 4 && "scroll-mt-77.25",
-            weeksInMonth == 5 && "scroll-mt-89",
-            weeksInMonth == 6 && "scroll-mt-100.75",
+            weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
+            weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
+            weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
             "lg:flex-1 lg:scroll-mt-[calc(var(--header-height))]!",
           )}
         >
@@ -127,9 +127,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
             month={month}
             events={events}
             classNameForDate={clsx(
-              weeksInMonth == 4 && "scroll-mt-77.25",
-              weeksInMonth == 5 && "scroll-mt-89",
-              weeksInMonth == 6 && "scroll-mt-100.75",
+              weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
+              weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
+              weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
               "lg:scroll-mt-[calc(var(--header-height))]",
             )}
           />
