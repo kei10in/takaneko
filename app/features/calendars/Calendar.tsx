@@ -68,12 +68,12 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   }, [currentSlide]);
 
   return (
-    <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height))]">
+    <div className="bg-white landscape:flex landscape:min-h-[calc(100svh-var(--header-height))]">
       <div
         className={clsx(
           "sticky top-(--header-height) bg-white",
-          "lg:h-fit lg:max-h-[calc(100svh-var(--header-height))]",
-          "lg:flex-1 lg:overflow-y-auto lg:pb-8",
+          "landscape:h-fit landscape:max-h-[calc(100svh-var(--header-height))]",
+          "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto landscape:pb-8",
         )}
       >
         <MonthlyCalendarController
@@ -98,7 +98,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
             navigate({ pathname: href, search: location.search }, { replace: true });
           }}
           className={clsx(
-            "transition-all lg:h-auto",
+            "transition-all landscape:h-auto",
             weeksInMonth == 4 && "h-(--calendar-height-for-4-weeks)",
             weeksInMonth == 5 && "h-(--calendar-height-for-5-weeks)",
             weeksInMonth == 6 && "h-(--calendar-height-for-6-weeks)",
@@ -113,14 +113,18 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         </Swiper>
       </div>
 
-      <div className={clsx("px-4 lg:flex lg:w-110 lg:flex-none lg:flex-col")}>
+      <div
+        className={clsx(
+          "px-4 landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
+        )}
+      >
         <div
           id="events-list"
           className={clsx(
             weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
             weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
             weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
-            "lg:flex-1 lg:scroll-mt-[calc(var(--header-height))]!",
+            "landscape:flex-1 landscape:scroll-mt-[calc(var(--header-height))]!",
           )}
         >
           <EventList
@@ -130,12 +134,12 @@ export const Calendar: React.FC<Props> = (props: Props) => {
               weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
               weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
               weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
-              "lg:scroll-mt-[calc(var(--header-height))]",
+              "landscape:scroll-mt-[calc(var(--header-height))]",
             )}
           />
         </div>
 
-        <div className="ml-auto w-fit lg:flex-0">
+        <div className="ml-auto w-fit landscape:flex-0">
           <Link
             to="#events-list"
             className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
@@ -147,21 +151,19 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
         <hr className="my-2 border-gray-300" />
 
-        <div className="">
-          <div className="flex items-center justify-between">
-            <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
-              <span>
-                <HiChevronLeft />
-              </span>
-              <span>{displayMonth(prevMonth)}</span>
-            </Link>
-            <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
-              <span>{displayMonth(nextMonth)}</span>
-              <span>
-                <HiChevronRight />
-              </span>
-            </Link>
-          </div>
+        <div className="flex items-center justify-between landscape:pb-8">
+          <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
+            <span>
+              <HiChevronLeft />
+            </span>
+            <span>{displayMonth(prevMonth)}</span>
+          </Link>
+          <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
+            <span>{displayMonth(nextMonth)}</span>
+            <span>
+              <HiChevronRight />
+            </span>
+          </Link>
         </div>
       </div>
     </div>
