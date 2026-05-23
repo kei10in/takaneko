@@ -68,7 +68,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   }, [currentSlide]);
 
   return (
-    <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height)-3rem)]">
+    <div className="bg-white pb-8 lg:flex lg:min-h-[calc(100svh-var(--header-height))]">
       <div
         className={clsx(
           "sticky top-(--header-height) bg-white",
