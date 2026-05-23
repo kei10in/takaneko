@@ -68,12 +68,12 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   }, [currentSlide]);
 
   return (
-    <div className="bg-white landscape:flex landscape:min-h-[calc(100svh-var(--header-height))]">
+    <div className="bg-white landscape:flex landscape:min-h-[calc(100dvh-var(--header-height))]">
       <div
         className={clsx(
           "sticky top-(--header-height) bg-white",
-          "landscape:h-fit landscape:max-h-[calc(100svh-var(--header-height))]",
-          "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto landscape:pb-8",
+          "landscape:h-[calc(100dvh-var(--header-height))] landscape:min-h-[calc(100dvh-var(--header-height))]",
+          "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto",
         )}
       >
         <MonthlyCalendarController

@@ -23,13 +23,16 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
   const weekdayStyle = clsx(
-    "box-border h-(--calendar-weekday-height) w-1/7 border-b border-gray-300 p-0 lg:h-(--lg-calendar-weekday-height)",
+    "box-border h-(--calendar-weekday-height) w-1/7 border-b border-gray-300 p-0",
+    "landscape:h-(--calendar-landscape-weekday-height)",
   );
 
   return (
-    <table className="w-full max-w-full table-fixed border-separate border-spacing-0 select-none">
+    <table
+      className={clsx("w-full max-w-full table-fixed border-separate border-spacing-0 select-none")}
+    >
       <thead>
-        <tr className="text-xs leading-none text-gray-500 lg:text-sm">
+        <tr className="text-xs leading-none text-gray-500 landscape:text-sm">
           <th className={weekdayStyle}>日</th>
           <th className={weekdayStyle}>月</th>
           <th className={weekdayStyle}>火</th>
@@ -49,7 +52,10 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
               return (
                 <td
                   key={j}
-                  className="box-border h-(--calendar-cell-height) max-h-(--calendar-cell-height) overflow-hidden border-b border-b-gray-300 p-0"
+                  className={clsx(
+                    "box-border h-(--calendar-cell-height) max-h-(--calendar-cell-height) overflow-hidden border-b border-b-gray-300 p-0",
+                    "landscape:h-(--calendar-landscape-cell-height) landscape:max-h-(--calendar-landscape-cell-height)",
+                  )}
                 >
                   {disabled || events.length == 0 || !currentMonth ? (
                     <div className="h-full w-full">
