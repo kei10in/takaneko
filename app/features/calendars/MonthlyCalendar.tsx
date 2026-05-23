@@ -52,7 +52,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                   className="box-border h-(--calendar-cell-height) max-h-(--calendar-cell-height) overflow-hidden border-b border-b-gray-300 p-0"
                 >
                   {disabled || events.length == 0 || !currentMonth ? (
-                    <div className="w-full">
+                    <div className="h-full w-full">
                       <CalendarCell
                         date={date.day}
                         day={date.dayOfWeek}
@@ -63,7 +63,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                     </div>
                   ) : (
                     <Link
-                      className="inset-focus block w-full"
+                      className="inset-focus block h-full w-full"
                       to={`#${dateString}`}
                       onClick={(e) => {
                         e.preventDefault();

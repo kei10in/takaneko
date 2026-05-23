@@ -21,7 +21,12 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
   const isWeekday = !isSunday && !isSaturday;
 
   return (
-    <div className={clsx("w-full", selected && "overflow-hidden bg-blue-500 text-white")}>
+    <div
+      className={clsx(
+        "flex h-full w-full flex-col justify-start",
+        selected && "overflow-hidden bg-blue-500 text-white",
+      )}
+    >
       <div
         className={clsx(
           "pt-px lg:pb-px",
@@ -58,7 +63,7 @@ export const CalendarCell: React.FC<Props> = (props: Props) => {
         </div>
       ))}
 
-      <div className="pt-px pb-1 lg:pt-1 lg:pb-1">
+      <div className="mt-auto pt-px pb-1 lg:pt-1 lg:pb-1">
         {events.length <= 5 ? (
           <div className="flex h-1 items-center justify-center gap-0.5 lg:h-1.5 lg:gap-1">
             {events.map((event) => {
