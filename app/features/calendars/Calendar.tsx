@@ -115,7 +115,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
+          "bg-zinc-50 landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
         )}
       >
         <div

@@ -173,10 +173,10 @@ export default function Index() {
                 return (
                   <SwiperSlide key={i} className="w-96/100 max-w-96/100 sm:w-120 sm:max-w-120">
                     <div className="px-1">
-                      <p className="mb-4 font-semibold text-gray-400">
+                      <p className="mb-4 font-semibold">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                       </p>
-                      <div className="h-64 space-y-4 overflow-y-auto rounded-lg border border-gray-200 px-4 py-4">
+                      <div className="h-64 space-y-4 overflow-y-auto rounded-3xl border border-zinc-100 bg-zinc-50 px-4 py-4 inset-shadow-xs">
                         {events.length !== 0 ? (
                           events.map((event) => (
                             <LinkCalendarEventItem
