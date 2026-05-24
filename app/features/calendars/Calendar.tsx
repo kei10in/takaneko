@@ -115,12 +115,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "px-4 landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
+          "landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
         )}
       >
         <div
           id="events-list"
           className={clsx(
+            "px-4",
             weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
             weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
             weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
@@ -139,7 +140,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           />
         </div>
 
-        <div className="ml-auto w-fit landscape:flex-0">
+        <div className="ml-auto w-fit px-4 landscape:flex-0">
           <Link
             to="#events-list"
             className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
@@ -151,7 +152,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
         <hr className="my-2 border-gray-300" />
 
-        <div className="flex items-center justify-between landscape:pb-8">
+        <div className="flex items-center justify-between px-4 landscape:pb-8">
           <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
             <span>
               <HiChevronLeft />
