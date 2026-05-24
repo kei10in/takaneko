@@ -5,8 +5,8 @@ import { Link, MetaFunction, Outlet } from "react-router";
 import { SecondaryTopbar } from "~/components/SecondaryTopbar";
 import { iconButtonPrimary } from "~/components/styles/buttons";
 import { XMarkButton } from "~/components/XMarkButton";
-import { formatTitle } from "~/utils/htmlHeader";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
+import { formatTitle } from "~/utils/htmlHeader";
 import { MenuContents } from "./MenuContents";
 
 export const meta: MetaFunction = () => {
@@ -55,8 +55,8 @@ export default function Index() {
       <div className="@container">
         <div className="flex w-full">
           {/* サイドバー。モバイルでは非表示 */}
-          <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] flex-none overflow-y-auto px-4 lg:block">
-            <nav className="w-96">
+          <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] flex-none overflow-y-auto lg:block">
+            <nav className="w-104">
               <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
             </nav>
           </aside>
