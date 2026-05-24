@@ -29,7 +29,9 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
 
   return (
     <table
-      className={clsx("w-full max-w-full table-fixed border-separate border-spacing-0 select-none")}
+      className={clsx(
+        "w-full max-w-full table-fixed border-separate border-spacing-0 select-none landscape:mb-(--calendar-landscape-footer-space)",
+      )}
     >
       <thead>
         <tr className="text-xs leading-none text-gray-500 landscape:text-sm">

@@ -69,9 +69,13 @@
       var(--header-height) + var(--calendar-controller-height) + var(--calendar-height-for-6-weeks)
     );
 
+    /* ランドスケープのときのカレンダーの下側に余白を作ります。PCでの圧迫感を軽減するため。 */
+    --calendar-landscape-footer-space: 1.5rem;
+
     /* ランドスケープのときのカレンダーが使える領域の高さです。実際の高さは週の数によって変わります。 */
     --calendar-landscape-height: calc(
-      100svh - var(--header-height) - var(--calendar-controller-height)
+      100svh - var(--header-height) - var(--calendar-controller-height) -
+        var(--calendar-landscape-footer-space)
     );
     --calendar-landscape-weekday-height: 1.25rem;
     --calendar-landscape-cell-height: calc(
