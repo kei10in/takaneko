@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import { useMemo } from "react";
 import { Link } from "react-router";
 import { getCalendarDatesOfMonth } from "~/utils/calendar/calendarDate";
@@ -21,30 +22,37 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   );
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
+  const weekdayStyle = clsx(
+    "box-border h-(--calendar-weekday-height) w-1/7 border-b border-gray-300 p-0 lg:h-(--lg-calendar-weekday-height)",
+  );
+
   return (
     <table className="w-full max-w-full table-fixed border-separate border-spacing-0 select-none">
       <thead>
-        <tr className="text-xs text-gray-500 lg:text-sm">
-          <th className="w-1/7 border-b border-gray-300 p-0">日</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">月</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">火</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">水</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">木</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">金</th>
-          <th className="w-1/7 border-b border-gray-300 p-0">土</th>
+        <tr className="text-xs leading-none text-gray-500 lg:text-sm">
+          <th className={weekdayStyle}>日</th>
+          <th className={weekdayStyle}>月</th>
+          <th className={weekdayStyle}>火</th>
+          <th className={weekdayStyle}>水</th>
+          <th className={weekdayStyle}>木</th>
+          <th className={weekdayStyle}>金</th>
+          <th className={weekdayStyle}>土</th>
         </tr>
       </thead>
       <tbody>
         {calendarMonth.map((week, i) => (
-          <tr key={i} className="border-y border-gray-300">
+          <tr key={i}>
             {week.map(({ date, events }, j) => {
               const dateString = date.toString();
               // カレンダーの始まりや終わりに含まれる、前や次の月の日付かどうか
               const currentMonth = date.naiveMonth().equals(month);
               return (
-                <td key={j} className="border-b border-gray-300 p-0">
+                <td
+                  key={j}
+                  className="box-border h-(--calendar-cell-height) max-h-(--calendar-cell-height) overflow-hidden border-b border-b-gray-300 p-0"
+                >
                   {disabled || events.length == 0 || !currentMonth ? (
-                    <div className="w-full">
+                    <div className="h-full w-full">
                       <CalendarCell
                         date={date.day}
                         day={date.dayOfWeek}
@@ -55,7 +63,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                     </div>
                   ) : (
                     <Link
-                      className="inset-focus block w-full"
+                      className="inset-focus block h-full w-full"
                       to={`#${dateString}`}
                       onClick={(e) => {
                         e.preventDefault();

@@ -40,6 +40,35 @@
   :root {
     --header-height: 3.5rem;
     --secondary-header-height: 3rem;
+
+    --calendar-controller-height: 3rem;
+
+    --calendar-weekday-height: 1rem;
+    --lg-calendar-weekday-height: 1.25rem;
+
+    --calendar-cell-height: 2.9375rem;
+
+    /* ポートレートのときのカレンダーの高さ */
+    --calendar-height-for-4-weeks: calc(
+      var(--calendar-weekday-height) + var(--calendar-cell-height) * 4
+    );
+    --calendar-height-for-5-weeks: calc(
+      var(--calendar-weekday-height) + var(--calendar-cell-height) * 5
+    );
+    --calendar-height-for-6-weeks: calc(
+      var(--calendar-weekday-height) + var(--calendar-cell-height) * 6
+    );
+
+    /* ポートレートのときのイベントリストのスクロールマージン */
+    --calendar-scroll-margin-for-4-weeks: calc(
+      var(--header-height) + var(--calendar-controller-height) + var(--calendar-height-for-4-weeks)
+    );
+    --calendar-scroll-margin-for-5-weeks: calc(
+      var(--header-height) + var(--calendar-controller-height) + var(--calendar-height-for-5-weeks)
+    );
+    --calendar-scroll-margin-for-6-weeks: calc(
+      var(--header-height) + var(--calendar-controller-height) + var(--calendar-height-for-6-weeks)
+    );
   }
 
   :focus:not(:focus-visible) {

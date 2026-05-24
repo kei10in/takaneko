@@ -28,15 +28,15 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
   } = props;
 
   return (
-    <div className="mx-2 flex items-center justify-between py-2">
+    <div className="mx-2 flex h-(--calendar-controller-height) items-center justify-between">
       <Link
         className="inset-focus flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
         to={hrefToday}
         preventScrollReset={true}
       >
-        <span className="mx-auto">今日</span>
+        <span className="mx-auto whitespace-nowrap">今日</span>
       </Link>
-      <div className="text-gray-800">{displayMonth(month)}</div>
+      <div className="truncate overflow-hidden text-gray-800">{displayMonth(month)}</div>
       <div className="flex flex-none items-center gap-2">
         <Popover className="w-28">
           <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
