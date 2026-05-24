@@ -17,10 +17,10 @@ export const RandomGoodsList: React.FC<Props> = (props: Props) => {
     <div className="@container">
       <ul
         className={clsx(
-          "grid grid-cols-2 justify-items-center gap-x-2 gap-y-8 px-2",
-          "@md:grid-cols-3 @md:gap-x-4",
-          "@xl:grid-cols-4",
-          "@4xl:grid-cols-5 @4xl:gap-x-6",
+          "grid grid-cols-2 justify-items-center gap-x-4 gap-y-8 px-2",
+          "@xl:grid-cols-3 @xl:gap-x-4",
+          "@3xl:grid-cols-4",
+          "@5xl:grid-cols-5 @5xl:gap-x-4",
         )}
       >
         {items.map((photo) => {
