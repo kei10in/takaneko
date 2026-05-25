@@ -29,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="manifest" href="/manifest.webmanifest" />
         <Links />
       </head>
-      <body className="text-gray-800">
+      <body className="text-zinc-800">
         <Topbar />
 
         {children}

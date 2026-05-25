@@ -18,12 +18,12 @@ import {
   BsMusicNote,
   BsPersonCircle,
   BsPersonStandingDress,
-  BsThreeDotsVertical,
 } from "react-icons/bs";
+import { HiEllipsisVertical } from "react-icons/hi2";
 import { Link } from "react-router";
 import { SiteName } from "~/constants";
-import { iconButtonPrimary } from "./styles/buttons";
 import { XMarkButton } from "./XMarkButton";
+import { iconButton } from "./styles/buttons";
 
 type TopBarLink = {
   title: string;
@@ -128,13 +128,7 @@ export const Topbar: React.FC = () => {
 
   return (
     <Fragment>
-      <div
-        className={clsx(
-          "@container",
-          "sticky top-0 z-10 h-(--header-height)",
-          "border-b border-b-nadeshiko-200 bg-nadeshiko-50/90 backdrop-blur-sm",
-        )}
-      >
+      <div className={clsx("@container", "sticky top-0 z-10 h-(--header-height) bg-white")}>
         <div className="h-full px-4 @lg:px-6">
           <div className="flex h-full items-center">
             <div className="text-base text-gray-900">
@@ -146,11 +140,11 @@ export const Topbar: React.FC = () => {
                     alt="「たかねこの」のロゴ アイコン"
                   />
                 </div>
-                <p className="font-serif text-xl text-gray-600">{SiteName}</p>
+                <p className="font-serif text-xl">{SiteName}</p>
               </Link>
             </div>
             <div className="ml-auto">
-              <div className="hidden items-center gap-8 text-sm font-bold text-gray-500 lg:flex">
+              <div className="hidden items-center gap-8 text-sm lg:flex">
                 {TopBarMenu.map((item) => {
                   if (item.url != undefined) {
                     return (
@@ -188,8 +182,8 @@ export const Topbar: React.FC = () => {
                   );
                 })}
               </div>
-              <button className={iconButtonPrimary("lg:hidden")} onClick={() => setShowMenu(true)}>
-                <BsThreeDotsVertical className="h-6 w-6" />
+              <button className={iconButton("lg:hidden")} onClick={() => setShowMenu(true)}>
+                <HiEllipsisVertical className="h-6 w-6" />
               </button>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
-import { BsList } from "react-icons/bs";
+import { HiBars3 } from "react-icons/hi2";
 import { Link, MetaFunction, Outlet } from "react-router";
 import { SecondaryTopbar } from "~/components/SecondaryTopbar";
 import { iconButtonPrimary } from "~/components/styles/buttons";
@@ -46,7 +46,7 @@ export default function Index() {
           </p>
           <div className="flex-none">
             <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
-              <BsList className="h-6 w-6" />
+              <HiBars3 className="h-6 w-6" />
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { MDXContent } from "mdx/types";
 import { lazy, Suspense, useState } from "react";
-import { BsList } from "react-icons/bs";
+import { HiBars } from "react-icons/bs";
 import { Link, useLoaderData } from "react-router";
 import { markdownComponents2 } from "~/components/MdComponents2";
 import { SecondaryTopbar } from "~/components/SecondaryTopbar";
@@ -57,7 +57,7 @@ export default function Component() {
         <div className="flex h-full items-center gap-2">
           <div className="flex-none">
             <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
-              <BsList className="h-6 w-6" />
+              <HiBars className="h-6 w-6" />
             </button>
           </div>
           <p className="text-base font-bold text-gray-800">
