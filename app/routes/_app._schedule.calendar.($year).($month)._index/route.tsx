@@ -10,11 +10,16 @@ import {
 import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { calendarMonthRange, validateYearMonth } from "~/features/calendars/utils";
+import {
+  calendarMonthRange,
+  calendarMonthRangeForSEO,
+  validateYearMonth,
+} from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
 import { displayMonth } from "~/utils/dateDisplay";
+import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -25,13 +30,10 @@ const makeRobots = (loadedData: Awaited<ReturnType<typeof loader>> | undefined) 
   }
 
   const currentMonth = NaiveDate.todayInJapan().naiveMonth();
-  const upperLimitMonth = currentMonth.advance(9);
-  const lowerLimitMonth = currentMonth.advance(2);
+  const range = calendarMonthRangeForSEO(currentMonth);
 
   const pageMonth = new NaiveMonth(loadedData.year, loadedData.month);
-  const isIndexable =
-    0 <= pageMonth.differenceInMonths(lowerLimitMonth) &&
-    pageMonth.differenceInMonths(upperLimitMonth) < 0;
+  const isIndexable = isMonthInRange(pageMonth, range);
 
   return isIndexable ? [] : [{ name: "robots", content: "noindex,follow" }];
 };
