@@ -12,7 +12,7 @@ import { CalendarEvent } from "./calendarEvents";
 import { EventList } from "./EventList";
 import { MonthlyCalendar } from "./MonthlyCalendar";
 import { MonthlyCalendarController } from "./MonthlyCalendarController";
-import { calendarMonthHref, currentMonthHref } from "./utils";
+import { calendarMonthHref, calendarMonthRange, currentMonthHref } from "./utils";
 
 interface Props {
   events: CalendarEvent[];
@@ -34,10 +34,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   // Swiper の initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が
   // 変わってしまうため、初期値を保持しておく必要があります。
   const [{ startMonth, months, initialSlide }] = useState(() => {
-    const startMonth = new NaiveMonth(2022, 1);
-    const lastMonth = new NaiveMonth(NaiveMonth.current().year + 2, 0);
+    const [startMonth, lastMonth] = calendarMonthRange(NaiveMonth.current());
 
-    const n = lastMonth.differenceInMonths(startMonth) + 1;
+    const n = lastMonth.differenceInMonths(startMonth);
     const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
     const initialSlide = month.differenceInMonths(startMonth);
 

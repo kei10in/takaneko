@@ -71,3 +71,13 @@ export const dateHref = (date: NaiveDate, param: { search?: string } = {}): stri
 
   return `/calendar/${y}/${m}/${d}${search}`;
 };
+
+/**
+ * calendarMonthRange はカレンダーページで表示する月の範囲を返す関数です。
+ */
+export const calendarMonthRange = (currentMonth: NaiveMonth): [NaiveMonth, NaiveMonth] => {
+  const startMonth = new NaiveMonth(2022, 1);
+  const lastMonth = new NaiveMonth(currentMonth.year + 2, 1);
+
+  return [startMonth, lastMonth];
+};

@@ -10,7 +10,7 @@ import {
 import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { validateYearMonth } from "~/features/calendars/utils";
+import { calendarMonthRange, validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
@@ -71,6 +71,16 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       if (r == undefined) {
         throw new Response("", { status: 404 });
       }
+
+      const pageMonth = new NaiveMonth(r.year, r.month);
+      const [startMonth, lastMonth] = calendarMonthRange(NaiveMonth.current());
+      if (
+        pageMonth.differenceInMonths(startMonth) < 0 ||
+        0 <= pageMonth.differenceInMonths(lastMonth)
+      ) {
+        throw new Response("", { status: 404 });
+      }
+
       return { ...r, day: undefined };
     }
   })();
