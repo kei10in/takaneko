@@ -33,6 +33,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
     { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
+    { name: "robots", content: "noindex,follow" },
   ];
 };
 

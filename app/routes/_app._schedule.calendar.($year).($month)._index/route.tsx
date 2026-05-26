@@ -10,18 +10,41 @@ import {
 import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { validateYearMonth } from "~/features/calendars/utils";
+import {
+  calendarMonthRange,
+  calendarMonthRangeForSEO,
+  validateYearMonth,
+} from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
 import { displayMonth } from "~/utils/dateDisplay";
+import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
+const makeRobots = (loadedData: Awaited<ReturnType<typeof loader>> | undefined) => {
+  if (loadedData == undefined) {
+    return [];
+  }
+
+  const currentMonth = NaiveDate.todayInJapan().naiveMonth();
+  const range = calendarMonthRangeForSEO(currentMonth);
+
+  const pageMonth = new NaiveMonth(loadedData.year, loadedData.month);
+  const isIndexable = isMonthInRange(pageMonth, range);
+
+  return isIndexable ? [] : [{ name: "robots", content: "noindex,follow" }];
+};
+
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title =
-    data == undefined ? "スケジュール" : `${displayMonth(data.year, data.month)} のスケジュール`;
+    loaderData == undefined
+      ? "スケジュール"
+      : `${displayMonth(loaderData.year, loaderData.month)} のスケジュール`;
+
+  const robots = makeRobots(loaderData);
 
   return [
     { title: formatTitle(title) },
@@ -36,6 +59,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
     { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
+    ...robots,
   ];
 };
 
@@ -49,6 +73,14 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       if (r == undefined) {
         throw new Response("", { status: 404 });
       }
+
+      const pageMonth = new NaiveMonth(r.year, r.month);
+      const range = calendarMonthRange(NaiveMonth.current());
+
+      if (!isMonthInRange(pageMonth, range)) {
+        throw new Response("", { status: 404 });
+      }
+
       return { ...r, day: undefined };
     }
   })();

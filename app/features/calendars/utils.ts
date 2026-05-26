@@ -1,3 +1,4 @@
+import { MonthRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 
@@ -70,4 +71,21 @@ export const dateHref = (date: NaiveDate, param: { search?: string } = {}): stri
   const { search = "" } = param;
 
   return `/calendar/${y}/${m}/${d}${search}`;
+};
+
+/**
+ * calendarMonthRange はカレンダーページで表示する月の範囲を返す関数です。
+ */
+export const calendarMonthRange = (currentMonth: NaiveMonth): MonthRange => {
+  const startMonth = new NaiveMonth(2022, 1);
+  const lastMonth = new NaiveMonth(currentMonth.year + 2, 1);
+
+  return { start: startMonth, end: lastMonth };
+};
+
+export const calendarMonthRangeForSEO = (currentMonth: NaiveMonth): MonthRange => {
+  const upperLimitMonth = currentMonth.advance(9);
+  const lowerLimitMonth = currentMonth.advance(2);
+
+  return { start: lowerLimitMonth, end: upperLimitMonth };
 };
