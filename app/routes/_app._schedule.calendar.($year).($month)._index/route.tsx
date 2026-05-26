@@ -75,11 +75,9 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       }
 
       const pageMonth = new NaiveMonth(r.year, r.month);
-      const [startMonth, lastMonth] = calendarMonthRange(NaiveMonth.current());
-      if (
-        pageMonth.differenceInMonths(startMonth) < 0 ||
-        0 <= pageMonth.differenceInMonths(lastMonth)
-      ) {
+      const range = calendarMonthRange(NaiveMonth.current());
+
+      if (!isMonthInRange(pageMonth, range)) {
         throw new Response("", { status: 404 });
       }
 

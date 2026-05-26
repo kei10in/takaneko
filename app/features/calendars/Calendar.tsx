@@ -6,6 +6,7 @@ import { Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 import { displayMonth } from "~/utils/dateDisplay";
+import { iterateMonthsInRange } from "~/utils/datetime/MonthRange";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventFilterType } from "../events/eventFilter";
 import { CalendarEvent } from "./calendarEvents";
@@ -34,13 +35,11 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   // Swiper の initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が
   // 変わってしまうため、初期値を保持しておく必要があります。
   const [{ startMonth, months, initialSlide }] = useState(() => {
-    const [startMonth, lastMonth] = calendarMonthRange(NaiveMonth.current());
+    const range = calendarMonthRange(NaiveMonth.current());
+    const months = Array.from(iterateMonthsInRange(range));
+    const initialSlide = month.differenceInMonths(range.start);
 
-    const n = lastMonth.differenceInMonths(startMonth);
-    const months = Array.from({ length: n }, (_, i) => startMonth.advance(i));
-    const initialSlide = month.differenceInMonths(startMonth);
-
-    return { startMonth, months, initialSlide };
+    return { startMonth: range.start, months, initialSlide };
   });
 
   const currentSlide = useMemo(() => {
