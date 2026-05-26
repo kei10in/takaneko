@@ -24,6 +24,7 @@ export const meta: MetaFunction = () => {
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle("今日のスケジュール") },
     { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
+    { name: "robots", content: "noindex,follow" },
   ];
 };
 

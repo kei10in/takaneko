@@ -19,9 +19,30 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
+const makeRobots = (loadedData: Awaited<ReturnType<typeof loader>> | undefined) => {
+  if (loadedData == undefined) {
+    return [];
+  }
+
+  const currentMonth = NaiveDate.todayInJapan().naiveMonth();
+  const upperLimitMonth = currentMonth.advance(9);
+  const lowerLimitMonth = currentMonth.advance(2);
+
+  const pageMonth = new NaiveMonth(loadedData.year, loadedData.month);
+  const isIndexable =
+    0 <= pageMonth.differenceInMonths(lowerLimitMonth) &&
+    pageMonth.differenceInMonths(upperLimitMonth) < 0;
+
+  return isIndexable ? [] : [{ name: "robots", content: "noindex,follow" }];
+};
+
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title =
-    data == undefined ? "スケジュール" : `${displayMonth(data.year, data.month)} のスケジュール`;
+    loaderData == undefined
+      ? "スケジュール"
+      : `${displayMonth(loaderData.year, loaderData.month)} のスケジュール`;
+
+  const robots = makeRobots(loaderData);
 
   return [
     { title: formatTitle(title) },
@@ -36,6 +57,7 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
     { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
+    ...robots,
   ];
 };
 
