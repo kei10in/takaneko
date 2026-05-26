@@ -1,12 +1,11 @@
 import { DomainName } from "~/constants";
-import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
+import { calendarMonthHref, calendarMonthRangeForSEO } from "~/features/calendars/utils";
 import { EventModule } from "~/features/events/eventModule";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { AllMembers } from "~/features/profile/members";
 import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "./datetime/NaiveDate";
-import { NaiveMonth } from "./datetime/NaiveMonth";
 
 export interface SitemapUrl {
   url: string;
@@ -20,14 +19,10 @@ interface SitemapPath {
 }
 
 export const allPages = async (today: NaiveDate, events: EventModule[]): Promise<SitemapUrl[]> => {
-  const dateRange = [new NaiveDate(2022, 8, 1), new NaiveDate(today.year, today.month + 6, 1)];
-  const monthRange = [new NaiveMonth(2022, 8), new NaiveMonth(today.year, today.month + 6)];
-
   const pages = [
     ...buildStaticPages(),
     ...buildMemberPages(),
-    ...buildMonthlyPages(monthRange[0], monthRange[1]),
-    ...buildDailyPages(dateRange[0], dateRange[1]),
+    ...buildMonthlyPages(today),
     ...buildEventPages(events),
     ...buildTradeImagePages(),
     ...buildProductPages(),
@@ -36,21 +31,16 @@ export const allPages = async (today: NaiveDate, events: EventModule[]): Promise
   return pages;
 };
 
-const buildDailyPages = (start: NaiveDate, end: NaiveDate): SitemapPath[] => {
+const buildMonthlyPages = (today: NaiveDate): SitemapPath[] => {
+  const range = calendarMonthRangeForSEO(today.naiveMonth());
+
   const result = [];
-  let current = start;
 
-  while ([current.year, current.month, current.day] < [end.year, end.month, end.day]) {
-    result.push({ path: dateHref(current) });
-    current = current.nextDate();
-  }
-
-  return result;
-};
-
-const buildMonthlyPages = (start: NaiveMonth, end: NaiveMonth): SitemapPath[] => {
-  const result = [];
-  let current = start;
+  // sitemap.xml と meta robots でのズレの対策として sitemap.xml は開始側だけ 1 ヶ月狭くする。
+  // sitemap には記載があるが、noindex になるページを発生させないため。
+  // sitemap に未記載で index されるのは問題ないため、終了側は狭くしない。
+  let current = range.start.advance(1);
+  const end = range.end;
 
   while ([current.year, current.month] < [end.year, end.month]) {
     result.push({ path: calendarMonthHref(current) });

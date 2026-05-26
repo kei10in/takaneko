@@ -1,3 +1,4 @@
+import { MonthRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 
@@ -80,4 +81,11 @@ export const calendarMonthRange = (currentMonth: NaiveMonth): [NaiveMonth, Naive
   const lastMonth = new NaiveMonth(currentMonth.year + 2, 1);
 
   return [startMonth, lastMonth];
+};
+
+export const calendarMonthRangeForSEO = (currentMonth: NaiveMonth): MonthRange => {
+  const upperLimitMonth = currentMonth.advance(9);
+  const lowerLimitMonth = currentMonth.advance(2);
+
+  return { start: lowerLimitMonth, end: upperLimitMonth };
 };
