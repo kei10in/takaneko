@@ -4,12 +4,14 @@ import { BsChevronDown } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link, To } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
+import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventFilters, EventFilterType } from "../events/eventFilter";
-import { calendarMonthHref } from "./utils";
+import { calendarMonthHref, calendarMonthRange } from "./utils";
 
 interface Props {
   month: NaiveMonth;
+  currentMonth: NaiveMonth;
   filter?: EventFilterType | undefined;
   hash?: string | undefined;
   hrefToday: To;
@@ -26,6 +28,8 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
     hrefPreviousMonth,
     hrefNextMonth,
   } = props;
+
+  const monthRange = calendarMonthRange(props.currentMonth);
 
   return (
     <div className="mx-2 flex h-(--calendar-controller-height) items-center justify-between">
@@ -76,18 +80,30 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
           </PopoverPanel>
         </Popover>
         <div className="inline-flex h-8 w-20 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
-          <Link
-            className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
-            to={hrefPreviousMonth}
-          >
-            <HiChevronLeft />
-          </Link>
-          <Link
-            className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
-            to={hrefNextMonth}
-          >
-            <HiChevronRight />
-          </Link>
+          {isMonthInRange(month.previousMonth(), monthRange) ? (
+            <Link
+              className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+              to={hrefPreviousMonth}
+            >
+              <HiChevronLeft />
+            </Link>
+          ) : (
+            <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
+              <HiChevronLeft />
+            </span>
+          )}
+          {isMonthInRange(month.nextMonth(), monthRange) ? (
+            <Link
+              className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+              to={hrefNextMonth}
+            >
+              <HiChevronRight />
+            </Link>
+          ) : (
+            <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
+              <HiChevronRight />
+            </span>
+          )}
         </div>
       </div>
     </div>

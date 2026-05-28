@@ -30,9 +30,6 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   // スクロール位置の調整のために必要な値です。
   const weeksInMonth = month.weeksInMonth();
 
-  const prevMonth = month.previousMonth();
-  const nextMonth = month.nextMonth();
-
   // コンポーネントがマウントされたときに一回だけ値を決定します。
   // Swiper に渡す initialSlide の値を計算するための計算です。
   // Swiper の initialSlide は名前とは裏腹に途中で値が変わるとスライド位置が
@@ -55,7 +52,11 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   const navigate = useNavigate();
 
   const hrefToday = { pathname: currentMonthHref(), search: location.search };
+
+  const prevMonth = month.previousMonth();
   const hrefPreviousMonth = { pathname: calendarMonthHref(prevMonth), search: location.search };
+
+  const nextMonth = month.nextMonth();
   const hrefNextMonth = { pathname: calendarMonthHref(nextMonth), search: location.search };
 
   useEffect(() => {
@@ -78,6 +79,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
       >
         <MonthlyCalendarController
           month={month}
+          currentMonth={currentMonth}
           filter={filter}
           hash={location.hash}
           hrefToday={hrefToday}
