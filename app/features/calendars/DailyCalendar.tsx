@@ -2,10 +2,12 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
+import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarEvent } from "./calendarEvents";
 import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
-import { calendarMonthHref, dateHref } from "./utils";
+import { calendarMonthHref, calendarMonthRange, dateHref } from "./utils";
 
 interface Props {
   year: number;
@@ -19,6 +21,9 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
 
   const d = new NaiveDate(year, month, day);
   const m = d.naiveMonth();
+
+  const currentMonth = NaiveMonth.current();
+  const monthRange = calendarMonthRange(currentMonth);
 
   return (
     <div className="container mx-auto min-h-[calc(100svh-var(--header-height)-3rem)] px-4">
@@ -36,13 +41,19 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
         <div className="my-4 flex items-center justify-between">
           <h1 className="text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
           <div className="flex h-8 w-36 items-stretch divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
-            <Link
-              className="inset-focus inline-flex h-full grow items-center justify-center"
-              to={dateHref(d.previousDate())}
-              preventScrollReset={true}
-            >
-              <HiChevronLeft />
-            </Link>
+            {isMonthInRange(d.previousDate().naiveMonth(), monthRange) ? (
+              <Link
+                className="inset-focus inline-flex h-full grow items-center justify-center"
+                to={dateHref(d.previousDate())}
+                preventScrollReset={true}
+              >
+                <HiChevronLeft />
+              </Link>
+            ) : (
+              <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
+                <HiChevronLeft />
+              </span>
+            )}
             <Link
               className="inset-focus inline-flex h-full grow items-center justify-center"
               to="/calendar/today"
@@ -50,13 +61,19 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
             >
               今日
             </Link>
-            <Link
-              className="inset-focus inline-flex h-full grow items-center justify-center"
-              to={dateHref(d.nextDate())}
-              preventScrollReset={true}
-            >
-              <HiChevronRight />
-            </Link>
+            {isMonthInRange(d.nextDate().naiveMonth(), monthRange) ? (
+              <Link
+                className="inset-focus inline-flex h-full grow items-center justify-center"
+                to={dateHref(d.nextDate())}
+                preventScrollReset={true}
+              >
+                <HiChevronRight />
+              </Link>
+            ) : (
+              <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
+                <HiChevronRight />
+              </span>
+            )}
           </div>
         </div>
 
