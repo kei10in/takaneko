@@ -169,9 +169,5 @@ export default function Index() {
     }
   }, [day, location.hash, location.search, month, navigate, year]);
 
-  return (
-    <div className="@container">
-      <Calendar events={events} month={m} filter={filterName} />
-    </div>
-  );
+  return <Calendar events={events} month={m} filter={filterName} />;
 }

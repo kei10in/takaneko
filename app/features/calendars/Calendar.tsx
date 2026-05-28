@@ -66,11 +66,10 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   }, [currentSlide]);
 
   return (
-    <div className="bg-white landscape:flex landscape:min-h-[calc(100dvh-var(--header-height))]">
+    <div className="flex flex-1 flex-col landscape:flex-row landscape:items-start">
       <div
         className={clsx(
-          "sticky top-(--header-height) bg-white",
-          "landscape:h-[calc(100dvh-var(--header-height))] landscape:min-h-[calc(100dvh-var(--header-height))]",
+          "sticky top-(--header-height) flex-none bg-white",
           "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto",
         )}
       >
@@ -113,17 +112,17 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "bg-zinc-50 landscape:flex landscape:flex-1 landscape:flex-col landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
+          "flex flex-1 flex-col bg-zinc-50 landscape:self-stretch landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
         )}
       >
         <div
           id="events-list"
           className={clsx(
-            "px-4",
+            "min-h-0 flex-1 px-4",
             weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
             weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
             weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
-            "landscape:flex-1 landscape:scroll-mt-[calc(var(--header-height))]!",
+            "landscape:scroll-mt-[calc(var(--header-height))]!",
           )}
         >
           <EventList
@@ -138,31 +137,33 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           />
         </div>
 
-        <div className="ml-auto w-fit px-4 landscape:flex-0">
-          <Link
-            to="#events-list"
-            className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
-          >
-            <span>最初に戻る</span>
-            <HiArrowUp className="w-3" />
-          </Link>
-        </div>
+        <div>
+          <div className="ml-auto w-fit flex-none px-4 landscape:flex-0">
+            <Link
+              to="#events-list"
+              className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
+            >
+              <span>最初に戻る</span>
+              <HiArrowUp className="w-3" />
+            </Link>
+          </div>
 
-        <hr className="my-2 border-gray-300" />
+          <hr className="my-2 border-gray-300" />
 
-        <div className="flex items-center justify-between px-4 landscape:pb-8">
-          <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
-            <span>
-              <HiChevronLeft />
-            </span>
-            <span>{displayMonth(prevMonth)}</span>
-          </Link>
-          <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
-            <span>{displayMonth(nextMonth)}</span>
-            <span>
-              <HiChevronRight />
-            </span>
-          </Link>
+          <div className="flex items-center justify-between px-4 pb-8">
+            <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
+              <span>
+                <HiChevronLeft />
+              </span>
+              <span>{displayMonth(prevMonth)}</span>
+            </Link>
+            <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
+              <span>{displayMonth(nextMonth)}</span>
+              <span>
+                <HiChevronRight />
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

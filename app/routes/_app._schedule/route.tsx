@@ -1,5 +1,5 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Link, Outlet } from "react-router";
 import { XMarkButton } from "~/components/XMarkButton";
 
@@ -8,7 +8,7 @@ export default function Index() {
   const close = () => setShowMenu(false);
 
   return (
-    <div>
+    <Fragment>
       <Outlet />
 
       <Dialog
@@ -34,6 +34,6 @@ export default function Index() {
           </DialogPanel>
         </div>
       </Dialog>
-    </div>
+    </Fragment>
   );
 }
