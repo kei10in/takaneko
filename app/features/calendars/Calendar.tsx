@@ -6,7 +6,7 @@ import { Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 import { displayMonth } from "~/utils/dateDisplay";
-import { iterateMonthsInRange } from "~/utils/datetime/MonthRange";
+import { isMonthInRange, iterateMonthsInRange } from "~/utils/datetime/MonthRange";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventFilterType } from "../events/eventFilter";
 import { CalendarEvent } from "./calendarEvents";
@@ -23,6 +23,9 @@ interface Props {
 
 export const Calendar: React.FC<Props> = (props: Props) => {
   const { events, month, filter } = props;
+
+  const currentMonth = NaiveMonth.current();
+  const monthRange = calendarMonthRange(currentMonth);
 
   // スクロール位置の調整のために必要な値です。
   const weeksInMonth = month.weeksInMonth();
@@ -141,7 +144,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           <div className="ml-auto w-fit flex-none px-4 landscape:flex-0">
             <Link
               to="#events-list"
-              className="inline-flex items-center justify-center gap-1 text-sm text-gray-500"
+              className="inline-flex items-center justify-center gap-1 text-sm text-zinc-600"
             >
               <span>最初に戻る</span>
               <HiArrowUp className="w-3" />
@@ -151,18 +154,37 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           <hr className="my-2 border-gray-300" />
 
           <div className="flex items-center justify-between px-4 pb-8">
-            <Link className="flex items-center font-bold text-gray-500" to={hrefPreviousMonth}>
-              <span>
-                <HiChevronLeft />
+            {isMonthInRange(prevMonth, monthRange) ? (
+              <Link className="flex items-center font-bold text-zinc-600" to={hrefPreviousMonth}>
+                <span>
+                  <HiChevronLeft />
+                </span>
+                <span>{displayMonth(prevMonth)}</span>
+              </Link>
+            ) : (
+              <span className="flex items-center font-bold text-zinc-300">
+                <span>
+                  <HiChevronLeft />
+                </span>
+                <span>{displayMonth(prevMonth)}</span>
               </span>
-              <span>{displayMonth(prevMonth)}</span>
-            </Link>
-            <Link className="flex items-center font-bold text-gray-500" to={hrefNextMonth}>
-              <span>{displayMonth(nextMonth)}</span>
-              <span>
-                <HiChevronRight />
+            )}
+
+            {isMonthInRange(nextMonth, monthRange) ? (
+              <Link className="flex items-center font-bold text-zinc-600" to={hrefNextMonth}>
+                <span>{displayMonth(nextMonth)}</span>
+                <span>
+                  <HiChevronRight />
+                </span>
+              </Link>
+            ) : (
+              <span className="flex items-center font-bold text-zinc-300">
+                <span>{displayMonth(nextMonth)}</span>
+                <span>
+                  <HiChevronRight />
+                </span>
               </span>
-            </Link>
+            )}
           </div>
         </div>
       </div>
