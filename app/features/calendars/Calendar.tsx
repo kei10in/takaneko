@@ -118,7 +118,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         <div
           id="events-list"
           className={clsx(
-            "min-h-0 flex-1 px-4",
+            "flex min-h-0 flex-1 flex-col px-4",
             weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
             weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
             weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",

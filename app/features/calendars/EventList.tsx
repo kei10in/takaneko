@@ -42,6 +42,14 @@ export const EventList: React.FC<Props> = (props: Props) => {
     return result;
   }, [events, month]);
 
+  if (eventsByDate.every(({ events }) => events.length === 0)) {
+    return (
+      <div className="flex flex-1 flex-col justify-center pb-12">
+        <p className="text-center text-gray-500">イベントが予定されていません。</p>
+      </div>
+    );
+  }
+
   return (
     <div className="pb-4">
       {eventsByDate.map(({ date: dt, events: eventsInDate }) => {
