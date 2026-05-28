@@ -118,6 +118,14 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
       if (r == undefined) {
         throw new Response("", { status: 404 });
       }
+
+      const pageMonth = new NaiveMonth(r.year, r.month);
+      const range = calendarMonthRange(NaiveMonth.current());
+
+      if (!isMonthInRange(pageMonth, range)) {
+        throw new Response("", { status: 404 });
+      }
+
       return { ...r, day: undefined };
     }
   })();
