@@ -15,9 +15,11 @@ import { 星谷美来誕生日記念_2025年11月06日 } from "./birthday/2025-1
 import { 城月菜央誕生日記念_2025年12月25日 } from "./birthday/2025-12-25_城月菜央誕生日記念";
 import { 葉月紗蘭誕生日記念_2026年03月03日 } from "./birthday/2026-03-03_葉月紗蘭誕生日記念";
 import { 籾山ひめり誕生日記念_2026年03月22日 } from "./birthday/2026-03-22_籾山ひめり誕生日記念";
+import { 東山恵里沙誕生日記念_2026年05月28日 } from "./birthday/2026-05-28_東山恵里沙誕生日記念";
 import { BirthdayGoodsCollection } from "./product";
 
 export const BirthdayGoods: BirthdayGoodsCollection[] = [
+  東山恵里沙誕生日記念_2026年05月28日,
   籾山ひめり誕生日記念_2026年03月22日,
   葉月紗蘭誕生日記念_2026年03月03日,
   城月菜央誕生日記念_2025年12月25日,
