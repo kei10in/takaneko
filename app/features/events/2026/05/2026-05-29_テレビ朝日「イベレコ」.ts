@@ -10,15 +10,19 @@ export const meta: EventMetaDescriptor = {
   present: ["東山恵里沙", "松本ももな", "籾山ひめり"],
   images: [
     {
-      path: "/events/2026/2026-05-15_テレビ朝日「イベレコ」.jpg",
-      ref: "https://x.com/takanenofficial/status/2054124422244569289",
+      path: "/events/2026/2026-05-29_テレビ朝日「イベレコ」.jpg",
+      ref: "https://x.com/takanenofficial/status/2060270121529254159",
+    },
+    {
+      path: "/events/2026/2026-05-29_テレビ朝日「イベレコ」_1.jpg",
+      ref: "https://x.com/tvasahi_event/status/2060285017260253334",
     },
   ],
   link: {
     text: "番組サイト",
     url: "https://www.tv-asahi.co.jp/pr/sphone/20260529_15646.html",
   },
-  updatedAt: "2026-05-28",
+  updatedAt: "2026-05-29",
 };
 
 export const content = /* md */ `
@@ -52,6 +56,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [当日告知 - イベレコ X](https://x.com/tvasahi_event/status/2060285017260253334)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2060270121529254159)
   - [告知 (告知動画あり) - イベレコ X](https://x.com/tvasahi_event/status/2053671436796281000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2054124422244569289)
 `;
