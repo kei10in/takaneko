@@ -2,6 +2,68 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://strmweb.jp/archives/21819/",
+    title:
+      "高嶺のなでしこ「アイドルにとって夏は戦。たかねこのことをどれだけ好きになってもらえるか。4周年となる勝負の夏を生き抜いて、勝ち続けていきたい」INTERVIEW",
+    authorName: "STREAM（ストリーム）",
+    publishedAt: "2026-05-29",
+    mediaUrl: "https://strmweb.jp/archives/21819/",
+    imageUrl: "https://strmweb.jp/home/wp-content/uploads/2026/05/DSC02661.jpg",
+    category: "article",
+    presents: ["城月菜央", "涼海すう", "東山恵里沙"],
+  },
+  {
+    kind: "ogp",
+    key: "https://digvii.com/entertainment/digvii-points-of-view1",
+    title:
+      "大人気アイドルグループ「高嶺のなでしこ」からあのふたりがWEB DIGVII新連載企画に降臨♡ | ENTERTAINMENT | WEB DIGVII | WEB DIGVII",
+    authorName: "WEB DIGVII",
+    publishedAt: "2026-05-27",
+    mediaUrl: "https://digvii.com/entertainment/digvii-points-of-view1",
+    imageUrl:
+      "https://images.microcms-assets.io/assets/03e5d8205333477eb096d98c1dffe075/71b9134d99404cf98818d6e8899d6e7c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-05-26%2015.32.58.jpeg",
+    category: "article",
+    presents: ["橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.oricon.co.jp/news/2456707/full/",
+    title:
+      "高嶺のなでしこ、3年半の軌跡と新曲が描く成長の物語　「ファンへの感謝」と「武道館への決意」【インタビュー】 ",
+    authorName: "オリコンニュース（ORICON NEWS）",
+    publishedAt: "2026-05-27",
+    mediaUrl: "https://www.oricon.co.jp/news/2456707/full/",
+    imageUrl:
+      "https://contents.oricon.co.jp/upimg/news/2457000/2456707/20260525_125841_p_o_92059627.jpg",
+    category: "article",
+    presents: ["星谷美来", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.vanitymix.jp/music/takanenonadeshiko-7/",
+    title: "高嶺のなでしこ VANITYMIX WEB LIMITED INTERVIEW",
+    authorName: "VANITYMIX マガジン",
+    publishedAt: "2026-05-26",
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-7/",
+    imageUrl: "https://www.vanitymix.jp/wp-content/uploads/2026/05/高嶺のなでしこ_全体アー写.jpg",
+    category: "article",
+    presents: ["松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://beeeem.com/article/takaneko-maranyan",
+    title:
+      "高嶺のなでしこ【インタビュー】頑張る人の心に寄り添い、背中を押すポジティブソング「“頑張りすぎなくていい“というメッセージを届けたい」-BEEEEM",
+    authorName: "BEEEEM",
+    publishedAt: "2026-05-25",
+    mediaUrl: "https://beeeem.com/article/takaneko-maranyan",
+    imageUrl:
+      "https://imagedelivery.net/GAZ6B7nYxar6-1ZqFjo_3w/35026386-0c7b-43e2-e52c-ccf431eeb800/medium",
+    category: "article",
+    presents: ["橋本桃呼", "日向端ひな", "星谷美来"],
+  },
+  {
     kind: "youtube",
     key: "kRs6P8ALYFM",
     title: "個性爆発！「高嶺のなでしこ」の悩みとは【音楽マシマシ 2025.7.28OA】",

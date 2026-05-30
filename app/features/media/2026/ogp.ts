@@ -2,6 +2,51 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://strmweb.jp/archives/21819/",
+    publishedAt: "2026-05-29",
+    category: "article",
+    presents: ["城月菜央", "涼海すう", "東山恵里沙"],
+  },
+  {
+    mediaUrl: "https://e.usen.com/interview/interview-original/takanenonadeshiko-ikiteryaii.html",
+    publishedAt: "2026-05-28",
+    category: "article",
+    presents: ["城月菜央", "涼海すう", "橋本桃呼", "葉月紗蘭"],
+  },
+  {
+    title:
+      "大人気アイドルグループ「高嶺のなでしこ」からあのふたりがWEB DIGVII新連載企画に降臨♡ | ENTERTAINMENT | WEB DIGVII | WEB DIGVII",
+    mediaUrl: "https://digvii.com/entertainment/digvii-points-of-view1",
+    siteName: "WEB DIGVII",
+    image: {
+      path: "https://images.microcms-assets.io/assets/03e5d8205333477eb096d98c1dffe075/71b9134d99404cf98818d6e8899d6e7c/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202026-05-26%2015.32.58.jpeg",
+      ref: "https://digvii.com/entertainment/digvii-points-of-view1",
+    },
+    publishedAt: "2026-05-27",
+    category: "article",
+    presents: ["橋本桃呼", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2059487504794091574",
+  },
+  {
+    mediaUrl: "https://www.oricon.co.jp/news/2456707/full/",
+    publishedAt: "2026-05-27",
+    category: "article",
+    presents: ["星谷美来", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    mediaUrl: "https://www.vanitymix.jp/music/takanenonadeshiko-7/",
+    publishedAt: "2026-05-26",
+    category: "article",
+    presents: ["松本ももな", "籾山ひめり"],
+  },
+  {
+    mediaUrl: "https://beeeem.com/article/takaneko-maranyan",
+    siteName: "BEEEEM",
+    publishedAt: "2026-05-25",
+    category: "article",
+    presents: ["橋本桃呼", "日向端ひな", "星谷美来"],
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/787967",
     publishedAt: "2026-04-30",
     category: "article",

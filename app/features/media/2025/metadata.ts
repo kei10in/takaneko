@@ -39,12 +39,11 @@ export const metadata2025: MediaDetails[] = [
     kind: "ogp",
     key: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
     title:
-      'HoneyWorksサウンド・プロデュース、高嶺のなでしこのインタビュー＆動画メッセージ公開。"アイドルがアイドルのことを歌う"強さと矜持――1stアルバム『見上げるたびに、恋をする。』リリース',
+      'HoneyWorksサウンド・プロデュース、高嶺のなでしこのインタビュー＆動画メッセージ公開。"アイドルがアイドルのことを歌う"強さと矜持――1stアルバム『見上げるたびに、恋をする。』リリース | Skream! 邦楽ロック・洋楽ロック ポータルサイト',
     authorName: "Skream! 邦楽ロック・洋楽ロック ポータルサイト",
     publishedAt: "2025-12-22",
     mediaUrl: "https://skream.jp/news/2025/12/takanenonadeshiko_interview.php",
-    imageUrl:
-      "https://skream.jp/news/assets_c/2025/12/takanenonadeshiko_interview-thumb-1200xauto-243641.jpg",
+    imageUrl: "https://skream.jp/news/2025/12/22/images/takanenonadeshiko_interview.jpg",
     category: "article",
     presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
   },
@@ -56,7 +55,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-12-22",
     mediaUrl: "https://skream.jp/interview/2025/12/takanenonadeshiko.php",
     imageUrl:
-      "https://skream.jp/interview/assets_c/2025/12/takanenonadeshiko-thumb-500xauto-242937.jpg",
+      "https://skream.jp/interview/assets_c/2025/12/takanenonadeshiko-thumb-700xauto-242937.jpg",
     category: "article",
     presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
   },
@@ -192,7 +191,7 @@ export const metadata2025: MediaDetails[] = [
     publishedAt: "2025-12-12",
     mediaUrl: "https://utaten.com/specialArticle/index/9685",
     imageUrl:
-      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?r=2026040517",
+      "https://cdn.utaten.com/uploads/images/specialArticle/9685/c743d3d3e815232f4da2d60668ccce1762cf8999.jpeg?type=original?r=2026053011",
     category: "article",
     presents: [],
   },
@@ -1334,7 +1333,7 @@ export const metadata2025: MediaDetails[] = [
   {
     kind: "ogp",
     key: "https://www.cinemastyle.jp/horror/20094/",
-    title: "高嶺のなでしこ・城月菜央さんが選ぶ2025年注目のホラー映画特集 | CinemaStyle",
+    title: "高嶺のなでしこ・城月菜央さんが選ぶ2025年注目のホラー映画特集！ | CinemaStyle",
     authorName: "CinemaStyle",
     publishedAt: "2025-05-23",
     mediaUrl: "https://www.cinemastyle.jp/horror/20094/",

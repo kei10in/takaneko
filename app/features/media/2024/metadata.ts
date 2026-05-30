@@ -1127,7 +1127,7 @@ export const metadata2024: MediaDetails[] = [
   {
     kind: "ogp",
     key: "https://natalie.mu/music/column/558076",
-    title: "女性アイドル / グループ編 | マイベストトラック2023 Vol. 1 - 音楽ナタリー コラム",
+    title: "女性アイドル / グループ編 | マイベストトラック2023 Vol. 1 - 音楽ナタリー",
     authorName: "音楽ナタリー",
     publishedAt: "2024-01-24",
     mediaUrl: "https://natalie.mu/music/column/558076",
