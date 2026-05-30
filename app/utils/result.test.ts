@@ -1,7 +1,20 @@
-import { describe, expect, it } from "vitest";
-import { Err, Ok, type Result } from "~/utils/result";
+import { describe, expect, expectTypeOf, it } from "vitest";
+import { Err, Ok, ResultAccessError, type Err as ErrType, type Ok as OkType, type Result } from "~/utils/result";
 
 describe("Result", () => {
+  it("should narrow by ok property", () => {
+    const result: Result<number, string> = Math.random() > 0.5 ? Ok(1) : Err("e");
+
+    if (result.ok) {
+      expectTypeOf(result).toEqualTypeOf<OkType<number>>();
+      expect(result.value).toBe(1);
+      return;
+    }
+
+    expectTypeOf(result).toEqualTypeOf<ErrType<string>>();
+    expect(result.error).toBe("e");
+  });
+
   describe("Ok", () => {
     it("should return the correct result", () => {
       const x: Result<string, string> = Ok("success");
@@ -38,6 +51,8 @@ describe("Result", () => {
       const x = Ok(10);
 
       expect(x.expect("should not fail")).toBe(10);
+      expect(() => x.unwrapErr()).toThrow(ResultAccessError);
+      expect(() => x.expectErr("no error")).toThrow("no error");
       expect(x.unwrapOr(0)).toBe(10);
       expect(x.unwrapOrElse(() => 0)).toBe(10);
       expect(x.mapErr((e) => String(e)).value).toBe(10);
@@ -59,7 +74,8 @@ describe("Result", () => {
     it("unwrap should throw the error", () => {
       const x = Err("error");
 
-      expect(() => x.unwrap()).toThrow("error");
+      expect(() => x.unwrap()).toThrow(ResultAccessError);
+      expect(() => x.unwrap()).toThrow("called unwrap on Err");
     });
 
     it("map should keep Err as-is", () => {
@@ -81,7 +97,10 @@ describe("Result", () => {
     it("Rust-like methods should work with TypeScript names", () => {
       const x = Err("error");
 
-      expect(() => x.expect("boom")).toThrow("boom: error");
+      expect(() => x.expect("boom")).toThrow(ResultAccessError);
+      expect(() => x.expect("boom")).toThrow("boom");
+      expect(x.unwrapErr()).toBe("error");
+      expect(x.expectErr("should not fail")).toBe("error");
       expect(x.unwrapOr(0)).toBe(0);
       expect(x.unwrapOrElse((e) => e.length)).toBe(5);
       expect(x.mapErr((e) => e.toUpperCase()).error).toBe("ERROR");
@@ -90,3 +109,20 @@ describe("Result", () => {
     });
   });
 });
+
+const hoge = (n: number): Result<number, string> => {
+  if (n > 0) {
+    return Ok(n * 2);
+  } else {
+    return Err("non-positive number");
+  }
+};
+
+export const fuga = (n: number) => {
+  const result = hoge(n);
+  if (result.ok) {
+    return result.value + 1;
+  } else {
+    return `Error: ${result.error}`;
+  }
+};
