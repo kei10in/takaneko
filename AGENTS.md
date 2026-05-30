@@ -5,6 +5,11 @@
 - アプリ本体は `app/`、Worker 関連は `workers/`、補助スクリプトは `scripts/` にあります。
 - アーキテクチャやデータ配置の詳細は `docs/ARCHITECTURE.md` を参照してください。
 
+## Most important principles
+
+- 質問に対しては、まず質問に答え、質問意外に指示がない場合は、質問への回答以外のことをしないこと。
+- こちらが言ったことをそのままプランに入れたり、文章や実装に含めたりしてはいけない。何を言っているのかを理解し、その解釈に合うように内容を更新すこと。
+
 ## Technology Stack
 
 - Node.js 24
@@ -72,6 +77,35 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 - 振る舞いを変更したら、関連するテストを追加または更新します。
 - テストは既存の Vitest スタイルに合わせて書きます。
 - `for in` や `for of` よりも、配列の `map` や `filter`、オブジェクトの `Object.entries` などのメソッドを優先します。
+
+## Programming Guidelines
+
+下記の原則は全て重要な原則です。特に上にあるものほどより重要な原則です。
+
+1. Rui Ueyama's incremental implementation に従う
+2. Type Safety を常に意識する
+   - any は使わない。unknown / as は他に方法がないとき以外は使わない。他に方法がないと思ったときでも、本当に方法がないのか十分に検討する。
+   - アプリケーションコードではメタプログラミング、型パズルは使わない。
+3. Testable design とは何かを理解し、実際にテスト可能なコードを書く。
+4. Functional programming
+5. Separate refactorings from behavior changes
+6. SOLID
+   - Single Responsibility Principle
+   - Open/Closed Principle
+   - Liskov Substitution Principle
+   - Interface Segregation Principle
+   - Dependency Inversion Principle
+7. Command Query Separation (CQS)
+8. Separation of Concerns (SoC)
+9. Integration Boundary
+   - Library, Web API などの外部依存を分離する。
+10. YAGNI
+
+### Testing
+
+1. t-wada's TDD を実行すること
+2. Behavior-Oriented Testing - 振る舞いに対してテストをする。実装に対するテストはしない。
+3. Fast Feedback Loop
 
 ## 参考
 
