@@ -41,52 +41,111 @@ export interface Err<U> extends ResultBase<never, U> {
 
 export type Result<T, E> = Ok<T> | Err<E>;
 
-export const Ok = <T>(value: T): Ok<T> => {
-  return {
-    kind: "ok",
-    ok: true,
-    err: false,
-    value,
-    error: undefined,
-    unwrap: () => value,
-    unwrapErr: () => {
-      throw new ResultAccessError("called unwrapErr on Ok");
-    },
-    expect: (_message: string) => value,
-    expectErr: (message: string) => {
-      throw new ResultAccessError(message);
-    },
-    unwrapOr: <V>(_defaultValue: V): T | V => value,
-    unwrapOrElse: <V>(_fn: (error: never) => V): T | V => value,
-    map: <U>(fn: (okValue: T) => U) => Ok(fn(value)),
-    mapErr: <F>(_fn: (error: never) => F): Result<T, F> => Ok(value),
-    andThen: <U, F>(fn: (okValue: T) => Result<U, F>) => fn(value),
-    orElse: <F>(_fn: (error: never) => Result<T, F>): Result<T, F> => Ok(value),
-    flatMap: <U, F>(fn: (okValue: T) => Result<U, F>) => fn(value),
-  };
-};
+class OkImpl<T> implements Ok<T> {
+  readonly kind = "ok" as const;
+  readonly ok = true as const;
+  readonly err = false as const;
+  readonly error = undefined;
 
-export const Err = <U>(error: U): Err<U> => {
-  return {
-    kind: "err",
-    ok: false,
-    err: true,
-    value: undefined,
-    error,
-    unwrap: () => {
-      throw new ResultAccessError("called unwrap on Err");
-    },
-    unwrapErr: () => error,
-    expect: (message: string) => {
-      throw new ResultAccessError(message);
-    },
-    expectErr: (_message: string) => error,
-    unwrapOr: <V>(defaultValue: V): V => defaultValue,
-    unwrapOrElse: <V>(fn: (errValue: U) => V): V => fn(error),
-    map: <V>(_fn: (value: never) => V): Result<V, U> => Err<U>(error),
-    mapErr: <F>(fn: (errValue: U) => F): Result<never, F> => Err<F>(fn(error)),
-    andThen: <V, F>(_fn: (value: never) => Result<V, F>): Result<V, U | F> => Err<U>(error),
-    orElse: <F>(fn: (errValue: U) => Result<never, F>): Result<never, F> => fn(error),
-    flatMap: <V, F>(_fn: (value: never) => Result<V, F>): Result<V, U | F> => Err<U>(error),
-  };
-};
+  constructor(readonly value: T) {}
+
+  unwrap(): T {
+    return this.value;
+  }
+
+  unwrapErr(): never {
+    throw new ResultAccessError("called unwrapErr on Ok");
+  }
+
+  expect(_message: string): T {
+    return this.value;
+  }
+
+  expectErr(message: string): never {
+    throw new ResultAccessError(message);
+  }
+
+  unwrapOr<V>(_defaultValue: V): T | V {
+    return this.value;
+  }
+
+  unwrapOrElse<V>(_fn: (error: never) => V): T | V {
+    return this.value;
+  }
+
+  map<U>(fn: (value: T) => U): Result<U, never> {
+    return Ok(fn(this.value));
+  }
+
+  mapErr<F>(_fn: (error: never) => F): Result<T, F> {
+    return Ok(this.value);
+  }
+
+  andThen<U, F>(fn: (value: T) => Result<U, F>): Result<U, F> {
+    return fn(this.value);
+  }
+
+  orElse<F>(_fn: (error: never) => Result<T, F>): Result<T, F> {
+    return Ok(this.value);
+  }
+
+  flatMap<U, F>(fn: (value: T) => Result<U, F>): Result<U, F> {
+    return fn(this.value);
+  }
+}
+
+class ErrImpl<U> implements Err<U> {
+  readonly kind = "err" as const;
+  readonly ok = false as const;
+  readonly err = true as const;
+  readonly value = undefined;
+
+  constructor(readonly error: U) {}
+
+  unwrap(): never {
+    throw new ResultAccessError("called unwrap on Err");
+  }
+
+  unwrapErr(): U {
+    return this.error;
+  }
+
+  expect(message: string): never {
+    throw new ResultAccessError(message);
+  }
+
+  expectErr(_message: string): U {
+    return this.error;
+  }
+
+  unwrapOr<V>(defaultValue: V): V {
+    return defaultValue;
+  }
+
+  unwrapOrElse<V>(fn: (error: U) => V): V {
+    return fn(this.error);
+  }
+
+  map<V>(_fn: (value: never) => V): Result<V, U> {
+    return Err(this.error);
+  }
+
+  mapErr<F>(fn: (error: U) => F): Result<never, F> {
+    return Err(fn(this.error));
+  }
+
+  andThen<V, F>(_fn: (value: never) => Result<V, F>): Result<V, U | F> {
+    return Err(this.error);
+  }
+
+  orElse<F>(fn: (error: U) => Result<never, F>): Result<never, F> {
+    return fn(this.error);
+  }
+
+  flatMap<V, F>(_fn: (value: never) => Result<V, F>): Result<V, U | F> {
+    return Err(this.error);
+  }
+}
+
+export const Ok = <T>(value: T): Ok<T> => new OkImpl(value);
+export const Err = <U>(error: U): Err<U> => new ErrImpl(error);
