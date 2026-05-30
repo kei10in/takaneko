@@ -1,5 +1,7 @@
+import { Presets, SingleBar } from "cli-progress";
 import fs from "fs/promises";
 import os from "node:os";
+import process from "node:process";
 import path from "path";
 import { format, resolveConfig, resolveConfigFile } from "prettier";
 import { dedent } from "ts-dedent";
@@ -55,6 +57,12 @@ type ResolvedOgpFields = {
   mediaUrl: string | undefined;
 };
 
+type ProgressReporter = {
+  increment: () => void;
+  dispose: () => void;
+  stop: () => void;
+};
+
 const assertNever = (value: never): never => {
   throw new Error(`Unexpected media kind: ${JSON.stringify(value)}`);
 };
@@ -64,13 +72,27 @@ const fetchAndCacheMediaMetadata = async () => {
 
   const existingMediaMetadata = Object.fromEntries(getAllMediaMetadata().map((m) => [m.key, m]));
 
+  const progress = createProgressReporter(allMedia.length);
   const metadataPromises = allMedia.map(
     async (media): Promise<Result<MediaDetails, MetadataBuildError>> => {
-      return await fetchMediaMetadata(media);
+      try {
+        return await fetchMediaMetadata(media);
+      } finally {
+        progress.increment();
+      }
     },
   );
 
-  const items = (await Promise.all(metadataPromises)).flatMap((result) => {
+  const metadataResults = await (async () => {
+    try {
+      return await Promise.all(metadataPromises);
+    } finally {
+      progress.stop();
+      progress.dispose();
+    }
+  })();
+
+  const items = metadataResults.flatMap((result) => {
     if (result.err) {
       const existingItem = existingMediaMetadata[result.error.key];
       if (shouldLogMetadataBuildError(existingItem)) {
@@ -170,6 +192,46 @@ const fetchMediaMetadata = async (
   }
 
   return assertNever(media);
+};
+
+const createProgressReporter = (total: number): ProgressReporter => {
+  if (total === 0) {
+    return {
+      increment: () => undefined,
+      dispose: () => undefined,
+      stop: () => undefined,
+    };
+  }
+
+  const bar = new SingleBar(
+    {
+      clearOnComplete: false,
+      format: "media metadata [{bar}] {percentage}% | {value}/{total}",
+      stream: process.stderr,
+      hideCursor: true,
+      gracefulExit: true,
+    },
+    Presets.shades_classic,
+  );
+  let disposed = false;
+
+  const stop = () => {
+    bar.stop();
+  };
+
+  bar.start(total, 0);
+
+  return {
+    increment: () => {
+      if (!disposed) {
+        bar.increment();
+      }
+    },
+    dispose: () => {
+      disposed = true;
+    },
+    stop,
+  };
 };
 
 const buildOgpMediaDetails = (
@@ -336,6 +398,7 @@ const prettier = async (source: string): Promise<string> => {
 
 const main = async () => {
   try {
+    process.noDeprecation = true;
     await fetchAndCacheMediaMetadata();
   } catch (error) {
     console.error("Failed to cache media metadata:", error);

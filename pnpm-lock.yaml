@@ -144,6 +144,9 @@ importers:
       '@testing-library/react':
         specifier: ^16.3.2
         version: 16.3.2(@testing-library/dom@10.4.0)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@types/cli-progress':
+        specifier: ^3.11.6
+        version: 3.11.6
       '@types/hast':
         specifier: ^3.0.4
         version: 3.0.4
@@ -174,6 +177,9 @@ importers:
       canvas:
         specifier: ^3.2.3
         version: 3.2.3
+      cli-progress:
+        specifier: ^3.12.0
+        version: 3.12.0
       eslint:
         specifier: ^9.39.2
         version: 9.39.2(jiti@2.7.0)
@@ -1891,6 +1897,9 @@ packages:
   '@types/chai@5.2.3':
     resolution: {integrity: sha512-Mw558oeA9fFbv65/y4mHtXDs9bPnFMZAL/jxdPFUpOHHIXX91mcgEHbS5Lahr+pwZFR8A7GQleRWeI6cGFC2UA==}
 
+  '@types/cli-progress@3.11.6':
+    resolution: {integrity: sha512-cE3+jb9WRlu+uOSAugewNpITJDt1VF8dHOopPO4IABFc3SXYL5WE/+PTz/FCdZRRfIujiWW3n3aMbv1eIGVRWA==}
+
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
@@ -2412,6 +2421,10 @@ packages:
 
   chownr@1.1.4:
     resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
+
+  cli-progress@3.12.0:
+    resolution: {integrity: sha512-tRkV3HJ1ASwm19THiiLIXLO7Im7wlTuKnvkYaTkyoAPefqjNg7W7DHKUlGRxy9vxDvbyCYQkQozvptuMkGCg8A==}
+    engines: {node: '>=4'}
 
   clsx@2.1.1:
     resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
@@ -6272,6 +6285,10 @@ snapshots:
       '@types/deep-eql': 4.0.2
       assertion-error: 2.0.1
 
+  '@types/cli-progress@3.11.6':
+    dependencies:
+      '@types/node': 25.0.2
+
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 2.1.0
@@ -6812,6 +6829,10 @@ snapshots:
       readdirp: 4.1.2
 
   chownr@1.1.4: {}
+
+  cli-progress@3.12.0:
+    dependencies:
+      string-width: 4.2.3
 
   clsx@2.1.1: {}
 
