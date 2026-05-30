@@ -26,74 +26,76 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
   const monthRange = calendarMonthRange(currentMonth);
 
   return (
-    <div className="container mx-auto min-h-[calc(100svh-var(--header-height)-3rem)] px-4">
-      <div className="mx-auto max-w-2xl space-y-4">
-        <div className="py-2">
-          <Breadcrumb
-            items={[
-              { label: "たかねこの", to: "/calendar" },
-              { label: "スケジュール", to: "/calendar" },
-              { label: displayMonth(m), to: calendarMonthHref(m) },
-            ]}
-          />
-        </div>
+    <div className="bg-zinc-50">
+      <div className="container mx-auto min-h-[calc(100svh-var(--header-height))] px-4">
+        <div className="mx-auto max-w-2xl space-y-4">
+          <div className="py-2">
+            <Breadcrumb
+              items={[
+                { label: "たかねこの", to: "/calendar" },
+                { label: "スケジュール", to: "/calendar" },
+                { label: displayMonth(m), to: calendarMonthHref(m) },
+              ]}
+            />
+          </div>
 
-        <div className="my-4 flex items-center justify-between">
-          <h1 className="text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
-          <div className="flex h-8 w-36 items-stretch divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
-            {isMonthInRange(d.previousDate().naiveMonth(), monthRange) ? (
+          <div className="my-4 flex items-center justify-between">
+            <h1 className="text-lg font-bold">{displayDateWithDayOfWeek(d)}</h1>
+            <div className="flex h-8 w-36 items-stretch divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
+              {isMonthInRange(d.previousDate().naiveMonth(), monthRange) ? (
+                <Link
+                  className="inset-focus inline-flex h-full grow items-center justify-center"
+                  to={dateHref(d.previousDate())}
+                  preventScrollReset={true}
+                >
+                  <HiChevronLeft />
+                </Link>
+              ) : (
+                <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
+                  <HiChevronLeft />
+                </span>
+              )}
               <Link
                 className="inset-focus inline-flex h-full grow items-center justify-center"
-                to={dateHref(d.previousDate())}
+                to="/calendar/today"
                 preventScrollReset={true}
               >
-                <HiChevronLeft />
+                今日
               </Link>
+              {isMonthInRange(d.nextDate().naiveMonth(), monthRange) ? (
+                <Link
+                  className="inset-focus inline-flex h-full grow items-center justify-center"
+                  to={dateHref(d.nextDate())}
+                  preventScrollReset={true}
+                >
+                  <HiChevronRight />
+                </Link>
+              ) : (
+                <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
+                  <HiChevronRight />
+                </span>
+              )}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            {events.length !== 0 ? (
+              events.map((event) => (
+                <LinkCalendarEventItem
+                  key={event.slug}
+                  to={`/events/${event.slug}`}
+                  category={event.category}
+                  summary={event.summary}
+                  location={event.location}
+                  region={event.region}
+                  thumbnail={event.thumbnail}
+                  time={event.time}
+                />
+              ))
             ) : (
-              <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
-                <HiChevronLeft />
-              </span>
-            )}
-            <Link
-              className="inset-focus inline-flex h-full grow items-center justify-center"
-              to="/calendar/today"
-              preventScrollReset={true}
-            >
-              今日
-            </Link>
-            {isMonthInRange(d.nextDate().naiveMonth(), monthRange) ? (
-              <Link
-                className="inset-focus inline-flex h-full grow items-center justify-center"
-                to={dateHref(d.nextDate())}
-                preventScrollReset={true}
-              >
-                <HiChevronRight />
-              </Link>
-            ) : (
-              <span className="inset-focus inline-flex h-full grow items-center justify-center text-zinc-300">
-                <HiChevronRight />
-              </span>
+              <div className="mx-auto w-fit py-4 text-gray-800">予定はありません。</div>
             )}
           </div>
-        </div>
-
-        <div className="space-y-4">
-          {events.length !== 0 ? (
-            events.map((event) => (
-              <LinkCalendarEventItem
-                key={event.slug}
-                to={`/events/${event.slug}`}
-                category={event.category}
-                summary={event.summary}
-                location={event.location}
-                region={event.region}
-                thumbnail={event.thumbnail}
-                time={event.time}
-              />
-            ))
-          ) : (
-            <div className="mx-auto w-fit py-4 text-gray-800">予定はありません。</div>
-          )}
         </div>
       </div>
     </div>
