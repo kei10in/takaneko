@@ -66,51 +66,7 @@ const fetchAndCacheMediaMetadata = async () => {
 
   const metadataPromises = allMedia.map(
     async (media): Promise<Result<MediaDetails, MetadataBuildError>> => {
-      const key = mediaKey(media);
-
-      if (media.kind == "static") {
-        return Ok({
-          kind: "static",
-          key,
-          title: media.title,
-          authorName: media.authorName,
-          publishedAt: media.publishedAt,
-          mediaUrl: media.mediaUrl,
-          imageUrl: media.image.path,
-          category: media.category,
-          presents: media.presents ?? [],
-        });
-      } else if (media.kind == "ogp") {
-        const metadata = await ogp(media.mediaUrl);
-        return buildOgpMediaDetails(media, key, metadata);
-      } else if (media.kind == "youtube") {
-        const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${media.videoId}&format=json`;
-        const response = await fetch(url);
-
-        if (!response.ok) {
-          return Err({
-            kind: "youtube-fetch-failed",
-            key,
-            videoId: media.videoId,
-            message: `${response.status} ${response.statusText}`,
-          });
-        }
-
-        const jsonData = await response.json();
-        const parsedOEmbed = validateYouTubeOEmbedResponse(jsonData);
-        if (!parsedOEmbed) {
-          return Err({
-            kind: "youtube-invalid-oembed",
-            key,
-            videoId: media.videoId,
-            message: "Unexpected response format",
-          });
-        }
-
-        return buildYoutubeMediaDetails(media, key, parsedOEmbed);
-      }
-
-      return assertNever(media);
+      return await fetchMediaMetadata(media);
     },
   );
 
@@ -164,6 +120,56 @@ const fetchAndCacheMediaMetadata = async () => {
       await fs.writeFile(outputFilePath, formattedContent, "utf-8");
     }),
   );
+};
+
+const fetchMediaMetadata = async (
+  media: MediaDescriptor,
+): Promise<Result<MediaDetails, MetadataBuildError>> => {
+  const key = mediaKey(media);
+
+  if (media.kind == "static") {
+    return Ok({
+      kind: "static",
+      key,
+      title: media.title,
+      authorName: media.authorName,
+      publishedAt: media.publishedAt,
+      mediaUrl: media.mediaUrl,
+      imageUrl: media.image.path,
+      category: media.category,
+      presents: media.presents ?? [],
+    });
+  } else if (media.kind == "ogp") {
+    const metadata = await ogp(media.mediaUrl);
+    return buildOgpMediaDetails(media, key, metadata);
+  } else if (media.kind == "youtube") {
+    const url = `${oEmbedEndpoint}?url=https://www.youtube.com/watch?v=${media.videoId}&format=json`;
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      return Err({
+        kind: "youtube-fetch-failed",
+        key,
+        videoId: media.videoId,
+        message: `${response.status} ${response.statusText}`,
+      });
+    }
+
+    const jsonData = await response.json();
+    const parsedOEmbed = validateYouTubeOEmbedResponse(jsonData);
+    if (!parsedOEmbed) {
+      return Err({
+        kind: "youtube-invalid-oembed",
+        key,
+        videoId: media.videoId,
+        message: "Unexpected response format",
+      });
+    }
+
+    return buildYoutubeMediaDetails(media, key, parsedOEmbed);
+  }
+
+  return assertNever(media);
 };
 
 const buildOgpMediaDetails = (
