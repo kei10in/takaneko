@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "SOLO",
   date: "2026-08-06",
-  open: undefined,
-  start: undefined,
+  open: "18:00",
+  start: "19:00",
   end: undefined,
   region: "神奈川",
   location: "KT Zepp Yokohama",
@@ -18,8 +18,8 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   link: {
-    text: "",
-    url: "",
+    text: "公式ニュース",
+    url: "https://takanenonadeshiko.jp/?p=5342",
   },
   ticket: "",
   streamings: undefined,
@@ -32,11 +32,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-05-07",
+  updatedAt: "2026-05-31",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [詳細告知 - 公式ニュース](https://takanenonadeshiko.jp/?p=5342)
+  - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2060677607843152256)
   - [開催決定 - 公式 X](https://x.com/takanenofficial/status/2051982808751739008)
 `;
