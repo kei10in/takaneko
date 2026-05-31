@@ -100,6 +100,7 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 9. Integration Boundary
    - Library, Web API などの外部依存を分離する。
 10. YAGNI
+11. 例外を投げる代わりに Result モナドを使う。
 
 ### Testing
 
