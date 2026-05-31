@@ -32,78 +32,82 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
   const monthRange = calendarMonthRange(props.currentMonth);
 
   return (
-    <div className="mx-2 flex h-(--calendar-controller-height) items-center justify-between">
-      <Link
-        className="inset-focus flex h-8 items-center rounded-md border border-gray-200 px-3 text-sm"
-        to={hrefToday}
-        preventScrollReset={true}
-      >
-        <span className="mx-auto whitespace-nowrap">今日</span>
-      </Link>
-      <div className="truncate overflow-hidden text-gray-800">{displayMonth(month)}</div>
-      <div className="flex flex-none items-center gap-2">
-        <Popover className="w-28">
-          <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
-            <div className="mx-auto flex-1 pl-2">
-              {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
-            </div>
-            <div className="flex-none px-1">
-              <BsChevronDown className="text-xs" />
-            </div>
-          </PopoverButton>
-          <PopoverPanel
-            anchor={{ to: "bottom", gap: "0.5rem" }}
-            className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
-          >
-            <ul className="space-y-1">
-              {EventFilters.map((c) => (
-                <li key={c.display}>
-                  <CloseButton
-                    as={Link}
-                    data-current={filter == c.name ? "" : undefined}
-                    className={clsx(
-                      "block w-24 px-3 text-center text-sm text-gray-600",
-                      "data-current:bg-nadeshiko-700 data-current:text-white",
-                    )}
-                    to={{
-                      pathname: calendarMonthHref(month),
-                      search: c.name == EventFilterType.all ? "" : `?t=${c.name}`,
-                      hash: `#${hash}`,
-                    }}
-                    preventScrollReset={true}
-                  >
-                    {c.display}
-                  </CloseButton>
-                </li>
-              ))}
-            </ul>
-          </PopoverPanel>
-        </Popover>
-        <div className="inline-flex h-8 w-20 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200">
-          {isMonthInRange(month.previousMonth(), monthRange) ? (
-            <Link
-              className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
-              to={hrefPreviousMonth}
+    <div className="@container h-(--calendar-controller-height) w-full">
+      <div className="flex h-full w-full items-center justify-between px-4">
+        <div className="truncate overflow-hidden pl-2 text-xl">{displayMonth(month)}</div>
+        <div className="flex flex-none items-center gap-4">
+          <Popover className="w-28">
+            <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
+              <div className="mx-auto flex-1 pl-2">
+                {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
+              </div>
+              <div className="flex-none px-1">
+                <BsChevronDown className="text-xs" />
+              </div>
+            </PopoverButton>
+            <PopoverPanel
+              anchor={{ to: "bottom", gap: "0.5rem" }}
+              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
             >
-              <HiChevronLeft />
-            </Link>
-          ) : (
-            <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
-              <HiChevronLeft />
-            </span>
-          )}
-          {isMonthInRange(month.nextMonth(), monthRange) ? (
+              <ul className="space-y-1">
+                {EventFilters.map((c) => (
+                  <li key={c.display}>
+                    <CloseButton
+                      as={Link}
+                      data-current={filter == c.name ? "" : undefined}
+                      className={clsx(
+                        "block w-24 px-3 text-center text-sm text-gray-600",
+                        "data-current:bg-nadeshiko-700 data-current:text-white",
+                      )}
+                      to={{
+                        pathname: calendarMonthHref(month),
+                        search: c.name == EventFilterType.all ? "" : `?t=${c.name}`,
+                        hash: `#${hash}`,
+                      }}
+                      preventScrollReset={true}
+                    >
+                      {c.display}
+                    </CloseButton>
+                  </li>
+                ))}
+              </ul>
+            </PopoverPanel>
+          </Popover>
+          <div className="hidden h-8 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @md:inline-flex">
+            {isMonthInRange(month.previousMonth(), monthRange) ? (
+              <Link
+                className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+                to={hrefPreviousMonth}
+              >
+                <HiChevronLeft />
+              </Link>
+            ) : (
+              <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
+                <HiChevronLeft />
+              </span>
+            )}
+
             <Link
-              className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
-              to={hrefNextMonth}
+              className="inset-focus flex h-8 items-center px-3 text-sm"
+              to={hrefToday}
+              preventScrollReset={true}
             >
-              <HiChevronRight />
+              <span className="mx-auto whitespace-nowrap">今日</span>
             </Link>
-          ) : (
-            <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
-              <HiChevronRight />
-            </span>
-          )}
+
+            {isMonthInRange(month.nextMonth(), monthRange) ? (
+              <Link
+                className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+                to={hrefNextMonth}
+              >
+                <HiChevronRight />
+              </Link>
+            ) : (
+              <span className="inset-focus inline-flex h-full grow items-center justify-center text-sm text-zinc-300">
+                <HiChevronRight />
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>
