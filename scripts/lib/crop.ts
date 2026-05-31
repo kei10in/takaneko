@@ -1,6 +1,6 @@
 import { CompressionType, FilterType, Transformer } from "@napi-rs/image";
 import { createCanvas, loadImage, type Image } from "canvas";
-import fs from "node:fs";
+import fs, { existsSync } from "node:fs";
 import path from "node:path";
 import {
   CROPPED_MINI_PHOTO_CARD_SIZE,
@@ -37,10 +37,33 @@ export const getOutputImageSize = (photo: RandomGoods, pos: ImagePosition): Size
   }
 };
 
+export interface ImageCroppingSpec {
+  position: Xywh;
+  outputSize: Size;
+  outputPath: string;
+}
+
+export const listImageCroppingSpecs = (photo: RandomGoods): ImageCroppingSpec[] => {
+  return photo.positions.map((pos) => ({
+    position: pos,
+    outputSize: getOutputImageSize(photo, pos),
+    outputPath: `public${croppedImagePath(photo.url, pos.id)}`,
+  }));
+};
+
+export interface CroppingOptions {
+  rebuild: boolean;
+}
+
 /**
  * ランダムグッズの商品紹介画像をひとつずつの画像に切り抜きます。
  */
-export const crop = async (photo: RandomGoods): Promise<void> => {
+export const crop = async (photo: RandomGoods, { rebuild }: CroppingOptions): Promise<void> => {
+  const specs = listImageCroppingSpecs(photo).filter((x) => rebuild || !existsSync(x.outputPath));
+  if (specs.length === 0) {
+    return;
+  }
+
   const filepath = `public${photo.url}`;
   const source = await fs.promises.readFile(filepath);
   const decodedPng = await new Transformer(source).rotate().png({
@@ -49,10 +72,8 @@ export const crop = async (photo: RandomGoods): Promise<void> => {
   });
   const sourceImage = await loadImage(decodedPng);
 
-  const tasks = photo.positions.map(async (pos) => {
-    const size = getOutputImageSize(photo, pos);
-    const dest = `public${croppedImagePath(photo.url, pos.id)}`;
-    await cropImage(sourceImage, pos, dest, size);
+  const tasks = specs.map(async (spec) => {
+    await cropImage(sourceImage, spec.position, spec.outputPath, spec.outputSize);
   });
 
   await Promise.all(tasks);

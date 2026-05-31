@@ -3,20 +3,22 @@ import {
   regularTakanekoMiniPhotoCards,
   regularTakanekoPhotos,
 } from "~/features/products/productImages";
-import { crop } from "./lib/crop";
+import { crop, CroppingOptions } from "./lib/crop";
 
 const main = async () => {
-  await cropPhotos();
-  await cropMiniPhotoCards();
-  await cropOtherRandomGoods();
+  const rebuild = process.argv.includes("--rebuild");
+
+  await cropPhotos({ rebuild });
+  await cropMiniPhotoCards({ rebuild });
+  await cropOtherRandomGoods({ rebuild });
 };
 
 /**
  * 生写真の画像をひとつずつの画像に切り抜きます。
  */
-const cropPhotos = async () => {
+const cropPhotos = async (options: CroppingOptions) => {
   const tasks = regularTakanekoPhotos().map(async (photo) => {
-    await crop(photo);
+    await crop(photo, options);
   });
 
   await Promise.all(tasks);
@@ -25,9 +27,9 @@ const cropPhotos = async () => {
 /**
  * ミニフォトカードの画像をひとつずつの画像に切り抜きます。
  */
-const cropMiniPhotoCards = async () => {
+const cropMiniPhotoCards = async (options: CroppingOptions) => {
   const tasks = regularTakanekoMiniPhotoCards().map(async (photo) => {
-    await crop(photo);
+    await crop(photo, options);
   });
 
   await Promise.all(tasks);
@@ -36,9 +38,9 @@ const cropMiniPhotoCards = async () => {
 /**
  * その他のランダムグッズの画像をひとつずつの画像に切り抜きます。
  */
-const cropOtherRandomGoods = async () => {
+const cropOtherRandomGoods = async (options: CroppingOptions) => {
   const tasks = otherTakanekoRandomGoods().map(async (photo) => {
-    await crop(photo);
+    await crop(photo, options);
   });
 
   await Promise.all(tasks);
