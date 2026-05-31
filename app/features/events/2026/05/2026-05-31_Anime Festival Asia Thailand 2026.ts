@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-05-31_Anime Festival Asia Thailand 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2035193861899985206",
     },
+    {
+      path: "/events/2026/2026-05-31_Anime Festival Asia Thailand 2026_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2060975911869235471",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -32,11 +36,12 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-23",
+  updatedAt: "2026-05-31",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2060975911869235471)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2035193861899985206)
 `;
