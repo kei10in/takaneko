@@ -27,8 +27,8 @@ export const DailyCalendar: React.FC<Props> = (props: Props) => {
 
   return (
     <div className="bg-zinc-50">
-      <div className="container mx-auto min-h-[calc(100svh-var(--header-height))] px-4">
-        <div className="mx-auto max-w-2xl space-y-4">
+      <div className="container mx-auto min-h-[calc(100svh-var(--header-height))]">
+        <div className="mx-auto max-w-2xl space-y-4 px-4">
           <div className="py-2">
             <Breadcrumb
               items={[

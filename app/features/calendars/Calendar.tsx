@@ -117,13 +117,13 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "flex flex-1 flex-col bg-zinc-50 landscape:self-stretch landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
+          "@container flex flex-1 flex-col bg-zinc-50 landscape:self-stretch landscape:border-l landscape:border-l-gray-300 landscape:md:w-96 landscape:md:flex-none landscape:lg:w-110",
         )}
       >
         <div
           id="events-list"
           className={clsx(
-            "flex min-h-0 flex-1 flex-col px-4",
+            "mx-auto flex min-h-0 w-full max-w-2xl flex-1 flex-col px-4",
             weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
             weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",
             weeksInMonth == 6 && "scroll-mt-(--calendar-scroll-margin-for-6-weeks)",
@@ -143,19 +143,21 @@ export const Calendar: React.FC<Props> = (props: Props) => {
         </div>
 
         <div>
-          <div className="ml-auto w-fit flex-none px-4 landscape:flex-0">
-            <Link
-              to="#events-list"
-              className="inline-flex items-center justify-center gap-1 text-sm text-zinc-600"
-            >
-              <span>最初に戻る</span>
-              <HiArrowUp className="w-3" />
-            </Link>
+          <div className="mx-auto flex min-h-0 w-full max-w-2xl flex-none landscape:flex-0">
+            <div className="ml-auto w-fit px-4">
+              <Link
+                to="#events-list"
+                className="inline-flex items-center justify-center gap-1 text-sm text-zinc-600"
+              >
+                <span>最初に戻る</span>
+                <HiArrowUp className="w-3" />
+              </Link>
+            </div>
           </div>
 
           <hr className="my-2 border-gray-300" />
 
-          <div className="flex items-center justify-between px-4 pb-8">
+          <div className="mx-auto flex min-h-0 w-full max-w-2xl items-center justify-between px-4 pb-8">
             {isMonthInRange(prevMonth, monthRange) ? (
               <Link className="flex items-center font-bold text-zinc-600" to={hrefPreviousMonth}>
                 <span>
