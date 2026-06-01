@@ -37,7 +37,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
         <div className="truncate overflow-hidden pl-2 text-xl">{displayMonth(month)}</div>
 
         <div className="flex flex-none items-center gap-4">
-          <Popover className="w-32">
+          <Popover className="relative w-32">
             <PopoverButton
               className={clsx(
                 "flex h-9 w-full items-center justify-between rounded-full border border-gray-200 px-1",
@@ -57,8 +57,10 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
               </div>
             </PopoverButton>
             <PopoverPanel
-              anchor={{ to: "bottom end", gap: "0.5rem", padding: "0.5rem" }}
-              className="min-w-48 overflow-hidden rounded-2xl border border-zinc-200 bg-white p-2 shadow-xl outline-none"
+              className={clsx(
+                "z-20 min-w-48 overflow-auto rounded-2xl border border-zinc-200 bg-white p-2 shadow-xl outline-none",
+                "absolute top-full right-0 mt-2 max-h-[calc(100dvh-var(--header-height)-var(--calendar-controller-height)-1rem)]",
+              )}
             >
               <ul className="space-y-0.5">
                 {EventFilters.map((c) => (
