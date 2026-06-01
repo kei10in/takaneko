@@ -70,14 +70,14 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                 <SwiperSlide key={y} className="space-y-2">
                   <div className="flex items-center justify-between select-none">
                     <button
-                      className="flex size-9 items-center justify-center rounded-lg hover:bg-zinc-200"
+                      className="flex size-9 items-center justify-center rounded-lg hover:bg-zinc-100"
                       onClick={() => swiperRef.current?.slidePrev()}
                     >
                       <HiChevronLeft className="inline-block" />
                     </button>
                     <span className="font-bold text-zinc-400">{y}</span>
                     <button
-                      className="flex size-9 items-center justify-center rounded-lg hover:bg-zinc-200"
+                      className="flex size-9 items-center justify-center rounded-lg hover:bg-zinc-100"
                       onClick={() => swiperRef.current?.slideNext()}
                     >
                       <HiChevronRight className="inline-block" />
@@ -99,7 +99,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                                 hash: `#${hash}`,
                               }}
                               className={clsx(
-                                "flex h-9 items-center justify-center rounded-lg text-base whitespace-nowrap hover:bg-zinc-200",
+                                "flex h-9 items-center justify-center rounded-lg text-base whitespace-nowrap hover:bg-zinc-100",
                                 isCurrent && "bg-nadeshiko-800 text-white",
                               )}
                             >
@@ -113,7 +113,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                   <div>
                     <CloseButton
                       as={Link}
-                      className="inset-focus flex h-9 items-center rounded-lg px-3 hover:bg-zinc-200"
+                      className="inset-focus flex h-9 items-center rounded-lg px-3 hover:bg-zinc-100"
                       to={hrefToday}
                       preventScrollReset={true}
                     >
@@ -160,7 +160,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                       data-current={filter == c.name ? "" : undefined}
                       className={clsx(
                         "flex h-9 items-center px-6 text-base text-gray-600",
-                        "rounded-lg hover:bg-zinc-200 data-current:bg-nadeshiko-800 data-current:text-white",
+                        "rounded-lg hover:bg-zinc-100 data-current:bg-nadeshiko-800 data-current:text-white",
                       )}
                       to={{
                         pathname: calendarMonthHref(month),
@@ -180,7 +180,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
           <div className="hidden h-9 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @lg:inline-flex">
             {isMonthInRange(month.previousMonth(), monthRange) ? (
               <Link
-                className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+                className="inset-focus inline-flex h-full grow items-center justify-center text-sm hover:bg-zinc-100"
                 to={hrefPreviousMonth}
               >
                 <HiChevronLeft />
@@ -192,7 +192,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
             )}
 
             <Link
-              className="inset-focus flex items-center px-3"
+              className="inset-focus flex items-center px-3 hover:bg-zinc-100"
               to={hrefToday}
               preventScrollReset={true}
             >
@@ -201,7 +201,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
 
             {isMonthInRange(month.nextMonth(), monthRange) ? (
               <Link
-                className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
+                className="inset-focus inline-flex h-full grow items-center justify-center text-sm hover:bg-zinc-100"
                 to={hrefNextMonth}
               >
                 <HiChevronRight />
