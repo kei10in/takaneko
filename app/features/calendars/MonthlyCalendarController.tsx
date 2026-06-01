@@ -1,7 +1,7 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { BsChevronDown } from "react-icons/bs";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
+import { HiChevronLeft, HiChevronRight, HiOutlineFunnel } from "react-icons/hi2";
 import { Link, To } from "react-router";
 import { displayMonth } from "~/utils/dateDisplay";
 import { isMonthInRange } from "~/utils/datetime/MonthRange";
@@ -35,29 +35,40 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
     <div className="@container h-(--calendar-controller-height) w-full">
       <div className="flex h-full w-full items-center justify-between px-4">
         <div className="truncate overflow-hidden pl-2 text-xl">{displayMonth(month)}</div>
+
         <div className="flex flex-none items-center gap-4">
-          <Popover className="w-28">
-            <PopoverButton className="flex w-full items-center justify-between rounded-full border border-gray-200 text-sm text-gray-600">
-              <div className="mx-auto flex-1 pl-2">
-                {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
+          <Popover className="w-32">
+            <PopoverButton
+              className={clsx(
+                "flex h-9 w-full items-center justify-between rounded-full border border-gray-200 px-1",
+                "outline-none",
+              )}
+            >
+              <div className="flex-1">
+                <span className="pr-1">
+                  <HiOutlineFunnel className="inline-block" />
+                </span>
+                <span>
+                  {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
+                </span>
               </div>
               <div className="flex-none px-1">
                 <BsChevronDown className="text-xs" />
               </div>
             </PopoverButton>
             <PopoverPanel
-              anchor={{ to: "bottom", gap: "0.5rem" }}
-              className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
+              anchor={{ to: "bottom end", gap: "0.5rem", padding: "0.5rem" }}
+              className="min-w-48 overflow-hidden rounded-2xl border border-zinc-200 bg-white p-2 shadow-xl outline-none"
             >
-              <ul className="space-y-1">
+              <ul className="space-y-0.5">
                 {EventFilters.map((c) => (
                   <li key={c.display}>
                     <CloseButton
                       as={Link}
                       data-current={filter == c.name ? "" : undefined}
                       className={clsx(
-                        "block w-24 px-3 text-center text-sm text-gray-600",
-                        "data-current:bg-nadeshiko-700 data-current:text-white",
+                        "flex h-9 items-center px-6 text-base text-gray-600",
+                        "rounded-lg hover:bg-zinc-200 data-current:bg-nadeshiko-700 data-current:text-white",
                       )}
                       to={{
                         pathname: calendarMonthHref(month),
@@ -73,7 +84,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
               </ul>
             </PopoverPanel>
           </Popover>
-          <div className="hidden h-8 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @md:inline-flex">
+          <div className="hidden h-9 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @md:inline-flex">
             {isMonthInRange(month.previousMonth(), monthRange) ? (
               <Link
                 className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
@@ -88,7 +99,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
             )}
 
             <Link
-              className="inset-focus flex h-8 items-center px-3 text-sm"
+              className="inset-focus flex items-center px-3"
               to={hrefToday}
               preventScrollReset={true}
             >
