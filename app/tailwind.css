@@ -151,3 +151,8 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+@utility graceful-selected-item {
+  @apply font-semibold text-white/95;
+  @apply bg-linear-50 from-nadeshiko-800/90 from-0% via-nadeshiko-800 via-50% to-nadeshiko-800/50 to-100%;
+}

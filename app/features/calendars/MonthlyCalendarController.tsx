@@ -98,9 +98,10 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                                 search: filter == EventFilterType.all ? "" : `?t=${filter}`,
                                 hash: `#${hash}`,
                               }}
+                              data-current={isCurrent ? "" : undefined}
                               className={clsx(
                                 "flex h-9 items-center justify-center rounded-lg text-base whitespace-nowrap hover:bg-zinc-100",
-                                isCurrent && "bg-nadeshiko-800 text-white",
+                                "data-current:graceful-selected-item",
                               )}
                             >
                               <span className="mx-auto inline-block w-10 text-right">{m} 月</span>
@@ -160,7 +161,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                       data-current={filter == c.name ? "" : undefined}
                       className={clsx(
                         "flex h-9 items-center px-6 text-base text-gray-600",
-                        "rounded-lg hover:bg-zinc-100 data-current:bg-nadeshiko-800 data-current:text-white",
+                        "rounded-lg hover:bg-zinc-100 data-current:graceful-selected-item",
                       )}
                       to={{
                         pathname: calendarMonthHref(month),
