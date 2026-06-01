@@ -37,22 +37,22 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
         <div className="truncate overflow-hidden pl-2 text-xl">{displayMonth(month)}</div>
 
         <div className="flex flex-none items-center gap-4">
-          <Popover className="relative w-32">
+          <Popover className="relative">
             <PopoverButton
               className={clsx(
-                "flex h-9 w-full items-center justify-between rounded-full border border-gray-200 px-1",
+                "flex h-9 w-full min-w-48 items-center justify-between rounded-full border border-gray-200 text-start",
                 "outline-none",
               )}
             >
-              <div className="flex-1">
-                <span className="pr-1">
+              <div className="flex-1 px-4">
+                <span className="pr-2">
                   <HiOutlineFunnel className="inline-block" />
                 </span>
                 <span>
                   {EventFilters.find((x) => x.name == filter)?.display ?? EventFilters[0].display}
                 </span>
               </div>
-              <div className="flex-none px-1">
+              <div className="flex-none px-2">
                 <BsChevronDown className="text-xs" />
               </div>
             </PopoverButton>
@@ -86,7 +86,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
               </ul>
             </PopoverPanel>
           </Popover>
-          <div className="hidden h-9 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @md:inline-flex">
+          <div className="hidden h-9 w-28 divide-x divide-gray-200 overflow-hidden rounded-md border border-gray-200 @lg:inline-flex">
             {isMonthInRange(month.previousMonth(), monthRange) ? (
               <Link
                 className="inset-focus inline-flex h-full grow items-center justify-center text-sm"
