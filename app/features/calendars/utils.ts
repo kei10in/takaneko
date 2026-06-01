@@ -73,6 +73,13 @@ export const dateHref = (date: NaiveDate, param: { search?: string } = {}): stri
   return `/calendar/${y}/${m}/${d}${search}`;
 };
 
+export const calendarYearRange = (currentMonth: NaiveMonth): number[] => {
+  const startYear = 2022;
+  const endYear = currentMonth.year + 2;
+
+  return Array.from({ length: endYear - startYear }, (_, i) => startYear + i);
+};
+
 /**
  * calendarMonthRange はカレンダーページで表示する月の範囲を返す関数です。
  */

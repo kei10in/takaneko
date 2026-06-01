@@ -23,7 +23,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
   const calendarMonth = useMemo(() => zipCalendarDatesAndEvents(dates, events), [dates, events]);
 
   const weekdayStyle = clsx(
-    "box-border h-(--calendar-weekday-height) w-1/7 border-b border-gray-300 p-0",
+    "box-border h-(--calendar-weekday-height) w-1/7 border-b border-gray-300 p-0 py-0.5 align-bottom",
     "landscape:h-(--calendar-landscape-weekday-height)",
   );
 

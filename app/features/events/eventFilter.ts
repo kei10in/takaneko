@@ -41,24 +41,16 @@ export const EventFilters: EventFilter[] = [
     predicate: (event) => event.meta.category === EventType.EVENT,
   },
   {
-    display: "生配信",
+    display: "配信",
     name: "streaming",
-    predicate: (event) => event.meta.category === EventType.STREAMING,
+    predicate: (event) =>
+      event.meta.category === EventType.STREAMING || event.meta.category === EventType.WEB,
   },
   {
-    display: "テレビ",
+    display: "TV・ラジオ",
     name: "tv",
-    predicate: (event) => event.meta.category === EventType.TV,
-  },
-  {
-    display: "ラジオ",
-    name: "radio",
-    predicate: (event) => event.meta.category === EventType.RADIO,
-  },
-  {
-    display: "Web",
-    name: "web",
-    predicate: (event) => event.meta.category === EventType.WEB,
+    predicate: (event) =>
+      event.meta.category === EventType.TV || event.meta.category === EventType.RADIO,
   },
   {
     display: "誕生日",
