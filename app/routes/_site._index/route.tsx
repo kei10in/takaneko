@@ -17,7 +17,8 @@ import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 export const meta: MetaFunction = () => {
   const title = SiteTitle;
   const description =
-    "HoneyWorksサウンドプロデュースの10人組アイドルグループ 高嶺のなでしこ (たかねこ) の非公式ファンサイト。トレード画像をつくるやつでは、生写真やミニフォトカードなどのランダムグッズのトレード用の画像を作成可能。スケジュールでは、ライブやイベント、テレビ出演などのスケジュールが確認可能。";
+    "HoneyWorksサウンドプロデュース「高嶺のなでしこ（たかねこ）」の非公式ファンサイト。ライブ・イベント予定、テレビ・ラジオ出演、セットリスト、トレード画像作成、楽曲・衣装情報をまとめています。";
+
   const url = `https://${DomainName}/`;
 
   return [
