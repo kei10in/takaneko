@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import {
   ClientLoaderFunctionArgs,
   LoaderFunctionArgs,
+  MetaArgs,
   MetaFunction,
   useLoaderData,
   useLocation,
@@ -24,36 +25,67 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
-const makeRobots = (loadedData: Awaited<ReturnType<typeof loader>> | undefined) => {
-  if (loadedData == undefined) {
+const makeRobots = ({ params, loaderData }: MetaArgs<typeof loader>) => {
+  if (loaderData == undefined) {
+    return [];
+  }
+
+  const { year, month } = params;
+  // /calendar のとき index, follow。つまり robots なし
+  if (year == undefined || month == undefined) {
     return [];
   }
 
   const currentMonth = NaiveDate.todayInJapan().naiveMonth();
   const range = calendarMonthRangeForSEO(currentMonth);
 
-  const pageMonth = new NaiveMonth(loadedData.year, loadedData.month);
+  const pageMonth = new NaiveMonth(loaderData.year, loaderData.month);
   const isIndexable = isMonthInRange(pageMonth, range);
 
   return isIndexable ? [] : [{ name: "robots", content: "noindex,follow" }];
 };
 
-export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+const makeCanonical = ({ params, loaderData }: MetaArgs<typeof loader>) => {
+  if (loaderData == undefined) {
+    return `https://${DomainName}/calendar`;
+  }
+
+  const { year, month } = params;
+  // /calendar のときは self canonical
+  if (year == undefined || month == undefined) {
+    return `https://${DomainName}/calendar`;
+  }
+
+  const currentMonth = NaiveDate.todayInJapan().naiveMonth();
+  if (currentMonth.year === loaderData.year && currentMonth.month === loaderData.month) {
+    return `https://${DomainName}/calendar`;
+  }
+
+  const yearStr = String(loaderData.year).padStart(4, "0");
+  const monthStr = String(loaderData.month).padStart(2, "0");
+
+  return `https://${DomainName}/calendar/${yearStr}/${monthStr}`;
+};
+
+export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>) => {
+  const { loaderData } = args;
+
   const title =
     loaderData == undefined
       ? "スケジュール"
       : `${displayMonth(loaderData.year, loaderData.month)} のスケジュール`;
 
-  const robots = makeRobots(loaderData);
+  const robots = makeRobots(args);
+  const canonical = makeCanonical(args);
 
   return [
     { title: formatTitle(title) },
     {
       name: "description",
       content:
-        "高嶺のなでしこの出演予定やリリース情報をまとめた非公式スケジュールです。" +
-        "気になるイベント・ライブ・テレビ・ラジオの出演日や雑誌・CDの発売日などを確認しましょう。",
+        "高嶺のなでしこのイベント・ライブ・リリースイベント・テレビ・ラジオ出演予定などをまとめた非公式スケジュールです。",
     },
+    { tagName: "link", rel: "canonical", href: canonical },
     { name: "twitter:card", content: "summary" },
     { name: "twitter:site", content: "@takanekofan" },
     { name: "twitter:creator", content: "@takanekofan" },
