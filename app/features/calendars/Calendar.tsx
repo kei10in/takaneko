@@ -70,7 +70,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   }, [currentSlide]);
 
   return (
-    <div className="flex flex-1 flex-col landscape:flex-row landscape:items-start">
+    <section className="flex flex-1 flex-col landscape:flex-row landscape:items-start">
+      <h1 className="sr-only">{displayMonth(month.year, month.month)} のスケジュール</h1>
+
       <div
         className={clsx(
           "sticky top-(--header-height) flex-none bg-white",
@@ -192,6 +194,6 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

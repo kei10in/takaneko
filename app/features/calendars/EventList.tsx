@@ -55,13 +55,20 @@ export const EventList: React.FC<Props> = (props: Props) => {
       {eventsByDate.map(({ date: dt, events: eventsInDate }) => {
         const anchor = dt.toString();
         const date = displayDate(dt);
+        const key = dt.getTimeAsUTC();
+
+        if (eventsInDate.length === 0) {
+          // イベントがない日付はアンカーだけ置いておく
+          // アンカーは today リンクとかで必要になっています。
+          return <div key={key} id={anchor} className={classNameForDate} />;
+        }
 
         return (
-          <div key={dt.getTimeAsUTC()} id={anchor} className={classNameForDate}>
-            <div className={clsx(eventsInDate.length == 0 && "hidden", "space-y-2 py-6")}>
-              <h3 className={clsx("text-xl font-bold", classNameForDate)}>
+          <section key={key} id={anchor} className={classNameForDate}>
+            <div className="space-y-2 py-6">
+              <h2 className={clsx("text-xl font-bold", classNameForDate)}>
                 <Link to={dateHref(dt)}>{date}</Link>
-              </h3>
+              </h2>
               <div className="space-y-4">
                 {eventsInDate.map((event) => (
                   <LinkCalendarEventItem
@@ -77,7 +84,7 @@ export const EventList: React.FC<Props> = (props: Props) => {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
         );
       })}
     </div>
