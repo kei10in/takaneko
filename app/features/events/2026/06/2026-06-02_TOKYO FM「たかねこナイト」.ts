@@ -11,15 +11,23 @@ export const meta: EventMetaDescriptor = {
   present: ["東山恵里沙"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2026/2026-06-02_TOKYO FM「たかねこナイト」.jpg",
+      ref: "https://x.com/takanenofficial/status/2061666618296721625",
+    },
+    {
+      path: "/events/2026/2026-06-02_TOKYO FM「たかねこナイト」_1.jpg",
+      ref: "https://x.com/PodcastsMs_jp/status/2061779872989757704",
+    },
+    {
+      path: "/events/2026/2026-06-02_TOKYO FM「たかねこナイト」_2.jpg",
+      ref: "https://x.com/PodcastsMs_jp/status/2061961058273677656",
     },
   ],
   link: {
     text: "番組サイト",
     url: "https://audee-membership.jp/takanenonadeshiko",
   },
-  updatedAt: "2026-04-01",
+  updatedAt: "2026-06-03",
 };
 
 export const content = /* md */ `
@@ -27,9 +35,8 @@ export const content = /* md */ `
 
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260603030000)
-
-  <!-- - [Podcasts Membership]() -->
-  <!-- - [メンバーシップ限定 アンコール]() -->
+  - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smZQf5XQ9SAN3KM5AHU3q8jn)
+  - [メンバーシップ限定 アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smaR3ngcXaQ7aipwNtXKRG35)
 
   ## 番組説明
 
@@ -52,6 +59,9 @@ export const content = /* md */ `
   ## リンク
 
   - [Radiko](https://radiko.jp/share?sid=FMT&t=20260603030000)
+  - [メンバーシップ告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/2061961058273677656)
+  - [当日告知 - ポッドキャストメンバーシップ X](https://x.com/PodcastsMs_jp/status/2061779872989757704)
+  - [当日告知 - 公式 X](https://x.com/takanenofficial/status/2061666618296721625)
   - [メッセージ投稿フォーム](https://tfm.co.jp/f/takanenonadeshiko/message)
   - [公式 X 告知](https://x.com/takanenofficial/status/1971409392299016409)
   - [Wikipedia](https://ja.wikipedia.org/wiki/高嶺のなでしこラジオ定期公演「たかねこナイト」)
