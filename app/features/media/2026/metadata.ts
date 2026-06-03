@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/790542",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第12回『外れたみんなの頭のネジ』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-05-31",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/790542",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/05/790542_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
     key: "https://strmweb.jp/archives/21819/",
     title:
       "高嶺のなでしこ「アイドルにとって夏は戦。たかねこのことをどれだけ好きになってもらえるか。4周年となる勝負の夏を生き抜いて、勝ち続けていきたい」INTERVIEW",
