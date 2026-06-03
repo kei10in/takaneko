@@ -31,11 +31,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-05-10",
+  updatedAt: "2026-06-03",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [終演報告・アーカイブ配信告知 - ビビプロ X](https://x.com/vivipro_ww/status/2061792832101523744)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2061719471803490518)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2053431126124052940)
 `;
