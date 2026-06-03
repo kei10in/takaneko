@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Anime Festival Asia Thailand 2026",
   category: "LIVE",
-  liveType: undefined,
+  liveType: "GUEST",
   date: "2026-05-31",
   open: undefined,
   start: undefined,
