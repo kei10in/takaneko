@@ -35,11 +35,12 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-05-30",
+  updatedAt: "2026-06-03",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2061319511396237428)
   - [告知 - POPPIN' BASE 公式 X](https://x.com/POPPINBASE/status/2060647708525019532)
 `;
