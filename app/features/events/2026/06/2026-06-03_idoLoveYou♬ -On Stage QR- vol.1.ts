@@ -22,6 +22,14 @@ export const meta: EventMetaDescriptor = {
       tags: ["timetable"],
     },
     {
+      path: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「花柄ワンピース」.jpg",
+      ref: "https://x.com/takanenofficial/status/2062013927631061093",
+    },
+    {
+      path: "/events/2026/2026-06-03_idoLoveYou♬ -On Stage QR- vol.1_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2062141401912193449",
+    },
+    {
       path: "/events/2026/2026-06-03_idoLoveYou♬ -On Stage QR- vol.1_タイムテーブル.png",
       ref: "https://x.com/ily_joqr/status/2057053731301245176",
       tags: [],
@@ -35,14 +43,22 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["20:50", "21:50"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「花柄ワンピース」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2062013927631061093",
   },
   acts: {
     start: "19:55",
     end: "20:20",
-    setlist: [],
-    url: "",
+    setlist: [
+      "衣装: ピンク衣装",
+      "美しく生きろ",
+      "推しの魔法",
+      "MC",
+      "生きてりゃいい",
+      "僕は君になれない",
+      "ファンサ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2062145423327043744",
   },
   updatedAt: "2026-06-03",
 };
@@ -57,6 +73,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2062149998163484904)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2062141401912193449)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2062013927631061093)
   - [台風6号 接近に伴う対応について - idolLoveYou♬ -On The Radio- X](https://x.com/ily_joqr/status/2061727015687057547)
   - [タイムテーブル公開 - idolLoveYou♬ -On The Radio- X](https://x.com/ily_joqr/status/2057053731301245176)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2054534623347331372)
