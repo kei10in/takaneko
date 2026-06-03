@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://menkyo-torocca.jp/feature/takaneko04_qa09.html",
+    title: "たかねこプロフ帳★2026 籾山ひめり編｜合宿免許なら運転免許トロッカ！ ",
+    authorName: "運転免許トロッカ！",
+    publishedAt: "2026-06-03",
+    mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa09.html",
+    imageUrl: "https://menkyo-torocca.jp/images/common/torocca_ogp_takaneko.jpg",
+    category: "article",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/790542",
     title:
       "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第12回『外れたみんなの頭のネジ』 | TV LIFE web",
@@ -407,7 +418,7 @@ export const metadata2026: MediaDetails[] = [
     publishedAt: "2026-03-16",
     mediaUrl: "https://mdpr.jp/news/4747179",
     imageUrl:
-      "https://img-mdpr.freetls.fastly.net/article/B1nU/wm/B1nUfzx7ulPqWjxalXLAPSsbKLa9yzy1hA2PZwWbV3k.jpg",
+      "https://img-mdpr.freetls.fastly.net/article/B1nU/wm/B1nUfzx7ulPqWjxalXLAPSsbKLa9yzy1hA2PZwWbV3k.jpg?width=700&disable=upscale&auto=webp&quality=80",
     category: "article",
     presents: ["橋本桃呼"],
   },
