@@ -19,6 +19,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     publishedAt: "2026-05-28",
     category: "article",
     presents: ["城月菜央", "涼海すう", "橋本桃呼", "葉月紗蘭"],
+    siteName: "encore",
   },
   {
     title:

@@ -27,6 +27,17 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://e.usen.com/interview/interview-original/takanenonadeshiko-ikiteryaii.html",
+    title: "高嶺のなでしこ「生きてりゃいい」インタビュー――たかねこからの",
+    authorName: "encore",
+    publishedAt: "2026-05-28",
+    mediaUrl: "https://e.usen.com/interview/interview-original/takanenonadeshiko-ikiteryaii.html",
+    imageUrl: "https://e.usen.com/image/670fa88f9de39b73dabf88dee5502e57c0a139fe.jpg",
+    category: "article",
+    presents: ["城月菜央", "涼海すう", "橋本桃呼", "葉月紗蘭"],
+  },
+  {
+    kind: "ogp",
     key: "https://digvii.com/entertainment/digvii-points-of-view1",
     title:
       "大人気アイドルグループ「高嶺のなでしこ」からあのふたりがWEB DIGVII新連載企画に降臨♡ | ENTERTAINMENT | WEB DIGVII | WEB DIGVII",
