@@ -360,6 +360,20 @@ export const AllMembers: MemberDescription[] = [
   HimeriMomiyama,
 ] as const;
 
+export const CurrentMembers: MemberDescription[] = [
+  NaoKizuki,
+  SuSuzumi,
+  MomokoHashimoto,
+  SaaraHazuki,
+  ErisaHigashiyama,
+  HinaHinahata,
+  MikuruHoshitani,
+  MomonaMatsumoto,
+  HimeriMomiyama,
+] as const;
+
+export const FormerMembers: MemberDescription[] = [RiriHaruno] as const;
+
 export const findMemberDescription = (name: MemberId): MemberDescription => {
   if (name === "城月菜央") {
     return NaoKizuki;

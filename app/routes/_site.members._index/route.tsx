@@ -4,7 +4,7 @@ import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "reac
 import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { formatTitle } from "~/utils/htmlHeader";
-import { AllMembers } from "../../features/profile/members";
+import { CurrentMembers, FormerMembers } from "../../features/profile/members";
 import { MemberIdCard } from "./MemberIdCard";
 
 export const meta: MetaFunction = () => {
@@ -72,7 +72,7 @@ export default function Index() {
           <h2 className={sectionHeading("my-4")}>メンバー</h2>
 
           <ul className="flex flex-wrap justify-center gap-4">
-            {AllMembers.map((member) => (
+            {CurrentMembers.map((member) => (
               <li key={member.name} className="flex-none">
                 <MemberIdCard member={member} />
               </li>
@@ -179,6 +179,18 @@ export default function Index() {
               ))}
             </ul>
           </section>
+        </section>
+
+        <section className="mt-12">
+          <h2 className={sectionHeading("my-4")}>元メンバー</h2>
+
+          <ul className="flex flex-wrap justify-center gap-4">
+            {FormerMembers.map((member) => (
+              <li key={member.name} className="flex-none">
+                <MemberIdCard member={member} />
+              </li>
+            ))}
+          </ul>
         </section>
       </section>
     </div>
