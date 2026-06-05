@@ -67,7 +67,7 @@ const ChineseSocialMedia = [
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox("mt-8 px-4")}>
+      <section className={pageBox("my-8 px-4")}>
         <h1 className={"text-5xl"}>プロフィール</h1>
 
         <div className="mt-12 space-y-24">
