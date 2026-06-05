@@ -27,7 +27,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     hashTag,
     hashTagForReply,
     hashTagsForAnnouncement,
-    image,
+    images,
     officialProfile,
     twitter,
     instagram,
@@ -35,13 +35,15 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     showroom,
   } = profile;
 
+  const image = images[0];
+
   return (
     <div className="mx-auto pb-16 lg:max-w-5xl lg:py-12">
       <div className="lg:grid lg:grid-cols-2 lg:gap-4">
         <div className="w-full">
           <div className="mx-auto w-fit">
             <img
-              className="block h-[28rem] object-cover object-center lg:h-[36rem]"
+              className="block h-112 object-cover object-center lg:h-144"
               src={image.path}
               alt="プロフィール"
             />
