@@ -20,6 +20,7 @@ export const DIGVII_チェキ風アクリルキーホルダー: RandomGoods = {
     { id: 6, name: "橋本桃呼", description: "C" },
     { id: 7, name: "橋本桃呼 & 籾山ひめり", description: "ペア" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 87, y: 50, width: 375, height: 450 },
     { id: 2, x: 562, y: 50, width: 375, height: 450 },

@@ -18,6 +18,7 @@ export const DIGVII_ペアアクリルブロック: RandomGoods = {
     { id: 4, name: "橋本桃呼 & 籾山ひめり", description: "D" },
     { id: 5, name: "橋本桃呼 & 籾山ひめり", description: "E" },
   ],
+  withFrame: true,
   positions: [
     { id: 1, x: 87, y: 50, width: 375, height: 450 },
     { id: 2, x: 562, y: 50, width: 375, height: 450 },
