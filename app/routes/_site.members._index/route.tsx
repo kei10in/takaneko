@@ -9,8 +9,10 @@ export const meta: MetaFunction = () => {
     { title: formatTitle(`メンバー`) },
     {
       name: "description",
-      content: "高嶺のなでしこ メンバー一覧",
+      content:
+        "すべてのメンバーを紹介。城月菜央、涼海すう、橋本桃呼、葉月紗蘭、東山恵里沙、日向端ひな、星谷美来、松本ももな、籾山ひめり、春野莉々。",
     },
+    { name: "robots", content: "noindex,follow" },
   ];
 };
 

@@ -13,7 +13,9 @@ export const meta: MetaFunction = () => {
     { title: formatTitle(`プロフィール`) },
     {
       name: "description",
-      content: "高嶺のなでしこ メンバー一覧",
+      content:
+        "高嶺のなでしこは、城月菜央・涼海すう・橋本桃呼・葉月紗蘭・東山恵里沙・日向端ひな・星谷美来・松本ももな・籾山ひめり" +
+        "からなるアイドルグループです。サウンドプロデュースは HoneyWorks。",
     },
   ];
 };
