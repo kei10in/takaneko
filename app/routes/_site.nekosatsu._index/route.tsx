@@ -1,4 +1,4 @@
-import { Dialog, DialogPanel } from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { Link, MetaFunction, useLocation, useNavigate } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { NaoKizuki, SaaraHazuki } from "~/features/profile/members";
@@ -100,7 +100,7 @@ export default function Component() {
                 {pics.pictures.map((pic, i) => (
                   <li key={pic}>
                     <Link
-                      className="block aspect-[5/3.5] max-w-80 overflow-hidden rounded-lg shadow"
+                      className="block aspect-5/3.5 max-w-80 overflow-hidden rounded-lg shadow"
                       to={`#${pics.member.slug}-${i}`}
                       preventScrollReset={true}
                     >
@@ -116,14 +116,18 @@ export default function Component() {
                       onClose={close}
                       className="relative z-50"
                     >
-                      <div className="fixed inset-0 flex w-screen items-center justify-center bg-black/50 p-4">
-                        <DialogPanel className="w-full lg:max-w-[66%]">
-                          <img
-                            src={pic}
-                            alt={`${pics.member.name} (${i})`}
-                            className="block w-full object-contain"
-                          />
-                        </DialogPanel>
+                      <DialogBackdrop className="fixed inset-0 bg-black/70 backdrop-blur-xs" />
+
+                      <div className="fixed inset-0 h-0 overflow-visible">
+                        <div className="flex min-h-lvh w-full min-w-full items-center justify-center">
+                          <DialogPanel className="w-full lg:max-w-2/3">
+                            <img
+                              src={pic}
+                              alt={`${pics.member.name} (${i})`}
+                              className="block w-full object-contain"
+                            />
+                          </DialogPanel>
+                        </div>
                       </div>
                     </Dialog>
                   </li>
