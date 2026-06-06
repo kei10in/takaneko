@@ -77,7 +77,7 @@ const buildStaticPages = (): SitemapPath[] => {
     { path: "/calendar" },
     { path: "/calendar/registration" },
     { path: "/products" },
-    { path: "/members" },
+    { path: "/profile" },
     { path: "/official/news" },
     { path: "/releases" },
     { path: "/terms" },
