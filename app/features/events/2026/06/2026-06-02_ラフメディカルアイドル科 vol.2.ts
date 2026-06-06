@@ -31,12 +31,21 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-03",
+  updatedAt: "2026-06-06",
 };
 
 export const content = /* md */ `
+  ## アーカイブ配信
+
+  - 💰 2,000円
+  - 🎫 [購入ページ](https://online-ticket.yoshimoto.co.jp/products/laughmedical2_260606)
+  - 🛒 販売期間：〜 6/20 (土) 12:00
+  - 🎥 視聴期間：〜 6/20 (土) 23:59
+
   ## リンク
 
+  - [アーカイブ配信 告知 - 公式 X](https://x.com/takanenofficial/status/2063111172325601766)
+  - [ダイジェスト公開 - ビビプロ X](https://x.com/takanenofficial/status/2063111172325601766)
   - [終演報告・アーカイブ配信告知 - ビビプロ X](https://x.com/vivipro_ww/status/2061792832101523744)
   - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2061719471803490518)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2053431126124052940)
