@@ -20,7 +20,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
     <div>
       <Swiper
         className={clsx(
-          "h-64 w-full lg:h-[30rem]",
+          "h-64 w-full lg:h-120",
           "[&_.swiper-button-next]:opacity-0",
           "[&_.swiper-button-prev]:opacity-0",
           "[&_.swiper-pagination]:bottom-0",
@@ -41,7 +41,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
           const imageComponent = (
             <div key={i}>
               <div
-                className="relative h-64 w-full bg-cover bg-center lg:h-[30rem]"
+                className="relative h-64 w-full bg-cover bg-center lg:h-120"
                 style={{
                   backgroundImage: `url("${image.src}")`,
                 }}
