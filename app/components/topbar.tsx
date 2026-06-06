@@ -60,11 +60,6 @@ const TopBarMenu: TopBarMenuItem[] = [
     title: "データベース",
     items: [
       {
-        title: "メンバー",
-        url: "/members",
-        Icon: BsPersonVcard,
-      },
-      {
         title: "楽曲",
         Icon: BsMusicNote,
         url: "/songs",
@@ -83,6 +78,11 @@ const TopBarMenu: TopBarMenuItem[] = [
         title: "グッズ",
         Icon: BsCart,
         url: "/products",
+      },
+      {
+        title: "メンバー",
+        url: "/members",
+        Icon: BsPersonVcard,
       },
       {
         title: "統計",
