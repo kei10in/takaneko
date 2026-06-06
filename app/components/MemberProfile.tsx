@@ -3,7 +3,7 @@ import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link } from "react-router";
 import { TwitterHashTag } from "~/components/TwitterHashTag";
 import { MemberDescription } from "~/features/profile/types";
-import { pageColumnBox, pageHeading, sectionHeading } from "./styles";
+import { sectionHeading } from "./styles";
 
 interface Props {
   profile: MemberDescription;
@@ -27,7 +27,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     hashTag,
     hashTagForReply,
     hashTagsForAnnouncement,
-    image,
+    images,
     officialProfile,
     twitter,
     instagram,
@@ -35,26 +35,28 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
     showroom,
   } = profile;
 
+  const image = images[0];
+
   return (
     <div className="mx-auto pb-16 lg:max-w-5xl lg:py-12">
       <div className="lg:grid lg:grid-cols-2 lg:gap-4">
         <div className="w-full">
-          <div className="mx-auto w-fit">
+          <div className="mx-auto px-4">
             <img
-              className="block h-[28rem] object-cover object-center lg:h-[36rem]"
+              className="block w-full object-cover object-center"
               src={image.path}
               alt="プロフィール"
             />
             <p className="text-right text-xs text-gray-400">
               <Link to={image.ref} target="_blank" rel="noreferrer">
-                引用元 <HiArrowTopRightOnSquare className="inline" />
+                画像の引用元 <HiArrowTopRightOnSquare className="inline" />
               </Link>
             </p>
           </div>
         </div>
 
-        <section className={pageColumnBox("px-4")}>
-          <h1 className={pageHeading()}>{name}</h1>
+        <section className={"px-4 py-16"}>
+          <h1 className="text-5xl">{name}</h1>
 
           <div className="mt-2 flex gap-4 text-gray-500">
             <p>{kana}</p>
@@ -67,7 +69,7 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
             </Link>
           </p>
 
-          <dl className="mt-8 grid grid-cols-3 gap-2">
+          <dl className="mt-12 grid grid-cols-3 gap-2">
             <dt className="text-gray-400">血液型</dt>
             <dd className="col-span-2">{bloodType}</dd>
             <dt className="text-gray-400">生年月日</dt>

@@ -80,10 +80,7 @@ export interface MemberDescription {
     path: string;
     ref: string;
   };
-  image: {
-    path: string;
-    ref: string;
-  };
+  images: ImageDescription[];
   officialProfile: string;
   twitter: string;
   instagram: string;

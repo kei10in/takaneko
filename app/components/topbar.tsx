@@ -18,6 +18,7 @@ import {
   BsMusicNote,
   BsPersonCircle,
   BsPersonStandingDress,
+  BsPersonVcard,
 } from "react-icons/bs";
 import { HiEllipsisVertical } from "react-icons/hi2";
 import { Link } from "react-router";
@@ -51,8 +52,8 @@ const TopBarMenu: TopBarMenuItem[] = [
     Icon: BsCalendar,
   },
   {
-    title: "メンバー",
-    url: "/members",
+    title: "プロフィール",
+    url: "/profile",
     Icon: BsPersonCircle,
   },
   {
@@ -77,6 +78,11 @@ const TopBarMenu: TopBarMenuItem[] = [
         title: "グッズ",
         Icon: BsCart,
         url: "/products",
+      },
+      {
+        title: "メンバー",
+        url: "/members",
+        Icon: BsPersonVcard,
       },
       {
         title: "統計",

@@ -22,12 +22,18 @@ export const NaoKizuki: MemberDescription = {
   hashTagsForAnnouncement: ["#餌を入手", "#たかねこ入場なり"],
   idPhoto: {
     path: "/takaneko/members/nao-kizuki_id-photo.webp",
-    ref: "https://x.com/nao_kizuki/status/1871571549926625283",
+    ref: "https://x.com/nao_kizuki/status/2003843113828467137",
   },
-  image: {
-    path: "/takaneko/members/nao-kizuki.webp",
-    ref: "https://x.com/nao_kizuki/status/1871571549926625283",
-  },
+  images: [
+    {
+      path: "/takaneko/members/nao-kizuki_2.webp",
+      ref: "https://x.com/nao_kizuki/status/2003843113828467137",
+    },
+    {
+      path: "/takaneko/members/nao-kizuki.webp",
+      ref: "https://x.com/nao_kizuki/status/1871571549926625283",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/nao_kizuki/",
   twitter: "https://twitter.com/nao_kizuki",
   instagram: "https://www.instagram.com/nao_kizuki_/",
@@ -56,12 +62,18 @@ export const SuSuzumi: MemberDescription = {
   hashTags: ["#すうだより"],
   idPhoto: {
     path: "/takaneko/members/su-suzumi_id-photo.webp",
-    ref: "https://x.com/su_suzumi_/status/1826409216082673981",
+    ref: "https://x.com/su_suzumi_/status/1958657167864815630",
   },
-  image: {
-    path: "/takaneko/members/su-suzumi.webp",
-    ref: "https://x.com/su_suzumi_/status/1826409216082673981",
-  },
+  images: [
+    {
+      path: "/takaneko/members/su-suzumi_2.webp",
+      ref: "https://x.com/su_suzumi_/status/1958657167864815630",
+    },
+    {
+      path: "/takaneko/members/su-suzumi.webp",
+      ref: "https://x.com/su_suzumi_/status/1826409216082673981",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/suu_suzumi/",
   twitter: "https://x.com/su_suzumi_",
   instagram: "https://www.instagram.com/su_suzumi_/",
@@ -89,12 +101,18 @@ export const MomokoHashimoto: MemberDescription = {
   hashTagForReply: "#桃呼ちゅわん",
   idPhoto: {
     path: "/takaneko/members/momoko-hashimoto_id-photo.webp",
-    ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
+    ref: "https://x.com/MomokoHashimoto/status/1938613832257261682",
   },
-  image: {
-    path: "/takaneko/members/momoko-hashimoto.webp",
-    ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
-  },
+  images: [
+    {
+      path: "/takaneko/members/momoko-hashimoto_2.webp",
+      ref: "https://x.com/MomokoHashimoto/status/1938613832257261682",
+    },
+    {
+      path: "/takaneko/members/momoko-hashimoto.webp",
+      ref: "https://x.com/MomokoHashimoto/status/1806341805870559503",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/橋本桃呼/",
   twitter: "https://x.com/MomokoHashimoto",
   instagram: "https://www.instagram.com/momoko__3628/",
@@ -122,12 +140,18 @@ export const SaaraHazuki: MemberDescription = {
   hashTagForReply: "#さあらにお手紙",
   idPhoto: {
     path: "/takaneko/members/saara-hazuki_id-photo.webp",
-    ref: "https://x.com/saara_hazuki/status/1820988363425640598",
+    ref: "https://x.com/saara_hazuki/status/2028659917016678416",
   },
-  image: {
-    path: "/takaneko/members/saara-hazuki.webp",
-    ref: "https://x.com/saara_hazuki/status/1820988363425640598",
-  },
+  images: [
+    {
+      path: "/takaneko/members/saara-hazuki_2.webp",
+      ref: "https://x.com/saara_hazuki/status/2028659917016678416",
+    },
+    {
+      path: "/takaneko/members/saara-hazuki.webp",
+      ref: "https://x.com/saara_hazuki/status/1820988363425640598",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/saara_hazuki/",
   twitter: "https://twitter.com/saara_hazuki",
   instagram: "https://www.instagram.com/saara_hazuki/",
@@ -158,10 +182,12 @@ export const RiriHaruno: MemberDescription = {
     path: "/takaneko/members/riri-haruno_id-photo.webp",
     ref: "https://x.com/riri_haruno/status/1802461772424806777",
   },
-  image: {
-    path: "/takaneko/members/riri-haruno.webp",
-    ref: "https://x.com/riri_haruno/status/1802461772424806777",
-  },
+  images: [
+    {
+      path: "/takaneko/members/riri-haruno.webp",
+      ref: "https://x.com/riri_haruno/status/1802461772424806777",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/riri_haruno/",
   twitter: "https://x.com/riri_haruno",
   instagram: "https://www.instagram.com/haruno_riri/",
@@ -190,12 +216,18 @@ export const ErisaHigashiyama: MemberDescription = {
   hashTagsForAnnouncement: ["#たかねこスケジュール", "#たかねこVLOG", "#ねこカメ"],
   idPhoto: {
     path: "/takaneko/members/erisa-higashiyama_id-photo.webp",
-    ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
+    ref: "https://x.com/erisahigasiyama/status/2059651390516158523",
   },
-  image: {
-    path: "/takaneko/members/erisa-higashiyama.webp",
-    ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
-  },
+  images: [
+    {
+      path: "/takaneko/members/erisa-higashiyama_2.webp",
+      ref: "https://x.com/erisahigasiyama/status/2059651390516158523",
+    },
+    {
+      path: "/takaneko/members/erisa-higashiyama.webp",
+      ref: "https://x.com/erisahigasiyama/status/1781639035225878730",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/erisa_higashiyama/",
   twitter: "https://x.com/erisahigasiyama",
   instagram: "https://www.instagram.com/erisa_higashiyama/",
@@ -224,12 +256,18 @@ export const HinaHinahata: MemberDescription = {
   hashTags: ["#ひなたまごはん", "#ひなたまのすゝめ"],
   idPhoto: {
     path: "/takaneko/members/hina-hinahata_id-photo.webp",
-    ref: "https://x.com/hina_hinahata/status/1830193741627605281",
+    ref: "https://x.com/hina_hinahata/status/1983549612494602283",
   },
-  image: {
-    path: "/takaneko/members/hina-hinahata.webp",
-    ref: "https://x.com/hina_hinahata/status/1830193741627605281",
-  },
+  images: [
+    {
+      path: "/takaneko/members/hina-hinahata_2.webp",
+      ref: "https://x.com/hina_hinahata/status/1983549612494602283",
+    },
+    {
+      path: "/takaneko/members/hina-hinahata.webp",
+      ref: "https://x.com/hina_hinahata/status/1830193741627605281",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/hina_hinahata/",
   twitter: "https://x.com/hina_hinahata",
   instagram: "https://www.instagram.com/hinatama18",
@@ -259,12 +297,18 @@ export const MikuruHoshitani: MemberDescription = {
   hashTagsForAnnouncement: ["#たかねこセトリ"],
   idPhoto: {
     path: "/takaneko/members/mikuru-hoshitani_id-photo.webp",
-    ref: "https://x.com/Mikuru_hositani/status/1819560982420783221",
+    ref: "https://x.com/Mikuru_hositani/status/1986086201284235348",
   },
-  image: {
-    path: "/takaneko/members/mikuru-hoshitani.webp",
-    ref: "https://x.com/Mikuru_hositani/status/1819560982420783221",
-  },
+  images: [
+    {
+      path: "/takaneko/members/mikuru-hoshitani_2.webp",
+      ref: "https://x.com/Mikuru_hositani/status/1986086201284235348",
+    },
+    {
+      path: "/takaneko/members/mikuru-hoshitani.webp",
+      ref: "https://x.com/Mikuru_hositani/status/1819560982420783221",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/mikuru_hoshitani/",
   twitter: "https://x.com/mikuru_hositani",
   instagram: "https://www.instagram.com/mikuru_1106/",
@@ -301,12 +345,18 @@ export const MomonaMatsumoto: MemberDescription = {
   ],
   idPhoto: {
     path: "/takaneko/members/momona-matsumoto_id-photo.webp",
-    ref: "https://x.com/momonamatsumoto/status/1802142860449620097",
+    ref: "https://x.com/momonamatsumoto/status/1977026425359417788",
   },
-  image: {
-    path: "/takaneko/members/momona-matsumoto.webp",
-    ref: "https://x.com/momonamatsumoto/status/1802142860449620097",
-  },
+  images: [
+    {
+      path: "/takaneko/members/momona-matsumoto_2.webp",
+      ref: "https://x.com/momonamatsumoto/status/1977026425359417788",
+    },
+    {
+      path: "/takaneko/members/momona-matsumoto.webp",
+      ref: "https://x.com/momonamatsumoto/status/1802142860449620097",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/momona_matsumoto/",
   twitter: "https://x.com/momonamatsumoto",
   instagram: "https://www.instagram.com/momona.1012/",
@@ -334,12 +384,18 @@ export const HimeriMomiyama: MemberDescription = {
   hashTagForReply: "#ひめ連絡網。",
   idPhoto: {
     path: "/takaneko/members/himeri-momiyama_id-photo.webp",
-    ref: "https://x.com/himeri_momiyama/status/1806331460787601907",
+    ref: "https://x.com/himeri_momiyama/status/2035371402493321553",
   },
-  image: {
-    path: "/takaneko/members/himeri-momiyama.webp",
-    ref: "https://x.com/himeri_momiyama/status/1806331460787601907",
-  },
+  images: [
+    {
+      path: "/takaneko/members/himeri-momiyama_2.webp",
+      ref: "https://x.com/himeri_momiyama/status/2035371402493321553",
+    },
+    {
+      path: "/takaneko/members/himeri-momiyama.webp",
+      ref: "https://x.com/himeri_momiyama/status/1806331460787601907",
+    },
+  ],
   officialProfile: "https://takanenonadeshiko.jp/himeri_momiyama/",
   twitter: "https://x.com/himeri_momiyama",
   instagram: "https://www.instagram.com/momichan_hime/",
@@ -359,6 +415,20 @@ export const AllMembers: MemberDescription[] = [
   MomonaMatsumoto,
   HimeriMomiyama,
 ] as const;
+
+export const CurrentMembers: MemberDescription[] = [
+  NaoKizuki,
+  SuSuzumi,
+  MomokoHashimoto,
+  SaaraHazuki,
+  ErisaHigashiyama,
+  HinaHinahata,
+  MikuruHoshitani,
+  MomonaMatsumoto,
+  HimeriMomiyama,
+] as const;
+
+export const FormerMembers: MemberDescription[] = [RiriHaruno] as const;
 
 export const findMemberDescription = (name: MemberId): MemberDescription => {
   if (name === "城月菜央") {

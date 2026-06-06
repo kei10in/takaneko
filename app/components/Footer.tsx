@@ -77,7 +77,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
                   <Link to="/calendar">スケジュール</Link>
                 </li>
                 <li>
-                  <Link to="/members">メンバー</Link>
+                  <Link to="/profile">プロフィール</Link>
                 </li>
                 <li>
                   <Link to="/songs">楽曲</Link>
@@ -90,6 +90,9 @@ export const Footer: React.FC<Props> = (props: Props) => {
                 </li>
                 <li>
                   <Link to="/products">グッズ</Link>
+                </li>
+                <li>
+                  <Link to="/members">メンバー</Link>
                 </li>
                 <li>
                   <Link to="/stats">統計</Link>

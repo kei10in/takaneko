@@ -49,7 +49,7 @@ export default function Index() {
       <div className="w-full">
         <div className="mx-auto w-fit">
           <img
-            className="block h-[28rem] object-cover object-center lg:h-[36rem]"
+            className="block h-112 object-cover object-center lg:h-144"
             src={image.path}
             alt="プロフィール"
           />
