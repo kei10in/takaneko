@@ -52,12 +52,13 @@ export const meta: EventMetaDescriptor = {
     ],
     links: ["https://prtimes.jp/main/html/rd/p/000000916.000025517.html"],
   },
-  updatedAt: "2026-05-31",
+  updatedAt: "2026-06-06",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [サイン会の様子 - Anime Festival Asia X](https://x.com/animefestasia/status/2062552042560999684)
   - [ライブレポート](https://prtimes.jp/main/html/rd/p/000000916.000025517.html)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2061099211492614501)
   - [出演報告 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2061372191027904550)
