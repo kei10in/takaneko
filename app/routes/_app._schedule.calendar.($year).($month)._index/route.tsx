@@ -68,10 +68,11 @@ const makeCanonical = ({ params, loaderData }: MetaArgs<typeof loader>) => {
 };
 
 export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>) => {
-  const { loaderData } = args;
+  const { params, loaderData } = args;
+  const { year, month } = params;
 
   const title =
-    loaderData == undefined
+    loaderData == undefined || (year == undefined && month == undefined)
       ? "スケジュール"
       : `${displayMonth(loaderData.year, loaderData.month)} のスケジュール`;
 
