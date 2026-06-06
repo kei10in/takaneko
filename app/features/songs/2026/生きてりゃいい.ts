@@ -26,6 +26,7 @@ export const 生きてりゃいい: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=957yJCyB-tk",
       publishedAt: "2026-05-13",
       // SAMA https://x.com/SAMA___official/status/2054524076153335825
+      // kk https://x.com/illust_kk_draw/status/2054566407778840841
     },
     {
       text: "Making",
