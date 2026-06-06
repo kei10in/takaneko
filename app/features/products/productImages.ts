@@ -159,6 +159,7 @@ import { BouquetOf9FlowersFinal_自撮りステッカー } from "./2026/2026-05-
 import { BouquetOf9FlowersFinal_ミニフォト } from "./2026/2026-05-06_ミニフォトカード「Bouquet of 9 Flowers FINAL」";
 import { BouquetOf9FlowersFinal_生写真 } from "./2026/2026-05-06_生写真「Bouquet of 9 Flowers FINAL」";
 import { BouquetOf9Flowers_限定ガチャ } from "./2026/2026-05-06_限定ガチャ「Bouquet of 9 Flowers」";
+import { DIGVII_チェキ風アクリルキーホルダー } from "./2026/2026-05-27_DIGVII チェキ風アクリルキーホルダー";
 import { DIGVII_自撮り風ブロマイド } from "./2026/2026-05-27_DIGVII 自撮り風ブロマイド";
 import { 私はわたしの事が好き_生写真 } from "./2026/2026-05-28_生写真「私は、わたしの事が好き。」";
 import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_03_ミニフォトカード「私は、わたしの事が好き。」";
@@ -179,6 +180,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   DIGVII_自撮り風ブロマイド,
+  DIGVII_チェキ風アクリルキーホルダー,
   私はわたしの事が好き_生写真,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
