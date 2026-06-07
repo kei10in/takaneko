@@ -179,12 +179,8 @@ export default function Index() {
           <p>
             スタンプは <img className="inline h-6" src="/求.svg" alt="求" /> /{" "}
             <img className="inline h-6" src="/譲.svg" alt="譲" /> /{" "}
-            <img className="inline h-6" src="/1.svg" alt="1" /> /{" "}
-            <img className="inline h-6" src="/2.svg" alt="2" /> /{" "}
-            <img className="inline h-6" src="/3.svg" alt="3" /> /{" "}
-            <img className="inline h-6" src="/4.svg" alt="4" /> /{" "}
-            <img className="inline h-6" src="/5.svg" alt="5" /> /{" "}
-            <img className="inline h-6" src="/6.svg" alt="6" /> から選択します。
+            <img className="inline h-6" src="/1.svg" alt="1" /> 〜{" "}
+            <img className="inline h-6" src="/12.svg" alt="12" /> / 絵文字スタンプから選択します。
           </p>
           <p>
             スタンプを消すときは <BsBan className="inline-block text-gray-600" /> を選択します。

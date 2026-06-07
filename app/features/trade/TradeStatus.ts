@@ -27,6 +27,8 @@ export const TradeStatusImages = [
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 12, src: "/12.svg", alt: "12" },
 ];
 
+const TradeStatusMaxHaveCount = 12;
+
 export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => {
   const img = TradeStatusImages.find((item) => item.match(trade));
   return img?.src;
@@ -56,7 +58,7 @@ export const Stamp = {
   increment: (status: TradeStatus | undefined): TradeStatus => {
     if (status?.tag == "have") {
       let count = (status.count ?? 0) + 1;
-      count = count > 12 ? 12 : count;
+      count = count > TradeStatusMaxHaveCount ? TradeStatusMaxHaveCount : count;
       return { tag: "have", count };
     } else {
       return { tag: "have", count: 1 };
