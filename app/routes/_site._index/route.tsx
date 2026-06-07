@@ -12,6 +12,7 @@ import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
+import { ldJsonWebSite } from "~/utils/jsonLd/webSite";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
 
 export const meta: MetaFunction = () => {
@@ -37,14 +38,7 @@ export const meta: MetaFunction = () => {
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: `${url}takanekono-card.png` },
-    {
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: SiteTitle,
-        url,
-      },
-    },
+    ldJsonWebSite({ name: SiteTitle, url }),
     {
       tagName: "link",
       rel: "canonical",
