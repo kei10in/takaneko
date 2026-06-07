@@ -21,6 +21,25 @@ interface Props {
   onChangeTradeState?: (id: number, ts: TradeStatus) => void;
 }
 
+const TradeStateButtonLines = [
+  [
+    { value: { tag: "have", count: 1 }, src: "/1.svg", alt: "1" },
+    { value: { tag: "have", count: 2 }, src: "/2.svg", alt: "2" },
+    { value: { tag: "have", count: 3 }, src: "/3.svg", alt: "3" },
+    { value: { tag: "have", count: 4 }, src: "/4.svg", alt: "4" },
+    { value: { tag: "have", count: 5 }, src: "/5.svg", alt: "5" },
+    { value: { tag: "have", count: 6 }, src: "/6.svg", alt: "6" },
+  ],
+  [
+    { value: { tag: "have", count: 7 }, src: "/7.svg", alt: "7" },
+    { value: { tag: "have", count: 8 }, src: "/8.svg", alt: "8" },
+    { value: { tag: "have", count: 9 }, src: "/9.svg", alt: "9" },
+    { value: { tag: "have", count: 10 }, src: "/10.svg", alt: "10" },
+    { value: { tag: "have", count: 11 }, src: "/11.svg", alt: "11" },
+    { value: { tag: "have", count: 12 }, src: "/12.svg", alt: "12" },
+  ],
+] satisfies { value: TradeStatus; src: string; alt: string }[][];
+
 export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
   const { productImage, tradeDescriptions, index, onChangeItem, onChangeTradeState } = props;
 
@@ -113,7 +132,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
       </Swiper>
 
       {/* Caption */}
-      <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-tr-[2rem] rounded-bl-[2rem] bg-white shadow-sm">
+      <div className="relative mx-auto mt-4 h-16 w-80 items-center gap-4 overflow-hidden rounded-tr-4xl rounded-bl-4xl bg-white shadow-sm">
         <div className="absolute -top-9 -left-5 h-20 w-20 rounded-full bg-nadeshiko-500" />
         <div className="absolute rounded-full p-2">
           <p className="text-[0.625rem] leading-none text-white">No.</p>
@@ -130,7 +149,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
       </div>
 
       {/* Trade state selector */}
-      <div className="select-none">
+      <div className="space-y-4 select-none">
         <div className="mt-4 flex items-center justify-center gap-0.5">
           <TradeStateButton
             value={tradeStatus}
@@ -202,50 +221,21 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
             </PopoverPanel>
           </Popover>
         </div>
-        <div className="mt-0.5 flex items-center justify-center gap-0.5">
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 1 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/1.svg" alt="1" className="h-10 w-10" />
-          </TradeStateButton>
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 2 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/2.svg" alt="2" className="h-10 w-10" />
-          </TradeStateButton>
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 3 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/3.svg" alt="3" className="h-10 w-10" />
-          </TradeStateButton>
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 4 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/4.svg" alt="4" className="h-10 w-10" />
-          </TradeStateButton>
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 5 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/5.svg" alt="5" className="h-10 w-10" />
-          </TradeStateButton>
-          <TradeStateButton
-            value={tradeStatus}
-            forValue={{ tag: "have", count: 6 }}
-            onClick={handleClickTradeState}
-          >
-            <img src="/6.svg" alt="6" className="h-10 w-10" />
-          </TradeStateButton>
-        </div>
+
+        {TradeStateButtonLines.map((line, i) => (
+          <div key={i} className="flex items-center justify-center gap-1">
+            {line.map((button) => (
+              <TradeStateButton
+                key={button.alt}
+                value={tradeStatus}
+                forValue={button.value}
+                onClick={handleClickTradeState}
+              >
+                <img src={button.src} alt={button.alt} className="size-10" />
+              </TradeStateButton>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

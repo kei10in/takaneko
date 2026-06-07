@@ -14,11 +14,17 @@ export const TradeStatusImages = [
     alt: "譲",
   },
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 1, src: "/1.svg", alt: "1" },
-  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count === 2, src: "/2.svg", alt: "2" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 2, src: "/2.svg", alt: "2" },
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 3, src: "/3.svg", alt: "3" },
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 4, src: "/4.svg", alt: "4" },
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 5, src: "/5.svg", alt: "5" },
   { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 6, src: "/6.svg", alt: "6" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 7, src: "/7.svg", alt: "7" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 8, src: "/8.svg", alt: "8" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 9, src: "/9.svg", alt: "9" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 10, src: "/10.svg", alt: "10" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 11, src: "/11.svg", alt: "11" },
+  { match: (ts: TradeStatus) => ts.tag == "have" && ts.count == 12, src: "/12.svg", alt: "12" },
 ];
 
 export const tradeStateToImageSrc = (trade: TradeStatus): string | undefined => {
@@ -50,7 +56,7 @@ export const Stamp = {
   increment: (status: TradeStatus | undefined): TradeStatus => {
     if (status?.tag == "have") {
       let count = (status.count ?? 0) + 1;
-      count = count > 6 ? 6 : count;
+      count = count > 12 ? 12 : count;
       return { tag: "have", count };
     } else {
       return { tag: "have", count: 1 };

@@ -304,9 +304,13 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         }}
       >
         <DialogBackdrop className={dialogBackdropStyle()} transition />
-        <div className={dialogBaseStyle()}>
+        <div className="fixed inset-0 flex flex-col justify-end">
           <DialogPanel
-            className={clsx(dialogPanelStyle(), "mx-2 w-full max-w-lg bg-nadeshiko-50")}
+            className={clsx(
+              "w-full max-w-lg bg-white",
+              "transition-all duration-300 ease-in-out",
+              "data-closed:translate-y-full",
+            )}
             transition
           >
             <div className="ml-auto w-fit p-2">
