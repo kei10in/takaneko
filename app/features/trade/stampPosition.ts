@@ -120,7 +120,7 @@ const calcStampPosition = (width: number, height: number): Xywh => {
   let size;
   if (aspectRatio < 3 / 4) {
     // 3 : 4 よりも長辺が長い場合: スタンプのサイズは短辺によって決定します。
-    size = Math.min(width, height) * SIZE_RATIO_3_4;
+    size = Math.min(width, height) * SIZE_RATIO_3_4 * 0.8;
   } else {
     // 3 / 4 ~ 4 / 3 の間の矩形の場合
 
@@ -132,13 +132,13 @@ const calcStampPosition = (width: number, height: number): Xywh => {
     const t = 1 - Math.exp(-5 * normalizedRatio);
 
     const sizeRatio = SIZE_RATIO_3_4 * (1 - t) + SIZE_RATIO_SQUARE * t;
-    size = Math.min(width, height) * sizeRatio;
+    size = Math.min(width, height) * sizeRatio * 0.8;
   }
 
   // 位置の計算: 位置はサイズと向きによって決定します。
   // 縦長であっても横長と同じ位置にスタンプが配置される場合があります。
-  const x = width / height < POSITION_THRESHOLD ? (width - size) / 2 : width - size;
-  const y = height - size;
+  const x = width / height < POSITION_THRESHOLD ? (width - size) / 2 : width - size - width * 0.02;
+  const y = height - size - height * 0.02;
 
   return { x, y, width: size, height: size };
 };
