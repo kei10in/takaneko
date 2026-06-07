@@ -13,7 +13,6 @@ import {
 import {
   Link,
   LoaderFunctionArgs,
-  MetaDescriptor,
   MetaFunction,
   useLoaderData,
   useLocation,
@@ -49,20 +48,14 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
       ? "高嶺のなでしこの非公式スケジュールです。"
       : (meta.description ?? makePageDescription(meta));
 
-  const result: MetaDescriptor[] = [
+  const jsonLd = meta == undefined ? undefined : ldJsonMusicEvent(meta);
+
+  return [
     { title: formatTitle(title) },
     { name: "description", content: description },
+    ...(meta == undefined ? [] : twitterCard(meta)),
+    ...(jsonLd == undefined ? [] : [jsonLd]),
   ];
-
-  if (meta != undefined) {
-    result.push(...twitterCard(meta));
-    const jsonLd = ldJsonMusicEvent(meta);
-    if (jsonLd != undefined) {
-      result.push(jsonLd);
-    }
-  }
-
-  return result;
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
