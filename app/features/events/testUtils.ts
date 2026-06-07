@@ -22,6 +22,7 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     link: partial.link,
     present: partial.present,
     absent: partial.absent,
+    ticket: partial.ticket,
     updatedAt: partial.updatedAt,
 
     // 配列フィールドはデフォルトで空配列

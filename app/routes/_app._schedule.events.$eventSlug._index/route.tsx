@@ -28,6 +28,7 @@ import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { Events } from "~/features/events/events";
 import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
+import { ldJsonMusicEvent } from "~/features/events/ldJsonMusicEvent";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
@@ -55,6 +56,10 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
 
   if (meta != undefined) {
     result.push(...twitterCard(meta));
+    const jsonLd = ldJsonMusicEvent(meta);
+    if (jsonLd != undefined) {
+      result.push(jsonLd);
+    }
   }
 
   return result;
