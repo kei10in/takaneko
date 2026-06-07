@@ -149,7 +149,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
       </div>
 
       {/* Trade state selector */}
-      <div className="space-y-4 select-none">
+      <div className="space-y-2 select-none">
         <div className="mt-4 flex items-center justify-center gap-0.5">
           <TradeStateButton
             value={tradeStatus}
