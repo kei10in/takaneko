@@ -9,7 +9,9 @@ describe("makeLivesForSongMap", () => {
     const events = await Events.importAllEventModules();
     const events2022 = events.filter((event) => event.meta.date.startsWith("2022"));
 
-    const result = makeLivesForSongMap(events2022).filter((x) => x.count > 0);
+    const result = makeLivesForSongMap(events2022)
+      .filter((x) => x.count > 0)
+      .sort((a, b) => a.name.localeCompare(b.name));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2022"));
   });
 
@@ -17,7 +19,9 @@ describe("makeLivesForSongMap", () => {
     const events = await Events.importAllEventModules();
     const events2023 = events.filter((event) => event.meta.date.startsWith("2023"));
 
-    const result = makeLivesForSongMap(events2023).filter((x) => x.count > 0);
+    const result = makeLivesForSongMap(events2023)
+      .filter((x) => x.count > 0)
+      .sort((a, b) => a.name.localeCompare(b.name));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2023"));
   });
 
@@ -25,7 +29,9 @@ describe("makeLivesForSongMap", () => {
     const events = await Events.importAllEventModules();
     const events2024 = events.filter((event) => event.meta.date.startsWith("2024"));
 
-    const result = makeLivesForSongMap(events2024).filter((x) => x.count > 0);
+    const result = makeLivesForSongMap(events2024)
+      .filter((x) => x.count > 0)
+      .sort((a, b) => a.name.localeCompare(b.name));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2024"));
   });
 
@@ -33,7 +39,9 @@ describe("makeLivesForSongMap", () => {
     const events = await Events.importAllEventModules();
     const events2025 = events.filter((event) => event.meta.date.startsWith("2025"));
 
-    const result = makeLivesForSongMap(events2025).filter((x) => x.count > 0);
+    const result = makeLivesForSongMap(events2025)
+      .filter((x) => x.count > 0)
+      .sort((a, b) => a.name.localeCompare(b.name));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2025"));
   });
 });
