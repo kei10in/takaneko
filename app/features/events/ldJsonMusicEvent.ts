@@ -1,5 +1,6 @@
 import type { MetaDescriptor } from "react-router";
 import type { EventStatusType, MusicEvent, Offer, Place, WithContext } from "schema-dts";
+import { DomainName } from "~/constants";
 import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LdJsonMeta } from "~/utils/jsonLd/react-router";
@@ -23,9 +24,9 @@ const musicEventDocument = (event: EventMeta): WithContext<MusicEvent> | undefin
   const startDate = schemaDateTime(event.date, event.start);
   const endDate = event.end == undefined ? undefined : schemaDateTime(event.date, event.end);
   const eventStatus = schemaEventStatus(event.status);
-  const image = event.images.map((img) => img.path);
+  const image = schemaImage(event.images);
   const location = event.location == undefined ? undefined : schemaLocation(event.location, region);
-  const offers = event.ticket == undefined ? undefined : schemaOffer(event.ticket);
+  const offers = schemaOffer(event.ticket);
 
   return {
     "@context": "https://schema.org",
@@ -53,6 +54,10 @@ const japanPrefecture = (region: string | undefined): string | undefined => {
   return JAPAN_PREFECTURES.includes(region) ? region : undefined;
 };
 
+const schemaImage = (images: EventMeta["images"]): string[] => {
+  return images.map((img) => new URL(img.path, `https://${DomainName}`).toString());
+};
+
 const schemaLocation = (location: string, region: string): Place => {
   return {
     "@type": "Place",
@@ -65,7 +70,10 @@ const schemaLocation = (location: string, region: string): Place => {
   };
 };
 
-const schemaOffer = (url: string): Offer => {
+const schemaOffer = (url: string | undefined): Offer | undefined => {
+  if (url == undefined || url.trim() == "") {
+    return undefined;
+  }
   return { "@type": "Offer", url };
 };
 

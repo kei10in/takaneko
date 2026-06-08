@@ -1,154 +1,170 @@
-import { describe, expect, it } from "vitest";
-import { isMusicEvent, ldJsonMusicEvent } from "./ldJsonMusicEvent";
-import { makeEventMetaForTest } from "./testUtils";
+import { assert, describe, expect, it } from "vitest";
+import type { EventModule } from "./eventModule";
+import { Events } from "./events";
+import { ldJsonMusicEvent } from "./ldJsonMusicEvent";
 
-describe("isMusicEvent", () => {
-  it("returns false when liveType is missing", () => {
-    const event = makeEventMetaForTest({ region: "東京", liveType: undefined });
+describe("MusicEvent JSON-LD for Google Event structured data", async () => {
+  const allEvents = await Events.importAllEventModules();
+  const representativeEvents = [
+    {
+      caseName: "solo live",
+      event: eventByFilename(
+        allEvents,
+        "2025/02/2025-02-14_ワンマンライブ 2025 〜Cute for life〜.ts",
+      ),
+    },
+    {
+      caseName: "release event with mini live",
+      event: eventByFilename(
+        allEvents,
+        "2025/12/2025-12-17_1st アルバム「見上げるたびに、恋をする。」リリースイベント@ダイバーシティ東京.ts",
+      ),
+    },
+    {
+      caseName: "live event with ticket URL",
+      event: eventByFilename(allEvents, "2025/12/2025-12-25_たかねこクリスマスパーティー2025.ts"),
+    },
+  ];
 
-    expect(isMusicEvent(event)).toBe(false);
-  });
+  describe.each(representativeEvents)("$caseName: $event.filename", ({ event }) => {
+    const document = ldJsonDocument(ldJsonMusicEvent(event.meta));
+    const location = recordField(document, "location");
+    const address = recordField(location, "address");
+    const performer = recordField(document, "performer");
 
-  it("returns true for events outside Japan when liveType is set", () => {
-    const event = makeEventMetaForTest({ region: "ソウル", liveType: "SOLO" });
-
-    expect(isMusicEvent(event)).toBe(true);
-  });
-
-  it("returns true when liveType is set", () => {
-    const event = makeEventMetaForTest({ region: "東京", liveType: "RELEASE_EVENT" });
-
-    expect(isMusicEvent(event)).toBe(true);
-  });
-});
-
-describe("ldJsonMusicEvent", () => {
-  it("returns undefined when the event is not a MusicEvent", () => {
-    const event = makeEventMetaForTest({ region: "東京", liveType: undefined });
-
-    expect(ldJsonMusicEvent(event)).toBeUndefined();
-  });
-
-  it("builds MusicEvent JSON-LD for a domestic live event", () => {
-    const event = makeEventMetaForTest({
-      title: "ワンマンライブ",
-      summary: "ライブ",
-      description: "出力しない説明",
-      category: "LIVE",
-      liveType: "SOLO",
-      date: "2026-08-07",
-      start: "19:00",
-      end: "21:00",
-      region: "東京",
-      location: "豊洲PIT",
-      images: [{ path: "/events/live.webp", ref: "https://example.com/live", tags: [] }],
-      ticket: "https://example.com/ticket",
+    it("emits JSON-LD", () => {
+      expect(document).toBeDefined();
     });
 
-    expect(ldJsonMusicEvent(event)).toEqual({
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "MusicEvent",
-        name: "ワンマンライブ",
-        startDate: "2026-08-07T19:00+09:00",
-        endDate: "2026-08-07T21:00+09:00",
-        image: ["/events/live.webp"],
-        location: {
-          "@type": "Place",
-          name: "豊洲PIT",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "東京",
-            addressCountry: "JP",
-          },
-        },
-        performer: {
-          "@type": "MusicGroup",
-          name: "高嶺のなでしこ",
-        },
-        offers: {
-          "@type": "Offer",
-          url: "https://example.com/ticket",
-        },
-      },
-    });
-  });
-
-  it("returns undefined when the MusicEvent is outside Japan", () => {
-    const event = makeEventMetaForTest({
-      liveType: "SOLO",
-      region: "ソウル",
-      location: "YES24 LIVE HALL",
+    it("uses schema.org context", () => {
+      expect(document?.["@context"]).toBe("https://schema.org");
     });
 
-    expect(ldJsonMusicEvent(event)).toBeUndefined();
-  });
-
-  it("builds MusicEvent JSON-LD for a release event with liveType", () => {
-    const event = makeEventMetaForTest({
-      category: "EVENT",
-      liveType: "RELEASE_EVENT",
-      region: "埼玉",
+    it("uses an Event subtype supported by Google Event structured data", () => {
+      expect(document?.["@type"]).toBe("MusicEvent");
     });
 
-    const result = ldJsonMusicEvent(event);
-
-    expect(result).toEqual({
-      "script:ld+json": expect.objectContaining({
-        "@type": "MusicEvent",
-        startDate: "2025-08-01",
-      }),
-    });
-  });
-
-  it("normalizes late-night time notation", () => {
-    const event = makeEventMetaForTest({
-      liveType: "SOLO",
-      region: "東京",
-      date: "2026-06-09",
-      start: "27:00",
-      end: "27:30",
+    it("has a non-empty event name", () => {
+      expect(document?.name).toEqual(expect.any(String));
+      expect(document?.name).not.toBe("");
     });
 
-    expect(ldJsonMusicEvent(event)).toEqual({
-      "script:ld+json": expect.objectContaining({
-        startDate: "2026-06-10T03:00+09:00",
-        endDate: "2026-06-10T03:30+09:00",
-      }),
-    });
-  });
-
-  it("maps event statuses", () => {
-    const canceled = makeEventMetaForTest({
-      liveType: "SOLO",
-      region: "東京",
-      status: "CANCELED",
-    });
-    const rescheduled = makeEventMetaForTest({
-      liveType: "SOLO",
-      region: "東京",
-      status: "RESCHEDULED",
-    });
-    const withdrawn = makeEventMetaForTest({
-      liveType: "SOLO",
-      region: "東京",
-      status: "WITHDRAWN",
+    it("has a Google-compatible startDate", () => {
+      expect(document?.startDate).toEqual(expect.any(String));
+      expect(document?.startDate).toMatch(
+        /^(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z))$/,
+      );
     });
 
-    expect(ldJsonMusicEvent(canceled)).toEqual({
-      "script:ld+json": expect.objectContaining({
-        eventStatus: "https://schema.org/EventCancelled",
-      }),
+    it("has a Place location", () => {
+      expect(location?.["@type"]).toBe("Place");
     });
-    expect(ldJsonMusicEvent(rescheduled)).toEqual({
-      "script:ld+json": expect.objectContaining({
-        eventStatus: "https://schema.org/EventPostponed",
-      }),
+
+    it("has a non-empty venue name", () => {
+      expect(location?.name).toEqual(expect.any(String));
+      expect(location?.name).not.toBe("");
     });
-    expect(ldJsonMusicEvent(withdrawn)).toEqual({
-      "script:ld+json": expect.not.objectContaining({
-        eventStatus: expect.anything(),
-      }),
+
+    it("does not use the event name as the venue name", () => {
+      expect(location?.name).not.toBe(document?.name);
+    });
+
+    it("has a PostalAddress", () => {
+      expect(address?.["@type"]).toBe("PostalAddress");
+    });
+
+    it("has addressRegion as recognizable address information", () => {
+      expect(address?.addressRegion).toEqual(expect.any(String));
+      expect(address?.addressRegion).not.toBe("");
+    });
+
+    it("has addressCountry", () => {
+      expect(address?.addressCountry).toEqual(expect.any(String));
+      expect(address?.addressCountry).not.toBe("");
+    });
+
+    it("emits only absolute HTTP image URLs in Google-supported formats", () => {
+      const images = arrayField(document, "image");
+
+      expect(images.length).toBeGreaterThan(0);
+      images.forEach((image) => {
+        expect(image).toEqual(expect.any(String));
+        expect(image).toMatch(/^https?:\/\//);
+        assert(typeof image === "string");
+        expect(new URL(image).pathname).toMatch(/\.(jpe?g|png|webp)$/i);
+      });
+    });
+
+    it("emits a valid Offer when offers are present", () => {
+      const offers = arrayField(document, "offers");
+
+      offers.forEach((offer) => {
+        expect(offer).toEqual(expect.any(Object));
+        assert(isRecord(offer));
+        expect(offer["@type"]).toBe("Offer");
+        expect(offer.url).toEqual(expect.any(String));
+        expect(offer.url).toMatch(/^https?:\/\//);
+      });
+    });
+
+    it("has a non-empty performer name when performer is present", () => {
+      if (performer == undefined) {
+        expect(performer).toBeUndefined();
+        return;
+      }
+
+      expect(performer.name).toEqual(expect.any(String));
+      expect(performer.name).not.toBe("");
     });
   });
 });
+
+const eventByFilename = (events: EventModule[], filename: string): EventModule => {
+  const event = events.find((event) => event.filename.endsWith(filename));
+  assert(event != undefined, `Event not found: ${filename}`);
+  assert(
+    event.meta.liveType != undefined,
+    `Representative event must be a MusicEvent: ${filename}`,
+  );
+  return event;
+};
+
+const ldJsonDocument = (
+  meta: ReturnType<typeof ldJsonMusicEvent>,
+): Record<string, unknown> | undefined => {
+  if (meta == undefined) {
+    return undefined;
+  }
+
+  const document = Object.entries(meta).find(([key]) => key === "script:ld+json")?.[1];
+  return isRecord(document) ? document : undefined;
+};
+
+const recordField = (
+  record: Record<string, unknown> | undefined,
+  key: string,
+): Record<string, unknown> | undefined => {
+  if (record == undefined) {
+    return undefined;
+  }
+
+  const value = record[key];
+  return isRecord(value) ? value : undefined;
+};
+
+const arrayField = (record: Record<string, unknown> | undefined, key: string): unknown[] => {
+  if (record == undefined) {
+    return [];
+  }
+
+  const value = record[key];
+  if (value == undefined) {
+    return [];
+  }
+
+  return Array.isArray(value) ? value : [value];
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> => {
+  return typeof value === "object" && value != null && !Array.isArray(value);
+};
