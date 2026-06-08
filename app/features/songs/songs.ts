@@ -63,6 +63,7 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   世界は恋に落ちている,
   // 2025
   花は誓いを忘れない,
+  病名恋ワズライ,
   この世界は嘘でできている,
   ライフクエスト,
   東京サマーセッション,
@@ -71,7 +72,6 @@ export const ALL_SONGS: SongMetaDescriptor[] = [
   メランコリックハニー,
   東京サニーパーティー,
   CuteForLife,
-  病名恋ワズライ,
   小悪魔だってかまわない,
   // 2024
   初恋の絵本,
