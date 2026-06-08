@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "GUEST",
   date: "2026-06-09",
-  open: undefined,
-  start: undefined,
+  open: "17:00",
+  start: "18:00",
   end: undefined,
   region: "東京",
   location: "東京ガーデンシアター",
@@ -29,10 +29,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    start: "19:15",
+    end: "19:35",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-04-27",
+  updatedAt: "2026-06-09",
 };
 
 export const content = /* md */ `
