@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://menkyo-torocca.jp/feature/takaneko04_qa06.html",
+    title: "たかねこプロフ帳★2026 日向端ひな編｜合宿免許なら運転免許トロッカ！ ",
+    authorName: "運転免許トロッカ！",
+    publishedAt: "2026-06-08",
+    mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa06.html",
+    imageUrl: "https://menkyo-torocca.jp/images/common/torocca_ogp_takaneko.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "ogp",
     key: "https://menkyo-torocca.jp/feature/takaneko04_qa07.html",
     title: "たかねこプロフ帳★2026 星谷美来編｜合宿免許なら運転免許トロッカ！ ",
     authorName: "運転免許トロッカ！",
