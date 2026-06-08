@@ -11,7 +11,7 @@ describe("makeLivesForSongMap", () => {
 
     const result = makeLivesForSongMap(events2022)
       .filter((x) => x.count > 0)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => (a.name === b.name ? 0 : a.name < b.name ? -1 : 1));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2022"));
   });
 
@@ -21,7 +21,7 @@ describe("makeLivesForSongMap", () => {
 
     const result = makeLivesForSongMap(events2023)
       .filter((x) => x.count > 0)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => (a.name === b.name ? 0 : a.name < b.name ? -1 : 1));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2023"));
   });
 
@@ -31,7 +31,7 @@ describe("makeLivesForSongMap", () => {
 
     const result = makeLivesForSongMap(events2024)
       .filter((x) => x.count > 0)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => (a.name === b.name ? 0 : a.name < b.name ? -1 : 1));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2024"));
   });
 
@@ -41,7 +41,7 @@ describe("makeLivesForSongMap", () => {
 
     const result = makeLivesForSongMap(events2025)
       .filter((x) => x.count > 0)
-      .sort((a, b) => a.name.localeCompare(b.name));
+      .sort((a, b) => (a.name === b.name ? 0 : a.name < b.name ? -1 : 1));
     await expect(result).toMatchFileSnapshot(snapshotFor("song-activities-2025"));
   });
 });

@@ -2144,6 +2144,420 @@
     "costumeStats": [
       {
         "costumeName": "アンチファン衣装",
+        "count": 12,
+      },
+      {
+        "costumeName": "「女の子は強い」制服衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "2022 サンタ衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "T シャツ (メンバー個別名前入り)",
+        "count": 1,
+      },
+    ],
+    "count": 15,
+    "lives": [
+      {
+        "event": {
+          "date": "2022-12-27",
+          "liveType": "GUEST",
+          "location": "品川インターシティホール",
+          "region": "東京",
+          "slug": "2022-12-27_SPARK 2022",
+          "summary": "SPARK 2022",
+          "title": "SPARK 2022 in SHINAGAWA",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-12-25",
+          "liveType": "SOLO",
+          "location": "Mixalive TOKYO 6階 Theater Mixa",
+          "region": "東京",
+          "slug": "2022-12-25_たかねこクリスマスパーティー2022",
+          "summary": "たかねこクリスマスパーティー2022",
+          "title": "たかねこクリスマスパーティー2022",
+        },
+        "segments": [
+          {
+            "actTitle": "FC限定 X'mas だって可愛いって言われたい♡お楽しみ会",
+            "costumeName": "「女の子は強い」制服衣装",
+            "index": 4,
+            "members": undefined,
+            "section": "main",
+          },
+          {
+            "actTitle": "聖夜の約束ー！LIVE",
+            "costumeName": "2022 サンタ衣装",
+            "index": 7,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-12-08",
+          "liveType": "GUEST",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
+          "summary": "インディーズアイドルチャンピオンシップ2022",
+          "title": "インディーズアイドルチャンピオンシップ2022",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-11-23",
+          "liveType": "GUEST",
+          "location": "SHIBUYA PLEASURE PLEASURE",
+          "region": "東京",
+          "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
+          "summary": "WWS FESTIVAL vol.1 -Girls Side-",
+          "title": "WWS FESTIVAL vol.1 -Girls Side-",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-11-21",
+          "liveType": "GUEST",
+          "location": "なかのZERO大ホール",
+          "region": "東京",
+          "slug": "2022-11-21_IDOL STAGE FES vol.4",
+          "summary": "IDOL STAGE FES vol.4",
+          "title": "IDOL STAGE FES vol.4",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 3,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-11-12",
+          "liveType": "GUEST",
+          "location": "恵比寿ガーデンホール",
+          "region": "東京",
+          "slug": "2022-11-12_Liven up IDOL vol.3",
+          "summary": "Liven up IDOL vol.3",
+          "title": "Liven up IDOL vol.3",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 2,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-11-03",
+          "liveType": "GUEST",
+          "location": "神田明神ホール",
+          "region": "東京",
+          "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
+          "summary": "秋葉原アイドルサーキット vol.2",
+          "title": "秋葉原アイドルサーキット vol.2",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-31",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
+          "summary": "1st ファンミーティング 〜お披露目式〜",
+          "title": "1st ファンミーティング 〜お披露目式〜",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "T シャツ (メンバー個別名前入り)",
+            "index": 0,
+            "members": undefined,
+            "section": "encore",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-29",
+          "liveType": "RELEASE_EVENT",
+          "location": "カメイドクロック カメクロステージ",
+          "region": "東京",
+          "slug": "2022-10-29_アンチファン リリースイベント@カメイドクロック",
+          "summary": "アンチファン リリースイベント@カメイドクロック",
+          "title": "1st シングル「アンチファン」リリースイベント@カメイドクロック カメクロステージ",
+        },
+        "segments": [
+          {
+            "actTitle": "1 部",
+            "costumeName": "アンチファン衣装",
+            "index": 2,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-21",
+          "liveType": "GUEST",
+          "location": "新宿ReNY",
+          "region": "東京",
+          "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
+          "summary": "TOKYO GIRLS GIRLS extra!!",
+          "title": "TOKYO GIRLS GIRLS extra!!",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-13",
+          "liveType": "GUEST",
+          "location": "なかのZERO 大ホール",
+          "region": "東京",
+          "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
+          "summary": "AION CINDERELLA DX -Who is CinderellA?-",
+          "title": "AION CINDERELLA DX -Who is CinderellA?-",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-09",
+          "liveType": "GUEST",
+          "location": "みさき公園",
+          "region": "大阪",
+          "slug": "2022-10-09_MISAKI IDOL FES",
+          "summary": "MISAKI IDOL FES Day2",
+          "title": "MISAKI IDOL FES Day2",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 1,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-08",
+          "liveType": "GUEST",
+          "location": "みさき公園",
+          "region": "大阪",
+          "slug": "2022-10-08_MISAKI IDOL FES",
+          "summary": "MISAKI IDOL FES Day1",
+          "title": "MISAKI IDOL FES Day1",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 2,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-05",
+          "liveType": "GUEST",
+          "location": "LINE CUBE SHIBUYA",
+          "region": "東京",
+          "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
+          "summary": "IDOL GARDEN 2022 AUTUMN",
+          "title": "IDOL GARDEN 2022 AUTUMN",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "アンチファン衣装",
+            "index": 2,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+    ],
+    "name": "女の子は強い",
+    "slug": "女の子は強い",
+  },
+  {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
+        "count": 1,
+      },
+      {
+        "costumeName": "「乙女どもよ。」制服衣装",
+        "count": 1,
+      },
+    ],
+    "count": 2,
+    "lives": [
+      {
+        "event": {
+          "date": "2022-12-25",
+          "liveType": "SOLO",
+          "location": "Mixalive TOKYO 6階 Theater Mixa",
+          "region": "東京",
+          "slug": "2022-12-25_たかねこクリスマスパーティー2022",
+          "summary": "たかねこクリスマスパーティー2022",
+          "title": "たかねこクリスマスパーティー2022",
+        },
+        "segments": [
+          {
+            "actTitle": "聖夜の約束ー！LIVE",
+            "costumeName": "アンチファン衣装",
+            "index": 2,
+            "members": [
+              "橋本桃呼",
+              "春野莉々",
+              "東山恵里沙",
+              "日向端ひな",
+              "籾山ひめり",
+            ],
+            "section": "main",
+          },
+        ],
+      },
+      {
+        "event": {
+          "date": "2022-10-31",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
+          "summary": "1st ファンミーティング 〜お披露目式〜",
+          "title": "1st ファンミーティング 〜お披露目式〜",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "「乙女どもよ。」制服衣装",
+            "index": 7,
+            "members": [
+              "橋本桃呼",
+              "春野莉々",
+              "東山恵里沙",
+              "日向端ひな",
+              "籾山ひめり",
+            ],
+            "section": "main",
+          },
+        ],
+      },
+    ],
+    "name": "私は怪物",
+    "slug": "私は怪物",
+  },
+  {
+    "costumeStats": [
+      {
+        "costumeName": "「乙女どもよ。」制服衣装",
+        "count": 1,
+      },
+    ],
+    "count": 1,
+    "lives": [
+      {
+        "event": {
+          "date": "2022-10-31",
+          "liveType": "SOLO",
+          "location": "豊洲PIT",
+          "region": "東京",
+          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
+          "summary": "1st ファンミーティング 〜お披露目式〜",
+          "title": "1st ファンミーティング 〜お披露目式〜",
+        },
+        "segments": [
+          {
+            "actTitle": undefined,
+            "costumeName": "「乙女どもよ。」制服衣装",
+            "index": 9,
+            "members": undefined,
+            "section": "main",
+          },
+        ],
+      },
+    ],
+    "name": "美しく生きろ",
+    "slug": "美しく生きろ",
+  },
+  {
+    "costumeStats": [
+      {
+        "costumeName": "アンチファン衣装",
         "count": 16,
       },
       {
@@ -2496,419 +2910,5 @@
     ],
     "name": "誇り高きアイドル",
     "slug": "誇り高きアイドル",
-  },
-  {
-    "costumeStats": [
-      {
-        "costumeName": "アンチファン衣装",
-        "count": 1,
-      },
-      {
-        "costumeName": "「乙女どもよ。」制服衣装",
-        "count": 1,
-      },
-    ],
-    "count": 2,
-    "lives": [
-      {
-        "event": {
-          "date": "2022-12-25",
-          "liveType": "SOLO",
-          "location": "Mixalive TOKYO 6階 Theater Mixa",
-          "region": "東京",
-          "slug": "2022-12-25_たかねこクリスマスパーティー2022",
-          "summary": "たかねこクリスマスパーティー2022",
-          "title": "たかねこクリスマスパーティー2022",
-        },
-        "segments": [
-          {
-            "actTitle": "聖夜の約束ー！LIVE",
-            "costumeName": "アンチファン衣装",
-            "index": 2,
-            "members": [
-              "橋本桃呼",
-              "春野莉々",
-              "東山恵里沙",
-              "日向端ひな",
-              "籾山ひめり",
-            ],
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-31",
-          "liveType": "SOLO",
-          "location": "豊洲PIT",
-          "region": "東京",
-          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
-          "summary": "1st ファンミーティング 〜お披露目式〜",
-          "title": "1st ファンミーティング 〜お披露目式〜",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "「乙女どもよ。」制服衣装",
-            "index": 7,
-            "members": [
-              "橋本桃呼",
-              "春野莉々",
-              "東山恵里沙",
-              "日向端ひな",
-              "籾山ひめり",
-            ],
-            "section": "main",
-          },
-        ],
-      },
-    ],
-    "name": "私は怪物",
-    "slug": "私は怪物",
-  },
-  {
-    "costumeStats": [
-      {
-        "costumeName": "アンチファン衣装",
-        "count": 12,
-      },
-      {
-        "costumeName": "「女の子は強い」制服衣装",
-        "count": 1,
-      },
-      {
-        "costumeName": "2022 サンタ衣装",
-        "count": 1,
-      },
-      {
-        "costumeName": "T シャツ (メンバー個別名前入り)",
-        "count": 1,
-      },
-    ],
-    "count": 15,
-    "lives": [
-      {
-        "event": {
-          "date": "2022-12-27",
-          "liveType": "GUEST",
-          "location": "品川インターシティホール",
-          "region": "東京",
-          "slug": "2022-12-27_SPARK 2022",
-          "summary": "SPARK 2022",
-          "title": "SPARK 2022 in SHINAGAWA",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-12-25",
-          "liveType": "SOLO",
-          "location": "Mixalive TOKYO 6階 Theater Mixa",
-          "region": "東京",
-          "slug": "2022-12-25_たかねこクリスマスパーティー2022",
-          "summary": "たかねこクリスマスパーティー2022",
-          "title": "たかねこクリスマスパーティー2022",
-        },
-        "segments": [
-          {
-            "actTitle": "FC限定 X'mas だって可愛いって言われたい♡お楽しみ会",
-            "costumeName": "「女の子は強い」制服衣装",
-            "index": 4,
-            "members": undefined,
-            "section": "main",
-          },
-          {
-            "actTitle": "聖夜の約束ー！LIVE",
-            "costumeName": "2022 サンタ衣装",
-            "index": 7,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-12-08",
-          "liveType": "GUEST",
-          "location": "豊洲PIT",
-          "region": "東京",
-          "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
-          "summary": "インディーズアイドルチャンピオンシップ2022",
-          "title": "インディーズアイドルチャンピオンシップ2022",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-11-23",
-          "liveType": "GUEST",
-          "location": "SHIBUYA PLEASURE PLEASURE",
-          "region": "東京",
-          "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
-          "summary": "WWS FESTIVAL vol.1 -Girls Side-",
-          "title": "WWS FESTIVAL vol.1 -Girls Side-",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-11-21",
-          "liveType": "GUEST",
-          "location": "なかのZERO大ホール",
-          "region": "東京",
-          "slug": "2022-11-21_IDOL STAGE FES vol.4",
-          "summary": "IDOL STAGE FES vol.4",
-          "title": "IDOL STAGE FES vol.4",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 3,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-11-12",
-          "liveType": "GUEST",
-          "location": "恵比寿ガーデンホール",
-          "region": "東京",
-          "slug": "2022-11-12_Liven up IDOL vol.3",
-          "summary": "Liven up IDOL vol.3",
-          "title": "Liven up IDOL vol.3",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 2,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-11-03",
-          "liveType": "GUEST",
-          "location": "神田明神ホール",
-          "region": "東京",
-          "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
-          "summary": "秋葉原アイドルサーキット vol.2",
-          "title": "秋葉原アイドルサーキット vol.2",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-31",
-          "liveType": "SOLO",
-          "location": "豊洲PIT",
-          "region": "東京",
-          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
-          "summary": "1st ファンミーティング 〜お披露目式〜",
-          "title": "1st ファンミーティング 〜お披露目式〜",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "T シャツ (メンバー個別名前入り)",
-            "index": 0,
-            "members": undefined,
-            "section": "encore",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-29",
-          "liveType": "RELEASE_EVENT",
-          "location": "カメイドクロック カメクロステージ",
-          "region": "東京",
-          "slug": "2022-10-29_アンチファン リリースイベント@カメイドクロック",
-          "summary": "アンチファン リリースイベント@カメイドクロック",
-          "title": "1st シングル「アンチファン」リリースイベント@カメイドクロック カメクロステージ",
-        },
-        "segments": [
-          {
-            "actTitle": "1 部",
-            "costumeName": "アンチファン衣装",
-            "index": 2,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-21",
-          "liveType": "GUEST",
-          "location": "新宿ReNY",
-          "region": "東京",
-          "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
-          "summary": "TOKYO GIRLS GIRLS extra!!",
-          "title": "TOKYO GIRLS GIRLS extra!!",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-13",
-          "liveType": "GUEST",
-          "location": "なかのZERO 大ホール",
-          "region": "東京",
-          "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
-          "summary": "AION CINDERELLA DX -Who is CinderellA?-",
-          "title": "AION CINDERELLA DX -Who is CinderellA?-",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-09",
-          "liveType": "GUEST",
-          "location": "みさき公園",
-          "region": "大阪",
-          "slug": "2022-10-09_MISAKI IDOL FES",
-          "summary": "MISAKI IDOL FES Day2",
-          "title": "MISAKI IDOL FES Day2",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 1,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-08",
-          "liveType": "GUEST",
-          "location": "みさき公園",
-          "region": "大阪",
-          "slug": "2022-10-08_MISAKI IDOL FES",
-          "summary": "MISAKI IDOL FES Day1",
-          "title": "MISAKI IDOL FES Day1",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 2,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-      {
-        "event": {
-          "date": "2022-10-05",
-          "liveType": "GUEST",
-          "location": "LINE CUBE SHIBUYA",
-          "region": "東京",
-          "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
-          "summary": "IDOL GARDEN 2022 AUTUMN",
-          "title": "IDOL GARDEN 2022 AUTUMN",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "アンチファン衣装",
-            "index": 2,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-    ],
-    "name": "女の子は強い",
-    "slug": "女の子は強い",
-  },
-  {
-    "costumeStats": [
-      {
-        "costumeName": "「乙女どもよ。」制服衣装",
-        "count": 1,
-      },
-    ],
-    "count": 1,
-    "lives": [
-      {
-        "event": {
-          "date": "2022-10-31",
-          "liveType": "SOLO",
-          "location": "豊洲PIT",
-          "region": "東京",
-          "slug": "2022-10-31_1st ファンミーティング 〜お披露目式〜",
-          "summary": "1st ファンミーティング 〜お披露目式〜",
-          "title": "1st ファンミーティング 〜お披露目式〜",
-        },
-        "segments": [
-          {
-            "actTitle": undefined,
-            "costumeName": "「乙女どもよ。」制服衣装",
-            "index": 9,
-            "members": undefined,
-            "section": "main",
-          },
-        ],
-      },
-    ],
-    "name": "美しく生きろ",
-    "slug": "美しく生きろ",
   },
 ]
