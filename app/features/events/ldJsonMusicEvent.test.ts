@@ -21,8 +21,15 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
       ),
     },
     {
-      caseName: "live event with ticket URL",
-      event: eventByFilename(allEvents, "2025/12/2025-12-25_たかねこクリスマスパーティー2025.ts"),
+      caseName: "hosted live festival",
+      event: eventByFilename(
+        allEvents,
+        "2025/10/2025-10-29_たかねこフェス vol.5 〜ハロウィンSP〜.ts",
+      ),
+    },
+    {
+      caseName: "guest festival appearance",
+      event: eventByFilename(allEvents, "2025/08/2025-08-31_@JAM EXPO 2025.ts"),
     },
   ];
 
