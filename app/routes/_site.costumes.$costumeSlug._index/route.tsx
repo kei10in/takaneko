@@ -232,7 +232,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                 </span>
               </h2>
 
-              <ul className="-mx-4 mt-4 grid grid-cols-3 gap-1 space-y-2 sm:grid-cols-4">
+              <ul className="-mx-4 mt-4 grid grid-cols-3 gap-1 sm:grid-cols-4">
                 {galleryImages.map(({ path, ref }, i) => {
                   return (
                     <li key={i}>
