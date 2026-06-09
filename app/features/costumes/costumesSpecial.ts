@@ -102,7 +102,7 @@ export const ハニフェス2025制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/uniforms/ハニフェス2025制服.jpg",
+      path: "/takaneko/costumes/specials/ハニフェス2025制服.jpg",
       ref: "https://x.com/MomokoHashimoto/status/1967569067902198269",
     },
   ],
@@ -176,7 +176,7 @@ export const ホワイトチョコ・ビターチョコ制服衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/mv/ホワイトチョコ・ビターチョコ制服.webp",
+      path: "/takaneko/costumes/specials/ホワイトチョコ・ビターチョコ制服.webp",
       ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
     },
   ],
@@ -189,7 +189,7 @@ export const バレンタイン2025衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/mv/バレンタイン2025衣装.webp",
+      path: "/takaneko/costumes/specials/バレンタイン2025衣装.webp",
       ref: "https://prtimes.jp/main/html/rd/p/000000726.000025517.html",
     },
   ],
