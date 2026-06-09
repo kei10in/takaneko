@@ -21,6 +21,8 @@ export type StageCostumeName = z.infer<typeof StageCostumeName>;
 export const StageCostumeNames: string[] = StageCostumeName.options;
 
 export const MvCostumeName = z.enum([
+  "「生きてりゃいい」MV 衣装",
+  "「生きてりゃいい」MV パジャマ衣装",
   "「私は、わたしの事が好き。」衣装",
   "「世界は恋に落ちている」制服衣装",
   "「病名恋ワズライ」衣装",

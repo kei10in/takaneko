@@ -1,5 +1,62 @@
 import { MvCostume } from "./types";
 
+export const 生きてりゃいいMV衣装 = {
+  kind: "mv",
+  name: "「生きてりゃいい」MV 衣装",
+  slug: "生きてりゃいい衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2057778266333925780",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2054520386214326408",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2054518779657560502",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2054517774693855617",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_葉月紗蘭.jpg",
+      ref: "https://x.com/saara_hazuki/status/2054545061413851360",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2054550062680908286",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2054528454302024082",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_星谷美来.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2055661261002870849",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2054522864318157049",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMV衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2054518600502071492",
+    },
+  ],
+} satisfies MvCostume;
+
+export const 生きてりゃいいMVパジャマ衣装 = {
+  kind: "mv",
+  name: "「生きてりゃいい」MV パジャマ衣装",
+  slug: "生きてりゃいいMVパジャマ衣装",
+
+  images: [],
+} satisfies MvCostume;
+
 export const 私はわたしの事が好き衣装 = {
   kind: "mv",
   name: "「私は、わたしの事が好き。」衣装",
@@ -559,6 +616,8 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
+  生きてりゃいいMV衣装,
+  生きてりゃいいMVパジャマ衣装,
   私はわたしの事が好き衣装,
   世界は恋に落ちている制服衣装,
   病名恋ワズライ衣装,
