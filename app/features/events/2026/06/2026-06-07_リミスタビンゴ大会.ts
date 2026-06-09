@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-06-07_リミスタビンゴ大会.jpg",
       ref: "https://limista.com/projects/7454/products/54517",
     },
+    {
+      path: "/events/2026/2026-06-07_リミスタビンゴ大会_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2063589286667059642",
+    },
   ],
   link: {
     text: "リミスタ",
@@ -35,7 +39,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-07",
+  updatedAt: "2026-06-09",
 };
 
 export const content = /* md */ `
@@ -67,6 +71,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2063589286667059642)
   - [リミスタ プロジェクトページ](https://limista.com/projects/7454)
   - [詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=4983)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2019727773619638646)
