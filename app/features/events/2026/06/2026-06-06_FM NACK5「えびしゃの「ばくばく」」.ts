@@ -8,17 +8,24 @@ export const meta: EventMetaDescriptor = {
   end: "26:30",
   region: "ラジオ",
   present: ["星谷美来", "籾山ひめり"],
+  images: [
+    {
+      path: "/events/2026/2026-06-06_FM NACK5「えびしゃの「ばくばく」」.jpg",
+      ref: "https://x.com/takanenofficial/status/2063316251393524143",
+    },
+  ],
   link: {
     text: "",
     url: "",
   },
-  updatedAt: "2026-06-06",
+  updatedAt: "2026-06-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
   - [radiko 番組放送回](https://radiko.jp/share/?sid=NACK5&t=20260607020000)
+  - [出演報告](https://x.com/takanenofficial/status/2063316251393524143)
   - [メッセージフォーム](https://www.nack5.co.jp/message/5547/)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2062756297787769322)
   - [告知 - えびしゃの「ばくばく」 X](https://x.com/bakubaku_795/status/2062812110510567667)
