@@ -54,7 +54,40 @@ export const 生きてりゃいいMVパジャマ衣装 = {
   name: "「生きてりゃいい」MV パジャマ衣装",
   slug: "生きてりゃいいMVパジャマ衣装",
 
-  images: [],
+  images: [
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2054550062680908286",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2057638848226873601",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2054550958617796654",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2054517774693855617",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2054550062680908286",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_星谷美来.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2054521548397269258",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2054571403228410056",
+    },
+    {
+      path: "/takaneko/costumes/mv/生きてりゃいい/生きてりゃいいMVパジャマ衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2054942354940002338",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 私はわたしの事が好き衣装 = {
