@@ -2,6 +2,29 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "o3KKDOWI0Uc",
+    title:
+      "『愛してるゲームを終わらせたい』伊藤美来さん × 高嶺のなでしこの橋本桃呼さん＆日向端ひなさんからコメントが到着！🌸",
+    authorName: "Real Sound Movie",
+    publishedAt: "2026-06-09",
+    mediaUrl: "https://youtu.be/o3KKDOWI0Uc",
+    imageUrl: "https://i.ytimg.com/vi/o3KKDOWI0Uc/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "日向端ひな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://realsound.jp/movie/2026/06/post-2414982.html",
+    title: "伊藤美来×高嶺のなでしこ 橋本桃呼＆日向端ひな　『愛してるゲームを終わらせたい』女子会",
+    authorName: "Real Sound｜リアルサウンド 映画部",
+    publishedAt: "2026-06-09",
+    mediaUrl: "https://realsound.jp/movie/2026/06/post-2414982.html",
+    imageUrl: "https://realsound.jp/wp-content/uploads/2026/06/20260608-asgtakane-017.jpg",
+    category: "article",
+    presents: ["橋本桃呼", "日向端ひな"],
+  },
+  {
     kind: "ogp",
     key: "https://menkyo-torocca.jp/feature/takaneko04_qa05.html",
     title: "たかねこプロフ帳★2026 東山恵里沙編｜合宿免許なら運転免許トロッカ！ ",
