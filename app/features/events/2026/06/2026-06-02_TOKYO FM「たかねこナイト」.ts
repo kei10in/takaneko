@@ -8,7 +8,7 @@ export const meta: EventMetaDescriptor = {
   start: "27:00",
   end: "27:30",
   region: "ラジオ",
-  present: ["東山恵里沙"],
+  present: ["東山恵里沙", "日向端ひな", "葉月紗蘭"],
   images: [
     {
       path: "/events/2026/2026-06-02_TOKYO FM「たかねこナイト」.jpg",
@@ -36,7 +36,7 @@ export const content = /* md */ `
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t=20260603030000)
   - [Podcasts Membership](https://audee-membership.jp/takanenonadeshiko/audio/smZQf5XQ9SAN3KM5AHU3q8jn)
-  - [メンバーシップ限定 アンコール](https://audee-membership.jp/takanenonadeshiko/audio/smaR3ngcXaQ7aipwNtXKRG35)
+  - [メンバーシップ限定 アンコールトーク](https://audee-membership.jp/takanenonadeshiko/audio/smaR3ngcXaQ7aipwNtXKRG35)
 
   ## 番組説明
 
