@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "qRT4eVzeHvA",
+    title: "高嶺のなでしこ「可愛くてごめん」などキュートにパフォ　ASIA CELEBRATION LIVE",
+    authorName: "vois ヴォイス",
+    publishedAt: "2026-06-10",
+    mediaUrl: "https://youtu.be/qRT4eVzeHvA",
+    imageUrl: "https://i.ytimg.com/vi/qRT4eVzeHvA/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "youtube",
     key: "o3KKDOWI0Uc",
     title:
       "『愛してるゲームを終わらせたい』伊藤美来さん × 高嶺のなでしこの橋本桃呼さん＆日向端ひなさんからコメントが到着！🌸",
