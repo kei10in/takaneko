@@ -1,5 +1,54 @@
 import { MvCostume } from "./types";
 
+export const ハートブーケDPV衣装 = {
+  kind: "mv",
+  name: "「ハートブーケ」DPV 衣装",
+  slug: "ハートブーケDPV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2063598875664073118",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2063594033361125476",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2063597014550720916",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2063608704638046299",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_葉月紗蘭.jpg",
+      ref: "https://x.com/saara_hazuki/status/2063592753884479893",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2063599208402448853",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2063607764367376503",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_星谷美来.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2064696111441518924",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2064512035535385079",
+    },
+    {
+      path: "/takaneko/costumes/mv/ハートブーケ/ハートブーケDPV衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2063598875664073118",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 生きてりゃいいMV衣装 = {
   kind: "mv",
   name: "「生きてりゃいい」MV 衣装",
@@ -537,7 +586,7 @@ export const 決戦スピリットMV衣装 = {
 
   images: [
     {
-      path: "/takaneko/costumes/mv/決戦スピリットMV衣装_バレー部.jpg",
+      path: "/takaneko/costumes/mv/決戦スピリットMV衣装_バレー部.jpg",
       ref: "https://x.com/hina_hinahata/status/1917216185336451309",
     },
     {
@@ -649,6 +698,7 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
+  ハートブーケDPV衣装,
   生きてりゃいいMV衣装,
   生きてりゃいいMVパジャマ衣装,
   私はわたしの事が好き衣装,

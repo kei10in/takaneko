@@ -1,47 +1,66 @@
-import { existsSync } from "node:fs";
-import { rename } from "node:fs/promises";
-import path from "node:path";
 import { glob } from "glob";
+import { existsSync } from "node:fs";
+import { lstat, rename } from "node:fs/promises";
+import path from "node:path";
+
+type EntryType = "file" | "directory";
+
+interface FileSystemEntry {
+  path: string;
+  type: EntryType;
+}
 
 interface RenameCandidate {
   sourcePath: string;
   targetPath: string;
   sourceName: string;
   targetName: string;
+  type: EntryType;
 }
 
-const eventPattern = path
+const eventFilePattern = path
   .resolve(import.meta.dirname, "..", "app", "features", "events", "*", "**", "*.{ts,tsx,mdx}")
   .replace(/\\/g, "/");
-const publicPattern = path.resolve(import.meta.dirname, "..", "public", "**", "*").replace(/\\/g, "/");
+const eventDirectoryPattern = path
+  .resolve(import.meta.dirname, "..", "app", "features", "events", "*", "**")
+  .replace(/\\/g, "/");
+const publicPattern = path
+  .resolve(import.meta.dirname, "..", "public", "**", "*")
+  .replace(/\\/g, "/");
 
 const main = async () => {
   const dryRun = process.argv.includes("--dry-run");
-  const files = await glob([eventPattern, publicPattern], { nodir: true });
-  const candidates = files.flatMap((filePath) => {
-    const sourceName = path.basename(filePath);
-    const targetName = sourceName.normalize("NFC");
+  const entries = await collectEntries();
+  const candidates = entries
+    .flatMap((entry) => {
+      const sourceName = path.basename(entry.path);
+      const targetName = sourceName.normalize("NFC");
 
-    if (sourceName === targetName) {
-      return [];
-    }
+      if (sourceName === targetName) {
+        return [];
+      }
 
-    return [
-      {
-        sourcePath: filePath,
-        targetPath: path.join(path.dirname(filePath), targetName),
-        sourceName,
-        targetName,
-      } satisfies RenameCandidate,
-    ];
-  });
+      return [
+        {
+          sourcePath: entry.path,
+          targetPath: path.join(path.dirname(entry.path), targetName),
+          sourceName,
+          targetName,
+          type: entry.type,
+        } satisfies RenameCandidate,
+      ];
+    })
+    .sort((a, b) => b.sourcePath.length - a.sourcePath.length);
 
   if (candidates.length === 0) {
-    console.log("NFC ではないファイル名は見つかりませんでした。");
+    console.log("NFC ではないファイル名・ディレクトリ名は見つかりませんでした。");
     return;
   }
 
-  const conflicts = findConflicts(candidates, files);
+  const conflicts = findConflicts(
+    candidates,
+    entries.map((entry) => entry.path),
+  );
   if (conflicts.length > 0) {
     console.error("リネーム先が衝突するため中断します。");
     conflicts.forEach((conflict) => {
@@ -51,7 +70,7 @@ const main = async () => {
     return;
   }
 
-  console.log(`${candidates.length} 件のファイル名を NFC に正規化します。`);
+  console.log(`${candidates.length} 件のファイル名・ディレクトリ名を NFC に正規化します。`);
 
   await candidates.reduce(async (previous, candidate, index) => {
     await previous;
@@ -61,8 +80,32 @@ const main = async () => {
   console.log(dryRun ? "dry-run 完了" : "リネーム完了");
 };
 
-const findConflicts = (candidates: RenameCandidate[], files: string[]): string[] => {
-  const knownFiles = new Set(files);
+const collectEntries = async (): Promise<FileSystemEntry[]> => {
+  const paths = await glob([eventFilePattern, eventDirectoryPattern, publicPattern], {
+    nodir: false,
+  });
+  const uniquePaths = [...new Set(paths)];
+  const entries = await Promise.all(
+    uniquePaths.map(async (entryPath): Promise<FileSystemEntry | undefined> => {
+      const stats = await lstat(entryPath);
+
+      if (stats.isDirectory()) {
+        return { path: entryPath, type: "directory" };
+      }
+
+      if (stats.isFile()) {
+        return { path: entryPath, type: "file" };
+      }
+
+      return undefined;
+    }),
+  );
+
+  return entries.filter((entry): entry is FileSystemEntry => entry !== undefined);
+};
+
+const findConflicts = (candidates: RenameCandidate[], paths: string[]): string[] => {
+  const knownPaths = new Set(paths);
   const grouped = candidates.reduce(
     (acc, candidate) => {
       const key = candidate.targetPath;
@@ -78,8 +121,8 @@ const findConflicts = (candidates: RenameCandidate[], files: string[]): string[]
     }
 
     const [sourcePath] = sourcePaths;
-    if (sourcePath !== targetPath && knownFiles.has(targetPath)) {
-      return [`${targetPath}: ${sourcePath} と既存ファイルが衝突します`];
+    if (sourcePath !== targetPath && knownPaths.has(targetPath)) {
+      return [`${targetPath}: ${sourcePath} と既存ファイルまたはディレクトリが衝突します`];
     }
 
     return [];
