@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-09_LuckyFes'26.jpg",
       ref: "https://x.com/takanenofficial/status/2031222538442014861",
     },
+    {
+      path: "/events/2026/2026-08-09_LuckyFes'26_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2064565863517474972",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント サイト",
@@ -29,14 +34,17 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    start: "13:20",
+    end: "13:55",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-03-10",
+  updatedAt: "2026-06-10",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2064565863517474972)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2031222538442014861)
 `;
