@@ -1,13 +1,11 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "オンライン個別お話し会📢",
+  summary: "オンライン個別お話し会 受付📋",
   category: "EVENT",
-  date: "2026-06-14",
-  start: "13:00",
-  end: "20:30",
+  date: "2026-06-11",
+  start: "21:00",
   region: "Web",
-  present: ["高嶺のなでしこ2"],
   images: [
     {
       path: "/events/2026/2026-06-14_オンライン個別お話し会_1.jpg",
@@ -22,7 +20,7 @@ export const meta: EventMetaDescriptor = {
     text: "開催詳細",
     url: "https://takanenonadeshiko.jp/?p=5368",
   },
-  updatedAt: "2026-06-08",
+  updatedAt: "2026-06-10",
 };
 
 export const content = /* md */ `
@@ -62,6 +60,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [販売日の変更について - 公式 X](https://x.com/takanenofficial/status/2064664258282192999)
   - [公式ニュース](https://takanenonadeshiko.jp/?p=5368)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2063924342740980202)
 `;

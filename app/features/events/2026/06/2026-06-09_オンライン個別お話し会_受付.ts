@@ -2,6 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会 受付📋",
+  status: "RESCHEDULED",
   category: "EVENT",
   date: "2026-06-09",
   start: "21:00",
@@ -20,11 +21,13 @@ export const meta: EventMetaDescriptor = {
     text: "開催詳細",
     url: "https://takanenonadeshiko.jp/?p=5368",
   },
-  updatedAt: "2026-06-08",
+  updatedAt: "2026-06-10",
 };
 
 export const content = /* md */ `
   ## 開催情報
+
+  販売受付は 2026年06月14日 (木) に延期されました。
 
   **販売開始:** 2026年06月09日 (火) 21:00 〜 順次
 
@@ -60,6 +63,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [販売受付の延期について - 公式 X](https://x.com/takanenofficial/status/2064320842268619120)
   - [公式ニュース](https://takanenonadeshiko.jp/?p=5368)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2063924342740980202)
 `;
