@@ -107,7 +107,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-06-06",
+  updatedAt: "2026-06-13",
 };
 
 export const content = /* md */ `
@@ -129,6 +129,14 @@ export const content = /* md */ `
   3 部
 
   - 商品不明
+
+  ## チェキボーズ
+
+  1. 指ハート
+  2. ほっぺハート
+  3. がおー
+
+  https://x.com/ROJITA__jp/status/2065377543419744659
 
   ## リンク
 
