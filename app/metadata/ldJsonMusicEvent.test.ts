@@ -34,7 +34,8 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
   ];
 
   describe.each(representativeEvents)("$caseName: $event.filename", ({ event }) => {
-    const document = ldJsonDocument(ldJsonMusicEvent(event.meta));
+    const id = `https://takanekofan.app/events/${event.slug}#music-event`;
+    const document = ldJsonDocument(ldJsonMusicEvent(event.meta, id));
     const location = recordField(document, "location");
     const address = recordField(location, "address");
     const performer = recordField(document, "performer");
@@ -49,6 +50,10 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
 
     it("uses an Event subtype supported by Google Event structured data", () => {
       expect(document?.["@type"]).toBe("MusicEvent");
+    });
+
+    it("has a stable JSON-LD node id", () => {
+      expect(document?.["@id"]).toBe(id);
     });
 
     it("has a non-empty event name", () => {

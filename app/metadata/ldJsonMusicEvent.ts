@@ -6,12 +6,12 @@ import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LdJsonMeta } from "~/utils/jsonLd/react-router";
 
-export const ldJsonMusicEvent = (event: EventMeta): MetaDescriptor | undefined => {
-  const document = musicEventDocument(event);
+export const ldJsonMusicEvent = (event: EventMeta, id: string): MetaDescriptor | undefined => {
+  const document = musicEventDocument(event, id);
   return document == undefined ? undefined : LdJsonMeta(document);
 };
 
-const musicEventDocument = (event: EventMeta): WithContext<MusicEvent> | undefined => {
+const musicEventDocument = (event: EventMeta, id: string): WithContext<MusicEvent> | undefined => {
   if (!isMusicEvent(event)) {
     return undefined;
   }
@@ -30,6 +30,7 @@ const musicEventDocument = (event: EventMeta): WithContext<MusicEvent> | undefin
 
   return {
     "@context": "https://schema.org",
+    "@id": id,
     "@type": "MusicEvent",
     name: event.title ?? event.summary,
     startDate,

@@ -29,6 +29,8 @@ import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
+import { canonicalUrl } from "~/metadata/canonicalUrl";
+import { LdJsonIds } from "~/metadata/ldJsonIds";
 import { ldJsonMusicEvent } from "~/metadata/ldJsonMusicEvent";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -39,7 +41,7 @@ import { EventOverview } from "./EventOverview";
 import { makePageDescription } from "./makePageDescription";
 import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet";
 
-export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+export const meta: MetaFunction<typeof loader> = ({ loaderData, location }) => {
   const meta = loaderData?.eventMeta;
 
   const title = meta?.title ?? meta?.summary ?? "スケジュール";
@@ -47,8 +49,10 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
     meta == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
       : (meta.description ?? makePageDescription(meta));
+  const canonical = canonicalUrl(location);
+  const musicEventId = LdJsonIds.musicEvent(canonical);
 
-  const jsonLd = meta == undefined ? undefined : ldJsonMusicEvent(meta);
+  const jsonLd = meta == undefined ? undefined : ldJsonMusicEvent(meta, musicEventId);
 
   return [
     { title: formatTitle(title) },
