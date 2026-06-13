@@ -128,7 +128,8 @@ export const content = /* md */ `
 
   3 部
 
-  - 商品不明
+  - https://x.com/ROJITA__jp/status/2065652417224675656
+  - https://x.com/ROJITA__jp/status/2065329181534371985
 
   ## チェキボーズ
 
