@@ -13,6 +13,14 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
+      path: "/events/2026/2026-06-27_HERO SONIC 2026_出演ステージ.jpg",
+      ref: "https://x.com/HEROSONIC2026/status/2063184306185654380",
+    },
+    {
+      path: "/events/2026/2026-06-27_HERO SONIC 2026_エリアマップ.jpg",
+      ref: "https://x.com/HEROSONIC2026/status/2063184306185654380",
+    },
+    {
       path: "/events/2026/2026-06-27_HERO SONIC 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2047626682396500329",
     },
@@ -33,10 +41,11 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    title: "メインステージ FIRST THREAD",
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-05-07",
+  updatedAt: "2026-06-13",
 };
 
 export const content = /* md */ `
