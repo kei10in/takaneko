@@ -1,10 +1,10 @@
 import type { MetaDescriptor } from "react-router";
 import type { EventStatusType, MusicEvent, Offer, Place, WithContext } from "schema-dts";
 import { DomainName } from "~/constants";
+import type { EventMeta } from "~/features/events/eventMeta";
 import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LdJsonMeta } from "~/utils/jsonLd/react-router";
-import type { EventMeta } from "./eventMeta";
 
 export const ldJsonMusicEvent = (event: EventMeta): MetaDescriptor | undefined => {
   const document = musicEventDocument(event);

@@ -1,6 +1,6 @@
 import { assert, describe, expect, it } from "vitest";
-import type { EventModule } from "./eventModule";
-import { Events } from "./events";
+import type { EventModule } from "~/features/events/eventModule";
+import { Events } from "~/features/events/events";
 import { ldJsonMusicEvent } from "./ldJsonMusicEvent";
 
 describe("MusicEvent JSON-LD for Google Event structured data", async () => {
