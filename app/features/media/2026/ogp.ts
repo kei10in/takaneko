@@ -2,6 +2,24 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa02.html",
+    publishedAt: "2026-06-12",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa03.html",
+    publishedAt: "2026-06-11",
+    category: "article",
+    presents: ["橋本桃呼"],
+  },
+  {
+    mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa04.html",
+    publishedAt: "2026-06-10",
+    category: "article",
+    presents: ["葉月紗蘭"],
+  },
+  {
     mediaUrl: "https://realsound.jp/movie/2026/06/post-2414982.html",
     publishedAt: "2026-06-09",
     category: "article",
@@ -89,6 +107,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     publishedAt: "2026-05-25",
     category: "article",
     presents: ["橋本桃呼", "日向端ひな", "星谷美来"],
+    officialTwitter: "https://x.com/takanenofficial/status/2065642931596435680",
   },
   {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/787967",
