@@ -25,7 +25,6 @@ import { ImageCarousel } from "~/components/ImageCarousel";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { Mdx } from "~/components/Mdx";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
-import { validateEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
 import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
@@ -41,7 +40,7 @@ import { makePageDescription } from "./makePageDescription";
 import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet";
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
-  const meta = validateEventMeta(loaderData?.eventMeta);
+  const meta = loaderData?.eventMeta;
 
   const title = meta?.title ?? meta?.summary ?? "スケジュール";
   const description =
