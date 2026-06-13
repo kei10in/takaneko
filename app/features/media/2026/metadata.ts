@@ -24,6 +24,18 @@ export const metadata2026: MediaDetails[] = [
     presents: ["橋本桃呼"],
   },
   {
+    kind: "ogp",
+    key: "https://www.wws-channel.com/girls2/630254.html",
+    title:
+      "高嶺のなでしこ、「可愛くてごめん」「ファンサ」全4曲をパフォーマンス〈ASIA CULTURE FESTIVAL 2026〉",
+    authorName: "WWSチャンネル",
+    publishedAt: "2026-06-11",
+    mediaUrl: "https://www.wws-channel.com/girls2/630254.html",
+    imageUrl: "https://pub-6e6736ba37d64d4aa5ae63b074884090.r2.dev/2026/06/I6Sycd2z-00_2.jpg",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "qRT4eVzeHvA",
     title: "高嶺のなでしこ「可愛くてごめん」などキュートにパフォ　ASIA CELEBRATION LIVE",

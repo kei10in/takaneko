@@ -14,6 +14,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     presents: ["橋本桃呼"],
   },
   {
+    mediaUrl: "https://www.wws-channel.com/girls2/630254.html",
+    publishedAt: "2026-06-11",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa04.html",
     publishedAt: "2026-06-10",
     category: "article",

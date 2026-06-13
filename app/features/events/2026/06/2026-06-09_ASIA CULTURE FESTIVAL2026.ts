@@ -45,12 +45,13 @@ export const meta: EventMetaDescriptor = {
     ],
     url: "https://x.com/Mikuru_hositani/status/2064310285998108833",
   },
-  updatedAt: "2026-06-10",
+  updatedAt: "2026-06-13",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ライブレポート - WWS チャンネル X](https://x.com/wwschannel/status/2065072057503641746)
   - [ダイジェスト動画 - vois X](https://x.com/voisjp/status/2064479090841960901)
   - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/2064313841748721838)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2064313499724255539)
