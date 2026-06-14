@@ -11,6 +11,7 @@ import {
   BsTicketPerforated,
 } from "react-icons/bs";
 import {
+  href,
   Link,
   LoaderFunctionArgs,
   MetaFunction,
@@ -40,7 +41,7 @@ import { EventOverview } from "./EventOverview";
 import { makePageDescription } from "./makePageDescription";
 import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet";
 
-export const meta: MetaFunction<typeof loader> = ({ loaderData, location }) => {
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const meta = loaderData?.eventMeta;
 
   const title = meta?.title ?? meta?.summary ?? "スケジュール";
@@ -49,9 +50,12 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData, location }) => {
       ? "高嶺のなでしこの非公式スケジュールです。"
       : (meta.description ?? makePageDescription(meta));
   const formattedTitle = formatTitle(title);
-  const canonical = canonicalUrl(location);
+  const canonical =
+    loaderData == undefined
+      ? undefined
+      : canonicalUrl(href("/events/:eventSlug", { eventSlug: loaderData.slug }));
   const jsonLd =
-    meta == undefined
+    meta == undefined || canonical == undefined
       ? undefined
       : ldJsonEventDocument({
           event: meta,

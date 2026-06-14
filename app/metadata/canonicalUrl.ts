@@ -1,8 +1,7 @@
-import type { Location } from "react-router";
 import { DomainName } from "~/constants";
 
-export const canonicalUrl = (location: Location): string => {
-  const pathname = location.pathname.replace(/\/+$/, "");
+export const canonicalUrl = (pathname: string): string => {
+  const normalizedPathname = pathname.replace(/\/+$/, "");
 
-  return `https://${DomainName}${pathname}`;
+  return `https://${DomainName}${normalizedPathname}`;
 };

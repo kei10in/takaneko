@@ -3,29 +3,25 @@ import { DomainName } from "~/constants";
 import { canonicalUrl } from "./canonicalUrl";
 
 describe("canonicalUrl", () => {
-  it("uses the site domain and request pathname", () => {
-    expect(canonicalUrl(location("/events/2025-02-14_live"))).toBe(
+  it("uses the site domain and pathname", () => {
+    expect(canonicalUrl("/events/2025-02-14_live")).toBe(
       `https://${DomainName}/events/2025-02-14_live`,
     );
   });
 
   it("removes trailing slashes", () => {
-    expect(canonicalUrl(location("/events/2025-02-14_live/"))).toBe(
+    expect(canonicalUrl("/events/2025-02-14_live/")).toBe(
       `https://${DomainName}/events/2025-02-14_live`,
     );
   });
 
   it("does not keep a trailing slash for the root page", () => {
-    expect(canonicalUrl(location("/"))).toBe(`https://${DomainName}`);
+    expect(canonicalUrl("/")).toBe(`https://${DomainName}`);
+  });
+
+  it("accepts a pathname without URL-encoding it", () => {
+    expect(canonicalUrl("/events/2025-07-10_FM三重「つながるジカン」")).toBe(
+      `https://${DomainName}/events/2025-07-10_FM三重「つながるジカン」`,
+    );
   });
 });
-
-const location = (pathname: string) => {
-  return {
-    pathname,
-    search: "",
-    hash: "",
-    state: null,
-    key: "default",
-  };
-};
