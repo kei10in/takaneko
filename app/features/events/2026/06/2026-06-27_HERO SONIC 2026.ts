@@ -52,12 +52,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-13",
+  updatedAt: "2026-06-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066060571909177490)
   - [タイムテーブル公開 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2065373547384430833)
   - [出演日発表 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2052358036736360944)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2047626682396500329)
