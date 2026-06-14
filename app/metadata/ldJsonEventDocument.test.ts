@@ -7,7 +7,7 @@ import { type LdJsonEventDocument, ldJsonEventDocument } from "./ldJsonEventDocu
 expectTypeOf<LdJsonEventDocument>().toExtend<Graph | WithContext<Thing>>();
 
 describe("Event details JSON-LD", () => {
-  it("emits a WebPage without @graph when MusicEvent is absent", () => {
+  it("emits a WebPage and BreadcrumbList when MusicEvent is absent", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-02-14_event`;
 
     const document = ldJsonEventDocument({
@@ -24,15 +24,21 @@ describe("Event details JSON-LD", () => {
 
     expect(document).toEqual({
       "@context": "https://schema.org",
-      "@id": `${canonicalUrl}#web-page`,
-      "@type": "WebPage",
-      url: canonicalUrl,
-      name: "イベント",
-      description: "イベント詳細です。",
+      "@graph": [
+        {
+          "@id": `${canonicalUrl}#web-page`,
+          "@type": "WebPage",
+          url: canonicalUrl,
+          name: "イベント",
+          description: "イベント詳細です。",
+          breadcrumb: { "@id": `${canonicalUrl}#breadcrumb-list` },
+        },
+        breadcrumbList(canonicalUrl, "イベント"),
+      ],
     });
   });
 
-  it("emits a WebPage without @graph for an overseas live event", () => {
+  it("emits a WebPage and BreadcrumbList for an overseas live event", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-08-24_seoul-live`;
 
     const document = ldJsonEventDocument({
@@ -50,15 +56,21 @@ describe("Event details JSON-LD", () => {
 
     expect(document).toEqual({
       "@context": "https://schema.org",
-      "@id": `${canonicalUrl}#web-page`,
-      "@type": "WebPage",
-      url: canonicalUrl,
-      name: "LIVE 2025 SUMMER in SEOUL",
-      description: "海外ライブ詳細です。",
+      "@graph": [
+        {
+          "@id": `${canonicalUrl}#web-page`,
+          "@type": "WebPage",
+          url: canonicalUrl,
+          name: "LIVE 2025 SUMMER in SEOUL",
+          description: "海外ライブ詳細です。",
+          breadcrumb: { "@id": `${canonicalUrl}#breadcrumb-list` },
+        },
+        breadcrumbList(canonicalUrl, "LIVE 2025 SUMMER in SEOUL"),
+      ],
     });
   });
 
-  it("emits a WebPage without @graph for a withdrawn live event", () => {
+  it("emits a WebPage and BreadcrumbList for a withdrawn live event", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-08-01_withdrawn-live`;
 
     const document = ldJsonEventDocument({
@@ -77,11 +89,17 @@ describe("Event details JSON-LD", () => {
 
     expect(document).toEqual({
       "@context": "https://schema.org",
-      "@id": `${canonicalUrl}#web-page`,
-      "@type": "WebPage",
-      url: canonicalUrl,
-      name: "出演辞退ライブ",
-      description: "出演辞退ライブ詳細です。",
+      "@graph": [
+        {
+          "@id": `${canonicalUrl}#web-page`,
+          "@type": "WebPage",
+          url: canonicalUrl,
+          name: "出演辞退ライブ",
+          description: "出演辞退ライブ詳細です。",
+          breadcrumb: { "@id": `${canonicalUrl}#breadcrumb-list` },
+        },
+        breadcrumbList(canonicalUrl, "出演辞退ライブ"),
+      ],
     });
   });
 
@@ -111,8 +129,10 @@ describe("Event details JSON-LD", () => {
           url: canonicalUrl,
           name: "ライブ",
           description: "ライブ詳細です。",
+          breadcrumb: { "@id": `${canonicalUrl}#breadcrumb-list` },
           mainEntity: { "@id": musicEventId },
         },
+        breadcrumbList(canonicalUrl, "ライブ"),
         {
           "@id": musicEventId,
           "@type": "MusicEvent",
@@ -134,3 +154,30 @@ describe("Event details JSON-LD", () => {
     });
   });
 });
+
+const breadcrumbList = (canonicalUrl: string, eventName: string) => {
+  return {
+    "@id": `${canonicalUrl}#breadcrumb-list`,
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "たかねこの",
+        item: `https://${DomainName}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "スケジュール",
+        item: `https://${DomainName}/calendar`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: eventName,
+        item: canonicalUrl,
+      },
+    ],
+  };
+};

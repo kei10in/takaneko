@@ -13,4 +13,10 @@ describe("LdJsonIds", () => {
       "https://takanekofan.app/events/2025-02-14_live#web-page",
     );
   });
+
+  it("builds a BreadcrumbList node id from the canonical URL", () => {
+    expect(LdJsonIds.breadcrumbList("https://takanekofan.app/events/2025-02-14_live")).toBe(
+      "https://takanekofan.app/events/2025-02-14_live#breadcrumb-list",
+    );
+  });
 });

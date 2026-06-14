@@ -13,6 +13,7 @@ export interface LdJsonWebPageArgs {
   url: string;
   name: string;
   description: string;
+  breadcrumbId?: string;
 }
 
 export const webPageDocument = ({
@@ -20,6 +21,7 @@ export const webPageDocument = ({
   url,
   name,
   description,
+  breadcrumbId,
 }: LdJsonWebPageArgs): LdJsonWebPage => {
   return {
     "@id": id,
@@ -27,5 +29,6 @@ export const webPageDocument = ({
     url,
     name,
     description,
+    breadcrumb: breadcrumbId ? { "@id": breadcrumbId } : undefined,
   };
 };

@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { DomainName } from "~/constants";
 import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument";
+import type { LdJsonMusicEvent } from "~/metadata/ldJsonMusicEvent";
 import { makePageDescription } from "~/routes/_app._schedule.events.$eventSlug._index/makePageDescription";
 import { Events } from "./events";
 
@@ -17,11 +18,8 @@ describe("live event modules", async () => {
         description: event.meta.description ?? makePageDescription(event.meta),
       });
 
-      if (!("@graph" in document)) {
-        return [];
-      }
-
-      const location = document["@graph"][1].location;
+      const musicEvent = document["@graph"].find(isMusicEvent);
+      const location = musicEvent?.location;
       const placeName = location?.name;
 
       return placeName == ""
@@ -32,3 +30,14 @@ describe("live event modules", async () => {
     expect(eventsWithEmptyPlaceName).toEqual([]);
   });
 });
+
+const isMusicEvent = (item: unknown): item is LdJsonMusicEvent => {
+  return hasProperty(item, "@type") && item["@type"] === "MusicEvent";
+};
+
+const hasProperty = <T extends PropertyKey>(
+  value: unknown,
+  key: T,
+): value is Record<T, unknown> => {
+  return typeof value === "object" && value != undefined && key in value;
+};

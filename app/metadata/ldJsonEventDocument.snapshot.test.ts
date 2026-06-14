@@ -5,76 +5,162 @@ import { ldJsonEventDocument } from "./ldJsonEventDocument";
 
 describe("Event details JSON-LD snapshots", () => {
   it("emits JSON-LD for a domestic live event", async () => {
-    expect(
-      await eventDocumentSnapshot("2025-02-14_ワンマンライブ 2025 〜Cute for life〜"),
-    ).toMatchInlineSnapshot(`
+    expect(await eventDocumentSnapshot("2025-02-14_ワンマンライブ 2025 〜Cute for life〜"))
+      .toMatchInlineSnapshot(`
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#web-page",
+              "@type": "WebPage",
+              "breadcrumb": {
+                "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#breadcrumb-list",
+              },
+              "description": "ワンマンライブ 2025 〜Cute for life〜",
+              "mainEntity": {
+                "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#music-event",
+              },
+              "name": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+              "url": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+            },
+            {
+              "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#breadcrumb-list",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "item": "https://takanekofan.app",
+                  "name": "たかねこの",
+                  "position": 1,
+                },
+                {
+                  "@type": "ListItem",
+                  "item": "https://takanekofan.app/calendar",
+                  "name": "スケジュール",
+                  "position": 2,
+                },
+                {
+                  "@type": "ListItem",
+                  "item": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+                  "name": "ワンマンライブ 2025 〜Cute for life〜",
+                  "position": 3,
+                },
+              ],
+            },
+            {
+              "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#music-event",
+              "@type": "MusicEvent",
+              "image": "https://takanekofan.app/events/2025/2025-02-14_ワンマンライブ 2025 〜Cute for life〜.png",
+              "location": {
+                "@type": "Place",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressCountry": "JP",
+                  "addressRegion": "東京",
+                },
+                "name": "国立代々木競技場 第二体育館",
+              },
+              "mainEntityOfPage": {
+                "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#web-page",
+              },
+              "name": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
+              "performer": {
+                "@type": "MusicGroup",
+                "name": "高嶺のなでしこ",
+              },
+              "startDate": "2025-02-14",
+            },
+          ],
+        }
+      `);
+  });
+
+  it("emits JSON-LD for an overseas live event", async () => {
+    expect(await eventDocumentSnapshot("2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL"))
+      .toMatchInlineSnapshot(`
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#web-page",
+            "@id": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL#web-page",
             "@type": "WebPage",
-            "description": "ワンマンライブ 2025 〜Cute for life〜",
-            "mainEntity": {
-              "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#music-event",
+            "breadcrumb": {
+              "@id": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL#breadcrumb-list",
             },
-            "name": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
-            "url": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜",
+            "description": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+            "name": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+            "url": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
           },
           {
-            "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#music-event",
-            "@type": "MusicEvent",
-            "image": "https://takanekofan.app/events/2025/2025-02-14_ワンマンライブ 2025 〜Cute for life〜.png",
-            "location": {
-              "@type": "Place",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "JP",
-                "addressRegion": "東京",
+            "@id": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL#breadcrumb-list",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app",
+                "name": "たかねこの",
+                "position": 1,
               },
-              "name": "国立代々木競技場 第二体育館",
-            },
-            "mainEntityOfPage": {
-              "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#web-page",
-            },
-            "name": "『高嶺のなでしこ ワンマンライブ 2025 〜Cute for life〜』 supported by KOJI",
-            "performer": {
-              "@type": "MusicGroup",
-              "name": "高嶺のなでしこ",
-            },
-            "startDate": "2025-02-14",
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app/calendar",
+                "name": "スケジュール",
+                "position": 2,
+              },
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+                "name": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
+                "position": 3,
+              },
+            ],
           },
         ],
       }
     `);
   });
 
-  it("emits JSON-LD for an overseas live event", async () => {
-    expect(
-      await eventDocumentSnapshot("2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL"),
-    ).toMatchInlineSnapshot(`
-      {
-        "@context": "https://schema.org",
-        "@id": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL#web-page",
-        "@type": "WebPage",
-        "description": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
-        "name": "TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
-        "url": "https://takanekofan.app/events/2025-08-24_TAKANE NO NADESHIKO LIVE 2025 SUMMER in SEOUL",
-      }
-    `);
-  });
-
   it("emits JSON-LD for a non-live event", async () => {
-    expect(
-      await eventDocumentSnapshot("2026-06-13_松本ももなちゃん× ROJITA チェキ会"),
-    ).toMatchInlineSnapshot(`
+    expect(await eventDocumentSnapshot("2026-06-13_松本ももなちゃん× ROJITA チェキ会"))
+      .toMatchInlineSnapshot(`
       {
         "@context": "https://schema.org",
-        "@id": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会#web-page",
-        "@type": "WebPage",
-        "description": "松本ももなちゃん× ROJITA チェキ会",
-        "name": "松本ももなちゃん× ROJITA チェキ会",
-        "url": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会",
+        "@graph": [
+          {
+            "@id": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会#web-page",
+            "@type": "WebPage",
+            "breadcrumb": {
+              "@id": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会#breadcrumb-list",
+            },
+            "description": "松本ももなちゃん× ROJITA チェキ会",
+            "name": "松本ももなちゃん× ROJITA チェキ会",
+            "url": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会",
+          },
+          {
+            "@id": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会#breadcrumb-list",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app",
+                "name": "たかねこの",
+                "position": 1,
+              },
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app/calendar",
+                "name": "スケジュール",
+                "position": 2,
+              },
+              {
+                "@type": "ListItem",
+                "item": "https://takanekofan.app/events/2026-06-13_松本ももなちゃん× ROJITA チェキ会",
+                "name": "松本ももなちゃん× ROJITA チェキ会",
+                "position": 3,
+              },
+            ],
+          },
+        ],
       }
     `);
   });
