@@ -1,35 +1,46 @@
-import type { MetaDescriptor } from "react-router";
-import type { EventStatusType, MusicEvent, Offer, Place, WithContext } from "schema-dts";
+import type { EventStatusType } from "schema-dts";
 import { DomainName } from "~/constants";
 import type { EventMeta } from "~/features/events/eventMeta";
-import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { LdJsonMeta } from "~/utils/jsonLd/react-router";
 
-export const ldJsonMusicEvent = (event: EventMeta, id: string): MetaDescriptor | undefined => {
-  const document = musicEventDocument(event, id);
-  return document == undefined ? undefined : LdJsonMeta(document);
-};
+export interface LdJsonMusicEvent {
+  "@id": string;
+  "@type": "MusicEvent";
+  name: string;
+  startDate: string;
+  endDate?: string;
+  performer: { "@type": "MusicGroup"; name: string };
+  eventStatus?: EventStatusType;
+  image?: string[];
+  location?: LdJsonPlace;
+  offers?: LdJsonOffer;
+}
 
-const musicEventDocument = (event: EventMeta, id: string): WithContext<MusicEvent> | undefined => {
-  if (!isMusicEvent(event)) {
-    return undefined;
-  }
+interface LdJsonPlace {
+  "@type": "Place";
+  name: string;
+  address: {
+    "@type": "PostalAddress";
+    addressRegion: string | undefined;
+    addressCountry: "JP";
+  };
+}
 
-  const region = japanPrefecture(event.region);
-  if (region == undefined) {
-    return undefined;
-  }
+interface LdJsonOffer {
+  "@type": "Offer";
+  url: string;
+}
 
+export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEvent => {
   const startDate = schemaDateTime(event.date, event.start);
   const endDate = event.end == undefined ? undefined : schemaDateTime(event.date, event.end);
   const eventStatus = schemaEventStatus(event.status);
   const image = schemaImage(event.images);
-  const location = event.location == undefined ? undefined : schemaLocation(event.location, region);
+  const location =
+    event.location == undefined ? undefined : schemaLocation(event.location, event.region);
   const offers = schemaOffer(event.ticket);
 
   return {
-    "@context": "https://schema.org",
     "@id": id,
     "@type": "MusicEvent",
     name: event.title ?? event.summary,
@@ -44,22 +55,11 @@ const musicEventDocument = (event: EventMeta, id: string): WithContext<MusicEven
   };
 };
 
-export const isMusicEvent = (event: EventMeta): boolean => {
-  return event.liveType != undefined;
-};
-
-const japanPrefecture = (region: string | undefined): string | undefined => {
-  if (region == undefined) {
-    return undefined;
-  }
-  return JAPAN_PREFECTURES.includes(region) ? region : undefined;
-};
-
 const schemaImage = (images: EventMeta["images"]): string[] => {
   return images.map((img) => new URL(img.path, `https://${DomainName}`).toString());
 };
 
-const schemaLocation = (location: string, region: string): Place => {
+const schemaLocation = (location: string, region: string | undefined): LdJsonPlace => {
   return {
     "@type": "Place",
     name: location,
@@ -71,7 +71,7 @@ const schemaLocation = (location: string, region: string): Place => {
   };
 };
 
-const schemaOffer = (url: string | undefined): Offer | undefined => {
+const schemaOffer = (url: string | undefined): LdJsonOffer | undefined => {
   if (url == undefined || url.trim() == "") {
     return undefined;
   }

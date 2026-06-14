@@ -30,8 +30,7 @@ import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
 import { canonicalUrl } from "~/metadata/canonicalUrl";
-import { LdJsonIds } from "~/metadata/ldJsonIds";
-import { ldJsonMusicEvent } from "~/metadata/ldJsonMusicEvent";
+import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -49,13 +48,20 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData, location }) => {
     meta == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
       : (meta.description ?? makePageDescription(meta));
+  const formattedTitle = formatTitle(title);
   const canonical = canonicalUrl(location);
-  const musicEventId = LdJsonIds.musicEvent(canonical);
-
-  const jsonLd = meta == undefined ? undefined : ldJsonMusicEvent(meta, musicEventId);
+  const jsonLd =
+    meta == undefined
+      ? undefined
+      : ldJsonEventDocument({
+          event: meta,
+          canonicalUrl: canonical,
+          name: formattedTitle,
+          description,
+        });
 
   return [
-    { title: formatTitle(title) },
+    { title: formattedTitle },
     { name: "description", content: description },
     ...(meta == undefined ? [] : twitterCard(meta)),
     ...(jsonLd == undefined ? [] : [jsonLd]),

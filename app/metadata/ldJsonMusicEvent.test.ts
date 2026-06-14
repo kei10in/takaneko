@@ -1,7 +1,7 @@
 import { assert, describe, expect, it } from "vitest";
 import type { EventModule } from "~/features/events/eventModule";
 import { Events } from "~/features/events/events";
-import { ldJsonMusicEvent } from "./ldJsonMusicEvent";
+import { musicEventDocument } from "./ldJsonMusicEvent";
 
 describe("MusicEvent JSON-LD for Google Event structured data", async () => {
   const allEvents = await Events.importAllEventModules();
@@ -35,17 +35,10 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
 
   describe.each(representativeEvents)("$caseName: $event.filename", ({ event }) => {
     const id = `https://takanekofan.app/events/${event.slug}#music-event`;
-    const document = ldJsonDocument(ldJsonMusicEvent(event.meta, id));
-    const location = recordField(document, "location");
-    const address = recordField(location, "address");
-    const performer = recordField(document, "performer");
+    const document = musicEventDocument(event.meta, id);
 
     it("emits JSON-LD", () => {
       expect(document).toBeDefined();
-    });
-
-    it("uses schema.org context", () => {
-      expect(document?.["@context"]).toBe("https://schema.org");
     });
 
     it("uses an Event subtype supported by Google Event structured data", () => {
@@ -69,50 +62,66 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     });
 
     it("has a Place location", () => {
-      expect(location?.["@type"]).toBe("Place");
+      assert(document.location != undefined);
+      expect(document.location).toEqual(
+        expect.objectContaining({
+          "@type": "Place",
+        }),
+      );
     });
 
     it("has a non-empty venue name", () => {
-      expect(location?.name).toEqual(expect.any(String));
-      expect(location?.name).not.toBe("");
+      assert(document.location != undefined);
+      expect(document.location.name).toEqual(expect.any(String));
+      expect(document.location.name).not.toBe("");
     });
 
     it("does not use the event name as the venue name", () => {
-      expect(location?.name).not.toBe(document?.name);
+      assert(document.location != undefined);
+      expect(document.location.name).not.toBe(document.name);
     });
 
     it("has a PostalAddress", () => {
-      expect(address?.["@type"]).toBe("PostalAddress");
+      assert(document.location != undefined);
+      expect(document.location.address).toEqual(
+        expect.objectContaining({
+          "@type": "PostalAddress",
+        }),
+      );
     });
 
     it("has addressRegion as recognizable address information", () => {
-      expect(address?.addressRegion).toEqual(expect.any(String));
-      expect(address?.addressRegion).not.toBe("");
+      const location = document.location;
+      if (location == undefined) {
+        throw new Error("Expected location to be defined");
+      }
+      expect(location.address.addressRegion).toEqual(expect.any(String));
+      expect(location.address.addressRegion).not.toBe("");
     });
 
     it("has addressCountry", () => {
-      expect(address?.addressCountry).toEqual(expect.any(String));
-      expect(address?.addressCountry).not.toBe("");
+      const location = document.location;
+      if (location == undefined) {
+        throw new Error("Expected location to be defined");
+      }
+      expect(location.address.addressCountry).toEqual(expect.any(String));
+      expect(location.address.addressCountry).not.toBe("");
     });
 
     it("emits only absolute HTTP image URLs in Google-supported formats", () => {
-      const images = arrayField(document, "image");
-
-      expect(images.length).toBeGreaterThan(0);
-      images.forEach((image) => {
+      assert(document.image != undefined);
+      expect(document.image.length).toBeGreaterThan(0);
+      document.image.forEach((image) => {
         expect(image).toEqual(expect.any(String));
         expect(image).toMatch(/^https?:\/\//);
-        assert(typeof image === "string");
         expect(new URL(image).pathname).toMatch(/\.(jpe?g|png|webp)$/i);
       });
     });
 
     it("emits a valid Offer when offers are present", () => {
-      const offers = arrayField(document, "offers");
+      const offers = document.offers == undefined ? [] : [document.offers];
 
       offers.forEach((offer) => {
-        expect(offer).toEqual(expect.any(Object));
-        assert(isRecord(offer));
         expect(offer["@type"]).toBe("Offer");
         expect(offer.url).toEqual(expect.any(String));
         expect(offer.url).toMatch(/^https?:\/\//);
@@ -120,13 +129,9 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     });
 
     it("has a non-empty performer name when performer is present", () => {
-      if (performer == undefined) {
-        expect(performer).toBeUndefined();
-        return;
-      }
-
-      expect(performer.name).toEqual(expect.any(String));
-      expect(performer.name).not.toBe("");
+      expect(document.performer["@type"]).toBe("MusicGroup");
+      expect(document.performer.name).toEqual(expect.any(String));
+      expect(document.performer.name).not.toBe("");
     });
   });
 });
@@ -139,44 +144,4 @@ const eventByFilename = (events: EventModule[], filename: string): EventModule =
     `Representative event must be a MusicEvent: ${filename}`,
   );
   return event;
-};
-
-const ldJsonDocument = (
-  meta: ReturnType<typeof ldJsonMusicEvent>,
-): Record<string, unknown> | undefined => {
-  if (meta == undefined) {
-    return undefined;
-  }
-
-  const document = Object.entries(meta).find(([key]) => key === "script:ld+json")?.[1];
-  return isRecord(document) ? document : undefined;
-};
-
-const recordField = (
-  record: Record<string, unknown> | undefined,
-  key: string,
-): Record<string, unknown> | undefined => {
-  if (record == undefined) {
-    return undefined;
-  }
-
-  const value = record[key];
-  return isRecord(value) ? value : undefined;
-};
-
-const arrayField = (record: Record<string, unknown> | undefined, key: string): unknown[] => {
-  if (record == undefined) {
-    return [];
-  }
-
-  const value = record[key];
-  if (value == undefined) {
-    return [];
-  }
-
-  return Array.isArray(value) ? value : [value];
-};
-
-const isRecord = (value: unknown): value is Record<string, unknown> => {
-  return typeof value === "object" && value != null && !Array.isArray(value);
 };

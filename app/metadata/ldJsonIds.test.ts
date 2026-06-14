@@ -7,4 +7,10 @@ describe("LdJsonIds", () => {
       "https://takanekofan.app/events/2025-02-14_live#music-event",
     );
   });
+
+  it("builds a WebPage node id from the canonical URL", () => {
+    expect(LdJsonIds.webPage("https://takanekofan.app/events/2025-02-14_live")).toBe(
+      "https://takanekofan.app/events/2025-02-14_live#web-page",
+    );
+  });
 });
