@@ -30,7 +30,7 @@ export const ldJsonEventDocument = ({
     description,
   });
 
-  if (isMusicEvent(event) && isHeldInJapan(event)) {
+  if (isMusicEvent(event) && isHeldInJapan(event) && hasLocation(event)) {
     const musicEventId = LdJsonIds.musicEvent(canonicalUrl);
     const musicEvent = musicEventDocument(event, musicEventId);
 
@@ -65,4 +65,8 @@ const isHeldInJapan = (event: EventMeta): boolean => {
   }
 
   return JAPAN_PREFECTURES.includes(event.region);
+};
+
+const hasLocation = (event: EventMeta): boolean => {
+  return event.location != undefined && event.location.trim() != "";
 };
