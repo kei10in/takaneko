@@ -13,7 +13,6 @@ export interface LdJsonMusicEvent {
   eventStatus?: EventStatusType;
   image?: string[];
   location?: LdJsonPlace;
-  offers?: LdJsonOffer;
 }
 
 interface LdJsonPlace {
@@ -26,11 +25,6 @@ interface LdJsonPlace {
   };
 }
 
-interface LdJsonOffer {
-  "@type": "Offer";
-  url: string;
-}
-
 export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEvent => {
   const startDate = schemaDateTime(event.date, event.start);
   const endDate = event.end == undefined ? undefined : schemaDateTime(event.date, event.end);
@@ -38,7 +32,6 @@ export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEve
   const image = schemaImage(event.images);
   const location =
     event.location == undefined ? undefined : schemaLocation(event.location, event.region);
-  const offers = schemaOffer(event.ticket);
 
   return {
     "@id": id,
@@ -51,7 +44,6 @@ export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEve
     ...(eventStatus == undefined ? {} : { eventStatus }),
     ...(image.length == 0 ? {} : { image }),
     ...(location == undefined ? {} : { location }),
-    ...(offers == undefined ? {} : { offers }),
   };
 };
 
@@ -69,13 +61,6 @@ const schemaLocation = (location: string, region: string | undefined): LdJsonPla
       addressCountry: "JP",
     },
   };
-};
-
-const schemaOffer = (url: string | undefined): LdJsonOffer | undefined => {
-  if (url == undefined || url.trim() == "") {
-    return undefined;
-  }
-  return { "@type": "Offer", url };
 };
 
 const schemaEventStatus = (status: EventMeta["status"]): EventStatusType | undefined => {

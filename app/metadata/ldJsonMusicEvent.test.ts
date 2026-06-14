@@ -118,14 +118,8 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
       });
     });
 
-    it("emits a valid Offer when offers are present", () => {
-      const offers = document.offers == undefined ? [] : [document.offers];
-
-      offers.forEach((offer) => {
-        expect(offer["@type"]).toBe("Offer");
-        expect(offer.url).toEqual(expect.any(String));
-        expect(offer.url).toMatch(/^https?:\/\//);
-      });
+    it("does not emit offers", () => {
+      expect(document).not.toHaveProperty("offers");
     });
 
     it("has a non-empty performer name when performer is present", () => {
