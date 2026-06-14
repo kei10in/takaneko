@@ -2,6 +2,7 @@ import { MusicEvent } from "schema-dts";
 import { assert, describe, expect, expectTypeOf, it } from "vitest";
 import type { EventModule } from "~/features/events/eventModule";
 import { Events } from "~/features/events/events";
+import { makeEventMetaForTest } from "~/features/events/testUtils";
 import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent";
 
 expectTypeOf<LdJsonMusicEvent>().toExtend<MusicEvent>();
@@ -122,6 +123,19 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
         name: expect.stringMatching(/\S/),
       });
     });
+  });
+
+  it("does not emit a Place with an empty name", () => {
+    const document = musicEventDocument(
+      makeEventMetaForTest({
+        liveType: "GUEST",
+        location: "",
+        region: "東京",
+      }),
+      "https://takanekofan.app/events/2025-08-01_live#music-event",
+    );
+
+    expect(document.location).toBeUndefined();
   });
 });
 

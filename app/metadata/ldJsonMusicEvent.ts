@@ -34,8 +34,7 @@ export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEve
   const endDate = event.end == undefined ? undefined : schemaDateTime(event.date, event.end);
   const eventStatus = schemaEventStatus(event.status);
   const image = schemaImage(event.images);
-  const location =
-    event.location == undefined ? undefined : schemaLocation(event.location, event.region);
+  const location = schemaLocation(event.location, event.region);
 
   return {
     "@id": id,
@@ -63,7 +62,14 @@ const schemaImage = (images: ImageDescription[]): string | undefined => {
   return undefined;
 };
 
-const schemaLocation = (location: string, region: string | undefined): LdJsonPlace => {
+const schemaLocation = (
+  location: string | undefined,
+  region: string | undefined,
+): LdJsonPlace | undefined => {
+  if (location == undefined || location.trim() == "") {
+    return undefined;
+  }
+
   return {
     "@type": "Place",
     name: location,
