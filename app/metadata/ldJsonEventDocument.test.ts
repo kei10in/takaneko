@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
+import { DomainName } from "~/constants";
 import { makeEventMetaForTest } from "~/features/events/testUtils";
 import { ldJsonEventDocument } from "./ldJsonEventDocument";
 
 describe("Event details JSON-LD", () => {
   it("emits a WebPage without @graph when MusicEvent is absent", () => {
-    const canonicalUrl = "https://takanekofan.app/events/2025-02-14_event";
+    const canonicalUrl = `https://${DomainName}/events/2025-02-14_event`;
 
     const meta = ldJsonEventDocument({
       event: makeEventMetaForTest({
@@ -29,7 +30,7 @@ describe("Event details JSON-LD", () => {
   });
 
   it("emits a WebPage without @graph for an overseas live event", () => {
-    const canonicalUrl = "https://takanekofan.app/events/2025-08-24_seoul-live";
+    const canonicalUrl = `https://${DomainName}/events/2025-08-24_seoul-live`;
 
     const meta = ldJsonEventDocument({
       event: makeEventMetaForTest({
@@ -55,7 +56,7 @@ describe("Event details JSON-LD", () => {
   });
 
   it("emits a graph when both WebPage and MusicEvent are present", () => {
-    const canonicalUrl = "https://takanekofan.app/events/2025-02-14_live";
+    const canonicalUrl = `https://${DomainName}/events/2025-02-14_live`;
     const musicEventId = `${canonicalUrl}#music-event`;
 
     const meta = ldJsonEventDocument({
