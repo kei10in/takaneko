@@ -1,6 +1,12 @@
 import type { WebPage } from "schema-dts";
 
-export type LdJsonWebPage = WebPage & { "@id": string };
+export type LdJsonWebPage = WebPage & {
+  "@id": string;
+  "@type": "WebPage";
+  url: string;
+  name: string;
+  description: string;
+};
 
 export interface LdJsonWebPageArgs {
   id: string;

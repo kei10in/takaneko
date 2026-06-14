@@ -1,5 +1,8 @@
-import { describe, expect, it } from "vitest";
-import { webPageDocument } from "./ldJsonWebPage";
+import { WebPage } from "schema-dts";
+import { describe, expect, expectTypeOf, it } from "vitest";
+import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage";
+
+expectTypeOf<LdJsonWebPage>().toExtend<WebPage>();
 
 describe("WebPage JSON-LD", () => {
   it("emits a WebPage document", () => {

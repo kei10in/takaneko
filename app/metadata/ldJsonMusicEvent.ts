@@ -4,7 +4,20 @@ import type { EventMeta } from "~/features/events/eventMeta";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
-export type LdJsonMusicEvent = MusicEvent & { "@id": string };
+export type LdJsonMusicEvent = MusicEvent & {
+  "@type": "MusicEvent";
+  "@id": string;
+  name: string;
+  startDate: string;
+  endDate?: string;
+  performer: {
+    "@type": "MusicGroup";
+    name: string;
+  };
+  eventStatus?: EventStatusType;
+  image?: string;
+  location?: LdJsonPlace;
+};
 
 interface LdJsonPlace {
   "@type": "Place";

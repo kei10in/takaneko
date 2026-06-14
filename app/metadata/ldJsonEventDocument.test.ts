@@ -1,13 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { Graph, Thing, WithContext } from "schema-dts";
+import { describe, expect, expectTypeOf, it } from "vitest";
 import { DomainName } from "~/constants";
 import { makeEventMetaForTest } from "~/features/events/testUtils";
-import { ldJsonEventDocument } from "./ldJsonEventDocument";
+import { type LdJsonEventDocument, ldJsonEventDocument } from "./ldJsonEventDocument";
+
+expectTypeOf<LdJsonEventDocument>().toExtend<Graph | WithContext<Thing>>();
 
 describe("Event details JSON-LD", () => {
   it("emits a WebPage without @graph when MusicEvent is absent", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-02-14_event`;
 
-    const meta = ldJsonEventDocument({
+    const document = ldJsonEventDocument({
       event: makeEventMetaForTest({
         title: "イベント",
         summary: "イベント",
@@ -19,7 +22,7 @@ describe("Event details JSON-LD", () => {
       description: "イベント詳細です。",
     });
 
-    expect(meta["script:ld+json"]).toEqual({
+    expect(document).toEqual({
       "@context": "https://schema.org",
       "@id": `${canonicalUrl}#web-page`,
       "@type": "WebPage",
@@ -32,7 +35,7 @@ describe("Event details JSON-LD", () => {
   it("emits a WebPage without @graph for an overseas live event", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-08-24_seoul-live`;
 
-    const meta = ldJsonEventDocument({
+    const document = ldJsonEventDocument({
       event: makeEventMetaForTest({
         title: "LIVE 2025 SUMMER in SEOUL",
         summary: "LIVE 2025 SUMMER in SEOUL",
@@ -45,7 +48,7 @@ describe("Event details JSON-LD", () => {
       description: "海外ライブ詳細です。",
     });
 
-    expect(meta["script:ld+json"]).toEqual({
+    expect(document).toEqual({
       "@context": "https://schema.org",
       "@id": `${canonicalUrl}#web-page`,
       "@type": "WebPage",
@@ -59,7 +62,7 @@ describe("Event details JSON-LD", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-02-14_live`;
     const musicEventId = `${canonicalUrl}#music-event`;
 
-    const meta = ldJsonEventDocument({
+    const document = ldJsonEventDocument({
       event: makeEventMetaForTest({
         title: "ライブ",
         summary: "ライブ",
@@ -72,7 +75,7 @@ describe("Event details JSON-LD", () => {
       description: "ライブ詳細です。",
     });
 
-    expect(meta["script:ld+json"]).toEqual({
+    expect(document).toEqual({
       "@context": "https://schema.org",
       "@graph": [
         {

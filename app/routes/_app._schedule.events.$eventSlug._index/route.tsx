@@ -35,6 +35,7 @@ import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
+import { LdJsonMeta } from "~/utils/jsonLd/react-router";
 import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventDetails";
 import { EventOverview } from "./EventOverview";
@@ -57,12 +58,14 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const jsonLd =
     meta == undefined || canonical == undefined
       ? undefined
-      : ldJsonEventDocument({
-          event: meta,
-          canonicalUrl: canonical,
-          name: formattedTitle,
-          description,
-        });
+      : LdJsonMeta(
+          ldJsonEventDocument({
+            event: meta,
+            canonicalUrl: canonical,
+            name: formattedTitle,
+            description,
+          }),
+        );
 
   return [
     { title: formattedTitle },

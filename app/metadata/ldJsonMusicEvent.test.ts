@@ -1,7 +1,10 @@
-import { assert, describe, expect, it } from "vitest";
+import { MusicEvent } from "schema-dts";
+import { assert, describe, expect, expectTypeOf, it } from "vitest";
 import type { EventModule } from "~/features/events/eventModule";
 import { Events } from "~/features/events/events";
-import { musicEventDocument } from "./ldJsonMusicEvent";
+import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent";
+
+expectTypeOf<LdJsonMusicEvent>().toExtend<MusicEvent>();
 
 describe("MusicEvent JSON-LD for Google Event structured data", async () => {
   const allEvents = await Events.importAllEventModules();
