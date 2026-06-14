@@ -1,6 +1,7 @@
 import type { EventStatusType, MusicEvent } from "schema-dts";
 import { DomainName } from "~/constants";
 import type { EventMeta } from "~/features/events/eventMeta";
+import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { ImageDescription } from "~/utils/types/ImageDescription";
 
@@ -29,7 +30,11 @@ interface LdJsonPlace {
   };
 }
 
-export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEvent => {
+export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEvent | undefined => {
+  if (!canEmitMusicEvent(event)) {
+    return undefined;
+  }
+
   const startDate = schemaDateTime(event.date, event.start);
   const endDate = event.end == undefined ? undefined : schemaDateTime(event.date, event.end);
   const eventStatus = schemaEventStatus(event.status);
@@ -48,6 +53,17 @@ export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEve
     ...(image == undefined ? {} : { image }),
     ...(location == undefined ? {} : { location }),
   };
+};
+
+const canEmitMusicEvent = (event: EventMeta): boolean => {
+  return (
+    event.liveType != undefined &&
+    event.status != "WITHDRAWN" &&
+    event.region != undefined &&
+    JAPAN_PREFECTURES.includes(event.region) &&
+    event.location != undefined &&
+    event.location.trim() != ""
+  );
 };
 
 const schemaImage = (images: ImageDescription[]): string | undefined => {

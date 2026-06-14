@@ -45,6 +45,8 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
       expect(document).toBeDefined();
     });
 
+    assert(document != undefined);
+
     it("uses an Event subtype supported by Google Event structured data", () => {
       expect(document?.["@type"]).toBe("MusicEvent");
     });
@@ -135,7 +137,21 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
       "https://takanekofan.app/events/2025-08-01_live#music-event",
     );
 
-    expect(document.location).toBeUndefined();
+    expect(document).toBeUndefined();
+  });
+
+  it("does not emit MusicEvent JSON-LD for withdrawn appearances", () => {
+    const document = musicEventDocument(
+      makeEventMetaForTest({
+        liveType: "GUEST",
+        location: "Spotify O-EAST",
+        region: "東京",
+        status: "WITHDRAWN",
+      }),
+      "https://takanekofan.app/events/2025-08-01_live#music-event",
+    );
+
+    expect(document).toBeUndefined();
   });
 });
 

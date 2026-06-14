@@ -58,6 +58,33 @@ describe("Event details JSON-LD", () => {
     });
   });
 
+  it("emits a WebPage without @graph for a withdrawn live event", () => {
+    const canonicalUrl = `https://${DomainName}/events/2025-08-01_withdrawn-live`;
+
+    const document = ldJsonEventDocument({
+      event: makeEventMetaForTest({
+        title: "出演辞退ライブ",
+        summary: "出演辞退ライブ",
+        liveType: "GUEST",
+        region: "東京",
+        location: "Spotify O-EAST",
+        status: "WITHDRAWN",
+      }),
+      canonicalUrl,
+      name: "出演辞退ライブ",
+      description: "出演辞退ライブ詳細です。",
+    });
+
+    expect(document).toEqual({
+      "@context": "https://schema.org",
+      "@id": `${canonicalUrl}#web-page`,
+      "@type": "WebPage",
+      url: canonicalUrl,
+      name: "出演辞退ライブ",
+      description: "出演辞退ライブ詳細です。",
+    });
+  });
+
   it("emits a graph when both WebPage and MusicEvent are present", () => {
     const canonicalUrl = `https://${DomainName}/events/2025-02-14_live`;
     const musicEventId = `${canonicalUrl}#music-event`;

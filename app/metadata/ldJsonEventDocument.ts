@@ -1,6 +1,5 @@
 import { Graph, Thing, WithContext } from "schema-dts";
 import type { EventMeta } from "~/features/events/eventMeta";
-import { JAPAN_PREFECTURES } from "~/features/stats/pref";
 import { LdJsonIds } from "./ldJsonIds";
 import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent";
 import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage";
@@ -30,10 +29,10 @@ export const ldJsonEventDocument = ({
     description,
   });
 
-  if (isMusicEvent(event) && isHeldInJapan(event) && hasLocation(event)) {
-    const musicEventId = LdJsonIds.musicEvent(canonicalUrl);
-    const musicEvent = musicEventDocument(event, musicEventId);
+  const musicEventId = LdJsonIds.musicEvent(canonicalUrl);
+  const musicEvent = musicEventDocument(event, musicEventId);
 
+  if (musicEvent != undefined) {
     return {
       "@context": "https://schema.org",
       "@graph": [
@@ -53,20 +52,4 @@ export const ldJsonEventDocument = ({
       ...webPage,
     };
   }
-};
-
-const isMusicEvent = (event: EventMeta): boolean => {
-  return event.liveType != undefined;
-};
-
-const isHeldInJapan = (event: EventMeta): boolean => {
-  if (event.region == undefined) {
-    return false;
-  }
-
-  return JAPAN_PREFECTURES.includes(event.region);
-};
-
-const hasLocation = (event: EventMeta): boolean => {
-  return event.location != undefined && event.location.trim() != "";
 };
