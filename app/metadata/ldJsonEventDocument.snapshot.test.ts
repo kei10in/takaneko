@@ -23,10 +23,7 @@ describe("Event details JSON-LD snapshots", () => {
             {
               "@id": "https://takanekofan.app/events/2025-02-14_ワンマンライブ 2025 〜Cute for life〜#music-event",
               "@type": "MusicEvent",
-              "image": [
-                "https://takanekofan.app/events/2025/2025-02-14_%E3%83%AF%E3%83%B3%E3%83%9E%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96%202025%20%E3%80%9CCute%20for%20life%E3%80%9C.png",
-                "https://takanekofan.app/events/2025/2025-02-14_%E3%83%AF%E3%83%B3%E3%83%9E%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%96%202025%20%E3%80%9CCute%20for%20life%E3%80%9C_%E6%9D%A5%E5%A0%B4%E8%80%85%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%88.jpg",
-              ],
+              "image": "https://takanekofan.app/events/2025/2025-02-14_ワンマンライブ 2025 〜Cute for life〜.png",
               "location": {
                 "@type": "Place",
                 "address": {

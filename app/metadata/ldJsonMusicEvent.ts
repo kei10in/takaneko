@@ -1,19 +1,10 @@
-import type { EventStatusType } from "schema-dts";
+import type { EventStatusType, MusicEvent } from "schema-dts";
 import { DomainName } from "~/constants";
 import type { EventMeta } from "~/features/events/eventMeta";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { ImageDescription } from "~/utils/types/ImageDescription";
 
-export interface LdJsonMusicEvent {
-  "@id": string;
-  "@type": "MusicEvent";
-  name: string;
-  startDate: string;
-  endDate?: string;
-  performer: { "@type": "MusicGroup"; name: string };
-  eventStatus?: EventStatusType;
-  image?: string[];
-  location?: LdJsonPlace;
-}
+export type LdJsonMusicEvent = MusicEvent & { "@id": string };
 
 interface LdJsonPlace {
   "@type": "Place";
@@ -42,13 +33,21 @@ export const musicEventDocument = (event: EventMeta, id: string): LdJsonMusicEve
 
     performer: { "@type": "MusicGroup", name: "高嶺のなでしこ" },
     ...(eventStatus == undefined ? {} : { eventStatus }),
-    ...(image.length == 0 ? {} : { image }),
+    ...(image == undefined ? {} : { image }),
     ...(location == undefined ? {} : { location }),
   };
 };
 
-const schemaImage = (images: EventMeta["images"]): string[] => {
-  return images.map((img) => new URL(img.path, `https://${DomainName}`).toString());
+const schemaImage = (images: ImageDescription[]): string | undefined => {
+  const imagePaths = images
+    .filter((img) => img.path.length > 0)
+    .map((img) => `https://${DomainName}${img.path}`);
+
+  if (imagePaths.length > 0) {
+    return imagePaths[0];
+  }
+
+  return undefined;
 };
 
 const schemaLocation = (location: string, region: string | undefined): LdJsonPlace => {

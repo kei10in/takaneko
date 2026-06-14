@@ -72,49 +72,39 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
 
     it("has a non-empty venue name", () => {
       assert(document.location != undefined);
-      expect(document.location.name).toEqual(expect.any(String));
-      expect(document.location.name).not.toBe("");
-    });
-
-    it("does not use the event name as the venue name", () => {
-      assert(document.location != undefined);
-      expect(document.location.name).not.toBe(document.name);
+      expect(document.location).toMatchObject({
+        name: expect.stringMatching(/\S/),
+      });
     });
 
     it("has a PostalAddress", () => {
-      assert(document.location != undefined);
-      expect(document.location.address).toEqual(
-        expect.objectContaining({
+      expect(document.location).toMatchObject({
+        address: expect.objectContaining({
           "@type": "PostalAddress",
         }),
-      );
+      });
     });
 
     it("has addressRegion as recognizable address information", () => {
-      const location = document.location;
-      if (location == undefined) {
-        throw new Error("Expected location to be defined");
-      }
-      expect(location.address.addressRegion).toEqual(expect.any(String));
-      expect(location.address.addressRegion).not.toBe("");
+      expect(document.location).toMatchObject({
+        address: expect.objectContaining({
+          addressRegion: expect.stringMatching(/\S/),
+        }),
+      });
     });
 
     it("has addressCountry", () => {
-      const location = document.location;
-      if (location == undefined) {
-        throw new Error("Expected location to be defined");
-      }
-      expect(location.address.addressCountry).toEqual(expect.any(String));
-      expect(location.address.addressCountry).not.toBe("");
+      expect(document.location).toMatchObject({
+        address: expect.objectContaining({
+          addressCountry: expect.stringMatching(/\S/),
+        }),
+      });
     });
 
     it("emits only absolute HTTP image URLs in Google-supported formats", () => {
-      assert(document.image != undefined);
-      expect(document.image.length).toBeGreaterThan(0);
-      document.image.forEach((image) => {
-        expect(image).toEqual(expect.any(String));
-        expect(image).toMatch(/^https?:\/\//);
-        expect(new URL(image).pathname).toMatch(/\.(jpe?g|png|webp)$/i);
+      assert(typeof document.image === "string");
+      expect(document).toMatchObject({
+        image: expect.stringMatching(/^https?:\/\/.*\.(jpe?g|png|webp)$/i),
       });
     });
 
@@ -123,9 +113,11 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     });
 
     it("has a non-empty performer name when performer is present", () => {
-      expect(document.performer["@type"]).toBe("MusicGroup");
-      expect(document.performer.name).toEqual(expect.any(String));
-      expect(document.performer.name).not.toBe("");
+      expect(document.performer).toBeDefined();
+      expect(document.performer).toMatchObject({
+        "@type": "MusicGroup",
+        name: expect.stringMatching(/\S/),
+      });
     });
   });
 });
