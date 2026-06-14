@@ -9,7 +9,7 @@ export const meta: EventMetaDescriptor = {
   start: undefined,
   end: undefined,
   region: "東京",
-  location: "",
+  location: "お台場・青海周辺エリア",
   present: ["高嶺のなでしこ2"],
   images: [
     {
