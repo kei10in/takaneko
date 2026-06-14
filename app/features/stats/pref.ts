@@ -1,4 +1,4 @@
-import { EventModule } from "../events/eventModule";
+import type { EventModule } from "../events/eventModule";
 
 export const JAPAN_PREFECTURES = [
   "北海道",

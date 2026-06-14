@@ -11,9 +11,9 @@ import {
   BsTicketPerforated,
 } from "react-icons/bs";
 import {
+  href,
   Link,
   LoaderFunctionArgs,
-  MetaDescriptor,
   MetaFunction,
   useLoaderData,
   useLocation,
@@ -30,9 +30,12 @@ import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
+import { canonicalUrl } from "~/metadata/canonicalUrl";
+import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument";
 import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
+import { LdJsonMeta } from "~/utils/jsonLd/react-router";
 import { findMemberDescription } from "../../features/profile/members";
 import { EventDetails } from "./EventDetails";
 import { EventOverview } from "./EventOverview";
@@ -47,17 +50,29 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
     meta == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
       : (meta.description ?? makePageDescription(meta));
+  const formattedTitle = formatTitle(title);
+  const canonical =
+    loaderData == undefined
+      ? undefined
+      : canonicalUrl(href("/events/:eventSlug", { eventSlug: loaderData.slug }));
+  const jsonLd =
+    meta == undefined || canonical == undefined
+      ? undefined
+      : LdJsonMeta(
+          ldJsonEventDocument({
+            event: meta,
+            canonicalUrl: canonical,
+            name: formattedTitle,
+            description,
+          }),
+        );
 
-  const result: MetaDescriptor[] = [
-    { title: formatTitle(title) },
+  return [
+    { title: formattedTitle },
     { name: "description", content: description },
+    ...(meta == undefined ? [] : twitterCard(meta)),
+    ...(jsonLd == undefined ? [] : [jsonLd]),
   ];
-
-  if (meta != undefined) {
-    result.push(...twitterCard(meta));
-  }
-
-  return result;
 };
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {

@@ -9,6 +9,7 @@ import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventIte
 import { dateHref } from "~/features/calendars/utils";
 import { Events } from "~/features/events/events";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
+import { ldJsonWebSite } from "~/metadata/ldJsonWebSite";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { getActiveDateInJapan } from "~/utils/japanTime";
@@ -37,14 +38,7 @@ export const meta: MetaFunction = () => {
     { name: "twitter:title", content: title },
     { name: "twitter:description", content: description },
     { name: "twitter:image", content: `${url}takanekono-card.png` },
-    {
-      "script:ld+json": {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        name: SiteTitle,
-        url,
-      },
-    },
+    ldJsonWebSite(),
     {
       tagName: "link",
       rel: "canonical",
