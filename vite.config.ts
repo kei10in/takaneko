@@ -5,12 +5,14 @@ import tailwindcss from "@tailwindcss/vite";
 import gfm from "remark-gfm";
 import { defineConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
-import tsconfigPaths from "vite-tsconfig-paths";
 import { allowBrTags } from "./app/utils/rehype/allowBrTags";
 import { gfmAlert } from "./app/utils/rehype/gfmAlert";
 import { takanekono } from "./app/vite/plugin";
 
 export default defineConfig({
+  resolve: {
+    tsconfigPaths: true,
+  },
   plugins: [
     Inspect(),
     takanekono(),
@@ -27,6 +29,5 @@ export default defineConfig({
       exclude: ["./app/features/guide/**/*.md", "./app/features/guide/**/*.mdx"],
     }),
     reactRouter(),
-    tsconfigPaths(),
   ],
 });

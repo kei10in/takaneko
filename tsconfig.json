@@ -11,7 +11,8 @@
     "env.d.ts",
     "react-router.config.ts",
     "scripts/**/*.ts",
-    "vite.config.ts"
+    "vite.config.ts",
+    "vitest.config.ts"
   ],
   "exclude": [],
   "compilerOptions": {
