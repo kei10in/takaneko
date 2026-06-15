@@ -1,5 +1,34 @@
 import { Publication } from "../types";
 
+export const LARME_069: Publication = {
+  slug: "LARME 069",
+  name: "LARME 069",
+  date: "2026-06-17",
+  kind: "magazines",
+  publisher: "LARME",
+  listPrice: 891,
+  priceWithTax: 980,
+  code: [],
+  url: "",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-06-17_LARME069.jpg",
+      ref: "https://x.com/larmemagazine/status/2065403692015301098",
+    },
+    {
+      path: "/publications/2026/2026-06-17_LARME069_城月菜央.jpg",
+      ref: "https://x.com/takanenofficial/status/2065403692015301098",
+    },
+    {
+      path: "/publications/2026/2026-06-17_LARME069_松本ももな.jpg",
+      ref: "https://x.com/takanenofficial/status/2065403692015301098",
+    },
+  ],
+  featuredMembers: ["城月菜央", "松本ももな"],
+  officialTwitter: "https://x.com/takanenofficial/status/2066477127718015306",
+  links: [],
+};
+
 export const LARME_068: Publication = {
   slug: "LARME 068",
   name: "LARME 068",
