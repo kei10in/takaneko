@@ -34,5 +34,6 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [今週の音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2066355016412315776)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2065781235507696056)
 `;
