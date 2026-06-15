@@ -16,10 +16,15 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-04_超NATSUZOME 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2047525946400583801",
     },
+    {
+      path: "/events/2026/2026-07-05_超NATSUZOME 2026 Day2_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2066400821529792954",
+      tags: ["timetable"],
+    },
   ],
   link: {
-    text: "", // "超NATSUZOME 公式サイト",
-    url: "", // "https://natsuzome.info/",
+    text: "超NATSUZOME 公式サイト",
+    url: "https://natsuzome.info/",
   },
   ticket: "https://r10.to/chonatsuzome2026",
   streamings: undefined,
@@ -30,15 +35,33 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      title: "一曲入魂ステージ",
+      start: "11:50",
+      end: "13:00",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "超ステージ",
+      start: "14:50",
+      end: "15:10",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "SOMARIステージ",
+      start: "16:55",
+      end: "17:10",
       setlist: [],
       url: "",
     },
   ],
-  updatedAt: "2026-05-09",
+  updatedAt: "2026-06-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066400821529792954)
   - [出演告知 - 公式 X](https://x.com/takanenofficial/status/2047525946400583801)
 `;
