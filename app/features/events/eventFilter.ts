@@ -33,7 +33,8 @@ export const EventFilters: EventFilter[] = [
   {
     display: "ライブ",
     name: "live",
-    predicate: (event) => event.meta.category === EventType.LIVE,
+    predicate: (event) =>
+      event.meta.category === EventType.LIVE || event.meta.liveType != undefined,
   },
   {
     display: "イベント",
