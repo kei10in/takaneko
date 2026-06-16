@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@タワーレコード新宿店",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   date: "2024-02-12",
   region: "東京",
   location: "タワーレコード新宿店",
