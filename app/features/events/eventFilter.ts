@@ -61,7 +61,7 @@ export const EventFilters: EventFilter[] = [
     display: "発売日",
     name: "release",
     predicate: (event) =>
-      event.meta.category == EventType.RELEASE ||
+      event.meta.category == EventType.CD ||
       event.meta.category == EventType.BOOK ||
       event.meta.category == EventType.MAGAZINE,
   },

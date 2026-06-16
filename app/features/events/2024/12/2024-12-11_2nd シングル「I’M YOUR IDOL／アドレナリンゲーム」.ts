@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」",
-  category: "RELEASE",
+  category: "CD",
   date: "2024-12-11",
   region: "💿",
   updatedAt: "2024-11-15",

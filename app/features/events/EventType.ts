@@ -4,7 +4,7 @@ export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
   "EVENT", // 握手会・撮影会・サイン会など
   "STREAMING", // SHOWROOM・YouTube Live など
-  "RELEASE",
+  "CD",
   "BIRTHDAY",
   "TV",
   "RADIO",
@@ -22,7 +22,7 @@ export const compareEventType = (a: EventType, b: EventType): number => {
     EventType.LIVE,
     EventType.EVENT,
     EventType.STREAMING,
-    EventType.RELEASE,
+    EventType.CD,
     EventType.BIRTHDAY,
     EventType.TV,
     EventType.RADIO,
@@ -43,7 +43,7 @@ export const eventTypeToEmoji = (category: EventType): string => {
       return "🌸";
     case EventType.STREAMING:
       return "🎥";
-    case EventType.RELEASE:
+    case EventType.CD:
       return "💿";
     case EventType.BIRTHDAY:
       return "🎂";
@@ -70,7 +70,7 @@ export const eventTypeToColor = (category: EventType): string => {
       return "bg-gray-800";
     case EventType.STREAMING:
       return "bg-orange-400";
-    case EventType.RELEASE:
+    case EventType.CD:
       return "bg-fuchsia-500";
     case EventType.BIRTHDAY:
       return "bg-red-600";
