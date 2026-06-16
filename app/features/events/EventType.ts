@@ -124,3 +124,16 @@ export const liveTypeColor = (liveType: LiveType | undefined): string => {
       return "bg-gray-300";
   }
 };
+
+export const MeetAndGreetTypeEnum = z.enum([
+  "握手会",
+  "撮影会",
+  "サイン会",
+  "団体サイン会",
+  "オンライン サイン会",
+  "オンライン お話し会",
+  "対面お話し会",
+]);
+
+export const MeetAndGreetType = MeetAndGreetTypeEnum.enum;
+export type MeetAndGreetType = z.infer<typeof MeetAndGreetTypeEnum>;
