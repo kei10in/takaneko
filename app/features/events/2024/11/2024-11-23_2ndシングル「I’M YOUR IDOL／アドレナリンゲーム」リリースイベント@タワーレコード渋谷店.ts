@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@タワーレコード渋谷店",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
   date: "2024-11-23",
   region: "東京",

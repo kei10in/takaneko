@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "2nd シングル「I’M YOUR IDOL / タイトル未定」リリースイベント@サッポロファクトリー アトリウム",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
   date: "2024-09-16",
   location: "サッポロファクトリー アトリウム",

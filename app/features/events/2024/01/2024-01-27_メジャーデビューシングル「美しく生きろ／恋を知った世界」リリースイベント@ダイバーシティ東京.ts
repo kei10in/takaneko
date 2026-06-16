@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@ダイバーシティ東京",
   title:
     "高嶺のなでしこ「美しく生きろ / 恋を知った世界」 & Devil ANTHEM. Blue Youth合同リリースイベント@ダイバーシティ東京 フェスティバル広場",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
   date: "2024-01-27",
   open: "12:40",

@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
   date: "2026-",
   open: undefined,

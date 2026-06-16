@@ -28,6 +28,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## 開催情報
 
+  きゃっち
   **販売開始:** 2026年05月21日 (木) 20:30 〜 順次
 
   - 20:30 〜 💛城月菜央
