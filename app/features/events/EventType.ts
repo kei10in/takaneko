@@ -1,8 +1,10 @@
 import { z } from "zod/v4";
+import { assertNever } from "~/utils/assertNever";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
   "EVENT", // 握手会・撮影会・サイン会など
+  "RELEASE_EVENT", // CDリリースイベント
   "STREAMING", // SHOWROOM・YouTube Live など
   "CD",
   "BIRTHDAY",
@@ -21,6 +23,7 @@ export const compareEventType = (a: EventType, b: EventType): number => {
   const order = [
     EventType.LIVE,
     EventType.EVENT,
+    EventType.RELEASE_EVENT,
     EventType.STREAMING,
     EventType.CD,
     EventType.BIRTHDAY,
@@ -41,6 +44,8 @@ export const eventTypeToEmoji = (category: EventType): string => {
       return "🎤";
     case EventType.EVENT:
       return "🌸";
+    case EventType.RELEASE_EVENT:
+      return "🚀";
     case EventType.STREAMING:
       return "🎥";
     case EventType.CD:
@@ -59,6 +64,8 @@ export const eventTypeToEmoji = (category: EventType): string => {
       return "📰";
     case EventType.OTHER:
       return "📅";
+    default:
+      assertNever(category);
   }
 };
 
@@ -67,6 +74,8 @@ export const eventTypeToColor = (category: EventType): string => {
     case EventType.LIVE:
       return "bg-nadeshiko-700";
     case EventType.EVENT:
+      return "bg-gray-800";
+    case EventType.RELEASE_EVENT:
       return "bg-gray-800";
     case EventType.STREAMING:
       return "bg-orange-400";
@@ -86,6 +95,8 @@ export const eventTypeToColor = (category: EventType): string => {
       return "bg-indigo-400";
     case EventType.OTHER:
       return "bg-amber-700";
+    default:
+      assertNever(category);
   }
 };
 
