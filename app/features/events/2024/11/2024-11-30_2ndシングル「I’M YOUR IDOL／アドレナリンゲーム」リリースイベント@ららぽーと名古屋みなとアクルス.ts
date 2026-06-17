@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
     "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@ららぽーと名古屋みなとアクルス",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-11-30",
   location: "ららぽーと名古屋みなとアクルス",
   region: "愛知",

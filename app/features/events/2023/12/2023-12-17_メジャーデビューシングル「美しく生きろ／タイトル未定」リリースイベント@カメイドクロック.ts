@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
     "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@カメイドクロック",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2023-12-17",
   region: "東京",
   location: "カメイドクロック",

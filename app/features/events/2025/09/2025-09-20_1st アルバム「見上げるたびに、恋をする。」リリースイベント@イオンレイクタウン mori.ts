@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@イオンレイクタウン mori",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2025-09-20",
   open: undefined,
   start: "09:30",

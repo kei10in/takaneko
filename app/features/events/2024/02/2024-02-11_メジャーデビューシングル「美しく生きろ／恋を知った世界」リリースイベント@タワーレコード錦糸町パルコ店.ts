@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@タワーレコード錦糸町パルコ店",
   category: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-02-11",
   region: "東京",
   location: "タワーレコード錦糸町パルコ店",

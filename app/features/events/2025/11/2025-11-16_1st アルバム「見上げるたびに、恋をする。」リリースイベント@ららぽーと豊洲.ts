@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@ららぽーと豊洲",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2025-11-16",
   open: "10:00",
   start: "12:30",

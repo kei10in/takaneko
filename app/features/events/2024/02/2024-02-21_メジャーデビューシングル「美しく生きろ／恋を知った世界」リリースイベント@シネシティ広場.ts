@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@シネシティ広場",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-02-21",
   open: "14:30",
   start: "15:00",

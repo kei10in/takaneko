@@ -6,6 +6,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント「個別対面お話し会 & スペシャル抽選会」@サンライズホールC",
   category: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2025-02-02",
   open: "12:00",
   start: "13:00",

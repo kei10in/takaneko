@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL / タイトル未定」リリースイベント@ららぽーと豊洲",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-09-22",
   location: "ららぽーと豊洲 シーサイドデッキメインステージ",
   region: "東京",

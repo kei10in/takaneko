@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@すみだ産業会館",
   category: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-02-24",
   region: "東京",
   location: "すみだ産業会館",

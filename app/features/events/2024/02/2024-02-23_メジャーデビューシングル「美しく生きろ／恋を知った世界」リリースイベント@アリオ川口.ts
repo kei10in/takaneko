@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@アリオ川口",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-02-23",
   region: "埼玉",
   location: "アリオ川口",

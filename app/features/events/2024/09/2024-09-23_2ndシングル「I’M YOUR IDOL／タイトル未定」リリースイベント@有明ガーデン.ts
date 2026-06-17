@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL / タイトル未定」リリースイベント@有明ガーデン",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2024-09-23",
   location: "有明ガーデン 3F みんなのテラス",
   region: "東京",

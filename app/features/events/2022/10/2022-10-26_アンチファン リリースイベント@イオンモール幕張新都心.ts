@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
   title: "1st シングル「アンチファン」リリースイベント@イオンモール幕張新都心グランドスクエア",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2022-10-26",
   region: "千葉",
   location: "イオンモール幕張新都心グランドスクエア",

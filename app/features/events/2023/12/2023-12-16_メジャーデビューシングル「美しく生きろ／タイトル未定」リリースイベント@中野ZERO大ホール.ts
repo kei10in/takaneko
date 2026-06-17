@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
     "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@中野ZERO大ホール",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: [],
   date: "2023-12-16",
   region: "東京",
   location: "中野 ZERO 大ホール",
