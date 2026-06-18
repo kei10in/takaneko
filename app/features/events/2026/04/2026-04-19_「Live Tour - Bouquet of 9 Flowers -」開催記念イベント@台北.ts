@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "「Live Tour - Bouquet of 9 Flowers -」開催記念イベント@台北",
   title: "「Live Tour - Bouquet of 9 Flowers -」開催記念『個別2ショット撮影会』@台北",
   category: "EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["撮影会"],
   date: "2026-04-19",
   open: undefined,
   start: "12:00",

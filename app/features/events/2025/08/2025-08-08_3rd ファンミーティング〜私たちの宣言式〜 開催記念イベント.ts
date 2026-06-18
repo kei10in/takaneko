@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "高嶺のなでしこ「3rd ファンミーティング〜私たちの宣言式〜」 開催記念 『個別2ショット会』・『個別TikTok撮影会』",
   category: "EVENT",
+  meetAndGreetTypes: ["撮影会", "TikTok 撮影会"],
   liveType: undefined,
   date: "2025-08-08",
   open: undefined,

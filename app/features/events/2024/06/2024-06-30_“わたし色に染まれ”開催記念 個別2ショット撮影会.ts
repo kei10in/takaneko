@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "“わたし色に染まれ”開催記念 個別2ショット撮影会",
   title: "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別2ショット撮影会",
   category: "EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["撮影会"],
   date: "2024-06-30",
   region: "福岡",
   location: "福岡タワー ホール1",

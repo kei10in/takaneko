@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "大オンライントーク会",
   title: "2ndシングル「IʼM YOUR IDOL/アドレナリンゲーム」発売記念 オンライントーク会",
   category: "EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2024-12-15",
   start: "13:00",
   end: "18:10",
