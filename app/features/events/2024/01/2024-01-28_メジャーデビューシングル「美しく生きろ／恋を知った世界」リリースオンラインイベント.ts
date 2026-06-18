@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースオンラインイベント",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["オンライン お話し会", "オンライン サイン会"],
   date: "2024-01-28",
   region: "Web",
   present: ["高嶺のなでしこ"],

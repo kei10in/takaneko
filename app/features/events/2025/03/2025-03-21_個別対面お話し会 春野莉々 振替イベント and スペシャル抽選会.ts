@@ -4,7 +4,8 @@ export const meta: EventMetaDescriptor = {
   summary: "個別対面お話し会 春野莉々 振替イベント & スペシャル抽選会",
   title:
     "2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース記念個別対面お話し会 & スペシャル抽選会 春野莉々 振替イベント",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["対面お話し会"],
   date: "2025-03-21",
   open: "17:30",
   start: "18:00",
