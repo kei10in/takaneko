@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会 受付📋",
-  category: "EVENT",
+  category: "SALES_OPEN",
   date: "2026-05-21",
   start: "20:30",
   region: "Web",
