@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "松本ももな×michellMacaron特別写メ会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2025-09-21",
   open: undefined,
   start: "11:00",

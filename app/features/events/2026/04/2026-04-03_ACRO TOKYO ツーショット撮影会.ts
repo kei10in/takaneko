@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "アクロトーキョー ツーショット撮影会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2026-04-03",
   open: undefined,
   start: "18:00",

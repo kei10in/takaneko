@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "“わたし色に染まれ”開催記念 個別サイン会",
   title: "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別サイン会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2024-05-11",
   region: "大阪",
   location: "大阪 サンライズビル ホールB・C",

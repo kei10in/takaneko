@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "“わたし色に染まれ”開催記念 個別TikTok撮影会",
   title: "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別TikTok撮影会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2024-07-14",
   region: "東京",
   location: "KFC Hall",

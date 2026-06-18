@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "TikTok撮影会@大阪",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2023-11-18",
   region: "大阪",
   location: "御堂筋ホール心斎橋",

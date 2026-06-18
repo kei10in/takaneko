@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "たかねこフェス vol.4 開催記念 個別撮影会@宮城",
   title: "たかねこフェス vol.4 出張編 開催記念『個別TikTok撮影会』、『個別2ショット撮影会』",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2025-04-14",
   open: undefined,
   start: undefined,

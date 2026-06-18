@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "「LARME×高嶺のなでしこ」メンバー全員サイン会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2025-06-29",
   open: undefined,
   start: "18:00",

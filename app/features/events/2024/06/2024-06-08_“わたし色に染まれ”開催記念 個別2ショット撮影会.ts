@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "“わたし色に染まれ”開催記念 個別2ショット撮影会",
   title: "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別2ショット撮影会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2024-06-08",
   region: "宮城",
   location: "仙台国際センター 展示室3AB",

@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "たかねこフェス特別編「ガールズパーティ2023 春」TikTok撮影会",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2023-05-21",
   region: "東京",
   location: "新宿KeyStudio",

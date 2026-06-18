@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "2周年記念 Zepp TOUR 2024 「瞬きさえ忘れる。」公演記念 エリア別サイン会@北海道🖊",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2024-09-15",
   location: "Zepp Sapporo",
   region: "北海道",

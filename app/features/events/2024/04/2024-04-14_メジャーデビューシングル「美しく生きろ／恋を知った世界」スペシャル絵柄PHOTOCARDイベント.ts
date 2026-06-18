@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ／恋を知った世界」スペシャル絵柄PHOTOCARDイベント",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2024-04-14",
   region: "東京",
   location: "",

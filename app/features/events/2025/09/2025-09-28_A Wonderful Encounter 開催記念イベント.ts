@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "高嶺のなでしこ 3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』",
   category: "EVENT",
+  meetAndGreetTypes: [],
   date: "2025-09-28",
   open: undefined,
   start: undefined,
