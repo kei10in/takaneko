@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」当選者限定リリースイベント「I’M YOUR IDOL」MV コメンタリー & MV 衣装グループ撮影会",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["撮影会"],
   date: "2024-11-20",
   region: "東京",
   location: undefined,

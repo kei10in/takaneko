@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@TFTホール",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2024-02-25",
   region: "東京",
   location: "TFTホール",

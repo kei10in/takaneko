@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2026-01-31",
   open: "10:00",
   start: "12:30",

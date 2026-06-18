@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント 追加オンラインサイン会",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["オンライン サイン会"],
   date: "2024-02-17",
   region: "Web",
   present: ["高嶺のなでしこ"],

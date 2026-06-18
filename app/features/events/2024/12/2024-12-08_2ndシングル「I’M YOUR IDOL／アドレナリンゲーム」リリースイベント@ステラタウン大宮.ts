@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@ステラタウン大宮",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["撮影会", "握手会"],
   date: "2024-12-08",
   region: "埼玉",
   location: "ステラタウン大宮 1F 屋外 メローペ広場",

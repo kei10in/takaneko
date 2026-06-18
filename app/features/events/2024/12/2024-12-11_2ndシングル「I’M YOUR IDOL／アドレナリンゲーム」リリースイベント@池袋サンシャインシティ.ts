@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
     "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@池袋サンシャインシティ",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2024-12-11",
   region: "東京",
   location: "池袋・サンシャインシティ噴水広場",

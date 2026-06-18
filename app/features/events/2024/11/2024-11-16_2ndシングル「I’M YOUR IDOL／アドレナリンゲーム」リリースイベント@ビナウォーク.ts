@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@ビナウォーク",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2024-11-16",
   region: "神奈川",
   location: "ビナウォーク 5 番館",

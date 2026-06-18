@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "ミニライブ＆グループトーク会",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["対面お話し会"],
   date: "2022-10-08",
   region: "大阪",
   location: "タワーレコードNU茶屋町店",

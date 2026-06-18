@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@カメイドクロック",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2024-01-21",
   region: "東京",
   location: "カメイドクロック",

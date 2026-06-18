@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント オンラインサイン会&お話し会",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["オンライン サイン会", "オンライン お話し会"],
   date: "2025-10-25",
   open: undefined,
   start: undefined,

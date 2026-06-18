@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
   status: "RESCHEDULED",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["対面お話し会"],
   date: "2022-09-19",
   region: "大阪",
   location: "タワーレコード難波店",

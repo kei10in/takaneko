@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@TOC有明",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["サイン会"],
   date: "2025-11-09",
   open: "10:00",
   start: "11:30",

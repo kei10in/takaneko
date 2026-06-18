@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント@横浜YTJホール 振替日",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2025-11-18",
   open: "17:30",
   start: "18:00",

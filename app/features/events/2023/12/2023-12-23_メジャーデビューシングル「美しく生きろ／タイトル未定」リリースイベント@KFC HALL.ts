@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "メジャーデビューシングル「美しく生きろ / タイトル未定」リリースイベント@KFC HALL",
   category: "RELEASE_EVENT",
-  meetAndGreetTypes: [],
+  meetAndGreetTypes: ["握手会"],
   date: "2023-12-23",
   region: "東京",
   location: "KFC HALL",
