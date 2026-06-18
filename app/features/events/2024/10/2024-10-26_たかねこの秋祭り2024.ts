@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "たかねこの秋祭り2024 〜FC limited〜",
-  category: "LIVE",
+  category: "VARIETY",
   liveType: "SOLO",
   date: "2024-10-26",
   region: "東京",

@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "「瞬きさえ忘れる。」完全全通限定ファンミーティング",
   title:
     "2周年記念 Zepp TOUR 2024「瞬きさえ忘れる。」スタンプラリー企画 ＜完全全通限定ファンミーティング＞",
-  category: "EVENT",
+  category: "VARIETY",
   status: "RESCHEDULED",
   date: "2024-12-21",
   open: "16:00",

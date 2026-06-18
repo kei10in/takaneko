@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "高嶺のなでしこらじおっちゅーの！公開収録",
-  category: "EVENT",
+  category: "VARIETY",
   date: "2025-02-02",
   open: "10:30",
   start: "11:00",

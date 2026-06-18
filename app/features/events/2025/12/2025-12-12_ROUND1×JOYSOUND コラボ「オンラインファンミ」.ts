@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "ROUND1×JOYSOUND コラボ「オンラインファンミ」",
-  category: "EVENT",
+  category: "VARIETY",
   liveType: undefined,
   date: "2025-12-12",
   open: undefined,

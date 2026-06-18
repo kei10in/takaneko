@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "高嶺のなでしこのアイドル授業中 公開収録",
-  category: "EVENT",
+  category: "VARIETY",
   date: "2024-09-22",
   location: "ららぽーと豊洲 シーサイドデッキメインステージ",
   region: "東京",

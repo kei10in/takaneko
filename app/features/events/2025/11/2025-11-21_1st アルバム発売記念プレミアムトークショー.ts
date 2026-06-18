@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム発売記念プレミアムトークショー",
-  category: "EVENT",
+  category: "VARIETY",
   date: "2025-11-21",
   open: undefined,
   start: "19:00",
