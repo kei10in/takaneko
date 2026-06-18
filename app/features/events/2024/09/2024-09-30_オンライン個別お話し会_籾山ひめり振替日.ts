@@ -3,6 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会 籾山ひめり 振替日📢",
   category: "EVENT",
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2024-09-30",
   region: "Web",
   images: [

@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
   description:
     "2024年10月24日 18:00 から、高嶺のなでしこ オンライン個別お話し会が SPACE MAKE (スペースメイク、スペメ) で開催されます。受付は 2024年10月20日 19:00 からです。",
   category: "EVENT",
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2024-10-24",
   region: "Web",
   present: ["高嶺のなでしこ"],
