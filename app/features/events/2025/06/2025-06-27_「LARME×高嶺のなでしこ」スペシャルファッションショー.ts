@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "「LARME×高嶺のなでしこ」スペシャルファッションショー",
-  category: "EVENT",
+  category: "VARIETY",
   date: "2025-06-27",
   open: undefined,
   start: undefined,
