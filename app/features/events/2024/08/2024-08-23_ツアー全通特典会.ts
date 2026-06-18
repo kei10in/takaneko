@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "ツアー全通特典会",
-  category: "EVENT",
+  category: "VARIETY",
   date: "2024-08-23",
   location: "Hall Mixa",
   region: "東京",

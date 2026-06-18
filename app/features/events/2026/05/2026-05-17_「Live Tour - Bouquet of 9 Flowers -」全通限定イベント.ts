@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "「Live Tour - Bouquet of 9 Flowers -」全通限定イベント",
-  category: "EVENT",
+  category: "VARIETY",
   liveType: "SOLO",
   date: "2026-05-17",
   open: "16:30",
