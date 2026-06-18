@@ -146,6 +146,7 @@ export const liveTypeColor = (liveType: LiveType | undefined): string => {
 export const MeetAndGreetTypeEnum = z.enum([
   "握手会",
   "撮影会",
+  "TikTok 撮影会",
   "サイン会",
   "団体サイン会",
   "オンライン サイン会",
