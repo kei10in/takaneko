@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "TGC KITAKYUSHU 2022",
   title: "TGC KITAKYUSHU 2022 by TOKYO GIRLS COLLECTION",
-  category: "EVENT",
+  category: "FASHION",
   liveType: "GUEST",
   date: "2022-11-19",
   region: "福岡",

@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "IDOL FILE CITY CULTURE CIRCUIT 2026",
-  category: "OTHER",
+  category: "FASHION",
   liveType: undefined,
   date: "2026-03-14",
   open: "13:00",

@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "KANSAI COLLECTION 2024 SPRING & SUMMER",
-  category: "OTHER",
+  category: "FASHION",
   date: "2024-03-20",
   region: "大阪",
   location: "京セラドーム大阪",

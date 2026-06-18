@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "IDOL RUNWAY COLLECTION Supported by TGC",
-  category: "OTHER",
+  category: "FASHION",
   liveType: "GUEST",
   date: "2023-08-07",
   region: "東京",

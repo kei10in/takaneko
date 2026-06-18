@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "OKINAWA COLLECTION 2026",
-  category: "OTHER",
+  category: "FASHION",
   liveType: undefined,
   date: "2026-06-20",
   open: "13:00",
