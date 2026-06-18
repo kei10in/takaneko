@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "渋谷LOFT9アイドル倶楽部 vol.36",
-  category: "EVENT",
+  category: "OTHER",
   liveType: undefined,
   date: "2022-10-06",
   open: "18:30",

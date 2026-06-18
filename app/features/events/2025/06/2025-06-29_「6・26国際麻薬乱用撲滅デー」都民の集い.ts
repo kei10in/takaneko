@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "「6・26国際麻薬乱用撲滅デー」都民の集い",
-  category: "EVENT",
+  category: "LIVE",
   liveType: "GUEST",
   date: "2025-06-29",
   open: undefined,
