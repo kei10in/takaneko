@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2024-02-28",
   region: "東京",
   location: "duo MUSIC EXCHANGE",

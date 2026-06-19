@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Vocal & Dance Collection Live Vol.6",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2024-05-14",
   region: "東京",
   location: "Veats Shibuya",

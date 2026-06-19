@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2023-01-15",
   region: "東京",
   location: "Spotify O-WEST",

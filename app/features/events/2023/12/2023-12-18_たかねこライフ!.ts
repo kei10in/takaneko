@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "たかねこライフ!",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2023-12-18",
   region: "神奈川",
   location: "KT Zepp Yokohama",

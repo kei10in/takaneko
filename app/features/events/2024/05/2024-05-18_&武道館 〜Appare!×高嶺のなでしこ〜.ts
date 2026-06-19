@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "&武道館 〜Appare!×高嶺のなでしこ〜",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2024-05-18",
   region: "東京",
   location: "品川ステラボール",

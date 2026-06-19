@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Devil ANTHEM. Road to 雲外蒼天 でびぱっぱ2MAN",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "JOINT",
   date: "2026-04-28",
   open: "19:00",
   start: "19:40",
