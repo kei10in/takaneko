@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "NATSLIVE「たかねこ初恋キッチン。#6」",
+  summary: "NATSLIVE「たかねこ初恋キッチン。#6 初恋青椒肉絲。」",
   category: "STREAMING",
   liveType: undefined,
   date: "2026-06-19",
@@ -12,14 +12,14 @@ export const meta: EventMetaDescriptor = {
   location: "NATSLIVE CAFE 表参道",
   present: ["城月菜央", "日向端ひな", "星谷美来"],
   images: [
-    // {
-    //   path: "/events/2026/2026-06-19_たかねこ初恋キッチン_1.jpg",
-    //   ref: "",
-    // },
-    // {
-    //   path: "/events/2026/2026-06-19_たかねこ初恋キッチン_2.jpg",
-    //   ref: "",
-    // },
+    {
+      path: "/events/2026/2026-06-19_NATSLIVE「たかねこ初恋キッチン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2067908177828712823",
+    },
+    {
+      path: "/events/2026/2026-06-19_NATSLIVE「たかねこ初恋キッチン」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2067933052874203355",
+    },
   ],
   link: {
     text: "",
@@ -33,9 +33,9 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「初恋親子丼。カード A タイプ」 660 円 (税込)",
-      // "レシピカード「初恋親子丼。カード B タイプ」 660 円 (税込)",
-      // "レシピカード「初恋親子丼。カード C タイプ」 660 円 (税込)",
+      "レシピカード「初恋青椒肉絲。カード A タイプ」 660 円 (税込)",
+      "レシピカード「初恋青椒肉絲。カード B タイプ」 660 円 (税込)",
+      "レシピカード「初恋青椒肉絲。カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-03",
+  updatedAt: "2026-06-19",
 };
 
 export const content = /* md */ `
@@ -65,10 +65,9 @@ export const content = /* md */ `
 
   ## リンク
 
-  <!-- - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2059594542501044231) -->
-  <!-- - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2059569201036345698) -->
-  <!-- - [一般応募スタート - 公式 X](https://x.com/takanenofficial/status/2046524341362335750) -->
-
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2067933052874203355)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2067908177828712823)
+  - [一般応募スタート - 公式 X](https://x.com/takanenofficial/status/2063157727363572102)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2062060921296662838)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2062051780838686990)
 `;
