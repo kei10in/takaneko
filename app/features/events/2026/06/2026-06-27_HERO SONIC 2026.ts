@@ -39,7 +39,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://event.tiget.net/herosonic2026",
   },
   ticket: "https://tiget.net/events/480471",
-  streamings: undefined,
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv350678794",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
@@ -52,12 +55,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-14",
+  updatedAt: "2026-06-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ニコ生中継決定 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2067925373556277746)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066060571909177490)
   - [タイムテーブル公開 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2065373547384430833)
   - [出演日発表 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2052358036736360944)
