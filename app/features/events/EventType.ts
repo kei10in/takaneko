@@ -121,7 +121,10 @@ export const eventTypeToColor = (category: EventType): string => {
 export const LiveTypeEnum = z.enum([
   "SOLO", // ソロライブ
   "HOSTED", // 主催ライブ
-  "GUEST", // ゲスト出演
+  "JOINT", // 対バン・少数組の共同ライブ
+  "GUEST", // 他者の単独公演・ツアーへのゲスト出演
+  "FESTIVAL", // 音楽・アイドルライブを主目的にしたフェス・サーキット・多数組イベント
+  "EVENT_LIVE", // ファッションショーなど、ライブイベント以外の催しでのライブ出演
   "RELEASE_EVENT", // リリースイベント
 ]);
 
@@ -134,8 +137,14 @@ export const liveTypeColor = (liveType: LiveType | undefined): string => {
       return "bg-nadeshiko-700";
     case LiveType.HOSTED:
       return "bg-blue-300";
-    case LiveType.GUEST:
+    case LiveType.JOINT:
       return "bg-amber-300";
+    case LiveType.GUEST:
+      return "bg-orange-300";
+    case LiveType.FESTIVAL:
+      return "bg-emerald-400";
+    case LiveType.EVENT_LIVE:
+      return "bg-cyan-400";
     case LiveType.RELEASE_EVENT:
       return "bg-violet-400";
     default:
