@@ -35,7 +35,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -75,7 +75,7 @@
       {
         "event": {
           "date": "2024-09-25",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "きゅりあん",
           "region": "東京",
           "slug": "2024-09-25_STARRZ TOKYO",
@@ -115,7 +115,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -135,7 +135,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -195,7 +195,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -215,7 +215,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -255,7 +255,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -275,7 +275,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -295,7 +295,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -315,7 +315,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -355,7 +355,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -375,7 +375,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -512,7 +512,7 @@
       {
         "event": {
           "date": "2024-08-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-08-22_iLiVE!SUMMER",
@@ -552,7 +552,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -572,7 +572,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -632,7 +632,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -652,7 +652,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -721,7 +721,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-12-28_HEROINES COUNTDOWN",
@@ -741,7 +741,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "池袋サンシャインシティ噴水広場",
           "region": "東京",
           "slug": "2024-12-28_EYEがむぎゅっとフェス",
@@ -761,7 +761,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -835,12 +835,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -1077,7 +1077,7 @@
       {
         "event": {
           "date": "2024-10-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-10-30_ツインプラネット感謝祭",
@@ -1398,7 +1398,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -1418,7 +1418,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -1498,7 +1498,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -1598,7 +1598,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -1618,7 +1618,7 @@
       {
         "event": {
           "date": "2024-08-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-25_HEROINES SUMMER 2024 Day 2",
@@ -1638,7 +1638,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -1678,7 +1678,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -1698,7 +1698,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -1718,7 +1718,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -1783,7 +1783,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -1955,7 +1955,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -1975,7 +1975,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -1995,7 +1995,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -2015,7 +2015,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -2075,7 +2075,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -2095,7 +2095,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -2115,7 +2115,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -2175,7 +2175,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -2195,7 +2195,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -2215,7 +2215,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -2255,7 +2255,7 @@
       {
         "event": {
           "date": "2024-03-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "稲毛海浜公園野外音楽堂",
           "region": "千葉",
           "slug": "2024-03-31_NATSUZOME2024",
@@ -2275,7 +2275,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -2295,7 +2295,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -2355,7 +2355,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -2375,7 +2375,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -2415,7 +2415,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -2455,7 +2455,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -2495,7 +2495,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -2675,12 +2675,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -2843,7 +2843,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -2863,7 +2863,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -2957,7 +2957,7 @@
       {
         "event": {
           "date": "2024-11-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Diver City TOKYO",
           "region": "東京",
           "slug": "2024-11-06_ZEPPIN DISCO VOL1",
@@ -2977,7 +2977,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -3017,7 +3017,7 @@
       {
         "event": {
           "date": "2024-10-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-10-30_ツインプラネット感謝祭",
@@ -3037,7 +3037,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -3333,7 +3333,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -3498,7 +3498,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -3638,7 +3638,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -3658,7 +3658,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -3678,7 +3678,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -3826,7 +3826,7 @@
       {
         "event": {
           "date": "2024-06-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2024-06-02_ハニフェス 〜女子高文化祭 渋谷〜",
@@ -3873,7 +3873,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -4018,7 +4018,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -4038,7 +4038,7 @@
       {
         "event": {
           "date": "2024-11-09",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "野洲文化ホール",
           "region": "滋賀",
           "slug": "2024-11-09_UtaTen presents SHIGA IDOL COLLECTION 2024",
@@ -4078,7 +4078,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -4118,7 +4118,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -4158,7 +4158,7 @@
       {
         "event": {
           "date": "2024-10-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST / Spotify O-WEST",
           "region": "東京",
           "slug": "2024-10-02_大青春祭2024",
@@ -4198,7 +4198,7 @@
       {
         "event": {
           "date": "2024-08-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-08-22_iLiVE!SUMMER",
@@ -4218,7 +4218,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -4238,7 +4238,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -4278,7 +4278,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -4298,7 +4298,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -4318,7 +4318,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -4358,7 +4358,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -4378,7 +4378,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -4438,7 +4438,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -4498,7 +4498,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -4518,7 +4518,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -4538,7 +4538,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -4578,7 +4578,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -4618,7 +4618,7 @@
       {
         "event": {
           "date": "2024-01-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-01-17_iLiVE! premium",
@@ -4638,7 +4638,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -4743,7 +4743,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-12-28_HEROINES COUNTDOWN",
@@ -4763,7 +4763,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "池袋サンシャインシティ噴水広場",
           "region": "東京",
           "slug": "2024-12-28_EYEがむぎゅっとフェス",
@@ -4783,7 +4783,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -4903,7 +4903,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -4923,7 +4923,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -4963,7 +4963,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -4983,7 +4983,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -5003,7 +5003,7 @@
       {
         "event": {
           "date": "2024-11-09",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "野洲文化ホール",
           "region": "滋賀",
           "slug": "2024-11-09_UtaTen presents SHIGA IDOL COLLECTION 2024",
@@ -5043,7 +5043,7 @@
       {
         "event": {
           "date": "2024-11-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Diver City TOKYO",
           "region": "東京",
           "slug": "2024-11-06_ZEPPIN DISCO VOL1",
@@ -5063,7 +5063,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -5083,7 +5083,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -5123,7 +5123,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -5203,7 +5203,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -5223,7 +5223,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "直方リバーサイドパーク",
           "region": "福岡",
           "slug": "2024-10-13_MAKE A MONOGATARI 2024",
@@ -5263,7 +5263,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -5283,7 +5283,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -5303,7 +5303,7 @@
       {
         "event": {
           "date": "2024-10-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST / Spotify O-WEST",
           "region": "東京",
           "slug": "2024-10-02_大青春祭2024",
@@ -5403,7 +5403,7 @@
       {
         "event": {
           "date": "2024-09-25",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "きゅりあん",
           "region": "東京",
           "slug": "2024-09-25_STARRZ TOKYO",
@@ -5463,7 +5463,7 @@
       {
         "event": {
           "date": "2024-09-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "烏丸半島芝生広場",
           "region": "滋賀",
           "slug": "2024-09-21_イナズマロックフェス 2024",
@@ -5523,7 +5523,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -5543,7 +5543,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -5563,7 +5563,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -5583,7 +5583,7 @@
       {
         "event": {
           "date": "2024-09-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-09-06_黒フェス2024〜白黒歌合戦〜",
@@ -5603,7 +5603,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -5623,7 +5623,7 @@
       {
         "event": {
           "date": "2024-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-27_エンドレスサマー2024",
@@ -5643,7 +5643,7 @@
       {
         "event": {
           "date": "2024-08-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-25_HEROINES SUMMER 2024 Day 2",
@@ -5663,7 +5663,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -5683,7 +5683,7 @@
       {
         "event": {
           "date": "2024-08-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-08-22_iLiVE!SUMMER",
@@ -5703,7 +5703,7 @@
       {
         "event": {
           "date": "2024-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "三崎公園野外音楽堂",
           "region": "福島",
           "slug": "2024-08-17_でびぱっぱ夏祭 2024 〜東の陣〜",
@@ -5723,7 +5723,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-08-15_まいにちフェス2024 produced by au",
@@ -5743,7 +5743,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -5763,7 +5763,7 @@
       {
         "event": {
           "date": "2024-08-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "大阪城野外音楽堂",
           "region": "大阪",
           "slug": "2024-08-12_でびぱっぱ夏祭 2024 〜西の陣〜",
@@ -5810,7 +5810,7 @@
       {
         "event": {
           "date": "2024-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-04_TOKYO IDOL FESTIVAL 2024",
@@ -5830,7 +5830,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -5857,7 +5857,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -5877,7 +5877,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -5897,7 +5897,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -5917,7 +5917,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-07-27_六本木アイドルフェスティバル2024",
@@ -5937,7 +5937,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -5957,7 +5957,7 @@
       {
         "event": {
           "date": "2024-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2024-07-26_TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
@@ -5977,7 +5977,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -5997,7 +5997,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -6037,7 +6037,7 @@
       {
         "event": {
           "date": "2024-07-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-06_超NATSUZOME2024",
@@ -6138,7 +6138,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -6158,7 +6158,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -6205,7 +6205,7 @@
       {
         "event": {
           "date": "2024-06-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-06-03_MARQUEE Fes. -day1-",
@@ -6225,7 +6225,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -6245,7 +6245,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -6265,7 +6265,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -6312,7 +6312,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -6339,7 +6339,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -6359,7 +6359,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -6379,7 +6379,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -6399,7 +6399,7 @@
       {
         "event": {
           "date": "2024-04-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張メッセ ホール 9・10・11",
           "region": "千葉",
           "slug": "2024-04-28_超⾳楽祭 in ニコニコ超会議2024",
@@ -6419,7 +6419,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -6439,7 +6439,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -6479,7 +6479,7 @@
       {
         "event": {
           "date": "2024-04-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-04-12_うるトラすフェスタ〜桜満開!春SP〜",
@@ -6519,7 +6519,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -6539,7 +6539,7 @@
       {
         "event": {
           "date": "2024-03-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "稲毛海浜公園野外音楽堂",
           "region": "千葉",
           "slug": "2024-03-31_NATSUZOME2024",
@@ -6559,7 +6559,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -6579,7 +6579,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -6599,7 +6599,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -6659,7 +6659,7 @@
       {
         "event": {
           "date": "2024-03-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-03-14_TOKYO GIRLS GIRLS",
@@ -6679,7 +6679,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -6699,7 +6699,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -6719,7 +6719,7 @@
       {
         "event": {
           "date": "2024-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-05_MARQUEE祭 vol.142",
@@ -6739,7 +6739,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -6759,7 +6759,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -6779,7 +6779,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -6819,7 +6819,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -6839,7 +6839,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -6859,7 +6859,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -6919,7 +6919,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -6939,7 +6939,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -6959,7 +6959,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -6979,7 +6979,7 @@
       {
         "event": {
           "date": "2024-01-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-01-17_iLiVE! premium",
@@ -6999,7 +6999,7 @@
       {
         "event": {
           "date": "2024-01-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2024-01-06_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -7019,7 +7019,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -7039,7 +7039,7 @@
       {
         "event": {
           "date": "2024-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-01-03_謹賀新年！アイドル初夢ライブ supported by @JAM",
@@ -7092,7 +7092,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -7132,7 +7132,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -7293,7 +7293,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -7340,7 +7340,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -7387,7 +7387,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -7536,7 +7536,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -7576,7 +7576,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -7596,7 +7596,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -7776,7 +7776,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -7796,7 +7796,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -7816,7 +7816,7 @@
       {
         "event": {
           "date": "2024-09-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-09-06_黒フェス2024〜白黒歌合戦〜",
@@ -7836,7 +7836,7 @@
       {
         "event": {
           "date": "2024-09-05",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "長良川球場",
           "region": "岐阜",
           "slug": "2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦試合前パフォーマンス",
@@ -7856,7 +7856,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -7876,7 +7876,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-08-15_まいにちフェス2024 produced by au",
@@ -7923,7 +7923,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -7943,7 +7943,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -7963,7 +7963,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -7983,7 +7983,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-07-27_六本木アイドルフェスティバル2024",
@@ -8003,7 +8003,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -8023,7 +8023,7 @@
       {
         "event": {
           "date": "2024-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2024-07-26_TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
@@ -8043,7 +8043,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -8063,7 +8063,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -8264,7 +8264,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -8723,7 +8723,7 @@
       {
         "event": {
           "date": "2024-11-09",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "野洲文化ホール",
           "region": "滋賀",
           "slug": "2024-11-09_UtaTen presents SHIGA IDOL COLLECTION 2024",
@@ -8883,7 +8883,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -8903,7 +8903,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -8943,7 +8943,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -8963,7 +8963,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -8983,7 +8983,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -9003,7 +9003,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -9063,7 +9063,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -9083,7 +9083,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -9103,7 +9103,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -9123,7 +9123,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -9183,7 +9183,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -9375,7 +9375,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -9535,7 +9535,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-08-15_まいにちフェス2024 produced by au",
@@ -9575,7 +9575,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -9595,7 +9595,7 @@
       {
         "event": {
           "date": "2024-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2024-07-26_TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
@@ -9770,7 +9770,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -9830,7 +9830,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -10003,7 +10003,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-12-28_HEROINES COUNTDOWN",
@@ -10043,12 +10043,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -10103,7 +10103,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -10123,7 +10123,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -10163,7 +10163,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -10203,7 +10203,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -10223,7 +10223,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -10263,7 +10263,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -10323,7 +10323,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -10343,7 +10343,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "直方リバーサイドパーク",
           "region": "福岡",
           "slug": "2024-10-13_MAKE A MONOGATARI 2024",
@@ -10383,7 +10383,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -10403,7 +10403,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -10423,7 +10423,7 @@
       {
         "event": {
           "date": "2024-10-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST / Spotify O-WEST",
           "region": "東京",
           "slug": "2024-10-02_大青春祭2024",
@@ -10523,7 +10523,7 @@
       {
         "event": {
           "date": "2024-09-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "烏丸半島芝生広場",
           "region": "滋賀",
           "slug": "2024-09-21_イナズマロックフェス 2024",
@@ -10563,7 +10563,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -10583,7 +10583,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -10603,7 +10603,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -10623,7 +10623,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -10643,7 +10643,7 @@
       {
         "event": {
           "date": "2024-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-27_エンドレスサマー2024",
@@ -10663,7 +10663,7 @@
       {
         "event": {
           "date": "2024-08-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-25_HEROINES SUMMER 2024 Day 2",
@@ -10683,7 +10683,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -10703,7 +10703,7 @@
       {
         "event": {
           "date": "2024-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "三崎公園野外音楽堂",
           "region": "福島",
           "slug": "2024-08-17_でびぱっぱ夏祭 2024 〜東の陣〜",
@@ -10723,7 +10723,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -10770,7 +10770,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -10790,7 +10790,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -10810,7 +10810,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -10830,7 +10830,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -10850,7 +10850,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -10870,7 +10870,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -10910,7 +10910,7 @@
       {
         "event": {
           "date": "2024-07-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-06_超NATSUZOME2024",
@@ -11011,7 +11011,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -11031,7 +11031,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -11078,7 +11078,7 @@
       {
         "event": {
           "date": "2024-06-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-06-03_MARQUEE Fes. -day1-",
@@ -11098,7 +11098,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -11118,7 +11118,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -11165,7 +11165,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -11185,7 +11185,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -11205,7 +11205,7 @@
       {
         "event": {
           "date": "2024-04-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張メッセ ホール 9・10・11",
           "region": "千葉",
           "slug": "2024-04-28_超⾳楽祭 in ニコニコ超会議2024",
@@ -11225,7 +11225,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -11285,7 +11285,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -11305,7 +11305,7 @@
       {
         "event": {
           "date": "2024-03-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "稲毛海浜公園野外音楽堂",
           "region": "千葉",
           "slug": "2024-03-31_NATSUZOME2024",
@@ -11325,7 +11325,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -11345,7 +11345,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -11405,7 +11405,7 @@
       {
         "event": {
           "date": "2024-03-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-03-14_TOKYO GIRLS GIRLS",
@@ -11425,7 +11425,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -11445,7 +11445,7 @@
       {
         "event": {
           "date": "2024-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-05_MARQUEE祭 vol.142",
@@ -11465,7 +11465,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -11485,7 +11485,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -11505,7 +11505,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -11545,7 +11545,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -11565,7 +11565,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -11605,7 +11605,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -11645,7 +11645,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -11685,7 +11685,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -11705,7 +11705,7 @@
       {
         "event": {
           "date": "2024-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-01-03_謹賀新年！アイドル初夢ライブ supported by @JAM",
@@ -11953,7 +11953,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -12226,7 +12226,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "池袋サンシャインシティ噴水広場",
           "region": "東京",
           "slug": "2024-12-28_EYEがむぎゅっとフェス",
@@ -12246,7 +12246,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -12313,12 +12313,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -12413,7 +12413,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -12433,7 +12433,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -12493,7 +12493,7 @@
       {
         "event": {
           "date": "2024-11-09",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "野洲文化ホール",
           "region": "滋賀",
           "slug": "2024-11-09_UtaTen presents SHIGA IDOL COLLECTION 2024",
@@ -12513,7 +12513,7 @@
       {
         "event": {
           "date": "2024-11-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Diver City TOKYO",
           "region": "東京",
           "slug": "2024-11-06_ZEPPIN DISCO VOL1",
@@ -12533,7 +12533,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -12553,7 +12553,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -12593,7 +12593,7 @@
       {
         "event": {
           "date": "2024-10-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-10-30_ツインプラネット感謝祭",
@@ -12653,7 +12653,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -12673,7 +12673,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "直方リバーサイドパーク",
           "region": "福岡",
           "slug": "2024-10-13_MAKE A MONOGATARI 2024",
@@ -12713,7 +12713,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -12733,7 +12733,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -12753,7 +12753,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -12853,7 +12853,7 @@
       {
         "event": {
           "date": "2024-09-25",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "きゅりあん",
           "region": "東京",
           "slug": "2024-09-25_STARRZ TOKYO",
@@ -12913,7 +12913,7 @@
       {
         "event": {
           "date": "2024-09-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "烏丸半島芝生広場",
           "region": "滋賀",
           "slug": "2024-09-21_イナズマロックフェス 2024",
@@ -12973,7 +12973,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -12993,7 +12993,7 @@
       {
         "event": {
           "date": "2024-09-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-09-06_黒フェス2024〜白黒歌合戦〜",
@@ -13013,7 +13013,7 @@
       {
         "event": {
           "date": "2024-09-05",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "長良川球場",
           "region": "岐阜",
           "slug": "2024-09-05_読売ジャイアンツ対東京ヤクルトスワローズ公式戦試合前パフォーマンス",
@@ -13033,7 +13033,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -13053,7 +13053,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -13093,7 +13093,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -13113,7 +13113,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -13133,7 +13133,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -13153,7 +13153,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -13173,7 +13173,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -13193,7 +13193,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -13314,7 +13314,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -13334,7 +13334,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -13381,7 +13381,7 @@
       {
         "event": {
           "date": "2024-06-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2024-06-02_ハニフェス 〜女子高文化祭 渋谷〜",
@@ -13401,7 +13401,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -13421,7 +13421,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -13468,7 +13468,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -13488,7 +13488,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -13508,7 +13508,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -13528,7 +13528,7 @@
       {
         "event": {
           "date": "2024-04-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張メッセ ホール 9・10・11",
           "region": "千葉",
           "slug": "2024-04-28_超⾳楽祭 in ニコニコ超会議2024",
@@ -13548,7 +13548,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -13568,7 +13568,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -13628,7 +13628,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -13648,7 +13648,7 @@
       {
         "event": {
           "date": "2024-03-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "稲毛海浜公園野外音楽堂",
           "region": "千葉",
           "slug": "2024-03-31_NATSUZOME2024",
@@ -13668,7 +13668,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -13688,7 +13688,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -13708,7 +13708,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -13768,7 +13768,7 @@
       {
         "event": {
           "date": "2024-03-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-03-14_TOKYO GIRLS GIRLS",
@@ -13788,7 +13788,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -13808,7 +13808,7 @@
       {
         "event": {
           "date": "2024-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-05_MARQUEE祭 vol.142",
@@ -13828,7 +13828,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -13848,7 +13848,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -13868,7 +13868,7 @@
       {
         "event": {
           "date": "2024-03-02",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第一体育館",
           "region": "東京",
           "slug": "2024-03-02_マイナビTGC 2024 SS",
@@ -13888,7 +13888,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -13968,7 +13968,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -14008,7 +14008,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -14068,7 +14068,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -14108,7 +14108,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -14128,7 +14128,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -14148,7 +14148,7 @@
       {
         "event": {
           "date": "2024-01-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-01-17_iLiVE! premium",
@@ -14168,7 +14168,7 @@
       {
         "event": {
           "date": "2024-01-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2024-01-06_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -14188,7 +14188,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -14208,7 +14208,7 @@
       {
         "event": {
           "date": "2024-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-01-03_謹賀新年！アイドル初夢ライブ supported by @JAM",
@@ -14285,7 +14285,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -14425,7 +14425,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -14445,7 +14445,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -14465,7 +14465,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -14505,7 +14505,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -14525,7 +14525,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -14605,7 +14605,7 @@
       {
         "event": {
           "date": "2024-09-25",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "きゅりあん",
           "region": "東京",
           "slug": "2024-09-25_STARRZ TOKYO",
@@ -14665,7 +14665,7 @@
       {
         "event": {
           "date": "2024-08-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-25_HEROINES SUMMER 2024 Day 2",
@@ -14705,7 +14705,7 @@
       {
         "event": {
           "date": "2024-07-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-07-31_超アイドルまにあ!!!",
@@ -14745,7 +14745,7 @@
       {
         "event": {
           "date": "2024-07-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-07_超NATSUZOME2024",
@@ -14900,7 +14900,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -14920,7 +14920,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -15020,7 +15020,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -15060,7 +15060,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -15140,7 +15140,7 @@
       {
         "event": {
           "date": "2024-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-01-03_謹賀新年！アイドル初夢ライブ supported by @JAM",
@@ -15408,7 +15408,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-12-28_HEROINES COUNTDOWN",
@@ -15448,12 +15448,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -15488,7 +15488,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -15528,7 +15528,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -15588,7 +15588,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -15708,7 +15708,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -15728,7 +15728,7 @@
       {
         "event": {
           "date": "2024-08-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-08-22_iLiVE!SUMMER",
@@ -15748,7 +15748,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -15788,7 +15788,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -15936,7 +15936,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -15956,7 +15956,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -16003,7 +16003,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -16023,7 +16023,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -16043,7 +16043,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -16083,7 +16083,7 @@
       {
         "event": {
           "date": "2024-04-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-04-12_うるトラすフェスタ〜桜満開!春SP〜",
@@ -16163,7 +16163,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -16183,7 +16183,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -16250,7 +16250,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -16297,7 +16297,7 @@
       {
         "event": {
           "date": "2024-02-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-02-10_HEROINES VALENTINE FES in OSAKA",
@@ -16364,7 +16364,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -16411,7 +16411,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -16431,7 +16431,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -16451,7 +16451,7 @@
       {
         "event": {
           "date": "2024-01-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2024-01-06_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -16560,7 +16560,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -16580,7 +16580,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -16600,7 +16600,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -16680,7 +16680,7 @@
       {
         "event": {
           "date": "2024-10-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-03_TIF ASIA TOUR 2024 in Shanghai DAY1",
@@ -16780,7 +16780,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -16800,7 +16800,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -16840,7 +16840,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -16860,7 +16860,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -16981,7 +16981,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -17001,7 +17001,7 @@
       {
         "event": {
           "date": "2024-06-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPOINGI",
           "region": "東京",
           "slug": "2024-06-10_iLiVE! Vol.14",
@@ -17048,7 +17048,7 @@
       {
         "event": {
           "date": "2024-06-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2024-06-02_ハニフェス 〜女子高文化祭 渋谷〜",
@@ -17068,7 +17068,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -17088,7 +17088,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -17135,7 +17135,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -17155,7 +17155,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -17175,7 +17175,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -17195,7 +17195,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -17235,7 +17235,7 @@
       {
         "event": {
           "date": "2024-04-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-04-12_うるトラすフェスタ〜桜満開!春SP〜",
@@ -17275,7 +17275,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -17295,7 +17295,7 @@
       {
         "event": {
           "date": "2024-03-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "稲毛海浜公園野外音楽堂",
           "region": "千葉",
           "slug": "2024-03-31_NATSUZOME2024",
@@ -17315,7 +17315,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -17335,7 +17335,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -17355,7 +17355,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -17528,7 +17528,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -17548,7 +17548,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -17608,7 +17608,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -17688,7 +17688,7 @@
       {
         "event": {
           "date": "2024-09-25",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "きゅりあん",
           "region": "東京",
           "slug": "2024-09-25_STARRZ TOKYO",
@@ -17748,7 +17748,7 @@
       {
         "event": {
           "date": "2024-08-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "大阪城野外音楽堂",
           "region": "大阪",
           "slug": "2024-08-12_でびぱっぱ夏祭 2024 〜西の陣〜",
@@ -17768,7 +17768,7 @@
       {
         "event": {
           "date": "2024-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-04_TOKYO IDOL FESTIVAL 2024",
@@ -17808,7 +17808,7 @@
       {
         "event": {
           "date": "2024-07-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-07_超NATSUZOME2024",
@@ -17848,7 +17848,7 @@
       {
         "event": {
           "date": "2024-06-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-06-03_MARQUEE Fes. -day1-",
@@ -17868,7 +17868,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -17888,7 +17888,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -17988,7 +17988,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -18008,7 +18008,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -18068,7 +18068,7 @@
       {
         "event": {
           "date": "2024-01-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-01-17_iLiVE! premium",
@@ -18282,7 +18282,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -18362,7 +18362,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -18402,7 +18402,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -18442,7 +18442,7 @@
       {
         "event": {
           "date": "2024-11-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Diver City TOKYO",
           "region": "東京",
           "slug": "2024-11-06_ZEPPIN DISCO VOL1",
@@ -18462,7 +18462,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -18482,7 +18482,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -18562,7 +18562,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "直方リバーサイドパーク",
           "region": "福岡",
           "slug": "2024-10-13_MAKE A MONOGATARI 2024",
@@ -18602,7 +18602,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -18622,7 +18622,7 @@
       {
         "event": {
           "date": "2024-10-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST / Spotify O-WEST",
           "region": "東京",
           "slug": "2024-10-02_大青春祭2024",
@@ -18722,7 +18722,7 @@
       {
         "event": {
           "date": "2024-09-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "烏丸半島芝生広場",
           "region": "滋賀",
           "slug": "2024-09-21_イナズマロックフェス 2024",
@@ -18762,7 +18762,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -18782,7 +18782,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -18802,7 +18802,7 @@
       {
         "event": {
           "date": "2024-09-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-09-06_黒フェス2024〜白黒歌合戦〜",
@@ -18822,7 +18822,7 @@
       {
         "event": {
           "date": "2024-08-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-24_HEROINES SUMMER 2024 Day 1",
@@ -18842,7 +18842,7 @@
       {
         "event": {
           "date": "2024-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "三崎公園野外音楽堂",
           "region": "福島",
           "slug": "2024-08-17_でびぱっぱ夏祭 2024 〜東の陣〜",
@@ -18862,7 +18862,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-08-15_まいにちフェス2024 produced by au",
@@ -18882,7 +18882,7 @@
       {
         "event": {
           "date": "2024-08-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "大阪城野外音楽堂",
           "region": "大阪",
           "slug": "2024-08-12_でびぱっぱ夏祭 2024 〜西の陣〜",
@@ -18922,7 +18922,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -18942,7 +18942,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-07-27_六本木アイドルフェスティバル2024",
@@ -18962,7 +18962,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -18982,7 +18982,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -19022,7 +19022,7 @@
       {
         "event": {
           "date": "2024-07-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-06_超NATSUZOME2024",
@@ -19123,7 +19123,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -19170,7 +19170,7 @@
       {
         "event": {
           "date": "2024-06-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-06-03_MARQUEE Fes. -day1-",
@@ -19190,7 +19190,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -19210,7 +19210,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -19230,7 +19230,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -19277,7 +19277,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -19297,7 +19297,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -19317,7 +19317,7 @@
       {
         "event": {
           "date": "2024-04-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張メッセ ホール 9・10・11",
           "region": "千葉",
           "slug": "2024-04-28_超⾳楽祭 in ニコニコ超会議2024",
@@ -19357,7 +19357,7 @@
       {
         "event": {
           "date": "2024-04-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-04-12_うるトラすフェスタ〜桜満開!春SP〜",
@@ -19397,7 +19397,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -19417,7 +19417,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -19477,7 +19477,7 @@
       {
         "event": {
           "date": "2024-03-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-03-14_TOKYO GIRLS GIRLS",
@@ -19497,7 +19497,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -19517,7 +19517,7 @@
       {
         "event": {
           "date": "2024-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-05_MARQUEE祭 vol.142",
@@ -19537,7 +19537,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -19557,7 +19557,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -19597,7 +19597,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -19617,7 +19617,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -19637,7 +19637,7 @@
       {
         "event": {
           "date": "2024-01-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2024-01-06_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -19657,7 +19657,7 @@
       {
         "event": {
           "date": "2024-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-01-04_アイドル甲子園 in Spotify O-EAST 2024 PART2",
@@ -19714,7 +19714,7 @@
       {
         "event": {
           "date": "2024-11-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-East",
           "region": "東京",
           "slug": "2024-11-18_MARQUEE Fes.",
@@ -19814,7 +19814,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -19834,7 +19834,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -19854,7 +19854,7 @@
       {
         "event": {
           "date": "2024-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティーホール",
           "region": "東京",
           "slug": "2024-07-21_LEADING",
@@ -19914,7 +19914,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -19934,7 +19934,7 @@
       {
         "event": {
           "date": "2024-04-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-04-21_SACOFES. UNIVERSE",
@@ -19974,7 +19974,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -20014,7 +20014,7 @@
       {
         "event": {
           "date": "2024-03-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-04_iLiVE! WHITEDAY 〜渋谷サーキット〜",
@@ -20034,7 +20034,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -20054,7 +20054,7 @@
       {
         "event": {
           "date": "2024-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-02-02_ツインテールフェス2024",
@@ -20074,7 +20074,7 @@
       {
         "event": {
           "date": "2024-01-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp NAMBA",
           "region": "大阪",
           "slug": "2024-01-23_NAMBALiFE! vol.2",
@@ -20749,7 +20749,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -20897,7 +20897,7 @@
       {
         "event": {
           "date": "2024-06-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2024-06-02_ハニフェス 〜女子高文化祭 渋谷〜",
@@ -21029,7 +21029,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-12-28_HEROINES COUNTDOWN",
@@ -21049,7 +21049,7 @@
       {
         "event": {
           "date": "2024-12-28",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "池袋サンシャインシティ噴水広場",
           "region": "東京",
           "slug": "2024-12-28_EYEがむぎゅっとフェス",
@@ -21069,7 +21069,7 @@
       {
         "event": {
           "date": "2024-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-12-27_LEADING PREMIUM 年末感謝祭24",
@@ -21129,12 +21129,12 @@
       {
         "event": {
           "date": "2024-12-12",
-          "liveType": "RELEASE_EVENT",
+          "liveType": "EVENT_LIVE",
           "location": "Studio Mixa",
           "region": "東京",
-          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "slug": "2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
           "summary": "トビデルたかねこ生配信！",
-          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
+          "title": "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
         },
         "segments": [
           {
@@ -21209,7 +21209,7 @@
       {
         "event": {
           "date": "2024-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-21_iLiVE! Vol.16",
@@ -21229,7 +21229,7 @@
       {
         "event": {
           "date": "2024-11-19",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-11-19_ッスッゴイライブ〜SP LIVE〜",
@@ -21269,7 +21269,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -21289,7 +21289,7 @@
       {
         "event": {
           "date": "2024-11-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-11-11_でびぱっぱ",
@@ -21309,7 +21309,7 @@
       {
         "event": {
           "date": "2024-11-09",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "野洲文化ホール",
           "region": "滋賀",
           "slug": "2024-11-09_UtaTen presents SHIGA IDOL COLLECTION 2024",
@@ -21349,7 +21349,7 @@
       {
         "event": {
           "date": "2024-11-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Diver City TOKYO",
           "region": "東京",
           "slug": "2024-11-06_ZEPPIN DISCO VOL1",
@@ -21369,7 +21369,7 @@
       {
         "event": {
           "date": "2024-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷Spotify O-WEST",
           "region": "東京",
           "slug": "2024-11-05_フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
@@ -21389,7 +21389,7 @@
       {
         "event": {
           "date": "2024-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "明治大学 生田キャンパス",
           "region": "神奈川",
           "slug": "2024-11-03_生明祭2024 MIF",
@@ -21429,7 +21429,7 @@
       {
         "event": {
           "date": "2024-10-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-10-30_ツインプラネット感謝祭",
@@ -21449,7 +21449,7 @@
       {
         "event": {
           "date": "2024-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-10-29_HEROINES HALLOWEEN DAY 1",
@@ -21509,7 +21509,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2024-10-13_ナナフェス",
@@ -21529,7 +21529,7 @@
       {
         "event": {
           "date": "2024-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "直方リバーサイドパーク",
           "region": "福岡",
           "slug": "2024-10-13_MAKE A MONOGATARI 2024",
@@ -21569,7 +21569,7 @@
       {
         "event": {
           "date": "2024-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2024-10-05_LARME fes vol.1",
@@ -21589,7 +21589,7 @@
       {
         "event": {
           "date": "2024-10-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "バンダイナムコ上海文化センター・夢想劇場",
           "region": "上海",
           "slug": "2024-10-04_TIF ASIA TOUR 2024 in Shangha DAY2i",
@@ -21609,7 +21609,7 @@
       {
         "event": {
           "date": "2024-10-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST / Spotify O-WEST",
           "region": "東京",
           "slug": "2024-10-02_大青春祭2024",
@@ -21709,7 +21709,7 @@
       {
         "event": {
           "date": "2024-09-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "烏丸半島芝生広場",
           "region": "滋賀",
           "slug": "2024-09-21_イナズマロックフェス 2024",
@@ -21769,7 +21769,7 @@
       {
         "event": {
           "date": "2024-09-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2024-09-14_@JAM EXPO 2024",
@@ -21789,7 +21789,7 @@
       {
         "event": {
           "date": "2024-09-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-09-11_MARQUEE Fes. -day2-",
@@ -21809,7 +21809,7 @@
       {
         "event": {
           "date": "2024-09-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "本多の森 北電ホール",
           "region": "石川",
           "slug": "2024-09-08_かがやきフェス2024",
@@ -21829,7 +21829,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -21849,7 +21849,7 @@
       {
         "event": {
           "date": "2024-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-27_エンドレスサマー2024",
@@ -21869,7 +21869,7 @@
       {
         "event": {
           "date": "2024-08-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園 イベントステージ HOLA!",
           "region": "埼玉",
           "slug": "2024-08-25_HEROINES SUMMER 2024 Day 2",
@@ -21889,7 +21889,7 @@
       {
         "event": {
           "date": "2024-08-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲 PIT",
           "region": "東京",
           "slug": "2024-08-22_iLiVE!SUMMER",
@@ -21909,7 +21909,7 @@
       {
         "event": {
           "date": "2024-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "三崎公園野外音楽堂",
           "region": "福島",
           "slug": "2024-08-17_でびぱっぱ夏祭 2024 〜東の陣〜",
@@ -21929,7 +21929,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -21949,7 +21949,7 @@
       {
         "event": {
           "date": "2024-08-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "大阪城野外音楽堂",
           "region": "大阪",
           "slug": "2024-08-12_でびぱっぱ夏祭 2024 〜西の陣〜",
@@ -21996,7 +21996,7 @@
       {
         "event": {
           "date": "2024-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-04_TOKYO IDOL FESTIVAL 2024",
@@ -22016,7 +22016,7 @@
       {
         "event": {
           "date": "2024-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-03_TOKYO IDOL FESTIVAL 2024",
@@ -22036,7 +22036,7 @@
       {
         "event": {
           "date": "2024-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2024-08-02_TOKYO IDOL FESTIVAL 2024",
@@ -22056,7 +22056,7 @@
       {
         "event": {
           "date": "2024-07-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-07-28_柚姫の部屋フェス2024",
@@ -22076,7 +22076,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2024-07-27_六本木アイドルフェスティバル2024",
@@ -22096,7 +22096,7 @@
       {
         "event": {
           "date": "2024-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "フジテレビ本社屋エリア",
           "region": "東京",
           "slug": "2024-07-27_お台場冒険王2024",
@@ -22116,7 +22116,7 @@
       {
         "event": {
           "date": "2024-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2024-07-15_LuckyFes’24",
@@ -22156,7 +22156,7 @@
       {
         "event": {
           "date": "2024-07-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-06_超NATSUZOME2024",
@@ -22257,7 +22257,7 @@
       {
         "event": {
           "date": "2024-06-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WOMB",
           "region": "東京",
           "slug": "2024-06-15_やついフェス2024",
@@ -22304,7 +22304,7 @@
       {
         "event": {
           "date": "2024-06-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-06-03_MARQUEE Fes. -day1-",
@@ -22324,7 +22324,7 @@
       {
         "event": {
           "date": "2024-06-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2024-06-02_ハニフェス 〜女子高文化祭 渋谷〜",
@@ -22344,7 +22344,7 @@
       {
         "event": {
           "date": "2024-05-31",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-31_dot yell fes 4マン SP",
@@ -22364,7 +22364,7 @@
       {
         "event": {
           "date": "2024-05-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-05-18_&武道館 〜Appare!×高嶺のなでしこ〜",
@@ -22384,7 +22384,7 @@
       {
         "event": {
           "date": "2024-05-14",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Veats Shibuya",
           "region": "東京",
           "slug": "2024-05-14_Vocal & Dance Collection Live Vol.6",
@@ -22431,7 +22431,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -22451,7 +22451,7 @@
       {
         "event": {
           "date": "2024-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場特設会場 お台場青海地区P区画",
           "region": "東京",
           "slug": "2024-05-04_KASSEN 2024 in 肉フェス",
@@ -22471,7 +22471,7 @@
       {
         "event": {
           "date": "2024-04-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
@@ -22491,7 +22491,7 @@
       {
         "event": {
           "date": "2024-04-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張メッセ ホール 9・10・11",
           "region": "千葉",
           "slug": "2024-04-28_超⾳楽祭 in ニコニコ超会議2024",
@@ -22511,7 +22511,7 @@
       {
         "event": {
           "date": "2024-04-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2024-04-26_B.L.T. WONDERLAND LIVE vol.1",
@@ -22531,7 +22531,7 @@
       {
         "event": {
           "date": "2024-04-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2024-04-20_IDOL SQUARE presents SQUARE PARTY 8",
@@ -22571,7 +22571,7 @@
       {
         "event": {
           "date": "2024-04-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-04-12_うるトラすフェスタ〜桜満開!春SP〜",
@@ -22618,7 +22618,7 @@
       {
         "event": {
           "date": "2024-04-06",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Nagoya",
           "region": "愛知",
           "slug": "2024-04-06_ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
@@ -22638,7 +22638,7 @@
       {
         "event": {
           "date": "2024-03-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2024-03-30_超アイドルまにあ!!!",
@@ -22658,7 +22658,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -22678,7 +22678,7 @@
       {
         "event": {
           "date": "2024-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-26_ッスッゴイフェス",
@@ -22738,7 +22738,7 @@
       {
         "event": {
           "date": "2024-03-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-03-14_TOKYO GIRLS GIRLS",
@@ -22758,7 +22758,7 @@
       {
         "event": {
           "date": "2024-03-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-10_IDORISE!! FESTIVAL 2024",
@@ -22778,7 +22778,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -22798,7 +22798,7 @@
       {
         "event": {
           "date": "2024-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-03-05_MARQUEE祭 vol.142",
@@ -22818,7 +22818,7 @@
       {
         "event": {
           "date": "2024-03-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "YCC県民文化ホール 大ホール",
           "region": "山梨",
           "slug": "2024-03-03_YBSよっちゃばれ festival",
@@ -22838,7 +22838,7 @@
       {
         "event": {
           "date": "2024-03-02",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第一体育館",
           "region": "東京",
           "slug": "2024-03-02_マイナビTGC 2024 SS",
@@ -22858,7 +22858,7 @@
       {
         "event": {
           "date": "2024-02-28",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2024-02-28_ライブナタリー “高嶺のなでしこ × fishbowl × CYNHN”",
@@ -22925,7 +22925,7 @@
       {
         "event": {
           "date": "2024-02-19",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "NHKホール",
           "region": "東京",
           "slug": "2024-02-19_NHK「ニュージェネ！」公開収録",
@@ -22945,7 +22945,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",
@@ -23086,7 +23086,7 @@
       {
         "event": {
           "date": "2024-01-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷公園野外大音楽堂",
           "region": "東京",
           "slug": "2024-01-21_でびぱっぱ冬祭 in 野音",
@@ -23106,7 +23106,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -23126,7 +23126,7 @@
       {
         "event": {
           "date": "2024-01-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2024-01-17_iLiVE! premium",
@@ -23146,7 +23146,7 @@
       {
         "event": {
           "date": "2024-01-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2024-01-06_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -23166,7 +23166,7 @@
       {
         "event": {
           "date": "2024-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2024-01-03_謹賀新年！アイドル初夢ライブ supported by @JAM",
@@ -23383,7 +23383,7 @@
       {
         "event": {
           "date": "2024-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "安平町ときわ公園",
           "region": "北海道",
           "slug": "2024-08-31_A Villa idol festival HOKKAIDO 2024@北海道",
@@ -23403,7 +23403,7 @@
       {
         "event": {
           "date": "2024-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-27_エンドレスサマー2024",
@@ -23423,7 +23423,7 @@
       {
         "event": {
           "date": "2024-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2024-07-26_TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
@@ -23443,7 +23443,7 @@
       {
         "event": {
           "date": "2024-07-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2024-07-07_超NATSUZOME2024",
@@ -23483,7 +23483,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-05-05_HEROINES FES -5周年記念LIVE-",
@@ -23563,7 +23563,7 @@
       {
         "event": {
           "date": "2024-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2024-03-09_IDORISE!! FESTIVAL 2024",
@@ -23603,7 +23603,7 @@
       {
         "event": {
           "date": "2024-01-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台PIT",
           "region": "宮城",
           "slug": "2024-01-20_ZUNDALiFE!",
@@ -23698,7 +23698,7 @@
       {
         "event": {
           "date": "2024-11-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2024-11-14_超 明星現象",
@@ -23858,7 +23858,7 @@
       {
         "event": {
           "date": "2024-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-27_エンドレスサマー2024",
@@ -23878,7 +23878,7 @@
       {
         "event": {
           "date": "2024-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2024-08-15_NEO KASSEN 2024",
@@ -23898,7 +23898,7 @@
       {
         "event": {
           "date": "2024-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2024-07-26_TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
@@ -24073,7 +24073,7 @@
       {
         "event": {
           "date": "2024-05-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-05-05_歌舞伎町UP GATE↑↑2024",
@@ -24133,7 +24133,7 @@
       {
         "event": {
           "date": "2024-03-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2024-03-27_dot yell fes 3周年SP",
@@ -24193,7 +24193,7 @@
       {
         "event": {
           "date": "2024-02-16",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2024-02-16_高嶺のなでしこ×JamsCollection×ILY1 3マンライブ2024 Supported by カラオケまねきねこ",

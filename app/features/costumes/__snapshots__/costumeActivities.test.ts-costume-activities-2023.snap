@@ -13,7 +13,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
           "slug": "2023-12-29_IDOL WAVE in TOKYO",
@@ -31,7 +31,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2023-12-17",
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
@@ -50,7 +50,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
           "slug": "2023-12-17_ガラフェス 日比谷野音 デリシャスサンデー",
@@ -65,7 +65,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2023-12-16",
           "liveType": "RELEASE_EVENT",
           "location": "中野 ZERO 大ホール",
@@ -117,7 +117,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2023-12-23",
           "liveType": undefined,
           "location": "KFC HALL",
@@ -143,7 +143,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-12-28_LEADING PREMIUM 年末感謝祭’23",
@@ -160,7 +160,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-18",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2023-12-18_たかねこライフ!",
@@ -177,7 +177,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2023-12-15_iLiVE! Vol.11",
@@ -194,7 +194,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2023-12-10_ッスッゴイライブ 〜5th anniversary SP LIVE〜",
@@ -211,7 +211,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-12-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
           "slug": "2023-12-10_HYPE IDOL! Vol.42",
@@ -228,7 +228,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-11-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
           "slug": "2023-11-26_HYPER HEROINES FES",
@@ -262,7 +262,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-11-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2023-11-05_IDOL SQUARE",
@@ -279,7 +279,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-11-04",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
           "slug": "2023-11-04_Seisen Festival Concert 2023",
@@ -296,7 +296,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
           "slug": "2023-10-28_Let’s “Seeing is believing” in NAGOYA",
@@ -313,7 +313,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
           "slug": "2023-10-21_LOOP QUEST",
@@ -330,7 +330,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-15",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
           "slug": "2023-10-15_Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
@@ -347,7 +347,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
           "slug": "2023-10-09_日韓文化交流フェスティバル",
@@ -364,7 +364,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-09-24",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2023-09-24_ナナランドのスリーマンランド！",
@@ -381,7 +381,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2023-09-23_NAKAYOSHI FES",
@@ -398,7 +398,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-09-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-09-13_MARQUEE Fes. -day 1-",
@@ -428,7 +428,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-11-18",
           "liveType": undefined,
           "location": "御堂筋ホール心斎橋",
@@ -454,7 +454,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-11-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-11-13_MARQUEE Fes. -day 1-",
@@ -471,7 +471,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-11-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
           "slug": "2023-11-03_秋葉原アイドルサーキット vol.3",
@@ -488,7 +488,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
           "slug": "2023-10-29_Appare! HALLOWEEN 2023",
@@ -505,7 +505,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
           "slug": "2023-10-22_THFes. 2023",
@@ -522,7 +522,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-15",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
           "slug": "2023-10-15_Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
@@ -539,7 +539,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-07",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
           "slug": "2023-10-07_獨医祭",
@@ -556,7 +556,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2023-09-18_Fang Music Fes 02",
@@ -573,7 +573,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-09-15_日テレプラス秋のアイドル祭り Supported by U-ZONE",
@@ -607,7 +607,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-08-31_エンドレスサマー2023",
@@ -627,7 +627,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2023-08-27_@JAM EXPO 2023 supported by UP-T",
@@ -644,7 +644,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-08-17_NEO KASSEN 2023",
@@ -661,7 +661,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2023-08-15_『ジャムズセッション!!』-真夏のプレミアム-",
@@ -678,7 +678,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2023-08-15_KAWAII LAB. presents. KAWAII SONIC",
@@ -695,7 +695,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2023-08-14_dot yell fes SUMMER SP 2023",
@@ -712,7 +712,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2023-08-12_アイドル“ウタ”バースFES 2023",
@@ -729,7 +729,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2023-08-10_Lucky Cats Festival 2023",
@@ -744,9 +744,9 @@
           },
         ],
         "event": {
-          "category": "OTHER",
+          "category": "FASHION",
           "date": "2023-08-07",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
           "slug": "2023-08-07_IDOL RUNWAY COLLECTION Supported by TGC",
@@ -766,7 +766,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2023-08-06_TOKYO IDOL FESTIVAL 2023",
@@ -786,7 +786,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2023-08-04_TOKYO IDOL FESTIVAL 2023",
@@ -803,7 +803,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-08-01_TIF2023 “超”決起集会",
@@ -820,7 +820,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2023-07-29_六本木アイドルフェスティバル2023",
@@ -837,7 +837,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-23",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
           "slug": "2023-07-23_青夏",
@@ -854,7 +854,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
           "slug": "2023-07-17_SPARK 2023 in YAMANAKAKO",
@@ -874,7 +874,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-16",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
           "slug": "2023-07-16_SPARK 2023 in YAMANAKAKO",
@@ -894,7 +894,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
           "slug": "2023-07-15_SPARK 2023 in YAMANAKAKO",
@@ -911,7 +911,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-14",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2023-07-14_うるトラすフェスタ 2023 〜夏スペシャル in 豊洲PIT〜",
@@ -931,7 +931,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2023-07-02_超NATSUZOME2023 Day2",
@@ -948,7 +948,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
           "slug": "2023-07-01_超NATSUZOME2023 Day1",
@@ -965,7 +965,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-06-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
           "slug": "2023-06-25_ASIA MUSIC CARAVAN in Tochigi",
@@ -1019,7 +1019,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-06-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-06-12_Queen & Princess SP",
@@ -1036,7 +1036,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-06-05",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2023-06-05_豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
@@ -1070,7 +1070,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-05-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
           "slug": "2023-05-28_BUZZ IDOL! Vol.1",
@@ -1104,7 +1104,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-05-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-05-17_MARQUEE Fes. -day 2-",
@@ -1221,7 +1221,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-06-24",
           "liveType": undefined,
           "location": "浅草橋ヒューリックホール",
@@ -1234,7 +1234,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-06-17",
           "liveType": undefined,
           "location": "ミッドランドホール",
@@ -1247,7 +1247,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-05-07",
           "liveType": undefined,
           "location": "広島RCC文化センター 7F",
@@ -1260,7 +1260,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-05-04",
           "liveType": undefined,
           "location": "福岡国際会議場 国際会議室501",
@@ -1273,7 +1273,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-04-29",
           "liveType": undefined,
           "location": "難波御堂筋ホール ホール7",
@@ -1286,7 +1286,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-04-22",
           "liveType": undefined,
           "location": "仙台国際センター展示室3 AB",
@@ -1312,7 +1312,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-10-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2023-10-31_ヒロインズハロウィン",
@@ -1346,7 +1346,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2023-08-06_TOKYO IDOL FESTIVAL 2023",
@@ -1363,7 +1363,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-04-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
           "slug": "2023-04-17_ちゅらまちゅり",
@@ -1380,7 +1380,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-03-26_春の新生活応援フェス！",
@@ -1397,7 +1397,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
           "slug": "2023-03-24_NIG FES 2023",
@@ -1414,7 +1414,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-03-21_EVOLUTION POP! EXTRE",
@@ -1431,7 +1431,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿住友ビル 新宿住友ホール",
           "region": "東京",
           "slug": "2023-03-20_SNSで（たぶん）バズったフェス2023",
@@ -1448,7 +1448,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
           "slug": "2023-03-18_ヒロインズホワイト",
@@ -1465,7 +1465,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-03-12_IDORISE!! FESTIVAL 2023",
@@ -1482,7 +1482,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2023-03-05_MARQUEE祭 Vol.128",
@@ -1499,7 +1499,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
           "slug": "2023-02-28_アイドル甲子園 in 新宿BLAZE",
@@ -1516,7 +1516,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
           "slug": "2023-02-27_うるトラすフェスタ vol.12",
@@ -1536,7 +1536,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
           "slug": "2023-02-26_DDD 〜Discovery iDol OKINAWA〜 3rd depot",
@@ -1553,7 +1553,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
           "slug": "2023-02-25_@JAM the Field vol.23",
@@ -1570,7 +1570,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
           "slug": "2023-02-23_KASSEN",
@@ -1587,7 +1587,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
           "slug": "2023-02-18_Golazo! vol.8",
@@ -1621,7 +1621,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
           "slug": "2023-02-05_IDOL SQUARE presents SQUARE PARTY 1",
@@ -1638,7 +1638,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-02-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
           "slug": "2023-02-02_ツインテールフェス2023",
@@ -1655,7 +1655,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
           "slug": "2023-01-22_lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
@@ -1672,7 +1672,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-16",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LIQUIDROOM",
           "region": "東京",
           "slug": "2023-01-16_iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
@@ -1689,7 +1689,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-15",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2023-01-15_謹賀新年！Appare!×高嶺のなでしこ×ナナランド 3マンライブ！",
@@ -1709,7 +1709,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
           "slug": "2023-01-08_@JAM PARTY vol.80",
@@ -1726,7 +1726,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EXシアター六本木",
           "region": "東京",
           "slug": "2023-01-07_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -1743,7 +1743,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-01-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2023-01-03_NewYear Premium Party 2023",
@@ -1756,7 +1756,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-04-09",
           "liveType": undefined,
           "location": undefined,
@@ -1799,7 +1799,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2023-08-04_TOKYO IDOL FESTIVAL 2023",
@@ -1816,7 +1816,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-07-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
           "slug": "2023-07-17_SPARK 2023 in YAMANAKAKO",
@@ -1921,7 +1921,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2023-05-07",
           "liveType": undefined,
           "location": "広島RCC文化センター 7F",
@@ -1947,7 +1947,7 @@
         "event": {
           "category": "LIVE",
           "date": "2023-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
           "slug": "2023-08-31_赤レンガスプラッシュ祭2023 Day2",
@@ -2000,7 +2000,7 @@
         "event": {
           "category": "OTHER",
           "date": "2023-10-26",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "ホテルメトロポリタン エドモント",
           "region": "東京",
           "slug": "2023-10-26_第14回 ALL JAPAN ナチュラルチーズコンテスト",
