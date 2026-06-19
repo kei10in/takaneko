@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ASIA MUSIC CARAVAN in Tochigi",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-06-25",
   region: "栃木",
   location: "栃木県総合文化センター",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "WWS FESTIVAL vol.1 -Girls Side-",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-11-23",
   region: "東京",
   location: "SHIBUYA PLEASURE PLEASURE",

@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "SNSで（たぶん）バズったフェス2023",
   title: "NABE presents 「SNSで（たぶん）バズったフェス2023」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-03-20",
   region: "東京",
   location: "新宿住友ビル 新宿住友ホール",

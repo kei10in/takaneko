@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "マイナビTGC 2024 S/S",
   title: "マイナビ TOKYO GIRLS COLLECTION 2024 SPRING / SUMMER",
   category: "FASHION",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-03-02",
   open: undefined,
   start: undefined,

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "YUMENOHANASHI Premium LIVE 0918@KBSホール",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-09-18",
   region: "京都",
   location: "KBSホール",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "UtaTen presents SHIGA IDOL COLLECTION 2024",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-11-09",
   location: "野洲文化ホール",
   region: "滋賀",

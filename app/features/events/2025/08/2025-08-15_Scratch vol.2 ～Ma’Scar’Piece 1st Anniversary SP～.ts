@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-08-15",
   open: "12:00",
   start: "12:30",

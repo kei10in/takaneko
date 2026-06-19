@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "TIF ASIA TOUR 2024 in Shanghai DAY2",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-10-04",
   region: "上海",
   location: "バンダイナムコ上海文化センター・夢想劇場",

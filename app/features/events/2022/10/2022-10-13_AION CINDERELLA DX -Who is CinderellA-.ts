@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "AION CINDERELLA DX -Who is CinderellA?-",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-10-13",
   region: "東京",
   location: "なかのZERO 大ホール",

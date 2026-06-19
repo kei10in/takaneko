@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "ハニフェス 〜女子校文化祭 日比谷〜",
   title: "HoneyWorks Presents ハニフェス 〜女子校文化祭 日比谷〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-04-29",
   region: "東京",
   location: "日比谷野外音楽堂",

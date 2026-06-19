@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "SPARK 2022",
   title: "SPARK 2022 in SHINAGAWA",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-12-27",
   region: "東京",
   location: "品川インターシティホール",

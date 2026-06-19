@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ガラフェス 日比谷野音 デリシャスサンデー",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-12-17",
   region: "東京",
   location: "日比谷野外大音楽堂",

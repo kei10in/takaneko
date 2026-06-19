@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "Appare!のなでしこ vol.2",
   title: "『Appare!のなでしこ〜Appare!×高嶺のなでしこ 2マンライブ！〜』vol.2",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-01-19",
   open: "12:15",
   start: "13:00",

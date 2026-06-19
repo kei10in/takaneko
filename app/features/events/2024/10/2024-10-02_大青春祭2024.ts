@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "かすみ草とステラ presents 大青春祭2024",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-10-02",
   region: "東京",
   location: "Spotify O-EAST / Spotify O-WEST",

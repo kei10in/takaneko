@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "YELL LIVE 2025",
   title: "YELL LIVE 2025 powered by TikTok LIVE",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-08-27",
   open: "16:30",
   start: "17:30",

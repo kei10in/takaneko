@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
   category: "OTHER",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-07-27",
   open: "12:00",
   start: "14:00",

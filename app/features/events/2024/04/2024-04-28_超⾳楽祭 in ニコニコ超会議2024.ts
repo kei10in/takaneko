@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "超⾳楽祭 in ニコニコ超会議2024",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-04-28",
   region: "千葉",
   location: "幕張メッセ ホール 9・10・11",

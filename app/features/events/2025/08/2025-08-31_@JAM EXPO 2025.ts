@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "@JAM EXPO 2025",
   title: "@JAM EXPO 2025 supported by UP-T",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-08-31",
   open: undefined,
   start: "09:40",

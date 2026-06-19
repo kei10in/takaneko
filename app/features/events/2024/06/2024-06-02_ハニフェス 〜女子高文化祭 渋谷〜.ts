@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "ハニフェス 〜女子高文化祭 渋谷〜",
   title: "HoneyWorks Presents ハニフェス 〜女子高文化祭 渋谷〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-06-02",
   region: "東京",
   location: "LINE CUBE SHIBUYA",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ニューイヤーだよ！六本木アイドルフェスティバル",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-01-07",
   region: "東京",
   location: "EXシアター六本木",

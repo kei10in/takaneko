@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "TGC KITAKYUSHU 2022",
   title: "TGC KITAKYUSHU 2022 by TOKYO GIRLS COLLECTION",
   category: "FASHION",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-11-19",
   region: "福岡",
   location: "西日本総合展示場新館",

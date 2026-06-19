@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "たかねこライフ！",
   title: "EVOLUTION POP! Vol.79 〜たかねこライフ！ Premium〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-02-05",
   open: "18:15",
   start: "19:00",

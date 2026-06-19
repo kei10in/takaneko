@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "アイドル甲子園 in Spotify O-EAST 2024 PART2",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-01-04",
   region: "東京",
   location: "Spotify O-EAST",

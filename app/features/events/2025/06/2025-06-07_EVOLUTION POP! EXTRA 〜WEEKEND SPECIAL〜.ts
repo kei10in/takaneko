@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-06-07",
   open: "12:15",
   start: "13:00",

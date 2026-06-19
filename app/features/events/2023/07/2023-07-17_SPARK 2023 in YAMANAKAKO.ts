@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "SPARK 2023 in YAMANAKAKO",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-07-17",
   region: "山梨",
   location: "山中湖交流プラザきらら",

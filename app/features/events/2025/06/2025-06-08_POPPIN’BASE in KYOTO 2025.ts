@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "POPPIN' BASE in KYOTO 2025",
   title: "OSAKA GIGANTIC MUSIC FESTIVAL Special Live 「POPPIN' BASE in KYOTO 2025」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-06-08",
   open: "11:30",
   start: "12:00",

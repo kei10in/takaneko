@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "KOOmic idol Festa",
   title: "DJ KOO presents 「KOOmic idol Festa」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-03-29",
   open: "11:30",
   start: "12:00",

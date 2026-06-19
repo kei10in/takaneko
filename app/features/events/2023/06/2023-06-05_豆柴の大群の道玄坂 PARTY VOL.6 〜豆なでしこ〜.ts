@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "豆柴の大群の道玄坂 PARTY VOL.6 〜豆なでしこ〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-06-05",
   region: "東京",
   location: "Spotify O-WEST",

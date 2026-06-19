@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "KASSEN2026",
   title: "NEO JAPONISM PRESENTS KASSEN2026",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-06-21",
   open: "10:30",
   start: "11:05",

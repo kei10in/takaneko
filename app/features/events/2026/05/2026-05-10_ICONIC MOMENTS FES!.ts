@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "ICONIC MOMENTS FES!",
   title: "ICONIC MOMENTS FES! Supported by ZIP-FM",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-05-10",
   open: "09:50",
   start: "10:35",

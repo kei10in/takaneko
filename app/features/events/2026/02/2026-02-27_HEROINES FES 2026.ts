@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "HEROINES FES 2026",
   title: "HEROINES FES 2026 DAY1",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-02-27",
   open: "12:30",
   start: "13:30",

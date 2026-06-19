@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "POPPIN' BASE in GIGA",
   title: "THANKS 10TH GIGA Special LIVE「POPPIN' BASE in GIGA」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-07-30",
   open: "12:00",
   start: "13:00",

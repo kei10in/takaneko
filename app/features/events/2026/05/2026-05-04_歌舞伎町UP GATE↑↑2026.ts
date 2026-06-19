@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "歌舞伎町UP GATE↑↑2026",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-05-04",
   open: "12:00",
   start: "13:00",

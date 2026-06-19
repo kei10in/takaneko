@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "馬馬馬馬鹿猫祭 -ババババンビ×高嶺のなでしこ ツーマンライブ-",
   title: "ババババンビ presents 馬馬馬馬鹿猫祭 -ババババンビ×高嶺のなでしこ ツーマンライブ-",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-02-01",
   open: "17:00",
   start: "17:30",

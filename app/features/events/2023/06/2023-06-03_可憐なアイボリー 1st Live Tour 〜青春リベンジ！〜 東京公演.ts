@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "可憐なアイボリー 1st Live Tour 〜青春リベンジ！〜 東京公演",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-06-03",
   region: "東京",
   location: "品川ステラボール",
