@@ -1,6 +1,6 @@
 import { Act } from "../events/act";
 import { EventModule } from "../events/eventModule";
-import { EventType } from "../events/EventType";
+import { EventType, LiveType } from "../events/EventType";
 import { AllCostumes } from "./costumes";
 import { LivesForCostume } from "./types";
 
@@ -85,7 +85,10 @@ export const makeLivesForCostumes = (events: EventModule[]): LivesForCostume[] =
 };
 
 const isMeetAndGreetEvent = (event: EventModule): boolean => {
-  return event.meta.category === EventType.MEET_AND_GREET;
+  return (
+    event.meta.category === EventType.MEET_AND_GREET ||
+    (event.meta.meetAndGreetTypes.length > 0 && event.meta.liveType != LiveType.RELEASE_EVENT)
+  );
 };
 
 const collectMeetAndGreetCostumes = (event: EventModule): Set<string> => {
