@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "“EYEがむぎゅっと”フェス",
   title: "Zoff presents “EYEがむぎゅっと”フェス",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2024-12-28",
   open: "13:30",
   start: "14:30",
