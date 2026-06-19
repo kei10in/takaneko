@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "9ZpVBv_KJrU",
+    title:
+      "TVアニメ『#愛してるゲームを終わらせたい』スペシャル女子会♡ #高嶺のなでしこ #橋本桃呼 さん＆#日向端ひな さんが作品にちなんだ「愛してるゲーム」に挑戦！💌",
+    authorName: "Real Sound Movie",
+    publishedAt: "2026-06-16",
+    mediaUrl: "https://youtu.be/9ZpVBv_KJrU",
+    imageUrl: "https://i.ytimg.com/vi/9ZpVBv_KJrU/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "日向端ひな"],
+  },
+  {
     kind: "ogp",
     key: "https://menkyo-torocca.jp/feature/takaneko04_qa02.html",
     title: "たかねこプロフ帳★2026 涼海すう編｜合宿免許なら運転免許トロッカ！ ",
