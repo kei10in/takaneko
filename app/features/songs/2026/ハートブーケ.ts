@@ -26,6 +26,11 @@ export const ハートブーケ: SongMetaDescriptor = {
       publishedAt: "2026-06-07",
     },
     {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=TdpfOc990TA",
+      publishedAt: "2026-06-16",
+    },
+    {
       text: "HoneyWorks Guest Vocal",
       videoId: "https://www.youtube.com/watch?v=SZfI0atkrfU",
       publishedAt: "2026-06-06",
