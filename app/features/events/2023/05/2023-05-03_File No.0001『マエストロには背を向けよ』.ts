@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "File No.0001『マエストロには背を向けよ』",
-  category: "LIVE",
+  category: "OTHER",
   date: "2023-05-03",
   region: "東京",
   location: "Mixalive TOKYO 6F Theater Mixa",
