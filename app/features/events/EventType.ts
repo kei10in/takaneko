@@ -140,11 +140,11 @@ export const liveTypeColor = (liveType: LiveType | undefined): string => {
     case LiveType.JOINT:
       return "bg-amber-300";
     case LiveType.GUEST:
-      return "bg-orange-300";
+      return "bg-amber-300";
     case LiveType.FESTIVAL:
-      return "bg-emerald-400";
+      return "bg-amber-400";
     case LiveType.EVENT_LIVE:
-      return "bg-cyan-400";
+      return "bg-amber-400";
     case LiveType.RELEASE_EVENT:
       return "bg-violet-400";
     default:
