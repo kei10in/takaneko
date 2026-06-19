@@ -16,13 +16,20 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-06-20_OKINAWA COLLECTION 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2064921960455565380",
     },
+    {
+      path: "/events/2026/2026-06-20_OKINAWA COLLECTION 2026_配信告知.jpg",
+      ref: "https://x.com/okicolle/status/2067849864881250636",
+    },
   ],
   link: {
     text: "イベント公式サイト",
     url: "https://okinawa-collection.jp/",
   },
   ticket: "https://okinawa-collection.jp/26_spring/ticket/",
-  streamings: undefined,
+  streamings: {
+    text: "ミクチャ",
+    url: "https://mixch.tv/u/17856786/live",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
@@ -34,11 +41,12 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-06-11",
+  updatedAt: "2026-06-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [配信告知 - OKINAWA COLLECTION X](https://x.com/okicolle/status/2067849864881250636)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2064921960455565380)
 `;
