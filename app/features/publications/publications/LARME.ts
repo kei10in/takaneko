@@ -26,7 +26,12 @@ export const LARME_069: Publication = {
   ],
   featuredMembers: ["城月菜央", "松本ももな"],
   officialTwitter: "https://x.com/takanenofficial/status/2066477127718015306",
-  links: [],
+  links: [
+    {
+      text: "本日発売 (動画あり) - 公式 X",
+      url: "https://x.com/takanenofficial/status/2067140572931084576",
+    },
+  ],
 };
 
 export const LARME_068: Publication = {
