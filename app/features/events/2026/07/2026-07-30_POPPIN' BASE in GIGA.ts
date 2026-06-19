@@ -14,6 +14,10 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
+      path: "/events/2026/2026-07-30_POPPIN BASE in GIGA_高嶺のなでしこ.jpg",
+      ref: "https://x.com/takanenofficial/status/2067804672522658296",
+    },
+    {
       path: "/events/2026/2026-07-30_POPPIN BASE in GIGA.jpg",
       ref: "https://x.com/POPPINBASE/status/2060647708525019532",
     },
@@ -35,7 +39,7 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-06-03",
+  updatedAt: "2026-06-19",
 };
 
 export const content = /* md */ `
