@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "りそなグループ B.LEAGUE 2025-26 B1リーグ戦 茨城ロボッツ vs 越谷アルファーズ - LuckyFes Half Time Show",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2026-04-15",
   open: undefined,
   start: "19:05",

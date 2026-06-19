@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
   category: "OTHER",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2025-04-12",
   open: undefined,
   start: undefined,

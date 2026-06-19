@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "24時間テレビ 日産チャリティーイベント",
   category: "OTHER",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2025-08-30",
   open: undefined,
   start: "15:00",

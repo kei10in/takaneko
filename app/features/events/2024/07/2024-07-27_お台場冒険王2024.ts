@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "お台場冒険王2024",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2024-07-27",
   region: "東京",
   location: "フジテレビ本社屋エリア",

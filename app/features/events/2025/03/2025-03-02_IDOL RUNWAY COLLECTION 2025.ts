@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "IDOL RUNWAY COLLECTION 2025",
   category: "FASHION",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2025-03-02",
   open: "11:00",
   start: "12:00",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Seisen Festival Concert 2023",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2023-11-04",
   region: "東京",
   location: "清泉女子大学",

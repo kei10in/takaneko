@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "第22回 東京国際ミュージック・マーケット (22ndTIMM) ショーケースライブ",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2025-11-04",
   open: "17:00",
   start: "18:00",

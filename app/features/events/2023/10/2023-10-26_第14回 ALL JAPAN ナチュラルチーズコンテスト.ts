@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "第14回 ALL JAPAN ナチュラルチーズコンテスト",
   category: "OTHER",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2023-10-26",
   open: undefined,
   start: "17:00",

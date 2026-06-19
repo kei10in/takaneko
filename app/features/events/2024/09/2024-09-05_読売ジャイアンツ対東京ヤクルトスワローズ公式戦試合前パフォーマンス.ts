@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "読売ジャイアンツ対東京ヤクルトスワローズ公式戦での試合前パフォーマンス",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "EVENT_LIVE",
   date: "2024-09-05",
   location: "長良川球場",
   region: "岐阜",
