@@ -13,12 +13,16 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-06-20_TOKYO MX「音ボケPOPS」.jpg",
       ref: "https://x.com/takanenofficial/status/2065781235507696056",
     },
+    {
+      path: "/events/2026/2026-06-20_TOKYO MX「音ボケPOPS」_1.jpg",
+      ref: "https://x.com/otobokepops/status/2066355016412315776",
+    },
   ],
   link: {
     text: "番組サイト",
     url: "https://s.mxtv.jp/music/otobokepops/",
   },
-  updatedAt: "2026-06-14",
+  updatedAt: "2026-06-19",
 };
 
 export const content = /* md */ `
@@ -34,6 +38,8 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [今週の音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2066355016412315776)
+  - [音ボケPOPS ダイジェスト動画 - 音ボケPOPS X](https://x.com/otobokepops/status/2067804600640721128)
+  - [土曜の夜は 音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2067079788909519126)
+  - [今週の 音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2066355016412315776)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2065781235507696056)
 `;
