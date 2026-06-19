@@ -7,7 +7,7 @@ export const EventTypeEnum = z.enum([
   "RELEASE_EVENT", // CDリリースイベント
   "STREAMING", // SHOWROOM・YouTube Live など
   "VARIETY", // 単独のバラエティイベント
-  "FASHION", // 明確なファッションショーイベントだけに使う。また単独イベントにも使わない。
+  "FASHION", // 明確な外部のファッションショーイベント。単独イベントには使わない。
   "SALES_OPEN", // お話し会の受付など
   "CD",
   "BIRTHDAY",

@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "メ〜テレ「秋山歌謡祭2025」",
-  category: "LIVE",
+  category: "TV",
   date: "2025-03-21",
   open: undefined,
   start: "23:15",

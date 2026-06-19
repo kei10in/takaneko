@@ -2,10 +2,11 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "超十代大運動会2024",
-  category: "LIVE",
+  category: "OTHER",
   date: "2024-08-21",
   region: "東京",
   location: "国立代々木競技場第二体育館",
+  present: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"],
   images: [
     {
       path: "/events/2024/2024-08-21_超十代大運動会2024.jpg",
