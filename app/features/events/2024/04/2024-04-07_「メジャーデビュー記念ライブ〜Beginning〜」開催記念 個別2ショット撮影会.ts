@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "「メジャーデビュー記念ライブ〜Beginning〜」開催記念 個別2ショット撮影会",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
   meetAndGreetTypes: ["撮影会"],
   date: "2024-04-07",
   region: "愛知",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "“わたし色に染まれ”開催記念 個別TikTok撮影会",
   title: "「高嶺のなでしこ 全国ツアー2024“わたし色に染まれ”」開催記念 個別TikTok撮影会",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
   meetAndGreetTypes: ["TikTok 撮影会"],
   date: "2024-07-14",
   region: "東京",

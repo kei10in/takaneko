@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "松本ももなちゃん× ROJITA チェキ会",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
   meetAndGreetTypes: ["撮影会"],
   liveType: undefined,
   date: "2026-06-13",

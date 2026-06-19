@@ -8,8 +8,8 @@ import { findMemberDescription } from "../../features/profile/members";
 export const makePageDescription = (meta: EventMeta): string => {
   if (meta.category == EventType.LIVE) {
     return makeLiveDescription(meta);
-  } else if (meta.category == EventType.EVENT) {
-    return makeEventDescription(meta);
+  } else if (meta.category == EventType.MEET_AND_GREET) {
+    return makeMeetAndGreetDescription(meta);
   } else if (meta.category == EventType.MAGAZINE) {
     return makeMagazineDescription(meta);
   } else if (meta.category == EventType.TV) {
@@ -36,10 +36,10 @@ export const makeLiveDescription = (meta: EventMeta) => {
 };
 
 /**
- * 主催イベントの description を生成します。
+ * Meet and Greet イベントの description を生成します。
  * 主催イベント以外では適切な文章になりません。
  */
-export const makeEventDescription = (meta: EventMeta) => {
+export const makeMeetAndGreetDescription = (meta: EventMeta) => {
   const date = displayDateWithDayOfWeek(meta.date);
   const title = meta.title ?? meta.summary;
   const present = presentMembers(meta.present, meta.absent ?? []);

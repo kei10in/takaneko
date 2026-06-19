@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "東名阪ツアー2025 – Spring Ride – 開催記念イベント@東京",
   title:
     "「高嶺のなでしこ 東名阪ツアー2025 – Spring Ride –」開催記念 『個別サイン会』・『個別TikTok撮影会』@東京",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
   meetAndGreetTypes: ["TikTok 撮影会", "サイン会"],
   date: "2025-05-18",
   open: undefined,

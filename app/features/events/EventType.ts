@@ -3,7 +3,7 @@ import { assertNever } from "~/utils/assertNever";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
-  "EVENT", // 握手会・撮影会・サイン会など
+  "MEET_AND_GREET", // 握手会・撮影会・サイン会など
   "RELEASE_EVENT", // CDリリースイベント
   "STREAMING", // SHOWROOM・YouTube Live など
   "VARIETY", // 単独のバラエティイベント
@@ -25,7 +25,7 @@ export type EventType = z.infer<typeof EventTypeEnum>;
 export const compareEventType = (a: EventType, b: EventType): number => {
   const order = [
     EventType.LIVE,
-    EventType.EVENT,
+    EventType.MEET_AND_GREET,
     EventType.RELEASE_EVENT,
     EventType.STREAMING,
     EventType.VARIETY,
@@ -48,14 +48,14 @@ export const eventTypeToEmoji = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "🎤";
-    case EventType.EVENT:
+    case EventType.MEET_AND_GREET:
       return "🌸";
     case EventType.RELEASE_EVENT:
       return "🚀";
     case EventType.STREAMING:
       return "🎥";
     case EventType.VARIETY:
-      return "🎭";
+      return "✨";
     case EventType.FASHION:
       return "👗";
     case EventType.SALES_OPEN:
@@ -85,7 +85,7 @@ export const eventTypeToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "bg-nadeshiko-700";
-    case EventType.EVENT:
+    case EventType.MEET_AND_GREET:
       return "bg-gray-800";
     case EventType.RELEASE_EVENT:
       return "bg-gray-800";

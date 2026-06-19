@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: '"TOKYO RESIDENT" Issue:002 サイン & お渡し会',
-  category: "EVENT",
+  category: "MEET_AND_GREET",
   meetAndGreetTypes: ["サイン会", "お渡し会"],
   date: "2024-09-20",
   region: "東京",
