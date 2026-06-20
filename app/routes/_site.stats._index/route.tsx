@@ -25,6 +25,12 @@ const items = [
     url: "/stats/songs",
   },
   {
+    title: "セットリスト",
+    description:
+      "開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から横断検索できます。",
+    url: "/setlists",
+  },
+  {
     title: "都道府県別ライブ開催数",
     description: "各都道府県でのライブ開催回数を集計したグラフです。東京は除外しています。",
     url: "/stats/prefectures",

@@ -2,8 +2,8 @@ import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import { Markdown } from "~/components/Markdown";
 import { Act, isEmptyAct } from "~/features/events/act";
+import { Setlist } from "~/features/events/components/Setlist";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
-import { Setlist } from "./Setlist";
 
 interface Props {
   acts: Act[];

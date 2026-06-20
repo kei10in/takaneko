@@ -101,15 +101,15 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
 
   if (slug == undefined) {
     return <li>{component}</li>;
-  } else {
-    return (
-      <li>
-        <Link className="block" to={`/songs/${slug}`}>
-          {component}
-        </Link>
-      </li>
-    );
   }
+
+  return (
+    <li>
+      <Link className="block" to={`/songs/${slug}`}>
+        {component}
+      </Link>
+    </li>
+  );
 };
 
 interface SectionListItemProps {
