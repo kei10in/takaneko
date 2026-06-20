@@ -80,8 +80,8 @@ export default function Component() {
   const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
-  const totalSongCount = useMemo(
-    () => results.reduce((sum, result) => sum + result.event.songCount, 0),
+  const totalActCount = useMemo(
+    () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
   );
   const activeFilterCount = activeSetlistFilterCount(filters);
@@ -217,9 +217,10 @@ export default function Component() {
           </div>
         </Dialog>
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
-          <p>{results.length.toLocaleString()} 件</p>
-          <p>{totalSongCount.toLocaleString()} 曲</p>
+        <div className="mt-6 ml-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-zinc-600">
+          <p>
+            {results.length} 件 / {totalActCount} ステージ
+          </p>
           {filters.q != "" && <p>検索: {filters.q}</p>}
         </div>
 
