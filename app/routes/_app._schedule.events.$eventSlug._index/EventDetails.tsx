@@ -69,7 +69,12 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
 
                 {description && <Markdown>{description}</Markdown>}
 
-                {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
+                {setlist.length > 0 && (
+                  <section>
+                    <h4 className="font-bold text-gray-500">セットリスト</h4>
+                    <Setlist setlist={setlist} links={links} />
+                  </section>
+                )}
 
                 {note && <Markdown>{note}</Markdown>}
 
