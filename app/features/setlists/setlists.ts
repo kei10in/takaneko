@@ -118,7 +118,7 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
     .flatMap((event): SetlistEvent[] => {
       const { meta } = event;
 
-      if (meta.liveType == undefined) {
+      if (meta.liveType == undefined || meta.status != undefined) {
         return [];
       }
 
