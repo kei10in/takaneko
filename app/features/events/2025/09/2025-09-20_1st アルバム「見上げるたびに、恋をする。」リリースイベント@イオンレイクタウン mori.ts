@@ -40,6 +40,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "ミニライブ",
+      types: ["LIVE"],
       open: "11:45",
       start: "12:30",
       setlist: [

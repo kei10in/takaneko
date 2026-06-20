@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部 楽曲交換",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん (アップアップガールズ(2))",
@@ -26,6 +27,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "Overture",
@@ -45,6 +47,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部 楽曲交換",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん (アップアップガールズ(2))",
@@ -53,6 +56,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "Overture",

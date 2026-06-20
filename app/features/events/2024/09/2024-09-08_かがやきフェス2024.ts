@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://kagayaki-fes.jp/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:わたし色に染まれ衣装",
       "可愛くてごめん",

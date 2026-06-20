@@ -43,6 +43,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "浮島 STAGE",
+      types: ["LIVE"],
       start: "17:25",
       end: "17:40",
       description: "配信なし",
@@ -57,6 +58,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "UP-T HOT STAGE",
+      types: ["LIVE"],
       start: "19:45",
       end: "20:15",
       description: `

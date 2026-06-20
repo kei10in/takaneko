@@ -30,6 +30,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.showroom-live.com/r/idolrunwaycollection",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: ピンク衣装",
       "可愛くてごめん",

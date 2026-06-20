@@ -37,6 +37,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     start: "13:40",
     end: "13:50",
     setlist: ["衣装:高嶺のなでしこ 2024 衣装", "決戦スピリット", "MC", "美しく生きろ", "MC"],

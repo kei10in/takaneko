@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "ピーチステージ",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん",
@@ -29,6 +30,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "ブルーベリーステージ",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "初恋のひと。",

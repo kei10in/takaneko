@@ -21,6 +21,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "HEAT GARAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:美しく生きろ衣装",
         "初恋のひと。",
@@ -34,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "DOLL FACTORY",
+      types: ["LIVE"],
       setlist: [
         "衣装:僕は君になれない衣装",
         "ヒロインは平均以下。",

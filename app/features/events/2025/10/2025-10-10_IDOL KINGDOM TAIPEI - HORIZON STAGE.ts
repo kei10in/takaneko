@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://tickets.funone.io/activity/activity_detail/erUlvCAQQdht6e",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     start: "14:30",
     end: "15:00",
     setlist: [

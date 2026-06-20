@@ -14,6 +14,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 東山恵里沙、星谷美来",
       "衣装: アンチファン衣装",

@@ -56,6 +56,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2部 LIVE",
+      types: ["LIVE"],
       start: "19:25",
       end: "19:50",
       setlist: [

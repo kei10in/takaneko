@@ -30,6 +30,7 @@ export const meta: EventMetaDescriptor = {
     time: ["17:50", "18:50"],
   },
   acts: {
+    types: ["LIVE"],
     start: "17:15",
     end: "17:40",
     setlist: [

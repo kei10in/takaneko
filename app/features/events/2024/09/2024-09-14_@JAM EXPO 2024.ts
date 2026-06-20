@@ -12,6 +12,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://atjam.jp/expo2024",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: わたし色に染まれ衣装",
       "美しく生きろ",

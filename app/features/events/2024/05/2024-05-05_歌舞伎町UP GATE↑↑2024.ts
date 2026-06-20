@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "TOKYU KABUKICHO TOWER",
+      types: ["LIVE"],
       setlist: [
         "衣装:美しく生きろ衣装",
         "可愛くてごめん",
@@ -29,6 +30,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "Zepp Shinjuku",
+      types: ["LIVE"],
       setlist: [
         "衣装:美しく生きろ衣装",
         "革命の女王",

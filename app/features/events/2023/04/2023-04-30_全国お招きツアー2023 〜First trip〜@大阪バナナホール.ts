@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部 コラボパフォーマンス",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "アンチファン (真っ白なキャンバス コラボ)",
@@ -26,6 +27,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "Overture",
@@ -44,6 +46,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部 コラボパフォーマンス",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん (Appare! コラボ)",
@@ -52,6 +55,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "Overture",

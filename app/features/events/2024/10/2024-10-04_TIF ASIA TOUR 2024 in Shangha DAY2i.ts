@@ -19,6 +19,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.facebook.com/TIFASIATOUR.DS",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:アンチファン衣装",
       "女の子は強い",

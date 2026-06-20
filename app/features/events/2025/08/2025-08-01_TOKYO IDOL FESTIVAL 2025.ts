@@ -73,6 +73,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SKY STAGE",
+      types: ["LIVE"],
       start: "18:15",
       end: "18:40",
       description: `
@@ -98,6 +99,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "DOLL FACTORY",
+      types: ["LIVE"],
       start: "20:20",
       end: "20:40",
       description: `

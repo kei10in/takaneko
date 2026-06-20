@@ -34,6 +34,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/1941829561156829643",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: アンチファン衣装",
       "17歳",

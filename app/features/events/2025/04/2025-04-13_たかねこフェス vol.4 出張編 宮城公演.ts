@@ -19,6 +19,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       open: "12:30",
       start: "13:30",
       description: "出演: Jams Collection",
@@ -45,6 +46,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       open: "17:30",
       start: "18:30",
       description: "出演: いぎなり東北産",

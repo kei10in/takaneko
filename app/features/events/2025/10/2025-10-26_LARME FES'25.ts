@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部",
+      types: ["LIVE"],
       setlist: [
         "衣装: LARME Fes'25 衣装",
         "可愛くてごめん", // TVsize

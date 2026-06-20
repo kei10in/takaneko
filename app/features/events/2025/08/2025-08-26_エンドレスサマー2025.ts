@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "花火ステージ Spotify O-EAST",
+    types: ["LIVE"],
     start: "19:45",
     end: "20:10",
     setlist: [

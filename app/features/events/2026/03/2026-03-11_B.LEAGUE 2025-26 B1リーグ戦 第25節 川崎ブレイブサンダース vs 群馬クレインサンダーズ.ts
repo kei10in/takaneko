@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/brave_thunders/status/2029482057173270881",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 高嶺のなでしこ 2024 衣装 + 川崎ブレイブ・サンダース 2025-26 ユニフォーム",
       "可愛くてごめん",

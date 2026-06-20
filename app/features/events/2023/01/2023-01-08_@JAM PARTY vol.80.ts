@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "衣装:アンチファン衣装",
         "アンチファン",
@@ -31,6 +32,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "衣装:アンチファン衣装",
         "可愛くてごめん",

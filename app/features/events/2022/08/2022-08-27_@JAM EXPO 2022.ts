@@ -17,11 +17,13 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "オレンジステージ🍊",
+      types: ["LIVE"],
       setlist: ["衣装:アンチファン衣装", "アンチファン", "誇り高きアイドル", "ファンサ"],
       url: "https://x.com/Mikuru_hositani/status/1563415251520876545",
     },
     {
       title: "ブルーベリーステージ🫐",
+      types: ["LIVE"],
       setlist: [
         "衣装:アンチファン衣装",
         "アンチファン",

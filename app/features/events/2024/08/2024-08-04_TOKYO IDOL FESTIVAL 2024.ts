@@ -20,6 +20,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "SKY STAGE",
+    types: ["LIVE"],
     setlist: ["衣装:わたし色に染まれ衣装", "美しく生きろ", "月曜日の憂鬱", "ファンサ", "MC"],
     url: "https://x.com/Mikuru_hositani/status/1820056311503196181",
   },

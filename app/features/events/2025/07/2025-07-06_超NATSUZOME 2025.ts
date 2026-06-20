@@ -37,6 +37,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://live.nicovideo.jp/watch/lv348128990",
   },
   acts: {
+    types: ["LIVE"],
     start: "17:45",
     end: "18:10",
     setlist: [

@@ -34,6 +34,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装: 美しく生きろ衣装", "可愛くてごめん", "美しく生きろ"],
     url: "https://x.com/Mikuru_hositani/status/1763798724298629400",
   },

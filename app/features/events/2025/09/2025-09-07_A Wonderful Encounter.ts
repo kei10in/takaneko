@@ -28,6 +28,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://live.nicovideo.jp/watch/lv348613804",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ:東山恵里沙、松本ももな",
       "衣装:「初恋のひと。」制服衣装",

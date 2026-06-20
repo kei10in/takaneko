@@ -50,6 +50,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       open: "11:30",
       start: "13:00",
       setlist: [
@@ -86,6 +87,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       open: "17:30",
       start: "19:00",
       setlist: [

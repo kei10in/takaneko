@@ -48,6 +48,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://abema.app/DmjU",
   },
   acts: {
+    types: ["LIVE"],
     start: "19:05",
     end: "19:15",
     setlist: ["衣装: ピンク衣装", "可愛くてごめん", "ファンサ", "美しく生きろ"],

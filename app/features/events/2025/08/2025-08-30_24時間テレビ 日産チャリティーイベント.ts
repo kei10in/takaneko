@@ -40,6 +40,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "LIVE & オークション",
+      types: ["LIVE"],
       description: "お宝オークションを開催予定",
       start: "18:00",
       end: "18:30",

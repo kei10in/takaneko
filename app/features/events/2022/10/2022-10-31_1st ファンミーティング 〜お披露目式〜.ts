@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:ハロウィンコスプレ🎃",
       "ハロウィン・ナイト (AKB48 cover)",

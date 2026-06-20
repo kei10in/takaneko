@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.giants.jp/column/2024games/2024gifu/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装:読売ジャイアンツ ユニフォーム", "可愛くてごめん", "MC", "モテチェン！"],
   },
   updatedAt: "2025-06-15",

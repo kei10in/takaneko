@@ -61,6 +61,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "FOREST STAGE",
+      types: ["LIVE"],
       start: "14:30",
       end: "14:50",
       setlist: [
@@ -75,6 +76,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "MORI MORI STAGE",
+      types: ["LIVE"],
       start: "18:55",
       end: "19:20",
       setlist: [

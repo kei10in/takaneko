@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "ミニライブ",
+      types: ["LIVE"],
       setlist: [
         "衣装: 美しく生きろ衣装",
         "Overture",

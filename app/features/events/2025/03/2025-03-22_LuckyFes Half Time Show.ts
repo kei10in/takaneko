@@ -36,6 +36,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/1903040165964337353",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",
       "決戦スピリット",

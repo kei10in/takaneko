@@ -20,6 +20,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部",
+      types: ["LIVE"],
       open: "11:40",
       start: "12:00",
       absent: ["城月菜央"],
@@ -55,6 +56,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部",
+      types: ["LIVE"],
       open: "14:40",
       start: "15:00",
       absent: ["城月菜央", "東山恵里沙"],

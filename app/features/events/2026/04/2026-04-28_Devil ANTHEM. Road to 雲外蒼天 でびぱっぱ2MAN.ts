@@ -33,6 +33,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2048756551872094345",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "初恋のひと。",

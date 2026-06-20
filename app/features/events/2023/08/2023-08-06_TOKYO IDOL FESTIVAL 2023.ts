@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "SMILE GARDEN",
+      types: ["LIVE"],
       start: "12:15",
       end: "12:35",
       setlist: [
@@ -31,6 +32,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "HOT STAGE",
+      types: ["LIVE"],
       start: "13:10",
       end: "13:40",
       description: `
@@ -43,6 +45,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SKY STAGE",
+      types: ["LIVE"],
       start: "17:55",
       end: "18:10",
       setlist: ["衣装:全国お招きツアー衣装", "決戦スピリット", "初恋のひと。", "ファンサ"],

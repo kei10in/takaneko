@@ -11,6 +11,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "衣装:キュンキュン学園制服",
         "センパイ。",
@@ -26,6 +27,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "衣装:キュンキュン学園制服",
         "可愛くてごめん",

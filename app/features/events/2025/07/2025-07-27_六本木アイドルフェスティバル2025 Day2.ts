@@ -47,6 +47,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "カラオケコラボ",
+      types: ["LIVE"],
       start: "16:35",
       end: "16:55",
       description: `
@@ -93,6 +94,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "ステージ",
+      types: ["LIVE"],
       start: "19:15",
       end: "19:40",
       setlist: [

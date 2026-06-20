@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
   ],
   absent: ["城月菜央"],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 葉月紗蘭、春野莉々",
       "衣装:アンチファン衣装",

@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/1996951476753592460",
   },
   acts: {
+    types: ["LIVE"],
     start: "20:05",
     end: "20:30",
     description: "タイムテーブルに記載の内容が間違っています。",

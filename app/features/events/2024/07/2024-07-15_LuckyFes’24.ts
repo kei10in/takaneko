@@ -16,6 +16,7 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: {
     title: "HILLS STAGE",
+    types: ["LIVE"],
     setlist: [
       "衣装:わたし色に染まれ衣装",
       "美しく生きろ",

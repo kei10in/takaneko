@@ -55,6 +55,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "ストロベリーステージ",
+      types: ["LIVE"],
       start: "18:20",
       end: "18:45",
       setlist: [

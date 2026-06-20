@@ -22,6 +22,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketdive.com/event/heroinescountdown241228_29",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     start: "19:25",
     end: "19:50",
     setlist: [

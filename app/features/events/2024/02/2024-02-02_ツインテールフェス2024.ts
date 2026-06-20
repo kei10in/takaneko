@@ -24,6 +24,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:美しく生きろ衣装 (ジャケットなし)",
       "男の子の目的は何？",

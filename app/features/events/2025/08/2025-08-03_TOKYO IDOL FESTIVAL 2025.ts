@@ -26,6 +26,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "SKY STAGE",
+      types: ["LIVE"],
       start: "17:10",
       end: "17:25",
       description: `
@@ -38,6 +39,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SMILE GARDEN",
+      types: ["LIVE"],
       start: "19:05",
       end: "19:25",
       description: `

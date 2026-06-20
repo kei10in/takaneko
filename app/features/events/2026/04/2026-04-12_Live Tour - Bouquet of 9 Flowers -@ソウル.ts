@@ -44,6 +44,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "Overture",
         "衣装: Bouquet of 9 Flowers 衣装",

@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:全国お招きツアー衣装",
       "可愛くてごめん",

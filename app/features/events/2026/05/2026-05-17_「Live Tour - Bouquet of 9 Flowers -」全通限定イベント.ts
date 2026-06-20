@@ -34,6 +34,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 涼海すう、葉月紗蘭",
         "Overture",

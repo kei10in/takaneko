@@ -39,6 +39,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "全員",
+      types: ["LIVE"],
       setlist: ["衣装:「ハニフェス 2025」制服衣装", "今、恋がはじまれ。"],
       links: [
         {
@@ -49,6 +50,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "高嶺のなでしこブロック",
+      types: ["LIVE"],
       setlist: [
         "衣装: 「ハニフェス 2025」制服衣装",
         "初恋のひと。",
@@ -67,6 +69,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "アンコール コラボ",
+      types: ["LIVE"],
       setlist: [
         "衣装: T シャツ (ハニフェス 2025)",
         "めおと (Hanon、小田桐ななさ、柴咲あかり、土屋玲実、橘美空、橋本桃呼、葉月紗蘭)",

@@ -30,6 +30,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://www.zoff.co.jp/shop/t/t1982/",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:美しく生きろ衣装",
       "美しく生きろ",

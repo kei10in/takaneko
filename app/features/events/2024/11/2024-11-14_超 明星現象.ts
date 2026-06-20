@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/cho_myojo",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "美しく生きろ",

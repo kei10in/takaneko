@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "Club Que Será Será",
+    types: ["LIVE"],
     start: "12:30",
     end: "12:55",
     setlist: [

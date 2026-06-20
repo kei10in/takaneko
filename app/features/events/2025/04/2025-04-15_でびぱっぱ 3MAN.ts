@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketvillage.jp/events/13288",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "革命の女王",

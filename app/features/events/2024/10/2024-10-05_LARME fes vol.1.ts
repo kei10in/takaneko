@@ -19,6 +19,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://larmefes.com/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:LARME fes vol.1 衣装",
       "女の子は強い",

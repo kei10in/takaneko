@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 東山恵里沙、松本ももな",
       "衣装:美しく生きろ衣装",

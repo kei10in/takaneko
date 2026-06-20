@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "KASSEN Spotify O-EAST",
+    types: ["LIVE"],
     start: "11:45",
     end: "12:15",
     setlist: [

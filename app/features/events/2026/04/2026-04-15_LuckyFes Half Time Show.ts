@@ -37,6 +37,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "LuckyFes Half Time Show",
+    types: ["LIVE"],
     start: "19:45",
     setlist: [
       "衣装: 高嶺のなでしこ 2024 衣装 + 茨城ロボッツ ユニフォーム",

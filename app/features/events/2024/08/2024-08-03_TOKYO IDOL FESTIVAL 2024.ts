@@ -21,6 +21,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "HOT STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:わたし色に染まれ衣装",
         "美しく生きろ",
@@ -36,6 +37,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "浮島STAGE",
+      types: ["LIVE"],
       setlist: ["衣装:アンチファン衣装", "#超絶かわいい", "LOVE ANTHEM", "ファンサ", "MC"],
       url: "https://x.com/Mikuru_hositani/status/1819663539784564829",
     },
