@@ -73,6 +73,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "撮影会 & お見送り",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "T シャツ (Bouquet of 9 Flowers ver.)",
         lanes: [],

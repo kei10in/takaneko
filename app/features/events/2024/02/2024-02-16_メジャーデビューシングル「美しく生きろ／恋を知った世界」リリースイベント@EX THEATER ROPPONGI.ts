@@ -22,6 +22,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "3マンライブ終演後",
       meetAndGreet: {
         lanes: [

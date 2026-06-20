@@ -60,6 +60,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "1 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "見上げるたびに、恋をする。衣装",
         lanes: [
@@ -94,6 +95,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "見上げるたびに、恋をする。衣装",
         lanes: [

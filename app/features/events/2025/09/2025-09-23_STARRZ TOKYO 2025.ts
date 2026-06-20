@@ -57,6 +57,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SPIRALGIRL ステージ - ファッションショー",
+      types: ["RUNWAY"],
       start: "18:04",
       end: "18:11",
       description: `

@@ -54,10 +54,12 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "PART 2",
+      types: ["RUNWAY"],
       description: "「Zipper STAGE」に籾山ひめり、「LARME STAGE」に松本ももなが出演しました。",
     },
     {
       title: "PART 3",
+      types: ["RUNWAY"],
       description:
         "「【ゼンレスゾーンゼロ】× IDOL RUNWAY COLLECTION SPECIAL STAGE」に松本ももな、「IDOL RUNWAY COLLECTION SPECIAL COLLECTION」に橋本桃呼が出演しました。",
     },

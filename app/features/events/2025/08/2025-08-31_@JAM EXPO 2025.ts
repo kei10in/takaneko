@@ -45,6 +45,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "Zipper ファッションショー",
+      types: ["RUNWAY"],
       start: "15:55",
       end: "16:15",
       description: `

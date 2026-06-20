@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "全員握手会",
+      types: ["MEET_AND_GREET"],
       start: "20:00",
       meetAndGreet: {
         costume: "I’M YOUR IDOL 衣装",

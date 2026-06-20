@@ -38,6 +38,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "1 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "12:45",
       absent: ["城月菜央"],
       meetAndGreet: {
@@ -74,6 +75,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "15:45",
       absent: ["城月菜央", "東山恵里沙"],
       meetAndGreet: {
