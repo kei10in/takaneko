@@ -8,7 +8,14 @@ import {
   BsPinMap,
   BsSearch,
 } from "react-icons/bs";
-import { Link, MetaFunction, useLoaderData, useSearchParams } from "react-router";
+import { useEffect, useMemo, useState } from "react";
+import {
+  Link,
+  MetaFunction,
+  ShouldRevalidateFunctionArgs,
+  useLoaderData,
+  useSearchParams,
+} from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageBox, pageHeading } from "~/components/styles";
 import { Setlist } from "~/features/events/components/Setlist";
@@ -47,21 +54,61 @@ export const loader = async () => {
   return { events, options };
 };
 
+export const shouldRevalidate = ({
+  currentUrl,
+  nextUrl,
+  defaultShouldRevalidate,
+}: ShouldRevalidateFunctionArgs) => {
+  if (currentUrl.pathname == nextUrl.pathname) {
+    return false;
+  }
+
+  return defaultShouldRevalidate;
+};
+
 export default function Component() {
   const { events, options } = useLoaderData<typeof loader>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const filters = searchFiltersFromParams(searchParams);
-  const results = filterSetlistEvents(events, filters);
-  const totalSongCount = results.reduce((sum, result) => sum + result.event.songCount, 0);
+  const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
+  const [query, setQuery] = useState(filters.q);
+  const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
+  const totalSongCount = useMemo(
+    () => results.reduce((sum, result) => sum + result.event.songCount, 0),
+    [results],
+  );
+
+  useEffect(() => {
+    const timeout = window.setTimeout(() => setQuery(filters.q), 0);
+    return () => window.clearTimeout(timeout);
+  }, [filters.q]);
+
+  const commitSearch = () => {
+    const next = new URLSearchParams(searchParams);
+    const q = query.trim();
+    if (q == "") {
+      next.delete("q");
+    } else {
+      next.set("q", q);
+    }
+
+    setSearchParams(next, {
+      preventScrollReset: true,
+      defaultShouldRevalidate: false,
+    });
+  };
 
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
     const next = new URLSearchParams(searchParams);
+
     if (value == "" || (key == "status" && value == "all")) {
       next.delete(key);
     } else {
       next.set(key, value);
     }
-    setSearchParams(next, { preventScrollReset: true });
+    setSearchParams(next, {
+      preventScrollReset: true,
+      defaultShouldRevalidate: false,
+    });
   };
 
   return (
@@ -80,18 +127,35 @@ export default function Component() {
         </div>
 
         <div className="mt-8 space-y-4 rounded-lg border border-gray-200 bg-white p-4">
-          <label className="block">
-            <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
-            <span className="flex items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-              <BsSearch className="flex-none text-gray-400" />
-              <input
-                className="min-w-0 flex-1 outline-none"
-                value={filters.q}
-                onChange={(event) => updateFilter("q", event.currentTarget.value)}
-                placeholder="イベント名、曲名、会場、地域、衣装"
-              />
-            </span>
-          </label>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              commitSearch();
+            }}
+          >
+            <label className="block" htmlFor="setlist-search-query">
+              <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
+              <span className="flex items-stretch gap-2">
+                <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
+                  <BsSearch className="flex-none text-gray-400" />
+                  <input
+                    id="setlist-search-query"
+                    className="min-w-0 flex-1 outline-none"
+                    value={query}
+                    onChange={(event) => setQuery(event.currentTarget.value)}
+                    placeholder="イベント名、曲名、会場、地域、衣装"
+                  />
+                </span>
+                <button
+                  type="submit"
+                  className="flex flex-none items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
+                >
+                  <BsSearch />
+                  <span>検索</span>
+                </button>
+              </span>
+            </label>
+          </form>
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             <SelectFilter
