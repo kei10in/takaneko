@@ -12,7 +12,7 @@ export const CostumeCard: React.FC<Props> = (props: Props) => {
 
   return (
     <Link className="block h-full overflow-hidden" to={`./${costume.slug}`}>
-      <div className="aspect-4/3 w-full bg-gray-50 rounded-lg transition shadow-sm hover:shadow-md overflow-hidden">
+      <div className="aspect-4/3 w-full overflow-hidden rounded-lg bg-gray-50 shadow-sm transition hover:shadow-md">
         {image ? (
           <img
             src={image}
@@ -20,7 +20,7 @@ export const CostumeCard: React.FC<Props> = (props: Props) => {
             className="h-full w-full object-cover object-center"
           />
         ) : (
-          <div className="flex h-full  w-full items-center justify-center bg-gray-100">
+          <div className="flex h-full w-full items-center justify-center bg-gray-100">
             <GiAmpleDress className="h-12 w-12 text-gray-300" />
           </div>
 

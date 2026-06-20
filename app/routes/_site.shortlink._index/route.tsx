@@ -8,8 +8,8 @@ import {
 } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
+import { formatTitle } from "~/utils/htmlHeader";
 import { shortlink, ShortLinkResult } from "~/utils/shortlink";
 
 export const meta: MetaFunction = () => {

@@ -1,8 +1,8 @@
 import { MetaFunction } from "react-router";
 import { SharableUrl } from "~/components/SharableUrl";
 import { pageBox, pageHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [

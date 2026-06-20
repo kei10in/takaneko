@@ -2,12 +2,12 @@ import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [

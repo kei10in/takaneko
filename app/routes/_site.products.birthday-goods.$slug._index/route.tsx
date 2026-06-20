@@ -2,9 +2,9 @@ import { MetaFunction, useParams } from "react-router";
 import { ImageSlide2 } from "~/components/ImageSlide2";
 import { Markdown } from "~/components/Markdown";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { BirthdayGoodsCollection } from "~/features/products/product";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = ({ params }) => {
   const slug = params.slug;

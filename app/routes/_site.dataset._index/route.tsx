@@ -2,8 +2,8 @@ import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { formatDataSize } from "~/utils/dataSize";
+import { formatTitle } from "~/utils/htmlHeader";
 import type { Route } from "./+types/route";
 import { DatasetMeta } from "./types";
 

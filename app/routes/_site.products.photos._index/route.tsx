@@ -1,7 +1,7 @@
 import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { PHOTOS } from "~/features/products/photos";
+import { formatTitle } from "~/utils/htmlHeader";
 import { ProductCard } from "../../components/ProductCard";
 
 export const meta: MetaFunction = () => {

@@ -2,9 +2,9 @@ import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
   return [

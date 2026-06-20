@@ -1,5 +1,12 @@
 import { describe, expect, expectTypeOf, it } from "vitest";
-import { Err, Ok, ResultAccessError, type Err as ErrType, type Ok as OkType, type Result } from "~/utils/result";
+import {
+  Err,
+  Ok,
+  ResultAccessError,
+  type Err as ErrType,
+  type Ok as OkType,
+  type Result,
+} from "~/utils/result";
 
 describe("Result", () => {
   it("should narrow by ok property", () => {
