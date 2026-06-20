@@ -1,7 +1,7 @@
 import { Act } from "~/features/events/act";
 import { EventStatus } from "~/features/events/eventMeta";
-import { LiveType } from "~/features/events/EventType";
 import { EventModule } from "~/features/events/eventModule";
+import { LiveType } from "~/features/events/EventType";
 import { Segment } from "~/features/events/setlist";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LinkDescription } from "~/utils/types/LinkDescription";
@@ -92,7 +92,12 @@ export const buildSetlistEvents = (
         return [];
       }
 
-      const acts = meta.acts.length == 0 ? [emptySetlistAct()] : meta.acts.map(makeSetlistAct);
+      const acts =
+        meta.acts.length == 0
+          ? [emptySetlistAct()]
+          : meta.acts
+              .filter((act) => act.types.includes("LIVE") && act.status == undefined)
+              .map(makeSetlistAct);
       const songCount = acts.reduce((sum, act) => sum + act.songCount, 0);
       const hasSetlist = acts.some((act) => act.hasSetlist);
       const hasMissingSetlist = acts.some((act) => !act.hasSetlist);
@@ -119,7 +124,7 @@ export const buildSetlistEvents = (
           region: meta.region,
           location: meta.location,
           acts,
-          actCount: meta.acts.length,
+          actCount: acts.length,
           songCount,
           hasSetlist,
           hasMissingSetlist,
@@ -153,7 +158,8 @@ export const filterSetlistEvents = (
       return [];
     }
 
-    const eventMatchesQuery = tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
+    const eventMatchesQuery =
+      tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
     const matchedActIndexes = event.acts.flatMap((act, index) => {
       const songMatches = filters.song == "" || act.songTitles.includes(filters.song);
       if (!songMatches) {
@@ -161,8 +167,7 @@ export const filterSetlistEvents = (
       }
 
       const combinedSearchText = `${event.eventSearchText} ${act.searchText}`;
-      const actMatchesQuery =
-        eventMatchesQuery || containsAllTokens(combinedSearchText, tokens);
+      const actMatchesQuery = eventMatchesQuery || containsAllTokens(combinedSearchText, tokens);
       if (!actMatchesQuery) {
         return [];
       }
