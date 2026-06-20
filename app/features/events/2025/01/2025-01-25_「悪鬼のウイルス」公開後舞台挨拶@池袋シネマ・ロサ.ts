@@ -21,9 +21,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2456168",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-01-18",
 };
 

@@ -12,9 +12,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/1760301396505895155",
     },
   ],
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2026-03-21",
 };
 

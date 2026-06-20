@@ -18,9 +18,7 @@ export const meta: EventMetaDescriptor = {
     text: "超十代公式 TikTok",
     url: "https://www.tiktok.com/@chojudai",
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

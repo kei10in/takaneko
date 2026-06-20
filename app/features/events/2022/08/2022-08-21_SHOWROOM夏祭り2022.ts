@@ -16,9 +16,7 @@ export const meta: EventMetaDescriptor = {
     text: "イベント公式 HP",
     url: "https://award.showroom-live.com/summer2022/",
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

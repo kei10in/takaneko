@@ -36,9 +36,7 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
   showNotes: {
     played: ["美しく生きろ"],
   },

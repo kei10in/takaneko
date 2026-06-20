@@ -25,9 +25,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "https://ch.chara-ani.com/",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-07-19",
 };
 

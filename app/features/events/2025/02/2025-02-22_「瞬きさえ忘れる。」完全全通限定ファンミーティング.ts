@@ -23,9 +23,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   costume: "T シャツ (瞬きさえ忘れる ver.) + コーチジャケット (瞬きさえ忘れる ver.)",
   updatedAt: "2026-04-02",
 };

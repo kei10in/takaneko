@@ -12,9 +12,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/radioinews/status/1646425579431030787",
     },
   ],
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

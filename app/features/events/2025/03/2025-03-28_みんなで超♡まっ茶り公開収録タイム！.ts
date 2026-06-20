@@ -23,9 +23,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "https://tiget.net/events/388127",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-03-21",
 };
 
