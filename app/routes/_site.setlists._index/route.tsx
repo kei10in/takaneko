@@ -20,13 +20,12 @@ import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageBox, pageHeading } from "~/components/styles";
 import { Setlist } from "~/features/events/components/Setlist";
 import { Events } from "~/features/events/events";
-import { liveTypeColor } from "~/features/events/EventType";
+import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
 import {
   buildSetlistEvents,
   buildSetlistFilterOptions,
   defaultSetlistSearchFilters,
   filterSetlistEvents,
-  liveTypeLabel,
   SetlistEvent,
   SetlistLiveFilters,
   SetlistLiveFilterType,

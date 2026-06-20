@@ -265,25 +265,6 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
   };
 };
 
-export const liveTypeLabel = (liveType: LiveType): string => {
-  switch (liveType) {
-    case "SOLO":
-      return "ワンマン";
-    case "HOSTED":
-      return "主催";
-    case "JOINT":
-      return "対バン";
-    case "GUEST":
-      return "ゲスト";
-    case "FESTIVAL":
-      return "フェス";
-    case "EVENT_LIVE":
-      return "イベント出演";
-    case "RELEASE_EVENT":
-      return "リリースイベント";
-  }
-};
-
 export const normalizeSearchText = (text: string): string => {
   return text.normalize("NFKC").toLocaleLowerCase("ja-JP").replace(/\s+/g, " ").trim();
 };
