@@ -6,7 +6,14 @@ import { MemberIdEnum } from "../profile/types";
 import { parseSetlist } from "./setlist";
 import { MeetAngGreetLanesList } from "./timeSchedule";
 
-export const ActTypeEnum = z.enum(["LIVE", "MEET_AND_GREET", "RUNWAY", "OTHER"]);
+export const ActTypeEnum = z.enum([
+  "LIVE",
+  "MEET_AND_GREET",
+  "RUNWAY",
+  "TALK",
+  "SCREENING",
+  "OTHER",
+]);
 
 export const ActType = ActTypeEnum.enum;
 export type ActType = z.infer<typeof ActTypeEnum>;
