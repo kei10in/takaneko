@@ -7,7 +7,7 @@ import {
   DisclosurePanel,
 } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   BsBoxArrowUpRight,
   BsCalendar,
@@ -80,7 +80,6 @@ export default function Component() {
   const { events } = useLoaderData<typeof loader>();
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
-  const [query, setQuery] = useState(filters.q);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
   const totalSongCount = useMemo(
@@ -89,14 +88,9 @@ export default function Component() {
   );
   const activeFilterCount = activeSetlistFilterCount(filters);
 
-  useEffect(() => {
-    const timeout = window.setTimeout(() => setQuery(filters.q), 0);
-    return () => window.clearTimeout(timeout);
-  }, [filters.q]);
-
-  const commitSearch = () => {
+  const commitSearch = (inputQuery: string) => {
     const next = new URLSearchParams(searchParams);
-    const q = query.trim();
+    const q = inputQuery.trim();
     if (q == "") {
       next.delete("q");
     } else {
@@ -124,7 +118,6 @@ export default function Component() {
   };
 
   const resetFilters = () => {
-    setQuery("");
     setSearchParams(new URLSearchParams(), {
       preventScrollReset: true,
       defaultShouldRevalidate: false,
@@ -164,10 +157,9 @@ export default function Component() {
 
         <div className="mt-8 hidden rounded-lg border border-gray-200 bg-white p-4 sm:block">
           <SetlistFilterForm
+            searchFormId="setlist-search-form"
             searchInputId="setlist-search-query"
             filters={filters}
-            query={query}
-            onQueryChange={setQuery}
             onSearch={commitSearch}
             onFilterChange={updateFilter}
           />
@@ -194,12 +186,11 @@ export default function Component() {
               </div>
 
               <SetlistFilterForm
+                searchFormId="setlist-search-form-mobile"
                 searchInputId="setlist-search-query-mobile"
                 filters={filters}
-                query={query}
-                onQueryChange={setQuery}
-                onSearch={() => {
-                  commitSearch();
+                onSearch={(q) => {
+                  commitSearch(q);
                   setIsFilterDialogOpen(false);
                 }}
                 onFilterChange={updateFilter}
@@ -214,12 +205,9 @@ export default function Component() {
                   クリア
                 </button>
                 <button
-                  type="button"
+                  type="submit"
+                  form="setlist-search-form-mobile"
                   className="h-11 rounded-md bg-nadeshiko-800 text-sm font-semibold text-white"
-                  onClick={() => {
-                    commitSearch();
-                    setIsFilterDialogOpen(false);
-                  }}
                 >
                   結果を見る
                 </button>
@@ -256,28 +244,29 @@ export default function Component() {
 }
 
 interface SetlistFilterFormProps {
+  searchFormId: string;
   searchInputId: string;
   filters: SetlistSearchFilters;
-  query: string;
-  onQueryChange: (query: string) => void;
-  onSearch: () => void;
+  onSearch: (query: string) => void;
   onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
 }
 
 const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
+  searchFormId,
   searchInputId,
   filters,
-  query,
-  onQueryChange,
   onSearch,
   onFilterChange,
 }: SetlistFilterFormProps) => {
   return (
     <div className="space-y-4">
       <form
+        id={searchFormId}
         onSubmit={(event) => {
           event.preventDefault();
-          onSearch();
+          const formData = new FormData(event.currentTarget);
+          const q = formData.get("q");
+          onSearch(typeof q == "string" ? q : "");
         }}
       >
         <label className="block" htmlFor={searchInputId}>
@@ -286,10 +275,11 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
             <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
               <BsSearch className="flex-none text-gray-400" />
               <input
+                key={`${searchInputId}:${filters.q}`}
                 id={searchInputId}
+                name="q"
                 className="min-w-0 flex-1 outline-none"
-                value={query}
-                onChange={(event) => onQueryChange(event.currentTarget.value)}
+                defaultValue={filters.q}
                 placeholder="イベント名、曲名、会場、地域、衣装"
               />
             </span>
