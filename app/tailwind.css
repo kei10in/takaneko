@@ -152,6 +152,11 @@
   }
 }
 
+@utility graceful-button {
+  @apply w-fit rounded-full px-8 py-2 font-semibold text-nadeshiko-50;
+  @apply bg-linear-50 from-nadeshiko-800/60 from-0% via-nadeshiko-800 via-40% to-nadeshiko-800/30 to-100%;
+}
+
 @utility graceful-selected-item {
   @apply font-semibold text-white/95;
   @apply bg-linear-50 from-nadeshiko-800/90 from-0% via-nadeshiko-800 via-50% to-nadeshiko-800/50 to-100%;

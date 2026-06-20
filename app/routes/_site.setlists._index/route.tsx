@@ -281,7 +281,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
             </span>
             <button
               type="submit"
-              className="flex flex-none items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
+              className="flex graceful-button flex-none items-center gap-1 rounded-full px-4 text-sm font-semibold"
             >
               <BsSearch />
               <span>検索</span>
