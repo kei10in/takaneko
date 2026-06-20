@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "FC限定 X'mas だって可愛いって言われたい♡お楽しみ会",
+      types: ["LIVE"],
       setlist: [
         "衣装:2022 サンタ衣装",
         "赤鼻のトナカイ: 城月菜央、春野莉々、東山恵里沙、松本ももな、籾山ひめり",
@@ -41,6 +42,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "聖夜の約束ー！LIVE",
+      types: ["LIVE"],
       setlist: [
         "衣装:アンチファン衣装",
         "Overture",

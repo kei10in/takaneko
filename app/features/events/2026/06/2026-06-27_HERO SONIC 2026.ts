@@ -50,6 +50,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "メインステージ FIRST THREAD",
+    types: ["LIVE"],
     start: "15:55",
     end: "16:30",
     setlist: [],

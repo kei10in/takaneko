@@ -36,6 +36,8 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticket.rakuten.co.jp/music/jpop/idle/RTPYITF/",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
+    status: "WITHDRAWN",
     start: "20:25",
     end: "20:50",
     url: "",

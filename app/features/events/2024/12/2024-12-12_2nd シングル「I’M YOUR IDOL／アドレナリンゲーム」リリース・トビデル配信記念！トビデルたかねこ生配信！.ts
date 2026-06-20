@@ -26,6 +26,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://lin.ee/AhFRyzZ/lntl/pr",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: I’M YOUR IDOL 衣装",
       "I’M YOUR IDOL",

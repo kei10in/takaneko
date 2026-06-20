@@ -14,6 +14,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 城月菜央, 籾山ひめり",
       "衣装: I’M YOUR IDOL 衣装",

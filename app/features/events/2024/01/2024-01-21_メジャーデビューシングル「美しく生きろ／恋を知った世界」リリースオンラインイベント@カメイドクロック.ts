@@ -23,6 +23,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       start: "11:00",
       setlist: [
         "衣装:美しく生きろ衣装",
@@ -37,6 +38,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第一部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "美しく生きろ衣装",
         lanes: [
@@ -53,6 +55,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       start: "13:30",
       setlist: [
         "衣装:美しく生きろ衣装",
@@ -67,6 +70,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "美しく生きろ衣装",
         lanes: [

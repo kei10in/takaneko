@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 松本ももな、涼海すう",
         "衣装:ホワイトサンタ 2023 衣装",
@@ -39,6 +40,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 星谷美来、城月菜央",
         "衣装:ホワイトサンタ 2023 衣装",

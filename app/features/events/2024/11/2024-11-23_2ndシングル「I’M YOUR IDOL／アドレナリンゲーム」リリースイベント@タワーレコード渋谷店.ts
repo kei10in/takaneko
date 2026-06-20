@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: [
     {
+      types: ["LIVE"],
       open: "18:30",
       start: "19:00",
       setlist: [
@@ -34,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "全員握手会",
+      types: ["MEET_AND_GREET"],
       start: "20:00",
       meetAndGreet: {
         costume: "I’M YOUR IDOL 衣装",

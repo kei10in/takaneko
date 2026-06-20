@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 籾山ひめり、涼海すう",
       "衣装:「初恋のひと。」制服衣装",

@@ -31,24 +31,28 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部",
+      types: ["SCREENING"],
       open: "11:00",
       start: "11:20",
       end: "12:06",
     },
     {
       title: "2 部",
+      types: ["SCREENING"],
       open: "13:30",
       start: "13:50",
       end: "14:35",
     },
     {
       title: "3 部",
+      types: ["SCREENING"],
       open: "16:00",
       start: "16:20",
       end: "17:05",
     },
     {
       title: "4 部",
+      types: ["SCREENING"],
       open: "18:30",
       start: "18:50",
       end: "19:35",

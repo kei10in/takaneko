@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
   ],
   present: ["高嶺のなでしこ"],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: わたし色に染まれ衣装",
       "美しく生きろ",

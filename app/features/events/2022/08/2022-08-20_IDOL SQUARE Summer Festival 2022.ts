@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装: アンチファン衣装", "アンチファン", "誇り高きアイドル", "MC"],
     url: "https://x.com/Mikuru_hositani/status/1560888817208283137",
     links: [

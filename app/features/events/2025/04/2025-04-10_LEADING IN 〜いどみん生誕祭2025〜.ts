@@ -29,6 +29,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketvillage.jp/events/13305",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     start: "18:20",
     end: "18:50",
     setlist: [

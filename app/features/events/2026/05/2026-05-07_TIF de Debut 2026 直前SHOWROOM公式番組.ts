@@ -36,12 +36,7 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [
-    {
-      setlist: [],
-      url: "",
-    },
-  ],
+  acts: [],
   updatedAt: "2026-05-07",
 };
 

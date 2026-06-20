@@ -32,6 +32,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://live.tv.rakuten.co.jp/content/503647/",
   },
   acts: {
+    types: ["LIVE"],
     start: "19:40",
     end: "20:10",
     setlist: [

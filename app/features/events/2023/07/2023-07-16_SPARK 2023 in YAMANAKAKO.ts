@@ -17,11 +17,13 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "YANAGI STAGE",
+      types: ["LIVE"],
       setlist: ["衣装:全国お招きツアー衣装", "初恋のひと。", "月曜日の憂鬱", "ファンサ"],
       url: "https://x.com/Mikuru_hositani/status/1680503297944199168",
     },
     {
       title: "BOTAN STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "革命の女王",

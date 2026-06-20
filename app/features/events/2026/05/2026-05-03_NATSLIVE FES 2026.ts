@@ -31,6 +31,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "初恋キッチン。体育館で会お。",
+    types: ["OTHER"],
     description: "初恋食材をかけたクッキング大運動会",
     start: "12:45",
     end: "13:45",

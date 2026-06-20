@@ -30,6 +30,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketdive.com/event/0703_fave",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     start: "20:25",
     end: "21:00",
     setlist: [

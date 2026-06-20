@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://poppinbase.info/news/72/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:2025 春衣装",
       "可愛くてごめん",

@@ -51,6 +51,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "PRINCESS STAGE",
+    types: ["LIVE"],
     start: "19:50",
     end: "20:20",
     setlist: [

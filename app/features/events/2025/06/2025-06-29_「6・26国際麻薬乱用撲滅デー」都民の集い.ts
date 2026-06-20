@@ -30,6 +30,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 2025 春衣装",
       "初恋のひと。",

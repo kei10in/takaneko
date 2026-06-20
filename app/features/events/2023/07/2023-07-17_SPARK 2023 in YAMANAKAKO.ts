@@ -17,11 +17,13 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "KIKU STAGE",
+      types: ["LIVE"],
       setlist: ["衣装:「初恋のひと。」制服衣装", "月曜日の憂鬱", "僕は君になれない", "ファンサ"],
       url: "https://x.com/Mikuru_hositani/status/1680828053872852993",
     },
     {
       title: "SPARK STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "決戦スピリット",

@@ -26,6 +26,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 2025 春衣装",
       "僕は君になれない",

@@ -33,6 +33,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticket.rakuten.co.jp/music/rt0maao/",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     start: "20:40",
     end: "21:00",
     setlist: [

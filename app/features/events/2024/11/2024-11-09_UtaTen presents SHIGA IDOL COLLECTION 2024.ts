@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
   ],
   absent: ["橋本桃呼"],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "可愛くてごめん",

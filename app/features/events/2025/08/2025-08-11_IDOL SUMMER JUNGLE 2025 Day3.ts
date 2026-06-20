@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "TIGER STAGE",
+    types: ["LIVE"],
     start: "19:30",
     end: "19:55",
     setlist: [

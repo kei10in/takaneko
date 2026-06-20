@@ -19,6 +19,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://takanenonadeshiko.jp/高嶺のなでしこ「たかねこフェス〜オータムセッ/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "会いにKiTE! (iLiFE! cover)",

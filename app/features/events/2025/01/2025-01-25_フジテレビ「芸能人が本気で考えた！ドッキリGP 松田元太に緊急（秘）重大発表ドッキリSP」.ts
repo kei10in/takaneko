@@ -20,9 +20,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-01-25",
 };
 

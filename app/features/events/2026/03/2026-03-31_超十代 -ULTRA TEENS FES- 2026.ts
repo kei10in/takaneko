@@ -36,6 +36,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "3rd STAGE 内 スペシャル LIVE ステージ",
+    types: ["LIVE"],
     start: "18:40",
     setlist: ["衣装:見上げるたびに、恋をする。衣装", "可愛くてごめん", "ファンサ", "美しく生きろ"],
     links: ["https://x.com/takanenofficial/status/2038972794462228965"],

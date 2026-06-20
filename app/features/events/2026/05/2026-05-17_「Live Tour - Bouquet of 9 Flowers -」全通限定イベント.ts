@@ -34,6 +34,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 涼海すう、葉月紗蘭",
         "Overture",
@@ -72,6 +73,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "撮影会 & お見送り",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "T シャツ (Bouquet of 9 Flowers ver.)",
         lanes: [],

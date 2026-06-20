@@ -31,6 +31,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       start: "14:00",
       setlist: [
         "衣装:2025 夏衣装",
@@ -69,6 +70,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       open: "18:20",
       start: "19:00",
       setlist: [

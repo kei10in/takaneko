@@ -16,9 +16,7 @@ export const meta: EventMetaDescriptor = {
     text: "ティザー動画",
     url: "https://x.com/takanenofficial/status/1859914724961350042",
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

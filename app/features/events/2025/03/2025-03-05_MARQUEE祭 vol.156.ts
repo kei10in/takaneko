@@ -33,6 +33,7 @@ export const meta: EventMetaDescriptor = {
     lineup: ["ミニフォトカード「ピンク衣装」"],
   },
   acts: {
+    types: ["LIVE"],
     start: "19:25",
     end: "19:50",
     setlist: [

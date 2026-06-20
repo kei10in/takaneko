@@ -29,6 +29,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装:T シャツ (MILK JAPAN)", "いつか私がママになったら"],
   },
   updatedAt: "2025-06-15",

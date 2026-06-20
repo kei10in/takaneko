@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "Suupeas / 籾山ひめりコラボ ",
+      types: ["LIVE"],
       setlist: ["衣装:パジャマ", "アイム・ノット・プリンセス"],
       links: [
         {
@@ -45,6 +46,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "ステージ",
+      types: ["LIVE"],
       setlist: [
         "衣装:わたし色に染まれ衣装",
         "可愛くてごめん",

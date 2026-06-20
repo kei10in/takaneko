@@ -44,6 +44,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     start: "19:00",
     end: "19:25",
     setlist: [

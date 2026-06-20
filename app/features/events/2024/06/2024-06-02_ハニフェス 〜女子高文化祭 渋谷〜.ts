@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "全員",
+      types: ["LIVE"],
       setlist: ["衣装: 「センパイ。」制服衣装", "センパイ。"],
       links: [
         {
@@ -28,6 +29,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "高嶺のなでしこブロック",
+      types: ["LIVE"],
       setlist: [
         "衣装: 「センパイ。」制服衣装",
         "美しく生きろ",
@@ -45,6 +47,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "アンコール 全員",
+      types: ["LIVE"],
       setlist: ["衣装: 「センパイ。」制服衣装", "金曜日のおはよう"],
       links: [
         {

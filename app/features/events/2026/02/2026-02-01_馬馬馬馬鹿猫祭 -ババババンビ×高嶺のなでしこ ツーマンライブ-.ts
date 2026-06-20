@@ -41,6 +41,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2017579869014790645",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:2025 春衣装",
       "可愛くてごめん",

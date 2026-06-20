@@ -29,6 +29,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:美しく生きろ衣装",
       "初恋のひと。",

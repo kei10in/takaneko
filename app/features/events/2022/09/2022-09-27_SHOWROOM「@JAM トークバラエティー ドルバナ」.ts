@@ -28,9 +28,7 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2026-03-13",
 };
 

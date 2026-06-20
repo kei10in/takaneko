@@ -35,27 +35,32 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "sugar nine ブース トークショー",
+      types: ["TALK"],
       start: "14:15",
       links: ["https://x.com/kan_kore/status/2037455837459780014"],
     },
     {
       title: "ALICE and the PIRATES ランウェイ",
+      types: ["RUNWAY"],
       description: "白黒のゴシックロリータ衣装でランウェイに登場。",
       links: [{ text: "YouTube", url: "https://www.youtube.com/watch?v=vnYoPEPFCFw" }],
     },
     {
       title: "BABY, THE STARS SHINE BRIGHT ランウェイ",
+      types: ["RUNWAY"],
       description: "ピンクのロリータ衣装でランウェイに登場。",
       links: [{ text: "YouTube", url: "https://www.youtube.com/watch?v=U1cuqDSEIec" }],
     },
     {
       title: "SHEIN スペシャルステージ ランウェイ",
+      types: ["RUNWAY"],
       description:
         "グレーの長袖トップス、白のミニスカート、腰に赤地に白ドットのリボンを巻き、赤いバッグを持ったスタイリングで登場。",
       links: [{ text: "YouTube", url: "https://www.youtube.com/watch?v=WW1Sk8qXnXg" }],
     },
     {
       title: "グランドフィナーレ",
+      types: ["RUNWAY"],
     },
   ],
   updatedAt: "2026-04-05",

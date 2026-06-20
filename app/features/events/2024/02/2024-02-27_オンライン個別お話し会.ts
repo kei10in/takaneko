@@ -14,9 +14,7 @@ export const meta: EventMetaDescriptor = {
       ref: "",
     },
   ],
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

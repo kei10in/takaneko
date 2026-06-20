@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 松本ももな、東山恵里沙",
         "衣装:わたし色に染まれ衣装",
@@ -42,6 +43,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 葉月紗蘭、城月菜央",
         "衣装:T シャツ (2nd ファンミ ver.)",

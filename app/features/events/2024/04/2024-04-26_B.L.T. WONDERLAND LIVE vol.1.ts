@@ -16,6 +16,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:僕は君になれない衣装",
       "女の子は強い",

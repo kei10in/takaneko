@@ -50,12 +50,14 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1部 公開収録",
+      types: ["PUBLIC RECORDING"],
       start: "13:30",
       end: "13:50",
       url: "",
     },
     {
       title: "2部 LIVE",
+      types: ["LIVE"],
       start: "19:25",
       end: "19:50",
       setlist: [

@@ -40,6 +40,7 @@ export const meta: EventMetaDescriptor = {
     lineup: ["ミニフォトカード「ピンク衣装」"],
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: わたし色に染まれ衣装",
       "女の子は強い",

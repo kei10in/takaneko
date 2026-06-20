@@ -27,10 +27,7 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    setlist: [],
-    url: "",
-  },
+  acts: [],
   costume: "見上げるたびに、恋をする。衣装",
   updatedAt: "2026-04-03",
 };

@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "https://eplus.jp/kannaidevil2025/",
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: ピンク衣装",
       "可愛くてごめん",

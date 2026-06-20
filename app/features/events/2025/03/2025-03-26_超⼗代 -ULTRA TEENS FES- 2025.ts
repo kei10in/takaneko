@@ -49,6 +49,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装: ピンク衣装", "可愛くてごめん", "初恋のひと。", "ファンサ"],
     url: "https://x.com/Mikuru_hositani/status/1904845616813138164",
   },

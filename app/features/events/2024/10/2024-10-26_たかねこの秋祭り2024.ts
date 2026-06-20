@@ -11,11 +11,13 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "第一部",
+      types: ["LIVE"],
       setlist: ["衣装:高嶺のなでしこ 2024 衣装"],
       url: "",
     },
     {
       title: "第二部",
+      types: ["LIVE"],
       setlist: [
         "衣装:高嶺のなでしこ 2024 衣装",
         "革命の女王",

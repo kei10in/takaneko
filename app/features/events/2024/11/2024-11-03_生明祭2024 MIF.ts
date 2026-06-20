@@ -12,6 +12,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.instagram.com/p/DA01PBXSgdo/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "センパイ。",

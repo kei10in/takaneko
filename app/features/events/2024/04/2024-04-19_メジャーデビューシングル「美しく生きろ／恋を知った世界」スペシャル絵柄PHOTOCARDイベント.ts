@@ -19,9 +19,7 @@ export const meta: EventMetaDescriptor = {
     text: "公式ニュース",
     url: "https://takanenonadeshiko.jp/?p=1937",
   },
-  acts: {
-    url: "",
-  },
+  acts: [],
   // costume: "美しく生きろ衣装",
   updatedAt: "2026-03-21",
 };

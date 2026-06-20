@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://atjam.jp/event/detail/pgFh3robiIsVMIXQFsZj",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:アンチファン衣装",
       "アンチファン",

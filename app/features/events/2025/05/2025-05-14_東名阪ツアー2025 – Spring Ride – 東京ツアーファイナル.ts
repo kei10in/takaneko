@@ -28,6 +28,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://live.nicovideo.jp/watch/lv347719283",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 松本ももな、籾山ひめり",
       "衣装: 全国お招きツアー衣装",

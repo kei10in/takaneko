@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2015221878999359506",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:見上げるたびに、恋をする。衣装",
       "革命の女王",

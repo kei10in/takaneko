@@ -22,9 +22,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   showNotes: {
     played: ["Cute for life"],
   },

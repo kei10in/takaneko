@@ -25,6 +25,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://eplus.jp/takanenonadeshiko/",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 全国お招きツアー衣装",
       "影ナレ: 葉月紗蘭、東山恵里沙",

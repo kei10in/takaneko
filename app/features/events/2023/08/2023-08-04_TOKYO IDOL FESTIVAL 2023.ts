@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "HOT STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "決戦スピリット",
@@ -32,6 +33,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SMILE GARDEN",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "ころころガール",
@@ -42,6 +44,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "FESTIVAL STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:「初恋のひと。」制服衣装",
         "初恋のひと。",

@@ -45,6 +45,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "野外ステージ",
+      types: ["LIVE"],
       start: "16:25",
       end: "16:45",
       setlist: [
@@ -59,6 +60,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "Zepp Shinjuku",
+      types: ["LIVE"],
       start: "19:40",
       end: "20:10",
       setlist: [

@@ -19,6 +19,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://2023.idorisefes.jp/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:アンチファン衣装",
       "可愛くてごめん",

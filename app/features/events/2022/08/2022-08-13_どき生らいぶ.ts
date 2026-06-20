@@ -12,9 +12,7 @@ export const meta: EventMetaDescriptor = {
       ref: "",
     },
   ],
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-06-21",
 };
 

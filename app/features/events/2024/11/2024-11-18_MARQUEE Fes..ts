@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/MARQUEE_matsuri/status/1840949758497866212",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
       "可愛くてごめん",

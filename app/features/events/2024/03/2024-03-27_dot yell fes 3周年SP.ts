@@ -34,6 +34,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: 全国お招きツアー衣装",
       "革命の女王",

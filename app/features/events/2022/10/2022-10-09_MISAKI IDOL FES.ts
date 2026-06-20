@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   ],
   ticket: "https://t.livepocket.jp/e/pavi-misaki-idol-fes",
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:アンチファン衣装",
       "誇り高きアイドル",

@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "衣装:見上げるたびに、恋をする。衣装",
         "花は誓いを忘れない",
@@ -50,6 +51,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "見上げるたびに、恋をする。衣装",
         lanes: [

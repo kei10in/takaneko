@@ -45,6 +45,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/idolfeswithroar/status/1885994808889754073",
   },
   acts: {
+    types: ["LIVE"],
     start: "18:15",
     end: "18:40",
     setlist: [

@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "Spotify O-Crest",
+      types: ["LIVE"],
       setlist: [
         "衣装:高嶺のなでしこ 2024 衣装",
         "アンチファン",
@@ -55,6 +56,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "Spotify O-EAST",
+      types: ["LIVE"],
       setlist: [
         "衣装: ピンク衣装",
         "I’M YOUR IDOL",

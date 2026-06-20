@@ -18,9 +18,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ `

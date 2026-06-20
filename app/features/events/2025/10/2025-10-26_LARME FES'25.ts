@@ -42,6 +42,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部",
+      types: ["LIVE"],
       setlist: [
         "衣装: LARME Fes'25 衣装",
         "可愛くてごめん", // TVsize
@@ -58,14 +59,17 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "michellMacaron ステージ",
+      types: ["RUNWAY"],
       description: "出演: 🎀松本ももな",
     },
     {
       title: "YELLOW KAIWAI",
+      types: ["RUNWAY"],
       description: "出演: 💛城月菜央",
     },
     {
       title: "PINK KAIWAI",
+      types: ["RUNWAY"],
       description: "出演: 🎀松本ももな",
     },
   ],

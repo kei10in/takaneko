@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "ZOME ステージ",
+      types: ["LIVE"],
       setlist: ["衣装:全国お招きツアー衣装", "可愛くてごめん"],
       links: [
         {
@@ -27,6 +28,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "超ステージ",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "決戦スピリット",

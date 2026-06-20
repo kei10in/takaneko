@@ -17,6 +17,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "YANAGI STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "初恋のひと。",
@@ -28,6 +29,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SPARK STAGE",
+      types: ["LIVE"],
       setlist: [
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん",

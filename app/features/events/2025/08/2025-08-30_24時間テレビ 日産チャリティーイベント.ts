@@ -40,6 +40,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "LIVE & オークション",
+      types: ["LIVE"],
       description: "お宝オークションを開催予定",
       start: "18:00",
       end: "18:30",
@@ -56,6 +57,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "謎解きは怪奇！YesどんぐりRPGを救う！",
+      types: ["OTHER"],
       description: "出演メンバー: 城月菜央、橋本桃呼",
       start: "18:40",
       end: "18:50",

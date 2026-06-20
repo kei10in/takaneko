@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: [
     {
+      types: ["LIVE"],
       open: "16:00",
       start: "16:30",
       setlist: [
@@ -42,6 +43,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "17:20",
       meetAndGreet: {
         costume: "「I’M YOUR IDOL」MV 衣装",

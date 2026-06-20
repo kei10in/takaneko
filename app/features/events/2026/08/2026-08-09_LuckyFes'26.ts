@@ -34,6 +34,8 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: {
+    title: "GARDEN STAGE",
+    types: ["LIVE"],
     start: "13:20",
     end: "13:55",
     setlist: [],

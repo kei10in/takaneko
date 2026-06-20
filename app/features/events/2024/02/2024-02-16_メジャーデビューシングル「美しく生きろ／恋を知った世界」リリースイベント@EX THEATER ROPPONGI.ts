@@ -22,6 +22,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "3マンライブ終演後",
       meetAndGreet: {
         lanes: [
@@ -39,6 +40,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "抽選会",
+      types: ["OTHER"],
       description: `
         A賞: ソロチェキ (推しサイン入れ)
         

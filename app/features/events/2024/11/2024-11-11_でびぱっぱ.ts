@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/devilanthem/status/1834547727029666047",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装: わたし色に染まれ衣装",
       "初恋のひと。",

@@ -18,6 +18,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://inazumarock.com/2024/",
   },
   acts: {
+    types: ["LIVE"],
     setlist: [
       "衣装:わたし色に染まれ衣装",
       "可愛くてごめん",

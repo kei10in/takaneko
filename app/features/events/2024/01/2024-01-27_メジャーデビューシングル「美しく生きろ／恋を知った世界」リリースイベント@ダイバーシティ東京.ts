@@ -28,6 +28,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "ミニライブ",
+      types: ["LIVE"],
       setlist: [
         "衣装:美しく生きろ衣装",
         "可愛くてごめん",
@@ -42,6 +43,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "美しく生きろ衣装",
         lanes: [

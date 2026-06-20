@@ -23,9 +23,7 @@ export const meta: EventMetaDescriptor = {
   },
   ticket: "https://www.kansai-collection.net/ticket/",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
   updatedAt: "2025-08-06",
 };
 

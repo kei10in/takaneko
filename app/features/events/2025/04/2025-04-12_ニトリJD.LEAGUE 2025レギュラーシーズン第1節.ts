@@ -24,6 +24,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://t.pia.jp/pia/ticketInformation.do?eventCd=2508712&perfCd=001&rlsCd=002",
   streamings: undefined,
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装: 2025 春衣装", "可愛くてごめん", "美しく生きろ"],
     url: "",
   },

@@ -20,12 +20,15 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部 ミニライブ (中止)",
+      types: ["LIVE"],
+      status: "CANCELED",
       open: "11:40",
       start: "12:00",
       description: "中止",
     },
     {
       title: "1 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "12:00",
       description: "時間変更 12:45 → 12:00",
       meetAndGreet: {
@@ -44,12 +47,15 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 ミニライブ (中止)",
+      types: ["LIVE"],
+      status: "CANCELED",
       open: "14:40",
       start: "15:00",
       description: "中止",
     },
     {
       title: "2 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       start: "15:00",
       description: "時間変更 15:45 → 15:00",
       meetAndGreet: {

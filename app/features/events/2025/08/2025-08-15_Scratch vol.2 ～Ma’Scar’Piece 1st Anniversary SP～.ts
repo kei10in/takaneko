@@ -38,6 +38,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/1955974073663807803",
   },
   acts: {
+    types: ["LIVE"],
     start: "17:40",
     end: "18:10",
     setlist: [

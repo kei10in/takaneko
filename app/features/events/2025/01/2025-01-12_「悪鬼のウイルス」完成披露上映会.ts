@@ -33,9 +33,7 @@ export const meta: EventMetaDescriptor = {
   ],
   ticket: "https://w.pia.jp/t/demon-virus/",
   streamings: undefined,
-  acts: {
-    url: "",
-  },
+  acts: [],
 };
 
 export const content = /* md */ ``;

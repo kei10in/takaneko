@@ -14,6 +14,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: [
       "影ナレ: 橋本桃呼、日向端ひな",
       "衣装:わたし色に染まれ衣装",

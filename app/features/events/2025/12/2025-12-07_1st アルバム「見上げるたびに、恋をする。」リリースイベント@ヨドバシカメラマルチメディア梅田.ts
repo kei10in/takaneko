@@ -37,6 +37,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部 ミニライブ",
+      types: ["LIVE"],
       open: "12:10",
       start: "12:30",
       setlist: [
@@ -59,6 +60,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "1 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "見上げるたびに、恋をする。衣装",
         lanes: [
@@ -75,6 +77,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 ミニライブ",
+      types: ["LIVE"],
       open: "15:40",
       start: "16:00",
       setlist: [
@@ -92,6 +95,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 グループ握手会",
+      types: ["MEET_AND_GREET"],
       meetAndGreet: {
         costume: "見上げるたびに、恋をする。衣装",
         lanes: [

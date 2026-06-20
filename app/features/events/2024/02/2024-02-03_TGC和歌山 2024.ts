@@ -15,6 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: {
+    types: ["LIVE"],
     setlist: ["衣装:美しく生きろ衣装", "可愛くてごめん～美しく生きろ TGCスペシャルメドレー"],
     url: "https://x.com/Mikuru_hositani/status/1753697322146595323",
   },

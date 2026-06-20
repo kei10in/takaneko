@@ -49,6 +49,7 @@ export const meta: EventMetaDescriptor = {
     lineup: ["プロフィールカード"],
   },
   acts: {
+    types: ["LIVE"],
     start: "20:05",
     end: "20:35",
     setlist: [

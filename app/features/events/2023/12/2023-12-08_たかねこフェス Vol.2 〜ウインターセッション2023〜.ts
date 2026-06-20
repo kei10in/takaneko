@@ -17,11 +17,13 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "オープニング ステージ",
+      types: ["LIVE"],
       description: "各グループ一曲ずつ披露したあとに本編開始。",
       setlist: ["衣装:美しく生きろ衣装", "いつか私がママになったら"],
     },
     {
       title: "メイン ステージ",
+      types: ["LIVE"],
       setlist: [
         "衣装:美しく生きろ衣装",
         "美しく生きろ",

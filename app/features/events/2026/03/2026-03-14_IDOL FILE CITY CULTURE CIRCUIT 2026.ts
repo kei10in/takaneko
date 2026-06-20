@@ -43,6 +43,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: {
     title: "3rd Stage - FASHION STAGE",
+    types: ["RUNWAY"],
     start: "19:45",
     end: "20:15",
     url: "",
