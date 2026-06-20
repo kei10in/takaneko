@@ -35,6 +35,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "sugar nine ブース トークショー",
+      types: ["TALK"],
       start: "14:15",
       links: ["https://x.com/kan_kore/status/2037455837459780014"],
     },
@@ -59,6 +60,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "グランドフィナーレ",
+      types: ["RUNWAY"],
     },
   ],
   updatedAt: "2026-04-05",

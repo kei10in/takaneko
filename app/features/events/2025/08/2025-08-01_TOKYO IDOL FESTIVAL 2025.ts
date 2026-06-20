@@ -26,6 +26,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "INFO CENTRE",
+      types: ["TALK"],
       start: "10:15",
       end: "11:00",
       description: `
@@ -41,6 +42,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "INFO CENTRE",
+      types: ["TALK"],
       start: "11:50",
       end: "12:30",
       description: `
@@ -58,6 +60,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SMILE GARDEN",
+      types: ["OTHER"],
       start: "17:15",
       end: "17:45",
       description: `

@@ -20,6 +20,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1 部 ミニライブ (中止)",
+      status: "CANCELED",
       open: "11:40",
       start: "12:00",
       description: "中止",
@@ -45,6 +46,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "2 部 ミニライブ (中止)",
+      status: "CANCELED",
       open: "14:40",
       start: "15:00",
       description: "中止",

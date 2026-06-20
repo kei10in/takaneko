@@ -59,6 +59,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "UP-T HOT STAGE",
+      types: ["OTHER"],
       start: "19:55",
       end: "20:45",
       description: `

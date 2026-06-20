@@ -26,6 +26,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "INFO CENTRE",
+      types: ["TALK"],
       start: "14:05",
       end: "14:35",
       description: `

@@ -40,6 +40,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "抽選会",
+      types: ["OTHER"],
       description: `
         A賞: ソロチェキ (推しサイン入れ)
         

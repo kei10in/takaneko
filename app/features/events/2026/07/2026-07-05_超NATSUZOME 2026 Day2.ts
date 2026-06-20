@@ -36,6 +36,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "一曲入魂ステージ",
+      types: ["LIVE"],
       start: "11:50",
       end: "13:00",
       setlist: [],
@@ -43,6 +44,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "超ステージ",
+      types: ["LIVE"],
       start: "14:50",
       end: "15:10",
       setlist: [],
@@ -50,6 +52,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "SOMARIステージ",
+      types: ["LIVE"],
       start: "16:55",
       end: "17:10",
       setlist: [],

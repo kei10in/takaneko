@@ -57,6 +57,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "謎解きは怪奇！YesどんぐりRPGを救う！",
+      types: ["OTHER"],
       description: "出演メンバー: 城月菜央、橋本桃呼",
       start: "18:40",
       end: "18:50",

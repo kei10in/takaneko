@@ -65,6 +65,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "スペシャル生配信",
+      types: ["OTHER"],
       description: `
         橋本桃呼、東山恵里沙、籾山ひめり、松本ももなが出演しました。
         
