@@ -1,5 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { clsx } from "clsx";
+import { useEffect, useMemo, useState } from "react";
 import {
   BsBoxArrowUpRight,
   BsCalendar,
@@ -8,7 +9,6 @@ import {
   BsPinMap,
   BsSearch,
 } from "react-icons/bs";
-import { useEffect, useMemo, useState } from "react";
 import {
   Link,
   MetaFunction,
@@ -26,10 +26,10 @@ import {
   buildSetlistFilterOptions,
   defaultSetlistSearchFilters,
   filterSetlistEvents,
-  liveTypeFilterLabel,
   liveTypeLabel,
   SetlistEvent,
-  SetlistLiveTypeFilter,
+  SetlistLiveFilters,
+  SetlistLiveFilterType,
   SetlistSearchFilters,
   SetlistSearchStatus,
 } from "~/features/setlists/setlists";
@@ -123,8 +123,8 @@ export default function Component() {
         <div className="space-y-3">
           <h1 className={pageHeading()}>セットリスト</h1>
           <p className="max-w-3xl text-sm leading-7 text-gray-600">
-            開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から探せます。
-            1 部 / 2 部や複数ステージは、イベント内の公演ごとに分けて表示します。
+            開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から探せます。 1 部 / 2
+            部や複数ステージは、イベント内の公演ごとに分けて表示します。
           </p>
         </div>
 
@@ -170,10 +170,11 @@ export default function Component() {
               label="ライブ種別"
               value={filters.type}
               onChange={(value) => updateFilter("type", value)}
-              options={options.liveTypeFilters.map((filter) => ({
-                value: filter,
-                label: liveTypeFilterLabel(filter),
+              options={SetlistLiveFilters.map((filter) => ({
+                value: filter.name,
+                label: filter.display,
               }))}
+              includeAll={false}
             />
             <SelectFilter
               label="楽曲"
@@ -335,7 +336,7 @@ const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                 <section key={index} className="space-y-2">
                   {(event.acts.length > 1 || act.title != undefined) && (
                     <div className="flex items-center gap-2">
-                      <h3 className="min-w-0 flex-1 line-clamp-1 text-base font-semibold text-gray-700">
+                      <h3 className="line-clamp-1 min-w-0 flex-1 text-base font-semibold text-gray-700">
                         {act.title ?? `公演 ${index + 1}`}
                       </h3>
                       {showMatchedAct && matchedActIndexSet.has(index) && (
@@ -385,7 +386,7 @@ const searchFiltersFromParams = (params: URLSearchParams): SetlistSearchFilters 
   };
 };
 
-const parseLiveTypeFilter = (value: string | null): SetlistLiveTypeFilter | "" => {
+const parseLiveTypeFilter = (value: string | null): SetlistLiveFilterType | "" => {
   if (
     value == "solo" ||
     value == "hosted" ||
