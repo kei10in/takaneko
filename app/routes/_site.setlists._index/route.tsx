@@ -25,7 +25,6 @@ import {
   useLoaderData,
   useSearchParams,
 } from "react-router";
-import { Breadcrumb } from "~/components/Breadcrumb";
 import { pageBox, pageHeading } from "~/components/styles";
 import { Setlist } from "~/features/events/components/Setlist";
 import { Events } from "~/features/events/events";
@@ -126,10 +125,6 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <div className="px-4 py-1">
-        <Breadcrumb items={[{ label: "たかねこの", to: "/" }]} />
-      </div>
-
       <section className={pageBox("px-4")}>
         <div className="space-y-3">
           <h1 className={pageHeading()}>セットリスト</h1>
