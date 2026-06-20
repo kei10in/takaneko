@@ -50,6 +50,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "1部 公開収録",
+      types: ["PUBLIC RECORDING"],
       start: "13:30",
       end: "13:50",
       url: "",
