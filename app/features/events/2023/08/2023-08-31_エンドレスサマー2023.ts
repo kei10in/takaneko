@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "エンドレスサマー2023",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-08-31",
   region: "東京",
   location: "Spotify O-EAST",

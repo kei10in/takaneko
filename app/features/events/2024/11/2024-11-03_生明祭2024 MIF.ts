@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "生明祭 2024 MIF",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2024-11-03",
   location: "明治大学 生田キャンパス",
   region: "神奈川",

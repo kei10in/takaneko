@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Joy∞Stage - アイドル交差点・香港",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-10-18",
   open: "12:15",
   start: "12:45",

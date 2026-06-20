@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "STARRZ TOKYO 2025",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2025-09-23",
   open: "12:00",
   start: "12:45",

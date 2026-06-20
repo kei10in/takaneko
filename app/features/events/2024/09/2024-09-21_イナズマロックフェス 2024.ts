@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "イナズマロックフェス 2024",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-09-21",
   location: "烏丸半島芝生広場",
   region: "滋賀",

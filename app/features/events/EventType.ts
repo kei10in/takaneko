@@ -1,10 +1,15 @@
 import { z } from "zod/v4";
+import { assertNever } from "~/utils/assertNever";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
-  "EVENT", // 握手会・撮影会・サイン会など
+  "MEET_AND_GREET", // 握手会・撮影会・サイン会など
+  "RELEASE_EVENT", // CDリリースイベント
   "STREAMING", // SHOWROOM・YouTube Live など
-  "RELEASE",
+  "VARIETY", // 単独のバラエティイベント
+  "FASHION", // 明確な外部のファッションショーイベント。単独イベントには使わない。
+  "SALES_OPEN", // お話し会の受付など
+  "CD",
   "BIRTHDAY",
   "TV",
   "RADIO",
@@ -20,9 +25,13 @@ export type EventType = z.infer<typeof EventTypeEnum>;
 export const compareEventType = (a: EventType, b: EventType): number => {
   const order = [
     EventType.LIVE,
-    EventType.EVENT,
+    EventType.MEET_AND_GREET,
+    EventType.RELEASE_EVENT,
     EventType.STREAMING,
-    EventType.RELEASE,
+    EventType.VARIETY,
+    EventType.FASHION,
+    EventType.SALES_OPEN,
+    EventType.CD,
     EventType.BIRTHDAY,
     EventType.TV,
     EventType.RADIO,
@@ -39,11 +48,19 @@ export const eventTypeToEmoji = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "🎤";
-    case EventType.EVENT:
+    case EventType.MEET_AND_GREET:
       return "🌸";
+    case EventType.RELEASE_EVENT:
+      return "🚀";
     case EventType.STREAMING:
       return "🎥";
-    case EventType.RELEASE:
+    case EventType.VARIETY:
+      return "✨";
+    case EventType.FASHION:
+      return "👗";
+    case EventType.SALES_OPEN:
+      return "📋";
+    case EventType.CD:
       return "💿";
     case EventType.BIRTHDAY:
       return "🎂";
@@ -59,6 +76,8 @@ export const eventTypeToEmoji = (category: EventType): string => {
       return "📰";
     case EventType.OTHER:
       return "📅";
+    default:
+      assertNever(category);
   }
 };
 
@@ -66,11 +85,19 @@ export const eventTypeToColor = (category: EventType): string => {
   switch (category) {
     case EventType.LIVE:
       return "bg-nadeshiko-700";
-    case EventType.EVENT:
+    case EventType.MEET_AND_GREET:
+      return "bg-gray-800";
+    case EventType.RELEASE_EVENT:
       return "bg-gray-800";
     case EventType.STREAMING:
       return "bg-orange-400";
-    case EventType.RELEASE:
+    case EventType.VARIETY:
+      return "bg-purple-400";
+    case EventType.FASHION:
+      return "bg-pink-400";
+    case EventType.SALES_OPEN:
+      return "bg-gray-500";
+    case EventType.CD:
       return "bg-fuchsia-500";
     case EventType.BIRTHDAY:
       return "bg-red-600";
@@ -86,13 +113,18 @@ export const eventTypeToColor = (category: EventType): string => {
       return "bg-indigo-400";
     case EventType.OTHER:
       return "bg-amber-700";
+    default:
+      assertNever(category);
   }
 };
 
 export const LiveTypeEnum = z.enum([
   "SOLO", // ソロライブ
   "HOSTED", // 主催ライブ
-  "GUEST", // ゲスト出演
+  "JOINT", // 対バン・少数組の共同ライブ
+  "GUEST", // 他者の単独公演・ツアーへのゲスト出演
+  "FESTIVAL", // 音楽・アイドルライブを主目的にしたフェス・サーキット・多数組イベント
+  "EVENT_LIVE", // ファッションショーなど、ライブイベント以外の催しでのライブ出演
   "RELEASE_EVENT", // リリースイベント
 ]);
 
@@ -105,11 +137,32 @@ export const liveTypeColor = (liveType: LiveType | undefined): string => {
       return "bg-nadeshiko-700";
     case LiveType.HOSTED:
       return "bg-blue-300";
+    case LiveType.JOINT:
+      return "bg-amber-300";
     case LiveType.GUEST:
       return "bg-amber-300";
+    case LiveType.FESTIVAL:
+      return "bg-amber-400";
+    case LiveType.EVENT_LIVE:
+      return "bg-amber-400";
     case LiveType.RELEASE_EVENT:
       return "bg-violet-400";
     default:
       return "bg-gray-300";
   }
 };
+
+export const MeetAndGreetTypeEnum = z.enum([
+  "握手会",
+  "撮影会",
+  "TikTok 撮影会",
+  "サイン会",
+  "団体サイン会",
+  "オンライン サイン会",
+  "オンライン お話し会",
+  "対面お話し会",
+  "お渡し会",
+]);
+
+export const MeetAndGreetType = MeetAndGreetTypeEnum.enum;
+export type MeetAndGreetType = z.infer<typeof MeetAndGreetTypeEnum>;

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ShiShi Fes",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-01-28",
   open: "14:30",
   start: "15:00",

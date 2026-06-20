@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "NATSUZOME2024",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-03-31",
   region: "千葉",
   location: "稲毛海浜公園野外音楽堂",

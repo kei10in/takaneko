@@ -15,7 +15,7 @@
       {
         "event": {
           "date": "2022-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2022-12-27_SPARK 2022",
@@ -62,7 +62,7 @@
       {
         "event": {
           "date": "2022-12-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
@@ -82,7 +82,7 @@
       {
         "event": {
           "date": "2022-11-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "SHIBUYA PLEASURE PLEASURE",
           "region": "東京",
           "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
@@ -102,7 +102,7 @@
       {
         "event": {
           "date": "2022-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO大ホール",
           "region": "東京",
           "slug": "2022-11-21_IDOL STAGE FES vol.4",
@@ -122,7 +122,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -142,7 +142,7 @@
       {
         "event": {
           "date": "2022-11-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
           "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
@@ -229,7 +229,7 @@
       {
         "event": {
           "date": "2022-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿ReNY",
           "region": "東京",
           "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
@@ -249,7 +249,7 @@
       {
         "event": {
           "date": "2022-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO 大ホール",
           "region": "東京",
           "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
@@ -269,7 +269,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -309,7 +309,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -329,7 +329,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -349,7 +349,7 @@
       {
         "event": {
           "date": "2022-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-23_IDOL SQUARE NEXT",
@@ -369,7 +369,7 @@
       {
         "event": {
           "date": "2022-09-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-20_IDOL SQUARE NEXT",
@@ -396,7 +396,7 @@
       {
         "event": {
           "date": "2022-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール",
@@ -436,7 +436,7 @@
       {
         "event": {
           "date": "2022-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-15_IDOL SQUARE NEXT",
@@ -463,7 +463,7 @@
       {
         "event": {
           "date": "2022-09-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2022-09-13_MARQUEE Fes. -day 1-",
@@ -483,7 +483,7 @@
       {
         "event": {
           "date": "2022-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2022-08-31_エンドレスサマー2022",
@@ -510,7 +510,7 @@
       {
         "event": {
           "date": "2022-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2022-08-27_@JAM EXPO 2022",
@@ -537,7 +537,7 @@
       {
         "event": {
           "date": "2022-08-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
           "slug": "2022-08-20_IDOL SQUARE Summer Festival 2022",
@@ -557,7 +557,7 @@
       {
         "event": {
           "date": "2022-08-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "フジテレビ 湾岸スタジオ 横 公園",
           "region": "東京",
           "slug": "2022-08-07_TOKYO IDOL FESTIVAL 2022",
@@ -609,7 +609,7 @@
       {
         "event": {
           "date": "2022-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2022-12-27_SPARK 2022",
@@ -656,7 +656,7 @@
       {
         "event": {
           "date": "2022-12-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田スクエアホール ",
           "region": "東京",
           "slug": "2022-12-10_IDOL SQUARE 3 〜推しは推せる時に推せ〜",
@@ -676,7 +676,7 @@
       {
         "event": {
           "date": "2022-12-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
@@ -696,7 +696,7 @@
       {
         "event": {
           "date": "2022-11-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "SHIBUYA PLEASURE PLEASURE",
           "region": "東京",
           "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
@@ -716,7 +716,7 @@
       {
         "event": {
           "date": "2022-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO大ホール",
           "region": "東京",
           "slug": "2022-11-21_IDOL STAGE FES vol.4",
@@ -736,7 +736,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -756,7 +756,7 @@
       {
         "event": {
           "date": "2022-11-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
           "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
@@ -836,7 +836,7 @@
       {
         "event": {
           "date": "2022-10-22",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "河口湖ステラシアター",
           "region": "山梨",
           "slug": "2022-10-22_TGC FES YAMANASHI 2022",
@@ -856,7 +856,7 @@
       {
         "event": {
           "date": "2022-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿ReNY",
           "region": "東京",
           "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
@@ -876,7 +876,7 @@
       {
         "event": {
           "date": "2022-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO 大ホール",
           "region": "東京",
           "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
@@ -896,7 +896,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -936,7 +936,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -956,7 +956,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -976,7 +976,7 @@
       {
         "event": {
           "date": "2022-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-23_IDOL SQUARE NEXT",
@@ -996,7 +996,7 @@
       {
         "event": {
           "date": "2022-09-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-20_IDOL SQUARE NEXT",
@@ -1016,7 +1016,7 @@
       {
         "event": {
           "date": "2022-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール",
@@ -1056,7 +1056,7 @@
       {
         "event": {
           "date": "2022-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-15_IDOL SQUARE NEXT",
@@ -1076,7 +1076,7 @@
       {
         "event": {
           "date": "2022-09-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2022-09-13_MARQUEE Fes. -day 1-",
@@ -1103,7 +1103,7 @@
       {
         "event": {
           "date": "2022-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2022-08-31_エンドレスサマー2022",
@@ -1123,7 +1123,7 @@
       {
         "event": {
           "date": "2022-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2022-08-27_@JAM EXPO 2022",
@@ -1191,7 +1191,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -1278,7 +1278,7 @@
       {
         "event": {
           "date": "2022-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿ReNY",
           "region": "東京",
           "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
@@ -1298,7 +1298,7 @@
       {
         "event": {
           "date": "2022-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO 大ホール",
           "region": "東京",
           "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
@@ -1318,7 +1318,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -1358,7 +1358,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -1378,7 +1378,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -1398,7 +1398,7 @@
       {
         "event": {
           "date": "2022-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-23_IDOL SQUARE NEXT",
@@ -1418,7 +1418,7 @@
       {
         "event": {
           "date": "2022-09-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-20_IDOL SQUARE NEXT",
@@ -1438,7 +1438,7 @@
       {
         "event": {
           "date": "2022-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール",
@@ -1478,7 +1478,7 @@
       {
         "event": {
           "date": "2022-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-15_IDOL SQUARE NEXT",
@@ -1498,7 +1498,7 @@
       {
         "event": {
           "date": "2022-09-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2022-09-13_MARQUEE Fes. -day 1-",
@@ -1518,7 +1518,7 @@
       {
         "event": {
           "date": "2022-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2022-08-31_エンドレスサマー2022",
@@ -1538,7 +1538,7 @@
       {
         "event": {
           "date": "2022-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2022-08-27_@JAM EXPO 2022",
@@ -1558,7 +1558,7 @@
       {
         "event": {
           "date": "2022-08-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "フジテレビ 湾岸スタジオ 横 公園",
           "region": "東京",
           "slug": "2022-08-07_TOKYO IDOL FESTIVAL 2022",
@@ -1602,7 +1602,7 @@
       {
         "event": {
           "date": "2022-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2022-12-27_SPARK 2022",
@@ -1642,7 +1642,7 @@
       {
         "event": {
           "date": "2022-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO大ホール",
           "region": "東京",
           "slug": "2022-11-21_IDOL STAGE FES vol.4",
@@ -1662,7 +1662,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -1682,7 +1682,7 @@
       {
         "event": {
           "date": "2022-11-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
           "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
@@ -1742,7 +1742,7 @@
       {
         "event": {
           "date": "2022-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿ReNY",
           "region": "東京",
           "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
@@ -1762,7 +1762,7 @@
       {
         "event": {
           "date": "2022-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO 大ホール",
           "region": "東京",
           "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
@@ -1782,7 +1782,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -1802,7 +1802,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -1822,7 +1822,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -1842,7 +1842,7 @@
       {
         "event": {
           "date": "2022-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-23_IDOL SQUARE NEXT",
@@ -1862,7 +1862,7 @@
       {
         "event": {
           "date": "2022-09-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-20_IDOL SQUARE NEXT",
@@ -1882,7 +1882,7 @@
       {
         "event": {
           "date": "2022-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール",
@@ -1992,7 +1992,7 @@
       {
         "event": {
           "date": "2022-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2022-12-27_SPARK 2022",
@@ -2039,7 +2039,7 @@
       {
         "event": {
           "date": "2022-12-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田スクエアホール ",
           "region": "東京",
           "slug": "2022-12-10_IDOL SQUARE 3 〜推しは推せる時に推せ〜",
@@ -2059,7 +2059,7 @@
       {
         "event": {
           "date": "2022-12-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
@@ -2079,7 +2079,7 @@
       {
         "event": {
           "date": "2022-11-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "SHIBUYA PLEASURE PLEASURE",
           "region": "東京",
           "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
@@ -2099,7 +2099,7 @@
       {
         "event": {
           "date": "2022-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO大ホール",
           "region": "東京",
           "slug": "2022-11-21_IDOL STAGE FES vol.4",
@@ -2119,7 +2119,7 @@
       {
         "event": {
           "date": "2022-11-19",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "西日本総合展示場新館",
           "region": "福岡",
           "slug": "2022-11-19_TGC KITAKYUSHU 2022",
@@ -2164,7 +2164,7 @@
       {
         "event": {
           "date": "2022-12-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2022-12-27_SPARK 2022",
@@ -2211,7 +2211,7 @@
       {
         "event": {
           "date": "2022-12-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2022-12-08_インディーズアイドルチャンピオンシップ2022",
@@ -2231,7 +2231,7 @@
       {
         "event": {
           "date": "2022-11-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "SHIBUYA PLEASURE PLEASURE",
           "region": "東京",
           "slug": "2022-11-23_WWS FESTIVAL vol.1 -Girls Side-",
@@ -2251,7 +2251,7 @@
       {
         "event": {
           "date": "2022-11-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO大ホール",
           "region": "東京",
           "slug": "2022-11-21_IDOL STAGE FES vol.4",
@@ -2271,7 +2271,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -2291,7 +2291,7 @@
       {
         "event": {
           "date": "2022-11-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
           "slug": "2022-11-03_秋葉原アイドルサーキット vol.2",
@@ -2351,7 +2351,7 @@
       {
         "event": {
           "date": "2022-10-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "新宿ReNY",
           "region": "東京",
           "slug": "2022-10-21_TOKYO GIRLS GIRLS extra!!",
@@ -2371,7 +2371,7 @@
       {
         "event": {
           "date": "2022-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "なかのZERO 大ホール",
           "region": "東京",
           "slug": "2022-10-13_AION CINDERELLA DX -Who is CinderellA-",
@@ -2391,7 +2391,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -2411,7 +2411,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -2431,7 +2431,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -2590,7 +2590,7 @@
       {
         "event": {
           "date": "2022-12-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神田スクエアホール ",
           "region": "東京",
           "slug": "2022-12-10_IDOL SQUARE 3 〜推しは推せる時に推せ〜",
@@ -2610,7 +2610,7 @@
       {
         "event": {
           "date": "2022-11-12",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2022-11-12_Liven up IDOL vol.3",
@@ -2670,7 +2670,7 @@
       {
         "event": {
           "date": "2022-10-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-09_MISAKI IDOL FES",
@@ -2710,7 +2710,7 @@
       {
         "event": {
           "date": "2022-10-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "みさき公園",
           "region": "大阪",
           "slug": "2022-10-08_MISAKI IDOL FES",
@@ -2730,7 +2730,7 @@
       {
         "event": {
           "date": "2022-10-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "LINE CUBE SHIBUYA",
           "region": "東京",
           "slug": "2022-10-05_IDOL GARDEN 2022 AUTUMN",
@@ -2750,7 +2750,7 @@
       {
         "event": {
           "date": "2022-09-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-23_IDOL SQUARE NEXT",
@@ -2770,7 +2770,7 @@
       {
         "event": {
           "date": "2022-09-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-20_IDOL SQUARE NEXT",
@@ -2790,7 +2790,7 @@
       {
         "event": {
           "date": "2022-09-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール",
@@ -2810,7 +2810,7 @@
       {
         "event": {
           "date": "2022-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
           "slug": "2022-09-15_IDOL SQUARE NEXT",
@@ -2830,7 +2830,7 @@
       {
         "event": {
           "date": "2022-09-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2022-09-13_MARQUEE Fes. -day 1-",
@@ -2850,7 +2850,7 @@
       {
         "event": {
           "date": "2022-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
           "slug": "2022-08-31_エンドレスサマー2022",
@@ -2870,7 +2870,7 @@
       {
         "event": {
           "date": "2022-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2022-08-27_@JAM EXPO 2022",
@@ -2890,7 +2890,7 @@
       {
         "event": {
           "date": "2022-08-20",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
           "slug": "2022-08-20_IDOL SQUARE Summer Festival 2022",

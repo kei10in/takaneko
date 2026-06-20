@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "でびぱっぱ夏祭 2025〜東の陣〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-08-16",
   open: "9:45",
   start: "10:30",

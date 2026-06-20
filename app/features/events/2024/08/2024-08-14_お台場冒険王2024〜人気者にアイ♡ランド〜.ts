@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オールナイトフジコ公開収録📺",
-  category: "LIVE",
+  category: "OTHER",
   date: "2024-08-14",
   region: "東京",
   present: ["高嶺のなでしこ"],

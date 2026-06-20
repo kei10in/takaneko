@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "でびぱっぱ冬祭 in 野音",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-01-21",
   region: "東京",
   location: "日比谷公園野外大音楽堂",

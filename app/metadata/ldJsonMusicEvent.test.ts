@@ -130,7 +130,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
   it("does not emit a Place with an empty name", () => {
     const document = musicEventDocument(
       makeEventMetaForTest({
-        liveType: "GUEST",
+        liveType: "FESTIVAL",
         location: "",
         region: "東京",
       }),
@@ -143,7 +143,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
   it("does not emit MusicEvent JSON-LD for withdrawn appearances", () => {
     const document = musicEventDocument(
       makeEventMetaForTest({
-        liveType: "GUEST",
+        liveType: "FESTIVAL",
         location: "Spotify O-EAST",
         region: "東京",
         status: "WITHDRAWN",

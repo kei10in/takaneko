@@ -3,8 +3,9 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイベント@イオンレイクタウン kaze",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: ["握手会"],
   date: "2024-11-17",
   region: "埼玉",
   location: "イオンレイクタウン kaze 翼の広場",

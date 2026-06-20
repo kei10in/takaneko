@@ -2,8 +2,9 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "ミニライブ＆グループトーク会",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: ["対面お話し会"],
   date: "2022-09-17",
   region: "大阪",
   location: "タワーレコード梅田NU茶屋町店",

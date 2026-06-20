@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "HEROINES VALENTINE 2025",
   title: "TOKYO DOME presents HEROINES VALENTINE 2025",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-02-16",
   region: "東京",
   location: "TOKYO DOME CITY HALL",

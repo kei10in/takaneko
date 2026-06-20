@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "日テレプラス秋のアイドル祭り Supported by U-ZONE",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-09-15",
   region: "東京",
   location: "Spotify O-EAST",

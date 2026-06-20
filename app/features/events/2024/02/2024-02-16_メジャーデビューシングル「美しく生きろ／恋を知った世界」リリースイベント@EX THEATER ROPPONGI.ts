@@ -3,7 +3,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@EX THEATER ROPPONGI",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["握手会"],
   date: "2024-02-16",
   region: "東京",
   location: "EX THEATER ROPPONGI",

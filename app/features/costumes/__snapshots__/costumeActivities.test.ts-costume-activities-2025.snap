@@ -13,7 +13,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-12-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-12-28_LEADING PREMIUM 年末感謝祭'25",
@@ -30,7 +30,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-12-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Kanadevia Hall",
           "region": "東京",
           "slug": "2025-12-24_HEROINES Xmas DAY1",
@@ -45,7 +45,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-12-17",
           "liveType": "RELEASE_EVENT",
           "location": "ダイバーシティ東京 プラザ 2F フェスティバル広場",
@@ -65,7 +65,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-12-07",
           "liveType": "RELEASE_EVENT",
           "location": "ヨドバシカメラマルチメディア梅田 B2F ヨドバシホール",
@@ -84,7 +84,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-12-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川プリンス ステラボール",
           "region": "東京",
           "slug": "2025-12-06_KOOmic idol Festa vol.2",
@@ -102,7 +102,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-22",
           "liveType": "RELEASE_EVENT",
           "location": "プライムツリー赤池 1F プライムホール",
@@ -122,7 +122,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-16",
           "liveType": "RELEASE_EVENT",
           "location": "ららぽーと豊洲 シーサイドデッキ メインステージ",
@@ -141,7 +141,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-11-04",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-11-04_第22回 東京国際ミュージック・マーケット (22ndTIMM) ショーケースライブ",
@@ -158,7 +158,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-11-03",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "江戸川大学 駒木キャンパス 第二体育館",
           "region": "千葉",
           "slug": "2025-11-03_駒木祭 in「江戸川ガールズアワード」",
@@ -192,7 +192,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-22",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-10-22_MARQUEE Fes",
@@ -209,7 +209,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-16",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-10-16_iLiVE! HALLOWEEN",
@@ -226,7 +226,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "群馬県庁県民広場前",
           "region": "群馬",
           "slug": "2025-10-13_ぐんまちゃんアイドルフェスティバル",
@@ -243,7 +243,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-09-23",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "日本工学院アリーナ",
           "region": "東京",
           "slug": "2025-09-23_STARRZ TOKYO 2025",
@@ -258,7 +258,7 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-09-20",
           "liveType": "RELEASE_EVENT",
           "location": "イオンレイクタウンmori FOREST STAGE",
@@ -290,7 +290,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-12-21",
           "liveType": undefined,
           "location": "",
@@ -303,7 +303,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-12-20",
           "liveType": undefined,
           "location": "TODA HALL & CONFERENCE TOKYO (HALL A)",
@@ -316,7 +316,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-12-13",
           "liveType": undefined,
           "location": "ベルサール西新宿 イベントホール",
@@ -329,7 +329,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-29",
           "liveType": undefined,
           "location": "ソニックシティ 第 1 展示場",
@@ -342,7 +342,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-24",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -355,20 +355,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
-          "date": "2025-11-21",
-          "liveType": undefined,
-          "location": "",
-          "region": "愛知",
-          "slug": "2025-11-21_1st アルバム発売記念プレミアムトークショー",
-          "summary": "1st アルバム発売記念プレミアムトークショー",
-          "title": "1st アルバム発売記念プレミアムトークショー",
-        },
-      },
-      {
-        "acts": [],
-        "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-15",
           "liveType": undefined,
           "location": "",
@@ -381,7 +368,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-09",
           "liveType": undefined,
           "location": "TOC有明",
@@ -394,7 +381,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-02",
           "liveType": undefined,
           "location": "TFTホール",
@@ -407,7 +394,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-01",
           "liveType": undefined,
           "location": "横浜YTJホール",
@@ -420,7 +407,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-10-05",
           "liveType": undefined,
           "location": "",
@@ -433,7 +420,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-10-04",
           "liveType": undefined,
           "location": "サンシャインシティ 展示ホールD-3",
@@ -446,7 +433,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-09-27",
           "liveType": undefined,
           "location": "ベルサール西新宿 イベントホール",
@@ -472,7 +459,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "台北 統一時代百貨夢廣場",
           "region": "台湾",
           "slug": "2025-10-11_IDOL KINGDOM TAIPEI",
@@ -489,7 +476,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "台北 統一時代百貨夢廣場",
           "region": "台湾",
           "slug": "2025-10-10_IDOL KINGDOM TAIPEI",
@@ -506,7 +493,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "MOONDOG",
           "region": "台湾",
           "slug": "2025-10-10_IDOL KINGDOM TAIPEI - HORIZON STAGE",
@@ -540,7 +527,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-31",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
           "slug": "2025-08-31_@JAM EXPO 2025",
@@ -557,7 +544,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Haneda",
           "region": "東京",
           "slug": "2025-08-27_YELL LIVE 2025",
@@ -594,7 +581,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ZOZOマリンスタジアム＆幕張メッセ",
           "region": "千葉",
           "slug": "2025-08-17_SUMMER SONIC 2025 TOKYO",
@@ -628,7 +615,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "国営ひたち海浜公園",
           "region": "茨城",
           "slug": "2025-08-09_LuckyFes'25",
@@ -665,7 +652,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "SUMMER FES LIVEアリーナ（六本木ヒルズアリーナ）",
           "region": "東京",
           "slug": "2025-08-04_まいにちフェス2025 ～真夏のアイドルLIVE～",
@@ -682,7 +669,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-02_TOKYO IDOL FESTIVAL 2025",
@@ -695,7 +682,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-08-08",
           "liveType": undefined,
           "location": "TFTホール 1000",
@@ -768,7 +755,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-09-27",
           "liveType": undefined,
           "location": "ベルサール西新宿 イベントホール",
@@ -781,7 +768,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-05-18",
           "liveType": undefined,
           "location": "東京流通センター Bホール",
@@ -794,7 +781,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-05-10",
           "liveType": undefined,
           "location": "難波御堂筋ホール ホール7",
@@ -823,7 +810,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Portal 212",
           "region": "香港",
           "slug": "2025-10-18_Joy∞Stage - アイドル交差点・香港",
@@ -843,7 +830,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2025-07-27_六本木アイドルフェスティバル2025 Day2",
@@ -860,7 +847,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-06",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "幕張海浜公園 G ブロック特設会場",
           "region": "千葉",
           "slug": "2025-07-06_超NATSUZOME 2025",
@@ -875,9 +862,9 @@
           },
         ],
         "event": {
-          "category": "EVENT",
+          "category": "LIVE",
           "date": "2025-06-29",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "池袋西口公園野外劇場",
           "region": "東京",
           "slug": "2025-06-29_「6・26国際麻薬乱用撲滅デー」都民の集い",
@@ -928,7 +915,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-06-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
           "slug": "2025-06-08_POPPIN’BASE in KYOTO 2025",
@@ -945,7 +932,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-05-31",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "代々木公園イベント広場",
           "region": "東京",
           "slug": "2025-05-31_ベトナムフェスティバル2025",
@@ -965,7 +952,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-05-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2025-05-04_歌舞伎町UP GATE↑↑2025",
@@ -1062,7 +1049,7 @@
         "event": {
           "category": "OTHER",
           "date": "2025-04-12",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "大垣市北公園野球場",
           "region": "岐阜",
           "slug": "2025-04-12_ニトリJD.LEAGUE 2025レギュラーシーズン第1節",
@@ -1095,7 +1082,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-15",
           "liveType": undefined,
           "location": "",
@@ -1108,7 +1095,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-08",
           "liveType": undefined,
           "location": "",
@@ -1121,7 +1108,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-09-27",
           "liveType": undefined,
           "location": "ベルサール西新宿 イベントホール",
@@ -1134,7 +1121,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-05-05",
           "liveType": undefined,
           "location": "ミッドランドホール",
@@ -1147,7 +1134,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-04-30",
           "liveType": undefined,
           "location": "新潟県民会館 ギャラリー",
@@ -1160,7 +1147,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-04-26",
           "liveType": undefined,
           "location": "BLUELIVE HIROSHIMA",
@@ -1173,7 +1160,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-04-20",
           "liveType": undefined,
           "location": "神戸サンボーホール 1階 大展示場",
@@ -1186,7 +1173,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-04-14",
           "liveType": undefined,
           "location": "仙台PIT",
@@ -1212,7 +1199,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿ガーデンホール",
           "region": "東京",
           "slug": "2025-07-03_FAVE IDOLS FES〜今会いたい最強アイドル〜",
@@ -1229,7 +1216,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-06-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
           "slug": "2025-06-01_iLiVE! vol.17",
@@ -1246,7 +1233,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-04-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-04-03_NIGFES2025",
@@ -1263,7 +1250,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-04-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "有明アリーナ",
           "region": "東京",
           "slug": "2025-04-01_LANDCON 2025",
@@ -1280,7 +1267,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-29",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
           "slug": "2025-03-29_KOOmic idol Festa",
@@ -1295,9 +1282,9 @@
           },
         ],
         "event": {
-          "category": "OTHER",
+          "category": "FASHION",
           "date": "2025-03-26",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場第一体育館",
           "region": "東京",
           "slug": "2025-03-26_超⼗代 -ULTRA TEENS FES- 2025",
@@ -1314,7 +1301,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-Crest, Spotify O-EAST",
           "region": "東京",
           "slug": "2025-03-09_IDORISE!! FESTIVAL 2025",
@@ -1331,7 +1318,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-05",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-03-05_MARQUEE祭 vol.156",
@@ -1346,9 +1333,9 @@
           },
         ],
         "event": {
-          "category": "LIVE",
+          "category": "FASHION",
           "date": "2025-03-02",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第一体育館",
           "region": "東京",
           "slug": "2025-03-02_IDOL RUNWAY COLLECTION 2025",
@@ -1365,7 +1352,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-23",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "神奈川県民ホール 大ホール",
           "region": "神奈川",
           "slug": "2025-02-23_関内デビルフェスティヴォ〜",
@@ -1382,7 +1369,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-18",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-02-18_AND PARADE MUSIC FES",
@@ -1412,7 +1399,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-10-04",
           "liveType": undefined,
           "location": "サンシャインシティ 展示ホールD-3",
@@ -1425,7 +1412,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-05-24",
           "liveType": undefined,
           "location": "TODA HALL & CONFERENCE TOKYO (HALL B)",
@@ -1438,7 +1425,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-04-05",
           "liveType": undefined,
           "location": "福岡タワー タワーホール1",
@@ -1451,7 +1438,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-02-15",
           "liveType": undefined,
           "location": "池袋・サンシャインシティ 展示ホールA",
@@ -1477,7 +1464,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-09-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "WWW X",
           "region": "東京",
           "slug": "2025-09-09_超 明星現象 2025",
@@ -1497,7 +1484,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-16",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "三崎公園野外音楽堂",
           "region": "福島",
           "slug": "2025-08-16_でびぱっぱ夏祭 2025〜東の陣〜",
@@ -1514,7 +1501,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-13",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-08-13_NEO KASSEN 2025",
@@ -1531,7 +1518,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-11",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場R地区",
           "region": "東京",
           "slug": "2025-08-11_IDOL SUMMER JUNGLE 2025 Day3",
@@ -1548,7 +1535,7 @@
         "event": {
           "category": "OTHER",
           "date": "2025-07-27",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
           "slug": "2025-07-27_ノジマTリーグ 2025-2026 シーズン 女子開幕戦",
@@ -1565,7 +1552,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-06-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "CLUB CITTA'",
           "region": "東京",
           "slug": "2025-06-09_NIGHT ROCK FES",
@@ -1582,7 +1569,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-05-25",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Diver City",
           "region": "東京",
           "slug": "2025-05-25_@JAM 2025 Day2 〜SUPER LIVE〜",
@@ -1599,7 +1586,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-04-15",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "SHIBUYA CLUB QUATTRO",
           "region": "東京",
           "slug": "2025-04-15_でびぱっぱ 3MAN",
@@ -1616,7 +1603,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-04-10",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-04-10_LEADING IN 〜いどみん生誕祭2025〜",
@@ -1633,7 +1620,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-20",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "京都 KBS HALL",
           "region": "京都",
           "slug": "2025-03-20_KOLLABS",
@@ -1650,7 +1637,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-09",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-Crest, Spotify O-EAST",
           "region": "東京",
           "slug": "2025-03-09_IDORISE!! FESTIVAL 2025",
@@ -1667,7 +1654,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-16",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
           "slug": "2025-02-16_HEROINES VALENTINE 2025",
@@ -1701,7 +1688,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "GARDEN 新木場 FACTORY",
           "region": "東京",
           "slug": "2025-02-08_Scratch vol.1",
@@ -1718,7 +1705,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-01-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2025-01-30_ZEPPIN DISCO vol.2",
@@ -1735,7 +1722,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-01-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-01-28_ShiShiFes",
@@ -1752,7 +1739,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-01-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-01-27_ジャムズセッション!!〜新春 SP〜",
@@ -1765,7 +1752,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-01-11",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -1791,7 +1778,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-11-17",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-11-17_MARQUEE Fes. -day1-",
@@ -1808,7 +1795,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-06-07",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "恵比寿 LIQUIDROOM",
           "region": "東京",
           "slug": "2025-06-07_EVOLUTION POP! EXTRA 〜WEEKEND SPECIAL〜",
@@ -1842,7 +1829,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-01-19",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
           "slug": "2025-01-19_Appare!のなでしこ vol.2",
@@ -1859,7 +1846,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-01-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
           "slug": "2025-01-04_ニューイヤーだよ！六本木アイドルフェスティバル",
@@ -1872,7 +1859,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-11-29",
           "liveType": undefined,
           "location": "ソニックシティ 第 1 展示場",
@@ -1885,7 +1872,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-02-02",
           "liveType": undefined,
           "location": "サンライズビル大阪 サンライズホールC",
@@ -1911,7 +1898,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-01_TOKYO IDOL FESTIVAL 2025",
@@ -1928,7 +1915,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2025-07-26_アニソフィアフェス2025 Summer",
@@ -1945,7 +1932,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "品川インターシティホール",
           "region": "東京",
           "slug": "2025-07-26_TOKYO GIRLS GIRLS ~ 5th Anniversary ~",
@@ -1962,7 +1949,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-08",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2025-03-08_IDORISE!! FESTIVAL 2025",
@@ -1979,7 +1966,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-05",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
           "slug": "2025-02-05_たかねこライフ！",
@@ -1992,7 +1979,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-01-11",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -2018,7 +2005,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-12-04",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2025-12-04_BEEEEM FES vol.1",
@@ -2068,7 +2055,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-09-28",
           "liveType": undefined,
           "location": "東京流通センター 第二展示場 Fホール",
@@ -2094,7 +2081,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-30",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
           "slug": "2025-10-30_Appare! HALLOWEEN FES. 2025",
@@ -2111,7 +2098,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
           "slug": "2025-08-26_エンドレスサマー2025",
@@ -2128,7 +2115,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2025-08-15_Scratch vol.2 ～Ma’Scar’Piece 1st Anniversary SP～",
@@ -2145,7 +2132,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-03_TOKYO IDOL FESTIVAL 2025",
@@ -2162,7 +2149,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-21",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "立川ステージガーデン",
           "region": "東京",
           "slug": "2025-07-21_iLiVE! SUMMER -いくぞッ！武道館SP-",
@@ -2175,7 +2162,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-02-01",
           "liveType": undefined,
           "location": "松下IMPホール",
@@ -2188,7 +2175,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-01-11",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -2214,7 +2201,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-01",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-01_TOKYO IDOL FESTIVAL 2025",
@@ -2231,7 +2218,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-27",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
           "slug": "2025-07-27_六本木アイドルフェスティバル2025 Day2",
@@ -2295,7 +2282,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-02-01",
           "liveType": undefined,
           "location": "松下IMPホール",
@@ -2308,7 +2295,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-01-11",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -2334,7 +2321,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-28",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "ZeppDiverCity)",
           "region": "東京",
           "slug": "2025-10-28_HEROINES HALLOWEEN DAY2",
@@ -2351,7 +2338,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-03",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-03_TOKYO IDOL FESTIVAL 2025",
@@ -2368,7 +2355,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-07",
-          "liveType": "GUEST",
+          "liveType": "JOINT",
           "location": "Zepp Haneda",
           "region": "東京",
           "slug": "2025-07-07_たかねこLiFE!",
@@ -2381,7 +2368,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-01-11",
           "liveType": undefined,
           "location": "大崎ブライトコアホール",
@@ -2424,7 +2411,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-08-02",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
           "slug": "2025-08-02_TOKYO IDOL FESTIVAL 2025",
@@ -2471,7 +2458,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-09-28",
           "liveType": undefined,
           "location": "東京流通センター 第二展示場 Fホール",
@@ -2497,7 +2484,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
@@ -2662,7 +2649,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-10-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "東京ガーデンシアター",
           "region": "東京",
           "slug": "2025-10-26_LARME FES'25",
@@ -2690,7 +2677,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-09-15",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "日比谷野外音楽堂",
           "region": "東京",
           "slug": "2025-09-15_ハニフェス 2025 ～女子校文化祭 日比谷～",
@@ -2715,7 +2702,7 @@
         "event": {
           "category": "OTHER",
           "date": "2025-08-30",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "横浜日産グローバル本社ギャラリー",
           "region": "神奈川",
           "slug": "2025-08-30_24時間テレビ 日産チャリティーイベント",
@@ -2756,7 +2743,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-08-08",
           "liveType": undefined,
           "location": "TFTホール 1000",
@@ -2782,7 +2769,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-07-26",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
           "slug": "2025-07-26_アニソフィアフェス2025 Summer",
@@ -2807,7 +2794,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-03-22",
-          "liveType": "GUEST",
+          "liveType": "EVENT_LIVE",
           "location": "アダストリアみとアリーナ",
           "region": "茨城",
           "slug": "2025-03-22_LuckyFes Half Time Show",
@@ -2832,7 +2819,7 @@
         "event": {
           "category": "LIVE",
           "date": "2025-02-24",
-          "liveType": "GUEST",
+          "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
           "slug": "2025-02-24_ロウルとアイドルフェス",
@@ -2870,7 +2857,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "MEET_AND_GREET",
           "date": "2025-02-15",
           "liveType": undefined,
           "location": "池袋・サンシャインシティ 展示ホールA",
@@ -2909,7 +2896,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-10-25",
           "liveType": undefined,
           "location": "",
@@ -2922,7 +2909,7 @@
       {
         "acts": [],
         "event": {
-          "category": "EVENT",
+          "category": "RELEASE_EVENT",
           "date": "2025-10-04",
           "liveType": undefined,
           "location": "サンシャインシティ 展示ホールD-3",

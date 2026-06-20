@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "ロウルとアイドルフェス",
   title: "ロウルとアイドルフェス powered by KAWASAKI BRAVE THUNDERS",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-02-24",
   region: "神奈川",
   location: "KT Zepp Yokohama",

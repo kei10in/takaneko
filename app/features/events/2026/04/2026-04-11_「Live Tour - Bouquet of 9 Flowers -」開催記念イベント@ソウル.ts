@@ -3,7 +3,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "「Live Tour - Bouquet of 9 Flowers -」開催記念イベント@ソウル",
   title: "「Live Tour - Bouquet of 9 Flowers -」開催記念『個別TikTok撮影会』@ソウル",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["TikTok 撮影会"],
   date: "2026-04-11",
   open: undefined,
   start: "11:00",

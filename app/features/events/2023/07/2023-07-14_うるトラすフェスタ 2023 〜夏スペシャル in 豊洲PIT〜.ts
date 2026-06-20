@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "うるトラすフェスタ 2023 〜夏スペシャル in 豊洲PIT〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-07-14",
   region: "東京",
   location: "豊洲PIT",

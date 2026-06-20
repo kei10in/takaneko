@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会 受付📋",
   description:
     "2024年10月20日 19:00 から、高嶺のなでしこ オンライン個別お話し会 受付開始。開催は、2024年10月24日 18:00 から、SPACE MAKE (スペースメイク、スぺメ) を使って行われます。",
-  category: "EVENT",
+  category: "SALES_OPEN",
   date: "2024-10-20",
   region: "Web",
   images: [

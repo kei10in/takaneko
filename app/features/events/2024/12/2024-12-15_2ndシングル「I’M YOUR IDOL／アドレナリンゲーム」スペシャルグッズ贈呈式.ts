@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」スペシャルグッズ贈呈式",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["お渡し会"],
   date: "2024-12-15",
   start: "10:30",
   end: "12:00",

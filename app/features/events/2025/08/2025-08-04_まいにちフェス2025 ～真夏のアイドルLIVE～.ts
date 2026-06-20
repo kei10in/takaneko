@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "まいにちフェス2025 ～真夏のアイドルLIVE～",
   title: " まいにちフェス2025 ～真夏のアイドルLIVE～ produced by au",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2025-08-04",
   open: "16:45",
   start: "17:30",

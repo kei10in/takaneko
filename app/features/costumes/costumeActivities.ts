@@ -85,7 +85,10 @@ export const makeLivesForCostumes = (events: EventModule[]): LivesForCostume[] =
 };
 
 const isMeetAndGreetEvent = (event: EventModule): boolean => {
-  return event.meta.category === EventType.EVENT && event.meta.liveType !== LiveType.RELEASE_EVENT;
+  return (
+    event.meta.category === EventType.MEET_AND_GREET ||
+    (event.meta.meetAndGreetTypes.length > 0 && event.meta.liveType != LiveType.RELEASE_EVENT)
+  );
 };
 
 const collectMeetAndGreetCostumes = (event: EventModule): Set<string> => {

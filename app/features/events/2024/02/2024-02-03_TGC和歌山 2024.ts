@@ -2,8 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "TGC和歌山 2024",
-  category: "OTHER",
-  liveType: "GUEST",
+  category: "FASHION",
+  liveType: "EVENT_LIVE",
   date: "2024-02-03",
   region: "和歌山",
   location: "和歌山ビッグホエール",

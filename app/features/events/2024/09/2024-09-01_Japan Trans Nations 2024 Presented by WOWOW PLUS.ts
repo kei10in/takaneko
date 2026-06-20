@@ -4,6 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "Japan Trans Nations 2024 Presented by WOWOW PLUS",
   status: "CANCELED",
   category: "LIVE",
+  liveType: "FESTIVAL",
   date: "2024-09-01",
   location: "幕張メッセ イベントホール",
   region: "千葉",

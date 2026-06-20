@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "超十代名古屋2024",
   title: "超十代 -ULTRA TEENS FES- 2024@NAGOYA",
-  category: "OTHER",
+  category: "FASHION",
   date: "2024-12-26",
   region: "愛知",
   location: "ポートメッセ名古屋コンベンションセンター",

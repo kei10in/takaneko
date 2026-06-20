@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "TOKYO GIRLS GIRLS 〜4th Anniversary day1〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-07-26",
   region: "東京",
   location: "品川インターシティホール",

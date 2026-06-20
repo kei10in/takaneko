@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-01-22",
   region: "東京",
   location: "KeyStudio",

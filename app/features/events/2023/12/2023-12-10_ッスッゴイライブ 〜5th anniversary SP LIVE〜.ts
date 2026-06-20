@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ッスッゴイライブ 〜5th anniversary SP LIVE〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-12-10",
   region: "東京",
   location: "品川ステラボール",

@@ -4,7 +4,8 @@ export const meta: EventMetaDescriptor = {
   summary: "「Live Tour - Bouquet of 9 Flowers -」開催記念イベント@仙台",
   title:
     "「Live Tour - Bouquet of 9 Flowers -」開催記念 『個別2ショット撮影会』・『個別TikTok撮影会』・『個別サイン会』@仙台",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["撮影会", "TikTok 撮影会", "サイン会"],
   date: "2026-03-28",
   open: undefined,
   start: "11:00",

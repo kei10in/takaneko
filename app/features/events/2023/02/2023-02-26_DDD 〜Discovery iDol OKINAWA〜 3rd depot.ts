@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "DDD 〜Discovery iDol OKINAWA〜 3rd depot",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-02-26",
   region: "沖縄",
   location: "Livehouse Output",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "iCON DOLL LOUNGE 2023 〜NEW YEAR MEETING!〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-01-16",
   region: "東京",
   location: "LIQUIDROOM",

@@ -3,8 +3,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "超十代 -ULTRA TEENS FES- 2026",
   title: "超十代 -ULTRA TEENS FES- 2026 presented by docomo",
-  category: "LIVE",
-  liveType: "GUEST",
+  category: "FASHION",
+  liveType: "EVENT_LIVE",
   date: "2026-03-31",
   open: "11:00",
   start: "12:30",

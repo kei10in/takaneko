@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "iLiVE! WHITEDAY 〜渋谷サーキット〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-03-04",
   region: "東京",
   location: "Spotify O-EAST",

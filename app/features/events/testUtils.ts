@@ -9,11 +9,13 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     title: partial.title ?? partial.summary ?? "Test Event Title",
     summary: partial.summary ?? "Test Event Summary",
     category: partial.category ?? "LIVE",
+    liveType: partial.liveType,
+    meetAndGreetTypes: partial.meetAndGreetTypes ?? [],
+
     date: partial.date ?? "2025-08-01",
 
     description: partial.description,
     status: partial.status,
-    liveType: partial.liveType,
     open: partial.open,
     start: partial.start,
     end: partial.end,

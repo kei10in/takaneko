@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "KANSAI COLLECTION 2025 AUTUMN & WINTER",
   status: "WITHDRAWN",
-  category: "OTHER",
+  category: "FASHION",
   date: "2025-08-06",
   open: "11:30",
   start: "13:00",

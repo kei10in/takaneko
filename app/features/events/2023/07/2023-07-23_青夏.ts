@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "青夏",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2023-07-23",
   region: "東京",
   location: "恵比寿LIQUIDROOM",

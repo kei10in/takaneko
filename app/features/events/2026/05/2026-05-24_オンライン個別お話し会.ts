@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会📢",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2026-05-24",
   start: "13:00",
   end: "20:30",
@@ -28,6 +29,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## 開催情報
 
+  きゃっち
   **販売開始:** 2026年05月21日 (木) 20:30 〜 順次
 
   - 20:30 〜 💛城月菜央

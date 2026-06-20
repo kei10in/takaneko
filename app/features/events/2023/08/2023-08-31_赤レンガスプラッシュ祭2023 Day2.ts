@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "赤レンガスプラッシュ祭2023 Day2",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-08-31",
   region: "神奈川",
   location: "横浜赤レンガ倉庫イベント広場B",

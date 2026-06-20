@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "年末大感謝祭2025",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["撮影会", "TikTok 撮影会"],
   date: "2025-12-27",
   open: undefined,
   start: "11:00",

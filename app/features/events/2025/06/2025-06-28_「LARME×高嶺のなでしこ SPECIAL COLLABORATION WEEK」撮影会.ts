@@ -4,7 +4,8 @@ export const meta: EventMetaDescriptor = {
   summary: "「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」撮影会",
   title:
     "「LARME×⾼嶺のなでしこ SPECIAL COLLABORATION WEEK」『個別TikTok撮影会』、『個別2ショット撮影会』",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["撮影会", "TikTok 撮影会"],
   date: "2025-06-28",
   open: undefined,
   start: "11:00",

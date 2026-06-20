@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "超iLiVE!",
   title: "超iLiVE! supported by refrear",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-04-01",
   open: "10:30",
   start: "11:20",

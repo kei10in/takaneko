@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "PARAD-i-SE Vol.3",
   title: "パラディークpresents「PARAD-i-SE Vol.3」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2026-03-19",
   open: "09:20",
   start: "10:00",

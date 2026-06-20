@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Let’s “Seeing is believing” in NAGOYA",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-10-28",
   region: "愛知",
   location: "THE BOTTOM LINE",

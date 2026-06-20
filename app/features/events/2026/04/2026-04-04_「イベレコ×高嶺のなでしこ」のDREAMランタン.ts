@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
   title: "「イベレコ×高嶺のなでしこ」のDREAMランタン by 関電工",
   status: "CANCELED",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2026-04-04",
   open: "18:30",
   start: "19:00",

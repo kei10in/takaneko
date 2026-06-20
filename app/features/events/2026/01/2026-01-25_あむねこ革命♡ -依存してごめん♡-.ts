@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "あむねこ革命♡ -依存してごめん♡-",
   title: "AVAM×高嶺のなでしこ 2マンライブ「あむねこ革命♡ -依存してごめん♡-」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2026-01-25",
   open: "15:00",
   start: "16:00",

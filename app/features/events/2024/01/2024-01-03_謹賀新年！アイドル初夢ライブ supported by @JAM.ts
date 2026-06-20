@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "謹賀新年！アイドル初夢ライブ supported by @JAM",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-01-03",
   region: "東京",
   location: "Zepp Diver City",

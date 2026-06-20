@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "~/features/events/eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "KANSAI COLLECTION 2026 AUTUMN & WINTER",
-  category: "OTHER",
+  category: "FASHION",
   liveType: undefined,
   date: "2026-08-13",
   open: "11:30",

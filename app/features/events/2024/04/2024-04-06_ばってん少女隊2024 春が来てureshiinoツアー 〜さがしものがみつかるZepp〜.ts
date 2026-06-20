@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2024-04-06",
   region: "愛知",
   location: "Zepp Nagoya",

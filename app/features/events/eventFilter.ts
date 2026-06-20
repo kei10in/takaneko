@@ -6,6 +6,7 @@ export const EventFilterTypeEnum = z.enum([
   "all",
   "live",
   "event",
+  "release-event",
   "streaming",
   "tv",
   "radio",
@@ -33,12 +34,21 @@ export const EventFilters: EventFilter[] = [
   {
     display: "ライブ",
     name: "live",
-    predicate: (event) => event.meta.category === EventType.LIVE,
+    predicate: (event) =>
+      event.meta.category === EventType.LIVE || event.meta.liveType != undefined,
   },
   {
     display: "イベント",
     name: "event",
-    predicate: (event) => event.meta.category === EventType.EVENT,
+    predicate: (event) =>
+      event.meta.category === EventType.MEET_AND_GREET ||
+      event.meta.category == EventType.VARIETY ||
+      event.meta.category == EventType.FASHION,
+  },
+  {
+    display: "リリース イベント",
+    name: "release-event",
+    predicate: (event) => event.meta.category == EventType.RELEASE_EVENT,
   },
   {
     display: "配信",
@@ -61,7 +71,7 @@ export const EventFilters: EventFilter[] = [
     display: "発売日",
     name: "release",
     predicate: (event) =>
-      event.meta.category == EventType.RELEASE ||
+      event.meta.category == EventType.CD ||
       event.meta.category == EventType.BOOK ||
       event.meta.category == EventType.MAGAZINE,
   },

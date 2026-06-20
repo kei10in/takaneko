@@ -8,7 +8,13 @@ import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
 
-const MeetsEvents: string[] = [EventType.LIVE, EventType.EVENT];
+const MeetsEvents: string[] = [
+  EventType.LIVE,
+  EventType.MEET_AND_GREET,
+  EventType.RELEASE_EVENT,
+  EventType.VARIETY,
+  EventType.FASHION,
+];
 
 const EventFilters: Record<string, { name: string; pred?: (meta: EventMeta) => boolean }> = {
   all: {

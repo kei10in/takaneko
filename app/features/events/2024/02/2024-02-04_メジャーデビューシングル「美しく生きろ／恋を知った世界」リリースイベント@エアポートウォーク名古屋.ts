@@ -3,8 +3,9 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary:
     "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@エアポートウォーク名古屋",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: ["握手会"],
   date: "2024-02-04",
   region: "愛知",
   location: "エアポートウォーク名古屋",

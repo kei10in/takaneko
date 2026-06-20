@@ -4,6 +4,7 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { allPages } from "~/utils/sitemap";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
+import { EventType } from "./EventType";
 import { Events } from "./events";
 
 describe("event module", async () => {
@@ -47,6 +48,14 @@ describe("event module", async () => {
         const path = image.path;
         expect(AllAssets).toContain(path);
       }
+    });
+
+    it("should have meet and greet types for meet and greet events", () => {
+      if (event.meta.category !== EventType.MEET_AND_GREET) {
+        return;
+      }
+
+      expect(event.meta.meetAndGreetTypes.length).toBeGreaterThan(0);
     });
 
     it("should contains valid references in content", () => {

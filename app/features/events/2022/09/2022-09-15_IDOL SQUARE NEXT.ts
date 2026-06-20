@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "IDOL SQUARE NEXT 9/15 夜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-09-15",
   region: "東京",
   location: "有楽町オルタナティブシアター",

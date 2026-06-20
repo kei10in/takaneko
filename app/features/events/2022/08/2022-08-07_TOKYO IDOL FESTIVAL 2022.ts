@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "TOKYO IDOL FESTIVAL 2022",
   title: "TOKYO IDOL FESTIVAL 2022 supported by にしたんクリニック",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2022-08-07",
   region: "東京",
   location: "フジテレビ 湾岸スタジオ 横 公園",

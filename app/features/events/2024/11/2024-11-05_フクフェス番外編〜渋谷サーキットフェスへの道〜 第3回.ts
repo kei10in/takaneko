@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "フクフェス番外編〜渋谷サーキットフェスへの道〜 第3回",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-11-05",
   location: "渋谷Spotify O-WEST",
   region: "東京",

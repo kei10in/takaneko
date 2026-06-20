@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "1st シングル「アンチファン」",
-  category: "RELEASE",
+  category: "CD",
   date: "2022-10-26",
   region: "💿",
   location: "",

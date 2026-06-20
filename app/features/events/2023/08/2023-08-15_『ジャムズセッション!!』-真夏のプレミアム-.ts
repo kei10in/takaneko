@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "『ジャムズセッション!!』-真夏のプレミアム-",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2023-08-15",
   region: "神奈川",
   location: "KT Zepp Yokohama",

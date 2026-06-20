@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "KASSEN 2024 in 肉フェス",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-05-04",
   region: "東京",
   location: "お台場特設会場 お台場青海地区P区画",

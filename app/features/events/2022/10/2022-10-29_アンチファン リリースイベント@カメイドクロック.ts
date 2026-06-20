@@ -3,8 +3,9 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "アンチファン リリースイベント@カメイドクロック",
   title: "1st シングル「アンチファン」リリースイベント@カメイドクロック カメクロステージ",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
+  meetAndGreetTypes: ["対面お話し会"],
   date: "2022-10-29",
   region: "東京",
   location: "カメイドクロック カメクロステージ",

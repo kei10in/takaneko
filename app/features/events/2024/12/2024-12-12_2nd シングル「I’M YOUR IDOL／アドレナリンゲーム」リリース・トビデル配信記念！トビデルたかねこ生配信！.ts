@@ -3,9 +3,9 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "トビデルたかねこ生配信！",
   title:
-    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！",
-  category: "LIVE",
-  liveType: "RELEASE_EVENT",
+    "2nd シングル「I’M YOUR IDOL / アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！",
+  category: "RELEASE_EVENT",
+  liveType: "EVENT_LIVE",
   date: "2024-12-12",
   open: "19:00",
   start: "19:30",
@@ -13,7 +13,7 @@ export const meta: EventMetaDescriptor = {
   location: "Studio Mixa",
   images: [
     {
-      path: "/events/2024/2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイ・トビデル配信記念！トビデルたかねこ生配信！.jpg",
+      path: "/events/2024/2024-12-12_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリース・トビデル配信記念！トビデルたかねこ生配信！.jpg",
       ref: "https://x.com/takanenofficial/status/1862428956982747203",
     },
   ],

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "でびぱっぱ夏祭 2024 〜西の陣〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "FESTIVAL",
   date: "2024-08-12",
   region: "大阪",
   location: "大阪城野外音楽堂",

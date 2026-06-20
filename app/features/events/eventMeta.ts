@@ -4,7 +4,7 @@ import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
 import { Act, isEmptyAct } from "./act";
-import { compareEventType, EventTypeEnum, LiveTypeEnum } from "./EventType";
+import { compareEventType, EventTypeEnum, LiveTypeEnum, MeetAndGreetTypeEnum } from "./EventType";
 import { normalizeLink } from "./normalizeLink";
 import { ShowNotes } from "./showNotes";
 import { TimeScheduleForMeetAndGreet } from "./timeSchedule";
@@ -31,6 +31,7 @@ const EventMeta = z
     status: EventStatus.optional(),
     category: EventTypeEnum,
     liveType: LiveTypeEnum.optional(),
+    meetAndGreetTypes: z.array(MeetAndGreetTypeEnum).default([]),
     date: z.string(),
     open: z.string().optional(),
     start: z.string().optional(),

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "駒木祭 in「江戸川ガールズアワード」",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2025-11-03",
   open: "13:00",
   start: "13:30",

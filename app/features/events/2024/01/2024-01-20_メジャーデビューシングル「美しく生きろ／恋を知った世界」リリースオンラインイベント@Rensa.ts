@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "メジャーデビューシングル「美しく生きろ / 恋を知った世界」リリースイベント@Rensa",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["握手会"],
   date: "2024-01-20",
   open: "11:30",
   start: "12:00",

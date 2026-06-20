@@ -4,7 +4,7 @@ export const meta: EventMetaDescriptor = {
   summary: "LuckyFes Half Time Show",
   title: "茨城ロボッツ vs アルバルク東京 / LuckyFes Half Time Show",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2025-03-22",
   open: undefined,
   start: "15:05",

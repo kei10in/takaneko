@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オンライン個別お話し会",
-  category: "EVENT",
+  category: "MEET_AND_GREET",
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2024-06-26",
   region: "Web",
   present: ["涼海すう", "橋本桃呼", "東山恵里沙", "日向端ひな", "松本ももな"],

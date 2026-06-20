@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "Appare!のなでしこ 〜Appare!×高嶺のなでしこ2マンライブ〜",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2023-10-15",
   region: "東京",
   location: "品川グランドホール",

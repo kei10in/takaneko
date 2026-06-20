@@ -3,7 +3,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "大オンライントーク会 振替日",
   title: "2ndシングル「IʼM YOUR IDOL/アドレナリンゲーム」発売記念 オンライントーク会 振替日",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["オンライン お話し会"],
   date: "2024-12-21",
   start: "10:00",
   region: "Web",

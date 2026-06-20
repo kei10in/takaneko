@@ -2,7 +2,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "オンラインサイン会・オンライントーク会振替日",
-  category: "EVENT",
+  category: "RELEASE_EVENT",
+  meetAndGreetTypes: ["オンライン お話し会", "オンライン サイン会"],
   date: "2024-02-17",
   region: "Web",
   present: ["橋本桃呼", "葉月紗蘭", "東山恵里沙"],

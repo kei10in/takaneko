@@ -3,8 +3,8 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "IDOL RUNWAY COLLECTION 2026",
   title: "CREATEs presents IDOL RUNWAY COLLECTION 2026 Supported by TGC",
-  category: "LIVE",
-  liveType: "GUEST",
+  category: "FASHION",
+  liveType: "EVENT_LIVE",
   date: "2026-03-15",
   open: "11:00",
   start: "12:00",

@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "ZEPPIN DISCO VOL.1",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2024-11-06",
   location: "Zepp Diver City TOKYO",
   region: "東京",

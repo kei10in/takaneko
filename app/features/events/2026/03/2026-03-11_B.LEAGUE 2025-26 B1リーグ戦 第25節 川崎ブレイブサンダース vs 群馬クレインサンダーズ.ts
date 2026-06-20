@@ -5,7 +5,7 @@ export const meta: EventMetaDescriptor = {
   title:
     "りそなグループ B.LEAGUE 2025-26 B1リーグ戦 第25節 川崎ブレイブサンダース vs 群馬クレインサンダーズ",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "EVENT_LIVE",
   date: "2026-03-11",
   open: undefined,
   start: "19:05",

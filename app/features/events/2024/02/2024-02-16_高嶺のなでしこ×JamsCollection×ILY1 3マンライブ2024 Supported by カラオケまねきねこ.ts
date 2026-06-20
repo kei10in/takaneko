@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 export const meta: EventMetaDescriptor = {
   summary: "高嶺のなでしこ×JamsCollection×ILY:1 3マンライブ2024 Supported by カラオケまねきねこ",
   category: "LIVE",
-  liveType: "GUEST",
+  liveType: "JOINT",
   date: "2024-02-16",
   region: "東京",
   location: "EX THEATER ROPPONGI",

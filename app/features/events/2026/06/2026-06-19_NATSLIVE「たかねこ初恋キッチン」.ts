@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "NATSLIVE「たかねこ初恋キッチン。#6 初恋青椒肉絲。」",
-  category: "STREAMING",
+  category: "VARIETY",
   liveType: undefined,
   date: "2026-06-19",
   open: "18:30",

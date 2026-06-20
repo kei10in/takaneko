@@ -77,7 +77,7 @@ describe("Event details JSON-LD", () => {
       event: makeEventMetaForTest({
         title: "出演辞退ライブ",
         summary: "出演辞退ライブ",
-        liveType: "GUEST",
+        liveType: "FESTIVAL",
         region: "東京",
         location: "Spotify O-EAST",
         status: "WITHDRAWN",
