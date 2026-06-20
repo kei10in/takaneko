@@ -11,10 +11,19 @@ export const ActTypeEnum = z.enum(["LIVE", "MEET_AND_GREET", "RUNWAY", "OTHER"])
 export const ActType = ActTypeEnum.enum;
 export type ActType = z.infer<typeof ActTypeEnum>;
 
+const ActStatus = z.union([
+  z.literal("RESCHEDULED"),
+  z.literal("CANCELED"),
+  z.literal("WITHDRAWN"),
+]);
+
+export type ActStatus = z.infer<typeof ActStatus>;
+
 export const Act = z
   .object({
     title: z.string().optional(),
     types: z.array(ActTypeEnum).default([]),
+    status: ActStatus.optional(),
 
     open: z.string().optional(),
     start: z.string().optional(),
