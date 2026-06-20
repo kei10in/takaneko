@@ -1,23 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { Act } from "~/features/events/act";
+import { EventModule } from "~/features/events/eventModule";
 import { LiveType } from "~/features/events/EventType";
 import { parseSetlist } from "~/features/events/setlist";
+import { makeEventMetaForTest } from "~/features/events/testUtils";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { buildSetlistEvents, filterSetlistEvents, SetlistSearchFilters } from "./setlists";
-
-interface SourceEvent {
-  slug: string;
-  meta: {
-    status?: "RESCHEDULED" | "CANCELED" | "WITHDRAWN" | undefined;
-    liveType?: LiveType | undefined;
-    date: string;
-    summary: string;
-    title: string;
-    region?: string | undefined;
-    location?: string | undefined;
-    acts: Act[];
-  };
-}
 
 const today = new NaiveDate(2026, 1, 10);
 
@@ -136,6 +124,7 @@ describe("filterSetlistEvents", () => {
         slug: "2025-12-24_solo",
         date: "2025-12-24",
         summary: "Christmas Party",
+        keywords: ["クリパ"],
         liveType: "SOLO",
         region: "大阪",
         location: "なんば",
@@ -161,6 +150,7 @@ describe("filterSetlistEvents", () => {
 
   it("searches event names, act names, locations, regions, songs, and costumes", () => {
     expect(filterSetlistEvents(events, filters({ q: "christmas" }))).toHaveLength(1);
+    expect(filterSetlistEvents(events, filters({ q: "クリパ" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "hot stage" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "なんば" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "東京" }))).toHaveLength(1);
@@ -199,23 +189,30 @@ const sourceEvent = (input: {
   summary?: string | undefined;
   status?: "RESCHEDULED" | "CANCELED" | "WITHDRAWN" | undefined;
   liveType?: LiveType | undefined;
+  keywords?: string[] | undefined;
   region?: string | undefined;
   location?: string | undefined;
   acts: Act[];
-}): SourceEvent => {
+}): EventModule => {
   const summary = input.summary ?? input.slug;
+  const meta = makeEventMetaForTest({
+    status: input.status,
+    category: "LIVE",
+    liveType: input.liveType,
+    date: input.date,
+    summary,
+    title: summary,
+    keywords: input.keywords,
+    region: input.region,
+    location: input.location,
+    acts: input.acts,
+  });
+
   return {
     slug: input.slug,
-    meta: {
-      status: input.status,
-      liveType: input.liveType,
-      date: input.date,
-      summary,
-      title: summary,
-      region: input.region,
-      location: input.location,
-      acts: input.acts,
-    },
+    filename: `${input.slug}.ts`,
+    meta,
+    Content: () => null,
   };
 };
 

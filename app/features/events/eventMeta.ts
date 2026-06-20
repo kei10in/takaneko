@@ -28,6 +28,8 @@ const EventMeta = z
     // ページの説明文を指定します。指定しない場合は自動生成される文言が使われます。
     description: z.string().optional(),
 
+    keywords: z.array(z.string()).default([]),
+
     status: EventStatus.optional(),
     category: EventTypeEnum,
     liveType: LiveTypeEnum.optional(),

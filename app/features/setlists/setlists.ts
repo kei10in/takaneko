@@ -1,6 +1,5 @@
 import { z } from "zod/v4";
 import { Act } from "~/features/events/act";
-import { EventStatus } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
 import { LiveType } from "~/features/events/EventType";
 import { Segment } from "~/features/events/setlist";
@@ -114,24 +113,7 @@ export interface SetlistSearchResult {
   matchedActIndexes: number[];
 }
 
-interface SetlistEventSource {
-  slug: string;
-  meta: {
-    status?: EventStatus | undefined;
-    liveType?: LiveType | undefined;
-    date: string;
-    summary: string;
-    title: string;
-    region?: string | undefined;
-    location?: string | undefined;
-    acts: Act[];
-  };
-}
-
-export const buildSetlistEvents = (
-  events: SetlistEventSource[] | EventModule[],
-  today: NaiveDate,
-): SetlistEvent[] => {
+export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): SetlistEvent[] => {
   return events
     .flatMap((event): SetlistEvent[] => {
       const { meta } = event;
@@ -161,6 +143,7 @@ export const buildSetlistEvents = (
           title,
           meta.date,
           meta.date.slice(0, 4),
+          ...meta.keywords,
           meta.region,
           meta.location,
           meta.liveType,

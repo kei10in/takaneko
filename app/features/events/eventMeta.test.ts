@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { compareEventMeta, compareEventStatus } from "./eventMeta";
+import { compareEventMeta, compareEventStatus, validateEventMeta } from "./eventMeta";
 import { makeEventMetaForTest } from "./testUtils";
 
 describe("compareEventMeta", () => {
@@ -62,5 +62,28 @@ describe("compareEventStatus", () => {
     expect(compareEventStatus("WITHDRAWN", "CANCELED")).toBeLessThan(0);
     expect(compareEventStatus(undefined, undefined)).toBe(0);
     expect(compareEventStatus("CANCELED", "RESCHEDULED")).toBeGreaterThan(0);
+  });
+});
+
+describe("validateEventMeta", () => {
+  it("defaults keywords to an empty array", () => {
+    const meta = validateEventMeta({
+      summary: "Test Event",
+      category: "LIVE",
+      date: "2025-08-01",
+    });
+
+    expect(meta?.keywords).toEqual([]);
+  });
+
+  it("keeps keywords for search metadata", () => {
+    const meta = validateEventMeta({
+      summary: "Test Event",
+      category: "LIVE",
+      date: "2025-08-01",
+      keywords: ["別名", "略称"],
+    });
+
+    expect(meta?.keywords).toEqual(["別名", "略称"]);
   });
 });
