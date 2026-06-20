@@ -1,13 +1,22 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { clsx } from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import {
   BsBoxArrowUpRight,
   BsCalendar,
   BsChevronDown,
+  BsFilter,
   BsListOl,
   BsPinMap,
   BsSearch,
+  BsX,
 } from "react-icons/bs";
 import {
   Link,
@@ -72,11 +81,13 @@ export default function Component() {
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
   const [query, setQuery] = useState(filters.q);
+  const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
   const totalSongCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.songCount, 0),
     [results],
   );
+  const activeFilterCount = activeSetlistFilterCount(filters);
 
   useEffect(() => {
     const timeout = window.setTimeout(() => setQuery(filters.q), 0);
@@ -101,12 +112,20 @@ export default function Component() {
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
     const next = new URLSearchParams(searchParams);
 
-    if (value == "" || (key == "status" && value == "all")) {
+    if (value == "" || (key == "status" && value == "all") || (key == "type" && value == "all")) {
       next.delete(key);
     } else {
       next.set(key, value);
     }
     setSearchParams(next, {
+      preventScrollReset: true,
+      defaultShouldRevalidate: false,
+    });
+  };
+
+  const resetFilters = () => {
+    setQuery("");
+    setSearchParams(new URLSearchParams(), {
       preventScrollReset: true,
       defaultShouldRevalidate: false,
     });
@@ -127,73 +146,87 @@ export default function Component() {
           </p>
         </div>
 
-        <div className="mt-8 space-y-4 rounded-lg border border-gray-200 bg-white p-4">
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-              commitSearch();
-            }}
+        <div className="mt-8 sm:hidden">
+          <button
+            type="button"
+            className="flex h-11 w-full items-center justify-center gap-2 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
+            onClick={() => setIsFilterDialogOpen(true)}
           >
-            <label className="block" htmlFor="setlist-search-query">
-              <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
-              <span className="flex items-stretch gap-2">
-                <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-                  <BsSearch className="flex-none text-gray-400" />
-                  <input
-                    id="setlist-search-query"
-                    className="min-w-0 flex-1 outline-none"
-                    value={query}
-                    onChange={(event) => setQuery(event.currentTarget.value)}
-                    placeholder="イベント名、曲名、会場、地域、衣装"
-                  />
-                </span>
-                <button
-                  type="submit"
-                  className="flex flex-none items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
-                >
-                  <BsSearch />
-                  <span>検索</span>
-                </button>
+            <BsFilter className="text-lg" />
+            <span>絞り込み</span>
+            {activeFilterCount > 0 && (
+              <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
+                {activeFilterCount}
               </span>
-            </label>
-          </form>
-
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            <SelectFilter
-              label="年"
-              value={filters.year}
-              onChange={(value) => updateFilter("year", value)}
-              options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
-            />
-            <SelectFilter
-              label="ライブ種別"
-              value={filters.type}
-              onChange={(value) => updateFilter("type", value)}
-              options={SetlistLiveFilters.map((filter) => ({
-                value: filter.name,
-                label: filter.display,
-              }))}
-              includeAll={false}
-            />
-            <SelectFilter
-              label="楽曲"
-              value={filters.song}
-              onChange={(value) => updateFilter("song", value)}
-              options={PerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
-            />
-            <SelectFilter
-              label="登録状態"
-              value={filters.status}
-              onChange={(value) => updateFilter("status", value)}
-              options={[
-                { value: "all", label: "すべて" },
-                { value: "with-setlist", label: "登録済み" },
-                { value: "missing", label: "未登録あり" },
-              ]}
-              includeAll={false}
-            />
-          </div>
+            )}
+          </button>
         </div>
+
+        <div className="mt-8 hidden rounded-lg border border-gray-200 bg-white p-4 sm:block">
+          <SetlistFilterForm
+            searchInputId="setlist-search-query"
+            filters={filters}
+            query={query}
+            onQueryChange={setQuery}
+            onSearch={commitSearch}
+            onFilterChange={updateFilter}
+          />
+        </div>
+
+        <Dialog
+          open={isFilterDialogOpen}
+          onClose={() => setIsFilterDialogOpen(false)}
+          className="relative z-50 sm:hidden"
+        >
+          <DialogBackdrop className="fixed inset-0 bg-black/40" />
+          <div className="fixed inset-x-0 bottom-0 max-h-[calc(100dvh-3rem)] overflow-y-auto rounded-t-xl bg-white shadow-xl">
+            <DialogPanel className="p-4">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <h2 className="text-base font-semibold text-gray-800">絞り込み</h2>
+                <button
+                  type="button"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-gray-200 text-gray-500"
+                  onClick={() => setIsFilterDialogOpen(false)}
+                  aria-label="閉じる"
+                >
+                  <BsX className="text-xl" />
+                </button>
+              </div>
+
+              <SetlistFilterForm
+                searchInputId="setlist-search-query-mobile"
+                filters={filters}
+                query={query}
+                onQueryChange={setQuery}
+                onSearch={() => {
+                  commitSearch();
+                  setIsFilterDialogOpen(false);
+                }}
+                onFilterChange={updateFilter}
+              />
+
+              <div className="mt-5 grid grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  className="h-11 rounded-md border border-gray-300 text-sm font-semibold text-gray-600"
+                  onClick={resetFilters}
+                >
+                  クリア
+                </button>
+                <button
+                  type="button"
+                  className="h-11 rounded-md bg-nadeshiko-800 text-sm font-semibold text-white"
+                  onClick={() => {
+                    commitSearch();
+                    setIsFilterDialogOpen(false);
+                  }}
+                >
+                  結果を見る
+                </button>
+              </div>
+            </DialogPanel>
+          </div>
+        </Dialog>
 
         <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
           <p>{results.length.toLocaleString()} 件</p>
@@ -221,6 +254,94 @@ export default function Component() {
     </div>
   );
 }
+
+interface SetlistFilterFormProps {
+  searchInputId: string;
+  filters: SetlistSearchFilters;
+  query: string;
+  onQueryChange: (query: string) => void;
+  onSearch: () => void;
+  onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
+}
+
+const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
+  searchInputId,
+  filters,
+  query,
+  onQueryChange,
+  onSearch,
+  onFilterChange,
+}: SetlistFilterFormProps) => {
+  return (
+    <div className="space-y-4">
+      <form
+        onSubmit={(event) => {
+          event.preventDefault();
+          onSearch();
+        }}
+      >
+        <label className="block" htmlFor={searchInputId}>
+          <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
+          <span className="flex items-stretch gap-2">
+            <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
+              <BsSearch className="flex-none text-gray-400" />
+              <input
+                id={searchInputId}
+                className="min-w-0 flex-1 outline-none"
+                value={query}
+                onChange={(event) => onQueryChange(event.currentTarget.value)}
+                placeholder="イベント名、曲名、会場、地域、衣装"
+              />
+            </span>
+            <button
+              type="submit"
+              className="flex flex-none items-center gap-1 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
+            >
+              <BsSearch />
+              <span>検索</span>
+            </button>
+          </span>
+        </label>
+      </form>
+
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <SelectFilter
+          label="年"
+          value={filters.year}
+          onChange={(value) => onFilterChange("year", value)}
+          options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
+        />
+        <SelectFilter
+          label="ライブ種別"
+          value={filters.type == "" ? "all" : filters.type}
+          onChange={(value) => onFilterChange("type", value)}
+          options={SetlistLiveFilters.map((filter) => ({
+            value: filter.name,
+            label: filter.display,
+          }))}
+          includeAll={false}
+        />
+        <SelectFilter
+          label="楽曲"
+          value={filters.song}
+          onChange={(value) => onFilterChange("song", value)}
+          options={PerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
+        />
+        <SelectFilter
+          label="登録状態"
+          value={filters.status}
+          onChange={(value) => onFilterChange("status", value)}
+          options={[
+            { value: "all", label: "すべて" },
+            { value: "with-setlist", label: "登録済み" },
+            { value: "missing", label: "未登録あり" },
+          ]}
+          includeAll={false}
+        />
+      </div>
+    </div>
+  );
+};
 
 interface SelectFilterProps {
   label: string;
@@ -254,6 +375,16 @@ const SelectFilter: React.FC<SelectFilterProps> = ({
       </select>
     </label>
   );
+};
+
+const activeSetlistFilterCount = (filters: SetlistSearchFilters): number => {
+  return [
+    filters.q,
+    filters.year,
+    filters.type == "all" ? "" : filters.type,
+    filters.song,
+    filters.status == "all" ? "" : filters.status,
+  ].filter((value) => value != "").length;
 };
 
 interface SetlistEventCardProps {
@@ -388,6 +519,7 @@ const searchFiltersFromParams = (params: URLSearchParams): SetlistSearchFilters 
 const parseLiveTypeFilter = (value: string | null): SetlistLiveFilterType | "" => {
   if (
     value == "solo" ||
+    value == "all" ||
     value == "hosted" ||
     value == "joint" ||
     value == "event-live" ||

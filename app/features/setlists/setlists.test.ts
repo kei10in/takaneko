@@ -3,12 +3,7 @@ import { Act } from "~/features/events/act";
 import { LiveType } from "~/features/events/EventType";
 import { parseSetlist } from "~/features/events/setlist";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import {
-  buildSetlistEvents,
-  buildSetlistFilterOptions,
-  filterSetlistEvents,
-  SetlistSearchFilters,
-} from "./setlists";
+import { buildSetlistEvents, filterSetlistEvents, SetlistSearchFilters } from "./setlists";
 
 interface SourceEvent {
   slug: string;
@@ -94,10 +89,7 @@ describe("buildSetlistEvents", () => {
       today,
     );
 
-    expect(events[0]?.acts.map((act) => act.title)).toEqual([
-      "1 部 ミニライブ",
-      "2 部 ミニライブ",
-    ]);
+    expect(events[0]?.acts.map((act) => act.title)).toEqual(["1 部 ミニライブ", "2 部 ミニライブ"]);
     expect(events[0]?.songCount).toBe(2);
   });
 
@@ -137,7 +129,7 @@ describe("filterSetlistEvents", () => {
         location: "お台場",
         acts: [
           act(["衣装: Blue Dress", "Song A", "Song B"], { title: "SMILE GARDEN" }),
-          act(["Song C"], { title: "HOT STAGE" }),
+          act(["ファンサ"], { title: "HOT STAGE" }),
         ],
       }),
       sourceEvent({
@@ -172,7 +164,7 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ q: "hot stage" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "なんば" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "東京" }))).toHaveLength(1);
-    expect(filterSetlistEvents(events, filters({ q: "song c" }))).toHaveLength(1);
+    expect(filterSetlistEvents(events, filters({ q: "ファンサ" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "blue dress" }))).toHaveLength(1);
   });
 
@@ -188,7 +180,7 @@ describe("filterSetlistEvents", () => {
       "2026-01-01_festival",
       "2025-12-01_missing",
     ]);
-    expect(filterSetlistEvents(events, filters({ song: "Song C" })).map(toSlug)).toEqual([
+    expect(filterSetlistEvents(events, filters({ song: "ファンサ" })).map(toSlug)).toEqual([
       "2026-01-01_festival",
     ]);
     expect(filterSetlistEvents(events, filters({ status: "with-setlist" })).map(toSlug)).toEqual([
@@ -198,43 +190,6 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ status: "missing" })).map(toSlug)).toEqual([
       "2025-12-01_missing",
     ]);
-  });
-
-  it("builds live type options from source data and song options from repertoire and limited songs", () => {
-    const events = buildSetlistEvents(
-      [
-        sourceEvent({
-          slug: "2026-01-01_festival",
-          date: "2026-01-01",
-          liveType: "FESTIVAL",
-          acts: [act(["ファンサ", "青春トレイン (ラストアイドル cover)"])],
-        }),
-        sourceEvent({
-          slug: "2026-01-02_joint",
-          date: "2026-01-02",
-          liveType: "JOINT",
-          acts: [act(["ハッピークリスマスパーティ"])],
-        }),
-        sourceEvent({
-          slug: "2026-01-03_guest",
-          date: "2026-01-03",
-          liveType: "GUEST",
-          acts: [act(["Song X"])],
-        }),
-        sourceEvent({
-          slug: "2026-01-04_solo",
-          date: "2026-01-04",
-          liveType: "SOLO",
-          acts: [act(["Song Y"])],
-        }),
-      ],
-      today,
-    );
-
-    const options = buildSetlistFilterOptions(events);
-
-    expect(options.liveTypeFilters).toEqual(["solo", "joint"]);
-    expect(options.songs).toEqual(["ハッピークリスマスパーティ", "ファンサ"]);
   });
 });
 
