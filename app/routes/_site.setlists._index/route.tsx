@@ -25,7 +25,7 @@ import {
   useLoaderData,
   useSearchParams,
 } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
+import { pageBox } from "~/components/styles";
 import { Setlist } from "~/features/events/components/Setlist";
 import { Events } from "~/features/events/events";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
@@ -125,10 +125,11 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox("px-4")}>
-        <div className="space-y-3">
-          <h1 className={pageHeading()}>セットリスト</h1>
-          <p className="max-w-3xl text-sm leading-7 text-gray-600">
+      <section className={pageBox("my-8 px-4")}>
+        <div className="space-y-12">
+          <h1 className={"text-5xl"}>セットリスト</h1>
+          {/* 見た目だけの調整 */}
+          <p className="ml-2">
             開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から探せます。 1 部 / 2
             部や複数ステージは、イベント内の公演ごとに分けて表示します。
           </p>
