@@ -26,8 +26,10 @@ import {
   buildSetlistFilterOptions,
   defaultSetlistSearchFilters,
   filterSetlistEvents,
+  liveTypeFilterLabel,
   liveTypeLabel,
   SetlistEvent,
+  SetlistLiveTypeFilter,
   SetlistSearchFilters,
   SetlistSearchStatus,
 } from "~/features/setlists/setlists";
@@ -168,9 +170,9 @@ export default function Component() {
               label="ライブ種別"
               value={filters.type}
               onChange={(value) => updateFilter("type", value)}
-              options={options.liveTypes.map((liveType) => ({
-                value: liveType,
-                label: liveTypeLabel(liveType),
+              options={options.liveTypeFilters.map((filter) => ({
+                value: filter,
+                label: liveTypeFilterLabel(filter),
               }))}
             />
             <SelectFilter
@@ -377,10 +379,24 @@ const searchFiltersFromParams = (params: URLSearchParams): SetlistSearchFilters 
     ...defaultSetlistSearchFilters(),
     q: params.get("q") ?? "",
     year: params.get("year") ?? "",
-    type: params.get("type") ?? "",
+    type: parseLiveTypeFilter(params.get("type")),
     song: params.get("song") ?? "",
     status,
   };
+};
+
+const parseLiveTypeFilter = (value: string | null): SetlistLiveTypeFilter | "" => {
+  if (
+    value == "solo" ||
+    value == "hosted" ||
+    value == "festival-joint-guest" ||
+    value == "event-live" ||
+    value == "release-event"
+  ) {
+    return value;
+  }
+
+  return "";
 };
 
 const parseSearchStatus = (value: string | null): SetlistSearchStatus => {

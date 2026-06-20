@@ -3,15 +3,23 @@ import { EventStatus } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
 import { LiveType } from "~/features/events/EventType";
 import { Segment } from "~/features/events/setlist";
+import { ALL_SONGS } from "~/features/songs/songs";
+import { Limited, Repertoire } from "~/features/songs/tags";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 
 export type SetlistSearchStatus = "all" | "with-setlist" | "missing";
+export type SetlistLiveTypeFilter =
+  | "solo"
+  | "hosted"
+  | "festival-joint-guest"
+  | "event-live"
+  | "release-event";
 
 export interface SetlistSearchFilters {
   q: string;
   year: string;
-  type: string;
+  type: SetlistLiveTypeFilter | "";
   song: string;
   status: SetlistSearchStatus;
 }
@@ -51,7 +59,7 @@ export interface SetlistSearchResult {
 
 export interface SetlistFilterOptions {
   years: string[];
-  liveTypes: LiveType[];
+  liveTypeFilters: SetlistLiveTypeFilter[];
   songs: string[];
 }
 
@@ -146,7 +154,7 @@ export const filterSetlistEvents = (
       return [];
     }
 
-    if (filters.type != "" && event.liveType != filters.type) {
+    if (filters.type != "" && !matchesLiveTypeFilter(filters.type, event.liveType)) {
       return [];
     }
 
@@ -185,12 +193,21 @@ export const filterSetlistEvents = (
 
 export const buildSetlistFilterOptions = (events: SetlistEvent[]): SetlistFilterOptions => {
   const years = [...new Set(events.map((event) => event.date.slice(0, 4)))].toSorted().toReversed();
-  const liveTypes = [...new Set(events.map((event) => event.liveType))].toSorted();
+  const availableLiveTypeFilters = new Set(
+    events.map((event) => liveTypeFilterForEvent(event.liveType)),
+  );
+  const liveTypeFilters = LiveTypeFilterOrder.filter((filter) =>
+    availableLiveTypeFilters.has(filter),
+  );
   const songs = [
-    ...new Set(events.flatMap((event) => event.acts.flatMap((act) => act.songTitles))),
+    ...new Set(
+      events
+        .flatMap((event) => event.acts.flatMap((act) => act.songTitles))
+        .filter(isFilterableSongTitle),
+    ),
   ].toSorted((a, b) => a.localeCompare(b, "ja"));
 
-  return { years, liveTypes, songs };
+  return { years, liveTypeFilters, songs };
 };
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
@@ -222,8 +239,63 @@ export const liveTypeLabel = (liveType: LiveType): string => {
   }
 };
 
+export const liveTypeFilterLabel = (filter: SetlistLiveTypeFilter): string => {
+  switch (filter) {
+    case "solo":
+      return "ワンマン";
+    case "hosted":
+      return "主催";
+    case "festival-joint-guest":
+      return "フェス・対バン・ゲスト";
+    case "event-live":
+      return "イベント出演";
+    case "release-event":
+      return "リリースイベント";
+  }
+};
+
 export const normalizeSearchText = (text: string): string => {
   return text.normalize("NFKC").toLocaleLowerCase("ja-JP").replace(/\s+/g, " ").trim();
+};
+
+const LiveTypeFilterOrder: SetlistLiveTypeFilter[] = [
+  "solo",
+  "hosted",
+  "festival-joint-guest",
+  "event-live",
+  "release-event",
+];
+
+const liveTypeFilterForEvent = (liveType: LiveType): SetlistLiveTypeFilter => {
+  switch (liveType) {
+    case "SOLO":
+      return "solo";
+    case "HOSTED":
+      return "hosted";
+    case "JOINT":
+    case "GUEST":
+    case "FESTIVAL":
+      return "festival-joint-guest";
+    case "EVENT_LIVE":
+      return "event-live";
+    case "RELEASE_EVENT":
+      return "release-event";
+  }
+};
+
+const matchesLiveTypeFilter = (filter: SetlistLiveTypeFilter, liveType: LiveType): boolean => {
+  return liveTypeFilterForEvent(liveType) == filter;
+};
+
+const FilterableSongTagKeys = new Set([Repertoire.key, Limited.key]);
+const FilterableSongTitles = new Set(
+  ALL_SONGS.filter((song) => song.tags?.some((tag) => FilterableSongTagKeys.has(tag.key))).map(
+    (song) => song.name,
+  ),
+);
+
+const isFilterableSongTitle = (songTitle: string): boolean => {
+  return FilterableSongTitles.has(songTitle);
 };
 
 const searchTokens = (q: string): string[] => {

@@ -3,7 +3,12 @@ import { Act } from "~/features/events/act";
 import { LiveType } from "~/features/events/EventType";
 import { parseSetlist } from "~/features/events/setlist";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { buildSetlistEvents, filterSetlistEvents, SetlistSearchFilters } from "./setlists";
+import {
+  buildSetlistEvents,
+  buildSetlistFilterOptions,
+  filterSetlistEvents,
+  SetlistSearchFilters,
+} from "./setlists";
 
 interface SourceEvent {
   slug: string;
@@ -166,9 +171,12 @@ describe("filterSetlistEvents", () => {
       "2025-12-24_solo",
       "2025-12-01_missing",
     ]);
-    expect(filterSetlistEvents(events, filters({ type: "SOLO" })).map(toSlug)).toEqual([
+    expect(filterSetlistEvents(events, filters({ type: "solo" })).map(toSlug)).toEqual([
       "2025-12-24_solo",
     ]);
+    expect(
+      filterSetlistEvents(events, filters({ type: "festival-joint-guest" })).map(toSlug),
+    ).toEqual(["2026-01-01_festival", "2025-12-01_missing"]);
     expect(filterSetlistEvents(events, filters({ song: "Song C" })).map(toSlug)).toEqual([
       "2026-01-01_festival",
     ]);
@@ -179,6 +187,43 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ status: "missing" })).map(toSlug)).toEqual([
       "2025-12-01_missing",
     ]);
+  });
+
+  it("builds live type options from source data and song options from repertoire and limited songs", () => {
+    const events = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: "2026-01-01_festival",
+          date: "2026-01-01",
+          liveType: "FESTIVAL",
+          acts: [act(["ファンサ", "青春トレイン (ラストアイドル cover)"])],
+        }),
+        sourceEvent({
+          slug: "2026-01-02_joint",
+          date: "2026-01-02",
+          liveType: "JOINT",
+          acts: [act(["ハッピークリスマスパーティ"])],
+        }),
+        sourceEvent({
+          slug: "2026-01-03_guest",
+          date: "2026-01-03",
+          liveType: "GUEST",
+          acts: [act(["Song X"])],
+        }),
+        sourceEvent({
+          slug: "2026-01-04_solo",
+          date: "2026-01-04",
+          liveType: "SOLO",
+          acts: [act(["Song Y"])],
+        }),
+      ],
+      today,
+    );
+
+    const options = buildSetlistFilterOptions(events);
+
+    expect(options.liveTypeFilters).toEqual(["solo", "festival-joint-guest"]);
+    expect(options.songs).toEqual(["ハッピークリスマスパーティ", "ファンサ"]);
   });
 });
 
@@ -216,6 +261,7 @@ const act = (
 ): Act => {
   return {
     title: options?.title,
+    types: ["LIVE"],
     absent: [],
     setlist: parseSetlist(setlist),
     links: [],
