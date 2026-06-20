@@ -12,6 +12,16 @@ export const SetlistSearchStatusEnum = z.enum(["all", "with-setlist", "missing"]
 export const SetlistSearchStatus = SetlistSearchStatusEnum.enum;
 export type SetlistSearchStatus = z.infer<typeof SetlistSearchStatusEnum>;
 
+export const SetlistYearFilterStart = 2022;
+export const SetlistYearFilterEnd = new Date().getFullYear();
+
+export const SetlistYearFilters = Array.from(
+  { length: SetlistYearFilterEnd - SetlistYearFilterStart + 1 },
+  (_, i) => (SetlistYearFilterStart + i).toString(),
+)
+  .toReversed()
+  .map((x) => ({ value: x, label: `${x} 年` }));
+
 export const SetlistLiveFilterTypeEnum = z.enum([
   "all",
   "solo",
@@ -102,10 +112,6 @@ export interface SetlistEvent {
 export interface SetlistSearchResult {
   event: SetlistEvent;
   matchedActIndexes: number[];
-}
-
-export interface SetlistFilterOptions {
-  years: string[];
 }
 
 interface SetlistEventSource {
@@ -246,12 +252,6 @@ const matchesSongFilter = (songSlug: string, act: SetlistAct): boolean => {
   }
 
   return act.songTitles.includes(songName);
-};
-
-export const buildSetlistFilterOptions = (events: SetlistEvent[]): SetlistFilterOptions => {
-  const years = [...new Set(events.map((event) => event.date.slice(0, 4)))].toSorted().toReversed();
-
-  return { years };
 };
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {

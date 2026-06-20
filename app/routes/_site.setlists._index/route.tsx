@@ -23,7 +23,6 @@ import { Events } from "~/features/events/events";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
 import {
   buildSetlistEvents,
-  buildSetlistFilterOptions,
   defaultSetlistSearchFilters,
   filterSetlistEvents,
   SetlistEvent,
@@ -31,6 +30,7 @@ import {
   SetlistLiveFilterType,
   SetlistSearchFilters,
   SetlistSearchStatus,
+  SetlistYearFilters,
 } from "~/features/setlists/setlists";
 import { PerformedSongs } from "~/features/songs/songsFiltered";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
@@ -51,9 +51,8 @@ export const meta: MetaFunction = () => {
 export const loader = async () => {
   const eventModules = await Events.importAllEventModules();
   const events = buildSetlistEvents(eventModules, NaiveDate.todayInJapan());
-  const options = buildSetlistFilterOptions(events);
 
-  return { events, options };
+  return { events };
 };
 
 export const shouldRevalidate = ({
@@ -69,7 +68,7 @@ export const shouldRevalidate = ({
 };
 
 export default function Component() {
-  const { events, options } = useLoaderData<typeof loader>();
+  const { events } = useLoaderData<typeof loader>();
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
   const [query, setQuery] = useState(filters.q);
@@ -164,7 +163,7 @@ export default function Component() {
               label="年"
               value={filters.year}
               onChange={(value) => updateFilter("year", value)}
-              options={options.years.map((year) => ({ value: year, label: `${year}年` }))}
+              options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
             />
             <SelectFilter
               label="ライブ種別"
