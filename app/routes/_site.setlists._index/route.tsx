@@ -213,12 +213,13 @@ export default function Component() {
         ) : (
           <ul className="mt-4 space-y-4">
             {results.map(({ event, matchedActIndexes }) => (
-              <SetlistEventCard
-                key={event.slug}
-                event={event}
-                matchedActIndexes={matchedActIndexes}
-                showMatchedAct={filters.q != "" || filters.song != ""}
-              />
+              <li key={event.slug}>
+                <SetlistEventCard
+                  event={event}
+                  matchedActIndexes={matchedActIndexes}
+                  showMatchedAct={filters.q != "" || filters.song != ""}
+                />
+              </li>
             ))}
           </ul>
         )}
