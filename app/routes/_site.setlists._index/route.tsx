@@ -32,6 +32,7 @@ import {
   SetlistSearchFilters,
   SetlistSearchStatus,
 } from "~/features/setlists/setlists";
+import { PerformedSongs } from "~/features/songs/songsFiltered";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -179,7 +180,7 @@ export default function Component() {
               label="楽曲"
               value={filters.song}
               onChange={(value) => updateFilter("song", value)}
-              options={options.songs.map((song) => ({ value: song, label: song }))}
+              options={PerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
             />
             <SelectFilter
               label="登録状態"

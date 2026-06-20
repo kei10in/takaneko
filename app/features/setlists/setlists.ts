@@ -4,10 +4,9 @@ import { EventStatus } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
 import { LiveType } from "~/features/events/EventType";
 import { Segment } from "~/features/events/setlist";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { Limited, Repertoire } from "~/features/songs/tags";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { LinkDescription } from "~/utils/types/LinkDescription";
+import { ALL_SONGS } from "../songs/songs";
 
 export const SetlistSearchStatusEnum = z.enum(["all", "with-setlist", "missing"]);
 export const SetlistSearchStatus = SetlistSearchStatusEnum.enum;
@@ -107,7 +106,6 @@ export interface SetlistSearchResult {
 
 export interface SetlistFilterOptions {
   years: string[];
-  songs: string[];
 }
 
 interface SetlistEventSource {
@@ -210,7 +208,7 @@ export const filterSetlistEvents = (
     const eventMatchesQuery =
       tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
     const matchedActIndexes = event.acts.flatMap((act, index) => {
-      const songMatches = filters.song == "" || act.songTitles.includes(filters.song);
+      const songMatches = matchesSongFilter(filters.song, act);
       if (!songMatches) {
         return [];
       }
@@ -241,18 +239,19 @@ const matchesLiveTypeFilter = (filter: SetlistLiveFilterType, event: SetlistEven
   return f.predicate(event.liveType);
 };
 
+const matchesSongFilter = (songSlug: string, act: SetlistAct): boolean => {
+  const songName = ALL_SONGS.find((x) => x.slug === songSlug)?.name;
+  if (songName == undefined) {
+    return true;
+  }
+
+  return act.songTitles.includes(songName);
+};
+
 export const buildSetlistFilterOptions = (events: SetlistEvent[]): SetlistFilterOptions => {
   const years = [...new Set(events.map((event) => event.date.slice(0, 4)))].toSorted().toReversed();
 
-  const songs = [
-    ...new Set(
-      events
-        .flatMap((event) => event.acts.flatMap((act) => act.songTitles))
-        .filter(isFilterableSongTitle),
-    ),
-  ].toSorted((a, b) => a.localeCompare(b, "ja"));
-
-  return { years, songs };
+  return { years };
 };
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
@@ -267,17 +266,6 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
 
 export const normalizeSearchText = (text: string): string => {
   return text.normalize("NFKC").toLocaleLowerCase("ja-JP").replace(/\s+/g, " ").trim();
-};
-
-const FilterableSongTagKeys = new Set([Repertoire.key, Limited.key]);
-const FilterableSongTitles = new Set(
-  ALL_SONGS.filter((song) => song.tags?.some((tag) => FilterableSongTagKeys.has(tag.key))).map(
-    (song) => song.name,
-  ),
-);
-
-const isFilterableSongTitle = (songTitle: string): boolean => {
-  return FilterableSongTitles.has(songTitle);
 };
 
 const searchTokens = (q: string): string[] => {
