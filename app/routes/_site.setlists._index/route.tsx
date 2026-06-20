@@ -1,4 +1,5 @@
 import {
+  CloseButton,
   Dialog,
   DialogBackdrop,
   DialogPanel,
@@ -9,15 +10,12 @@ import {
 import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import {
-  BsBoxArrowUpRight,
-  BsCalendar,
-  BsChevronDown,
-  BsFilter,
-  BsListOl,
-  BsPinMap,
-  BsSearch,
-  BsX,
-} from "react-icons/bs";
+  HiChevronDown,
+  HiFunnel,
+  HiMagnifyingGlass,
+  HiMusicalNote,
+  HiOutlineMapPin,
+} from "react-icons/hi2";
 import {
   Link,
   MetaFunction,
@@ -25,7 +23,8 @@ import {
   useLoaderData,
   useSearchParams,
 } from "react-router";
-import { pageBox } from "~/components/styles";
+import { dialogBackdropStyle, pageBox } from "~/components/styles";
+import { XMarkButton } from "~/components/XMarkButton";
 import { Setlist } from "~/features/events/components/Setlist";
 import { Events } from "~/features/events/events";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
@@ -138,10 +137,10 @@ export default function Component() {
         <div className="mt-8 sm:hidden">
           <button
             type="button"
-            className="flex h-11 w-full items-center justify-center gap-2 rounded-md bg-nadeshiko-800 px-4 text-sm font-semibold text-white"
+            className="ml-auto flex h-10 graceful-button w-56 items-center justify-center gap-2 px-4"
             onClick={() => setIsFilterDialogOpen(true)}
           >
-            <BsFilter className="text-lg" />
+            <HiFunnel className="" />
             <span>絞り込み</span>
             {activeFilterCount > 0 && (
               <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
@@ -166,47 +165,53 @@ export default function Component() {
           onClose={() => setIsFilterDialogOpen(false)}
           className="relative z-50 sm:hidden"
         >
-          <DialogBackdrop className="fixed inset-0 bg-black/40" />
-          <div className="fixed inset-x-0 bottom-0 max-h-[calc(100dvh-3rem)] overflow-y-auto rounded-t-xl bg-white shadow-xl">
-            <DialogPanel className="p-4">
-              <div className="mb-4 flex items-center justify-between gap-3">
-                <h2 className="text-base font-semibold text-gray-800">絞り込み</h2>
-                <button
-                  type="button"
-                  className="grid h-9 w-9 place-items-center rounded-full border border-gray-200 text-gray-500"
-                  onClick={() => setIsFilterDialogOpen(false)}
-                  aria-label="閉じる"
-                >
-                  <BsX className="text-xl" />
-                </button>
-              </div>
+          <DialogBackdrop className={dialogBackdropStyle()} transition />
+          <div className="fixed inset-0 flex flex-col items-center justify-end">
+            <DialogPanel
+              className={clsx(
+                "max-h-[calc(100dvh-var(--header-height))] w-full overflow-y-auto bg-white shadow-xl",
+                "data-closed:translate-y-full",
+                "transition-all duration-300 ease-in-out",
+              )}
+              transition
+            >
+              <div className="p-4">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <h2 className="text-base font-semibold text-gray-800">絞り込み</h2>
+                  <CloseButton
+                    as={XMarkButton}
+                    onClick={() => setIsFilterDialogOpen(false)}
+                    aria-label="閉じる"
+                  />
+                </div>
 
-              <SetlistFilterForm
-                searchFormId="setlist-search-form-mobile"
-                searchInputId="setlist-search-query-mobile"
-                filters={filters}
-                onSearch={(q) => {
-                  commitSearch(q);
-                  setIsFilterDialogOpen(false);
-                }}
-                onFilterChange={updateFilter}
-              />
+                <SetlistFilterForm
+                  searchFormId="setlist-search-form-mobile"
+                  searchInputId="setlist-search-query-mobile"
+                  filters={filters}
+                  onSearch={(q) => {
+                    commitSearch(q);
+                    setIsFilterDialogOpen(false);
+                  }}
+                  onFilterChange={updateFilter}
+                />
 
-              <div className="mt-5 grid grid-cols-2 gap-2">
-                <button
-                  type="button"
-                  className="h-11 rounded-md border border-gray-300 text-sm font-semibold text-gray-600"
-                  onClick={resetFilters}
-                >
-                  クリア
-                </button>
-                <button
-                  type="submit"
-                  form="setlist-search-form-mobile"
-                  className="h-11 rounded-md bg-nadeshiko-800 text-sm font-semibold text-white"
-                >
-                  結果を見る
-                </button>
+                <div className="mt-5 grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    className="h-10 rounded-full border border-zinc-300 text-zinc-600"
+                    onClick={resetFilters}
+                  >
+                    クリア
+                  </button>
+                  <button
+                    type="submit"
+                    form="setlist-search-form-mobile"
+                    className="graceful-button w-auto"
+                  >
+                    結果を見る
+                  </button>
+                </div>
               </div>
             </DialogPanel>
           </div>
@@ -269,7 +274,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
           <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
           <span className="flex items-stretch gap-2">
             <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-              <BsSearch className="flex-none text-gray-400" />
+              <HiMagnifyingGlass className="flex-none text-gray-400" />
               <input
                 key={`${searchInputId}:${filters.q}`}
                 id={searchInputId}
@@ -283,7 +288,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
               type="submit"
               className="flex graceful-button flex-none items-center gap-1 rounded-full px-4 text-sm font-semibold"
             >
-              <BsSearch />
+              <HiMagnifyingGlass />
               <span>検索</span>
             </button>
           </span>
@@ -396,10 +401,7 @@ const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
             <div className="flex items-start gap-3">
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                  <span className="inline-flex items-center gap-1">
-                    <BsCalendar />
-                    {displayDateWithDayOfWeek(date)}
-                  </span>
+                  <span className="inline-flex items-center">{displayDateWithDayOfWeek(date)}</span>
                   <span
                     className={clsx(
                       "inline-block rounded-full px-2 py-0.5 text-white",
@@ -427,21 +429,21 @@ const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                 <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
                   {event.location != undefined && (
                     <span className="inline-flex min-w-0 items-center gap-1">
-                      <BsPinMap className="flex-none" />
+                      <HiOutlineMapPin className="flex-none" />
                       <span className="line-clamp-1">{event.location}</span>
                     </span>
                   )}
                   {event.region != undefined && <span>{event.region}</span>}
                   <span className="inline-flex items-center gap-1">
-                    <BsListOl />
+                    <HiMusicalNote />
                     {event.actCount > 1 ? `${event.actCount} 公演 / ` : ""}
                     {event.songCount} 曲
                   </span>
                 </div>
               </div>
 
-              <div className="flex flex-none items-center gap-2 pt-1 text-gray-400">
-                <BsChevronDown className={clsx("transition-transform", open && "rotate-180")} />
+              <div className="flex flex-none items-center gap-2 pt-1">
+                <HiChevronDown className={clsx("transition-transform", open && "rotate-180")} />
               </div>
             </div>
           </DisclosureButton>
@@ -479,7 +481,6 @@ const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                   to={eventUrl}
                 >
                   <span>イベント詳細</span>
-                  <BsBoxArrowUpRight />
                 </Link>
               </div>
             </div>
