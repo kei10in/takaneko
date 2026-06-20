@@ -12,7 +12,7 @@ export type SetlistSearchStatus = "all" | "with-setlist" | "missing";
 export type SetlistLiveTypeFilter =
   | "solo"
   | "hosted"
-  | "festival-joint-guest"
+  | "joint"
   | "event-live"
   | "release-event";
 
@@ -77,8 +77,6 @@ interface SetlistEventSource {
   };
 }
 
-const ExcludedStatuses: EventStatus[] = ["CANCELED", "WITHDRAWN", "RESCHEDULED"];
-
 export const buildSetlistEvents = (
   events: SetlistEventSource[] | EventModule[],
   today: NaiveDate,
@@ -88,10 +86,6 @@ export const buildSetlistEvents = (
       const { meta } = event;
 
       if (meta.liveType == undefined) {
-        return [];
-      }
-
-      if (meta.status != undefined && ExcludedStatuses.includes(meta.status)) {
         return [];
       }
 
@@ -245,7 +239,7 @@ export const liveTypeFilterLabel = (filter: SetlistLiveTypeFilter): string => {
       return "ワンマン";
     case "hosted":
       return "主催";
-    case "festival-joint-guest":
+    case "joint":
       return "フェス・対バン・ゲスト";
     case "event-live":
       return "イベント出演";
@@ -261,7 +255,7 @@ export const normalizeSearchText = (text: string): string => {
 const LiveTypeFilterOrder: SetlistLiveTypeFilter[] = [
   "solo",
   "hosted",
-  "festival-joint-guest",
+  "joint",
   "event-live",
   "release-event",
 ];
@@ -275,7 +269,7 @@ const liveTypeFilterForEvent = (liveType: LiveType): SetlistLiveTypeFilter => {
     case "JOINT":
     case "GUEST":
     case "FESTIVAL":
-      return "festival-joint-guest";
+      return "joint";
     case "EVENT_LIVE":
       return "event-live";
     case "RELEASE_EVENT":

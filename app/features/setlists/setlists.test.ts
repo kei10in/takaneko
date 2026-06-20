@@ -27,7 +27,7 @@ interface SourceEvent {
 const today = new NaiveDate(2026, 1, 10);
 
 describe("buildSetlistEvents", () => {
-  it("keeps past live events and excludes future, non-live, and inactive events", () => {
+  it("keeps past live events and excludes future and non-live events", () => {
     const events = buildSetlistEvents(
       [
         sourceEvent({
@@ -54,6 +54,16 @@ describe("buildSetlistEvents", () => {
           liveType: undefined,
           acts: [act(["Song D"])],
         }),
+      ],
+      today,
+    );
+
+    expect(events.map((event) => event.slug)).toEqual(["2026-01-01_live"]);
+  });
+
+  it("does not exclude live events by status", () => {
+    const events = buildSetlistEvents(
+      [
         sourceEvent({
           slug: "2026-01-01_canceled",
           date: "2026-01-01",
@@ -65,7 +75,7 @@ describe("buildSetlistEvents", () => {
       today,
     );
 
-    expect(events.map((event) => event.slug)).toEqual(["2026-01-01_live"]);
+    expect(events.map((event) => event.slug)).toEqual(["2026-01-01_canceled"]);
   });
 
   it("keeps separated acts under the same event", () => {
@@ -174,9 +184,10 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ type: "solo" })).map(toSlug)).toEqual([
       "2025-12-24_solo",
     ]);
-    expect(
-      filterSetlistEvents(events, filters({ type: "festival-joint-guest" })).map(toSlug),
-    ).toEqual(["2026-01-01_festival", "2025-12-01_missing"]);
+    expect(filterSetlistEvents(events, filters({ type: "joint" })).map(toSlug)).toEqual([
+      "2026-01-01_festival",
+      "2025-12-01_missing",
+    ]);
     expect(filterSetlistEvents(events, filters({ song: "Song C" })).map(toSlug)).toEqual([
       "2026-01-01_festival",
     ]);
@@ -222,7 +233,7 @@ describe("filterSetlistEvents", () => {
 
     const options = buildSetlistFilterOptions(events);
 
-    expect(options.liveTypeFilters).toEqual(["solo", "festival-joint-guest"]);
+    expect(options.liveTypeFilters).toEqual(["solo", "joint"]);
     expect(options.songs).toEqual(["ハッピークリスマスパーティ", "ファンサ"]);
   });
 });

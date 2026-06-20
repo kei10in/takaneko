@@ -389,7 +389,7 @@ const parseLiveTypeFilter = (value: string | null): SetlistLiveTypeFilter | "" =
   if (
     value == "solo" ||
     value == "hosted" ||
-    value == "festival-joint-guest" ||
+    value == "joint" ||
     value == "event-live" ||
     value == "release-event"
   ) {
