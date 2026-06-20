@@ -160,7 +160,7 @@ export const MonthlyCalendarController: React.FC<Props> = (props: Props) => {
                       as={Link}
                       data-current={filter == c.name ? "" : undefined}
                       className={clsx(
-                        "flex h-9 items-center px-6 text-base text-gray-600",
+                        "flex h-9 items-center px-6 text-base text-nowrap text-gray-600",
                         "rounded-lg hover:bg-zinc-100 data-current:graceful-selected-item",
                       )}
                       to={{
