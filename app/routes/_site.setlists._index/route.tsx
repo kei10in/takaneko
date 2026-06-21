@@ -1,7 +1,7 @@
 import { CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useDeferredValue, useMemo, useState } from "react";
-import { HiFunnel, HiMagnifyingGlass } from "react-icons/hi2";
+import { HiFunnel, HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
 import { MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
@@ -86,11 +86,6 @@ export default function Component() {
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
   );
-  const activeFilterCount = activeSetlistFilterCount(filters);
-
-  const updateSearchQuery = (inputQuery: string) => {
-    setQuery(inputQuery);
-  };
 
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
     const nextValue = key == "type" && value == "all" ? "" : value;
@@ -115,34 +110,43 @@ export default function Component() {
         </div>
 
         <div className="mt-8 space-y-4">
-          <label className="block">
-            <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
-            <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-              <HiMagnifyingGlass className="flex-none text-gray-400" />
-              <input
-                name="q"
-                className="min-w-0 flex-1 outline-none"
-                value={query}
-                onChange={(event) => {
-                  const nextQuery = event.currentTarget.value;
-                  setQuery(nextQuery);
-                  if (!isComposing) {
-                    updateFilter("q", nextQuery);
-                  }
-                }}
-                onCompositionStart={() => {
-                  setIsComposing(true);
-                }}
-                onCompositionEnd={(event) => {
-                  const nextQuery = event.currentTarget.value;
-                  setIsComposing(false);
-                  setQuery(nextQuery);
+          <div className="box-border flex h-10 items-center gap-2 rounded-full border border-zinc-300 px-3 focus-within:border-nadeshiko-500">
+            <HiMagnifyingGlass className="flex-none text-zinc-400" />
+            <input
+              name="q"
+              className="min-w-0 flex-1 outline-none"
+              value={query}
+              autoComplete="off"
+              onChange={(event) => {
+                const nextQuery = event.currentTarget.value;
+                setQuery(nextQuery);
+                if (!isComposing) {
                   updateFilter("q", nextQuery);
+                }
+              }}
+              onCompositionStart={() => {
+                setIsComposing(true);
+              }}
+              onCompositionEnd={(event) => {
+                const nextQuery = event.currentTarget.value;
+                setIsComposing(false);
+                setQuery(nextQuery);
+                updateFilter("q", nextQuery);
+              }}
+              placeholder="イベント名、曲名、会場、地域、衣装"
+            />
+            {query != "" && (
+              <button
+                className="flex size-5 items-center justify-center rounded-full"
+                onClick={() => {
+                  setQuery("");
+                  updateFilter("q", "");
                 }}
-                placeholder="イベント名、曲名、会場、地域、衣装"
-              />
-            </span>
-          </label>
+              >
+                <HiXMark className="size-full text-zinc-500" />
+              </button>
+            )}
+          </div>
 
           <div className="hidden sm:block">
             <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
@@ -151,16 +155,11 @@ export default function Component() {
           <div className="sm:hidden">
             <button
               type="button"
-              className="ml-auto flex h-10 graceful-button w-56 items-center justify-center gap-2 px-4"
+              className="ml-auto flex h-10 graceful-button w-40 items-center justify-center gap-2 px-4"
               onClick={() => setIsFilterDialogOpen(true)}
             >
-              <HiFunnel className="" />
+              <HiFunnel />
               <span>絞り込み</span>
-              {activeFilterCount > 0 && (
-                <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
-                  {activeFilterCount}
-                </span>
-              )}
             </button>
           </div>
         </div>
