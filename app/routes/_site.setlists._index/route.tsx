@@ -117,8 +117,6 @@ export default function Component() {
 
         <div className="mt-8 hidden rounded-lg border border-gray-200 bg-white p-4 sm:block">
           <SetlistFilterForm
-            searchFormId="setlist-search-form"
-            searchInputId="setlist-search-query"
             filters={filters}
             query={query}
             onQueryChange={updateSearchQuery}
@@ -152,13 +150,10 @@ export default function Component() {
                 </div>
 
                 <SetlistFilterForm
-                  searchFormId="setlist-search-form-mobile"
-                  searchInputId="setlist-search-query-mobile"
                   filters={filters}
                   query={query}
                   onQueryChange={updateSearchQuery}
                   onFilterChange={updateFilter}
-                  onSubmit={() => setIsFilterDialogOpen(false)}
                 />
 
                 <div className="mt-5 grid grid-cols-2 gap-2">
@@ -212,8 +207,6 @@ export default function Component() {
 }
 
 interface SetlistFilterFormProps {
-  searchFormId: string;
-  searchInputId: string;
   filters: SetlistSearchFilters;
   query: string;
   onQueryChange: (query: string) => void;
@@ -222,66 +215,42 @@ interface SetlistFilterFormProps {
 }
 
 const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
-  searchFormId,
-  searchInputId,
   filters,
   query,
   onFilterChange,
   onQueryChange,
-  onSubmit,
 }: SetlistFilterFormProps) => {
   const [isComposing, setIsComposing] = useState(false);
 
   return (
     <div className="space-y-4">
-      <form
-        id={searchFormId}
-        onSubmit={(event) => {
-          event.preventDefault();
-          const formData = new FormData(event.currentTarget);
-          const q = formData.get("q");
-          onQueryChange(typeof q == "string" ? q : "");
-          onSubmit?.();
-        }}
-      >
-        <label className="block" htmlFor={searchInputId}>
-          <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
-          <span className="flex items-stretch gap-2">
-            <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-              <HiMagnifyingGlass className="flex-none text-gray-400" />
-              <input
-                id={searchInputId}
-                name="q"
-                className="min-w-0 flex-1 outline-none"
-                value={query}
-                onChange={(event) => {
-                  const nextQuery = event.currentTarget.value;
-                  onQueryChange(nextQuery);
-                  if (!isComposing) {
-                    onFilterChange("q", nextQuery);
-                  }
-                }}
-                onCompositionStart={() => {
-                  setIsComposing(true);
-                }}
-                onCompositionEnd={(event) => {
-                  const nextQuery = event.currentTarget.value;
-                  setIsComposing(false);
-                  onFilterChange("q", nextQuery);
-                }}
-                placeholder="イベント名、曲名、会場、地域、衣装"
-              />
-            </span>
-            <button
-              type="submit"
-              className="flex graceful-button flex-none items-center gap-1 rounded-full px-4 text-sm font-semibold"
-            >
-              <HiMagnifyingGlass />
-              <span>検索</span>
-            </button>
-          </span>
-        </label>
-      </form>
+      <label className="block">
+        <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
+        <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
+          <HiMagnifyingGlass className="flex-none text-gray-400" />
+          <input
+            name="q"
+            className="min-w-0 flex-1 outline-none"
+            value={query}
+            onChange={(event) => {
+              const nextQuery = event.currentTarget.value;
+              onQueryChange(nextQuery);
+              if (!isComposing) {
+                onFilterChange("q", nextQuery);
+              }
+            }}
+            onCompositionStart={() => {
+              setIsComposing(true);
+            }}
+            onCompositionEnd={(event) => {
+              const nextQuery = event.currentTarget.value;
+              setIsComposing(false);
+              onFilterChange("q", nextQuery);
+            }}
+            placeholder="イベント名、曲名、会場、地域、衣装"
+          />
+        </span>
+      </label>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <SelectFilter
