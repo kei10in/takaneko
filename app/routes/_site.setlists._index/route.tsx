@@ -258,6 +258,11 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
   filters,
   onFilterChange,
 }: SetlistFilterFormProps) => {
+  const sortedPerformedSongs = useMemo(
+    () => [...PerformedSongs].toSorted((a, b) => a.name.localeCompare(b.name)),
+    [],
+  );
+
   return (
     <div className="space-y-4">
       <div className="grid gap-4 lg:grid-cols-2">
@@ -283,7 +288,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
           label="楽曲"
           value={filters.song}
           onChange={(value) => onFilterChange("song", value)}
-          options={PerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
+          options={sortedPerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
         />
         <SelectFilter
           label="衣装"
