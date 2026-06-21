@@ -10,11 +10,10 @@ import {
 } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
-import { Events } from "~/features/events/events";
 import {
-  buildSetlistEvents,
   defaultSetlistSearchFilters,
   filterSetlistEvents,
+  SetlistEvents,
   SetlistLiveFilters,
   SetlistLiveFilterType,
   SetlistSearchFilters,
@@ -22,8 +21,8 @@ import {
   SetlistYearFilters,
 } from "~/features/setlists/setlists";
 import { PerformedSongs } from "~/features/songs/songsFiltered";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { formatTitle } from "~/utils/htmlHeader";
+import type { Route } from "./+types/route";
 import { SetlistEventCard } from "./SetlistEventCard";
 
 export const meta: MetaFunction = () => {
@@ -37,11 +36,23 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = async () => {
-  const eventModules = await Events.importAllEventModules();
-  const events = buildSetlistEvents(eventModules, NaiveDate.todayInJapan());
+export const loader = async ({ request, context }: Route.LoaderArgs) => {
+  const origin = new URL(request.url).origin;
+  const url = new URL("/data/setlists/lives.json", origin).toString();
+  const response = await context.cloudflare.env.ASSETS.fetch(url);
 
-  return { events };
+  if (!response.ok) {
+    throw new Response("Setlist index is not found.", { status: 500 });
+  }
+
+  const json = await response.json();
+  const result = SetlistEvents.safeParse(json);
+
+  if (!result.success) {
+    throw new Response("Setlist index is invalid.", { status: 500 });
+  }
+
+  return { events: result.data };
 };
 
 export const shouldRevalidate = ({

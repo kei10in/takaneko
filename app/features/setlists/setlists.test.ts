@@ -44,7 +44,7 @@ describe("buildSetlistEvents", () => {
     expect(events.map((event) => event.slug)).toEqual(["2026-01-01_live"]);
   });
 
-  it("does not exclude live events by status", () => {
+  it("excludes live events by status", () => {
     const events = buildSetlistEvents(
       [
         sourceEvent({
@@ -58,7 +58,7 @@ describe("buildSetlistEvents", () => {
       today,
     );
 
-    expect(events.map((event) => event.slug)).toEqual(["2026-01-01_canceled"]);
+    expect(events.map((event) => event.slug)).toEqual([]);
   });
 
   it("keeps separated acts under the same event", () => {
