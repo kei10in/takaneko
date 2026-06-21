@@ -64,6 +64,7 @@ export const shouldRevalidate = ({
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
   const [query, setQuery] = useState("");
+  const [isComposing, setIsComposing] = useState(false);
   const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const deferredQuery = useDeferredValue(filters.q);
@@ -113,29 +114,55 @@ export default function Component() {
           </p>
         </div>
 
-        <div className="mt-8 sm:hidden">
-          <button
-            type="button"
-            className="ml-auto flex h-10 graceful-button w-56 items-center justify-center gap-2 px-4"
-            onClick={() => setIsFilterDialogOpen(true)}
-          >
-            <HiFunnel className="" />
-            <span>絞り込み</span>
-            {activeFilterCount > 0 && (
-              <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
-                {activeFilterCount}
-              </span>
-            )}
-          </button>
-        </div>
+        <div className="mt-8 space-y-4">
+          <label className="block">
+            <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
+            <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
+              <HiMagnifyingGlass className="flex-none text-gray-400" />
+              <input
+                name="q"
+                className="min-w-0 flex-1 outline-none"
+                value={query}
+                onChange={(event) => {
+                  const nextQuery = event.currentTarget.value;
+                  setQuery(nextQuery);
+                  if (!isComposing) {
+                    updateFilter("q", nextQuery);
+                  }
+                }}
+                onCompositionStart={() => {
+                  setIsComposing(true);
+                }}
+                onCompositionEnd={(event) => {
+                  const nextQuery = event.currentTarget.value;
+                  setIsComposing(false);
+                  setQuery(nextQuery);
+                  updateFilter("q", nextQuery);
+                }}
+                placeholder="イベント名、曲名、会場、地域、衣装"
+              />
+            </span>
+          </label>
 
-        <div className="mt-8 hidden rounded-lg border border-gray-200 bg-white p-4 sm:block">
-          <SetlistFilterForm
-            filters={filters}
-            query={query}
-            onQueryChange={updateSearchQuery}
-            onFilterChange={updateFilter}
-          />
+          <div className="hidden sm:block">
+            <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
+          </div>
+
+          <div className="sm:hidden">
+            <button
+              type="button"
+              className="ml-auto flex h-10 graceful-button w-56 items-center justify-center gap-2 px-4"
+              onClick={() => setIsFilterDialogOpen(true)}
+            >
+              <HiFunnel className="" />
+              <span>絞り込み</span>
+              {activeFilterCount > 0 && (
+                <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
+                  {activeFilterCount}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
 
         <Dialog
@@ -163,12 +190,7 @@ export default function Component() {
                   />
                 </div>
 
-                <SetlistFilterForm
-                  filters={filters}
-                  query={query}
-                  onQueryChange={updateSearchQuery}
-                  onFilterChange={updateFilter}
-                />
+                <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
 
                 <div className="mt-5 grid grid-cols-2 gap-2">
                   <button
@@ -224,51 +246,15 @@ export default function Component() {
 
 interface SetlistFilterFormProps {
   filters: SetlistSearchFilters;
-  query: string;
-  onQueryChange: (query: string) => void;
   onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
-  onSubmit?: (() => void) | undefined;
 }
 
 const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
   filters,
-  query,
   onFilterChange,
-  onQueryChange,
 }: SetlistFilterFormProps) => {
-  const [isComposing, setIsComposing] = useState(false);
-
   return (
     <div className="space-y-4">
-      <label className="block">
-        <span className="mb-1 block text-sm font-semibold text-gray-600">検索</span>
-        <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
-          <HiMagnifyingGlass className="flex-none text-gray-400" />
-          <input
-            name="q"
-            className="min-w-0 flex-1 outline-none"
-            value={query}
-            onChange={(event) => {
-              const nextQuery = event.currentTarget.value;
-              onQueryChange(nextQuery);
-              if (!isComposing) {
-                onFilterChange("q", nextQuery);
-              }
-            }}
-            onCompositionStart={() => {
-              setIsComposing(true);
-            }}
-            onCompositionEnd={(event) => {
-              const nextQuery = event.currentTarget.value;
-              setIsComposing(false);
-              onQueryChange(nextQuery);
-              onFilterChange("q", nextQuery);
-            }}
-            placeholder="イベント名、曲名、会場、地域、衣装"
-          />
-        </span>
-      </label>
-
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <SelectFilter
           label="年"
