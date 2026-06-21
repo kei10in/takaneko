@@ -72,9 +72,8 @@ export default function Component() {
   );
   const activeFilterCount = activeSetlistFilterCount(filters);
 
-  const commitSearch = (inputQuery: string) => {
-    const q = inputQuery.trim();
-    setFilters((filters) => ({ ...filters, q }));
+  const updateSearchQuery = (inputQuery: string) => {
+    setFilters((filters) => ({ ...filters, q: inputQuery }));
   };
 
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
@@ -119,7 +118,7 @@ export default function Component() {
             searchFormId="setlist-search-form"
             searchInputId="setlist-search-query"
             filters={filters}
-            onSearch={commitSearch}
+            onQueryChange={updateSearchQuery}
             onFilterChange={updateFilter}
           />
         </div>
@@ -153,11 +152,9 @@ export default function Component() {
                   searchFormId="setlist-search-form-mobile"
                   searchInputId="setlist-search-query-mobile"
                   filters={filters}
-                  onSearch={(q) => {
-                    commitSearch(q);
-                    setIsFilterDialogOpen(false);
-                  }}
+                  onQueryChange={updateSearchQuery}
                   onFilterChange={updateFilter}
+                  onSubmit={() => setIsFilterDialogOpen(false)}
                 />
 
                 <div className="mt-5 grid grid-cols-2 gap-2">
@@ -214,17 +211,34 @@ interface SetlistFilterFormProps {
   searchFormId: string;
   searchInputId: string;
   filters: SetlistSearchFilters;
-  onSearch: (query: string) => void;
+  onQueryChange: (query: string) => void;
   onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
+  onSubmit?: (() => void) | undefined;
 }
 
 const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
   searchFormId,
   searchInputId,
   filters,
-  onSearch,
   onFilterChange,
+  onQueryChange,
+  onSubmit,
 }: SetlistFilterFormProps) => {
+  const [queryInput, setQueryInput] = useState(filters.q);
+  const [syncedQuery, setSyncedQuery] = useState(filters.q);
+  const [isComposing, setIsComposing] = useState(false);
+
+  if (filters.q != syncedQuery && !isComposing) {
+    setSyncedQuery(filters.q);
+    setQueryInput(filters.q);
+  }
+
+  const updateQuery = (value: string) => {
+    setQueryInput(value);
+    setSyncedQuery(value);
+    onQueryChange(value);
+  };
+
   return (
     <div className="space-y-4">
       <form
@@ -233,7 +247,8 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
           event.preventDefault();
           const formData = new FormData(event.currentTarget);
           const q = formData.get("q");
-          onSearch(typeof q == "string" ? q : "");
+          onQueryChange(typeof q == "string" ? q : "");
+          onSubmit?.();
         }}
       >
         <label className="block" htmlFor={searchInputId}>
@@ -242,11 +257,25 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
             <span className="flex min-w-0 flex-1 items-center gap-2 rounded-md border border-gray-300 px-3 py-2 focus-within:border-nadeshiko-500">
               <HiMagnifyingGlass className="flex-none text-gray-400" />
               <input
-                key={`${searchInputId}:${filters.q}`}
                 id={searchInputId}
                 name="q"
                 className="min-w-0 flex-1 outline-none"
-                defaultValue={filters.q}
+                value={queryInput}
+                onChange={(event) => {
+                  const nextQuery = event.currentTarget.value;
+                  setQueryInput(nextQuery);
+                  if (!isComposing) {
+                    updateQuery(nextQuery);
+                  }
+                }}
+                onCompositionStart={() => {
+                  setIsComposing(true);
+                }}
+                onCompositionEnd={(event) => {
+                  const nextQuery = event.currentTarget.value;
+                  setIsComposing(false);
+                  updateQuery(nextQuery);
+                }}
                 placeholder="イベント名、曲名、会場、地域、衣装"
               />
             </span>
