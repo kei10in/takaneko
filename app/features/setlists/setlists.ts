@@ -4,6 +4,7 @@ import { EventModule } from "~/features/events/eventModule";
 import { LiveType } from "~/features/events/EventType";
 import { Segment } from "~/features/events/setlist";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { ImageDescription } from "~/utils/types/ImageDescription";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { ALL_SONGS } from "../songs/songs";
 
@@ -100,6 +101,7 @@ export interface SetlistEvent {
   liveType: LiveType;
   region?: string | undefined;
   location?: string | undefined;
+  image: ImageDescription | undefined;
   acts: SetlistAct[];
   actCount: number;
   songCount: number;
@@ -159,6 +161,7 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
           liveType: meta.liveType,
           region: meta.region,
           location: meta.location,
+          image: meta.images[0],
           acts,
           actCount: acts.length,
           songCount,

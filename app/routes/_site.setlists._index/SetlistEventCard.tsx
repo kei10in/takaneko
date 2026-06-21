@@ -1,6 +1,14 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { CloseButton, Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { HiChevronDown, HiMusicalNote, HiOutlineMapPin } from "react-icons/hi2";
+import { GiMicrophone } from "react-icons/gi";
+import {
+  HiChevronDown,
+  HiOutlineCalendarDays,
+  HiOutlineMapPin,
+  HiOutlineMusicalNote,
+  HiOutlineStar,
+  HiXMark,
+} from "react-icons/hi2";
 import { Link } from "react-router";
 import { Setlist } from "~/features/events/components/Setlist";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
@@ -24,20 +32,56 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
   const eventUrl = `/events/${event.slug}`;
 
   return (
-    <div className="group overflow-hidden rounded-lg border border-zinc-200 bg-white shadow-sm">
+    <div
+      className={clsx(
+        "group box-border overflow-hidden rounded-3xl border border-zinc-500/10 bg-white shadow-xl shadow-black/2",
+      )}
+    >
       <Disclosure>
         {({ open }) => (
           <div>
-            <DisclosureButton className="block w-full px-4 py-4 text-left">
-              <div className="flex items-start gap-3">
-                <div className="min-w-0 flex-1">
-                  <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500">
-                    <span className="inline-flex items-center">
-                      {displayDateWithDayOfWeek(date)}
-                    </span>
+            <DisclosureButton className="block w-full p-2 text-left focus-visible:outline-none">
+              <div className="flex items-start gap-2">
+                {/* Image */}
+                <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
+                  {event.image != undefined ? (
+                    <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
+                      <img
+                        src={event.image?.path}
+                        className="h-full w-full object-contain text-xs"
+                        alt={event.title}
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-nadeshiko-100 text-nadeshiko-800">
+                      <GiMicrophone className="text-3xl" />
+                    </div>
+                  )}
+                </div>
+
+                {/* Event Summary */}
+                <div className="min-w-0 flex-1 space-y-1 py-0.5 pl-2">
+                  <div className="line-clamp-1 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+                    {displayDateWithDayOfWeek(date)}
+                  </div>
+
+                  <h2 className="line-clamp-2 leading-snug font-semibold transition-colors group-hover:text-nadeshiko-800">
+                    {event.title}
+                  </h2>
+
+                  <div className="line-clamp-1 flex items-center text-sm text-zinc-500">
+                    {event.location != undefined && (
+                      <span className="inline-flex min-w-0 items-center gap-1">
+                        <HiOutlineMapPin className="size-4 flex-none" />
+                        <span className="line-clamp-1">{event.location}</span>
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-1 pt-0.5 text-xs">
                     <span
                       className={clsx(
-                        "inline-block rounded-full px-2 py-0.5 text-white",
+                        "inline-block rounded-full px-2 text-white",
                         liveTypeColor(event.liveType),
                       )}
                     >
@@ -45,7 +89,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                     </span>
                     {!event.hasSetlist && (
                       <span className="inline-block rounded-full bg-gray-100 px-2 py-0.5 text-gray-500">
-                        セットリスト未登録
+                        未登録
                       </span>
                     )}
                     {event.hasSetlist && event.hasMissingSetlist && (
@@ -54,24 +98,16 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                       </span>
                     )}
                   </div>
-
-                  <h2 className="mt-2 line-clamp-2 text-lg font-semibold group-hover:text-nadeshiko-800">
-                    {event.title}
-                  </h2>
-
-                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500">
-                    {event.location != undefined && (
-                      <span className="inline-flex min-w-0 items-center gap-1">
-                        <HiOutlineMapPin className="flex-none" />
-                        <span className="line-clamp-1">{event.location}</span>
-                      </span>
-                    )}
-                    {event.region != undefined && <span>{event.region}</span>}
-                  </div>
                 </div>
 
-                <div className="flex flex-none items-center gap-2 pt-1">
-                  <HiChevronDown className={clsx("transition-transform", open && "-rotate-180")} />
+                {/* Chevron */}
+                <div className="flex size-8 flex-none items-center justify-center rounded-full transition-colors group-hover:bg-zinc-500/5">
+                  <HiChevronDown
+                    className={clsx(
+                      "size-5 text-zinc-500 transition-transform",
+                      open && "-rotate-180",
+                    )}
+                  />
                 </div>
               </div>
             </DisclosureButton>
@@ -80,9 +116,14 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
               transition
               className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-200 ease-in-out data-closed:grid-rows-[0fr]"
             >
-              <div className="m-h-0 overflow-hidden">
-                <div className="bg-zinc-500/2, border-y border-zinc-100 px-4 py-5">
-                  <div className="space-y-7">
+              <div className="min-h-0 overflow-hidden">
+                <div
+                  className={clsx(
+                    "mb-2 border-y border-zinc-100 px-4 inset-shadow-black/5",
+                    "inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)]",
+                  )}
+                >
+                  <div className="my-6 space-y-7">
                     {event.acts.map((act, index) => (
                       <section key={index} className="space-y-2">
                         {(event.acts.length > 1 || act.title != undefined) && (
@@ -101,35 +142,51 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                         {act.hasSetlist ? (
                           <Setlist setlist={act.setlist} links={act.links} />
                         ) : (
-                          <div className="rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
+                          <div className="z-50 rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
                             セットリスト未登録
                           </div>
                         )}
                       </section>
                     ))}
                   </div>
+                  <div className="my-1 text-right">
+                    <CloseButton className="inline-flex items-center justify-center gap-1 rounded-full text-sm text-zinc-500">
+                      <HiXMark className="size-4" />
+                      <span>閉じる</span>
+                    </CloseButton>
+                  </div>
                 </div>
               </div>
             </DisclosurePanel>
+
+            <div className="flex items-center px-2 pb-2 text-sm">
+              <div className="flex min-w-0 flex-1 items-center">
+                <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
+                  <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
+                  <span>{event.songCount} 曲</span>
+                </div>
+
+                {event.actCount > 1 && (
+                  <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
+                    <HiOutlineStar className="size-4 text-nadeshiko-600" />
+                    <span>{event.actCount} 公演</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-none justify-end">
+                <Link
+                  className="flex h-8 items-center gap-1 rounded-full px-2 hover:bg-zinc-100"
+                  to={eventUrl}
+                >
+                  <HiOutlineCalendarDays className="size-5 text-nadeshiko-600" />
+                  <span>イベント詳細</span>
+                </Link>
+              </div>
+            </div>
           </div>
         )}
       </Disclosure>
-      <div className="flex items-center justify-between px-4 py-2">
-        <div className="flex items-center gap-1">
-          <HiMusicalNote />
-          {event.actCount > 1 ? `${event.actCount} 公演 / ` : ""}
-          {event.songCount} 曲
-        </div>
-
-        <div className="flex justify-end">
-          <Link
-            className="inline-flex items-center gap-1 text-sm font-semibold text-nadeshiko-800"
-            to={eventUrl}
-          >
-            <span>イベント詳細</span>
-          </Link>
-        </div>
-      </div>
     </div>
   );
 };
