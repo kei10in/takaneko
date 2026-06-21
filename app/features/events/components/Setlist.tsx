@@ -35,7 +35,7 @@ export const Setlist: React.FC<Props> = (props: Props) => {
 
       <div className="flex justify-end gap-1">
         {links.length > 0 && (
-          <p className="flex-1 pb-4 pl-6 text-xs text-gray-400">
+          <p className="flex-1 truncate pb-4 pl-6 text-xs text-nowrap text-gray-400">
             出典:{" "}
             <Link
               className="text-nadeshiko-600"
