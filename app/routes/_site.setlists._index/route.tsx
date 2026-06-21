@@ -2,12 +2,7 @@ import { CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/re
 import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import { HiFunnel, HiMagnifyingGlass } from "react-icons/hi2";
-import {
-  MetaFunction,
-  ShouldRevalidateFunctionArgs,
-  useLoaderData,
-  useSearchParams,
-} from "react-router";
+import { MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
 import { AllStageCostumes } from "~/features/costumes/costumesStage";
@@ -15,7 +10,6 @@ import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents";
 import {
   defaultSetlistSearchFilters,
   SetlistLiveFilters,
-  SetlistLiveFilterType,
   SetlistSearchFilters,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters";
@@ -69,8 +63,7 @@ export const shouldRevalidate = ({
 
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const filters = useMemo(() => searchFiltersFromParams(searchParams), [searchParams]);
+  const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
   const totalActCount = useMemo(
@@ -80,39 +73,17 @@ export default function Component() {
   const activeFilterCount = activeSetlistFilterCount(filters);
 
   const commitSearch = (inputQuery: string) => {
-    const next = new URLSearchParams(searchParams);
     const q = inputQuery.trim();
-    if (q == "") {
-      next.delete("q");
-    } else {
-      next.set("q", q);
-    }
-
-    setSearchParams(next, {
-      preventScrollReset: true,
-      defaultShouldRevalidate: false,
-    });
+    setFilters((filters) => ({ ...filters, q }));
   };
 
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
-    const next = new URLSearchParams(searchParams);
-
-    if (value == "" || (key == "type" && value == "all")) {
-      next.delete(key);
-    } else {
-      next.set(key, value);
-    }
-    setSearchParams(next, {
-      preventScrollReset: true,
-      defaultShouldRevalidate: false,
-    });
+    const nextValue = key == "type" && value == "all" ? "" : value;
+    setFilters((filters) => ({ ...filters, [key]: nextValue }));
   };
 
   const resetFilters = () => {
-    setSearchParams(new URLSearchParams(), {
-      preventScrollReset: true,
-      defaultShouldRevalidate: false,
-    });
+    setFilters(defaultSetlistSearchFilters());
   };
 
   return (
@@ -369,30 +340,4 @@ const activeSetlistFilterCount = (filters: SetlistSearchFilters): number => {
     filters.song,
     filters.costume,
   ].filter((value) => value != "").length;
-};
-
-const searchFiltersFromParams = (params: URLSearchParams): SetlistSearchFilters => {
-  return {
-    ...defaultSetlistSearchFilters(),
-    q: params.get("q") ?? "",
-    year: params.get("year") ?? "",
-    type: parseLiveTypeFilter(params.get("type")),
-    song: params.get("song") ?? "",
-    costume: params.get("costume") ?? "",
-  };
-};
-
-const parseLiveTypeFilter = (value: string | null): SetlistLiveFilterType | "" => {
-  if (
-    value == "solo" ||
-    value == "all" ||
-    value == "hosted" ||
-    value == "joint" ||
-    value == "event-live" ||
-    value == "release-event"
-  ) {
-    return value;
-  }
-
-  return "";
 };
