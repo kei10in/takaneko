@@ -63,6 +63,7 @@ export const shouldRevalidate = ({
 
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
+  const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
@@ -73,7 +74,7 @@ export default function Component() {
   const activeFilterCount = activeSetlistFilterCount(filters);
 
   const updateSearchQuery = (inputQuery: string) => {
-    setFilters((filters) => ({ ...filters, q: inputQuery }));
+    setQuery(inputQuery);
   };
 
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
@@ -82,6 +83,7 @@ export default function Component() {
   };
 
   const resetFilters = () => {
+    setQuery("");
     setFilters(defaultSetlistSearchFilters());
   };
 
@@ -118,6 +120,7 @@ export default function Component() {
             searchFormId="setlist-search-form"
             searchInputId="setlist-search-query"
             filters={filters}
+            query={query}
             onQueryChange={updateSearchQuery}
             onFilterChange={updateFilter}
           />
@@ -152,6 +155,7 @@ export default function Component() {
                   searchFormId="setlist-search-form-mobile"
                   searchInputId="setlist-search-query-mobile"
                   filters={filters}
+                  query={query}
                   onQueryChange={updateSearchQuery}
                   onFilterChange={updateFilter}
                   onSubmit={() => setIsFilterDialogOpen(false)}
@@ -211,6 +215,7 @@ interface SetlistFilterFormProps {
   searchFormId: string;
   searchInputId: string;
   filters: SetlistSearchFilters;
+  query: string;
   onQueryChange: (query: string) => void;
   onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
   onSubmit?: (() => void) | undefined;
@@ -220,24 +225,12 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
   searchFormId,
   searchInputId,
   filters,
+  query,
   onFilterChange,
   onQueryChange,
   onSubmit,
 }: SetlistFilterFormProps) => {
-  const [queryInput, setQueryInput] = useState(filters.q);
-  const [syncedQuery, setSyncedQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
-
-  if (filters.q != syncedQuery && !isComposing) {
-    setSyncedQuery(filters.q);
-    setQueryInput(filters.q);
-  }
-
-  const updateQuery = (value: string) => {
-    setQueryInput(value);
-    setSyncedQuery(value);
-    onQueryChange(value);
-  };
 
   return (
     <div className="space-y-4">
@@ -260,12 +253,12 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
                 id={searchInputId}
                 name="q"
                 className="min-w-0 flex-1 outline-none"
-                value={queryInput}
+                value={query}
                 onChange={(event) => {
                   const nextQuery = event.currentTarget.value;
-                  setQueryInput(nextQuery);
+                  onQueryChange(nextQuery);
                   if (!isComposing) {
-                    updateQuery(nextQuery);
+                    onFilterChange("q", nextQuery);
                   }
                 }}
                 onCompositionStart={() => {
@@ -274,7 +267,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
                 onCompositionEnd={(event) => {
                   const nextQuery = event.currentTarget.value;
                   setIsComposing(false);
-                  updateQuery(nextQuery);
+                  onFilterChange("q", nextQuery);
                 }}
                 placeholder="イベント名、曲名、会場、地域、衣装"
               />
