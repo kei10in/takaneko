@@ -289,10 +289,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
           label="衣装"
           value={filters.costume}
           onChange={(value) => onFilterChange("costume", value)}
-          options={AllStageCostumes.map((costume) => ({
-            value: costume.slug,
-            label: costume.name,
-          }))}
+          optionGroups={StageCostumeFilterOptionGroups}
         />
       </div>
     </div>
@@ -348,8 +345,19 @@ interface SelectFilterProps {
   label: string;
   value: string;
   onChange: (value: string) => void;
-  options: { value: string; label: string }[];
+  options?: SelectFilterOption[] | undefined;
+  optionGroups?: SelectFilterOptionGroup[] | undefined;
   includeAll?: boolean | undefined;
+}
+
+interface SelectFilterOption {
+  value: string;
+  label: string;
+}
+
+interface SelectFilterOptionGroup {
+  label: string;
+  options: SelectFilterOption[];
 }
 
 const SelectFilter: React.FC<SelectFilterProps> = ({
@@ -357,6 +365,7 @@ const SelectFilter: React.FC<SelectFilterProps> = ({
   value,
   onChange,
   options,
+  optionGroups,
   includeAll = true,
 }: SelectFilterProps) => {
   return (
@@ -368,15 +377,43 @@ const SelectFilter: React.FC<SelectFilterProps> = ({
         onChange={(event) => onChange(event.currentTarget.value)}
       >
         {includeAll && <option value="">すべて</option>}
-        {options.map((option) => (
+        {options?.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
+        ))}
+        {optionGroups?.map((group) => (
+          <optgroup key={group.label} label={group.label}>
+            {group.options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </optgroup>
         ))}
       </select>
     </label>
   );
 };
+
+const StageCostumeFilterOptionGroups: SelectFilterOptionGroup[] = AllStageCostumes.reduce<
+  SelectFilterOptionGroup[]
+>((groups, costume) => {
+  const year = costume.liveDebut.slice(0, 4);
+  const label = `${year} 年`;
+  const option = {
+    value: costume.slug,
+    label: costume.name,
+  };
+
+  if (groups.some((group) => group.label == label)) {
+    return groups.map((group) =>
+      group.label == label ? { ...group, options: [...group.options, option] } : group,
+    );
+  }
+
+  return [...groups, { label, options: [option] }];
+}, []);
 
 const isSelectedLiveFilter = (
   filter: (typeof SetlistLiveFilters)[number],
