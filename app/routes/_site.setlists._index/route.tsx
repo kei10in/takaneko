@@ -1,6 +1,6 @@
 import { CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { HiFunnel, HiMagnifyingGlass } from "react-icons/hi2";
 import { MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
@@ -66,7 +66,21 @@ export default function Component() {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
-  const results = useMemo(() => filterSetlistEvents(events, filters), [filters, events]);
+  const deferredQuery = useDeferredValue(filters.q);
+  const searchFilters = useMemo<SetlistSearchFilters>(
+    () => ({
+      q: deferredQuery,
+      year: filters.year,
+      type: filters.type,
+      song: filters.song,
+      costume: filters.costume,
+    }),
+    [deferredQuery, filters.costume, filters.song, filters.type, filters.year],
+  );
+  const results = useMemo(
+    () => filterSetlistEvents(events, searchFilters),
+    [events, searchFilters],
+  );
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
@@ -181,7 +195,7 @@ export default function Component() {
           <p>
             {results.length} 件 / {totalActCount} ステージ
           </p>
-          {filters.q != "" && <p>検索: {filters.q}</p>}
+          {searchFilters.q != "" && <p>検索: {searchFilters.q}</p>}
         </div>
 
         {results.length == 0 ? (
@@ -195,7 +209,9 @@ export default function Component() {
                 <SetlistEventCard
                   event={event}
                   matchedActIndexes={matchedActIndexes}
-                  showMatchedAct={filters.q != "" || filters.song != "" || filters.costume != ""}
+                  showMatchedAct={
+                    searchFilters.q != "" || searchFilters.song != "" || searchFilters.costume != ""
+                  }
                 />
               </li>
             ))}
@@ -245,6 +261,7 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
             onCompositionEnd={(event) => {
               const nextQuery = event.currentTarget.value;
               setIsComposing(false);
+              onQueryChange(nextQuery);
               onFilterChange("q", nextQuery);
             }}
             placeholder="イベント名、曲名、会場、地域、衣装"
