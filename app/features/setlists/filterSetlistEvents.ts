@@ -22,13 +22,7 @@ export const filterSetlistEvents = (
     const eventMatchesQuery =
       tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
     const matchedActIndexes = event.acts.flatMap((act, index) => {
-      const songMatches = matchesSongFilter(filters.song, act);
-      if (!songMatches) {
-        return [];
-      }
-
-      const costumeMatches = matchesCostumeFilter(filters.costume, act);
-      if (!costumeMatches) {
+      if (!matchesSongAndCostumeFilters(filters.song, filters.costume, act)) {
         return [];
       }
 
@@ -58,24 +52,28 @@ const matchesLiveTypeFilter = (filter: SetlistLiveFilterType, event: SetlistEven
   return f.predicate(event.liveType);
 };
 
-const matchesSongFilter = (songSlug: string, act: SetlistAct): boolean => {
+const matchesSongAndCostumeFilters = (
+  songSlug: string,
+  costumeSlug: string,
+  act: SetlistAct,
+): boolean => {
   const songName = ALL_SONGS.find((x) => x.slug === songSlug)?.name;
-  if (songName == undefined) {
-    return true;
-  }
-
-  return act.songTitles.includes(songName);
-};
-
-const matchesCostumeFilter = (costumeSlug: string, act: SetlistAct): boolean => {
-  if (costumeSlug == "") {
-    return true;
-  }
-
   const costumeName = AllStageCostumes.find((costume) => costume.slug === costumeSlug)?.name;
-  if (costumeName == undefined) {
+
+  if (songName == undefined && costumeName == undefined) {
     return true;
   }
 
-  return act.costumeNames.includes(costumeName);
+  if (songName == undefined) {
+    return act.costumeNames.includes(costumeName ?? "");
+  }
+
+  if (costumeName == undefined) {
+    return act.songTitles.includes(songName);
+  }
+
+  return act.setlist.some(
+    (segment) =>
+      segment.kind == "song" && segment.songTitle == songName && segment.costumeName == costumeName,
+  );
 };

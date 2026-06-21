@@ -118,7 +118,16 @@ describe("filterSetlistEvents", () => {
         region: "東京",
         location: "お台場",
         acts: [
-          act(["衣装: アンチファン衣装", "Song A", "Song B"], { title: "SMILE GARDEN" }),
+          act(
+            [
+              "衣装: アンチファン衣装",
+              "Song A",
+              "ファンサ",
+              "衣装: 見上げるたびに、恋をする。衣装",
+              "Song B",
+            ],
+            { title: "SMILE GARDEN" },
+          ),
           act(["ファンサ"], { title: "HOT STAGE" }),
         ],
       }),
@@ -180,7 +189,21 @@ describe("filterSetlistEvents", () => {
     ).toEqual(["2026-01-01_festival"]);
     expect(
       filterSetlistEvents(events, filters({ costume: "見上げるたびに恋をする衣装" })).map(toSlug),
-    ).toEqual(["2025-12-24_solo"]);
+    ).toEqual(["2026-01-01_festival", "2025-12-24_solo"]);
+  });
+
+  it("matches costume and song filters against the same song segment", () => {
+    expect(
+      filterSetlistEvents(events, filters({ song: "ファンサ", costume: "アンチファン衣装" })).map(
+        toSlug,
+      ),
+    ).toEqual(["2026-01-01_festival"]);
+    expect(
+      filterSetlistEvents(
+        events,
+        filters({ song: "ファンサ", costume: "見上げるたびに恋をする衣装" }),
+      ).map(toSlug),
+    ).toEqual([]);
   });
 });
 
