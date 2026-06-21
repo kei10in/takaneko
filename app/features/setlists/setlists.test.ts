@@ -118,7 +118,7 @@ describe("filterSetlistEvents", () => {
         region: "東京",
         location: "お台場",
         acts: [
-          act(["衣装: Blue Dress", "Song A", "Song B"], { title: "SMILE GARDEN" }),
+          act(["衣装: アンチファン衣装", "Song A", "Song B"], { title: "SMILE GARDEN" }),
           act(["ファンサ"], { title: "HOT STAGE" }),
         ],
       }),
@@ -130,7 +130,7 @@ describe("filterSetlistEvents", () => {
         liveType: "SOLO",
         region: "大阪",
         location: "なんば",
-        acts: [act(["Song D"])],
+        acts: [act(["衣装: 見上げるたびに、恋をする。衣装", "Song D"])],
       }),
       sourceEvent({
         slug: "2025-12-01_missing",
@@ -157,10 +157,10 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ q: "なんば" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "東京" }))).toHaveLength(1);
     expect(filterSetlistEvents(events, filters({ q: "ファンサ" }))).toHaveLength(1);
-    expect(filterSetlistEvents(events, filters({ q: "blue dress" }))).toHaveLength(1);
+    expect(filterSetlistEvents(events, filters({ q: "アンチファン衣装" }))).toHaveLength(1);
   });
 
-  it("filters by year, live type, song, and setlist status", () => {
+  it("filters by year, live type, song, and costume", () => {
     expect(filterSetlistEvents(events, filters({ year: "2025" })).map(toSlug)).toEqual([
       "2025-12-24_solo",
       "2025-12-01_missing",
@@ -175,13 +175,12 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ song: "ファンサ" })).map(toSlug)).toEqual([
       "2026-01-01_festival",
     ]);
-    expect(filterSetlistEvents(events, filters({ status: "with-setlist" })).map(toSlug)).toEqual([
-      "2026-01-01_festival",
-      "2025-12-24_solo",
-    ]);
-    expect(filterSetlistEvents(events, filters({ status: "missing" })).map(toSlug)).toEqual([
-      "2025-12-01_missing",
-    ]);
+    expect(
+      filterSetlistEvents(events, filters({ costume: "アンチファン衣装" })).map(toSlug),
+    ).toEqual(["2026-01-01_festival"]);
+    expect(
+      filterSetlistEvents(events, filters({ costume: "見上げるたびに恋をする衣装" })).map(toSlug),
+    ).toEqual(["2025-12-24_solo"]);
   });
 });
 
@@ -239,7 +238,7 @@ const filters = (input: Partial<SetlistSearchFilters>): SetlistSearchFilters => 
     year: input.year ?? "",
     type: input.type ?? "",
     song: input.song ?? "",
-    status: input.status ?? "all",
+    costume: input.costume ?? "",
   };
 };
 

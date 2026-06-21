@@ -1,9 +1,6 @@
+import { AllStageCostumes } from "../costumes/costumesStage";
 import { ALL_SONGS } from "../songs/songs";
-import {
-  SetlistLiveFilterType,
-  SetlistLiveFilters,
-  SetlistSearchFilters,
-} from "./searchFilters";
+import { SetlistLiveFilterType, SetlistLiveFilters, SetlistSearchFilters } from "./searchFilters";
 import { containsAllTokens, searchTokens } from "./searchText";
 import { SetlistAct, SetlistEvent, SetlistSearchResult } from "./types";
 
@@ -22,19 +19,16 @@ export const filterSetlistEvents = (
       return [];
     }
 
-    if (filters.status == "with-setlist" && !event.hasSetlist) {
-      return [];
-    }
-
-    if (filters.status == "missing" && !event.hasMissingSetlist) {
-      return [];
-    }
-
     const eventMatchesQuery =
       tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
     const matchedActIndexes = event.acts.flatMap((act, index) => {
       const songMatches = matchesSongFilter(filters.song, act);
       if (!songMatches) {
+        return [];
+      }
+
+      const costumeMatches = matchesCostumeFilter(filters.costume, act);
+      if (!costumeMatches) {
         return [];
       }
 
@@ -71,4 +65,17 @@ const matchesSongFilter = (songSlug: string, act: SetlistAct): boolean => {
   }
 
   return act.songTitles.includes(songName);
+};
+
+const matchesCostumeFilter = (costumeSlug: string, act: SetlistAct): boolean => {
+  if (costumeSlug == "") {
+    return true;
+  }
+
+  const costumeName = AllStageCostumes.find((costume) => costume.slug === costumeSlug)?.name;
+  if (costumeName == undefined) {
+    return true;
+  }
+
+  return act.costumeNames.includes(costumeName);
 };

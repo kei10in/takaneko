@@ -10,13 +10,13 @@ import {
 } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
+import { AllStageCostumes } from "~/features/costumes/costumesStage";
 import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents";
 import {
   defaultSetlistSearchFilters,
   SetlistLiveFilters,
   SetlistLiveFilterType,
   SetlistSearchFilters,
-  SetlistSearchStatus,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters";
 import { SetlistEvents } from "~/features/setlists/types";
@@ -97,7 +97,7 @@ export default function Component() {
   const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
     const next = new URLSearchParams(searchParams);
 
-    if (value == "" || (key == "status" && value == "all") || (key == "type" && value == "all")) {
+    if (value == "" || (key == "type" && value == "all")) {
       next.delete(key);
     } else {
       next.set(key, value);
@@ -228,7 +228,7 @@ export default function Component() {
                 <SetlistEventCard
                   event={event}
                   matchedActIndexes={matchedActIndexes}
-                  showMatchedAct={filters.q != "" || filters.song != ""}
+                  showMatchedAct={filters.q != "" || filters.song != "" || filters.costume != ""}
                 />
               </li>
             ))}
@@ -314,15 +314,13 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
           options={PerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
         />
         <SelectFilter
-          label="登録状態"
-          value={filters.status}
-          onChange={(value) => onFilterChange("status", value)}
-          options={[
-            { value: "all", label: "すべて" },
-            { value: "with-setlist", label: "登録済み" },
-            { value: "missing", label: "未登録あり" },
-          ]}
-          includeAll={false}
+          label="衣装"
+          value={filters.costume}
+          onChange={(value) => onFilterChange("costume", value)}
+          options={AllStageCostumes.map((costume) => ({
+            value: costume.slug,
+            label: costume.name,
+          }))}
         />
       </div>
     </div>
@@ -369,19 +367,18 @@ const activeSetlistFilterCount = (filters: SetlistSearchFilters): number => {
     filters.year,
     filters.type == "all" ? "" : filters.type,
     filters.song,
-    filters.status == "all" ? "" : filters.status,
+    filters.costume,
   ].filter((value) => value != "").length;
 };
 
 const searchFiltersFromParams = (params: URLSearchParams): SetlistSearchFilters => {
-  const status = parseSearchStatus(params.get("status"));
   return {
     ...defaultSetlistSearchFilters(),
     q: params.get("q") ?? "",
     year: params.get("year") ?? "",
     type: parseLiveTypeFilter(params.get("type")),
     song: params.get("song") ?? "",
-    status,
+    costume: params.get("costume") ?? "",
   };
 };
 
@@ -398,11 +395,4 @@ const parseLiveTypeFilter = (value: string | null): SetlistLiveFilterType | "" =
   }
 
   return "";
-};
-
-const parseSearchStatus = (value: string | null): SetlistSearchStatus => {
-  if (value == "with-setlist" || value == "missing") {
-    return value;
-  }
-  return "all";
 };

@@ -1,10 +1,6 @@
 import { z } from "zod/v4";
 import { LiveType } from "~/features/events/EventType";
 
-export const SetlistSearchStatusEnum = z.enum(["all", "with-setlist", "missing"]);
-export const SetlistSearchStatus = SetlistSearchStatusEnum.enum;
-export type SetlistSearchStatus = z.infer<typeof SetlistSearchStatusEnum>;
-
 export const SetlistYearFilterStart = 2022;
 export const SetlistYearFilterEnd = new Date().getFullYear();
 
@@ -71,7 +67,7 @@ export interface SetlistSearchFilters {
   year: string;
   type: SetlistLiveFilterType | "";
   song: string;
-  status: SetlistSearchStatus;
+  costume: string;
 }
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
@@ -80,6 +76,6 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
     year: "",
     type: "",
     song: "",
-    status: "all",
+    costume: "",
   };
 };
