@@ -144,11 +144,11 @@ export default function Component() {
           className="relative z-50 sm:hidden"
         >
           <DialogBackdrop className={dialogBackdropStyle()} transition />
-          <div className="fixed inset-0 flex flex-col items-center justify-end">
+          <div className="fixed inset-0 flex items-end justify-end">
             <DialogPanel
               className={clsx(
-                "max-h-[calc(100dvh-var(--header-height))] w-full overflow-y-auto bg-white shadow-xl",
-                "data-closed:translate-y-full",
+                "h-dvh w-10/12 overflow-y-auto bg-white shadow-xl",
+                "data-closed:translate-x-full",
                 "transition-all duration-300 ease-in-out",
               )}
               transition
