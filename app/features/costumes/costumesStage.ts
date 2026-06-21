@@ -7,6 +7,8 @@ export const BouquetOf9Flowers衣装: StageCostume = {
   photoType: "artist",
   stylist: "浅野 実希",
 
+  liveDebut: "2026-02-14",
+
   images: [
     {
       path: "/takaneko/costumes/stage/Bouquet of 9 Flowers 衣装.jpg",
@@ -26,6 +28,8 @@ export const 見上げるたびに恋をする衣装: StageCostume = {
 
   photoType: "press",
 
+  liveDebut: "2025-09-07",
+
   images: [
     {
       path: "/takaneko/costumes/stage/見上げるたびに恋をする衣装.jpg",
@@ -39,6 +43,8 @@ export const _2025夏衣装 = {
   name: "2025 夏衣装",
   slug: "2025夏衣装",
   photoType: "none",
+
+  liveDebut: "2025-08-02",
 
   images: [
     {
@@ -54,6 +60,8 @@ export const アイドル衣装衣装 = {
   slug: "アイドル衣装衣装",
   photoType: "press",
 
+  liveDebut: "2025-05-06",
+
   images: [
     {
       path: "/takaneko/costumes/stage/アイドル衣装衣装.jpg",
@@ -67,6 +75,8 @@ export const _2025春衣装 = {
   name: "2025 春衣装",
   slug: "2025春衣装",
   photoType: "artist",
+
+  liveDebut: "2025-04-06",
 
   images: [
     {
@@ -82,6 +92,8 @@ export const ピンク衣装 = {
   slug: "ピンク衣装",
   photoType: "artist",
 
+  liveDebut: "2025-02-14",
+
   images: [
     {
       path: "/takaneko/costumes/stage/ピンク衣装.jpg",
@@ -95,6 +107,8 @@ export const 高嶺のなでしこ2024衣装 = {
   name: "高嶺のなでしこ 2024 衣装",
   slug: "高嶺のなでしこ2024衣装",
   photoType: "artist",
+
+  liveDebut: "2024-10-06",
 
   images: [
     {
@@ -110,6 +124,8 @@ export const ImYourIdol衣装 = {
   slug: "IM YOUR IDOL衣装",
   photoType: "press",
 
+  liveDebut: "2024-09-15",
+
   images: [
     {
       path: "/takaneko/costumes/stage/IM YOUR IDOL衣装.jpg",
@@ -123,6 +139,8 @@ export const わたし色に染まれ衣装 = {
   name: "わたし色に染まれ衣装",
   slug: "わたし色に染まれ衣装",
   photoType: "press",
+
+  liveDebut: "2024-04-18",
 
   images: [
     {
@@ -138,6 +156,8 @@ export const 美しく生きろ衣装_ジャケットなし = {
   slug: "美しく生きろ衣装 (ジャケットなし)",
   photoType: "none",
 
+  liveDebut: "2024-02-02",
+
   images: [
     {
       path: "/takaneko/costumes/stage/美しく生きろ衣装 (ジャケットなし).jpg",
@@ -152,6 +172,8 @@ export const 美しく生きろ衣装 = {
   slug: "美しく生きろ衣装",
   photoType: "press",
 
+  liveDebut: "2023-11-19",
+
   images: [
     {
       path: "/takaneko/costumes/stage/美しく生きろ衣装.jpg",
@@ -165,6 +187,8 @@ export const 僕は君になれない衣装 = {
   name: "僕は君になれない衣装",
   slug: "僕は君になれない衣装",
   photoType: "none",
+
+  liveDebut: "2023-090-03",
 
   images: [
     {
@@ -184,6 +208,8 @@ export const 全国お招きツアー衣装 = {
   slug: "全国お招きツアー衣装",
   photoType: "press",
 
+  liveDebut: "2023-04-23",
+
   images: [
     {
       path: "/takaneko/costumes/stage/全国お招きツアー衣装.jpg",
@@ -197,6 +223,8 @@ export const アンチファン衣装 = {
   name: "アンチファン衣装",
   slug: "アンチファン衣装",
   photoType: "press",
+
+  liveDebut: "2022-08-07",
 
   images: [
     {

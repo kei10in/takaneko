@@ -25,6 +25,7 @@ export interface StageCostume {
   slug: string;
 
   photoType: PhotoType;
+  liveDebut: string;
 
   stylist?: string;
 
