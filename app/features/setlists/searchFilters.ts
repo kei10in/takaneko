@@ -21,6 +21,7 @@ export const SetlistLiveFilterTypeEnum = z.enum([
 ]);
 export const SetlistLiveFilterType = SetlistLiveFilterTypeEnum.enum;
 export type SetlistLiveFilterType = z.infer<typeof SetlistLiveFilterTypeEnum>;
+export type SetlistSelectedLiveFilterType = Exclude<SetlistLiveFilterType, "all">;
 
 export interface SetlistLiveFilter {
   display: string;
@@ -64,8 +65,8 @@ export const SetlistLiveFilters: SetlistLiveFilter[] = [
 
 export interface SetlistSearchFilters {
   q: string;
-  year: string;
-  type: SetlistLiveFilterType | "";
+  year: string[];
+  type: SetlistSelectedLiveFilterType[];
   song: string;
   costume: string;
 }
@@ -73,8 +74,8 @@ export interface SetlistSearchFilters {
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
   return {
     q: "",
-    year: "",
-    type: "",
+    year: [],
+    type: [],
     song: "",
     costume: "",
   };

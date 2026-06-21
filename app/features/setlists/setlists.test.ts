@@ -170,15 +170,25 @@ describe("filterSetlistEvents", () => {
   });
 
   it("filters by year, live type, song, and costume", () => {
-    expect(filterSetlistEvents(events, filters({ year: "2025" })).map(toSlug)).toEqual([
+    expect(filterSetlistEvents(events, filters({ year: ["2025"] })).map(toSlug)).toEqual([
       "2025-12-24_solo",
       "2025-12-01_missing",
     ]);
-    expect(filterSetlistEvents(events, filters({ type: "solo" })).map(toSlug)).toEqual([
+    expect(filterSetlistEvents(events, filters({ year: ["2025", "2026"] })).map(toSlug)).toEqual([
+      "2026-01-01_festival",
+      "2025-12-24_solo",
+      "2025-12-01_missing",
+    ]);
+    expect(filterSetlistEvents(events, filters({ type: ["solo"] })).map(toSlug)).toEqual([
       "2025-12-24_solo",
     ]);
-    expect(filterSetlistEvents(events, filters({ type: "joint" })).map(toSlug)).toEqual([
+    expect(filterSetlistEvents(events, filters({ type: ["joint"] })).map(toSlug)).toEqual([
       "2026-01-01_festival",
+      "2025-12-01_missing",
+    ]);
+    expect(filterSetlistEvents(events, filters({ type: ["solo", "joint"] })).map(toSlug)).toEqual([
+      "2026-01-01_festival",
+      "2025-12-24_solo",
       "2025-12-01_missing",
     ]);
     expect(filterSetlistEvents(events, filters({ song: "ファンサ" })).map(toSlug)).toEqual([
@@ -258,8 +268,8 @@ const act = (
 const filters = (input: Partial<SetlistSearchFilters>): SetlistSearchFilters => {
   return {
     q: input.q ?? "",
-    year: input.year ?? "",
-    type: input.type ?? "",
+    year: input.year ?? [],
+    type: input.type ?? [],
     song: input.song ?? "",
     costume: input.costume ?? "",
   };

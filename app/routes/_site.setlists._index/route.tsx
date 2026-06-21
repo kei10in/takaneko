@@ -1,4 +1,4 @@
-import { CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useDeferredValue, useMemo, useState } from "react";
 import { HiFunnel, HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
@@ -11,6 +11,7 @@ import {
   defaultSetlistSearchFilters,
   SetlistLiveFilters,
   SetlistSearchFilters,
+  SetlistSelectedLiveFilterType,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters";
 import { SetlistEvents } from "~/features/setlists/types";
@@ -87,9 +88,11 @@ export default function Component() {
     [results],
   );
 
-  const updateFilter = (key: keyof SetlistSearchFilters, value: string) => {
-    const nextValue = key == "type" && value == "all" ? "" : value;
-    setFilters((filters) => ({ ...filters, [key]: nextValue }));
+  const updateFilter = <K extends keyof SetlistSearchFilters>(
+    key: K,
+    value: SetlistSearchFilters[K],
+  ) => {
+    setFilters((filters) => ({ ...filters, [key]: value }));
   };
 
   const resetFilters = () => {
@@ -245,7 +248,10 @@ export default function Component() {
 
 interface SetlistFilterFormProps {
   filters: SetlistSearchFilters;
-  onFilterChange: (key: keyof SetlistSearchFilters, value: string) => void;
+  onFilterChange: <K extends keyof SetlistSearchFilters>(
+    key: K,
+    value: SetlistSearchFilters[K],
+  ) => void;
 }
 
 const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
@@ -254,23 +260,25 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
 }: SetlistFilterFormProps) => {
   return (
     <div className="space-y-4">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <SelectFilter
+      <div className="grid gap-4 lg:grid-cols-2">
+        <CheckboxFilter
           label="年"
-          value={filters.year}
+          values={filters.year}
           onChange={(value) => onFilterChange("year", value)}
           options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
         />
-        <SelectFilter
+        <CheckboxFilter
           label="ライブ種別"
-          value={filters.type == "" ? "all" : filters.type}
+          values={filters.type}
           onChange={(value) => onFilterChange("type", value)}
-          options={SetlistLiveFilters.map((filter) => ({
+          options={SetlistLiveFilters.filter(isSelectedLiveFilter).map((filter) => ({
             value: filter.name,
             label: filter.display,
           }))}
-          includeAll={false}
         />
+      </div>
+
+      <div className="grid gap-3 sm:grid-cols-2">
         <SelectFilter
           label="楽曲"
           value={filters.song}
@@ -288,6 +296,51 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
         />
       </div>
     </div>
+  );
+};
+
+interface CheckboxFilterProps<T extends string> {
+  label: string;
+  values: T[];
+  onChange: (values: T[]) => void;
+  options: { value: T; label: string }[];
+}
+
+const CheckboxFilter = <T extends string>({
+  label,
+  values,
+  onChange,
+  options,
+}: CheckboxFilterProps<T>) => {
+  const updateValue = (value: T, checked: boolean) => {
+    if (checked) {
+      onChange(values.includes(value) ? values : [...values, value]);
+      return;
+    }
+
+    onChange(values.filter((x) => x != value));
+  };
+
+  return (
+    <fieldset>
+      <legend className="mb-1 block text-sm font-semibold text-gray-600">{label}</legend>
+      <div className="flex flex-wrap gap-2">
+        {options.map((option) => (
+          <Checkbox
+            key={option.value}
+            checked={values.includes(option.value)}
+            onChange={(checked) => updateValue(option.value, checked)}
+            className={clsx(
+              "group flex h-8 items-center justify-center rounded-full px-3 text-sm select-none",
+              "bg-zinc-100 font-semibold text-zinc-500",
+              "data-checked:box-content data-checked:border-0 data-checked:graceful-selected-item",
+            )}
+          >
+            {option.label}
+          </Checkbox>
+        ))}
+      </div>
+    </fieldset>
   );
 };
 
@@ -325,12 +378,8 @@ const SelectFilter: React.FC<SelectFilterProps> = ({
   );
 };
 
-const activeSetlistFilterCount = (filters: SetlistSearchFilters): number => {
-  return [
-    filters.q,
-    filters.year,
-    filters.type == "all" ? "" : filters.type,
-    filters.song,
-    filters.costume,
-  ].filter((value) => value != "").length;
+const isSelectedLiveFilter = (
+  filter: (typeof SetlistLiveFilters)[number],
+): filter is (typeof SetlistLiveFilters)[number] & { name: SetlistSelectedLiveFilterType } => {
+  return filter.name != "all";
 };

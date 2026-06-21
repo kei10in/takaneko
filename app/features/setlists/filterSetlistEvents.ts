@@ -1,6 +1,10 @@
 import { AllStageCostumes } from "../costumes/costumesStage";
 import { ALL_SONGS } from "../songs/songs";
-import { SetlistLiveFilterType, SetlistLiveFilters, SetlistSearchFilters } from "./searchFilters";
+import {
+  SetlistLiveFilters,
+  SetlistSearchFilters,
+  SetlistSelectedLiveFilterType,
+} from "./searchFilters";
 import { containsAllTokens, searchTokens } from "./searchText";
 import { SetlistAct, SetlistEvent, SetlistSearchResult } from "./types";
 
@@ -11,11 +15,17 @@ export const filterSetlistEvents = (
   const tokens = searchTokens(filters.q);
 
   return events.flatMap((event): SetlistSearchResult[] => {
-    if (filters.year != "" && !event.date.startsWith(`${filters.year}-`)) {
+    if (
+      filters.year.length > 0 &&
+      !filters.year.some((year) => event.date.startsWith(`${year}-`))
+    ) {
       return [];
     }
 
-    if (filters.type != "" && !matchesLiveTypeFilter(filters.type, event)) {
+    if (
+      filters.type.length > 0 &&
+      !filters.type.some((filter) => matchesLiveTypeFilter(filter, event))
+    ) {
       return [];
     }
 
@@ -43,7 +53,10 @@ export const filterSetlistEvents = (
   });
 };
 
-const matchesLiveTypeFilter = (filter: SetlistLiveFilterType, event: SetlistEvent): boolean => {
+const matchesLiveTypeFilter = (
+  filter: SetlistSelectedLiveFilterType,
+  event: SetlistEvent,
+): boolean => {
   const f = SetlistLiveFilters.find((f) => f.name == filter);
   if (f == undefined) {
     return true;
