@@ -5,7 +5,9 @@ import { LiveType } from "~/features/events/EventType";
 import { parseSetlist } from "~/features/events/setlist";
 import { makeEventMetaForTest } from "~/features/events/testUtils";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { buildSetlistEvents, filterSetlistEvents, SetlistSearchFilters } from "./setlists";
+import { buildSetlistEvents } from "./buildSetlistEvents";
+import { filterSetlistEvents } from "./filterSetlistEvents";
+import { SetlistSearchFilters } from "./searchFilters";
 
 const today = new NaiveDate(2026, 1, 10);
 

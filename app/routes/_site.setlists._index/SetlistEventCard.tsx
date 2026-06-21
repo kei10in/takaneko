@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router";
 import { Setlist } from "~/features/events/components/Setlist";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
-import { SetlistEvent } from "~/features/setlists/setlists";
+import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 

@@ -3,7 +3,7 @@ import { register } from "node:module";
 import { dirname } from "node:path";
 import { makeLivesForCostumes } from "~/features/costumes/costumeActivities";
 import { EventModule } from "~/features/events/eventModule";
-import { buildSetlistEvents } from "~/features/setlists/setlists";
+import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents";
 import { makeLivesForSongMap } from "~/features/songs/songActivities";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { makeSongPerformedList } from "~/features/stats/performanceCount";

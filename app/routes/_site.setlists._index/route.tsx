@@ -10,16 +10,16 @@ import {
 } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
+import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents";
 import {
   defaultSetlistSearchFilters,
-  filterSetlistEvents,
-  SetlistEvents,
   SetlistLiveFilters,
   SetlistLiveFilterType,
   SetlistSearchFilters,
   SetlistSearchStatus,
   SetlistYearFilters,
-} from "~/features/setlists/setlists";
+} from "~/features/setlists/searchFilters";
+import { SetlistEvents } from "~/features/setlists/types";
 import { PerformedSongs } from "~/features/songs/songsFiltered";
 import { formatTitle } from "~/utils/htmlHeader";
 import type { Route } from "./+types/route";
