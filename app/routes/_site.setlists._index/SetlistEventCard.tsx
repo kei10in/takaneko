@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import { GiMicrophone } from "react-icons/gi";
 import {
   HiChevronDown,
+  HiChevronRight,
   HiOutlineCalendarDays,
   HiOutlineMapPin,
   HiOutlineMusicalNote,
@@ -179,8 +180,9 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                   className="flex h-8 items-center gap-1 rounded-full px-2 hover:bg-zinc-100"
                   to={eventUrl}
                 >
-                  <HiOutlineCalendarDays className="size-5 text-nadeshiko-600" />
+                  <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
                   <span>イベント詳細</span>
+                  <HiChevronRight className="text-nadeshiko-600" />
                 </Link>
               </div>
             </div>

@@ -119,7 +119,7 @@ export default function Component() {
           <div className="ml-auto flex w-fit flex-wrap gap-1">
             <Link
               to="/calendar"
-              className="flex items-center gap-1 rounded-full px-2 text-sm hover:bg-nadeshiko-100"
+              className="flex h-8 items-center gap-1 rounded-full px-2 text-sm hover:bg-zinc-100"
             >
               <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
               <span className="block">スケジュール</span>
