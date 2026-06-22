@@ -88,12 +88,12 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                       {liveTypeLabel(event.liveType)}
                     </span>
                     {!event.hasSetlist && (
-                      <span className="inline-block rounded-full bg-gray-100 px-2 py-0.5 text-gray-500">
+                      <span className="inline-block rounded-full bg-zinc-100 px-2 text-zinc-500">
                         未登録
                       </span>
                     )}
                     {event.hasSetlist && event.hasMissingSetlist && (
-                      <span className="inline-block rounded-full bg-gray-100 px-2 py-0.5 text-gray-500">
+                      <span className="inline-block rounded-full bg-zinc-100 px-2 text-zinc-500">
                         未登録あり
                       </span>
                     )}
