@@ -1,7 +1,7 @@
 import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useDeferredValue, useMemo, useState } from "react";
-import { HiFunnel, HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
+import { HiAdjustmentsHorizontal, HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
 import { MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
@@ -154,11 +154,11 @@ export default function Component() {
           <div>
             <button
               type="button"
-              className="ml-auto flex h-10 graceful-button w-40 items-center justify-center gap-2 px-4"
+              className="ml-auto flex h-10 graceful-button items-center justify-center gap-1 rounded-xl px-4"
               onClick={() => setIsFilterDialogOpen(true)}
             >
-              <HiFunnel />
-              <span>絞り込み</span>
+              <HiAdjustmentsHorizontal className="size-5" />
+              <span>フィルタ</span>
             </button>
           </div>
         </div>
@@ -178,9 +178,9 @@ export default function Component() {
               )}
               transition
             >
-              <div className="p-4">
+              <div className="space-y-8 p-4">
                 <div className="mb-4 flex items-center justify-between gap-3">
-                  <h2 className="text-base font-semibold text-gray-800">絞り込み</h2>
+                  <h2 className="text-base font-semibold text-gray-800">フィルタ</h2>
                   <CloseButton
                     as={XMarkButton}
                     onClick={() => setIsFilterDialogOpen(false)}
@@ -190,17 +190,17 @@ export default function Component() {
 
                 <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
 
-                <div className="mt-12 grid grid-cols-2 gap-4">
+                <div className="flex flex-wrap justify-stretch gap-2 pt-4">
                   <button
                     type="button"
-                    className="h-10 rounded-xl border border-zinc-300 text-zinc-600 hover:bg-zinc-100"
+                    className="h-10 flex-1 rounded-xl border border-zinc-300 px-4 text-nowrap text-zinc-600 hover:bg-zinc-100"
                     onClick={resetFilters}
                   >
                     クリア
                   </button>
-                  <CloseButton className="flex graceful-button w-auto items-center justify-center gap-2 rounded-xl">
-                    <span className="block">結果を見る</span>
-                    <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
+                  <CloseButton className="flex graceful-button w-auto flex-1 items-center justify-center gap-2 rounded-xl px-4">
+                    <span className="block text-nowrap">検索する</span>
+                    <span className="block rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
                       {results.length}
                     </span>
                   </CloseButton>
@@ -315,8 +315,8 @@ const CheckboxFilter = <T extends string>({
   };
 
   return (
-    <fieldset>
-      <legend className="mb-1 block text-sm font-semibold text-gray-600">{label}</legend>
+    <fieldset className="space-y-2">
+      <legend className="block font-semibold text-gray-600">{label}</legend>
       <div className="flex flex-wrap gap-2">
         {options.map((option) => (
           <Checkbox
@@ -365,8 +365,8 @@ const SelectFilter: React.FC<SelectFilterProps> = ({
   includeAll = true,
 }: SelectFilterProps) => {
   return (
-    <label className="block">
-      <span className="mb-1 block text-sm font-semibold text-gray-600">{label}</span>
+    <label className="block space-y-2">
+      <span className="block font-semibold text-gray-600">{label}</span>
       <select
         className="h-10 w-full rounded-md border border-gray-300 bg-white px-3 text-sm"
         value={value}
