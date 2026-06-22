@@ -129,7 +129,7 @@ export default function Component() {
         </div>
 
         <div className="mt-8 space-y-4">
-          <div className="box-border flex h-10 items-center gap-2 rounded-full border border-zinc-300 px-3 focus-within:border-nadeshiko-500">
+          <div className="box-border flex h-10 items-center gap-2 rounded-full border border-zinc-300 px-3 focus-within:border-zinc-400">
             <HiMagnifyingGlass className="flex-none text-zinc-400" />
             <input
               name="q"
