@@ -151,11 +151,7 @@ export default function Component() {
             )}
           </div>
 
-          <div className="hidden sm:block">
-            <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
-          </div>
-
-          <div className="sm:hidden">
+          <div>
             <button
               type="button"
               className="ml-auto flex h-10 graceful-button w-40 items-center justify-center gap-2 px-4"
@@ -170,13 +166,13 @@ export default function Component() {
         <Dialog
           open={isFilterDialogOpen}
           onClose={() => setIsFilterDialogOpen(false)}
-          className="relative z-50 sm:hidden"
+          className="relative z-50"
         >
           <DialogBackdrop className={dialogBackdropStyle()} transition />
           <div className="fixed inset-0 flex items-end justify-end">
             <DialogPanel
               className={clsx(
-                "h-dvh w-10/12 overflow-y-auto bg-white shadow-xl",
+                "h-dvh w-10/12 max-w-lg overflow-y-auto bg-white shadow-xl",
                 "data-closed:translate-x-full",
                 "transition-all duration-300 ease-in-out",
               )}
@@ -194,21 +190,20 @@ export default function Component() {
 
                 <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
 
-                <div className="mt-5 grid grid-cols-2 gap-2">
+                <div className="mt-12 grid grid-cols-2 gap-4">
                   <button
                     type="button"
-                    className="h-10 rounded-full border border-zinc-300 text-zinc-600"
+                    className="h-10 rounded-xl border border-zinc-300 text-zinc-600 hover:bg-zinc-100"
                     onClick={resetFilters}
                   >
                     クリア
                   </button>
-                  <button
-                    type="submit"
-                    form="setlist-search-form-mobile"
-                    className="graceful-button w-auto"
-                  >
-                    結果を見る
-                  </button>
+                  <CloseButton className="flex graceful-button w-auto items-center justify-center gap-2 rounded-xl">
+                    <span className="block">結果を見る</span>
+                    <span className="rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
+                      {results.length}
+                    </span>
+                  </CloseButton>
                 </div>
               </div>
             </DialogPanel>
@@ -264,39 +259,35 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
   );
 
   return (
-    <div className="space-y-4">
-      <div className="grid gap-4 lg:grid-cols-2">
-        <CheckboxFilter
-          label="年"
-          values={filters.year}
-          onChange={(value) => onFilterChange("year", value)}
-          options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
-        />
-        <CheckboxFilter
-          label="ライブ種別"
-          values={filters.type}
-          onChange={(value) => onFilterChange("type", value)}
-          options={SetlistLiveFilters.filter(isSelectedLiveFilter).map((filter) => ({
-            value: filter.name,
-            label: filter.display,
-          }))}
-        />
-      </div>
+    <div className="space-y-6">
+      <CheckboxFilter
+        label="年"
+        values={filters.year}
+        onChange={(value) => onFilterChange("year", value)}
+        options={SetlistYearFilters.map((year) => ({ value: year.value, label: year.label }))}
+      />
+      <CheckboxFilter
+        label="ライブ種別"
+        values={filters.type}
+        onChange={(value) => onFilterChange("type", value)}
+        options={SetlistLiveFilters.filter(isSelectedLiveFilter).map((filter) => ({
+          value: filter.name,
+          label: filter.display,
+        }))}
+      />
 
-      <div className="grid gap-3 sm:grid-cols-2">
-        <SelectFilter
-          label="楽曲"
-          value={filters.song}
-          onChange={(value) => onFilterChange("song", value)}
-          options={sortedPerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
-        />
-        <SelectFilter
-          label="衣装"
-          value={filters.costume}
-          onChange={(value) => onFilterChange("costume", value)}
-          optionGroups={StageCostumeFilterOptionGroups}
-        />
-      </div>
+      <SelectFilter
+        label="楽曲"
+        value={filters.song}
+        onChange={(value) => onFilterChange("song", value)}
+        options={sortedPerformedSongs.map((song) => ({ value: song.slug, label: song.name }))}
+      />
+      <SelectFilter
+        label="衣装"
+        value={filters.costume}
+        onChange={(value) => onFilterChange("costume", value)}
+        optionGroups={StageCostumeFilterOptionGroups}
+      />
     </div>
   );
 };
