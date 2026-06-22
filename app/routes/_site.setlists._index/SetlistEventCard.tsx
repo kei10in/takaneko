@@ -170,7 +170,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                 {event.actCount > 1 && (
                   <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
                     <HiOutlineStar className="size-4 text-nadeshiko-600" />
-                    <span>{event.actCount} 公演</span>
+                    <span>{event.actCount} ステージ</span>
                   </div>
                 )}
               </div>
