@@ -37,7 +37,6 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
           ...meta.keywords,
           meta.region,
           meta.location,
-          meta.liveType,
         ]).join(" "),
       );
 
