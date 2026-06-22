@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "文化放送「idoLove You♪ -On The Radio-」",
+  summary: "文化放送「idoLove You♬ -On The Radio-」",
   category: "RADIO",
   date: "2026-06-23",
   start: "28:30",
@@ -30,5 +30,5 @@ export const content = /* md */ `
 
   - [radiko 番組放送回](https://radiko.jp/share/?sid=QRR&t=20260624043000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2067121395885347044)
-  - [告知 - idoLove You♪ -On The Radio- X](https://x.com/ily_joqr/status/2067079797751042360)
+  - [告知 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2067079797751042360)
 `;
