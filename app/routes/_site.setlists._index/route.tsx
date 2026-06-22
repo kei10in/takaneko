@@ -1,8 +1,14 @@
 import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
 import { useDeferredValue, useMemo, useState } from "react";
-import { HiAdjustmentsHorizontal, HiMagnifyingGlass, HiXMark } from "react-icons/hi2";
-import { MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
+import {
+  HiAdjustmentsHorizontal,
+  HiChevronRight,
+  HiMagnifyingGlass,
+  HiOutlineCalendarDays,
+  HiXMark,
+} from "react-icons/hi2";
+import { Link, MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
 import { AllStageCostumes } from "~/features/costumes/costumesStage";
@@ -26,7 +32,7 @@ export const meta: MetaFunction = () => {
     {
       name: "description",
       content:
-        "高嶺のなでしこ (たかねこ) の開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から横断検索できます。",
+        "高嶺のなでしこ (たかねこ) の過去のライブのセットリストを、イベント名・楽曲名・衣装名・会場名から横断検索できます。",
     },
   ];
 };
@@ -103,13 +109,23 @@ export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className={pageBox("my-8 px-4")}>
-        <div className="space-y-12">
-          <h1 className={"text-5xl"}>セットリスト</h1>
-          {/* 見た目だけの調整 */}
-          <p className="ml-2">
-            開催済みライブのセットリストを、イベント名・楽曲名・会場・地域から探せます。 1 部 / 2
-            部や複数ステージは、イベント内の公演ごとに分けて表示します。
+        <div>
+          <h1 className="mb-6 text-5xl">セットリスト</h1>
+
+          <p className="mx-2 mb-2">
+            過去のライブのセットリストを、イベント名・曲名・衣装名・会場名から探せます。
           </p>
+
+          <div className="ml-auto flex w-fit flex-wrap gap-1">
+            <Link
+              to="/calendar"
+              className="flex items-center gap-1 rounded-full px-2 text-sm hover:bg-nadeshiko-100"
+            >
+              <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
+              <span className="block">スケジュール</span>
+              <HiChevronRight className="text-nadeshiko-600" />
+            </Link>
+          </div>
         </div>
 
         <div className="mt-8 space-y-4">
@@ -136,7 +152,7 @@ export default function Component() {
                 setQuery(nextQuery);
                 updateFilter("q", nextQuery);
               }}
-              placeholder="イベント名、曲名、会場、地域、衣装"
+              placeholder="イベント・曲・衣装・会場で検索"
             />
             {query != "" && (
               <button
