@@ -22,7 +22,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://s.mxtv.jp/music/otobokepops/",
   },
-  updatedAt: "2026-06-19",
+  updatedAt: "2026-06-22",
 };
 
 export const content = /* md */ `
@@ -38,6 +38,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [音ボケPOPS 収録直後の感想 - 音ボケPOPS X](https://x.com/otobokepops/status/2068166959091626335)
   - [音ボケPOPS ダイジェスト動画 - 音ボケPOPS X](https://x.com/otobokepops/status/2067804600640721128)
   - [土曜の夜は 音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2067079788909519126)
   - [今週の 音ボケPOPS - 音ボケPOPS X](https://x.com/otobokepops/status/2066355016412315776)
