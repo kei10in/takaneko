@@ -15,6 +15,7 @@ export const makeEventMetaForTest = (partial: Partial<EventMeta>): EventMeta => 
     date: partial.date ?? "2025-08-01",
 
     description: partial.description,
+    keywords: partial.keywords ?? [],
     status: partial.status,
     open: partial.open,
     start: partial.start,

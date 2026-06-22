@@ -26,9 +26,7 @@ export const Setlist: React.FC<Props> = (props: Props) => {
   }, [setlist, copyWithMC, copyWithOrder]);
 
   return (
-    <section>
-      <h4 className="font-bold text-gray-500">セットリスト</h4>
-
+    <div>
       <ul className="mt-1 divide-y divide-gray-100 pb-4">
         {setlist.map((part, i) => {
           return <SetlistItem key={i} part={part} />;
@@ -37,7 +35,7 @@ export const Setlist: React.FC<Props> = (props: Props) => {
 
       <div className="flex justify-end gap-1">
         {links.length > 0 && (
-          <p className="flex-1 pb-4 pl-6 text-xs text-gray-400">
+          <p className="flex-1 truncate pb-4 pl-6 text-xs text-nowrap text-gray-400">
             出典:{" "}
             <Link
               className="text-nadeshiko-600"
@@ -94,6 +92,6 @@ export const Setlist: React.FC<Props> = (props: Props) => {
           <CopyButton data={setlistText} />
         </div>
       </div>
-    </section>
+    </div>
   );
 };

@@ -2,6 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "TOKYO IDOL FESTIVAL 2023",
+  keywords: ["TIF", "TIF2023"],
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2023-08-06",

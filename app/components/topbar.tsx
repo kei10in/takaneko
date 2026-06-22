@@ -15,6 +15,7 @@ import {
   BsCart,
   BsFilm,
   BsGraphUp,
+  BsListOl,
   BsMusicNote,
   BsPersonCircle,
   BsPersonStandingDress,
@@ -63,6 +64,11 @@ const TopBarMenu: TopBarMenuItem[] = [
         title: "楽曲",
         Icon: BsMusicNote,
         url: "/songs",
+      },
+      {
+        title: "セットリスト",
+        Icon: BsListOl,
+        url: "/setlists",
       },
       {
         title: "衣装",

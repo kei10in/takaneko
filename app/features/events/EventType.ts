@@ -131,6 +131,25 @@ export const LiveTypeEnum = z.enum([
 export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
 
+export const liveTypeLabel = (liveType: LiveType | undefined): string => {
+  switch (liveType) {
+    case "SOLO":
+      return "ワンマン";
+    case "HOSTED":
+      return "主催対バン";
+    case "JOINT":
+    case "GUEST":
+    case "FESTIVAL":
+      return "対バン";
+    case "EVENT_LIVE":
+      return "イベント出演";
+    case "RELEASE_EVENT":
+      return "リリースイベント";
+    default:
+      return "不明";
+  }
+};
+
 export const liveTypeColor = (liveType: LiveType | undefined): string => {
   switch (liveType) {
     case LiveType.SOLO:

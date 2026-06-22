@@ -2,8 +2,8 @@ import React from "react";
 import { GiAmpleDress } from "react-icons/gi";
 import { Markdown } from "~/components/Markdown";
 import { Act, isEmptyAct } from "~/features/events/act";
+import { Setlist } from "~/features/events/components/Setlist";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
-import { Setlist } from "./Setlist";
 
 interface Props {
   acts: Act[];
@@ -69,7 +69,12 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
 
                 {description && <Markdown>{description}</Markdown>}
 
-                {setlist.length > 0 && <Setlist setlist={setlist} links={links} />}
+                {setlist.length > 0 && (
+                  <section>
+                    <h4 className="font-bold text-gray-500">セットリスト</h4>
+                    <Setlist setlist={setlist} links={links} />
+                  </section>
+                )}
 
                 {note && <Markdown>{note}</Markdown>}
 

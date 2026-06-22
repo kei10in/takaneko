@@ -1,45 +1,48 @@
+import { z } from "zod/v4";
 import { parseMemberName } from "../profile/parseMemberName";
-import { MemberId } from "../profile/types";
+import { MemberIdEnum } from "../profile/types";
 
-export interface SongSegment {
-  kind: "song";
-  index: number;
-  section: "main" | "encore";
-  songTitle: string;
-  costumeName?: string | undefined;
-  members: MemberId[];
-}
+export const Segment = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("talk"),
+    costumeName: z.string().optional(),
+  }),
+  z.object({
+    kind: z.literal("announce"),
+    name: z.string(),
+    members: z.array(MemberIdEnum),
+  }),
+  z.object({
+    kind: z.literal("overture"),
+  }),
+  z.object({
+    kind: z.literal("song"),
+    index: z.number(),
+    section: z.enum(["main", "encore"]),
+    songTitle: z.string(),
+    costumeName: z.string().optional(),
+    members: z.array(MemberIdEnum).default([]),
+  }),
+  z.object({
+    kind: z.literal("encore"),
+  }),
+  z.object({
+    kind: z.literal("special"),
+    title: z.string().optional(),
+    costumeName: z.string().optional(),
+  }),
+  z.object({
+    kind: z.literal("costume"),
+    costumeName: z.string(),
+  }),
+  z.object({
+    kind: z.literal("interlude"),
+    description: z.string().optional(),
+  }),
+]);
 
-export type Segment =
-  | {
-      kind: "talk";
-      costumeName?: string | undefined;
-    }
-  | {
-      kind: "announce";
-      name: string;
-      members: MemberId[];
-    }
-  | {
-      kind: "overture";
-    }
-  | SongSegment
-  | {
-      kind: "encore";
-    }
-  | {
-      kind: "special";
-      title?: string | undefined;
-      costumeName?: string | undefined;
-    }
-  | {
-      kind: "costume";
-      costumeName: string;
-    }
-  | {
-      kind: "interlude";
-      description?: string | undefined;
-    };
+export type Segment = z.infer<typeof Segment>;
+export type SongSegment = Extract<Segment, { kind: "song" }>;
 
 interface ParsingState {
   section: "main" | "encore";

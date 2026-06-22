@@ -3,9 +3,11 @@ import { register } from "node:module";
 import { dirname } from "node:path";
 import { makeLivesForCostumes } from "~/features/costumes/costumeActivities";
 import { EventModule } from "~/features/events/eventModule";
+import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents";
 import { makeLivesForSongMap } from "~/features/songs/songActivities";
 import { ALL_SONGS } from "~/features/songs/songs";
 import { makeSongPerformedList } from "~/features/stats/performanceCount";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
@@ -15,6 +17,7 @@ const main = async () => {
   buildSongToLiveMap(events);
   buildSongPerformedList(events);
   buildCostumeToLiveIndex(events);
+  buildSetlistEventIndex(events);
 };
 
 const buildSongToLiveMap = (events: EventModule[]) => {
@@ -50,6 +53,15 @@ const buildCostumeToLiveIndex = (events: EventModule[]) => {
     mkdirSync(dirname(outputPath), { recursive: true });
     writeFileSync(outputPath, json);
   });
+};
+
+const buildSetlistEventIndex = (events: EventModule[]) => {
+  const setlistEvents = buildSetlistEvents(events, NaiveDate.todayInJapan());
+
+  const outputPath = "./public/data/setlists/lives.json";
+  const json = JSON.stringify(setlistEvents);
+  mkdirSync(dirname(outputPath), { recursive: true });
+  writeFileSync(outputPath, json);
 };
 
 main();
