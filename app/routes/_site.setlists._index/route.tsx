@@ -341,7 +341,7 @@ const CheckboxFilter = <T extends string>({
             onChange={(checked) => updateValue(option.value, checked)}
             className={clsx(
               "group flex h-8 items-center justify-center rounded-full px-3 text-sm select-none",
-              "bg-zinc-100 font-semibold text-zinc-500",
+              "bg-zinc-100 font-semibold text-zinc-500 hover:bg-zinc-200 hover:text-zinc-600",
               "data-checked:box-content data-checked:border-0 data-checked:graceful-selected-item",
             )}
           >
