@@ -105,7 +105,7 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/_MARIC/status/2052006505495535845"],
     },
   ],
-  updatedAt: "2026-05-07",
+  updatedAt: "2026-06-22",
 };
 
 export const content = /* md */ `
@@ -172,6 +172,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [YouTube ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2068325497369489753)
   - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/2052014312366231824)
   - [ほら咲いた 高嶺のなでしこ - 公式 X](https://x.com/takanenofficial/status/2052010494072918153)
   - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2051821904831598971)
