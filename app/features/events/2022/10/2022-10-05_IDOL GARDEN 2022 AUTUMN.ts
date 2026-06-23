@@ -21,7 +21,7 @@ export const meta: EventMetaDescriptor = {
       "アンチファン",
       "誇り高きアイドル",
       "MC",
-      "女の子は強い",
+      "初披露:女の子は強い",
       "ユメムスビ",
       "MC",
       "乙女どもよ。",

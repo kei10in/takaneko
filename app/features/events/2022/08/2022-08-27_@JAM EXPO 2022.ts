@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     {
       title: "オレンジステージ🍊",
       types: ["LIVE"],
-      setlist: ["衣装:アンチファン衣装", "アンチファン", "誇り高きアイドル", "ファンサ"],
+      setlist: ["衣装:アンチファン衣装", "アンチファン", "誇り高きアイドル", "初披露:ファンサ"],
       url: "https://x.com/Mikuru_hositani/status/1563415251520876545",
     },
     {

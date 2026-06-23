@@ -49,7 +49,7 @@ export const meta: EventMetaDescriptor = {
       "I’M YOUR IDOL",
       "アンコール",
       "衣装:高嶺のなでしこ 2024 衣装",
-      "アドレナリンゲーム",
+      "初披露:アドレナリンゲーム",
       "MC: 緊急告知",
       "ファンサ",
       "MC: 集合写真, TikTok",

@@ -17,7 +17,7 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: {
     types: ["LIVE"],
-    setlist: ["衣装:アンチファン衣装", "可愛くてごめん"],
+    setlist: ["衣装:アンチファン衣装", "初披露:可愛くてごめん"],
     url: "",
   },
   updatedAt: "2024-11-04",

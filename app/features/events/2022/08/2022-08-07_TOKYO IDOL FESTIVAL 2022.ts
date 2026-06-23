@@ -26,8 +26,8 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       setlist: [
         "衣装: アンチファン衣装",
-        "アンチファン",
-        "ユメムスビ",
+        "初披露:アンチファン",
+        "初披露:ユメムスビ",
         "MC",
         "青春トレイン (ラストアイドル cover)",
         "MC",

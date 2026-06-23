@@ -66,7 +66,7 @@ export const meta: EventMetaDescriptor = {
         "MC",
         "世界は恋に落ちている",
         "MC",
-        "私は、わたしの事が好き。",
+        "初披露:私は、わたしの事が好き。",
         "可愛くてごめん",
         "ファンサ",
         "I’M YOUR IDOL",

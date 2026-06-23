@@ -97,7 +97,7 @@ export const meta: EventMetaDescriptor = {
         "アンコール",
         "衣装: T シャツ (Bouquet of 9 Flowers ver.)",
         "幕間: エースコック スープはるさめ Web CM",
-        "生きてりゃいい",
+        "初披露:生きてりゃいい",
         "MC: 告知、記念撮影、TikTok 撮影",
         "ファンサ",
         "美しく生きろ",

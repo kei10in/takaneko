@@ -34,7 +34,7 @@ export const meta: EventMetaDescriptor = {
         "企画: たかねこ SUPER BINGO",
         "ファンサ",
         "MC: 写真撮影、TikTok撮影",
-        "恋を知った世界",
+        "初披露:恋を知った世界",
         "MC",
       ],
     },

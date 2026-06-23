@@ -41,7 +41,7 @@ export const meta: EventMetaDescriptor = {
       "LOVE ANTHEM",
       "グッズ抽選会",
       "MC:悪鬼のウイルス告知",
-      "アイのウイルス",
+      "初披露:アイのウイルス",
       "MC",
       "I’M YOUR IDOL",
       "恋を知った世界",

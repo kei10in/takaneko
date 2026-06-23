@@ -110,7 +110,7 @@ export const meta: EventMetaDescriptor = {
         "決戦スピリット",
         "この世界は嘘でできている",
         "MC",
-        "世界は恋に落ちている",
+        "初披露:世界は恋に落ちている",
         "MC",
         "女の子は強い",
         "I’M YOUR IDOL",
