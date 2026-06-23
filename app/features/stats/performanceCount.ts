@@ -24,6 +24,7 @@ export const makeSongPerformedList = (
     meta.acts.forEach((act) => {
       act.setlist
         .filter((p) => p.kind == "song")
+        .filter((p) => !p.isCover)
         .forEach((segment) => {
           if (result[segment.songTitle] == undefined) {
             return;

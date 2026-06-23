@@ -48,4 +48,47 @@ describe("parseSetlist", () => {
       { kind: "song", section: "main", index: 0, songTitle: "Song E" },
     ]);
   });
+
+  it("parse song title with 初披露 indication", () => {
+    const input = ["初披露: Song F"];
+    const result = parseSetlist(input);
+    expect(result).toEqual([
+      {
+        kind: "song",
+        section: "main",
+        index: 0,
+        songTitle: "Song F",
+        isFirstTime: true,
+      },
+    ]);
+  });
+
+  it("parses song title with original artist", () => {
+    const input = ["Song F (Original Artist cover)"];
+    const result = parseSetlist(input);
+    expect(result).toEqual([
+      {
+        kind: "song",
+        section: "main",
+        index: 0,
+        songTitle: "Song F",
+        originalArtist: "Original Artist",
+        isCover: true,
+      },
+    ]);
+  });
+
+  it("parses song title without original artist but with cover indication", () => {
+    const input = ["Song F (cover)"];
+    const result = parseSetlist(input);
+    expect(result).toEqual([
+      {
+        kind: "song",
+        section: "main",
+        index: 0,
+        songTitle: "Song F",
+        isCover: true,
+      },
+    ]);
+  });
 });
