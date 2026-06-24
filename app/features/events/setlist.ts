@@ -173,7 +173,7 @@ const parseSongSegment = (
 const parseSongTitle = (
   title: string,
 ): { songTitle: string; originalArtist?: string; isCover?: boolean } => {
-  const m = /^(.+?)\s+\((.*?)\s*(?:cover|カバー)\)$/.exec(title);
+  const m = /^(.+?)\s+\((.*?)\s+(?:cover|カバー)\)$/.exec(title);
   if (m) {
     const originalArtist = m[2]?.trim() || undefined;
     return { songTitle: m[1].trim(), originalArtist, isCover: true };
