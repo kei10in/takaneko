@@ -51,7 +51,7 @@ export const meta: EventMetaDescriptor = {
       "可愛くてごめん",
       "女の子は強い",
       "MC",
-      "ハートブーケ",
+      "初披露:ハートブーケ",
       "ファンサ",
       "美しく生きろ",
     ],

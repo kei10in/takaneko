@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
         "美しく生きろ",
         "アンコール",
         "衣装:T シャツ (わたし色に染まれ ver.)",
-        "センパイ。",
+        "初披露:センパイ。",
         "ファンサ",
         "MC",
       ],

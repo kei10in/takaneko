@@ -29,7 +29,7 @@ export const meta: EventMetaDescriptor = {
         "小悪魔だってかまわない！",
         "可愛くてごめん",
         "MC",
-        "メランコリックハニー",
+        "初披露:メランコリックハニー",
         "Cute for life",
         "MC",
         "I’M YOUR IDOL",

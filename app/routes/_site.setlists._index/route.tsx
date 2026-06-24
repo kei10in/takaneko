@@ -82,8 +82,18 @@ export default function Component() {
       type: filters.type,
       song: filters.song,
       costume: filters.costume,
+      isFirstPerformance: filters.isFirstPerformance,
+      isCover: filters.isCover,
     }),
-    [deferredQuery, filters.costume, filters.song, filters.type, filters.year],
+    [
+      deferredQuery,
+      filters.costume,
+      filters.isCover,
+      filters.isFirstPerformance,
+      filters.song,
+      filters.type,
+      filters.year,
+    ],
   );
   const results = useMemo(
     () => filterSetlistEvents(events, searchFilters),
@@ -245,7 +255,11 @@ export default function Component() {
                   event={event}
                   matchedActIndexes={matchedActIndexes}
                   showMatchedAct={
-                    searchFilters.q != "" || searchFilters.song != "" || searchFilters.costume != ""
+                    searchFilters.q != "" ||
+                    searchFilters.song != "" ||
+                    searchFilters.costume != "" ||
+                    searchFilters.isFirstPerformance ||
+                    searchFilters.isCover
                   }
                 />
               </li>
@@ -304,7 +318,60 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
         onChange={(value) => onFilterChange("costume", value)}
         optionGroups={StageCostumeFilterOptionGroups}
       />
+      <BooleanFilterGroup
+        label="その他"
+        options={[
+          {
+            checked: filters.isFirstPerformance,
+            onChange: (checked) => onFilterChange("isFirstPerformance", checked),
+            text: "初披露あり",
+          },
+          {
+            checked: filters.isCover,
+            onChange: (checked) => onFilterChange("isCover", checked),
+            text: "カバー曲あり",
+          },
+        ]}
+      />
     </div>
+  );
+};
+
+interface BooleanFilterOption {
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  text: string;
+}
+
+interface BooleanFilterGroupProps {
+  label: string;
+  options: BooleanFilterOption[];
+}
+
+const BooleanFilterGroup: React.FC<BooleanFilterGroupProps> = ({
+  label,
+  options,
+}: BooleanFilterGroupProps) => {
+  return (
+    <fieldset className="space-y-2">
+      <legend className="block font-semibold text-gray-600">{label}</legend>
+      <div className="flex flex-wrap gap-2">
+        {options.map((option) => (
+          <Checkbox
+            key={option.text}
+            checked={option.checked}
+            onChange={option.onChange}
+            className={clsx(
+              "group flex h-8 w-fit items-center justify-center rounded-full px-3 text-sm select-none",
+              "bg-zinc-100 font-semibold text-zinc-500 hover:bg-zinc-200 hover:text-zinc-600",
+              "data-checked:box-content data-checked:border-0 data-checked:graceful-selected-item",
+            )}
+          >
+            {option.text}
+          </Checkbox>
+        ))}
+      </div>
+    </fieldset>
   );
 };
 

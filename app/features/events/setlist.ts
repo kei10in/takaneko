@@ -21,7 +21,10 @@ export const Segment = z.discriminatedUnion("kind", [
     section: z.enum(["main", "encore"]),
     songTitle: z.string(),
     costumeName: z.string().optional(),
-    members: z.array(MemberIdEnum).default([]),
+    members: z.array(MemberIdEnum).optional(),
+    isFirstPerformance: z.boolean().optional(),
+    isCover: z.boolean().optional(),
+    originalArtist: z.string().optional(),
   }),
   z.object({
     kind: z.literal("encore"),
@@ -127,7 +130,19 @@ const parseSegment = (
     return { nextState: state, segment: { kind: "interlude", description } };
   }
 
-  const [songTitle, membersStr] = p.split(":").map((x) => x.trim());
+  return parseSongSegment(part, state);
+};
+
+const parseSongSegment = (
+  part: string,
+  state: ParsingState,
+): { nextState: ParsingState; segment: Segment } => {
+  const [isFirstPerformance, title, membersStr] = part.startsWith("初披露:")
+    ? [true, ...part.split(":").slice(1)]
+    : [undefined, ...part.split(":")];
+
+  const { songTitle, originalArtist, isCover } = parseSongTitle(title);
+
   const members = membersStr
     ?.split("、")
     .flatMap((x) => x.split(","))
@@ -148,8 +163,22 @@ const parseSegment = (
       index: state.index,
       songTitle,
       members,
+      isFirstPerformance,
+      isCover,
+      originalArtist,
     },
   };
+};
+
+const parseSongTitle = (
+  title: string,
+): { songTitle: string; originalArtist?: string; isCover?: boolean } => {
+  const m = /^(.+?)\s+\((.*?)\s*(?:cover|カバー)\)$/.exec(title);
+  if (m) {
+    const originalArtist = m[2]?.trim() || undefined;
+    return { songTitle: m[1].trim(), originalArtist, isCover: true };
+  }
+  return { songTitle: title.trim() };
 };
 
 export const formatSetlist = (
