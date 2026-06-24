@@ -34,7 +34,8 @@ export const filterSetlistEvents = (
     const matchedActIndexes = event.acts.flatMap((act, index) => {
       if (
         !matchesSongAndCostumeFilters(filters.song, filters.costume, act) ||
-        !matchesFirstPerformanceFilter(filters.isFirstPerformance, act)
+        !matchesFirstPerformanceFilter(filters.isFirstPerformance, act) ||
+        !matchesCoverFilter(filters.isCover, act)
       ) {
         return [];
       }
@@ -100,4 +101,12 @@ const matchesFirstPerformanceFilter = (isFirstPerformance: boolean, act: Setlist
   }
 
   return act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance);
+};
+
+const matchesCoverFilter = (isCover: boolean, act: SetlistAct): boolean => {
+  if (!isCover) {
+    return true;
+  }
+
+  return act.setlist.some((segment) => segment.kind == "song" && segment.isCover);
 };

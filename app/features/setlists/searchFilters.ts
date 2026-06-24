@@ -70,6 +70,7 @@ export interface SetlistSearchFilters {
   song: string;
   costume: string;
   isFirstPerformance: boolean;
+  isCover: boolean;
 }
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
@@ -80,5 +81,6 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
     song: "",
     costume: "",
     isFirstPerformance: false,
+    isCover: false,
   };
 };

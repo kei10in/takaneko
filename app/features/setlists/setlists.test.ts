@@ -122,7 +122,7 @@ describe("filterSetlistEvents", () => {
             [
               "衣装: アンチファン衣装",
               "Song A",
-              "ファンサ",
+              "ファンサ (mona cover)",
               "衣装: 見上げるたびに、恋をする。衣装",
               "Song B",
             ],
@@ -203,6 +203,9 @@ describe("filterSetlistEvents", () => {
     expect(filterSetlistEvents(events, filters({ isFirstPerformance: true })).map(toSlug)).toEqual([
       "2025-12-24_solo",
     ]);
+    expect(filterSetlistEvents(events, filters({ isCover: true })).map(toSlug)).toEqual([
+      "2026-01-01_festival",
+    ]);
   });
 
   it("matches costume and song filters against the same song segment", () => {
@@ -276,6 +279,7 @@ const filters = (input: Partial<SetlistSearchFilters>): SetlistSearchFilters => 
     song: input.song ?? "",
     costume: input.costume ?? "",
     isFirstPerformance: input.isFirstPerformance ?? false,
+    isCover: input.isCover ?? false,
   };
 };
 
