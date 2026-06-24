@@ -32,7 +32,10 @@ export const filterSetlistEvents = (
     const eventMatchesQuery =
       tokens.length == 0 || containsAllTokens(event.eventSearchText, tokens);
     const matchedActIndexes = event.acts.flatMap((act, index) => {
-      if (!matchesSongAndCostumeFilters(filters.song, filters.costume, act)) {
+      if (
+        !matchesSongAndCostumeFilters(filters.song, filters.costume, act) ||
+        !matchesFirstPerformanceFilter(filters.isFirstPerformance, act)
+      ) {
         return [];
       }
 
@@ -89,4 +92,12 @@ const matchesSongAndCostumeFilters = (
     (segment) =>
       segment.kind == "song" && segment.songTitle == songName && segment.costumeName == costumeName,
   );
+};
+
+const matchesFirstPerformanceFilter = (isFirstPerformance: boolean, act: SetlistAct): boolean => {
+  if (!isFirstPerformance) {
+    return true;
+  }
+
+  return act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance);
 };

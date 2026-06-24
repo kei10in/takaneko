@@ -69,6 +69,7 @@ export interface SetlistSearchFilters {
   type: SetlistSelectedLiveFilterType[];
   song: string;
   costume: string;
+  isFirstPerformance: boolean;
 }
 
 export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
@@ -78,5 +79,6 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
     type: [],
     song: "",
     costume: "",
+    isFirstPerformance: false,
   };
 };

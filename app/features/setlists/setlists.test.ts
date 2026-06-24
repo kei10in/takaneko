@@ -139,7 +139,7 @@ describe("filterSetlistEvents", () => {
         liveType: "SOLO",
         region: "大阪",
         location: "なんば",
-        acts: [act(["衣装: 見上げるたびに、恋をする。衣装", "Song D"])],
+        acts: [act(["衣装: 見上げるたびに、恋をする。衣装", "初披露:Song D"])],
       }),
       sourceEvent({
         slug: "2025-12-01_missing",
@@ -200,6 +200,9 @@ describe("filterSetlistEvents", () => {
     expect(
       filterSetlistEvents(events, filters({ costume: "見上げるたびに恋をする衣装" })).map(toSlug),
     ).toEqual(["2026-01-01_festival", "2025-12-24_solo"]);
+    expect(filterSetlistEvents(events, filters({ isFirstPerformance: true })).map(toSlug)).toEqual([
+      "2025-12-24_solo",
+    ]);
   });
 
   it("matches costume and song filters against the same song segment", () => {
@@ -272,6 +275,7 @@ const filters = (input: Partial<SetlistSearchFilters>): SetlistSearchFilters => 
     type: input.type ?? [],
     song: input.song ?? "",
     costume: input.costume ?? "",
+    isFirstPerformance: input.isFirstPerformance ?? false,
   };
 };
 

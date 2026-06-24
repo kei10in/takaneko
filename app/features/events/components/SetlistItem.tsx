@@ -98,7 +98,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
         <p className={clsx("line-clamp-1", slug && "leading-none text-nadeshiko-900")}>{name}</p>
         <p className="line-clamp-1 text-xs text-zinc-500">{costume}</p>
         <div className="flex items-center gap-2">
-          {part.isFirstTime && (
+          {part.isFirstPerformance && (
             <div className="flex items-center justify-center gap-0.5 rounded-full bg-nadeshiko-800 px-1 text-xs text-white">
               <HiSparkles />
               <span className="text-nowrap">初披露</span>

@@ -58,7 +58,7 @@ describe("parseSetlist", () => {
         section: "main",
         index: 0,
         songTitle: "Song F",
-        isFirstTime: true,
+        isFirstPerformance: true,
       },
     ]);
   });

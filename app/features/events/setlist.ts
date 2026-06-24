@@ -22,7 +22,7 @@ export const Segment = z.discriminatedUnion("kind", [
     songTitle: z.string(),
     costumeName: z.string().optional(),
     members: z.array(MemberIdEnum).optional(),
-    isFirstTime: z.boolean().optional(),
+    isFirstPerformance: z.boolean().optional(),
     isCover: z.boolean().optional(),
     originalArtist: z.string().optional(),
   }),
@@ -137,7 +137,7 @@ const parseSongSegment = (
   part: string,
   state: ParsingState,
 ): { nextState: ParsingState; segment: Segment } => {
-  const [isFirstTime, title, membersStr] = part.startsWith("初披露:")
+  const [isFirstPerformance, title, membersStr] = part.startsWith("初披露:")
     ? [true, ...part.split(":").slice(1)]
     : [undefined, ...part.split(":")];
 
@@ -163,7 +163,7 @@ const parseSongSegment = (
       index: state.index,
       songTitle,
       members,
-      isFirstTime: isFirstTime,
+      isFirstPerformance,
       isCover,
       originalArtist,
     },
@@ -173,7 +173,7 @@ const parseSongSegment = (
 const parseSongTitle = (
   title: string,
 ): { songTitle: string; originalArtist?: string; isCover?: boolean } => {
-  const m = /^(.+?)\s+\((.*?)\s+(?:cover|カバー)\)$/.exec(title);
+  const m = /^(.+?)\s+\((.*?)\s*(?:cover|カバー)\)$/.exec(title);
   if (m) {
     const originalArtist = m[2]?.trim() || undefined;
     return { songTitle: m[1].trim(), originalArtist, isCover: true };

@@ -82,8 +82,16 @@ export default function Component() {
       type: filters.type,
       song: filters.song,
       costume: filters.costume,
+      isFirstPerformance: filters.isFirstPerformance,
     }),
-    [deferredQuery, filters.costume, filters.song, filters.type, filters.year],
+    [
+      deferredQuery,
+      filters.costume,
+      filters.isFirstPerformance,
+      filters.song,
+      filters.type,
+      filters.year,
+    ],
   );
   const results = useMemo(
     () => filterSetlistEvents(events, searchFilters),
@@ -245,7 +253,10 @@ export default function Component() {
                   event={event}
                   matchedActIndexes={matchedActIndexes}
                   showMatchedAct={
-                    searchFilters.q != "" || searchFilters.song != "" || searchFilters.costume != ""
+                    searchFilters.q != "" ||
+                    searchFilters.song != "" ||
+                    searchFilters.costume != "" ||
+                    searchFilters.isFirstPerformance
                   }
                 />
               </li>
@@ -304,7 +315,44 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
         onChange={(value) => onFilterChange("costume", value)}
         optionGroups={StageCostumeFilterOptionGroups}
       />
+      <BooleanFilter
+        label="その他"
+        checked={filters.isFirstPerformance}
+        onChange={(checked) => onFilterChange("isFirstPerformance", checked)}
+        text="初披露あり"
+      />
     </div>
+  );
+};
+
+interface BooleanFilterProps {
+  label: string;
+  checked: boolean;
+  onChange: (checked: boolean) => void;
+  text: string;
+}
+
+const BooleanFilter: React.FC<BooleanFilterProps> = ({
+  label,
+  checked,
+  onChange,
+  text,
+}: BooleanFilterProps) => {
+  return (
+    <fieldset className="space-y-2">
+      <legend className="block font-semibold text-gray-600">{label}</legend>
+      <Checkbox
+        checked={checked}
+        onChange={onChange}
+        className={clsx(
+          "group flex h-8 w-fit items-center justify-center rounded-full px-3 text-sm select-none",
+          "bg-zinc-100 font-semibold text-zinc-500 hover:bg-zinc-200 hover:text-zinc-600",
+          "data-checked:box-content data-checked:border-0 data-checked:graceful-selected-item",
+        )}
+      >
+        {text}
+      </Checkbox>
+    </fieldset>
   );
 };
 
