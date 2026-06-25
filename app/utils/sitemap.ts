@@ -80,6 +80,7 @@ const buildStaticPages = (): SitemapPath[] => {
     { path: "/profile" },
     { path: "/official/news" },
     { path: "/releases" },
+    { path: "/setlists" },
     { path: "/terms" },
   ];
 };
