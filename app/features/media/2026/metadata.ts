@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/87114/",
+    title: "Ｎew専属モデル☆涼海すうをクローズアップ♡",
+    authorName: "Popteen Media",
+    publishedAt: "2026-06-23",
+    mediaUrl: "https://popteen.co.jp/media/87114/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2026/06/6638bd6af6606a74f409734468218556-e1781690724230.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "youtube",
     key: "9ZpVBv_KJrU",
     title:
