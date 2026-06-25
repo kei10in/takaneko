@@ -2,6 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "HERO SONIC 2026",
+  status: "CANCELED",
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-06-27",
@@ -17,13 +18,21 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/HEROSONIC2026/status/2063184306185654380",
     },
     {
+      path: "/events/2026/2026-06-27_HERO SONIC 2026_中止のお知らせ.jpg",
+      ref: "https://x.com/HEROSONIC2026/status/2070099695855354269",
+    },
+    {
       path: "/events/2026/2026-06-27_HERO SONIC 2026_エリアマップ.jpg",
       ref: "https://x.com/HEROSONIC2026/status/2063184306185654380",
     },
     {
+      path: "/events/2026/2026-06-27_HERO SONIC 2026_タイムテーブル+特典会.jpg",
+      ref: "https://x.com/takanenofficial/status/2069993993375543627",
+      tags: ["timetable"],
+    },
+    {
       path: "/events/2026/2026-06-27_HERO SONIC 2026_タイムテーブル.jpg",
       ref: "https://x.com/HEROSONIC2026/status/2065373547384430833",
-      tags: ["timetable"],
     },
     {
       path: "/events/2026/2026-06-27_HERO SONIC 2026.jpg",
@@ -56,12 +65,14 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-19",
+  updatedAt: "2026-06-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [中止のお知らせ - 公式 X](https://x.com/takanenofficial/status/2070100986614763551)
+  - [物販告知 - 公式 X](https://x.com/takanenofficial/status/2069993993375543627)
   - [ニコ生中継決定 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2067925373556277746)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066060571909177490)
   - [タイムテーブル公開 - HERO SONIC 2026 X](https://x.com/HEROSONIC2026/status/2065373547384430833)
