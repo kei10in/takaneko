@@ -82,6 +82,7 @@ import {
   Zipper_2025_2026年冬号,
   Zipper_2025年夏号,
   Zipper_2025年春号,
+  Zipper_2026年夏号,
 } from "./publications/Zipper";
 import { オシグラフVol1, オシグラフVol2, オシグラフVol3 } from "./publications/オシグラフ";
 import { グラビアプレスVol12 } from "./publications/グラビアプレス";
@@ -179,6 +180,7 @@ const publications: Publication[] = [
   Zipper_2025年春号,
   Zipper_2025年夏号,
   Zipper_2025_2026年冬号,
+  Zipper_2026年夏号,
   週刊少年チャンピオン_2024年No51,
   週刊少年チャンピオン_2025年No32,
   日経エンタテインメント_2024年2月号,

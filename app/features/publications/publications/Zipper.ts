@@ -1,5 +1,36 @@
 import { Publication } from "../types";
 
+export const Zipper_2026年夏号: Publication = {
+  slug: "Zipper 2026年夏号",
+  name: "Zipper 2026年夏号",
+  date: "2026-06-30",
+  kind: "mooks",
+  publisher: "祥伝社",
+  url: "https://www.zipper.jp/news/news-20260514/",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-06-30_Zipper 2026年夏号_通常版.jpg",
+      ref: "https://www.zipper.jp/magazine/",
+    },
+    {
+      path: "/publications/2026/2026-06-30_Zipper 2026年夏号_ステッカー付き特別版.jpg",
+      ref: "https://www.zipper.jp/magazine/",
+    },
+  ],
+  featuredMembers: ["籾山ひめり"],
+  officialTwitter: "https://x.com/takanenofficial/status/2069345040720404756",
+  links: [
+    {
+      text: "公式 X 発売告知",
+      url: "https://x.com/takanenofficial/status/2069345040720404756",
+    },
+    {
+      text: "Zipper 公式サイト ニュース",
+      url: "https://www.zipper.jp/news/news-20260514/",
+    },
+  ],
+};
+
 export const Zipper_2025_2026年冬号: Publication = {
   slug: "Zipper 2025-2026年冬号",
   name: "Zipper 2025-2026年冬号",
