@@ -11,7 +11,7 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { Link } from "react-router";
-import { Setlist } from "~/features/events/components/Setlist";
+import { Setlist } from "~/components/Setlist";
 import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
 import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
