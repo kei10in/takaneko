@@ -36,6 +36,7 @@ export const SetlistEvent = z.object({
 export type SetlistEvent = z.infer<typeof SetlistEvent>;
 
 export const SetlistEvents = z.array(SetlistEvent);
+export type SetlistEvents = z.infer<typeof SetlistEvents>;
 
 export interface SetlistSearchResult {
   event: SetlistEvent;

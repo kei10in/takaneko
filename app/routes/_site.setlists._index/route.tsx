@@ -47,13 +47,13 @@ export const loader = async ({ request, context }: Route.LoaderArgs) => {
   }
 
   const json = await response.json();
-  const result = SetlistEvents.safeParse(json);
+  // Worker が CPU time exceeded になるのを防止するために、Zod による validation
+  // は行わず、型アサーションで SetlistEvents 型に変換します。
+  // `/data/setlists/lives.json` は SetlistEvents をそのまま JSON に変換しているため、
+  // Zod による validation は必須ではありません。
+  const events = json as SetlistEvents;
 
-  if (!result.success) {
-    throw new Response("Setlist index is invalid.", { status: 500 });
-  }
-
-  return { events: result.data };
+  return { events };
 };
 
 export const shouldRevalidate = ({
