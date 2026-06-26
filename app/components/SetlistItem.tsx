@@ -7,12 +7,13 @@ import {
   BsMicFill,
   BsSoundwave,
 } from "react-icons/bs";
-import { HiMusicalNote, HiSparkles, HiUser } from "react-icons/hi2";
+import { HiMusicalNote } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import { Segment } from "~/features/events/setlist";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { ALL_SONGS } from "~/features/songs/songs";
+import { CoverBadge, FirstPerformanceBadge } from "./SmallBadges";
 
 interface Props {
   part: Segment;
@@ -98,17 +99,9 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
         <p className={clsx("line-clamp-1", slug && "leading-none text-nadeshiko-900")}>{name}</p>
         <p className="line-clamp-1 text-xs text-zinc-500">{costume}</p>
         <div className="flex items-center gap-2">
-          {part.isFirstPerformance && (
-            <div className="flex items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-              <HiSparkles className="text-yellow-500" />
-              <span className="text-nowrap text-zinc-600">初披露</span>
-            </div>
-          )}
+          {part.isFirstPerformance && <FirstPerformanceBadge />}
           {part.isCover && part.originalArtist && (
-            <div className="flex items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-              <HiUser className="text-zinc-600" />
-              <span className="text-nowrap text-zinc-600">{part.originalArtist}</span>
-            </div>
+            <CoverBadge originalArtist={part.originalArtist} />
           )}
           {members != "" && <div className="text-xs text-nowrap">{members}</div>}
         </div>
