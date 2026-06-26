@@ -12,7 +12,7 @@ import {
 } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Setlist } from "~/components/Setlist";
-import { liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
+import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
 import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -79,25 +79,11 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                     )}
                   </div>
 
-                  <div className="flex items-center gap-1 pt-0.5 text-xs">
-                    <span
-                      className={clsx(
-                        "inline-block rounded-full px-2 text-white",
-                        liveTypeColor(event.liveType),
-                      )}
-                    >
-                      {liveTypeLabel(event.liveType)}
-                    </span>
-                    {!event.hasSetlist && (
-                      <span className="inline-block rounded-full bg-zinc-100 px-2 text-zinc-500">
-                        未登録
-                      </span>
-                    )}
-                    {event.hasSetlist && event.hasMissingSetlist && (
-                      <span className="inline-block rounded-full bg-zinc-100 px-2 text-zinc-500">
-                        未登録あり
-                      </span>
-                    )}
+                  <div className="flex items-center gap-1 pt-0.5">
+                    <LiveTypeBadge liveType={event.liveType} />
+
+                    {!event.hasSetlist && <TextBadge text="未登録" />}
+                    {event.hasSetlist && event.hasMissingSetlist && <TextBadge text="未登録あり" />}
                   </div>
                 </div>
 
