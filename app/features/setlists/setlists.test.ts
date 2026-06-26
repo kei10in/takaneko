@@ -83,6 +83,28 @@ describe("buildSetlistEvents", () => {
     expect(events[0]?.songCount).toBe(2);
   });
 
+  it("marks acts and events that include first performance songs", () => {
+    const events = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: "2026-01-01_first_performance",
+          date: "2026-01-01",
+          liveType: "SOLO",
+          acts: [act(["Song A", "初披露:Song B"])],
+        }),
+      ],
+      today,
+    );
+
+    expect(events).toMatchObject([
+      {
+        slug: "2026-01-01_first_performance",
+        hasFirstPerformance: true,
+        acts: [{ hasFirstPerformance: true }],
+      },
+    ]);
+  });
+
   it("includes past live events without setlists", () => {
     const events = buildSetlistEvents(
       [
@@ -101,6 +123,7 @@ describe("buildSetlistEvents", () => {
         slug: "2026-01-01_missing",
         hasSetlist: false,
         hasMissingSetlist: true,
+        hasFirstPerformance: false,
         acts: [{ hasSetlist: false }],
       },
     ]);

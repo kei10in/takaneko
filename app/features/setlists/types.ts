@@ -13,6 +13,7 @@ export const SetlistAct = z.object({
   costumeNames: z.array(z.string()),
   songCount: z.number(),
   hasSetlist: z.boolean(),
+  hasFirstPerformance: z.boolean(),
   searchText: z.string(),
 });
 export type SetlistAct = z.infer<typeof SetlistAct>;
@@ -31,6 +32,7 @@ export const SetlistEvent = z.object({
   songCount: z.number(),
   hasSetlist: z.boolean(),
   hasMissingSetlist: z.boolean(),
+  hasFirstPerformance: z.boolean(),
   eventSearchText: z.string(),
 });
 export type SetlistEvent = z.infer<typeof SetlistEvent>;

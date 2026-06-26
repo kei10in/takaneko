@@ -12,7 +12,7 @@ import {
 } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Setlist } from "~/components/Setlist";
-import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
+import { FirstPerformanceBadge, LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
 import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -79,9 +79,10 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                     )}
                   </div>
 
-                  <div className="flex items-center gap-1 pt-0.5">
+                  <div className="flex flex-wrap items-center gap-1 pt-0.5">
                     <LiveTypeBadge liveType={event.liveType} />
 
+                    {event.hasFirstPerformance && <FirstPerformanceBadge />}
                     {!event.hasSetlist && <TextBadge text="未登録" />}
                     {event.hasSetlist && event.hasMissingSetlist && <TextBadge text="未登録あり" />}
                   </div>

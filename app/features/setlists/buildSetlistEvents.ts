@@ -27,6 +27,7 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
       const songCount = acts.reduce((sum, act) => sum + act.songCount, 0);
       const hasSetlist = acts.some((act) => act.hasSetlist);
       const hasMissingSetlist = acts.some((act) => !act.hasSetlist);
+      const hasFirstPerformance = acts.some((act) => act.hasFirstPerformance);
       const title = meta.title || meta.summary;
       const eventSearchText = normalizeSearchText(
         withSearchVariants([
@@ -55,6 +56,7 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
           songCount,
           hasSetlist,
           hasMissingSetlist,
+          hasFirstPerformance,
           eventSearchText,
         },
       ];
@@ -80,6 +82,9 @@ const makeSetlistAct = (act: Act): SetlistAct => {
     ),
   ];
   const songCount = songTitles.length;
+  const hasFirstPerformance = act.setlist.some(
+    (segment) => segment.kind == "song" && segment.isFirstPerformance,
+  );
   const searchableItems = withSearchVariants([
     act.title,
     act.start,
@@ -97,6 +102,7 @@ const makeSetlistAct = (act: Act): SetlistAct => {
     costumeNames,
     songCount,
     hasSetlist: songCount > 0,
+    hasFirstPerformance,
     searchText: normalizeSearchText(searchableItems.filter(isNonEmptyString).join(" ")),
   };
 };
@@ -109,6 +115,7 @@ const emptySetlistAct = (): SetlistAct => {
     costumeNames: [],
     songCount: 0,
     hasSetlist: false,
+    hasFirstPerformance: false,
     searchText: "",
   };
 };
