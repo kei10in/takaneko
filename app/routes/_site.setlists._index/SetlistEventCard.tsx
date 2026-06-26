@@ -7,7 +7,6 @@ import {
   HiOutlineCalendarDays,
   HiOutlineMapPin,
   HiOutlineMusicalNote,
-  HiOutlineStar,
   HiXMark,
 } from "react-icons/hi2";
 import { Link } from "react-router";
@@ -31,8 +30,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
   const date = NaiveDate.parseUnsafe(event.date);
   const matchedActIndexSet = new Set(matchedActIndexes);
   const eventUrl = `/events/${event.slug}`;
-  const songCount = totalSongCount(event);
-  const noSetlist = songCount == 0;
+  const noSetlist = event.acts.every((act) => act.songCount == 0);
 
   return (
     <div
@@ -155,15 +153,17 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
               <div className="flex min-w-0 flex-1 items-center">
                 <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
                   <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
-                  <span>{songCount} 曲</span>
-                </div>
-
-                {event.actCount > 1 && (
-                  <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
-                    <HiOutlineStar className="size-4 text-nadeshiko-600" />
-                    <span>{event.actCount} ステージ</span>
+                  <div>
+                    {event.acts.map((act, i) => {
+                      return (
+                        <span key={i}>
+                          {i != 0 && " / "}
+                          {act.songCount} 曲
+                        </span>
+                      );
+                    })}
                   </div>
-                )}
+                </div>
               </div>
 
               <div className="flex flex-none justify-end">
@@ -188,8 +188,4 @@ const containsFirstPerformanceSong = (event: SetlistEvent): boolean => {
   return event.acts.some((act) =>
     act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance),
   );
-};
-
-const totalSongCount = (event: SetlistEvent): number => {
-  return event.acts.reduce((sum, act) => sum + act.songCount, 0);
 };
