@@ -31,6 +31,8 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
   const date = NaiveDate.parseUnsafe(event.date);
   const matchedActIndexSet = new Set(matchedActIndexes);
   const eventUrl = `/events/${event.slug}`;
+  const songCount = totalSongCount(event);
+  const noSetlist = songCount == 0;
 
   return (
     <div
@@ -82,9 +84,11 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                   <div className="flex flex-wrap items-center gap-1 pt-0.5">
                     <LiveTypeBadge liveType={event.liveType} />
 
-                    {event.hasFirstPerformance && <FirstPerformanceBadge />}
-                    {!event.hasSetlist && <TextBadge text="未登録" />}
-                    {event.hasSetlist && event.hasMissingSetlist && <TextBadge text="未登録あり" />}
+                    {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
+                    {noSetlist && <TextBadge text="未登録" />}
+                    {!noSetlist && event.acts.some((act) => act.songCount == 0) && (
+                      <TextBadge text="未登録あり" />
+                    )}
                   </div>
                 </div>
 
@@ -127,12 +131,12 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                           </div>
                         )}
 
-                        {act.hasSetlist ? (
-                          <Setlist setlist={act.setlist} links={act.links} />
-                        ) : (
+                        {act.songCount == 0 ? (
                           <div className="z-50 rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
                             セットリスト未登録
                           </div>
+                        ) : (
+                          <Setlist setlist={act.setlist} links={act.links} />
                         )}
                       </section>
                     ))}
@@ -151,7 +155,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
               <div className="flex min-w-0 flex-1 items-center">
                 <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
                   <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
-                  <span>{event.songCount} 曲</span>
+                  <span>{songCount} 曲</span>
                 </div>
 
                 {event.actCount > 1 && (
@@ -178,4 +182,14 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
       </Disclosure>
     </div>
   );
+};
+
+const containsFirstPerformanceSong = (event: SetlistEvent): boolean => {
+  return event.acts.some((act) =>
+    act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance),
+  );
+};
+
+const totalSongCount = (event: SetlistEvent): number => {
+  return event.acts.reduce((sum, act) => sum + act.songCount, 0);
 };

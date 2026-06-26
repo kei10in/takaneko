@@ -80,10 +80,10 @@ describe("buildSetlistEvents", () => {
     );
 
     expect(events[0]?.acts.map((act) => act.title)).toEqual(["1 部 ミニライブ", "2 部 ミニライブ"]);
-    expect(events[0]?.songCount).toBe(2);
+    expect(events[0]?.acts.map((act) => act.songCount)).toEqual([1, 1]);
   });
 
-  it("marks acts and events that include first performance songs", () => {
+  it("marks acts that include first performance songs", () => {
     const events = buildSetlistEvents(
       [
         sourceEvent({
@@ -99,10 +99,61 @@ describe("buildSetlistEvents", () => {
     expect(events).toMatchObject([
       {
         slug: "2026-01-01_first_performance",
-        hasFirstPerformance: true,
         acts: [{ hasFirstPerformance: true }],
       },
     ]);
+  });
+
+  it("omits derived event flags and counts", () => {
+    const events = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: "2026-01-01_normal",
+          date: "2026-01-01",
+          liveType: "SOLO",
+          acts: [act(["Song A"])],
+        }),
+      ],
+      today,
+    );
+
+    const event = events[0];
+    const eventJson = JSON.stringify(event);
+
+    expect(event?.slug).toBe("2026-01-01_normal");
+    expect(event?.acts[0]?.songCount).toBe(1);
+    expect(event?.acts[0]?.hasFirstPerformance).toBeUndefined();
+    expect(Object.hasOwn(event ?? {}, "songCount")).toBe(false);
+    expect(Object.hasOwn(event ?? {}, "noSetlist")).toBe(false);
+    expect(Object.hasOwn(event ?? {}, "incompleteSetlist")).toBe(false);
+    expect(eventJson).not.toContain("noSetlist");
+    expect(eventJson).not.toContain("incompleteSetlist");
+    expect(eventJson).not.toContain("hasFirstPerformance");
+  });
+
+  it("keeps act song counts for registered and missing setlists", () => {
+    const events = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: "2026-01-01_incomplete",
+          date: "2026-01-01",
+          liveType: "RELEASE_EVENT",
+          acts: [
+            act(["Song A"], { title: "1 部 ミニライブ" }),
+            act([], { title: "2 部 ミニライブ" }),
+          ],
+        }),
+      ],
+      today,
+    );
+
+    expect(events).toMatchObject([
+      {
+        slug: "2026-01-01_incomplete",
+        acts: [{ songCount: 1 }, { songCount: 0 }],
+      },
+    ]);
+    expect(JSON.stringify(events[0])).not.toContain("incompleteSetlist");
   });
 
   it("includes past live events without setlists", () => {
@@ -118,15 +169,14 @@ describe("buildSetlistEvents", () => {
       today,
     );
 
-    expect(events).toMatchObject([
-      {
-        slug: "2026-01-01_missing",
-        hasSetlist: false,
-        hasMissingSetlist: true,
-        hasFirstPerformance: false,
-        acts: [{ hasSetlist: false }],
-      },
-    ]);
+    const event = events[0];
+
+    expect(event).toMatchObject({
+      slug: "2026-01-01_missing",
+      acts: [{ songCount: 0 }],
+    });
+    expect(event?.acts[0]?.hasFirstPerformance).toBeUndefined();
+    expect(JSON.stringify(event)).not.toContain("noSetlist");
   });
 });
 

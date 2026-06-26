@@ -24,10 +24,6 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
           : meta.acts
               .filter((act) => act.types.includes("LIVE") && act.status == undefined)
               .map(makeSetlistAct);
-      const songCount = acts.reduce((sum, act) => sum + act.songCount, 0);
-      const hasSetlist = acts.some((act) => act.hasSetlist);
-      const hasMissingSetlist = acts.some((act) => !act.hasSetlist);
-      const hasFirstPerformance = acts.some((act) => act.hasFirstPerformance);
       const title = meta.title || meta.summary;
       const eventSearchText = normalizeSearchText(
         withSearchVariants([
@@ -53,10 +49,6 @@ export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): Set
           image: meta.images[0],
           acts,
           actCount: acts.length,
-          songCount,
-          hasSetlist,
-          hasMissingSetlist,
-          hasFirstPerformance,
           eventSearchText,
         },
       ];
@@ -101,8 +93,7 @@ const makeSetlistAct = (act: Act): SetlistAct => {
     songTitles,
     costumeNames,
     songCount,
-    hasSetlist: songCount > 0,
-    hasFirstPerformance,
+    hasFirstPerformance: hasFirstPerformance ? true : undefined,
     searchText: normalizeSearchText(searchableItems.filter(isNonEmptyString).join(" ")),
   };
 };
@@ -114,8 +105,6 @@ const emptySetlistAct = (): SetlistAct => {
     songTitles: [],
     costumeNames: [],
     songCount: 0,
-    hasSetlist: false,
-    hasFirstPerformance: false,
     searchText: "",
   };
 };

@@ -100,7 +100,7 @@ const matchesFirstPerformanceFilter = (isFirstPerformance: boolean, act: Setlist
     return true;
   }
 
-  return act.hasFirstPerformance;
+  return act.hasFirstPerformance ?? false;
 };
 
 const matchesCoverFilter = (isCover: boolean, act: SetlistAct): boolean => {
