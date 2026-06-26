@@ -7,9 +7,9 @@ import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventT
 
 export const FirstPerformanceBadge: React.FC = () => {
   return (
-    <div className="flex items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-      <HiSparkles className="text-yellow-500" />
-      <span className="text-nowrap text-zinc-600">初披露</span>
+    <div className="flex h-4 items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
+      <HiSparkles className="text-yellow-400" />
+      <span className="text-nowrap text-zinc-700">初披露</span>
     </div>
   );
 };
@@ -20,9 +20,9 @@ interface CoverBadgeProps {
 
 export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverBadgeProps) => {
   return (
-    <div className="flex items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-      <HiUser className="text-zinc-600" />
-      <span className="text-nowrap text-zinc-600">{originalArtist}</span>
+    <div className="flex h-4 items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
+      <HiUser className="text-zinc-500" />
+      <span className="text-nowrap text-zinc-500">{originalArtist}</span>
     </div>
   );
 };
@@ -62,7 +62,7 @@ export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({ liveType }: LiveTy
 
 export const SoloConcertBadge: React.FC = () => {
   return (
-    <div className="box-border flex items-center justify-center gap-0.5 rounded-full border border-nadeshiko-800 bg-white px-1 text-xs">
+    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-nadeshiko-800 bg-white px-1 text-xs">
       <FaCrown className="text-nadeshiko-800" />
       <span className="text-nowrap text-nadeshiko-800">ワンマン</span>
     </div>
@@ -71,7 +71,7 @@ export const SoloConcertBadge: React.FC = () => {
 
 export const HostedJointLiveBadge: React.FC = () => {
   return (
-    <div className="box-border flex items-center justify-center gap-0.5 rounded-full border border-blue-400 bg-white px-1 text-xs">
+    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-blue-400 bg-white px-1 text-xs">
       <FaPenNib className="text-blue-400" />
       <span className="text-nowrap text-blue-400">主催対バン</span>
     </div>
@@ -80,7 +80,7 @@ export const HostedJointLiveBadge: React.FC = () => {
 
 export const JointLiveBadge: React.FC = () => {
   return (
-    <div className="box-border flex items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
+    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
       <HiUsers className="text-amber-500" />
       <span className="text-nowrap text-amber-500">対バン</span>
     </div>
@@ -89,7 +89,7 @@ export const JointLiveBadge: React.FC = () => {
 
 export const EventLiveBadge: React.FC = () => {
   return (
-    <div className="box-border flex items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
+    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
       <IoDiamond className="text-amber-500" />
       <span className="text-nowrap text-amber-500">イベント出演</span>
     </div>
@@ -98,7 +98,7 @@ export const EventLiveBadge: React.FC = () => {
 
 export const ReleaseEventBadge: React.FC = () => {
   return (
-    <div className="box-border flex items-center justify-center gap-0.5 rounded-full border border-violet-400 bg-white px-1 text-xs">
+    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-violet-400 bg-white px-1 text-xs">
       <GiCompactDisc className="text-violet-400" />
       <span className="text-nowrap text-violet-400">リリースイベント</span>
     </div>
@@ -111,7 +111,7 @@ interface TextBadgeProps {
 
 export const TextBadge: React.FC<TextBadgeProps> = ({ text }: TextBadgeProps) => {
   return (
-    <div className="flex items-center rounded-full bg-zinc-100 px-2 text-xs text-zinc-600">
+    <div className="flex h-4 items-center rounded-full bg-zinc-100 px-2 text-xs text-zinc-600">
       {text}
     </div>
   );
