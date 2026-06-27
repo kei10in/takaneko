@@ -177,12 +177,7 @@ export default function Index() {
                             <LinkCalendarEventItem
                               key={event.slug}
                               to={`/events/${event.slug}`}
-                              category={event.category}
-                              summary={event.summary}
-                              location={event.location}
-                              region={event.region}
-                              thumbnail={event.thumbnail}
-                              time={event.time}
+                              event={event}
                             />
                           ))
                         ) : (
