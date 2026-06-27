@@ -30,9 +30,11 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const thumbnail = event.images?.[0]?.path;
 
   return (
-    <div className="@container overflow-hidden rounded-xl bg-white shadow-md">
-      <div className="flex min-h-22 gap-2 pr-2">
-        <div className={clsx("w-1 flex-none self-stretch rounded-full", color)} />
+    <div className="@container overflow-hidden rounded-3xl bg-white shadow-md">
+      <div className="flex min-h-22 items-stretch gap-2 pr-2">
+        <div className="w-1 flex-none">
+          <div className={clsx("mt-7.25 h-7 w-full rounded-r-3xl", color)} />
+        </div>
         <div className="min-w-0 flex-1">
           {category == EventType.LIVE ? (
             <Live event={event} />
