@@ -3,7 +3,7 @@ import { EventType } from "~/features/events/EventType";
 import { validateEventMeta } from "~/features/events/eventMeta";
 import { EventModule } from "~/features/events/eventModule";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { allPages, sitemapGroups } from "~/utils/sitemap";
+import { allPages, sitemapGroups } from "~/utils/sitemap/sitemap";
 
 describe("sitemapGroups", () => {
   test("groups pages by sitemap output file", async () => {
@@ -27,9 +27,9 @@ describe("sitemapGroups", () => {
       "/",
     );
     expect(
-      groups.find((group) => group.name === "calendar")?.pages.every((page) =>
-        page.path.startsWith("/calendar/"),
-      ),
+      groups
+        .find((group) => group.name === "calendar")
+        ?.pages.every((page) => page.path.startsWith("/calendar/")),
     ).toBe(true);
     expect(groups.find((group) => group.name === "events")?.pages).toContainEqual({
       path: "/events/2026-06-28_Test Event",
@@ -37,14 +37,14 @@ describe("sitemapGroups", () => {
       lastmod: "2026-06-29",
     });
     expect(
-      groups.find((group) => group.name === "products")?.pages.every((page) =>
-        page.path.startsWith("/products/"),
-      ),
+      groups
+        .find((group) => group.name === "products")
+        ?.pages.every((page) => page.path.startsWith("/products/")),
     ).toBe(true);
     expect(
-      groups.find((group) => group.name === "trade")?.pages.every((page) =>
-        page.path.startsWith("/trade/"),
-      ),
+      groups
+        .find((group) => group.name === "trade")
+        ?.pages.every((page) => page.path.startsWith("/trade/")),
     ).toBe(true);
   });
 

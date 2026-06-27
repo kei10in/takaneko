@@ -7,7 +7,7 @@ import { dedent } from "ts-dedent";
 import { DomainName } from "~/constants";
 import { EventModule } from "~/features/events/eventModule";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { SitemapUrl, sitemapGroups } from "~/utils/sitemap";
+import { SitemapUrl, sitemapGroups } from "~/utils/sitemap/sitemap";
 import { Events } from "./lib/events";
 
 register("@mdx-js/node-loader", import.meta.url);
