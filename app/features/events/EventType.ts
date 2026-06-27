@@ -1,5 +1,6 @@
 import { z } from "zod/v4";
 import { assertNever } from "~/utils/assertNever";
+import { UiColors } from "~/utils/uiColors";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
@@ -113,6 +114,55 @@ export const eventTypeToColor = (category: EventType): string => {
       return "bg-indigo-400";
     case EventType.OTHER:
       return "bg-amber-700";
+    default:
+      assertNever(category);
+  }
+};
+
+export const eventTypeColors = (category: EventType): UiColors => {
+  switch (category) {
+    case EventType.LIVE:
+      return {
+        text: "text-nadeshiko-800",
+        background: "bg-nadeshiko-800",
+        border: "border-nadeshiko-800",
+      };
+    case EventType.MEET_AND_GREET:
+      return { text: "text-zinc-600", background: "bg-zinc-800", border: "border-zinc-600" };
+    case EventType.RELEASE_EVENT:
+      return { text: "text-violet-400", background: "bg-violet-600", border: "border-violet-400" };
+    case EventType.STREAMING:
+      return { text: "text-amber-500", background: "bg-amber-500", border: "border-amber-500" };
+    case EventType.VARIETY:
+      return { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" };
+    case EventType.FASHION:
+      return {
+        text: "text-nadeshiko-800",
+        background: "bg-nadeshiko-800",
+        border: "border-nadeshiko-800",
+      };
+    case EventType.SALES_OPEN:
+      return { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" };
+    case EventType.CD:
+      return {
+        text: "text-fuchsia-500",
+        background: "bg-fuchsia-500",
+        border: "border-fuchsia-500",
+      };
+    case EventType.BIRTHDAY:
+      return { text: "text-red-600", background: "bg-red-600", border: "border-red-600" };
+    case EventType.TV:
+      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
+    case EventType.RADIO:
+      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
+    case EventType.WEB:
+      return { text: "text-blue-600", background: "bg-blue-600", border: "border-blue-600" };
+    case EventType.BOOK:
+      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
+    case EventType.MAGAZINE:
+      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
+    case EventType.OTHER:
+      return { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" };
     default:
       assertNever(category);
   }

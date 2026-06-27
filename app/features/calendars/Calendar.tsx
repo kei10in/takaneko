@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 import { displayMonth } from "~/utils/dateDisplay";
 import { isMonthInRange, iterateMonthsInRange } from "~/utils/datetime/MonthRange";
+import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { EventFilterType } from "../events/eventFilter";
 import { CalendarEvent } from "./calendarEvents";
@@ -18,11 +19,12 @@ import { calendarMonthHref, calendarMonthRange, currentMonthHref } from "./utils
 interface Props {
   events: CalendarEvent[];
   month: NaiveMonth;
+  today: NaiveDate;
   filter?: EventFilterType | undefined;
 }
 
 export const Calendar: React.FC<Props> = (props: Props) => {
-  const { events, month, filter } = props;
+  const { events, month, today, filter } = props;
 
   const currentMonth = NaiveMonth.current();
   const monthRange = calendarMonthRange(currentMonth);
@@ -75,7 +77,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "sticky top-(--header-height) flex-none bg-white",
+          "sticky top-(--header-height) z-10 flex-none bg-white",
           "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto",
         )}
       >
@@ -133,8 +135,9 @@ export const Calendar: React.FC<Props> = (props: Props) => {
           )}
         >
           <EventList
-            month={month}
             events={events}
+            month={month}
+            today={today}
             classNameForDate={clsx(
               weeksInMonth == 4 && "scroll-mt-(--calendar-scroll-margin-for-4-weeks)",
               weeksInMonth == 5 && "scroll-mt-(--calendar-scroll-margin-for-5-weeks)",

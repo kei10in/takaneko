@@ -171,18 +171,13 @@ export default function Index() {
                       <p className="mb-4 font-semibold">
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                       </p>
-                      <div className="h-64 space-y-4 overflow-y-auto rounded-3xl border border-zinc-100 bg-zinc-50 px-4 py-4 inset-shadow-xs">
+                      <div className="h-72 space-y-4 overflow-y-auto rounded-4xl border border-zinc-100 bg-zinc-50 px-4 py-4 inset-shadow-xs">
                         {events.length !== 0 ? (
                           events.map((event) => (
                             <LinkCalendarEventItem
                               key={event.slug}
                               to={`/events/${event.slug}`}
-                              category={event.category}
-                              summary={event.summary}
-                              location={event.location}
-                              region={event.region}
-                              thumbnail={event.thumbnail}
-                              time={event.time}
+                              event={event}
                             />
                           ))
                         ) : (

@@ -1,46 +1,16 @@
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventStatus } from "../events/eventMeta";
+import { EventMeta } from "../events/eventMeta";
 import { EventModule } from "../events/eventModule";
-import { EventType } from "../events/EventType";
 
 export type CalendarEvent = {
   slug: string;
-  date: string;
-  summary: string;
-  status: EventStatus | undefined;
-  category: EventType;
-  region: string | undefined;
-  location: string | undefined;
-  thumbnail?: string | undefined;
-  time?: string | undefined;
-};
+} & EventMeta;
 
 export const calendarEventFromEventModule = (e: EventModule): CalendarEvent => {
-  if (e.meta.category == EventType.RADIO || e.meta.category == EventType.TV) {
-    return {
-      slug: e.slug,
-      date: e.meta.date,
-      summary: e.meta.summary,
-      status: e.meta.status,
-      category: e.meta.category,
-      region: e.meta.region,
-      location: e.meta.location,
-      thumbnail: e.meta.images?.[0]?.path,
-      // ラジオとテレビは放送時間が重要になるため、時間も表示します。
-      time: `${e.meta.start} 〜 ${e.meta.end}`,
-    };
-  } else {
-    return {
-      slug: e.slug,
-      date: e.meta.date,
-      summary: e.meta.summary,
-      status: e.meta.status,
-      category: e.meta.category,
-      region: e.meta.region,
-      location: e.meta.location,
-      thumbnail: e.meta.images?.[0]?.path,
-    };
-  }
+  return {
+    slug: e.slug,
+    ...e.meta,
+  };
 };
 
 /**

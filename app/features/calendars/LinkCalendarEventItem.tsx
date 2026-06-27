@@ -4,18 +4,11 @@ import { CalendarEventItem } from "./CalendarEventItem";
 type Props = React.ComponentProps<typeof Link> & React.ComponentProps<typeof CalendarEventItem>;
 
 export const LinkCalendarEventItem: React.FC<Props> = (props: Props) => {
-  const { category, summary, location, region, thumbnail, time, ...rest } = props;
+  const { event, ...rest } = props;
 
   return (
     <Link {...rest} className="inset-focus block">
-      <CalendarEventItem
-        category={category}
-        summary={summary}
-        location={location}
-        region={region}
-        thumbnail={thumbnail}
-        time={time}
-      />
+      <CalendarEventItem event={event} />
     </Link>
   );
 };

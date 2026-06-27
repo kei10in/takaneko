@@ -188,6 +188,7 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
 
 export default function Index() {
   const { year, month, day, filter, events } = useLoaderData<typeof loader>();
+  const today = NaiveDate.todayInJapan();
 
   const filterName = EventFilters.find((f) => f.name == filter)?.name ?? EventFilters[0].name;
 
@@ -210,5 +211,5 @@ export default function Index() {
     }
   }, [day, location.hash, location.search, month, navigate, year]);
 
-  return <Calendar events={events} month={m} filter={filterName} />;
+  return <Calendar events={events} month={m} today={today} filter={filterName} />;
 }
