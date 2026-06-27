@@ -3,6 +3,7 @@ _local/
 ## 自動生成ファイル
 public/calendar*.ics
 public/sitemap.xml
+public/sitemap-*.xml
 public/data/
 
 ## React router

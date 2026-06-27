@@ -13,22 +13,60 @@ export interface SitemapUrl {
   lastmod?: string;
 }
 
+export type SitemapGroupName = "core" | "calendar" | "events" | "products" | "trade";
+
+export interface SitemapUrlGroup {
+  name: SitemapGroupName;
+  filename: string;
+  pages: SitemapUrl[];
+}
+
 interface SitemapPath {
   path: string;
   lastmod?: string;
 }
 
 export const allPages = async (today: NaiveDate, events: EventModule[]): Promise<SitemapUrl[]> => {
-  const pages = [
-    ...buildStaticPages(),
-    ...buildMemberPages(),
-    ...buildMonthlyPages(today),
-    ...buildEventPages(events),
-    ...buildTradeImagePages(),
-    ...buildProductPages(),
-  ].map((page) => ({ ...page, url: encodeURI(`https://${DomainName}${page.path}`) }));
+  const groups = await sitemapGroups(today, events);
 
-  return pages;
+  return groups.flatMap((group) => group.pages);
+};
+
+export const sitemapGroups = async (
+  today: NaiveDate,
+  events: EventModule[],
+): Promise<SitemapUrlGroup[]> => {
+  return [
+    {
+      name: "core",
+      filename: "sitemap-core.xml",
+      pages: buildSitemapUrls([...buildStaticPages(), ...buildMemberPages()]),
+    },
+    {
+      name: "calendar",
+      filename: "sitemap-calendar.xml",
+      pages: buildSitemapUrls(buildMonthlyPages(today)),
+    },
+    {
+      name: "events",
+      filename: "sitemap-events.xml",
+      pages: buildSitemapUrls(buildEventPages(events)),
+    },
+    {
+      name: "products",
+      filename: "sitemap-products.xml",
+      pages: buildSitemapUrls(buildProductPages()),
+    },
+    {
+      name: "trade",
+      filename: "sitemap-trade.xml",
+      pages: buildSitemapUrls(buildTradeImagePages()),
+    },
+  ];
+};
+
+const buildSitemapUrls = (pages: SitemapPath[]): SitemapUrl[] => {
+  return pages.map((page) => ({ ...page, url: encodeURI(`https://${DomainName}${page.path}`) }));
 };
 
 const buildMonthlyPages = (today: NaiveDate): SitemapPath[] => {
