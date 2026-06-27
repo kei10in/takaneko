@@ -1,10 +1,29 @@
 import { clsx } from "clsx";
-import { FaCrown, FaPenNib } from "react-icons/fa6";
-import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
-import { HiRadio, HiSparkles, HiTv, HiUser, HiUsers } from "react-icons/hi2";
+import { FaCat, FaCrown, FaPenNib } from "react-icons/fa6";
+import { GiBowTieRibbon, GiCompactDisc, GiMicrophone, GiPopcorn } from "react-icons/gi";
+import {
+  HiBeaker,
+  HiBookOpen,
+  HiCake,
+  HiCurrencyYen,
+  HiRadio,
+  HiSparkles,
+  HiTv,
+  HiUser,
+  HiUsers,
+  HiVideoCamera,
+} from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
 import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
+
+interface Props {
+  large?: boolean;
+}
+
+interface WithTextProps extends Props {
+  text: string;
+}
 
 export const FirstPerformanceBadge: React.FC = () => {
   return (
@@ -28,25 +47,28 @@ export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverB
   );
 };
 
-interface LiveTypeBadgeProps {
+interface LiveTypeBadgeProps extends Props {
   liveType: LiveType;
 }
 
-export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({ liveType }: LiveTypeBadgeProps) => {
+export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({
+  liveType,
+  large,
+}: LiveTypeBadgeProps) => {
   if (liveType === LiveType.SOLO) {
-    return <SoloConcertBadge />;
+    return <SoloConcertBadge large={large} />;
   }
   if (liveType === LiveType.HOSTED) {
-    return <HostedJointLiveBadge />;
+    return <HostedJointLiveBadge large={large} />;
   }
   if (liveType == LiveType.FESTIVAL || liveType == LiveType.JOINT || liveType == LiveType.GUEST) {
-    return <JointLiveBadge />;
+    return <JointLiveBadge large={large} />;
   }
   if (liveType == LiveType.EVENT_LIVE) {
-    return <EventLiveBadge />;
+    return <EventLiveBadge large={large} />;
   }
   if (liveType == LiveType.RELEASE_EVENT) {
-    return <ReleaseEventBadge />;
+    return <ReleaseEventBadge large={large} />;
   }
 
   return (
@@ -61,57 +83,44 @@ export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({ liveType }: LiveTy
   );
 };
 
-export const SoloConcertBadge: React.FC = () => {
-  return (
-    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-nadeshiko-800 bg-white px-1 text-xs">
-      <FaCrown className="text-nadeshiko-800" />
-      <span className="text-nowrap text-nadeshiko-800">ワンマン</span>
-    </div>
-  );
+export const SoloConcertBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={FaCrown} text="ワンマン" color="nadeshiko" large={large} />;
 };
 
-export const HostedJointLiveBadge: React.FC = () => {
-  return (
-    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-blue-400 bg-white px-1 text-xs">
-      <FaPenNib className="text-blue-400" />
-      <span className="text-nowrap text-blue-400">主催対バン</span>
-    </div>
-  );
+export const HostedJointLiveBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={FaPenNib} text="主催対バン" color="light-blue" large={large} />;
 };
 
-export const JointLiveBadge: React.FC = () => {
-  return (
-    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
-      <HiUsers className="text-amber-500" />
-      <span className="text-nowrap text-amber-500">対バン</span>
-    </div>
-  );
+export const JointLiveBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiUsers} text="対バン" color="amber" large={large} />;
 };
 
-export const EventLiveBadge: React.FC = () => {
-  return (
-    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-amber-500 bg-white px-1 text-xs">
-      <IoDiamond className="text-amber-500" />
-      <span className="text-nowrap text-amber-500">イベント出演</span>
-    </div>
-  );
+export const EventLiveBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={IoDiamond} text="イベント出演" color="amber" large={large} />;
 };
 
-export const ReleaseEventBadge: React.FC = () => {
-  return (
-    <div className="box-border flex h-4 items-center justify-center gap-0.5 rounded-full border border-violet-400 bg-white px-1 text-xs">
-      <GiCompactDisc className="text-violet-400" />
-      <span className="text-nowrap text-violet-400">リリースイベント</span>
-    </div>
-  );
+export const ReleaseEventBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={GiCompactDisc} text="リリースイベント" color="violet" large={large} />;
 };
-
-interface Props {
-  large?: boolean;
-}
 
 export const LiveBadge: React.FC<Props> = ({ large }: Props) => {
   return <Badge icon={GiMicrophone} text="ライブ" color="nadeshiko" large={large} />;
+};
+
+export const MeetAndGreetBadge: React.FC<WithTextProps> = ({ text, large }: WithTextProps) => {
+  return <Badge icon={FaCat} text={text} color="black" large={large} />;
+};
+
+export const StreamingBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiVideoCamera} text="配信" color="amber" large={large} />;
+};
+
+export const VarietyEventBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={GiPopcorn} text="バラエティ" color="purple" large={large} />;
+};
+
+export const FashionShowBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={GiBowTieRibbon} text="ファッションショー" color="nadeshiko" large={large} />;
 };
 
 export const TvAppearanceBadge: React.FC<Props> = ({ large }: Props) => {
@@ -122,18 +131,78 @@ export const RadioAppearanceBadge: React.FC<Props> = ({ large }: Props) => {
   return <Badge icon={HiRadio} text="ラジオ" color="light-blue" large={large} />;
 };
 
+export const CdBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={GiCompactDisc} text="CD" color="fuchsia" large={large} />;
+};
+
+export const BookBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiBookOpen} text="書籍" color="indigo" large={large} />;
+};
+
+export const MagazineBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiBookOpen} text="雑誌" color="indigo" large={large} />;
+};
+
+export const BirthdayBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiCake} text="誕生日" color="amber" large={large} />;
+};
+
+export const SalesOpenBadge: React.FC<Props> = ({ large }: Props) => {
+  return <Badge icon={HiCurrencyYen} text="販売開始" color="gray" large={large} />;
+};
+
+export const OtherBadge: React.FC<WithTextProps> = ({ text, large }: WithTextProps) => {
+  return <Badge icon={HiBeaker} text={text} color="dark-amber" large={large} />;
+};
+
 interface BadgeProps {
   icon: IconType;
   text: string;
-  color: "light-blue" | "nadeshiko";
+  color:
+    | "light-blue"
+    | "nadeshiko"
+    | "amber"
+    | "fuchsia"
+    | "indigo"
+    | "violet"
+    | "purple"
+    | "black"
+    | "gray"
+    | "dark-amber";
   large?: boolean;
 }
 
 const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
   const { icon: Icon, text, color, large = false } = props;
 
-  const borderColor = color === "light-blue" ? "border-blue-400" : "border-nadeshiko-800";
-  const textColor = color === "light-blue" ? "text-blue-400" : "text-nadeshiko-800";
+  const BorderColorSet = {
+    "light-blue": "border-blue-400",
+    nadeshiko: "border-nadeshiko-800",
+    amber: "border-amber-500",
+    indigo: "border-indigo-400",
+    fuchsia: "border-fuchsia-500",
+    violet: "border-violet-400",
+    purple: "border-purple-400",
+    black: "border-zinc-600",
+    gray: "border-gray-500",
+    "dark-amber": "border-amber-700",
+  } as const;
+
+  const TextColorSet = {
+    "light-blue": "text-blue-400",
+    nadeshiko: "text-nadeshiko-800",
+    amber: "text-amber-500",
+    indigo: "text-indigo-400",
+    fuchsia: "text-fuchsia-500",
+    violet: "text-violet-400",
+    purple: "text-purple-400",
+    black: "text-zinc-600",
+    gray: "text-gray-500",
+    "dark-amber": "text-amber-700",
+  } as const;
+
+  const borderColor = BorderColorSet[color];
+  const textColor = TextColorSet[color];
 
   const sizeClass = large ? "h-5 text-sm px-1.5" : "h-4 text-xs px-1";
 
