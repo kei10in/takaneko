@@ -69,12 +69,10 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
           )}
         </div>
         {thumbnail && (
-          <div className="py-2">
-            <img
-              className="aspect-4/3 h-20 overflow-hidden rounded-md object-cover"
-              src={thumbnail}
-              alt={summary}
-            />
+          <div className="relative my-2 min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
+            <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
+              <img src={thumbnail} className="h-full w-full object-contain text-xs" alt={summary} />
+            </div>
           </div>
         )}
       </div>

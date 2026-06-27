@@ -75,7 +75,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
 
       <div
         className={clsx(
-          "sticky top-(--header-height) flex-none bg-white",
+          "sticky top-(--header-height) z-10 flex-none bg-white",
           "landscape:min-w-80 landscape:flex-1 landscape:overflow-y-auto",
         )}
       >
