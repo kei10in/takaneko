@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
 import { Link } from "react-router";
-import { displayDate } from "~/utils/dateDisplay";
+import { displayDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { CalendarEvent } from "./calendarEvents";
@@ -9,13 +9,14 @@ import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
 import { dateHref } from "./utils";
 
 interface Props {
-  month: NaiveMonth;
   events: CalendarEvent[];
+  month: NaiveMonth;
+  today: NaiveDate;
   classNameForDate?: string;
 }
 
 export const EventList: React.FC<Props> = (props: Props) => {
-  const { month, events, classNameForDate } = props;
+  const { events, month, today, classNameForDate } = props;
 
   const eventsByDate = useMemo(() => {
     const firstDate = NaiveDate.firstDateOfMonth(month);
@@ -51,10 +52,13 @@ export const EventList: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <div className="pb-4">
+    <div className="pb-6">
       {eventsByDate.map(({ date: dt, events: eventsInDate }) => {
         const anchor = dt.toString();
-        const date = displayDate(dt);
+        const isToday = dt.equals(today);
+        // const date = displayDate(dt);
+        const date = `${dt.month}月${dt.day}日`;
+        const dayOfWeek = displayDayOfWeek(dt);
         const key = dt.getTimeAsUTC();
 
         if (eventsInDate.length === 0) {
@@ -65,10 +69,18 @@ export const EventList: React.FC<Props> = (props: Props) => {
 
         return (
           <section key={key} id={anchor} className={classNameForDate}>
-            <div className="space-y-2 py-6">
-              <h2 className={clsx("text-xl font-bold", classNameForDate)}>
-                <Link to={dateHref(dt)}>{date}</Link>
-              </h2>
+            <div data-today={isToday ? "true" : undefined} className="group space-y-2 py-5">
+              <div className="flex items-center justify-between px-1">
+                <h2 className={clsx("font-semibold", classNameForDate)}>
+                  <Link to={dateHref(dt)} className="space-x-2">
+                    <span className="text-xl">{date}</span>
+                    <span className="text-base text-zinc-400">{dayOfWeek}曜</span>
+                  </Link>
+                </h2>
+                {isToday && (
+                  <div className="rounded-full bg-nadeshiko-200 px-2 text-nadeshiko-800">今日</div>
+                )}
+              </div>
               <div className="space-y-4">
                 {eventsInDate.map((event) => (
                   <LinkCalendarEventItem

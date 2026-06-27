@@ -50,6 +50,28 @@ export function displayDateWithDayOfWeek(
   }
 }
 
+export function displayDayOfWeek(d: string): string;
+export function displayDayOfWeek(nd: NaiveDate): string;
+export function displayDayOfWeek(year: number, month: number, day: number): string;
+
+export function displayDayOfWeek(
+  yearOrNd: number | string | NaiveDate,
+  month?: number,
+  day?: number,
+): string {
+  if (typeof yearOrNd === "string") {
+    const nd = NaiveDate.parseUnsafe(yearOrNd);
+    return displayDayOfWeek(nd);
+  } else if (typeof yearOrNd === "number" && typeof month === "number" && typeof day === "number") {
+    return displayDayOfWeek(new NaiveDate(yearOrNd, month, day));
+  } else if (yearOrNd instanceof NaiveDate) {
+    const dayOfWeek = ["日", "月", "火", "水", "木", "金", "土"][yearOrNd.dayOfWeek];
+    return dayOfWeek;
+  } else {
+    throw new Error("Invalid arguments");
+  }
+}
+
 export function displayMonth(nm: NaiveMonth): string;
 export function displayMonth(year: number, month: number): string;
 
