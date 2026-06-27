@@ -1,19 +1,21 @@
 import { clsx } from "clsx";
 import { BsClock, BsPinMap } from "react-icons/bs";
 import { EventType, eventTypeToColor, eventTypeToEmoji } from "../events/EventType";
+import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
-  category: EventType;
-  summary: string;
-  location?: string;
-  region?: string;
-  thumbnail?: string;
-  time?: string | undefined;
+  event: CalendarEvent;
 }
 
 export const CalendarEventItem: React.FC<Props> = (props: Props) => {
-  const { category, summary, location, region, thumbnail, time } = props;
+  const { event } = props;
+  const { category, summary, location, region } = event;
   const color = eventTypeToColor(category);
+  const thumbnail = event.images?.[0]?.path;
+  const time =
+    category == EventType.TV || category == EventType.RADIO
+      ? `${event.start} ～ ${event.end}`
+      : undefined;
 
   const place = location || region;
 
