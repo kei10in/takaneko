@@ -16,6 +16,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-06-28_SMILE PLUS 2026.jpg",
       ref: "https://x.com/takanenofficial/status/2033855865761984664",
     },
+    {
+      path: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「花柄ワンピース」.jpg",
+      ref: "https://x.com/takanenofficial/status/2070816912376738186",
+    },
+    {
+      path: "/events/2026/2026-06-28_SMILE PLUS 2026_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2070816912376738186",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -24,17 +32,18 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://t.pia.jp/pia/event/event.do?eventCd=2609719",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["15:00", "16:00"],
+    lineup: ["ミニフォトカード「花柄ワンピース」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2070816912376738186",
   },
   acts: [],
-  updatedAt: "2026-05-18",
+  updatedAt: "2026-06-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [お知らせ (出演・物販) - 公式 X](https://x.com/takanenofficial/status/2070816912376738186)
   - [出演者コメント動画 - SMILE PLUS 2026 X](https://x.com/sfp_smileplus/status/2056253500607361336)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2033855865761984664)
 `;
