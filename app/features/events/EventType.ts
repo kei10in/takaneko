@@ -1,6 +1,5 @@
 import { z } from "zod/v4";
-import { assertNever } from "~/utils/assertNever";
-import { UiColors } from "~/utils/uiColors";
+import type { UiColors } from "~/utils/uiColors";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
@@ -23,150 +22,127 @@ export const EventTypeEnum = z.enum([
 export const EventType = EventTypeEnum.enum;
 export type EventType = z.infer<typeof EventTypeEnum>;
 
-export const compareEventType = (a: EventType, b: EventType): number => {
-  const order = [
-    EventType.LIVE,
-    EventType.MEET_AND_GREET,
-    EventType.RELEASE_EVENT,
-    EventType.STREAMING,
-    EventType.VARIETY,
-    EventType.FASHION,
-    EventType.SALES_OPEN,
-    EventType.CD,
-    EventType.BIRTHDAY,
-    EventType.TV,
-    EventType.RADIO,
-    EventType.ON_DEMAND,
-    EventType.BOOK,
-    EventType.MAGAZINE,
-    EventType.OTHER,
-  ];
-
-  return order.indexOf(a) - order.indexOf(b);
+type EventTypeMetadata = {
+  order: number;
+  emoji: string;
+  color: string;
+  colors: UiColors;
 };
 
-export const eventTypeToEmoji = (category: EventType): string => {
-  switch (category) {
-    case EventType.LIVE:
-      return "🎤";
-    case EventType.MEET_AND_GREET:
-      return "🌸";
-    case EventType.RELEASE_EVENT:
-      return "🚀";
-    case EventType.STREAMING:
-      return "🎥";
-    case EventType.VARIETY:
-      return "✨";
-    case EventType.FASHION:
-      return "👗";
-    case EventType.SALES_OPEN:
-      return "📋";
-    case EventType.CD:
-      return "💿";
-    case EventType.BIRTHDAY:
-      return "🎂";
-    case EventType.TV:
-      return "📺";
-    case EventType.RADIO:
-      return "📻";
-    case EventType.ON_DEMAND:
-      return "📱";
-    case EventType.BOOK:
-      return "📖";
-    case EventType.MAGAZINE:
-      return "📰";
-    case EventType.OTHER:
-      return "📅";
-    default:
-      assertNever(category);
-  }
-};
+export const eventTypeMetadata = {
+  [EventType.LIVE]: {
+    order: 0,
+    emoji: "🎤",
+    color: "bg-nadeshiko-700",
+    colors: {
+      text: "text-nadeshiko-800",
+      background: "bg-nadeshiko-800",
+      border: "border-nadeshiko-800",
+    },
+  },
+  [EventType.MEET_AND_GREET]: {
+    order: 1,
+    emoji: "🌸",
+    color: "bg-gray-800",
+    colors: { text: "text-zinc-600", background: "bg-zinc-800", border: "border-zinc-600" },
+  },
+  [EventType.RELEASE_EVENT]: {
+    order: 2,
+    emoji: "🚀",
+    color: "bg-gray-800",
+    colors: { text: "text-violet-400", background: "bg-violet-600", border: "border-violet-400" },
+  },
+  [EventType.STREAMING]: {
+    order: 3,
+    emoji: "🎥",
+    color: "bg-orange-400",
+    colors: { text: "text-amber-500", background: "bg-amber-500", border: "border-amber-500" },
+  },
+  [EventType.VARIETY]: {
+    order: 4,
+    emoji: "✨",
+    color: "bg-purple-400",
+    colors: { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" },
+  },
+  [EventType.FASHION]: {
+    order: 5,
+    emoji: "👗",
+    color: "bg-pink-400",
+    colors: {
+      text: "text-nadeshiko-800",
+      background: "bg-nadeshiko-800",
+      border: "border-nadeshiko-800",
+    },
+  },
+  [EventType.SALES_OPEN]: {
+    order: 6,
+    emoji: "📋",
+    color: "bg-gray-500",
+    colors: { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" },
+  },
+  [EventType.CD]: {
+    order: 7,
+    emoji: "💿",
+    color: "bg-fuchsia-500",
+    colors: {
+      text: "text-fuchsia-500",
+      background: "bg-fuchsia-500",
+      border: "border-fuchsia-500",
+    },
+  },
+  [EventType.BIRTHDAY]: {
+    order: 8,
+    emoji: "🎂",
+    color: "bg-red-600",
+    colors: { text: "text-red-600", background: "bg-red-600", border: "border-red-600" },
+  },
+  [EventType.TV]: {
+    order: 9,
+    emoji: "📺",
+    color: "bg-sky-500",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.RADIO]: {
+    order: 10,
+    emoji: "📻",
+    color: "bg-sky-500",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.ON_DEMAND]: {
+    order: 11,
+    emoji: "📱",
+    color: "bg-sky-500",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.BOOK]: {
+    order: 12,
+    emoji: "📖",
+    color: "bg-indigo-400",
+    colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
+  },
+  [EventType.MAGAZINE]: {
+    order: 13,
+    emoji: "📰",
+    color: "bg-indigo-400",
+    colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
+  },
+  [EventType.OTHER]: {
+    order: 14,
+    emoji: "📅",
+    color: "bg-amber-700",
+    colors: { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" },
+  },
+} satisfies Record<EventType, EventTypeMetadata>;
 
-export const eventTypeToColor = (category: EventType): string => {
-  switch (category) {
-    case EventType.LIVE:
-      return "bg-nadeshiko-700";
-    case EventType.MEET_AND_GREET:
-      return "bg-gray-800";
-    case EventType.RELEASE_EVENT:
-      return "bg-gray-800";
-    case EventType.STREAMING:
-      return "bg-orange-400";
-    case EventType.VARIETY:
-      return "bg-purple-400";
-    case EventType.FASHION:
-      return "bg-pink-400";
-    case EventType.SALES_OPEN:
-      return "bg-gray-500";
-    case EventType.CD:
-      return "bg-fuchsia-500";
-    case EventType.BIRTHDAY:
-      return "bg-red-600";
-    case EventType.TV:
-      return "bg-sky-500";
-    case EventType.RADIO:
-      return "bg-sky-500";
-    case EventType.ON_DEMAND:
-      return "bg-sky-500";
-    case EventType.BOOK:
-      return "bg-indigo-400";
-    case EventType.MAGAZINE:
-      return "bg-indigo-400";
-    case EventType.OTHER:
-      return "bg-amber-700";
-    default:
-      assertNever(category);
-  }
-};
+export const compareEventType = (a: EventType, b: EventType): number =>
+  eventTypeMetadata[a].order - eventTypeMetadata[b].order;
 
-export const eventTypeColors = (category: EventType): UiColors => {
-  switch (category) {
-    case EventType.LIVE:
-      return {
-        text: "text-nadeshiko-800",
-        background: "bg-nadeshiko-800",
-        border: "border-nadeshiko-800",
-      };
-    case EventType.MEET_AND_GREET:
-      return { text: "text-zinc-600", background: "bg-zinc-800", border: "border-zinc-600" };
-    case EventType.RELEASE_EVENT:
-      return { text: "text-violet-400", background: "bg-violet-600", border: "border-violet-400" };
-    case EventType.STREAMING:
-      return { text: "text-amber-500", background: "bg-amber-500", border: "border-amber-500" };
-    case EventType.VARIETY:
-      return { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" };
-    case EventType.FASHION:
-      return {
-        text: "text-nadeshiko-800",
-        background: "bg-nadeshiko-800",
-        border: "border-nadeshiko-800",
-      };
-    case EventType.SALES_OPEN:
-      return { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" };
-    case EventType.CD:
-      return {
-        text: "text-fuchsia-500",
-        background: "bg-fuchsia-500",
-        border: "border-fuchsia-500",
-      };
-    case EventType.BIRTHDAY:
-      return { text: "text-red-600", background: "bg-red-600", border: "border-red-600" };
-    case EventType.TV:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.RADIO:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.ON_DEMAND:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.BOOK:
-      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
-    case EventType.MAGAZINE:
-      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
-    case EventType.OTHER:
-      return { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" };
-    default:
-      assertNever(category);
-  }
-};
+export const eventTypeToEmoji = (category: EventType): string => eventTypeMetadata[category].emoji;
+
+export const eventTypeToColor = (category: EventType): string => eventTypeMetadata[category].color;
+
+export const eventTypeColors = (category: EventType): UiColors =>
+  eventTypeMetadata[category].colors;
 
 export const LiveTypeEnum = z.enum([
   "SOLO", // ソロライブ
