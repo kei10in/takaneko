@@ -1,9 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { EventType } from "~/features/events/EventType";
-import { validateEventMeta } from "~/features/events/eventMeta";
-import { EventModule } from "~/features/events/eventModule";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { allPages, sitemapGroups } from "~/utils/sitemap/sitemap";
+import { buildEventModule } from "../tests/events";
 
 describe("sitemapGroups", () => {
   test("groups pages by sitemap output file", async () => {
@@ -61,31 +59,3 @@ describe("sitemapGroups", () => {
     expect(pages).toEqual(groups.flatMap((group) => group.pages));
   });
 });
-
-const buildEventModule = ({
-  slug,
-  date,
-  updatedAt,
-}: {
-  slug: string;
-  date: string;
-  updatedAt?: string;
-}): EventModule => {
-  const meta = validateEventMeta({
-    summary: "Test Event",
-    category: EventType.LIVE,
-    date,
-    updatedAt,
-  });
-
-  if (meta == undefined) {
-    throw new Error("Invalid test event meta");
-  }
-
-  return {
-    slug,
-    filename: `app/features/events/${date.slice(0, 4)}/${date.slice(5, 7)}/${slug}.mdx`,
-    meta,
-    Content: () => <></>,
-  };
-};
