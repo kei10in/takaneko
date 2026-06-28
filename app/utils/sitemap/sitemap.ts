@@ -6,6 +6,7 @@ import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
 import { AllMembers } from "~/features/profile/members";
 import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "../datetime/NaiveDate";
+import { lastmodConfig } from "./lastmod";
 
 export interface SitemapUrl {
   url: string;
@@ -109,7 +110,7 @@ const buildMemberPages = (): SitemapPath[] => {
 };
 
 const buildStaticPages = (): SitemapPath[] => {
-  return [
+  const paths = [
     { path: "/" },
     { path: "/trade" },
     { path: "/calendar" },
@@ -121,4 +122,9 @@ const buildStaticPages = (): SitemapPath[] => {
     { path: "/setlists" },
     { path: "/terms" },
   ];
+
+  return paths.map((p) => {
+    const lastmod = lastmodConfig.find((config) => config.path === p.path)?.lastmod;
+    return { ...p, lastmod };
+  });
 };
