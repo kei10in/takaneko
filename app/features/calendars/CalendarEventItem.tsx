@@ -172,7 +172,9 @@ const MediaAppearance: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { category, summary } = event;
   const time =
-    category == EventType.TV || category == EventType.RADIO
+    category == (EventType.TV || category == EventType.RADIO) &&
+    event.start != undefined &&
+    event.end != undefined
       ? `${event.start} ～ ${event.end}`
       : undefined;
 
