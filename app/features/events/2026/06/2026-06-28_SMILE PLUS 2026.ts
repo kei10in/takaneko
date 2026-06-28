@@ -58,6 +58,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2071218571225501898)
   - [きょうのたかねこ](https://x.com/takanenofficial/status/2071054760870834664)
   - [お知らせ (出演・物販) - 公式 X](https://x.com/takanenofficial/status/2070816912376738186)
   - [出演者コメント動画 - SMILE PLUS 2026 X](https://x.com/sfp_smileplus/status/2056253500607361336)
