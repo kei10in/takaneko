@@ -58,7 +58,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
             <MediaAppearance event={event} />
           ) : category == EventType.RADIO ? (
             <MediaAppearance event={event} />
-          ) : category == EventType.WEB ? (
+          ) : category == EventType.ON_DEMAND ? (
             <SimpleEvent event={event} />
           ) : category == EventType.BOOK ? (
             <SimpleEvent event={event} />
@@ -234,8 +234,8 @@ const EventTypeLabel: React.FC<Props> = (props: Props) => {
       return <IconLabel icon={HiTv} text="テレビ" colors={colors} />;
     case EventType.RADIO:
       return <IconLabel icon={HiRadio} text="ラジオ" colors={colors} />;
-    case EventType.WEB:
-      return <IconLabel icon={HiVideoCamera} text="WEB" colors={colors} />;
+    case EventType.ON_DEMAND:
+      return <IconLabel icon={HiVideoCamera} text="オンデマンド" colors={colors} />;
     case EventType.BOOK:
       return <IconLabel icon={HiBookOpen} text="書籍" colors={colors} />;
     case EventType.MAGAZINE:

@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "【WOMB】やついフェス2024 DAY1 ニコニコ復活ディレイ放送【ニコニコ超復活祭】",
-  category: "WEB",
+  category: "ON_DEMAND",
   date: "2024-09-15",
   region: "Web",
   images: [

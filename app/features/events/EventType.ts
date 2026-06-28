@@ -14,7 +14,7 @@ export const EventTypeEnum = z.enum([
   "BIRTHDAY",
   "TV",
   "RADIO",
-  "WEB",
+  "ON_DEMAND",
   "BOOK",
   "MAGAZINE",
   "OTHER",
@@ -36,7 +36,7 @@ export const compareEventType = (a: EventType, b: EventType): number => {
     EventType.BIRTHDAY,
     EventType.TV,
     EventType.RADIO,
-    EventType.WEB,
+    EventType.ON_DEMAND,
     EventType.BOOK,
     EventType.MAGAZINE,
     EventType.OTHER,
@@ -69,7 +69,7 @@ export const eventTypeToEmoji = (category: EventType): string => {
       return "📺";
     case EventType.RADIO:
       return "📻";
-    case EventType.WEB:
+    case EventType.ON_DEMAND:
       return "📱";
     case EventType.BOOK:
       return "📖";
@@ -106,8 +106,8 @@ export const eventTypeToColor = (category: EventType): string => {
       return "bg-sky-500";
     case EventType.RADIO:
       return "bg-sky-500";
-    case EventType.WEB:
-      return "bg-blue-600";
+    case EventType.ON_DEMAND:
+      return "bg-sky-500";
     case EventType.BOOK:
       return "bg-indigo-400";
     case EventType.MAGAZINE:
@@ -155,8 +155,8 @@ export const eventTypeColors = (category: EventType): UiColors => {
       return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
     case EventType.RADIO:
       return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.WEB:
-      return { text: "text-blue-600", background: "bg-blue-600", border: "border-blue-600" };
+    case EventType.ON_DEMAND:
+      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
     case EventType.BOOK:
       return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
     case EventType.MAGAZINE:

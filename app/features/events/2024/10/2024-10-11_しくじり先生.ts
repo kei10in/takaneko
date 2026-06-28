@@ -1,8 +1,8 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "しくじり先生",
-  category: "WEB",
+  summary: "ABEMA「しくじり先生」",
+  category: "ON_DEMAND",
   date: "2024-10-11",
   region: "Web",
   present: ["橋本桃呼"],

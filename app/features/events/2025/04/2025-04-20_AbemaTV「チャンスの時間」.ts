@@ -1,8 +1,8 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "AbemaTV「チャンスの時間」",
-  category: "WEB",
+  summary: "ABEMA「チャンスの時間」",
+  category: "ON_DEMAND",
   date: "2025-04-20",
   start: "23:00",
   end: "24:00",

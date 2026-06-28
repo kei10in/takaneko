@@ -9,8 +9,6 @@ export const EventFilterTypeEnum = z.enum([
   "release-event",
   "streaming",
   "tv",
-  "radio",
-  "web",
   "birthday",
   "release",
   "other",
@@ -53,14 +51,15 @@ export const EventFilters: EventFilter[] = [
   {
     display: "配信",
     name: "streaming",
-    predicate: (event) =>
-      event.meta.category === EventType.STREAMING || event.meta.category === EventType.WEB,
+    predicate: (event) => event.meta.category === EventType.STREAMING,
   },
   {
     display: "TV・ラジオ",
     name: "tv",
     predicate: (event) =>
-      event.meta.category === EventType.TV || event.meta.category === EventType.RADIO,
+      event.meta.category === EventType.TV ||
+      event.meta.category === EventType.RADIO ||
+      event.meta.category === EventType.ON_DEMAND,
   },
   {
     display: "誕生日",
