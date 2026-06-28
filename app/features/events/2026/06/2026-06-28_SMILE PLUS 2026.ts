@@ -36,13 +36,29 @@ export const meta: EventMetaDescriptor = {
     lineup: ["ミニフォトカード「花柄ワンピース」 / チェキ"],
     url: "https://x.com/takanenofficial/status/2070816912376738186",
   },
-  acts: [],
+  acts: [
+    {
+      setlist: [
+        "衣装: 見上げるたびに、恋をする。衣装",
+        "革命の女王",
+        "決戦スピリット",
+        "ハートブーケ",
+        "MC",
+        "この世界は嘘でできている",
+        "初恋のひと。",
+        "月曜日の憂鬱",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/2071196985517080960",
+    },
+  ],
   updatedAt: "2026-06-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2071054760870834664)
   - [お知らせ (出演・物販) - 公式 X](https://x.com/takanenofficial/status/2070816912376738186)
   - [出演者コメント動画 - SMILE PLUS 2026 X](https://x.com/sfp_smileplus/status/2056253500607361336)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2033855865761984664)
