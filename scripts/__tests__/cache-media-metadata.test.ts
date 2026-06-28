@@ -5,7 +5,7 @@ import {
   collectMissingOgpFields,
   mergeMediaMetadata,
   shouldLogMetadataBuildError,
-} from "./cache-media-metadata";
+} from "../cache-media-metadata";
 
 const makeStaticMedia = (mediaUrl: string): Extract<MediaDescriptor, { kind: "static" }> => ({
   kind: "static",
@@ -40,11 +40,7 @@ describe("collectMissingOgpFields", () => {
       mediaUrl: undefined,
     });
 
-    expect(missing).toEqual([
-      "title",
-      "siteName",
-      "mediaUrl",
-    ]);
+    expect(missing).toEqual(["title", "siteName", "mediaUrl"]);
   });
 });
 
@@ -56,9 +52,7 @@ describe("mergeMediaMetadata", () => {
 
     const result = mergeMediaMetadata([media], existing, {});
 
-    expect(result.transitions).toEqual([
-      { type: "marked-deleted", key, mediaUrl: media.mediaUrl },
-    ]);
+    expect(result.transitions).toEqual([{ type: "marked-deleted", key, mediaUrl: media.mediaUrl }]);
     expect(result.merged[0].deleted).toBe(true);
   });
 

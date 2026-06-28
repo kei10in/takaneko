@@ -1,7 +1,7 @@
 import { createRoutesStub } from "react-router";
 import { assert, describe, expect, it, test } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { allPages } from "~/utils/sitemap";
+import { allPages } from "~/utils/sitemap/sitemap";
 import { allAssetFiles } from "~/utils/tests/asset";
 import { extractURLsFromComponent } from "~/utils/tests/react";
 import { EventType } from "./EventType";
