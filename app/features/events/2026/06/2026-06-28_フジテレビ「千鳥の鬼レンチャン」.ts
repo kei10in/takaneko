@@ -13,7 +13,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組サイト",
     url: "https://www.fujitv.co.jp/oniren/",
   },
-  updatedAt: "2026-06-22",
+  updatedAt: "2026-06-28",
 };
 
 export const content = /* md */ `
@@ -67,6 +67,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2071201952520708394)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2071081157027049842)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2068689335055257824)
   - [告知 - 千鳥の鬼レンチャン X](https://x.com/oni_renchans/status/2068684340368994555)
   - [番組サイト](https://www.fujitv.co.jp/oniren/)
