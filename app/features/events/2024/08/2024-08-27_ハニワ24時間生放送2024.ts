@@ -2,7 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "ハニワ24時間生放送2024",
-  category: "WEB",
+  category: "STREAMING",
   date: "2024-08-27",
   region: "Web",
   link: {

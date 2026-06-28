@@ -85,6 +85,7 @@ export const YouTube2024 = [
     videoId: "jmGEMZg45xc",
     publishedAt: "2024-08-30",
     presents: ["籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/1829376023622041762",
   },
   {
     videoId: "s1ebJP17-TU",
