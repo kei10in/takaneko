@@ -16,7 +16,7 @@ import { IconType } from "react-icons/lib";
 import { LiveBadge, LiveTypeBadge, MeetAndGreetBadge } from "~/components/SmallBadges";
 import { assertNever } from "~/utils/assertNever";
 import { UiColors } from "~/utils/uiColors";
-import { EventType, eventTypeColors, eventTypeToColor } from "../events/EventType";
+import { EventType, eventTypeBackgroundColor, eventTypeColors } from "../events/EventType";
 import { CalendarEvent } from "./calendarEvents";
 
 interface Props {
@@ -26,14 +26,14 @@ interface Props {
 export const CalendarEventItem: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { category, summary } = event;
-  const color = eventTypeToColor(category);
+  const backgroundColor = eventTypeBackgroundColor(category);
   const thumbnail = event.images?.[0]?.path;
 
   return (
     <div className="@container overflow-hidden rounded-3xl bg-white shadow-md">
       <div className="flex min-h-22 items-stretch gap-2 pr-2">
         <div className="w-1 flex-none">
-          <div className={clsx("mt-7.25 h-7 w-full rounded-r-3xl", color)} />
+          <div className={clsx("mt-7.25 h-7 w-full rounded-r-3xl", backgroundColor)} />
         </div>
         <div className="min-w-0 flex-1">
           {category == EventType.LIVE ? (
@@ -103,7 +103,7 @@ const Live: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {liveType != undefined && (
-          <LiveTypeBadge liveType={liveType} colors={eventTypeColors(event.category)} large />
+          <LiveTypeBadge liveType={liveType} color={eventTypeColors(event.category).text} large />
         )}
       </div>
     </div>
@@ -114,6 +114,7 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { liveType, meetAndGreetTypes, summary, location, region } = event;
   const place = location || region;
+  const badgeColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -130,9 +131,9 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
         )}
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && <LiveBadge large />}
+        {liveType != undefined && <LiveBadge color={badgeColor} large />}
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} large />
+          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
         ))}
       </div>
     </div>
@@ -143,6 +144,7 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { liveType, meetAndGreetTypes, summary, location, region } = event;
   const place = location || region;
+  const badgeColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -160,9 +162,9 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} large />
+          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
         ))}
-        {liveType != undefined && <LiveBadge large />}
+        {liveType != undefined && <LiveBadge color={badgeColor} large />}
       </div>
     </div>
   );

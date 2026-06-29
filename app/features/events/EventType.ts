@@ -1,6 +1,5 @@
 import { z } from "zod/v4";
-import { assertNever } from "~/utils/assertNever";
-import { UiColors } from "~/utils/uiColors";
+import type { UiColors } from "~/utils/uiColors";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ
@@ -23,150 +22,112 @@ export const EventTypeEnum = z.enum([
 export const EventType = EventTypeEnum.enum;
 export type EventType = z.infer<typeof EventTypeEnum>;
 
-export const compareEventType = (a: EventType, b: EventType): number => {
-  const order = [
-    EventType.LIVE,
-    EventType.MEET_AND_GREET,
-    EventType.RELEASE_EVENT,
-    EventType.STREAMING,
-    EventType.VARIETY,
-    EventType.FASHION,
-    EventType.SALES_OPEN,
-    EventType.CD,
-    EventType.BIRTHDAY,
-    EventType.TV,
-    EventType.RADIO,
-    EventType.ON_DEMAND,
-    EventType.BOOK,
-    EventType.MAGAZINE,
-    EventType.OTHER,
-  ];
-
-  return order.indexOf(a) - order.indexOf(b);
+type EventTypeMetadata = {
+  order: number;
+  emoji: string;
+  colors: UiColors;
 };
 
-export const eventTypeToEmoji = (category: EventType): string => {
-  switch (category) {
-    case EventType.LIVE:
-      return "🎤";
-    case EventType.MEET_AND_GREET:
-      return "🌸";
-    case EventType.RELEASE_EVENT:
-      return "🚀";
-    case EventType.STREAMING:
-      return "🎥";
-    case EventType.VARIETY:
-      return "✨";
-    case EventType.FASHION:
-      return "👗";
-    case EventType.SALES_OPEN:
-      return "📋";
-    case EventType.CD:
-      return "💿";
-    case EventType.BIRTHDAY:
-      return "🎂";
-    case EventType.TV:
-      return "📺";
-    case EventType.RADIO:
-      return "📻";
-    case EventType.ON_DEMAND:
-      return "📱";
-    case EventType.BOOK:
-      return "📖";
-    case EventType.MAGAZINE:
-      return "📰";
-    case EventType.OTHER:
-      return "📅";
-    default:
-      assertNever(category);
-  }
-};
+export const eventTypeMetadata = {
+  [EventType.LIVE]: {
+    order: 0,
+    emoji: "🎤",
+    colors: {
+      text: "text-nadeshiko-800",
+      background: "bg-nadeshiko-800",
+      border: "border-nadeshiko-800",
+    },
+  },
+  [EventType.MEET_AND_GREET]: {
+    order: 1,
+    emoji: "🌸",
+    colors: { text: "text-zinc-600", background: "bg-zinc-600", border: "border-zinc-600" },
+  },
+  [EventType.RELEASE_EVENT]: {
+    order: 2,
+    emoji: "🚀",
+    colors: { text: "text-violet-400", background: "bg-violet-400", border: "border-violet-400" },
+  },
+  [EventType.STREAMING]: {
+    order: 3,
+    emoji: "🎥",
+    colors: { text: "text-orange-500", background: "bg-orange-500", border: "border-orange-500" },
+  },
+  [EventType.VARIETY]: {
+    order: 4,
+    emoji: "✨",
+    colors: { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" },
+  },
+  [EventType.FASHION]: {
+    order: 5,
+    emoji: "👗",
+    colors: {
+      text: "text-nadeshiko-800",
+      background: "bg-nadeshiko-800",
+      border: "border-nadeshiko-800",
+    },
+  },
+  [EventType.SALES_OPEN]: {
+    order: 6,
+    emoji: "📋",
+    colors: { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" },
+  },
+  [EventType.CD]: {
+    order: 7,
+    emoji: "💿",
+    colors: {
+      text: "text-fuchsia-500",
+      background: "bg-fuchsia-500",
+      border: "border-fuchsia-500",
+    },
+  },
+  [EventType.BIRTHDAY]: {
+    order: 8,
+    emoji: "🎂",
+    colors: { text: "text-red-600", background: "bg-red-600", border: "border-red-600" },
+  },
+  [EventType.TV]: {
+    order: 9,
+    emoji: "📺",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.RADIO]: {
+    order: 10,
+    emoji: "📻",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.ON_DEMAND]: {
+    order: 11,
+    emoji: "📱",
+    colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
+  },
+  [EventType.BOOK]: {
+    order: 12,
+    emoji: "📖",
+    colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
+  },
+  [EventType.MAGAZINE]: {
+    order: 13,
+    emoji: "📰",
+    colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
+  },
+  [EventType.OTHER]: {
+    order: 14,
+    emoji: "📅",
+    colors: { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" },
+  },
+} satisfies Record<EventType, EventTypeMetadata>;
 
-export const eventTypeToColor = (category: EventType): string => {
-  switch (category) {
-    case EventType.LIVE:
-      return "bg-nadeshiko-700";
-    case EventType.MEET_AND_GREET:
-      return "bg-gray-800";
-    case EventType.RELEASE_EVENT:
-      return "bg-gray-800";
-    case EventType.STREAMING:
-      return "bg-orange-400";
-    case EventType.VARIETY:
-      return "bg-purple-400";
-    case EventType.FASHION:
-      return "bg-pink-400";
-    case EventType.SALES_OPEN:
-      return "bg-gray-500";
-    case EventType.CD:
-      return "bg-fuchsia-500";
-    case EventType.BIRTHDAY:
-      return "bg-red-600";
-    case EventType.TV:
-      return "bg-sky-500";
-    case EventType.RADIO:
-      return "bg-sky-500";
-    case EventType.ON_DEMAND:
-      return "bg-sky-500";
-    case EventType.BOOK:
-      return "bg-indigo-400";
-    case EventType.MAGAZINE:
-      return "bg-indigo-400";
-    case EventType.OTHER:
-      return "bg-amber-700";
-    default:
-      assertNever(category);
-  }
-};
+export const compareEventType = (a: EventType, b: EventType): number =>
+  eventTypeMetadata[a].order - eventTypeMetadata[b].order;
 
-export const eventTypeColors = (category: EventType): UiColors => {
-  switch (category) {
-    case EventType.LIVE:
-      return {
-        text: "text-nadeshiko-800",
-        background: "bg-nadeshiko-800",
-        border: "border-nadeshiko-800",
-      };
-    case EventType.MEET_AND_GREET:
-      return { text: "text-zinc-600", background: "bg-zinc-800", border: "border-zinc-600" };
-    case EventType.RELEASE_EVENT:
-      return { text: "text-violet-400", background: "bg-violet-600", border: "border-violet-400" };
-    case EventType.STREAMING:
-      return { text: "text-amber-500", background: "bg-amber-500", border: "border-amber-500" };
-    case EventType.VARIETY:
-      return { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" };
-    case EventType.FASHION:
-      return {
-        text: "text-nadeshiko-800",
-        background: "bg-nadeshiko-800",
-        border: "border-nadeshiko-800",
-      };
-    case EventType.SALES_OPEN:
-      return { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" };
-    case EventType.CD:
-      return {
-        text: "text-fuchsia-500",
-        background: "bg-fuchsia-500",
-        border: "border-fuchsia-500",
-      };
-    case EventType.BIRTHDAY:
-      return { text: "text-red-600", background: "bg-red-600", border: "border-red-600" };
-    case EventType.TV:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.RADIO:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.ON_DEMAND:
-      return { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" };
-    case EventType.BOOK:
-      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
-    case EventType.MAGAZINE:
-      return { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" };
-    case EventType.OTHER:
-      return { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" };
-    default:
-      assertNever(category);
-  }
-};
+export const eventTypeToEmoji = (category: EventType): string => eventTypeMetadata[category].emoji;
+
+export const eventTypeBackgroundColor = (category: EventType): string =>
+  eventTypeMetadata[category].colors.background;
+
+export const eventTypeColors = (category: EventType): UiColors =>
+  eventTypeMetadata[category].colors;
 
 export const LiveTypeEnum = z.enum([
   "SOLO", // ソロライブ
@@ -181,45 +142,52 @@ export const LiveTypeEnum = z.enum([
 export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
 
-export const liveTypeLabel = (liveType: LiveType | undefined): string => {
-  switch (liveType) {
-    case "SOLO":
-      return "ワンマン";
-    case "HOSTED":
-      return "主催対バン";
-    case "JOINT":
-    case "GUEST":
-    case "FESTIVAL":
-      return "対バン";
-    case "EVENT_LIVE":
-      return "イベント出演";
-    case "RELEASE_EVENT":
-      return "リリースイベント";
-    default:
-      return "不明";
-  }
+type LiveTypeMetadata = {
+  label: string;
+  color: string;
 };
 
-export const liveTypeColor = (liveType: LiveType | undefined): string => {
-  switch (liveType) {
-    case LiveType.SOLO:
-      return "bg-nadeshiko-700";
-    case LiveType.HOSTED:
-      return "bg-blue-300";
-    case LiveType.JOINT:
-      return "bg-amber-300";
-    case LiveType.GUEST:
-      return "bg-amber-300";
-    case LiveType.FESTIVAL:
-      return "bg-amber-400";
-    case LiveType.EVENT_LIVE:
-      return "bg-amber-400";
-    case LiveType.RELEASE_EVENT:
-      return "bg-violet-400";
-    default:
-      return "bg-gray-300";
-  }
-};
+const unknownLiveTypeMetadata = {
+  label: "不明",
+  color: "bg-gray-300",
+} satisfies LiveTypeMetadata;
+
+export const liveTypeMetadata = {
+  [LiveType.SOLO]: {
+    label: "ワンマン",
+    color: "bg-nadeshiko-700",
+  },
+  [LiveType.HOSTED]: {
+    label: "主催対バン",
+    color: "bg-blue-300",
+  },
+  [LiveType.JOINT]: {
+    label: "対バン",
+    color: "bg-amber-300",
+  },
+  [LiveType.GUEST]: {
+    label: "対バン",
+    color: "bg-amber-300",
+  },
+  [LiveType.FESTIVAL]: {
+    label: "対バン",
+    color: "bg-amber-400",
+  },
+  [LiveType.EVENT_LIVE]: {
+    label: "イベント出演",
+    color: "bg-amber-400",
+  },
+  [LiveType.RELEASE_EVENT]: {
+    label: "リリースイベント",
+    color: "bg-violet-400",
+  },
+} satisfies Record<LiveType, LiveTypeMetadata>;
+
+export const liveTypeLabel = (liveType: LiveType | undefined): string =>
+  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).label;
+
+export const liveTypeColor = (liveType: LiveType | undefined): string =>
+  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).color;
 
 export const MeetAndGreetTypeEnum = z.enum([
   "握手会",
