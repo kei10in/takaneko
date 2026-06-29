@@ -103,7 +103,7 @@ const Live: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {liveType != undefined && (
-          <LiveTypeBadge liveType={liveType} colors={eventTypeColors(event.category)} large />
+          <LiveTypeBadge liveType={liveType} color={eventTypeColors(event.category).text} large />
         )}
       </div>
     </div>
