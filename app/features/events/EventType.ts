@@ -33,7 +33,7 @@ export const eventTypeMetadata = {
   [EventType.LIVE]: {
     order: 0,
     emoji: "🎤",
-    color: "bg-nadeshiko-700",
+    color: "bg-nadeshiko-800",
     colors: {
       text: "text-nadeshiko-800",
       background: "bg-nadeshiko-800",
@@ -43,20 +43,20 @@ export const eventTypeMetadata = {
   [EventType.MEET_AND_GREET]: {
     order: 1,
     emoji: "🌸",
-    color: "bg-gray-800",
-    colors: { text: "text-zinc-600", background: "bg-zinc-800", border: "border-zinc-600" },
+    color: "bg-zinc-600",
+    colors: { text: "text-zinc-600", background: "bg-zinc-600", border: "border-zinc-600" },
   },
   [EventType.RELEASE_EVENT]: {
     order: 2,
     emoji: "🚀",
-    color: "bg-gray-800",
-    colors: { text: "text-violet-400", background: "bg-violet-600", border: "border-violet-400" },
+    color: "bg-violet-400",
+    colors: { text: "text-violet-400", background: "bg-violet-400", border: "border-violet-400" },
   },
   [EventType.STREAMING]: {
     order: 3,
     emoji: "🎥",
-    color: "bg-orange-400",
-    colors: { text: "text-amber-500", background: "bg-amber-500", border: "border-amber-500" },
+    color: "bg-orange-500",
+    colors: { text: "text-orange-500", background: "bg-orange-500", border: "border-orange-500" },
   },
   [EventType.VARIETY]: {
     order: 4,
@@ -67,7 +67,7 @@ export const eventTypeMetadata = {
   [EventType.FASHION]: {
     order: 5,
     emoji: "👗",
-    color: "bg-pink-400",
+    color: "bg-nadeshiko-800",
     colors: {
       text: "text-nadeshiko-800",
       background: "bg-nadeshiko-800",
@@ -99,19 +99,19 @@ export const eventTypeMetadata = {
   [EventType.TV]: {
     order: 9,
     emoji: "📺",
-    color: "bg-sky-500",
+    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.RADIO]: {
     order: 10,
     emoji: "📻",
-    color: "bg-sky-500",
+    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.ON_DEMAND]: {
     order: 11,
     emoji: "📱",
-    color: "bg-sky-500",
+    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.BOOK]: {
