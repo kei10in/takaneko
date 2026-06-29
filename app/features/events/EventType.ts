@@ -25,7 +25,6 @@ export type EventType = z.infer<typeof EventTypeEnum>;
 type EventTypeMetadata = {
   order: number;
   emoji: string;
-  color: string;
   colors: UiColors;
 };
 
@@ -33,7 +32,6 @@ export const eventTypeMetadata = {
   [EventType.LIVE]: {
     order: 0,
     emoji: "🎤",
-    color: "bg-nadeshiko-800",
     colors: {
       text: "text-nadeshiko-800",
       background: "bg-nadeshiko-800",
@@ -43,31 +41,26 @@ export const eventTypeMetadata = {
   [EventType.MEET_AND_GREET]: {
     order: 1,
     emoji: "🌸",
-    color: "bg-zinc-600",
     colors: { text: "text-zinc-600", background: "bg-zinc-600", border: "border-zinc-600" },
   },
   [EventType.RELEASE_EVENT]: {
     order: 2,
     emoji: "🚀",
-    color: "bg-violet-400",
     colors: { text: "text-violet-400", background: "bg-violet-400", border: "border-violet-400" },
   },
   [EventType.STREAMING]: {
     order: 3,
     emoji: "🎥",
-    color: "bg-orange-500",
     colors: { text: "text-orange-500", background: "bg-orange-500", border: "border-orange-500" },
   },
   [EventType.VARIETY]: {
     order: 4,
     emoji: "✨",
-    color: "bg-purple-400",
     colors: { text: "text-purple-400", background: "bg-purple-400", border: "border-purple-400" },
   },
   [EventType.FASHION]: {
     order: 5,
     emoji: "👗",
-    color: "bg-nadeshiko-800",
     colors: {
       text: "text-nadeshiko-800",
       background: "bg-nadeshiko-800",
@@ -77,13 +70,11 @@ export const eventTypeMetadata = {
   [EventType.SALES_OPEN]: {
     order: 6,
     emoji: "📋",
-    color: "bg-gray-500",
     colors: { text: "text-gray-500", background: "bg-gray-500", border: "border-gray-500" },
   },
   [EventType.CD]: {
     order: 7,
     emoji: "💿",
-    color: "bg-fuchsia-500",
     colors: {
       text: "text-fuchsia-500",
       background: "bg-fuchsia-500",
@@ -93,43 +84,36 @@ export const eventTypeMetadata = {
   [EventType.BIRTHDAY]: {
     order: 8,
     emoji: "🎂",
-    color: "bg-red-600",
     colors: { text: "text-red-600", background: "bg-red-600", border: "border-red-600" },
   },
   [EventType.TV]: {
     order: 9,
     emoji: "📺",
-    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.RADIO]: {
     order: 10,
     emoji: "📻",
-    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.ON_DEMAND]: {
     order: 11,
     emoji: "📱",
-    color: "bg-blue-400",
     colors: { text: "text-blue-400", background: "bg-blue-400", border: "border-blue-400" },
   },
   [EventType.BOOK]: {
     order: 12,
     emoji: "📖",
-    color: "bg-indigo-400",
     colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
   },
   [EventType.MAGAZINE]: {
     order: 13,
     emoji: "📰",
-    color: "bg-indigo-400",
     colors: { text: "text-indigo-400", background: "bg-indigo-400", border: "border-indigo-400" },
   },
   [EventType.OTHER]: {
     order: 14,
     emoji: "📅",
-    color: "bg-amber-700",
     colors: { text: "text-amber-700", background: "bg-amber-700", border: "border-amber-700" },
   },
 } satisfies Record<EventType, EventTypeMetadata>;
@@ -139,7 +123,8 @@ export const compareEventType = (a: EventType, b: EventType): number =>
 
 export const eventTypeToEmoji = (category: EventType): string => eventTypeMetadata[category].emoji;
 
-export const eventTypeToColor = (category: EventType): string => eventTypeMetadata[category].color;
+export const eventTypeBackgroundColor = (category: EventType): string =>
+  eventTypeMetadata[category].colors.background;
 
 export const eventTypeColors = (category: EventType): UiColors =>
   eventTypeMetadata[category].colors;
