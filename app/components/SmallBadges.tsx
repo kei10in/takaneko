@@ -117,10 +117,15 @@ export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverB
 interface WithTextProps {
   text: string;
   large?: boolean;
+  color?: string;
 }
 
-export const MeetAndGreetBadge: React.FC<WithTextProps> = ({ text, large }: WithTextProps) => {
-  return <Badge icon={FaCat} text={text} color={Black} large={large} />;
+export const MeetAndGreetBadge: React.FC<WithTextProps> = ({
+  text,
+  large,
+  color,
+}: WithTextProps) => {
+  return <Badge icon={FaCat} text={text} color={color ?? Black} large={large} />;
 };
 
 interface TextBadgeProps {
