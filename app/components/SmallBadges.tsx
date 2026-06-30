@@ -13,6 +13,14 @@ interface BadgeProps {
   large?: boolean;
 }
 
+interface IconChipProps {
+  icon: IconType;
+  text: string;
+  backgroundColor: string;
+  iconColor: string;
+  textColor: string;
+}
+
 const LightBlue = "text-blue-400";
 
 const Nadeshiko = "text-nadeshiko-800";
@@ -38,6 +46,22 @@ const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
     >
       <Icon />
       <span className="text-nowrap">{text}</span>
+    </div>
+  );
+};
+
+const IconChip: React.FC<IconChipProps> = (props: IconChipProps) => {
+  const { icon: Icon, text, backgroundColor, iconColor, textColor } = props;
+
+  return (
+    <div
+      className={clsx(
+        "flex h-4 items-center justify-center gap-0.5 rounded-full px-1 text-xs",
+        backgroundColor,
+      )}
+    >
+      <Icon className={iconColor} />
+      <span className={clsx("text-nowrap", textColor)}>{text}</span>
     </div>
   );
 };
@@ -94,10 +118,13 @@ export const LiveBadge: React.FC<LiveBadgeProps> = ({ large, color }: LiveBadgeP
 
 export const FirstPerformanceBadge: React.FC = () => {
   return (
-    <div className="flex h-4 items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-      <HiSparkles className="text-yellow-400" />
-      <span className="text-nowrap text-zinc-700">初披露</span>
-    </div>
+    <IconChip
+      icon={HiSparkles}
+      text="初披露"
+      backgroundColor="bg-zinc-100"
+      iconColor="text-yellow-400"
+      textColor="text-zinc-700"
+    />
   );
 };
 
@@ -107,10 +134,13 @@ interface CoverBadgeProps {
 
 export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverBadgeProps) => {
   return (
-    <div className="flex h-4 items-center justify-center gap-0.5 rounded-full bg-zinc-100 px-1 text-xs">
-      <HiUser className="text-zinc-500" />
-      <span className="text-nowrap text-zinc-500">{originalArtist}</span>
-    </div>
+    <IconChip
+      icon={HiUser}
+      text={originalArtist}
+      backgroundColor="bg-zinc-100"
+      iconColor="text-zinc-500"
+      textColor="text-zinc-500"
+    />
   );
 };
 
