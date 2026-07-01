@@ -199,6 +199,7 @@ export const MeetAndGreetTypeEnum = z.enum([
   "オンライン お話し会",
   "対面お話し会",
   "お渡し会",
+  "1日店長",
 ]);
 
 export const MeetAndGreetType = MeetAndGreetTypeEnum.enum;

@@ -2,6 +2,7 @@ import { clsx } from "clsx";
 import { FaCrown, FaHandshake, FaPenNib, FaSignature, FaTiktok } from "react-icons/fa6";
 import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
 import {
+  HiBuildingStorefront,
   HiCamera,
   HiChatBubbleLeftRight,
   HiGift,
@@ -163,6 +164,8 @@ export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
         return { icon: HiChatBubbleLeftRight, text: "対面お話し会" };
       case MeetAndGreetType.お渡し会:
         return { icon: HiGift, text: "お渡し会" };
+      case MeetAndGreetType["1日店長"]:
+        return { icon: HiBuildingStorefront, text: "1日店長" };
 
       default:
         assertNever(meetAndGreetType);
