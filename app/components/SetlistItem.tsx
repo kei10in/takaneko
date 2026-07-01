@@ -10,10 +10,10 @@ import {
 import { HiMusicalNote } from "react-icons/hi2";
 import { Link } from "react-router";
 import { Fragment } from "react/jsx-runtime";
+import { CoverBadge, FirstPerformanceBadge } from "~/components/IconChip";
 import { Segment } from "~/features/events/setlist";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { ALL_SONGS } from "~/features/songs/songs";
-import { CoverBadge, FirstPerformanceBadge } from "./SmallBadges";
 
 interface Props {
   part: Segment;

@@ -13,7 +13,8 @@ import {
   HiVideoCamera,
 } from "react-icons/hi2";
 import { IconType } from "react-icons/lib";
-import { LiveBadge, LiveTypeBadge, MeetAndGreetBadge } from "~/components/SmallBadges";
+import { MeetAndGreetChip } from "~/components/IconChip";
+import { LiveBadge, LiveTypeBadge } from "~/components/SmallBadges";
 import { assertNever } from "~/utils/assertNever";
 import { UiColors } from "~/utils/uiColors";
 import { EventType, eventTypeBackgroundColor, eventTypeColors } from "../events/EventType";
@@ -133,7 +134,7 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {liveType != undefined && <LiveBadge color={badgeColor} large />}
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} text={type} color={badgeColor} />
         ))}
       </div>
     </div>
@@ -162,7 +163,7 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} text={type} color={badgeColor} />
         ))}
         {liveType != undefined && <LiveBadge color={badgeColor} large />}
       </div>

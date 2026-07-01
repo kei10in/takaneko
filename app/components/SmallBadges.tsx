@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
-import { FaCat, FaCrown, FaPenNib } from "react-icons/fa6";
+import { FaCrown, FaPenNib } from "react-icons/fa6";
 import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
-import { HiSparkles, HiUser, HiUsers } from "react-icons/hi2";
+import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
 import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
@@ -13,19 +13,9 @@ interface BadgeProps {
   large?: boolean;
 }
 
-interface IconChipProps {
-  icon: IconType;
-  text: string;
-  backgroundColor: string;
-  iconColor: string;
-  textColor: string;
-}
-
 const LightBlue = "text-blue-400";
 
 const Nadeshiko = "text-nadeshiko-800";
-
-const Black = "text-zinc-600";
 
 const Amber = "text-amber-500";
 
@@ -46,22 +36,6 @@ const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
     >
       <Icon />
       <span className="text-nowrap">{text}</span>
-    </div>
-  );
-};
-
-const IconChip: React.FC<IconChipProps> = (props: IconChipProps) => {
-  const { icon: Icon, text, backgroundColor, iconColor, textColor } = props;
-
-  return (
-    <div
-      className={clsx(
-        "flex h-4 items-center justify-center gap-0.5 rounded-full px-1 text-xs",
-        backgroundColor,
-      )}
-    >
-      <Icon className={iconColor} />
-      <span className={clsx("text-nowrap", textColor)}>{text}</span>
     </div>
   );
 };
@@ -114,48 +88,6 @@ interface LiveBadgeProps {
 
 export const LiveBadge: React.FC<LiveBadgeProps> = ({ large, color }: LiveBadgeProps) => {
   return <Badge icon={GiMicrophone} text="ライブ" color={color ?? Nadeshiko} large={large} />;
-};
-
-export const FirstPerformanceBadge: React.FC = () => {
-  return (
-    <IconChip
-      icon={HiSparkles}
-      text="初披露"
-      backgroundColor="bg-zinc-100"
-      iconColor="text-yellow-400"
-      textColor="text-zinc-700"
-    />
-  );
-};
-
-interface CoverBadgeProps {
-  originalArtist: string;
-}
-
-export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverBadgeProps) => {
-  return (
-    <IconChip
-      icon={HiUser}
-      text={originalArtist}
-      backgroundColor="bg-zinc-100"
-      iconColor="text-zinc-500"
-      textColor="text-zinc-500"
-    />
-  );
-};
-
-interface WithTextProps {
-  text: string;
-  large?: boolean;
-  color?: string;
-}
-
-export const MeetAndGreetBadge: React.FC<WithTextProps> = ({
-  text,
-  large,
-  color,
-}: WithTextProps) => {
-  return <Badge icon={FaCat} text={text} color={color ?? Black} large={large} />;
 };
 
 interface TextBadgeProps {
