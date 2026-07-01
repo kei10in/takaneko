@@ -9,21 +9,26 @@ interface IconChipProps {
   backgroundColor: string;
   iconColor: string;
   textColor: string;
+  large?: boolean;
 }
 
 interface MeetAndGreetChipProps {
   text: string;
   color?: string;
   backgroundColor?: string;
+  large?: boolean;
 }
 
 export const IconChip: React.FC<IconChipProps> = (props: IconChipProps) => {
-  const { icon: Icon, text, backgroundColor, iconColor, textColor } = props;
+  const { icon: Icon, text, backgroundColor, iconColor, textColor, large = false } = props;
+
+  const sizeClass = large ? "h-5 px-1.5 text-sm" : "h-4 px-1 text-xs";
 
   return (
     <div
       className={clsx(
-        "flex h-4 items-center justify-center gap-0.5 rounded-full px-1 text-xs",
+        "flex items-center justify-center gap-0.5 rounded-full",
+        sizeClass,
         backgroundColor,
       )}
     >
@@ -65,6 +70,7 @@ export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
   text,
   color = "text-zinc-600",
   backgroundColor = "bg-zinc-100",
+  large,
 }: MeetAndGreetChipProps) => {
   return (
     <IconChip
@@ -73,6 +79,7 @@ export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
       backgroundColor={backgroundColor}
       iconColor={color}
       textColor={color}
+      large={large}
     />
   );
 };

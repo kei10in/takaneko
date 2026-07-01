@@ -134,7 +134,7 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {liveType != undefined && <LiveBadge color={badgeColor} large />}
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} text={type} color={badgeColor} />
+          <MeetAndGreetChip key={type} text={type} color={badgeColor} large />
         ))}
       </div>
     </div>
@@ -163,7 +163,7 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} text={type} color={badgeColor} />
+          <MeetAndGreetChip key={type} text={type} color={badgeColor} large />
         ))}
         {liveType != undefined && <LiveBadge color={badgeColor} large />}
       </div>
