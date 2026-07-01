@@ -73,8 +73,8 @@ export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>)
 
   const title =
     loaderData == undefined || (year == undefined && month == undefined)
-      ? "スケジュール"
-      : `${displayMonth(loaderData.year, loaderData.month)} のスケジュール`;
+      ? "ライブ・イベント スケジュール"
+      : `${displayMonth(loaderData.year, loaderData.month)} のライブ・イベント スケジュール`;
 
   const robots = makeRobots(args);
   const canonical = makeCanonical(args);
@@ -84,7 +84,7 @@ export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>)
     {
       name: "description",
       content:
-        "高嶺のなでしこのイベント・ライブ・リリースイベント・テレビ・ラジオ出演予定などをまとめた非公式スケジュールです。",
+        "高嶺のなでしこのライブ・イベント・リリースイベント・テレビ・ラジオ出演予定などをまとめた非公式カレンダーです。",
     },
     { tagName: "link", rel: "canonical", href: canonical },
     { name: "twitter:card", content: "summary" },
