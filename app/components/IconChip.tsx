@@ -49,7 +49,7 @@ interface LiveChipProps {
 
 export const LiveChip: React.FC<LiveChipProps> = ({ iconColor, large = false }: LiveChipProps) => {
   const backgroundColor = "bg-zinc-100";
-  const textColor = "text-zinc-800";
+  const textColor = "text-zinc-600";
 
   return (
     <IconChip
@@ -72,7 +72,7 @@ export const LiveTypeChip: React.FC<{ liveType: LiveType; large?: boolean }> = (
 }) => {
   const backgroundColor = "bg-zinc-100";
   const iconColor = "text-nadeshiko-800";
-  const textColor = "text-zinc-700";
+  const textColor = "text-zinc-600";
 
   const LIVE_TYPE_METADATA = {
     [LiveType.SOLO]: { icon: FaCrown, text: "ワンマン" },
@@ -141,7 +141,7 @@ export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
   large,
 }: MeetAndGreetChipProps) => {
   const backgroundColor = "bg-zinc-100";
-  const textColor = "text-zinc-700";
+  const textColor = "text-zinc-600";
 
   const { icon, text } = (() => {
     switch (meetAndGreetType) {
