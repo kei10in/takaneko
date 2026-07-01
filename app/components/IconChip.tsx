@@ -1,10 +1,18 @@
 import { clsx } from "clsx";
-import { FaCat, FaCrown, FaPenNib } from "react-icons/fa6";
+import { FaCrown, FaHandshake, FaPenNib, FaSignature, FaTiktok } from "react-icons/fa6";
 import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
-import { HiSparkles, HiUser, HiUsers } from "react-icons/hi2";
+import {
+  HiCamera,
+  HiChatBubbleLeftRight,
+  HiGift,
+  HiSparkles,
+  HiUser,
+  HiUsers,
+} from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType } from "~/features/events/EventType";
+import { LiveType, MeetAndGreetType } from "~/features/events/EventType";
+import { assertNever } from "~/utils/assertNever";
 
 interface IconChipProps {
   icon: IconType;
@@ -122,22 +130,48 @@ export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverB
 };
 
 interface MeetAndGreetChipProps {
-  text: string;
+  meetAndGreetType: MeetAndGreetType;
   iconColor?: string;
   large?: boolean;
 }
 
 export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
-  text,
+  meetAndGreetType,
   iconColor = "text-zinc-700",
   large,
 }: MeetAndGreetChipProps) => {
   const backgroundColor = "bg-zinc-100";
   const textColor = "text-zinc-700";
 
+  const { icon, text } = (() => {
+    switch (meetAndGreetType) {
+      case MeetAndGreetType.握手会:
+        return { icon: FaHandshake, text: "握手会" };
+      case MeetAndGreetType.撮影会:
+        return { icon: HiCamera, text: "撮影会" };
+      case MeetAndGreetType["TikTok 撮影会"]:
+        return { icon: FaTiktok, text: "TikTok 撮影会" };
+      case MeetAndGreetType.サイン会:
+        return { icon: FaSignature, text: "サイン会" };
+      case MeetAndGreetType.団体サイン会:
+        return { icon: FaSignature, text: "団体サイン会" };
+      case MeetAndGreetType["オンライン サイン会"]:
+        return { icon: FaSignature, text: "オンライン サイン会" };
+      case MeetAndGreetType["オンライン お話し会"]:
+        return { icon: HiChatBubbleLeftRight, text: "オンライン お話し会" };
+      case MeetAndGreetType.対面お話し会:
+        return { icon: HiChatBubbleLeftRight, text: "対面お話し会" };
+      case MeetAndGreetType.お渡し会:
+        return { icon: HiGift, text: "お渡し会" };
+
+      default:
+        assertNever(meetAndGreetType);
+    }
+  })();
+
   return (
     <IconChip
-      icon={FaCat}
+      icon={icon}
       text={text}
       backgroundColor={backgroundColor}
       iconColor={iconColor}
