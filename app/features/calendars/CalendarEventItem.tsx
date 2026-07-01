@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { BsClock } from "react-icons/bs";
+import { FaCat } from "react-icons/fa6";
 import { GiBowTieRibbon, GiCompactDisc, GiMicrophone, GiPopcorn } from "react-icons/gi";
 import {
   HiBeaker,
@@ -9,11 +10,10 @@ import {
   HiOutlineMapPin,
   HiRadio,
   HiTv,
-  HiUsers,
   HiVideoCamera,
 } from "react-icons/hi2";
 import { IconType } from "react-icons/lib";
-import { LiveBadge, LiveTypeBadge, MeetAndGreetBadge } from "~/components/SmallBadges";
+import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip";
 import { assertNever } from "~/utils/assertNever";
 import { UiColors } from "~/utils/uiColors";
 import { EventType, eventTypeBackgroundColor, eventTypeColors } from "../events/EventType";
@@ -102,9 +102,7 @@ const Live: React.FC<Props> = (props: Props) => {
         )}
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && (
-          <LiveTypeBadge liveType={liveType} color={eventTypeColors(event.category).text} large />
-        )}
+        {liveType != undefined && <LiveTypeChip liveType={liveType} large />}
       </div>
     </div>
   );
@@ -114,7 +112,7 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { liveType, meetAndGreetTypes, summary, location, region } = event;
   const place = location || region;
-  const badgeColor = eventTypeColors(event.category).text;
+  const chipColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -131,9 +129,9 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
         )}
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && <LiveBadge color={badgeColor} large />}
+        {liveType != undefined && <LiveChip iconColor={chipColor} large />}
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} meetAndGreetType={type} iconColor={chipColor} large />
         ))}
       </div>
     </div>
@@ -162,9 +160,9 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetBadge key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} meetAndGreetType={type} iconColor={badgeColor} large />
         ))}
-        {liveType != undefined && <LiveBadge color={badgeColor} large />}
+        {liveType != undefined && <LiveChip iconColor={badgeColor} large />}
       </div>
     </div>
   );
@@ -219,7 +217,7 @@ const EventTypeLabel: React.FC<Props> = (props: Props) => {
     case EventType.LIVE:
       return <IconLabel icon={GiMicrophone} text="ライブ" colors={colors} />;
     case EventType.MEET_AND_GREET:
-      return <IconLabel icon={HiUsers} text="対面イベント" colors={colors} />;
+      return <IconLabel icon={FaCat} text="対面イベント" colors={colors} />;
     case EventType.RELEASE_EVENT:
       return <IconLabel icon={GiCompactDisc} text="リリースイベント" colors={colors} />;
     case EventType.STREAMING:

@@ -10,8 +10,9 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { Link } from "react-router";
+import { FirstPerformanceBadge } from "~/components/IconChip";
 import { Setlist } from "~/components/Setlist";
-import { FirstPerformanceBadge, LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
+import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
 import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
