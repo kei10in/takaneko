@@ -1,5 +1,6 @@
 import { clsx } from "clsx";
 import { BsClock } from "react-icons/bs";
+import { FaCat } from "react-icons/fa6";
 import { GiBowTieRibbon, GiCompactDisc, GiMicrophone, GiPopcorn } from "react-icons/gi";
 import {
   HiBeaker,
@@ -9,7 +10,6 @@ import {
   HiOutlineMapPin,
   HiRadio,
   HiTv,
-  HiUsers,
   HiVideoCamera,
 } from "react-icons/hi2";
 import { IconType } from "react-icons/lib";
@@ -217,7 +217,7 @@ const EventTypeLabel: React.FC<Props> = (props: Props) => {
     case EventType.LIVE:
       return <IconLabel icon={GiMicrophone} text="ライブ" colors={colors} />;
     case EventType.MEET_AND_GREET:
-      return <IconLabel icon={HiUsers} text="対面イベント" colors={colors} />;
+      return <IconLabel icon={FaCat} text="対面イベント" colors={colors} />;
     case EventType.RELEASE_EVENT:
       return <IconLabel icon={GiCompactDisc} text="リリースイベント" colors={colors} />;
     case EventType.STREAMING:
