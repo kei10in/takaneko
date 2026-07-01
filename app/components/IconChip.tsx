@@ -1,7 +1,10 @@
 import { clsx } from "clsx";
-import { FaCat } from "react-icons/fa6";
-import { HiSparkles, HiUser } from "react-icons/hi2";
+import { FaCat, FaCrown, FaPenNib } from "react-icons/fa6";
+import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
+import { HiSparkles, HiUser, HiUsers } from "react-icons/hi2";
+import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
+import { LiveType } from "~/features/events/EventType";
 
 interface IconChipProps {
   icon: IconType;
@@ -9,13 +12,6 @@ interface IconChipProps {
   backgroundColor: string;
   iconColor: string;
   textColor: string;
-  large?: boolean;
-}
-
-interface MeetAndGreetChipProps {
-  text: string;
-  color?: string;
-  backgroundColor?: string;
   large?: boolean;
 }
 
@@ -35,6 +31,65 @@ export const IconChip: React.FC<IconChipProps> = (props: IconChipProps) => {
       <Icon className={iconColor} />
       <span className={clsx("text-nowrap", textColor)}>{text}</span>
     </div>
+  );
+};
+
+interface LiveChipProps {
+  iconColor: string;
+  large?: boolean;
+}
+
+export const LiveChip: React.FC<LiveChipProps> = ({ iconColor, large = false }: LiveChipProps) => {
+  const backgroundColor = "bg-zinc-100";
+  const textColor = "text-zinc-800";
+
+  return (
+    <IconChip
+      icon={GiMicrophone}
+      text="ライブ"
+      backgroundColor={backgroundColor}
+      iconColor={iconColor}
+      textColor={textColor}
+      large={large}
+    />
+  );
+};
+
+export const LiveTypeChip: React.FC<{ liveType: LiveType; large?: boolean }> = ({
+  liveType,
+  large = false,
+}: {
+  liveType: LiveType;
+  large?: boolean;
+}) => {
+  const backgroundColor = "bg-zinc-100";
+  const iconColor = "text-nadeshiko-800";
+  const textColor = "text-zinc-700";
+
+  const LIVE_TYPE_METADATA = {
+    [LiveType.SOLO]: { icon: FaCrown, text: "ワンマン" },
+    [LiveType.HOSTED]: { icon: FaPenNib, text: "主催対バン" },
+    [LiveType.FESTIVAL]: { icon: HiUsers, text: "対バン" },
+    [LiveType.JOINT]: { icon: HiUsers, text: "対バン" },
+    [LiveType.GUEST]: { icon: HiUsers, text: "対バン" },
+    [LiveType.EVENT_LIVE]: { icon: IoDiamond, text: "イベント出演" },
+    [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, text: "リリースイベント" },
+  } as const;
+
+  const liveTypeProps = LIVE_TYPE_METADATA[liveType];
+  if (!liveTypeProps) {
+    return null;
+  }
+
+  return (
+    <IconChip
+      icon={liveTypeProps.icon}
+      text={liveTypeProps.text}
+      backgroundColor={backgroundColor}
+      iconColor={iconColor}
+      textColor={textColor}
+      large={large}
+    />
   );
 };
 
@@ -66,19 +121,27 @@ export const CoverBadge: React.FC<CoverBadgeProps> = ({ originalArtist }: CoverB
   );
 };
 
+interface MeetAndGreetChipProps {
+  text: string;
+  iconColor?: string;
+  large?: boolean;
+}
+
 export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
   text,
-  color = "text-zinc-600",
-  backgroundColor = "bg-zinc-100",
+  iconColor = "text-zinc-700",
   large,
 }: MeetAndGreetChipProps) => {
+  const backgroundColor = "bg-zinc-100";
+  const textColor = "text-zinc-700";
+
   return (
     <IconChip
       icon={FaCat}
       text={text}
       backgroundColor={backgroundColor}
-      iconColor={color}
-      textColor={color}
+      iconColor={iconColor}
+      textColor={textColor}
       large={large}
     />
   );

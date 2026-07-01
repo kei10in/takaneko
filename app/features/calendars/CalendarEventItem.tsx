@@ -13,8 +13,7 @@ import {
   HiVideoCamera,
 } from "react-icons/hi2";
 import { IconType } from "react-icons/lib";
-import { MeetAndGreetChip } from "~/components/IconChip";
-import { LiveBadge, LiveTypeBadge } from "~/components/SmallBadges";
+import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip";
 import { assertNever } from "~/utils/assertNever";
 import { UiColors } from "~/utils/uiColors";
 import { EventType, eventTypeBackgroundColor, eventTypeColors } from "../events/EventType";
@@ -103,9 +102,7 @@ const Live: React.FC<Props> = (props: Props) => {
         )}
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && (
-          <LiveTypeBadge liveType={liveType} color={eventTypeColors(event.category).text} large />
-        )}
+        {liveType != undefined && <LiveTypeChip liveType={liveType} large />}
       </div>
     </div>
   );
@@ -115,7 +112,7 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
   const { liveType, meetAndGreetTypes, summary, location, region } = event;
   const place = location || region;
-  const badgeColor = eventTypeColors(event.category).text;
+  const chipColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -132,9 +129,9 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
         )}
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && <LiveBadge color={badgeColor} large />}
+        {liveType != undefined && <LiveChip iconColor={chipColor} large />}
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} text={type} iconColor={chipColor} large />
         ))}
       </div>
     </div>
@@ -163,9 +160,9 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
       </div>
       <div className="mt-4 flex flex-wrap items-center gap-1">
         {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} text={type} color={badgeColor} large />
+          <MeetAndGreetChip key={type} text={type} iconColor={badgeColor} large />
         ))}
-        {liveType != undefined && <LiveBadge color={badgeColor} large />}
+        {liveType != undefined && <LiveChip iconColor={badgeColor} large />}
       </div>
     </div>
   );
