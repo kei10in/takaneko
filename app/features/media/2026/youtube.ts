@@ -2,6 +2,51 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "bnNr5xE9cbg",
+    publishedAt: "2026-07-02",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "ebdMFFWCkG0",
+    publishedAt: "2026-07-01",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "_YLTtVDi9-o",
+    publishedAt: "2026-07-01",
+    presents: ["橋本桃呼"],
+  },
+  {
+    videoId: "YgzbYB_0Aoo",
+    publishedAt: "2026-06-30",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    videoId: "LpmrSt0BbNA",
+    publishedAt: "2026-06-29",
+    presents: ["東山恵里沙"],
+  },
+  {
+    videoId: "piHSraj9_DY",
+    publishedAt: "2026-06-26",
+    presents: ["日向端ひな"],
+  },
+  {
+    videoId: "bYJs2zGilYs",
+    publishedAt: "2026-06-25",
+    presents: ["星谷美来"],
+  },
+  {
+    videoId: "Jfbf5muvGDs",
+    publishedAt: "2026-06-24",
+    presents: ["松本ももな"],
+  },
+  {
+    videoId: "_2D6wkxB8sk",
+    publishedAt: "2026-06-23",
+    presents: ["籾山ひめり"],
+  },
+  {
     videoId: "9ZpVBv_KJrU",
     publishedAt: "2026-06-16",
     presents: ["橋本桃呼", "日向端ひな"],
