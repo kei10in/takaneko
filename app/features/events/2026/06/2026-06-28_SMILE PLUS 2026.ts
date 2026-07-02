@@ -52,12 +52,13 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2071196985517080960",
     },
   ],
-  updatedAt: "2026-06-28",
+  updatedAt: "2026-07-02",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ライブフォト - SMILE PLUS 2026 X](https://x.com/sfp_smileplus/status/2071919230510158322)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2071218571225501898)
   - [きょうのたかねこ](https://x.com/takanenofficial/status/2071054760870834664)
   - [お知らせ (出演・物販) - 公式 X](https://x.com/takanenofficial/status/2070816912376738186)
