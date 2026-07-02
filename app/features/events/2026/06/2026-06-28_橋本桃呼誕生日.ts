@@ -26,7 +26,11 @@ export const content = /* md */ `
   ## 誕生日写真
 
   - [🩷橋本桃呼 X 1](https://x.com/MomokoHashimoto/status/2070885052334940198)
-  - [🩷橋本桃呼 Instagram 1](https://www.instagram.com/p/DaILSfLEVwh)
+  - [🩷橋本桃呼 X 2](https://x.com/MomokoHashimoto/status/2071580518484005054)
+  - [🩷橋本桃呼 X 3](https://x.com/MomokoHashimoto/status/2072317880033780198)
+  - [🩷橋本桃呼 Instagram 1](https://www.instagram.com/momoko__3628/p/DaILSfLEVwh/)
+  - [🩷橋本桃呼 Instagram 2](https://www.instagram.com/momoko__3628/p/DaK7pExEeMQ/)
+  - [🩷橋本桃呼 Instagram 3](https://www.instagram.com/momoko__3628/p/DaQKcl1xgZO/)
 
   ## 公式 X
 
