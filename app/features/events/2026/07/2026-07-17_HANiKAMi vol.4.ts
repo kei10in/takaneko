@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-17_HANiKAMi vol.4.jpg",
       ref: "https://x.com/takanenofficial/status/2062831795289329914",
     },
+    {
+      path: "/events/2026/2026-07-17_HANiKAMi vol.4_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2071458656827097378",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "",
@@ -24,16 +29,23 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://w.pia.jp/t/hanikami4/",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["20:30", "21:30"],
     lineup: undefined,
-    url: undefined,
+    url: "https://x.com/takanenofficial/status/2071458656827097378",
   },
-  acts: [],
-  updatedAt: "2026-06-06",
+  acts: {
+    types: ["LIVE"],
+    start: "19:45",
+    end: "20:10",
+    setlist: [],
+    url: "",
+  },
+  updatedAt: "2026-07-02",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2071458656827097378)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2062831795289329914)
 `;
