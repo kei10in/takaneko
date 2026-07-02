@@ -6,7 +6,7 @@ export const loadImageFromFile = async (path: string): Promise<Image> => {
     const image = await loadImage(path);
     return image;
   } catch (error) {
-    const png = await sharp(path, { failOnError: true }).png();
+    const png = await sharp(path, { failOn: "error" }).png();
     const meta = await png.metadata();
 
     console.log(meta);
