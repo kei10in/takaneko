@@ -13,6 +13,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     publishedAt: "2026-06-23",
     category: "article",
     presents: ["涼海すう"],
+    officialTwitter: "https://x.com/takanenofficial/status/2071043403752828978",
   },
   {
     mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa02.html",
