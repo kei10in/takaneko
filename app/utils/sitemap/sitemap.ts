@@ -1,5 +1,4 @@
 import { DomainName } from "~/constants";
-import { calendarMonthHref, calendarMonthRangeForSEO } from "~/features/calendars/utils";
 import { EventModule } from "~/features/events/eventModule";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
@@ -14,7 +13,7 @@ export interface SitemapUrl {
   lastmod?: string;
 }
 
-export type SitemapGroupName = "core" | "calendar" | "events" | "products" | "trade";
+export type SitemapGroupName = "core" | "events" | "products" | "trade";
 
 export interface SitemapUrlGroup {
   name: SitemapGroupName;
@@ -34,7 +33,7 @@ export const allPages = async (today: NaiveDate, events: EventModule[]): Promise
 };
 
 export const sitemapGroups = async (
-  today: NaiveDate,
+  _today: NaiveDate,
   events: EventModule[],
 ): Promise<SitemapUrlGroup[]> => {
   return [
@@ -42,11 +41,6 @@ export const sitemapGroups = async (
       name: "core",
       filename: "sitemap-core.xml",
       pages: buildSitemapUrls([...buildStaticPages(), ...buildMemberPages()]),
-    },
-    {
-      name: "calendar",
-      filename: "sitemap-calendar.xml",
-      pages: buildSitemapUrls(buildMonthlyPages(today)),
     },
     {
       name: "events",
@@ -68,25 +62,6 @@ export const sitemapGroups = async (
 
 const buildSitemapUrls = (pages: SitemapPath[]): SitemapUrl[] => {
   return pages.map((page) => ({ ...page, url: encodeURI(`https://${DomainName}${page.path}`) }));
-};
-
-const buildMonthlyPages = (today: NaiveDate): SitemapPath[] => {
-  const range = calendarMonthRangeForSEO(today.naiveMonth());
-
-  const result = [];
-
-  // sitemap.xml と meta robots でのズレの対策として sitemap.xml は開始側だけ 1 ヶ月狭くする。
-  // sitemap には記載があるが、noindex になるページを発生させないため。
-  // sitemap に未記載で index されるのは問題ないため、終了側は狭くしない。
-  let current = range.start.advance(1);
-  const end = range.end;
-
-  while ([current.year, current.month] < [end.year, end.month]) {
-    result.push({ path: calendarMonthHref(current) });
-    current = current.nextMonth();
-  }
-
-  return result;
 };
 
 const buildEventPages = (events: EventModule[]): SitemapPath[] => {

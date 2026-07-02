@@ -89,10 +89,3 @@ export const calendarMonthRange = (currentMonth: NaiveMonth): MonthRange => {
 
   return { start: startMonth, end: lastMonth };
 };
-
-export const calendarMonthRangeForSEO = (currentMonth: NaiveMonth): MonthRange => {
-  const upperLimitMonth = currentMonth.advance(9);
-  const lowerLimitMonth = currentMonth.advance(2);
-
-  return { start: lowerLimitMonth, end: upperLimitMonth };
-};

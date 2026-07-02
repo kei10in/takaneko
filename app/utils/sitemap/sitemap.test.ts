@@ -16,7 +16,6 @@ describe("sitemapGroups", () => {
 
     expect(groups.map((group) => group.filename)).toEqual([
       "sitemap-core.xml",
-      "sitemap-calendar.xml",
       "sitemap-events.xml",
       "sitemap-products.xml",
       "sitemap-trade.xml",
@@ -24,11 +23,10 @@ describe("sitemapGroups", () => {
     expect(groups.find((group) => group.name === "core")?.pages.map((page) => page.path)).toContain(
       "/",
     );
-    expect(
-      groups
-        .find((group) => group.name === "calendar")
-        ?.pages.every((page) => page.path.startsWith("/calendar/")),
-    ).toBe(true);
+    expect(groups.find((group) => group.name === "core")?.pages).toContainEqual({
+      path: "/calendar",
+      url: "https://takanekofan.app/calendar",
+    });
     expect(groups.find((group) => group.name === "events")?.pages).toContainEqual({
       path: "/events/2026-06-28_Test Event",
       url: "https://takanekofan.app/events/2026-06-28_Test%20Event",

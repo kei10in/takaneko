@@ -11,11 +11,7 @@ import {
 import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import {
-  calendarMonthRange,
-  calendarMonthRangeForSEO,
-  validateYearMonth,
-} from "~/features/calendars/utils";
+import { calendarMonthRange, validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
@@ -24,48 +20,6 @@ import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
-
-const makeRobots = ({ params, loaderData }: MetaArgs<typeof loader>) => {
-  if (loaderData == undefined) {
-    return [];
-  }
-
-  const { year, month } = params;
-  // /calendar のとき index, follow。つまり robots なし
-  if (year == undefined || month == undefined) {
-    return [];
-  }
-
-  const currentMonth = NaiveDate.todayInJapan().naiveMonth();
-  const range = calendarMonthRangeForSEO(currentMonth);
-
-  const pageMonth = new NaiveMonth(loaderData.year, loaderData.month);
-  const isIndexable = isMonthInRange(pageMonth, range);
-
-  return isIndexable ? [] : [{ name: "robots", content: "noindex,follow" }];
-};
-
-const makeCanonical = ({ params, loaderData }: MetaArgs<typeof loader>) => {
-  if (loaderData == undefined) {
-    return `https://${DomainName}/calendar`;
-  }
-
-  const { year, month } = params;
-  // /calendar のときは self canonical
-  if (year == undefined || month == undefined) {
-    return `https://${DomainName}/calendar`;
-  }
-
-  const currentMonth = NaiveDate.todayInJapan().naiveMonth();
-  if (currentMonth.year === loaderData.year && currentMonth.month === loaderData.month) {
-    return `https://${DomainName}/calendar`;
-  }
-
-  const yearStr = String(loaderData.year).padStart(4, "0");
-  const monthStr = String(loaderData.month).padStart(2, "0");
-
-  return `https://${DomainName}/calendar/${yearStr}/${monthStr}`;
-};
 
 export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>) => {
   const { params, loaderData } = args;
@@ -76,9 +30,6 @@ export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>)
       ? "ライブ・イベント スケジュール"
       : `${displayMonth(loaderData.year, loaderData.month)} のライブ・イベント スケジュール`;
 
-  const robots = makeRobots(args);
-  const canonical = makeCanonical(args);
-
   return [
     { title: formatTitle(title) },
     {
@@ -86,13 +37,12 @@ export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>)
       content:
         "高嶺のなでしこのライブ・イベント・リリースイベント・テレビ・ラジオ出演予定などをまとめた非公式カレンダーです。",
     },
-    { tagName: "link", rel: "canonical", href: canonical },
+    { tagName: "link", rel: "canonical", href: `https://${DomainName}/calendar` },
     { name: "twitter:card", content: "summary" },
     { name: "twitter:site", content: "@takanekofan" },
     { name: "twitter:creator", content: "@takanekofan" },
     { name: "twitter:title", content: formatTitle(title) },
     { name: "twitter:image", content: `https://${DomainName}/takanekono-card-schedule.png` },
-    ...robots,
   ];
 };
 

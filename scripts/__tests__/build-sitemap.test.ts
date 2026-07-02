@@ -16,16 +16,12 @@ describe("buildSitemapFiles", () => {
     expect(files.map((file) => file.filename)).toEqual([
       "sitemap.xml",
       "sitemap-core.xml",
-      "sitemap-calendar.xml",
       "sitemap-events.xml",
       "sitemap-products.xml",
       "sitemap-trade.xml",
     ]);
     expect(files.find((file) => file.filename === "sitemap.xml")?.content).toContain(
       '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    );
-    expect(files.find((file) => file.filename === "sitemap.xml")?.content).toContain(
-      "<loc>https://takanekofan.app/sitemap-calendar.xml</loc>",
     );
     expect(files.find((file) => file.filename === "sitemap.xml")?.content).toContain(
       "<loc>https://takanekofan.app/sitemap-events.xml</loc>",
