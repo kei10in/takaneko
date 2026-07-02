@@ -27,7 +27,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://natsuzome.info/",
   },
   ticket: "https://r10.to/chonatsuzome2026",
-  streamings: undefined,
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv350854873",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
@@ -65,6 +68,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [ニコ生配信告知 - 公式 X](https://x.com/takanenofficial/status/2072523154266726713)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066400821529792954)
   - [出演告知 - 公式 X](https://x.com/takanenofficial/status/2047525946400583801)
 `;
