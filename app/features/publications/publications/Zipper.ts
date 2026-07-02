@@ -6,7 +6,7 @@ export const Zipper_2026年夏号: Publication = {
   date: "2026-06-30",
   kind: "mooks",
   publisher: "祥伝社",
-  url: "https://www.zipper.jp/news/news-20260514/",
+  url: "https://www.zipper.jp/news/news-20260626/",
   coverImages: [
     {
       path: "/publications/2026/2026-06-30_Zipper 2026年夏号_通常版.jpg",
@@ -23,6 +23,10 @@ export const Zipper_2026年夏号: Publication = {
     {
       text: "公式 X 発売告知",
       url: "https://x.com/takanenofficial/status/2069345040720404756",
+    },
+    {
+      text: "Zipper2026年夏号 読者プレゼント",
+      url: "https://www.zipper.jp/news/news-20260630/",
     },
     {
       text: "Zipper 公式サイト ニュース",
