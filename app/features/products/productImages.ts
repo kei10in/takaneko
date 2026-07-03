@@ -164,9 +164,11 @@ import { DIGVII_ペアアクリルブロック } from "./2026/2026-05-27_DIGVII 
 import { DIGVII_自撮り風ブロマイド } from "./2026/2026-05-27_DIGVII 自撮り風ブロマイド";
 import { 私はわたしの事が好き_生写真 } from "./2026/2026-05-28_生写真「私は、わたしの事が好き。」";
 import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_03_ミニフォトカード「私は、わたしの事が好き。」";
+import { 花柄ワンピース_ミニフォト } from "./2026/2026-06-03_ミニフォトカード「花柄ワンピース」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  花柄ワンピース_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
   BouquetOf9FlowersFinal_アンブレラマーカー,
@@ -180,6 +182,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  花柄ワンピース_ミニフォト,
   DIGVII_自撮り風ブロマイド,
   DIGVII_ペアアクリルブロック,
   DIGVII_チェキ風アクリルキーホルダー,
