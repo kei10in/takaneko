@@ -43,7 +43,7 @@
     "unified": "^11.0.5",
     "unist-util-map": "^4.0.0",
     "unist-util-visit": "^5.1.0",
-    "url-metadata": "^5.5.2",
+    "url-metadata": "^5.5.3",
     "zod": "^4.4.3",
     "zustand": "^5.0.14"
   },

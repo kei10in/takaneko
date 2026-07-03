@@ -99,8 +99,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       url-metadata:
-        specifier: ^5.5.2
-        version: 5.5.2
+        specifier: ^5.5.3
+        version: 5.5.3
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -4932,8 +4932,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  url-metadata@5.5.2:
-    resolution: {integrity: sha512-NaFgP4h80uX8iIneiM+Ic7J4gJ94lriaSLKHyxhx6Q3nz2wj+0qGbwuKMcWdhj5c2M5PtNt1piNkNwG9cDNM6Q==}
+  url-metadata@5.5.3:
+    resolution: {integrity: sha512-JHRWXzWr4IV52rBrsprWHz59pez9JBLT1Z05yKBCB0UaMGjjqEKoIjfHu/jYOtltbOyCeoO+g+Sq5eNp+sKylw==}
     engines: {node: '>=6.0.0'}
 
   url-template@2.0.8:
@@ -10341,7 +10341,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-metadata@5.5.2:
+  url-metadata@5.5.3:
     dependencies:
       cheerio: 1.2.0
       node-fetch: 2.7.0
