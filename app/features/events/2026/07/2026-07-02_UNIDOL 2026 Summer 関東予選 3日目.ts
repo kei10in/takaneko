@@ -42,12 +42,13 @@ export const meta: EventMetaDescriptor = {
     ],
     links: ["https://x.com/4glico/status/2072651353311383893"],
   },
-  updatedAt: "2026-07-02",
+  updatedAt: "2026-07-04",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [コメント動画 - UNIDOL 実行委員会 X](https://x.com/UNIDOL_EXCO/status/2072686615332639014)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2072667450517438906)
   - [告知 - UNIDOL 実行委員会 X](https://x.com/UNIDOL_EXCO/status/2072646758409367845)
 `;
