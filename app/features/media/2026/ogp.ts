@@ -9,6 +9,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     officialTwitter: "https://x.com/takanenofficial/status/2072236265840271835",
   },
   {
+    mediaUrl: "https://www.wws-channel.com/girls2/634313.html",
+    publishedAt: "2026-06-28",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://popteen.co.jp/media/87114/",
     publishedAt: "2026-06-23",
     category: "article",

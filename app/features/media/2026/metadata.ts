@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "u4mybGVFOK8",
+    title:
+      "【城月菜央】たかねこが運転免許トロッカ！早口言葉にチャレンジ！！｜運転免許トロッカ！×高嶺のなでしこ",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2026-07-03",
+    mediaUrl: "https://youtu.be/u4mybGVFOK8",
+    imageUrl: "https://i.ytimg.com/vi/u4mybGVFOK8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "bnNr5xE9cbg",
     title:
       "【涼海すう】たかねこが運転免許トロッカ！早口言葉にチャレンジ！！｜運転免許トロッカ！×高嶺のなでしこ",
@@ -70,6 +82,28 @@ export const metadata2026: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/LpmrSt0BbNA/hqdefault.jpg",
     category: "youtube",
     presents: ["東山恵里沙"],
+  },
+  {
+    kind: "youtube",
+    key: "iYyacWIzmYU",
+    title: "高嶺のなでしこ、ライブ出演前に意気込みを語る！＜ASIA CULTURE FESTIVAL 2026＞",
+    authorName: "WWS チャンネル",
+    publishedAt: "2026-06-28",
+    mediaUrl: "https://youtu.be/iYyacWIzmYU",
+    imageUrl: "https://i.ytimg.com/vi/iYyacWIzmYU/hqdefault.jpg",
+    category: "youtube",
+    presents: [],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.wws-channel.com/girls2/634313.html",
+    title: "【動画】高嶺のなでしこ、ライブ出演前に意気込みを語る！＜ASIA CULTURE FESTIVAL 2026＞",
+    authorName: "WWSチャンネル",
+    publishedAt: "2026-06-28",
+    mediaUrl: "https://www.wws-channel.com/girls2/634313.html",
+    imageUrl: "https://pub-6e6736ba37d64d4aa5ae63b074884090.r2.dev/2026/06/takane00.jpg",
+    category: "article",
+    presents: [],
   },
   {
     kind: "youtube",

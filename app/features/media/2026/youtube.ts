@@ -2,6 +2,11 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "u4mybGVFOK8",
+    publishedAt: "2026-07-03",
+    presents: ["城月菜央"],
+  },
+  {
     videoId: "bnNr5xE9cbg",
     publishedAt: "2026-07-02",
     presents: ["涼海すう"],
@@ -10,6 +15,7 @@ export const YouTube2026 = [
     videoId: "ebdMFFWCkG0",
     publishedAt: "2026-07-01",
     presents: ["涼海すう"],
+    officialTwitter: "https://x.com/takanenofficial/status/2072847800405000398",
   },
   {
     videoId: "_YLTtVDi9-o",
@@ -25,6 +31,11 @@ export const YouTube2026 = [
     videoId: "LpmrSt0BbNA",
     publishedAt: "2026-06-29",
     presents: ["東山恵里沙"],
+  },
+  {
+    videoId: "iYyacWIzmYU",
+    publishedAt: "2026-06-28",
+    presents: [],
   },
   {
     videoId: "piHSraj9_DY",
