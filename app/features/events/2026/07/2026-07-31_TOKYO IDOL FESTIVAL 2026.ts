@@ -17,6 +17,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026.webp",
       ref: "https://official.idolfes.com/s/tif2026/",
     },
+    {
+      path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026_スペシャルコラボステージ.jpg",
+      ref: "https://x.com/takanenofficial/status/2072674247311552701",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -36,6 +40,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [くままちょこっとライン夕コラボ🩷 告知- 公式 X](https://x.com/takanenofficial/status/2072674247311552701)
   - [出演日決定 - 公式 X](https://x.com/takanenofficial/status/2063834688842821651)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2041751260945379650)
   - [出演者情報 - イベントサイト](https://official.idolfes.com/s/tif2026/page/lineup)
