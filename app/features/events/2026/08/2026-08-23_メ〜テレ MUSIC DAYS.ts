@@ -21,20 +21,38 @@ export const meta: EventMetaDescriptor = {
     text: "メ〜テレ イベント情報",
     url: "https://www.nagoyatv.com/event/nagoyatv_musicdays.html",
   },
-  ticket: "",
+  ticket: "https://fan.pia.jp/nagoyatv-event/ticket/detail/152",
   streamings: undefined,
   goods: {
     time: undefined,
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-06-11",
+  acts: [
+    {
+      title: "1 部",
+      types: ["LIVE"],
+      open: "13:00",
+      start: "13:45",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "2 部",
+      types: ["LIVE"],
+      open: "16:45",
+      start: "17:30",
+      setlist: [],
+      url: "",
+    },
+  ],
+  updatedAt: "2026-07-04",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [チケット先行受付スタート - 公式 X](https://x.com/takanenofficial/status/2073381622788108294)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2064915525483086231)
   - [告知 - メ〜チケ X](https://x.com/event_nagoyatv/status/2064950762430459971)
 `;
