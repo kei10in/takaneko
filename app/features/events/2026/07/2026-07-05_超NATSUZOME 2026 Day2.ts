@@ -32,13 +32,13 @@ export const meta: EventMetaDescriptor = {
     url: "https://live.nicovideo.jp/watch/lv350854873",
   },
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["15:20", "16:20"],
+    lineup: ["ミニフォトカード「花柄ワンピース」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2073391391103951033",
   },
   acts: [
     {
-      title: "一曲入魂ステージ",
+      title: "ZOME ステージ (一曲入魂ステージ)",
       types: ["LIVE"],
       start: "11:50",
       end: "13:00",
@@ -68,6 +68,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2073391391103951033)
   - [ニコ生配信告知 - 公式 X](https://x.com/takanenofficial/status/2072523154266726713)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2066400821529792954)
   - [出演告知 - 公式 X](https://x.com/takanenofficial/status/2047525946400583801)
