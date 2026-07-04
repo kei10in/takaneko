@@ -10,6 +10,8 @@ description: Update or create event files under app/features/events in the takan
 `app/features/events` のイベントファイル更新を、既存実例から抽出したルールで一貫して実施する。  
 実ファイルの構造・カテゴリ別の書き方・テスト制約を先に確認してから編集する。
 
+特に指定がない場合は @\_local にあるファイルを参照して、既存パターンに従って編集する。
+
 ## Use Repository Examples First
 
 編集前に `references/event-patterns.md` を読み、対象に近い実ファイルを最低 1 件選ぶ。  
