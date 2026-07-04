@@ -166,6 +166,18 @@ export const metadata2026: MediaDetails[] = [
     presents: ["涼海すう"],
   },
   {
+    kind: "ogp",
+    key: "https://thetv.jp/news/detail/1405739/",
+    title:
+      "高嶺のなでしこ「国を超えて伝わるものがあったら嬉しい」、日本初開催「ASIA CULTURE FESTIVAL」で海外ファンの熱い熱気に感激 | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2026-06-21",
+    mediaUrl: "https://thetv.jp/news/detail/1405739/",
+    imageUrl: "https://thetv.jp/i/nw/1405739/17589212.jpg?w=1284",
+    category: "article",
+    presents: [],
+  },
+  {
     kind: "youtube",
     key: "9ZpVBv_KJrU",
     title:

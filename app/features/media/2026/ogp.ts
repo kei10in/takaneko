@@ -22,6 +22,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     officialTwitter: "https://x.com/takanenofficial/status/2071043403752828978",
   },
   {
+    mediaUrl: "https://thetv.jp/news/detail/1405739/",
+    publishedAt: "2026-06-21",
+    category: "article",
+    presents: [],
+  },
+  {
     mediaUrl: "https://menkyo-torocca.jp/feature/takaneko04_qa02.html",
     publishedAt: "2026-06-12",
     category: "article",
