@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Trade Products"
+  short_description: "Add and verify trade image product definitions"
+  default_prompt: "Use $update-trade-products to add a new trade-image product definition."
