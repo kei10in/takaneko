@@ -24,6 +24,43 @@ description: Add or update trade-image product definitions in the takaneko repos
    - 30 種の旧 lineup は `REGULAR_MINI_PHOTO_SET` を検討する。
    - 生写真は `REGULAR_PHOTO_SET` / `REGULAR_PHOTO_SET2` など既存定義に合わせる。
 
+## Product Group Decision
+
+`category` が `"生写真"` でも、すべてを生写真セットとして扱うわけではない。  
+画像の見た目と販売形態から、次の基準で `set` を付けるか判断する。
+
+生写真セットとして扱うもの:
+
+- 高嶺のなでしこの公式グッズとして、メンバー別の生写真カードが同じ体裁で一覧化されている。
+- 各メンバーに同じ構成の複数カットがある。
+  - 例: ヨリ/チュウ/ヒキの 3 種、またはヨリ 1/2・チュウ 1/2・ヒキ 1/2 の 6 種。
+- 画像内の各アイテムが縦長の生写真カードとして統一され、個別カードに番号やメンバー名が付いている。
+- 現行メンバーだけで構成された、通常のランダム生写真ラインナップとして見える。
+- この場合は `set: { kind: ProductLine.Photo, setName: "..." }` を設定する。
+  - `regularTakanekoPhotos()` に入り、カード subtitle は「生写真セット」になる。
+  - cropped image は `CROPPED_PHOTO_SIZE` に揃えられる。
+  - Trade text title は `生写真 <setName>` になる。
+
+その他として扱うもの:
+
+- 企画・媒体・イベント固有のブロマイド/特典で、通常のメンバー別ランダム生写真セットに見えない。
+- 各メンバー 1 カットだけ、またはメンバーごとのカット数や構成が揃っていない。
+- 横長写真、集合写真、後ろ姿、イメージカット、オフショットなどが混在している。
+- 他グループ・他出演者・媒体ロゴ主体の画像が含まれる。
+- 画像上のカード体裁が通常の生写真セットと違い、番号付きの統一カード一覧ではない。
+- この場合は `set` を設定しない。
+  - `otherTakanekoRandomGoods()` に入り、カード subtitle は「その他」になる。
+  - cropped image は通常生写真サイズではなく、その他ランダムグッズ用のサイズ計算になる。
+  - Trade text title は `${abbrevCategory(category)} ${series}` になる。
+
+過去例:
+
+- 生写真セット扱い: `生写真「Bouquet of 9 Flowers」`, `生写真「ロウルグッズ」`
+- その他扱い: `生写真「グラビアプレス Vol.12」`, `らんだむブロマイド (ハニフェス Ver.)`
+
+判断に迷う場合は推測で決めず、ユーザーに「生写真セット扱い」か「その他扱い」かを確認する。  
+確認時は、迷っている理由を「カット構成」「カード体裁」「販売形態」のどれにあるか具体的に伝える。
+
 ## Product Definition
 
 新規定義は `app/features/products/YYYY/YYYY-MM-DD_<商品名>.ts` に作る。
@@ -72,7 +109,7 @@ export const シリーズ名_ミニフォト: RandomGoods = {
 pnpm tsx scripts/crop-items.ts
 ```
 
-`tsx` が sandbox の IPC 作成で失敗した場合は、同じコマンドを承認付きで再実行する。  
+このコマンドは `tsx` の IPC 作成が sandbox 内で必ず失敗するため、最初から承認付きで sandbox 外実行する。  
 生成後、対象の `public/takaneko/cropped/<stem>_001.webp` などが追加されたことを確認する。
 
 サムネイル生成が必要な場合の実体は `.tsx` ではなく `.ts`。
@@ -81,6 +118,7 @@ pnpm tsx scripts/crop-items.ts
 pnpm tsx scripts/gen-thumbnails.ts
 ```
 
+このコマンドも `tsx` の IPC 作成が sandbox 内で必ず失敗するため、最初から承認付きで sandbox 外実行する。  
 既に `public/takaneko/thumbnails/goods/YYYY/<stem>@1x.webp`、`@2x.webp`、`@3x.webp` が揃っているなら追加生成は不要。
 
 ## Release Notes
