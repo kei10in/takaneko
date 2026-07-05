@@ -27,6 +27,11 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
       publishedAt: "2026-03-15",
     },
     {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=40lUsRoj5xs",
+      publishedAt: "2026-07-05",
+    },
+    {
       text: "アニソンでしょでしょ",
       videoId: "sFUJxqo6ye4",
       publishedAt: "2023-11-18",
