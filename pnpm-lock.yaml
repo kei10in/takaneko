@@ -99,8 +99,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       url-metadata:
-        specifier: ^5.5.2
-        version: 5.5.2
+        specifier: ^5.6.1
+        version: 5.6.1
       zod:
         specifier: ^4.4.3
         version: 4.4.3
@@ -127,8 +127,8 @@ importers:
         specifier: ^3.1.1
         version: 3.1.1(rollup@4.60.1)
       '@napi-rs/image':
-        specifier: ^1.13.0
-        version: 1.13.0
+        specifier: ^1.14.0
+        version: 1.14.0
       '@react-router/dev':
         specifier: ^7.17.0
         version: 7.17.0(@types/node@25.0.2)(jiti@2.7.0)(lightningcss@1.32.0)(react-router@7.17.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(tsx@4.22.4)(typescript@5.9.3)(vite@8.1.0(@types/node@25.0.2)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.4.5))(wrangler@4.103.0(@cloudflare/workers-types@4.20250327.0))(yaml@2.4.5)
@@ -214,17 +214,17 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       prettier:
-        specifier: ^3.8.4
-        version: 3.8.4
+        specifier: ^3.9.1
+        version: 3.9.1
       prettier-plugin-embed:
         specifier: ^0.5.1
         version: 0.5.1
       prettier-plugin-organize-imports:
         specifier: ^4.3.0
-        version: 4.3.0(prettier@3.8.4)(typescript@5.9.3)
+        version: 4.3.0(prettier@3.9.1)(typescript@5.9.3)
       prettier-plugin-tailwindcss:
         specifier: ^0.8.0
-        version: 0.8.0(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier@3.8.4)
+        version: 0.8.0(prettier-plugin-organize-imports@4.3.0(prettier@3.9.1)(typescript@5.9.3))(prettier@3.9.1)
       rehype-stringify:
         specifier: ^10.0.1
         version: 10.0.1
@@ -524,6 +524,9 @@ packages:
 
   '@emnapi/runtime@1.11.1':
     resolution: {integrity: sha512-vgj7R3y3Wgx24IQaGPA/R6YFXLHVMOZ0uVEyIQPaWs+rd1AzfEMXlAC22FYwO1XkKR6NPsq7mUandH8oIRdZFw==}
+
+  '@emnapi/runtime@1.11.2':
+    resolution: {integrity: sha512-kyOl3X0DuTiT1h2ft8r2fYO8JYtU9a9Xis/zBSiGArNaagCOWx90N1k2wxp18czFDH+OgcWGb5ZP/XMt3dcyPA==}
 
   '@emnapi/wasi-threads@1.2.1':
     resolution: {integrity: sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w==}
@@ -1575,89 +1578,89 @@ packages:
   '@mjackson/node-fetch-server@0.2.0':
     resolution: {integrity: sha512-EMlH1e30yzmTpGLQjlFmaDAjyOeZhng1/XCd7DExR8PNAnG/G1tyruZxEoUe11ClnwGhGrtsdnyyUx1frSzjng==}
 
-  '@napi-rs/image-android-arm64@1.13.0':
-    resolution: {integrity: sha512-3JYRerDVpvKrY3s7AfyBQ7nwhM9lLf7a2Zdh803pttXUFb+QLfLU+wuSNBkt+DI77zC8gEeuOtDhC3KQvoz/3A==}
+  '@napi-rs/image-android-arm64@1.14.0':
+    resolution: {integrity: sha512-LBWu1fNR7uC6kNQy+axDqXKU7Kj1x3UdD3xGKw/bks6YAUG15m92qwSwINDEB4Jqgl29vCeSNFItJZRm3byfJQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
 
-  '@napi-rs/image-darwin-arm64@1.13.0':
-    resolution: {integrity: sha512-+irpvq+WCURKDrvuLxs+Y/z/1wkzQ2c3dtmpLr2+EeHKiH661x8Iq6PUhrB2iT41HSGLZ8ygX5wjzzcgroohOQ==}
+  '@napi-rs/image-darwin-arm64@1.14.0':
+    resolution: {integrity: sha512-0f7SqjtXHelxbwkqdpUb/5yhVK7ciVoe902hqCeffhAFsJA7HQbEbzfM8W1MDawI6Ghenr5zHYQimWf1W1vaow==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
 
-  '@napi-rs/image-darwin-x64@1.13.0':
-    resolution: {integrity: sha512-CinTLm9jlZ1JwZvJNHbVQ18iLeOxE8x1asUBnN0ZmmPr5DUNYsOr9ho6uONXDGG/tGpWzXyDrrEaK1VX89MAGg==}
+  '@napi-rs/image-darwin-x64@1.14.0':
+    resolution: {integrity: sha512-wi6w06N516QzSd/QMre/Ye92mA4b5E2yQfr1+Hhml3tWrIM2Po2QvxBO9ns0AaG8u6y8b545bDzQCGLTfBykyQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
 
-  '@napi-rs/image-freebsd-x64@1.13.0':
-    resolution: {integrity: sha512-ckiKiPOvDtVrhkI77u3ZUX2yuY88esF1E+d5qtwFFtyCAGHWZG/Iro64O6n4Y06dZs5FkluZo2VRvWlqxl6u+Q==}
+  '@napi-rs/image-freebsd-x64@1.14.0':
+    resolution: {integrity: sha512-Sz1XSGF6/Xmjb33CbWLOb7h6+ekmoJRGsN0bdnzn8W86OHPTSsIbTOMtqp9ZXTLQNJgeXQhprQhhmRFNRqq0Gg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
 
-  '@napi-rs/image-linux-arm-gnueabihf@1.13.0':
-    resolution: {integrity: sha512-JOsc+lVVVfg6JqTRWt1HjGcb5E1F5VCgEfltdnV9SLUm3hfRLYVwN14ZNIhdBzRqX5RchSoplHjq+KCSk8tgHw==}
+  '@napi-rs/image-linux-arm-gnueabihf@1.14.0':
+    resolution: {integrity: sha512-ZsJ+0Rl3Ke1DN+W4lQMSzsfrwskjP4CkUsqOT7Y/HpziwirQn9R2fl2QU2Kb2eDSQvwSvGbRCkMLqH+4V4rzHg==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
 
-  '@napi-rs/image-linux-arm64-gnu@1.13.0':
-    resolution: {integrity: sha512-wf1UgZ4VZOzFu+29cr+ZJczokYAnin1zFxALYplWc1zgqZoEegiI/a1MBMYUqVXL4Bp6U0PdJSL569Pxp9CHIQ==}
+  '@napi-rs/image-linux-arm64-gnu@1.14.0':
+    resolution: {integrity: sha512-J06fGFXt76fAGEaCb3uyPQgZrwvGbpYZycA4Xz6F5dauVgcLPw75syXmggode5G+a0cSg40fjddXMvSWhPwHGQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@napi-rs/image-linux-arm64-musl@1.13.0':
-    resolution: {integrity: sha512-FAsIUjln8F32Y/nMCfSiHJC5FbmxHuYAkcR1XZNYMUmAsK7Qnu9atkqmzSC/0zlTDVnmn9DDvovBLJZX42APIw==}
+  '@napi-rs/image-linux-arm64-musl@1.14.0':
+    resolution: {integrity: sha512-AH8WvQb58ix9/RHB+9XNF2rOB8aAnFHzj0hDCCZCplRGHmv9BzOtA+IWdf5l4f7KmEJUohY+MxVWJ1jfpgn+JQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@napi-rs/image-linux-x64-gnu@1.13.0':
-    resolution: {integrity: sha512-rgPDeh2Xr7cGHQjxpWn8eFiM6Ksmtby1045DJ9JyN56JZQL9eSXzF/v3tuqg6nE84R83R4LaV7PTG1kMKw956A==}
+  '@napi-rs/image-linux-x64-gnu@1.14.0':
+    resolution: {integrity: sha512-oU3wnQcDeZf+t8vyKMP4A6okY7JNjRbiiC7j8UsJ2lDf0no3GDQEJCCFDrQ7gCKQZAI7cr0rFbI75l2KlTM0PQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@napi-rs/image-linux-x64-musl@1.13.0':
-    resolution: {integrity: sha512-DpLPe4sWC0BVglx36oXGuO4wMwPBUcy1s2XF/Txuu1ytVzpHlVJCfrv1H2g6sFi77OZV98lO8JqbJC4im3Ja0g==}
+  '@napi-rs/image-linux-x64-musl@1.14.0':
+    resolution: {integrity: sha512-iuDTfVmFm9W6S4gzLNdSFt+Wr86LtciJJ+u2i0KBixpFYoHzeIkUr6LHBIkYg3eNdi7xHBb9qFBvxxhFQg4tUQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@napi-rs/image-wasm32-wasi@1.13.0':
-    resolution: {integrity: sha512-paach4otfb9fQFK1hJ/AqfZpS+2vNBEqGSPPz/j4Cy7aAObHIU3pzSBaDRRyNZj84E7n/FKk+CxT4pbZvLLjHw==}
+  '@napi-rs/image-wasm32-wasi@1.14.0':
+    resolution: {integrity: sha512-XRAbAQVWSm4wQzYwnTtOHD+ev6dRHUxLxmFQe5Nbev12dspqkB40zsDJ/yr4VwnV80gIfEfg7BvRLw9FFvLRlg==}
     engines: {node: '>=14.0.0'}
     cpu: [wasm32]
 
-  '@napi-rs/image-win32-arm64-msvc@1.13.0':
-    resolution: {integrity: sha512-l6bTKBg5BnIY6NHgd9SDnZ5G/tc7DbWCIPE4Jyxt18P8xJ5OJHm0Rjm4Ki/7FHuLR1Za4+7AfWzpGEQyTGr98A==}
+  '@napi-rs/image-win32-arm64-msvc@1.14.0':
+    resolution: {integrity: sha512-Wuq0AfN5rjrv2SkJTubIIYW//B5aBloPxND9GxRHKgGkLhyiSxBD6iOCQA1M/n12rvF9BWeadDDO8JLoO3iRHA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
 
-  '@napi-rs/image-win32-ia32-msvc@1.13.0':
-    resolution: {integrity: sha512-dDXcFKodA/kXZexVUXTV02c3l4WKfmDZDcxdl8xw4RU7+Konpi4mOPBLSahNhBOWlYMNZrcg5cODoCc1OaOjbQ==}
+  '@napi-rs/image-win32-ia32-msvc@1.14.0':
+    resolution: {integrity: sha512-Idb+OyISq24YRdO8iU+BC6QaN4pU6HpC+SRrxFOftWJg0xXPzfPfpwpwdviduJK/SjJcHe02nhUq3HKHtUEnWQ==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
 
-  '@napi-rs/image-win32-x64-msvc@1.13.0':
-    resolution: {integrity: sha512-pY5VfH0xILroYTJ2834M523Ceb9faMaaeOoCLs6ynrxITRtb7l99JINEe9Q+XmsC1wwFdCekj8lnmAvVB6AhNA==}
+  '@napi-rs/image-win32-x64-msvc@1.14.0':
+    resolution: {integrity: sha512-Hq5BY3+FeNehRe1VPhVQ28dGTSWlxnGAHeoF7/GpgeWBfltLT5+DpkV+FPyq6ju49kG1aFofE+IlSGi5sMJ0Kw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
 
-  '@napi-rs/image@1.13.0':
-    resolution: {integrity: sha512-TeEk+USSto0e1YQdicOTFOUrvcux2gSPnkCDRv4BTTBX0g/0xX/ilaeKyPHwodF0Tm9QdIzWR+Vz5AbWdaPulA==}
+  '@napi-rs/image@1.14.0':
+    resolution: {integrity: sha512-pmwJPWY6R063luNBEP9msq9lFu+kYVMiQTJRSpyGnzYnnerYpT3U4vCgFhhVR3jypCgCVWi9viDLoEJoZoIA1w==}
     engines: {node: '>= 10'}
 
   '@napi-rs/wasm-runtime@1.1.6':
@@ -4282,8 +4285,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.8.4:
-    resolution: {integrity: sha512-N2MylSdi48+5N/6S5j+maeHbUSIzzZ5uOcX5Hm4QpV8Dkb1HFjfAKTKX6yNPJQD9AhcT3ifHNB66tWTTJDi11Q==}
+  prettier@3.9.1:
+    resolution: {integrity: sha512-ppiDo2CSwexck1eyZUwJHg/N3nf1+6IRCv7W/VJ5vaLnVCmB7+3CdRfMwoCHBBX6xTrREDTksZ4OZl5SSf4zXA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -4932,8 +4935,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  url-metadata@5.5.2:
-    resolution: {integrity: sha512-NaFgP4h80uX8iIneiM+Ic7J4gJ94lriaSLKHyxhx6Q3nz2wj+0qGbwuKMcWdhj5c2M5PtNt1piNkNwG9cDNM6Q==}
+  url-metadata@5.6.1:
+    resolution: {integrity: sha512-KflXGcvIovJ+zKM/bfUHEBexvWRaA4p1kaMHKrfbmarCmrBbpRd8V7EMT05gxWYCZi4K8la4OKf/PCTRYkAteA==}
     engines: {node: '>=6.0.0'}
 
   url-template@2.0.8:
@@ -5596,6 +5599,11 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@emnapi/runtime@1.11.2':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
   '@emnapi/wasi-threads@1.2.1':
     dependencies:
       tslib: 2.8.1
@@ -6182,17 +6190,17 @@ snapshots:
 
   '@img/sharp-wasm32@0.33.5':
     dependencies:
-      '@emnapi/runtime': 1.11.1
+      '@emnapi/runtime': 1.11.2
     optional: true
 
   '@img/sharp-wasm32@0.34.5':
     dependencies:
-      '@emnapi/runtime': 1.11.1
+      '@emnapi/runtime': 1.11.2
     optional: true
 
   '@img/sharp-wasm32@0.35.2':
     dependencies:
-      '@emnapi/runtime': 1.11.1
+      '@emnapi/runtime': 1.11.2
     optional: true
 
   '@img/sharp-webcontainers-wasm32@0.35.2':
@@ -6322,64 +6330,64 @@ snapshots:
 
   '@mjackson/node-fetch-server@0.2.0': {}
 
-  '@napi-rs/image-android-arm64@1.13.0':
+  '@napi-rs/image-android-arm64@1.14.0':
     optional: true
 
-  '@napi-rs/image-darwin-arm64@1.13.0':
+  '@napi-rs/image-darwin-arm64@1.14.0':
     optional: true
 
-  '@napi-rs/image-darwin-x64@1.13.0':
+  '@napi-rs/image-darwin-x64@1.14.0':
     optional: true
 
-  '@napi-rs/image-freebsd-x64@1.13.0':
+  '@napi-rs/image-freebsd-x64@1.14.0':
     optional: true
 
-  '@napi-rs/image-linux-arm-gnueabihf@1.13.0':
+  '@napi-rs/image-linux-arm-gnueabihf@1.14.0':
     optional: true
 
-  '@napi-rs/image-linux-arm64-gnu@1.13.0':
+  '@napi-rs/image-linux-arm64-gnu@1.14.0':
     optional: true
 
-  '@napi-rs/image-linux-arm64-musl@1.13.0':
+  '@napi-rs/image-linux-arm64-musl@1.14.0':
     optional: true
 
-  '@napi-rs/image-linux-x64-gnu@1.13.0':
+  '@napi-rs/image-linux-x64-gnu@1.14.0':
     optional: true
 
-  '@napi-rs/image-linux-x64-musl@1.13.0':
+  '@napi-rs/image-linux-x64-musl@1.14.0':
     optional: true
 
-  '@napi-rs/image-wasm32-wasi@1.13.0':
+  '@napi-rs/image-wasm32-wasi@1.14.0':
     dependencies:
       '@emnapi/core': 1.11.1
       '@emnapi/runtime': 1.11.1
       '@napi-rs/wasm-runtime': 1.1.6(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)
     optional: true
 
-  '@napi-rs/image-win32-arm64-msvc@1.13.0':
+  '@napi-rs/image-win32-arm64-msvc@1.14.0':
     optional: true
 
-  '@napi-rs/image-win32-ia32-msvc@1.13.0':
+  '@napi-rs/image-win32-ia32-msvc@1.14.0':
     optional: true
 
-  '@napi-rs/image-win32-x64-msvc@1.13.0':
+  '@napi-rs/image-win32-x64-msvc@1.14.0':
     optional: true
 
-  '@napi-rs/image@1.13.0':
+  '@napi-rs/image@1.14.0':
     optionalDependencies:
-      '@napi-rs/image-android-arm64': 1.13.0
-      '@napi-rs/image-darwin-arm64': 1.13.0
-      '@napi-rs/image-darwin-x64': 1.13.0
-      '@napi-rs/image-freebsd-x64': 1.13.0
-      '@napi-rs/image-linux-arm-gnueabihf': 1.13.0
-      '@napi-rs/image-linux-arm64-gnu': 1.13.0
-      '@napi-rs/image-linux-arm64-musl': 1.13.0
-      '@napi-rs/image-linux-x64-gnu': 1.13.0
-      '@napi-rs/image-linux-x64-musl': 1.13.0
-      '@napi-rs/image-wasm32-wasi': 1.13.0
-      '@napi-rs/image-win32-arm64-msvc': 1.13.0
-      '@napi-rs/image-win32-ia32-msvc': 1.13.0
-      '@napi-rs/image-win32-x64-msvc': 1.13.0
+      '@napi-rs/image-android-arm64': 1.14.0
+      '@napi-rs/image-darwin-arm64': 1.14.0
+      '@napi-rs/image-darwin-x64': 1.14.0
+      '@napi-rs/image-freebsd-x64': 1.14.0
+      '@napi-rs/image-linux-arm-gnueabihf': 1.14.0
+      '@napi-rs/image-linux-arm64-gnu': 1.14.0
+      '@napi-rs/image-linux-arm64-musl': 1.14.0
+      '@napi-rs/image-linux-x64-gnu': 1.14.0
+      '@napi-rs/image-linux-x64-musl': 1.14.0
+      '@napi-rs/image-wasm32-wasi': 1.14.0
+      '@napi-rs/image-win32-arm64-msvc': 1.14.0
+      '@napi-rs/image-win32-ia32-msvc': 1.14.0
+      '@napi-rs/image-win32-x64-msvc': 1.14.0
 
   '@napi-rs/wasm-runtime@1.1.6(@emnapi/core@1.10.0)(@emnapi/runtime@1.10.0)':
     dependencies:
@@ -6460,7 +6468,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.1
       pkg-types: 2.3.1
-      prettier: 3.8.4
+      prettier: 3.9.1
       react-refresh: 0.14.2
       react-router: 7.17.0(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       semver: 7.8.4
@@ -9404,18 +9412,18 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3):
+  prettier-plugin-organize-imports@4.3.0(prettier@3.9.1)(typescript@5.9.3):
     dependencies:
-      prettier: 3.8.4
+      prettier: 3.9.1
       typescript: 5.9.3
 
-  prettier-plugin-tailwindcss@0.8.0(prettier-plugin-organize-imports@4.3.0(prettier@3.8.4)(typescript@5.9.3))(prettier@3.8.4):
+  prettier-plugin-tailwindcss@0.8.0(prettier-plugin-organize-imports@4.3.0(prettier@3.9.1)(typescript@5.9.3))(prettier@3.9.1):
     dependencies:
-      prettier: 3.8.4
+      prettier: 3.9.1
     optionalDependencies:
-      prettier-plugin-organize-imports: 4.3.0(prettier@3.8.4)(typescript@5.9.3)
+      prettier-plugin-organize-imports: 4.3.0(prettier@3.9.1)(typescript@5.9.3)
 
-  prettier@3.8.4: {}
+  prettier@3.9.1: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -10341,7 +10349,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  url-metadata@5.5.2:
+  url-metadata@5.6.1:
     dependencies:
       cheerio: 1.2.0
       node-fetch: 2.7.0
