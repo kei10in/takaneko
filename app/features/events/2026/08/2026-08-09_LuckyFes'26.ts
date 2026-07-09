@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       path: "/events/2026/2026-08-09_LuckyFes'26_タイムテーブル.jpg",
-      ref: "https://x.com/takanenofficial/status/2064565863517474972",
+      ref: "https://x.com/luckyfm_fes/status/2074327548327338339",
       tags: ["timetable"],
     },
   ],
@@ -41,12 +41,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-06-10",
+  updatedAt: "2026-07-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ステージ撮影・SNS投稿ルール公開 - LuckyFes X](https://x.com/luckyfm_fes/status/2074327548327338339)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2064565863517474972)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2031222538442014861)
 `;
