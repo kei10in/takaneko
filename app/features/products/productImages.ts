@@ -175,13 +175,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   花柄ワンピース_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
-  BouquetOf9FlowersFinal_アンブレラマーカー,
-  BouquetOf9FlowersFinal_自撮りステッカー,
-  BouquetOf9Flowers_限定ガチャ,
-  BouquetOf9Flowers_生写真,
-  BouquetOf9Flowers_ミニフォト,
-  BouquetOf9Flowers_缶バッジ,
-  BouquetOf9Flowers_目印チャーム,
+  私はわたしの事が好き_生写真,
   私はわたしの事が好き_ミニフォト,
 ];
 
