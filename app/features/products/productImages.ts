@@ -165,9 +165,11 @@ import { DIGVII_自撮り風ブロマイド } from "./2026/2026-05-27_DIGVII 自
 import { 私はわたしの事が好き_生写真 } from "./2026/2026-05-28_生写真「私は、わたしの事が好き。」";
 import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_03_ミニフォトカード「私は、わたしの事が好き。」";
 import { 花柄ワンピース_ミニフォト } from "./2026/2026-06-03_ミニフォトカード「花柄ワンピース」";
+import { たかねこフェスvol6_ミニフォト } from "./2026/2026-07-12_ミニフォトカード「たかねこフェス vol.6」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  たかねこフェスvol6_ミニフォト,
   花柄ワンピース_ミニフォト,
   BouquetOf9FlowersFinal_生写真,
   BouquetOf9FlowersFinal_ミニフォト,
@@ -182,6 +184,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  たかねこフェスvol6_ミニフォト,
   花柄ワンピース_ミニフォト,
   DIGVII_自撮り風ブロマイド,
   DIGVII_ペアアクリルブロック,
