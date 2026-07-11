@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
 import {
@@ -51,6 +53,175 @@ const expectPositionsCloseTo = (actual: Rect[], expected: Rect[], tolerance = 2)
     expect(Math.abs((actual[index]?.height ?? 0) - position.height)).toBeLessThanOrEqual(tolerance);
   });
 };
+
+describe("extractMiniPhotoPositions", () => {
+  it("extracts every card position from real mini-photo sample 1", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.1.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 38, y: 26, width: 87, height: 137 },
+      { id: 2, x: 130, y: 26, width: 87, height: 137 },
+      { id: 3, x: 221, y: 26, width: 87, height: 137 },
+      { id: 4, x: 312, y: 26, width: 87, height: 137 },
+      { id: 5, x: 404, y: 26, width: 87, height: 137 },
+      { id: 6, x: 491, y: 26, width: 87, height: 137 },
+      { id: 7, x: 587, y: 26, width: 87, height: 137 },
+      { id: 8, x: 678, y: 26, width: 87, height: 137 },
+      { id: 9, x: 770, y: 26, width: 87, height: 137 },
+      { id: 10, x: 38, y: 167, width: 87, height: 137 },
+      { id: 11, x: 130, y: 167, width: 87, height: 137 },
+      { id: 12, x: 221, y: 167, width: 87, height: 137 },
+      { id: 13, x: 312, y: 167, width: 87, height: 137 },
+      { id: 14, x: 404, y: 167, width: 87, height: 137 },
+      { id: 15, x: 491, y: 167, width: 87, height: 137 },
+      { id: 16, x: 587, y: 167, width: 87, height: 137 },
+      { id: 17, x: 678, y: 167, width: 87, height: 137 },
+      { id: 18, x: 770, y: 167, width: 87, height: 137 },
+      { id: 19, x: 38, y: 309, width: 87, height: 137 },
+      { id: 20, x: 130, y: 309, width: 87, height: 137 },
+      { id: 21, x: 221, y: 309, width: 87, height: 137 },
+      { id: 22, x: 312, y: 309, width: 87, height: 137 },
+      { id: 23, x: 404, y: 309, width: 87, height: 137 },
+      { id: 24, x: 491, y: 309, width: 87, height: 137 },
+      { id: 25, x: 587, y: 309, width: 87, height: 137 },
+      { id: 26, x: 678, y: 309, width: 87, height: 137 },
+      { id: 27, x: 770, y: 309, width: 87, height: 137 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(3);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
+
+  it("extracts every card position from real mini-photo sample 2", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.2.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 37, y: 57, width: 81, height: 128 },
+      { id: 2, x: 123, y: 57, width: 81, height: 128 },
+      { id: 3, x: 210, y: 57, width: 81, height: 128 },
+      { id: 4, x: 297, y: 57, width: 81, height: 128 },
+      { id: 5, x: 383, y: 57, width: 81, height: 128 },
+      { id: 6, x: 470, y: 57, width: 81, height: 128 },
+      { id: 7, x: 557, y: 57, width: 81, height: 128 },
+      { id: 8, x: 643, y: 57, width: 81, height: 128 },
+      { id: 9, x: 729, y: 57, width: 81, height: 128 },
+      { id: 10, x: 37, y: 190, width: 81, height: 128 },
+      { id: 11, x: 123, y: 190, width: 81, height: 128 },
+      { id: 12, x: 210, y: 190, width: 81, height: 128 },
+      { id: 13, x: 297, y: 190, width: 81, height: 128 },
+      { id: 14, x: 383, y: 190, width: 81, height: 128 },
+      { id: 15, x: 470, y: 190, width: 81, height: 128 },
+      { id: 16, x: 557, y: 190, width: 81, height: 128 },
+      { id: 17, x: 643, y: 190, width: 81, height: 128 },
+      { id: 18, x: 729, y: 190, width: 81, height: 128 },
+      { id: 19, x: 37, y: 323, width: 81, height: 128 },
+      { id: 20, x: 123, y: 323, width: 81, height: 128 },
+      { id: 21, x: 210, y: 323, width: 81, height: 128 },
+      { id: 22, x: 297, y: 323, width: 81, height: 128 },
+      { id: 23, x: 383, y: 323, width: 81, height: 128 },
+      { id: 24, x: 470, y: 323, width: 81, height: 128 },
+      { id: 25, x: 557, y: 323, width: 81, height: 128 },
+      { id: 26, x: 643, y: 323, width: 81, height: 128 },
+      { id: 27, x: 729, y: 323, width: 81, height: 128 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(3);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
+
+  it("extracts every card position from real mini-photo sample 3", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.3.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 166, y: 14, width: 79, height: 125 },
+      { id: 2, x: 256, y: 14, width: 79, height: 125 },
+      { id: 3, x: 346, y: 14, width: 79, height: 125 },
+      { id: 4, x: 437, y: 14, width: 79, height: 125 },
+      { id: 5, x: 527, y: 14, width: 79, height: 125 },
+      { id: 6, x: 617, y: 14, width: 79, height: 125 },
+      { id: 7, x: 31, y: 148, width: 79, height: 125 },
+      { id: 8, x: 121, y: 148, width: 79, height: 125 },
+      { id: 9, x: 211, y: 148, width: 79, height: 125 },
+      { id: 10, x: 301, y: 148, width: 79, height: 125 },
+      { id: 11, x: 392, y: 148, width: 79, height: 125 },
+      { id: 12, x: 482, y: 148, width: 79, height: 125 },
+      { id: 13, x: 572, y: 148, width: 79, height: 125 },
+      { id: 14, x: 663, y: 148, width: 79, height: 125 },
+      { id: 15, x: 753, y: 148, width: 79, height: 125 },
+      { id: 16, x: 166, y: 281, width: 79, height: 125 },
+      { id: 17, x: 256, y: 281, width: 79, height: 125 },
+      { id: 18, x: 346, y: 281, width: 79, height: 125 },
+      { id: 19, x: 437, y: 281, width: 79, height: 125 },
+      { id: 20, x: 527, y: 281, width: 79, height: 125 },
+      { id: 21, x: 617, y: 281, width: 79, height: 125 },
+      { id: 22, x: 31, y: 412, width: 79, height: 125 },
+      { id: 23, x: 121, y: 412, width: 79, height: 125 },
+      { id: 24, x: 211, y: 412, width: 79, height: 125 },
+      { id: 25, x: 301, y: 412, width: 79, height: 125 },
+      { id: 26, x: 392, y: 412, width: 79, height: 125 },
+      { id: 27, x: 482, y: 412, width: 79, height: 125 },
+      { id: 28, x: 572, y: 412, width: 79, height: 125 },
+      { id: 29, x: 663, y: 412, width: 79, height: 125 },
+      { id: 30, x: 753, y: 412, width: 79, height: 125 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(4);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
+
+  it("extracts every card position from real mini-photo sample 4", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.4.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 18, y: 13, width: 28, height: 44 },
+      { id: 2, x: 49, y: 13, width: 28, height: 44 },
+      { id: 3, x: 79, y: 13, width: 28, height: 44 },
+      { id: 4, x: 110, y: 13, width: 28, height: 44 },
+      { id: 5, x: 140, y: 13, width: 28, height: 44 },
+      { id: 6, x: 171, y: 13, width: 28, height: 44 },
+      { id: 7, x: 201, y: 13, width: 28, height: 44 },
+      { id: 8, x: 232, y: 13, width: 28, height: 44 },
+      { id: 9, x: 262, y: 13, width: 28, height: 44 },
+      { id: 10, x: 18, y: 63, width: 28, height: 44 },
+      { id: 11, x: 49, y: 63, width: 28, height: 44 },
+      { id: 12, x: 79, y: 63, width: 28, height: 44 },
+      { id: 13, x: 110, y: 63, width: 28, height: 44 },
+      { id: 14, x: 140, y: 63, width: 28, height: 44 },
+      { id: 15, x: 171, y: 63, width: 28, height: 44 },
+      { id: 16, x: 201, y: 63, width: 28, height: 44 },
+      { id: 17, x: 232, y: 63, width: 28, height: 44 },
+      { id: 18, x: 262, y: 63, width: 28, height: 44 },
+      { id: 19, x: 18, y: 114, width: 28, height: 44 },
+      { id: 20, x: 49, y: 114, width: 28, height: 44 },
+      { id: 21, x: 79, y: 114, width: 28, height: 44 },
+      { id: 22, x: 110, y: 114, width: 28, height: 44 },
+      { id: 23, x: 140, y: 114, width: 28, height: 44 },
+      { id: 24, x: 171, y: 114, width: 28, height: 44 },
+      { id: 25, x: 201, y: 114, width: 28, height: 44 },
+      { id: 26, x: 232, y: 114, width: 28, height: 44 },
+      { id: 27, x: 262, y: 114, width: 28, height: 44 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(3);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
+});
 
 describe("extractMiniPhotoPositionsFromPixels", () => {
   it("extracts a grid from a non-white background while retaining small position offsets", () => {
