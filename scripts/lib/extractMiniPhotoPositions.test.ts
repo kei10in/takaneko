@@ -309,6 +309,50 @@ describe("extractMiniPhotoPositions", () => {
     expect(result.value.diagnostics.rows).toBe(4);
     expect(result.value.diagnostics.columns).toBe(9);
   });
+
+  it("extracts every card position from real mini-photo sample 7", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.7.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 16, y: 6, width: 29, height: 46 },
+      { id: 2, x: 47, y: 6, width: 29, height: 46 },
+      { id: 3, x: 77, y: 6, width: 29, height: 46 },
+      { id: 4, x: 108, y: 6, width: 29, height: 46 },
+      { id: 5, x: 138, y: 6, width: 29, height: 46 },
+      { id: 6, x: 168, y: 6, width: 29, height: 46 },
+      { id: 7, x: 199, y: 6, width: 29, height: 46 },
+      { id: 8, x: 229, y: 6, width: 29, height: 46 },
+      { id: 9, x: 260, y: 6, width: 29, height: 46 },
+      { id: 10, x: 16, y: 57, width: 29, height: 46 },
+      { id: 11, x: 47, y: 57, width: 29, height: 46 },
+      { id: 12, x: 77, y: 57, width: 29, height: 46 },
+      { id: 13, x: 108, y: 57, width: 29, height: 46 },
+      { id: 14, x: 138, y: 57, width: 29, height: 46 },
+      { id: 15, x: 168, y: 57, width: 29, height: 46 },
+      { id: 16, x: 199, y: 57, width: 29, height: 46 },
+      { id: 17, x: 229, y: 57, width: 29, height: 46 },
+      { id: 18, x: 260, y: 57, width: 29, height: 46 },
+      { id: 19, x: 16, y: 106, width: 29, height: 46 },
+      { id: 20, x: 46, y: 106, width: 29, height: 46 },
+      { id: 21, x: 76, y: 106, width: 29, height: 46 },
+      { id: 22, x: 107, y: 106, width: 29, height: 46 },
+      { id: 23, x: 138, y: 106, width: 29, height: 46 },
+      { id: 24, x: 168, y: 106, width: 29, height: 46 },
+      { id: 25, x: 199, y: 106, width: 29, height: 46 },
+      { id: 26, x: 229, y: 106, width: 29, height: 46 },
+      { id: 27, x: 260, y: 106, width: 29, height: 46 },
+      { id: 28, x: 106, y: 154, width: 29, height: 46 },
+      { id: 29, x: 138, y: 154, width: 29, height: 46 },
+      { id: 30, x: 169, y: 154, width: 29, height: 46 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(4);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
 });
 
 describe("extractMiniPhotoPositionsFromPixels", () => {

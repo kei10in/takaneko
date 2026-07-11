@@ -58,7 +58,7 @@ interface LayoutCandidate {
   rows: number;
   columns: number;
   score: number;
-  alignment: "global-grid" | "row-wise";
+  alignment: "global-grid" | "row-wise" | "row-wise-connected";
 }
 
 interface AxisModel {
@@ -130,6 +130,7 @@ export const extractMiniPhotoPositionsFromPixels = (
   const usefulChromaLayout =
     chromaForegroundLayout != undefined &&
     (bestBaselineLayout == undefined ||
+      chromaForegroundLayout.rects.length > bestBaselineLayout.rects.length * 1.2 ||
       (chromaForegroundLayout.rects.length > bestBaselineLayout.rects.length &&
         layoutOccupancy(chromaForegroundLayout) > layoutOccupancy(bestBaselineLayout) * 1.2))
       ? chromaForegroundLayout
@@ -166,6 +167,7 @@ export const extractMiniPhotoPositionsFromPixels = (
     image.height,
     normalizeMode,
     best.alignment,
+    image,
   );
   const positions = sortPositions(refined).map((rect, index) => ({
     id: index + 1,
@@ -303,19 +305,21 @@ const detectForegroundLayout = (
     edges,
     createForegroundMask(image, estimateBackgroundColor(image), foregroundThreshold),
     foregroundThreshold > 45 ? 0.15 : 0.08,
+    false,
   );
 
 const detectChromaForegroundLayout = (
   image: PixelImage,
   edges: EdgeMap,
 ): LayoutCandidate | undefined =>
-  detectForegroundLayoutFromMask(image, edges, createChromaForegroundMask(image), 0.08);
+  detectForegroundLayoutFromMask(image, edges, createChromaForegroundMask(image), 0.08, true);
 
 const detectForegroundLayoutFromMask = (
   image: PixelImage,
   edges: EdgeMap,
   foreground: Uint8Array,
   columnSupportRatio: number,
+  splitMergedRuns: boolean,
 ): LayoutCandidate | undefined => {
   const rowProjection = Array.from({ length: image.height }, (_, y) => {
     let count = 0;
@@ -324,11 +328,18 @@ const detectForegroundLayoutFromMask = (
     }
     return count;
   });
-  const rowRuns = findProjectionRuns(
+  const initialRowRuns = findProjectionRuns(
     rowProjection,
     Math.max(3, Math.round(image.width * 0.08)),
     Math.max(4, Math.round(image.height * 0.07)),
   );
+  const rowRuns = splitMergedRuns
+    ? splitOversizedRuns(
+        initialRowRuns,
+        median(initialRowRuns.map(([top, bottom]) => bottom - top + 1)),
+      )
+    : initialRowRuns;
+  let splitOccurred = rowRuns.length > initialRowRuns.length;
   const rows = rowRuns.map(([top, bottom], row) => {
     const height = bottom - top + 1;
     const columnProjection = Array.from({ length: image.width }, (_, x) => {
@@ -338,11 +349,16 @@ const detectForegroundLayoutFromMask = (
       }
       return count;
     });
-    return findProjectionRuns(
+    const columnRuns = findProjectionRuns(
       columnProjection,
       Math.max(3, Math.round(height * columnSupportRatio)),
       Math.max(4, Math.round(image.width * 0.02)),
-    )
+    );
+    const separatedColumnRuns = splitMergedRuns
+      ? splitOversizedRuns(columnRuns, height * TARGET_ASPECT_RATIO)
+      : columnRuns;
+    splitOccurred ||= separatedColumnRuns.length > columnRuns.length;
+    return separatedColumnRuns
       .map(([left, right], column): ClusteredRect => {
         const width = right - left + 1;
         const boundaryScore = rectangleBoundaryScore(edges, image.width, image.height, {
@@ -403,7 +419,7 @@ const detectForegroundLayoutFromMask = (
     rows: nonEmptyRows.length,
     columns: Math.max(...nonEmptyRows.map((row) => row.length)),
     score,
-    alignment: "row-wise",
+    alignment: splitOccurred ? "row-wise-connected" : "row-wise",
   };
 };
 
@@ -494,6 +510,18 @@ const findProjectionRuns = (
 
   return runs;
 };
+
+const splitOversizedRuns = (runs: [number, number][], targetLength: number): [number, number][] =>
+  runs.flatMap(([start, end]) => {
+    const length = end - start + 1;
+    const parts = Math.max(1, Math.round(length / targetLength));
+    if (parts === 1) return [[start, end]];
+
+    return Array.from({ length: parts }, (_, index): [number, number] => [
+      Math.round(start + (length * index) / parts),
+      Math.round(start + (length * (index + 1)) / parts) - 1,
+    ]);
+  });
 
 const findProjectionPeaks = (projection: number[], limit: number): number[] => {
   const sortedValues = [...projection].sort((a, b) => a - b);
@@ -771,7 +799,7 @@ const normalizeLayout = (
   imageHeight: number,
 ): ClusteredRect[] => {
   if (mode === "none") return layout.rects;
-  if (layout.alignment === "row-wise") {
+  if (layout.alignment !== "global-grid") {
     const representative = chooseRepresentativeSize(layout.rects);
     const rowPositions = groupByIndex(layout.rects, (rect) => rect.row).map((row) =>
       Math.round(median(row.map((rect) => rect.y))),
@@ -934,10 +962,18 @@ const refinePositions = (
   imageHeight: number,
   mode: NormalizeMode,
   alignment: LayoutCandidate["alignment"],
+  image: PixelImage,
 ): ClusteredRect[] => {
   if (mode === "none" || mode === "grid") return rects;
-  if (alignment === "row-wise") {
-    return refineRowWisePositions(rects, edges, imageWidth, imageHeight);
+  if (alignment !== "global-grid") {
+    return refineRowWisePositions(
+      rects,
+      edges,
+      imageWidth,
+      imageHeight,
+      alignment === "row-wise-connected",
+      image,
+    );
   }
   if (rects.every((rect) => rect.width < 40)) return rects;
 
@@ -984,6 +1020,8 @@ const refineRowWisePositions = (
   edges: EdgeMap,
   imageWidth: number,
   imageHeight: number,
+  constrainToSource: boolean,
+  image: PixelImage,
 ): ClusteredRect[] => {
   const representative = chooseRepresentativeSize(rects);
   const sizeCandidates = [-2, -1, 0, 1, 2].flatMap((widthDelta) =>
@@ -1022,7 +1060,10 @@ const refineRowWisePositions = (
   const refined = rects.map(
     (rect) => bestPositionForSize(rect, bestSize, edges, imageWidth, imageHeight).rect,
   );
-  return bestSize.width < 40 ? regularizeRowPositionOutliers(refined) : refined;
+  if (bestSize.width >= 40) return refined;
+  return constrainToSource
+    ? regularizeLowResolutionLayout(rects, refined, image)
+    : regularizeRowPositionOutliers(refined);
 };
 
 const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
@@ -1038,6 +1079,83 @@ const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] 
       return Math.abs(rect.x - expected) >= 2 ? { ...rect, x: expected } : rect;
     });
   });
+
+const regularizeLowResolutionLayout = (
+  sourceRects: ClusteredRect[],
+  refinedRects: ClusteredRect[],
+  image: PixelImage,
+): ClusteredRect[] => {
+  const sourceRows = groupByIndex(sourceRects, (rect) => rect.row).map((row) =>
+    [...row].sort((a, b) => a.x - b.x),
+  );
+  const refinedRows = groupByIndex(refinedRects, (rect) => rect.row).map((row) =>
+    [...row].sort((a, b) => a.x - b.x),
+  );
+  const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
+  const referenceRows = sourceRows.filter((row) => row.length === maximumColumns);
+  const referenceColumns = Array.from({ length: maximumColumns }, (_, column) =>
+    Math.round(median(referenceRows.map((row) => row[column].x))),
+  );
+
+  return refinedRows.flatMap((row, rowIndex) => {
+    const sourceRow = sourceRows[rowIndex];
+    const rowY = Math.round(median(row.map((rect) => rect.y)));
+    const possibleOffsets = Array.from(
+      { length: maximumColumns - row.length + 1 },
+      (_, offset) => ({
+        offset,
+        distance: sourceRow.reduce(
+          (sum, rect, index) => sum + Math.abs(rect.x - referenceColumns[offset + index]),
+          0,
+        ),
+      }),
+    );
+    const columnOffset = possibleOffsets.sort((a, b) => a.distance - b.distance)[0]?.offset ?? 0;
+
+    return row.map((rect, index) => {
+      const expectedX = referenceColumns[columnOffset + index];
+      const constrainedX = rect.x < expectedX || rect.x > expectedX + 1 ? expectedX : rect.x;
+      const currentFrameScore = verticalChromaFrameScore(image, {
+        ...rect,
+        x: constrainedX,
+      });
+      const leftFrameScore = verticalChromaFrameScore(image, {
+        ...rect,
+        x: constrainedX - 1,
+      });
+      return {
+        ...rect,
+        x:
+          constrainedX > 0 && leftFrameScore > 10 && leftFrameScore > currentFrameScore * 1.5
+            ? constrainedX - 1
+            : constrainedX,
+        y: Math.abs(rect.y - rowY) >= 2 ? rowY : rect.y,
+      };
+    });
+  });
+};
+
+const verticalChromaFrameScore = (
+  image: PixelImage,
+  rect: Pick<RectCandidate, "x" | "y" | "width" | "height">,
+): number => {
+  const lineScore = (x: number): number => {
+    if (x < 0 || x >= image.width) return 0;
+    return average(
+      Array.from({ length: rect.height }, (_, offset) => {
+        const y = rect.y + offset;
+        if (y < 0 || y >= image.height) return 0;
+        const index = (y * image.width + x) * image.channels;
+        const red = image.data[index];
+        const green = image.data[index + 1];
+        const blue = image.data[index + 2];
+        return Math.max(red, green, blue) - Math.min(red, green, blue);
+      }),
+    );
+  };
+
+  return Math.min(lineScore(rect.x), lineScore(rect.x + rect.width - 1));
+};
 
 const bestPositionForSize = (
   rect: ClusteredRect,
