@@ -221,6 +221,50 @@ describe("extractMiniPhotoPositions", () => {
     expect(result.value.diagnostics.rows).toBe(3);
     expect(result.value.diagnostics.columns).toBe(9);
   });
+
+  it("extracts every card position from real mini-photo sample 5", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/miniphoto-sample.5.webp"));
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 130, y: 40, width: 61, height: 96 },
+      { id: 2, x: 209, y: 40, width: 61, height: 96 },
+      { id: 3, x: 286, y: 40, width: 61, height: 96 },
+      { id: 4, x: 364, y: 40, width: 61, height: 96 },
+      { id: 5, x: 441, y: 40, width: 61, height: 96 },
+      { id: 6, x: 518, y: 40, width: 61, height: 96 },
+      { id: 7, x: 596, y: 40, width: 61, height: 96 },
+      { id: 8, x: 674, y: 40, width: 61, height: 96 },
+      { id: 9, x: 752, y: 40, width: 61, height: 96 },
+      { id: 10, x: 247, y: 158, width: 61, height: 96 },
+      { id: 11, x: 325, y: 158, width: 61, height: 96 },
+      { id: 12, x: 402, y: 158, width: 61, height: 96 },
+      { id: 13, x: 480, y: 158, width: 61, height: 96 },
+      { id: 14, x: 557, y: 158, width: 61, height: 96 },
+      { id: 15, x: 635, y: 158, width: 61, height: 96 },
+      { id: 16, x: 247, y: 281, width: 61, height: 96 },
+      { id: 17, x: 325, y: 281, width: 61, height: 96 },
+      { id: 18, x: 402, y: 281, width: 61, height: 96 },
+      { id: 19, x: 480, y: 281, width: 61, height: 96 },
+      { id: 20, x: 557, y: 281, width: 61, height: 96 },
+      { id: 21, x: 635, y: 281, width: 61, height: 96 },
+      { id: 22, x: 123, y: 406, width: 61, height: 96 },
+      { id: 23, x: 200, y: 406, width: 61, height: 96 },
+      { id: 24, x: 278, y: 406, width: 61, height: 96 },
+      { id: 25, x: 355, y: 406, width: 61, height: 96 },
+      { id: 26, x: 433, y: 406, width: 61, height: 96 },
+      { id: 27, x: 510, y: 406, width: 61, height: 96 },
+      { id: 28, x: 588, y: 406, width: 61, height: 96 },
+      { id: 29, x: 664, y: 406, width: 61, height: 96 },
+      { id: 30, x: 743, y: 406, width: 61, height: 96 },
+    ]);
+    expect(result.value.confidence).toBeGreaterThan(0.6);
+    expect(result.value.diagnostics.rows).toBe(4);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
 });
 
 describe("extractMiniPhotoPositionsFromPixels", () => {

@@ -72,6 +72,7 @@ const TARGET_ASPECT_RATIO = 54 / 86;
 const MAX_ASPECT_RATIO = 56 / 84;
 const CANDIDATE_MIN_ASPECT_RATIO = MIN_ASPECT_RATIO - 0.08;
 const CANDIDATE_MAX_ASPECT_RATIO = MAX_ASPECT_RATIO + 0.08;
+const SIZE_ASPECT_RATIO_WEIGHT = 4.7;
 
 export const extractMiniPhotoPositions = async (
   input: Uint8Array,
@@ -112,8 +113,20 @@ export const extractMiniPhotoPositionsFromPixels = (
 
   const edges = createEdgeMap(image);
   const rawCandidates = detectRectCandidates(image, edges);
-  const foregroundLayout = detectForegroundLayout(image, edges);
-  const layouts = [foregroundLayout, ...createLayoutCandidates(rawCandidates)]
+  const foregroundLayout = detectForegroundLayout(image, edges, 45);
+  const highContrastForegroundLayout = detectForegroundLayout(image, edges, 100);
+  const edgeLayouts = createLayoutCandidates(rawCandidates);
+  const baselineLayouts = [foregroundLayout, ...edgeLayouts]
+    .filter((layout): layout is LayoutCandidate => layout != undefined)
+    .sort((a, b) => b.score - a.score);
+  const bestBaselineLayout = baselineLayouts[0];
+  const usefulHighContrastLayout =
+    highContrastForegroundLayout != undefined &&
+    (bestBaselineLayout == undefined ||
+      highContrastForegroundLayout.rects.length > bestBaselineLayout.rects.length * 1.2)
+      ? highContrastForegroundLayout
+      : undefined;
+  const layouts = [usefulHighContrastLayout, ...baselineLayouts]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
     .sort((a, b) => b.score - a.score);
   const best = layouts[0];
@@ -272,9 +285,13 @@ const detectRectCandidates = (image: PixelImage, edges: EdgeMap): RectCandidate[
   return suppressDuplicateRectangles(sorted).slice(0, 500);
 };
 
-const detectForegroundLayout = (image: PixelImage, edges: EdgeMap): LayoutCandidate | undefined => {
+const detectForegroundLayout = (
+  image: PixelImage,
+  edges: EdgeMap,
+  foregroundThreshold: number,
+): LayoutCandidate | undefined => {
   const background = estimateBackgroundColor(image);
-  const foreground = createForegroundMask(image, background, 45);
+  const foreground = createForegroundMask(image, background, foregroundThreshold);
   const rowProjection = Array.from({ length: image.height }, (_, y) => {
     let count = 0;
     for (let x = 0; x < image.width; x += 1) {
@@ -298,7 +315,7 @@ const detectForegroundLayout = (image: PixelImage, edges: EdgeMap): LayoutCandid
     });
     return findProjectionRuns(
       columnProjection,
-      Math.max(3, Math.round(height * 0.08)),
+      Math.max(3, Math.round(height * (foregroundThreshold > 45 ? 0.15 : 0.08))),
       Math.max(4, Math.round(image.width * 0.02)),
     )
       .map(([left, right], column): ClusteredRect => {
@@ -322,6 +339,14 @@ const detectForegroundLayout = (image: PixelImage, edges: EdgeMap): LayoutCandid
   );
 
   if (nonEmptyRows.length < 2 || rects.length < 4) return undefined;
+  const horizontalPairs = nonEmptyRows.flatMap((row) =>
+    row.slice(1).map((rect, index) => rect.x < row[index].x + row[index].width - 1),
+  );
+  const horizontalOverlapRatio =
+    horizontalPairs.length === 0
+      ? 0
+      : horizontalPairs.filter(Boolean).length / horizontalPairs.length;
+  if (horizontalOverlapRatio > 0.1) return undefined;
 
   const representative = chooseRepresentativeSize(rects);
   const sizeConsistency = average(
@@ -929,11 +954,13 @@ const refineRowWisePositions = (
   const bestSize =
     maximumBoundaryScore > 0.15
       ? scoredSizes
-          .filter((size) => size.boundaryScore >= maximumBoundaryScore * 0.9)
+          .filter((size) => size.boundaryScore >= maximumBoundaryScore * 0.75)
           .sort(
             (a, b) =>
-              Math.abs(a.width / a.height - TARGET_ASPECT_RATIO) -
-              Math.abs(b.width / b.height - TARGET_ASPECT_RATIO),
+              b.boundaryScore -
+              Math.abs(b.width / b.height - TARGET_ASPECT_RATIO) * SIZE_ASPECT_RATIO_WEIGHT -
+              (a.boundaryScore -
+                Math.abs(a.width / a.height - TARGET_ASPECT_RATIO) * SIZE_ASPECT_RATIO_WEIGHT),
           )[0]
       : scoredSizes.sort((a, b) => b.boundaryScore - a.boundaryScore)[0];
 
