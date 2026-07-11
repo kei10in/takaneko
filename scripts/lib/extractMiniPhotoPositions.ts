@@ -115,6 +115,7 @@ export const extractMiniPhotoPositionsFromPixels = (
   const rawCandidates = detectRectCandidates(image, edges);
   const foregroundLayout = detectForegroundLayout(image, edges, 45);
   const highContrastForegroundLayout = detectForegroundLayout(image, edges, 100);
+  const chromaForegroundLayout = detectChromaForegroundLayout(image, edges);
   const edgeLayouts = createLayoutCandidates(rawCandidates);
   const baselineLayouts = [foregroundLayout, ...edgeLayouts]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
@@ -126,7 +127,14 @@ export const extractMiniPhotoPositionsFromPixels = (
       highContrastForegroundLayout.rects.length > bestBaselineLayout.rects.length * 1.2)
       ? highContrastForegroundLayout
       : undefined;
-  const layouts = [usefulHighContrastLayout, ...baselineLayouts]
+  const usefulChromaLayout =
+    chromaForegroundLayout != undefined &&
+    (bestBaselineLayout == undefined ||
+      (chromaForegroundLayout.rects.length > bestBaselineLayout.rects.length &&
+        layoutOccupancy(chromaForegroundLayout) > layoutOccupancy(bestBaselineLayout) * 1.2))
+      ? chromaForegroundLayout
+      : undefined;
+  const layouts = [usefulHighContrastLayout, usefulChromaLayout, ...baselineLayouts]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
     .sort((a, b) => b.score - a.score);
   const best = layouts[0];
@@ -289,9 +297,26 @@ const detectForegroundLayout = (
   image: PixelImage,
   edges: EdgeMap,
   foregroundThreshold: number,
+): LayoutCandidate | undefined =>
+  detectForegroundLayoutFromMask(
+    image,
+    edges,
+    createForegroundMask(image, estimateBackgroundColor(image), foregroundThreshold),
+    foregroundThreshold > 45 ? 0.15 : 0.08,
+  );
+
+const detectChromaForegroundLayout = (
+  image: PixelImage,
+  edges: EdgeMap,
+): LayoutCandidate | undefined =>
+  detectForegroundLayoutFromMask(image, edges, createChromaForegroundMask(image), 0.08);
+
+const detectForegroundLayoutFromMask = (
+  image: PixelImage,
+  edges: EdgeMap,
+  foreground: Uint8Array,
+  columnSupportRatio: number,
 ): LayoutCandidate | undefined => {
-  const background = estimateBackgroundColor(image);
-  const foreground = createForegroundMask(image, background, foregroundThreshold);
   const rowProjection = Array.from({ length: image.height }, (_, y) => {
     let count = 0;
     for (let x = 0; x < image.width; x += 1) {
@@ -315,7 +340,7 @@ const detectForegroundLayout = (
     });
     return findProjectionRuns(
       columnProjection,
-      Math.max(3, Math.round(height * (foregroundThreshold > 45 ? 0.15 : 0.08))),
+      Math.max(3, Math.round(height * columnSupportRatio)),
       Math.max(4, Math.round(image.width * 0.02)),
     )
       .map(([left, right], column): ClusteredRect => {
@@ -421,6 +446,31 @@ const createForegroundMask = (
       mask[y * image.width + x] = distance > threshold ? 1 : 0;
     }
   }
+  return mask;
+};
+
+const createChromaForegroundMask = (image: PixelImage): Uint8Array => {
+  const background = estimateBackgroundColor(image);
+  const backgroundChroma = Math.max(...background) - Math.min(...background);
+  const mask = new Uint8Array(image.width * image.height);
+
+  for (let y = 0; y < image.height; y += 1) {
+    for (let x = 0; x < image.width; x += 1) {
+      const index = (y * image.width + x) * image.channels;
+      const red = image.data[index];
+      const green = image.data[index + 1];
+      const blue = image.data[index + 2];
+      const distance =
+        Math.abs(red - background[0]) +
+        Math.abs(green - background[1]) +
+        Math.abs(blue - background[2]);
+      const chroma = Math.max(red, green, blue) - Math.min(red, green, blue);
+      const isDark = red + green + blue < 240;
+      mask[y * image.width + x] =
+        distance > 30 && (chroma > backgroundChroma + 10 || isDark) ? 1 : 0;
+    }
+  }
+
   return mask;
 };
 
@@ -584,6 +634,9 @@ const createLayoutFromSize = (
     alignment: "global-grid",
   };
 };
+
+const layoutOccupancy = (layout: LayoutCandidate): number =>
+  layout.rects.length / (layout.rows * layout.columns);
 
 const overlapRatio = (rects: ClusteredRect[], rows: number, columns: number): number => {
   const horizontalPairs = Array.from({ length: rows }).flatMap((_, row) => {
@@ -966,10 +1019,25 @@ const refineRowWisePositions = (
 
   if (bestSize == undefined) return rects;
 
-  return rects.map(
+  const refined = rects.map(
     (rect) => bestPositionForSize(rect, bestSize, edges, imageWidth, imageHeight).rect,
   );
+  return bestSize.width < 40 ? regularizeRowPositionOutliers(refined) : refined;
 };
+
+const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
+  groupByIndex(rects, (rect) => rect.row).flatMap((row) => {
+    const sorted = [...row].sort((a, b) => a.x - b.x);
+    if (sorted.length < 3) return sorted;
+
+    const step = Math.round(median(sorted.slice(1).map((rect, index) => rect.x - sorted[index].x)));
+    const origin = Math.round(median(sorted.map((rect, index) => rect.x - step * index)));
+
+    return sorted.map((rect, index) => {
+      const expected = origin + step * index;
+      return Math.abs(rect.x - expected) >= 2 ? { ...rect, x: expected } : rect;
+    });
+  });
 
 const bestPositionForSize = (
   rect: ClusteredRect,
