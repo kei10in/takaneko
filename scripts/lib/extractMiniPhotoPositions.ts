@@ -58,6 +58,7 @@ interface LayoutCandidate {
   rows: number;
   columns: number;
   score: number;
+  alignment: "global-grid" | "row-wise";
 }
 
 interface AxisModel {
@@ -111,7 +112,10 @@ export const extractMiniPhotoPositionsFromPixels = (
 
   const edges = createEdgeMap(image);
   const rawCandidates = detectRectCandidates(image, edges);
-  const layouts = createLayoutCandidates(rawCandidates);
+  const foregroundLayout = detectForegroundLayout(image, edges);
+  const layouts = [foregroundLayout, ...createLayoutCandidates(rawCandidates)]
+    .filter((layout): layout is LayoutCandidate => layout != undefined)
+    .sort((a, b) => b.score - a.score);
   const best = layouts[0];
 
   if (best == undefined || best.score < 0.46) {
@@ -134,7 +138,14 @@ export const extractMiniPhotoPositionsFromPixels = (
 
   const normalizeMode = options.normalizeMode ?? "position-only";
   const normalized = normalizeLayout(best, normalizeMode, edges, image.width, image.height);
-  const refined = refinePositions(normalized, edges, image.width, image.height, normalizeMode);
+  const refined = refinePositions(
+    normalized,
+    edges,
+    image.width,
+    image.height,
+    normalizeMode,
+    best.alignment,
+  );
   const positions = sortPositions(refined).map((rect, index) => ({
     id: index + 1,
     x: rect.x,
@@ -259,6 +270,154 @@ const detectRectCandidates = (image: PixelImage, edges: EdgeMap): RectCandidate[
 
   const sorted = candidates.sort((a, b) => b.boundaryScore - a.boundaryScore).slice(0, 2500);
   return suppressDuplicateRectangles(sorted).slice(0, 500);
+};
+
+const detectForegroundLayout = (image: PixelImage, edges: EdgeMap): LayoutCandidate | undefined => {
+  const background = estimateBackgroundColor(image);
+  const foreground = createForegroundMask(image, background, 45);
+  const rowProjection = Array.from({ length: image.height }, (_, y) => {
+    let count = 0;
+    for (let x = 0; x < image.width; x += 1) {
+      count += foreground[y * image.width + x];
+    }
+    return count;
+  });
+  const rowRuns = findProjectionRuns(
+    rowProjection,
+    Math.max(3, Math.round(image.width * 0.08)),
+    Math.max(4, Math.round(image.height * 0.07)),
+  );
+  const rows = rowRuns.map(([top, bottom], row) => {
+    const height = bottom - top + 1;
+    const columnProjection = Array.from({ length: image.width }, (_, x) => {
+      let count = 0;
+      for (let y = top; y <= bottom; y += 1) {
+        count += foreground[y * image.width + x];
+      }
+      return count;
+    });
+    return findProjectionRuns(
+      columnProjection,
+      Math.max(3, Math.round(height * 0.08)),
+      Math.max(4, Math.round(image.width * 0.02)),
+    )
+      .map(([left, right], column): ClusteredRect => {
+        const width = right - left + 1;
+        const boundaryScore = rectangleBoundaryScore(edges, image.width, image.height, {
+          x: left,
+          y: top,
+          width,
+          height,
+        });
+        return { x: left, y: top, width, height, boundaryScore, row, column };
+      })
+      .filter((rect) => {
+        const ratio = rect.width / rect.height;
+        return ratio >= CANDIDATE_MIN_ASPECT_RATIO && ratio <= CANDIDATE_MAX_ASPECT_RATIO;
+      });
+  });
+  const nonEmptyRows = rows.filter((row) => row.length >= 2);
+  const rects = nonEmptyRows.flatMap((row, rowIndex) =>
+    row.map((rect, column) => ({ ...rect, row: rowIndex, column })),
+  );
+
+  if (nonEmptyRows.length < 2 || rects.length < 4) return undefined;
+
+  const representative = chooseRepresentativeSize(rects);
+  const sizeConsistency = average(
+    rects.map(
+      (rect) =>
+        1 -
+        clamp(
+          Math.abs(rect.width - representative.width) / representative.width +
+            Math.abs(rect.height - representative.height) / representative.height,
+          0,
+          1,
+        ),
+    ),
+  );
+  const aspect = scoreAspectRatio(representative.width / representative.height);
+  const horizontalSpacing = average(
+    nonEmptyRows.map((row) => scoreRegularDifferences(row.map((rect) => rect.x))),
+  );
+  const verticalSpacing = scoreRegularDifferences(
+    nonEmptyRows.map((row) => median(row.map((rect) => rect.y))),
+  );
+  const score =
+    sizeConsistency * 0.35 + aspect * 0.25 + horizontalSpacing * 0.25 + verticalSpacing * 0.15;
+
+  if (sizeConsistency < 0.88 || aspect < 0.75 || horizontalSpacing < 0.75) return undefined;
+
+  return {
+    rects,
+    rows: nonEmptyRows.length,
+    columns: Math.max(...nonEmptyRows.map((row) => row.length)),
+    score,
+    alignment: "row-wise",
+  };
+};
+
+const estimateBackgroundColor = (image: PixelImage): [number, number, number] => {
+  const pixels: [number, number, number][] = [];
+  const appendPixel = (x: number, y: number) => {
+    const index = (y * image.width + x) * image.channels;
+    pixels.push([image.data[index], image.data[index + 1], image.data[index + 2]]);
+  };
+
+  for (let x = 0; x < image.width; x += 1) {
+    appendPixel(x, 0);
+    appendPixel(x, image.height - 1);
+  }
+  for (let y = 1; y < image.height - 1; y += 1) {
+    appendPixel(0, y);
+    appendPixel(image.width - 1, y);
+  }
+
+  return [
+    median(pixels.map((pixel) => pixel[0])),
+    median(pixels.map((pixel) => pixel[1])),
+    median(pixels.map((pixel) => pixel[2])),
+  ];
+};
+
+const createForegroundMask = (
+  image: PixelImage,
+  background: [number, number, number],
+  threshold: number,
+): Uint8Array => {
+  const mask = new Uint8Array(image.width * image.height);
+  for (let y = 0; y < image.height; y += 1) {
+    for (let x = 0; x < image.width; x += 1) {
+      const index = (y * image.width + x) * image.channels;
+      const distance =
+        Math.abs(image.data[index] - background[0]) +
+        Math.abs(image.data[index + 1] - background[1]) +
+        Math.abs(image.data[index + 2] - background[2]);
+      mask[y * image.width + x] = distance > threshold ? 1 : 0;
+    }
+  }
+  return mask;
+};
+
+const findProjectionRuns = (
+  projection: number[],
+  threshold: number,
+  minimumLength: number,
+): [number, number][] => {
+  const runs: [number, number][] = [];
+  let start: number | undefined;
+
+  for (let index = 0; index <= projection.length; index += 1) {
+    if (index < projection.length && projection[index] >= threshold && start == undefined) {
+      start = index;
+    }
+    if ((index === projection.length || projection[index] < threshold) && start != undefined) {
+      if (index - start >= minimumLength) runs.push([start, index - 1]);
+      start = undefined;
+    }
+  }
+
+  return runs;
 };
 
 const findProjectionPeaks = (projection: number[], limit: number): number[] => {
@@ -392,7 +551,13 @@ const createLayoutFromSize = (
   if (rows < 2 && columns < 4) return undefined;
   if (overlapRatio(rects, rows, columns) > 0.1) return undefined;
 
-  return { rects, rows, columns, score: scoreLayout(rects, rows, columns) };
+  return {
+    rects,
+    rows,
+    columns,
+    score: scoreLayout(rects, rows, columns),
+    alignment: "global-grid",
+  };
 };
 
 const overlapRatio = (rects: ClusteredRect[], rows: number, columns: number): number => {
@@ -528,7 +693,24 @@ const normalizeLayout = (
   imageHeight: number,
 ): ClusteredRect[] => {
   if (mode === "none") return layout.rects;
+  if (layout.alignment === "row-wise") {
+    const representative = chooseRepresentativeSize(layout.rects);
+    const rowPositions = groupByIndex(layout.rects, (rect) => rect.row).map((row) =>
+      Math.round(median(row.map((rect) => rect.y))),
+    );
+    const columnPositions = groupByIndex(layout.rects, (rect) => rect.column).map((column) =>
+      Math.round(median(column.map((rect) => rect.x))),
+    );
+    return layout.rects.map((rect) => ({
+      ...rect,
+      x: mode === "grid" ? (columnPositions[rect.column] ?? rect.x) : rect.x,
+      y: mode === "grid" ? (rowPositions[rect.row] ?? rect.y) : rect.y,
+      width: representative.width,
+      height: representative.height,
+    }));
+  }
   const model = fitGridModel(layout, edges, imageWidth, imageHeight);
+  const columnPositions = regularizeSmallAxis(model.columns);
   const occupiedCells = new Map(layout.rects.map((rect) => [`${rect.row}:${rect.column}`, rect]));
   const averageBoundary = average(layout.rects.map((rect) => rect.boundaryScore));
 
@@ -539,7 +721,7 @@ const normalizeLayout = (
         ...(existing ?? { boundaryScore: 0 }),
         row,
         column,
-        x: model.columns.positions[column],
+        x: columnPositions[column],
         y: model.rows.positions[row],
         width: model.columns.size,
         height: model.rows.size,
@@ -555,6 +737,15 @@ const normalizeLayout = (
       ];
     }),
   );
+};
+
+const regularizeSmallAxis = (model: AxisModel): number[] => {
+  if (model.size >= 40 || model.positions.length < 5) return model.positions;
+  const first = model.positions[0];
+  const last = model.positions.at(-1);
+  if (first == undefined || last == undefined) return model.positions;
+  const step = (last - first) / (model.positions.length - 1);
+  return model.positions.map((_, index) => Math.round(first + step * index));
 };
 
 const fitGridModel = (
@@ -664,14 +855,19 @@ const refinePositions = (
   imageWidth: number,
   imageHeight: number,
   mode: NormalizeMode,
+  alignment: LayoutCandidate["alignment"],
 ): ClusteredRect[] => {
   if (mode === "none" || mode === "grid") return rects;
+  if (alignment === "row-wise") {
+    return refineRowWisePositions(rects, edges, imageWidth, imageHeight);
+  }
+  if (rects.every((rect) => rect.width < 40)) return rects;
 
   return rects.map((rect) => {
     const alternatives = [-2, -1, 0, 1, 2].flatMap((offsetX) =>
       [-2, -1, 0, 1, 2].flatMap((offsetY) =>
-        [-1, 0, 1].flatMap((widthDelta) =>
-          [-1, 0, 1].map((heightDelta) => ({
+        [-2, -1, 0, 1, 2].flatMap((widthDelta) =>
+          [-2, -1, 0, 1, 2].map((heightDelta) => ({
             ...rect,
             x: rect.x + offsetX,
             y: rect.y + offsetY,
@@ -703,6 +899,85 @@ const refinePositions = (
     })[0];
     return best ?? rect;
   });
+};
+
+const refineRowWisePositions = (
+  rects: ClusteredRect[],
+  edges: EdgeMap,
+  imageWidth: number,
+  imageHeight: number,
+): ClusteredRect[] => {
+  const representative = chooseRepresentativeSize(rects);
+  const sizeCandidates = [-2, -1, 0, 1, 2].flatMap((widthDelta) =>
+    [-2, -1, 0, 1, 2].map((heightDelta) => ({
+      width: representative.width + widthDelta,
+      height: representative.height + heightDelta,
+    })),
+  );
+  const scoredSizes = sizeCandidates
+    .filter(({ width, height }) => {
+      const ratio = width / height;
+      return ratio >= CANDIDATE_MIN_ASPECT_RATIO && ratio <= CANDIDATE_MAX_ASPECT_RATIO;
+    })
+    .map((size) => ({
+      ...size,
+      boundaryScore: average(
+        rects.map((rect) => bestPositionForSize(rect, size, edges, imageWidth, imageHeight).score),
+      ),
+    }));
+  const maximumBoundaryScore = Math.max(...scoredSizes.map((size) => size.boundaryScore));
+  const bestSize =
+    maximumBoundaryScore > 0.15
+      ? scoredSizes
+          .filter((size) => size.boundaryScore >= maximumBoundaryScore * 0.9)
+          .sort(
+            (a, b) =>
+              Math.abs(a.width / a.height - TARGET_ASPECT_RATIO) -
+              Math.abs(b.width / b.height - TARGET_ASPECT_RATIO),
+          )[0]
+      : scoredSizes.sort((a, b) => b.boundaryScore - a.boundaryScore)[0];
+
+  if (bestSize == undefined) return rects;
+
+  return rects.map(
+    (rect) => bestPositionForSize(rect, bestSize, edges, imageWidth, imageHeight).rect,
+  );
+};
+
+const bestPositionForSize = (
+  rect: ClusteredRect,
+  size: { width: number; height: number },
+  edges: EdgeMap,
+  imageWidth: number,
+  imageHeight: number,
+): { rect: ClusteredRect; score: number } => {
+  const candidates = [-2, -1, 0, 1, 2].flatMap((offsetX) =>
+    [-2, -1, 0, 1, 2].map((offsetY) => ({
+      ...rect,
+      x: rect.x + offsetX,
+      y: rect.y + offsetY,
+      width: size.width,
+      height: size.height,
+      adjustment: Math.abs(offsetX) + Math.abs(offsetY),
+    })),
+  );
+  const best = candidates
+    .filter(
+      (candidate) =>
+        candidate.x > 0 &&
+        candidate.y > 0 &&
+        candidate.x + candidate.width < imageWidth &&
+        candidate.y + candidate.height < imageHeight,
+    )
+    .map((candidate) => ({
+      rect: candidate,
+      score:
+        rectangleBoundaryScore(edges, imageWidth, imageHeight, candidate) -
+        candidate.adjustment * 0.008,
+    }))
+    .sort((a, b) => b.score - a.score)[0];
+
+  return best ?? { rect, score: 0 };
 };
 
 const chooseRepresentativeSize = (rects: RectCandidate[]): { width: number; height: number } => {
