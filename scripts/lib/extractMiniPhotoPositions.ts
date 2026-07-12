@@ -77,6 +77,8 @@ const CATALOG_COLUMNS = 6;
 const CATALOG_INNER_FRAME_MAX_FILL = 0.78;
 const CATALOG_CARD_WIDTH_STEP_RATIO = 0.875;
 const CATALOG_CARD_HEIGHT_STEP_RATIO = 0.925;
+const CATALOG_TOP_LEFT_WIDTH_STEP_RATIO = 0.77;
+const CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO = 0.943;
 
 export const extractMiniPhotoPositions = async (
   input: Uint8Array,
@@ -235,21 +237,38 @@ const completeCatalogLayout = (
   const verticalStep = Math.round(median(verticalDifferences));
   if (horizontalStep <= representative.width || verticalStep <= representative.height) return rects;
 
-  const detectedInnerFrame =
+  const detectedCenteredInnerFrame =
     representative.width / horizontalStep < CATALOG_INNER_FRAME_MAX_FILL &&
     representative.height / verticalStep < CATALOG_INNER_FRAME_MAX_FILL;
-  const width = detectedInnerFrame
+  const detectedTopLeftInnerFrame =
+    representative.width / horizontalStep < CATALOG_INNER_FRAME_MAX_FILL &&
+    representative.height / verticalStep >= CATALOG_INNER_FRAME_MAX_FILL;
+  const detectedInnerFrame = detectedCenteredInnerFrame || detectedTopLeftInnerFrame;
+  const width = detectedCenteredInnerFrame
     ? Math.round(horizontalStep * CATALOG_CARD_WIDTH_STEP_RATIO)
-    : representative.width;
-  const height = detectedInnerFrame
+    : detectedTopLeftInnerFrame
+      ? Math.round(horizontalStep * CATALOG_TOP_LEFT_WIDTH_STEP_RATIO)
+      : representative.width;
+  const height = detectedCenteredInnerFrame
     ? Math.round(verticalStep * CATALOG_CARD_HEIGHT_STEP_RATIO)
-    : representative.height;
-  const inset = detectedInnerFrame ? Math.round((width - representative.width) / 2) : 0;
+    : detectedTopLeftInnerFrame
+      ? Math.round(verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO)
+      : representative.height;
+  const horizontalInset = detectedCenteredInnerFrame
+    ? Math.round((width - representative.width) / 2)
+    : detectedTopLeftInnerFrame
+      ? width - representative.width
+      : 0;
+  const verticalInset = detectedCenteredInnerFrame
+    ? horizontalInset
+    : detectedTopLeftInnerFrame
+      ? height - representative.height
+      : 0;
   const transformedRows = sourceRows.map((row) =>
     row.map((rect) => ({
       ...rect,
-      x: rect.x - inset,
-      y: rect.y - inset,
+      x: rect.x - horizontalInset,
+      y: rect.y - verticalInset,
       width,
       height,
     })),
