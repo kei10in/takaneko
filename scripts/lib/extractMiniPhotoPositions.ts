@@ -79,6 +79,9 @@ const CATALOG_CARD_WIDTH_STEP_RATIO = 0.875;
 const CATALOG_CARD_HEIGHT_STEP_RATIO = 0.925;
 const CATALOG_TOP_LEFT_WIDTH_STEP_RATIO = 0.77;
 const CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO = 0.943;
+const CATALOG_MAX_CARD_ASPECT_RATIO = 0.69;
+const CATALOG_CARD_PIXEL_ASPECT_RATIO = 0.636;
+const CATALOG_MAX_STANDARD_GRID_ASPECT_RATIO = 0.72;
 
 export const extractMiniPhotoPositions = async (
   input: Uint8Array,
@@ -243,27 +246,49 @@ const completeCatalogLayout = (
   const detectedTopLeftInnerFrame =
     representative.width / horizontalStep < CATALOG_INNER_FRAME_MAX_FILL &&
     representative.height / verticalStep >= CATALOG_INNER_FRAME_MAX_FILL;
-  const detectedInnerFrame = detectedCenteredInnerFrame || detectedTopLeftInnerFrame;
-  const width = detectedCenteredInnerFrame
-    ? Math.round(horizontalStep * CATALOG_CARD_WIDTH_STEP_RATIO)
-    : detectedTopLeftInnerFrame
-      ? Math.round(horizontalStep * CATALOG_TOP_LEFT_WIDTH_STEP_RATIO)
-      : representative.width;
-  const height = detectedCenteredInnerFrame
-    ? Math.round(verticalStep * CATALOG_CARD_HEIGHT_STEP_RATIO)
-    : detectedTopLeftInnerFrame
-      ? Math.round(verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO)
-      : representative.height;
+  const detectedWideGridInnerFrame =
+    detectedCenteredInnerFrame &&
+    horizontalStep / verticalStep > CATALOG_MAX_STANDARD_GRID_ASPECT_RATIO;
+  const detectedWideFrame =
+    representative.width / representative.height > CATALOG_MAX_CARD_ASPECT_RATIO;
+  const needsFrameCorrection =
+    detectedCenteredInnerFrame || detectedTopLeftInnerFrame || detectedWideFrame;
+  const width = detectedWideGridInnerFrame
+    ? Math.round(
+        verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO * CATALOG_CARD_PIXEL_ASPECT_RATIO,
+      )
+    : detectedCenteredInnerFrame
+      ? Math.round(horizontalStep * CATALOG_CARD_WIDTH_STEP_RATIO)
+      : detectedTopLeftInnerFrame
+        ? Math.round(horizontalStep * CATALOG_TOP_LEFT_WIDTH_STEP_RATIO)
+        : detectedWideFrame
+          ? Math.round(
+              verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO * CATALOG_CARD_PIXEL_ASPECT_RATIO,
+            )
+          : representative.width;
+  const height = detectedWideGridInnerFrame
+    ? Math.round(verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO)
+    : detectedCenteredInnerFrame
+      ? Math.round(verticalStep * CATALOG_CARD_HEIGHT_STEP_RATIO)
+      : detectedTopLeftInnerFrame
+        ? Math.round(verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO)
+        : detectedWideFrame
+          ? Math.round(verticalStep * CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO)
+          : representative.height;
   const horizontalInset = detectedCenteredInnerFrame
     ? Math.round((width - representative.width) / 2)
     : detectedTopLeftInnerFrame
       ? width - representative.width
-      : 0;
+      : detectedWideFrame
+        ? -Math.round((representative.width - width) / 2)
+        : 0;
   const verticalInset = detectedCenteredInnerFrame
     ? horizontalInset
     : detectedTopLeftInnerFrame
       ? height - representative.height
-      : 0;
+      : detectedWideFrame
+        ? -Math.round((verticalStep - representative.height) / 2)
+        : 0;
   const transformedRows = sourceRows.map((row) =>
     row.map((rect) => ({
       ...rect,
@@ -314,7 +339,7 @@ const completeCatalogLayout = (
   const rowPositions = [...rowsAbove, ...modeledExistingRows, ...rowsBelow];
   const leadingAddedRows = rowsAbove.length;
 
-  const refinedColumns = detectedInnerFrame
+  const refinedColumns = needsFrameCorrection
     ? columns.map((position) =>
         bestCatalogAxisPosition(position, 4, (candidate) =>
           average(
@@ -330,7 +355,7 @@ const completeCatalogLayout = (
         ),
       )
     : columns;
-  const refinedRows = detectedInnerFrame
+  const refinedRows = needsFrameCorrection
     ? rowPositions.map((position) =>
         bestCatalogAxisPosition(position, 4, (candidate) =>
           average(
