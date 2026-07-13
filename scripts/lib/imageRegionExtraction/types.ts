@@ -82,6 +82,10 @@ export interface ExtractionProfile {
   refinement: {
     sizeAspectRatioWeight: number;
   };
+  additionalForegroundVariants: {
+    threshold: number;
+    splitMergedRuns: boolean;
+  }[];
 }
 
 export type PositionPostProcessor = (

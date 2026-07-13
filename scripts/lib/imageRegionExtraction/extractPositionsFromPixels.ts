@@ -61,6 +61,11 @@ export const extractPositionsFromPixels = (
   const foregroundLayout = detectForegroundLayout(image, edges, 45, profile);
   const highContrastForegroundLayout = detectForegroundLayout(image, edges, 100, profile);
   const chromaForegroundLayout = detectChromaForegroundLayout(image, edges, profile);
+  const additionalForegroundLayouts = profile.additionalForegroundVariants
+    .map(({ threshold, splitMergedRuns }) =>
+      detectForegroundLayout(image, edges, threshold, profile, splitMergedRuns),
+    )
+    .filter((layout): layout is LayoutCandidate => layout != undefined);
   const edgeLayouts = createLayoutCandidates(rawCandidates, profile);
   const baselineLayouts = [foregroundLayout, ...edgeLayouts]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
@@ -80,7 +85,12 @@ export const extractPositionsFromPixels = (
         layoutOccupancy(chromaForegroundLayout) > layoutOccupancy(bestBaselineLayout) * 1.2))
       ? chromaForegroundLayout
       : undefined;
-  const layouts = [usefulHighContrastLayout, usefulChromaLayout, ...baselineLayouts]
+  const layouts = [
+    ...additionalForegroundLayouts,
+    usefulHighContrastLayout,
+    usefulChromaLayout,
+    ...baselineLayouts,
+  ]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
     .sort((a, b) => b.score - a.score);
   const best = layouts[0];
@@ -222,13 +232,14 @@ const detectForegroundLayout = (
   edges: EdgeMap,
   foregroundThreshold: number,
   profile: ExtractionProfile,
+  splitMergedRuns = false,
 ): LayoutCandidate | undefined =>
   detectForegroundLayoutFromMask(
     image,
     edges,
     createForegroundMask(image, estimateBackgroundColor(image), foregroundThreshold),
     foregroundThreshold > 45 ? 0.15 : 0.08,
-    false,
+    splitMergedRuns,
     profile,
   );
 

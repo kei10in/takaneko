@@ -1,10 +1,10 @@
 import type { ExtractionProfile } from "../imageRegionExtraction/types";
 
-export const miniPhotoExtractionProfile: ExtractionProfile = {
+export const photoExtractionProfile: ExtractionProfile = {
   aspectRatio: {
-    minimum: 52 / 88,
-    target: 54 / 86,
-    maximum: 56 / 84,
+    minimum: 87 / 129,
+    target: 89 / 127,
+    maximum: 91 / 125,
     candidateMargin: 0.08,
   },
   layout: {
@@ -15,5 +15,8 @@ export const miniPhotoExtractionProfile: ExtractionProfile = {
   refinement: {
     sizeAspectRatioWeight: 4.7,
   },
-  additionalForegroundVariants: [],
+  additionalForegroundVariants: [
+    { threshold: 20, splitMergedRuns: true },
+    { threshold: 30, splitMergedRuns: true },
+  ],
 };
