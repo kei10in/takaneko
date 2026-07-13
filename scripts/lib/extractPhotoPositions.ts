@@ -6,8 +6,8 @@ import type {
   ExtractPositionsError,
   ExtractPositionsOptions,
   PixelImage,
-  PositionPostProcessor,
 } from "./imageRegionExtraction/types";
+import { correctOverdetectedCatalogLayout } from "./photoExtraction/catalogCorrection";
 import { photoExtractionProfile } from "./photoExtraction/profile";
 
 export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types";
@@ -15,8 +15,6 @@ export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types";
 export type ExtractPhotoPositionsOptions = ExtractPositionsOptions;
 export type ExtractedPhotoPositions = ExtractedPositions;
 export type ExtractPhotoPositionsError = ExtractPositionsError;
-
-const preserveDetectedLayout: PositionPostProcessor = (rects) => rects;
 
 export const extractPhotoPositions = async (
   input: Uint8Array,
@@ -30,4 +28,9 @@ export const extractPhotoPositionsFromPixels = (
   image: PixelImage,
   options: ExtractPhotoPositionsOptions = {},
 ): Result<ExtractedPhotoPositions, ExtractPhotoPositionsError> =>
-  extractPositionsFromPixels(image, photoExtractionProfile, preserveDetectedLayout, options);
+  extractPositionsFromPixels(
+    image,
+    photoExtractionProfile,
+    correctOverdetectedCatalogLayout,
+    options,
+  );
