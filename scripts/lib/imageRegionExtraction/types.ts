@@ -81,6 +81,8 @@ export interface ExtractionProfile {
   };
   refinement: {
     sizeAspectRatioWeight: number;
+    regularizeColumnPositionOutliers: boolean;
+    regularizeRowPositions: boolean;
   };
   additionalForegroundVariants: {
     threshold: number;

@@ -123,11 +123,33 @@ const refineRowWisePositions = (
   const refined = rects.map(
     (rect) => bestPositionForSize(rect, bestSize, edges, imageWidth, imageHeight).rect,
   );
-  if (bestSize.width >= 40) return refined;
-  return constrainToSource
+  if (bestSize.width >= 40) {
+    const regularizedColumns = profile.refinement.regularizeColumnPositionOutliers
+      ? regularizeColumnPositionOutliers(refined)
+      : refined;
+    return profile.refinement.regularizeRowPositions
+      ? regularizeRowPositions(regularizedColumns)
+      : regularizedColumns;
+  }
+  const regularized = constrainToSource
     ? regularizeLowResolutionLayout(rects, refined, image)
     : regularizeRowPositionOutliers(refined);
+  return profile.refinement.regularizeRowPositions
+    ? regularizeRowPositions(regularized)
+    : regularized;
 };
+
+const regularizeColumnPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
+  groupByIndex(rects, (rect) => rect.column).flatMap((column) => {
+    const columnX = Math.round(median(column.map((rect) => rect.x)));
+    return column.map((rect) => (Math.abs(rect.x - columnX) >= 2 ? { ...rect, x: columnX } : rect));
+  });
+
+const regularizeRowPositions = (rects: ClusteredRect[]): ClusteredRect[] =>
+  groupByIndex(rects, (rect) => rect.row).flatMap((row) => {
+    const rowY = Math.round(median(row.map((rect) => rect.y)));
+    return row.map((rect) => ({ ...rect, y: rowY }));
+  });
 
 const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
   groupByIndex(rects, (rect) => rect.row).flatMap((row) => {

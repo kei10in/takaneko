@@ -14,6 +14,8 @@ export const photoExtractionProfile: ExtractionProfile = {
   },
   refinement: {
     sizeAspectRatioWeight: 4.7,
+    regularizeColumnPositionOutliers: true,
+    regularizeRowPositions: true,
   },
   additionalForegroundVariants: [
     { threshold: 20, splitMergedRuns: true },
