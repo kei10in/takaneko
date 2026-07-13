@@ -10,10 +10,12 @@ const createCatalogImage = (): PixelImage => {
   const data = new Uint8Array(width * height * channels).fill(255);
   const columns = [40, 230, 420, 610, 800, 990];
   const rows = [260, 520, 780, 1040, 1300];
+  const firstRowOffsets = [0, -2, 0, -6, 0, 6];
 
   rows.forEach((y, row) => {
-    columns.slice(0, row === rows.length - 1 ? 3 : columns.length).forEach((x) => {
-      Array.from({ length: 228 }, (_, offsetY) => y + offsetY).forEach((pixelY) => {
+    columns.slice(0, row === rows.length - 1 ? 3 : columns.length).forEach((x, column) => {
+      const cardY = y + (row === 0 ? firstRowOffsets[column] : 0);
+      Array.from({ length: 228 }, (_, offsetY) => cardY + offsetY).forEach((pixelY) => {
         Array.from({ length: 160 }, (_, offsetX) => x + offsetX).forEach((pixelX) => {
           const index = (pixelY * width + pixelX) * channels;
           data[index] = 230;
@@ -23,6 +25,22 @@ const createCatalogImage = (): PixelImage => {
       });
     });
   });
+
+  const setPixel = (x: number, y: number, red: number, green = red, blue = red): void => {
+    const index = (y * width + x) * channels;
+    data[index] = red;
+    data[index + 1] = green;
+    data[index + 2] = blue;
+  };
+  Array.from({ length: 160 }, (_, offsetX) => 610 + offsetX).forEach((x) => {
+    setPixel(x, 254, 239, 245, 245);
+    setPixel(x, 255, 226, 233, 233);
+  });
+  Array.from({ length: 160 }, (_, offsetX) => 990 + offsetX).forEach((x) => {
+    setPixel(x, 266, 242);
+    setPixel(x, 267, 215);
+  });
+  [230, 231, 389].forEach((x) => setPixel(x, 519, 230));
 
   return { width, height, channels, data };
 };
@@ -64,13 +82,13 @@ describe("photo catalog correction", () => {
 
     expect(positions).toEqual([
       { x: 40, y: 260, width: 160, height: 228, row: 0, column: 0 },
-      { x: 230, y: 260, width: 160, height: 228, row: 0, column: 1 },
+      { x: 230, y: 258, width: 160, height: 228, row: 0, column: 1 },
       { x: 420, y: 260, width: 160, height: 228, row: 0, column: 2 },
-      { x: 610, y: 260, width: 160, height: 228, row: 0, column: 3 },
+      { x: 610, y: 256, width: 160, height: 228, row: 0, column: 3 },
       { x: 800, y: 260, width: 160, height: 228, row: 0, column: 4 },
-      { x: 990, y: 260, width: 160, height: 228, row: 0, column: 5 },
+      { x: 990, y: 266, width: 160, height: 228, row: 0, column: 5 },
       { x: 40, y: 520, width: 160, height: 228, row: 1, column: 0 },
-      { x: 230, y: 520, width: 160, height: 228, row: 1, column: 1 },
+      { x: 230, y: 521, width: 160, height: 228, row: 1, column: 1 },
       { x: 420, y: 520, width: 160, height: 228, row: 1, column: 2 },
       { x: 610, y: 520, width: 160, height: 228, row: 1, column: 3 },
       { x: 800, y: 520, width: 160, height: 228, row: 1, column: 4 },

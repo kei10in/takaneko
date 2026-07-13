@@ -1,5 +1,9 @@
 import { chooseRepresentativeSize, groupByIndex, median } from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore, verticalLineSum } from "../imageRegionExtraction/imageEdges";
+import {
+  horizontalLineSum,
+  rectangleBoundaryScore,
+  verticalLineSum,
+} from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
 import { photoExtractionProfile } from "./profile";
 
@@ -9,6 +13,10 @@ const NEUTRAL_MAX_CHROMA = 12;
 const NEUTRAL_MIN_BRIGHTNESS = 215;
 const NEUTRAL_MAX_BRIGHTNESS = 242;
 const MAXIMUM_GAP_SUPPORT = 0.08;
+const MINIMUM_PRE_BOUNDARY_SUPPORT = 0.01;
+const MAXIMUM_PRE_BOUNDARY_SUPPORT = 0.05;
+const FULL_PRE_BOUNDARY_SUPPORT = 0.99;
+const SPLIT_BOUNDARY_SCORE_RATIO = 0.94;
 
 interface AxisRun {
   start: number;
@@ -47,21 +55,110 @@ export const correctOverdetectedCatalogLayout = (
   }
 
   return reconstructedRows.flatMap(({ y, columns }, row) =>
-    columns.map((x, column) => ({
-      x,
-      y,
-      width,
-      height,
-      row,
-      column,
-      boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
+    columns.map((x, column) => {
+      const cardY = refineCardTop(neutralMask, edges, image, x, y, width, height);
+      return {
         x,
-        y,
+        y: cardY,
         width,
         height,
-      }),
-    })),
+        row,
+        column,
+        boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
+          x,
+          y: cardY,
+          width,
+          height,
+        }),
+      };
+    }),
   );
+};
+
+const refineCardTop = (
+  neutralMask: Uint8Array,
+  edges: EdgeMap,
+  image: PixelImage,
+  x: number,
+  initial: number,
+  cardWidth: number,
+  cardHeight: number,
+): number => {
+  const radius = Math.max(2, Math.round(cardHeight * 0.03));
+  const cornerWidth = Math.max(8, Math.round(cardWidth * 0.08));
+
+  const strongestEdge = Array.from(
+    { length: radius * 2 + 1 },
+    (_, index) => initial - radius + index,
+  )
+    .filter((candidate) => candidate >= 1 && candidate + cardHeight < image.height)
+    .map((candidate) => ({
+      candidate,
+      score: cardTopEdgeScore(edges, image.width, x, candidate, cardWidth, cornerWidth),
+    }))
+    .sort((first, second) => second.score - first.score)[0];
+  if (strongestEdge == undefined) return initial;
+
+  const precedingEdgeScore = cardTopEdgeScore(
+    edges,
+    image.width,
+    x,
+    strongestEdge.candidate - 1,
+    cardWidth,
+    cornerWidth,
+  );
+  const detectedSplitBoundary =
+    precedingEdgeScore >= strongestEdge.score * SPLIT_BOUNDARY_SCORE_RATIO;
+  const previousSupport = neutralRowSupport(
+    neutralMask,
+    image.width,
+    x,
+    strongestEdge.candidate - 1,
+    cardWidth,
+  );
+  const precedingSupport = neutralRowSupport(
+    neutralMask,
+    image.width,
+    x,
+    strongestEdge.candidate - 2,
+    cardWidth,
+  );
+  const detectedFullPreBoundaryRow = previousSupport >= FULL_PRE_BOUNDARY_SUPPORT;
+  const detectedSparsePreBoundaryEdge =
+    previousSupport >= MINIMUM_PRE_BOUNDARY_SUPPORT &&
+    previousSupport <= MAXIMUM_PRE_BOUNDARY_SUPPORT &&
+    precedingSupport === 0;
+
+  if (detectedFullPreBoundaryRow) return strongestEdge.candidate - 1;
+  if (detectedSplitBoundary || detectedSparsePreBoundaryEdge) {
+    return strongestEdge.candidate + 1;
+  }
+  return strongestEdge.candidate;
+};
+
+const cardTopEdgeScore = (
+  edges: EdgeMap,
+  imageWidth: number,
+  x: number,
+  y: number,
+  cardWidth: number,
+  cornerWidth: number,
+): number =>
+  horizontalLineSum(edges, imageWidth, y, x, x + cornerWidth) +
+  horizontalLineSum(edges, imageWidth, y, x + cardWidth - cornerWidth, x + cardWidth);
+
+const neutralRowSupport = (
+  mask: Uint8Array,
+  imageWidth: number,
+  x: number,
+  y: number,
+  width: number,
+): number => {
+  let support = 0;
+  for (let pixelX = x; pixelX < x + width; pixelX += 1) {
+    support += mask[y * imageWidth + pixelX] ?? 0;
+  }
+  return support / width;
 };
 
 const createNeutralMask = (image: PixelImage): Uint8Array => {
