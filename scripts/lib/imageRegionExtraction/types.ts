@@ -83,6 +83,7 @@ export interface ExtractionProfile {
     sizeAspectRatioWeight: number;
     regularizeColumnPositionOutliers: boolean;
     regularizeRowPositions: boolean;
+    refineLowResolutionColumnFrames: boolean;
   };
   additionalForegroundVariants: {
     threshold: number;

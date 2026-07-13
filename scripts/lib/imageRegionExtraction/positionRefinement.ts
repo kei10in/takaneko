@@ -1,5 +1,5 @@
 import { average, chooseRepresentativeSize, groupByIndex, median } from "./geometry";
-import { rectangleBoundaryScore } from "./imageEdges";
+import { rectangleBoundaryScore, verticalLineSum } from "./imageEdges";
 import type {
   ClusteredRect,
   EdgeMap,
@@ -132,7 +132,13 @@ const refineRowWisePositions = (
       : regularizedColumns;
   }
   const regularized = constrainToSource
-    ? regularizeLowResolutionLayout(rects, refined, image)
+    ? regularizeLowResolutionLayout(
+        rects,
+        refined,
+        edges,
+        image,
+        profile.refinement.refineLowResolutionColumnFrames,
+      )
     : regularizeRowPositionOutliers(refined);
   return profile.refinement.regularizeRowPositions
     ? regularizeRowPositions(regularized)
@@ -168,7 +174,9 @@ const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] 
 const regularizeLowResolutionLayout = (
   sourceRects: ClusteredRect[],
   refinedRects: ClusteredRect[],
+  edges: EdgeMap,
   image: PixelImage,
+  refineColumnFrames: boolean,
 ): ClusteredRect[] => {
   const sourceRows = groupByIndex(sourceRects, (rect) => rect.row).map((row) =>
     [...row].sort((a, b) => a.x - b.x),
@@ -208,16 +216,36 @@ const regularizeLowResolutionLayout = (
         ...rect,
         x: constrainedX - 1,
       });
+      const correctedX =
+        constrainedX > 0 && leftFrameScore > 10 && leftFrameScore > currentFrameScore * 1.5
+          ? constrainedX - 1
+          : refineColumnFrames &&
+              hasStrongerVerticalFrame(rect, constrainedX + 1, constrainedX, edges, image.height)
+            ? constrainedX + 1
+            : constrainedX;
       return {
         ...rect,
-        x:
-          constrainedX > 0 && leftFrameScore > 10 && leftFrameScore > currentFrameScore * 1.5
-            ? constrainedX - 1
-            : constrainedX,
+        x: correctedX,
         y: Math.abs(rect.y - rowY) >= 2 ? rowY : rect.y,
       };
     });
   });
+};
+
+const hasStrongerVerticalFrame = (
+  rect: Pick<RectCandidate, "y" | "width" | "height">,
+  candidateX: number,
+  currentX: number,
+  edges: EdgeMap,
+  imageHeight: number,
+): boolean => {
+  const lineScore = (x: number): number =>
+    verticalLineSum(edges, imageHeight, x, rect.y, rect.y + rect.height);
+
+  return (
+    lineScore(candidateX) > lineScore(currentX) &&
+    lineScore(candidateX + rect.width) > lineScore(currentX + rect.width)
+  );
 };
 
 const verticalChromaFrameScore = (

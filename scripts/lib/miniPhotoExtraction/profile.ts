@@ -16,6 +16,7 @@ export const miniPhotoExtractionProfile: ExtractionProfile = {
     sizeAspectRatioWeight: 4.7,
     regularizeColumnPositionOutliers: false,
     regularizeRowPositions: false,
+    refineLowResolutionColumnFrames: false,
   },
   additionalForegroundVariants: [],
 };

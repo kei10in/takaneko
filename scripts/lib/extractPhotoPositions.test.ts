@@ -135,11 +135,11 @@ describe("extractPhotoPositions", () => {
     expect(result.value.positions).toEqual([
       { id: 1, x: 7, y: 8, width: 34, height: 48 },
       { id: 2, x: 41, y: 8, width: 34, height: 48 },
-      { id: 3, x: 76, y: 8, width: 34, height: 48 },
+      { id: 3, x: 77, y: 8, width: 34, height: 48 },
       { id: 4, x: 110, y: 8, width: 34, height: 48 },
       { id: 5, x: 145, y: 8, width: 34, height: 48 },
       { id: 6, x: 179, y: 8, width: 34, height: 48 },
-      { id: 7, x: 214, y: 8, width: 34, height: 48 },
+      { id: 7, x: 215, y: 8, width: 34, height: 48 },
       { id: 8, x: 249, y: 8, width: 34, height: 48 },
       { id: 9, x: 283, y: 8, width: 34, height: 48 },
       { id: 10, x: 7, y: 57, width: 34, height: 48 },
