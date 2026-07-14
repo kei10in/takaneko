@@ -75,4 +75,38 @@ describe("fitCatalogFrames", () => {
       ),
     );
   });
+
+  it("completes a missing cell in an inferred four-column grid", () => {
+    const image = createImage();
+    const rects = createShortRects().filter((rect) => rect.row !== 1 || rect.column !== 3);
+
+    const fitted = fitCatalogFrames(
+      rects,
+      createEdgeMap(image),
+      image,
+      photoExtractionProfile.aspectRatio,
+    );
+
+    expect(
+      fitted?.map(({ x, y, width, height, row, column }) => ({
+        x,
+        y,
+        width,
+        height,
+        row,
+        column,
+      })),
+    ).toEqual(
+      [80, 330, 580].flatMap((y, row) =>
+        [50, 240, 430, 620].map((x, column) => ({
+          x,
+          y,
+          width: 140,
+          height: 200,
+          row,
+          column,
+        })),
+      ),
+    );
+  });
 });

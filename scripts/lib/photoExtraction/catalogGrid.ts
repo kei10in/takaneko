@@ -3,6 +3,7 @@ import { scoreRegularDifferences } from "../imageRegionExtraction/layoutScoring"
 import type { ClusteredRect } from "../imageRegionExtraction/types";
 
 const MINIMUM_CATALOG_ROWS = 3;
+const MINIMUM_REFERENCE_ROWS = 2;
 const MINIMUM_COLUMNS = 3;
 const COLUMN_ALIGNMENT_TOLERANCE_RATIO = 0.25;
 
@@ -26,7 +27,7 @@ export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefine
   if (columns == undefined) return undefined;
 
   const referenceRows = sourceRows.filter((row) => row.length === columns);
-  if (referenceRows.length < MINIMUM_CATALOG_ROWS) return undefined;
+  if (referenceRows.length < MINIMUM_REFERENCE_ROWS) return undefined;
 
   const referenceColumns = Array.from({ length: columns }, (_, column) =>
     Math.round(median(referenceRows.map((row) => row[column].x))),

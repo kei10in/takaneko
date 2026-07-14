@@ -2,7 +2,9 @@ import {
   average,
   chooseRepresentativeSize,
   clamp,
+  groupByIndex,
   median,
+  sortPositions,
 } from "../imageRegionExtraction/geometry";
 import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
 import type {
@@ -32,19 +34,61 @@ export const fitCatalogFrames = (
 
   const representative = chooseRepresentativeSize(grid.rects);
   const currentRatio = representative.width / representative.height;
-  if (currentRatio >= aspectRatio.minimum && currentRatio <= aspectRatio.maximum) {
-    return grid.rects.length === rects.length ? undefined : grid.rects;
-  }
+  const resizeFrames = currentRatio < aspectRatio.minimum || currentRatio > aspectRatio.maximum;
+  const height = resizeFrames
+    ? chooseFrameHeight(grid.rects, representative.width, edges, image, aspectRatio)
+    : representative.height;
+  if (height == undefined) return undefined;
 
-  const minimumHeight = Math.ceil(representative.width / aspectRatio.maximum);
-  const maximumHeight = Math.floor(representative.width / aspectRatio.minimum);
+  const fitted = grid.rects.map((rect) =>
+    createFrame(
+      rect,
+      resizeFrames ? representative.width : rect.width,
+      resizeFrames ? height : rect.height,
+      edges,
+      image,
+    ),
+  );
+  const completed = completeGridCells(
+    fitted,
+    grid.rows,
+    grid.columns,
+    { width: representative.width, height },
+    edges,
+    image,
+  );
+  const unchanged =
+    completed.length === rects.length &&
+    completed.every((frame) =>
+      rects.some(
+        (rect) =>
+          rect.row === frame.row &&
+          rect.column === frame.column &&
+          rect.x === frame.x &&
+          rect.y === frame.y &&
+          rect.width === frame.width &&
+          rect.height === frame.height,
+      ),
+    );
+  return unchanged ? undefined : completed;
+};
+
+const chooseFrameHeight = (
+  rects: ClusteredRect[],
+  width: number,
+  edges: EdgeMap,
+  image: PixelImage,
+  aspectRatio: ExtractionProfile["aspectRatio"],
+): number | undefined => {
+  const minimumHeight = Math.ceil(width / aspectRatio.maximum);
+  const maximumHeight = Math.floor(width / aspectRatio.minimum);
   const candidates = Array.from(
     { length: maximumHeight - minimumHeight + 1 },
     (_, index) => minimumHeight + index,
   ).map((height): FrameCandidate => {
-    const frames = grid.rects.map((rect) => ({
+    const frames = rects.map((rect) => ({
       ...rect,
-      width: representative.width,
+      width,
       height,
     }));
     return {
@@ -52,7 +96,7 @@ export const fitCatalogFrames = (
       boundaryScore: average(
         frames.map((frame) => rectangleBoundaryScore(edges, image.width, image.height, frame)),
       ),
-      aspectScore: scoreAspectRatio(representative.width / height, aspectRatio),
+      aspectScore: scoreAspectRatio(width / height, aspectRatio),
       bannerScore: scoreBannerAlignment(image, frames),
     };
   });
@@ -66,19 +110,75 @@ export const fitCatalogFrames = (
         candidate.bannerScore * 0.16,
     }))
     .sort((first, second) => second.score - first.score)[0];
-  if (best == undefined) return undefined;
+  return best?.height;
+};
 
-  return grid.rects.map((rect) => {
-    const frame = {
-      ...rect,
-      width: representative.width,
-      height: best.height,
-    };
-    return {
-      ...frame,
-      boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, frame),
-    };
+const completeGridCells = (
+  rects: ClusteredRect[],
+  rows: number,
+  columns: number,
+  frameSize: { width: number; height: number },
+  edges: EdgeMap,
+  image: PixelImage,
+): ClusteredRect[] => {
+  const columnPositions = groupByIndex(rects, (rect) => rect.column).map((column) =>
+    Math.round(median(column.map(({ x }) => x))),
+  );
+  const rowPositions = groupByIndex(rects, (rect) => rect.row).map((row) =>
+    Math.round(median(row.map(({ y }) => y))),
+  );
+  if (columnPositions.length !== columns || rowPositions.length !== rows) return rects;
+
+  const bannerGaps = rects.flatMap((rect) => {
+    const bottom = findPhotoBannerBottom(image, rect);
+    return bottom == undefined ? [] : [rect.y + rect.height - (bottom + 1)];
   });
+  if (bannerGaps.length < rects.length * 0.5) return rects;
+
+  const targetBannerGap = median(bannerGaps);
+  const bannerGapTolerance = Math.max(2, Math.round(frameSize.height * 0.01));
+  const minimumBoundaryScore = median(rects.map(({ boundaryScore }) => boundaryScore)) * 0.55;
+  const occupied = new Set(rects.map(({ row, column }) => `${row}:${column}`));
+  const missing = Array.from({ length: rows }).flatMap((_, row) =>
+    Array.from({ length: columns }).flatMap((__, column) => {
+      if (occupied.has(`${row}:${column}`)) return [];
+      const frame = createFrame(
+        {
+          x: columnPositions[column],
+          y: rowPositions[row],
+          width: frameSize.width,
+          height: frameSize.height,
+          boundaryScore: 0,
+          row,
+          column,
+        },
+        frameSize.width,
+        frameSize.height,
+        edges,
+        image,
+      );
+      const bannerBottom = findPhotoBannerBottom(image, frame);
+      if (bannerBottom == undefined || frame.boundaryScore < minimumBoundaryScore) return [];
+      const bannerGap = frame.y + frame.height - (bannerBottom + 1);
+      return Math.abs(bannerGap - targetBannerGap) <= bannerGapTolerance ? [frame] : [];
+    }),
+  );
+
+  return sortPositions([...rects, ...missing]);
+};
+
+const createFrame = (
+  rect: ClusteredRect,
+  width: number,
+  height: number,
+  edges: EdgeMap,
+  image: PixelImage,
+): ClusteredRect => {
+  const frame = { ...rect, width, height };
+  return {
+    ...frame,
+    boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, frame),
+  };
 };
 
 const scoreAspectRatio = (ratio: number, aspectRatio: ExtractionProfile["aspectRatio"]): number => {

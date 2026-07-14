@@ -6,11 +6,12 @@ import {
 } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
 import { fitCatalogFrames } from "./catalogFrame";
+import { inferCatalogGrid } from "./catalogGrid";
 import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
 
-const CATALOG_COLUMNS = 6;
 const MINIMUM_CATALOG_ROWS = 3;
+const MINIMUM_COLUMNS = 3;
 const NEUTRAL_MAX_CHROMA = 12;
 const NEUTRAL_MIN_BRIGHTNESS = 215;
 const NEUTRAL_MAX_BRIGHTNESS = 242;
@@ -38,13 +39,14 @@ export const correctCatalogLayout = (
   edges: EdgeMap,
   image: PixelImage,
 ): ClusteredRect[] => {
-  if (image.width < 1000 || image.height < 1400 || rects.length < CATALOG_COLUMNS) return rects;
+  const grid = inferCatalogGrid(rects);
+  if (grid == undefined) return rects;
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length > 0)
     .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
 
-  const width = chooseRepresentativeSize(rects).width;
+  const width = chooseRepresentativeSize(grid.rects).width;
   const height = Math.round(width / photoExtractionProfile.aspectRatio.target);
   const neutralMask = createNeutralMask(image);
   const rowProjection = projectRows(neutralMask, image.width, image.height);
@@ -54,10 +56,13 @@ export const correctCatalogLayout = (
     .map((y) => findCardRowTop(y, height, rowProjection))
     .filter((y): y is number => y != undefined)
     .filter((y, index, rows) => index === 0 || y !== rows[index - 1])
-    .map((y) => ({ y, columns: findCardColumns(neutralMask, edges, image, y, width, height) }))
-    .filter(({ columns }) => columns.length >= 3 && columns.length <= CATALOG_COLUMNS);
+    .map((y) => ({
+      y,
+      columns: findCardColumns(neutralMask, edges, image, y, width, height, grid.columns),
+    }))
+    .filter(({ columns }) => columns.length >= MINIMUM_COLUMNS && columns.length <= grid.columns);
 
-  const fullRows = reconstructedRows.filter(({ columns }) => columns.length === CATALOG_COLUMNS);
+  const fullRows = reconstructedRows.filter(({ columns }) => columns.length === grid.columns);
   if (reconstructedRows.length < MINIMUM_CATALOG_ROWS || fullRows.length < MINIMUM_CATALOG_ROWS) {
     return fitCatalogFrames(rects, edges, image, photoExtractionProfile.aspectRatio) ?? rects;
   }
@@ -237,6 +242,7 @@ const findCardColumns = (
   y: number,
   cardWidth: number,
   cardHeight: number,
+  maximumColumns: number,
 ): number[] => {
   const top = Math.min(image.height, y + 8);
   const bottom = Math.min(image.height, y + cardHeight - 16);
@@ -264,7 +270,7 @@ const findCardColumns = (
 
   const initialColumns = candidates.slice(candidates.indexOf(first) + 1).reduce<number[]>(
     (columns, candidate) => {
-      if (columns.length >= CATALOG_COLUMNS) return columns;
+      if (columns.length >= maximumColumns) return columns;
       const previous = columns.at(-1) ?? first;
       const difference = candidate - previous;
       if (difference < cardWidth * 0.9) return columns;

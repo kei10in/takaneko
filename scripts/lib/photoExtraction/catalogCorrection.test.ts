@@ -72,6 +72,50 @@ const createOverdetectedRects = (): ClusteredRect[] => {
   );
 };
 
+const createCompactCatalog = (): { image: PixelImage; rects: ClusteredRect[] } => {
+  const width = 820;
+  const height = 850;
+  const channels = 3;
+  const data = new Uint8Array(width * height * channels).fill(245);
+  const columns = [50, 240, 430, 620];
+  const rows = [80, 330, 580];
+
+  rows.forEach((y) => {
+    columns.forEach((x) => {
+      Array.from({ length: 200 }, (_, offsetY) => offsetY).forEach((offsetY) => {
+        Array.from({ length: 140 }, (_, offsetX) => offsetX).forEach((offsetX) => {
+          const index = ((y + offsetY) * width + x + offsetX) * channels;
+          const color = offsetY >= 150 && offsetY < 195 ? 255 : offsetY >= 195 ? 220 : 120;
+          data[index] = color;
+          data[index + 1] = offsetY < 150 ? 150 : color;
+          data[index + 2] = offsetY < 150 ? 180 : color;
+        });
+      });
+    });
+  });
+
+  return {
+    image: { width, height, channels, data },
+    rects: rows.flatMap((y, row) =>
+      columns.flatMap((x, column) =>
+        row === 1 && column === 3
+          ? []
+          : [
+              {
+                x,
+                y,
+                width: 140,
+                height: 180,
+                boundaryScore: 0.5,
+                row,
+                column,
+              },
+            ],
+      ),
+    ),
+  };
+};
+
 describe("photo catalog correction", () => {
   it("reconstructs six-column card rows from an overdetected catalog layout", () => {
     const image = createCatalogImage();
@@ -124,5 +168,33 @@ describe("photo catalog correction", () => {
     );
 
     expect(correctCatalogLayout(rects, createEdgeMap(image), image)).toEqual(rects);
+  });
+
+  it("corrects a compact catalog without assuming six columns", () => {
+    const { image, rects } = createCompactCatalog();
+
+    const corrected = correctCatalogLayout(rects, createEdgeMap(image), image);
+
+    expect(
+      corrected.map(({ x, y, width, height, row, column }) => ({
+        x,
+        y,
+        width,
+        height,
+        row,
+        column,
+      })),
+    ).toEqual(
+      [80, 330, 580].flatMap((y, row) =>
+        [50, 240, 430, 620].map((x, column) => ({
+          x,
+          y,
+          width: 140,
+          height: 200,
+          row,
+          column,
+        })),
+      ),
+    );
   });
 });
