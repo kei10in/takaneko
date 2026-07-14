@@ -7,7 +7,7 @@ import type {
   ExtractPositionsOptions,
   PixelImage,
 } from "./imageRegionExtraction/types";
-import { correctOverdetectedCatalogLayout } from "./photoExtraction/catalogCorrection";
+import { correctCatalogLayout } from "./photoExtraction/catalogCorrection";
 import { photoExtractionProfile } from "./photoExtraction/profile";
 
 export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types";
@@ -28,9 +28,4 @@ export const extractPhotoPositionsFromPixels = (
   image: PixelImage,
   options: ExtractPhotoPositionsOptions = {},
 ): Result<ExtractedPhotoPositions, ExtractPhotoPositionsError> =>
-  extractPositionsFromPixels(
-    image,
-    photoExtractionProfile,
-    correctOverdetectedCatalogLayout,
-    options,
-  );
+  extractPositionsFromPixels(image, photoExtractionProfile, correctCatalogLayout, options);

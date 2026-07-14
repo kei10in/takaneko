@@ -5,6 +5,8 @@ import {
   verticalLineSum,
 } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
+import { fitCatalogFrames } from "./catalogFrame";
+import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
 
 const CATALOG_COLUMNS = 6;
@@ -13,11 +15,6 @@ const NEUTRAL_MAX_CHROMA = 12;
 const NEUTRAL_MIN_BRIGHTNESS = 215;
 const NEUTRAL_MAX_BRIGHTNESS = 242;
 const MAXIMUM_GAP_SUPPORT = 0.08;
-const BANNER_MIN_BRIGHTNESS = 248;
-const BANNER_MAX_CHROMA = 12;
-const BANNER_MIN_ROW_SUPPORT = 0.55;
-const BANNER_MIN_RUN_LENGTH = 5;
-const BANNER_SCAN_START_RATIO = 0.72;
 const BANNER_SCORE_WEIGHT = 0.75;
 const CARD_TOP_SCORE_WEIGHT = 1 - BANNER_SCORE_WEIGHT;
 const CARD_TOP_ALIGNMENT_RADIUS = 2;
@@ -36,7 +33,7 @@ interface DetectedCard {
   column: number;
 }
 
-export const correctOverdetectedCatalogLayout = (
+export const correctCatalogLayout = (
   rects: ClusteredRect[],
   edges: EdgeMap,
   image: PixelImage,
@@ -46,8 +43,6 @@ export const correctOverdetectedCatalogLayout = (
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length > 0)
     .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
-  const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
-  if (maximumColumns <= CATALOG_COLUMNS) return rects;
 
   const width = chooseRepresentativeSize(rects).width;
   const height = Math.round(width / photoExtractionProfile.aspectRatio.target);
@@ -64,7 +59,7 @@ export const correctOverdetectedCatalogLayout = (
 
   const fullRows = reconstructedRows.filter(({ columns }) => columns.length === CATALOG_COLUMNS);
   if (reconstructedRows.length < MINIMUM_CATALOG_ROWS || fullRows.length < MINIMUM_CATALOG_ROWS) {
-    return rects;
+    return fitCatalogFrames(rects, edges, image, photoExtractionProfile.aspectRatio) ?? rects;
   }
 
   const detectedCards = reconstructedRows.flatMap(({ y, columns }, row) =>
@@ -74,7 +69,12 @@ export const correctOverdetectedCatalogLayout = (
         x,
         edgeY: edge.position,
         edgeScore: edge.score,
-        bannerBottom: findBannerBottom(image, x, edge.position, width, height),
+        bannerBottom: findPhotoBannerBottom(image, {
+          x,
+          y: edge.position,
+          width,
+          height,
+        }),
         row,
         column,
       };
@@ -137,36 +137,6 @@ const findStrongestCardTop = (
       }))
       .sort((first, second) => second.score - first.score)[0] ?? { position: initial, score: 0 }
   );
-};
-
-const findBannerBottom = (
-  image: PixelImage,
-  x: number,
-  cardY: number,
-  cardWidth: number,
-  cardHeight: number,
-): number | undefined => {
-  const start = cardY + Math.round(cardHeight * BANNER_SCAN_START_RATIO);
-  const end = Math.min(image.height, cardY + cardHeight);
-  const supportedRows = Array.from({ length: end - start }, (_, index) => start + index).map(
-    (y) => bannerRowSupport(image, x, y, cardWidth) >= BANNER_MIN_ROW_SUPPORT,
-  );
-  const bannerRun = findRuns(supportedRows, BANNER_MIN_RUN_LENGTH).at(-1);
-  return bannerRun == undefined ? undefined : start + bannerRun.end;
-};
-
-const bannerRowSupport = (image: PixelImage, x: number, y: number, width: number): number => {
-  let support = 0;
-  for (let pixelX = x; pixelX < x + width; pixelX += 1) {
-    const index = (y * image.width + pixelX) * image.channels;
-    const red = image.data[index] ?? 0;
-    const green = image.data[index + 1] ?? 0;
-    const blue = image.data[index + 2] ?? 0;
-    const brightness = (red + green + blue) / 3;
-    const chroma = Math.max(red, green, blue) - Math.min(red, green, blue);
-    if (brightness >= BANNER_MIN_BRIGHTNESS && chroma <= BANNER_MAX_CHROMA) support += 1;
-  }
-  return support / width;
 };
 
 const bestCardTopPosition = (

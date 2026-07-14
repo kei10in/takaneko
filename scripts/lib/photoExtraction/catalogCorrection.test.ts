@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
-import { correctOverdetectedCatalogLayout } from "./catalogCorrection";
+import { correctCatalogLayout } from "./catalogCorrection";
 
 const createCatalogImage = (): PixelImage => {
   const width = 1200;
@@ -76,11 +76,7 @@ describe("photo catalog correction", () => {
   it("reconstructs six-column card rows from an overdetected catalog layout", () => {
     const image = createCatalogImage();
 
-    const corrected = correctOverdetectedCatalogLayout(
-      createOverdetectedRects(),
-      createEdgeMap(image),
-      image,
-    );
+    const corrected = correctCatalogLayout(createOverdetectedRects(), createEdgeMap(image), image);
     const positions = corrected.map(({ x, y, width, height, row, column }) => ({
       x,
       y,
@@ -121,10 +117,12 @@ describe("photo catalog correction", () => {
     ]);
   });
 
-  it("preserves layouts that are not overdetected", () => {
+  it("preserves layouts without enough repeated rows", () => {
     const image = createCatalogImage();
-    const rects = createOverdetectedRects().filter((rect) => rect.column < 6);
+    const rects = createOverdetectedRects().filter(
+      (rect) => rect.row >= 1 && rect.row <= 2 && rect.column < 6,
+    );
 
-    expect(correctOverdetectedCatalogLayout(rects, createEdgeMap(image), image)).toEqual(rects);
+    expect(correctCatalogLayout(rects, createEdgeMap(image), image)).toEqual(rects);
   });
 });
