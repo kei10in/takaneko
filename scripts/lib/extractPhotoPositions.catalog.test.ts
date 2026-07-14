@@ -249,4 +249,90 @@ describe("extractPhotoPositions for catalog images", () => {
       { id: 30, x: 1402, y: 1696, width: 235, height: 335 },
     ]);
   });
+
+  it("extracts ワンピース", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-05-27_生写真「ワンピース」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 42, y: 226, width: 220, height: 315 },
+      { id: 2, x: 297, y: 226, width: 220, height: 315 },
+      { id: 3, x: 552, y: 226, width: 220, height: 315 },
+      { id: 4, x: 808, y: 226, width: 220, height: 315 },
+      { id: 5, x: 1063, y: 226, width: 220, height: 315 },
+      { id: 6, x: 1318, y: 226, width: 220, height: 315 },
+      { id: 7, x: 42, y: 557, width: 220, height: 315 },
+      { id: 8, x: 297, y: 557, width: 220, height: 315 },
+      { id: 9, x: 552, y: 557, width: 220, height: 315 },
+      { id: 10, x: 808, y: 557, width: 220, height: 315 },
+      { id: 11, x: 1063, y: 557, width: 220, height: 315 },
+      { id: 12, x: 1318, y: 557, width: 220, height: 315 },
+      { id: 13, x: 42, y: 903, width: 220, height: 315 },
+      { id: 14, x: 297, y: 903, width: 220, height: 315 },
+      { id: 15, x: 552, y: 903, width: 220, height: 315 },
+      { id: 16, x: 808, y: 903, width: 220, height: 315 },
+      { id: 17, x: 1063, y: 903, width: 220, height: 315 },
+      { id: 18, x: 1318, y: 903, width: 220, height: 315 },
+      { id: 19, x: 42, y: 1249, width: 220, height: 315 },
+      { id: 20, x: 297, y: 1249, width: 220, height: 315 },
+      { id: 21, x: 552, y: 1249, width: 220, height: 315 },
+      { id: 22, x: 808, y: 1249, width: 220, height: 315 },
+      { id: 23, x: 1063, y: 1249, width: 220, height: 315 },
+      { id: 24, x: 1318, y: 1249, width: 220, height: 315 },
+      { id: 25, x: 42, y: 1595, width: 220, height: 315 },
+      { id: 26, x: 297, y: 1595, width: 220, height: 315 },
+      { id: 27, x: 552, y: 1595, width: 220, height: 315 },
+      { id: 28, x: 808, y: 1595, width: 220, height: 315 },
+      { id: 29, x: 1063, y: 1595, width: 220, height: 315 },
+      { id: 30, x: 1318, y: 1595, width: 220, height: 315 },
+    ]);
+  });
+
+  it("extracts ライブ女子", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-10-30_生写真「ライブ女子」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 44, y: 240, width: 235, height: 335 },
+      { id: 2, x: 316, y: 240, width: 235, height: 335 },
+      { id: 3, x: 587, y: 240, width: 235, height: 335 },
+      { id: 4, x: 859, y: 240, width: 235, height: 335 },
+      { id: 5, x: 1131, y: 240, width: 235, height: 335 },
+      { id: 6, x: 1403, y: 240, width: 235, height: 335 },
+      { id: 7, x: 44, y: 593, width: 235, height: 335 },
+      { id: 8, x: 316, y: 593, width: 235, height: 335 },
+      { id: 9, x: 587, y: 593, width: 235, height: 335 },
+      { id: 10, x: 859, y: 593, width: 235, height: 335 },
+      { id: 11, x: 1131, y: 593, width: 235, height: 335 },
+      { id: 12, x: 1403, y: 593, width: 235, height: 335 },
+      { id: 13, x: 44, y: 960, width: 235, height: 335 },
+      { id: 14, x: 316, y: 960, width: 235, height: 335 },
+      { id: 15, x: 587, y: 960, width: 235, height: 335 },
+      { id: 16, x: 859, y: 960, width: 235, height: 335 },
+      { id: 17, x: 1131, y: 960, width: 235, height: 335 },
+      { id: 18, x: 1403, y: 960, width: 235, height: 335 },
+      { id: 19, x: 44, y: 1329, width: 235, height: 335 },
+      { id: 20, x: 316, y: 1329, width: 235, height: 335 },
+      { id: 21, x: 587, y: 1329, width: 235, height: 335 },
+      { id: 22, x: 859, y: 1329, width: 235, height: 335 },
+      { id: 23, x: 1131, y: 1329, width: 235, height: 335 },
+      { id: 24, x: 1403, y: 1329, width: 235, height: 335 },
+      { id: 25, x: 44, y: 1697, width: 235, height: 335 },
+      { id: 26, x: 316, y: 1697, width: 235, height: 335 },
+      { id: 27, x: 587, y: 1697, width: 235, height: 335 },
+      { id: 28, x: 859, y: 1697, width: 235, height: 335 },
+      { id: 29, x: 1131, y: 1697, width: 235, height: 335 },
+      { id: 30, x: 1403, y: 1697, width: 235, height: 335 },
+    ]);
+  });
 });
