@@ -22,7 +22,7 @@ describe("extractPhotoPositions for catalog images", () => {
       { id: 6, x: 1206, y: 297, width: 192, height: 274 },
       { id: 7, x: 91, y: 596, width: 192, height: 274 },
       { id: 8, x: 316, y: 595, width: 192, height: 274 },
-      { id: 9, x: 533, y: 594, width: 192, height: 274 },
+      { id: 9, x: 533, y: 595, width: 192, height: 274 },
       { id: 10, x: 757, y: 592, width: 192, height: 274 },
       { id: 11, x: 981, y: 596, width: 192, height: 274 },
       { id: 12, x: 1206, y: 596, width: 192, height: 274 },

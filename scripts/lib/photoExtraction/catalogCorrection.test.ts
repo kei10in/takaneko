@@ -23,6 +23,16 @@ const createCatalogImage = (): PixelImage => {
           data[index + 2] = 230;
         });
       });
+      const expectedY =
+        row === 0 && column === 3 ? cardY + 2 : row === 1 && column === 1 ? cardY + 1 : cardY;
+      Array.from({ length: 43 }, (_, offsetY) => expectedY + 180 + offsetY).forEach((pixelY) => {
+        Array.from({ length: 160 }, (_, offsetX) => x + offsetX).forEach((pixelX) => {
+          const index = (pixelY * width + pixelX) * channels;
+          data[index] = 250;
+          data[index + 1] = 250;
+          data[index + 2] = 250;
+        });
+      });
     });
   });
 

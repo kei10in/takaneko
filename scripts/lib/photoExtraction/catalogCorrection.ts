@@ -13,14 +13,27 @@ const NEUTRAL_MAX_CHROMA = 12;
 const NEUTRAL_MIN_BRIGHTNESS = 215;
 const NEUTRAL_MAX_BRIGHTNESS = 242;
 const MAXIMUM_GAP_SUPPORT = 0.08;
-const MINIMUM_PRE_BOUNDARY_SUPPORT = 0.01;
-const MAXIMUM_PRE_BOUNDARY_SUPPORT = 0.05;
-const FULL_PRE_BOUNDARY_SUPPORT = 0.99;
-const SPLIT_BOUNDARY_SCORE_RATIO = 0.94;
+const BANNER_MIN_BRIGHTNESS = 248;
+const BANNER_MAX_CHROMA = 12;
+const BANNER_MIN_ROW_SUPPORT = 0.55;
+const BANNER_MIN_RUN_LENGTH = 5;
+const BANNER_SCAN_START_RATIO = 0.72;
+const BANNER_SCORE_WEIGHT = 0.75;
+const CARD_TOP_SCORE_WEIGHT = 1 - BANNER_SCORE_WEIGHT;
+const CARD_TOP_ALIGNMENT_RADIUS = 2;
 
 interface AxisRun {
   start: number;
   end: number;
+}
+
+interface DetectedCard {
+  x: number;
+  edgeY: number;
+  edgeScore: number;
+  bannerBottom: number | undefined;
+  row: number;
+  column: number;
 }
 
 export const correctOverdetectedCatalogLayout = (
@@ -54,86 +67,139 @@ export const correctOverdetectedCatalogLayout = (
     return rects;
   }
 
-  return reconstructedRows.flatMap(({ y, columns }, row) =>
-    columns.map((x, column) => {
-      const cardY = refineCardTop(neutralMask, edges, image, x, y, width, height);
+  const detectedCards = reconstructedRows.flatMap(({ y, columns }, row) =>
+    columns.map((x, column): DetectedCard => {
+      const edge = findStrongestCardTop(edges, image, x, y, width, height);
       return {
         x,
-        y: cardY,
-        width,
-        height,
+        edgeY: edge.position,
+        edgeScore: edge.score,
+        bannerBottom: findBannerBottom(image, x, edge.position, width, height),
         row,
         column,
-        boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
-          x,
-          y: cardY,
-          width,
-          height,
-        }),
       };
     }),
   );
+  const bannerGaps = detectedCards.flatMap(({ edgeY, bannerBottom }) =>
+    bannerBottom == undefined ? [] : [edgeY + height - (bannerBottom + 1)],
+  );
+  const targetBannerGap = bannerGaps.length === 0 ? undefined : Math.round(median(bannerGaps));
+
+  return detectedCards.map(({ x, edgeY, edgeScore, bannerBottom, row, column }) => {
+    const y =
+      bannerBottom == undefined || targetBannerGap == undefined
+        ? edgeY
+        : bestCardTopPosition(
+            edges,
+            image.width,
+            x,
+            edgeY,
+            edgeScore,
+            width,
+            height,
+            bannerBottom,
+            targetBannerGap,
+          );
+    return {
+      x,
+      y,
+      width,
+      height,
+      row,
+      column,
+      boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
+        x,
+        y,
+        width,
+        height,
+      }),
+    };
+  });
 };
 
-const refineCardTop = (
-  neutralMask: Uint8Array,
+const findStrongestCardTop = (
   edges: EdgeMap,
   image: PixelImage,
   x: number,
   initial: number,
   cardWidth: number,
   cardHeight: number,
-): number => {
+): { position: number; score: number } => {
   const radius = Math.max(2, Math.round(cardHeight * 0.03));
   const cornerWidth = Math.max(8, Math.round(cardWidth * 0.08));
 
-  const strongestEdge = Array.from(
-    { length: radius * 2 + 1 },
-    (_, index) => initial - radius + index,
-  )
-    .filter((candidate) => candidate >= 1 && candidate + cardHeight < image.height)
-    .map((candidate) => ({
-      candidate,
-      score: cardTopEdgeScore(edges, image.width, x, candidate, cardWidth, cornerWidth),
-    }))
-    .sort((first, second) => second.score - first.score)[0];
-  if (strongestEdge == undefined) return initial;
+  return (
+    Array.from({ length: radius * 2 + 1 }, (_, index) => initial - radius + index)
+      .filter((candidate) => candidate >= 1 && candidate + cardHeight < image.height)
+      .map((position) => ({
+        position,
+        score: cardTopEdgeScore(edges, image.width, x, position, cardWidth, cornerWidth),
+      }))
+      .sort((first, second) => second.score - first.score)[0] ?? { position: initial, score: 0 }
+  );
+};
 
-  const precedingEdgeScore = cardTopEdgeScore(
-    edges,
-    image.width,
-    x,
-    strongestEdge.candidate - 1,
-    cardWidth,
-    cornerWidth,
+const findBannerBottom = (
+  image: PixelImage,
+  x: number,
+  cardY: number,
+  cardWidth: number,
+  cardHeight: number,
+): number | undefined => {
+  const start = cardY + Math.round(cardHeight * BANNER_SCAN_START_RATIO);
+  const end = Math.min(image.height, cardY + cardHeight);
+  const supportedRows = Array.from({ length: end - start }, (_, index) => start + index).map(
+    (y) => bannerRowSupport(image, x, y, cardWidth) >= BANNER_MIN_ROW_SUPPORT,
   );
-  const detectedSplitBoundary =
-    precedingEdgeScore >= strongestEdge.score * SPLIT_BOUNDARY_SCORE_RATIO;
-  const previousSupport = neutralRowSupport(
-    neutralMask,
-    image.width,
-    x,
-    strongestEdge.candidate - 1,
-    cardWidth,
-  );
-  const precedingSupport = neutralRowSupport(
-    neutralMask,
-    image.width,
-    x,
-    strongestEdge.candidate - 2,
-    cardWidth,
-  );
-  const detectedFullPreBoundaryRow = previousSupport >= FULL_PRE_BOUNDARY_SUPPORT;
-  const detectedSparsePreBoundaryEdge =
-    previousSupport >= MINIMUM_PRE_BOUNDARY_SUPPORT &&
-    previousSupport <= MAXIMUM_PRE_BOUNDARY_SUPPORT &&
-    precedingSupport === 0;
+  const bannerRun = findRuns(supportedRows, BANNER_MIN_RUN_LENGTH).at(-1);
+  return bannerRun == undefined ? undefined : start + bannerRun.end;
+};
 
-  if (detectedFullPreBoundaryRow) return strongestEdge.candidate - 1;
-  if (detectedSplitBoundary || detectedSparsePreBoundaryEdge) {
-    return strongestEdge.candidate + 1;
+const bannerRowSupport = (image: PixelImage, x: number, y: number, width: number): number => {
+  let support = 0;
+  for (let pixelX = x; pixelX < x + width; pixelX += 1) {
+    const index = (y * image.width + pixelX) * image.channels;
+    const red = image.data[index] ?? 0;
+    const green = image.data[index + 1] ?? 0;
+    const blue = image.data[index + 2] ?? 0;
+    const brightness = (red + green + blue) / 3;
+    const chroma = Math.max(red, green, blue) - Math.min(red, green, blue);
+    if (brightness >= BANNER_MIN_BRIGHTNESS && chroma <= BANNER_MAX_CHROMA) support += 1;
   }
-  return strongestEdge.candidate;
+  return support / width;
+};
+
+const bestCardTopPosition = (
+  edges: EdgeMap,
+  imageWidth: number,
+  x: number,
+  edgeY: number,
+  strongestEdgeScore: number,
+  cardWidth: number,
+  cardHeight: number,
+  bannerBottom: number,
+  targetBannerGap: number,
+): number => {
+  const cornerWidth = Math.max(8, Math.round(cardWidth * 0.08));
+  return (
+    Array.from(
+      { length: CARD_TOP_ALIGNMENT_RADIUS * 2 + 1 },
+      (_, index) => edgeY - CARD_TOP_ALIGNMENT_RADIUS + index,
+    )
+      .map((position) => {
+        const edgeScore = cardTopEdgeScore(edges, imageWidth, x, position, cardWidth, cornerWidth);
+        const bannerGap = position + cardHeight - (bannerBottom + 1);
+        const bannerScore = Math.max(0, 1 - Math.abs(bannerGap - targetBannerGap) / 2);
+        return {
+          position,
+          score:
+            (strongestEdgeScore === 0 ? 0 : edgeScore / strongestEdgeScore) *
+              CARD_TOP_SCORE_WEIGHT +
+            bannerScore * BANNER_SCORE_WEIGHT,
+        };
+      })
+      .sort((first, second) => second.score - first.score)[0]?.position ?? edgeY
+  );
 };
 
 const cardTopEdgeScore = (
@@ -146,20 +212,6 @@ const cardTopEdgeScore = (
 ): number =>
   horizontalLineSum(edges, imageWidth, y, x, x + cornerWidth) +
   horizontalLineSum(edges, imageWidth, y, x + cardWidth - cornerWidth, x + cardWidth);
-
-const neutralRowSupport = (
-  mask: Uint8Array,
-  imageWidth: number,
-  x: number,
-  y: number,
-  width: number,
-): number => {
-  let support = 0;
-  for (let pixelX = x; pixelX < x + width; pixelX += 1) {
-    support += mask[y * imageWidth + pixelX] ?? 0;
-  }
-  return support / width;
-};
 
 const createNeutralMask = (image: PixelImage): Uint8Array => {
   const mask = new Uint8Array(image.width * image.height);
