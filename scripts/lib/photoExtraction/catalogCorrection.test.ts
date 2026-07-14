@@ -80,6 +80,15 @@ const createCompactCatalog = (): { image: PixelImage; rects: ClusteredRect[] } =
   const columns = [50, 240, 430, 620];
   const rows = [80, 330, 580];
 
+  Array.from({ length: 30 }, (_, y) => y + 20).forEach((y) => {
+    Array.from({ length: 620 }, (_, x) => x + 100).forEach((x) => {
+      const index = (y * width + x) * channels;
+      data[index] = 80;
+      data[index + 1] = 130;
+      data[index + 2] = 180;
+    });
+  });
+
   rows.forEach((y) => {
     columns.forEach((x) => {
       Array.from({ length: 200 }, (_, offsetY) => offsetY).forEach((offsetY) => {

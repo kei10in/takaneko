@@ -42,6 +42,32 @@ const createShortRects = (): ClusteredRect[] =>
     })),
   );
 
+const createCenteredRoughRects = (): ClusteredRect[] =>
+  [80, 330, 580].flatMap((y, row) =>
+    [50, 240, 430, 620].map((x, column) => ({
+      x: x + 1,
+      y: y + 5,
+      width: 138,
+      height: 190,
+      boundaryScore: 0.5,
+      row,
+      column,
+    })),
+  );
+
+const createAlignedRects = (): ClusteredRect[] =>
+  [80, 330, 580].flatMap((y, row) =>
+    [50, 240, 430, 620].map((x, column) => ({
+      x,
+      y,
+      width: 140,
+      height: 200,
+      boundaryScore: 0.5,
+      row,
+      column,
+    })),
+  );
+
 describe("fitCatalogFrames", () => {
   it("recovers the shared card height inside the allowed aspect ratio", () => {
     const image = createImage();
@@ -108,5 +134,35 @@ describe("fitCatalogFrames", () => {
         })),
       ),
     );
+  });
+
+  it("evaluates size and anchor variations around a rough center", () => {
+    const image = createImage();
+
+    const fitted = fitCatalogFrames(
+      createCenteredRoughRects(),
+      createEdgeMap(image),
+      image,
+      photoExtractionProfile.aspectRatio,
+    );
+
+    expect(fitted?.map(({ x, y, width, height }) => ({ x, y, width, height }))).toEqual(
+      [80, 330, 580].flatMap((y) =>
+        [50, 240, 430, 620].map((x) => ({ x, y, width: 140, height: 200 })),
+      ),
+    );
+  });
+
+  it("keeps an aligned grid when alternatives do not clearly improve the evidence", () => {
+    const image = createImage();
+
+    const fitted = fitCatalogFrames(
+      createAlignedRects(),
+      createEdgeMap(image),
+      image,
+      photoExtractionProfile.aspectRatio,
+    );
+
+    expect(fitted).toBeUndefined();
   });
 });

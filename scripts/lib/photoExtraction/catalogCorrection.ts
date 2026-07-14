@@ -7,6 +7,7 @@ import {
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
 import { fitCatalogFrames } from "./catalogFrame";
 import { inferCatalogGrid } from "./catalogGrid";
+import { hasCatalogHeader } from "./catalogHeader";
 import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
 
@@ -41,12 +42,19 @@ export const correctCatalogLayout = (
 ): ClusteredRect[] => {
   const grid = inferCatalogGrid(rects);
   if (grid == undefined) return rects;
+  const representative = chooseRepresentativeSize(grid.rects);
+  const firstCardY = Math.round(
+    median(grid.rects.filter(({ row }) => row === 0).map(({ y }) => y)),
+  );
+  if (!hasCatalogHeader(image, firstCardY, representative.height)) {
+    return rects;
+  }
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length > 0)
     .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
 
-  const width = chooseRepresentativeSize(grid.rects).width;
+  const width = representative.width;
   const height = Math.round(width / photoExtractionProfile.aspectRatio.target);
   const neutralMask = createNeutralMask(image);
   const rowProjection = projectRows(neutralMask, image.width, image.height);
