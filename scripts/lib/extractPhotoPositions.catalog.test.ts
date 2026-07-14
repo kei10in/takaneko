@@ -163,4 +163,87 @@ describe("extractPhotoPositions for catalog images", () => {
       { id: 25, x: 1402, y: 1695, width: 234, height: 335 },
     ]);
   });
+
+  it("extracts 2024年バレンタイン", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-02-14_生写真「2024年バレンタイン」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 20, y: 154, width: 161, height: 230 },
+      { id: 2, x: 215, y: 154, width: 161, height: 230 },
+      { id: 3, x: 410, y: 154, width: 161, height: 230 },
+      { id: 4, x: 605, y: 154, width: 161, height: 230 },
+      { id: 5, x: 800, y: 154, width: 161, height: 230 },
+      { id: 6, x: 995, y: 154, width: 161, height: 230 },
+      { id: 7, x: 20, y: 392, width: 161, height: 230 },
+      { id: 8, x: 215, y: 392, width: 161, height: 230 },
+      { id: 9, x: 410, y: 392, width: 161, height: 230 },
+      { id: 10, x: 605, y: 392, width: 161, height: 230 },
+      { id: 11, x: 800, y: 392, width: 161, height: 230 },
+      { id: 12, x: 20, y: 629, width: 161, height: 230 },
+      { id: 13, x: 215, y: 629, width: 161, height: 230 },
+      { id: 14, x: 410, y: 629, width: 161, height: 230 },
+      { id: 15, x: 605, y: 629, width: 161, height: 230 },
+      { id: 16, x: 800, y: 629, width: 161, height: 230 },
+      { id: 17, x: 995, y: 629, width: 161, height: 230 },
+      { id: 18, x: 20, y: 867, width: 161, height: 230 },
+      { id: 19, x: 215, y: 867, width: 161, height: 230 },
+      { id: 20, x: 410, y: 867, width: 161, height: 230 },
+      { id: 21, x: 605, y: 867, width: 161, height: 230 },
+      { id: 22, x: 800, y: 867, width: 161, height: 230 },
+      { id: 23, x: 995, y: 867, width: 161, height: 230 },
+      { id: 24, x: 20, y: 1104, width: 161, height: 230 },
+      { id: 25, x: 215, y: 1104, width: 161, height: 230 },
+      { id: 26, x: 605, y: 1104, width: 161, height: 231 },
+      { id: 27, x: 800, y: 1104, width: 161, height: 231 },
+    ]);
+  });
+
+  it("extracts 白ワンピース", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-08-07_生写真「白ワンピース」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 44, y: 240, width: 235, height: 318 },
+      { id: 2, x: 316, y: 240, width: 235, height: 318 },
+      { id: 3, x: 587, y: 240, width: 235, height: 318 },
+      { id: 4, x: 859, y: 240, width: 235, height: 318 },
+      { id: 5, x: 1131, y: 240, width: 235, height: 318 },
+      { id: 6, x: 1402, y: 240, width: 235, height: 318 },
+      { id: 7, x: 44, y: 593, width: 235, height: 318 },
+      { id: 8, x: 316, y: 593, width: 235, height: 318 },
+      { id: 9, x: 587, y: 593, width: 235, height: 318 },
+      { id: 10, x: 859, y: 593, width: 235, height: 318 },
+      { id: 11, x: 1131, y: 593, width: 235, height: 318 },
+      { id: 12, x: 1402, y: 593, width: 235, height: 318 },
+      { id: 13, x: 44, y: 960, width: 235, height: 318 },
+      { id: 14, x: 316, y: 960, width: 235, height: 318 },
+      { id: 15, x: 587, y: 960, width: 235, height: 318 },
+      { id: 16, x: 859, y: 960, width: 235, height: 318 },
+      { id: 17, x: 1131, y: 960, width: 235, height: 318 },
+      { id: 18, x: 1402, y: 960, width: 235, height: 318 },
+      { id: 19, x: 44, y: 1329, width: 235, height: 318 },
+      { id: 20, x: 316, y: 1329, width: 235, height: 318 },
+      { id: 21, x: 587, y: 1329, width: 235, height: 318 },
+      { id: 22, x: 859, y: 1329, width: 235, height: 318 },
+      { id: 23, x: 1131, y: 1329, width: 235, height: 318 },
+      { id: 24, x: 1402, y: 1329, width: 235, height: 318 },
+      { id: 25, x: 44, y: 1696, width: 235, height: 318 },
+      { id: 26, x: 316, y: 1696, width: 235, height: 318 },
+      { id: 27, x: 587, y: 1696, width: 235, height: 318 },
+      { id: 28, x: 859, y: 1696, width: 235, height: 318 },
+      { id: 29, x: 1131, y: 1696, width: 235, height: 318 },
+      { id: 30, x: 1402, y: 1696, width: 235, height: 318 },
+    ]);
+  });
 });
