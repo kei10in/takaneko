@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
-import type { ClusteredRect } from "../imageRegionExtraction/types";
-import { chooseCatalogFrameWidth, inferCatalogGrid, regularizeCatalogColumns } from "./catalogGrid";
+import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types";
+import {
+  chooseCatalogFrameWidth,
+  inferCatalogGrid,
+  reconstructSparseCatalogGrid,
+  regularizeCatalogColumns,
+} from "./catalogGrid";
 
 const createRow = (row: number, y: number, columns: number[]): ClusteredRect[] =>
   columns.map((column) => ({
@@ -97,5 +102,49 @@ describe("chooseCatalogFrameWidth", () => {
     ];
 
     expect(chooseCatalogFrameWidth(rects)).toBe(235);
+  });
+});
+
+describe("reconstructSparseCatalogGrid", () => {
+  it("reconstructs missing rows and columns from a partial grid spread across the catalog", () => {
+    const createRect = (x: number, y: number, width: number, height: number) => ({
+      x,
+      y,
+      width,
+      height,
+      boundaryScore: 0.5,
+      row: 0,
+      column: 0,
+    });
+    const partial: LayoutCandidate = {
+      rects: [
+        createRect(40, 180, 160, 220),
+        createRect(420, 180, 160, 220),
+        createRect(800, 180, 160, 220),
+        createRect(230, 430, 160, 220),
+        createRect(610, 430, 160, 220),
+        createRect(40, 930, 160, 220),
+        createRect(420, 930, 160, 220),
+        createRect(800, 930, 160, 220),
+      ],
+      rows: 3,
+      columns: 5,
+      score: 0.65,
+      alignment: "global-grid",
+    };
+    const decoy: LayoutCandidate = {
+      rects: [102, 361, 610, 868].map((x) => createRect(x, 61, 76, 104)),
+      rows: 1,
+      columns: 4,
+      score: 0.75,
+      alignment: "global-grid",
+    };
+
+    const grid = reconstructSparseCatalogGrid([decoy, partial], 1000, 1200);
+
+    expect(grid?.rows).toBe(4);
+    expect(grid?.columns).toBe(5);
+    expect([...new Set(grid?.rects.map(({ x }) => x))]).toEqual([40, 230, 420, 610, 800]);
+    expect([...new Set(grid?.rects.map(({ y }) => y))]).toEqual([180, 430, 680, 930]);
   });
 });

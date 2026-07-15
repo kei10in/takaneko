@@ -1,6 +1,11 @@
-import { chooseRepresentativeSize, groupByIndex, median } from "../imageRegionExtraction/geometry";
+import {
+  chooseRepresentativeSize,
+  clusterValues,
+  groupByIndex,
+  median,
+} from "../imageRegionExtraction/geometry";
 import { scoreRegularDifferences } from "../imageRegionExtraction/layoutScoring";
-import type { ClusteredRect } from "../imageRegionExtraction/types";
+import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types";
 
 const MINIMUM_CATALOG_ROWS = 3;
 const MINIMUM_REFERENCE_ROWS = 2;
@@ -8,6 +13,11 @@ const MINIMUM_COLUMNS = 3;
 const COLUMN_ALIGNMENT_TOLERANCE_RATIO = 0.25;
 const COLUMN_OUTLIER_TOLERANCE_RATIO = 0.08;
 const INNER_FRAME_WIDTH_QUANTILE = 0.25;
+const SPARSE_LAYOUT_SCORE_WEIGHT = 0.8;
+const SPARSE_LAYOUT_COVERAGE_WEIGHT = 1 - SPARSE_LAYOUT_SCORE_WEIGHT;
+const AXIS_MINIMUM_STEP_RATIO = 0.95;
+const AXIS_MAXIMUM_STEP_RATIO = 1.6;
+const AXIS_ALIGNMENT_TOLERANCE_RATIO = 0.08;
 
 interface CatalogGrid {
   rects: ClusteredRect[];
@@ -18,6 +28,11 @@ interface CatalogGrid {
 interface MatchedRow {
   y: number;
   rects: ClusteredRect[];
+}
+
+interface AxisGrid {
+  positions: number[];
+  score: number;
 }
 
 export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefined => {
@@ -82,6 +97,105 @@ export const chooseCatalogFrameWidth = <T extends { width: number }>(rects: T[])
   const lowerQuartile =
     sortedWidths[Math.floor((sortedWidths.length - 1) * INNER_FRAME_WIDTH_QUANTILE)];
   return lowerQuartile === representative - 1 ? lowerQuartile : representative;
+};
+
+export const reconstructSparseCatalogGrid = (
+  layouts: LayoutCandidate[],
+  imageWidth: number,
+  imageHeight: number,
+): CatalogGrid | undefined =>
+  layouts
+    .filter(({ rects }) => rects.length >= MINIMUM_COLUMNS * 2)
+    .flatMap((layout) => {
+      const representative = chooseRepresentativeSize(layout.rects);
+      const columns = inferRegularAxis(
+        layout.rects.map(({ x }) => x),
+        representative.width,
+        imageWidth,
+      );
+      const rows = inferRegularAxis(
+        layout.rects.map(({ y }) => y),
+        representative.height,
+        imageHeight,
+      );
+      if (
+        columns == undefined ||
+        rows == undefined ||
+        columns.positions.length < MINIMUM_COLUMNS ||
+        rows.positions.length < MINIMUM_CATALOG_ROWS
+      ) {
+        return [];
+      }
+
+      const occupiedArea = layout.rects.reduce((sum, rect) => sum + rect.width * rect.height, 0);
+      const left = Math.min(...layout.rects.map(({ x }) => x));
+      const right = Math.max(...layout.rects.map(({ x, width }) => x + width));
+      const top = Math.min(...layout.rects.map(({ y }) => y));
+      const bottom = Math.max(...layout.rects.map(({ y, height }) => y + height));
+      const imageArea = imageWidth * imageHeight;
+      const coverage = Math.sqrt(
+        (occupiedArea / imageArea) * (((right - left) * (bottom - top)) / imageArea),
+      );
+      return [
+        {
+          grid: {
+            rects: rows.positions.flatMap((y, row) =>
+              columns.positions.map((x, column) => ({
+                x,
+                y,
+                width: representative.width,
+                height: representative.height,
+                boundaryScore: 0,
+                row,
+                column,
+              })),
+            ),
+            rows: rows.positions.length,
+            columns: columns.positions.length,
+          },
+          score:
+            layout.score * SPARSE_LAYOUT_SCORE_WEIGHT + coverage * SPARSE_LAYOUT_COVERAGE_WEIGHT,
+        },
+      ];
+    })
+    .sort((first, second) => second.score - first.score)[0]?.grid;
+
+const inferRegularAxis = (
+  values: number[],
+  itemSize: number,
+  imageLength: number,
+): AxisGrid | undefined => {
+  const tolerance = Math.max(3, itemSize * AXIS_ALIGNMENT_TOLERANCE_RATIO);
+  const clustered = clusterValues(values, tolerance);
+  const minimumStep = Math.ceil(itemSize * AXIS_MINIMUM_STEP_RATIO);
+  const maximumStep = Math.floor(itemSize * AXIS_MAXIMUM_STEP_RATIO);
+
+  return Array.from({ length: maximumStep - minimumStep + 1 }, (_, index) => minimumStep + index)
+    .flatMap((step) =>
+      clustered.map((value) => {
+        const origin = Math.round(value - Math.floor(value / step) * step);
+        const positions = Array.from(
+          { length: Math.floor((imageLength - itemSize - origin) / step) + 1 },
+          (_, position) => origin + position * step,
+        );
+        const matches = clustered.flatMap((candidate) => {
+          const nearest = positions
+            .map((position, positionIndex) => ({
+              positionIndex,
+              distance: Math.abs(candidate - position),
+            }))
+            .sort((first, second) => first.distance - second.distance)[0];
+          return nearest != undefined && nearest.distance <= tolerance ? [nearest] : [];
+        });
+        const distinctMatches = new Set(matches.map(({ positionIndex }) => positionIndex)).size;
+        const error = matches.reduce((sum, { distance }) => sum + distance, 0);
+        return {
+          positions,
+          score: distinctMatches * 1000 + matches.length * 10 - error,
+        };
+      }),
+    )
+    .sort((first, second) => second.score - first.score)[0];
 };
 
 const dominantColumnCount = (rows: ClusteredRect[][]): number | undefined => {

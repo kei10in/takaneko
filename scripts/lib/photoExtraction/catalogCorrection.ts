@@ -1,12 +1,28 @@
-import { chooseRepresentativeSize, groupByIndex, median } from "../imageRegionExtraction/geometry";
+import {
+  average,
+  chooseRepresentativeSize,
+  clamp,
+  groupByIndex,
+  median,
+} from "../imageRegionExtraction/geometry";
 import {
   horizontalLineSum,
   rectangleBoundaryScore,
   verticalLineSum,
 } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
+import type {
+  ClusteredRect,
+  EdgeMap,
+  PixelImage,
+  PositionPostProcessContext,
+} from "../imageRegionExtraction/types";
 import { fitCatalogFrames } from "./catalogFrame";
-import { chooseCatalogFrameWidth, inferCatalogGrid, regularizeCatalogColumns } from "./catalogGrid";
+import {
+  chooseCatalogFrameWidth,
+  inferCatalogGrid,
+  reconstructSparseCatalogGrid,
+  regularizeCatalogColumns,
+} from "./catalogGrid";
 import { hasCatalogHeader } from "./catalogHeader";
 import { chooseCatalogFrameSize } from "./catalogSize";
 import { findPhotoBannerBottom } from "./photoBanner";
@@ -23,6 +39,10 @@ const CARD_TOP_SCORE_WEIGHT = 1 - BANNER_SCORE_WEIGHT;
 const CARD_TOP_ALIGNMENT_RADIUS = 2;
 const ALIGNED_ROW_TOP_TOLERANCE = 2;
 const MINIMUM_RELIABLE_BANNER_RATIO = 0.9;
+const MINIMUM_SPARSE_GRID_BANNER_RATIO = 0.8;
+const SPARSE_GRID_MODEL_RADIUS_RATIO = 0.01;
+const SPARSE_GRID_BANNER_SCORE_WEIGHT = 0.7;
+const SPARSE_GRID_EDGE_SCORE_WEIGHT = 1 - SPARSE_GRID_BANNER_SCORE_WEIGHT;
 
 interface AxisRun {
   start: number;
@@ -42,9 +62,39 @@ export const correctCatalogLayout = (
   rects: ClusteredRect[],
   edges: EdgeMap,
   image: PixelImage,
+  context: PositionPostProcessContext = { layouts: [] },
 ): ClusteredRect[] => {
   const grid = inferCatalogGrid(rects);
-  if (grid == undefined) return rects;
+  if (grid == undefined) {
+    const sparseGrid = reconstructSparseCatalogGrid(context.layouts, image.width, image.height);
+    if (sparseGrid == undefined) return rects;
+
+    const representative = chooseRepresentativeSize(sparseGrid.rects);
+    const firstCardY = Math.min(...sparseGrid.rects.map(({ y }) => y));
+    if (!hasCatalogHeader(image, firstCardY, representative.height)) return rects;
+
+    const fitted =
+      fitCatalogFrames(sparseGrid.rects, edges, image, photoExtractionProfile.aspectRatio) ??
+      sparseGrid.rects;
+    const baseWidth = chooseCatalogFrameWidth(fitted);
+    const size = chooseCatalogFrameSize(
+      fitted,
+      baseWidth,
+      photoExtractionProfile.aspectRatio.target,
+      edges,
+      image,
+    );
+    const resized = fitted.map((frame) => ({ ...frame, ...size }));
+    const rowTops = findBannerAlignedRowTops(resized, edges, image);
+    return resized.map((frame) => ({
+      ...frame,
+      y: rowTops[frame.row] ?? frame.y,
+      boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
+        ...frame,
+        y: rowTops[frame.row] ?? frame.y,
+      }),
+    }));
+  }
   const representative = chooseRepresentativeSize(grid.rects);
   const firstCardY = Math.round(
     median(grid.rects.filter(({ row }) => row === 0).map(({ y }) => y)),
@@ -162,6 +212,80 @@ export const correctCatalogLayout = (
       }),
     };
   });
+};
+
+const findBannerAlignedRowTops = (
+  frames: ClusteredRect[],
+  edges: EdgeMap,
+  image: PixelImage,
+): number[] => {
+  const rows = groupByIndex(frames, ({ row }) => row);
+  const initial = rows.map((row) => Math.round(median(row.map(({ y }) => y))));
+  if (initial.length < MINIMUM_CATALOG_ROWS) return initial;
+
+  const initialStep = Math.round(
+    median(initial.slice(1).map((position, index) => position - initial[index])),
+  );
+  const representativeHeight = median(frames.map(({ height }) => height));
+  const radius = Math.max(1, Math.floor(representativeHeight * SPARSE_GRID_MODEL_RADIUS_RATIO));
+  const candidates = Array.from({ length: radius * 2 + 1 }, (_, index) => index - radius).flatMap(
+    (originOffset) =>
+      Array.from({ length: radius * 2 + 1 }, (_, index) => index - radius).map((stepOffset) => {
+        const positions = initial.map(
+          (_, row) => initial[0] + originOffset + (initialStep + stepOffset) * row,
+        );
+        const gaps = rows.flatMap((row, rowIndex) =>
+          row.flatMap((frame) => {
+            const y = positions[rowIndex];
+            const bannerBottom = findPhotoBannerBottom(image, { ...frame, y });
+            return bannerBottom == undefined ? [] : [y + frame.height - (bannerBottom + 1)];
+          }),
+        );
+        const detectionRatio = gaps.length / frames.length;
+        const targetGap = median(gaps);
+        const consistency = average(
+          gaps.map((gap) => 1 - clamp(Math.abs(gap - targetGap) / 2, 0, 1)),
+        );
+        const edgeScore = average(
+          rows.flatMap((row, rowIndex) =>
+            row.map((frame) => {
+              const cornerWidth = Math.max(8, Math.round(frame.width * 0.08));
+              return cardTopEdgeScore(
+                edges,
+                image.width,
+                frame.x,
+                positions[rowIndex],
+                frame.width,
+                cornerWidth,
+              );
+            }),
+          ),
+        );
+        return {
+          positions,
+          detectionRatio,
+          bannerScore: detectionRatio * 0.4 + consistency * 0.6,
+          edgeScore,
+          adjustment: Math.abs(originOffset) + Math.abs(stepOffset),
+        };
+      }),
+  );
+  const maximumEdgeScore = Math.max(...candidates.map(({ edgeScore }) => edgeScore));
+
+  return (
+    candidates
+      .filter(({ detectionRatio }) => detectionRatio >= MINIMUM_SPARSE_GRID_BANNER_RATIO)
+      .map((candidate) => ({
+        ...candidate,
+        score:
+          candidate.bannerScore * SPARSE_GRID_BANNER_SCORE_WEIGHT +
+          (maximumEdgeScore === 0 ? 0 : candidate.edgeScore / maximumEdgeScore) *
+            SPARSE_GRID_EDGE_SCORE_WEIGHT,
+      }))
+      .sort(
+        (first, second) => second.score - first.score || first.adjustment - second.adjustment,
+      )[0]?.positions ?? initial
+  );
 };
 
 const findStrongestCardTop = (

@@ -136,7 +136,7 @@ export const extractPositionsFromPixels = (
     image,
     profile,
   );
-  const completed = postProcess(refined, edges, image);
+  const completed = postProcess(refined, edges, image, { layouts });
   const positions = sortPositions(completed).map((rect, index) => ({
     id: index + 1,
     x: rect.x,

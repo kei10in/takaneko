@@ -207,6 +207,49 @@ describe("extractPhotoPositions for catalog images", () => {
     ]);
   });
 
+  it("extracts 2024年振袖", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-01-03_生写真「2024年振袖」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 21, y: 155, width: 161, height: 230 },
+      { id: 2, x: 216, y: 155, width: 161, height: 230 },
+      { id: 3, x: 411, y: 155, width: 161, height: 230 },
+      { id: 4, x: 606, y: 155, width: 161, height: 230 },
+      { id: 5, x: 801, y: 155, width: 161, height: 230 },
+      { id: 6, x: 996, y: 155, width: 161, height: 230 },
+      { id: 7, x: 21, y: 393, width: 161, height: 230 },
+      { id: 8, x: 216, y: 393, width: 161, height: 230 },
+      { id: 9, x: 411, y: 393, width: 161, height: 230 },
+      { id: 10, x: 606, y: 393, width: 161, height: 230 },
+      { id: 11, x: 801, y: 393, width: 161, height: 230 },
+      { id: 12, x: 996, y: 393, width: 161, height: 230 },
+      { id: 13, x: 21, y: 631, width: 161, height: 230 },
+      { id: 14, x: 216, y: 631, width: 161, height: 230 },
+      { id: 15, x: 411, y: 631, width: 161, height: 230 },
+      { id: 16, x: 606, y: 631, width: 161, height: 230 },
+      { id: 17, x: 801, y: 631, width: 161, height: 230 },
+      { id: 18, x: 996, y: 631, width: 161, height: 230 },
+      { id: 19, x: 21, y: 869, width: 161, height: 230 },
+      { id: 20, x: 216, y: 869, width: 161, height: 230 },
+      { id: 21, x: 411, y: 869, width: 161, height: 230 },
+      { id: 22, x: 606, y: 869, width: 161, height: 230 },
+      { id: 23, x: 801, y: 869, width: 161, height: 230 },
+      { id: 24, x: 996, y: 869, width: 161, height: 230 },
+      { id: 25, x: 21, y: 1107, width: 161, height: 230 },
+      { id: 26, x: 216, y: 1107, width: 161, height: 230 },
+      { id: 27, x: 411, y: 1107, width: 161, height: 230 },
+      { id: 28, x: 606, y: 1107, width: 161, height: 230 },
+      { id: 29, x: 801, y: 1107, width: 161, height: 230 },
+      { id: 30, x: 996, y: 1107, width: 161, height: 230 },
+    ]);
+  });
+
   it("extracts 白ワンピース", async () => {
     const input = await readFile(
       path.resolve("public/takaneko/goods/2024/2024-08-07_生写真「白ワンピース」.webp"),

@@ -95,4 +95,9 @@ export type PositionPostProcessor = (
   rects: ClusteredRect[],
   edges: EdgeMap,
   image: PixelImage,
+  context: PositionPostProcessContext,
 ) => ClusteredRect[];
+
+export interface PositionPostProcessContext {
+  layouts: LayoutCandidate[];
+}
