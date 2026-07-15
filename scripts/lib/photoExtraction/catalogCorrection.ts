@@ -24,7 +24,7 @@ import {
   regularizeCatalogColumns,
 } from "./catalogGrid";
 import { hasCatalogHeader } from "./catalogHeader";
-import { chooseCatalogFrameSize } from "./catalogSize";
+import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize";
 import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
 
@@ -86,12 +86,29 @@ export const correctCatalogLayout = (
     );
     const resized = fitted.map((frame) => ({ ...frame, ...size }));
     const rowTops = findBannerAlignedRowTops(resized, edges, image);
-    return resized.map((frame) => ({
+    const aligned = resized.map((frame) => ({
       ...frame,
       y: rowTops[frame.row] ?? frame.y,
+    }));
+    const insets = chooseCatalogFrameInsets(
+      aligned,
+      size,
+      photoExtractionProfile.aspectRatio,
+      edges,
+      image,
+    );
+    return aligned.map((frame) => ({
+      ...frame,
+      x: frame.x + insets.offsetX,
+      y: frame.y + insets.offsetY,
+      width: insets.width,
+      height: insets.height,
       boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
         ...frame,
-        y: rowTops[frame.row] ?? frame.y,
+        x: frame.x + insets.offsetX,
+        y: frame.y + insets.offsetY,
+        width: insets.width,
+        height: insets.height,
       }),
     }));
   }
