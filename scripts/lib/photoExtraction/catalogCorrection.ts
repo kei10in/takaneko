@@ -6,8 +6,9 @@ import {
 } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
 import { fitCatalogFrames } from "./catalogFrame";
-import { inferCatalogGrid } from "./catalogGrid";
+import { chooseCatalogFrameWidth, inferCatalogGrid, regularizeCatalogColumns } from "./catalogGrid";
 import { hasCatalogHeader } from "./catalogHeader";
+import { chooseCatalogFrameSize } from "./catalogSize";
 import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
 
@@ -20,6 +21,8 @@ const MAXIMUM_GAP_SUPPORT = 0.08;
 const BANNER_SCORE_WEIGHT = 0.75;
 const CARD_TOP_SCORE_WEIGHT = 1 - BANNER_SCORE_WEIGHT;
 const CARD_TOP_ALIGNMENT_RADIUS = 2;
+const ALIGNED_ROW_TOP_TOLERANCE = 2;
+const MINIMUM_RELIABLE_BANNER_RATIO = 0.9;
 
 interface AxisRun {
   start: number;
@@ -54,26 +57,43 @@ export const correctCatalogLayout = (
     .filter((row) => row.length > 0)
     .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
 
-  const width = representative.width;
-  const height = Math.round(width / photoExtractionProfile.aspectRatio.target);
+  const baseWidth = chooseCatalogFrameWidth(grid.rects);
+  const baseHeight = Math.round(baseWidth / photoExtractionProfile.aspectRatio.target);
   const neutralMask = createNeutralMask(image);
   const rowProjection = projectRows(neutralMask, image.width, image.height);
-  const reconstructedRows = sourceRows
+  const sourceRowPositions = sourceRows
     .map((row) => Math.round(median(row.map(({ y }) => y))))
-    .filter((y) => y > image.height * 0.1)
-    .map((y) => findCardRowTop(y, height, rowProjection))
-    .filter((y): y is number => y != undefined)
-    .filter((y, index, rows) => index === 0 || y !== rows[index - 1])
-    .map((y) => ({
-      y,
-      columns: findCardColumns(neutralMask, edges, image, y, width, height, grid.columns),
-    }))
-    .filter(({ columns }) => columns.length >= MINIMUM_COLUMNS && columns.length <= grid.columns);
+    .filter((y) => y > image.height * 0.1);
+  const reconstructedRows = regularizeCatalogColumns(
+    sourceRowPositions
+      .map((y) => findCardRowTop(y, baseHeight, rowProjection))
+      .filter((y): y is number => y != undefined)
+      .filter((y, index, rows) => index === 0 || y !== rows[index - 1])
+      .map((y) => ({
+        y,
+        columns: findCardColumns(neutralMask, edges, image, y, baseWidth, baseHeight, grid.columns),
+      }))
+      .filter(({ columns }) => columns.length >= MINIMUM_COLUMNS && columns.length <= grid.columns),
+    grid.columns,
+    baseWidth,
+  );
 
   const fullRows = reconstructedRows.filter(({ columns }) => columns.length === grid.columns);
-  if (reconstructedRows.length < MINIMUM_CATALOG_ROWS || fullRows.length < MINIMUM_CATALOG_ROWS) {
+  if (
+    reconstructedRows.length !== sourceRowPositions.length ||
+    reconstructedRows.length < MINIMUM_CATALOG_ROWS ||
+    fullRows.length < MINIMUM_CATALOG_ROWS
+  ) {
     return fitCatalogFrames(rects, edges, image, photoExtractionProfile.aspectRatio) ?? rects;
   }
+
+  const { width, height } = chooseCatalogFrameSize(
+    reconstructedRows.flatMap(({ y, columns }) => columns.map((x) => ({ x, y }))),
+    baseWidth,
+    photoExtractionProfile.aspectRatio.target,
+    edges,
+    image,
+  );
 
   const detectedCards = reconstructedRows.flatMap(({ y, columns }, row) =>
     columns.map((x, column): DetectedCard => {
@@ -97,10 +117,24 @@ export const correctCatalogLayout = (
     bannerBottom == undefined ? [] : [edgeY + height - (bannerBottom + 1)],
   );
   const targetBannerGap = bannerGaps.length === 0 ? undefined : Math.round(median(bannerGaps));
+  const reliableBannerRatio =
+    targetBannerGap == undefined
+      ? 0
+      : bannerGaps.filter((gap) => Math.abs(gap - targetBannerGap) <= 2).length /
+        detectedCards.length;
+  const alignedRowTops = groupByIndex(detectedCards, ({ row }) => row).map((cards) => {
+    if (reliableBannerRatio >= MINIMUM_RELIABLE_BANNER_RATIO) return undefined;
+    const rowTop = Math.round(median(cards.map(({ edgeY }) => edgeY)));
+    return cards.every(({ edgeY }) => Math.abs(edgeY - rowTop) <= ALIGNED_ROW_TOP_TOLERANCE)
+      ? rowTop
+      : undefined;
+  });
 
   return detectedCards.map(({ x, edgeY, edgeScore, bannerBottom, row, column }) => {
+    const alignedRowTop = alignedRowTops[row];
     const y =
-      bannerBottom == undefined || targetBannerGap == undefined
+      alignedRowTop ??
+      (bannerBottom == undefined || targetBannerGap == undefined
         ? edgeY
         : bestCardTopPosition(
             edges,
@@ -112,7 +146,7 @@ export const correctCatalogLayout = (
             height,
             bannerBottom,
             targetBannerGap,
-          );
+          ));
     return {
       x,
       y,
@@ -229,7 +263,7 @@ const findCardRowTop = (
   cardHeight: number,
   projection: number[],
 ): number | undefined => {
-  const start = Math.max(1, initial - 4);
+  const start = Math.max(1, initial - Math.max(4, Math.round(cardHeight * 0.03)));
   const end = Math.min(projection.length - 1, initial + Math.round(cardHeight * 0.13));
   const best = Array.from({ length: end - start + 1 }, (_, index) => start + index)
     .map((position) => ({

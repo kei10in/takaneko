@@ -6,6 +6,8 @@ const MINIMUM_CATALOG_ROWS = 3;
 const MINIMUM_REFERENCE_ROWS = 2;
 const MINIMUM_COLUMNS = 3;
 const COLUMN_ALIGNMENT_TOLERANCE_RATIO = 0.25;
+const COLUMN_OUTLIER_TOLERANCE_RATIO = 0.08;
+const INNER_FRAME_WIDTH_QUANTILE = 0.25;
 
 interface CatalogGrid {
   rects: ClusteredRect[];
@@ -48,6 +50,38 @@ export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefine
     rows: selectedRows.length,
     columns,
   };
+};
+
+export const regularizeCatalogColumns = <T extends { columns: number[] }>(
+  rows: T[],
+  columnCount: number,
+  cardWidth: number,
+): T[] => {
+  const fullRows = rows.filter(({ columns }) => columns.length === columnCount);
+  if (fullRows.length < MINIMUM_CATALOG_ROWS) return rows;
+
+  const referenceColumns = Array.from({ length: columnCount }, (_, column) =>
+    Math.round(median(fullRows.map(({ columns }) => columns[column]))),
+  );
+  const tolerance = cardWidth * COLUMN_OUTLIER_TOLERANCE_RATIO;
+  return rows.map((row) =>
+    row.columns.length !== columnCount
+      ? row
+      : {
+          ...row,
+          columns: row.columns.map((x, column) =>
+            Math.abs(x - referenceColumns[column]) > tolerance ? referenceColumns[column] : x,
+          ),
+        },
+  );
+};
+
+export const chooseCatalogFrameWidth = <T extends { width: number }>(rects: T[]): number => {
+  const sortedWidths = rects.map(({ width }) => width).sort((first, second) => first - second);
+  const representative = Math.round(median(sortedWidths));
+  const lowerQuartile =
+    sortedWidths[Math.floor((sortedWidths.length - 1) * INNER_FRAME_WIDTH_QUANTILE)];
+  return lowerQuartile === representative - 1 ? lowerQuartile : representative;
 };
 
 const dominantColumnCount = (rows: ClusteredRect[][]): number | undefined => {
