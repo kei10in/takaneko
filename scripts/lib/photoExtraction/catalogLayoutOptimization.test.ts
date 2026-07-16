@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
+import { scoreLocalizedFrameBoundary } from "./catalogBoundary";
 import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization";
 import { photoExtractionProfile } from "./profile";
 
@@ -18,7 +19,7 @@ const createCatalog = (): { image: PixelImage; frames: ClusteredRect[] } => {
     Array.from({ length: FRAME_SIZE.height }, (_, offsetY) => y + offsetY).forEach((pixelY) => {
       Array.from({ length: FRAME_SIZE.width }, (_, offsetX) => x + offsetX).forEach((pixelX) => {
         const index = (pixelY * width + pixelX) * channels;
-        const isBanner = pixelY >= y + 65 && pixelY <= y + 80;
+        const isBanner = pixelY >= y + 65 && pixelY <= y + 83;
         data[index] = isBanner ? 255 : 150;
         data[index + 1] = isBanner ? 255 : 180;
         data[index + 2] = isBanner ? 255 : 200;
@@ -59,10 +60,15 @@ describe("low-confidence catalog layout optimization", () => {
     const { image, frames } = createCatalog();
     const offsets = [6, -12, 12];
     const irregular = frames.map((frame) => ({ ...frame, y: frame.y + offsets[frame.row] }));
+    const edges = createEdgeMap(image);
+
+    expect(
+      scoreLocalizedFrameBoundary(edges, image.width, image.height, frames[0]),
+    ).toBeGreaterThan(scoreLocalizedFrameBoundary(edges, image.width, image.height, irregular[0]));
 
     const optimized = optimizeLowConfidenceCatalogLayout(
       irregular,
-      createEdgeMap(image),
+      edges,
       image,
       photoExtractionProfile,
     );

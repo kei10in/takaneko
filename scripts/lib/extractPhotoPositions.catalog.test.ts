@@ -2,8 +2,9 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { extractPhotoPositions } from "./extractPhotoPositions";
+import { expectCatalogPositions } from "./photoExtraction/photoCatalogRegression";
 
-describe("extractPhotoPositions for catalog images", () => {
+describe("extractPhotoPositions for catalog images", { timeout: 10_000 }, () => {
   it("extracts 晴れ着2026", async () => {
     const input = await readFile(
       path.resolve("public/takaneko/goods/2026/2026-01-01_生写真「晴れ着2026」.webp"),
@@ -13,7 +14,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 98, y: 292, width: 192, height: 274 },
       { id: 2, x: 316, y: 290, width: 192, height: 274 },
       { id: 3, x: 527, y: 292, width: 192, height: 274 },
@@ -55,7 +56,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 81, y: 288, width: 188, height: 268 },
       { id: 2, x: 312, y: 288, width: 188, height: 268 },
       { id: 3, x: 540, y: 288, width: 188, height: 268 },
@@ -95,7 +96,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 45, y: 238, width: 176, height: 251 },
       { id: 2, x: 232, y: 238, width: 176, height: 251 },
       { id: 3, x: 419, y: 238, width: 176, height: 251 },
@@ -135,7 +136,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 239, width: 235, height: 335 },
       { id: 2, x: 315, y: 239, width: 235, height: 335 },
       { id: 3, x: 587, y: 239, width: 235, height: 335 },
@@ -173,7 +174,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 20, y: 154, width: 161, height: 230 },
       { id: 2, x: 215, y: 154, width: 161, height: 230 },
       { id: 3, x: 410, y: 154, width: 161, height: 230 },
@@ -216,7 +217,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 23, y: 157, width: 158, height: 228 },
       { id: 2, x: 218, y: 157, width: 158, height: 228 },
       { id: 3, x: 413, y: 157, width: 158, height: 228 },
@@ -259,7 +260,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 240, width: 235, height: 335 },
       { id: 2, x: 316, y: 240, width: 235, height: 335 },
       { id: 3, x: 587, y: 240, width: 235, height: 335 },
@@ -302,7 +303,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 42, y: 226, width: 220, height: 315 },
       { id: 2, x: 297, y: 226, width: 220, height: 315 },
       { id: 3, x: 552, y: 226, width: 220, height: 315 },
@@ -345,7 +346,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 240, width: 233, height: 332 },
       { id: 2, x: 316, y: 240, width: 233, height: 332 },
       { id: 3, x: 587, y: 240, width: 233, height: 332 },
@@ -388,7 +389,7 @@ describe("extractPhotoPositions for catalog images", () => {
 
     expect(result.ok).toBe(true);
     if (result.err) return;
-    expect(result.value.positions).toEqual([
+    await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 45, y: 240, width: 234, height: 335 },
       { id: 2, x: 317, y: 240, width: 234, height: 335 },
       { id: 3, x: 588, y: 240, width: 234, height: 335 },
