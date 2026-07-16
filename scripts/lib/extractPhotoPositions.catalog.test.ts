@@ -378,4 +378,47 @@ describe("extractPhotoPositions for catalog images", () => {
       { id: 30, x: 1403, y: 1697, width: 233, height: 332 },
     ]);
   });
+
+  it("extracts メイド至上主義", async () => {
+    const input = await readFile(
+      path.resolve("public/takaneko/goods/2024/2024-06-21_生写真「メイド☆至上主義」.webp"),
+    );
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toEqual([
+      { id: 1, x: 45, y: 240, width: 234, height: 335 },
+      { id: 2, x: 317, y: 240, width: 234, height: 335 },
+      { id: 3, x: 588, y: 240, width: 234, height: 335 },
+      { id: 4, x: 859, y: 240, width: 234, height: 335 },
+      { id: 5, x: 1131, y: 240, width: 234, height: 335 },
+      { id: 6, x: 1403, y: 240, width: 234, height: 335 },
+      { id: 7, x: 44, y: 593, width: 234, height: 335 },
+      { id: 8, x: 316, y: 593, width: 234, height: 335 },
+      { id: 9, x: 588, y: 593, width: 234, height: 335 },
+      { id: 10, x: 859, y: 593, width: 234, height: 335 },
+      { id: 11, x: 1131, y: 593, width: 234, height: 335 },
+      { id: 12, x: 1403, y: 593, width: 234, height: 335 },
+      { id: 13, x: 45, y: 961, width: 234, height: 335 },
+      { id: 14, x: 316, y: 961, width: 234, height: 335 },
+      { id: 15, x: 588, y: 961, width: 234, height: 335 },
+      { id: 16, x: 859, y: 961, width: 234, height: 335 },
+      { id: 17, x: 1131, y: 961, width: 234, height: 335 },
+      { id: 18, x: 1403, y: 961, width: 234, height: 335 },
+      { id: 19, x: 45, y: 1329, width: 234, height: 335 },
+      { id: 20, x: 317, y: 1329, width: 234, height: 335 },
+      { id: 21, x: 588, y: 1329, width: 234, height: 335 },
+      { id: 22, x: 859, y: 1329, width: 234, height: 335 },
+      { id: 23, x: 1131, y: 1329, width: 234, height: 335 },
+      { id: 24, x: 1403, y: 1329, width: 234, height: 335 },
+      { id: 25, x: 45, y: 1697, width: 234, height: 335 },
+      { id: 26, x: 317, y: 1697, width: 234, height: 335 },
+      { id: 27, x: 588, y: 1697, width: 234, height: 335 },
+      { id: 28, x: 859, y: 1697, width: 234, height: 335 },
+      { id: 29, x: 1130, y: 1697, width: 234, height: 335 },
+      { id: 30, x: 1403, y: 1697, width: 234, height: 335 },
+    ]);
+  });
 });

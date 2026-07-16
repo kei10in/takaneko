@@ -24,6 +24,7 @@ import {
   regularizeCatalogColumns,
 } from "./catalogGrid";
 import { hasCatalogHeader } from "./catalogHeader";
+import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization";
 import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize";
 import { findPhotoBannerBottom } from "./photoBanner";
 import { photoExtractionProfile } from "./profile";
@@ -97,7 +98,7 @@ export const correctCatalogLayout = (
       edges,
       image,
     );
-    return aligned.map((frame) => ({
+    const corrected = aligned.map((frame) => ({
       ...frame,
       x: frame.x + insets.offsetX,
       y: frame.y + insets.offsetY,
@@ -111,6 +112,7 @@ export const correctCatalogLayout = (
         height: insets.height,
       }),
     }));
+    return optimizeLowConfidenceCatalogLayout(corrected, edges, image, photoExtractionProfile);
   }
   const representative = chooseRepresentativeSize(grid.rects);
   const firstCardY = Math.round(
@@ -151,7 +153,9 @@ export const correctCatalogLayout = (
     reconstructedRows.length < MINIMUM_CATALOG_ROWS ||
     fullRows.length < MINIMUM_CATALOG_ROWS
   ) {
-    return fitCatalogFrames(rects, edges, image, photoExtractionProfile.aspectRatio) ?? rects;
+    const fitted =
+      fitCatalogFrames(rects, edges, image, photoExtractionProfile.aspectRatio) ?? rects;
+    return optimizeLowConfidenceCatalogLayout(fitted, edges, image, photoExtractionProfile);
   }
 
   const { width, height } = chooseCatalogFrameSize(
@@ -197,7 +201,7 @@ export const correctCatalogLayout = (
       : undefined;
   });
 
-  return detectedCards.map(({ x, edgeY, edgeScore, bannerBottom, row, column }) => {
+  const corrected = detectedCards.map(({ x, edgeY, edgeScore, bannerBottom, row, column }) => {
     const alignedRowTop = alignedRowTops[row];
     const y =
       alignedRowTop ??
@@ -229,6 +233,7 @@ export const correctCatalogLayout = (
       }),
     };
   });
+  return optimizeLowConfidenceCatalogLayout(corrected, edges, image, photoExtractionProfile);
 };
 
 const findBannerAlignedRowTops = (
