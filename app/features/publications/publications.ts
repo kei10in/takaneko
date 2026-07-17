@@ -16,6 +16,7 @@ import {
   EX大衆_2024年12月号,
   EX大衆_2025年03月号,
   EX大衆_2025年07月号,
+  EX大衆_2026年08・09月号,
 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
 import { IDOL_AND_READ_041, IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
@@ -116,6 +117,7 @@ const publications: Publication[] = [
   EX大衆_2024年12月号,
   EX大衆_2025年03月号,
   EX大衆_2025年07月号,
+  EX大衆_2026年08・09月号,
   FINEBOYS_2024年7月号,
   IDOL_AND_READ_高田メタルSpecial,
   IDOL_AND_READ_041,

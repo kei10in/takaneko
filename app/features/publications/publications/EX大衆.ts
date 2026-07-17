@@ -1,5 +1,30 @@
 import { Publication } from "../types";
 
+export const EX大衆_2026年08・09月号: Publication = {
+  slug: "EX大衆 2026年8・9月号",
+  name: "EX大衆 2026年8・9月号",
+  date: "2026-07-16",
+  kind: "magazines", // "books"
+  publisher: "双葉社",
+  listPrice: 1000,
+  priceWithTax: 1100,
+  code: [{ kind: "JAN", value: "4912117710962" }],
+  url: "https://www.futabasha.co.jp/book/magazine/49121177109620000000",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-07-16_EX大衆 2026年8・9月号.jpg",
+      ref: "https://x.com/EXtaishu/status/2074765866584203462",
+    },
+    {
+      path: "/publications/2026/2026-07-16_EX大衆 2026年8・9月号_オフショット.jpg",
+      ref: "https://x.com/takanenofficial/status/2077373866779840891",
+    },
+  ],
+  featuredMembers: ["東山恵里沙"],
+  officialTwitter: "https://x.com/takanenofficial/status/2077373866779840891",
+  links: [],
+};
+
 export const EX大衆_2025年07月号: Publication = {
   slug: "EX大衆 2025年7月号",
   name: "EX大衆 2025年7月号",
