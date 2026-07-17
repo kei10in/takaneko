@@ -29,9 +29,9 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://eplus.jp/takanenonadeshiko",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["11:00", "終演後30分程度"],
     lineup: undefined,
-    url: undefined,
+    url: "https://x.com/takanenofficial/status/2075193248193384464",
   },
   acts: [
     {
@@ -111,6 +111,12 @@ export const content = /* md */ `
   - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2076301910794264978)
   - [2 ステージ目 出演報告 - 公式 X](https://x.com/takanenofficial/status/2076313369276039561)
   - [1 ステージ目 出演報告 - 公式 X](https://x.com/takanenofficial/status/2076158538284753394)
+  - [たかねこ出没中 3 - 公式 X](https://x.com/takanenofficial/status/2076239790278840636)
+  - [たかねこ出没中 2 - 公式 X](https://x.com/takanenofficial/status/2076218138673422780)
+  - [たかねこ出没中 1 - 公式 X](https://x.com/takanenofficial/status/2076203976845066515)
+  - [完売のお知らせ - 公式 X](https://x.com/takanenofficial/status/2076124422499598781)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2075946006211121592)
+  - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2075193248193384464)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2060527234348388737)
   - [公式ニュース](https://takanenonadeshiko.jp/?p=5243)
   - [開催告知 - 公式 X](https://x.com/takanenofficial/status/2051981551270060290)
