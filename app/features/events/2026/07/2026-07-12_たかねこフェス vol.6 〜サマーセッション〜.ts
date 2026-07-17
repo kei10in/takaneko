@@ -83,6 +83,28 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 出演者紹介ポスト
+
+  - [Lumiétoile](https://x.com/takanenofficial/status/2076144823736914332)
+  - [Ma'Scar'Piece](https://x.com/takanenofficial/status/2076161008880832625)
+  - [フューチャーサイダー](https://x.com/takanenofficial/status/2076163444001427704)
+  - [22/7_the 3rd](https://x.com/takanenofficial/status/2076168526520627215)
+  - [フルコース](https://x.com/takanenofficial/status/2076175185011785786)
+  - [RE-GE](https://x.com/takanenofficial/status/2076184832682659985)
+  - [ハルカエコー](https://x.com/takanenofficial/status/2076249211826483490)
+  - [ラストシーン](https://x.com/takanenofficial/status/2076286814139334749)
+  - [Pixel Ribbon](https://x.com/takanenofficial/status/2076201005382074757)
+  - [ドレスコード](https://x.com/takanenofficial/status/2076262899044278534)
+  - [α+](https://x.com/takanenofficial/status/2076216573229240346)
+  - [ハルニシオン](https://x.com/takanenofficial/status/2076223983851307096)
+  - [MEGAFON](https://x.com/takanenofficial/status/2076245252953030959)
+  - [なみだ色の消しごむ](https://x.com/takanenofficial/status/2076235609753223266)
+  - [可憐なアイボリー](https://x.com/takanenofficial/status/2076241566830854418)
+  - [夜光性アミューズ](https://x.com/takanenofficial/status/2076256122764415161)
+  - [yosugala](https://x.com/takanenofficial/status/2076289051834064912)
+  - [22/7](https://x.com/takanenofficial/status/2076293420277219447)
+  - [いぎなり東北産](https://x.com/takanenofficial/status/2076296381258695107)
+
   ## リンク
 
   - [ダイジェスト - 公式 X](https://x.com/takanenofficial/status/2076864483428123109)
