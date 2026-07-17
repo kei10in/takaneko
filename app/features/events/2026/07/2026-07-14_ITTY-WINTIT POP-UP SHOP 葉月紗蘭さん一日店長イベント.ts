@@ -38,7 +38,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-01",
+  updatedAt: "2026-07-17",
 };
 
 export const content = /* md */ `
@@ -62,6 +62,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2076977508897943562)
   - [LivePocket](https://livepocket.jp/e/yf1vk)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2072243827025350775)
 `;
