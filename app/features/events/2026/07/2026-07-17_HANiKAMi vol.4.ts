@@ -46,8 +46,16 @@ export const meta: EventMetaDescriptor = {
     types: ["LIVE"],
     start: "19:45",
     end: "20:15",
-    setlist: [],
-    url: "",
+    setlist: [
+      "衣装: Bouquet of 9 Flowers 衣装",
+      "可愛くてごめん",
+      "初恋のこたえ。",
+      "MC",
+      "メランコリックハニー",
+      "月曜日の憂鬱",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2078104395930325425",
   },
   updatedAt: "2026-07-17",
 };
@@ -55,6 +63,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2078104395930325425)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2078102482438467751)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2078076374246674722)
   - [城月菜央欠席のお知らせ - 公式 X](https://x.com/takanenofficial/status/2077906123730858392)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2077736254645674231)
