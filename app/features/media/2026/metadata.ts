@@ -3,6 +3,17 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "6eHtXCUNtt8",
+    title: "【抜き打ち】恐怖の体重チェック！Popteenモデルの体重を大公開！【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-07-15",
+    mediaUrl: "https://youtu.be/6eHtXCUNtt8",
+    imageUrl: "https://i.ytimg.com/vi/6eHtXCUNtt8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
     key: "u4mybGVFOK8",
     title:
       "【城月菜央】たかねこが運転免許トロッカ！早口言葉にチャレンジ！！｜運転免許トロッカ！×高嶺のなでしこ",
