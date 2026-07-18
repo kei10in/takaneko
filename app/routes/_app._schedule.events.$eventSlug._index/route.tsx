@@ -110,6 +110,16 @@ export default function EventPage() {
 
   return (
     <div className="container mx-auto lg:max-w-4xl">
+      <div className="bg-linear-to-b from-zinc-100/80 to-white to-20% px-4 py-4">
+        <Breadcrumb
+          items={[
+            { label: "スケジュール", to: "/calendar" },
+            { label: displayMonth(m), to: calendarMonthHref(m) },
+            { label: `${d.day.toString().padStart(2, "0")}日`, to: dateHref(d) },
+          ]}
+        />
+      </div>
+
       <div>
         {meta.images.length > 0 && (
           <ImageCarousel
@@ -122,17 +132,6 @@ export default function EventPage() {
             }))}
           />
         )}
-
-        <div className="px-4 py-2">
-          <Breadcrumb
-            items={[
-              { label: "たかねこの", to: "/" },
-              { label: "スケジュール", to: "/calendar" },
-              { label: displayMonth(m), to: calendarMonthHref(m) },
-              { label: `${d.day.toString().padStart(2, "0")}日`, to: dateHref(d) },
-            ]}
-          />
-        </div>
 
         <div className="my-4 space-y-2">
           <h1 className="px-4 pb-1.5 text-2xl font-bold">
