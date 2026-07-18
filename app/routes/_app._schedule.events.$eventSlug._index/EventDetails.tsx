@@ -18,7 +18,7 @@ export const EventDetails: React.FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <h2 className="my-6 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+      <h2 className="my-6 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
         開催内容
       </h2>
 

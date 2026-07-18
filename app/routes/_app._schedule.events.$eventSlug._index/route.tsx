@@ -262,7 +262,7 @@ export default function EventPage() {
 
         {meta.links.length > 0 && (
           <section>
-            <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+            <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
               リンク
             </h2>
             <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
