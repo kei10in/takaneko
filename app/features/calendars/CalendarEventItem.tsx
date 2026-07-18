@@ -1,9 +1,9 @@
 import { clsx } from "clsx";
 import { BsClock } from "react-icons/bs";
 import { HiOutlineMapPin } from "react-icons/hi2";
-import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip";
-import { EventType, eventTypeBackgroundColor, eventTypeColors } from "../events/EventType";
+import { EventType, eventTypeBackgroundColor } from "../events/EventType";
 import { CalendarEvent } from "./calendarEvents";
+import { EventMetaChips } from "./EventMetaChips";
 import { EventTypeLabel } from "./EventTypeLabel";
 
 interface Props {
@@ -71,7 +71,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
 
 const Live: React.FC<Props> = (props: Props) => {
   const { event } = props;
-  const { liveType, summary, location, region } = event;
+  const { summary, location, region } = event;
   const place = location || region;
 
   return (
@@ -88,18 +88,20 @@ const Live: React.FC<Props> = (props: Props) => {
           </p>
         )}
       </div>
-      <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && <LiveTypeChip liveType={liveType} large />}
-      </div>
+      <EventMetaChips
+        className="mt-4"
+        category={event.category}
+        liveType={event.liveType}
+        meetAndGreetTypes={event.meetAndGreetTypes}
+      />
     </div>
   );
 };
 
 const ReleaseEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
-  const { liveType, meetAndGreetTypes, summary, location, region } = event;
+  const { summary, location, region } = event;
   const place = location || region;
-  const chipColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -115,21 +117,20 @@ const ReleaseEvent: React.FC<Props> = (props: Props) => {
           </p>
         )}
       </div>
-      <div className="mt-4 flex flex-wrap items-center gap-1">
-        {liveType != undefined && <LiveChip iconColor={chipColor} large />}
-        {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} meetAndGreetType={type} iconColor={chipColor} large />
-        ))}
-      </div>
+      <EventMetaChips
+        className="mt-4"
+        category={event.category}
+        liveType={event.liveType}
+        meetAndGreetTypes={event.meetAndGreetTypes}
+      />
     </div>
   );
 };
 
 const OfflineEvent: React.FC<Props> = (props: Props) => {
   const { event } = props;
-  const { liveType, meetAndGreetTypes, summary, location, region } = event;
+  const { summary, location, region } = event;
   const place = location || region;
-  const badgeColor = eventTypeColors(event.category).text;
 
   return (
     <div className="flex flex-col gap-1 py-2">
@@ -145,12 +146,12 @@ const OfflineEvent: React.FC<Props> = (props: Props) => {
           </p>
         )}
       </div>
-      <div className="mt-4 flex flex-wrap items-center gap-1">
-        {meetAndGreetTypes.map((type) => (
-          <MeetAndGreetChip key={type} meetAndGreetType={type} iconColor={badgeColor} large />
-        ))}
-        {liveType != undefined && <LiveChip iconColor={badgeColor} large />}
-      </div>
+      <EventMetaChips
+        className="mt-4"
+        category={event.category}
+        liveType={event.liveType}
+        meetAndGreetTypes={event.meetAndGreetTypes}
+      />
     </div>
   );
 };
