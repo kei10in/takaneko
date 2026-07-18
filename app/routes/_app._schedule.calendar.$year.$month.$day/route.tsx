@@ -7,11 +7,12 @@ import {
 import { DomainName } from "~/constants";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
 import { DailyCalendar } from "~/features/calendars/DailyCalendar";
-import { validateYearMonthDate } from "~/features/calendars/utils";
+import { isCalendarMonthAvailable, validateYearMonthDate } from "~/features/calendars/utils";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
@@ -39,7 +40,13 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.day });
-  if (r == undefined) {
+  if (
+    r == undefined ||
+    !isCalendarMonthAvailable(
+      new NaiveMonth(r.year, r.month),
+      NaiveDate.todayInJapan().naiveMonth(),
+    )
+  ) {
     throw new Response("", { status: 404 });
   }
 
@@ -53,7 +60,13 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 
 export const clientLoader = async ({ params }: ClientLoaderFunctionArgs) => {
   const r = validateYearMonthDate({ year: params.year, month: params.month, day: params.day });
-  if (r == undefined) {
+  if (
+    r == undefined ||
+    !isCalendarMonthAvailable(
+      new NaiveMonth(r.year, r.month),
+      NaiveDate.todayInJapan().naiveMonth(),
+    )
+  ) {
     throw new Response("", { status: 404 });
   }
 

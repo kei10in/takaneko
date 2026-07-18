@@ -11,12 +11,11 @@ import {
 import { DomainName } from "~/constants";
 import { Calendar } from "~/features/calendars/Calendar";
 import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { calendarMonthRange, validateYearMonth } from "~/features/calendars/utils";
+import { isCalendarMonthAvailable, validateYearMonth } from "~/features/calendars/utils";
 import { EventFilters } from "~/features/events/eventFilter";
 import { compareEventMeta } from "~/features/events/eventMeta";
 import { Events } from "~/features/events/events";
 import { displayMonth } from "~/utils/dateDisplay";
-import { isMonthInRange } from "~/utils/datetime/MonthRange";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -58,9 +57,7 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       }
 
       const pageMonth = new NaiveMonth(r.year, r.month);
-      const range = calendarMonthRange(NaiveMonth.current());
-
-      if (!isMonthInRange(pageMonth, range)) {
+      if (!isCalendarMonthAvailable(pageMonth, NaiveDate.todayInJapan().naiveMonth())) {
         throw new Response("", { status: 404 });
       }
 
@@ -103,9 +100,7 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
       }
 
       const pageMonth = new NaiveMonth(r.year, r.month);
-      const range = calendarMonthRange(NaiveMonth.current());
-
-      if (!isMonthInRange(pageMonth, range)) {
+      if (!isCalendarMonthAvailable(pageMonth, NaiveDate.todayInJapan().naiveMonth())) {
         throw new Response("", { status: 404 });
       }
 
