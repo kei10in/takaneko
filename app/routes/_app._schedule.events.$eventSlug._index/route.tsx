@@ -24,9 +24,9 @@ import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { Mdx } from "~/components/Mdx";
+import { EventTypeLabel } from "~/features/calendars/EventTypeLabel";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { Events } from "~/features/events/events";
-import { eventTypeToEmoji } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
@@ -133,115 +133,123 @@ export default function EventPage() {
           />
         )}
 
-        <div className="my-4 space-y-2">
-          <h1 className="px-4 pb-1.5 text-2xl font-bold">
-            <span>{eventTypeToEmoji(meta.category)}</span>
-            <span>{meta.title ?? meta.summary}</span>
-          </h1>
-          <div className="flex items-center gap-1 px-5">
-            <BsCalendar className="text-gray-400" />
-            <p>
-              {displayDateWithDayOfWeek(d)}
-              {meta.start != undefined && meta.start != "" && ` ${meta.start} 〜`}
-              {meta.end != undefined && meta.end != "" && ` ${meta.end}`}
-              {(meta.start == undefined || meta.start == "") &&
-                meta.end != undefined &&
-                meta.end != "" &&
-                " まで"}
-            </p>
+        <div className="my-8 space-y-4">
+          <div className="space-y-1">
+            <div className="px-4">
+              <EventTypeLabel category={meta.category} />
+            </div>
+
+            <h1 className="px-4 pb-1.5 text-3xl font-bold">
+              <span>{meta.title ?? meta.summary}</span>
+            </h1>
           </div>
-          {meta.open && (
-            <div className="flex items-center gap-1 px-5">
-              <BsDoorOpen className="text-gray-400" />
-              <p>開場 {meta.open} 〜</p>
-            </div>
-          )}
-          {meta.location && (
-            <Link
-              className="block"
-              to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsPinMap className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{meta.location}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
 
-          {meta.link && (
-            <Link className="block" to={meta.link.url} target="_blank" rel="noreferrer">
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsLink45Deg className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{meta.link.text}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
-          {meta.ticket && (
-            <Link className="block" to={meta.ticket} target="_blank" rel="noreferrer">
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsTicketPerforated className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">チケット</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
-          {meta.streamings.map((streaming) => (
-            <Link
-              key={streaming.url}
-              className="block"
-              to={streaming.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsBroadcast className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{streaming.text}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          ))}
-
-          {meta.present != undefined && meta.present.length != 0 && (
+          <div className="space-y-2">
             <div className="flex items-center gap-1 px-5">
-              <span>
-                <BsPersonFill className="text-gray-400" />
-              </span>
-              <span className="text-gray-600">
-                {meta.present.map((n) => findMemberOrGroupDescription(n).name).join(" / ")}
-              </span>
+              <BsCalendar className="text-gray-400" />
+              <p>
+                {displayDateWithDayOfWeek(d)}
+                {meta.start != undefined && meta.start != "" && ` ${meta.start} 〜`}
+                {meta.end != undefined && meta.end != "" && ` ${meta.end}`}
+                {(meta.start == undefined || meta.start == "") &&
+                  meta.end != undefined &&
+                  meta.end != "" &&
+                  " まで"}
+              </p>
             </div>
-          )}
+            {meta.open && (
+              <div className="flex items-center gap-1 px-5">
+                <BsDoorOpen className="text-gray-400" />
+                <p>開場 {meta.open} 〜</p>
+              </div>
+            )}
+            {meta.location && (
+              <Link
+                className="block"
+                to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center gap-1 px-5">
+                  <span>
+                    <BsPinMap className="text-gray-400" />
+                  </span>
+                  <span className="text-nadeshiko-900">{meta.location}</span>
+                  <span>
+                    <BsBoxArrowUpRight className="text-gray-400" />
+                  </span>
+                </div>
+              </Link>
+            )}
 
-          {meta.absent != undefined && meta.absent.length != 0 && (
-            <div className="flex items-center gap-1 px-5">
-              <span>
-                <BsPersonFillSlash className="text-gray-400" />
-              </span>
-              <span className="text-gray-600">
-                {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
-              </span>
-            </div>
-          )}
+            {meta.link && (
+              <Link className="block" to={meta.link.url} target="_blank" rel="noreferrer">
+                <div className="flex items-center gap-1 px-5">
+                  <span>
+                    <BsLink45Deg className="text-gray-400" />
+                  </span>
+                  <span className="text-nadeshiko-900">{meta.link.text}</span>
+                  <span>
+                    <BsBoxArrowUpRight className="text-gray-400" />
+                  </span>
+                </div>
+              </Link>
+            )}
+            {meta.ticket && (
+              <Link className="block" to={meta.ticket} target="_blank" rel="noreferrer">
+                <div className="flex items-center gap-1 px-5">
+                  <span>
+                    <BsTicketPerforated className="text-gray-400" />
+                  </span>
+                  <span className="text-nadeshiko-900">チケット</span>
+                  <span>
+                    <BsBoxArrowUpRight className="text-gray-400" />
+                  </span>
+                </div>
+              </Link>
+            )}
+            {meta.streamings.map((streaming) => (
+              <Link
+                key={streaming.url}
+                className="block"
+                to={streaming.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center gap-1 px-5">
+                  <span>
+                    <BsBroadcast className="text-gray-400" />
+                  </span>
+                  <span className="text-nadeshiko-900">{streaming.text}</span>
+                  <span>
+                    <BsBoxArrowUpRight className="text-gray-400" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+
+            {meta.present != undefined && meta.present.length != 0 && (
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <BsPersonFill className="text-gray-400" />
+                </span>
+                <span className="text-gray-600">
+                  {meta.present.map((n) => findMemberOrGroupDescription(n).name).join(" / ")}
+                </span>
+              </div>
+            )}
+
+            {meta.absent != undefined && meta.absent.length != 0 && (
+              <div className="flex items-center gap-1 px-5">
+                <span>
+                  <BsPersonFillSlash className="text-gray-400" />
+                </span>
+                <span className="text-gray-600">
+                  {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
