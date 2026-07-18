@@ -105,6 +105,10 @@ export const MomokoHashimoto: MemberDescription = {
   },
   images: [
     {
+      path: "/takaneko/members/momoko-hashimoto_3.webp",
+      ref: "https://x.com/MomokoHashimoto/status/2070885052334940198",
+    },
+    {
       path: "/takaneko/members/momoko-hashimoto_2.webp",
       ref: "https://x.com/MomokoHashimoto/status/1938613832257261682",
     },
