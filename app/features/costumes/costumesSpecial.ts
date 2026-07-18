@@ -1,5 +1,54 @@
 import { SpecialCostume } from "./types";
 
+export const _2026浴衣 = {
+  kind: "special",
+  name: "2026 浴衣",
+  slug: "2026浴衣",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣.jpg",
+      ref: "https://x.com/takanenofficial/status/2076158538284753394",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2076192349269733775",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2076305251884470702",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2076680060942360978",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_葉月紗蘭.jpg",
+      ref: "https://x.com/saara_hazuki/status/2076305031809339822",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2077153145915068435",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2076311398431531281",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_星谷美来.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2076221900880330760",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_松本ももな.jpg",
+      ref: "https://www.instagram.com/momona.1012/p/Daxvn44E30T/",
+    },
+    {
+      path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2076684291803910342",
+    },
+  ],
+} satisfies SpecialCostume;
+
 export const アクロトーキョーツーショット撮影会衣装 = {
   kind: "special",
   name: "アクロトーキョー ツーショット撮影会衣装",
@@ -282,6 +331,7 @@ export const ハロウィンコスプレ = {
 } satisfies SpecialCostume;
 
 export const AllSpecialCostumes = [
+  _2026浴衣,
   アクロトーキョーツーショット撮影会衣装,
   アクロトーキョーコラボグッズ衣装,
   高嶺のなでしこ2024衣装_茨城ロボッツ2025_26ユニフォーム,
