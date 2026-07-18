@@ -17,10 +17,12 @@ export const _2026浴衣 = {
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_涼海すう.jpg",
       ref: "https://x.com/su_suzumi_/status/2076305251884470702",
+      square: { offsetY: 20 },
     },
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_橋本桃呼.jpg",
       ref: "https://x.com/MomokoHashimoto/status/2076680060942360978",
+      square: { offsetY: 30 },
     },
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_葉月紗蘭.jpg",
@@ -29,6 +31,7 @@ export const _2026浴衣 = {
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_東山恵里沙.jpg",
       ref: "https://x.com/erisahigasiyama/status/2077153145915068435",
+      square: { offsetY: 10 },
     },
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_日向端ひな.jpg",
@@ -37,6 +40,7 @@ export const _2026浴衣 = {
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_星谷美来.jpg",
       ref: "https://x.com/Mikuru_hositani/status/2076221900880330760",
+      square: { offsetY: 20 },
     },
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_松本ももな.jpg",
@@ -45,6 +49,7 @@ export const _2026浴衣 = {
     {
       path: "/takaneko/costumes/specials/2026浴衣/2026浴衣_籾山ひめり.jpg",
       ref: "https://x.com/himeri_momiyama/status/2076684291803910342",
+      square: { offsetY: 30 },
     },
   ],
 } satisfies SpecialCostume;

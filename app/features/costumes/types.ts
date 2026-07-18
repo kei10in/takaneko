@@ -1,5 +1,5 @@
 import { z } from "zod/v4";
-import { ImageDescription } from "~/utils/types/ImageDescription";
+import { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription";
 import { EventTypeEnum, LiveTypeEnum } from "../events/EventType";
 import {
   MvCostumeName,
@@ -29,7 +29,7 @@ export interface StageCostume {
 
   stylist?: string;
 
-  images?: ImageDescription[];
+  images?: ImageDescriptionWithOffset[];
 }
 
 export interface MvCostume {
@@ -37,7 +37,7 @@ export interface MvCostume {
   name: MvCostumeName;
   slug: string;
 
-  images?: ImageDescription[];
+  images?: ImageDescriptionWithOffset[];
 }
 
 /**
@@ -49,7 +49,7 @@ export interface TShirtCostume {
   name: TShirtCostumeName;
   slug: string;
 
-  images?: ImageDescription[];
+  images?: ImageDescriptionWithOffset[];
 }
 
 export interface SpecialCostume {
@@ -57,7 +57,7 @@ export interface SpecialCostume {
   name: SpecialCostumeName;
   slug: string;
 
-  images?: ImageDescription[];
+  images?: ImageDescriptionWithOffset[];
 }
 
 export type Costume = StageCostume | MvCostume | TShirtCostume | SpecialCostume;

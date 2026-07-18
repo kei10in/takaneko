@@ -20,6 +20,7 @@ import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { formatTitle } from "~/utils/htmlHeader";
 import type { Route } from "./+types/route";
 import { LiveSkeleton } from "./LiveSkeleton";
+import { squareImageObjectPosition } from "./squareImageObjectPosition";
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
   const title = formatTitle(data?.costume.name ?? "衣装が見つかりません。");
@@ -233,7 +234,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               </h2>
 
               <ul className="-mx-4 mt-4 grid grid-cols-3 gap-1 sm:grid-cols-4">
-                {galleryImages.map(({ path, ref }, i) => {
+                {galleryImages.map(({ path, ref, square }, i) => {
                   return (
                     <li key={i}>
                       <Link to={`#photo-${i}`} replace={true} preventScrollReset={true}>
@@ -241,6 +242,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                           src={path}
                           alt="コスチュームの他の画像"
                           className="block aspect-square w-full object-cover"
+                          style={{
+                            objectPosition: squareImageObjectPosition(square),
+                          }}
                         />
                       </Link>
 
