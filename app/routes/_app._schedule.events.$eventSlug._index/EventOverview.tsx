@@ -23,7 +23,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
     <Fragment>
       {timetables.length > 0 && (
         <section>
-          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
             タイムテーブル
           </h2>
           {timetables.map((tt, i) => {
@@ -58,7 +58,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
 
       {showMerchandise(goods) && (
         <section>
-          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+          <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
             物販情報
           </h2>
 

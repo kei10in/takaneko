@@ -1,15 +1,15 @@
+import { clsx } from "clsx";
+import { IconType } from "node_modules/react-icons/lib/iconBase";
+import { BsCalendar3, BsPerson, BsPersonSlash } from "react-icons/bs";
 import {
-  BsBoxArrowUpRight,
-  BsBroadcast,
-  BsCalendar,
-  BsCalendar3,
-  BsDoorOpen,
-  BsLink45Deg,
-  BsPersonFill,
-  BsPersonFillSlash,
-  BsPinMap,
-  BsTicketPerforated,
-} from "react-icons/bs";
+  HiOutlineArrowTopRightOnSquare,
+  HiOutlineCalendarDays,
+  HiOutlineClock,
+  HiOutlineLink,
+  HiOutlineMapPin,
+  HiOutlineSignal,
+  HiOutlineTicket,
+} from "react-icons/hi2";
 import {
   href,
   Link,
@@ -24,9 +24,11 @@ import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { Mdx } from "~/components/Mdx";
+import { EventMetaChips } from "~/features/calendars/EventMetaChips";
+import { EventTypeLabel } from "~/features/calendars/EventTypeLabel";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { Events } from "~/features/events/events";
-import { eventTypeToEmoji } from "~/features/events/EventType";
+import { EventType } from "~/features/events/EventType";
 import { makeIcs } from "~/features/events/ical";
 import { twitterCard } from "~/features/events/twitterCard";
 import { findMemberOrGroupDescription } from "~/features/profile/profile";
@@ -110,6 +112,16 @@ export default function EventPage() {
 
   return (
     <div className="container mx-auto lg:max-w-4xl">
+      <div className="bg-linear-to-b from-zinc-100/80 to-white to-20% px-4 py-4">
+        <Breadcrumb
+          items={[
+            { label: "スケジュール", to: "/calendar" },
+            { label: displayMonth(m), to: calendarMonthHref(m) },
+            { label: `${d.day.toString().padStart(2, "0")}日`, to: dateHref(d) },
+          ]}
+        />
+      </div>
+
       <div>
         {meta.images.length > 0 && (
           <ImageCarousel
@@ -123,126 +135,116 @@ export default function EventPage() {
           />
         )}
 
-        <div className="px-4 py-2">
-          <Breadcrumb
-            items={[
-              { label: "たかねこの", to: "/" },
-              { label: "スケジュール", to: "/calendar" },
-              { label: displayMonth(m), to: calendarMonthHref(m) },
-              { label: `${d.day.toString().padStart(2, "0")}日`, to: dateHref(d) },
-            ]}
-          />
-        </div>
+        <div className="my-8 space-y-4">
+          <div className="space-y-1">
+            <div className="px-4">
+              <EventTypeLabel category={meta.category} />
+            </div>
 
-        <div className="my-4 space-y-2">
-          <h1 className="px-4 pb-1.5 text-2xl font-bold">
-            <span>{eventTypeToEmoji(meta.category)}</span>
-            <span>{meta.title ?? meta.summary}</span>
-          </h1>
-          <div className="flex items-center gap-1 px-5">
-            <BsCalendar className="text-gray-400" />
-            <p>
-              {displayDateWithDayOfWeek(d)}
-              {meta.start != undefined && meta.start != "" && ` ${meta.start} 〜`}
-              {meta.end != undefined && meta.end != "" && ` ${meta.end}`}
-              {(meta.start == undefined || meta.start == "") &&
-                meta.end != undefined &&
-                meta.end != "" &&
-                " まで"}
-            </p>
+            <h1 className="px-4 pb-1.5 text-3xl font-bold">
+              <span>{meta.title ?? meta.summary}</span>
+            </h1>
           </div>
-          {meta.open && (
-            <div className="flex items-center gap-1 px-5">
-              <BsDoorOpen className="text-gray-400" />
-              <p>開場 {meta.open} 〜</p>
-            </div>
-          )}
-          {meta.location && (
-            <Link
-              className="block"
-              to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsPinMap className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{meta.location}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
+          <div className="space-y-3">
+            <FieldWithIcon className="px-5" icon={HiOutlineCalendarDays}>
+              <p>{displayDateWithDayOfWeek(d)}</p>
+            </FieldWithIcon>
 
-          {meta.link && (
-            <Link className="block" to={meta.link.url} target="_blank" rel="noreferrer">
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsLink45Deg className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{meta.link.text}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
-          {meta.ticket && (
-            <Link className="block" to={meta.ticket} target="_blank" rel="noreferrer">
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsTicketPerforated className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">チケット</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          )}
-          {meta.streamings.map((streaming) => (
-            <Link
-              key={streaming.url}
-              className="block"
-              to={streaming.url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="flex items-center gap-1 px-5">
-                <span>
-                  <BsBroadcast className="text-gray-400" />
-                </span>
-                <span className="text-nadeshiko-900">{streaming.text}</span>
-                <span>
-                  <BsBoxArrowUpRight className="text-gray-400" />
-                </span>
-              </div>
-            </Link>
-          ))}
+            {meta.category == EventType.LIVE && (meta.open || meta.start) && (
+              <FieldWithIcon className="px-5" icon={HiOutlineClock}>
+                {meta.open && meta.start && (
+                  <p>
+                    開場: {meta.open} / 開演: {meta.start}
+                  </p>
+                )}
+                {meta.open && !meta.start && <p>開場: {meta.open}</p>}
+                {!meta.open && meta.start && <p>開演: {meta.start}</p>}
 
-          {meta.present != undefined && meta.present.length != 0 && (
-            <div className="flex items-center gap-1 px-5">
-              <span>
-                <BsPersonFill className="text-gray-400" />
-              </span>
-              <span className="text-gray-600">
+                {meta.end && <p className="text-sm">終演: {meta.end}</p>}
+              </FieldWithIcon>
+            )}
+
+            {(meta.category == EventType.TV || meta.category == EventType.RADIO) && meta.start && (
+              <FieldWithIcon className="px-5" icon={HiOutlineClock}>
+                <p>
+                  {meta.start} 〜 {meta.end}
+                </p>
+              </FieldWithIcon>
+            )}
+
+            {meta.location && (
+              <FieldWithIcon className="px-5" icon={HiOutlineMapPin}>
+                <Link
+                  className="block space-x-1"
+                  to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="underline">{meta.location}</span>
+                  <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
+                </Link>
+              </FieldWithIcon>
+            )}
+
+            {meta.link && (
+              <FieldWithIcon className="px-5" icon={HiOutlineLink}>
+                <Link
+                  className="block space-x-1"
+                  to={meta.link.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="underline">{meta.link.text}</span>
+                  <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
+                </Link>
+              </FieldWithIcon>
+            )}
+
+            {meta.ticket && (
+              <FieldWithIcon className="px-5" icon={HiOutlineTicket}>
+                <Link className="block space-x-1" to={meta.ticket} target="_blank" rel="noreferrer">
+                  <span className="underline">チケット</span>
+                  <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
+                </Link>
+              </FieldWithIcon>
+            )}
+
+            {meta.streamings.length > 0 && (
+              <FieldWithIcon className="px-5" icon={HiOutlineSignal}>
+                {meta.streamings.map((streaming, i) => (
+                  <Link
+                    key={i}
+                    className="block space-x-1"
+                    to={streaming.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="underline">{streaming.text}</span>
+                    <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
+                  </Link>
+                ))}
+              </FieldWithIcon>
+            )}
+
+            {meta.present != undefined && meta.present.length != 0 && (
+              <FieldWithIcon className="px-5" icon={BsPerson}>
                 {meta.present.map((n) => findMemberOrGroupDescription(n).name).join(" / ")}
-              </span>
-            </div>
-          )}
+              </FieldWithIcon>
+            )}
 
-          {meta.absent != undefined && meta.absent.length != 0 && (
-            <div className="flex items-center gap-1 px-5">
-              <span>
-                <BsPersonFillSlash className="text-gray-400" />
-              </span>
-              <span className="text-gray-600">
+            {meta.absent != undefined && meta.absent.length != 0 && (
+              <FieldWithIcon className="px-5" icon={BsPersonSlash}>
                 {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
-              </span>
-            </div>
-          )}
+              </FieldWithIcon>
+            )}
+          </div>
+
+          <EventMetaChips
+            className="px-5"
+            category={meta.category}
+            liveType={meta.liveType}
+            meetAndGreetTypes={meta.meetAndGreetTypes}
+          />
         </div>
       </div>
 
@@ -263,7 +265,7 @@ export default function EventPage() {
 
         {meta.links.length > 0 && (
           <section>
-            <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+            <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
               リンク
             </h2>
             <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
@@ -326,3 +328,22 @@ export default function EventPage() {
     </div>
   );
 }
+
+interface FieldWithIconProps {
+  className?: string;
+  icon: IconType;
+  children?: React.ReactNode;
+}
+
+const FieldWithIcon: React.FC<FieldWithIconProps> = (props: FieldWithIconProps) => {
+  const { className, icon: Icon, children } = props;
+
+  return (
+    <div className={clsx("flex items-start gap-2", className)}>
+      <div>
+        <Icon className="size-6 text-zinc-400" />
+      </div>
+      <div className="py-0.5 leading-tight">{children}</div>
+    </div>
+  );
+};
