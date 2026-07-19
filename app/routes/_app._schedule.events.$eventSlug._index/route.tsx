@@ -24,6 +24,7 @@ import { Breadcrumb } from "~/components/Breadcrumb";
 import { ImageCarousel } from "~/components/ImageCarousel";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { Mdx } from "~/components/Mdx";
+import { EventMetaChips } from "~/features/calendars/EventMetaChips";
 import { EventTypeLabel } from "~/features/calendars/EventTypeLabel";
 import { calendarMonthHref, dateHref } from "~/features/calendars/utils";
 import { Events } from "~/features/events/events";
@@ -237,6 +238,13 @@ export default function EventPage() {
                 {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
               </FieldWithIcon>
             )}
+
+            <EventMetaChips
+              className="px-5"
+              category={meta.category}
+              liveType={meta.liveType}
+              meetAndGreetTypes={meta.meetAndGreetTypes}
+            />
           </div>
         </div>
       </div>
