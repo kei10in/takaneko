@@ -145,7 +145,6 @@ export default function EventPage() {
               <span>{meta.title ?? meta.summary}</span>
             </h1>
           </div>
-
           <div className="space-y-3">
             <FieldWithIcon className="px-5" icon={HiOutlineCalendarDays}>
               <p>{displayDateWithDayOfWeek(d)}</p>
@@ -238,14 +237,14 @@ export default function EventPage() {
                 {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
               </FieldWithIcon>
             )}
-
-            <EventMetaChips
-              className="px-5"
-              category={meta.category}
-              liveType={meta.liveType}
-              meetAndGreetTypes={meta.meetAndGreetTypes}
-            />
           </div>
+
+          <EventMetaChips
+            className="px-5"
+            category={meta.category}
+            liveType={meta.liveType}
+            meetAndGreetTypes={meta.meetAndGreetTypes}
+          />
         </div>
       </div>
 
