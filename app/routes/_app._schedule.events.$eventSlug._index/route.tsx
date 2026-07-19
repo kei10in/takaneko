@@ -151,7 +151,7 @@ export default function EventPage() {
               <p>{displayDateWithDayOfWeek(d)}</p>
             </FieldWithIcon>
 
-            {(meta.category == EventType.LIVE || meta.open) && (
+            {meta.category == EventType.LIVE && (meta.open || meta.start) && (
               <FieldWithIcon className="px-5" icon={HiOutlineClock}>
                 {meta.open && meta.start && (
                   <p>
