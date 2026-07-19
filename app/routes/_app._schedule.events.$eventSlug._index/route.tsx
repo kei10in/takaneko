@@ -112,7 +112,7 @@ export default function EventPage() {
 
   return (
     <div className="container mx-auto lg:max-w-4xl">
-      <div className="bg-linear-to-b from-zinc-100/80 to-white to-20% px-4 py-4">
+      <div className="px-4 py-4">
         <Breadcrumb
           items={[
             { label: "スケジュール", to: "/calendar" },
