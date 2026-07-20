@@ -1,3 +1,4 @@
+import { Limited } from "../tags";
 import { SongMetaDescriptor } from "../types";
 
 export const 東京サマーセッション: SongMetaDescriptor = {
@@ -13,6 +14,8 @@ export const 東京サマーセッション: SongMetaDescriptor = {
   videoRelease: undefined,
   digitalRelease: undefined,
   liveDebut: "2025-08-07",
+
+  tags: [Limited],
 
   youtube: [
     {
