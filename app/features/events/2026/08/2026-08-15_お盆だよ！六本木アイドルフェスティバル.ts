@@ -29,11 +29,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-17",
+  updatedAt: "2026-07-18",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2078313813196325298)
   - [出演者発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2078026920772641017)
 `;
