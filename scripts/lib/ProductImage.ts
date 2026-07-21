@@ -1,8 +1,7 @@
-import { loadImage } from "canvas";
-import Konva from "konva";
-import "konva/canvas-backend";
+import { Transformer } from "@napi-rs/image";
+import { createCanvas, loadImage } from "canvas";
 import fs from "node:fs";
-import { ImagePosition } from "~/features/products/product";
+import type { ImagePosition } from "~/features/products/product";
 import { Size } from "~/utils/types/Size";
 
 export class ProductImage {
@@ -70,24 +69,15 @@ export class ProductImage {
     fs.writeFileSync(output, JSON.stringify(positions, null, 2));
   }
 
-  async draw(output: string) {
-    const stage = new Konva.Stage({
-      width: this.size.width,
-      height: this.size.height,
-    });
-
-    const layer = new Konva.Layer();
-    stage.add(layer);
-
-    layer.add(
-      new Konva.Rect({
-        x: 0,
-        y: 0,
-        width: this.size.width,
-        height: this.size.height,
-        fill: "white",
-      }),
-    );
+  async render(): Promise<{
+    buffer: Buffer;
+    positions: ImagePosition[];
+    size: Size;
+  }> {
+    const canvas = createCanvas(this.size.width, this.size.height);
+    const context = canvas.getContext("2d");
+    context.fillStyle = "white";
+    context.fillRect(0, 0, this.size.width, this.size.height);
 
     const positions = this.photoRects();
 
@@ -105,23 +95,16 @@ export class ProductImage {
         height: height * scale,
       };
 
-      layer.add(
-        new Konva.Image({
-          image: image as unknown as CanvasImageSource,
-          x,
-          y,
-          width,
-          height,
-          crop,
-        }),
-      );
+      context.drawImage(image, crop.x, crop.y, crop.width, crop.height, x, y, width, height);
     }
 
-    const dataUrl = await stage.toDataURL({ mimeType: "image/webp", quality: 0.95 });
+    const png = canvas.toBuffer("image/png");
+    const buffer = await new Transformer(png).webp(95);
+    return { buffer, positions, size: this.size };
+  }
 
-    // Write Data URL to file
-    const base64Data = dataUrl.replace(/^data:image\/\w+;base64,/, "");
-    const buffer = Buffer.from(base64Data, "base64");
+  async draw(output: string) {
+    const { buffer } = await this.render();
     fs.writeFileSync(output, buffer);
   }
 }
