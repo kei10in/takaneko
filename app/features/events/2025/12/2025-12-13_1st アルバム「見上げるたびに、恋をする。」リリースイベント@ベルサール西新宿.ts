@@ -48,7 +48,7 @@ export const meta: EventMetaDescriptor = {
         start: "11:30",
         end: "12:30",
         costume: "見上げるたびに、恋をする。衣装",
-        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷未来", "籾山ひめり"],
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
       },
       {
         title: "2 部",
@@ -62,7 +62,7 @@ export const meta: EventMetaDescriptor = {
         start: "14:30",
         end: "15:30",
         costume: "高嶺のなでしこ×michellMacaron コラボアイテム",
-        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷未来", "籾山ひめり"],
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
       },
       {
         title: "4 部",
@@ -76,7 +76,7 @@ export const meta: EventMetaDescriptor = {
         start: "16:50",
         end: "17:50",
         costume: "高嶺のなでしこ×michellMacaron コラボアイテム",
-        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷未来", "籾山ひめり"],
+        lanes: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "星谷美来", "籾山ひめり"],
       },
       {
         title: "6 部",
