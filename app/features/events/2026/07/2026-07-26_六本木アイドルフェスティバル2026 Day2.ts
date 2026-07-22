@@ -35,7 +35,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.tv-asahi.co.jp/idolfes/",
   },
   ticket: "https://ticket.tv-asahi.co.jp/ex/project/rif2026",
-  streamings: undefined,
+  streamings: {
+    text: "ABEMA PPV",
+    url: "https://abema.go.link/b9jtc",
+  },
   goods: {
     time: ["12:00", "13:00"],
     lineup: undefined,
@@ -55,12 +58,13 @@ export const meta: EventMetaDescriptor = {
       end: "14:40",
     },
   ],
-  updatedAt: "2026-07-10",
+  updatedAt: "2026-07-22",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [配信告知 - ABEMA X](https://x.com/ABEMA/status/2078751695451107453)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2074773162076807587)
   - [出演告知 - 公式 X](https://x.com/takanenofficial/status/2047593891738562806)
 `;
