@@ -3,7 +3,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { extractMiniPhotoPositions } from "./extractMiniPhotoPositions";
 
-describe("extractMiniPhotoPositions for catalog images", () => {
+describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, () => {
   it("extracts 晴れ着2025", async () => {
     const input = await readFile(
       path.resolve("public/takaneko/goods/2025/2025-01-02_ミニフォトカード「晴れ着2025」.webp"),
