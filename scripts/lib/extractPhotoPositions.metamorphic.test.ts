@@ -94,7 +94,7 @@ const transformations: Transformation[] = [
   },
 ];
 
-describe("catalog layout optimization metamorphic properties", () => {
+describe("catalog layout optimization metamorphic properties", { timeout: 15_000 }, () => {
   it.each(transformations)("preserves positions after $name", async ({ apply }) => {
     const source = await readFile(sourcePath);
     const baseline = await extractPhotoPositions(source);

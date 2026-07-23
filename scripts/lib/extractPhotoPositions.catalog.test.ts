@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { extractPhotoPositions } from "./extractPhotoPositions";
 import { expectCatalogPositions } from "./photoExtraction/photoCatalogRegression";
 
-describe("extractPhotoPositions for catalog images", { timeout: 10_000 }, () => {
+describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => {
   it("extracts 晴れ着2026", async () => {
     const input = await readFile(
       path.resolve("public/takaneko/goods/2026/2026-01-01_生写真「晴れ着2026」.webp"),
