@@ -1,43 +1,14 @@
 import path from "node:path";
 import { createInterface } from "node:readline/promises";
 import {
-  parseTradeProductArguments,
+  createTradeProductCommand,
   resolveTradeProductInput,
 } from "./lib/tradeProductGenerator/cli";
 import { generateTradeProduct } from "./lib/tradeProductGenerator/generator";
 import type { TradeProductInput } from "./lib/tradeProductGenerator/productDefinition";
 
-const usage = `Usage:
-  pnpm tsx scripts/generate-trade-product.ts <image-path> [options]
-
-Options:
-  --type <type>                  生成タイプ
-    photo-original              生写真の販促画像をそのまま使用
-    photo-grid                  生写真を抽出して標準グリッドへ再配置
-    mini-photo-original         ミニフォトの販促画像をそのまま使用
-    mini-photo-grid             ミニフォトを抽出して標準グリッドへ再配置
-  --date <YYYY-MM-DD>            商品日
-  --series <name>                シリーズ名
-  --lineup <regular-27|regular-30>
-                                 標準ラインナップ
-
-省略したオプションだけを対話形式で確認します。`;
-
-const main = async (): Promise<void> => {
-  const args = process.argv.slice(2);
-  if (args.includes("--help") || args.includes("-h")) {
-    console.log(usage);
-    return;
-  }
-
-  const parsed = parseTradeProductArguments(args);
-  if (parsed.err) {
-    console.error(parsed.error.message);
-    console.error(usage);
-    process.exitCode = 1;
-    return;
-  }
-  if (!hasAllInputs(parsed.value) && !process.stdin.isTTY) {
+const run = async (partial: Partial<TradeProductInput>): Promise<void> => {
+  if (!hasAllInputs(partial) && !process.stdin.isTTY) {
     console.error("非対話環境ではすべてのオプションを指定してください。");
     process.exitCode = 1;
     return;
@@ -45,7 +16,7 @@ const main = async (): Promise<void> => {
 
   const terminal = createInterface({ input: process.stdin, output: process.stdout });
   try {
-    const resolved = await resolveTradeProductInput(parsed.value, (question) =>
+    const resolved = await resolveTradeProductInput(partial, (question) =>
       terminal.question(question),
     );
     if (resolved.err) {
@@ -85,6 +56,10 @@ const main = async (): Promise<void> => {
   } finally {
     terminal.close();
   }
+};
+
+const main = async (): Promise<void> => {
+  await createTradeProductCommand(run).parseAsync();
 };
 
 const hasAllInputs = (input: Partial<TradeProductInput>): input is TradeProductInput =>

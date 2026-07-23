@@ -1,23 +1,26 @@
 import { describe, expect, it, vi } from "vitest";
-import { parseTradeProductArguments, resolveTradeProductInput } from "./cli";
+import { createTradeProductCommand, resolveTradeProductInput } from "./cli";
 
-describe("parseTradeProductArguments", () => {
-  it("parses the required image argument and supported options", () => {
-    const parsed = parseTradeProductArguments([
-      "--",
-      "/tmp/catalog.jpg",
-      "--type=photo-grid",
-      "--date",
-      "2026-07-20",
-      "--series",
-      "テスト衣装",
-      "--lineup",
-      "regular-27",
-    ]);
+describe("createTradeProductCommand", () => {
+  it("passes the image argument and supported options to the action", async () => {
+    const action = vi.fn(async () => undefined);
+    const command = createTradeProductCommand(action);
 
-    expect(parsed.ok).toBe(true);
-    if (parsed.err) return;
-    expect(parsed.value).toEqual({
+    await command.parseAsync(
+      [
+        "/tmp/catalog.jpg",
+        "--type=photo-grid",
+        "--date",
+        "2026-07-20",
+        "--series",
+        "テスト衣装",
+        "--lineup",
+        "regular-27",
+      ],
+      { from: "user" },
+    );
+
+    expect(action).toHaveBeenCalledWith({
       inputPath: "/tmp/catalog.jpg",
       type: "photo-grid",
       date: "2026-07-20",
@@ -26,19 +29,39 @@ describe("parseTradeProductArguments", () => {
     });
   });
 
-  it("rejects unknown options", () => {
-    const parsed = parseTradeProductArguments(["catalog.jpg", "--unknown=value"]);
-    expect(parsed.err).toBe(true);
+  it("rejects unknown options", async () => {
+    const command = createTestCommand();
+
+    await expect(
+      command.parseAsync(["catalog.jpg", "--unknown=value"], { from: "user" }),
+    ).rejects.toMatchObject({ code: "commander.unknownOption" });
   });
 
-  it("requires exactly one positional image path", () => {
-    const missing = parseTradeProductArguments([]);
-    const multiple = parseTradeProductArguments(["first.jpg", "second.jpg"]);
+  it("requires exactly one positional image path", async () => {
+    const missing = createTestCommand();
+    const multiple = createTestCommand();
 
-    expect(missing.err).toBe(true);
-    expect(multiple.err).toBe(true);
+    await expect(missing.parseAsync([], { from: "user" })).rejects.toMatchObject({
+      code: "commander.missingArgument",
+    });
+    await expect(
+      multiple.parseAsync(["first.jpg", "second.jpg"], { from: "user" }),
+    ).rejects.toMatchObject({ code: "commander.excessArguments" });
+  });
+
+  it("rejects unsupported option values", async () => {
+    const command = createTestCommand();
+
+    await expect(
+      command.parseAsync(["catalog.jpg", "--type", "unknown"], { from: "user" }),
+    ).rejects.toMatchObject({ code: "commander.invalidArgument" });
   });
 });
+
+const createTestCommand = () =>
+  createTradeProductCommand(async () => undefined)
+    .exitOverride()
+    .configureOutput({ writeOut: () => undefined, writeErr: () => undefined });
 
 describe("resolveTradeProductInput", () => {
   it("prompts only for omitted values", async () => {

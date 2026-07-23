@@ -1,3 +1,4 @@
+import { Command, Option } from "commander";
 import { Err, Ok, type Result } from "~/utils/result";
 import type { TradeProductInput, TradeProductLineup, TradeProductType } from "./productDefinition";
 
@@ -8,57 +9,37 @@ export type TradeProductCliError = {
 
 type Prompt = (question: string) => Promise<string>;
 
-const optionToField = {
-  type: "type",
-  date: "date",
-  series: "series",
-  lineup: "lineup",
-} as const;
+type TradeProductCommandAction = (input: Partial<TradeProductInput>) => Promise<void>;
 
-export const parseTradeProductArguments = (
-  args: string[],
-): Result<Partial<TradeProductInput>, TradeProductCliError> => {
-  const values: Record<string, string> = {};
-  let index = 0;
-  while (index < args.length) {
-    const argument = args[index];
-    if (argument === "--") {
-      index += 1;
-      continue;
-    }
-    if (!argument.startsWith("--")) {
-      if (values.inputPath != undefined) {
-        return Err({
-          kind: "invalid-arguments",
-          message: `入力画像は1つだけ指定してください: ${argument}`,
-        });
-      }
-      values.inputPath = argument;
-      index += 1;
-      continue;
-    }
-    const [rawName, inlineValue] = argument.slice(2).split(/=(.*)/s, 2);
-    if (!isOptionName(rawName)) {
-      return Err({ kind: "invalid-arguments", message: `不明なオプションです: --${rawName}` });
-    }
-    const value = inlineValue ?? args[index + 1];
-    if (value == undefined || value.startsWith("--")) {
-      return Err({
-        kind: "invalid-arguments",
-        message: `--${rawName} の値がありません。`,
-      });
-    }
-    values[optionToField[rawName]] = value;
-    index += inlineValue == undefined ? 2 : 1;
-  }
+interface TradeProductCommandOptions {
+  type?: TradeProductType;
+  date?: string;
+  series?: string;
+  lineup?: TradeProductLineup;
+}
 
-  if (values.inputPath == undefined) {
-    return invalid("入力画像を位置引数で指定してください。");
-  }
+const productTypes = [
+  "photo-original",
+  "photo-grid",
+  "mini-photo-original",
+  "mini-photo-grid",
+] satisfies TradeProductType[];
 
-  const validated = validatePartial(values);
-  return validated.err ? validated : Ok(validated.value);
-};
+const lineups = ["regular-27", "regular-30"] satisfies TradeProductLineup[];
+
+export const createTradeProductCommand = (action: TradeProductCommandAction): Command =>
+  new Command()
+    .name("generate-trade-product")
+    .description("生写真・ミニフォトの商品定義と画像を生成します。")
+    .argument("<image-path>", "入力する販促画像のパス")
+    .addOption(new Option("--type <type>", "生成タイプ").choices(productTypes))
+    .option("--date <YYYY-MM-DD>", "商品日")
+    .option("--series <name>", "シリーズ名")
+    .addOption(new Option("--lineup <lineup>", "標準ラインナップ").choices(lineups))
+    .addHelpText("after", "\n省略したオプションだけを対話形式で確認します。")
+    .action(async (inputPath: string, options: TradeProductCommandOptions) => {
+      await action({ inputPath, ...options });
+    });
 
 export const resolveTradeProductInput = async (
   partial: Partial<TradeProductInput>,
@@ -143,5 +124,3 @@ const isProductType = (value: string): value is TradeProductType =>
 
 const isLineup = (value: string): value is TradeProductLineup =>
   value === "regular-27" || value === "regular-30";
-
-const isOptionName = (value: string): value is keyof typeof optionToField => value in optionToField;
