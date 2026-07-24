@@ -105,12 +105,17 @@
     "vitest": "^4.1.9",
     "wrangler": "^4.111.0"
   },
-  "engines": {
-    "node": "^22.0.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "tar-fs": "^2.1.4"
+  "packageManager": "pnpm@11.17.0",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.0.0",
+      "onFail": "error"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": ">=11.0.0 <12.0.0",
+      "onFail": "download"
     }
   }
 }
