@@ -12,7 +12,7 @@
 
 ## Technology Stack
 
-- Node.js 22
+- Node.js 26
 - PNPM
 - TypeScript
 - React Router v7
