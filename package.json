@@ -105,11 +105,10 @@
     "vitest": "^4.1.9",
     "wrangler": "^4.111.0"
   },
-  "packageManager": "pnpm@11.17.0",
   "devEngines": {
     "runtime": {
       "name": "node",
-      "version": "^22.0.0",
+      "version": "^26.0.0",
       "onFail": "error"
     },
     "packageManager": {
