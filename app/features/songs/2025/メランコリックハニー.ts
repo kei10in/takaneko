@@ -31,5 +31,10 @@ export const メランコリックハニー: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=S6ks_vyopd0",
       publishedAt: "2025-05-16",
     },
+    {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=kFSLKJ1DmMA",
+      publishedAt: "2026-07-18",
+    },
   ],
 };
