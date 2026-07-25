@@ -59,6 +59,17 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "18:20",
       end: "18:50",
+      setlist: [
+        "衣装: サマーセッション衣装",
+        "初恋のこたえ。",
+        "僕は君になれない",
+        "決戦スピリット",
+        "MC",
+        "この世界は嘘でできている",
+        "恋を知った世界",
+        "美しく生きろ",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/2080993239843180734",
     },
   ],
   updatedAt: "2026-07-25",
@@ -67,6 +78,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2080993239843180734)
+  - [出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2080979409700577658)
   - [明日のおチェキ](https://x.com/takanekomanager/status/2080636855868125604)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2080635357520097447)
   - [配信告知 - ABEMA X](https://x.com/ABEMA/status/2078751695451107453)
