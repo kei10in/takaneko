@@ -21,7 +21,7 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  ticket: "",
+  ticket: "https://w.pia.jp/t/favfes/",
   streamings: undefined,
   goods: {
     time: undefined,
@@ -35,5 +35,6 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2081000360387440701)
   - [開催決定 - fav me X](https://x.com/_fav_me_/status/2080956221813641527)
 `;
