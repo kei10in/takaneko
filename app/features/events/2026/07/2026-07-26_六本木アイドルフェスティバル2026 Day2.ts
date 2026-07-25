@@ -2,6 +2,7 @@ import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
   summary: "六本木アイドルフェスティバル2026 Day2",
+  title: "10年目記念で有明に引っ越しだよ！六本木アイドルフェスティバル2026",
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-07-26",
@@ -58,7 +59,7 @@ export const meta: EventMetaDescriptor = {
       end: "14:40",
     },
   ],
-  updatedAt: "2026-07-22",
+  updatedAt: "2026-07-25",
 };
 
 export const content = /* md */ `
