@@ -22,6 +22,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/TIP_TIF_staff/status/2075177498573517014",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-08-02_TOKYO IDOL FESTIVAL 2026_INFO CENTRE トーク企画.jpg",
+      ref: "https://x.com/TIP_TIF_staff/status/2080593845058707566",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -41,15 +45,28 @@ export const meta: EventMetaDescriptor = {
       start: "09:45",
       end: "10:15",
     },
+    {
+      title: "INFO CENTRE",
+      types: ["TALK"],
+      start: "15:45",
+      end: "16:25",
+      description: /* md */ `
+        歌声喫茶“みてい”
+
+        💙籾山ひめりが出演。
+      `,
+    },
   ],
-  updatedAt: "2026-07-10",
+  updatedAt: "2026-07-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080631584475222296)
+  - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593845058707566)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
-  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
+  - [タイムテーブル公開 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
   - [出演日決定 - 公式 X](https://x.com/takanenofficial/status/2063834688842821651)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2041751260945379650)
   - [出演者情報 - イベントサイト](https://official.idolfes.com/s/tif2026/page/lineup)
