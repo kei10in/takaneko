@@ -63,7 +63,7 @@ export const content = /* md */ `
 
   - [TIF2026×UNIDOLステージ 出演告知 - 公式 X](https://x.com/takanenofficial/status/2075150469328933306)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
-  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
+  - [タイムテーブル公開 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
   - [出演日決定 - 公式 X](https://x.com/takanenofficial/status/2063834688842821651)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2041751260945379650)
   - [出演者情報 - イベントサイト](https://official.idolfes.com/s/tif2026/page/lineup)
