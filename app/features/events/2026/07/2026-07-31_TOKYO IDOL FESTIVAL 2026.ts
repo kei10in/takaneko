@@ -26,6 +26,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026_スペシャルコラボステージ.jpg",
       ref: "https://x.com/takanenofficial/status/2072674247311552701",
     },
+    {
+      path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026_INFO CENTRE トーク企画.jpg",
+      ref: "https://x.com/TIP_TIF_staff/status/2080593837936791995",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -39,6 +43,17 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [
+    {
+      title: "INFO CENTRE",
+      types: ["TALK"],
+      start: "10:15",
+      end: "11:00",
+      description: `
+        TIFで起きた朝は 〜今日ここ行きタイッテ！〜
+
+        🧡東山恵里沙が出演。
+      `,
+    },
     {
       title: "TOROCCO PARK",
       types: ["LIVE"],
@@ -59,14 +74,16 @@ export const meta: EventMetaDescriptor = {
       end: "20:40",
     },
   ],
-  updatedAt: "2026-07-10",
+  updatedAt: "2026-07-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080626716423360890)
+  - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593837936791995)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
-  - [タイムテーブル公開 - TIP&TIF 公式 X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
+  - [タイムテーブル公開 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2075177498573517014)
   - [くままちょこっと乱入コラボ 告知 - 公式 X](https://x.com/takanenofficial/status/2072674247311552701)
   - [出演日決定 - 公式 X](https://x.com/takanenofficial/status/2063834688842821651)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2041751260945379650)
