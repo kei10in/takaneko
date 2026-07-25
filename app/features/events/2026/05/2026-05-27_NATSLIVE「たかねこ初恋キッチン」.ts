@@ -20,6 +20,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-05-27_たかねこ初恋キッチン_2.jpg",
       ref: "https://x.com/takanenofficial/status/2059594542501044231",
     },
+    {
+      path: "/events/2026/2026-01-23_NATSLIVE「たかねこ初恋キッチン」.jpg",
+      ref: "https://x.com/NATSLIVE_app/status/2008418252485955755",
+    },
   ],
   link: {
     text: "",
