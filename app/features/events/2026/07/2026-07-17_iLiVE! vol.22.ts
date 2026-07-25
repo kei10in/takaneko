@@ -35,7 +35,7 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["14:20", "15:20"],
-    lineup: ["ミニフォトカード「浴衣2026」 / チェキ"],
+    lineup: ["ミニフォトカード「たかねこフェス vol.6」 / チェキ"],
     url: "https://x.com/takanenofficial/status/2077736254645674231",
   },
   acts: {

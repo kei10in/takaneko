@@ -29,6 +29,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-25_六本木アイドルフェスティバル2026 Day1_特典会スケジュール.jpg",
       ref: "https://x.com/takanenofficial/status/2074773162076807587",
     },
+    {
+      path: "/takaneko/goods/2026/2026-07-12_ミニフォトカード「たかねこフェス vol.6」.jpg",
+      ref: "https://x.com/takanenofficial/status/2080635357520097447",
+    },
+    {
+      path: "/events/2026/2026-07-25_六本木アイドルフェスティバル2026 Day1_明日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2080636855868125604",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -41,8 +49,8 @@ export const meta: EventMetaDescriptor = {
   },
   goods: {
     time: ["15:20", "16:20"],
-    lineup: undefined,
-    url: "https://x.com/takanenofficial/status/2074773162076807587",
+    lineup: ["ミニフォトカード「たかねこフェス vol.6」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2080635357520097447",
   },
   acts: [
     {
@@ -52,12 +60,14 @@ export const meta: EventMetaDescriptor = {
       end: "18:50",
     },
   ],
-  updatedAt: "2026-07-22",
+  updatedAt: "2026-07-25",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [明日のおチェキ](https://x.com/takanekomanager/status/2080636855868125604)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2080635357520097447)
   - [配信告知 - ABEMA X](https://x.com/ABEMA/status/2078751695451107453)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2074773162076807587)
   - [出演告知 - 公式 X](https://x.com/takanenofficial/status/2047593891738562806)
