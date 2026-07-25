@@ -10,11 +10,16 @@ export const meta: EventMetaDescriptor = {
   end: "20:00",
   region: "東京",
   location: "NATSLIVE CAFE 表参道",
-  present: ["城月菜央", "涼海すう", "籾山ひめり"],
+  present: ["葉月紗蘭", "涼海すう", "籾山ひめり"],
+  absent: ["城月菜央"],
   images: [
     {
-      path: "/events/2026/2026-07-24_NATSLIVE「たかねこ初恋キッチン」.jpg",
-      ref: "https://x.com/takanenofficial/status/2071838644030287883",
+      path: "/events/2026/2026-07-24_NATSLIVE「たかねこ初恋キッチン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2080591631225700825",
+    },
+    {
+      path: "/events/2026/2026-07-24_NATSLIVE「たかねこ初恋キッチン」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2080612945248047597",
     },
   ],
   link: {
@@ -29,14 +34,14 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「初恋青椒肉絲。カード A タイプ」 660 円 (税込)",
-      // "レシピカード「初恋青椒肉絲。カード B タイプ」 660 円 (税込)",
-      // "レシピカード「初恋青椒肉絲。カード C タイプ」 660 円 (税込)",
+      "レシピカード「チリコンカンナッツタコス カード A タイプ」 660 円 (税込)",
+      "レシピカード「チリコンカンナッツタコス カード B タイプ」 660 円 (税込)",
+      "レシピカード「チリコンカンナッツタコス カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-01",
+  updatedAt: "2026-07-24",
 };
 
 export const content = /* md */ `
@@ -52,12 +57,15 @@ export const content = /* md */ `
 
   ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-  <!-- ## グッズの販売期間 -->
+  ## グッズの販売期間
 
-  <!-- 2026年07月24日 19:00 〜 2026年07月25日 18:59 -->
+  2026年07月24日 19:00 〜 2026年07月25日 18:59
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2080612945248047597)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2080591631225700825)
+  - [出演者変更のお知らせ - 公式 X](https://x.com/takanenofficial/status/2079447215635140998)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2071838644030287883)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2071836134531891518)
 `;
