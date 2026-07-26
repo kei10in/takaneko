@@ -1,25 +1,11 @@
 import { RouterContextProvider } from "react-router";
-
-export interface CloudflareLoadContext {
-  env: Env;
-  ctx: ExecutionContext;
-}
-
-declare module "react-router" {
-  export interface AppLoadContext {
-    cloudflare: CloudflareLoadContext;
-  }
-
-  export interface RouterContextProvider extends AppLoadContext {
-    cloudflare: CloudflareLoadContext;
-  }
-}
+import { cloudflareContext, type CloudflareLoadContext } from "../app/cloudflare-context";
 
 export const createCloudflareLoadContext = (
   env: Env,
   ctx: ExecutionContext,
 ): RouterContextProvider => {
   const context = new RouterContextProvider();
-  context.cloudflare = { env, ctx };
+  context.set(cloudflareContext, { env, ctx } satisfies CloudflareLoadContext);
   return context;
 };

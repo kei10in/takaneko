@@ -17,7 +17,7 @@
   "exclude": [],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2023"],
-    "types": ["@react-router/cloudflare", "vite/client", "mdx", "./worker-configuration.d.ts"],
+    "types": ["vite/client", "mdx", "./worker-configuration.d.ts"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",

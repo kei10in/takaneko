@@ -22,8 +22,8 @@ import type { Route } from "./+types/route";
 import { LiveSkeleton } from "./LiveSkeleton";
 import { squareImageObjectPosition } from "./squareImageObjectPosition";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const title = formatTitle(data?.costume.name ?? "衣装が見つかりません。");
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+  const title = formatTitle(loaderData?.costume.name ?? "衣装が見つかりません。");
 
   return [{ title }, { name: "description", content: "高嶺のなでしこの楽曲" }];
 };

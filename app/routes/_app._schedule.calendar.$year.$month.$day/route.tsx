@@ -15,11 +15,15 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
 import { formatTitle } from "~/utils/htmlHeader";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title =
-    data == undefined
+    loaderData == undefined
       ? "スケジュール"
-      : `${displayDateWithDayOfWeek(data.year, data.month, data.day)} のスケジュール`;
+      : `${displayDateWithDayOfWeek(
+          loaderData.year,
+          loaderData.month,
+          loaderData.day,
+        )} のスケジュール`;
 
   return [
     { title: formatTitle(title) },
