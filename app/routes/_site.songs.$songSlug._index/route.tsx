@@ -26,8 +26,8 @@ import { Credit } from "./Credit";
 import { LiveSkeleton } from "./LiveSkeleton";
 import { YouTubeCard } from "./YouTubeCard";
 
-export const meta: MetaFunction<typeof loader> = ({ data }) => {
-  const title = formatTitle(data?.track.name ?? "楽曲が見つかりません");
+export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
+  const title = formatTitle(loaderData?.track.name ?? "楽曲が見つかりません");
 
   return [{ title }, { name: "description", content: "高嶺のなでしこの楽曲" }];
 };

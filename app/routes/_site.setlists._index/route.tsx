@@ -9,6 +9,7 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { Link, MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
+import { cloudflareContext } from "~/cloudflare-context";
 import { dialogBackdropStyle, pageBox } from "~/components/styles";
 import { XMarkButton } from "~/components/XMarkButton";
 import { AllStageCostumes } from "~/features/costumes/costumesStage";
@@ -40,7 +41,7 @@ export const meta: MetaFunction = () => {
 export const loader = async ({ request, context }: Route.LoaderArgs) => {
   const origin = new URL(request.url).origin;
   const url = new URL("/data/setlists/lives.json", origin).toString();
-  const response = await context.cloudflare.env.ASSETS.fetch(url);
+  const response = await context.get(cloudflareContext).env.ASSETS.fetch(url);
 
   if (!response.ok) {
     throw new Response("Setlist index is not found.", { status: 500 });

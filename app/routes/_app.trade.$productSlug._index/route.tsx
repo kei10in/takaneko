@@ -8,9 +8,9 @@ import { TradeDescription } from "~/features/trade/TradeStatus";
 import { Route } from "./+types/route";
 import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData";
 
-export const meta: Route.MetaFunction = ({ data, location }) => {
-  const title = titleForTradeImagesTool(data);
-  const description = descriptionForTradeImagesTool(data);
+export const meta: Route.MetaFunction = ({ loaderData, location }) => {
+  const title = titleForTradeImagesTool(loaderData);
+  const description = descriptionForTradeImagesTool(loaderData);
   const image = `https://${DomainName}/takanekono-card-trading-image-generator.png`;
   const url = `https://${DomainName}${location.pathname}`;
 

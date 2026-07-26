@@ -1,9 +1,10 @@
-import { RouterContextProvider, type AppLoadContext } from "react-router";
+import { RouterContextProvider } from "react-router";
 import { describe, expect, it, vi } from "vitest";
+import { cloudflareContext } from "../app/cloudflare-context";
 import { createCloudflareLoadContext } from "./context";
 
 describe("createCloudflareLoadContext", () => {
-  it("creates an AppLoadContext-compatible RouterContextProvider with Cloudflare bindings", () => {
+  it("creates a RouterContextProvider with Cloudflare bindings", () => {
     const env = {
       PNPM_VERSION: "10.7.0",
       ASSETS: {
@@ -18,9 +19,8 @@ describe("createCloudflareLoadContext", () => {
     } satisfies ExecutionContext;
 
     const context = createCloudflareLoadContext(env, executionContext);
-    const appLoadContext: AppLoadContext = context;
 
     expect(context).toBeInstanceOf(RouterContextProvider);
-    expect(appLoadContext.cloudflare).toEqual({ env, ctx: executionContext });
+    expect(context.get(cloudflareContext)).toEqual({ env, ctx: executionContext });
   });
 });

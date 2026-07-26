@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
+import { cloudflareContext } from "~/cloudflare-context";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { formatDataSize } from "~/utils/dataSize";
 import { formatTitle } from "~/utils/htmlHeader";
@@ -43,7 +44,7 @@ const TAKANEKO_DATA_FILES = [
 ];
 
 export const loader = async ({ request, context }: Route.LoaderArgs) => {
-  const { env } = context.cloudflare;
+  const { env } = context.get(cloudflareContext);
 
   const origin = new URL(request.url).origin;
   const metaUrl = new URL("/data/meta.json", origin).toString();
