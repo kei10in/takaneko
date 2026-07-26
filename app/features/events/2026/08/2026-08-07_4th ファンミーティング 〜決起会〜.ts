@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "4th ファンミーティング",
+  summary: "4th ファンミーティング ～決起会～",
   category: "LIVE",
   liveType: "SOLO",
   date: "2026-08-07",
@@ -46,7 +46,7 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-05-31",
+  updatedAt: "2026-07-27",
 };
 
 export const content = /* md */ `
