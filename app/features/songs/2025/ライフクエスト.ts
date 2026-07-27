@@ -31,5 +31,10 @@ export const ライフクエスト: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=sW19jLLfPq4",
       publishedAt: "2025-07-25",
     },
+    {
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=mmbcf8unzfw",
+      publishedAt: "2026-07-27",
+    },
   ],
 };
