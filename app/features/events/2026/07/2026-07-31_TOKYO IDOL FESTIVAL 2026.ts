@@ -68,18 +68,30 @@ export const meta: EventMetaDescriptor = {
       description: "くままちょこっと乱入コラボ",
     },
     {
+      title: "INFO CENTRE",
+      types: ["TALK"],
+      start: "17:35",
+      end: "18:05",
+      description: /* md */ `
+        HKT48長野らら＆NGT48北澤百音の「TIFで友達できるかな？」
+
+        💙籾山ひめりが出演。
+      `,
+    },
+    {
       title: "SKY STAGE",
       types: ["LIVE"],
       start: "20:25",
       end: "20:40",
     },
   ],
-  updatedAt: "2026-07-25",
+  updatedAt: "2026-07-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2081711196559057062)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080626716423360890)
   - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593837936791995)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
