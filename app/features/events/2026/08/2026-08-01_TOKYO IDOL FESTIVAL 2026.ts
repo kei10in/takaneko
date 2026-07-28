@@ -40,27 +40,46 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "11:35",
       end: "11:50",
+      description: `
+        有料配信: [sheeta Live Stream]
+
+        [sheeta Live Stream]: https://sheeta.jp/live-stream/live/sm9v6rtNrekbk9chRDEejP3b
+      `,
     },
     {
       title: "UP-T HOT STAGE",
       types: ["OTHER"],
       start: "13:10",
       end: "13:25",
-      description: "TIF2026×UNIDOLステージ",
+      description: `
+        TIF2026×UNIDOLステージ
+
+        有料配信: [TIF Streaming] / [FOD]
+
+        [TIF Streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8520/
+      `,
     },
     {
       title: "SMILE GARDEN",
       types: ["LIVE"],
       start: "17:55",
       end: "18:15",
+      description: `
+        有料配信: [TIF Streaming] / [FOD]
+
+        [TIF Streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8520/
+      `,
     },
   ],
-  updatedAt: "2026-07-10",
+  updatedAt: "2026-07-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [TIF2026×UNIDOLステージ 出演告知 - 公式 X](https://x.com/takanenofficial/status/2075150469328933306)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
   - [タイムテーブル公開 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2075177498573517014)

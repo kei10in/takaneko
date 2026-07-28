@@ -52,6 +52,10 @@ export const meta: EventMetaDescriptor = {
         TIFで起きた朝は 〜今日ここ行きタイッテ！〜
 
         🧡東山恵里沙が出演。
+
+        無料配信: [SHOWROOM]
+
+        [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
     },
     {
@@ -59,13 +63,24 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "16:10",
       end: "16:30",
+      description: `
+        有料配信: [sheeta Live Stream]
+
+        [sheeta Live Stream]: https://sheeta.jp/live-stream/live/smVxNxZ5dKjVhJEXzeBEWcpU
+      `,
     },
     {
       title: "TOROCCO PARK",
       types: ["OTHER"],
       start: "16:30",
       end: "16:35",
-      description: "くままちょこっと乱入コラボ",
+      description: `
+        くままちょこっと乱入コラボ
+
+        有料配信: [sheeta Live Stream]
+
+        [sheeta Live Stream]: https://sheeta.jp/live-stream/live/smVxNxZ5dKjVhJEXzeBEWcpU
+      `,
     },
     {
       title: "INFO CENTRE",
@@ -76,6 +91,10 @@ export const meta: EventMetaDescriptor = {
         HKT48長野らら＆NGT48北澤百音の「TIFで友達できるかな？」
 
         💙籾山ひめりが出演。
+
+        無料配信: [SHOWROOM]
+
+        [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
     },
     {
@@ -83,6 +102,11 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "20:25",
       end: "20:40",
+      description: `
+        有料配信: [ニコニコチャンネル「TIFチャンネル」]
+
+        [ニコニコチャンネル「TIFチャンネル」]: https://live.nicovideo.jp/watch/lv351006291
+      `,
     },
   ],
   updatedAt: "2026-07-28",
@@ -91,6 +115,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2081711196559057062)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080626716423360890)
   - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593837936791995)

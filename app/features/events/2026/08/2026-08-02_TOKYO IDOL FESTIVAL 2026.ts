@@ -44,6 +44,12 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "09:45",
       end: "10:15",
+      description: `
+        有料配信: [TIF Streaming] / [FOD]
+
+        [TIF Streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8520/
+      `,
     },
     {
       title: "INFO CENTRE",
@@ -54,15 +60,20 @@ export const meta: EventMetaDescriptor = {
         歌声喫茶“みてい”
 
         💙籾山ひめりが出演。
+
+        無料配信: [SHOWROOM]
+
+        [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
     },
   ],
-  updatedAt: "2026-07-25",
+  updatedAt: "2026-07-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080631584475222296)
   - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593845058707566)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2075195766973583430)
