@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "4周年 Special LIVE",
+  summary: "4th Anniversary Special LIVE 〜STELLA〜",
   category: "LIVE",
   liveType: "SOLO",
   date: "2026-08-06",
@@ -13,15 +13,15 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2026/2026-08-06_4th Anniversary Special LIVE 〜STELLA〜.jpg",
+      ref: "https://x.com/takanenofficial/status/2081575326501740755",
     },
   ],
   link: {
     text: "公式ニュース",
     url: "https://takanenonadeshiko.jp/?p=5342",
   },
-  ticket: "",
+  ticket: "https://eplus.jp/takanenonadeshiko/",
   streamings: undefined,
   goods: {
     time: undefined,
@@ -29,12 +29,13 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-05-31",
+  updatedAt: "2026-07-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [公演タイトル公開 - 公式 X](https://x.com/takanenofficial/status/2081575326501740755)
   - [詳細告知 - 公式ニュース](https://takanenonadeshiko.jp/?p=5342)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2060677607843152256)
   - [開催決定 - 公式 X](https://x.com/takanenofficial/status/2051982808751739008)
