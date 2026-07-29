@@ -22,7 +22,7 @@ URL: https://takanekofan.app/
 ## 技術スタック
 
 - [TypeScript](https://www.typescriptlang.org/)
-- [React Router v7](https://reactrouter.com/)
+- [React Router v8](https://reactrouter.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
 - [Vitest](https://vitest.dev/)

@@ -1,7 +1,7 @@
 # AGENTS.md
 
 - このリポジトリは、高嶺のなでしこの非公式ファンサイト「たかねこの」のソースコードです。
-- 技術スタックは TypeScript、React Router v7、Vite、Tailwind CSS、Vitest、Cloudflare Workers です。
+- 技術スタックは TypeScript、React Router v8、Vite、Tailwind CSS、Vitest、Cloudflare Workers です。
 - アプリ本体は `app/`、Worker 関連は `workers/`、補助スクリプトは `scripts/` にあります。
 - アーキテクチャやデータ配置の詳細は `docs/ARCHITECTURE.md` を参照してください。
 
@@ -15,7 +15,7 @@
 - Node.js 26
 - PNPM
 - TypeScript
-- React Router v7
+- React Router v8
 - Tailwind CSS
 - Headless UI
 - React Icons
