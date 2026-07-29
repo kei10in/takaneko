@@ -6,6 +6,7 @@ import {
 } from "../imageRegionExtraction/geometry";
 import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
 import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
+import { refineMiniPhotoCatalogFrames } from "./catalogFrameRefinement";
 
 const CATALOG_COLUMNS = 6;
 const CATALOG_INNER_FRAME_MAX_FILL = 0.78;
@@ -181,7 +182,7 @@ export const completeCatalogLayout = (
       )
     : rowPositions;
 
-  return refinedRows.flatMap((y, row) => {
+  const completed = refinedRows.flatMap((y, row) => {
     const sourceRowIndex = row - leadingAddedRows;
     const sourceRow = transformedRows[sourceRowIndex];
     const isAddedRow = sourceRow == undefined;
@@ -212,6 +213,7 @@ export const completeCatalogLayout = (
       }),
     );
   });
+  return refineMiniPhotoCatalogFrames(completed, edges, image);
 };
 
 const bestCatalogAxisPosition = (

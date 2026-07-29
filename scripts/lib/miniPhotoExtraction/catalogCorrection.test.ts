@@ -49,7 +49,7 @@ describe("mini-photo catalog correction", () => {
     const corrected = completeCatalogLayout(rects, createEdgeMap(image), image);
 
     expect(corrected).toHaveLength(27);
-    expect(corrected[0]).toMatchObject({ x: 36, y: 141, width: 147, height: 242 });
-    expect(corrected.at(-1)).toMatchObject({ x: 695, y: 1189, width: 147, height: 242 });
+    expect(corrected[0]).toMatchObject({ x: 36, y: 141, width: 146, height: 240 });
+    expect(corrected.at(-1)).toMatchObject({ x: 695, y: 1189, width: 146, height: 240 });
   });
 });
