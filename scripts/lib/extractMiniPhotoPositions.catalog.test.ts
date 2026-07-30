@@ -418,4 +418,55 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
       { id: 27, x: 700, y: 1373, width: 164, height: 260 },
     ]);
   });
+
+  it("extracts たかねこフェス vol.6", async () => {
+    const input = await readFile(
+      path.resolve(
+        "public/takaneko/goods/2026/2026-07-12_ミニフォトカード「たかねこフェス vol.6」.jpg",
+      ),
+    );
+
+    const result = await extractMiniPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    const origins = [
+      [84, 409],
+      [324, 409],
+      [561, 407],
+      [808, 409],
+      [1048, 409],
+      [1284, 409],
+      [83, 770],
+      [324, 770],
+      [563, 770],
+      [808, 770],
+      [1046, 772],
+      [1284, 771],
+      [83, 1135],
+      [323, 1135],
+      [563, 1135],
+      [810, 1133],
+      [1046, 1133],
+      [1284, 1135],
+      [83, 1495],
+      [323, 1495],
+      [563, 1495],
+      [810, 1495],
+      [1046, 1495],
+      [1284, 1495],
+      [440, 1860],
+      [684, 1858],
+      [929, 1858],
+    ];
+    expect(result.value.positions).toEqual(
+      origins.map(([x, y], index) => ({
+        id: index + 1,
+        x,
+        y,
+        width: 218,
+        height: 342,
+      })),
+    );
+  });
 });

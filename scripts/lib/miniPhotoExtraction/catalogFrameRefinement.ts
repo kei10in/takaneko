@@ -7,6 +7,8 @@ const OUTER_EDGE_HORIZONTAL_INSET = 1;
 const OUTER_EDGE_VERTICAL_INSET = 2;
 const REFERENCE_CARD_WIDTH = 200;
 const REFERENCE_CARD_HEIGHT = 320;
+const MAXIMUM_SIZE_SPREAD_RATIO = 0.03;
+const MINIMUM_POSITION_OFFSET_RATIO = 0.03;
 
 export interface ScaleAwareSearchPlan {
   radius: number;
@@ -170,9 +172,41 @@ export const refineMiniPhotoCatalogFrames = (
     width: representativeRefinedSize.width - OUTER_EDGE_HORIZONTAL_INSET,
     height: representativeRefinedSize.height - OUTER_EDGE_VERTICAL_INSET,
   };
+  const proposed = independentlyRefined.map((frame) => ({
+    ...frame,
+    ...commonSize,
+  }));
+  const widthSpread =
+    Math.max(...independentlyRefined.map(({ width }) => width)) -
+    Math.min(...independentlyRefined.map(({ width }) => width));
+  const heightSpread =
+    Math.max(...independentlyRefined.map(({ height }) => height)) -
+    Math.min(...independentlyRefined.map(({ height }) => height));
+  const maximumOffset = Math.max(
+    ...independentlyRefined.map(
+      (frame, index) =>
+        Math.abs(frame.x - (frames[index]?.x ?? frame.x)) +
+        Math.abs(frame.y - (frames[index]?.y ?? frame.y)),
+    ),
+  );
+  const averageScore = (candidates: Frame[]): number =>
+    candidates.reduce(
+      (sum, frame) => sum + rectangleBoundaryScore(edges, image.width, image.height, frame),
+      0,
+    ) / candidates.length;
+  const baselineScore = averageScore(frames);
+  const proposedScore = averageScore(proposed);
+  const hasNoBoundarySignal = baselineScore === 0 && proposedScore === 0;
+  const shouldRefine =
+    hasNoBoundarySignal ||
+    (widthSpread <= representative.width * MAXIMUM_SIZE_SPREAD_RATIO &&
+      heightSpread <= representative.height * MAXIMUM_SIZE_SPREAD_RATIO &&
+      maximumOffset >= Math.ceil(representative.width * MINIMUM_POSITION_OFFSET_RATIO) &&
+      proposedScore > baselineScore);
+  if (!shouldRefine) return frames;
 
-  return independentlyRefined.map((frame) => {
-    const refined = { x: frame.x, y: frame.y, ...commonSize };
+  return proposed.map((frame) => {
+    const refined = frame;
     return {
       ...frame,
       ...refined,
