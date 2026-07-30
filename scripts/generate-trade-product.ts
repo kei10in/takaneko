@@ -66,8 +66,7 @@ const hasAllInputs = (input: Partial<TradeProductInput>): input is TradeProductI
   input.inputPath != undefined &&
   input.type != undefined &&
   input.date != undefined &&
-  input.series != undefined &&
-  input.lineup != undefined;
+  input.series != undefined;
 
 const todayInJapan = (): string => {
   const parts = new Intl.DateTimeFormat("en-US", {

@@ -35,7 +35,7 @@ export const createTradeProductCommand = (action: TradeProductCommandAction): Co
     .addOption(new Option("--type <type>", "生成タイプ").choices(productTypes))
     .option("--date <YYYY-MM-DD>", "商品日")
     .option("--series <name>", "シリーズ名")
-    .addOption(new Option("--lineup <lineup>", "標準ラインナップ").choices(lineups))
+    .addOption(new Option("--lineup <lineup>", "標準ラインナップのヒント").choices(lineups))
     .addHelpText("after", "\n省略したオプションだけを対話形式で確認します。")
     .action(async (inputPath: string, options: TradeProductCommandOptions) => {
       await action({ inputPath, ...options });
@@ -58,8 +58,7 @@ export const resolveTradeProductInput = async (
     ).trim();
   const date = partial.date ?? (await prompt("商品日 (YYYY-MM-DD): ")).trim();
   const series = partial.series ?? (await prompt("シリーズ名: ")).trim();
-  const lineup =
-    partial.lineup ?? (await prompt("ラインナップ (regular-27 / regular-30): ")).trim();
+  const lineup = partial.lineup;
 
   const validated = validatePartial({ inputPath, type, date, series, lineup });
   if (validated.err) return validated;
@@ -67,8 +66,7 @@ export const resolveTradeProductInput = async (
     validated.value.inputPath == undefined ||
     validated.value.type == undefined ||
     validated.value.date == undefined ||
-    validated.value.series == undefined ||
-    validated.value.lineup == undefined
+    validated.value.series == undefined
   ) {
     return Err({ kind: "invalid-answer", message: "必要な入力が不足しています。" });
   }

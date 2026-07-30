@@ -36,4 +36,23 @@ describe("generateTradeProductImage", { timeout: 15_000 }, () => {
       height: 1238,
     });
   });
+
+  it("uses the detected item count when the lineup hint does not match", async () => {
+    const descriptor = buildProductDescriptor({
+      inputPath: path.resolve(
+        "public/takaneko/goods/2026/2026-03-05_ミニフォトカード「セーラー服2026」.jpg",
+      ),
+      type: "mini-photo-original",
+      date: "2026-07-31",
+      series: "ヒント不一致テスト",
+      lineup: "regular-30",
+    });
+    if (descriptor.err) throw new Error(descriptor.error.message);
+
+    const result = await generateTradeProductImage(descriptor.value);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toHaveLength(27);
+  });
 });

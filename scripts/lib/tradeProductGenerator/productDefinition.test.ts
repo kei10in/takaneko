@@ -45,6 +45,20 @@ describe("buildProductDescriptor", () => {
     expect(result.value.itemCount).toBe(30);
   });
 
+  it("builds a descriptor without a lineup hint", () => {
+    const result = buildProductDescriptor({
+      inputPath: "/tmp/catalog.jpg",
+      type: "mini-photo-original",
+      date: "2026-07-31",
+      series: "TIF2026限定ライブフォト 1",
+    });
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.itemCount).toBeUndefined();
+    expect(result.value.lineupConstant).toBeUndefined();
+  });
+
   it("rejects invalid calendar dates", () => {
     const result = buildProductDescriptor({
       inputPath: "/tmp/catalog.jpg",
@@ -89,7 +103,13 @@ describe("renderProductDefinition", () => {
       extension: ".jpg",
       width: 1200,
       height: 1600,
-      positions: [{ id: 1, x: 10, y: 20, width: 100, height: 140 }],
+      positions: Array.from({ length: 27 }, (_, index) => ({
+        id: index + 1,
+        x: 10,
+        y: 20,
+        width: 100,
+        height: 140,
+      })),
       buffer: Buffer.from("image"),
     });
 
@@ -97,6 +117,32 @@ describe("renderProductDefinition", () => {
     expect(source).toContain('url: "/takaneko/goods/2026/2026-07-20_生写真「テスト衣装」.jpg"');
     expect(source).toContain("variants: REGULAR_PHOTO_SET2");
     expect(source).toContain("{ id: 1, x: 10, y: 20, width: 100, height: 140 }");
+  });
+
+  it("renders detected items when no lineup hint is supplied", async () => {
+    const descriptor = buildProductDescriptor({
+      inputPath: "/tmp/catalog.jpg",
+      type: "mini-photo-original",
+      date: "2026-07-31",
+      series: "TIF2026限定ライブフォト 1",
+    });
+    if (descriptor.err) throw new Error(descriptor.error.message);
+
+    const source = await renderProductDefinition(descriptor.value, {
+      extension: ".jpg",
+      width: 1200,
+      height: 1600,
+      positions: [
+        { id: 1, x: 10, y: 20, width: 100, height: 140 },
+        { id: 2, x: 120, y: 20, width: 100, height: 140 },
+      ],
+      buffer: Buffer.from("image"),
+    });
+
+    expect(source).not.toContain('from "../utils"');
+    expect(source).toContain(
+      'variants: [\n    { id: 1, name: "" },\n    { id: 2, name: "" },\n  ]',
+    );
   });
 });
 

@@ -17,7 +17,6 @@ export type GenerateTradeProductImageError =
   | { kind: "unsupported-image-format"; message: string }
   | { kind: "input-read-failed"; message: string }
   | { kind: "position-detection-failed"; message: string }
-  | { kind: "item-count-mismatch"; message: string }
   | { kind: "invalid-position"; message: string }
   | { kind: "image-generation-failed"; message: string };
 
@@ -47,13 +46,6 @@ export const generateTradeProductImage = async (
   if (detected.err) {
     return Err({ kind: "position-detection-failed", message: detected.error.message });
   }
-  if (detected.value.positions.length !== descriptor.itemCount) {
-    return Err({
-      kind: "item-count-mismatch",
-      message: `画像から${detected.value.positions.length}枚を検出しましたが、${descriptor.itemCount}枚のラインナップが選択されています。`,
-    });
-  }
-
   let dimensions: { width: number; height: number };
   try {
     const metadata = await sharp(input).metadata();

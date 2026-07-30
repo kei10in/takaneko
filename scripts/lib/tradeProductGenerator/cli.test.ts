@@ -65,7 +65,7 @@ const createTestCommand = () =>
 
 describe("resolveTradeProductInput", () => {
   it("prompts only for omitted values", async () => {
-    const answers = ["mini-photo-original", "2026-07-20", "テスト", "regular-27"];
+    const answers = ["mini-photo-original", "2026-07-20", "テスト"];
     const prompt = vi.fn(async () => answers.shift() ?? "");
 
     const resolved = await resolveTradeProductInput({ inputPath: "/tmp/catalog.jpg" }, prompt);
@@ -77,13 +77,13 @@ describe("resolveTradeProductInput", () => {
       type: "mini-photo-original",
       date: "2026-07-20",
       series: "テスト",
-      lineup: "regular-27",
+      lineup: undefined,
     });
-    expect(prompt).toHaveBeenCalledTimes(4);
+    expect(prompt).toHaveBeenCalledTimes(3);
   });
 
   it("keeps supplied options and prompts only for missing options", async () => {
-    const answers = ["テスト", "regular-27"];
+    const answers = ["テスト"];
     const prompt = vi.fn(async () => answers.shift() ?? "");
 
     const resolved = await resolveTradeProductInput(
@@ -102,8 +102,8 @@ describe("resolveTradeProductInput", () => {
       type: "photo-grid",
       date: "2026-07-20",
       series: "テスト",
-      lineup: "regular-27",
+      lineup: undefined,
     });
-    expect(prompt).toHaveBeenCalledTimes(2);
+    expect(prompt).toHaveBeenCalledOnce();
   });
 });

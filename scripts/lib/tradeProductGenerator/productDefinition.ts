@@ -16,18 +16,18 @@ export interface TradeProductInput {
   type: TradeProductType;
   date: string;
   series: string;
-  lineup: TradeProductLineup;
+  lineup?: TradeProductLineup;
 }
 
 export interface TradeProductDescriptor extends TradeProductInput {
   year: number;
-  itemCount: 27 | 30;
+  itemCount?: 27 | 30;
   exportName: string;
   productLabel: string;
   productName: string;
   categoryLabel: "生写真" | "ミニフォトカード";
   productLine: "Photo" | "MiniPhotoCard";
-  lineupConstant:
+  lineupConstant?:
     | "REGULAR_PHOTO_SET"
     | "REGULAR_PHOTO_SET2"
     | "REGULAR_MINI_PHOTO_SET"
@@ -130,13 +130,13 @@ export const buildProductDescriptor = (
     ...input,
     series,
     year,
-    itemCount: input.lineup === "regular-27" ? 27 : 30,
+    itemCount: input.lineup == undefined ? undefined : input.lineup === "regular-27" ? 27 : 30,
     exportName: `${exportBase}_${attributes.exportSuffix}`,
     productLabel,
     productName: `${attributes.productNamePrefix}「${series}」`,
     categoryLabel: attributes.categoryLabel,
     productLine: attributes.productLine,
-    lineupConstant: attributes.lineups[input.lineup],
+    lineupConstant: input.lineup == undefined ? undefined : attributes.lineups[input.lineup],
     stem: `${input.date}_${productLabel}`,
   });
 };
@@ -177,8 +177,17 @@ export const renderProductDefinition = async (
         `    { id: ${id}, x: ${x}, y: ${y}, width: ${width}, height: ${height} },`,
     )
     .join("\n");
-  const source = `import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { ${descriptor.lineupConstant} } from "../utils";
+  const usesLineupHint =
+    descriptor.lineupConstant != undefined && descriptor.itemCount === image.positions.length;
+  const lineupImport = usesLineupHint
+    ? `\nimport { ${descriptor.lineupConstant} } from "../utils";`
+    : "";
+  const variants = usesLineupHint
+    ? descriptor.lineupConstant
+    : `[
+${image.positions.map(({ id }) => `    { id: ${id}, name: "" },`).join("\n")}
+  ]`;
+  const source = `import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";${lineupImport}
 
 export const ${descriptor.exportName}: RandomGoods = {
   id: ${JSON.stringify(descriptor.productLabel)},
@@ -192,7 +201,7 @@ export const ${descriptor.exportName}: RandomGoods = {
   url: ${JSON.stringify(`/takaneko/goods/${descriptor.year}/${descriptor.stem}${image.extension}`)},
   width: ${image.width},
   height: ${image.height},
-  variants: ${descriptor.lineupConstant},
+  variants: ${variants},
   positions: [
 ${positions}
   ],
