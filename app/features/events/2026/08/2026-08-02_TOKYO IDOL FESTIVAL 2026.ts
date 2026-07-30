@@ -14,6 +14,11 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
+      path: "/events/2026/2026-08-02_TOKYO IDOL FESTIVAL 2026_高嶺のなでしこ出演タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2082795873982206342",
+      tags: ["timetable"],
+    },
+    {
       path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026.webp",
       ref: "https://official.idolfes.com/s/tif2026/",
     },
@@ -67,12 +72,13 @@ export const meta: EventMetaDescriptor = {
       `,
     },
   ],
-  updatedAt: "2026-07-28",
+  updatedAt: "2026-07-30",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082795873982206342)
   - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080631584475222296)
   - [INFO CENTRE トーク企画 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2080593845058707566)
