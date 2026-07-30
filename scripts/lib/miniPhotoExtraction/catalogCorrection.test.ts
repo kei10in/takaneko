@@ -52,4 +52,21 @@ describe("mini-photo catalog correction", () => {
     expect(corrected[0]).toMatchObject({ x: 36, y: 141, width: 146, height: 240 });
     expect(corrected.at(-1)).toMatchObject({ x: 695, y: 1189, width: 146, height: 240 });
   });
+
+  it("removes a consistent bottom drop shadow from non-standard catalog grids", () => {
+    const image = emptyImage(1721, 2435);
+    const rects: ClusteredRect[] = Array.from({ length: 16 }, (_, index) => ({
+      x: 49 + (index % 4) * 203,
+      y: 574 + Math.floor(index / 4) * 356,
+      width: 198,
+      height: 320,
+      boundaryScore: 1,
+      row: Math.floor(index / 4),
+      column: index % 4,
+    }));
+
+    const corrected = completeCatalogLayout(rects, createEdgeMap(image), image);
+
+    expect(corrected).toEqual(rects.map((rect) => ({ ...rect, height: 311 })));
+  });
 });

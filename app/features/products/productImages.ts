@@ -167,19 +167,20 @@ import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_0
 import { 花柄ワンピース_ミニフォト } from "./2026/2026-06-03_ミニフォトカード「花柄ワンピース」";
 import { たかねこフェスvol6_ミニフォト } from "./2026/2026-07-12_ミニフォトカード「たかねこフェス vol.6」";
 import { たかねこフェスvol6_生写真 } from "./2026/2026-07-12_生写真「たかねこフェス vol.6」";
+import { TIF2026限定ライブフォト1_ミニフォト } from "./2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 1」";
+import { TIF2026限定ライブフォト2_ミニフォト } from "./2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 2」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  TIF2026限定ライブフォト2_ミニフォト,
+  TIF2026限定ライブフォト1_ミニフォト,
   たかねこフェスvol6_生写真,
   たかねこフェスvol6_ミニフォト,
-  花柄ワンピース_ミニフォト,
-  BouquetOf9FlowersFinal_生写真,
-  BouquetOf9FlowersFinal_ミニフォト,
-  私はわたしの事が好き_生写真,
-  私はわたしの事が好き_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  TIF2026限定ライブフォト2_ミニフォト,
+  TIF2026限定ライブフォト1_ミニフォト,
   たかねこフェスvol6_生写真,
   たかねこフェスvol6_ミニフォト,
   花柄ワンピース_ミニフォト,

@@ -17,6 +17,8 @@ const CATALOG_TOP_LEFT_HEIGHT_STEP_RATIO = 0.943;
 const CATALOG_MAX_CARD_ASPECT_RATIO = 0.69;
 const CATALOG_CARD_PIXEL_ASPECT_RATIO = 0.636;
 const CATALOG_MAX_STANDARD_GRID_ASPECT_RATIO = 0.72;
+const DROP_SHADOW_MAX_ASPECT_RATIO = 0.625;
+const DROP_SHADOW_MAX_HEIGHT_RATIO = 0.05;
 
 export const completeCatalogLayout = (
   rects: ClusteredRect[],
@@ -30,7 +32,8 @@ export const completeCatalogLayout = (
     .map((row) => [...row].sort((a, b) => a.x - b.x))
     .sort((a, b) => median(a.map((rect) => rect.y)) - median(b.map((rect) => rect.y)));
   const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
-  if (maximumColumns !== CATALOG_COLUMNS || sourceRows.length < 3) return rects;
+  if (maximumColumns !== CATALOG_COLUMNS) return removeConsistentBottomDropShadow(rects);
+  if (sourceRows.length < 3) return rects;
 
   const representative = chooseRepresentativeSize(rects);
   const horizontalDifferences = sourceRows.flatMap((row) =>
@@ -214,6 +217,24 @@ export const completeCatalogLayout = (
     );
   });
   return refineMiniPhotoCatalogFrames(completed, edges, image);
+};
+
+const removeConsistentBottomDropShadow = (rects: ClusteredRect[]): ClusteredRect[] => {
+  if (rects.length < 10) return rects;
+
+  const representative = chooseRepresentativeSize(rects);
+  if (representative.width / representative.height >= DROP_SHADOW_MAX_ASPECT_RATIO) return rects;
+
+  const cardHeight = Math.round(representative.width / CATALOG_CARD_PIXEL_ASPECT_RATIO);
+  const removedHeight = representative.height - cardHeight;
+  if (
+    removedHeight <= 0 ||
+    removedHeight > representative.height * DROP_SHADOW_MAX_HEIGHT_RATIO
+  ) {
+    return rects;
+  }
+
+  return rects.map((rect) => ({ ...rect, height: cardHeight }));
 };
 
 const bestCatalogAxisPosition = (
