@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-15_お盆だよ！六本木アイドルフェスティバル.jpg",
       ref: "https://x.com/idolotakarakuji/status/2078026920772641017",
     },
+    {
+      path: "/events/2026/2026-08-15_お盆だよ！六本木アイドルフェスティバル_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2082400841244496230",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -28,13 +33,18 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-07-18",
+  acts: {
+    types: ["LIVE"],
+    start: "15:05",
+    end: "15:30",
+  },
+  updatedAt: "2026-07-30",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2082400841244496230)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2078313813196325298)
   - [出演者発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2078026920772641017)
 `;
