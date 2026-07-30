@@ -21,13 +21,20 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/luckyfm_fes/status/2074327548327338339",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-08-09_LuckyFes'26_ABEMA配信.jpg",
+      ref: "https://x.com/takanenofficial/status/2082330521632485415",
+    },
   ],
   link: {
     text: "イベント サイト",
     url: "https://luckyfes.com/",
   },
   ticket: "https://luckyfes.com/ticket",
-  streamings: undefined,
+  streamings: {
+    text: "ABEMA",
+    url: "https://abema.tv/channels/luckyfes/slots/Exw82fUx6zCYzK",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
@@ -41,12 +48,14 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-07-09",
+  updatedAt: "2026-07-30",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [配信ページ - ABEMA](https://abema.tv/lp/luckyfes-onair)
+  - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2082330521632485415)
   - [ステージ撮影・SNS投稿ルール公開 - LuckyFes X](https://x.com/luckyfm_fes/status/2074327548327338339)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2064565863517474972)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2031222538442014861)
