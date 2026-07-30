@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     text: "番組ホームページ",
     url: "https://lucky-ibaraki.com/ims/",
   },
-  updatedAt: "2026-07-30",
+  updatedAt: "2026-07-31",
 };
 
 export const content = /* md */ `
@@ -28,6 +28,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2082662612718989565)
   - [radiko 出演時間から再生](https://radiko.jp/share?sid=IBS&t=20260730132100)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=IBS&t=20260730130000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2080563719705416090)
