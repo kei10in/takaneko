@@ -31,6 +31,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-02_TOKYO IDOL FESTIVAL 2026_INFO CENTRE トーク企画.jpg",
       ref: "https://x.com/TIP_TIF_staff/status/2080593845058707566",
     },
+    {
+      path: "/events/2026/2026-08-02_TOKYO IDOL FESTIVAL 2026_グランドフィナーレ.jpg",
+      ref: "https://x.com/TIP_TIF_staff/status/2082783262993510432",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -71,6 +75,22 @@ export const meta: EventMetaDescriptor = {
         [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
     },
+    {
+      title: "HOT STAGE",
+      types: ["OTHER"],
+      start: "19:50",
+      end: "20:35",
+      description: /* md */ `
+        グランドフィナーレ
+
+        🩷橋本桃呼、💙籾山ひめりが出演。
+
+        有料配信: [TIF Streaming] / [FOD]
+
+        [TIF Streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8520/
+      `,
+    },
   ],
   updatedAt: "2026-07-30",
 };
@@ -78,6 +98,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [グランドフィナーレ 出演告知 - 公式 X](https://x.com/takanenofficial/status/2082790812178399671)
+  - [グランドフィナーレ 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2082783262993510432)
   - [出演タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082795873982206342)
   - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2080631584475222296)
