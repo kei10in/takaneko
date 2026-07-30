@@ -35,6 +35,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-07-31_TOKYO IDOL FESTIVAL 2026_INFO CENTRE トーク企画.jpg",
       ref: "https://x.com/TIP_TIF_staff/status/2080593837936791995",
     },
+    {
+      path: "/takaneko/goods/2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 1」.jpg",
+      ref: "https://x.com/takanenofficial/status/2082779722946318468",
+    },
+    {
+      path: "/takaneko/goods/2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 2」.jpg",
+      ref: "https://x.com/takanenofficial/status/2082779722946318468",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -43,9 +51,12 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://official.idolfes.com/s/tif2026/page/ticket",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["18:40", "19:40"],
+    lineup: [
+      "ミニフォトカード「TIF2026 限定ライブフォト 1」",
+      "ミニフォトカード「TIF2026 限定ライブフォト 2」",
+    ],
+    url: "https://x.com/takanenofficial/status/2082779722946318468",
   },
   acts: [
     {
@@ -114,12 +125,18 @@ export const meta: EventMetaDescriptor = {
       `,
     },
   ],
-  updatedAt: "2026-07-30",
+  updatedAt: "2026-07-31",
 };
 
 export const content = /* md */ `
+  ## 物販
+
+  - **時間:** 18:40〜19:40
+  - **場所:** GREETING AREA G-4
+
   ## リンク
 
+  - [物販タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082779722946318468)
   - [出演タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082795873982206342)
   - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
   - [INFO CENTRE トーク企画 出演告知 - 公式 X](https://x.com/takanenofficial/status/2081711196559057062)
