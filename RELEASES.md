@@ -2,6 +2,9 @@
 
 ## 2026-07-31
 
+- トレード画像をつくるやつに、4th Anniversary Special LIVE 〜STELLA〜 の FC 抽選会グッズを追加しました。
+  - 4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別 アンブレラマーカー
+  - 4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別デザイン 自撮りステッカー
 - トレード画像をつくるやつに、ミニフォトカード「TIF2026 限定ライブフォト 2」を追加しました。
 - トレード画像をつくるやつに、ミニフォトカード「TIF2026 限定ライブフォト 1」を追加しました。
 

@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const STELLA_FC抽選会_アンブレラマーカー: RandomGoods = {
+  id: "4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別 アンブレラマーカー",
+  slug: "アンブレラマーカー「4th Anniversary Special LIVE 〜STELLA〜 FC抽選会」",
+  name: "4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別 アンブレラマーカー",
+  year: 2026,
+  series: "",
+  category: "アクリルキーホルダー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-08-06_メンバー個別アンブレラマーカー.png",
+  width: 800,
+  height: 500,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 10, y: 75, width: 152, height: 152 },
+    { id: 2, x: 165, y: 76, width: 152, height: 152 },
+    { id: 3, x: 318, y: 77, width: 152, height: 152 },
+    { id: 4, x: 472, y: 75, width: 152, height: 152 },
+    { id: 5, x: 629, y: 75, width: 152, height: 152 },
+    { id: 6, x: 87, y: 243, width: 152, height: 152 },
+    { id: 7, x: 244, y: 243, width: 152, height: 152 },
+    { id: 8, x: 405, y: 246, width: 152, height: 152 },
+    { id: 9, x: 569, y: 243, width: 152, height: 152 },
+  ],
+};

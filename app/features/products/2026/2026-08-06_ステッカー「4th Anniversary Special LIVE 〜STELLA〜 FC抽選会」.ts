@@ -1,0 +1,36 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const STELLA_FC抽選会_自撮りステッカー: RandomGoods = {
+  id: "4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別デザイン 自撮りステッカー",
+  slug: "ステッカー「4th Anniversary Special LIVE 〜STELLA〜 FC抽選会」",
+  name: "4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別デザイン 自撮りステッカー",
+  year: 2026,
+  series: "",
+  category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-08-06_メンバー個別デザイン自撮りステッカー.png",
+  width: 800,
+  height: 500,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  positions: [
+    { id: 1, x: 34, y: 51, width: 132, height: 173 },
+    { id: 2, x: 184, y: 51, width: 132, height: 173 },
+    { id: 3, x: 334, y: 51, width: 132, height: 173 },
+    { id: 4, x: 484, y: 51, width: 132, height: 173 },
+    { id: 5, x: 634, y: 51, width: 132, height: 173 },
+    { id: 6, x: 68, y: 276, width: 132, height: 173 },
+    { id: 7, x: 230, y: 297, width: 172, height: 131 },
+    { id: 8, x: 432, y: 276, width: 132, height: 173 },
+    { id: 9, x: 599, y: 275, width: 132, height: 173 },
+  ],
+};
