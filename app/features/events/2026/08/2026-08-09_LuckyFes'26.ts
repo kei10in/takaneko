@@ -48,12 +48,13 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-07-30",
+  updatedAt: "2026-07-31",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [コメント動画 - LuckyFes X](https://x.com/luckyfm_fes/status/2082737970432692677)
   - [配信ページ - ABEMA](https://abema.tv/lp/luckyfes-onair)
   - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2082330521632485415)
   - [ステージ撮影・SNS投稿ルール公開 - LuckyFes X](https://x.com/luckyfm_fes/status/2074327548327338339)
