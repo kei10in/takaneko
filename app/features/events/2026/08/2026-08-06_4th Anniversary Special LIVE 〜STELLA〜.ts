@@ -29,12 +29,14 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-28",
+  updatedAt: "2026-07-31",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [FC 抽選会 / セトリ予想クイズ 詳細 - 公式 FC News](https://takanekofc.com/news/public/_/p28pk0cpsk8ego0d.html)
+  - [FC 抽選会 / セトリ予想クイズ お知らせ - 公式 X](https://x.com/takanenofficial/status/2082753064004436178)
   - [公演タイトル公開 - 公式 X](https://x.com/takanenofficial/status/2081575326501740755)
   - [詳細告知 - 公式ニュース](https://takanenonadeshiko.jp/?p=5342)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2060677607843152256)
