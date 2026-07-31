@@ -4,7 +4,7 @@ import { dedent } from "ts-dedent";
 import { LinkDescription } from "~/utils/types/LinkDescription";
 import { MemberIdEnum } from "../profile/types";
 import { parseSetlist } from "./setlist";
-import { MeetAngGreetLanesList } from "./timeSchedule";
+import { EventCostume, MeetAngGreetLanesList } from "./timeSchedule";
 
 export const ActTypeEnum = z.enum([
   "LIVE",
@@ -61,6 +61,8 @@ export const Act = z
 
     // グループ握手会向けのフィールドです。
     meetAndGreet: z.object({ costume: z.string(), lanes: MeetAngGreetLanesList }).optional(),
+
+    costume: EventCostume.optional(),
 
     // みくるんの #たかねこセトリを指定します。
     url: z
