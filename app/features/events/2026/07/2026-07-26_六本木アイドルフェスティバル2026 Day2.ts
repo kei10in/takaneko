@@ -83,12 +83,15 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2081268778508386574",
     },
   ],
-  updatedAt: "2026-07-26",
+  updatedAt: "2026-07-31",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [高嶺のなでしこ【六本木アイドルフェスティバル2026 ライブレポート】灼熱の野外ステージで魅せた、爽やかで気品あふれるパフォーマンス-BEEEEM](https://beeeem.com/article/rif2026-takaneko)
+  - [ライブレポート公開 - BEEEEM ニュース X](https://x.com/BEEEEM_NEWS/status/2082662469840052536)
+  - [出演後コメント - 六本木アイドルフェスティバル X](https://x.com/idolotakarakuji/status/2082420878361371127)
   - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2081268778508386574)
   - [GOLD STAGE 出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2081273491220033794)
   - [FUTURE STAGE 出演報告 - 公式 X](https://x.com/takanenofficial/status/2081216745969488161)
