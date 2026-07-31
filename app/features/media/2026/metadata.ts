@@ -3,6 +3,30 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "4moXcHK6U9s",
+    title:
+      "【夏休みSP】高嶺のなでしこ　城月菜央主演 埼玉の怖い話「七里殺人の森」ホラーちゃんねるオリジナル短編映画",
+    authorName: "ホラーちゃんねる",
+    publishedAt: "2026-07-31",
+    mediaUrl: "https://youtu.be/4moXcHK6U9s",
+    imageUrl: "https://i.ytimg.com/vi/4moXcHK6U9s/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/808993",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第14回『ドットホラーストーリー』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-07-31",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/808993",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/07/808993_02.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "6eHtXCUNtt8",
     title: "【抜き打ち】恐怖の体重チェック！Popteenモデルの体重を大公開！【Popteen】",
     authorName: "PopteenTV",
