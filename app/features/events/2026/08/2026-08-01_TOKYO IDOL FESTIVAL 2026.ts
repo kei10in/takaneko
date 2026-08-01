@@ -71,6 +71,7 @@ export const meta: EventMetaDescriptor = {
         "小悪魔だってかまわない！",
         "#超絶かわいい",
       ],
+      url: "https://x.com/Mikuru_hositani/status/2083514244289700225",
       links: ["https://x.com/takanenofficial/status/2083402941306912804"],
     },
     {
@@ -92,6 +93,28 @@ export const meta: EventMetaDescriptor = {
     {
       title: "SMILE GARDEN",
       types: ["LIVE"],
+      start: "17:45",
+      end: "17:50",
+      description: `
+        たかねこ未定サプライズコラボ
+
+        有料配信: [TIF Streaming] / [FOD]
+
+        [TIF Streaming]: https://official.idolfes.com/s/tifst
+        [FOD]: https://fod.fujitv.co.jp/ppv/8520/
+      `,
+      setlist: [
+        "衣装: アンチファン衣装",
+        "夏のオレンジ (タイトル未定 コラボ)",
+        "可愛くてごめん (タイトル未定 コラボ)",
+        "推しの魔法 (タイトル未定 コラボ)",
+        "MC",
+      ],
+      links: ["https://x.com/takanenofficial/status/2083533271523037274"],
+    },
+    {
+      title: "SMILE GARDEN",
+      types: ["LIVE"],
       start: "17:55",
       end: "18:15",
       description: `
@@ -100,6 +123,14 @@ export const meta: EventMetaDescriptor = {
         [TIF Streaming]: https://official.idolfes.com/s/tifst
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
+      setlist: [
+        "衣装: アンチファン衣装",
+        "花は誓いを忘れない",
+        "女の子は強い",
+        "僕らの青",
+        "I’M YOUR IDOL",
+      ],
+      url: "https://x.com/Mikuru_hositani/status/2083514244289700225",
     },
   ],
   updatedAt: "2026-08-01",
@@ -113,6 +144,10 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2083514244289700225)
+  - [SMILE GARDEN 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083510745199693994)
+  - [SMILE GARDEN 出演案内 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083473909639454942)
+  - [SIMLE GARDEN たかねこ未定コラボステージ報告 - 公式 X](https://x.com/takanenofficial/status/2083533271523037274)
   - [TIF2026×UNIDOLステージ 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083440387847315598)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2083409550808617214)
   - [TIF2026×UNIDOLステージ 出演報告 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083403568858726878)
