@@ -35,6 +35,10 @@ export const meta: EventMetaDescriptor = {
       path: "/takaneko/goods/2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 2」.jpg",
       ref: "https://x.com/takanenofficial/status/2082779722946318468",
     },
+    {
+      path: "/events/2026/2026-08-01_TOKYO IDOL FESTIVAL 2026_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2083409550808617214",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -61,6 +65,13 @@ export const meta: EventMetaDescriptor = {
 
         [sheeta Live Stream]: https://sheeta.jp/live-stream/live/sm9v6rtNrekbk9chRDEejP3b
       `,
+      setlist: [
+        "衣装: 2025 春衣装",
+        "メランコリックハニー",
+        "小悪魔だってかまわない！",
+        "#超絶かわいい",
+      ],
+      links: ["https://x.com/takanenofficial/status/2083402941306912804"],
     },
     {
       title: "UP-T HOT STAGE",
@@ -75,6 +86,8 @@ export const meta: EventMetaDescriptor = {
         [TIF Streaming]: https://official.idolfes.com/s/tifst
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
+      setlist: ["衣装: 全国お招きツアー衣装", "初恋のひと。", "決戦スピリット"],
+      links: ["https://x.com/takanenofficial/status/2083440387847315598"],
     },
     {
       title: "SMILE GARDEN",
@@ -89,7 +102,7 @@ export const meta: EventMetaDescriptor = {
       `,
     },
   ],
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-01",
 };
 
 export const content = /* md */ `
@@ -100,6 +113,12 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [TIF2026×UNIDOLステージ 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083440387847315598)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2083409550808617214)
+  - [TIF2026×UNIDOLステージ 出演報告 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083403568858726878)
+  - [浮島STAGE 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083402941306912804)
+  - [浮島STAGE 出演案内 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083380345068785978)
+  - [きょうのたかねこ - 公式 X](https://x.com/takanenofficial/status/2083341947788304832)
   - [物販タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082779722946318468)
   - [出演タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082795873982206342)
   - [放送・配信 - イベントサイト](https://official.idolfes.com/s/tif2026/page/broadcast)
