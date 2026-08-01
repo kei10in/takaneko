@@ -13,8 +13,8 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ2"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2026/2026-08-25_星谷美来 卒業公演 〜ずっと恋の病でいてね〜.jpg",
+      ref: "https://x.com/takanenofficial/status/2083357041314402597",
     },
   ],
   link: {
@@ -29,12 +29,13 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-04",
+  updatedAt: "2026-08-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [一般販売開始 - 公式 X](https://x.com/takanenofficial/status/2083357041314402597)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2073232831061676274)
   - [開場/開演時間変更のお知らせ - 公式 X](https://x.com/takanenofficial/status/2073260517960110299)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5400)
