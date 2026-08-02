@@ -82,6 +82,11 @@ rg --files "app/features/events/${YEAR}" | rg "${CATEGORY_HINT}" | head -n 20
 - `region` は同時期の同カテゴリファイルの表記に合わせる。
 - 視聴先 URL は `streamings` に定義し、告知履歴は `content` のリンクに分離する。
 
+### NATSLIVE「たかねこ初恋キッチン」
+
+- [NATSLIVE「たかねこ初恋キッチン」実装仕様](natslive.md) を参照する。
+- 現地観覧付き配信のため、通常の Streaming イベントとは区別する。
+
 ## ステータス仕様
 
 - `status` に使う値は `RESCHEDULED` / `CANCELED` / `WITHDRAWN` のみとする。
