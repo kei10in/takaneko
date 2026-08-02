@@ -70,13 +70,23 @@ export const meta: EventMetaDescriptor = {
         [TIF Streaming]: https://official.idolfes.com/s/tifst
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
+      setlist: [
+        "衣装: サマーセッション衣装",
+        "初恋のこたえ。",
+        "恋を知った世界",
+        "誇り高きアイドル",
+        "MC",
+        "僕らの青",
+        "ファンサ",
+        "美しく生きろ",
+      ],
     },
     {
       title: "INFO CENTRE",
       types: ["TALK"],
       start: "15:45",
       end: "16:25",
-      description: /* md */ `
+      description: `
         歌声喫茶“みてい”
 
         💙籾山ひめりが出演。
@@ -91,7 +101,7 @@ export const meta: EventMetaDescriptor = {
       types: ["OTHER"],
       start: "19:50",
       end: "20:35",
-      description: /* md */ `
+      description: `
         グランドフィナーレ
 
         🩷橋本桃呼、💙籾山ひめりが出演。
@@ -103,7 +113,7 @@ export const meta: EventMetaDescriptor = {
       `,
     },
   ],
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-02",
 };
 
 export const content = /* md */ `
