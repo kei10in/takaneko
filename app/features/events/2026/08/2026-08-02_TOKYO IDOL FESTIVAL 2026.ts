@@ -80,6 +80,8 @@ export const meta: EventMetaDescriptor = {
         "ファンサ",
         "美しく生きろ",
       ],
+      url: "https://x.com/Mikuru_hositani/status/2083886084589809810",
+      links: ["https://x.com/takanenofficial/status/2083782436736082096"],
     },
     {
       title: "INFO CENTRE",
@@ -96,6 +98,7 @@ export const meta: EventMetaDescriptor = {
         [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
       costume: "サマーセッション衣装",
+      links: ["https://x.com/takanenofficial/status/2083844538083536918"],
     },
     {
       title: "HOT STAGE",
@@ -113,6 +116,7 @@ export const meta: EventMetaDescriptor = {
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
       costume: "サマーセッション衣装",
+      links: ["https://x.com/takanenofficial/status/2083899105903071331"],
     },
   ],
   updatedAt: "2026-08-02",
@@ -126,6 +130,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [グランドフィナーレ 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083899105903071331)
+  - [INFO CENTRE トーク企画「歌声喫茶 “みてい”」出演報告 - 公式 X](https://x.com/takanenofficial/status/2083844538083536918)
+  - [UP-T HOT STAGE 出演報告・セットリスト - 公式 X](https://x.com/takanenofficial/status/2083782436736082096)
   - [物販タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082779722946318468)
   - [グランドフィナーレ 出演告知 - 公式 X](https://x.com/takanenofficial/status/2082790812178399671)
   - [グランドフィナーレ 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2082783262993510432)
