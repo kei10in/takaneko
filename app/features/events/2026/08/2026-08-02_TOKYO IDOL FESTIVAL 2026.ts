@@ -95,6 +95,7 @@ export const meta: EventMetaDescriptor = {
 
         [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
+      costume: "サマーセッション衣装",
     },
     {
       title: "HOT STAGE",
@@ -111,6 +112,7 @@ export const meta: EventMetaDescriptor = {
         [TIF Streaming]: https://official.idolfes.com/s/tifst
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
+      costume: "サマーセッション衣装",
     },
   ],
   updatedAt: "2026-08-02",
