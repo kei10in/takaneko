@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const _4thファンミ_缶バッジ: RandomGoods = {
+  id: "缶バッジ「4th ファンミ」",
+  slug: "キラキラ缶バッジ「4th ファンミ」",
+  name: "キラキラ缶バッジ「4th ファンミ」",
+  year: 2026,
+  series: "4th Anniversary",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-08-07_缶バッジ「4th ファンミ」.webp",
+  width: 236,
+  height: 236,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "星谷美来", description: "" },
+    { id: 8, name: "松本ももな", description: "" },
+    { id: 9, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 4, y: 4, width: 75, height: 75 },
+    { id: 2, x: 81, y: 4, width: 75, height: 75 },
+    { id: 3, x: 158, y: 4, width: 75, height: 75 },
+    { id: 4, x: 4, y: 81, width: 75, height: 75 },
+    { id: 5, x: 81, y: 81, width: 75, height: 75 },
+    { id: 6, x: 158, y: 81, width: 75, height: 75 },
+    { id: 7, x: 4, y: 158, width: 75, height: 75 },
+    { id: 8, x: 81, y: 158, width: 75, height: 75 },
+    { id: 9, x: 158, y: 158, width: 75, height: 75 },
+  ],
+};
