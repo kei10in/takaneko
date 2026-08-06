@@ -171,6 +171,7 @@ import { TIF2026限定ライブフォト1_ミニフォト } from "./2026/2026-07
 import { TIF2026限定ライブフォト2_ミニフォト } from "./2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 2」";
 import { STELLA_FC抽選会_アンブレラマーカー } from "./2026/2026-08-06_アンブレラマーカー「4th Anniversary Special LIVE 〜STELLA〜 FC抽選会」";
 import { STELLA_FC抽選会_自撮りステッカー } from "./2026/2026-08-06_ステッカー「4th Anniversary Special LIVE 〜STELLA〜 FC抽選会」";
+import { _4thAnniversary_生写真 } from "./2026/2026-08-06_生写真「4th Anniversary」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
@@ -181,6 +182,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  _4thAnniversary_生写真,
   STELLA_FC抽選会_アンブレラマーカー,
   STELLA_FC抽選会_自撮りステッカー,
   TIF2026限定ライブフォト2_ミニフォト,
