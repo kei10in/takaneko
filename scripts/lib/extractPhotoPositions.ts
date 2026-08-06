@@ -8,6 +8,7 @@ import type {
   PixelImage,
 } from "./imageRegionExtraction/types";
 import { correctCatalogLayout } from "./photoExtraction/catalogCorrection";
+import { recoverPhotoOuterFrames } from "./photoExtraction/catalogOuterFrame";
 import { photoExtractionProfile } from "./photoExtraction/profile";
 
 export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types";
@@ -28,4 +29,10 @@ export const extractPhotoPositionsFromPixels = (
   image: PixelImage,
   options: ExtractPhotoPositionsOptions = {},
 ): Result<ExtractedPhotoPositions, ExtractPhotoPositionsError> =>
-  extractPositionsFromPixels(image, photoExtractionProfile, correctCatalogLayout, options);
+  extractPositionsFromPixels(
+    image,
+    photoExtractionProfile,
+    (rects, edges, source, context) =>
+      recoverPhotoOuterFrames(correctCatalogLayout(rects, edges, source, context), edges, source),
+    options,
+  );

@@ -164,6 +164,33 @@ describe("extractPhotoPositions", () => {
     expect(result.value.diagnostics.rows).toBe(3);
     expect(result.value.diagnostics.columns).toBe(9);
   });
+
+  it("keeps the outer frame of every photo in low-resolution sample 5", async () => {
+    const input = await readFile(path.resolve("scripts/lib/test-fixture/photo-sample.5.png"));
+
+    const result = await extractPhotoPositions(input);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    const columnsByRow = [
+      [7, 58, 108, 159, 210, 260, 311, 361, 412],
+      [7, 58, 108, 159, 209, 260, 311, 361, 412],
+      [7, 58, 108, 159, 209, 260, 311, 361, 412],
+    ];
+    expect(result.value.positions).toEqual(
+      columnsByRow.flatMap((columns, row) =>
+        columns.map((x, column) => ({
+          id: row * columns.length + column + 1,
+          x,
+          y: [9, 80, 151][row],
+          width: 49,
+          height: 69,
+        })),
+      ),
+    );
+    expect(result.value.diagnostics.rows).toBe(3);
+    expect(result.value.diagnostics.columns).toBe(9);
+  });
 });
 
 describe("extractPhotoPositionsFromPixels", () => {

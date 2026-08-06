@@ -5,6 +5,35 @@ import { generateTradeProductImage } from "./image";
 import { buildProductDescriptor } from "./productDefinition";
 
 describe("generateTradeProductImage", { timeout: 15_000 }, () => {
+  it("renders a low-resolution photo catalog after recovering its outer frames", async () => {
+    const descriptor = buildProductDescriptor({
+      inputPath: path.resolve("scripts/lib/test-fixture/photo-sample.5.png"),
+      type: "photo-grid",
+      date: "2026-08-06",
+      series: "4th Anniversary",
+      lineup: "regular-27",
+    });
+    if (descriptor.err) throw new Error(descriptor.error.message);
+
+    const result = await generateTradeProductImage(descriptor.value);
+
+    expect(result.ok).toBe(true);
+    if (result.err) return;
+    expect(result.value.positions).toHaveLength(27);
+    expect(result.value.positions[0]).toEqual({
+      id: 1,
+      x: 33,
+      y: 33,
+      width: 154,
+      height: 220,
+    });
+    expect(await sharp(result.value.buffer).metadata()).toMatchObject({
+      format: "webp",
+      width: 1080,
+      height: 1238,
+    });
+  });
+
   it("renders detected mini photos into the shared WebP grid", async () => {
     const descriptor = buildProductDescriptor({
       inputPath: path.resolve(
