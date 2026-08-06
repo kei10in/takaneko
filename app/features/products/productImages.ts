@@ -180,12 +180,10 @@ import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./prod
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _4thAnniversary_生写真,
   _4thAnniversary_ミニフォト,
+  _4thAnniversarySTELLA_缶バッジ,
+  _4thファンミ_缶バッジ,
   STELLA_FC抽選会_アンブレラマーカー,
   STELLA_FC抽選会_自撮りステッカー,
-  TIF2026限定ライブフォト2_ミニフォト,
-  TIF2026限定ライブフォト1_ミニフォト,
-  たかねこフェスvol6_生写真,
-  たかねこフェスvol6_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
