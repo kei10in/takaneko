@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-08-09",
-  open: undefined,
-  start: undefined,
+  open: "08:00",
+  start: "10:00",
   end: undefined,
   region: "茨城",
   location: "国営ひたち海浜公園",
@@ -25,6 +25,18 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-09_LuckyFes'26_ABEMA配信.jpg",
       ref: "https://x.com/takanenofficial/status/2082330521632485415",
     },
+    {
+      path: "/events/2026/2026-08-09_LuckyFes'26_ABEMA配信タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2085941571782935009",
+    },
+    {
+      path: "/events/2026/2026-08-09_LuckyFes'26_グッズ.jpg",
+      ref: "https://x.com/takanenofficial/status/2085946654327447886",
+    },
+    {
+      path: "/events/2026/2026-08-09_LuckyFes'26_会場マップ.jpg",
+      ref: "https://x.com/takanenofficial/status/2085946654327447886",
+    },
   ],
   link: {
     text: "イベント サイト",
@@ -37,8 +49,13 @@ export const meta: EventMetaDescriptor = {
   },
   goods: {
     time: undefined,
-    lineup: undefined,
-    url: undefined,
+    lineup: [
+      "高嶺のなでしこワッペンポロシャツ",
+      "ランダムプロフトレカ (LuckyFes'26 ver.)",
+      "グループフェイスタオル (2026 サマー ver.)",
+      "メッシュサコッシュ",
+    ],
+    url: "https://x.com/takanenofficial/status/2085946654327447886",
   },
   acts: {
     title: "GARDEN STAGE",
@@ -48,12 +65,15 @@ export const meta: EventMetaDescriptor = {
     setlist: [],
     url: "",
   },
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-08",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2086074960577986702)
+  - [グッズ情報 - 公式 X](https://x.com/takanenofficial/status/2085946654327447886)
+  - [ABEMA配信タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2085941571782935009)
   - [コメント動画 - LuckyFes X](https://x.com/luckyfm_fes/status/2082737970432692677)
   - [配信ページ - ABEMA](https://abema.tv/lp/luckyfes-onair)
   - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2082330521632485415)
