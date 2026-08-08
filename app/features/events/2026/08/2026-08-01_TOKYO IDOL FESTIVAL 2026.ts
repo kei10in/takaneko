@@ -144,7 +144,7 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [#たかねこセトリ](https://x.com/Mikuru_hositani/status/2083514244289700225)
+  - [【TIF2026リポート第10弾】高嶺のなでしこ×UNIDOLが魅せた感動のコラボ！約80名の女子大生と創り上げた圧巻パフォーマンス（写真33枚）【Reporter：早川千鶴、坂口心優】 | ACTRESS PRESS](https://actresspress.com/unidol-tif2026/)
   - [SMILE GARDEN 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083510745199693994)
   - [SMILE GARDEN 出演案内 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083473909639454942)
   - [SIMLE GARDEN たかねこ未定コラボステージ報告 - 公式 X](https://x.com/takanenofficial/status/2083533271523037274)
