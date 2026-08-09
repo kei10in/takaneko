@@ -24,7 +24,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://takanenonadeshiko.jp/?p=5420",
   },
   ticket: "https://ch.chara-ani.com/entry",
-  streamings: undefined,
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv351080272",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
