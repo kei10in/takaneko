@@ -150,7 +150,23 @@ export default function EventPage() {
               <p>{displayDateWithDayOfWeek(d)}</p>
             </FieldWithIcon>
 
-            {meta.category == EventType.LIVE && (meta.open || meta.start) && (
+            {(meta.category == EventType.LIVE || meta.category == EventType.FASHION) &&
+              (meta.open || meta.start) && (
+                <FieldWithIcon className="px-5" icon={HiOutlineClock}>
+                  {meta.open && meta.start && (
+                    <p>
+                      開場: {meta.open} / 開演: {meta.start}
+                    </p>
+                  )}
+                  {meta.open && !meta.start && <p>開場: {meta.open}</p>}
+                  {!meta.open && meta.start && <p>開演: {meta.start}</p>}
+
+                  {meta.end && <p className="text-sm">終演: {meta.end}</p>}
+                </FieldWithIcon>
+              )}
+
+            {/* EventType.OTHER は何が来るかわからないため、一旦 LIVE とは別実装にしておく */}
+            {meta.category == EventType.OTHER && (meta.open || meta.start) && (
               <FieldWithIcon className="px-5" icon={HiOutlineClock}>
                 {meta.open && meta.start && (
                   <p>
