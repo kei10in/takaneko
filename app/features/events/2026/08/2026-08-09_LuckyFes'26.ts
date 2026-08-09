@@ -62,15 +62,29 @@ export const meta: EventMetaDescriptor = {
     types: ["LIVE"],
     start: "13:20",
     end: "13:55",
-    setlist: [],
-    url: "",
+    setlist: [
+      "衣装: サマーセッション衣装",
+      "初恋のこたえ。",
+      "初恋のひと。",
+      "ハートブーケ",
+      "決戦スピリット",
+      "MC",
+      "僕らの青",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    url: "https://x.com/Mikuru_hositani/status/2086370086454235288",
   },
-  updatedAt: "2026-08-08",
+  updatedAt: "2026-08-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2086384740983320790)
+  - [セットリスト・ライブ写真 - LuckyFes](https://luckyfes.com/quick-report/64)
+  - [セットリスト・ライブ写真 - LuckyFes X](https://x.com/luckyfm_fes/status/2086349292802052143)
+  - [出演前コメント - LuckyFes X](https://x.com/luckyfm_fes/status/2086303557008113807)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2086074960577986702)
   - [グッズ情報 - 公式 X](https://x.com/takanenofficial/status/2085946654327447886)
   - [ABEMA配信タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2085941571782935009)
