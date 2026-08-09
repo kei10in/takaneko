@@ -53,7 +53,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       setlist: [
-        "衣装: 見上げるたびに恋をする衣装",
+        "衣装: 見上げるたびに、恋をする。衣装",
         "アイドル衣装",
         "I’M YOUR IDOL",
         "初恋のひと。",
