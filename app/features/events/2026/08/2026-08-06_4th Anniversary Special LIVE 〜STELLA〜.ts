@@ -70,7 +70,7 @@ export const meta: EventMetaDescriptor = {
         "女の子は強い",
         "初恋のこたえ。",
         "MC",
-        "約束",
+        "初披露: 約束",
         "花は誓いを忘れない",
         "MC",
         "美しく生きろ",
