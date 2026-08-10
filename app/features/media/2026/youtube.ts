@@ -2,6 +2,17 @@ import { YouTubeVideoDescriptor } from "../types";
 
 export const YouTube2026 = [
   {
+    videoId: "AIipyKKzmiA",
+    publishedAt: "2026-08-07",
+    presents: ["松本ももな"],
+  },
+  {
+    videoId: "3nQcUeM4UHQ",
+    publishedAt: "2026-08-05",
+    presents: ["涼海すう"],
+    officialTwitter: "https://x.com/takanenofficial/status/2085010437536678329",
+  },
+  {
     videoId: "4moXcHK6U9s",
     publishedAt: "2026-07-31",
     presents: ["城月菜央"],

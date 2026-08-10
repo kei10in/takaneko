@@ -3,6 +3,42 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "AIipyKKzmiA",
+    title:
+      "【汗や風に負けない！崩れない前髪の作り方】アイドルはどうしてる？高嶺のなでしこ松本ももな＆SWEET STEADY奥田彩友のステージ裏に潜入取材！夏の“滝汗対策”教えます【ココ調】",
+    authorName: "めざましmedia",
+    publishedAt: "2026-08-07",
+    mediaUrl: "https://youtu.be/AIipyKKzmiA",
+    imageUrl: "https://i.ytimg.com/vi/AIipyKKzmiA/hqdefault.jpg",
+    category: "youtube",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://popteen.co.jp/media/87938/",
+    title: "【Popteen専属モデル 次世代スター決定戦】ポージングバトル編 審査発表 ！！！((Part1))",
+    authorName: "Popteen Media",
+    publishedAt: "2026-08-06",
+    mediaUrl: "https://popteen.co.jp/media/87938/",
+    imageUrl:
+      "https://popteen.co.jp/media/wp-content/uploads/sites/2/2026/08/475b0a03b7bf98240afeba3e2ca0a454-1024x1024.png",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    key: "3nQcUeM4UHQ",
+    title:
+      "【バトル開幕】専属モデルの頂点は誰だ！？Popteen専属モデル次世代スター決定戦開幕！【バトル#1】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-08-05",
+    mediaUrl: "https://youtu.be/3nQcUeM4UHQ",
+    imageUrl: "https://i.ytimg.com/vi/3nQcUeM4UHQ/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
     key: "4moXcHK6U9s",
     title:
       "【夏休みSP】高嶺のなでしこ　城月菜央主演 埼玉の怖い話「七里殺人の森」ホラーちゃんねるオリジナル短編映画",
