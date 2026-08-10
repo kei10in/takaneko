@@ -43,6 +43,10 @@ export const meta: EventMetaDescriptor = {
       path: "/takaneko/goods/2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 2」.jpg",
       ref: "https://x.com/takanenofficial/status/2082779722946318468",
     },
+    {
+      path: "/events/2026/2026-08-02_TOKYO IDOL FESTIVAL 2026_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2083727309086028066",
+    },
   ],
   link: {
     text: "イベントサイト",
@@ -119,7 +123,7 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2083899105903071331"],
     },
   ],
-  updatedAt: "2026-08-02",
+  updatedAt: "2026-08-10",
 };
 
 export const content = /* md */ `
@@ -133,6 +137,9 @@ export const content = /* md */ `
   - [グランドフィナーレ 出演報告 - 公式 X](https://x.com/takanenofficial/status/2083899105903071331)
   - [INFO CENTRE トーク企画「歌声喫茶 “みてい”」出演報告 - 公式 X](https://x.com/takanenofficial/status/2083844538083536918)
   - [UP-T HOT STAGE 出演報告・セットリスト - 公式 X](https://x.com/takanenofficial/status/2083782436736082096)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2083727309086028066)
+  - [HOT STAGE 出演案内 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2083714854675001383)
+  - [きょうのたかねこ - 公式 X](https://x.com/takanenofficial/status/2083708362764767314)
   - [物販タイムテーブル - 公式 X](https://x.com/takanenofficial/status/2082779722946318468)
   - [グランドフィナーレ 出演告知 - 公式 X](https://x.com/takanenofficial/status/2082790812178399671)
   - [グランドフィナーレ 出演者発表 - TIP&TIF X](https://x.com/TIP_TIF_staff/status/2082783262993510432)
