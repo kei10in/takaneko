@@ -37,22 +37,25 @@ export const meta: EventMetaDescriptor = {
         start: "14:00",
         end: "15:00",
         lanes: ["松本ももな"],
+        costume: { name: "私服", label: "私服 1" },
       },
       {
         title: "特典会 1 部",
         start: "16:00",
         end: "17:00",
         lanes: ["松本ももな"],
+        costume: { name: "私服", label: "私服 1" },
       },
       {
         title: "特典会 2 部",
         start: "18:00",
         end: "19:00",
         lanes: ["松本ももな"],
+        costume: { name: "私服", label: "私服 2" },
       },
     ],
   },
-  updatedAt: "2026-07-18",
+  updatedAt: "2026-08-11",
 };
 
 export const content = /* md */ `
@@ -64,6 +67,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2086999964916625448)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2078370708191895980)
   - [告知 - HMV&BOOKS SHIBUYA X](https://x.com/HmvBooksShibuya/status/2078301369401065525)
   - [イベント詳細 - HMV&BOOKS](https://www.hmv.co.jp/store/event/55890/)
