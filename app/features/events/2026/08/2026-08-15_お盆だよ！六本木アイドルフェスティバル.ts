@@ -27,23 +27,64 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.tv-asahi.co.jp/summerstation/arena/special/idolfes/",
   },
   ticket: "https://ticket.tv-asahi.co.jp/ex/project/rif2026_obon",
-  streamings: undefined,
+  streamings: {
+    text: "ABEMA PPV",
+    url: "https://abema.go.link/6TqTX",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
     url: undefined,
   },
-  acts: {
-    types: ["LIVE"],
-    start: "15:05",
-    end: "15:30",
-  },
-  updatedAt: "2026-07-30",
+  acts: [
+    {
+      types: ["LIVE"],
+      start: "15:05",
+      end: "15:30",
+    },
+    {
+      title: "カラオケコラボ",
+      types: ["OTHER"],
+      start: "16:50",
+      end: "17:05",
+      description: `
+        - **ユニット2:**
+          - 愛白かなた (AOAO)
+          - 橘るあ (THE ORCHESTRA TOKYO)
+          - 籾山ひめり (高嶺のなでしこ)
+          - 里仲菜月 (Task have Fun)
+          - 石浜芽衣 (虹のコンキスタドール)
+        - **ユニット3:**
+          - 塩澤みさき (AOAO)
+          - 橋本桃呼 (高嶺のなでしこ)
+          - 松本ももな (高嶺のなでしこ)
+          - 瀬崎くるみ (ChumToto)
+          - 栗原舞優 (虹のコンキスタドール)
+          - 高梨結 (ラフ×ラフ)
+        - **ユニット4:**
+          - はのんまゆ (INUWASI)
+          - 裕木真生 (THE ORCHESTRA TOKYO)
+          - 涼海すう (高嶺のなでしこ)
+          - 一宮ゆい (虹のコンキスタドール)
+          - 小柴あいり (FES☆TIVE)
+      `,
+      links: [
+        "https://x.com/idolotakarakuji/status/2087449256395481339",
+        "https://x.com/idolotakarakuji/status/2087449507826933987",
+        "https://x.com/idolotakarakuji/status/2087449759657128256",
+      ],
+    },
+  ],
+  updatedAt: "2026-08-12",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [配信タイムテーブル - ABEMA X](https://x.com/ABEMA/status/2087378540455161990)
+  - [カラオケコラボ ユニット2参加メンバー発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2087449256395481339)
+  - [カラオケコラボ ユニット3参加メンバー発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2087449507826933987)
+  - [カラオケコラボ ユニット4参加メンバー発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2087449759657128256)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2082400841244496230)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2078313813196325298)
   - [出演者発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2078026920772641017)
