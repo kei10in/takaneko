@@ -51,12 +51,14 @@ import { 東京サマーセッション } from "./2025/東京サマーセッシ�
 import { 病名恋ワズライ } from "./2025/病名恋ワズライ";
 import { 花は誓いを忘れない } from "./2025/花は誓いを忘れない";
 import { ハートブーケ } from "./2026/ハートブーケ";
+import { 僕らの青 } from "./2026/僕らの青";
 import { 生きてりゃいい } from "./2026/生きてりゃいい";
 import { 私はわたしの事が好き } from "./2026/私は、わたしの事が好き。";
 import { SongMetaDescriptor } from "./types";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2026
+  僕らの青,
   ハートブーケ,
   生きてりゃいい,
   私はわたしの事が好き,
