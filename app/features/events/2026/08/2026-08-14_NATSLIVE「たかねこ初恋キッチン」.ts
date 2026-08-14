@@ -13,6 +13,14 @@ export const meta: EventMetaDescriptor = {
   present: ["橋本桃呼", "日向端ひな", "星谷美来"],
   images: [
     {
+      path: "/events/2026/2026-08-14_NATSLIVE「たかねこ初恋キッチン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2088199002118594858",
+    },
+    {
+      path: "/events/2026/2026-08-14_NATSLIVE「たかねこ初恋キッチン」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2088220471397597603",
+    },
+    {
       path: "/events/2026/2026-01-23_NATSLIVE「たかねこ初恋キッチン」.jpg",
       ref: "https://x.com/takanenofficial/status/2081986931932733485",
     },
@@ -29,14 +37,14 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「チリコンカンナッツタコス カード A タイプ」 660 円 (税込)",
-      // "レシピカード「チリコンカンナッツタコス カード B タイプ」 660 円 (税込)",
-      // "レシピカード「チリコンカンナッツタコス カード C タイプ」 660 円 (税込)",
+      "レシピカード「初恋冷しゃぶ カード A タイプ」 660 円 (税込)",
+      "レシピカード「初恋冷しゃぶ カード B タイプ」 660 円 (税込)",
+      "レシピカード「初恋冷しゃぶ カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-14",
 };
 
 export const content = /* md */ `
@@ -58,6 +66,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2088220471397597603)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2088199002118594858)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2081986931932733485)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2081982991639650516)
 `;
