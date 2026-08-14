@@ -69,18 +69,20 @@ export const meta: EventMetaDescriptor = {
           - 小柴あいり (FES☆TIVE)
       `,
       links: [
+        "https://x.com/takanenofficial/status/2087873089778630879",
         "https://x.com/idolotakarakuji/status/2087449256395481339",
         "https://x.com/idolotakarakuji/status/2087449507826933987",
         "https://x.com/idolotakarakuji/status/2087449759657128256",
       ],
     },
   ],
-  updatedAt: "2026-08-12",
+  updatedAt: "2026-08-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [カラオケコラボ出演告知 - 公式 X](https://x.com/takanenofficial/status/2087873089778630879)
   - [配信タイムテーブル - ABEMA X](https://x.com/ABEMA/status/2087378540455161990)
   - [カラオケコラボ ユニット2参加メンバー発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2087449256395481339)
   - [カラオケコラボ ユニット3参加メンバー発表 - 六本木アイドルフェス X](https://x.com/idolotakarakuji/status/2087449507826933987)
