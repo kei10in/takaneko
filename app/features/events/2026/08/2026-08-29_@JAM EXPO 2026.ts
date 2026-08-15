@@ -17,6 +17,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-29_@JAM EXPO 2026.png",
       ref: "https://atjam.jp/expo2026",
     },
+    {
+      path: "/events/2026/2026-08-29_@JAM EXPO 2026_タイムテーブル.jpg",
+      ref: "https://x.com/at_jam/status/2085661793503093200",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -29,13 +34,21 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-07-17",
+  acts: [
+    {
+      title: "ストロベリーステージ",
+      types: ["LIVE"],
+      start: "15:35",
+      end: "16:00",
+    },
+  ],
+  updatedAt: "2026-08-16",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - @JAM X](https://x.com/at_jam/status/2085661793503093200)
   - [出演日公開 - 公式 X](https://x.com/takanenofficial/status/2078057226007408776)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2076539619949375542)
 `;
