@@ -75,7 +75,7 @@ export const meta: EventMetaDescriptor = {
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
       setlist: [
-        "衣装: サマーセッション衣装",
+        "衣装: 2026 夏衣装",
         "初恋のこたえ。",
         "恋を知った世界",
         "誇り高きアイドル",
@@ -101,7 +101,7 @@ export const meta: EventMetaDescriptor = {
 
         [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
-      costume: "サマーセッション衣装",
+      costume: "2026 夏衣装",
       links: ["https://x.com/takanenofficial/status/2083844538083536918"],
     },
     {
@@ -119,7 +119,7 @@ export const meta: EventMetaDescriptor = {
         [TIF Streaming]: https://official.idolfes.com/s/tifst
         [FOD]: https://fod.fujitv.co.jp/ppv/8520/
       `,
-      costume: "サマーセッション衣装",
+      costume: "2026 夏衣装",
       links: ["https://x.com/takanenofficial/status/2083899105903071331"],
     },
   ],

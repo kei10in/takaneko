@@ -54,7 +54,7 @@ export const meta: EventMetaDescriptor = {
         start: "13:20",
         end: "14:20",
         lastEntry: "14:00",
-        costume: "サマーセッション衣装",
+        costume: "2026 夏衣装",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
       },
       {
@@ -62,7 +62,7 @@ export const meta: EventMetaDescriptor = {
         start: "14:30",
         end: "15:30",
         lastEntry: "15:10",
-        costume: "サマーセッション衣装",
+        costume: "2026 夏衣装",
         lanes: ["涼海すう", "籾山ひめり", "葉月紗蘭", "松本ももな"],
       },
       {
@@ -70,7 +70,7 @@ export const meta: EventMetaDescriptor = {
         start: "16:20",
         end: "17:20",
         lastEntry: "17:00",
-        costume: "サマーセッション衣装",
+        costume: "2026 夏衣装",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
       },
       {
@@ -78,7 +78,7 @@ export const meta: EventMetaDescriptor = {
         start: "17:30",
         end: "18:30",
         lastEntry: "18:10",
-        costume: "サマーセッション衣装",
+        costume: "2026 夏衣装",
         lanes: ["涼海すう", "籾山ひめり", "葉月紗蘭", "松本ももな"],
       },
       {
@@ -86,7 +86,7 @@ export const meta: EventMetaDescriptor = {
         start: "19:00",
         end: "20:00",
         lastEntry: "19:40",
-        costume: "サマーセッション衣装",
+        costume: "2026 夏衣装",
         lanes: [
           {
             label: "グループ 1",

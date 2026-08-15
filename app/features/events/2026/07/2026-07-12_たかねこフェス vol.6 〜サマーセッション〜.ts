@@ -60,7 +60,7 @@ export const meta: EventMetaDescriptor = {
       start: "20:35",
       end: "21:00",
       setlist: [
-        "衣装: サマーセッション衣装",
+        "衣装: 2026 夏衣装",
         "美しく生きろ",
         "LOVE ANTHEM",
         "MC",

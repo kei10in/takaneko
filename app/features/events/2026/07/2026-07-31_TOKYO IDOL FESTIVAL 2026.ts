@@ -77,7 +77,7 @@ export const meta: EventMetaDescriptor = {
 
         [SHOWROOM]: https://www.showroom-live.com/tif_infocentre
       `,
-      costume: "サマーセッション衣装",
+      costume: "2026 夏衣装",
     },
     {
       title: "TOROCCO PARK",
@@ -145,7 +145,7 @@ export const meta: EventMetaDescriptor = {
         [ニコニコチャンネル「TIFチャンネル」]: https://live.nicovideo.jp/watch/lv351006291
       `,
       setlist: [
-        "衣装: サマーセッション衣装",
+        "衣装: 2026 夏衣装",
         "ハートブーケ",
         "アイドル衣装",
         "MC",

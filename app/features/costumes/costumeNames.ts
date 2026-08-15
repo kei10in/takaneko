@@ -1,7 +1,7 @@
 import { z } from "zod/v4";
 
 export const StageCostumeName = z.enum([
-  "サマーセッション衣装",
+  "2026 夏衣装",
   "Bouquet of 9 Flowers 衣装",
   "見上げるたびに、恋をする。衣装",
   "2025 夏衣装",
