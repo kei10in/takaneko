@@ -38,6 +38,7 @@ export const meta: EventMetaDescriptor = {
         start: "11:00",
         end: "12:00",
         lastEntry: "11:40",
+        costume: "僕は君になれない衣装",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
       },
       {
@@ -45,6 +46,7 @@ export const meta: EventMetaDescriptor = {
         start: "12:10",
         end: "13:10",
         lastEntry: "12:50",
+        costume: "僕は君になれない衣装",
         lanes: ["涼海すう", "籾山ひめり", "葉月紗蘭", "松本ももな"],
       },
       {
@@ -52,6 +54,7 @@ export const meta: EventMetaDescriptor = {
         start: "13:20",
         end: "14:20",
         lastEntry: "14:00",
+        costume: "サマーセッション衣装",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
       },
       {
@@ -59,6 +62,7 @@ export const meta: EventMetaDescriptor = {
         start: "14:30",
         end: "15:30",
         lastEntry: "15:10",
+        costume: "サマーセッション衣装",
         lanes: ["涼海すう", "籾山ひめり", "葉月紗蘭", "松本ももな"],
       },
       {
@@ -66,6 +70,7 @@ export const meta: EventMetaDescriptor = {
         start: "16:20",
         end: "17:20",
         lastEntry: "17:00",
+        costume: "サマーセッション衣装",
         lanes: ["橋本桃呼", "星谷美来", "東山恵里沙", "日向端ひな", "城月菜央"],
       },
       {
@@ -73,6 +78,7 @@ export const meta: EventMetaDescriptor = {
         start: "17:30",
         end: "18:30",
         lastEntry: "18:10",
+        costume: "サマーセッション衣装",
         lanes: ["涼海すう", "籾山ひめり", "葉月紗蘭", "松本ももな"],
       },
       {
@@ -80,6 +86,7 @@ export const meta: EventMetaDescriptor = {
         start: "19:00",
         end: "20:00",
         lastEntry: "19:40",
+        costume: "サマーセッション衣装",
         lanes: [
           {
             label: "グループ 1",
@@ -98,12 +105,15 @@ export const meta: EventMetaDescriptor = {
     ],
   },
   acts: [],
-  updatedAt: "2026-07-18",
+  updatedAt: "2026-08-16",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ - 公式 X](https://x.com/takanenofficial/status/2088601809057382618)
+  - [TikTok 撮影楽曲と衣装のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=5468)
+  - [当日券販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=5466)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5420)
   - [抽選受付 - キャラアニ・チャンス](https://ch.chara-ani.com/entry)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2078047162576023781)

@@ -92,7 +92,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
-  - [当日の案内 - 公式 X](https://x.com/takanenofficial/status/2085750311919014276)
+  - [#あしたのたかねこ - 公式 X](https://x.com/takanenofficial/status/2085750311919014276)
   - [TikTok 撮影楽曲と衣装のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=5443)
   - [当日券販売のお知らせ - 公式ニュース](https://takanenonadeshiko.jp/?p=5441)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5420)
