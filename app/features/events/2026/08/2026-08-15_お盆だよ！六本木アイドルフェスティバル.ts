@@ -26,7 +26,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2088400276549976066",
     },
     {
-      path: "/takaneko/goods/2026/2026-08-06_ミニフォトカード「4th Anniversary」.jpg",
+      path: "/takaneko/goods/2026/2026-08-06_ミニフォトカード「4th Anniversary」.jpg",
       ref: "https://x.com/takanenofficial/status/2088400276549976066",
     },
     {
