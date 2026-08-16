@@ -26,7 +26,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://www.kansai-collection.net/",
   },
   ticket: "https://www.kansai-collection.net/ticket/",
-  streamings: undefined,
+  streamings: {
+    text: "TikTok LIVE",
+    url: "https://www.tiktok.com/@kansaicollection",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
