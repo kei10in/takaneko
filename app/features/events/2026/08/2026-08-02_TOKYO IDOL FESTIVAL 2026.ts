@@ -123,7 +123,7 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2083899105903071331"],
     },
   ],
-  updatedAt: "2026-08-10",
+  updatedAt: "2026-08-16",
 };
 
 export const content = /* md */ `
@@ -131,6 +131,11 @@ export const content = /* md */ `
 
   - **時間:** 10:45〜11:45
   - **場所:** GREETING AREA I-4
+
+  ## ライブレポート
+
+  - [高嶺のなでしこ、9人で揃う最後のTIF「最後まで楽しんで行きましょう」＜TIF2026ライブレポート＞ | 日刊SPA!](https://nikkan-spa.jp/2178208)
+  - [高嶺のなでしこ、TIF3日目のトップで登場「HOT STAGEに名前を刻みに来ました！」＜TIF2026＞ | WEBザテレビジョン](https://thetv.jp/news/detail/1429299/)
 
   ## リンク
 

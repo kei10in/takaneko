@@ -133,7 +133,7 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2083514244289700225",
     },
   ],
-  updatedAt: "2026-08-01",
+  updatedAt: "2026-08-16",
 };
 
 export const content = /* md */ `
@@ -141,6 +141,14 @@ export const content = /* md */ `
 
   - **時間:** 14:00〜15:00
   - **場所:** GREETING AREA G-2
+
+  ## ライブレポート
+
+  - [【TIF2026リポート第10弾】高嶺のなでしこ×UNIDOLが魅せた感動のコラボ！約80名の女子大生と創り上げた圧巻パフォーマンス（写真33枚）【Reporter：早川千鶴、坂口心優】 | ACTRESS PRESS](https://actresspress.com/unidol-tif2026/)
+  - [高嶺のなでしこがSMILE GARDENで夏のハーモニー！タイトル未定とのゲリラコラボも【TIF2026】 | 蜜柑通信](https://mikan-incomplete.com/report/146912)
+  - [高嶺のなでしこ、デビューステージ「SMILE GARDEN」で眩しい夏を彩る〈TIF2026〉 | Liveen Times](https://www.lvtimes.net/broad/78640/)
+  - [高嶺のなでしこ TIF2026 デビューステージのSMILE GARDENでパフォーマンス！ - Music Culture：ミュージックカルチャー](https://www.music-culture.info/9105/)
+  - [BONJOUR IDOL X](https://x.com/bonjour_idol/status/2083711113452224861)
 
   ## リンク
 
