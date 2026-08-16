@@ -3,6 +3,29 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "qeUUCsJknI0",
+    title:
+      "【波乱のチーム戦】「全然噛み合わない…」本音がぶつかる！？専属モデルのガチ対決【バトル#4】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-08-15",
+    mediaUrl: "https://youtu.be/qeUUCsJknI0",
+    imageUrl: "https://i.ytimg.com/vi/qeUUCsJknI0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    key: "9w3vMl0KO9A",
+    title: "【下剋上】「POPの顔は私」ポージングバトルの結果は…！？【バトル#2】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-08-08",
+    mediaUrl: "https://youtu.be/9w3vMl0KO9A",
+    imageUrl: "https://i.ytimg.com/vi/9w3vMl0KO9A/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
     key: "AIipyKKzmiA",
     title:
       "【汗や風に負けない！崩れない前髪の作り方】アイドルはどうしてる？高嶺のなでしこ松本ももな＆SWEET STEADY奥田彩友のステージ裏に潜入取材！夏の“滝汗対策”教えます【ココ調】",

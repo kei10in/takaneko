@@ -509,7 +509,7 @@ export const metadata2025: MediaDetails[] = [
     kind: "youtube",
     key: "dmYhpOLT7hg",
     title:
-      "【ファンミ独占密着】高嶺のなでしこ3周年“9人で立つ大舞台”籾山ひめり「私たちの覚悟を」ファンへのメッセージほぼノーカット＆浴衣で『可愛くてごめん』披露！新曲リハ映像＆ケータリング食リポも",
+      "高嶺のなでしこ3周年“9人で立つ大舞台”籾山ひめり「私たちの覚悟を」ファンへのメッセージほぼノーカット＆浴衣で『可愛くてごめん』披露！新曲リハ映像＆ケータリング食リポも【ファンミ独占密着】",
     authorName: "めざましmedia",
     publishedAt: "2025-09-01",
     mediaUrl: "https://youtu.be/dmYhpOLT7hg",
