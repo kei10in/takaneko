@@ -44,10 +44,11 @@ describe("event module", async () => {
     });
 
     it("should contains valid image reference in meta", () => {
-      for (const image of event.meta.images) {
-        const path = image.path;
-        expect(AllAssets).toContain(path);
-      }
+      const notFoundImages = event.meta.images
+        .map((image) => image.path)
+        .filter((path) => !AllAssets.includes(path));
+
+      expect(notFoundImages).toEqual([]);
     });
 
     it("should have meet and greet types for meet and greet events", () => {
