@@ -16,6 +16,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-25_星谷美来 卒業公演 〜ずっと恋の病でいてね〜.jpg",
       ref: "https://x.com/takanenofficial/status/2083357041314402597",
     },
+    {
+      path: "/events/2026/2026-08-25_星谷美来 卒業公演 〜ずっと恋の病でいてね〜_FC会員限定プレゼントキャンペーン.png",
+      ref: "https://x.com/takanenofficial/status/2089283998124318734",
+    },
   ],
   link: {
     text: "イベント詳細",
@@ -29,12 +33,13 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-08-01",
+  updatedAt: "2026-08-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [FC 会員限定 卒業メッセージ募集・プレゼントキャンペーン 告知 - 公式 X](https://x.com/takanenofficial/status/2089283998124318734)
   - [一般販売開始 - 公式 X](https://x.com/takanenofficial/status/2083357041314402597)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2073232831061676274)
   - [開場/開演時間変更のお知らせ - 公式 X](https://x.com/takanenofficial/status/2073260517960110299)
