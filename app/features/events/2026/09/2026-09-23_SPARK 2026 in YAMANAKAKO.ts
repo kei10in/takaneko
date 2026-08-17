@@ -29,12 +29,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-08-02",
+  updatedAt: "2026-08-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
-  - [イベントサイト](https://sparkfes.com/2026/)
+  - [出演日公開 - 公式 X](https://x.com/takanenofficial/status/2089170352194908663)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2083852868138971475)
 `;
