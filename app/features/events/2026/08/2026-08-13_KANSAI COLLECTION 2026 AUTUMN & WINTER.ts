@@ -61,6 +61,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [高嶺のなでしこ・松本ももな、2季連続の関コレで3ステージ。ゴシックからロリータ、大人の秋コーデまで【KANSAI COLLECTION 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/61127/)
+  - [記事紹介: 【関コレ2026A/W】高嶺のなでしこ・松本ももな - ライブタイムズ エンタメ X](https://x.com/LIVETIMES_ENTA/status/2088956116264968620)
   - [【見つけた美女シリーズ】TikTokでバズ曲連発・秋元康プロデュース…「関コレ2026A/W」で注目の4人 - モデルプレス](https://mdpr.jp/news/4829083)
   - [記事紹介: モデルプレス見つけた美女シリーズ - モデルプレス X](https://x.com/modelpress/status/2088199869311983898)
   - [高嶺のなでしこ松本ももな、ゴスロリコーデで雰囲気ガラリ 高貴な世界観で魅了【関コレ2026A/W】 - モデルプレス](https://mdpr.jp/news/4828708)
