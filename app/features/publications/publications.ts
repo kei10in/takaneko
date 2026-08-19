@@ -19,6 +19,7 @@ import {
   EX大衆_2026年08・09月号,
 } from "./publications/EX大衆";
 import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
+import { GIANNA_Plus_DONNA_1_松本ももな } from "./publications/GIANNA Plus DONNA";
 import { IDOL_AND_READ_041, IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
 import {
   IDOL_FILE_Vol35,
@@ -125,6 +126,7 @@ const publications: Publication[] = [
   EX大衆_2025年07月号,
   EX大衆_2026年08・09月号,
   FINEBOYS_2024年7月号,
+  GIANNA_Plus_DONNA_1_松本ももな,
   IDOL_AND_READ_高田メタルSpecial,
   IDOL_AND_READ_041,
   IDOL_FILE_Vol35,
