@@ -7,7 +7,7 @@ import {
   BLT_2024年9月号,
   BLT_graduation_2026中学高校卒業,
 } from "./publications/B.L.T";
-import { BEEEEM_vol1, BEEEEM_vol2 } from "./publications/BEEEEM";
+import { BEEEEM_vol1, BEEEEM_vol2, BEEEEM_vol3 } from "./publications/BEEEEM";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
 import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO";
 import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
@@ -112,6 +112,7 @@ const publications: Publication[] = [
   _20SWEET_2023_JANUARY,
   BEEEEM_vol1,
   BEEEEM_vol2,
+  BEEEEM_vol3,
   BLT_2023年2月号,
   BLT_2024年9月号,
   BLT_graduation_2026中学高校卒業,

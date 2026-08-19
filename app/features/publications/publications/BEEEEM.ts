@@ -1,5 +1,24 @@
 import { Publication } from "../types";
 
+export const BEEEEM_vol3: Publication = {
+  slug: "BEEEEM vol.3",
+  name: "BEEEEM vol.3",
+  date: "2026-09-14",
+  kind: "magazines",
+  publisher: "株式会社扶桑社",
+  listPrice: 2200,
+  priceWithTax: 2420,
+  url: "https://x.com/BEEEEM_NEWS/status/2090011193540804630",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_表紙.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2090011193540804630",
+    },
+  ],
+  featuredMembers: ["高嶺のなでしこ2"],
+  officialTwitter: "",
+};
+
 export const BEEEEM_vol2: Publication = {
   slug: "BEEEEM vol.2",
   name: "BEEEEM vol.2",
