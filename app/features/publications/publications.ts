@@ -85,7 +85,12 @@ import {
   Zipper_2025年春号,
   Zipper_2026年夏号,
 } from "./publications/Zipper";
-import { オシグラフVol1, オシグラフVol2, オシグラフVol3 } from "./publications/オシグラフ";
+import {
+  オシグラフVol1,
+  オシグラフVol2,
+  オシグラフVol3,
+  オシグラフVol4,
+} from "./publications/オシグラフ";
 import { グラビアプレスVol12 } from "./publications/グラビアプレス";
 import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
 import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka";
@@ -198,6 +203,7 @@ const publications: Publication[] = [
   オシグラフVol1,
   オシグラフVol2,
   オシグラフVol3,
+  オシグラフVol4,
   グラビアプレスVol12,
   グラビアンエイジ_VOL2,
   シティ情報Fukuoka_2025年8月号,

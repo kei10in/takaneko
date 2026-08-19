@@ -1,5 +1,106 @@
 import { Publication } from "../types";
 
+export const オシグラフVol4: Publication = {
+  slug: "オシグラフ Vol.4",
+  name: "オシグラフ Vol.4",
+  date: "2026-09-05",
+  kind: "magazines", // books
+  publisher: "st-YOLO",
+  listPrice: 1500,
+  priceWithTax: 1650,
+  url: "https://styolo0307.official.ec/items/153986187",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_表紙.jpg",
+      ref: "https://styolo0307.official.ec/items/153986187",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4 高嶺のなでしこver_表紙.jpg",
+      ref: "https://styolo0307.official.ec/items/153989000",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4 高嶺のなでしこver_プレミアム特典.jpg",
+      ref: "https://styolo0307.official.ec/items/153989000",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_プレミアム版ナンバリングページイメージ.jpg",
+      ref: "https://x.com/oshigraph/status/2088225836663279975",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼1.jpg",
+      ref: "https://x.com/oshigraph/status/2087510571809665056",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼2.jpg",
+      ref: "",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼抽選チェキ.jpg",
+      ref: "https://x.com/oshigraph/status/2087510571809665056",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼抽選サイン色紙.jpg",
+      ref: "https://x.com/oshigraph/status/2087758337115119802",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな1.jpg",
+      ref: "https://x.com/oshigraph/status/2087511084710367375",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな2.jpg",
+      ref: "https://x.com/oshigraph/status/2087844962646044767",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな抽選チェキ.jpg",
+      ref: "https://x.com/oshigraph/status/2087511084710367375",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな抽選サイン色紙.jpg",
+      ref: "https://x.com/oshigraph/status/2087758411270357278",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり1.jpg",
+      ref: "https://x.com/oshigraph/status/2087510187087482983",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり2.jpg",
+      ref: "https://x.com/oshigraph/status/2087844729241346191",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり抽選チェキ.jpg",
+      ref: "https://x.com/oshigraph/status/2087510187087482983",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり抽選サイン色紙.jpg",
+      ref: "https://x.com/oshigraph/status/2087758249261232291",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央1.jpg",
+      ref: "https://x.com/oshigraph/status/2087511419143274600",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央2.jpg",
+      ref: "https://x.com/oshigraph/status/2087845094917657033",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央抽選チェキ.jpg",
+      ref: "https://x.com/oshigraph/status/2087511419143274600",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央抽選サイン色紙.jpg",
+      ref: "https://x.com/oshigraph/status/2087758511984009364",
+    },
+  ],
+  featuredMembers: ["橋本桃呼", "松本ももな", "籾山ひめり", "城月菜央"],
+  officialTwitter: "https://x.com/takanenofficial/status/2087494371084247116",
+  links: [
+    {
+      text: "表紙デザイン - カズシフジイ X",
+      url: "https://x.com/kazushi_fujii_/status/2087489721299792215",
+    },
+  ],
+};
+
 export const オシグラフVol3: Publication = {
   slug: "オシグラフ Vol.3",
   name: "オシグラフ Vol.3",
