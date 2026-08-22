@@ -31,11 +31,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-08-10",
+  updatedAt: "2026-08-22",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2090450029018554624)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2084229037216661782)
 `;
