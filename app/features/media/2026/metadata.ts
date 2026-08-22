@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://thetv.jp/news/detail/1434039/",
+    title:
+      "高嶺のなでしこ、9人体制“最後の夏”は「ファンからの愛に全力で応えたい」＜TIF2026＞ | WEBザテレビジョン",
+    authorName: "WEBザテレビジョン",
+    publishedAt: "2026-08-22",
+    mediaUrl: "https://thetv.jp/news/detail/1434039/",
+    imageUrl: "https://thetv.jp/i/nw/1434039/18285574.jpg?w=1284",
+    category: "article",
+    presents: ["涼海すう", "葉月紗蘭", "東山恵里沙", "日向端ひな", "星谷美来"],
+  },
+  {
     kind: "youtube",
     key: "qeUUCsJknI0",
     title:
