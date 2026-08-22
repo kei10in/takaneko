@@ -29,11 +29,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-08-19",
+  updatedAt: "2026-08-22",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2090076322873709015)
   - [告知 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2090031018061267241)
 `;
