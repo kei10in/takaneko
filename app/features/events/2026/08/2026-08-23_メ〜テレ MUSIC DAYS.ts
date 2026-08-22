@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-23_メ〜テレ MUSIC DAYS.jpg",
       ref: "https://x.com/event_nagoyatv/status/2064950762430459971",
     },
+    {
+      path: "/takaneko/goods/2026/2026-08-06_ミニフォトカード「4th Anniversary」.jpg",
+      ref: "https://x.com/takanenofficial/status/2091148400440045784",
+      tags: ["merch-item"],
+    },
   ],
   link: {
     text: "メ〜テレ イベント情報",
@@ -25,8 +30,8 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: undefined,
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「4th Anniversary」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2091148400440045784",
   },
   acts: [
     {
@@ -46,12 +51,13 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-07-04",
+  updatedAt: "2026-08-22",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2091148400440045784)
   - [チケット先行受付スタート - 公式 X](https://x.com/takanenofficial/status/2073381622788108294)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2064915525483086231)
   - [告知 - メ〜チケ X](https://x.com/event_nagoyatv/status/2064950762430459971)
