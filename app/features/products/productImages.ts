@@ -180,6 +180,7 @@ import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「�
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  星谷美来_特別卒業記念生写真セット_生写真,
   ボタニカル衣装_生写真,
   ボタニカル衣装_ミニフォト,
 ];
