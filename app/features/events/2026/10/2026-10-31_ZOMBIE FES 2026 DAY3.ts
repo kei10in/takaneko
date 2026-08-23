@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "神奈川",
   location: "横須賀うみかぜ公園 特設ステージ",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3.jpg",

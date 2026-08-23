@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "東京",
   location: "Shibuya LOVEZ",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-10-07_超 明星現象 2026.jpg",

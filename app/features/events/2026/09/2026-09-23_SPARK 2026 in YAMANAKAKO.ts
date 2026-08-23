@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "山梨",
   location: "山中湖交流プラザきらら",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-21_SPARK 2026 in YAMANAKAKO.jpg",

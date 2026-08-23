@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "神奈川",
   location: "横浜赤レンガ倉庫イベント広場B",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-09_赤レンガスプラッシュ祭-Day2-.jpg",

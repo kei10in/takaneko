@@ -11,7 +11,7 @@ export const meta: EventMetaDescriptor = {
   end: "16:00",
   region: "神奈川",
   location: "横浜アリーナ",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-20_IDOL RUNWAY COLLECTION 2026.jpg",

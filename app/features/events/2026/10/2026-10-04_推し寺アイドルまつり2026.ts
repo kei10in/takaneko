@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "愛知",
   location: "東別院テラスホール",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-10-04_推し寺アイドルまつり2026.jpg",
