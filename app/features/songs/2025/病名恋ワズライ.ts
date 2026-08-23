@@ -26,6 +26,11 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
       publishedAt: "2025-11-20",
     },
     {
+      text: "Live (Live Tour - Bouquet of 9 Flowers - FINAL",
+      videoId: "https://www.youtube.com/watch?v=q2dqKruOPsw",
+      publishedAt: "2026-08-23",
+    },
+    {
       text: "GUMI",
       videoId: "mwBGD2WT70I",
       publishedAt: "2013-12-17",
