@@ -72,3 +72,18 @@ export const TakanenoNadeshiko2: GroupDescription = {
     "籾山ひめり",
   ],
 } as const;
+
+export const TakanenoNadeshiko3: GroupDescription = {
+  id: "高嶺のなでしこ3",
+  ...TakanenoNadeshikoBase,
+  members: [
+    "城月菜央",
+    "涼海すう",
+    "橋本桃呼",
+    "葉月紗蘭",
+    "東山恵里沙",
+    "日向端ひな",
+    "松本ももな",
+    "籾山ひめり",
+  ],
+} as const;

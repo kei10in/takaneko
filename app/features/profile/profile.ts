@@ -1,6 +1,11 @@
 import { ImageDescription } from "~/utils/types/ImageDescription";
 import { findMemberDescription } from "./members";
-import { AllMembersProfile, TakanenoNadeshiko, TakanenoNadeshiko2 } from "./takaneno-nadeshiko";
+import {
+  AllMembersProfile,
+  TakanenoNadeshiko,
+  TakanenoNadeshiko2,
+  TakanenoNadeshiko3,
+} from "./takaneno-nadeshiko";
 import {
   GroupDescription,
   GroupId,
@@ -19,6 +24,10 @@ export const findMemberOrGroupDescription = (
 
   if (id == GroupId.高嶺のなでしこ2) {
     return TakanenoNadeshiko2;
+  }
+
+  if (id == GroupId.高嶺のなでしこ3) {
+    return TakanenoNadeshiko3;
   }
 
   return findMemberDescription(id);
@@ -44,6 +53,8 @@ export const flattenMembers = (members: MemberIdOrGroupId[]): MemberId[] => {
       TakanenoNadeshiko.members.forEach((member) => result.add(member));
     } else if (m == GroupId.高嶺のなでしこ2) {
       TakanenoNadeshiko2.members.forEach((member) => result.add(member));
+    } else if (m == GroupId.高嶺のなでしこ3) {
+      TakanenoNadeshiko3.members.forEach((member) => result.add(member));
     } else {
       result.add(m);
     }
@@ -68,6 +79,10 @@ export const findIdPhoto = (
     return TakanenoNadeshiko2;
   }
 
+  if (id == GroupId.高嶺のなでしこ3) {
+    return TakanenoNadeshiko3;
+  }
+
   return findMemberDescription(id);
 };
 
@@ -82,6 +97,10 @@ export const includesMember = (member: MemberId, memberList: MemberIdOrGroupId[]
 
     if (p == GroupId.高嶺のなでしこ2) {
       return TakanenoNadeshiko2.members.includes(member);
+    }
+
+    if (p == GroupId.高嶺のなでしこ3) {
+      return TakanenoNadeshiko3.members.includes(member);
     }
 
     return p == member;

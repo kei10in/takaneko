@@ -6,6 +6,8 @@ export const GroupIdEnum = z.enum([
   "高嶺のなでしこ",
   // 9 人体制の高嶺のなでしこ。2025-08-01 以降
   "高嶺のなでしこ2",
+  // 8 人体制の高嶺のなでしこ。2026-09-01 以降
+  "高嶺のなでしこ3",
 ]);
 
 export const GroupId = GroupIdEnum.enum;
