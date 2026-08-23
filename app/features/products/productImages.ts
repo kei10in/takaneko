@@ -176,6 +176,7 @@ import { _4thAnniversary_生写真 } from "./2026/2026-08-06_生写真「4th Ann
 import { _4thファンミ_缶バッジ } from "./2026/2026-08-06_缶バッジ「4th ファンミ」";
 import { _4thAnniversarySTELLA_缶バッジ } from "./2026/2026-08-07_缶バッジ「STELLA」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
+import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「ボタニカル衣装」";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _4thAnniversary_生写真,
@@ -187,6 +188,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  ボタニカル衣装_生写真,
   _4thAnniversary_生写真,
   _4thAnniversary_ミニフォト,
   _4thAnniversarySTELLA_缶バッジ,
