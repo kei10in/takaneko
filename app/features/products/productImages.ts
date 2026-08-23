@@ -164,7 +164,7 @@ import { DIGVII_ペアアクリルブロック } from "./2026/2026-05-27_DIGVII 
 import { DIGVII_自撮り風ブロマイド } from "./2026/2026-05-27_DIGVII 自撮り風ブロマイド";
 import { 私はわたしの事が好き_生写真 } from "./2026/2026-05-28_生写真「私は、わたしの事が好き。」";
 import { 私はわたしの事が好き_ミニフォト } from "./2026/2026-05_03_ミニフォトカード「私は、わたしの事が好き。」";
-import { 花柄ワンピース_ミニフォト } from "./2026/2026-06-03_ミニフォトカード「花柄ワンピース」";
+import { ボタニカル衣装_ミニフォト } from "./2026/2026-06-03_ミニフォトカード「花柄ワンピース」";
 import { たかねこフェスvol6_ミニフォト } from "./2026/2026-07-12_ミニフォトカード「たかねこフェス vol.6」";
 import { たかねこフェスvol6_生写真 } from "./2026/2026-07-12_生写真「たかねこフェス vol.6」";
 import { TIF2026限定ライブフォト1_ミニフォト } from "./2026/2026-07-31_ミニフォトカード「TIF2026 限定ライブフォト 1」";
@@ -175,8 +175,8 @@ import { _4thAnniversary_ミニフォト } from "./2026/2026-08-06_ミニフォ�
 import { _4thAnniversary_生写真 } from "./2026/2026-08-06_生写真「4th Anniversary」";
 import { _4thファンミ_缶バッジ } from "./2026/2026-08-06_缶バッジ「4th ファンミ」";
 import { _4thAnniversarySTELLA_缶バッジ } from "./2026/2026-08-07_缶バッジ「STELLA」";
-import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「ボタニカル衣装」";
+import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   _4thAnniversary_生写真,
@@ -199,7 +199,7 @@ export const TAKANEKO_PHOTOS: RandomGoods[] = [
   TIF2026限定ライブフォト1_ミニフォト,
   たかねこフェスvol6_生写真,
   たかねこフェスvol6_ミニフォト,
-  花柄ワンピース_ミニフォト,
+  ボタニカル衣装_ミニフォト,
   DIGVII_自撮り風ブロマイド,
   DIGVII_ペアアクリルブロック,
   DIGVII_チェキ風アクリルキーホルダー,

@@ -1,16 +1,18 @@
 import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
 
-export const 花柄ワンピース_ミニフォト: RandomGoods = {
+export const ボタニカル衣装_ミニフォト: RandomGoods = {
+  // 後から「ボタニカル衣装」と判明したため従来使っていた名前のままにしておく。
+  // `id` は後からは変更できないため。
   id: "ミニフォトカード「花柄ワンピース」",
-  slug: "ミニフォトカード「花柄ワンピース」",
-  name: "ミニフォトカードセット「花柄ワンピース」",
+  slug: "ミニフォトカード「ボタニカル衣装」",
+  name: "ミニフォトカードセット「ボタニカル衣装」",
   year: 2026,
-  series: "花柄ワンピース",
+  series: "ボタニカル衣装",
   category: "ミニフォトカード",
-  set: { kind: ProductLine.MiniPhotoCard, setName: "花柄ワンピース" },
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ボタニカル衣装" },
   tradeText: TradeTextType.Numbering,
-  url: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「花柄ワンピース」.jpg",
+  url: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「ボタニカル衣装」.jpg",
   width: 1448,
   height: 2048,
   variants: REGULAR_MINI_PHOTO_SET2,
