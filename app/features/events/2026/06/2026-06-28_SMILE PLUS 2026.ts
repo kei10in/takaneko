@@ -17,7 +17,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2033855865761984664",
     },
     {
-      path: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「花柄ワンピース」.jpg",
+      path: "/takaneko/goods/2026/2026-06-03_ミニフォトカード「ボタニカル衣装」.jpg",
       ref: "https://x.com/takanenofficial/status/2070816912376738186",
     },
     {

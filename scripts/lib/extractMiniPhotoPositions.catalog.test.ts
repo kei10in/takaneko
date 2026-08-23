@@ -341,7 +341,7 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
 
   it("extracts 花柄ワンピース", async () => {
     const input = await readFile(
-      path.resolve("public/takaneko/goods/2026/2026-06-03_ミニフォトカード「花柄ワンピース」.jpg"),
+      path.resolve("public/takaneko/goods/2026/2026-06-03_ミニフォトカード「ボタニカル衣装」.jpg"),
     );
 
     const result = await extractMiniPhotoPositions(input);
