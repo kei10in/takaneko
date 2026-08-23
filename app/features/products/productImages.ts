@@ -179,12 +179,8 @@ import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「�
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
-  _4thAnniversary_生写真,
-  _4thAnniversary_ミニフォト,
-  _4thAnniversarySTELLA_缶バッジ,
-  _4thファンミ_缶バッジ,
-  STELLA_FC抽選会_アンブレラマーカー,
-  STELLA_FC抽選会_自撮りステッカー,
+  ボタニカル衣装_生写真,
+  ボタニカル衣装_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
