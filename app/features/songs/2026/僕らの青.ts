@@ -9,9 +9,9 @@ export const 僕らの青: SongMetaDescriptor = {
   composedBy: "shito, 中西",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "木下菜津子＆美花",
 
-  videoRelease: undefined,
+  videoRelease: "2026-08-24",
   digitalRelease: "2026-08-12",
   liveDebut: "2026-07-31",
 
@@ -21,6 +21,11 @@ export const 僕らの青: SongMetaDescriptor = {
 
   officialSite: "",
   youtube: [
+    {
+      text: "MV",
+      videoId: "https://www.youtube.com/watch?v=dtBq4Yo57rk",
+      publishedAt: "2026-08-24",
+    },
     {
       text: "Jacket Photo Shoot Making Movie",
       videoId: "https://www.youtube.com/watch?v=IsXhzPQX_nQ",
