@@ -30,7 +30,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://takanenonadeshiko.jp/?p=5400",
   },
   ticket: "",
-  streamings: undefined,
+  streamings: {
+    text: "SHOWROOM",
+    url: "https://www.showroom-live.com/premium_live/takaneko_mikuru_graduation/S55686",
+  },
   goods: {
     time: ["14:00", "終演後30分程度"],
     lineup: [
@@ -50,12 +53,13 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2091498185726334568",
   },
   acts: [],
-  updatedAt: "2026-08-23",
+  updatedAt: "2026-08-24",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [SHOWROOM 生配信決定 - 公式 X](https://x.com/takanenofficial/status/2091495682528125426)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2091498185726334568)
   - [FC 会員限定 卒業メッセージ募集・プレゼントキャンペーン 告知 - 公式 X](https://x.com/takanenofficial/status/2089283998124318734)
   - [一般販売開始 - 公式 X](https://x.com/takanenofficial/status/2083357041314402597)
