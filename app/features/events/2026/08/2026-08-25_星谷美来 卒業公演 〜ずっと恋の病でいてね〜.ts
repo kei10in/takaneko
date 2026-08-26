@@ -69,7 +69,7 @@ export const meta: EventMetaDescriptor = {
         "可愛くてごめん",
         "MC: みくるん秘蔵写真 & VTR",
         "幕間: VTR 星谷美来が卒業公演でやりたいこと",
-        // "衣装: みくるんだけ黒ドレス"
+        "衣装: 星谷美来 卒業公演 黒ドレス, 2025 春衣装",
         "企画: 星谷美来ドラム弾き語り (Pretender - Official 髭男 dism)",
         "幕間: VTR 星谷美来 卒業式",
         "企画: 卒業証書授与",
@@ -83,7 +83,7 @@ export const meta: EventMetaDescriptor = {
         "アンコール",
         "衣装: 星谷美来 卒業公演 ピンクドレス",
         "贈り歌 (CHiCO with HoneyWorks カバー)",
-        "衣装: メンバー カラー T シャツ 赤 (A Wonderful Encounter ver.)",
+        "衣装: 星谷美来 卒業公演 ピンクドレス, メンバー カラー T シャツ 赤 (A Wonderful Encounter ver.)",
         "MC",
         "可愛くてごめん", // 撮影可能
         "MC: 写真撮影・TikTok 撮影",

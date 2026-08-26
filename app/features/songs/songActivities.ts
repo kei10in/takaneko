@@ -69,7 +69,7 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
         segments: e.segments.map(({ act, segment }) => ({
           actTitle: act.title,
           section: segment.section,
-          costumeName: segment.costumeName,
+          costumeNames: segment.costumeNames,
           index: segment.index,
           members: segment.members,
         })),
@@ -79,11 +79,13 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
     const costumeCount: Record<string, number> = {};
     activitySummary.events.forEach(({ segments }) => {
       segments.forEach(({ segment }) => {
-        const costume = segment.costumeName ?? "Unknown";
-        if (costumeCount[costume] == undefined) {
-          costumeCount[costume] = 0;
-        }
-        costumeCount[costume]++;
+        const costumes = segment.costumeNames ?? ["Unknown"];
+        costumes.forEach((costume) => {
+          if (costumeCount[costume] == undefined) {
+            costumeCount[costume] = 0;
+          }
+          costumeCount[costume]++;
+        });
       });
     });
 

@@ -56,7 +56,7 @@ export const SimpleSongActivity = z.object({
       index: z.number(),
       actTitle: z.string().optional(),
       section: z.enum(["main", "encore"]),
-      costumeName: z.string().optional(),
+      costumeNames: z.array(z.string()).optional(),
       members: z.array(z.string()).optional(),
     }),
   ),

@@ -32,7 +32,7 @@ const main = async () => {
               section: segment.section,
               order: segment.index + 1,
               song: segment.songTitle,
-              costume: segment.costumeName ?? "",
+              costume: segment.costumeNames?.join(", ") ?? "",
               date: event.meta.date,
               event: event.meta.summary,
               act: act.title ?? "",

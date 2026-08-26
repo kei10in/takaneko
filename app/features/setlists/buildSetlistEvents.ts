@@ -64,10 +64,10 @@ const makeSetlistAct = (act: Act): SetlistAct => {
     ...new Set(
       act.setlist.flatMap((segment) => {
         if (segment.kind == "costume") {
-          return [segment.costumeName];
+          return segment.costumeNames;
         }
-        if ("costumeName" in segment && segment.costumeName != undefined) {
-          return [segment.costumeName];
+        if ("costumeNames" in segment && segment.costumeNames != undefined) {
+          return segment.costumeNames;
         }
         return [];
       }),

@@ -14,15 +14,27 @@ describe("parseSetlist", () => {
     ]);
   });
 
-  it("parses costume changes and special segments with costumeName tracking", () => {
-    const input = ["衣装: Red Dress", "MC", "Song X", "企画: Game", "Song Y"];
+  it("parses costume changes and tracks multiple costume names", () => {
+    const input = ["衣装: Red Dress, Blue Dress", "MC", "Song X", "企画: Game", "Song Y"];
     const result = parseSetlist(input);
     expect(result).toEqual([
-      { kind: "costume", costumeName: "Red Dress" },
-      { kind: "talk", costumeName: "Red Dress" },
-      { kind: "song", section: "main", index: 0, songTitle: "Song X", costumeName: "Red Dress" },
-      { kind: "special", title: "Game", costumeName: "Red Dress" },
-      { kind: "song", section: "main", index: 1, songTitle: "Song Y", costumeName: "Red Dress" },
+      { kind: "costume", costumeNames: ["Red Dress", "Blue Dress"] },
+      { kind: "talk", costumeNames: ["Red Dress", "Blue Dress"] },
+      {
+        kind: "song",
+        section: "main",
+        index: 0,
+        songTitle: "Song X",
+        costumeNames: ["Red Dress", "Blue Dress"],
+      },
+      { kind: "special", title: "Game", costumeNames: ["Red Dress", "Blue Dress"] },
+      {
+        kind: "song",
+        section: "main",
+        index: 1,
+        songTitle: "Song Y",
+        costumeNames: ["Red Dress", "Blue Dress"],
+      },
     ]);
   });
 

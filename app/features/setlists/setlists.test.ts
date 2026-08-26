@@ -104,6 +104,22 @@ describe("buildSetlistEvents", () => {
     ]);
   });
 
+  it("collects every costume worn during an act", () => {
+    const events = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: "2026-01-01_multiple_costumes",
+          date: "2026-01-01",
+          liveType: "SOLO",
+          acts: [act(["衣装: Costume A, Costume B", "Song A"])],
+        }),
+      ],
+      today,
+    );
+
+    expect(events[0]?.acts[0]?.costumeNames).toEqual(["Costume A", "Costume B"]);
+  });
+
   it("omits derived event flags and counts", () => {
     const events = buildSetlistEvents(
       [

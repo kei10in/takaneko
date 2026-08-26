@@ -26,10 +26,12 @@ export const makeLivesForCostumes = (events: EventModule[]): LivesForCostume[] =
       act.setlist
         .filter((p) => p.kind == "costume")
         .forEach((segment) => {
-          if (!costumeToActsMap[segment.costumeName]) {
-            costumeToActsMap[segment.costumeName] = [];
-          }
-          costumeToActsMap[segment.costumeName].push({ act });
+          segment.costumeNames.forEach((costumeName) => {
+            if (!costumeToActsMap[costumeName]) {
+              costumeToActsMap[costumeName] = [];
+            }
+            costumeToActsMap[costumeName].push({ act });
+          });
         });
     });
 

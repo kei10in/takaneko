@@ -91,7 +91,9 @@ const matchesSongAndCostumeFilters = (
 
   return act.setlist.some(
     (segment) =>
-      segment.kind == "song" && segment.songTitle == songName && segment.costumeName == costumeName,
+      segment.kind == "song" &&
+      segment.songTitle == songName &&
+      segment.costumeNames?.includes(costumeName),
   );
 };
 

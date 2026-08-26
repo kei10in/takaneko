@@ -42,7 +42,9 @@ describe("all setlist items", async () => {
           return false;
         }
 
-        const isKnown = AllCostumeNames.includes(item.costumeName);
+        const isKnown = item.costumeNames.every((costumeName) =>
+          AllCostumeNames.includes(costumeName),
+        );
 
         return !isKnown;
       })

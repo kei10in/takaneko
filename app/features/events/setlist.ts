@@ -5,7 +5,7 @@ import { MemberIdEnum } from "../profile/types";
 export const Segment = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("talk"),
-    costumeName: z.string().optional(),
+    costumeNames: z.array(z.string()).optional(),
   }),
   z.object({
     kind: z.literal("announce"),
@@ -20,7 +20,7 @@ export const Segment = z.discriminatedUnion("kind", [
     index: z.number(),
     section: z.enum(["main", "encore"]),
     songTitle: z.string(),
-    costumeName: z.string().optional(),
+    costumeNames: z.array(z.string()).optional(),
     members: z.array(MemberIdEnum).optional(),
     isFirstPerformance: z.boolean().optional(),
     isCover: z.boolean().optional(),
@@ -32,11 +32,11 @@ export const Segment = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("special"),
     title: z.string().optional(),
-    costumeName: z.string().optional(),
+    costumeNames: z.array(z.string()).optional(),
   }),
   z.object({
     kind: z.literal("costume"),
-    costumeName: z.string(),
+    costumeNames: z.array(z.string()),
   }),
   z.object({
     kind: z.literal("interlude"),
@@ -49,7 +49,7 @@ export type SongSegment = Extract<Segment, { kind: "song" }>;
 
 interface ParsingState {
   section: "main" | "encore";
-  costumeName?: string | undefined;
+  costumeNames?: string[] | undefined;
   index: number;
 }
 
@@ -63,7 +63,7 @@ export const parseSetlist = (startPlan: string[]): Segment[] => {
       };
     },
     {
-      state: { section: "main", costumeName: undefined, index: 0 },
+      state: { section: "main", costumeNames: undefined, index: 0 },
       result: [],
     },
   );
@@ -98,26 +98,30 @@ const parseSegment = (
   }
 
   if (p.toLowerCase() == "mc" || p.toLowerCase().startsWith("mc:")) {
-    return { nextState: state, segment: { kind: "talk", costumeName: state.costumeName } };
+    return { nextState: state, segment: { kind: "talk", costumeNames: state.costumeNames } };
   }
 
   if (p == "アンコール" || p.toLowerCase() == "encore") {
     return {
-      nextState: { section: "encore", index: 0, costumeName: state.costumeName },
+      nextState: { section: "encore", index: 0, costumeNames: state.costumeNames },
       segment: { kind: "encore" },
     };
   }
 
   if (p.startsWith("衣装:")) {
-    const costumeName = p.slice(3).trim();
-    return { nextState: { ...state, costumeName }, segment: { kind: "costume", costumeName } };
+    const costumeNames = p
+      .slice(3)
+      .trim()
+      .split(",")
+      .map((costumeName) => costumeName.trim());
+    return { nextState: { ...state, costumeNames }, segment: { kind: "costume", costumeNames } };
   }
 
   if (p == "企画" || p.startsWith("企画:")) {
     const segmentTitle = p.startsWith("企画:") ? p.slice(3).trim() : undefined;
     return {
       nextState: state,
-      segment: { kind: "special", title: segmentTitle, costumeName: state.costumeName },
+      segment: { kind: "special", title: segmentTitle, costumeNames: state.costumeNames },
     };
   }
 
@@ -159,7 +163,7 @@ const parseSongSegment = (
     segment: {
       kind: "song",
       section: state.section,
-      costumeName: state.costumeName,
+      costumeNames: state.costumeNames,
       index: state.index,
       songTitle,
       members,

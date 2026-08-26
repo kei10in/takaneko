@@ -41,7 +41,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   }
   if (part.kind == "special") {
     const text = part.title ?? "企画";
-    const subtext = part.costumeName || "衣装不明";
+    const subtext = part.costumeNames?.join("、") || "衣装不明";
     return <SimpleListItem icon="special" text={text} subtext={subtext} />;
   }
   if (part.kind == "interlude") {
@@ -57,7 +57,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   const n = `${part.index + 1}`;
   const name = part.songTitle;
   const members = part.members?.map((m) => memberNameToEmoji(m)).join("") ?? "";
-  const costume = part.costumeName || "衣装不明";
+  const costume = part.costumeNames?.join("、") || "衣装不明";
   const track = ALL_SONGS.find((track) => track.name === name);
   const slug = track?.slug;
   const img = track?.coverArt;
