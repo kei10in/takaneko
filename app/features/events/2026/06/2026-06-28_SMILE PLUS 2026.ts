@@ -38,6 +38,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "衣装: 見上げるたびに、恋をする。衣装",
         "革命の女王",
@@ -52,7 +53,7 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2071196985517080960",
     },
   ],
-  updatedAt: "2026-07-02",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `

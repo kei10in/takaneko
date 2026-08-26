@@ -76,7 +76,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "UP-T HOT STAGE",
-      types: ["OTHER"],
+      types: ["LIVE", "OTHER"],
       start: "13:10",
       end: "13:25",
       description: `
@@ -133,7 +133,7 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/2083514244289700225",
     },
   ],
-  updatedAt: "2026-08-16",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `

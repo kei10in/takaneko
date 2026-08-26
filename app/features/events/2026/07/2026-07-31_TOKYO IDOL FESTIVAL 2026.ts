@@ -101,7 +101,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "TOROCCO PARK",
-      types: ["OTHER"],
+      types: ["LIVE", "OTHER"],
       start: "16:30",
       end: "16:35",
       description: `
@@ -144,17 +144,11 @@ export const meta: EventMetaDescriptor = {
 
         [ニコニコチャンネル「TIFチャンネル」]: https://live.nicovideo.jp/watch/lv351006291
       `,
-      setlist: [
-        "衣装: 2026 夏衣装",
-        "ハートブーケ",
-        "アイドル衣装",
-        "MC",
-        "初披露: 僕らの青",
-      ],
+      setlist: ["衣装: 2026 夏衣装", "ハートブーケ", "アイドル衣装", "MC", "初披露: 僕らの青"],
       url: "https://x.com/Mikuru_hositani/status/2083181032262734112",
     },
   ],
-  updatedAt: "2026-07-31",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `

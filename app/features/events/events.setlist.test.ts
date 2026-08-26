@@ -1,5 +1,5 @@
 import path from "node:path";
-import { describe, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { AllCostumeNames } from "../costumes/costumeNames";
 import { Events } from "./events";
 
@@ -77,5 +77,15 @@ describe("all events with setlist", async () => {
         .join("\n")}`;
       throw new Error(message);
     }
+  });
+
+  it("should classify every act with a setlist as LIVE", () => {
+    const badActs = allEvents.flatMap((event) =>
+      event.meta.acts
+        .filter((act) => act.setlist.length > 0 && !act.types.includes("LIVE"))
+        .map(() => path.basename(event.slug)),
+    );
+
+    expect(badActs).toEqual([]);
   });
 });

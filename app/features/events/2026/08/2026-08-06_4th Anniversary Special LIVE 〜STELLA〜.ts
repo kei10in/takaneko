@@ -52,6 +52,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "衣装: 見上げるたびに、恋をする。衣装",
         "アイドル衣装",
@@ -82,7 +83,7 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-08-09",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `

@@ -54,6 +54,7 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
+      types: ["LIVE"],
       setlist: [
         "影ナレ: 星谷美来",
         "Overture",
@@ -94,7 +95,7 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-08-24",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `
