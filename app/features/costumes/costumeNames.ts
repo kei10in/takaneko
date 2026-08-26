@@ -89,6 +89,15 @@ export const TShirtCostumeName = z.enum([
   "T シャツ (Bouquet of 9 Flowers 台北限定 ver.)",
   "T シャツ (Bouquet of 9 Flowers 韓国限定 ver.)",
   "T シャツ (Bouquet of 9 Flowers ver.)",
+  "メンバー カラー T シャツ 黄 (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 水色 (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 濃ピンク (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 白 (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ オレンジ (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 紫 (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 赤 (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 薄ピンク (A Wonderful Encounter ver.)",
+  "メンバー カラー T シャツ 青 (A Wonderful Encounter ver.)",
   "T シャツ (ハニフェス 2025)",
   "T シャツ (Spring Ride ver.)",
   "T シャツ (瞬きさえ忘れる。 ver.)",
@@ -106,6 +115,8 @@ export type TShirtCostumeName = z.infer<typeof TShirtCostumeName>;
 export const TShirtCostumeNames: string[] = TShirtCostumeName.options;
 
 export const SpecialCostumeName = z.enum([
+  "星谷美来 卒業公演 黒ドレス",
+  "星谷美来 卒業公演 ピンクドレス",
   "2026 浴衣",
   "超かぐや姫！コスプレ衣装",
   "アクロトーキョー ツーショット撮影会衣装",
