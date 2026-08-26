@@ -14,6 +14,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026.jpg",
       ref: "https://x.com/HoneyWorks_828/status/2086059864858444212",
     },
+    {
+      path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026_タイムテーブル.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/2092582837870375098",
+      tags: ["timetable"],
+    },
   ],
   link: undefined,
   ticket: "",
@@ -32,8 +37,17 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-16",
+  acts: [
+    {
+      title: "ハニワバンドセッション",
+      types: ["OTHER"],
+      start: "22:00",
+      description: "橋本桃呼、松本ももな",
+      setlist: [],
+      url: "",
+    },
+  ],
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `
@@ -43,5 +57,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2092620798829953264)
+  - [タイムテーブル公開 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2092582837870375098)
   - [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/2086059864858444212)
 `;

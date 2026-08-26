@@ -14,6 +14,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026.jpg",
       ref: "https://x.com/HoneyWorks_828/status/2086059864858444212",
     },
+    {
+      path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026_タイムテーブル.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/2092582837870375098",
+      tags: ["timetable"],
+    },
   ],
   link: undefined,
   ticket: "",
@@ -32,8 +37,33 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-16",
+  acts: [
+    {
+      title: "カレアイ&たかねこ枠",
+      types: ["OTHER"],
+      start: "11:00",
+      description: "城月菜央、涼海すう、籾山ひめり",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "アコースティック枠",
+      types: ["OTHER"],
+      start: "14:00",
+      description: "葉月紗蘭、東山恵里沙",
+      setlist: [],
+      url: "",
+    },
+    {
+      title: "ハニワバンドセッション",
+      types: ["OTHER"],
+      start: "17:30",
+      description: "日向端ひな、籾山ひめり",
+      setlist: [],
+      url: "",
+    },
+  ],
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `
@@ -43,5 +73,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2092620798829953264)
+  - [タイムテーブル公開 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2092582837870375098)
   - [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/2086059864858444212)
 `;
