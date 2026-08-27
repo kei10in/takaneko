@@ -2,6 +2,17 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "ktwhpkPsj1s",
+    title: "【爆笑】この表情どう伝える！？モデルたちが「変顔マッチ」に挑戦したら大盛り上がり！",
+    authorName: "PopteenTV",
+    publishedAt: "2026-08-26",
+    mediaUrl: "https://youtu.be/ktwhpkPsj1s",
+    imageUrl: "https://i.ytimg.com/vi/ktwhpkPsj1s/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://thetv.jp/news/detail/1434039/",
     title:
