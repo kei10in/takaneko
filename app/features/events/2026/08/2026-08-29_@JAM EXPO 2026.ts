@@ -28,7 +28,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://atjam.jp/expo2026",
   },
   ticket: "https://atjam.jp/expo2026/ticket",
-  streamings: undefined,
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv351209710",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
@@ -42,12 +45,13 @@ export const meta: EventMetaDescriptor = {
       end: "16:00",
     },
   ],
-  updatedAt: "2026-08-16",
+  updatedAt: "2026-08-27",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [配信情報 - @JAM X](https://x.com/at_jam/status/2092552638839792030)
   - [タイムテーブル公開 - @JAM X](https://x.com/at_jam/status/2085661793503093200)
   - [出演日公開 - 公式 X](https://x.com/takanenofficial/status/2078057226007408776)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2076539619949375542)
