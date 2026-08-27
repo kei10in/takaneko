@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
       types: ["OTHER"],
       start: "22:00",
       description: "橋本桃呼、松本ももな",
-      setlist: [],
+      setlist: ["衣装: Bouquet of 9 Flowers 衣装", "可愛くてごめん", "私は、わたしの事が好き。"],
       url: "",
     },
   ],
