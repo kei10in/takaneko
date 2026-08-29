@@ -43,14 +43,27 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "15:35",
       end: "16:00",
+      setlist: [
+        "衣装: 2026 夏衣装",
+        "ハートブーケ",
+        "初恋のこたえ。",
+        "MC",
+        "僕らの青",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2093618617070002358"],
     },
   ],
-  updatedAt: "2026-08-27",
+  updatedAt: "2026-08-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2093618617070002358)
+  - [出演者紹介 - @JAM X](https://x.com/at_jam/status/2093592505006870963)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2093330259382804726)
   - [配信情報 - @JAM X](https://x.com/at_jam/status/2092552638839792030)
   - [タイムテーブル公開 - @JAM X](https://x.com/at_jam/status/2085661793503093200)
   - [出演日公開 - 公式 X](https://x.com/takanenofficial/status/2078057226007408776)
