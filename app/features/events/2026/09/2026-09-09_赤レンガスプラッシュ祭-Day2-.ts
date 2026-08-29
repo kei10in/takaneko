@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-09-09_赤レンガスプラッシュ祭-Day2-.jpg",
       ref: "https://x.com/takanenofficial/status/2086784634969538610",
     },
+    {
+      path: "/events/2026/2026-09-09_赤レンガスプラッシュ祭-Day2-_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2093503904239493177",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "",
@@ -24,16 +29,21 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://idol-spot.tstar.jp/event/rig5abg/?scid=su_16699",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["終演後"],
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-10",
+  acts: {
+    types: ["LIVE"],
+    start: "18:40",
+    end: "19:05",
+  },
+  updatedAt: "2026-08-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2093503904239493177)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2086784634969538610)
 `;
