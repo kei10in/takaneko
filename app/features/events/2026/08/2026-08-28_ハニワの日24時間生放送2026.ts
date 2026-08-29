@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
       types: ["OTHER"],
       start: "11:00",
       description: "城月菜央、涼海すう、籾山ひめり",
-      setlist: [],
+      costume: "ワッペンポロシャツ",
       url: "",
     },
     {
@@ -51,7 +51,7 @@ export const meta: EventMetaDescriptor = {
       types: ["OTHER"],
       start: "14:00",
       description: "葉月紗蘭、東山恵里沙",
-      setlist: [],
+      costume: "2026 夏衣装",
       url: "",
     },
     {
@@ -59,11 +59,11 @@ export const meta: EventMetaDescriptor = {
       types: ["OTHER"],
       start: "17:30",
       description: "日向端ひな、籾山ひめり",
-      setlist: [],
+      setlist: ["衣装: 見上げるたびに、恋をする。衣装", "ハートブーケ", "LOVE ANTHEM"],
       url: "",
     },
   ],
-  updatedAt: "2026-08-27",
+  updatedAt: "2026-08-29",
 };
 
 export const content = /* md */ `
