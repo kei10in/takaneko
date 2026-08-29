@@ -21,6 +21,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-09-20_IDOL RUNWAY COLLECTION 2026_2.jpg",
       ref: "https://x.com/takanenofficial/status/2085554080139952378",
     },
+    {
+      path: "/events/2026/2026-09-20_IDOL RUNWAY COLLECTION 2026_タイムテーブル.jpg",
+      ref: "https://x.com/idolrunwaycolle/status/2093610101655458027",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "IDOL RUNWAY COLLECTION 公式サイト",
@@ -33,13 +38,21 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-09",
+  acts: [
+    {
+      title: "SPECIAL LIVE",
+      types: ["LIVE"],
+      start: "14:08",
+      end: "14:23",
+    },
+  ],
+  updatedAt: "2026-08-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2093610101655458027)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085554080139952378)
   - [告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2085659717771161736)
 `;
