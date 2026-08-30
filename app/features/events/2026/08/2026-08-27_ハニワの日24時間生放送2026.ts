@@ -19,6 +19,14 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/HoneyWorks_828/status/2092582837870375098",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026_プレゼント抽選企画.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/2093309667422376083",
+    },
+    {
+      path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026_プレゼント一覧.jpg",
+      ref: "https://x.com/HoneyWorks_828/status/2093309667422376083",
+    },
   ],
   link: undefined,
   ticket: "",
@@ -51,7 +59,7 @@ export const meta: EventMetaDescriptor = {
       url: "",
     },
   ],
-  updatedAt: "2026-08-27",
+  updatedAt: "2026-08-30",
 };
 
 export const content = /* md */ `
@@ -61,6 +69,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [プレゼント抽選企画 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2093309667422376083)
   - [ハニワバンドセッション 出演報告 - 公式 X](https://x.com/takanenofficial/status/2092974227335123188)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2092620798829953264)
   - [タイムテーブル公開 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2092582837870375098)
