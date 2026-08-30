@@ -1,6 +1,6 @@
 import React from "react";
 import { BsBook } from "react-icons/bs";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { ImageSlide } from "~/components/ImageSlide";
 import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
@@ -39,6 +39,7 @@ const price = (product: Publication) => {
 export default function PublicationProduct(props: Props) {
   const { product } = props;
 
+  const location = useLocation();
   const navigate = useNavigate();
 
   const keyValues = [
