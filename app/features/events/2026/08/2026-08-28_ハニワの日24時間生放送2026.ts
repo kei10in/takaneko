@@ -59,7 +59,11 @@ export const meta: EventMetaDescriptor = {
       types: ["MUSIC SESSION"],
       start: "17:30",
       description: "日向端ひな、籾山ひめり",
-      setlist: ["衣装: 見上げるたびに、恋をする。衣装", "ハートブーケ", "LOVE ANTHEM"],
+      setlist: [
+        "衣装: 見上げるたびに、恋をする。衣装",
+        "ハートブーケ: 日向端ひな、籾山ひめり",
+        "LOVE ANTHEM: 日向端ひな、籾山ひめり",
+      ],
       url: "",
     },
   ],
@@ -73,6 +77,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [ハニワバンドセッション 出演報告 - 公式 X](https://x.com/takanenofficial/status/2092974227335123188)
+  - [アコースティック枠 出演報告 - 公式 X](https://x.com/takanenofficial/status/2093233423532032193)
+  - [カレアイ&たかねこ枠 (Oji 枠) 出演報告 - 公式 X](https://x.com/takanenofficial/status/2093198336950218794)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2092620798829953264)
   - [タイムテーブル公開 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2092582837870375098)
   - [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/2086059864858444212)

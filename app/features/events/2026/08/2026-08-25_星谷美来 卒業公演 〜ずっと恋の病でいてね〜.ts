@@ -83,7 +83,7 @@ export const meta: EventMetaDescriptor = {
         "約束",
         "アンコール",
         "衣装: 星谷美来 卒業公演 ピンクドレス",
-        "贈り歌 (CHiCO with HoneyWorks カバー)",
+        "贈り歌 (CHiCO with HoneyWorks カバー): 星谷美来",
         "衣装: 星谷美来 卒業公演 ピンクドレス, メンバー カラー T シャツ 赤 (A Wonderful Encounter ver.)",
         "MC",
         "可愛くてごめん", // 撮影可能

@@ -43,7 +43,11 @@ export const meta: EventMetaDescriptor = {
       types: ["MUSIC SESSION"],
       start: "22:00",
       description: "橋本桃呼、松本ももな",
-      setlist: ["衣装: Bouquet of 9 Flowers 衣装", "可愛くてごめん", "私は、わたしの事が好き。"],
+      setlist: [
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "可愛くてごめん: 橋本桃呼、松本ももな",
+        "私は、わたしの事が好き。: 橋本桃呼、松本ももな",
+      ],
       url: "",
     },
   ],
@@ -57,6 +61,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [ハニワバンドセッション 出演報告 - 公式 X](https://x.com/takanenofficial/status/2092974227335123188)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2092620798829953264)
   - [タイムテーブル公開 - HoneyWorks X](https://x.com/HoneyWorks_828/status/2092582837870375098)
   - [HoneyWorks X 告知](https://x.com/HoneyWorks_828/status/2086059864858444212)
