@@ -44,7 +44,7 @@ export const オシグラフVol4: Publication = {
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼2.jpg",
-      ref: "",
+      ref: "https://x.com/oshigraph/status/2087844855317971091",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼3.jpg",
