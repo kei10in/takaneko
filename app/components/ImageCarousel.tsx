@@ -60,7 +60,7 @@ export const ImageCarousel: React.FC<Props> = (props: Props) => {
           return (
             <SwiperSlide key={i}>
               {image.to == undefined ? (
-                <div className="block h-full w-full flex-none">imageComponent</div>
+                <div className="block h-full w-full flex-none">{imageComponent}</div>
               ) : (
                 <Link
                   key={i}
