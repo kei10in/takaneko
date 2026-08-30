@@ -169,11 +169,11 @@ export const 高嶺のなでしこ2024衣装_24時間テレビ2025Tシャツ = {
 
   images: [
     {
-      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ.jpg",
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ.jpg",
       ref: "https://x.com/erisahigasiyama/status/1962117887361237469",
     },
     {
-      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ_涼海すう.jpg",
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2025Tシャツ_涼海すう.jpg",
       ref: "https://x.com/su_suzumi_/status/1961754243716764037",
     },
   ],
