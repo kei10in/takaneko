@@ -27,6 +27,18 @@ export const オシグラフVol4: Publication = {
       ref: "https://styolo0307.official.ec/items/153989000",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_切り抜きチェキ風カード_ピンク.jpg",
+      ref: "https://x.com/oshigraph/status/2094018788979294388",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_切り抜きチェキ風カード_ブルー.jpg",
+      ref: "https://x.com/oshigraph/status/2094018788979294388",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_切り抜きチェキ風カード_グリーン.jpg",
+      ref: "https://x.com/oshigraph/status/2094018788979294388",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_プレミアム版ナンバリングページイメージ.jpg",
       ref: "https://x.com/oshigraph/status/2088225836663279975",
     },
@@ -138,6 +150,10 @@ export const オシグラフVol4: Publication = {
   featuredMembers: ["橋本桃呼", "松本ももな", "籾山ひめり", "城月菜央"],
   officialTwitter: "https://x.com/takanenofficial/status/2087494371084247116",
   links: [
+    {
+      text: "切り抜きチェキ風カードのデザイン公開 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2094018788979294388",
+    },
     {
       text: "表紙デザイン - カズシフジイ X",
       url: "https://x.com/kazushi_fujii_/status/2087489721299792215",
