@@ -19,6 +19,10 @@ export const オシグラフVol4: Publication = {
       ref: "https://styolo0307.official.ec/items/153989000",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4 高嶺のなでしこver_裏表紙.jpg",
+      ref: "https://x.com/oshigraph/status/2092919972955881757",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4 高嶺のなでしこver_プレミアム特典.jpg",
       ref: "https://styolo0307.official.ec/items/153989000",
     },
@@ -27,12 +31,28 @@ export const オシグラフVol4: Publication = {
       ref: "https://x.com/oshigraph/status/2088225836663279975",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_出演者.jpg",
+      ref: "https://x.com/oshigraph/status/2089302145816551545",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_目次.jpg",
+      ref: "https://x.com/oshigraph/status/2092271971275014652",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼1.jpg",
       ref: "https://x.com/oshigraph/status/2087510571809665056",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼2.jpg",
       ref: "",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼3.jpg",
+      ref: "https://x.com/oshigraph/status/2090384310683742352",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼4.jpg",
+      ref: "https://x.com/oshigraph/status/2091829118086307899",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼抽選チェキ.jpg",
@@ -51,6 +71,14 @@ export const オシグラフVol4: Publication = {
       ref: "https://x.com/oshigraph/status/2087844962646044767",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな3.jpg",
+      ref: "https://x.com/oshigraph/status/2090384251334369307",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな4.jpg",
+      ref: "https://x.com/oshigraph/status/2091829092916273588",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな抽選チェキ.jpg",
       ref: "https://x.com/oshigraph/status/2087511084710367375",
     },
@@ -65,6 +93,14 @@ export const オシグラフVol4: Publication = {
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり2.jpg",
       ref: "https://x.com/oshigraph/status/2087844729241346191",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり3.jpg",
+      ref: "https://x.com/oshigraph/status/2090384411024105826",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり4.jpg",
+      ref: "https://x.com/oshigraph/status/2091829176609427589",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり抽選チェキ.jpg",
@@ -83,6 +119,14 @@ export const オシグラフVol4: Publication = {
       ref: "https://x.com/oshigraph/status/2087845094917657033",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央3.jpg",
+      ref: "https://x.com/oshigraph/status/2090384183533469853",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央4.jpg",
+      ref: "https://x.com/oshigraph/status/2091829043171840039",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央抽選チェキ.jpg",
       ref: "https://x.com/oshigraph/status/2087511419143274600",
     },
@@ -97,6 +141,30 @@ export const オシグラフVol4: Publication = {
     {
       text: "表紙デザイン - カズシフジイ X",
       url: "https://x.com/kazushi_fujii_/status/2087489721299792215",
+    },
+    {
+      text: "高嶺のなでしこ コメント動画 1 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2092971836875104709",
+    },
+    {
+      text: "高嶺のなでしこ コメント動画 2 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2093294292467159514",
+    },
+    {
+      text: "城月菜央 コメント動画 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2093290239326666769",
+    },
+    {
+      text: "橋本桃呼 コメント動画 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2093644629115896013",
+    },
+    {
+      text: "籾山ひめり コメント動画 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2093644823320465477",
+    },
+    {
+      text: "高嶺のなでしこ コメント動画 3 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2093656719658459481",
     },
   ],
 };
