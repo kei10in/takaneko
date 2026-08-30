@@ -95,12 +95,26 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-08-27",
+  updatedAt: "2026-08-30",
 };
 
 export const content = /* md */ `
+  ## メンバー終演報告
+
+  - [💛 城月 菜央](https://x.com/nao_kizuki/status/2092236457947869294)
+  - [🩵 涼海 すう](https://x.com/su_suzumi_/status/2092239581639069961)
+  - [🩷 橋本 桃呼](https://x.com/MomokoHashimoto/status/2092236552990835049)
+  - [🤍 葉月 紗蘭](https://x.com/saara_hazuki/status/2092233691905093853)
+  - [🧡 東山 恵里沙](https://x.com/erisahigasiyama/status/2092235824431833323)
+  - [💜 日向端 ひな](https://x.com/hina_hinahata/status/2092244086992572476)
+  - [❤️ 星谷 美来](https://x.com/Mikuru_hositani/status/2092261785210597553)
+  - [🎀 松本 ももな](https://x.com/momonamatsumoto/status/2092243458178306389)
+  - [💙 籾山 ひめり](https://x.com/himeri_momiyama/status/2092234156973703520)
+
   ## リンク
 
+  - [公演終了報告 - 公式 X](https://x.com/takanenofficial/status/2092237050158494008)
+  - [#あしたのたかねこ - 公式 X](https://x.com/takanenofficial/status/2091889583860695182)
   - [SHOWROOM 生配信決定 - 公式 X](https://x.com/takanenofficial/status/2091495682528125426)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2091498185726334568)
   - [FC 会員限定 卒業メッセージ募集・プレゼントキャンペーン 告知 - 公式 X](https://x.com/takanenofficial/status/2089283998124318734)
