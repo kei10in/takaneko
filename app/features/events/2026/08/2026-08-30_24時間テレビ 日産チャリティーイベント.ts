@@ -32,7 +32,16 @@ export const meta: EventMetaDescriptor = {
     url: "https://www2.nissan.co.jp/24/2026/",
   },
   ticket: "",
-  streamings: undefined,
+  streamings: [
+    {
+      text: "YouTube LIVE - 日産自動車株式会社",
+      url: "https://www.youtube.com/watch?v=tSUGcnn5mtI",
+    },
+    {
+      text: "YouTube LIVE - 日テレ公式チャンネル",
+      url: "https://www.youtube.com/watch?v=M1G5B18FfsM",
+    },
+  ],
   goods: {
     time: undefined,
     lineup: undefined,
