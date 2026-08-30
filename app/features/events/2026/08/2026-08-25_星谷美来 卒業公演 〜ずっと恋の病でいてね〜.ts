@@ -111,6 +111,11 @@ export const content = /* md */ `
   - [🎀 松本 ももな](https://x.com/momonamatsumoto/status/2092243458178306389)
   - [💙 籾山 ひめり](https://x.com/himeri_momiyama/status/2092234156973703520)
 
+  ## フラスタ
+
+  - [星谷美来 X](https://x.com/Mikuru_hositani/status/2094007241175355589)
+  - [星谷美来 Instagram](https://www.instagram.com/p/DcqRb4jifNN/)
+
   ## リンク
 
   - [公演終了報告 - 公式 X](https://x.com/takanenofficial/status/2092237050158494008)
