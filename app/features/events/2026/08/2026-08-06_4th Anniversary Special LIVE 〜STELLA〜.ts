@@ -90,6 +90,7 @@ export const content = /* md */ `
   ## ライブレポート
 
   - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000949.000025517.html)
+  - [Takane no Nadeshiko Crafts Its Constellation for Its 4th Anniversary: Takane no Nadeshiko’s 4th Anniversary Concert | BONJOUR IDOL](https://www.bonjouridol.com/articles/260806-takane-no-nadeshiko-4th-anniversary-concert)
 
   ## リンク
 
