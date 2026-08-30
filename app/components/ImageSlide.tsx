@@ -1,12 +1,19 @@
 import { clsx } from "clsx";
 import { useRef, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { Link } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
 import { XScroll } from "./scrollable/XScroll";
 
 interface Props {
-  images: { src: string; alt: string }[];
+  images: {
+    src: string;
+    alt: string;
+    to?: string;
+    replace?: boolean | undefined;
+    preventScrollReset?: boolean;
+  }[];
 }
 
 export const ImageSlide: React.FC<Props> = (props: Props) => {
@@ -58,13 +65,29 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
       >
         {images.map((image, i) => (
           <SwiperSlide key={i} className="aspect-square h-fit w-fit">
-            <div className={clsx("h-full w-full flex-none bg-gray-50")}>
-              <img
-                className="aspect-square h-full w-full object-contain"
-                src={image.src}
-                alt={image.alt}
-              />
-            </div>
+            {image.to != undefined && (
+              <Link
+                to={image.to}
+                replace={image.replace}
+                preventScrollReset={image.preventScrollReset}
+                className="block h-full w-full flex-none bg-gray-50"
+              >
+                <img
+                  className="aspect-square h-full w-full object-contain"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </Link>
+            )}
+            {image.to == undefined && (
+              <div className={clsx("h-full w-full flex-none bg-gray-50")}>
+                <img
+                  className="aspect-square h-full w-full object-contain"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </div>
+            )}
           </SwiperSlide>
         ))}
       </Swiper>

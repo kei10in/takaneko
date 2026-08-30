@@ -1,6 +1,7 @@
 import React from "react";
 import { BsBook } from "react-icons/bs";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
 import { ImageSlide } from "~/components/ImageSlide";
 import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
 import { presentMembers } from "~/features/profile/profile";
@@ -38,17 +39,29 @@ const price = (product: Publication) => {
 export default function PublicationProduct(props: Props) {
   const { product } = props;
 
+  const navigate = useNavigate();
+
   const keyValues = [
     { key: "発売日", value: displayDate(NaiveDate.parseUnsafe(product.date)) },
     { key: "出版社", value: product.publisher },
     { key: "価格", value: price(product) },
   ];
 
+  // `to` として文字列 "." だけを渡すと `?index` が付いてしまうのを防止するために、
+  // `To` のオブジェクトを渡す。
+  const close = () => navigate({ pathname: "." }, { replace: true, preventScrollReset: true });
+
   return (
     <div className="mx-auto pb-12 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-4 lg:py-12">
       {product.coverImages.length > 0 && (
         <ImageSlide
-          images={product.coverImages.map((img) => ({ src: img.path, alt: product.name }))}
+          images={product.coverImages.map((img, i) => ({
+            src: img.path,
+            alt: product.name,
+            to: `#photo-${i}`,
+            replace: true,
+            preventScrollReset: true,
+          }))}
         />
       )}
       {product.coverImages.length === 0 && (
@@ -123,6 +136,17 @@ export default function PublicationProduct(props: Props) {
           </section>
         )}
       </section>
+
+      {product.coverImages.map((img, i) => (
+        <ImagePreviewDialog
+          key={i}
+          open={location.hash == `#photo-${i}`}
+          onClose={close}
+          imageSrc={img.path}
+          imageAlt="プレビュー"
+          sourceUrl={img.ref}
+        />
+      ))}
     </div>
   );
 }
