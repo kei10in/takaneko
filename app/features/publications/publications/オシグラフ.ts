@@ -143,6 +143,10 @@ export const オシグラフVol4: Publication = {
       url: "https://x.com/kazushi_fujii_/status/2087489721299792215",
     },
     {
+      text: "カメラマン - ゆうととみやす X",
+      url: "https://x.com/yuto_cam/status/2090645624651993563",
+    },
+    {
       text: "高嶺のなでしこ コメント動画 1 - オシグラフ X",
       url: "https://x.com/oshigraph/status/2092971836875104709",
     },
@@ -165,6 +169,14 @@ export const オシグラフVol4: Publication = {
     {
       text: "高嶺のなでしこ コメント動画 3 - オシグラフ X",
       url: "https://x.com/oshigraph/status/2093656719658459481",
+    },
+    {
+      text: "松本ももな コメント動画 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2094010948155834700",
+    },
+    {
+      text: "高嶺のなでしこ コメント動画 4 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2094013729323254204",
     },
   ],
 };
