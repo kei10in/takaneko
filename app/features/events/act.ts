@@ -13,6 +13,7 @@ export const ActTypeEnum = z.enum([
   "TALK",
   "SCREENING",
   "PUBLIC RECORDING",
+  "MUSIC SESSION",
   "OTHER",
 ]);
 

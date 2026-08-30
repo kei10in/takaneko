@@ -40,7 +40,7 @@ export const meta: EventMetaDescriptor = {
   acts: [
     {
       title: "カレアイ&たかねこ枠",
-      types: ["OTHER"],
+      types: ["TALK"],
       start: "11:00",
       description: "城月菜央、涼海すう、籾山ひめり",
       costume: "ワッペンポロシャツ",
@@ -48,7 +48,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "アコースティック枠",
-      types: ["OTHER"],
+      types: ["MUSIC SESSION"],
       start: "14:00",
       description: "葉月紗蘭、東山恵里沙",
       costume: "2026 夏衣装",
@@ -56,7 +56,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       title: "ハニワバンドセッション",
-      types: ["OTHER"],
+      types: ["MUSIC SESSION"],
       start: "17:30",
       description: "日向端ひな、籾山ひめり",
       setlist: ["衣装: 見上げるたびに、恋をする。衣装", "ハートブーケ", "LOVE ANTHEM"],

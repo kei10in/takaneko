@@ -1,6 +1,7 @@
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { AllCostumeNames } from "../costumes/costumeNames";
+import { Act, ActType } from "./act";
 import { Events } from "./events";
 
 describe("all setlist items", async () => {
@@ -63,13 +64,11 @@ describe("all setlist items", async () => {
 describe("all events with setlist", async () => {
   const allEvents = await Events.importAllEventModules();
 
-  const eventsWithSetlist = allEvents.filter((e) => {
-    const actsWithSetlist = e.meta.acts.filter((act) => act.setlist.length > 0);
-    return actsWithSetlist.length > 0;
-  });
-
   it("should have liveType", () => {
-    const badEvents = eventsWithSetlist.filter((e) => e.meta.liveType === undefined);
+    const eventsWithLiveSetlist = allEvents.filter((e) =>
+      e.meta.acts.some((act) => act.setlist.length > 0 && act.types.includes(ActType.LIVE)),
+    );
+    const badEvents = eventsWithLiveSetlist.filter((e) => e.meta.liveType === undefined);
 
     if (badEvents.length > 0) {
       const message = `Found ${badEvents.length} events without liveType:\n${badEvents
@@ -79,13 +78,18 @@ describe("all events with setlist", async () => {
     }
   });
 
-  it("should classify every act with a setlist as LIVE", () => {
-    const badActs = allEvents.flatMap((event) =>
-      event.meta.acts
-        .filter((act) => act.setlist.length > 0 && !act.types.includes("LIVE"))
-        .map(() => path.basename(event.slug)),
+  it("should classify every act with a setlist as LIVE or MUSIC SESSION", () => {
+    const isValidAct = (act: Act) => {
+      if (act.setlist.length == 0) {
+        return true;
+      }
+      return [ActType.LIVE, ActType["MUSIC SESSION"]].some((type) => act.types.includes(type));
+    };
+
+    const eventsWithBadActs = allEvents.flatMap((event) =>
+      event.meta.acts.filter((act) => !isValidAct(act)).map(() => path.basename(event.slug)),
     );
 
-    expect(badActs).toEqual([]);
+    expect(eventsWithBadActs).toEqual([]);
   });
 });
