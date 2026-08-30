@@ -1,5 +1,22 @@
 import { SpecialCostume } from "./types";
 
+export const 高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ = {
+  kind: "special",
+  name: "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2026 Tシャツ",
+  slug: "高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ",
+
+  images: [
+    // {
+    //   path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ.jpg",
+    //   ref: "https://x.com/erisahigasiyama/status/1962117887361237469",
+    // },
+    // {
+    //   path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_涼海すう.jpg",
+    //   ref: "https://x.com/su_suzumi_/status/1961754243716764037",
+    // },
+  ],
+} satisfies SpecialCostume;
+
 export const _2026浴衣 = {
   kind: "special",
   name: "2026 浴衣",
@@ -336,6 +353,7 @@ export const ハロウィンコスプレ = {
 } satisfies SpecialCostume;
 
 export const AllSpecialCostumes = [
+  高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ,
   _2026浴衣,
   アクロトーキョーツーショット撮影会衣装,
   アクロトーキョーコラボグッズ衣装,
