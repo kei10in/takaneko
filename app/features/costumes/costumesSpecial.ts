@@ -6,14 +6,38 @@ export const 高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ = {
   slug: "高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ",
 
   images: [
-    // {
-    //   path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ.jpg",
-    //   ref: "https://x.com/erisahigasiyama/status/1962117887361237469",
-    // },
-    // {
-    //   path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_涼海すう.jpg",
-    //   ref: "https://x.com/su_suzumi_/status/1961754243716764037",
-    // },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ.jpg",
+      ref: "https://x.com/takanenofficial/status/2094052601067356321",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2094055400572436959",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2094051330361053576",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2094047298875781233",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_葉月紗蘭.jpg",
+      ref: "https://x.com/saara_hazuki/status/2094048233593135418",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2094045322351870200",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2094050461892702675",
+    },
+    {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2094047905758024050",
+    },
   ],
 } satisfies SpecialCostume;
 
