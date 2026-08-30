@@ -1,5 +1,54 @@
 import { MvCostume } from "./types";
 
+export const 僕らの青MV衣装 = {
+  kind: "mv",
+  name: "「僕らの青」MV 衣装",
+  slug: "僕らの青MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2091852643274834231",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2091845229917970926",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_涼海すう.jpg",
+      ref: "https://www.instagram.com/su_suzumi_/p/DcbLyFpEu-z",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2091860838600822905",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_葉月紗蘭.jpg",
+      ref: "https://x.com/saara_hazuki/status/2091856470396854749",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2091849042259214442",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2091861653461832156",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_星谷美来.jpg",
+      ref: "https://x.com/Mikuru_hositani/status/2091852643274834231",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2091875844788719834",
+    },
+    {
+      path: "/takaneko/costumes/mv/僕らの青/僕らの青MV衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2091850996108656837",
+    },
+  ],
+} satisfies MvCostume;
+
 export const ハートブーケDPV衣装 = {
   kind: "mv",
   name: "「ハートブーケ」DPV 衣装",
@@ -698,6 +747,7 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
+  僕らの青MV衣装,
   ハートブーケDPV衣装,
   生きてりゃいいMV衣装,
   生きてりゃいいMVパジャマ衣装,
