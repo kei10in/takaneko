@@ -28,11 +28,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-08-10",
+  updatedAt: "2026-09-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#きょうのたかねこ](https://x.com/takanenofficial/status/2094651466166514048)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085600255685398592)
 `;
