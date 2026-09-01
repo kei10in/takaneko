@@ -35,6 +35,10 @@ export const 高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ = {
       ref: "https://x.com/hina_hinahata/status/2094050461892702675",
     },
     {
+      path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2094060979705508228",
+    },
+    {
       path: "/takaneko/costumes/specials/高嶺のなでしこ2024衣装-24時間テレビ2026Tシャツ_籾山ひめり.jpg",
       ref: "https://x.com/himeri_momiyama/status/2094047905758024050",
     },
