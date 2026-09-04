@@ -57,7 +57,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-08-30",
+  updatedAt: "2026-09-04",
 };
 
 export const content = /* md */ `
@@ -72,6 +72,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2095869489485160717)
   - [オンラインサイン会詳細 - 公式ニュース](https://takanenonadeshiko.jp/newalbum-aworldinourcolors-0905-1/)
   - [オンラインお話し会詳細 - 公式ニュース](https://takanenonadeshiko.jp/newalbum-aworldinourcolors-0905-2/)
   - [オンラインサイン会＆お話し会 - リミスタ](https://limista.com/shipping_groups/7751)
