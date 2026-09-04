@@ -1318,6 +1318,7 @@ export const metadata2025: MediaDetails[] = [
     imageUrl: "https://i.ytimg.com/vi/4QiodO_oM00/hqdefault.jpg",
     category: "youtube",
     presents: ["城月菜央"],
+    deleted: true,
   },
   {
     kind: "youtube",
