@@ -3,6 +3,41 @@ import { MediaDetails } from "~/features/media/types";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "6wIjksbhkmY",
+    title:
+      "【厳しい現実】「可愛いだけじゃ生き残れない」OGモデル菅野結以が本気で審査！専属モデルたちが涙…【バトル#6】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-09-04",
+    mediaUrl: "https://youtu.be/6wIjksbhkmY",
+    imageUrl: "https://i.ytimg.com/vi/6wIjksbhkmY/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    key: "Q1HDZypFbGU",
+    title: "過去の出演映像からクイズ！／高嶺のなでしこ",
+    authorName: "TBSテレビ　全力アピール アダムシアター",
+    publishedAt: "2026-09-04",
+    mediaUrl: "https://youtu.be/Q1HDZypFbGU",
+    imageUrl: "https://i.ytimg.com/vi/Q1HDZypFbGU/hqdefault.jpg",
+    category: "youtube",
+    presents: ["高嶺のなでしこ2"],
+  },
+  {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/812261",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第15回『アグリーシスター 可愛いあの娘は醜いわたし』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-08-31",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/812261",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/08/812261_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "youtube",
     key: "ktwhpkPsj1s",
     title: "【爆笑】この表情どう伝える！？モデルたちが「変顔マッチ」に挑戦したら大盛り上がり！",
     authorName: "PopteenTV",
