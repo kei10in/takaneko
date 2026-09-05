@@ -194,6 +194,10 @@ export const オシグラフVol4: Publication = {
       text: "高嶺のなでしこ コメント動画 4 - オシグラフ X",
       url: "https://x.com/oshigraph/status/2094013729323254204",
     },
+    {
+      text: "高嶺のなでしこ コメント動画 5 - オシグラフ X",
+      url: "https://x.com/oshigraph/status/2094279887704174953",
+    },
   ],
 };
 
