@@ -6,6 +6,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     publishedAt: "2026-08-31",
     category: "article",
     presents: ["城月菜央"],
+    officialTwitter: "https://x.com/takanenofficial/status/2094392255469572176",
   },
   {
     mediaUrl: "https://thetv.jp/news/detail/1434039/",
