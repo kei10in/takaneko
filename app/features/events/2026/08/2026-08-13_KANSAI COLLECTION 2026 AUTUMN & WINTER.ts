@@ -61,7 +61,7 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-08-16",
+  updatedAt: "2026-09-05",
 };
 
 export const content = /* md */ `
@@ -73,6 +73,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [松本ももなさん インタビュー （関西コレクション 2026 AW） - kobe-trip-news2025 ページ！](https://kobe-trip-news2025.jimdofree.com/2026/08/15/松本ももなさん-インタビュー-関西コレクション-2026-aw/)
   - [〈インタビュー〉松本ももな（高嶺のなでしこ）｜「元気を与えられる存在に」アイドルとモデル、それぞれの夢【KANSAI COLLECTION 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/61219/)
   - [記事紹介: 〈インタビュー〉#松本ももな（高嶺のなでしこ）｜関コレ2026 A/W - ライブライムズ エンタメ X](https://x.com/LIVETIMES_ENTA/status/2089683618222559349)
   - [高嶺のなでしこ・松本ももな、2季連続の関コレで3ステージ。ゴシックからロリータ、大人の秋コーデまで【KANSAI COLLECTION 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/61127/)
