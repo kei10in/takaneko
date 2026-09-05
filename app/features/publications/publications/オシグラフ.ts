@@ -67,6 +67,10 @@ export const オシグラフVol4: Publication = {
       ref: "https://x.com/oshigraph/status/2091829118086307899",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼5.jpg",
+      ref: "https://x.com/oshigraph/status/2094377801248022864",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_橋本桃呼抽選チェキ.jpg",
       ref: "https://x.com/oshigraph/status/2087510571809665056",
     },
@@ -89,6 +93,10 @@ export const オシグラフVol4: Publication = {
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな4.jpg",
       ref: "https://x.com/oshigraph/status/2091829092916273588",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな5.jpg",
+      ref: "https://x.com/oshigraph/status/2094377501317612025",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_松本ももな抽選チェキ.jpg",
@@ -115,6 +123,10 @@ export const オシグラフVol4: Publication = {
       ref: "https://x.com/oshigraph/status/2091829176609427589",
     },
     {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり5.jpg",
+      ref: "https://x.com/oshigraph/status/2094377147054059835",
+    },
+    {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_籾山ひめり抽選チェキ.jpg",
       ref: "https://x.com/oshigraph/status/2087510187087482983",
     },
@@ -137,6 +149,10 @@ export const オシグラフVol4: Publication = {
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央4.jpg",
       ref: "https://x.com/oshigraph/status/2091829043171840039",
+    },
+    {
+      path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央5.jpg",
+      ref: "https://x.com/oshigraph/status/2094377340952273247",
     },
     {
       path: "/publications/2026/2026-09-05_オシグラフ Vol.4_城月菜央抽選チェキ.jpg",
