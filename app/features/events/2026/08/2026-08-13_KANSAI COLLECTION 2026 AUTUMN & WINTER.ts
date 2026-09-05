@@ -38,6 +38,7 @@ export const meta: EventMetaDescriptor = {
       description:
         "深紅のベルベットと黒レースを組み合わせたゴシックロリータ衣装でランウェイに登場。",
       links: [
+        { text: "KANSAI COLLECTION - YouTube", url: "https://www.youtube.com/watch?v=fB82Zy-nH7Q" },
         { text: "WowKorea FAN - YouTube", url: "https://www.youtube.com/watch?v=KmzQslJsRoM" },
       ],
     },
@@ -46,19 +47,30 @@ export const meta: EventMetaDescriptor = {
       types: ["RUNWAY"],
       description:
         "赤と白の水玉リボンをあしらったドレスに、同じ装いのぬいぐるみを合わせてランウェイに登場。",
-      links: [{ text: "YouTube", url: "https://www.youtube.com/watch?v=IdksA8K5ERI" }],
+      links: [
+        { text: "KANSAI COLLECTION - YouTube", url: "https://www.youtube.com/watch?v=IdksA8K5ERI" },
+      ],
     },
     {
       title: "SHEIN スペシャルステージ ランウェイ",
       types: ["RUNWAY"],
       description:
         "白の長袖トップスにチェック柄のミニスカート、赤いバッグを合わせたスタイリングでランウェイ登場。",
+      links: [
+        { text: "KANSAI COLLECTION - YouTube", url: "https://www.youtube.com/watch?v=TXtWyfNYt0A" },
+      ],
     },
   ],
   updatedAt: "2026-08-16",
 };
 
 export const content = /* md */ `
+  ## 登場ランウェイ動画
+
+  - [ALICE and the PIRATES](tps://www.youtube.com/watch?v=fB82Zy-nH7Q)
+  - [BABY, THE STARS SHINE BRIGHT](https://www.youtube.com/watch?v=IdksA8K5ERI)
+  - [SHEIN](https://www.youtube.com/watch?v=TXtWyfNYt0A)
+
   ## リンク
 
   - [〈インタビュー〉松本ももな（高嶺のなでしこ）｜「元気を与えられる存在に」アイドルとモデル、それぞれの夢【KANSAI COLLECTION 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/61219/)
