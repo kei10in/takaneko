@@ -14,6 +14,22 @@ export const BEEEEM_vol3: Publication = {
       path: "/publications/2026/2026-09-14_BEEEEM vol.3_表紙.jpg",
       ref: "https://x.com/BEEEEM_NEWS/status/2090011193540804630",
     },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_集合.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2095089356075631031",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_東山恵里沙.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2095089356906328568",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_松本ももな.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2095089358235984163",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_籾山ひめり.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2095089361557876843",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ2"],
   officialTwitter: "",
