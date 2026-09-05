@@ -95,7 +95,7 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-08-30",
+  updatedAt: "2026-09-05",
 };
 
 export const content = /* md */ `
@@ -116,8 +116,28 @@ export const content = /* md */ `
   - [星谷美来 X](https://x.com/Mikuru_hositani/status/2094007241175355589)
   - [星谷美来 Instagram](https://www.instagram.com/p/DcqRb4jifNN/)
 
+  ## オフショット
+
+  - [❤️ 星谷 美来 - 公式 X](https://x.com/takanenofficial/status/2094409881449013455)
+  - [💛 城月菜央 / 🩵 涼海すう / 🩷 橋本桃呼 / 🤍 葉月紗蘭 / ❤️ 星谷美来 - 公式 X](https://x.com/takanenofficial/status/2094410123477418017)
+  - [🧡 東山恵里沙 / 💜 日向端ひな / ❤️ 星谷美来 / 🎀 松本ももな / 💙 籾山ひめり - 公式 X](https://x.com/takanenofficial/status/2094410375403864106)
+
+  ## 最後のメッセージ
+
+  - [🐈‍⬛ THANK YOU MIKURU](https://x.com/takanenofficial/status/2094438933384073464)
+  - [💛 城月 菜央](https://x.com/nao_kizuki/status/2094435219248185487)
+  - [🩵 涼海 すう](https://x.com/su_suzumi_/status/2094427635732648022)
+  - [🩷 橋本 桃呼](https://x.com/MomokoHashimoto/status/2094433130522492963)
+  - [🤍 葉月 紗蘭](https://x.com/saara_hazuki/status/2094432972581798225)
+  - [🧡 東山 恵里沙](https://x.com/erisahigasiyama/status/2094399899614040376)
+  - [💜 日向端 ひな](https://x.com/hina_hinahata/status/2094418174053851288)
+  - [❤️ 星谷 美来 (動画あり)](https://x.com/Mikuru_hositani/status/2094437621095338074)
+  - [🎀 松本 ももな](https://x.com/momonamatsumoto/status/2094429453393010924)
+  - [💙 籾山 ひめり](https://x.com/himeri_momiyama/status/2094439339958870470)
+
   ## リンク
 
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2094424981560037464)
   - [公演終了報告 - 公式 X](https://x.com/takanenofficial/status/2092237050158494008)
   - [#あしたのたかねこ - 公式 X](https://x.com/takanenofficial/status/2091889583860695182)
   - [SHOWROOM 生配信決定 - 公式 X](https://x.com/takanenofficial/status/2091495682528125426)
