@@ -21,19 +21,25 @@ export const meta: EventMetaDescriptor = {
     url: "",
   },
   ticket: "https://tiget.net/events/512009",
-  streamings: undefined,
+  streamings: {
+    text: "PIA LIVE STREAM (有料)",
+    url: "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2670855",
+  },
   goods: {
     time: undefined,
     lineup: undefined,
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-09-01",
+  updatedAt: "2026-09-05",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アーカイブ配信中 - ビビプロ X](https://x.com/vivipro_ww/status/2096159124316934232)
+  - [アーカイブ配信開始 - ビビプロ X](https://x.com/vivipro_ww/status/2096059644406026718)
+  - [終演報告 - ビビプロ X](https://x.com/vivipro_ww/status/2094796174721200181)
   - [#きょうのたかねこ](https://x.com/takanenofficial/status/2094651466166514048)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085600255685398592)
 `;
