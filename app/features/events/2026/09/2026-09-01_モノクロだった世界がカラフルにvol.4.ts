@@ -31,12 +31,13 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-09-05",
+  updatedAt: "2026-09-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アーカイブ配信開始 (動画あり) - ビビプロ X](https://x.com/vivipro_ww/status/2096582095007363137)
   - [アーカイブ配信中 - ビビプロ X](https://x.com/vivipro_ww/status/2096159124316934232)
   - [アーカイブ配信開始 - ビビプロ X](https://x.com/vivipro_ww/status/2096059644406026718)
   - [終演報告 - ビビプロ X](https://x.com/vivipro_ww/status/2094796174721200181)
