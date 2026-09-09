@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2.jpg",
       ref: "https://x.com/ily_joqr/status/2090031018061267241",
     },
+    {
+      path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2_タイムテーブル.png",
+      ref: "https://x.com/takanenofficial/status/2097297651679076795",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -24,17 +29,22 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketdive.com/event/idoLoveYou_0917",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["終演後"],
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-22",
+  acts: {
+    types: ["LIVE"],
+    start: "20:20",
+    end: "20:45",
+  },
+  updatedAt: "2026-09-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2097297651679076795)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2090076322873709015)
   - [告知 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2090031018061267241)
 `;
