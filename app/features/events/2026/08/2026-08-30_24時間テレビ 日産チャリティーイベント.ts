@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: "21:00",
   region: "神奈川",
   location: "日産グローバル本社ギャラリー",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-08-30_24時間テレビ 日産チャリティーイベント.jpg",

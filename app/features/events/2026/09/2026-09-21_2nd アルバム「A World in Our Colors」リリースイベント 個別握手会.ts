@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: "19:00",
   region: "東京",
   location: "東京都内某所",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-21_2nd アルバム「A World in Our Colors」リリースイベント 個別握手会.jpg",

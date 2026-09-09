@@ -11,7 +11,7 @@ export const meta: EventMetaDescriptor = {
   end: undefined,
   region: "東京",
   location: "有明ガーデン モール棟3F みんなのテラス",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-06_2nd アルバム「A World in Our Colors」リリースイベント@有明ガーデン.jpg",

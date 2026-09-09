@@ -8,7 +8,7 @@ export const meta: EventMetaDescriptor = {
   end: "21:00",
   region: "Web",
   location: "",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-08-27_ハニワの日24時間生放送2026.jpg",

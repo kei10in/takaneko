@@ -10,7 +10,7 @@ export const meta: EventMetaDescriptor = {
   end: "18:00",
   region: "WEB",
   location: "",
-  present: ["高嶺のなでしこ2"],
+  present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-05_2nd アルバム「A World in Our Colors」リリースイベント オンラインサイン会.jpg",
