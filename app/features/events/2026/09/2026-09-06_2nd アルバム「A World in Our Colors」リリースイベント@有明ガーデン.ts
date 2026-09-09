@@ -33,12 +33,14 @@ export const meta: EventMetaDescriptor = {
     {
       title: "1部 ミニライブ",
       types: ["LIVE"],
+      status: "CANCELED",
       open: "12:10",
       start: "12:30",
     },
     {
       title: "1部 グループショット撮影会",
       types: ["MEET_AND_GREET"],
+      start: "12:30",
       meetAndGreet: {
         costume: "",
         lanes: [
@@ -56,12 +58,14 @@ export const meta: EventMetaDescriptor = {
     {
       title: "2部 ミニライブ",
       types: ["LIVE"],
+      status: "CANCELED",
       open: "15:40",
       start: "16:00",
     },
     {
       title: "2部 グループ握手会",
       types: ["MEET_AND_GREET"],
+      start: "16:00",
       meetAndGreet: {
         costume: "",
         lanes: [
@@ -77,7 +81,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-08-30",
+  updatedAt: "2026-09-09",
 };
 
 export const content = /* md */ `
@@ -95,6 +99,10 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2096509002607923324)
+  - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2096461172472242610)
+  - [ミニライブ中止のお知らせ - 公式 X](https://x.com/takanenofficial/status/2096406158378750097)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2096199162823872528)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/newalbum-aworldinourcolors-0906/)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2092545563300696256)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)
