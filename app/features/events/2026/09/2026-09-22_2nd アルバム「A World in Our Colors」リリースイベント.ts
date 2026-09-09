@@ -1,15 +1,15 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "2nd アルバム「A World in Our Colors」リリースイベント@ららぽーと TOKYO-BAY",
+  summary: "2nd アルバム「A World in Our Colors」リリースイベント@イオンレイクタウン mori",
   category: "RELEASE_EVENT",
   liveType: "RELEASE_EVENT",
-  date: "2026-09-19",
+  date: "2026-09-22",
   open: undefined,
-  start: "12:00",
+  start: "15:00",
   end: undefined,
-  region: "千葉",
-  location: "ららぽーと TOKYO-BAY North Gate みどりの広場",
+  region: "埼玉",
+  location: "イオンレイクタウン mori TREE STAGE (1F 木の広場)",
   present: ["高嶺のなでしこ3"],
   images: [
     {
@@ -21,15 +21,13 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2092540116913000546",
     },
   ],
-  link: { text: "イベント詳細 - 公式ニュース", url: "https://takanenonadeshiko.jp/?p=5547" },
+  link: { text: "イベント詳細 - 公式ニュース", url: "https://takanenonadeshiko.jp/?p=5552" },
   ticket: "",
   streamings: undefined,
   goods: { time: undefined, lineup: undefined, url: undefined },
   acts: [
-    { title: "1部 ミニライブ", types: ["LIVE"], open: "11:40", start: "12:00" },
-    { title: "1部 グループ特典会", types: ["MEET_AND_GREET"] },
-    { title: "2部 ミニライブ", types: ["LIVE"], open: "15:10", start: "15:30" },
-    { title: "2部 グループ特典会", types: ["MEET_AND_GREET"] },
+    { title: "ミニライブ", types: ["LIVE"], open: "14:40", start: "15:00" },
+    { title: "グループ特典会", types: ["MEET_AND_GREET"] },
   ],
   updatedAt: "2026-09-09",
 };
@@ -37,17 +35,16 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## イベント概要
 
-  - 1 部 ミニライブ & グループ特典会
-  - 2 部 ミニライブ & グループ特典会
+  - ミニライブ & グループ特典会
 
   グループ特典会の内容は後日発表。
 
-  - CD 販売開始: 10:00 〜
-  - CD 販売受付場所: ららぽーとTOKYO-BAY North Gate みどりの広場 CD販売ブースにて
+  - CD 販売開始: 12:00 〜
+  - CD 販売受付場所: イオンレイクタウンmori TREE STAGE (木の広場) CD販売ブースにて
 
   ## リンク
 
-  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5547)
+  - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5552)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)
 `;
