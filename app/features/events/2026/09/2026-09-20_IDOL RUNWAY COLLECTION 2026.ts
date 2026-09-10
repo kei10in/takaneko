@@ -46,12 +46,13 @@ export const meta: EventMetaDescriptor = {
       end: "14:23",
     },
   ],
-  updatedAt: "2026-08-29",
+  updatedAt: "2026-09-10",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演者メッセージ動画 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2096871098939777175)
   - [タイムテーブル公開 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2093610101655458027)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085554080139952378)
   - [告知 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2085659717771161736)
