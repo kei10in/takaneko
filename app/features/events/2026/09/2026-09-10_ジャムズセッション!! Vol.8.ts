@@ -17,6 +17,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2087517261095452675",
       tags: ["timetable"],
     },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「秋服 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2097694012807262457",
+    },
   ],
   link: {
     text: "",
@@ -26,19 +30,20 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["終演後"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「秋服 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2097694012807262457",
   },
   acts: {
     types: ["LIVE"],
     start: "19:45",
     end: "20:10",
   },
-  updatedAt: "2026-08-12",
+  updatedAt: "2026-09-10",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2097694012807262457)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2087517261095452675)
 `;
