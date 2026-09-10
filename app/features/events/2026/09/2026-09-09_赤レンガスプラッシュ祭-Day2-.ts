@@ -62,6 +62,7 @@ export const content = /* md */ `
   ## リンク
 
   - [出演報告 (ライブ動画あり) - 公式 X](https://x.com/takanenofficial/status/2097656852804935772)
+  - [ダイジェスト動画 - FES☆TIVE X](https://x.com/FESTIVEofficial/status/2097695631523594734)
   - [出演者紹介 - FES☆TIVE X](https://x.com/FESTIVEofficial/status/2097640068970373246)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2097638183861395693)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2097320299440345312)
