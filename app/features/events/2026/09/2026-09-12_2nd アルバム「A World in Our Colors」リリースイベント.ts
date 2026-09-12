@@ -27,24 +27,52 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: { time: undefined, lineup: undefined, url: undefined },
   acts: [
-    { title: "1部 ミニライブ", types: ["LIVE"], open: "12:10", start: "12:30" },
+    {
+      title: "1部 ミニライブ",
+      types: ["LIVE"],
+      open: "12:10",
+      start: "12:30",
+      setlist: [
+        "衣装: 2026 夏衣装",
+        "世界は恋に落ちている",
+        "乙女どもよ。",
+        "可愛くてごめん", // 撮影可能
+        "僕らの青",
+        "ファンサ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2098645281143496872"],
+    },
     {
       title: "1部 グループショット撮影会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "2026 夏衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "東山恵里沙", "籾山ひめり"] },
           { label: "B グループ", members: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "松本ももな"] },
         ],
       },
     },
-    { title: "2部 ミニライブ", types: ["LIVE"], open: "15:40", start: "16:00" },
+    {
+      title: "2部 ミニライブ",
+      types: ["LIVE"],
+      open: "15:40",
+      start: "16:00",
+      setlist: [
+        "衣装: 2026 夏衣装",
+        "初恋のひと。",
+        "小悪魔だってかまわない！",
+        "ハートブーケ", // 撮影可能
+        "アンチファン",
+        "決戦スピリット",
+      ],
+      links: ["https://x.com/takanenofficial/status/2098721455169229189"],
+    },
     {
       title: "2部 グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "2026 夏衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "東山恵里沙", "籾山ひめり"] },
           { label: "B グループ", members: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "松本ももな"] },
@@ -52,7 +80,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-09-09",
+  updatedAt: "2026-09-12",
 };
 
 export const content = /* md */ `
@@ -70,6 +98,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2098721455169229189)
+  - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2098645281143496872)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5542)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)

@@ -42,7 +42,7 @@ export const meta: EventMetaDescriptor = {
       types: ["MEET_AND_GREET"],
       start: "12:30",
       meetAndGreet: {
-        costume: "",
+        costume: "2026 夏衣装",
         lanes: [
           {
             label: "A グループ",
@@ -67,7 +67,7 @@ export const meta: EventMetaDescriptor = {
       types: ["MEET_AND_GREET"],
       start: "16:00",
       meetAndGreet: {
-        costume: "",
+        costume: "2026 夏衣装",
         lanes: [
           {
             label: "A グループ",
