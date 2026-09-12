@@ -178,7 +178,9 @@ import { _4thAnniversarySTELLA_缶バッジ } from "./2026/2026-08-07_缶バッ�
 import { 星谷美来_特別卒業記念生写真セット_生写真 } from "./2026/2026-08-25_特別♡卒業記念生写真セット";
 import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「ボタニカル衣装」";
 import { ワンピース2026_ミニフォト } from "./2026/2026-09-09_ミニフォトカード「ワンピース 2026」";
+import { CROWNED_IN_BLOOM_ステッカー } from "./2026/2026-09-13_ステッカー「CROWNED IN BLOOM」";
 import { ワンピース2026_生写真 } from "./2026/2026-09-13_生写真「ワンピース 2026」";
+import { CROWNED_IN_BLOOM_目印チャーム } from "./2026/2026-09-13_目印チャーム「CROWNED IN BLOOM」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
@@ -189,6 +191,8 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  CROWNED_IN_BLOOM_ステッカー,
+  CROWNED_IN_BLOOM_目印チャーム,
   ワンピース2026_生写真,
   ワンピース2026_ミニフォト,
   星谷美来_特別卒業記念生写真セット_生写真,

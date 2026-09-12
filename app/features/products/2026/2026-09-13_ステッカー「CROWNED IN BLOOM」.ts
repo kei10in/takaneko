@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const CROWNED_IN_BLOOM_ステッカー: RandomGoods = {
+  id: "ステッカー「CROWNED IN BLOOM」",
+  slug: "ステッカー「CROWNED IN BLOOM」",
+  name: "クリアメッセージステッカー「CROWNED IN BLOOM」",
+  year: 2026,
+  series: "CROWNED IN BLOOM",
+  category: "ステッカー",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-09-13_ステッカー「CROWNED IN BLOOM」.webp",
+  width: 406,
+  height: 186,
+  variants: [
+    { id: 1, name: "ルニャ・コーチ", description: "" },
+    { id: 2, name: "すうにゃろう", description: "" },
+    { id: 3, name: "はしもと もふ呼", description: "" },
+    { id: 4, name: "らあら", description: "" },
+    { id: 5, name: "にゃーさ", description: "" },
+    { id: 6, name: "たま", description: "" },
+    { id: 7, name: "ぽにゃん🎀", description: "" },
+    { id: 8, name: "もみさん。", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 20, y: 27, width: 87, height: 61 },
+    { id: 2, x: 113, y: 27, width: 87, height: 61 },
+    { id: 3, x: 205, y: 27, width: 87, height: 61 },
+    { id: 4, x: 299, y: 27, width: 87, height: 61 },
+    { id: 5, x: 20, y: 99, width: 87, height: 61 },
+    { id: 6, x: 113, y: 99, width: 87, height: 61 },
+    { id: 7, x: 205, y: 99, width: 87, height: 61 },
+    { id: 8, x: 299, y: 99, width: 87, height: 61 },
+  ],
+};

@@ -1,0 +1,37 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product";
+
+export const CROWNED_IN_BLOOM_目印チャーム: RandomGoods = {
+  id: "目印チャーム「CROWNED IN BLOOM」",
+  slug: "目印チャーム「CROWNED IN BLOOM」",
+  name: "にゃでしこ目印チャーム「CROWNED IN BLOOM」",
+  year: 2026,
+  series: "CROWNED IN BLOOM",
+  category: "目印チャーム",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-09-13_目印チャーム「CROWNED IN BLOOM」.webp",
+  width: 296,
+  height: 236,
+  variants: [
+    { id: 1, name: "ルニャ・コーチ", description: "" },
+    { id: 2, name: "すうにゃろう", description: "" },
+    { id: 3, name: "らあら", description: "" },
+    { id: 4, name: "はしもと もふ呼", description: "" },
+    { id: 5, name: "にゃーさ", description: "" },
+    { id: 6, name: "たま", description: "" },
+    { id: 7, name: "ぽにゃん🎀", description: "" },
+    { id: 8, name: "もみさん。", description: "" },
+    { id: 9, name: "てんにゃ", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 60, y: 7, width: 46, height: 106 },
+    { id: 2, x: 104, y: 7, width: 46, height: 106 },
+    { id: 3, x: 148, y: 7, width: 46, height: 106 },
+    { id: 4, x: 192, y: 7, width: 46, height: 106 },
+    { id: 5, x: 29, y: 121, width: 46, height: 106 },
+    { id: 6, x: 77, y: 121, width: 46, height: 106 },
+    { id: 7, x: 125, y: 121, width: 46, height: 106 },
+    { id: 8, x: 175, y: 121, width: 46, height: 106 },
+    { id: 9, x: 229, y: 121, width: 46, height: 106 },
+  ],
+};
