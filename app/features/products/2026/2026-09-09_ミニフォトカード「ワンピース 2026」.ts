@@ -1,15 +1,15 @@
 import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
 
-export const 秋服2026_ミニフォト: RandomGoods = {
+export const ワンピース2026_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「秋服 2026」",
-  slug: "ミニフォトカード「秋服 2026」",
-  name: "ミニフォトカードセット「秋服 2026」",
+  slug: "ミニフォトカード「ワンピース 2026」",
+  name: "ミニフォトカードセット「ワンピース 2026」",
   year: 2026,
-  series: "秋服 2026",
+  series: "ワンピース 2026",
   category: "ミニフォトカード",
-  set: { kind: ProductLine.MiniPhotoCard, setName: "秋服 2026" },
+  set: { kind: ProductLine.MiniPhotoCard, setName: "ワンピース 2026" },
   tradeText: TradeTextType.Numbering,
-  url: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「秋服 2026」.jpg",
+  url: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
   width: 2480,
   height: 3508,
   variants: [

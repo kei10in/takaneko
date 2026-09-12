@@ -177,12 +177,12 @@ import { _4thファンミ_缶バッジ } from "./2026/2026-08-06_缶バッジ「
 import { _4thAnniversarySTELLA_缶バッジ } from "./2026/2026-08-07_缶バッジ「STELLA」";
 import { 星谷美来_特別卒業記念生写真セット_生写真 } from "./2026/2026-08-25_特別♡卒業記念生写真セット";
 import { ボタニカル衣装_生写真 } from "./2026/2026-08-25_生写真「ボタニカル衣装」";
-import { 秋服2026_ミニフォト } from "./2026/2026-09-09_ミニフォトカード「秋服 2026」";
+import { ワンピース2026_ミニフォト } from "./2026/2026-09-09_ミニフォトカード「ワンピース 2026」";
 import { ワンピース2026_生写真 } from "./2026/2026-09-13_生写真「ワンピース 2026」";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
-  秋服2026_ミニフォト,
+  ワンピース2026_ミニフォト,
   星谷美来_特別卒業記念生写真セット_生写真,
   ボタニカル衣装_生写真,
   ボタニカル衣装_ミニフォト,
@@ -190,7 +190,7 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
   ワンピース2026_生写真,
-  秋服2026_ミニフォト,
+  ワンピース2026_ミニフォト,
   星谷美来_特別卒業記念生写真セット_生写真,
   ボタニカル衣装_生写真,
   _4thAnniversary_生写真,

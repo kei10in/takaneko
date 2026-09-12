@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
       tags: ["timetable"],
     },
     {
-      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「秋服 2026」.jpg",
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
       ref: "https://x.com/takanenofficial/status/2097694012807262457",
     },
     {
@@ -34,7 +34,7 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["終演後"],
-    lineup: ["ミニフォトカード「秋服 2026」 / チェキ"],
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
     url: "https://x.com/takanenofficial/status/2097694012807262457",
   },
   acts: {
