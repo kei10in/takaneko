@@ -40,5 +40,10 @@ export const ハートブーケ: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=2IXfjykpeP8",
       publishedAt: "2026-06-03",
     },
+    {
+      text: "Off Vocal",
+      videoId: "https://www.youtube.com/watch?v=6hTQ8kVVLoA",
+      publishedAt: "2026-06-04",
+    },
   ],
 };

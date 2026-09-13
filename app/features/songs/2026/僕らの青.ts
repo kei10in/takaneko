@@ -27,6 +27,11 @@ export const 僕らの青: SongMetaDescriptor = {
       publishedAt: "2026-08-24",
     },
     {
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=mRP1pqoIZQM",
+      publishedAt: "2026-08-30",
+    },
+    {
       text: "Jacket Photo Shoot Making Movie",
       videoId: "https://www.youtube.com/watch?v=IsXhzPQX_nQ",
       publishedAt: "2026-08-12",
