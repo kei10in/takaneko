@@ -13,6 +13,10 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ3"],
   images: [
     {
+      path: "/events/2026/2026-09-13_ワンマンライブ 〜CROWNED IN BLOOM〜_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2098751008268755384",
+    },
+    {
       path: "/events/2026/2026-09-13_ワンマンライブ 〜CROWNED IN BLOOM〜.jpg",
       ref: "https://x.com/takanenofficial/status/2094440635038364024",
     },
@@ -26,7 +30,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://takanenonadeshiko.jp/?p=5528",
   },
   ticket: "https://eplus.jp/takanenonadeshiko/",
-  streamings: undefined,
+  streamings: {
+    text: "TikTok Live",
+    url: "https://www.tiktok.com/@takanenofficial",
+  },
   goods: {
     time: ["10:00", "20:00"],
     lineup: [
@@ -45,7 +52,38 @@ export const meta: EventMetaDescriptor = {
     ],
     url: "https://x.com/takanenofficial/status/2098751481012695316",
   },
-  acts: [],
+  acts: {
+    types: ["LIVE"],
+    setlist: [
+      "衣装: 2026 秋衣装",
+      "約束",
+      "Overture",
+      "美しく生きろ",
+      "僕は君になれない",
+      "MC",
+      "ユメムスビ",
+      "女の子は強い",
+      "初恋のひと。",
+      "MC",
+      "初恋のこたえ。", // 撮影可能
+      "可愛くてごめん", // 撮影可能
+      "MC",
+      "我武者羅",
+      "革命の女王",
+      "決戦スピリット",
+      "僕らの青",
+      "幕間: フラワートス",
+      "ハートブーケ",
+      "恋を知った世界",
+      "花は誓いを忘れない",
+      "アンコール",
+      "衣装: T シャツ (CROWNED IN BLOOM ver.)",
+      "ファンサ",
+      "MC: 記念写真撮影・TikTok 撮影",
+      "I’M YOUR IDOL",
+    ],
+    links: ["https://prtimes.jp/main/html/rd/p/000000966.000025517.html"],
+  },
   meetAndGreet: {
     title: "個別 2 ショット撮影会",
     sessions: [
@@ -79,12 +117,16 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-09-12",
+  updatedAt: "2026-09-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000966.000025517.html)
+  - [終演報告 - 公式 X](https://x.com/takanenofficial/status/2099121045219475653)
+  - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2099003934199406607)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2098781179360977088)
   - [GOODS MENU 公開 - 公式 X](https://x.com/takanenofficial/status/2098751481012695316)
   - [個別 2 ショット撮影会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5564)
   - [個別 2 ショット撮影会詳細告知 - 公式 X](https://x.com/takanenofficial/status/2098751008268755384)
