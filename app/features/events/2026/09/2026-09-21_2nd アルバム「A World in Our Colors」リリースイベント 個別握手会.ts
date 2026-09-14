@@ -1,20 +1,26 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "2nd アルバム「A World in Our Colors」リリースイベント 個別握手会",
+  summary:
+    "2nd アルバム「A World in Our Colors」リリースイベント 個別握手会@シティホール＆ギャラリー五反田",
   category: "RELEASE_EVENT",
+  liveType: undefined,
   meetAndGreetTypes: ["握手会"],
   date: "2026-09-21",
   open: "11:20",
   start: "11:30",
   end: "19:00",
   region: "東京",
-  location: "東京都内某所",
+  location: "シティホール＆ギャラリー五反田",
   present: ["高嶺のなでしこ3"],
   images: [
     {
       path: "/events/2026/2026-09-21_2nd アルバム「A World in Our Colors」リリースイベント 個別握手会.jpg",
       ref: "https://victor-store.jp/special/takaneko20260921",
+    },
+    {
+      path: "/events/2026/2026-09-21_2nd アルバム「A World in Our Colors」リリースイベント 個別握手会_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2099424222544306372",
     },
     {
       path: "/events/2026/2026-09-21_2nd アルバム「A World in Our Colors」リリースイベント 個別握手会_1.jpg",
@@ -27,11 +33,12 @@ export const meta: EventMetaDescriptor = {
   ],
   link: {
     text: "イベント詳細 - 公式ニュース",
-    url: "https://takanenonadeshiko.jp/?p=5539",
+    url: "https://takanenonadeshiko.jp/?p=5572",
   },
   ticket: "",
   streamings: undefined,
   goods: { time: undefined, lineup: undefined, url: undefined },
+  acts: [],
   meetAndGreet: {
     title: "個別握手会",
     sessions: [
@@ -79,7 +86,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-09-04",
+  updatedAt: "2026-09-14",
 };
 
 export const content = /* md */ `
@@ -99,11 +106,15 @@ export const content = /* md */ `
 
   ### 当日受付
 
+  会場の予約販売ブースで、たかねこ盤 1 枚予約につき「個別握手会参加券」を 2 枚配布。
+
   - 当日 CD 予約販売開始: 10:30 〜
   - 事前 CD 予約販売当選者・特典券引換: 10:30 〜
 
   ## リンク
 
+  - [会場・当日販売詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5572)
+  - [会場・当日販売告知 - 公式 X](https://x.com/takanenofficial/status/2099424222544306372)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5539)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2095074261635612750)
   - [ビクターオンラインストア特設ページ](https://victor-store.jp/special/takaneko20260921)
