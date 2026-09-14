@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-09-27",
-  open: undefined,
-  start: "10:00",
+  open: "10:00",
+  start: "11:00",
   end: "20:00",
   region: "東京",
   location: "イオンモールむさし村山 つむぐ広場特設会場",
@@ -16,24 +16,37 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-09-27_エンタパークフェス2026.jpg",
       ref: "https://x.com/takanenofficial/status/2095829445781406169",
     },
+    {
+      path: "/events/2026/2026-09-27_エンタパークフェス2026_タイムテーブル.jpg",
+      ref: "",
+      tags: ["timetable"],
+    },
   ],
   link: {
-    text: "",
-    url: "",
+    text: "エンタパークフェス2026",
+    url: "https://entaparkfes.jp/",
   },
-  ticket: "",
+  ticket: "https://tiget.net/events/521207",
   streamings: undefined,
   goods: {
     time: undefined,
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-09-04",
+  acts: [
+    {
+      title: "DREAM STAGE",
+      types: ["LIVE"],
+      start: "17:25",
+      end: "17:55",
+    },
+  ],
+  updatedAt: "2026-09-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [チケット先行販売告知 - エンタパークフェス2026 X](https://x.com/entaparkfes/status/2098362196065735167)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2095829445781406169)
 `;
