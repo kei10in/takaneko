@@ -17,6 +17,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/MARQUEE_matsuri/status/2086286343228068342",
       tags: ["timetable"],
     },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2099838143113707849",
+    },
   ],
   link: {
     text: "",
@@ -26,20 +30,21 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["20:45", "21:55"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2099838143113707849",
   },
   acts: {
     types: ["LIVE"],
     start: "20:15",
     end: "20:40",
   },
-  updatedAt: "2026-08-10",
+  updatedAt: "2026-09-16",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2099838143113707849)
   - [タイムテーブル公開 - MARQUEE祭 X](https://x.com/MARQUEE_matsuri/status/2086286343228068342)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085591768763097555)
 `;
