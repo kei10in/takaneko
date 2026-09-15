@@ -52,6 +52,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [出演者メッセージ (松本ももな、籾山ひめり) - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2099407803865862301)
   - [出演者メッセージ動画 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2096871098939777175)
   - [タイムテーブル公開 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2093610101655458027)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2085554080139952378)
