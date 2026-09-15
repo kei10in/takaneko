@@ -26,6 +26,14 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/idolrunwaycolle/status/2093610101655458027",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-09-20_IDOL RUNWAY COLLECTION 2026_涼海すう.jpg",
+      ref: "https://x.com/takanenofficial/status/2098237594446537103",
+    },
+    {
+      path: "/events/2026/2026-09-20_IDOL RUNWAY COLLECTION 2026_松本ももな.jpg",
+      ref: "https://x.com/takanenofficial/status/2098237594446537103",
+    },
   ],
   link: {
     text: "IDOL RUNWAY COLLECTION 公式サイト",
@@ -46,12 +54,17 @@ export const meta: EventMetaDescriptor = {
       end: "14:23",
     },
   ],
-  updatedAt: "2026-09-10",
+  updatedAt: "2026-09-15",
 };
 
 export const content = /* md */ `
+  ## 出演 - ファッションステージ
+
+  **出演者:** 涼海すう / 松本ももな
+
   ## リンク
 
+  - [ファッションステージ出演告知 - 公式 X](https://x.com/takanenofficial/status/2098237594446537103)
   - [出演者メッセージ (松本ももな、籾山ひめり) - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2099407803865862301)
   - [出演者メッセージ動画 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2096871098939777175)
   - [タイムテーブル公開 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2093610101655458027)
