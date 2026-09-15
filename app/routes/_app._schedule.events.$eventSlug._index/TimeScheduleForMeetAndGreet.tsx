@@ -27,7 +27,7 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
 
   return (
     <section>
-      <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-xl leading-tight font-semibold">
+      <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
         {title} タイムスケジュール
       </h2>
 
