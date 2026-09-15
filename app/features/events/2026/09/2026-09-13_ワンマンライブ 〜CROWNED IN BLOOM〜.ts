@@ -55,6 +55,7 @@ export const meta: EventMetaDescriptor = {
   acts: {
     types: ["LIVE"],
     setlist: [
+      "影ナレ: 松本ももな, 籾山ひめり",
       "衣装: 2026 秋衣装",
       "約束",
       "Overture",
@@ -72,14 +73,14 @@ export const meta: EventMetaDescriptor = {
       "革命の女王",
       "決戦スピリット",
       "僕らの青",
-      "幕間: フラワートス",
+      "幕間: ウイングハート、フラワートス",
       "ハートブーケ",
       "恋を知った世界",
       "花は誓いを忘れない",
       "アンコール",
       "衣装: T シャツ (CROWNED IN BLOOM ver.)",
       "ファンサ",
-      "MC: 記念写真撮影・TikTok 撮影",
+      "MC: 記念写真・TikTok 撮影",
       "I’M YOUR IDOL",
     ],
     links: ["https://prtimes.jp/main/html/rd/p/000000966.000025517.html"],
@@ -117,13 +118,15 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-09-14",
+  updatedAt: "2026-09-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [高嶺のなでしこ、結成5年目の新たな一歩！新体制初ワンマンで新衣装＆「我武者羅」を初披露 クリスマスイベント開催も発表 | ACTRESS PRESS](https://actresspress.com/takanenonadeshiko20260913/) - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000966.000025517.html)
   - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000966.000025517.html)
+  - [CROWNED IN BLOOM Digest - 公式 X](https://x.com/takanenofficial/status/2099152371477811365)
   - [終演報告 - 公式 X](https://x.com/takanenofficial/status/2099121045219475653)
   - [配信告知 - 公式 X](https://x.com/takanenofficial/status/2099003934199406607)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2098781179360977088)
