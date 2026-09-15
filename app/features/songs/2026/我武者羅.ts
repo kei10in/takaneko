@@ -9,6 +9,7 @@ export const 我武者羅: SongMetaDescriptor = {
   composedBy: "HoneyWorks",
   arrangedBy: "HoneyWorks",
 
+  // https://x.com/NaokiGunzHUNT/status/2099077817812263086
   choreographedBy: "NAOKI",
 
   videoRelease: undefined,
