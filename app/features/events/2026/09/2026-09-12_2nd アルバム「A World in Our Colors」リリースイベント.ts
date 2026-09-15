@@ -80,7 +80,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-09-12",
+  updatedAt: "2026-09-15",
 };
 
 export const content = /* md */ `
@@ -93,13 +93,14 @@ export const content = /* md */ `
 
   たかねこ版 1 枚購入で「整理番号付き優先エリア入場券」 1 枚と希望グループの「グループ握手会参加券」を 2 枚を配布。
 
-  - CD 販売開始: 10:10 〜
+  - CD 販売開始: 10:00 〜
   - CD 販売受付場所: エミテラス所沢 2F TOKOROZAWA e-CUBE イベント会場特設ブース
 
   ## リンク
 
   - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2098721455169229189)
   - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2098645281143496872)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2098389069390909675)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5542)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)
