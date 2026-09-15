@@ -14,11 +14,11 @@ export const meta: EventMetaDescriptor = {
   images: [
     {
       path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2.jpg",
-      ref: "https://x.com/ily_joqr/status/2090031018061267241",
+      ref: "https://x.com/ily_joqr/status/2099800407056830723",
     },
     {
       path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2_タイムテーブル.png",
-      ref: "https://x.com/takanenofficial/status/2097297651679076795",
+      ref: "https://x.com/ily_joqr/status/2099800407056830723",
       tags: ["timetable"],
     },
   ],
@@ -38,12 +38,13 @@ export const meta: EventMetaDescriptor = {
     start: "20:20",
     end: "20:45",
   },
-  updatedAt: "2026-09-09",
+  updatedAt: "2026-09-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル修正版 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2099800407056830723)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2097297651679076795)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2090076322873709015)
   - [告知 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2090031018061267241)
