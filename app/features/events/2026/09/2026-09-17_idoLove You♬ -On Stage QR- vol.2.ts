@@ -22,6 +22,10 @@ export const meta: EventMetaDescriptor = {
       tags: ["timetable"],
     },
     {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2100230730257494498",
+    },
+    {
       path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2_本日のおチェキ.jpg",
       ref: "https://x.com/takanekomanager/status/2100562293667069980",
     },
@@ -34,8 +38,8 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["終演後"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2100230730257494498",
   },
   acts: {
     types: ["LIVE"],
@@ -59,6 +63,7 @@ export const content = /* md */ `
 
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2100555175329235263)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2100562293667069980)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2100230730257494498)
   - [タイムテーブル修正版 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2099800407056830723)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2097297651679076795)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2090076322873709015)
