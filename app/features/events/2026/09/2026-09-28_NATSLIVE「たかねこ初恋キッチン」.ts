@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta";
 
 export const meta: EventMetaDescriptor = {
-  summary: "NATSLIVE「たかねこ初恋キッチン。#9」",
+  summary: "NATSLIVE「たかねこ初恋キッチン。#9 初恋カオマンガイ。」",
   category: "VARIETY",
   liveType: undefined,
   date: "2026-09-28",
@@ -21,10 +21,10 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  ticket: "",
+  ticket: "https://fortune-cookie.natslive.jp/lotteries/CAOTqs/entry_sessions/new",
   streamings: {
     text: "NATSLIVE",
-    url: "",
+    url: "https://natslive.jp/episodes/18105",
   },
   goods: {
     time: undefined,
@@ -36,7 +36,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-09-14",
+  updatedAt: "2026-09-18",
 };
 
 export const content = /* md */ `
@@ -60,6 +60,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [一般抽選の告知 - 公式 X](https://x.com/takanenofficial/status/2100494970469646483)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2099430454658998744)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2099377607431352805)
 `;
