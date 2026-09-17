@@ -31,7 +31,10 @@ export const meta: EventMetaDescriptor = {
     url: "https://sparkfes.com/2026/",
   },
   ticket: "https://ticketdive.com/event/spark2026yamanakako",
-  streamings: undefined,
+  streamings: {
+    text: "ニコニコ生放送",
+    url: "https://live.nicovideo.jp/watch/lv351393366",
+  },
   goods: {
     time: ["17:25", "18:25"],
     lineup: undefined,
@@ -43,12 +46,13 @@ export const meta: EventMetaDescriptor = {
     start: "16:35",
     end: "17:05",
   },
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-09-18",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ニコ生配信告知 - SPARK 2026 X](https://x.com/SPARK_Fes/status/2100498742562677058)
   - [物販タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2099777743739343061)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2099460657695392091)
   - [「推しにお寿司を！」特別ページ](https://games.toolcol.jp/spark2026sushi)
