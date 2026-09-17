@@ -21,6 +21,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/ily_joqr/status/2099800407056830723",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-09-17_idoLove You♬ -On Stage QR- vol.2_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2100562293667069980",
+    },
   ],
   link: {
     text: "イベント公式サイト",
@@ -37,13 +41,24 @@ export const meta: EventMetaDescriptor = {
     types: ["LIVE"],
     start: "20:20",
     end: "20:45",
+    setlist: [
+      "衣装: 僕は君になれない衣装",
+      "僕は君になれない",
+      "女の子は強い",
+      "恋を知った世界",
+      "ファンサ",
+      "美しく生きろ",
+    ],
+    links: ["https://x.com/takanenofficial/status/2100555175329235263"],
   },
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-09-18",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2100555175329235263)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2100562293667069980)
   - [タイムテーブル修正版 - idoLove You♬ -On The Radio- X](https://x.com/ily_joqr/status/2099800407056830723)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2097297651679076795)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2090076322873709015)
