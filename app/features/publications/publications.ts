@@ -11,6 +11,7 @@ import { BEEEEM_vol1, BEEEEM_vol2, BEEEEM_vol3 } from "./publications/BEEEEM";
 import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
 import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO";
 import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
+import { DONNA_Photobook_Momona_Matsumoto } from "./publications/DONNA Photobook";
 import {
   EX大衆_2022年10月号,
   EX大衆_2024年12月号,
@@ -121,6 +122,7 @@ const publications: Publication[] = [
   CMNOW_vol220_2023年1_2月号,
   COMMERCIAL_PHOTO_2023年10月号,
   COSPLAY_MODE_2024年9月号,
+  DONNA_Photobook_Momona_Matsumoto,
   EX大衆_2022年10月号,
   EX大衆_2024年12月号,
   EX大衆_2025年03月号,
