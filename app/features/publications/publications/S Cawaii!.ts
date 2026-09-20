@@ -47,6 +47,10 @@ export const SCawaii_2026年11月号: Publication = {
   officialTwitter: "https://x.com/takanenofficial/status/2091802759964004849",
   links: [
     {
+      text: "本日発売 - 公式 X",
+      url: "https://x.com/takanenofficial/status/2100132588321185934",
+    },
+    {
       text: "S Cawaii! 2026年11月号 (特別版)",
       url: "https://scawaiiweb.com/magazines/detail/71977",
     },
