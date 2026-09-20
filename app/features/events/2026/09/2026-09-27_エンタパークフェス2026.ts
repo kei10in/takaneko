@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     },
     {
       path: "/events/2026/2026-09-27_エンタパークフェス2026_タイムテーブル.jpg",
-      ref: "",
+      ref: "https://x.com/entaparkfes/status/2100918186145358075",
       tags: ["timetable"],
     },
   ],
@@ -41,12 +41,13 @@ export const meta: EventMetaDescriptor = {
       end: "17:55",
     },
   ],
-  updatedAt: "2026-09-14",
+  updatedAt: "2026-09-20",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - エンタパークフェス2026 X](https://x.com/entaparkfes/status/2100918186145358075)
   - [チケット先行販売告知 - エンタパークフェス2026 X](https://x.com/entaparkfes/status/2098362196065735167)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2095829445781406169)
 `;
