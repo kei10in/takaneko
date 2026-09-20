@@ -9,16 +9,36 @@ export const SCawaii_2026年11月号: Publication = {
   listPrice: 1091,
   priceWithTax: 1200,
   code: [{ kind: "雑誌コード", value: "01904-11" }],
-  url: "https://scawaiiweb.com/hyoshi260824",
+  url: "https://scawaiiweb.com/magazines/detail/71976",
   coverImages: [
     {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_表紙.jpg",
+      ref: "https://scawaiiweb.com/hyoshi260911",
+    },
+    {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号増刊 特別版_表紙.jpg",
+      ref: "https://scawaiiweb.com/hyoshi260911",
+    },
+    {
       path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号増刊 特別版_限定ミニフォトカード.jpg",
-      ref: "https://x.com/takanenofficial/status/2091802759964004849",
+      ref: "https://pbs.twimg.com/media/HSjPNvAaIAAODfG.jpg",
+    },
+    {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_掲載カット1.jpg",
+      ref: "https://x.com/mag_scawaii/status/2101236050589020204",
+    },
+    {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_掲載カット2.jpg",
+      ref: "https://x.com/mag_scawaii/status/2101236326268088415",
+    },
+    {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_掲載カット3.jpg",
+      ref: "https://x.com/mag_scawaii/status/2101236463627354520",
     },
   ],
   bonuses: [
     {
-      name: "高嶺のなでしこ 限定ミニフォトカード（ランダム9種）",
+      name: "高嶺のなでしこ 限定ミニフォトカード (ランダム 9 種)",
       category: "インフォスクエア限定特典",
       store: "https://infosquare.shop/?pid=193139035",
     },
@@ -26,6 +46,10 @@ export const SCawaii_2026年11月号: Publication = {
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2091802759964004849",
   links: [
+    {
+      text: "S Cawaii! 2026年11月号 (特別版)",
+      url: "https://scawaiiweb.com/magazines/detail/71977",
+    },
     {
       text: "S Cawaii!2026年11月号増刊 | 高嶺のなでしこ 限定ミニフォトカード付き特別版 - infosquare（インフォスクエア）",
       url: "https://infosquare.shop/?pid=193139035",
