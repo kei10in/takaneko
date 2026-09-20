@@ -2,6 +2,19 @@ import { MediaDetails } from "~/features/media/types";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
+    title:
+      "SKE48研究生が高嶺のなでしこ、Jams Collectionとトークコラボ！ - Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス",
+    authorName: "Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス",
+    publishedAt: "2026-09-18",
+    mediaUrl: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
+    imageUrl:
+      "https://assets.locipo.jp/creatives/179229/original-05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94-20260918022820.jpg",
+    category: "video",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
     kind: "youtube",
     key: "6wIjksbhkmY",
     title:
@@ -122,7 +135,7 @@ export const metadata2026: MediaDetails[] = [
     kind: "youtube",
     key: "4moXcHK6U9s",
     title:
-      "【夏休みSP】高嶺のなでしこ　城月菜央主演 埼玉の怖い話「七里殺人の森」ホラーちゃんねるオリジナル短編映画",
+      "高嶺のなでしこ　城月菜央主演 埼玉の怖い話「七里殺人の森」ホラーちゃんねるオリジナル短編映画",
     authorName: "ホラーちゃんねる",
     publishedAt: "2026-07-31",
     mediaUrl: "https://youtu.be/4moXcHK6U9s",

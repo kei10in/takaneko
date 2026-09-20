@@ -83,6 +83,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [SKE48研究生が高嶺のなでしこ、Jams Collectionとトークコラボ！ - Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス](https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94)
   - [本日のおチェキ 1](https://x.com/takanekomanager/status/2091409404067483756)
   - [本日のおチェキ 2](https://x.com/takanekomanager/status/2091465481119220067)
   - [1 部 出演報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2091416815318802851)

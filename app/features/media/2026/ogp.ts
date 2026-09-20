@@ -2,6 +2,12 @@ import { OgpMediaDescriptor } from "../types";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
+    publishedAt: "2026-09-18",
+    category: "video",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/812261",
     publishedAt: "2026-08-31",
     category: "article",

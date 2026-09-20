@@ -874,7 +874,7 @@ export const metadata2025: MediaDetails[] = [
     authorName: "non-no web",
     publishedAt: "2025-07-21",
     mediaUrl: "https://nonno.hpplus.jp/entertainment/interview/261409/",
-    imageUrl: "https://nonno.hpplus.jp/wp-content/uploads/8217d37079ef2ebc77d9de973e1ff168.jpg",
+    imageUrl: "https://img-nonno.hpplus.jp/wp-content/uploads/8217d37079ef2ebc77d9de973e1ff168.jpg",
     category: "article",
     presents: ["橋本桃呼", "東山恵里沙", "松本ももな"],
   },
