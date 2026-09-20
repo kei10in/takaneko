@@ -31,24 +31,52 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: { time: undefined, lineup: undefined, url: undefined },
   acts: [
-    { title: "1部 ミニライブ", types: ["LIVE"], open: "11:40", start: "12:00" },
+    {
+      title: "1部 ミニライブ",
+      types: ["LIVE"],
+      open: "11:40",
+      start: "12:00",
+      setlist: [
+        "衣装: 2026 秋衣装",
+        "決戦スピリット",
+        "ヒロインは平均以下。",
+        "ファンサ", // 撮影可能
+        "女の子は強い",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2101187871977975910"],
+    },
     {
       title: "1部 グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "2026 秋衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "日向端ひな", "松本ももな"] },
           { label: "B グループ", members: ["橋本桃呼", "葉月紗蘭", "東山恵里沙", "籾山ひめり"] },
         ],
       },
     },
-    { title: "2部 ミニライブ", types: ["LIVE"], open: "15:10", start: "15:30" },
+    {
+      title: "2部 ミニライブ",
+      types: ["LIVE"],
+      open: "15:10",
+      start: "15:30",
+      setlist: [
+        "衣装: 2026 秋衣装",
+        "初恋のこたえ。",
+        "ハートブーケ",
+        "小悪魔だってかまわない！", // 撮影可能
+        "約束",
+        "僕らの青",
+      ],
+      links: ["https://x.com/takanenofficial/status/2101242843113357539"],
+    },
     {
       title: "2部 グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "2026 秋衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "橋本桃呼", "東山恵里沙"] },
           { label: "B グループ", members: ["葉月紗蘭", "日向端ひな", "松本ももな", "籾山ひめり"] },
@@ -56,7 +84,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-09-16",
+  updatedAt: "2026-09-20",
 };
 
 export const content = /* md */ `
@@ -72,6 +100,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2101242843113357539)
+  - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2101187871977975910)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2100966828600152423)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5547)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)
