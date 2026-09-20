@@ -40,7 +40,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://idolrunwaycollection.jp/",
   },
   ticket: "https://idolrunwaycollection.jp/#tickets",
-  streamings: [{ text: "IRC APP", url: "https://x.gd/YiywJ" }],
+  streamings: [{ text: "YouTube Live", url: "https://www.youtube.com/watch?v=HIDu2G1ca1E" }],
   goods: {
     time: undefined,
     lineup: undefined,
@@ -92,6 +92,7 @@ export const content = /* md */ `
   - [ライブ出演報告 (セットリスト・動画あり) - 公式 X](https://x.com/takanenofficial/status/2101559483365535961)
   - [ファッションステージ出演報告 - 公式 X](https://x.com/takanenofficial/status/2101524249794003151)
   - [#きょうのたかねこ](https://x.com/takanenofficial/status/2101446242085847393)
+  - [無料配信告知 - 公式 X](https://x.com/takanenofficial/status/2101268817095586049)
   - [ファッションステージ出演告知 - 公式 X](https://x.com/takanenofficial/status/2098237594446537103)
   - [出演者メッセージ (松本ももな、籾山ひめり) - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2099407803865862301)
   - [出演者メッセージ動画 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2096871098939777175)
