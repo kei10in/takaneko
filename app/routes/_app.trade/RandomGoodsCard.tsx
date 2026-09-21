@@ -1,8 +1,8 @@
 import { clsx } from "clsx";
+import { ThumbnailImage } from "~/components/ThumbnailImage";
 
 interface Props {
   image: string;
-  imageSet?: string;
   year: number;
   content: string;
   description: string;
@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
-  const { image, imageSet, year, content, description, selected = false } = props;
+  const { image, year, content, description, selected = false } = props;
 
   return (
     <div
@@ -20,7 +20,7 @@ export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
       data-selected={selected ? "true" : undefined}
     >
       <div className="m-2 h-48 overflow-hidden rounded-lg bg-zinc-100 p-4">
-        <img src={image} srcSet={imageSet} alt="product" className="h-full w-full object-contain" />
+        <ThumbnailImage src={image} alt="product" className="h-full w-full object-contain" />
       </div>
       <div className="flex flex-col space-y-0.5 px-2 pt-2 pb-6">
         <p className="line-clamp-3 text-sm leading-tight">{content}</p>
