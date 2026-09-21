@@ -1,8 +1,8 @@
 import React from "react";
+import { ThumbnailImage } from "~/components/ThumbnailImage";
 
 interface Props {
   image?: string | undefined;
-  imageSet?: string;
   fallback?: React.ReactNode;
   title: string;
   description?: string | undefined;
@@ -11,7 +11,6 @@ interface Props {
 export const SquareCard: React.FC<Props> = (props: Props) => {
   const {
     image,
-    imageSet,
     fallback = <img src="icon.svg" alt="サムネイルがありません" />,
     title,
     description,
@@ -26,7 +25,7 @@ export const SquareCard: React.FC<Props> = (props: Props) => {
           </div>
         )}
         {image && (
-          <img src={image} srcSet={imageSet} alt={title} className="h-full w-full object-contain" />
+          <ThumbnailImage src={image} alt={title} className="h-full w-full object-contain" />
         )}
       </div>
       <div>
