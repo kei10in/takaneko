@@ -1,5 +1,5 @@
 import { BsBook } from "react-icons/bs";
-import { ThumbnailImage } from "~/components/ThumbnailImage";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 

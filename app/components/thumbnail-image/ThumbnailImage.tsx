@@ -1,4 +1,4 @@
-import { StaticThumbnailImage } from "~/components/StaticThumbnailImage";
+import { StaticThumbnailImage } from "~/components/thumbnail-image/StaticThumbnailImage";
 
 type Props = React.ComponentProps<typeof StaticThumbnailImage>;
 

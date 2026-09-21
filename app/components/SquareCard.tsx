@@ -1,5 +1,5 @@
 import React from "react";
-import { ThumbnailImage } from "~/components/ThumbnailImage";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 
 interface Props {
   image?: string | undefined;
