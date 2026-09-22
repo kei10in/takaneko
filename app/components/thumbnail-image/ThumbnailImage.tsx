@@ -1,11 +1,11 @@
 import { CloudflareThumbnailImage } from "~/components/thumbnail-image/CloudflareThumbnailImage";
-import { StaticThumbnailImage } from "~/components/thumbnail-image/StaticThumbnailImage";
+import { DevThumbnailImage } from "~/components/thumbnail-image/DevThumbnailImage";
 
-type Props = React.ComponentProps<typeof StaticThumbnailImage>;
+type Props = React.ComponentProps<typeof DevThumbnailImage>;
 
 export const ThumbnailImage: React.FC<Props> = (props: Props) => {
   if (import.meta.env.DEV) {
-    return <StaticThumbnailImage {...props} />;
+    return <DevThumbnailImage {...props} />;
   }
 
   return <CloudflareThumbnailImage {...props} />;

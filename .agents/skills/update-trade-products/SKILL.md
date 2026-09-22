@@ -112,15 +112,6 @@ pnpm tsx scripts/crop-items.ts
 このコマンドは `tsx` の IPC 作成が sandbox 内で必ず失敗するため、最初から承認付きで sandbox 外実行する。  
 生成後、対象の `public/takaneko/cropped/<stem>_001.webp` などが追加されたことを確認する。
 
-サムネイル生成が必要な場合の実体は `.tsx` ではなく `.ts`。
-
-```bash
-pnpm tsx scripts/gen-thumbnails.ts
-```
-
-このコマンドも `tsx` の IPC 作成が sandbox 内で必ず失敗するため、最初から承認付きで sandbox 外実行する。  
-既に `public/takaneko/thumbnails/goods/YYYY/<stem>@1x.webp`、`@2x.webp`、`@3x.webp` が揃っているなら追加生成は不要。
-
 ## Release Notes
 
 `RELEASES.md` の先頭に今日の日付で追記する。文体は既存に合わせる。

@@ -38,6 +38,16 @@ pnpm tsx ./scripts/setlist-db.ts
 
 **パス:** `app/features/products/`
 
+### 開発時のサムネイル画像
+
+`ThumbnailImage` は開発時に `DevThumbnailImage`、本番では `CloudflareThumbnailImage` を使用します。
+開発時は Vite の `/__thumbnail?src=<元画像パス>&size=<サイズ>` が `public/` 内の画像を
+`@napi-rs/image` で変換して返します。240・480・720px の候補を `srcset` に指定し、
+縦横比を保った WebP を配信します。変換結果はファイル保存・キャッシュせず、
+元画像の差し替えはページの再読み込みで反映されます。
+
+既存の `StaticThumbnailImage`、静的サムネイル画像、手動生成スクリプトも引き続き利用できます。
+
 ## スクリプト
 
 プロジェクトには以下の自動化スクリプトが含まれています：
