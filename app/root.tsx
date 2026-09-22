@@ -8,8 +8,13 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
+import type { Route } from "./+types/root";
 import { Topbar } from "./components/topbar";
 import "./tailwind.css";
+
+export const loader = ({ request }: Route.LoaderArgs) => {
+  return { url: request.url };
+};
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
