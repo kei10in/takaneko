@@ -61,7 +61,7 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "14:05",
       end: "14:20",
-      setlist: ["2026 秋衣装", "初恋のひと。", "ファンサ", "美しく生きろ"],
+      setlist: ["衣装: 2026 秋衣装", "初恋のひと。", "ファンサ", "美しく生きろ"],
       links: ["https://x.com/takanenofficial/status/2101559483365535961"],
     },
   ],
