@@ -31,12 +31,26 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: { time: undefined, lineup: undefined, url: undefined },
   acts: [
-    { title: "ミニライブ", types: ["LIVE"], open: "14:40", start: "15:00" },
+    {
+      title: "ミニライブ",
+      types: ["LIVE"],
+      open: "14:40",
+      start: "15:00",
+      setlist: [
+        "衣装: 2026 秋衣装",
+        "初恋のひと。",
+        "初恋のこたえ。",
+        "可愛くてごめん", // 撮影可能
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2102329556120334507"],
+    },
     {
       title: "グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "2026 秋衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "葉月紗蘭", "東山恵里沙", "松本ももな"] },
           { label: "B グループ", members: ["涼海すう", "橋本桃呼", "日向端ひな", "籾山ひめり"] },
@@ -44,7 +58,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-09-16",
+  updatedAt: "2026-09-22",
 };
 
 export const content = /* md */ `
@@ -59,6 +73,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2102329556120334507)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2102047699415503072)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5552)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
   - [リリースイベントスケジュール告知 - 公式 X](https://x.com/takanenofficial/status/2092540116913000546)
