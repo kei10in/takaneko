@@ -3,9 +3,16 @@ import { ResizeFilterType, ResizeFit, Transformer } from "@napi-rs/image";
 import { Err, Ok, type Result } from "../utils/result";
 import type { DevThumbnailOptions } from "./parseDevThumbnailRequest";
 
-type ThumbnailError = "not-found" | "fetch-failed" | "conversion-failed";
+type ThumbnailError = "invalid-source" | "not-found" | "fetch-failed" | "conversion-failed";
 
-const fetchImage = async (url: URL): Promise<Result<Buffer, "not-found" | "fetch-failed">> => {
+const fetchImage = async (
+  url: URL,
+  allowedOrigin: URL,
+): Promise<Result<Buffer, "invalid-source" | "not-found" | "fetch-failed">> => {
+  if (url.origin !== allowedOrigin.origin || url.username !== "" || url.password !== "") {
+    return Err("invalid-source");
+  }
+
   try {
     const response = await fetch(url, { redirect: "manual", cache: "no-store" });
     if (!response.ok) {
@@ -21,8 +28,9 @@ const fetchImage = async (url: URL): Promise<Result<Buffer, "not-found" | "fetch
 export const loadDevThumbnail = async (
   source: URL,
   options: DevThumbnailOptions,
+  allowedOrigin: URL,
 ): Promise<Result<Buffer, ThumbnailError>> => {
-  const fetched = await fetchImage(source);
+  const fetched = await fetchImage(source, allowedOrigin);
   if (fetched.err) {
     return fetched;
   }

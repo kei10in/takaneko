@@ -27,13 +27,16 @@ export const createDevThumbnailMiddleware =
       return;
     }
 
-    // Host ヘッダーによらず、この開発サーバーの接続先から画像を取得する。
+    // Host ヘッダーによらず、この開発サーバーの接続先だけから画像を取得する。
+    const serverHost = localAddress.includes(":") ? `[${localAddress}]` : localAddress;
+    const allowedOrigin = new URL(`${protocol}//${serverHost}:${localPort}`);
     const source = new URL(parsed.value.source);
-    source.hostname = localAddress.includes(":") ? `[${localAddress}]` : localAddress;
-    source.port = String(localPort);
-    const result = await loadDevThumbnail(source, parsed.value.options);
+    source.protocol = allowedOrigin.protocol;
+    source.host = allowedOrigin.host;
+    const result = await loadDevThumbnail(source, parsed.value.options, allowedOrigin);
     if (result.err) {
       const errors = {
+        "invalid-source": { status: 400, message: "Invalid image source" },
         "not-found": { status: 404, message: "Image not found" },
         "fetch-failed": { status: 502, message: "Image fetch failed" },
         "conversion-failed": { status: 500, message: "Thumbnail conversion failed" },

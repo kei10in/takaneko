@@ -2,8 +2,9 @@
 import { Transformer } from "@napi-rs/image";
 import { once } from "node:events";
 import { createServer, type Server } from "node:http";
-import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { createDevThumbnailMiddleware } from "./devThumbnail";
+import { loadDevThumbnail } from "./loadDevThumbnail";
 
 const makeImage = (width: number, height: number) =>
   Transformer.fromRgbaPixels(Buffer.alloc(width * height * 4, 255), width, height).png();
@@ -232,4 +233,45 @@ describe("開発用サムネイル配信", () => {
       expect(sourceRequests).toEqual([url]);
     },
   );
+});
+
+describe("開発用サムネイルの画像取得先", () => {
+  const options = { width: 240, height: 240, quality: 80 };
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it.each([
+    "http://localhost:5173/image.png",
+    "http://127.0.0.1:5174/image.png",
+    "https://127.0.0.1:5173/image.png",
+    "http://user:password@127.0.0.1:5173/image.png",
+  ])("許可した origin と異なる取得先 %s は通信せず拒否する", async (source) => {
+    const fetchSpy = vi
+      .spyOn(globalThis, "fetch")
+      .mockRejectedValue(new Error("fetch must not be called"));
+
+    const result = await loadDevThumbnail(
+      new URL(source),
+      options,
+      new URL("http://127.0.0.1:5173"),
+    );
+
+    expect(result).toMatchObject({ err: true, error: "invalid-source" });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it("IPv6 の許可した origin から画像を取得する", async () => {
+    const image = await makeImage(100, 100);
+    const fetchSpy = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(new Response(Uint8Array.from(image), { status: 200 }));
+    const origin = new URL("http://[::1]:5173");
+
+    const result = await loadDevThumbnail(new URL("/image.png", origin), options, origin);
+
+    expect(result.ok).toBe(true);
+    expect(fetchSpy).toHaveBeenCalledOnce();
+  });
 });
