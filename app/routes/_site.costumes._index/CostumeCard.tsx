@@ -1,5 +1,6 @@
 import { GiAmpleDress } from "react-icons/gi";
 import { Link } from "react-router";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 import { Costume } from "~/features/costumes/types";
 
 interface Props {
@@ -14,7 +15,7 @@ export const CostumeCard: React.FC<Props> = (props: Props) => {
     <Link className="block h-full overflow-hidden" to={`./${costume.slug}`}>
       <div className="aspect-4/3 w-full overflow-hidden rounded-lg bg-gray-50 shadow-sm transition hover:shadow-md">
         {image ? (
-          <img
+          <ThumbnailImage
             src={image}
             alt={costume.name}
             className="h-full w-full object-cover object-center"
