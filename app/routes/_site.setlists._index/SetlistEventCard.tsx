@@ -13,6 +13,7 @@ import { Link } from "react-router";
 import { FirstPerformanceBadge } from "~/components/IconChip";
 import { Setlist } from "~/components/Setlist";
 import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 import { SetlistEvent } from "~/features/setlists/types";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
@@ -48,7 +49,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                 <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
                   {event.image != undefined ? (
                     <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
-                      <img
+                      <ThumbnailImage
                         src={event.image?.path}
                         className="h-full w-full object-contain text-xs"
                         alt={event.title}
