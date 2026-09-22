@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { BsClock } from "react-icons/bs";
 import { HiOutlineMapPin } from "react-icons/hi2";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 import { EventType, eventTypeBackgroundColor } from "../events/EventType";
 import { CalendarEvent } from "./calendarEvents";
 import { EventMetaChips } from "./EventMetaChips";
@@ -60,7 +61,11 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
         {thumbnail && (
           <div className="relative my-2 min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
             <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
-              <img src={thumbnail} className="h-full w-full object-contain text-xs" alt={summary} />
+              <ThumbnailImage
+                src={thumbnail}
+                className="h-full w-full object-contain text-xs"
+                alt={summary}
+              />
             </div>
           </div>
         )}
