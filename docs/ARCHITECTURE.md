@@ -41,8 +41,20 @@ pnpm tsx ./scripts/setlist-db.ts
 ### 開発時のサムネイル画像
 
 `ThumbnailImage` は開発時に `DevThumbnailImage`、本番では `CloudflareThumbnailImage` を使用します。
-開発時は Vite の `/__thumbnail?src=<元画像パス>&size=<サイズ>` が `public/` 内の画像を
-`@napi-rs/image` で変換して返します。240・480・720px の候補を `srcset` に指定し、
+開発時は Vite の `/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>` が開発サーバーから元画像を
+`fetch` し、`@napi-rs/image` で変換して返します。元画像にはルート基準のパス、または
+開発サーバーと同じオリジンの絶対 URL を指定できます。
+
+```text
+/cdn-cgi/image/width=240,height=240,fit=contain,format=webp,quality=80/publications/example.jpg
+```
+
+オプションはカンマ区切りで、順序は自由です。`width`・`height` は正の整数、
+`quality` は 1〜100 の整数、`fit=contain`・`format=webp` に対応し、５項目すべての指定が必要です。
+オプションの省略・重複・短縮名・その他の値は未対応です。元画像の外部オリジン指定、
+画像変換への再帰指定は拒否し、取得時のリダイレクトは追従しません。
+
+`DevThumbnailImage` は 240・480・720px の候補を `srcset` に指定し、
 縦横比を保った WebP を配信します。変換結果はファイル保存・キャッシュせず、
 元画像の差し替えはページの再読み込みで反映されます。
 

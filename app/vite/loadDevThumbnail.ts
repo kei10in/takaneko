@@ -1,62 +1,44 @@
 import { ResizeFilterType, ResizeFit, Transformer } from "@napi-rs/image";
-import { readFile, realpath } from "node:fs/promises";
-import path from "node:path";
 // Vite 設定の読み込み時はアプリ用の ~ エイリアスがまだ使えない。
 import { Err, Ok, type Result } from "../utils/result";
+import type { DevThumbnailOptions } from "./parseDevThumbnailRequest";
 
-type ThumbnailError = "invalid-path" | "not-found" | "conversion-failed";
+type ThumbnailError = "not-found" | "fetch-failed" | "conversion-failed";
 
-const isInside = (directory: string, filepath: string): boolean => {
-  const relative = path.relative(directory, filepath);
-  return (
-    relative !== "" &&
-    relative !== ".." &&
-    !relative.startsWith(`..${path.sep}`) &&
-    !path.isAbsolute(relative)
-  );
+const fetchImage = async (url: URL): Promise<Result<Buffer, "not-found" | "fetch-failed">> => {
+  try {
+    const response = await fetch(url, { redirect: "manual", cache: "no-store" });
+    if (!response.ok) {
+      await response.body?.cancel();
+      return Err(response.status === 404 ? "not-found" : "fetch-failed");
+    }
+    return Ok(Buffer.from(await response.arrayBuffer()));
+  } catch {
+    return Err("fetch-failed");
+  }
 };
 
 export const loadDevThumbnail = async (
-  publicDir: string,
-  src: string,
-  size: 240 | 480 | 720,
+  source: URL,
+  options: DevThumbnailOptions,
 ): Promise<Result<Buffer, ThumbnailError>> => {
-  if (!src.startsWith("/") || src.startsWith("//") || src.includes("\0") || src.includes("\\")) {
-    return Err("invalid-path");
+  const fetched = await fetchImage(source);
+  if (fetched.err) {
+    return fetched;
   }
 
   try {
-    const root = await realpath(publicDir);
-    const filepath = path.resolve(root, `.${src}`);
-    if (!isInside(root, filepath)) {
-      return Err("invalid-path");
-    }
-
-    // public 内のリンクから外部ファイルを読み出すことも防ぐ。
-    const sourcePath = await realpath(filepath);
-    if (!isInside(root, sourcePath)) {
-      return Err("invalid-path");
-    }
-
-    const source = await readFile(sourcePath);
-    const image = await new Transformer(source)
+    const image = await new Transformer(fetched.value)
       .rotate()
       .resize({
-        width: size,
-        height: size,
+        width: options.width,
+        height: options.height,
         fit: ResizeFit.Inside,
         filter: ResizeFilterType.Lanczos3,
       })
-      .webp(80);
+      .webp(options.quality);
     return Ok(image);
-  } catch (error) {
-    if (
-      error instanceof Error &&
-      "code" in error &&
-      (error.code === "ENOENT" || error.code === "ENOTDIR")
-    ) {
-      return Err("not-found");
-    }
+  } catch {
     return Err("conversion-failed");
   }
 };

@@ -1,30 +1,44 @@
 // @vitest-environment node
 import { Transformer } from "@napi-rs/image";
 import { once } from "node:events";
-import { mkdir, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promises";
 import { createServer, type Server } from "node:http";
-import os from "node:os";
-import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { createDevThumbnailMiddleware } from "./devThumbnail";
 
 const makeImage = (width: number, height: number) =>
   Transformer.fromRgbaPixels(Buffer.alloc(width * height * 4, 255), width, height).png();
 
+const defaultOptions = "width=240,height=240,fit=contain,format=webp,quality=80";
+
 describe("開発用サムネイル配信", () => {
-  let directory: string;
-  let publicDir: string;
   let server: Server;
   let origin: string;
+  let images: Map<string, Buffer>;
+  let sourceRequests: string[];
 
   beforeEach(async () => {
-    directory = await mkdtemp(path.join(os.tmpdir(), "dev-thumbnail-"));
-    publicDir = path.join(directory, "public");
-    await mkdir(publicDir);
-    const middleware = createDevThumbnailMiddleware(publicDir);
+    images = new Map();
+    sourceRequests = [];
+    const middleware = createDevThumbnailMiddleware();
     server = createServer((req, res) => {
       middleware(req, res, () => {
-        res.end("next middleware");
+        const url = req.url ?? "/";
+        sourceRequests.push(url);
+        const image = images.get(url);
+        if (image) {
+          res.setHeader("Content-Type", "image/png");
+          res.end(image);
+        } else if (url === "/redirect") {
+          res.writeHead(302, { Location: "/image.png" }).end();
+        } else if (url === "/external-redirect") {
+          res.writeHead(302, { Location: "https://example.com/image.png" }).end();
+        } else if (url === "/unavailable") {
+          res.writeHead(503).end();
+        } else if (url === "/disconnect") {
+          req.socket.destroy();
+        } else {
+          res.writeHead(404).end("next middleware");
+        }
       });
     });
     server.listen(0, "127.0.0.1");
@@ -43,22 +57,25 @@ describe("開発用サムネイル配信", () => {
         server.closeAllConnections();
       });
     }
-    await rm(directory, { recursive: true, force: true });
   });
 
-  const request = (src: string, size = "240") =>
-    fetch(`${origin}/__thumbnail?${new URLSearchParams({ src, size })}`);
+  const request = (src = "image.png", options = defaultOptions) =>
+    fetch(`${origin}/cdn-cgi/image/${options}/${src}`);
 
   it.each([
-    [800, 400, 240, 240, 120],
-    [400, 800, 480, 240, 480],
-    [800, 400, 720, 720, 360],
-    [40, 20, 240, 240, 120],
+    [800, 400, 240, 240, 240, 120],
+    [400, 800, 480, 480, 240, 480],
+    [800, 400, 720, 720, 720, 360],
+    [40, 20, 240, 240, 240, 120],
+    [800, 400, 300, 100, 200, 100],
   ])(
-    "%i×%i の画像を %ipx の枠に収める",
-    async (width, height, size, expectedWidth, expectedHeight) => {
-      await writeFile(path.join(publicDir, "image.png"), await makeImage(width, height));
-      const response = await request("/image.png", String(size));
+    "%i×%i の画像を %i×%i の枠に収める",
+    async (width, height, targetWidth, targetHeight, expectedWidth, expectedHeight) => {
+      images.set("/image.png", await makeImage(width, height));
+      const response = await request(
+        "image.png",
+        `width=${targetWidth},height=${targetHeight},fit=contain,format=webp,quality=80`,
+      );
       expect(response.status).toBe(200);
       expect(response.headers.get("content-type")).toBe("image/webp");
       expect(response.headers.get("cache-control")).toBe("no-store");
@@ -68,8 +85,41 @@ describe("開発用サムネイル配信", () => {
         width: expectedWidth,
         height: expectedHeight,
       });
+      expect(sourceRequests).toEqual(["/image.png"]);
     },
   );
+
+  it("オプションの順番に依存しない", async () => {
+    images.set("/image.png", await makeImage(800, 400));
+    expect(
+      (await request("image.png", "quality=80,format=webp,height=240,fit=contain,width=240"))
+        .status,
+    ).toBe(200);
+  });
+
+  it.each(["image.png", "/image.png", "absolute"])(
+    "元画像 %s を自身の HTTP サーバーから取得する",
+    async (source) => {
+      images.set("/image.png", await makeImage(100, 100));
+      const response = await request(source === "absolute" ? `${origin}/image.png` : source);
+      expect(response.status).toBe(200);
+      expect(sourceRequests).toEqual(["/image.png"]);
+    },
+  );
+
+  it("quality の指定を WebP 出力に反映する", async () => {
+    const pixels = Buffer.from(
+      Array.from({ length: 256 * 256 * 4 }, (_, index) =>
+        index % 4 === 3 ? 255 : (index * 17 + Math.floor(index / 1024)) % 256,
+      ),
+    );
+    images.set("/image.png", await Transformer.fromRgbaPixels(pixels, 256, 256).png());
+    const low = await request("image.png", defaultOptions.replace("quality=80", "quality=1"));
+    const high = await request("image.png", defaultOptions.replace("quality=80", "quality=100"));
+    expect(low.status).toBe(200);
+    expect(high.status).toBe(200);
+    expect(Buffer.from(await low.arrayBuffer())).not.toEqual(Buffer.from(await high.arrayBuffer()));
+  });
 
   it("EXIF の向きを補正してから指定サイズに収める", async () => {
     const jpeg = await Transformer.fromRgbaPixels(
@@ -82,78 +132,104 @@ describe("開発用サムネイル配信", () => {
       "ffe1002245786966000049492a0008000000010012010300010000000600000000000000",
       "hex",
     );
-    await writeFile(
-      path.join(publicDir, "rotated.jpg"),
-      Buffer.concat([jpeg.subarray(0, 2), exif, jpeg.subarray(2)]),
-    );
-    const response = await request("/rotated.jpg");
+    images.set("/rotated.jpg", Buffer.concat([jpeg.subarray(0, 2), exif, jpeg.subarray(2)]));
+    const response = await request("rotated.jpg");
     expect(response.status).toBe(200);
     expect(
       await new Transformer(Buffer.from(await response.arrayBuffer())).metadata(),
     ).toMatchObject({ width: 120, height: 240 });
   });
 
-  it("日本語・空白・区切り文字を含むパスを読み込める", async () => {
-    const name = "写真 1&2#3+.png";
-    await writeFile(path.join(publicDir, name), await makeImage(100, 100));
-    expect((await request(`/${name}`)).status).toBe(200);
-  });
-
-  it("元画像の更新を次のリクエストに反映する", async () => {
-    const filepath = path.join(publicDir, "image.png");
-    await writeFile(filepath, await makeImage(800, 400));
-    const before = Buffer.from(await (await request("/image.png")).arrayBuffer());
-    await writeFile(filepath, await makeImage(400, 800));
-    const after = Buffer.from(await (await request("/image.png")).arrayBuffer());
-    expect(await new Transformer(before).metadata()).toMatchObject({ width: 240, height: 120 });
-    expect(await new Transformer(after).metadata()).toMatchObject({ width: 120, height: 240 });
-    expect(await readFile(filepath)).toEqual(await makeImage(400, 800));
-  });
-
-  it.each(["", "241", "0", "-240", "abc"])("未対応のサイズ %s は 400 を返す", async (size) => {
-    expect((await request("/image.png", size)).status).toBe(400);
-  });
-
-  it.each(["", "/__thumbnail", "/__thumbnail?src=%2Fimage.png", "/__thumbnail?size=240"])(
-    "%s を他のルートと区別する",
-    async (url) => {
-      const response = await fetch(`${origin}${url}`);
-      if (url === "") {
-        expect(await response.text()).toBe("next middleware");
-      } else {
-        expect(response.status).toBe(400);
-      }
+  it.each([false, true])(
+    "日本語・予約文字とクエリを保持して取得する（絶対 URL: %s）",
+    async (absolute) => {
+      const source = `${encodeURIComponent("写真 1&2#3+?,%.png")}?version=2&name=a%3Fb`;
+      images.set(`/${source}`, await makeImage(100, 100));
+      expect((await request(absolute ? `${origin}/${source}` : source)).status).toBe(200);
+      expect(sourceRequests).toEqual([`/${source}`]);
     },
   );
 
-  it.each([
-    "/../outside.png",
-    "/../public-other/outside.png",
-    "https://example.com/image.png",
-    "image.png",
-    "/bad\u0000.png",
-  ])("不正な元画像パス %s を拒否する", async (src) => {
-    expect((await request(src)).status).toBe(400);
+  it("元画像の更新を次のリクエストに反映する", async () => {
+    images.set("/image.png", await makeImage(800, 400));
+    const before = Buffer.from(await (await request()).arrayBuffer());
+    images.set("/image.png", await makeImage(400, 800));
+    const after = Buffer.from(await (await request()).arrayBuffer());
+    expect(await new Transformer(before).metadata()).toMatchObject({ width: 240, height: 120 });
+    expect(await new Transformer(after).metadata()).toMatchObject({ width: 120, height: 240 });
+    expect(sourceRequests).toEqual(["/image.png", "/image.png"]);
   });
 
-  it("public 外を指すシンボリックリンクを拒否する", async () => {
-    const outside = path.join(directory, "outside.png");
-    await writeFile(outside, await makeImage(100, 100));
-    await symlink(outside, path.join(publicDir, "link.png"));
-    expect((await request("/link.png")).status).toBe(400);
+  it.each([
+    "",
+    "width=240",
+    defaultOptions.replace("width=240", "width=0"),
+    defaultOptions.replace("height=240", "height=-1"),
+    defaultOptions.replace("width=240", "width=1.5"),
+    defaultOptions.replace("width=240", "width=abc"),
+    defaultOptions.replace("quality=80", "quality=0"),
+    defaultOptions.replace("quality=80", "quality=101"),
+    defaultOptions.replace("quality=80", "quality=1.5"),
+    defaultOptions.replace("fit=contain", "fit=cover"),
+    defaultOptions.replace("format=webp", "format=jpeg"),
+    defaultOptions.replace("width=240", "w=240"),
+    `${defaultOptions},blur=2`,
+    `${defaultOptions},width=480`,
+    `${defaultOptions},`,
+  ])("不正・未対応のオプション %s は取得前に拒否する", async (options) => {
+    expect((await request("image.png", options)).status).toBe(400);
+    expect(sourceRequests).toEqual([]);
   });
+
+  it.each([
+    "",
+    "https://example.com/image.png",
+    "//example.com/image.png",
+    "ftp://localhost/image.png",
+    "%ZZ.png",
+  ])("不正な元画像 %s を取得前に拒否する", async (source) => {
+    expect((await request(source)).status).toBe(400);
+    expect(sourceRequests).toEqual([]);
+  });
+
+  it("異なるポートの元画像は取得しない", async () => {
+    const source = new URL("/image.png", origin);
+    source.port = source.port === "80" ? "81" : "80";
+    expect((await request(source.href)).status).toBe(400);
+    expect(sourceRequests).toEqual([]);
+  });
+
+  it.each([false, true])(
+    "画像変換への再帰リクエストを拒否する（絶対 URL: %s）",
+    async (absolute) => {
+      const source = `/cdn-cgi/image/${defaultOptions}/image.png`;
+      expect((await request(absolute ? `${origin}${source}` : source)).status).toBe(400);
+      expect(sourceRequests).toEqual([]);
+    },
+  );
+
+  it.each(["redirect", "external-redirect", "unavailable", "disconnect"])(
+    "元画像の取得失敗 %s は 502 を返す",
+    async (source) => {
+      expect((await request(source)).status).toBe(502);
+      expect(sourceRequests).toEqual([`/${source}`]);
+    },
+  );
 
   it("存在しない画像は 404 を返す", async () => {
-    expect((await request("/missing.png")).status).toBe(404);
+    expect((await request("missing.png")).status).toBe(404);
   });
 
   it("変換できない画像は 500 を返す", async () => {
-    await writeFile(path.join(publicDir, "broken.png"), "not an image");
-    expect((await request("/broken.png")).status).toBe(500);
+    images.set("/broken.png", Buffer.from("not an image"));
+    expect((await request("broken.png")).status).toBe(500);
   });
 
-  it("対象外の URL は後続の middleware に渡す", async () => {
-    const response = await fetch(`${origin}/__thumbnail-other`);
-    expect(await response.text()).toBe("next middleware");
-  });
+  it.each(["/__thumbnail?src=image.png&size=240", "/cdn-cgi/other", "/other"])(
+    "対象外の URL %s は後続に渡す",
+    async (url) => {
+      expect(await (await fetch(`${origin}${url}`)).text()).toBe("next middleware");
+      expect(sourceRequests).toEqual([url]);
+    },
+  );
 });

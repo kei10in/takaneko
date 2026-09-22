@@ -11,21 +11,25 @@ describe("DevThumbnailImage", () => {
     );
     const image = getByRole("img");
     expect(image.getAttribute("src")).toBe(
-      "/__thumbnail?src=%2Fpublications%2Fexample.jpg&size=240",
+      "/cdn-cgi/image/width=240,height=240,fit=contain,format=webp,quality=80/publications/example.jpg",
     );
     expect(image.getAttribute("srcset")).toBe(
-      "/__thumbnail?src=%2Fpublications%2Fexample.jpg&size=240 1x, /__thumbnail?src=%2Fpublications%2Fexample.jpg&size=480 2x, /__thumbnail?src=%2Fpublications%2Fexample.jpg&size=720 3x",
+      "/cdn-cgi/image/width=240,height=240,fit=contain,format=webp,quality=80/publications/example.jpg 1x, /cdn-cgi/image/width=480,height=480,fit=contain,format=webp,quality=80/publications/example.jpg 2x, /cdn-cgi/image/width=720,height=720,fit=contain,format=webp,quality=80/publications/example.jpg 3x",
     );
   });
 
   it("日本語・空白・クエリの区切り文字を含む元画像パスを保持する", () => {
-    const src = "/takaneko/goods/写真 1&2#3+.jpg";
+    const src = "/takaneko/goods/写真 1&2#3+?,%.jpg";
     const { getByRole } = render(<DevThumbnailImage src={src} alt="生写真" />);
     const candidates = getByRole("img").getAttribute("srcset")?.split(", ") ?? [];
     expect(candidates).toHaveLength(3);
     candidates.forEach((candidate) => {
       const url = new URL(candidate.split(" ")[0], "http://localhost");
-      expect(url.searchParams.get("src")).toBe(src);
+      const source = url.pathname.split("/").slice(4).join("/");
+      expect(decodeURIComponent(`/${source}`)).toBe(src);
+      expect(source).toContain("1&2%233+%3F%2C%25.jpg");
+      expect(url.search).toBe("");
+      expect(url.hash).toBe("");
     });
   });
 

@@ -1,31 +1,41 @@
+import { TLSSocket } from "node:tls";
 import type { Connect, Plugin } from "vite";
 import { loadDevThumbnail } from "./loadDevThumbnail";
+import { devThumbnailPrefix, parseDevThumbnailRequest } from "./parseDevThumbnailRequest";
 
 export const createDevThumbnailMiddleware =
-  (publicDir: string): Connect.NextHandleFunction =>
-  async (req, res, next) => {
-    // URL のパス部分だけで判定し、他のリクエストには関与しない。
-    const [pathname, query] = (req.url ?? "").split("?");
-    if (pathname !== "/__thumbnail") {
+  (): Connect.NextHandleFunction => async (req, res, next) => {
+    const requestUrl = req.url ?? "";
+    if (!requestUrl.startsWith(devThumbnailPrefix)) {
       next();
       return;
     }
 
     res.setHeader("Cache-Control", "no-store");
-    const params = new URLSearchParams(query);
-    const src = params.get("src");
-    const size = Number(params.get("size"));
-    if (!src || (size !== 240 && size !== 480 && size !== 720)) {
+    const protocol = req.socket instanceof TLSSocket ? "https:" : "http:";
+    const origin = URL.parse(`${protocol}//${req.headers.host ?? ""}`);
+    const { localAddress, localPort } = req.socket;
+    if (!origin || !localAddress || !localPort) {
+      res.statusCode = 400;
+      res.end("Invalid request origin");
+      return;
+    }
+    const parsed = parseDevThumbnailRequest(requestUrl, origin);
+    if (parsed.err) {
       res.statusCode = 400;
       res.end("Invalid thumbnail parameters");
       return;
     }
 
-    const result = await loadDevThumbnail(publicDir, src, size);
+    // Host ヘッダーによらず、この開発サーバーの接続先から画像を取得する。
+    const source = new URL(parsed.value.source);
+    source.hostname = localAddress.includes(":") ? `[${localAddress}]` : localAddress;
+    source.port = String(localPort);
+    const result = await loadDevThumbnail(source, parsed.value.options);
     if (result.err) {
       const errors = {
-        "invalid-path": { status: 400, message: "Invalid image path" },
         "not-found": { status: 404, message: "Image not found" },
+        "fetch-failed": { status: 502, message: "Image fetch failed" },
         "conversion-failed": { status: 500, message: "Thumbnail conversion failed" },
       };
       const error = errors[result.error];
@@ -42,6 +52,6 @@ export const devThumbnail = (): Plugin => ({
   name: "takanekono/dev-thumbnail",
   apply: "serve",
   configureServer(server) {
-    server.middlewares.use(createDevThumbnailMiddleware(server.config.publicDir));
+    server.middlewares.use(createDevThumbnailMiddleware());
   },
 });
