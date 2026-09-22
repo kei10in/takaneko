@@ -14,6 +14,7 @@ import { CoverBadge, FirstPerformanceBadge } from "~/components/IconChip";
 import { Segment } from "~/features/events/setlist";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
 import { ALL_SONGS } from "~/features/songs/songs";
+import { ThumbnailImage } from "./thumbnail-image/ThumbnailImage";
 
 interface Props {
   part: Segment;
@@ -70,7 +71,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
       <div className="flex-none py-2">
         <div className="relative flex items-center justify-center overflow-hidden rounded-lg shadow">
           {img ? (
-            <img
+            <ThumbnailImage
               className="size-15 bg-gray-100 object-cover text-xs text-zinc-500"
               src={img}
               alt={name}
