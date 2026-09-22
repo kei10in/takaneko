@@ -6,7 +6,6 @@ import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { findMemberDescription } from "~/features/profile/members";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
@@ -50,13 +49,11 @@ export default function Index() {
           >
             {BirthdayGoods.map((bg) => {
               const member = findMemberDescription(bg.memberName);
-              const thumbs = thumbnailSrcSet(bg.images[0].path);
 
               return (
                 <Link key={bg.slug} className="block" to={`/products/birthday-goods/${bg.slug}`}>
                   <SquareCard
-                    image={thumbs.src}
-                    imageSet={thumbs.srcset}
+                    image={bg.images[0].path}
                     title={member.name}
                     description={displayDate(NaiveDate.parseUnsafe(bg.date))}
                   />

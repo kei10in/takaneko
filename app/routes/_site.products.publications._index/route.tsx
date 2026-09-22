@@ -2,7 +2,6 @@ import { Link, MetaFunction } from "react-router";
 import { pageBox, pageHeading } from "~/components/styles";
 import { PUBLICATIONS } from "~/features/publications/publications";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { formatTitle } from "~/utils/htmlHeader";
 import { PublicationCard } from "./PublicationCard";
 
@@ -24,25 +23,17 @@ export default function Index() {
         <h1 className={pageHeading()}>書籍・雑誌</h1>
 
         <ul className="mt-8 grid grid-cols-2 place-content-center gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-          {PUBLICATIONS.map((publication) => {
-            const thumbs =
-              publication.coverImages[0] == undefined
-                ? undefined
-                : thumbnailSrcSet(publication.coverImages[0].path);
-
-            return (
-              <li key={publication.slug}>
-                <Link to={`/products/${publication.slug}`}>
-                  <PublicationCard
-                    name={publication.name}
-                    date={NaiveDate.parseUnsafe(publication.date)}
-                    image={thumbs?.src}
-                    imageSet={thumbs?.srcset}
-                  />
-                </Link>
-              </li>
-            );
-          })}
+          {PUBLICATIONS.map((publication) => (
+            <li key={publication.slug}>
+              <Link to={`/products/${publication.slug}`}>
+                <PublicationCard
+                  name={publication.name}
+                  date={NaiveDate.parseUnsafe(publication.date)}
+                  image={publication.coverImages[0]?.path}
+                />
+              </Link>
+            </li>
+          ))}
         </ul>
       </section>
     </div>

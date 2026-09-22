@@ -7,7 +7,6 @@ import { BirthdayGoods } from "~/features/products/birthdayGoods";
 import { LiveGoods } from "~/features/products/liveGoods";
 import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
 import { PUBLICATIONS } from "~/features/publications/publications";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
@@ -28,71 +27,47 @@ export default function Index() {
     {
       title: "ライブ・イベント グッズ",
       slug: "/products/live-goods",
-      items: LiveGoods.slice(0, 10).map((live) => {
-        const thumbs = thumbnailSrcSet(live.images[0].path);
-        return {
-          slug: `/products/live-goods/${live.slug}`,
-          image: thumbs.src,
-          imageSet: thumbs.srcset,
-          name: live.name,
-        };
-      }),
+      items: LiveGoods.slice(0, 10).map((live) => ({
+        slug: `/products/live-goods/${live.slug}`,
+        image: live.images[0].path,
+        name: live.name,
+      })),
     },
     {
       title: "誕生日記念グッズ",
       slug: "/products/birthday-goods",
-      items: BirthdayGoods.slice(0, 10).map((item) => {
-        const thumbs = thumbnailSrcSet(item.images[0].path);
-        return {
-          slug: `/products/birthday-goods/${item.slug}`,
-          image: thumbs.src,
-          imageSet: thumbs.srcset,
-          name: item.name,
-        };
-      }),
+      items: BirthdayGoods.slice(0, 10).map((item) => ({
+        slug: `/products/birthday-goods/${item.slug}`,
+        image: item.images[0].path,
+        name: item.name,
+      })),
     },
     {
       title: "生写真",
       slug: "/products/photos",
-      items: PHOTOS.slice(0, 10).map((photo) => {
-        const thumbs = thumbnailSrcSet(photo.url);
-        return {
-          slug: `/products/${photo.slug}`,
-          image: thumbs.src,
-          imageSet: thumbs.srcset,
-          name: photo.name,
-        };
-      }),
+      items: PHOTOS.slice(0, 10).map((photo) => ({
+        slug: `/products/${photo.slug}`,
+        image: photo.url,
+        name: photo.name,
+      })),
     },
     {
       title: "ミニフォトカード",
       slug: "/products/mini-photo-cards",
-      items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => {
-        const thumbs = thumbnailSrcSet(photo.url);
-        return {
-          slug: `/products/${photo.slug}`,
-          image: thumbs.src,
-          imageSet: thumbs.srcset,
-          name: photo.name,
-        };
-      }),
+      items: MINI_PHOTO_CARDS.slice(0, 10).map((photo) => ({
+        slug: `/products/${photo.slug}`,
+        image: photo.url,
+        name: photo.name,
+      })),
     },
     {
       title: "書籍・雑誌",
       slug: "/products/publications",
-      items: PUBLICATIONS.slice(0, 10).map((publication) => {
-        const thumbs =
-          publication.coverImages[0] == undefined
-            ? undefined
-            : thumbnailSrcSet(publication.coverImages[0].path);
-
-        return {
-          slug: `/products/${publication.slug}`,
-          image: thumbs?.src,
-          imageSet: thumbs?.srcset,
-          name: publication.name,
-        };
-      }),
+      items: PUBLICATIONS.slice(0, 10).map((publication) => ({
+        slug: `/products/${publication.slug}`,
+        image: publication.coverImages[0]?.path,
+        name: publication.name,
+      })),
     },
   ];
 
@@ -124,17 +99,12 @@ export default function Index() {
               <div className="mt-6">
                 <Swiper slidesPerView="auto" className="py-2">
                   {items.map((item) => {
-                    const { slug, image, imageSet, name } = item;
+                    const { slug, image, name } = item;
 
                     return (
                       <SwiperSlide key={slug} className="w-46 px-2">
                         <Link to={slug} className="block">
-                          <SquareCard
-                            image={image}
-                            imageSet={imageSet}
-                            title={name}
-                            fallback={<BsBook />}
-                          />
+                          <SquareCard image={image} title={name} fallback={<BsBook />} />
                         </Link>
                       </SwiperSlide>
                     );

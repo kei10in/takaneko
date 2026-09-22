@@ -1,4 +1,5 @@
 import { BsBook } from "react-icons/bs";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
 import { displayDate } from "~/utils/dateDisplay";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
 
@@ -6,11 +7,10 @@ interface Props {
   name: string;
   date: NaiveDate;
   image?: string;
-  imageSet?: string;
 }
 
 export const PublicationCard: React.FC<Props> = (props: Props) => {
-  const { name, date, image, imageSet } = props;
+  const { name, date, image } = props;
 
   return (
     <div className="w-full bg-white shadow-sm">
@@ -21,9 +21,8 @@ export const PublicationCard: React.FC<Props> = (props: Props) => {
           </div>
         )}
         {image && (
-          <img
+          <ThumbnailImage
             src={image}
-            srcSet={imageSet}
             alt={name}
             className="h-full w-full object-contain object-center"
           />

@@ -3,7 +3,6 @@ import { Link, MetaFunction } from "react-router";
 import { SquareCard } from "~/components/SquareCard";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
 import { LiveGoods } from "~/features/products/liveGoods";
-import { thumbnailSrcSet } from "~/utils/fileConventions";
 import { formatTitle } from "~/utils/htmlHeader";
 
 export const meta: MetaFunction = () => {
@@ -32,20 +31,11 @@ export default function Index() {
               "@md:grid-cols-3 @xl:grid-cols-4 @3xl:grid-cols-5 @5xl:grid-cols-6",
             )}
           >
-            {LiveGoods.map((lg) => {
-              const thumbs = thumbnailSrcSet(lg.images[0].path);
-
-              return (
-                <Link key={lg.slug} className="block" to={`/products/live-goods/${lg.slug}`}>
-                  <SquareCard
-                    image={thumbs.src}
-                    imageSet={thumbs.srcset}
-                    title={lg.name}
-                    description={""}
-                  />
-                </Link>
-              );
-            })}
+            {LiveGoods.map((lg) => (
+              <Link key={lg.slug} className="block" to={`/products/live-goods/${lg.slug}`}>
+                <SquareCard image={lg.images[0].path} title={lg.name} description={""} />
+              </Link>
+            ))}
           </div>
         </section>
       </section>
