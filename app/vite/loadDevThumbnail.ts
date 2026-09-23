@@ -12,9 +12,10 @@ const fetchImage = async (
   if (url.origin !== allowedOrigin.origin || url.username !== "" || url.password !== "") {
     return Err("invalid-source");
   }
+  const requestUrl = new URL(`${url.pathname}${url.search}`, allowedOrigin);
 
   try {
-    const response = await fetch(url, { redirect: "manual", cache: "no-store" });
+    const response = await fetch(requestUrl, { redirect: "manual", cache: "no-store" });
     if (!response.ok) {
       await response.body?.cancel();
       return Err(response.status === 404 ? "not-found" : "fetch-failed");
