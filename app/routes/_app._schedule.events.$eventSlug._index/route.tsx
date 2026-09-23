@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { IconType } from "node_modules/react-icons/lib/iconBase";
+import { IconType } from "react-icons";
 import { BsCalendar3, BsPerson, BsPersonSlash } from "react-icons/bs";
 import {
   HiOutlineArrowTopRightOnSquare,

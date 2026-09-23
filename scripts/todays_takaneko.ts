@@ -1,8 +1,8 @@
 import { glob } from "glob";
 import { register } from "node:module";
-import { createAnnouncePost } from "scripts/lib/socialMedia";
 import { EventMeta, validateEventMeta } from "~/features/events/eventMeta";
 import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { createAnnouncePost } from "./lib/socialMedia";
 
 register("@mdx-js/node-loader", import.meta.url);
 

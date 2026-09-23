@@ -16,7 +16,7 @@
   ],
   "exclude": [],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2023"],
+    "lib": ["DOM", "ES2023"],
     "types": ["vite/client", "mdx", "./worker-configuration.d.ts"],
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -29,7 +29,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]
     },

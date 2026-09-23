@@ -1,5 +1,6 @@
 import { glob } from "glob";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 import { EventRepository } from "~/features/events/EventRepository";
 
 const importGlob = (): Record<string, () => Promise<unknown>> => {
@@ -8,14 +9,7 @@ const importGlob = (): Record<string, () => Promise<unknown>> => {
 
   return Object.fromEntries(
     glob.sync(`${eventsDir.replace(/\\/g, "/")}/*/**/*.{mdx,tsx,ts}`).map((f) => {
-      return [
-        path.basename(f),
-        () => {
-          const cwd = process.cwd();
-          const importPath = path.relative(cwd, f);
-          return import(importPath);
-        },
-      ];
+      return [path.basename(f), () => import(pathToFileURL(f).href)];
     }),
   );
 };
