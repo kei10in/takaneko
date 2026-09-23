@@ -6,7 +6,6 @@ import {
   MetaFunction,
   useLoaderData,
   useLocation,
-  useNavigate,
 } from "react-router";
 import { DomainName } from "~/constants.ts";
 import { Calendar } from "~/features/calendars/Calendar.tsx";
@@ -140,7 +139,6 @@ export default function Index() {
   const m = new NaiveMonth(year, month);
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (day == undefined) {
@@ -154,7 +152,7 @@ export default function Index() {
       const elem = document.getElementById(anchor);
       elem?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [day, location.hash, location.search, month, navigate, year]);
+  }, [day, location.hash, month, year]);
 
   return <Calendar events={events} month={m} today={today} filter={filterName} />;
 }

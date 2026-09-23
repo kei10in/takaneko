@@ -209,7 +209,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
         viewPort.removeEventListener("pointercancel", onPointerCancel);
         document.removeEventListener("mouseleave", onMouseLeaveDoc);
       };
-    }, [momentum, momentumDecay, stopVelocity]);
+    }, [momentum]);
 
     return (
       <div
