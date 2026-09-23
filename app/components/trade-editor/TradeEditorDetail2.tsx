@@ -83,7 +83,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
         modules={[Navigation]}
         centeredSlides={true}
         initialSlide={index}
-        loop={positions.length > 3 ? true : false}
+        loop={positions.length > 3}
         slidesPerView="auto"
         navigation={{}}
         onSlideChange={(swiper) => {
