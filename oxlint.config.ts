@@ -2,6 +2,11 @@ import { defineConfig } from "oxlint";
 import { version } from "react";
 
 export default defineConfig({
+  categories: {
+    correctness: "error",
+    // suspicious: "error",
+    // pedantic: "warn",
+  },
   plugins: ["react", "jsx-a11y", "typescript", "import"],
   env: {
     builtin: true,
