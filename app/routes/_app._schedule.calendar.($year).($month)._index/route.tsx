@@ -74,8 +74,8 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const events = (
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
-      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        Events.importEventModulesByMonth(m),
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((eventMonth) =>
+        Events.importEventModulesByMonth(eventMonth),
       ),
     )
   )
@@ -117,8 +117,8 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
   const events = (
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
-      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        Events.importEventModulesByMonth(m),
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((eventMonth) =>
+        Events.importEventModulesByMonth(eventMonth),
       ),
     )
   )

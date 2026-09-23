@@ -58,13 +58,13 @@ export const MeetAndGreetTimeSchedule: React.FC<Props> = (props: Props) => {
                     const memberStr = lane.members
                       .map((n) => `${memberNameToEmoji(n)} ${n}`)
                       .join(" & ");
-                    const costume =
+                    const laneCostume =
                       typeof lane.costume == "string" ? lane.costume : lane.costume?.label;
                     return (
                       <div key={j} className="text-sm">
                         {lane.label && <span className="font-semibold">{lane.label}: </span>}
                         <span>{memberStr}</span>
-                        {costume && <span> ({costume})</span>}
+                        {laneCostume && <span> ({laneCostume})</span>}
                       </div>
                     );
                   })}

@@ -29,9 +29,12 @@ export default function Component() {
 
     const concertCountsByPrefecture = aggregatePrefectureStats(modules);
 
-    const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
+    const prefectureData = concertCountsByPrefecture.map((pref) => ({
+      key: pref.name,
+      value: pref.count,
+    }));
 
-    return data;
+    return prefectureData;
   });
 
   return (

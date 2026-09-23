@@ -59,7 +59,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
   const name = part.songTitle;
   const members = part.members?.map((m) => memberNameToEmoji(m)).join("") ?? "";
   const costume = part.costumeNames?.join("、") || "衣装不明";
-  const track = ALL_SONGS.find((track) => track.name === name);
+  const track = ALL_SONGS.find((song) => song.name === name);
   const slug = track?.slug;
   const img = track?.coverArt;
 

@@ -109,7 +109,7 @@ export default function Component() {
     key: K,
     value: SetlistSearchFilters[K],
   ) => {
-    setFilters((filters) => ({ ...filters, [key]: value }));
+    setFilters((previousFilters) => ({ ...previousFilters, [key]: value }));
   };
 
   const resetFilters = () => {

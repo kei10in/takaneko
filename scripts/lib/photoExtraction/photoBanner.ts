@@ -30,7 +30,9 @@ export const findPhotoBannerBottom = (
     current.end = index;
     return found;
   }, []);
-  const banner = runs.filter(({ start, end }) => end - start + 1 >= MINIMUM_RUN_LENGTH).at(-1);
+  const banner = runs
+    .filter(({ start: runStart, end: runEnd }) => runEnd - runStart + 1 >= MINIMUM_RUN_LENGTH)
+    .at(-1);
   return banner == undefined ? undefined : start + banner.end;
 };
 

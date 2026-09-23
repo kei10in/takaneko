@@ -7,7 +7,7 @@ const createFramedImage = (): PixelImage => {
   const height = 8;
   const data = new Uint8Array(width * height * 3);
   Array.from({ length: height }, (_, y) =>
-    Array.from({ length: width }, (_, x) => {
+    Array.from({ length: width }, (_pixel, x) => {
       const value = x >= 2 && x < 6 && y >= 2 && y < 6 ? 255 : 0;
       const index = (y * width + x) * 3;
       data[index] = value;

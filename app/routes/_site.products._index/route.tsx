@@ -99,11 +99,11 @@ export default function Index() {
               <div className="mt-6">
                 <Swiper slidesPerView="auto" className="py-2">
                   {items.map((item) => {
-                    const { slug, image, name } = item;
+                    const { slug: productSlug, image, name } = item;
 
                     return (
-                      <SwiperSlide key={slug} className="w-46 px-2">
-                        <Link to={slug} className="block">
+                      <SwiperSlide key={productSlug} className="w-46 px-2">
+                        <Link to={productSlug} className="block">
                           <SquareCard image={image} title={name} fallback={<BsBook />} />
                         </Link>
                       </SwiperSlide>

@@ -38,7 +38,7 @@ export const loader = async (args: Route.LoaderArgs) => {
         ];
 
   if (mdxKeys.some((key) => key in MdxDocs)) {
-    const key = mdxKeys.find((key) => key in MdxDocs)!;
+    const key = mdxKeys.find((candidateKey) => candidateKey in MdxDocs)!;
     return { key };
   }
 

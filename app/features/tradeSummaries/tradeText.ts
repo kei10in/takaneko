@@ -48,10 +48,10 @@ const generateNumberingTradeText = (
 
   const have = members
     .flatMap((member) => {
-      const have = member.items
+      const memberHave = member.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
         .map((i) => i.id);
-      if (have.length === 0) {
+      if (memberHave.length === 0) {
         return [];
       }
       const familyName = extractFamilyName(member.name);
@@ -59,16 +59,16 @@ const generateNumberingTradeText = (
         return [];
       }
 
-      return [`${familyName} ${have.join(", ")}`];
+      return [`${familyName} ${memberHave.join(", ")}`];
     })
     .join("\n");
 
   const wants = members
     .flatMap((member) => {
-      const wants = member.items
+      const memberWants = member.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
         .map((i) => i.id);
-      if (wants.length === 0) {
+      if (memberWants.length === 0) {
         return [];
       }
       const familyName = extractFamilyName(member.name);
@@ -76,7 +76,7 @@ const generateNumberingTradeText = (
         return [];
       }
 
-      return [`${familyName} ${wants.join(", ")}`];
+      return [`${familyName} ${memberWants.join(", ")}`];
     })
     .join("\n");
 
@@ -134,10 +134,10 @@ const generateDescriptionTradeText = (
 
   const have = members
     .flatMap((member) => {
-      const have = member.items
+      const memberHave = member.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
         .map((i) => i.description);
-      if (have.length === 0) {
+      if (memberHave.length === 0) {
         return [];
       }
       const familyName = extractFamilyName(member.name);
@@ -145,16 +145,16 @@ const generateDescriptionTradeText = (
         return [];
       }
 
-      return [`${familyName} ${have.join(", ")}`];
+      return [`${familyName} ${memberHave.join(", ")}`];
     })
     .join("\n");
 
   const wants = members
     .flatMap((member) => {
-      const wants = member.items
+      const memberWants = member.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
         .map((i) => i.description);
-      if (wants.length === 0) {
+      if (memberWants.length === 0) {
         return [];
       }
       const familyName = extractFamilyName(member.name);
@@ -162,7 +162,7 @@ const generateDescriptionTradeText = (
         return [];
       }
 
-      return [`${familyName} ${wants.join(", ")}`];
+      return [`${familyName} ${memberWants.join(", ")}`];
     })
     .join("\n");
 
@@ -201,7 +201,7 @@ const generateGroupByDescriptionTradeText = (
 
   const have = xs
     .flatMap((x) => {
-      const have = x.items
+      const memberHave = x.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
         .flatMap((i) => {
           const familyName = extractFamilyName(i.name);
@@ -211,17 +211,17 @@ const generateGroupByDescriptionTradeText = (
           return [familyName];
         });
 
-      if (have.length === 0) {
+      if (memberHave.length === 0) {
         return [];
       }
 
-      return `${x.description} ${have.join(", ")}`;
+      return `${x.description} ${memberHave.join(", ")}`;
     })
     .join("\n");
 
   const wants = xs
     .flatMap((x) => {
-      const wants = x.items
+      const memberWants = x.items
         .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
         .flatMap((i) => {
           const familyName = extractFamilyName(i.name);
@@ -231,11 +231,11 @@ const generateGroupByDescriptionTradeText = (
           return [familyName];
         });
 
-      if (wants.length === 0) {
+      if (memberWants.length === 0) {
         return [];
       }
 
-      return `${x.description} ${wants.join(", ")}`;
+      return `${x.description} ${memberWants.join(", ")}`;
     })
     .join("\n");
 

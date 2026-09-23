@@ -103,7 +103,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
             height: stamp.height * scale,
           };
 
-          const tradeStatus = tradeDescriptions[pos.id]?.status ?? { tag: "none" };
+          const itemTradeStatus = tradeDescriptions[pos.id]?.status ?? { tag: "none" };
 
           return (
             <SwiperSlide key={i} className="w-fit px-4">
@@ -118,7 +118,7 @@ export const TradeEditorDetail2: React.FC<Props> = (props: Props) => {
                   />
 
                   <TradeStatusStamp
-                    status={tradeStatus}
+                    status={itemTradeStatus}
                     x={stampPos.left}
                     y={stampPos.top}
                     width={stampPos.width}

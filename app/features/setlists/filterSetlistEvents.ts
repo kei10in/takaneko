@@ -61,7 +61,7 @@ const matchesLiveTypeFilter = (
   filter: SetlistSelectedLiveFilterType,
   event: SetlistEvent,
 ): boolean => {
-  const f = SetlistLiveFilters.find((f) => f.name == filter);
+  const f = SetlistLiveFilters.find((liveFilter) => liveFilter.name == filter);
   if (f == undefined) {
     return true;
   }

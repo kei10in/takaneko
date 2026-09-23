@@ -54,8 +54,8 @@ export const loader = async () => {
     [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
       const d = date.addDays(i);
       const { year, month, day } = d;
-      const events = await Events.importEventModulesByDate(d);
-      return { year, month, day, events: events.map(calendarEventFromEventModule) };
+      const dayEvents = await Events.importEventModulesByDate(d);
+      return { year, month, day, events: dayEvents.map(calendarEventFromEventModule) };
     }),
   );
 
@@ -69,8 +69,8 @@ export const clientLoader = async () => {
     [0, 1, 2, 3, 4, 5, 6].map(async (i) => {
       const d = date.addDays(i);
       const { year, month, day } = d;
-      const events = await Events.importEventModulesByDate(d);
-      return { year, month, day, events: events.map(calendarEventFromEventModule) };
+      const dayEvents = await Events.importEventModulesByDate(d);
+      return { year, month, day, events: dayEvents.map(calendarEventFromEventModule) };
     }),
   );
 
@@ -163,7 +163,7 @@ export default function Index() {
               modules={[A11y]}
               slidesPerView="auto"
             >
-              {events.map(({ year, month, day, events }, i) => {
+              {events.map(({ year, month, day, events: dayEvents }, i) => {
                 const date = new NaiveDate(year, month, day);
                 return (
                   <SwiperSlide key={i} className="w-96/100 max-w-96/100 sm:w-120 sm:max-w-120">
@@ -172,8 +172,8 @@ export default function Index() {
                         <Link to={dateHref(date)}>{displayDateWithDayOfWeek(date)} の予定:</Link>
                       </p>
                       <div className="h-72 space-y-4 overflow-y-auto rounded-4xl border border-zinc-100 bg-zinc-50 px-4 py-4 inset-shadow-xs">
-                        {events.length !== 0 ? (
-                          events.map((event) => (
+                        {dayEvents.length !== 0 ? (
+                          dayEvents.map((event) => (
                             <LinkCalendarEventItem
                               key={event.slug}
                               to={`/events/${event.slug}`}

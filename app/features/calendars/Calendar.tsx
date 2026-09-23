@@ -38,10 +38,10 @@ export const Calendar: React.FC<Props> = (props: Props) => {
   // 変わってしまうため、初期値を保持しておく必要があります。
   const [{ startMonth, months, initialSlide }] = useState(() => {
     const range = calendarMonthRange(NaiveMonth.current());
-    const months = Array.from(iterateMonthsInRange(range));
-    const initialSlide = month.differenceInMonths(range.start);
+    const calendarMonths = Array.from(iterateMonthsInRange(range));
+    const slideIndex = month.differenceInMonths(range.start);
 
-    return { startMonth: range.start, months, initialSlide };
+    return { startMonth: range.start, months: calendarMonths, initialSlide: slideIndex };
   });
 
   const currentSlide = useMemo(() => {

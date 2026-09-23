@@ -25,8 +25,8 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
 
     drawTradeImage(canvas, productImage, tradeDescriptions).then(() => {
       // Safari では WebP がサポートされていないため、PNG に変換されます。
-      const dataUrl = canvas.toDataURL("image/webp", 0.95);
-      setDataUrl(dataUrl);
+      const previewUrl = canvas.toDataURL("image/webp", 0.95);
+      setDataUrl(previewUrl);
     });
 
     return;
