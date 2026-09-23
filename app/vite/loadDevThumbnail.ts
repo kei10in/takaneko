@@ -9,28 +9,12 @@ const fetchImage = async (
   url: URL,
   allowedOrigin: URL,
 ): Promise<Result<Buffer, "invalid-source" | "not-found" | "fetch-failed">> => {
-  try {
-    const decodedPath = decodeURIComponent(url.pathname);
-    const hasDotSegment = decodedPath
-      .split("/")
-      .some((segment) => segment === "." || segment === "..");
-    if (
-      url.origin !== allowedOrigin.origin ||
-      url.username !== "" ||
-      url.password !== "" ||
-      !url.pathname.startsWith("/") ||
-      url.pathname.startsWith("//") ||
-      hasDotSegment
-    ) {
-      return Err("invalid-source");
-    }
-  } catch {
+  if (url.origin !== allowedOrigin.origin || url.username !== "" || url.password !== "") {
     return Err("invalid-source");
   }
-  const requestUrl = new URL(`${url.pathname}${url.search}`, allowedOrigin);
 
   try {
-    const response = await fetch(requestUrl, { redirect: "manual", cache: "no-store" });
+    const response = await fetch(url, { redirect: "manual", cache: "no-store" });
     if (!response.ok) {
       await response.body?.cancel();
       return Err(response.status === 404 ? "not-found" : "fetch-failed");
