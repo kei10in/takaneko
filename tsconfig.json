@@ -9,6 +9,7 @@
     "app/**/.client/**/*.tsx",
     "workers/**/*.ts",
     "env.d.ts",
+    "oxlint.config.ts",
     "react-router.config.ts",
     "scripts/**/*.ts",
     "vite.config.ts",

@@ -45,7 +45,7 @@ pnpm install
 
 - `pnpm dev` - 開発サーバーを起動します。開発サーバーには http://localhost:5173 でアクセスできます。
 - `pnpm typecheck` - 型チェック & React Router のルートモジュール用の型生成
-- `pnpm lint` - ESLint による性的解析を実行します。
+- `pnpm lint` - Oxlint による静的解析を実行します。設定は `oxlint.config.ts` で管理します。
 - `pnpm format` - Prettier によるコードフォーマットを実行します。
 - `pnpm vitest run` - テストを実行します。
 

@@ -8,7 +8,7 @@
     "deploy": "pnpm run build && wrangler deploy",
     "dev": "react-router dev",
     "format": "prettier --write app",
-    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app/ scripts/",
+    "lint": "oxlint app/ scripts/",
     "start": "vite preview",
     "cf-typegen": "wrangler types",
     "typecheck": "react-router typegen && tsc"
@@ -82,6 +82,7 @@
     "handlebars": "^4.7.9",
     "happy-dom": "^20.14.5",
     "icon-gen": "^5.0.0",
+    "oxlint": "^1.83.0",
     "prettier": "^3.9.8",
     "prettier-plugin-embed": "^0.5.1",
     "prettier-plugin-organize-imports": "^4.3.0",

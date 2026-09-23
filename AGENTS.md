@@ -116,5 +116,5 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 - セットアップと基本コマンド: `README.md`
 - アーキテクチャとデータ配置: `docs/ARCHITECTURE.md`
 - TypeScript 設定: `tsconfig.json`
-- ESLint 設定: `eslint.config.js`
+- Oxlint 設定: `oxlint.config.ts`
 - Vitest 設定: `vitest.config.ts`

@@ -33,6 +33,6 @@ export const ClippedImage: React.FC<Props> = (props: Props) => {
     };
   }, [clip.height, clip.width, clip.x, clip.y, src]);
 
-  // eslint-disable-next-line jsx-a11y/alt-text
+  // oxlint-disable-next-line jsx-a11y/alt-text
   return <img src={clippedSrc} {...rest} />;
 };
