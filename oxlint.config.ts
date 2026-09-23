@@ -28,6 +28,8 @@ export default defineConfig({
   rules: {
     // JSX は react-jsx で自動変換するため、React の import は不要です。
     "react/react-in-jsx-scope": "off",
+    // 数字で始まる作品名・商品名には識別子の先頭に _ を付けます。
+    "no-underscore-dangle": "off",
     "no-case-declarations": "error",
     "no-empty": "error",
     "no-fallthrough": "error",
