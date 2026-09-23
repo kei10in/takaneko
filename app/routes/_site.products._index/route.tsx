@@ -1,13 +1,13 @@
 import { BsBook, BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SquareCard } from "~/components/SquareCard";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { BirthdayGoods } from "~/features/products/birthdayGoods";
-import { LiveGoods } from "~/features/products/liveGoods";
-import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
-import { PUBLICATIONS } from "~/features/publications/publications";
-import { formatTitle } from "~/utils/htmlHeader";
+import { SquareCard } from "~/components/SquareCard.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { BirthdayGoods } from "~/features/products/birthdayGoods.ts";
+import { LiveGoods } from "~/features/products/liveGoods.ts";
+import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos.ts";
+import { PUBLICATIONS } from "~/features/publications/publications.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

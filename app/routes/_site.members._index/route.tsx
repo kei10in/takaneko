@@ -1,8 +1,8 @@
 import { MetaFunction } from "react-router";
-import { pageBox } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { CurrentMembers, FormerMembers } from "../../features/profile/members";
-import { MemberIdCard } from "./MemberIdCard";
+import { pageBox } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { CurrentMembers, FormerMembers } from "../../features/profile/members.ts";
+import { MemberIdCard } from "./MemberIdCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types.ts";
 import {
   createCatalogEvaluationContext,
   estimateMetricThresholds,
   evaluateCatalogLayout,
   medianAbsoluteDeviation,
-} from "./catalogLayoutMetrics";
-import { photoExtractionProfile } from "./profile";
+} from "./catalogLayoutMetrics.ts";
+import { photoExtractionProfile } from "./profile.ts";
 
 const createCatalog = (): { image: PixelImage; frames: ClusteredRect[] } => {
   const width = 260;

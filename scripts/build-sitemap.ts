@@ -4,11 +4,11 @@ import { register } from "node:module";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { dedent } from "ts-dedent";
-import { DomainName } from "~/constants";
-import { EventModule } from "~/features/events/eventModule";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { SitemapUrl, sitemapGroups } from "~/utils/sitemap/sitemap";
-import { Events } from "./lib/events";
+import { DomainName } from "~/constants.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { SitemapUrl, sitemapGroups } from "~/utils/sitemap/sitemap.ts";
+import { Events } from "./lib/events.ts";
 
 register("@mdx-js/node-loader", import.meta.url);
 

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { PixelImage } from "../imageRegionExtraction/types";
-import { scoreLocalizedFrameBoundary } from "./catalogBoundary";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { PixelImage } from "../imageRegionExtraction/types.ts";
+import { scoreLocalizedFrameBoundary } from "./catalogBoundary.ts";
 
 const createImageWithFrame = (frameColor: number): PixelImage => {
   const width = 80;

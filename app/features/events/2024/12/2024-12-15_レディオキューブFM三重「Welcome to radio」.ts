@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "レディオキューブFM三重「Welcome To radio3」",

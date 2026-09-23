@@ -1,11 +1,11 @@
-import { Err, Ok, type Result } from "~/utils/result";
+import { Err, Ok, type Result } from "~/utils/result.ts";
 import {
   createChromaForegroundMask,
   createForegroundMask,
   estimateBackgroundColor,
   findProjectionRuns,
   splitOversizedRuns,
-} from "./foregroundDetection";
+} from "./foregroundDetection.ts";
 import {
   average,
   chooseRepresentativeSize,
@@ -13,25 +13,25 @@ import {
   groupByIndex,
   median,
   sortPositions,
-} from "./geometry";
+} from "./geometry.ts";
 import {
   createEdgeMap,
   horizontalLineSum,
   rectangleBoundaryScore,
   verticalLineSum,
-} from "./imageEdges";
-import { createLayoutCandidates, layoutOccupancy, layoutSignature } from "./layoutDetection";
-import { normalizeLayout } from "./layoutNormalization";
+} from "./imageEdges.ts";
+import { createLayoutCandidates, layoutOccupancy, layoutSignature } from "./layoutDetection.ts";
+import { normalizeLayout } from "./layoutNormalization.ts";
 import {
   scoreAspectRatio as scoreAspectRatioForProfile,
   scoreRegularDifferences,
-} from "./layoutScoring";
-import { refinePositions } from "./positionRefinement";
+} from "./layoutScoring.ts";
+import { refinePositions } from "./positionRefinement.ts";
 import {
   createBoundaryPairs,
   findProjectionPeaks,
   suppressDuplicateRectangles,
-} from "./rectangleDetection";
+} from "./rectangleDetection.ts";
 import type {
   ClusteredRect,
   EdgeMap,
@@ -43,7 +43,7 @@ import type {
   PixelImage,
   PositionPostProcessor,
   RectCandidate,
-} from "./types";
+} from "./types.ts";
 
 export const extractPositionsFromPixels = (
   image: PixelImage,

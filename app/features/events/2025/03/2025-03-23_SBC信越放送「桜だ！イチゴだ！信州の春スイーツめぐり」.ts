@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "SBC信越放送「桜だ！イチゴだ！信州の春スイーツめぐり」",

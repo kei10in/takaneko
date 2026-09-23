@@ -1,5 +1,5 @@
-import { Original, Repertoire } from "../tags";
-import { SongMetaDescriptor } from "../types";
+import { Original, Repertoire } from "../tags.ts";
+import { SongMetaDescriptor } from "../types.ts";
 
 export const 約束: SongMetaDescriptor = {
   slug: "約束",

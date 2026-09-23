@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { squareImageObjectPosition } from "./squareImageObjectPosition";
+import { squareImageObjectPosition } from "./squareImageObjectPosition.ts";
 
 describe("squareImageObjectPosition", () => {
   it("uses the center for unspecified axes", () => {

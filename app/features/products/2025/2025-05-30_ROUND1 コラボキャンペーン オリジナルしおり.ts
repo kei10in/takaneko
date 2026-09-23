@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ROUND1_コラボキャンペーン_オリジナルしおり: RandomGoods = {
   id: "ROUND1 コラボキャンペーン オリジナルしおり",

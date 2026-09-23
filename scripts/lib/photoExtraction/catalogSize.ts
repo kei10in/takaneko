@@ -1,7 +1,11 @@
-import { clamp, median } from "../imageRegionExtraction/geometry";
-import { horizontalLineSum, verticalLineSum } from "../imageRegionExtraction/imageEdges";
-import type { EdgeMap, PixelImage } from "../imageRegionExtraction/types";
-import { findPhotoBannerBottom, photoBannerIsClipped, scorePhotoBannerGaps } from "./photoBanner";
+import { clamp, median } from "../imageRegionExtraction/geometry.ts";
+import { horizontalLineSum, verticalLineSum } from "../imageRegionExtraction/imageEdges.ts";
+import type { EdgeMap, PixelImage } from "../imageRegionExtraction/types.ts";
+import {
+  findPhotoBannerBottom,
+  photoBannerIsClipped,
+  scorePhotoBannerGaps,
+} from "./photoBanner.ts";
 
 const SIZE_SEARCH_RADIUS_RATIO = 0.01;
 const MAXIMUM_INNER_DISCONTINUITY_RATIO = 0.5;

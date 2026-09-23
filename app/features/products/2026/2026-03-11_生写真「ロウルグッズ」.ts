@@ -1,4 +1,4 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ロウルグッズ_生写真: RandomGoods = {
   id: "生写真「ロウルグッズ」",

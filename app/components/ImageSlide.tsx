@@ -4,7 +4,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
-import { XScroll } from "./scrollable/XScroll";
+import { XScroll } from "./scrollable/XScroll.tsx";
 
 interface Props {
   images: {

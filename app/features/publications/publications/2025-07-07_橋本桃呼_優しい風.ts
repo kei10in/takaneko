@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 橋本桃呼_優しい風: Publication = {
   slug: "2025-07-07_橋本桃呼_優しい風",

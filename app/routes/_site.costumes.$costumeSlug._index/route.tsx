@@ -10,17 +10,17 @@ import {
 import { Link, LoaderFunctionArgs, MetaFunction, useLocation, useNavigate } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
-import { Breadcrumb } from "~/components/Breadcrumb";
-import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
-import { pageHeading, sectionHeading } from "~/components/styles";
-import { AllCostumes } from "~/features/costumes/costumes";
-import { LivesForCostume } from "~/features/costumes/types";
-import { liveTypeColor } from "~/features/events/EventType";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { formatTitle } from "~/utils/htmlHeader";
-import type { Route } from "./+types/route";
-import { LiveSkeleton } from "./LiveSkeleton";
-import { squareImageObjectPosition } from "./squareImageObjectPosition";
+import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { ImagePreviewDialog } from "~/components/ImagePreviewDialog.tsx";
+import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { AllCostumes } from "~/features/costumes/costumes.ts";
+import { LivesForCostume } from "~/features/costumes/types.ts";
+import { liveTypeColor } from "~/features/events/EventType.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import type { Route } from "./+types/route.ts";
+import { LiveSkeleton } from "./LiveSkeleton.tsx";
+import { squareImageObjectPosition } from "./squareImageObjectPosition.ts";
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title = formatTitle(loaderData?.costume.name ?? "衣装が見つかりません。");

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap, rectangleBoundaryScore } from "./imageEdges";
-import type { PixelImage } from "./types";
+import { createEdgeMap, rectangleBoundaryScore } from "./imageEdges.ts";
+import type { PixelImage } from "./types.ts";
 
 const createFramedImage = (): PixelImage => {
   const width = 8;

@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { allPages, sitemapGroups } from "~/utils/sitemap/sitemap";
-import { buildEventModule } from "../tests/events";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { allPages, sitemapGroups } from "~/utils/sitemap/sitemap.ts";
+import { buildEventModule } from "../tests/events.ts";
 
 describe("sitemapGroups", () => {
   test("groups pages by sitemap output file", async () => {

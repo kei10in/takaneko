@@ -1,4 +1,4 @@
-import { YouTubeVideoDescriptor } from "../types";
+import { YouTubeVideoDescriptor } from "../types.ts";
 
 export const YouTube2025 = [
   {

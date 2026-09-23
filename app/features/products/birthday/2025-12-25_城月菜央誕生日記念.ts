@@ -1,5 +1,5 @@
 import { dedent } from "ts-dedent";
-import { BirthdayGoodsCollection, OfficialGoods } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product.ts";
 
 export const どうみても城月菜央のTシャツ: OfficialGoods = {
   slug: "どうみても城月菜央のTシャツ",

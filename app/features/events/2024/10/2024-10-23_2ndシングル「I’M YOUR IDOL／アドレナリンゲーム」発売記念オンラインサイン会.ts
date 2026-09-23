@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "2nd シングル「IʼM YOUR IDOL / アドレナリンゲーム」発売記念 オンラインサイン会",

@@ -1,14 +1,14 @@
 import React from "react";
 import { BsBook } from "react-icons/bs";
 import { Link, useLocation, useNavigate } from "react-router";
-import { ImagePreviewDialog } from "~/components/ImagePreviewDialog";
-import { ImageSlide } from "~/components/ImageSlide";
-import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles";
-import { presentMembers } from "~/features/profile/profile";
-import { Publication } from "~/features/publications/types";
-import { displayDate } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { findMemberDescription } from "../../features/profile/members";
+import { ImagePreviewDialog } from "~/components/ImagePreviewDialog.tsx";
+import { ImageSlide } from "~/components/ImageSlide.tsx";
+import { pageColumnBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { presentMembers } from "~/features/profile/profile.ts";
+import { Publication } from "~/features/publications/types.ts";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { findMemberDescription } from "../../features/profile/members.ts";
 
 interface Props {
   product: Publication;

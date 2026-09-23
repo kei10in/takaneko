@@ -1,6 +1,6 @@
-import { average, clamp, median } from "../imageRegionExtraction/geometry";
-import { horizontalLineSum, verticalLineSum } from "../imageRegionExtraction/imageEdges";
-import type { EdgeMap, RectCandidate } from "../imageRegionExtraction/types";
+import { average, clamp, median } from "../imageRegionExtraction/geometry.ts";
+import { horizontalLineSum, verticalLineSum } from "../imageRegionExtraction/imageEdges.ts";
+import type { EdgeMap, RectCandidate } from "../imageRegionExtraction/types.ts";
 
 const LOCAL_SEARCH_RATIO = 0.01;
 

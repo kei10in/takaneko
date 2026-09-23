@@ -8,17 +8,17 @@ import {
   useLocation,
   useNavigate,
 } from "react-router";
-import { DomainName } from "~/constants";
-import { Calendar } from "~/features/calendars/Calendar";
-import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { isCalendarMonthAvailable, validateYearMonth } from "~/features/calendars/utils";
-import { EventFilters } from "~/features/events/eventFilter";
-import { compareEventMeta } from "~/features/events/eventMeta";
-import { Events } from "~/features/events/events";
-import { displayMonth } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { formatTitle } from "~/utils/htmlHeader";
+import { DomainName } from "~/constants.ts";
+import { Calendar } from "~/features/calendars/Calendar.tsx";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents.ts";
+import { isCalendarMonthAvailable, validateYearMonth } from "~/features/calendars/utils.ts";
+import { EventFilters } from "~/features/events/eventFilter.ts";
+import { compareEventMeta } from "~/features/events/eventMeta.ts";
+import { Events } from "~/features/events/events.ts";
+import { displayMonth } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction<typeof loader> = (args: MetaArgs<typeof loader>) => {
   const { params, loaderData } = args;

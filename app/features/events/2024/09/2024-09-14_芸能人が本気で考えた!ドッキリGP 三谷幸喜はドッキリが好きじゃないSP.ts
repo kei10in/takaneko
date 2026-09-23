@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "芸能人が本気で考えた！ドッキリGP 三谷幸喜はドッキリが好きじゃないSP",

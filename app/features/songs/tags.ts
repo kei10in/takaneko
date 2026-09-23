@@ -1,4 +1,4 @@
-import { SongTag } from "./types";
+import { SongTag } from "./types.ts";
 
 export const Original: SongTag = {
   key: "original",

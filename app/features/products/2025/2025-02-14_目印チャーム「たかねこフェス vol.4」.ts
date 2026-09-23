@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const たかねこフェスvol4_目印チャーム: RandomGoods = {
   id: "ランダム目印チャーム「たかねこフェス vol.4」",

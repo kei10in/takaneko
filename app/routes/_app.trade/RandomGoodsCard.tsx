@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 
 interface Props {
   image: string;

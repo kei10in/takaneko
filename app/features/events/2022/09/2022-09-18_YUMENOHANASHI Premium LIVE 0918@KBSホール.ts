@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "YUMENOHANASHI Premium LIVE 0918@KBSホール",

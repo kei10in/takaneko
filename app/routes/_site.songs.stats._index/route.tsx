@@ -2,7 +2,7 @@ import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { MetaFunction } from "react-router";
-import { formatTitle } from "~/utils/htmlHeader";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 Chart.register(ChartDataLabels);
 

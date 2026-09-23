@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getActiveDateInJapan } from "../utils/japanTime";
+import { getActiveDateInJapan } from "../utils/japanTime.ts";
 
 describe("getActiveDateInJapan", () => {
   it("should return the same day if the given time is 7:00 AM or later in Japan", () => {

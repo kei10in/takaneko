@@ -1,4 +1,4 @@
-import { ItemDescription } from "./product";
+import { ItemDescription } from "./product.ts";
 
 export const REGULAR_PHOTO_SET = [
   { id: 1, name: "城月菜央", description: "ヨリ" },

@@ -1,6 +1,6 @@
-import { formatTitle } from "~/utils/htmlHeader";
-import { RandomGoods } from "../../features/products/product";
-import { flattenLineup } from "../../features/products/utils";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RandomGoods } from "../../features/products/product.ts";
+import { flattenLineup } from "../../features/products/utils.ts";
 
 export const titleForTradeImagesTool = (product: RandomGoods | undefined) => {
   if (product === undefined) {

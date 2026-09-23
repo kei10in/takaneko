@@ -4,7 +4,7 @@ import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType";
+import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType.ts";
 
 interface BadgeProps {
   icon: IconType;

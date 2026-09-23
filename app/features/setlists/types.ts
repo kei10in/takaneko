@@ -1,8 +1,8 @@
 import { z } from "zod/v4";
-import { LiveTypeEnum } from "~/features/events/EventType";
-import { Segment } from "~/features/events/setlist";
-import { ImageDescription } from "~/utils/types/ImageDescription";
-import { LinkDescription } from "~/utils/types/LinkDescription";
+import { LiveTypeEnum } from "~/features/events/EventType.ts";
+import { Segment } from "~/features/events/setlist.ts";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
 
 export const SetlistAct = z.object({
   title: z.string().optional(),

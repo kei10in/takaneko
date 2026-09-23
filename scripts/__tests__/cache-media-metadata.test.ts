@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { mediaKey } from "~/features/media/mediaDescriptor";
-import type { MediaDescriptor, MediaDetails } from "~/features/media/types";
+import { mediaKey } from "~/features/media/mediaDescriptor.ts";
+import type { MediaDescriptor, MediaDetails } from "~/features/media/types.ts";
 import {
   collectMissingOgpFields,
   mergeMediaMetadata,
   shouldLogMetadataBuildError,
-} from "../cache-media-metadata";
+} from "../cache-media-metadata.ts";
 
 const makeStaticMedia = (mediaUrl: string): Extract<MediaDescriptor, { kind: "static" }> => ({
   kind: "static",

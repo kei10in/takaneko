@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const _1stアルバム_セブンネット限定特典アクリルコースター: RandomGoods = {
   id: "1st アルバム「見上げるたびに、恋をする。」セブンネット限定特典アクリルコースター",

@@ -23,9 +23,9 @@ import {
 } from "react-icons/bs";
 import { HiEllipsisVertical } from "react-icons/hi2";
 import { Link } from "react-router";
-import { SiteName } from "~/constants";
-import { XMarkButton } from "./XMarkButton";
-import { iconButton } from "./styles/buttons";
+import { SiteName } from "~/constants.ts";
+import { XMarkButton } from "./XMarkButton.tsx";
+import { iconButton } from "./styles/buttons.ts";
 
 type TopBarLink = {
   title: string;

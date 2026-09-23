@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { compareEventMeta, compareEventStatus, validateEventMeta } from "./eventMeta";
-import { makeEventMetaForTest } from "./testUtils";
+import { compareEventMeta, compareEventStatus, validateEventMeta } from "./eventMeta.ts";
+import { makeEventMetaForTest } from "./testUtils.ts";
 
 describe("compareEventMeta", () => {
   it("should compare by date first", () => {

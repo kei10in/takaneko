@@ -1,5 +1,5 @@
 declare module "*.mdx" {
-  import type { EventMetaDescriptor } from "~/features/events/eventMeta";
+  import type { EventMetaDescriptor } from "~/features/events/eventMeta.ts";
 
   export const meta: EventMetaDescriptor | undefined;
 }

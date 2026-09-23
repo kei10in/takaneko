@@ -1,7 +1,7 @@
 import { MetaFunction } from "react-router";
-import { Markdown } from "~/components/Markdown";
-import { SiteName } from "~/constants";
-import { formatTitle } from "~/utils/htmlHeader";
+import { Markdown } from "~/components/Markdown.tsx";
+import { SiteName } from "~/constants.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import ReleaseNotes from "../../../RELEASES.md?raw";
 
 export const meta: MetaFunction = () => {

@@ -1,5 +1,5 @@
-import { Repertoire, TakanekoVersion } from "../tags";
-import { SongMetaDescriptor } from "../types";
+import { Repertoire, TakanekoVersion } from "../tags.ts";
+import { SongMetaDescriptor } from "../types.ts";
 
 export const 病名恋ワズライ: SongMetaDescriptor = {
   slug: "病名恋ワズライ",

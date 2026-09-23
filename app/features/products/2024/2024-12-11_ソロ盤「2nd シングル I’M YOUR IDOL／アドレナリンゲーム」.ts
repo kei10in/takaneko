@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const セカンドシングル_ソロ盤: RandomGoods = {
   id: "2nd シングル ソロ盤",

@@ -1,13 +1,13 @@
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import { Link } from "react-router";
-import { Breadcrumb } from "~/components/Breadcrumb";
-import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay";
-import { isMonthInRange } from "~/utils/datetime/MonthRange";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { CalendarEvent } from "./calendarEvents";
-import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
-import { calendarMonthHref, calendarMonthRange, dateHref } from "./utils";
+import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { displayDateWithDayOfWeek, displayMonth } from "~/utils/dateDisplay.ts";
+import { isMonthInRange } from "~/utils/datetime/MonthRange.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { CalendarEvent } from "./calendarEvents.ts";
+import { LinkCalendarEventItem } from "./LinkCalendarEventItem.tsx";
+import { calendarMonthHref, calendarMonthRange, dateHref } from "./utils.ts";
 
 interface Props {
   year: number;

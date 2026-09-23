@@ -1,5 +1,5 @@
-import { Repertoire, TakanekoVersion } from "../tags";
-import { SongMetaDescriptor } from "../types";
+import { Repertoire, TakanekoVersion } from "../tags.ts";
+import { SongMetaDescriptor } from "../types.ts";
 
 export const 男の子の目的は何: SongMetaDescriptor = {
   slug: "男の子の目的は何",

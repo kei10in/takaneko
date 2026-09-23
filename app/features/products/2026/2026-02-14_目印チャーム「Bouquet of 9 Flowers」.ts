@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const BouquetOf9Flowers_目印チャーム: RandomGoods = {
   id: "目印チャーム「Bouquet of 9 Flowers」",

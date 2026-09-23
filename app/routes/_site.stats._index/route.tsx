@@ -2,8 +2,8 @@ import { Chart } from "chart.js";
 import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 Chart.register(ChartDataLabels);
 

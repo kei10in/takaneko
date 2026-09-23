@@ -5,7 +5,7 @@ import {
   renderProductDefinition,
   updateProductImagesSource,
   updateReleaseNotes,
-} from "./productDefinition";
+} from "./productDefinition.ts";
 
 describe("buildProductDescriptor", () => {
   it("builds a current mini-photo descriptor", () => {
@@ -116,6 +116,8 @@ describe("renderProductDefinition", () => {
     expect(source).toContain("export const テスト衣装_生写真: RandomGoods");
     expect(source).toContain('url: "/takaneko/goods/2026/2026-07-20_生写真「テスト衣装」.jpg"');
     expect(source).toContain("variants: REGULAR_PHOTO_SET2");
+    expect(source).toContain('from "../utils.ts"');
+    expect(source).toContain('from "~/features/products/product.ts"');
     expect(source).toContain("{ id: 1, x: 10, y: 20, width: 100, height: 140 }");
   });
 
@@ -139,7 +141,7 @@ describe("renderProductDefinition", () => {
       buffer: Buffer.from("image"),
     });
 
-    expect(source).not.toContain('from "../utils"');
+    expect(source).not.toContain('from "../utils.ts"');
     expect(source).toContain(
       'variants: [\n    { id: 1, name: "" },\n    { id: 2, name: "" },\n  ]',
     );
@@ -149,8 +151,8 @@ describe("renderProductDefinition", () => {
 describe("repository source updates", () => {
   it("registers an import and product once", async () => {
     const original = [
-      'import { Existing } from "./2026/existing";',
-      'import { RandomGoods } from "./product";',
+      'import { Existing } from "./2026/existing.ts";',
+      'import { RandomGoods } from "./product.ts";',
       "",
       "export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [Existing];",
       "export const TAKANEKO_PHOTOS: RandomGoods[] = [Existing];",
@@ -159,11 +161,11 @@ describe("repository source updates", () => {
 
     const first = await updateProductImagesSource(original, {
       exportName: "テスト衣装_生写真",
-      importPath: "./2026/2026-07-20_生写真「テスト衣装」",
+      importPath: "./2026/2026-07-20_生写真「テスト衣装」.ts",
     });
     const second = await updateProductImagesSource(first, {
       exportName: "テスト衣装_生写真",
-      importPath: "./2026/2026-07-20_生写真「テスト衣装」",
+      importPath: "./2026/2026-07-20_生写真「テスト衣装」.ts",
     });
 
     expect(second.match(/import \{ テスト衣装_生写真 \}/g)).toHaveLength(1);
@@ -177,11 +179,11 @@ describe("repository source updates", () => {
 
     const updated = await updateProductImagesSource(original, {
       exportName: "生成テスト_生写真",
-      importPath: "./2026/2026-07-20_生写真「生成テスト」",
+      importPath: "./2026/2026-07-20_生写真「生成テスト」.ts",
     });
 
     expect(updated).toContain(
-      'import { 生成テスト_生写真 } from "./2026/2026-07-20_生写真「生成テスト」";',
+      'import { 生成テスト_生写真 } from "./2026/2026-07-20_生写真「生成テスト」.ts";',
     );
     const photos = updated.slice(updated.indexOf("export const TAKANEKO_PHOTOS:"));
     expect(photos).toContain("生成テスト_生写真,");

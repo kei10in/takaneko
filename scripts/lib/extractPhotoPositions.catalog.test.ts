@@ -1,8 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { extractPhotoPositions } from "./extractPhotoPositions";
-import { expectCatalogPositions } from "./photoExtraction/photoCatalogRegression";
+import { extractPhotoPositions } from "./extractPhotoPositions.ts";
+import { expectCatalogPositions } from "./photoExtraction/photoCatalogRegression.ts";
 
 describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => {
   it("extracts 晴れ着2026", async () => {

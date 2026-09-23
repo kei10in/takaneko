@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import useSWR from "swr";
-import { SocialCards, validateSocialCards } from "~/utils/ogp/metaData";
+import { SocialCards, validateSocialCards } from "~/utils/ogp/metaData.ts";
 
 interface Props {
   to: string;

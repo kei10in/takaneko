@@ -1,4 +1,4 @@
-import { Newspaper } from "../types";
+import { Newspaper } from "../types.ts";
 
 export const 山梨日日新聞_2023年7月11日: Newspaper = {
   slug: "山梨日日新聞 2023年7月11日",

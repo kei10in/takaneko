@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { Link, MetaFunction } from "react-router";
 import { Fragment } from "react/jsx-runtime";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { ECSites } from "./content";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { ECSites } from "./content.ts";
 
 export const meta: MetaFunction = () => {
   const title = formatTitle("1st アルバム「見上げるたびに、恋をする。」特典まとめ");

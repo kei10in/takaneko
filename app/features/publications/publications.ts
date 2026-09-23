@@ -1,34 +1,37 @@
-import { 城月菜央_記憶の中 } from "./publications/2025-07-07_城月菜央_記憶の中";
-import { 橋本桃呼_優しい風 } from "./publications/2025-07-07_橋本桃呼_優しい風";
-import { 籾山ひめり_木漏れ日 } from "./publications/2025-07-07_籾山ひめり_木漏れ日";
-import { _20SWEET_2023_JANUARY } from "./publications/20±SWEET";
+import { 城月菜央_記憶の中 } from "./publications/2025-07-07_城月菜央_記憶の中.ts";
+import { 橋本桃呼_優しい風 } from "./publications/2025-07-07_橋本桃呼_優しい風.ts";
+import { 籾山ひめり_木漏れ日 } from "./publications/2025-07-07_籾山ひめり_木漏れ日.ts";
+import { _20SWEET_2023_JANUARY } from "./publications/20±SWEET.ts";
 import {
   BLT_2023年2月号,
   BLT_2024年9月号,
   BLT_graduation_2026中学高校卒業,
-} from "./publications/B.L.T";
-import { BEEEEM_vol1, BEEEEM_vol2, BEEEEM_vol3 } from "./publications/BEEEEM";
-import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW";
-import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO";
-import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE";
-import { DONNA_Photobook_Momona_Matsumoto } from "./publications/DONNA Photobook";
+} from "./publications/B.L.T.ts";
+import { BEEEEM_vol1, BEEEEM_vol2, BEEEEM_vol3 } from "./publications/BEEEEM.ts";
+import { CMNOW_vol220_2023年1_2月号 } from "./publications/CMNOW.ts";
+import { COMMERCIAL_PHOTO_2023年10月号 } from "./publications/COMMERCIAL PHOTO.ts";
+import { COSPLAY_MODE_2024年9月号 } from "./publications/COSPLAY MODE.ts";
+import { DONNA_Photobook_Momona_Matsumoto } from "./publications/DONNA Photobook.ts";
 import {
   EX大衆_2022年10月号,
   EX大衆_2024年12月号,
   EX大衆_2025年03月号,
   EX大衆_2025年07月号,
   EX大衆_2026年08・09月号,
-} from "./publications/EX大衆";
-import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS";
-import { GIANNA_Plus_DONNA_1_松本ももな } from "./publications/GIANNA Plus DONNA";
-import { IDOL_AND_READ_041, IDOL_AND_READ_高田メタルSpecial } from "./publications/IDOL AND READ";
+} from "./publications/EX大衆.ts";
+import { FINEBOYS_2024年7月号 } from "./publications/FINEBOYS.ts";
+import { GIANNA_Plus_DONNA_1_松本ももな } from "./publications/GIANNA Plus DONNA.ts";
+import {
+  IDOL_AND_READ_041,
+  IDOL_AND_READ_高田メタルSpecial,
+} from "./publications/IDOL AND READ.ts";
 import {
   IDOL_FILE_Vol35,
   IDOL_FILE_Vol37,
   IDOL_FILE_Vol39,
   IDOL_FILE_Vol40,
-} from "./publications/IDOL FILE";
-import { KIDDY_LAND_FAN_BOOK } from "./publications/KIDDY LAND FAN BOOK";
+} from "./publications/IDOL FILE.ts";
+import { KIDDY_LAND_FAN_BOOK } from "./publications/KIDDY LAND FAN BOOK.ts";
 import {
   LARME_054,
   LARME_056,
@@ -45,7 +48,7 @@ import {
   LARME_068,
   LARME_069,
   LARME_070,
-} from "./publications/LARME";
+} from "./publications/LARME.ts";
 import {
   MARQUEE_Vol148,
   MARQUEE_Vol149,
@@ -60,26 +63,26 @@ import {
   MARQUEE_Vol158,
   MARQUEE_Vol159,
   MARQUEE_Vol160,
-} from "./publications/MARQUEE";
-import { mini_2022年10月号, mini_2023年2月号 } from "./publications/mini";
-import { Myojo_2024年9月号 } from "./publications/Myojo";
-import { nicola_2024年5月号 } from "./publications/nicola";
-import { nonno_2024年10月号, nonno_2025年09月号 } from "./publications/non-no";
-import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN";
-import { OutOfMusic_86, OutOfMusic_87, OutOfMusic_88 } from "./publications/Out of Music";
-import { Ray_2024年11月号 } from "./publications/Ray";
-import { SCawaii_2026年11月号, SCawaii_2026年2月号 } from "./publications/S Cawaii!";
-import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations";
-import { TOKYO_RESIDENT_Issue002, TOKYO_RESIDENT_Issue003 } from "./publications/TOKYO RESIDENT";
+} from "./publications/MARQUEE.ts";
+import { mini_2022年10月号, mini_2023年2月号 } from "./publications/mini.ts";
+import { Myojo_2024年9月号 } from "./publications/Myojo.ts";
+import { nicola_2024年5月号 } from "./publications/nicola.ts";
+import { nonno_2024年10月号, nonno_2025年09月号 } from "./publications/non-no.ts";
+import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN.ts";
+import { OutOfMusic_86, OutOfMusic_87, OutOfMusic_88 } from "./publications/Out of Music.ts";
+import { Ray_2024年11月号 } from "./publications/Ray.ts";
+import { SCawaii_2026年11月号, SCawaii_2026年2月号 } from "./publications/S Cawaii!.ts";
+import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations.ts";
+import { TOKYO_RESIDENT_Issue002, TOKYO_RESIDENT_Issue003 } from "./publications/TOKYO RESIDENT.ts";
 import {
   TopYellNeo2022AUTUMN as TopYellNeo2022Autumn,
   TopYellNeo2024_2025,
   TopYellNeo2024Autumn,
   TopYellNeo2024Spring,
   TopYellNeo2025Spring,
-} from "./publications/Top Yell NEO";
-import { VDCMagazine029, VDCMagazine030, VDCMagazine035 } from "./publications/VDC Magazine";
-import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph";
+} from "./publications/Top Yell NEO.ts";
+import { VDCMagazine029, VDCMagazine030, VDCMagazine035 } from "./publications/VDC Magazine.ts";
+import { WHITE_graph_011, 松本ももな_SweetDateTime } from "./publications/WHITE graph.ts";
 import {
   Zipper_2024_2025年冬号,
   Zipper_2024年秋号,
@@ -87,29 +90,29 @@ import {
   Zipper_2025年夏号,
   Zipper_2025年春号,
   Zipper_2026年夏号,
-} from "./publications/Zipper";
+} from "./publications/Zipper.ts";
 import {
   オシグラフVol1,
   オシグラフVol2,
   オシグラフVol3,
   オシグラフVol4,
-} from "./publications/オシグラフ";
-import { グラビアプレスVol12 } from "./publications/グラビアプレス";
-import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ";
-import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka";
-import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン";
+} from "./publications/オシグラフ.ts";
+import { グラビアプレスVol12 } from "./publications/グラビアプレス.ts";
+import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ.ts";
+import { シティ情報Fukuoka_2025年8月号 } from "./publications/シティ情報Fukuoka.ts";
+import { モデルプレスカウントダウンマガジン_vol10 } from "./publications/モデルプレスカウントダウンマガジン.ts";
 import {
   日経エンタテインメント_2024年2月号,
   日経エンタテインメント_2025年10月号,
-} from "./publications/日経エンタテイメント";
-import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME";
-import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA";
-import { 橋本桃呼_MOMOKO_ISM } from "./publications/橋本桃呼_MOMOKO_ISM";
+} from "./publications/日経エンタテイメント.ts";
+import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME.ts";
+import { 松本ももな_LAST_20_MOMONA } from "./publications/松本ももな_LAST 20 MOMONA.ts";
+import { 橋本桃呼_MOMOKO_ISM } from "./publications/橋本桃呼_MOMOKO_ISM.ts";
 import {
   週刊少年チャンピオン_2024年No51,
   週刊少年チャンピオン_2025年No32,
-} from "./publications/週刊少年チャンピオン";
-import { Publication } from "./types";
+} from "./publications/週刊少年チャンピオン.ts";
+import { Publication } from "./types.ts";
 
 const publications: Publication[] = [
   _20SWEET_2023_JANUARY,

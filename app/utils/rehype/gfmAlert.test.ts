@@ -4,7 +4,7 @@ import remarkRehype from "remark-rehype";
 import { dedent } from "ts-dedent";
 import { unified } from "unified";
 import { describe, expect, it } from "vitest";
-import { gfmAlert } from "./gfmAlert";
+import { gfmAlert } from "./gfmAlert.ts";
 
 describe("gfmAlert", () => {
   const processMarkdown = async (markdown: string) => {

@@ -1,6 +1,6 @@
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
-import { ProductImage } from "./ProductImage";
+import { ProductImage } from "./ProductImage.ts";
 
 describe("ProductImage", () => {
   it("renders an image and positions without writing files", async () => {

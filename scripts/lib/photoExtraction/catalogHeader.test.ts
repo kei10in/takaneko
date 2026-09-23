@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { PixelImage } from "../imageRegionExtraction/types";
-import { hasCatalogHeader } from "./catalogHeader";
+import type { PixelImage } from "../imageRegionExtraction/types.ts";
+import { hasCatalogHeader } from "./catalogHeader.ts";
 
 const createImage = (withHeader: boolean): PixelImage => {
   const width = 400;

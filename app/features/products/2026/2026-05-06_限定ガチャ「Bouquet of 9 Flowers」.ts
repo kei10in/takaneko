@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const BouquetOf9Flowers_限定ガチャ: RandomGoods = {
   id: "限定ガチャ「Bouquet of 9 Flowers」",

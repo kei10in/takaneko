@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const _1stアルバム_楽天ブックス限定特典アクリルスタンド: RandomGoods = {
   id: "1st アルバム「見上げるたびに、恋をする。」楽天ブックス限定特典アクリルスタンド",

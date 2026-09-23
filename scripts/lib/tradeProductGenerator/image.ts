@@ -2,16 +2,16 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { Err, Ok, type Result } from "~/utils/result";
-import { extractMiniPhotoPositions } from "../extractMiniPhotoPositions";
-import { extractPhotoPositions } from "../extractPhotoPositions";
-import { ProductImage } from "../ProductImage";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import { extractMiniPhotoPositions } from "../extractMiniPhotoPositions.ts";
+import { extractPhotoPositions } from "../extractPhotoPositions.ts";
+import { ProductImage } from "../ProductImage.ts";
 import {
   productTypeIsPhoto,
   productTypeUsesOriginalImage,
   type GeneratedTradeProductImage,
   type TradeProductDescriptor,
-} from "./productDefinition";
+} from "./productDefinition.ts";
 
 export type GenerateTradeProductImageError =
   | { kind: "unsupported-image-format"; message: string }

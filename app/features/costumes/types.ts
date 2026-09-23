@@ -1,12 +1,12 @@
 import { z } from "zod/v4";
-import { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription";
-import { EventTypeEnum, LiveTypeEnum } from "../events/EventType";
+import { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription.ts";
+import { EventTypeEnum, LiveTypeEnum } from "../events/EventType.ts";
 import {
   MvCostumeName,
   SpecialCostumeName,
   StageCostumeName,
   TShirtCostumeName,
-} from "./costumeNames";
+} from "./costumeNames.ts";
 
 export type PhotoType = "artist" | "press" | "none";
 

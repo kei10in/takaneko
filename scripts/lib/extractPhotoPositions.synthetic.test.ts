@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { extractPhotoPositionsFromPixels } from "./extractPhotoPositions";
-import { intersectionOverUnion } from "./imageRegionExtraction/geometry";
-import type { PixelImage } from "./imageRegionExtraction/types";
+import { extractPhotoPositionsFromPixels } from "./extractPhotoPositions.ts";
+import { intersectionOverUnion } from "./imageRegionExtraction/geometry.ts";
+import type { PixelImage } from "./imageRegionExtraction/types.ts";
 
 interface SyntheticCatalogOptions {
   rows: number;

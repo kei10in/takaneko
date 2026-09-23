@@ -1,8 +1,8 @@
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { AllCostumeNames } from "../costumes/costumeNames";
-import { Act, ActType } from "./act";
-import { Events } from "./events";
+import { AllCostumeNames } from "../costumes/costumeNames.ts";
+import { Act, ActType } from "./act.ts";
+import { Events } from "./events.ts";
 
 describe("all setlist items", async () => {
   const allEvents = await Events.importAllEventModules();

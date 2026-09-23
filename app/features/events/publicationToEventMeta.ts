@@ -1,6 +1,6 @@
-import { Publication } from "../publications/types";
-import { EventMetaDescriptor } from "./eventMeta";
-import { EventType } from "./EventType";
+import { Publication } from "../publications/types.ts";
+import { EventMetaDescriptor } from "./eventMeta.ts";
+import { EventType } from "./EventType.ts";
 
 export const convertPublicationToEventMeta = (
   publication: Publication | undefined = undefined,

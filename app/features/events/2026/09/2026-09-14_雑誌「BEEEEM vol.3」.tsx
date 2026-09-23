@@ -1,6 +1,6 @@
-import { EventMetaDescriptor } from "~/features/events/eventMeta";
-import { convertPublicationToEventMeta } from "~/features/events/publicationToEventMeta";
-import { BEEEEM_vol3 } from "~/features/publications/publications/BEEEEM";
+import { EventMetaDescriptor } from "~/features/events/eventMeta.ts";
+import { convertPublicationToEventMeta } from "~/features/events/publicationToEventMeta.ts";
+import { BEEEEM_vol3 } from "~/features/publications/publications/BEEEEM.ts";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(BEEEEM_vol3);
 

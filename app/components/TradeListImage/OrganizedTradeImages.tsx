@@ -2,8 +2,8 @@ import { clsx } from "clsx";
 import { BsBoxArrowUp } from "react-icons/bs";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { ImageSource } from "~/utils/html/types";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
+import { ImageSource } from "~/utils/html/types.ts";
 
 interface Props {
   title: string;

@@ -1,5 +1,5 @@
 import { z } from "zod/v4";
-import type { UiColors } from "~/utils/uiColors";
+import type { UiColors } from "~/utils/uiColors.ts";
 
 export const EventTypeEnum = z.enum([
   "LIVE", // ソロコンサート・対バンライブ

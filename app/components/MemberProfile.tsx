@@ -1,9 +1,9 @@
 import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link } from "react-router";
-import { TwitterHashTag } from "~/components/TwitterHashTag";
-import { MemberDescription } from "~/features/profile/types";
-import { sectionHeading } from "./styles";
+import { TwitterHashTag } from "~/components/TwitterHashTag.tsx";
+import { MemberDescription } from "~/features/profile/types.ts";
+import { sectionHeading } from "./styles.ts";
 
 interface Props {
   profile: MemberDescription;

@@ -1,6 +1,6 @@
 import { z } from "zod/v4";
-import { EventType } from "./EventType";
-import { EventModule } from "./eventModule";
+import { EventType } from "./EventType.ts";
+import { EventModule } from "./eventModule.ts";
 
 export const EventFilterTypeEnum = z.enum([
   "all",

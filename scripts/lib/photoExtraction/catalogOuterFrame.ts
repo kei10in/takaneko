@@ -1,11 +1,15 @@
 import {
   createForegroundMask,
   estimateBackgroundColor,
-} from "../imageRegionExtraction/foregroundDetection";
-import { chooseRepresentativeSize, groupByIndex, median } from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
-import { photoExtractionProfile } from "./profile";
+} from "../imageRegionExtraction/foregroundDetection.ts";
+import {
+  chooseRepresentativeSize,
+  groupByIndex,
+  median,
+} from "../imageRegionExtraction/geometry.ts";
+import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types.ts";
+import { photoExtractionProfile } from "./profile.ts";
 
 const OUTER_FOREGROUND_THRESHOLD = 20;
 const MINIMUM_STRIP_SUPPORT = 0.3;

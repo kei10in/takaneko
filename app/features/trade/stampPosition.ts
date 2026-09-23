@@ -1,4 +1,4 @@
-import { ImagePosition } from "../products/product";
+import { ImagePosition } from "../products/product.ts";
 
 export interface Xywh {
   x: number;

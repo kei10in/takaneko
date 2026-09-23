@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { BsChevronRight, BsMusicNoteBeamed } from "react-icons/bs";
 import { Link } from "react-router";
-import { calculateChartDimensions } from "./scale";
+import { calculateChartDimensions } from "./scale.ts";
 
 interface Props {
   songs: {

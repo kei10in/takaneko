@@ -4,10 +4,10 @@ import { MDXContent } from "mdx/types";
 import { lazy, Suspense, useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { Link, useLoaderData } from "react-router";
-import { markdownComponents2 } from "~/components/MdComponents2";
-import { SecondaryTopbar } from "~/components/SecondaryTopbar";
-import { iconButtonPrimary } from "~/components/styles/buttons";
-import { Route } from "./+types/route";
+import { markdownComponents2 } from "~/components/MdComponents2.tsx";
+import { SecondaryTopbar } from "~/components/SecondaryTopbar.tsx";
+import { iconButtonPrimary } from "~/components/styles/buttons.ts";
+import { Route } from "./+types/route.ts";
 
 const mdxModules = import.meta.glob("../../features/guide/**/*.(mdx|md)");
 const MdxDocs: Record<string, React.LazyExoticComponent<MDXContent>> = Object.fromEntries(

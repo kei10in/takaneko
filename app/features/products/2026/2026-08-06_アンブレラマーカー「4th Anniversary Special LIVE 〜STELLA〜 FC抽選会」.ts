@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const STELLA_FC抽選会_アンブレラマーカー: RandomGoods = {
   id: "4th Anniversary Special LIVE 〜STELLA〜 FC抽選会 メンバー個別 アンブレラマーカー",

@@ -3,10 +3,10 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import { BsCheck2, BsChevronDown } from "react-icons/bs";
 import { MetaFunction } from "react-router";
-import { Breadcrumb } from "~/components/Breadcrumb";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { ConcertPerformanceCount } from "./ConcertPeformanceCount";
+import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { ConcertPerformanceCount } from "./ConcertPeformanceCount.tsx";
 
 export const meta: MetaFunction = () => {
   return [

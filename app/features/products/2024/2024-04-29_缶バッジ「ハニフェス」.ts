@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ハニフェス_缶バッジ: RandomGoods = {
   id: "高嶺のなでしこ らんだむ缶バッジ",

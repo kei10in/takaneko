@@ -1,12 +1,12 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
 import { Link } from "react-router";
-import { displayDayOfWeek } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { CalendarEvent } from "./calendarEvents";
-import { LinkCalendarEventItem } from "./LinkCalendarEventItem";
-import { dateHref } from "./utils";
+import { displayDayOfWeek } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { CalendarEvent } from "./calendarEvents.ts";
+import { LinkCalendarEventItem } from "./LinkCalendarEventItem.tsx";
+import { dateHref } from "./utils.ts";
 
 interface Props {
   events: CalendarEvent[];

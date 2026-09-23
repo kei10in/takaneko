@@ -1,4 +1,4 @@
-import type { EdgeMap, PixelImage, RectCandidate } from "./types";
+import type { EdgeMap, PixelImage, RectCandidate } from "./types.ts";
 
 export const createEdgeMap = (image: PixelImage): EdgeMap => {
   const { width, height, channels, data } = image;

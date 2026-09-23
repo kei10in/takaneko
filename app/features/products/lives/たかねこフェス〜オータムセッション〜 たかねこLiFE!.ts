@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const たかねこフェス_オータムセッション_たかねこLiFE: LiveGoodsCollection = {
   slug: "たかねこフェス 〜オータムセッション〜 たかねこ LiFE!",

@@ -1,7 +1,7 @@
 import { MetaFunction } from "react-router";
-import { MemberProfile } from "~/components/MemberProfile";
-import { formatTitle } from "~/utils/htmlHeader";
-import { RiriHaruno } from "../../features/profile/members";
+import { MemberProfile } from "~/components/MemberProfile.tsx";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RiriHaruno } from "../../features/profile/members.ts";
 
 export const meta: MetaFunction = () => {
   return [

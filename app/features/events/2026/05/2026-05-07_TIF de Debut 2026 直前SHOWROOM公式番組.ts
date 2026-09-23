@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "~/features/events/eventMeta";
+import { EventMetaDescriptor } from "~/features/events/eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "TIF de Debut 2026 直前SHOWROOM公式番組",

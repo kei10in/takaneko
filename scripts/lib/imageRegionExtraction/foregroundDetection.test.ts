@@ -4,8 +4,8 @@ import {
   estimateBackgroundColor,
   findProjectionRuns,
   splitOversizedRuns,
-} from "./foregroundDetection";
-import type { PixelImage } from "./types";
+} from "./foregroundDetection.ts";
+import type { PixelImage } from "./types.ts";
 
 describe("foreground detection", () => {
   it("uses the image perimeter as the background reference", () => {

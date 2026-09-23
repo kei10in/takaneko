@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
-import { fitCatalogFrames } from "./catalogFrame";
-import { photoExtractionProfile } from "./profile";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types.ts";
+import { fitCatalogFrames } from "./catalogFrame.ts";
+import { photoExtractionProfile } from "./profile.ts";
 
 const createImage = (): PixelImage => {
   const width = 820;

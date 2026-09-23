@@ -1,5 +1,5 @@
-import { median } from "./geometry";
-import type { PixelImage } from "./types";
+import { median } from "./geometry.ts";
+import type { PixelImage } from "./types.ts";
 
 export const estimateBackgroundColor = (image: PixelImage): [number, number, number] => {
   const pixels: [number, number, number][] = [];

@@ -1,8 +1,8 @@
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { Link, MetaFunction, useLocation, useNavigate } from "react-router";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { NaoKizuki, SaaraHazuki } from "~/features/profile/members";
-import { formatTitle } from "~/utils/htmlHeader";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { NaoKizuki, SaaraHazuki } from "~/features/profile/members.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

@@ -3,8 +3,8 @@ import {
   chooseRepresentativeSize,
   groupByIndex,
   median,
-} from "../imageRegionExtraction/geometry";
-import type { ClusteredRect } from "../imageRegionExtraction/types";
+} from "../imageRegionExtraction/geometry.ts";
+import type { ClusteredRect } from "../imageRegionExtraction/types.ts";
 
 export interface AxisHypothesis {
   axis: "row" | "column";

@@ -1,4 +1,4 @@
-import { StaticMediaDescriptor } from "../types";
+import { StaticMediaDescriptor } from "../types.ts";
 
 export const StaticMedia2025: StaticMediaDescriptor[] = [
   {

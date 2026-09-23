@@ -11,9 +11,9 @@ import {
   HiVideoCamera,
 } from "react-icons/hi2";
 import { IconType } from "react-icons/lib";
-import { assertNever } from "~/utils/assertNever";
-import { UiColors } from "~/utils/uiColors";
-import { EventType, eventTypeColors } from "../events/EventType";
+import { assertNever } from "~/utils/assertNever.ts";
+import { UiColors } from "~/utils/uiColors.ts";
+import { EventType, eventTypeColors } from "../events/EventType.ts";
 
 interface Props {
   category: EventType;

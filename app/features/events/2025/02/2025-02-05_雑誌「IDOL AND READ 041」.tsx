@@ -1,6 +1,6 @@
-import { IDOL_AND_READ_041 } from "~/features/publications/publications/IDOL AND READ";
-import { EventMetaDescriptor } from "../../eventMeta";
-import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
+import { IDOL_AND_READ_041 } from "~/features/publications/publications/IDOL AND READ.ts";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
+import { convertPublicationToEventMeta } from "../../publicationToEventMeta.ts";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(IDOL_AND_READ_041);
 

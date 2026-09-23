@@ -1,4 +1,4 @@
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 export const getCalendarDatesOfMonth = (year: number, month: number): NaiveDate[][] => {
   const firstDate = new NaiveDate(year, month, 1);

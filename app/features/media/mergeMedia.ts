@@ -3,7 +3,7 @@ import {
   OgpMediaDescriptor,
   StaticMediaDescriptor,
   YouTubeVideoDescriptor,
-} from "~/features/media/types";
+} from "~/features/media/types.ts";
 
 export const mergeMedia = (
   youtube: YouTubeVideoDescriptor[],

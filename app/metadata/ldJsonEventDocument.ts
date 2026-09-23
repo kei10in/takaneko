@@ -1,9 +1,9 @@
 import { Graph } from "schema-dts";
-import type { EventMeta } from "~/features/events/eventMeta";
-import { eventBreadcrumbListDocument, LdJsonBreadcrumbList } from "./ldJsonBreadcrumbList";
-import { LdJsonIds } from "./ldJsonIds";
-import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent";
-import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage";
+import type { EventMeta } from "~/features/events/eventMeta.ts";
+import { eventBreadcrumbListDocument, LdJsonBreadcrumbList } from "./ldJsonBreadcrumbList.ts";
+import { LdJsonIds } from "./ldJsonIds.ts";
+import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent.ts";
+import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage.ts";
 
 export type LdJsonEventDocument =
   | (Graph & {

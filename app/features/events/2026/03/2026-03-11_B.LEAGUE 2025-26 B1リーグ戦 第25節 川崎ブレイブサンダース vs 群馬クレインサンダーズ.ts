@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "B.LEAGUE 2025-26 B1リーグ戦 第25節 川崎ブレイブサンダース vs 群馬クレインサンダーズ",

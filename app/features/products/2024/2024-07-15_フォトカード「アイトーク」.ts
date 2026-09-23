@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const アイトーク_フォトカード: RandomGoods = {
   id: "フォトカード (アイトーク ver)",

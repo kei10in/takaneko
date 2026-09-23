@@ -1,6 +1,6 @@
 import { MetaFunction } from "react-router";
-import { Mdx } from "~/components/Mdx";
-import { formatTitle } from "~/utils/htmlHeader";
+import { Mdx } from "~/components/Mdx.tsx";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import Memo from "./memo.mdx";
 
 export const meta: MetaFunction = () => {

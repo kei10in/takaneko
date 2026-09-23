@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { CalendarEventItem } from "./CalendarEventItem";
+import { CalendarEventItem } from "./CalendarEventItem.tsx";
 
 type Props = React.ComponentProps<typeof Link> & React.ComponentProps<typeof CalendarEventItem>;
 

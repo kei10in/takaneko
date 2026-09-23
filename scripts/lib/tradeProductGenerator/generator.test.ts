@@ -2,7 +2,7 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { generateTradeProduct } from "./generator";
+import { generateTradeProduct } from "./generator.ts";
 
 describe("generateTradeProduct", { timeout: 15_000 }, () => {
   const temporaryDirectories: string[] = [];
@@ -22,7 +22,7 @@ describe("generateTradeProduct", { timeout: 15_000 }, () => {
     await writeFile(
       path.join(repositoryRoot, "app/features/products/productImages.ts"),
       [
-        'import { RandomGoods } from "./product";',
+        'import { RandomGoods } from "./product.ts";',
         "export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [];",
         "export const TAKANEKO_PHOTOS: RandomGoods[] = [];",
       ].join("\n"),
@@ -54,7 +54,7 @@ describe("generateTradeProduct", { timeout: 15_000 }, () => {
     const releases = await readFile(result.value.releaseNotesPath, "utf8");
     expect(definition).toContain("export const 生成テスト_ミニフォト: RandomGoods");
     expect(definition).toContain("positions: [");
-    expect(registration).toContain("生成テスト_ミニフォト");
+    expect(registration).toContain('from "./2026/2026-07-20_ミニフォトカード「生成テスト」.ts"');
     expect(releases).toContain("## 2026-07-20");
     expect(await readFile(result.value.imagePath)).toEqual(await readFile(inputPath));
   });

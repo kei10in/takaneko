@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
-import { SelectableEmojis, StampType } from "~/features/trade/stamp";
+import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus.ts";
+import { SelectableEmojis, StampType } from "~/features/trade/stamp.ts";
 
 interface TradeState {
   allTradeDescriptions: Record<string, Record<number, TradeDescription>>;

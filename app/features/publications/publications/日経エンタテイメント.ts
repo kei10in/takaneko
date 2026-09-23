@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 日経エンタテインメント_2025年10月号: Publication = {
   slug: "日経エンタテインメント！ 2025年10月号",

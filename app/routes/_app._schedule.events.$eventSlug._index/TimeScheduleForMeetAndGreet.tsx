@@ -2,9 +2,9 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { BsClockHistory } from "react-icons/bs";
 import { GiAmpleDress } from "react-icons/gi";
-import { MeetAndGreetSession } from "~/features/events/timeSchedule";
-import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { MeetAndGreetSession } from "~/features/events/timeSchedule.ts";
+import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 interface Props {
   date: NaiveDate;

@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const LARME高嶺のなでしこ_ステッカー: RandomGoods = {
   id: "ステッカー「LARME×高嶺のなでしこ」",

@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "CSテレ朝チャンネル1「ワンマンライブ 2025 〜Cute for life〜「完全版」」",

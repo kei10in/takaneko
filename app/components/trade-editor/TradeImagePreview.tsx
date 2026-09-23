@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { BsBoxArrowUp } from "react-icons/bs";
-import { RandomGoods } from "~/features/products/product";
-import { TradeDescription } from "~/features/trade/TradeStatus";
-import { PARSED_UA } from "~/utils/ua";
-import { ImageLoader } from "../ImageLoader";
-import { drawTradeImage } from "./drawTradeImage";
-import { shareTradeImage } from "./shareTradeImage";
+import { RandomGoods } from "~/features/products/product.ts";
+import { TradeDescription } from "~/features/trade/TradeStatus.ts";
+import { PARSED_UA } from "~/utils/ua.ts";
+import { ImageLoader } from "../ImageLoader.tsx";
+import { drawTradeImage } from "./drawTradeImage.ts";
+import { shareTradeImage } from "./shareTradeImage.ts";
 
 interface Props {
   productImage: RandomGoods;

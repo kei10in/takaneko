@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ミニアクリルスタンドキーホルダーメンバーソロ写真: RandomGoods = {
   id: "2nd シングル セブンネット限定特典",

@@ -6,11 +6,11 @@ import {
   useLoaderData,
   useSearchParams,
 } from "react-router";
-import { SharableUrl } from "~/components/SharableUrl";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { formatTitle } from "~/utils/htmlHeader";
-import { shortlink, ShortLinkResult } from "~/utils/shortlink";
+import { SharableUrl } from "~/components/SharableUrl.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { shortlink, ShortLinkResult } from "~/utils/shortlink.ts";
 
 export const meta: MetaFunction = () => {
   return [

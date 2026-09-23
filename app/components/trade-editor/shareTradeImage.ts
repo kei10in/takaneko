@@ -1,7 +1,7 @@
-import { RandomGoods } from "~/features/products/product";
-import { TradeDescription } from "~/features/trade/TradeStatus";
-import { canvasToFile } from "~/utils/html/canvasToFile";
-import { drawTradeImage } from "./drawTradeImage";
+import { RandomGoods } from "~/features/products/product.ts";
+import { TradeDescription } from "~/features/trade/TradeStatus.ts";
+import { canvasToFile } from "~/utils/html/canvasToFile.ts";
+import { drawTradeImage } from "./drawTradeImage.ts";
 
 export const shareTradeImage = async (
   productImage: RandomGoods,

@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "ばってん少女隊2024 春が来てureshiinoツアー 〜さがしものがみつかるZepp〜",

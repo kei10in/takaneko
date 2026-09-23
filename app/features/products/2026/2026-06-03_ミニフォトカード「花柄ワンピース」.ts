@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { REGULAR_MINI_PHOTO_SET2 } from "../utils.ts";
 
 export const ボタニカル衣装_ミニフォト: RandomGoods = {
   // 後から「ボタニカル衣装」と判明したため従来使っていた名前のままにしておく。

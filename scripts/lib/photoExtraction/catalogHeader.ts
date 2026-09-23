@@ -2,8 +2,8 @@ import {
   createForegroundMask,
   estimateBackgroundColor,
   findProjectionRuns,
-} from "../imageRegionExtraction/foregroundDetection";
-import type { PixelImage } from "../imageRegionExtraction/types";
+} from "../imageRegionExtraction/foregroundDetection.ts";
+import type { PixelImage } from "../imageRegionExtraction/types.ts";
 
 const FOREGROUND_THRESHOLDS = [20, 45, 100];
 const MINIMUM_ROW_SUPPORT_RATIO = 0.02;

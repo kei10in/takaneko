@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const クリスマス2025_アクリルコースター: RandomGoods = {
   id: "アクリルコースター「クリスマス2025」ver.",

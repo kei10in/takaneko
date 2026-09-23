@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { chooseRepresentativeSize, intersectionOverUnion } from "./geometry";
+import { chooseRepresentativeSize, intersectionOverUnion } from "./geometry.ts";
 
 describe("intersectionOverUnion", () => {
   it("measures overlap independently of rectangle position", () => {

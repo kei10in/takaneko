@@ -1,9 +1,9 @@
 import { Image, loadImage } from "canvas";
 import Konva from "konva";
 import "konva/canvas-backend";
-import { ImagePosition } from "~/features/products/product";
-import { Rect } from "~/utils/types/dimensions";
-import { Size } from "~/utils/types/Size";
+import { ImagePosition } from "~/features/products/product.ts";
+import { Rect } from "~/utils/types/dimensions.ts";
+import { Size } from "~/utils/types/Size.ts";
 
 export class RandomGoodsItemList {
   readonly frame: Size;

@@ -5,9 +5,9 @@ import tailwindcss from "@tailwindcss/vite";
 import gfm from "remark-gfm";
 import { defineConfig } from "vite";
 import Inspect from "vite-plugin-inspect";
-import { allowBrTags } from "./app/utils/rehype/allowBrTags";
-import { gfmAlert } from "./app/utils/rehype/gfmAlert";
-import { takanekono } from "./app/vite/plugin";
+import { allowBrTags } from "./app/utils/rehype/allowBrTags.ts";
+import { gfmAlert } from "./app/utils/rehype/gfmAlert.ts";
+import { takanekono } from "./app/vite/plugin.ts";
 
 export default defineConfig({
   resolve: {

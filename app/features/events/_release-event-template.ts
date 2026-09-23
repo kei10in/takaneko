@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "~/features/events/eventMeta";
+import { EventMetaDescriptor } from "~/features/events/eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "1st アルバム「見上げるたびに、恋をする。」リリースイベント",

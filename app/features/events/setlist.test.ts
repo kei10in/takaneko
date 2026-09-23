@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseSetlist } from "./setlist";
+import { parseSetlist } from "./setlist.ts";
 
 describe("parseSetlist", () => {
   it("parses a simple stage plan with songs and MCs", () => {

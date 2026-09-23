@@ -1,5 +1,5 @@
 import { createRequestHandler } from "react-router";
-import { createCloudflareLoadContext } from "./context";
+import { createCloudflareLoadContext } from "./context.ts";
 
 const requestHandler = createRequestHandler(
   // ビルド後にしか存在しないモジュールであるため、request handler から動的に import します。

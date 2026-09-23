@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 超NATSUZOME2025限定カード: RandomGoods = {
   id: "超NATSUZOME2025限定カード",

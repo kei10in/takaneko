@@ -1,4 +1,4 @@
-import { OgpMediaDescriptor } from "../types";
+import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2023: OgpMediaDescriptor[] = [
   {

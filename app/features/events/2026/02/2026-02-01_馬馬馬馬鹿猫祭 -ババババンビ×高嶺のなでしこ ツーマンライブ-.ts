@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "馬馬馬馬鹿猫祭 -ババババンビ×高嶺のなでしこ ツーマンライブ-",

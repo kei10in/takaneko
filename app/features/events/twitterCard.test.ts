@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { makeEventMetaForTest } from "./testUtils";
-import { twitterCard } from "./twitterCard";
+import { makeEventMetaForTest } from "./testUtils.ts";
+import { twitterCard } from "./twitterCard.ts";
 
 describe("twitterCard", () => {
   it("should generate basic twitter card meta tags without image", () => {

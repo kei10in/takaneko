@@ -5,22 +5,22 @@ import process from "node:process";
 import path from "path";
 import { format, resolveConfig, resolveConfigFile } from "prettier";
 import { dedent } from "ts-dedent";
-import { mediaKey } from "~/features/media/mediaDescriptor";
-import { getAllMediaMetadata } from "~/features/media/metadata";
+import { mediaKey } from "~/features/media/mediaDescriptor.ts";
+import { getAllMediaMetadata } from "~/features/media/metadata.ts";
 import {
   MediaDescriptor,
   MediaDetails,
   OgpMediaDescriptor,
   YouTubeVideoDescriptor,
-} from "~/features/media/types";
-import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty";
-import { Err, Ok, type Result } from "~/utils/result";
-import { getAllMedia } from "../app/features/media/allMedia";
-import { NaiveDate } from "../app/utils/datetime/NaiveDate";
-import type { SocialCards } from "../app/utils/ogp/metaData";
-import { ogp } from "../app/utils/ogp/ogp";
-import type { YouTubeOEmbedResponse } from "../app/utils/youtube/types";
-import { validateYouTubeOEmbedResponse } from "../app/utils/youtube/youtubeOEmbed";
+} from "~/features/media/types.ts";
+import { findFirstNonEmpty } from "~/utils/findFirstNonEmpty.ts";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import { getAllMedia } from "../app/features/media/allMedia.ts";
+import { NaiveDate } from "../app/utils/datetime/NaiveDate.ts";
+import type { SocialCards } from "../app/utils/ogp/metaData.ts";
+import { ogp } from "../app/utils/ogp/ogp.ts";
+import type { YouTubeOEmbedResponse } from "../app/utils/youtube/types.ts";
+import { validateYouTubeOEmbedResponse } from "../app/utils/youtube/youtubeOEmbed.ts";
 
 const OUTPUT_DIR = path.resolve(import.meta.dirname, "../app/features/media");
 const oEmbedEndpoint = "https://www.youtube.com/oembed";
@@ -133,7 +133,7 @@ const fetchAndCacheMediaMetadata = async () => {
       const outputFilePath = path.resolve(OUTPUT_DIR, year.toString(), "metadata.ts");
 
       const metadataContent = dedent(`
-        import { MediaDetails } from "~/features/media/types";
+        import { MediaDetails } from "~/features/media/types.ts";
 
         export const metadata${year}: MediaDetails[] = ${JSON.stringify(media, null, 2)};
         `);

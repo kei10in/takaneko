@@ -9,23 +9,23 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { Link, MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
-import { cloudflareContext } from "~/cloudflare-context";
-import { dialogBackdropStyle, pageBox } from "~/components/styles";
-import { XMarkButton } from "~/components/XMarkButton";
-import { AllStageCostumes } from "~/features/costumes/costumesStage";
-import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents";
+import { cloudflareContext } from "~/cloudflare-context.ts";
+import { dialogBackdropStyle, pageBox } from "~/components/styles.ts";
+import { XMarkButton } from "~/components/XMarkButton.tsx";
+import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
+import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents.ts";
 import {
   defaultSetlistSearchFilters,
   SetlistLiveFilters,
   SetlistSearchFilters,
   SetlistSelectedLiveFilterType,
   SetlistYearFilters,
-} from "~/features/setlists/searchFilters";
-import { SetlistEvents } from "~/features/setlists/types";
-import { PerformedSongs } from "~/features/songs/songsFiltered";
-import { formatTitle } from "~/utils/htmlHeader";
-import type { Route } from "./+types/route";
-import { SetlistEventCard } from "./SetlistEventCard";
+} from "~/features/setlists/searchFilters.ts";
+import { SetlistEvents } from "~/features/setlists/types.ts";
+import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import type { Route } from "./+types/route.ts";
+import { SetlistEventCard } from "./SetlistEventCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

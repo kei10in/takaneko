@@ -1,6 +1,6 @@
 import { z } from "zod/v4";
-import { parseMemberName } from "../profile/parseMemberName";
-import { MemberIdEnum } from "../profile/types";
+import { parseMemberName } from "../profile/parseMemberName.ts";
+import { MemberIdEnum } from "../profile/types.ts";
 
 export const Segment = z.discriminatedUnion("kind", [
   z.object({

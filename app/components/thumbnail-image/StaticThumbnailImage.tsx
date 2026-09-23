@@ -1,4 +1,4 @@
-import { thumbnailSrcSet } from "~/utils/fileConventions";
+import { thumbnailSrcSet } from "~/utils/fileConventions.ts";
 
 type Props = Omit<React.ComponentProps<"img">, "src" | "srcSet" | "alt"> & {
   src: string;

@@ -6,7 +6,7 @@ import {
   extractMiniPhotoPositions,
   extractMiniPhotoPositionsFromPixels,
   type PixelImage,
-} from "./extractMiniPhotoPositions";
+} from "./extractMiniPhotoPositions.ts";
 
 interface Rect {
   x: number;

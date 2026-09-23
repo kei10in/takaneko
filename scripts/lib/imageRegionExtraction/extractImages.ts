@@ -1,8 +1,8 @@
 import { mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
-import { Err, Ok, type Result } from "~/utils/result";
-import type { ExtractedPositions, ExtractPositionsError } from "./types";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import type { ExtractedPositions, ExtractPositionsError } from "./types.ts";
 
 export interface ExtractedImages {
   outputDirectory: string;

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { SongMeta } from "./SongMeta";
-import { SongMetaDescriptor } from "./types";
+import { SongMeta } from "./SongMeta.ts";
+import { SongMetaDescriptor } from "./types.ts";
 
 describe("SongMeta", () => {
   describe("firstAppearance", () => {

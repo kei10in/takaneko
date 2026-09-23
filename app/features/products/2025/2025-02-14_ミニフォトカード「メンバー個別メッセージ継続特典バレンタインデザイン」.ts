@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const メンバー個別メッセージ継続特典バレンタインデザイン_ミニフォト: RandomGoods = {
   id: "メンバー個別メッセージ継続特典バレンタイン デザイン ミニフォトカード",

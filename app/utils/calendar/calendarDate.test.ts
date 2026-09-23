@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { getCalendarDatesOfMonth } from "./calendarDate";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { getCalendarDatesOfMonth } from "./calendarDate.ts";
 
 describe("getCalendarDatesOfMonth", () => {
   expect.addEqualityTesters([

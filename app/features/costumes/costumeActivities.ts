@@ -1,8 +1,8 @@
-import { Act } from "../events/act";
-import { EventModule } from "../events/eventModule";
-import { EventType, LiveType } from "../events/EventType";
-import { AllCostumes } from "./costumes";
-import { LivesForCostume } from "./types";
+import { Act } from "../events/act.ts";
+import { EventModule } from "../events/eventModule.ts";
+import { EventType, LiveType } from "../events/EventType.ts";
+import { AllCostumes } from "./costumes.ts";
+import { LivesForCostume } from "./types.ts";
 
 export const makeLivesForCostumes = (events: EventModule[]): LivesForCostume[] => {
   // Key は costume name

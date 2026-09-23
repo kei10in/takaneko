@@ -1,7 +1,7 @@
 import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { Err, Ok, type Result } from "~/utils/result";
-import { generateTradeProductImage, type GenerateTradeProductImageError } from "./image";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import { generateTradeProductImage, type GenerateTradeProductImageError } from "./image.ts";
 import {
   buildProductDescriptor,
   productDefinitionPath,
@@ -12,7 +12,7 @@ import {
   updateReleaseNotes,
   type TradeProductDescriptorError,
   type TradeProductInput,
-} from "./productDefinition";
+} from "./productDefinition.ts";
 
 export interface GenerateTradeProductRequest {
   repositoryRoot: string;
@@ -105,7 +105,7 @@ export const generateTradeProduct = async (
     definition = await renderProductDefinition(descriptor.value, image.value);
     updatedProductImages = await updateProductImagesSource(productImagesSource, {
       exportName: descriptor.value.exportName,
-      importPath: `./${descriptor.value.year}/${descriptor.value.stem}`,
+      importPath: `./${descriptor.value.year}/${descriptor.value.stem}.ts`,
     });
   } catch (error: unknown) {
     return Err({ kind: "repository-update-failed", message: errorMessage(error) });

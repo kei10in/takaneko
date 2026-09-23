@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const CROWNED_IN_BLOOM_ステッカー: RandomGoods = {
   id: "ステッカー「CROWNED IN BLOOM」",

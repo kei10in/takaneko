@@ -17,26 +17,31 @@ import {
   BsPencilSquare,
   BsTrashFill,
 } from "react-icons/bs";
-import { RandomGoods } from "~/features/products/product";
-import { useTradeEditorPanelStore } from "~/features/trade/store";
+import { RandomGoods } from "~/features/products/product.ts";
+import { useTradeEditorPanelStore } from "~/features/trade/store.ts";
 import {
   Stamp,
   totalHaveCount,
   totalWant,
   TradeDescription,
   TradeStatus,
-} from "~/features/trade/TradeStatus";
-import { convertToTradeText } from "~/features/tradeSummaries/tradeText";
-import { RandomGoodsList } from "~/routes/_app.trade/RandomGoodsList";
-import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { CopyButton } from "../CopyButton";
-import { dialogBackdropStyle, dialogBaseStyle, dialogPanelStyle, sectionHeading } from "../styles";
-import { XMarkButton } from "../XMarkButton";
-import { EmojiPanel } from "./EmojiPanel";
-import { HtmlTradeImage } from "./HtmlTradeImage";
-import { shareTradeImage } from "./shareTradeImage";
-import { TradeEditorDetail2 } from "./TradeEditorDetail2";
-import { TradeImagePreview } from "./TradeImagePreview";
+} from "~/features/trade/TradeStatus.ts";
+import { convertToTradeText } from "~/features/tradeSummaries/tradeText.ts";
+import { RandomGoodsList } from "~/routes/_app.trade/RandomGoodsList.tsx";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
+import { CopyButton } from "../CopyButton.tsx";
+import {
+  dialogBackdropStyle,
+  dialogBaseStyle,
+  dialogPanelStyle,
+  sectionHeading,
+} from "../styles.ts";
+import { XMarkButton } from "../XMarkButton.tsx";
+import { EmojiPanel } from "./EmojiPanel.tsx";
+import { HtmlTradeImage } from "./HtmlTradeImage.tsx";
+import { shareTradeImage } from "./shareTradeImage.ts";
+import { TradeEditorDetail2 } from "./TradeEditorDetail2.tsx";
+import { TradeImagePreview } from "./TradeImagePreview.tsx";
 
 interface Props {
   productImage: RandomGoods;

@@ -1,4 +1,4 @@
-import { SongMetaDescriptor } from "~/features/songs/types";
+import { SongMetaDescriptor } from "~/features/songs/types.ts";
 
 interface Props {
   song: SongMetaDescriptor;

@@ -1,9 +1,9 @@
 import { Link, MetaFunction, useParams } from "react-router";
-import { ImageSlide2 } from "~/components/ImageSlide2";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { LiveGoods } from "~/features/products/liveGoods";
-import { LiveGoodsCollection } from "~/features/products/product";
-import { formatTitle } from "~/utils/htmlHeader";
+import { ImageSlide2 } from "~/components/ImageSlide2.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { LiveGoods } from "~/features/products/liveGoods.ts";
+import { LiveGoodsCollection } from "~/features/products/product.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = ({ params }) => {
   const slug = params.slug;

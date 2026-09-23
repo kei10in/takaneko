@@ -9,13 +9,13 @@ import {
   BsTrash,
 } from "react-icons/bs";
 import { Link } from "react-router";
-import { pageHeading, sectionHeading } from "~/components/styles";
-import { DomainName, OgpSiteName } from "~/constants";
-import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
-import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { formatTitle } from "~/utils/htmlHeader";
-import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
-import { Route } from "./+types/route";
+import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { DomainName, OgpSiteName } from "~/constants.ts";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
+import { Route } from "./+types/route.ts";
 
 export const meta: Route.MetaFunction = ({ location }) => {
   const title = formatTitle("トレード画像つくるやつ");

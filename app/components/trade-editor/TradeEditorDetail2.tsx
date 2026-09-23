@@ -4,14 +4,14 @@ import { useMemo } from "react";
 import { BsBan } from "react-icons/bs";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { RandomGoods } from "~/features/products/product";
-import { TradeListImage } from "~/features/products/productImages";
-import { SelectableEmojis } from "~/features/trade/stamp";
-import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus";
-import { ClippedImage } from "../ClippedImage";
-import { TradeStateButton } from "./TradeStateButton";
-import { TradeStatusStamp } from "./TradeStatusStamp";
+import { RandomGoods } from "~/features/products/product.ts";
+import { TradeListImage } from "~/features/products/productImages.ts";
+import { SelectableEmojis } from "~/features/trade/stamp.ts";
+import { stampPositions } from "~/features/trade/stampPosition.ts";
+import { TradeDescription, TradeStatus } from "~/features/trade/TradeStatus.ts";
+import { ClippedImage } from "../ClippedImage.tsx";
+import { TradeStateButton } from "./TradeStateButton.tsx";
+import { TradeStatusStamp } from "./TradeStatusStamp.tsx";
 
 interface Props {
   productImage: RandomGoods;

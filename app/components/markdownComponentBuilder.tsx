@@ -1,6 +1,6 @@
 import { MDXContent, MDXProps } from "mdx/types";
 import { Components } from "react-markdown";
-import { Markdown } from "./Markdown";
+import { Markdown } from "./Markdown.tsx";
 
 export const makeMarkdownComponent = (mdStr: string): MDXContent => {
   const MarkdownContent = (props: MDXProps) => {

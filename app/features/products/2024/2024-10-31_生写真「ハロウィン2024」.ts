@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { CENTERED_PHOTO_SET } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { CENTERED_PHOTO_SET } from "../utils.ts";
 
 export const ハロウィン2024_生写真: RandomGoods = {
   id: "生写真「ハロウィン2024」ver",

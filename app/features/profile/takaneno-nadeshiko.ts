@@ -1,4 +1,4 @@
-import { GroupDescription, MemberCollectionDescription, MemberIdEnum } from "./types";
+import { GroupDescription, MemberCollectionDescription, MemberIdEnum } from "./types.ts";
 
 export const AllMembersProfile: MemberCollectionDescription = {
   id: "all",

@@ -1,8 +1,8 @@
 import * as csv from "@fast-csv/format";
 import fs, { writeFileSync } from "node:fs";
 import { register } from "node:module";
-import { SongSegment } from "~/features/events/setlist";
-import { Events } from "./lib/events";
+import { SongSegment } from "~/features/events/setlist.ts";
+import { Events } from "./lib/events.ts";
 
 register("@mdx-js/node-loader", import.meta.url);
 

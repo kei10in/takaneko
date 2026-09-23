@@ -1,7 +1,7 @@
 import { RouterContextProvider } from "react-router";
 import { describe, expect, it, vi } from "vitest";
-import { cloudflareContext } from "../app/cloudflare-context";
-import { createCloudflareLoadContext } from "./context";
+import { cloudflareContext } from "../app/cloudflare-context.ts";
+import { createCloudflareLoadContext } from "./context.ts";
 
 describe("createCloudflareLoadContext", () => {
   it("creates a RouterContextProvider with Cloudflare bindings", () => {

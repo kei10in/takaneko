@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const _4thAnniversarySTELLA_缶バッジ: RandomGoods = {
   id: "缶バッジ「STELLA」",

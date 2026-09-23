@@ -1,8 +1,8 @@
 import { MetaFunction } from "react-router";
-import { Markdown } from "~/components/Markdown";
-import { markdownComponents2 } from "~/components/MdComponents2";
-import { pageBox } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
+import { Markdown } from "~/components/Markdown.tsx";
+import { markdownComponents2 } from "~/components/MdComponents2.tsx";
+import { pageBox } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import article from "./article.md?raw";
 
 export const meta: MetaFunction = () => {

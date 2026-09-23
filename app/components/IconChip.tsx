@@ -12,8 +12,8 @@ import {
 } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, MeetAndGreetType } from "~/features/events/EventType";
-import { assertNever } from "~/utils/assertNever";
+import { LiveType, MeetAndGreetType } from "~/features/events/EventType.ts";
+import { assertNever } from "~/utils/assertNever.ts";
 
 interface IconChipProps {
   icon: IconType;

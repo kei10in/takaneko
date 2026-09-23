@@ -3,8 +3,8 @@ import { Transformer } from "@napi-rs/image";
 import { once } from "node:events";
 import { createServer, type Server } from "node:http";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { createDevThumbnailMiddleware } from "./devThumbnail";
-import { loadDevThumbnail } from "./loadDevThumbnail";
+import { createDevThumbnailMiddleware } from "./devThumbnail.ts";
+import { loadDevThumbnail } from "./loadDevThumbnail.ts";
 
 const makeImage = (width: number, height: number) =>
   Transformer.fromRgbaPixels(Buffer.alloc(width * height * 4, 255), width, height).png();

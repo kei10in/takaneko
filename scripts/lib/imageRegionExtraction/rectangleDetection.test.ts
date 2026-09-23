@@ -3,7 +3,7 @@ import {
   createBoundaryPairs,
   findProjectionPeaks,
   suppressDuplicateRectangles,
-} from "./rectangleDetection";
+} from "./rectangleDetection.ts";
 
 describe("rectangle detection", () => {
   it("retains the strongest projection peaks in coordinate order", () => {

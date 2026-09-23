@@ -1,4 +1,4 @@
-import { PARSED_UA } from "~/utils/ua";
+import { PARSED_UA } from "~/utils/ua.ts";
 
 export const shouldUseWebShareApi = () => {
   return typeof window === "undefined"

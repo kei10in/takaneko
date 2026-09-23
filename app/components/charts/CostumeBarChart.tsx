@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { useState } from "react";
-import { calculateChartDimensions } from "./scale";
+import { calculateChartDimensions } from "./scale.ts";
 
 interface Props {
   costume: {

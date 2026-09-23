@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { ClusteredRect } from "../imageRegionExtraction/types";
-import { applyAxisHypothesis, inferAxisHypotheses } from "./catalogAxisHypotheses";
+import type { ClusteredRect } from "../imageRegionExtraction/types.ts";
+import { applyAxisHypothesis, inferAxisHypotheses } from "./catalogAxisHypotheses.ts";
 
 const frame = (row: number, column: number, x: number, y: number): ClusteredRect => ({
   x,

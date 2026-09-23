@@ -1,4 +1,4 @@
-import { EventMeta } from "./eventMeta";
+import { EventMeta } from "./eventMeta.ts";
 
 /**
  * テスト用の EventMeta を作成する関数

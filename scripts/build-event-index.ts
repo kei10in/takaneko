@@ -1,14 +1,14 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { register } from "node:module";
 import { dirname } from "node:path";
-import { makeLivesForCostumes } from "~/features/costumes/costumeActivities";
-import { EventModule } from "~/features/events/eventModule";
-import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents";
-import { makeLivesForSongMap } from "~/features/songs/songActivities";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { makeSongPerformedList } from "~/features/stats/performanceCount";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { Events } from "./lib/events";
+import { makeLivesForCostumes } from "~/features/costumes/costumeActivities.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents.ts";
+import { makeLivesForSongMap } from "~/features/songs/songActivities.ts";
+import { ALL_SONGS } from "~/features/songs/songs.ts";
+import { makeSongPerformedList } from "~/features/stats/performanceCount.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { Events } from "./lib/events.ts";
 
 register("@mdx-js/node-loader", import.meta.url);
 

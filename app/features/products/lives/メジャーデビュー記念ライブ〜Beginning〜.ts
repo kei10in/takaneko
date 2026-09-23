@@ -1,6 +1,6 @@
-import { Beginning_ミニフォト } from "../2024/2024-04-08_ミニフォトカード「Beginning」";
-import { Beginning_生写真 } from "../2024/2024-04-08_生写真「Beginning」";
-import { LiveGoodsCollection } from "../product";
+import { Beginning_ミニフォト } from "../2024/2024-04-08_ミニフォトカード「Beginning」.ts";
+import { Beginning_生写真 } from "../2024/2024-04-08_生写真「Beginning」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const メジャーデビュー記念ライブBeginning: LiveGoodsCollection = {
   slug: "メジャーデビュー記念ライブ〜Beginning〜",

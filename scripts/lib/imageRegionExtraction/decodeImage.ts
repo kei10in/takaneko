@@ -1,6 +1,6 @@
 import sharp from "sharp";
-import { Err, Ok, type Result } from "~/utils/result";
-import type { ExtractPositionsError, PixelImage } from "./types";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import type { ExtractPositionsError, PixelImage } from "./types.ts";
 
 export const decodePixelImage = async (
   input: Uint8Array,

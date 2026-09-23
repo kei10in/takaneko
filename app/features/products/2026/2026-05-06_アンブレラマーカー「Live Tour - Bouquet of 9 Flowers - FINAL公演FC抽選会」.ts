@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const BouquetOf9FlowersFinal_アンブレラマーカー: RandomGoods = {
   id: "Live Tour - Bouquet of 9 Flowers - FINAL公演FC抽選会 メンバー個別 アンブレラマーカー",

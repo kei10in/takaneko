@@ -1,6 +1,6 @@
 import { MDXContent } from "mdx/types";
 import { Components } from "react-markdown";
-import { components as markdownComponents } from "./MdComponents";
+import { components as markdownComponents } from "./MdComponents.tsx";
 
 interface Props {
   components?: Components;

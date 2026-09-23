@@ -1,6 +1,6 @@
-import { isMonthInRange, MonthRange } from "~/utils/datetime/MonthRange";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
+import { isMonthInRange, MonthRange } from "~/utils/datetime/MonthRange.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
 
 export const validateYearMonth = (args: {
   year: string | undefined;

@@ -1,6 +1,6 @@
-import { validateEventMeta } from "~/features/events/eventMeta";
-import { EventModule } from "~/features/events/eventModule";
-import { EventType } from "~/features/events/EventType";
+import { validateEventMeta } from "~/features/events/eventMeta.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { EventType } from "~/features/events/EventType.ts";
 
 export const buildEventModule = ({
   slug,

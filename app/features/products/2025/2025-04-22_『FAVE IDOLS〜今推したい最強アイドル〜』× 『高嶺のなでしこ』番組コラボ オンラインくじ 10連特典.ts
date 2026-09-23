@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const FAVE_IDOLS_オンラインくじ10連特典: RandomGoods = {
   id: "FAVE IDOLS オンラインくじ",

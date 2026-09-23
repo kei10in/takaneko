@@ -1,7 +1,7 @@
 import twitter from "twitter-text";
-import { compareEventMeta, EventMeta } from "~/features/events/eventMeta";
-import { EventType, eventTypeToEmoji } from "~/features/events/EventType";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { compareEventMeta, EventMeta } from "~/features/events/eventMeta.ts";
+import { EventType, eventTypeToEmoji } from "~/features/events/EventType.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 /**
  * Social Media にポストするようのテキストを生成します。

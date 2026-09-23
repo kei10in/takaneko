@@ -1,4 +1,4 @@
-import { StageCostume } from "./types";
+import { StageCostume } from "./types.ts";
 
 export const _2026夏衣装 = {
   kind: "stage",

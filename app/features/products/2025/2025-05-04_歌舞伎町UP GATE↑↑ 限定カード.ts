@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 歌舞伎町UP_GATE限定カード: RandomGoods = {
   id: "歌舞伎町UP GATE↑↑ 限定カード",

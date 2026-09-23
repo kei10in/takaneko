@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { assertValidSlug } from "~/utils/tests/slug";
-import { AllCostumes } from "./costumes";
+import { assertValidSlug } from "~/utils/tests/slug.ts";
+import { AllCostumes } from "./costumes.ts";
 
 describe("costumes", () => {
   it("should have unique slugs", () => {

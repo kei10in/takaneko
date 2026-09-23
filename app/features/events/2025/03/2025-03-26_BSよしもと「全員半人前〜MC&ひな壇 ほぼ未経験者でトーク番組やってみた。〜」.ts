@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "BSよしもと「全員半人前〜MC&ひな壇 ほぼ未経験者でトーク番組やってみた。〜 #16」",

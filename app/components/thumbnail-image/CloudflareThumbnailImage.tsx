@@ -1,6 +1,6 @@
 import { useRouteLoaderData } from "react-router";
-import { DomainName } from "~/constants";
-import { loader } from "~/root";
+import { DomainName } from "~/constants.ts";
+import { loader } from "~/root.tsx";
 
 type Props = Omit<React.ComponentProps<"img">, "src" | "srcSet" | "alt"> & {
   src: string;

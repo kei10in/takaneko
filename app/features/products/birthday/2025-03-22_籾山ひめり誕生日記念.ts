@@ -1,5 +1,5 @@
 import { dedent } from "ts-dedent";
-import { BirthdayGoodsCollection, OfficialGoods } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product.ts";
 
 export const あくすたひめり生誕ばーじょん: OfficialGoods = {
   slug: "あくすたひめり生誕ばーじょん",

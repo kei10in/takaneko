@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const シティ情報Fukuoka_2025年8月号: Publication = {
   slug: "シティ情報Fukuoka 2025.8月号",

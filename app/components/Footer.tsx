@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import { FaDiscord, FaGithub, FaInstagram, FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { SiBereal } from "react-icons/si";
 import { Link } from "react-router";
-import { SiteName } from "~/constants";
+import { SiteName } from "~/constants.ts";
 
 interface Props {
   className?: string;

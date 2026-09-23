@@ -2,8 +2,8 @@ import {
   otherTakanekoRandomGoods,
   regularTakanekoMiniPhotoCards,
   regularTakanekoPhotos,
-} from "~/features/products/productImages";
-import { crop, CroppingOptions } from "./lib/crop";
+} from "~/features/products/productImages.ts";
+import { crop, CroppingOptions } from "./lib/crop.ts";
 
 const main = async () => {
   const rebuild = process.argv.includes("--rebuild");

@@ -1,4 +1,4 @@
-import { calculateChartDimensions } from "./scale";
+import { calculateChartDimensions } from "./scale.ts";
 
 interface Props {
   data: { key: string; value: number }[];

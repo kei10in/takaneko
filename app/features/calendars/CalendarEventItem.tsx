@@ -1,11 +1,11 @@
 import { clsx } from "clsx";
 import { BsClock } from "react-icons/bs";
 import { HiOutlineMapPin } from "react-icons/hi2";
-import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
-import { EventType, eventTypeBackgroundColor } from "../events/EventType";
-import { CalendarEvent } from "./calendarEvents";
-import { EventMetaChips } from "./EventMetaChips";
-import { EventTypeLabel } from "./EventTypeLabel";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { EventType, eventTypeBackgroundColor } from "../events/EventType.ts";
+import { CalendarEvent } from "./calendarEvents.ts";
+import { EventMetaChips } from "./EventMetaChips.tsx";
+import { EventTypeLabel } from "./EventTypeLabel.tsx";
 
 interface Props {
   event: CalendarEvent;

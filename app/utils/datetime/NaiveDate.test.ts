@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 describe("NaiveDate", () => {
   it("should correctly calculate the day of the week", () => {

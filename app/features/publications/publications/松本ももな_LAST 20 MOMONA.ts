@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 松本ももな_LAST_20_MOMONA: Publication = {
   slug: "松本ももな LAST 20 MOMONA",

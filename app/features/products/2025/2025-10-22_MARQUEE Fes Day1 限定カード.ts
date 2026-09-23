@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const MARQUEE_Fes_Day1_限定カード: RandomGoods = {
   id: "MARQUEE Fes Day1 限定カード",

@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 瞬きさえ忘れる_アクリルブロック: RandomGoods = {
   id: "ランダム落書きアクリルブロック「瞬きさえ忘れる。」ver",

@@ -1,5 +1,5 @@
-import { findIdPhoto } from "~/features/profile/profile";
-import { MemberIdOrAll } from "~/features/profile/types";
+import { findIdPhoto } from "~/features/profile/profile.ts";
+import { MemberIdOrAll } from "~/features/profile/types.ts";
 
 interface Props {
   member: MemberIdOrAll;

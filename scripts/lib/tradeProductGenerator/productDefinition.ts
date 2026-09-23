@@ -1,8 +1,8 @@
 import path from "node:path";
 import { format } from "prettier";
 import { Project, SyntaxKind } from "ts-morph";
-import type { ImagePosition } from "~/features/products/product";
-import { Err, Ok, type Result } from "~/utils/result";
+import type { ImagePosition } from "~/features/products/product.ts";
+import { Err, Ok, type Result } from "~/utils/result.ts";
 
 export type TradeProductType =
   | "photo-original"
@@ -180,14 +180,14 @@ export const renderProductDefinition = async (
   const usesLineupHint =
     descriptor.lineupConstant != undefined && descriptor.itemCount === image.positions.length;
   const lineupImport = usesLineupHint
-    ? `\nimport { ${descriptor.lineupConstant} } from "../utils";`
+    ? `\nimport { ${descriptor.lineupConstant} } from "../utils.ts";`
     : "";
   const variants = usesLineupHint
     ? descriptor.lineupConstant
     : `[
 ${image.positions.map(({ id }) => `    { id: ${id}, name: "" },`).join("\n")}
   ]`;
-  const source = `import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";${lineupImport}
+  const source = `import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";${lineupImport}
 
 export const ${descriptor.exportName}: RandomGoods = {
   id: ${JSON.stringify(descriptor.productLabel)},

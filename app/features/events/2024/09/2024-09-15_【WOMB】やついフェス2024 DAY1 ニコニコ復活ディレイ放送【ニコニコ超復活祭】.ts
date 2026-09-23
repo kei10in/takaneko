@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "【WOMB】やついフェス2024 DAY1 ニコニコ復活ディレイ放送【ニコニコ超復活祭】",

@@ -1,4 +1,4 @@
-import { BirthdayGoodsCollection, OfficialGoods } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product.ts";
 
 export const 誰でも着やすいTシャツ: OfficialGoods = {
   slug: "誰でも着やすいTシャツ",

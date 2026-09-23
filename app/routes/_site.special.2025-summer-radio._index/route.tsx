@@ -2,11 +2,11 @@ import { clsx } from "clsx";
 import { useEffect, useState } from "react";
 import { BsBroadcastPin, BsStopwatch } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { DomainName, OgpSiteName } from "~/constants";
-import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { formatTitle } from "~/utils/htmlHeader";
-import { RadioAppearances } from "./content";
+import { DomainName, OgpSiteName } from "~/constants.ts";
+import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RadioAppearances } from "./content.ts";
 
 export const meta: MetaFunction = () => {
   const title = formatTitle("「この夏、好きになっちゃえばいいのに。」ラジオ出演");

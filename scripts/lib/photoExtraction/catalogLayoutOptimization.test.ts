@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
-import { scoreLocalizedFrameBoundary } from "./catalogBoundary";
-import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization";
-import { photoExtractionProfile } from "./profile";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types.ts";
+import { scoreLocalizedFrameBoundary } from "./catalogBoundary.ts";
+import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization.ts";
+import { photoExtractionProfile } from "./profile.ts";
 
 const COLUMNS = [30, 120, 210];
 const ROWS = [80, 200, 320];

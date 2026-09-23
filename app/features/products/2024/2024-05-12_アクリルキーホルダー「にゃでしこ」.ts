@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const にゃでしこ_アクリルキーホルダー: RandomGoods = {
   id: "ランダムアクリルキーホルダー (にゃでしこ ver)",

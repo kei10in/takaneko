@@ -1,6 +1,6 @@
 import { globSync } from "glob";
 import "konva/canvas-backend";
-import { ProductImage } from "./lib/ProductImage.js";
+import { ProductImage } from "./lib/ProductImage.ts";
 
 const main = async () => {
   const files = globSync("public/takaneko/goods/work/*.png").toSorted();

@@ -1,10 +1,10 @@
 import { z } from "zod/v4";
 
 import { dedent } from "ts-dedent";
-import { LinkDescription } from "~/utils/types/LinkDescription";
-import { MemberIdEnum } from "../profile/types";
-import { parseSetlist } from "./setlist";
-import { EventCostume, MeetAngGreetLanesList } from "./timeSchedule";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
+import { MemberIdEnum } from "../profile/types.ts";
+import { parseSetlist } from "./setlist.ts";
+import { EventCostume, MeetAngGreetLanesList } from "./timeSchedule.ts";
 
 export const ActTypeEnum = z.enum([
   "LIVE",

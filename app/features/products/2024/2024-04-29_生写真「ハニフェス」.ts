@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ハニフェス_生写真: RandomGoods = {
   id: "らんだむブロマイド (ハニフェス ver)",

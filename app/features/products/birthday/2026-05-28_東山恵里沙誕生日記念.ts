@@ -1,5 +1,5 @@
 import { dedent } from "ts-dedent";
-import { BirthdayGoodsCollection, OfficialGoods } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product.ts";
 
 export const _2_0歳と20歳アクスタ: OfficialGoods = {
   slug: "2.0歳と20歳アクスタ",

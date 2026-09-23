@@ -1,12 +1,12 @@
 import { MetaFunction } from "react-router";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { AllMvCostumes } from "~/features/costumes/costumesMv";
-import { AllSpecialCostumes } from "~/features/costumes/costumesSpecial";
-import { AllStageCostumes } from "~/features/costumes/costumesStage";
-import { AllTShirtCostumes } from "~/features/costumes/costumesTshirt";
-import { Costume } from "~/features/costumes/types";
-import { formatTitle } from "~/utils/htmlHeader";
-import { CostumeCard } from "./CostumeCard";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { AllMvCostumes } from "~/features/costumes/costumesMv.ts";
+import { AllSpecialCostumes } from "~/features/costumes/costumesSpecial.ts";
+import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
+import { AllTShirtCostumes } from "~/features/costumes/costumesTshirt.ts";
+import { Costume } from "~/features/costumes/types.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { CostumeCard } from "./CostumeCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

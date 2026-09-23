@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const AWonderfulEncounterFC抽選会_アクリルキーホルダー: RandomGoods = {
   id: "A Wonderful Encounter FC抽選会 メンバー個別 繋がるアクリルキーホルダー",

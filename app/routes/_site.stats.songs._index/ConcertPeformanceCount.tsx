@@ -3,10 +3,10 @@ import "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import useSWR from "swr";
-import { SongBarChart } from "~/components/charts/SongBarChart";
-import { calculatePerformanceCount } from "~/features/stats/performanceCount";
-import { SongPerformanceStats } from "~/features/stats/types";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { SongBarChart } from "~/components/charts/SongBarChart.tsx";
+import { calculatePerformanceCount } from "~/features/stats/performanceCount.ts";
+import { SongPerformanceStats } from "~/features/stats/types.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 Chart.register(ChartDataLabels);
 

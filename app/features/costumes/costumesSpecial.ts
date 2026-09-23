@@ -1,4 +1,4 @@
-import { SpecialCostume } from "./types";
+import { SpecialCostume } from "./types.ts";
 
 export const 高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ = {
   kind: "special",

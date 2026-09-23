@@ -1,4 +1,4 @@
-import { stem } from "~/utils/string";
+import { stem } from "~/utils/string.ts";
 
 /**
  * 生写真の画像サイズです。

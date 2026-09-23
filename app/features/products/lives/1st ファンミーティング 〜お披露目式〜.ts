@@ -1,5 +1,5 @@
-import { ハロウィン_生写真 } from "../2022/2022-10-31_生写真「ハロウィン」";
-import { LiveGoodsCollection } from "../product";
+import { ハロウィン_生写真 } from "../2022/2022-10-31_生写真「ハロウィン」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const _1st_ファンミーティング_お披露目式: LiveGoodsCollection = {
   slug: "1st ファンミーティング 〜お披露目式〜",

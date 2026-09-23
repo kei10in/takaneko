@@ -1,6 +1,6 @@
-import { MemberId } from "~/features/profile/types";
-import { ImageDescription } from "~/utils/types/ImageDescription";
-import { Publication } from "../publications/types";
+import { MemberId } from "~/features/profile/types.ts";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
+import { Publication } from "../publications/types.ts";
 
 export type Product =
   | {

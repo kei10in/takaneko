@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const COMMERCIAL_PHOTO_2023年10月号: Publication = {
   slug: "COMMERCIAL PHOTO 2023年10月号",

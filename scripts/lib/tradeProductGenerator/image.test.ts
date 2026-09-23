@@ -1,8 +1,8 @@
 import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
-import { generateTradeProductImage } from "./image";
-import { buildProductDescriptor } from "./productDefinition";
+import { generateTradeProductImage } from "./image.ts";
+import { buildProductDescriptor } from "./productDefinition.ts";
 
 describe("generateTradeProductImage", { timeout: 15_000 }, () => {
   it("renders a low-resolution photo catalog after recovering its outer frames", async () => {

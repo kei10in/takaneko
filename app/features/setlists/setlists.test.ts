@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { Act } from "~/features/events/act";
-import { EventModule } from "~/features/events/eventModule";
-import { LiveType } from "~/features/events/EventType";
-import { parseSetlist } from "~/features/events/setlist";
-import { makeEventMetaForTest } from "~/features/events/testUtils";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { buildSetlistEvents } from "./buildSetlistEvents";
-import { filterSetlistEvents } from "./filterSetlistEvents";
-import { SetlistSearchFilters } from "./searchFilters";
+import { Act } from "~/features/events/act.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { LiveType } from "~/features/events/EventType.ts";
+import { parseSetlist } from "~/features/events/setlist.ts";
+import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { buildSetlistEvents } from "./buildSetlistEvents.ts";
+import { filterSetlistEvents } from "./filterSetlistEvents.ts";
+import { SetlistSearchFilters } from "./searchFilters.ts";
 
 const today = new NaiveDate(2026, 1, 10);
 

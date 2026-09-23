@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 橋本桃呼_MOMOKO_ISM: Publication = {
   slug: "橋本桃呼 MOMOKO ISM",

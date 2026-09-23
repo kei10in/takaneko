@@ -1,8 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { extractPhotoPositions, extractPhotoPositionsFromPixels } from "./extractPhotoPositions";
-import type { PixelImage } from "./imageRegionExtraction/types";
+import { extractPhotoPositions, extractPhotoPositionsFromPixels } from "./extractPhotoPositions.ts";
+import type { PixelImage } from "./imageRegionExtraction/types.ts";
 
 describe("extractPhotoPositions", () => {
   it("extracts every photo position from real sample 1", async () => {

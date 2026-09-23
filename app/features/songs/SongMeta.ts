@@ -1,6 +1,6 @@
-import { extractYouTubeVideoId, youtubeEmbedUrl } from "~/utils/youtube/videoId";
-import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage";
-import { SongMetaDescriptor } from "./types";
+import { extractYouTubeVideoId, youtubeEmbedUrl } from "~/utils/youtube/videoId.ts";
+import { YouTubeImage, youtubeImage } from "~/utils/youtube/youtubeImage.ts";
+import { SongMetaDescriptor } from "./types.ts";
 
 export type AppearanceType = "video" | "streaming" | "live";
 

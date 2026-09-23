@@ -1,12 +1,12 @@
 import { ClientLoaderFunctionArgs, LoaderFunctionArgs, useLoaderData } from "react-router";
-import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2";
-import { DomainName, OgpSiteName } from "~/constants";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
-import { relativeProductImages } from "~/features/products/relativeProductImages";
-import { useTradeStore } from "~/features/trade/store";
-import { TradeDescription } from "~/features/trade/TradeStatus";
-import { Route } from "./+types/route";
-import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData";
+import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2.tsx";
+import { DomainName, OgpSiteName } from "~/constants.ts";
+import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
+import { relativeProductImages } from "~/features/products/relativeProductImages.ts";
+import { useTradeStore } from "~/features/trade/store.ts";
+import { TradeDescription } from "~/features/trade/TradeStatus.ts";
+import { Route } from "./+types/route.ts";
+import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData.ts";
 
 export const meta: Route.MetaFunction = ({ loaderData, location }) => {
   const title = titleForTradeImagesTool(loaderData);

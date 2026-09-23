@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { DomainName } from "~/constants";
-import { Events } from "~/features/events/events";
-import { ldJsonEventDocument } from "./ldJsonEventDocument";
+import { DomainName } from "~/constants.ts";
+import { Events } from "~/features/events/events.ts";
+import { ldJsonEventDocument } from "./ldJsonEventDocument.ts";
 
 describe("Event details JSON-LD snapshots", () => {
   it("emits JSON-LD for a domestic live event", async () => {

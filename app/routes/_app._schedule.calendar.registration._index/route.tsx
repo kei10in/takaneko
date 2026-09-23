@@ -1,10 +1,10 @@
 import { BsCalendar3 } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { SharableUrl } from "~/components/SharableUrl";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { DomainName } from "~/constants";
-import { shouldUseWebShareApi } from "~/utils/browser/webShareApi";
-import { formatTitle } from "~/utils/htmlHeader";
+import { SharableUrl } from "~/components/SharableUrl.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { DomainName } from "~/constants.ts";
+import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

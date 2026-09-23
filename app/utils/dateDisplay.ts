@@ -1,5 +1,5 @@
-import { NaiveDate } from "./datetime/NaiveDate";
-import { NaiveMonth } from "./datetime/NaiveMonth";
+import { NaiveDate } from "./datetime/NaiveDate.ts";
+import { NaiveMonth } from "./datetime/NaiveMonth.ts";
 
 export function displayDate(d: string): string;
 export function displayDate(nd: NaiveDate): string;

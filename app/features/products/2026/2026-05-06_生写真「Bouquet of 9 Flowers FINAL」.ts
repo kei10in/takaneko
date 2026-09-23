@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { REGULAR_PHOTO_SET2 } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { REGULAR_PHOTO_SET2 } from "../utils.ts";
 
 export const BouquetOf9FlowersFinal_生写真: RandomGoods = {
   id: "生写真「Bouquet of 9 Flowers FINAL」",

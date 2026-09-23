@@ -1,5 +1,5 @@
-import { Unperformed } from "../tags";
-import { SongMetaDescriptor } from "../types";
+import { Unperformed } from "../tags.ts";
+import { SongMetaDescriptor } from "../types.ts";
 
 export const 初恋の絵本: SongMetaDescriptor = {
   slug: "初恋の絵本",

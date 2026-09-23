@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { buildEventModule } from "~/utils/tests/events";
-import { buildSitemapFiles } from "../build-sitemap";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { buildEventModule } from "~/utils/tests/events.ts";
+import { buildSitemapFiles } from "../build-sitemap.ts";
 
 describe("buildSitemapFiles", () => {
   test("builds a sitemap index and child sitemap files", async () => {

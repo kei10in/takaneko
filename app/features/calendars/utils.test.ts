@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { isMonthInRange } from "~/utils/datetime/MonthRange";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { calendarMonthRange, isCalendarMonthAvailable } from "./utils";
+import { isMonthInRange } from "~/utils/datetime/MonthRange.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { calendarMonthRange, isCalendarMonthAvailable } from "./utils.ts";
 
 describe("isCalendarMonthAvailable", () => {
   const currentMonth = new NaiveMonth(2026, 7);

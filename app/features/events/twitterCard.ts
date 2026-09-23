@@ -1,7 +1,7 @@
 import { MetaDescriptor } from "react-router";
-import { DomainName } from "~/constants";
-import { displayDate } from "~/utils/dateDisplay";
-import { EventMeta } from "./eventMeta";
+import { DomainName } from "~/constants.ts";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { EventMeta } from "./eventMeta.ts";
 
 export const twitterCard = (args: EventMeta): MetaDescriptor[] => {
   const result = [];

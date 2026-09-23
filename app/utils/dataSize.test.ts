@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatDataSize } from "./dataSize";
+import { formatDataSize } from "./dataSize.ts";
 
 describe("formatDataSize", () => {
   describe("Bytes", () => {

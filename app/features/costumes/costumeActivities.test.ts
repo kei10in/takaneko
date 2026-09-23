@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { Events } from "../../../scripts/lib/events";
-import { makeLivesForCostumes } from "./costumeActivities";
+import { Events } from "../../../scripts/lib/events.ts";
+import { makeLivesForCostumes } from "./costumeActivities.ts";
 
 const snapshotFor = (name: string) => `./__snapshots__/costumeActivities.test.ts-${name}.snap`;
 

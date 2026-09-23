@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 春野莉々誕生日記念グッズ_生写真: RandomGoods = {
   id: "生写真「春野莉々誕生日記念グッズ 2025」",

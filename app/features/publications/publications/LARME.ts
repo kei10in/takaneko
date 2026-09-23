@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const LARME_070: Publication = {
   slug: "LARME 070",

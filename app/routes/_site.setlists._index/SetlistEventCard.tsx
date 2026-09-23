@@ -10,13 +10,13 @@ import {
   HiXMark,
 } from "react-icons/hi2";
 import { Link } from "react-router";
-import { FirstPerformanceBadge } from "~/components/IconChip";
-import { Setlist } from "~/components/Setlist";
-import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges";
-import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
-import { SetlistEvent } from "~/features/setlists/types";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
+import { Setlist } from "~/components/Setlist.tsx";
+import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges.tsx";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { SetlistEvent } from "~/features/setlists/types.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 interface SetlistEventCardProps {
   event: SetlistEvent;

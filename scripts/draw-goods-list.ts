@@ -1,6 +1,6 @@
 import { globSync } from "glob";
 import * as fs from "node:fs";
-import { RandomGoodsItemList } from "./lib/RandomGoodsItemList";
+import { RandomGoodsItemList } from "./lib/RandomGoodsItemList.ts";
 
 /**
  * 3 枚の場合:

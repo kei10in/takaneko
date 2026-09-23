@@ -1,6 +1,6 @@
-import { chooseRepresentativeSize } from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
+import { chooseRepresentativeSize } from "../imageRegionExtraction/geometry.ts";
+import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types.ts";
 
 const SEARCH_RADIUS_RATIO = 0.04;
 const OUTER_EDGE_HORIZONTAL_INSET = 1;

@@ -1,4 +1,4 @@
-import { MvCostume } from "./types";
+import { MvCostume } from "./types.ts";
 
 export const 僕らの青MV衣装 = {
   kind: "mv",

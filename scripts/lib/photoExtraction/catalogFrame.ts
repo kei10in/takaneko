@@ -5,16 +5,16 @@ import {
   groupByIndex,
   median,
   sortPositions,
-} from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
+} from "../imageRegionExtraction/geometry.ts";
+import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges.ts";
 import type {
   ClusteredRect,
   EdgeMap,
   ExtractionProfile,
   PixelImage,
-} from "../imageRegionExtraction/types";
-import { inferCatalogGrid } from "./catalogGrid";
-import { findPhotoBannerBottom } from "./photoBanner";
+} from "../imageRegionExtraction/types.ts";
+import { inferCatalogGrid } from "./catalogGrid.ts";
+import { findPhotoBannerBottom } from "./photoBanner.ts";
 
 interface FrameCandidate {
   width: number;

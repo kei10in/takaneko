@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { DomainName } from "~/constants";
-import { canonicalUrl } from "./canonicalUrl";
+import { DomainName } from "~/constants.ts";
+import { canonicalUrl } from "./canonicalUrl.ts";
 
 describe("canonicalUrl", () => {
   it("uses the site domain and pathname", () => {

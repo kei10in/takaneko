@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { forwardRef, ReactNode, useEffect, useImperativeHandle, useRef } from "react";
-import { ScrollCalculator } from "./compute";
+import { ScrollCalculator } from "./compute.ts";
 
 /**
  * HorizontalGrabScroll

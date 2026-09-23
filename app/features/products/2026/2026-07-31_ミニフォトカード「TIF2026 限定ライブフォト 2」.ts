@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const TIF2026限定ライブフォト2_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「TIF2026 限定ライブフォト 2」",

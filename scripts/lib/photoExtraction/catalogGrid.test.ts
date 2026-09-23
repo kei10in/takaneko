@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types";
+import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types.ts";
 import {
   chooseCatalogFrameWidth,
   inferCatalogGrid,
   reconstructSparseCatalogGrid,
   regularizeCatalogColumns,
-} from "./catalogGrid";
+} from "./catalogGrid.ts";
 
 const createRow = (row: number, y: number, columns: number[]): ClusteredRect[] =>
   columns.map((column) => ({

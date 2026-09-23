@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const _20SWEET_2023_JANUARY: Publication = {
   slug: "20±SWEET 2023 JANUARY",

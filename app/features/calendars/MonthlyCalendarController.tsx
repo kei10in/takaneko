@@ -6,11 +6,11 @@ import { HiChevronLeft, HiChevronRight, HiOutlineFunnel } from "react-icons/hi2"
 import { Link, To } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
-import { displayMonth } from "~/utils/dateDisplay";
-import { isMonthInRange } from "~/utils/datetime/MonthRange";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { EventFilters, EventFilterType } from "../events/eventFilter";
-import { calendarMonthHref, calendarMonthRange, calendarYearRange } from "./utils";
+import { displayMonth } from "~/utils/dateDisplay.ts";
+import { isMonthInRange } from "~/utils/datetime/MonthRange.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { EventFilters, EventFilterType } from "../events/eventFilter.ts";
+import { calendarMonthHref, calendarMonthRange, calendarYearRange } from "./utils.ts";
 
 interface Props {
   month: NaiveMonth;

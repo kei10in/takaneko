@@ -1,7 +1,7 @@
 import { createEvent, EventAttributes } from "ics";
-import { DomainName } from "~/constants";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventMeta } from "./eventMeta";
+import { DomainName } from "~/constants.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { EventMeta } from "./eventMeta.ts";
 
 export const makeIcs = async (
   id: string,

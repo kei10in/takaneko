@@ -1,4 +1,4 @@
-import { YouTubeOEmbedResponse, YouTubeOEmbedResponseSchema } from "./types";
+import { YouTubeOEmbedResponse, YouTubeOEmbedResponseSchema } from "./types.ts";
 
 export const validateYouTubeOEmbedResponse = (data: unknown) => {
   const result = YouTubeOEmbedResponseSchema.safeParse(data);

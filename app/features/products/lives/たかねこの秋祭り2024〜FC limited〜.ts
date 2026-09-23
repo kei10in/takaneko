@@ -1,5 +1,5 @@
-import { ライブ女子_ミニフォト } from "../2024/2024-10-25_ミニフォトカード「ライブ女子」";
-import { LiveGoodsCollection } from "../product";
+import { ライブ女子_ミニフォト } from "../2024/2024-10-25_ミニフォトカード「ライブ女子」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const たかねこの秋祭り2024_FC_limited: LiveGoodsCollection = {
   slug: "たかねこの秋祭り 2024 〜FC limited〜",

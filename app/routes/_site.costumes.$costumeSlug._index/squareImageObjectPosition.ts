@@ -1,4 +1,4 @@
-import type { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription";
+import type { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription.ts";
 
 type SquareOffset = NonNullable<ImageDescriptionWithOffset["square"]>;
 

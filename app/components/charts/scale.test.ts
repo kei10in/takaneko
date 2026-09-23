@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { calculateChartDimensions } from "./scale";
+import { calculateChartDimensions } from "./scale.ts";
 
 describe("calculateChartDimensions", () => {
   test.each([

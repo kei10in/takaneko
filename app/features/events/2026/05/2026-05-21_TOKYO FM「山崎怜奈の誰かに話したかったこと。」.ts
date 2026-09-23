@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "~/features/events/eventMeta";
+import { EventMetaDescriptor } from "~/features/events/eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "TOKYO FM「山崎怜奈の誰かに話したかったこと。」",

@@ -5,16 +5,16 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper/types";
-import { displayMonth } from "~/utils/dateDisplay";
-import { isMonthInRange, iterateMonthsInRange } from "~/utils/datetime/MonthRange";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { EventFilterType } from "../events/eventFilter";
-import { CalendarEvent } from "./calendarEvents";
-import { EventList } from "./EventList";
-import { MonthlyCalendar } from "./MonthlyCalendar";
-import { MonthlyCalendarController } from "./MonthlyCalendarController";
-import { calendarMonthHref, calendarMonthRange, currentMonthHref } from "./utils";
+import { displayMonth } from "~/utils/dateDisplay.ts";
+import { isMonthInRange, iterateMonthsInRange } from "~/utils/datetime/MonthRange.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { EventFilterType } from "../events/eventFilter.ts";
+import { CalendarEvent } from "./calendarEvents.ts";
+import { EventList } from "./EventList.tsx";
+import { MonthlyCalendar } from "./MonthlyCalendar.tsx";
+import { MonthlyCalendarController } from "./MonthlyCalendarController.tsx";
+import { calendarMonthHref, calendarMonthRange, currentMonthHref } from "./utils.ts";
 
 interface Props {
   events: CalendarEvent[];

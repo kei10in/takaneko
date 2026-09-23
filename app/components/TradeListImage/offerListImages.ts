@@ -1,15 +1,15 @@
 import { useMemo } from "react";
 import useSWR from "swr";
-import { drawOfferList } from "~/components/TradeListImage/drawTradeItemList";
-import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource";
-import { croppedImagePath } from "~/features/products/croppedProductImage";
-import { RandomGoods } from "~/features/products/product";
-import { TradeListImage } from "~/features/products/productImages";
-import { tradeStateToImageSrc } from "~/features/trade/TradeStatus";
-import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
-import { ArrayUtils } from "~/utils/array";
-import { ImageSource } from "~/utils/html/types";
-import { TradingItemRenderProps } from "./types";
+import { drawOfferList } from "~/components/TradeListImage/drawTradeItemList.ts";
+import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource.ts";
+import { croppedImagePath } from "~/features/products/croppedProductImage.ts";
+import { RandomGoods } from "~/features/products/product.ts";
+import { TradeListImage } from "~/features/products/productImages.ts";
+import { tradeStateToImageSrc } from "~/features/trade/TradeStatus.ts";
+import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails.ts";
+import { ArrayUtils } from "~/utils/array/index.ts";
+import { ImageSource } from "~/utils/html/types.ts";
+import { TradingItemRenderProps } from "./types.ts";
 
 const transformOfferToRenderProps = (details: TradingItemDetail): TradingItemRenderProps => {
   return {

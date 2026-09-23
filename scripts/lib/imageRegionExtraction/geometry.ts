@@ -1,4 +1,4 @@
-import type { ClusteredRect, RectCandidate } from "./types";
+import type { ClusteredRect, RectCandidate } from "./types.ts";
 
 export const intersectionOverUnion = (
   first: Pick<RectCandidate, "x" | "y" | "width" | "height">,

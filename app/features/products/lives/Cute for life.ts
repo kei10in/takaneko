@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const CuteForLife: LiveGoodsCollection = {
   slug: "Cute for life",

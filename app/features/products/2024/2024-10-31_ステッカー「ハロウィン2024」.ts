@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ハロウィン2024_ステッカー: RandomGoods = {
   id: "ランダムステッカー「ハロウィン2024」ver",

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types";
-import { completeCatalogLayout } from "./catalogCorrection";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, PixelImage } from "../imageRegionExtraction/types.ts";
+import { completeCatalogLayout } from "./catalogCorrection.ts";
 
 const emptyImage = (width: number, height: number): PixelImage => ({
   width,

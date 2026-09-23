@@ -1,7 +1,7 @@
-import { RandomGoods } from "~/features/products/product";
-import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
-import { loadImage } from "~/utils/loadImage";
+import { RandomGoods } from "~/features/products/product.ts";
+import { stampPositions } from "~/features/trade/stampPosition.ts";
+import { TradeDescription, tradeStateToImageSrc } from "~/features/trade/TradeStatus.ts";
+import { loadImage } from "~/utils/loadImage.ts";
 
 export const drawTradeImage = async (
   canvas: HTMLCanvasElement,

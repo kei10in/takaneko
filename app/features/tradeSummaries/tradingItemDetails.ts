@@ -1,5 +1,5 @@
-import { ImagePosition, ItemDescription, RandomGoods } from "../products/product";
-import { TradeDescription, TradeStatus } from "../trade/TradeStatus";
+import { ImagePosition, ItemDescription, RandomGoods } from "../products/product.ts";
+import { TradeDescription, TradeStatus } from "../trade/TradeStatus.ts";
 
 export type TradingItemDetail = {
   item: ItemDescription;

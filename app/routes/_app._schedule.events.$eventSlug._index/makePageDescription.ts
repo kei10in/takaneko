@@ -1,9 +1,9 @@
-import { EventType } from "~/features/events/EventType";
-import { EventMeta } from "~/features/events/eventMeta";
-import { TakanenoNadeshiko, TakanenoNadeshiko2 } from "~/features/profile/takaneno-nadeshiko";
-import { MemberDescription, MemberId, MemberIdOrGroupId } from "~/features/profile/types";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { findMemberDescription } from "../../features/profile/members";
+import { EventType } from "~/features/events/EventType.ts";
+import { EventMeta } from "~/features/events/eventMeta.ts";
+import { TakanenoNadeshiko, TakanenoNadeshiko2 } from "~/features/profile/takaneno-nadeshiko.ts";
+import { MemberDescription, MemberId, MemberIdOrGroupId } from "~/features/profile/types.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { findMemberDescription } from "../../features/profile/members.ts";
 
 export const makePageDescription = (meta: EventMeta): string => {
   if (meta.category == EventType.LIVE) {

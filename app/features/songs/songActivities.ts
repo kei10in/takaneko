@@ -1,8 +1,8 @@
-import { Act } from "../events/act";
-import { EventModule } from "../events/eventModule";
-import { SongSegment } from "../events/setlist";
-import { ALL_SONGS } from "./songs";
-import { LivesForSong, SimpleSongActivity, SongMetaDescriptor } from "./types";
+import { Act } from "../events/act.ts";
+import { EventModule } from "../events/eventModule.ts";
+import { SongSegment } from "../events/setlist.ts";
+import { ALL_SONGS } from "./songs.ts";
+import { LivesForSong, SimpleSongActivity, SongMetaDescriptor } from "./types.ts";
 
 export interface SongActivitySummary {
   name: string;

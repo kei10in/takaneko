@@ -1,5 +1,5 @@
-import { average, clamp, median } from "../imageRegionExtraction/geometry";
-import type { PixelImage, RectCandidate } from "../imageRegionExtraction/types";
+import { average, clamp, median } from "../imageRegionExtraction/geometry.ts";
+import type { PixelImage, RectCandidate } from "../imageRegionExtraction/types.ts";
 
 const MINIMUM_BRIGHTNESS = 248;
 const MAXIMUM_CHROMA = 12;

@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const CMNOW_vol220_2023年1_2月号: Publication = {
   slug: "CM NOW vol.220 2023年1-2月号",

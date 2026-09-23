@@ -1,5 +1,5 @@
-import { intersectionOverUnion } from "./geometry";
-import type { RectCandidate } from "./types";
+import { intersectionOverUnion } from "./geometry.ts";
+import type { RectCandidate } from "./types.ts";
 
 export const findProjectionPeaks = (projection: number[], limit: number): number[] => {
   const sortedValues = [...projection].sort((a, b) => a - b);

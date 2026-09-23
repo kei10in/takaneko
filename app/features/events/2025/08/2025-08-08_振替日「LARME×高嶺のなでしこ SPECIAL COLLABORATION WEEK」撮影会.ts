@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "振替日「LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK」撮影会",

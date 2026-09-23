@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const _3rdファンミーティング_私たちの宣言式: LiveGoodsCollection = {
   slug: "3rd ファンミーティング 〜私たちの宣言式〜",

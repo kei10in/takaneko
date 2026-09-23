@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { photoBannerIsClipped, scorePhotoBannerGaps } from "./photoBanner";
+import { photoBannerIsClipped, scorePhotoBannerGaps } from "./photoBanner.ts";
 
 describe("scorePhotoBannerGaps", () => {
   it("prefers consistent margins with sufficient separation", () => {

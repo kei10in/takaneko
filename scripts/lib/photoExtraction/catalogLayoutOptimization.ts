@@ -1,22 +1,26 @@
-import { chooseRepresentativeSize, groupByIndex, median } from "../imageRegionExtraction/geometry";
+import {
+  chooseRepresentativeSize,
+  groupByIndex,
+  median,
+} from "../imageRegionExtraction/geometry.ts";
 import type {
   ClusteredRect,
   EdgeMap,
   ExtractionProfile,
   PixelImage,
-} from "../imageRegionExtraction/types";
-import { applyAxisHypothesis, inferAxisHypotheses } from "./catalogAxisHypotheses";
+} from "../imageRegionExtraction/types.ts";
+import { applyAxisHypothesis, inferAxisHypotheses } from "./catalogAxisHypotheses.ts";
 import {
   catalogQualityMetrics,
   chooseParetoImprovement,
   type CatalogLayoutEvaluation,
   type CatalogQualityMetric,
-} from "./catalogCandidateSelection";
+} from "./catalogCandidateSelection.ts";
 import {
   createCatalogEvaluationContext,
   estimateMetricThresholds,
   evaluateCatalogLayout,
-} from "./catalogLayoutMetrics";
+} from "./catalogLayoutMetrics.ts";
 
 const OPTIMIZATION_PASSES = 1;
 const AXIS_SEARCH_RATIO = 0.1;

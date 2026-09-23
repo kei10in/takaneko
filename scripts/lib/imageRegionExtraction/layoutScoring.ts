@@ -1,5 +1,5 @@
-import { average, chooseRepresentativeSize, clamp, groupByIndex, median } from "./geometry";
-import type { ClusteredRect, ExtractionProfile } from "./types";
+import { average, chooseRepresentativeSize, clamp, groupByIndex, median } from "./geometry.ts";
+import type { ClusteredRect, ExtractionProfile } from "./types.ts";
 
 export const scoreLayout = (
   rects: ClusteredRect[],

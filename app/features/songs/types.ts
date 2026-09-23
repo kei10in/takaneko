@@ -1,6 +1,6 @@
 import { z } from "zod/v4";
-import { LiveTypeEnum } from "../events/EventType";
-import { MemberId } from "../profile/types";
+import { LiveTypeEnum } from "../events/EventType.ts";
+import { MemberId } from "../profile/types.ts";
 
 export interface SongVideo {
   text: string;

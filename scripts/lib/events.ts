@@ -1,7 +1,7 @@
 import { glob } from "glob";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { EventRepository } from "~/features/events/EventRepository";
+import { EventRepository } from "~/features/events/EventRepository.ts";
 
 const importGlob = (): Record<string, () => Promise<unknown>> => {
   const scriptDir = import.meta.dirname;

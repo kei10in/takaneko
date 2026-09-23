@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const TopYellNeo2025Spring: Publication = {
   slug: "Top Yell NEO 2025 SPRING",

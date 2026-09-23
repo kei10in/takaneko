@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router";
-import { Footer } from "~/components/Footer";
+import { Footer } from "~/components/Footer.tsx";
 
 export default function SiteLayout() {
   return (

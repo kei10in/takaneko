@@ -1,11 +1,11 @@
-import { ImageDescription } from "~/utils/types/ImageDescription";
-import { findMemberDescription } from "./members";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
+import { findMemberDescription } from "./members.ts";
 import {
   AllMembersProfile,
   TakanenoNadeshiko,
   TakanenoNadeshiko2,
   TakanenoNadeshiko3,
-} from "./takaneno-nadeshiko";
+} from "./takaneno-nadeshiko.ts";
 import {
   GroupDescription,
   GroupId,
@@ -13,7 +13,7 @@ import {
   MemberDescription,
   MemberId,
   MemberIdOrGroupId,
-} from "./types";
+} from "./types.ts";
 
 export const findMemberOrGroupDescription = (
   id: MemberId | GroupId,

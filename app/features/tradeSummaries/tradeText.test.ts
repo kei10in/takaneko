@@ -1,10 +1,10 @@
 import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
-import { アンチファン衣装_生写真 } from "../products/2022/2022-08-08_生写真「アンチファン衣装」";
-import { 学生証風_ステッカー } from "../products/2024/2024-04-08_ステッカー「学生証風」";
-import { ハニフェス_生写真 } from "../products/2024/2024-04-29_生写真「ハニフェス」";
-import { ラブレターカード } from "../products/2025/2025-02-14_ラブレターカード";
-import { convertToTradeText } from "./tradeText";
+import { アンチファン衣装_生写真 } from "../products/2022/2022-08-08_生写真「アンチファン衣装」.ts";
+import { 学生証風_ステッカー } from "../products/2024/2024-04-08_ステッカー「学生証風」.ts";
+import { ハニフェス_生写真 } from "../products/2024/2024-04-29_生写真「ハニフェス」.ts";
+import { ラブレターカード } from "../products/2025/2025-02-14_ラブレターカード.ts";
+import { convertToTradeText } from "./tradeText.ts";
 
 describe("convertToTradeText", () => {
   it("should return formatted trade text for given product and trade descriptions with 'want' status", () => {

@@ -1,7 +1,7 @@
 import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { Link, Outlet } from "react-router";
-import { XMarkButton } from "~/components/XMarkButton";
+import { XMarkButton } from "~/components/XMarkButton.tsx";
 
 export default function Index() {
   const [showMenu, setShowMenu] = useState(false);

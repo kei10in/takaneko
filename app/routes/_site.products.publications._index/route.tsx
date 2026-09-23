@@ -1,9 +1,9 @@
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
-import { PUBLICATIONS } from "~/features/publications/publications";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { formatTitle } from "~/utils/htmlHeader";
-import { PublicationCard } from "./PublicationCard";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { PUBLICATIONS } from "~/features/publications/publications.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { PublicationCard } from "./PublicationCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

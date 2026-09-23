@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { MemberDescription } from "~/features/profile/types";
+import { MemberDescription } from "~/features/profile/types.ts";
 
 interface Props {
   member: MemberDescription;

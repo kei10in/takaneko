@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractYouTubeVideoId } from "./videoId";
+import { extractYouTubeVideoId } from "./videoId.ts";
 
 describe("extractYouTubeVideoId", () => {
   it.each([

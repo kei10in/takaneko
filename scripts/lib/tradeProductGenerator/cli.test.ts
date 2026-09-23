@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
-import { createTradeProductCommand, resolveTradeProductInput } from "./cli";
+import { createTradeProductCommand, resolveTradeProductInput } from "./cli.ts";
 
 describe("createTradeProductCommand", () => {
   it("passes the image argument and supported options to the action", async () => {

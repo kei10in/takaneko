@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const クリスマス2022_缶バッジ: RandomGoods = {
   id: "ランダム缶バッジ「たかねこクリスマスパーティー2022」ver.",

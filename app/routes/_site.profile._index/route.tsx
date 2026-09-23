@@ -3,10 +3,10 @@ import { FaTiktok } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { SiBereal, SiBilibili, SiSinaweibo, SiTiktok, SiXiaohongshu } from "react-icons/si";
 import { Link, MetaFunction } from "react-router";
-import { pageBox } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { CurrentMembers } from "../../features/profile/members";
-import { MemberIdCard } from "../_site.members._index/MemberIdCard";
+import { pageBox } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { CurrentMembers } from "../../features/profile/members.ts";
+import { MemberIdCard } from "../_site.members._index/MemberIdCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

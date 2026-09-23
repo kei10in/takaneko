@@ -3,17 +3,17 @@ import { BsArrowLeftRight, BsCalendar, BsChevronRight } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
 import { A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { DomainName, OgpSiteName, SiteName, SiteTitle } from "~/constants";
-import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem";
-import { dateHref } from "~/features/calendars/utils";
-import { Events } from "~/features/events/events";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
-import { ldJsonWebSite } from "~/metadata/ldJsonWebSite";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { getActiveDateInJapan } from "~/utils/japanTime";
-import { RandomGoodsList } from "../_app.trade/RandomGoodsList";
+import { DomainName, OgpSiteName, SiteName, SiteTitle } from "~/constants.ts";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents.ts";
+import { LinkCalendarEventItem } from "~/features/calendars/LinkCalendarEventItem.tsx";
+import { dateHref } from "~/features/calendars/utils.ts";
+import { Events } from "~/features/events/events.ts";
+import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
+import { ldJsonWebSite } from "~/metadata/ldJsonWebSite.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { getActiveDateInJapan } from "~/utils/japanTime.ts";
+import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
 
 export const meta: MetaFunction = () => {
   const title = SiteTitle;

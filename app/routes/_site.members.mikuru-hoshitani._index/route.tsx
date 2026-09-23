@@ -1,9 +1,9 @@
 import { FaInstagram } from "react-icons/fa6";
 import { Link, MetaFunction } from "react-router";
-import { MemberProfile } from "~/components/MemberProfile";
-import { sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { MikuruHoshitani } from "../../features/profile/members";
+import { MemberProfile } from "~/components/MemberProfile.tsx";
+import { sectionHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { MikuruHoshitani } from "../../features/profile/members.ts";
 
 export const meta: MetaFunction = () => {
   return [

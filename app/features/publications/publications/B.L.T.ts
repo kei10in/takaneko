@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const BLT_graduation_2026中学高校卒業: Publication = {
   slug: "B.L.T.graduation2026中学・高校卒業",

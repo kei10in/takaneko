@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 月刊ENTAME_2024年8月号: Publication = {
   slug: "月刊ENTAME 2024年8月号",

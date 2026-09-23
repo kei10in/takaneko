@@ -1,9 +1,9 @@
 import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { Link, MetaFunction } from "react-router";
-import { pageColumnBox, pageHeading } from "~/components/styles";
-import { TwitterHashTag } from "~/components/TwitterHashTag";
-import { formatTitle } from "~/utils/htmlHeader";
+import { pageColumnBox, pageHeading } from "~/components/styles.ts";
+import { TwitterHashTag } from "~/components/TwitterHashTag.tsx";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

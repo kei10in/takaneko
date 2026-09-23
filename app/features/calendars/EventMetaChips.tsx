@@ -1,5 +1,5 @@
-import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip";
-import { EventType, eventTypeColors, LiveType, MeetAndGreetType } from "../events/EventType";
+import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip.tsx";
+import { EventType, eventTypeColors, LiveType, MeetAndGreetType } from "../events/EventType.ts";
 
 interface Props {
   className?: string;

@@ -195,6 +195,7 @@ export default defineConfig({
     "import/namespace": "error",
     "import/default": "error",
     "import/export": "error",
+    "import/extensions": "error",
     "import/no-named-as-default": "warn",
     "import/no-named-as-default-member": "warn",
     "import/no-duplicates": "warn",

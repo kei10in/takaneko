@@ -4,9 +4,9 @@ import {
   intersectionOverUnion,
   nearestIndex,
   sortPositions,
-} from "./geometry";
-import { scoreLayout } from "./layoutScoring";
-import type { ClusteredRect, ExtractionProfile, LayoutCandidate, RectCandidate } from "./types";
+} from "./geometry.ts";
+import { scoreLayout } from "./layoutScoring.ts";
+import type { ClusteredRect, ExtractionProfile, LayoutCandidate, RectCandidate } from "./types.ts";
 
 export const createLayoutCandidates = (
   candidates: RectCandidate[],

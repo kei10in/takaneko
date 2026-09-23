@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractURLsFromComponent } from "./react";
+import { extractURLsFromComponent } from "./react.tsx";
 
 describe("extractURLsFromComponent", () => {
   it("should return an empty array when there are no URLs", () => {

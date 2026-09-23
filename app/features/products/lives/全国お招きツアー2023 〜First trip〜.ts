@@ -1,7 +1,7 @@
-import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "../2023/2023-04-23_ミニフォトカード「たかねこ全国お招きツアー 2023」";
-import { たかねこ全国お招きツアー2023衣装_生写真 } from "../2023/2023-04-23_生写真「たかねこ全国お招きツアー 2023」";
-import { 梅雨_生写真 } from "../2023/2023-06-29_生写真「梅雨」";
-import { LiveGoodsCollection } from "../product";
+import { たかねこ全国お招きツアー2023衣装_ミニフォト } from "../2023/2023-04-23_ミニフォトカード「たかねこ全国お招きツアー 2023」.ts";
+import { たかねこ全国お招きツアー2023衣装_生写真 } from "../2023/2023-04-23_生写真「たかねこ全国お招きツアー 2023」.ts";
+import { 梅雨_生写真 } from "../2023/2023-06-29_生写真「梅雨」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const 全国お招きツアー2023_First_trip: LiveGoodsCollection = {
   slug: "全国お招きツアー2023 〜First trip〜",

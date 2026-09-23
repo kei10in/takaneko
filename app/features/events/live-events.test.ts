@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { DomainName } from "~/constants";
-import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument";
-import type { LdJsonMusicEvent } from "~/metadata/ldJsonMusicEvent";
-import { makePageDescription } from "~/routes/_app._schedule.events.$eventSlug._index/makePageDescription";
-import { Events } from "./events";
+import { DomainName } from "~/constants.ts";
+import { ldJsonEventDocument } from "~/metadata/ldJsonEventDocument.ts";
+import type { LdJsonMusicEvent } from "~/metadata/ldJsonMusicEvent.ts";
+import { makePageDescription } from "~/routes/_app._schedule.events.$eventSlug._index/makePageDescription.ts";
+import { Events } from "./events.ts";
 
 describe("live event modules", async () => {
   const allEvents = await Events.importAllEventModules();

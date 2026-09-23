@@ -1,8 +1,8 @@
 import { clsx } from "clsx";
 import { NavLink } from "react-router";
-import { RandomGoods } from "~/features/products/product";
-import { RandomGoodsCardTexts } from "~/features/products/productImages";
-import { RandomGoodsCard } from "./RandomGoodsCard";
+import { RandomGoods } from "~/features/products/product.ts";
+import { RandomGoodsCardTexts } from "~/features/products/productImages.ts";
+import { RandomGoodsCard } from "./RandomGoodsCard.tsx";
 
 interface Props {
   items: RandomGoods[];

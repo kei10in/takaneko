@@ -1,7 +1,7 @@
 import { cleanup, render } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { afterEach, describe, expect, it } from "vitest";
-import { CloudflareThumbnailImage } from "./CloudflareThumbnailImage";
+import { CloudflareThumbnailImage } from "./CloudflareThumbnailImage.tsx";
 
 afterEach(cleanup);
 

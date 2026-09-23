@@ -1,6 +1,6 @@
 import { cleanup, render } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
-import { DevThumbnailImage } from "./DevThumbnailImage";
+import { DevThumbnailImage } from "./DevThumbnailImage.tsx";
 
 afterEach(cleanup);
 

@@ -1,6 +1,10 @@
 import { Command, Option } from "commander";
-import { Err, Ok, type Result } from "~/utils/result";
-import type { TradeProductInput, TradeProductLineup, TradeProductType } from "./productDefinition";
+import { Err, Ok, type Result } from "~/utils/result.ts";
+import type {
+  TradeProductInput,
+  TradeProductLineup,
+  TradeProductType,
+} from "./productDefinition.ts";
 
 export type TradeProductCliError = {
   kind: "invalid-arguments" | "invalid-answer";

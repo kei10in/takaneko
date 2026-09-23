@@ -1,8 +1,8 @@
 import { dedent } from "ts-dedent";
 import { describe, expect, it } from "vitest";
-import { Events } from "~/features/events/events";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { createAnnouncePost, formatEventForSocialMedia } from "./socialMedia";
+import { Events } from "~/features/events/events.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { createAnnouncePost, formatEventForSocialMedia } from "./socialMedia.ts";
 
 describe("formatEventForSocialMedia", () => {
   const importEvent = async (slug: string) => {

@@ -1,6 +1,6 @@
 import { BsMusicNoteBeamed } from "react-icons/bs";
-import { SongMeta } from "~/features/songs/SongMeta";
-import { SongMetaDescriptor } from "~/features/songs/types";
+import { SongMeta } from "~/features/songs/SongMeta.ts";
+import { SongMetaDescriptor } from "~/features/songs/types.ts";
 
 interface Props {
   track: SongMetaDescriptor;

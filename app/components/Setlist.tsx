@@ -2,12 +2,12 @@ import { Field, Label, Popover, PopoverButton, PopoverPanel } from "@headlessui/
 import { Fragment, useMemo } from "react";
 import { BsGear } from "react-icons/bs";
 import { Link } from "react-router";
-import { CopyButton } from "~/components/CopyButton";
-import { Switch } from "~/components/Switch";
-import { formatSetlist, Segment } from "~/features/events/setlist";
-import { useEventCalendarStore } from "~/features/events/store";
-import { LinkDescription } from "~/utils/types/LinkDescription";
-import { SetlistItem } from "./SetlistItem";
+import { CopyButton } from "~/components/CopyButton.tsx";
+import { Switch } from "~/components/Switch.tsx";
+import { formatSetlist, Segment } from "~/features/events/setlist.ts";
+import { useEventCalendarStore } from "~/features/events/store.ts";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
+import { SetlistItem } from "./SetlistItem.tsx";
 
 interface Props {
   setlist: Segment[];

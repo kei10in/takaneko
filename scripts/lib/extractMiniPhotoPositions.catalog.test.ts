@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { extractMiniPhotoPositions } from "./extractMiniPhotoPositions";
+import { extractMiniPhotoPositions } from "./extractMiniPhotoPositions.ts";
 
 describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, () => {
   it("extracts 晴れ着2025", async () => {

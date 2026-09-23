@@ -1,12 +1,12 @@
 import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
-import { SquareCard } from "~/components/SquareCard";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { BirthdayGoods } from "~/features/products/birthdayGoods";
-import { findMemberDescription } from "~/features/profile/members";
-import { displayDate } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { formatTitle } from "~/utils/htmlHeader";
+import { SquareCard } from "~/components/SquareCard.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { BirthdayGoods } from "~/features/products/birthdayGoods.ts";
+import { findMemberDescription } from "~/features/profile/members.ts";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

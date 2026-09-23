@@ -1,8 +1,8 @@
-import { Act } from "~/features/events/act";
-import { EventModule } from "~/features/events/eventModule";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { isNonEmptyString, normalizeSearchText, withSearchVariants } from "./searchText";
-import { SetlistAct, SetlistEvent } from "./types";
+import { Act } from "~/features/events/act.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { isNonEmptyString, normalizeSearchText, withSearchVariants } from "./searchText.ts";
+import { SetlistAct, SetlistEvent } from "./types.ts";
 
 export const buildSetlistEvents = (events: EventModule[], today: NaiveDate): SetlistEvent[] => {
   return events

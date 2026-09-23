@@ -1,4 +1,4 @@
-import { EventRepository } from "./EventRepository";
+import { EventRepository } from "./EventRepository.ts";
 
 const modules = import.meta.glob("./*/*/*.{mdx,tsx,ts}");
 

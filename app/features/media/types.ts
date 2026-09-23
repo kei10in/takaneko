@@ -1,5 +1,5 @@
-import type { MemberIdOrGroupId } from "~/features/profile/types";
-import { ImageDescription } from "~/utils/types/ImageDescription";
+import type { MemberIdOrGroupId } from "~/features/profile/types.ts";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 
 export interface YouTubeVideoDescriptor {
   videoId: string;

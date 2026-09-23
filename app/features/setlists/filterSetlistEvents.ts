@@ -1,12 +1,12 @@
-import { AllStageCostumes } from "../costumes/costumesStage";
-import { ALL_SONGS } from "../songs/songs";
+import { AllStageCostumes } from "../costumes/costumesStage.ts";
+import { ALL_SONGS } from "../songs/songs.ts";
 import {
   SetlistLiveFilters,
   SetlistSearchFilters,
   SetlistSelectedLiveFilterType,
-} from "./searchFilters";
-import { containsAllTokens, searchTokens } from "./searchText";
-import { SetlistAct, SetlistEvent, SetlistSearchResult } from "./types";
+} from "./searchFilters.ts";
+import { containsAllTokens, searchTokens } from "./searchText.ts";
+import { SetlistAct, SetlistEvent, SetlistSearchResult } from "./types.ts";
 
 export const filterSetlistEvents = (
   events: SetlistEvent[],

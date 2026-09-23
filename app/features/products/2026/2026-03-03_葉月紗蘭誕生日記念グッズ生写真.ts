@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 葉月紗蘭誕生日記念グッズ2026_生写真: RandomGoods = {
   id: "生写真「葉月紗蘭誕生日記念グッズ 2026」",

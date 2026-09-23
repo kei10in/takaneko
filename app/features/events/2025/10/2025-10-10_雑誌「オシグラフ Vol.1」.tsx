@@ -1,6 +1,6 @@
-import { オシグラフVol1 } from "~/features/publications/publications/オシグラフ";
-import { EventMetaDescriptor } from "../../eventMeta";
-import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
+import { オシグラフVol1 } from "~/features/publications/publications/オシグラフ.ts";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
+import { convertPublicationToEventMeta } from "../../publicationToEventMeta.ts";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(オシグラフVol1);
 

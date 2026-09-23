@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { makeIcs } from "./ical";
-import { makeEventMetaForTest } from "./testUtils";
+import { makeIcs } from "./ical.ts";
+import { makeEventMetaForTest } from "./testUtils.ts";
 
 describe("makeIcs", () => {
   it("should return ics object with filename and dataUrl when valid meta is provided", async () => {

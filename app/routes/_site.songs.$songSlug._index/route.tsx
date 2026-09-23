@@ -10,21 +10,21 @@ import {
 } from "react-icons/bs";
 import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
-import { Breadcrumb } from "~/components/Breadcrumb";
-import { CostumeBarChart } from "~/components/charts/CostumeBarChart";
-import { pageHeading, sectionHeading } from "~/components/styles";
-import { liveTypeColor } from "~/features/events/EventType";
-import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji";
-import { SongMeta } from "~/features/songs/SongMeta";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { LivesForSong } from "~/features/songs/types";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { formatTitle } from "~/utils/htmlHeader";
-import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
-import type { Route } from "./+types/route";
-import { Credit } from "./Credit";
-import { LiveSkeleton } from "./LiveSkeleton";
-import { YouTubeCard } from "./YouTubeCard";
+import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
+import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { liveTypeColor } from "~/features/events/EventType.ts";
+import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
+import { SongMeta } from "~/features/songs/SongMeta.ts";
+import { ALL_SONGS } from "~/features/songs/songs.ts";
+import { LivesForSong } from "~/features/songs/types.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
+import type { Route } from "./+types/route.ts";
+import { Credit } from "./Credit.tsx";
+import { LiveSkeleton } from "./LiveSkeleton.tsx";
+import { YouTubeCard } from "./YouTubeCard.tsx";
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title = formatTitle(loaderData?.track.name ?? "楽曲が見つかりません");

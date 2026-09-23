@@ -1,4 +1,4 @@
-import { TShirtCostume } from "./types";
+import { TShirtCostume } from "./types.ts";
 
 export const Tシャツ_BouquetOf9Flowers台湾限定 = {
   kind: "tshirt",

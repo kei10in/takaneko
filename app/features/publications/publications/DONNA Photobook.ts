@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const DONNA_Photobook_Momona_Matsumoto: Publication = {
   slug: "DONNA Photobook Momona Matsumoto",

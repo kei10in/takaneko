@@ -3,9 +3,9 @@ import { createInterface } from "node:readline/promises";
 import {
   createTradeProductCommand,
   resolveTradeProductInput,
-} from "./lib/tradeProductGenerator/cli";
-import { generateTradeProduct } from "./lib/tradeProductGenerator/generator";
-import type { TradeProductInput } from "./lib/tradeProductGenerator/productDefinition";
+} from "./lib/tradeProductGenerator/cli.ts";
+import { generateTradeProduct } from "./lib/tradeProductGenerator/generator.ts";
+import type { TradeProductInput } from "./lib/tradeProductGenerator/productDefinition.ts";
 
 const run = async (partial: Partial<TradeProductInput>): Promise<void> => {
   if (!hasAllInputs(partial) && !process.stdin.isTTY) {

@@ -1,5 +1,5 @@
-import { CloudflareThumbnailImage } from "~/components/thumbnail-image/CloudflareThumbnailImage";
-import { DevThumbnailImage } from "~/components/thumbnail-image/DevThumbnailImage";
+import { CloudflareThumbnailImage } from "~/components/thumbnail-image/CloudflareThumbnailImage.tsx";
+import { DevThumbnailImage } from "~/components/thumbnail-image/DevThumbnailImage.tsx";
 
 type Props = React.ComponentProps<typeof DevThumbnailImage>;
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { NaiveMonth } from "./NaiveMonth";
+import { NaiveMonth } from "./NaiveMonth.ts";
 
 describe("NaiveMonth", () => {
   it("should initialize correctly", () => {

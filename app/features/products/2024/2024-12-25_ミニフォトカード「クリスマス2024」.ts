@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { REGULAR_MINI_PHOTO_SET } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { REGULAR_MINI_PHOTO_SET } from "../utils.ts";
 
 export const クリスマス2024_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「クリスマス2024」ver",

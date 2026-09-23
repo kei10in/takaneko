@@ -36,6 +36,7 @@
     "rootDirs": [".", "./.react-router/types"],
 
     // Remix takes care of building everything in `remix build`.
+    "allowImportingTsExtensions": true,
     "noEmit": true
   }
 }

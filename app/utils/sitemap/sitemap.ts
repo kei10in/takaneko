@@ -1,11 +1,11 @@
-import { DomainName } from "~/constants";
-import { EventModule } from "~/features/events/eventModule";
-import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages";
-import { AllMembers } from "~/features/profile/members";
-import { PUBLICATIONS } from "~/features/publications/publications";
-import { NaiveDate } from "../datetime/NaiveDate";
-import { lastmodConfig } from "./lastmod";
+import { DomainName } from "~/constants.ts";
+import { EventModule } from "~/features/events/eventModule.ts";
+import { MINI_PHOTO_CARDS, PHOTOS } from "~/features/products/photos.ts";
+import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
+import { AllMembers } from "~/features/profile/members.ts";
+import { PUBLICATIONS } from "~/features/publications/publications.ts";
+import { NaiveDate } from "../datetime/NaiveDate.ts";
+import { lastmodConfig } from "./lastmod.ts";
 
 export interface SitemapUrl {
   url: string;

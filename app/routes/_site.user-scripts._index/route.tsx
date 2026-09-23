@@ -1,8 +1,8 @@
 import { BsDownload, BsExclamationTriangleFill, BsFiletypeJs } from "react-icons/bs";
 import { Link, MetaFunction } from "react-router";
-import { LinkCard } from "~/components/link-card/LinkCard";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
+import { LinkCard } from "~/components/link-card/LinkCard.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

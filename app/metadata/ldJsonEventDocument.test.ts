@@ -1,8 +1,8 @@
 import { Graph, Thing, WithContext } from "schema-dts";
 import { describe, expect, expectTypeOf, it } from "vitest";
-import { DomainName } from "~/constants";
-import { makeEventMetaForTest } from "~/features/events/testUtils";
-import { type LdJsonEventDocument, ldJsonEventDocument } from "./ldJsonEventDocument";
+import { DomainName } from "~/constants.ts";
+import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
+import { type LdJsonEventDocument, ldJsonEventDocument } from "./ldJsonEventDocument.ts";
 
 expectTypeOf<LdJsonEventDocument>().toExtend<Graph | WithContext<Thing>>();
 

@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const にゃでしこ_前髪クリップ: RandomGoods = {
   id: "ランダム前髪クリップ (にゃでしこ ver)",

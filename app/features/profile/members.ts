@@ -1,4 +1,4 @@
-import { MemberDescription, MemberId } from "./types";
+import { MemberDescription, MemberId } from "./types.ts";
 
 export const NaoKizuki: MemberDescription = {
   id: "城月菜央",

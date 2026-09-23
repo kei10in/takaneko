@@ -1,5 +1,5 @@
 import { z } from "zod/v4";
-import { LiveType } from "~/features/events/EventType";
+import { LiveType } from "~/features/events/EventType.ts";
 
 export const SetlistYearFilterStart = 2022;
 export const SetlistYearFilterEnd = new Date().getFullYear();

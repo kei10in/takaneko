@@ -1,4 +1,4 @@
-import { LinkDescription } from "~/utils/types/LinkDescription";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
 
 /**
  * テキストをリンクに変換します。

@@ -1,4 +1,4 @@
-import type { ClusteredRect } from "../imageRegionExtraction/types";
+import type { ClusteredRect } from "../imageRegionExtraction/types.ts";
 
 export interface CatalogQualityMetrics {
   boundarySupport: number;

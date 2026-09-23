@@ -4,21 +4,21 @@ import {
   clamp,
   groupByIndex,
   median,
-} from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
+} from "../imageRegionExtraction/geometry.ts";
+import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges.ts";
 import type {
   ClusteredRect,
   EdgeMap,
   ExtractionProfile,
   PixelImage,
-} from "../imageRegionExtraction/types";
-import { scoreLocalizedFrameBoundary } from "./catalogBoundary";
+} from "../imageRegionExtraction/types.ts";
+import { scoreLocalizedFrameBoundary } from "./catalogBoundary.ts";
 import {
   catalogQualityMetrics,
   type CatalogLayoutEvaluation,
   type MetricThresholds,
-} from "./catalogCandidateSelection";
-import { findPhotoBannerBottom, photoBannerIsClipped } from "./photoBanner";
+} from "./catalogCandidateSelection.ts";
+import { findPhotoBannerBottom, photoBannerIsClipped } from "./photoBanner.ts";
 
 interface FrameEvidence {
   boundaryScore: number;

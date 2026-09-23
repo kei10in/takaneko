@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const LARME高嶺のなでしこSpecialCollaborationWeek: LiveGoodsCollection = {
   slug: "LARME×高嶺のなでしこ SPECIAL COLLABORATION WEEK",

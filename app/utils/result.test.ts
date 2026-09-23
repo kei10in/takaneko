@@ -6,7 +6,7 @@ import {
   type Err as ErrType,
   type Ok as OkType,
   type Result,
-} from "~/utils/result";
+} from "~/utils/result.ts";
 
 describe("Result", () => {
   it("should narrow by ok property", () => {

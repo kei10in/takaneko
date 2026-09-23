@@ -1,6 +1,6 @@
 import { Switch } from "@headlessui/react";
 import { clsx } from "clsx";
-import { SelectableEmojis } from "~/features/trade/stamp";
+import { SelectableEmojis } from "~/features/trade/stamp.ts";
 
 interface Props {
   selected?: string;

@@ -1,4 +1,4 @@
-import { Markdown } from "~/components/Markdown";
+import { Markdown } from "~/components/Markdown.tsx";
 import content from "./sample.md?raw";
 
 export default function Component() {

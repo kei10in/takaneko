@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "path";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
-import { fetchYouTubeVideoMetadata } from "~/utils/youtube/youtubeVideoMetadata";
+import { ALL_SONGS } from "~/features/songs/songs.ts";
+import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
+import { fetchYouTubeVideoMetadata } from "~/utils/youtube/youtubeVideoMetadata.ts";
 
 const OUTPUT_FILE = path.resolve(
   import.meta.dirname,

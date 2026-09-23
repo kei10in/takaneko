@@ -4,30 +4,30 @@ import {
   clamp,
   groupByIndex,
   median,
-} from "../imageRegionExtraction/geometry";
+} from "../imageRegionExtraction/geometry.ts";
 import {
   horizontalLineSum,
   rectangleBoundaryScore,
   verticalLineSum,
-} from "../imageRegionExtraction/imageEdges";
+} from "../imageRegionExtraction/imageEdges.ts";
 import type {
   ClusteredRect,
   EdgeMap,
   PixelImage,
   PositionPostProcessContext,
-} from "../imageRegionExtraction/types";
-import { fitCatalogFrames } from "./catalogFrame";
+} from "../imageRegionExtraction/types.ts";
+import { fitCatalogFrames } from "./catalogFrame.ts";
 import {
   chooseCatalogFrameWidth,
   inferCatalogGrid,
   reconstructSparseCatalogGrid,
   regularizeCatalogColumns,
-} from "./catalogGrid";
-import { hasCatalogHeader } from "./catalogHeader";
-import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization";
-import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize";
-import { findPhotoBannerBottom } from "./photoBanner";
-import { photoExtractionProfile } from "./profile";
+} from "./catalogGrid.ts";
+import { hasCatalogHeader } from "./catalogHeader.ts";
+import { optimizeLowConfidenceCatalogLayout } from "./catalogLayoutOptimization.ts";
+import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize.ts";
+import { findPhotoBannerBottom } from "./photoBanner.ts";
+import { photoExtractionProfile } from "./profile.ts";
 
 const MINIMUM_CATALOG_ROWS = 3;
 const MINIMUM_COLUMNS = 3;

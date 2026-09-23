@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "フジテレビ「芸能人が本気で考えた！ドッキリGP 松田元太に緊急（秘）重大発表ドッキリSP」",

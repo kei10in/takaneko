@@ -1,9 +1,9 @@
 import fs from "node:fs";
 import { assert, describe, expect, it } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { isObject } from "~/utils/types/object";
-import { Events } from "./events";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { isObject } from "~/utils/types/object.ts";
+import { Events } from "./events.ts";
 
 describe("EventRepository", () => {
   describe("imported events", async () => {

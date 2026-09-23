@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import type { ClusteredRect } from "../imageRegionExtraction/types";
+import type { ClusteredRect } from "../imageRegionExtraction/types.ts";
 import {
   catalogQualityMetrics,
   chooseParetoImprovement,
   type CatalogLayoutEvaluation,
   type CatalogQualityMetrics,
   type MetricThresholds,
-} from "./catalogCandidateSelection";
+} from "./catalogCandidateSelection.ts";
 
 const frame: ClusteredRect = {
   x: 10,

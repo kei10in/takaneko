@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "../imageRegionExtraction/imageEdges";
-import type { PixelImage } from "../imageRegionExtraction/types";
-import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize";
+import { createEdgeMap } from "../imageRegionExtraction/imageEdges.ts";
+import type { PixelImage } from "../imageRegionExtraction/types.ts";
+import { chooseCatalogFrameInsets, chooseCatalogFrameSize } from "./catalogSize.ts";
 
 const createCatalogImage = (cardSize = 99): PixelImage => {
   const width = 380;

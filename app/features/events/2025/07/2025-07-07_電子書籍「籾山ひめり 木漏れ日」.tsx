@@ -1,6 +1,6 @@
-import { 籾山ひめり_木漏れ日 } from "~/features/publications/publications/2025-07-07_籾山ひめり_木漏れ日";
-import { EventMetaDescriptor } from "../../eventMeta";
-import { convertPublicationToEventMeta } from "../../publicationToEventMeta";
+import { 籾山ひめり_木漏れ日 } from "~/features/publications/publications/2025-07-07_籾山ひめり_木漏れ日.ts";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
+import { convertPublicationToEventMeta } from "../../publicationToEventMeta.ts";
 
 export const meta: EventMetaDescriptor = convertPublicationToEventMeta(籾山ひめり_木漏れ日);
 

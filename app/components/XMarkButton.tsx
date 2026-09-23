@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef, forwardRef } from "react";
 import { BsX } from "react-icons/bs";
-import { iconButton } from "./styles/buttons";
+import { iconButton } from "./styles/buttons.ts";
 
 type Props = ComponentPropsWithRef<"button">;
 

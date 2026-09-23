@@ -1,9 +1,9 @@
-import { RandomGoods } from "./product";
+import { RandomGoods } from "./product.ts";
 import {
   isRegularTakanekoMiniPhotoCard,
   isRegularTakanekoPhoto,
   TAKANEKO_PHOTOS,
-} from "./productImages";
+} from "./productImages.ts";
 
 export const relativeProductImages = (item: RandomGoods): RandomGoods[] => {
   const sameSeriesItems = TAKANEKO_PHOTOS.filter((x) => x.series === item.series).filter(

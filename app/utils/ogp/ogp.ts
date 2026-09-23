@@ -1,5 +1,5 @@
 import urlMetadata from "url-metadata";
-import { OpenGraph, SocialCards, TwitterCard } from "./metaData";
+import { OpenGraph, SocialCards, TwitterCard } from "./metaData.ts";
 
 export const ogp = async (url: string): Promise<SocialCards> => {
   try {

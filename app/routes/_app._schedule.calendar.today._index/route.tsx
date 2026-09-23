@@ -1,11 +1,11 @@
 import { MetaFunction, useLoaderData } from "react-router";
-import { DomainName } from "~/constants";
-import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { DailyCalendar } from "~/features/calendars/DailyCalendar";
-import { dateHref } from "~/features/calendars/utils";
-import { Events } from "~/features/events/events";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { formatTitle } from "~/utils/htmlHeader";
+import { DomainName } from "~/constants.ts";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents.ts";
+import { DailyCalendar } from "~/features/calendars/DailyCalendar.tsx";
+import { dateHref } from "~/features/calendars/utils.ts";
+import { Events } from "~/features/events/events.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   const today = NaiveDate.todayInJapan();

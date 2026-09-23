@@ -1,9 +1,9 @@
 import type { EventStatusType, MusicEvent } from "schema-dts";
-import { DomainName } from "~/constants";
-import type { EventMeta } from "~/features/events/eventMeta";
-import { JAPAN_PREFECTURES } from "~/features/stats/pref";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { ImageDescription } from "~/utils/types/ImageDescription";
+import { DomainName } from "~/constants.ts";
+import type { EventMeta } from "~/features/events/eventMeta.ts";
+import { JAPAN_PREFECTURES } from "~/features/stats/pref.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 
 export type LdJsonMusicEvent = MusicEvent & {
   "@type": "MusicEvent";

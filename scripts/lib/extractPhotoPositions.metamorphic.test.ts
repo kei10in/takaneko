@@ -2,15 +2,15 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { describe, expect, it } from "vitest";
-import type { ImagePosition } from "~/features/products/product";
-import { extractPhotoPositions } from "./extractPhotoPositions";
-import { decodePixelImage } from "./imageRegionExtraction/decodeImage";
-import { estimateBackgroundColor } from "./imageRegionExtraction/foregroundDetection";
-import { intersectionOverUnion } from "./imageRegionExtraction/geometry";
-import { createEdgeMap } from "./imageRegionExtraction/imageEdges";
-import type { ClusteredRect } from "./imageRegionExtraction/types";
-import { optimizeLowConfidenceCatalogLayout } from "./photoExtraction/catalogLayoutOptimization";
-import { photoExtractionProfile } from "./photoExtraction/profile";
+import type { ImagePosition } from "~/features/products/product.ts";
+import { extractPhotoPositions } from "./extractPhotoPositions.ts";
+import { decodePixelImage } from "./imageRegionExtraction/decodeImage.ts";
+import { estimateBackgroundColor } from "./imageRegionExtraction/foregroundDetection.ts";
+import { intersectionOverUnion } from "./imageRegionExtraction/geometry.ts";
+import { createEdgeMap } from "./imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect } from "./imageRegionExtraction/types.ts";
+import { optimizeLowConfidenceCatalogLayout } from "./photoExtraction/catalogLayoutOptimization.ts";
+import { photoExtractionProfile } from "./photoExtraction/profile.ts";
 
 interface TransformedCatalog {
   input: Buffer;

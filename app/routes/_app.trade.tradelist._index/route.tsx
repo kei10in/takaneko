@@ -2,29 +2,29 @@ import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/r
 import { clsx } from "clsx";
 import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
 import { useSearchParams } from "react-router";
-import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { DomainName, OgpSiteName } from "~/constants";
+import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages.tsx";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { DomainName, OgpSiteName } from "~/constants.ts";
 import {
   otherTakanekoRandomGoods,
   regularTakanekoMiniPhotoCards,
   regularTakanekoPhotos,
-} from "~/features/products/productImages";
-import { MemberDescription } from "~/features/profile/types";
-import { useTradeStore } from "~/features/trade/store";
+} from "~/features/products/productImages.ts";
+import { MemberDescription } from "~/features/profile/types.ts";
+import { useTradeStore } from "~/features/trade/store.ts";
 import {
   mapProductToTradingItemDetails,
   TradingItemDetail,
-} from "~/features/tradeSummaries/tradingItemDetails";
-import { formatTitle } from "~/utils/htmlHeader";
+} from "~/features/tradeSummaries/tradingItemDetails.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import {
   useMiniPhotoCardOfferListImages,
   useOtherGoodsOfferListImages,
   usePhotoOfferListImages,
-} from "../../components/TradeListImage/offerListImages";
-import { AllMembers } from "../../features/profile/members";
-import { Route } from "./+types/route";
-import { TradingItemList } from "./TradingItemList";
+} from "../../components/TradeListImage/offerListImages.ts";
+import { AllMembers } from "../../features/profile/members.ts";
+import { Route } from "./+types/route.ts";
+import { TradingItemList } from "./TradingItemList.tsx";
 
 export const meta: Route.MetaFunction = ({ location }) => {
   const title = formatTitle("譲れるやつ");

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { LdJsonIds } from "./ldJsonIds";
+import { LdJsonIds } from "./ldJsonIds.ts";
 
 describe("LdJsonIds", () => {
   it("builds a MusicEvent node id from the canonical event URL", () => {

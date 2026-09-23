@@ -1,7 +1,7 @@
 import { BsBook } from "react-icons/bs";
-import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
-import { displayDate } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 interface Props {
   name: string;

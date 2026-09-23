@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { REGULAR_MINI_PHOTO_SET2 } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { REGULAR_MINI_PHOTO_SET2 } from "../utils.ts";
 
 export const たかねこフェスvol6_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「たかねこフェス vol.6」",

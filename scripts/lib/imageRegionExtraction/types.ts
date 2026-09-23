@@ -1,4 +1,4 @@
-import type { ImagePosition } from "~/features/products/product";
+import type { ImagePosition } from "~/features/products/product.ts";
 
 export interface PixelImage {
   width: number;

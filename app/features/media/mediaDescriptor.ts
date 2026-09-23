@@ -1,4 +1,4 @@
-import { MediaDescriptor } from "./types";
+import { MediaDescriptor } from "./types.ts";
 
 export const mediaKey = (media: MediaDescriptor): string => {
   if (media.kind === "youtube") {

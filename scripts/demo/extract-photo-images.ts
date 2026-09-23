@@ -1,4 +1,4 @@
-import { extractPhotoImages } from "../lib/extractPhotoImages";
+import { extractPhotoImages } from "../lib/extractPhotoImages.ts";
 
 const main = async (): Promise<void> => {
   const inputPath = process.argv[2];

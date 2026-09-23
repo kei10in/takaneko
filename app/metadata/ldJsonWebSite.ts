@@ -1,6 +1,6 @@
 import type { MetaDescriptor } from "react-router";
-import { DomainName, SiteTitle } from "~/constants";
-import { LdJsonMeta } from "~/utils/jsonLd/react-router";
+import { DomainName, SiteTitle } from "~/constants.ts";
+import { LdJsonMeta } from "~/utils/jsonLd/react-router.ts";
 
 export const ldJsonWebSite = (): MetaDescriptor => {
   return LdJsonMeta({

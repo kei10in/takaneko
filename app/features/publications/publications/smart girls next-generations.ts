@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const SmartGirlsNextGenerations: Publication = {
   slug: "smart girls next-generations",

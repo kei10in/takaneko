@@ -1,7 +1,7 @@
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventModule } from "../events/eventModule";
-import { SongMetaDescriptor } from "../songs/types";
-import { SongPerformanceStats, SongPerformed } from "./types";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { EventModule } from "../events/eventModule.ts";
+import { SongMetaDescriptor } from "../songs/types.ts";
+import { SongPerformanceStats, SongPerformed } from "./types.ts";
 
 export const makeSongPerformedList = (
   events: EventModule[],

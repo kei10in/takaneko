@@ -1,6 +1,6 @@
-import { MemberId, MemberIdOrGroupId } from "~/features/profile/types";
-import { ImageDescription } from "~/utils/types/ImageDescription";
-import { LinkDescription } from "~/utils/types/LinkDescription";
+import { MemberId, MemberIdOrGroupId } from "~/features/profile/types.ts";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
 
 export interface Publication {
   /** 商品ページの識別子です。他の出版物と重複しない値を指定します。 */

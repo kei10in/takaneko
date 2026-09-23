@@ -1,5 +1,5 @@
 import { z } from "zod/v4";
-import { ImageDescription } from "~/utils/types/ImageDescription";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 
 export const GroupIdEnum = z.enum([
   // 10 人体制の高嶺のなでしこ

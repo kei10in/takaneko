@@ -2,8 +2,8 @@ import { createHash } from "node:crypto";
 import { mkdir } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
-import type { ImagePosition } from "~/features/products/product";
-import { intersectionOverUnion } from "../imageRegionExtraction/geometry";
+import type { ImagePosition } from "~/features/products/product.ts";
+import { intersectionOverUnion } from "../imageRegionExtraction/geometry.ts";
 
 const MINIMUM_IOU = 0.97;
 const THUMBNAIL_WIDTH = 96;

@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 瞬きさえ忘れる_FC抽選会_メンバー個別デザインステッカー: RandomGoods = {
   id: "瞬きさえ忘れる。FC抽選会 メンバー個別デザインステッカー",

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { displayDate, displayMonth } from "./dateDisplay";
-import { NaiveDate } from "./datetime/NaiveDate";
-import { NaiveMonth } from "./datetime/NaiveMonth";
+import { displayDate, displayMonth } from "./dateDisplay.ts";
+import { NaiveDate } from "./datetime/NaiveDate.ts";
+import { NaiveMonth } from "./datetime/NaiveMonth.ts";
 
 describe("displayDate", () => {
   it("should return '2022年01月01日' for '2022-01-01' string", () => {

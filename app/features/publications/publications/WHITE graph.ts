@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const WHITE_graph_011: Publication = {
   slug: "WHITE graph 011",

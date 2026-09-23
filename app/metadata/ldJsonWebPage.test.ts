@@ -1,6 +1,6 @@
 import { WebPage } from "schema-dts";
 import { describe, expect, expectTypeOf, it } from "vitest";
-import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage";
+import { LdJsonWebPage, webPageDocument } from "./ldJsonWebPage.ts";
 
 expectTypeOf<LdJsonWebPage>().toExtend<WebPage>();
 

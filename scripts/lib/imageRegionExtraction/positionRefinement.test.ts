@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { createEdgeMap } from "./imageEdges";
-import { bestPositionForSize } from "./positionRefinement";
-import type { PixelImage } from "./types";
+import { createEdgeMap } from "./imageEdges.ts";
+import { bestPositionForSize } from "./positionRefinement.ts";
+import type { PixelImage } from "./types.ts";
 
 describe("position refinement", () => {
   it("moves an approximate rectangle to the strongest nearby frame", () => {

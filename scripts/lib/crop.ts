@@ -6,14 +6,14 @@ import {
   CROPPED_MINI_PHOTO_CARD_SIZE,
   CROPPED_PHOTO_SIZE,
   croppedImagePath,
-} from "~/features/products/croppedProductImage";
-import { ImagePosition, RandomGoods } from "~/features/products/product";
+} from "~/features/products/croppedProductImage.ts";
+import { ImagePosition, RandomGoods } from "~/features/products/product.ts";
 import {
   isRegularTakanekoMiniPhotoCard,
   isRegularTakanekoPhoto,
-} from "~/features/products/productImages";
-import { Xywh } from "~/features/trade/stampPosition";
-import { Size } from "~/utils/types/Size";
+} from "~/features/products/productImages.ts";
+import { Xywh } from "~/features/trade/stampPosition.ts";
+import { Size } from "~/utils/types/Size.ts";
 
 const webpQuality = 80;
 

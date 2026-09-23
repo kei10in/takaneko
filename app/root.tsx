@@ -8,8 +8,8 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "react-router";
-import type { Route } from "./+types/root";
-import { Topbar } from "./components/topbar";
+import type { Route } from "./+types/root.ts";
+import { Topbar } from "./components/topbar.tsx";
 import "./tailwind.css";
 
 export const loader = ({ request }: Route.LoaderArgs) => {

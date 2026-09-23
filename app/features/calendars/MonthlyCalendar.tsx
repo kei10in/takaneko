@@ -1,11 +1,11 @@
 import { clsx } from "clsx";
 import { useMemo } from "react";
 import { Link } from "react-router";
-import { getCalendarDatesOfMonth } from "~/utils/calendar/calendarDate";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { CalendarCell } from "./CalendarCell";
-import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents";
+import { getCalendarDatesOfMonth } from "~/utils/calendar/calendarDate.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { CalendarCell } from "./CalendarCell.tsx";
+import { CalendarEvent, zipCalendarDatesAndEvents } from "./calendarEvents.ts";
 
 interface Props {
   month: NaiveMonth;

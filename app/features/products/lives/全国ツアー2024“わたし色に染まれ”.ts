@@ -1,7 +1,7 @@
-import { わたし色に染まれ_ミニフォト } from "../2024/2024-05-12_ミニフォトカード「わたし色に染まれ」";
-import { わたし色に染まれ_生写真 } from "../2024/2024-05-12_生写真「わたし色に染まれ」";
-import { 浴衣2024_生写真 } from "../2024/2024-07-12_生写真「浴衣2024」";
-import { LiveGoodsCollection } from "../product";
+import { わたし色に染まれ_ミニフォト } from "../2024/2024-05-12_ミニフォトカード「わたし色に染まれ」.ts";
+import { わたし色に染まれ_生写真 } from "../2024/2024-05-12_生写真「わたし色に染まれ」.ts";
+import { 浴衣2024_生写真 } from "../2024/2024-07-12_生写真「浴衣2024」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const 全国ツアー2024_わたし色に染まれ: LiveGoodsCollection = {
   slug: "全国ツアー2024“わたし色に染まれ”",

@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const GIANNA_Plus_DONNA_1_松本ももな: Publication = {
   slug: "GIANNA Plus DONNA 1 cover 松本ももな",

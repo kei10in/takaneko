@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "芸能人が本気で考えた!ドッキリGP ドッキリは地球を救うのか? 4時間テレビ",

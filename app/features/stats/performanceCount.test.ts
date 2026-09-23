@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { Events } from "../events/events";
-import { ALL_SONGS } from "../songs/songs";
-import { calculatePerformanceCount, makeSongPerformedList } from "./performanceCount";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { Events } from "../events/events.ts";
+import { ALL_SONGS } from "../songs/songs.ts";
+import { calculatePerformanceCount, makeSongPerformedList } from "./performanceCount.ts";
 
 const snapshotFor = (name: string) => `./__snapshots__/performanceCount.test.ts-${name}.snap`;
 

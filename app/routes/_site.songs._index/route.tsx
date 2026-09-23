@@ -1,10 +1,16 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { Limited, Original, Repertoire, TakanekoVersion, Unperformed } from "~/features/songs/tags";
-import { formatTitle } from "~/utils/htmlHeader";
-import { Thumbnail } from "./thumbnail";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { ALL_SONGS } from "~/features/songs/songs.ts";
+import {
+  Limited,
+  Original,
+  Repertoire,
+  TakanekoVersion,
+  Unperformed,
+} from "~/features/songs/tags.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { Thumbnail } from "./thumbnail.tsx";
 
 export const meta: MetaFunction = () => {
   return [

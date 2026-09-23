@@ -1,6 +1,6 @@
-import { average, chooseRepresentativeSize, groupByIndex, median } from "./geometry";
-import { horizontalLineSum, rectangleBoundaryScore, verticalLineSum } from "./imageEdges";
-import { scoreAspectRatio } from "./layoutScoring";
+import { average, chooseRepresentativeSize, groupByIndex, median } from "./geometry.ts";
+import { horizontalLineSum, rectangleBoundaryScore, verticalLineSum } from "./imageEdges.ts";
+import { scoreAspectRatio } from "./layoutScoring.ts";
 import type {
   AxisModel,
   ClusteredRect,
@@ -8,7 +8,7 @@ import type {
   ExtractionProfile,
   LayoutCandidate,
   NormalizeMode,
-} from "./types";
+} from "./types.ts";
 
 export const normalizeLayout = (
   layout: LayoutCandidate,

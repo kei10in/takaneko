@@ -3,9 +3,9 @@ import {
   clusterValues,
   groupByIndex,
   median,
-} from "../imageRegionExtraction/geometry";
-import { scoreRegularDifferences } from "../imageRegionExtraction/layoutScoring";
-import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types";
+} from "../imageRegionExtraction/geometry.ts";
+import { scoreRegularDifferences } from "../imageRegionExtraction/layoutScoring.ts";
+import type { ClusteredRect, LayoutCandidate } from "../imageRegionExtraction/types.ts";
 
 const MINIMUM_CATALOG_ROWS = 3;
 const MINIMUM_REFERENCE_ROWS = 2;

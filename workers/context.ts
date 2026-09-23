@@ -1,5 +1,5 @@
 import { RouterContextProvider } from "react-router";
-import { cloudflareContext, type CloudflareLoadContext } from "../app/cloudflare-context";
+import { cloudflareContext, type CloudflareLoadContext } from "../app/cloudflare-context.ts";
 
 export const createCloudflareLoadContext = (
   env: Env,

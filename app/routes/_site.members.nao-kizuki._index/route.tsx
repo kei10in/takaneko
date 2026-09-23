@@ -1,8 +1,8 @@
 import { Link, MetaFunction } from "react-router";
-import { MemberProfile } from "~/components/MemberProfile";
-import { sectionHeading } from "~/components/styles";
-import { formatTitle } from "~/utils/htmlHeader";
-import { NaoKizuki } from "../../features/profile/members";
+import { MemberProfile } from "~/components/MemberProfile.tsx";
+import { sectionHeading } from "~/components/styles.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { NaoKizuki } from "../../features/profile/members.ts";
 
 export const meta: MetaFunction = () => {
   return [

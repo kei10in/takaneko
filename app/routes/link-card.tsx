@@ -1,5 +1,5 @@
 import { LoaderFunctionArgs } from "react-router";
-import { ogp } from "~/utils/ogp/ogp";
+import { ogp } from "~/utils/ogp/ogp.ts";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);

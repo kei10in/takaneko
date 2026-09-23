@@ -1,7 +1,7 @@
 import { GiAmpleDress } from "react-icons/gi";
 import { Link } from "react-router";
-import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage";
-import { Costume } from "~/features/costumes/types";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { Costume } from "~/features/costumes/types.ts";
 
 interface Props {
   costume: Costume;

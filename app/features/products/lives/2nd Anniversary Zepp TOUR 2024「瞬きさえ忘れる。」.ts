@@ -1,9 +1,9 @@
-import { 瞬きさえ忘れる_ミニフォト } from "../2024/2024-09-15_ミニフォトカード「瞬きさえ忘れる。」";
-import { 瞬きさえ忘れる_生写真 } from "../2024/2024-09-15_生写真「瞬きさえ忘れる。」";
-import { 高嶺のなでしこ2024衣装_ミニフォト } from "../2024/2024-11-08_ミニフォトカード「高嶺のなでしこ2024衣装」";
-import { 高嶺のなでしこ2024衣装_生写真 } from "../2024/2024-11-08_生写真「高嶺のなでしこ2024衣装」";
-import { Prize, PrizeDrawing } from "../prizes";
-import { LiveGoodsCollection } from "../product";
+import { 瞬きさえ忘れる_ミニフォト } from "../2024/2024-09-15_ミニフォトカード「瞬きさえ忘れる。」.ts";
+import { 瞬きさえ忘れる_生写真 } from "../2024/2024-09-15_生写真「瞬きさえ忘れる。」.ts";
+import { 高嶺のなでしこ2024衣装_ミニフォト } from "../2024/2024-11-08_ミニフォトカード「高嶺のなでしこ2024衣装」.ts";
+import { 高嶺のなでしこ2024衣装_生写真 } from "../2024/2024-11-08_生写真「高嶺のなでしこ2024衣装」.ts";
+import { Prize, PrizeDrawing } from "../prizes.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const _2ndAnniversaryZeppTOUR2024瞬きさえ忘れる: LiveGoodsCollection = {
   slug: "2nd Anniversary Zepp TOUR 2024「瞬きさえ忘れる。」",

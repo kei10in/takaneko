@@ -1,9 +1,9 @@
 import { MusicEvent } from "schema-dts";
 import { assert, describe, expect, expectTypeOf, it } from "vitest";
-import type { EventModule } from "~/features/events/eventModule";
-import { Events } from "~/features/events/events";
-import { makeEventMetaForTest } from "~/features/events/testUtils";
-import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent";
+import type { EventModule } from "~/features/events/eventModule.ts";
+import { Events } from "~/features/events/events.ts";
+import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
+import { LdJsonMusicEvent, musicEventDocument } from "./ldJsonMusicEvent.ts";
 
 expectTypeOf<LdJsonMusicEvent>().toExtend<MusicEvent>();
 

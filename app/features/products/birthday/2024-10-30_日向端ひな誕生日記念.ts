@@ -1,5 +1,5 @@
 import { dedent } from "ts-dedent";
-import { BirthdayGoodsCollection, OfficialGoods } from "../product";
+import { BirthdayGoodsCollection, OfficialGoods } from "../product.ts";
 
 export const _18センチのひにゃねこアクスタ: OfficialGoods = {
   slug: "18㌢のひにゃねこアクスタ",

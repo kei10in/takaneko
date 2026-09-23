@@ -4,7 +4,7 @@ import { globSync } from "glob";
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { isThumbnail, thumbnailDir, thumbnails } from "~/utils/fileConventions";
+import { isThumbnail, thumbnailDir, thumbnails } from "~/utils/fileConventions.ts";
 
 const webpQuality = 80;
 const concurrency = Math.max(1, Math.min(os.cpus().length, 8));

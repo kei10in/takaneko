@@ -1,6 +1,6 @@
-import { 成長発表会_FC抽選会_メンバー個別デザインステッカー } from "../2024/2024-08-07_ステッカー「2nd ファンミーティング〜成長発表会〜 FC抽選会」";
-import { 白ワンピース_生写真 } from "../2024/2024-08-07_生写真「白ワンピース」";
-import { LiveGoodsCollection } from "../product";
+import { 成長発表会_FC抽選会_メンバー個別デザインステッカー } from "../2024/2024-08-07_ステッカー「2nd ファンミーティング〜成長発表会〜 FC抽選会」.ts";
+import { 白ワンピース_生写真 } from "../2024/2024-08-07_生写真「白ワンピース」.ts";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const _2ndファンミーティング成長発表会: LiveGoodsCollection = {
   slug: "2nd ファンミーティング〜成長発表会〜",

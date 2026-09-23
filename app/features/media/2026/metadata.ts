@@ -1,4 +1,4 @@
-import { MediaDetails } from "~/features/media/types";
+import { MediaDetails } from "~/features/media/types.ts";
 
 export const metadata2026: MediaDetails[] = [
   {

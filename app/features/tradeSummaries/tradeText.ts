@@ -1,7 +1,7 @@
-import { AllMembers } from "~/features/profile/members";
-import { ItemDescription, RandomGoods } from "../products/product";
-import { TradeText } from "../products/productImages";
-import { TradeDescription } from "../trade/TradeStatus";
+import { AllMembers } from "~/features/profile/members.ts";
+import { ItemDescription, RandomGoods } from "../products/product.ts";
+import { TradeText } from "../products/productImages.ts";
+import { TradeDescription } from "../trade/TradeStatus.ts";
 
 export const convertToTradeText = (
   productImage: RandomGoods,

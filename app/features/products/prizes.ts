@@ -1,4 +1,4 @@
-import { ImageDescription } from "~/utils/types/ImageDescription";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 
 export interface PrizeDrawing {
   id: string;

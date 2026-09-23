@@ -1,12 +1,12 @@
 import { clsx } from "clsx";
 import { BsDownload, BsFiletypeCsv, BsFiletypeJson } from "react-icons/bs";
 import { Link, MetaFunction, useLoaderData } from "react-router";
-import { cloudflareContext } from "~/cloudflare-context";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles";
-import { formatDataSize } from "~/utils/dataSize";
-import { formatTitle } from "~/utils/htmlHeader";
-import type { Route } from "./+types/route";
-import { DatasetMeta } from "./types";
+import { cloudflareContext } from "~/cloudflare-context.ts";
+import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { formatDataSize } from "~/utils/dataSize.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import type { Route } from "./+types/route.ts";
+import { DatasetMeta } from "./types.ts";
 
 export const meta: MetaFunction = () => {
   return [

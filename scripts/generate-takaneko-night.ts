@@ -8,7 +8,7 @@
 import Handlebars from "handlebars";
 import fs from "node:fs";
 import path from "path";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 // Constants derived from the template & spec
 const PROGRAM_FILE_SUFFIX = "TOKYO FM「たかねこナイト」.ts";

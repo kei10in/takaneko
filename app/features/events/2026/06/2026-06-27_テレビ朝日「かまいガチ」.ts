@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "テレビ朝日「かまいガチ 1時間SP放送記念!! 名作をもう一度「あの頃のラブレター歌謡祭」」",

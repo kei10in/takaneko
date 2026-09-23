@@ -1,8 +1,8 @@
 import { Transition } from "@headlessui/react";
 import { clsx } from "clsx";
 import { Fragment } from "react";
-import { SelectableEmojis } from "~/features/trade/stamp";
-import { TradeStatus, TradeStatusImages } from "~/features/trade/TradeStatus";
+import { SelectableEmojis } from "~/features/trade/stamp.ts";
+import { TradeStatus, TradeStatusImages } from "~/features/trade/TradeStatus.ts";
 
 interface Props {
   status?: TradeStatus | undefined;

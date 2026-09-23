@@ -1,5 +1,5 @@
 import { z } from "zod/v4";
-import { CostumeName } from "../costumes/costumeNames";
+import { CostumeName } from "../costumes/costumeNames.ts";
 
 export const EventCostume = z.union([
   CostumeName,

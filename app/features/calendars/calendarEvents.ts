@@ -1,6 +1,6 @@
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { EventMeta } from "../events/eventMeta";
-import { EventModule } from "../events/eventModule";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { EventMeta } from "../events/eventMeta.ts";
+import { EventModule } from "../events/eventModule.ts";
 
 export type CalendarEvent = {
   slug: string;

@@ -3,12 +3,16 @@ import { clsx } from "clsx";
 import { MouseEventHandler, useMemo, useState } from "react";
 import { BsBan } from "react-icons/bs";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
-import { RandomGoods } from "~/features/products/product";
-import { SelectableEmojis } from "~/features/trade/stamp";
-import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription, TradeStatus, tradeStateToImageSrc } from "~/features/trade/TradeStatus";
-import { ClippedImage } from "../ClippedImage";
-import { TradeStateButton } from "./TradeStateButton";
+import { RandomGoods } from "~/features/products/product.ts";
+import { SelectableEmojis } from "~/features/trade/stamp.ts";
+import { stampPositions } from "~/features/trade/stampPosition.ts";
+import {
+  TradeDescription,
+  TradeStatus,
+  tradeStateToImageSrc,
+} from "~/features/trade/TradeStatus.ts";
+import { ClippedImage } from "../ClippedImage.tsx";
+import { TradeStateButton } from "./TradeStateButton.tsx";
 
 interface Props {
   productImage: RandomGoods;

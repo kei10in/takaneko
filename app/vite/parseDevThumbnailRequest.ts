@@ -1,5 +1,5 @@
 // Vite 設定の読み込み時はアプリ用の ~ エイリアスがまだ使えない。
-import { Err, Ok, type Result } from "../utils/result";
+import { Err, Ok, type Result } from "../utils/result.ts";
 
 export const devThumbnailPrefix = "/cdn-cgi/image/";
 

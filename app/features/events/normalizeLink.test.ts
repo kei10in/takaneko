@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { LinkDescription } from "~/utils/types/LinkDescription";
-import { normalizeLink } from "./normalizeLink";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
+import { normalizeLink } from "./normalizeLink.ts";
 
 describe("normalizeLink", () => {
   it("should return a LinkDescription for a valid URL string", () => {

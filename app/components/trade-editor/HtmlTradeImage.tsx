@@ -1,8 +1,8 @@
 import { forwardRef, Ref, useMemo } from "react";
-import { ImagePosition } from "~/features/products/product";
-import { stampPositions } from "~/features/trade/stampPosition";
-import { TradeDescription } from "~/features/trade/TradeStatus";
-import { TradeStatusStamp } from "./TradeStatusStamp";
+import { ImagePosition } from "~/features/products/product.ts";
+import { stampPositions } from "~/features/trade/stampPosition.ts";
+import { TradeDescription } from "~/features/trade/TradeStatus.ts";
+import { TradeStatusStamp } from "./TradeStatusStamp.tsx";
 
 interface Props {
   image: { url: string; width: number; height: number };

@@ -1,13 +1,18 @@
 import { z } from "zod/v4";
 
-import { ImageDescription } from "~/utils/types/ImageDescription";
-import { LinkDescription } from "~/utils/types/LinkDescription";
-import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types";
-import { Act, isEmptyAct } from "./act";
-import { compareEventType, EventTypeEnum, LiveTypeEnum, MeetAndGreetTypeEnum } from "./EventType";
-import { normalizeLink } from "./normalizeLink";
-import { ShowNotes } from "./showNotes";
-import { TimeScheduleForMeetAndGreet } from "./timeSchedule";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
+import { MemberIdEnum, MemberIdOrGroupId } from "../profile/types.ts";
+import { Act, isEmptyAct } from "./act.ts";
+import {
+  compareEventType,
+  EventTypeEnum,
+  LiveTypeEnum,
+  MeetAndGreetTypeEnum,
+} from "./EventType.ts";
+import { normalizeLink } from "./normalizeLink.ts";
+import { ShowNotes } from "./showNotes.ts";
+import { TimeScheduleForMeetAndGreet } from "./timeSchedule.ts";
 
 const EventStatus = z.union([
   z.literal("RESCHEDULED"),

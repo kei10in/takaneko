@@ -15,9 +15,9 @@ import {
   isOtherTakanekoRandomGoods,
   isRegularTakanekoMiniPhotoCard,
   isRegularTakanekoPhoto,
-} from "~/features/products/productImages";
-import { RandomGoods } from "../../features/products/product";
-import { RandomGoodsList } from "./RandomGoodsList";
+} from "~/features/products/productImages.ts";
+import { RandomGoods } from "../../features/products/product.ts";
+import { RandomGoodsList } from "./RandomGoodsList.tsx";
 
 interface Props {
   allPhotos: {

@@ -1,6 +1,6 @@
-import { YouTubeVideoMetadata } from "./types";
-import { verifyYouTubeThumbnails } from "./youtubeImage";
-import { fetchYouTubeOEmbed } from "./youtubeOEmbed";
+import { YouTubeVideoMetadata } from "./types.ts";
+import { verifyYouTubeThumbnails } from "./youtubeImage.ts";
+import { fetchYouTubeOEmbed } from "./youtubeOEmbed.ts";
 
 export const fetchYouTubeVideoMetadata = async (
   videoId: string,

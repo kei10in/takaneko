@@ -4,16 +4,16 @@ import {
   MetaFunction,
   useLoaderData,
 } from "react-router";
-import { DomainName } from "~/constants";
-import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents";
-import { DailyCalendar } from "~/features/calendars/DailyCalendar";
-import { isCalendarMonthAvailable, validateYearMonthDate } from "~/features/calendars/utils";
-import { compareEventMeta } from "~/features/events/eventMeta";
-import { Events } from "~/features/events/events";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { NaiveMonth } from "~/utils/datetime/NaiveMonth";
-import { formatTitle } from "~/utils/htmlHeader";
+import { DomainName } from "~/constants.ts";
+import { calendarEventFromEventModule } from "~/features/calendars/calendarEvents.ts";
+import { DailyCalendar } from "~/features/calendars/DailyCalendar.tsx";
+import { isCalendarMonthAvailable, validateYearMonthDate } from "~/features/calendars/utils.ts";
+import { compareEventMeta } from "~/features/events/eventMeta.ts";
+import { Events } from "~/features/events/events.ts";
+import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   const title =

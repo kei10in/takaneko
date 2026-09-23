@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 週刊少年チャンピオン_2025年No32: Publication = {
   slug: "週刊少年チャンピオン2025年No.32",

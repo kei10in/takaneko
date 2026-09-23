@@ -4,12 +4,12 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
 import useSWR from "swr";
-import { Breadcrumb } from "~/components/Breadcrumb";
-import { BarChart } from "~/components/charts/BarChart";
-import { pageBox, pageHeading } from "~/components/styles";
-import { Events } from "~/features/events/events";
-import { aggregatePrefectureStats } from "~/features/stats/pref";
-import { formatTitle } from "~/utils/htmlHeader";
+import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { BarChart } from "~/components/charts/BarChart.tsx";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { Events } from "~/features/events/events.ts";
+import { aggregatePrefectureStats } from "~/features/stats/pref.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 Chart.register(ChartDataLabels);
 

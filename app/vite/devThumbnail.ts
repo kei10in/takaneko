@@ -1,7 +1,7 @@
 import { TLSSocket } from "node:tls";
 import type { Connect, Plugin } from "vite";
-import { loadDevThumbnail } from "./loadDevThumbnail";
-import { devThumbnailPrefix, parseDevThumbnailRequest } from "./parseDevThumbnailRequest";
+import { loadDevThumbnail } from "./loadDevThumbnail.ts";
+import { devThumbnailPrefix, parseDevThumbnailRequest } from "./parseDevThumbnailRequest.ts";
 
 export const createDevThumbnailMiddleware =
   (): Connect.NextHandleFunction => async (req, res, next) => {

@@ -1,10 +1,10 @@
-import type { Result } from "~/utils/result";
-import { extractPhotoPositions } from "./extractPhotoPositions";
+import type { Result } from "~/utils/result.ts";
+import { extractPhotoPositions } from "./extractPhotoPositions.ts";
 import {
   extractImages,
   type ExtractedImages,
   type ExtractImagesError,
-} from "./imageRegionExtraction/extractImages";
+} from "./imageRegionExtraction/extractImages.ts";
 
 export type ExtractedPhotoImages = ExtractedImages;
 export type ExtractPhotoImagesError = ExtractImagesError;

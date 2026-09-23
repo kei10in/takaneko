@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { miniPhotoExtractionProfile } from "../miniPhotoExtraction/profile";
-import { scoreAspectRatio, scoreLayout, scoreRegularDifferences } from "./layoutScoring";
-import type { ClusteredRect, ExtractionProfile } from "./types";
+import { miniPhotoExtractionProfile } from "../miniPhotoExtraction/profile.ts";
+import { scoreAspectRatio, scoreLayout, scoreRegularDifferences } from "./layoutScoring.ts";
+import type { ClusteredRect, ExtractionProfile } from "./types.ts";
 
 const regularLayout: ClusteredRect[] = [
   { x: 10, y: 10, width: 54, height: 86, boundaryScore: 0.8, row: 0, column: 0 },

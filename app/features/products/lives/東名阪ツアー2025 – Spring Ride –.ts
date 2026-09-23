@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const 東名阪ツアー2025_SpringRide: LiveGoodsCollection = {
   slug: "東名阪ツアー2025 Spring Ride",

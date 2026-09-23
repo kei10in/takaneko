@@ -1,8 +1,8 @@
 import { MDXContent } from "mdx/types";
 import { dedent } from "ts-dedent";
-import { makeMarkdownComponent } from "~/components/markdownComponentBuilder";
-import { stem } from "~/utils/string";
-import { EventMeta, validateEventMeta } from "./eventMeta";
+import { makeMarkdownComponent } from "~/components/markdownComponentBuilder.tsx";
+import { stem } from "~/utils/string.ts";
+import { EventMeta, validateEventMeta } from "./eventMeta.ts";
 
 export interface EventModule {
   slug: string;

@@ -1,5 +1,5 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
-import { REGULAR_MINI_PHOTO_SET } from "../utils";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
+import { REGULAR_MINI_PHOTO_SET } from "../utils.ts";
 
 export const たかねこ全国お招きツアー2023衣装_生写真: RandomGoods = {
   id: "生写真 (たかねこ全国お招きツアー 2023 ver)",

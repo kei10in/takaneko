@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "lopi lopi × YUMENOHANASHI PREMIUM LIVE 0122 〜OMEDETOU〜",

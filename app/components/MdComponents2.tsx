@@ -1,7 +1,7 @@
 import { clsx } from "clsx";
 import { BsExclamationTriangleFill, BsInfoCircle, BsLightbulb } from "react-icons/bs";
 import { Components } from "react-markdown";
-import { pageHeading, sectionHeading } from "./styles";
+import { pageHeading, sectionHeading } from "./styles.ts";
 
 export const markdownComponents2: Components = {
   h1: ({ children, ...props }) => (

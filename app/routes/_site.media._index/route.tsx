@@ -18,16 +18,16 @@ import {
   useLocation,
   useSearchParams,
 } from "react-router";
-import { MemberIcon } from "~/components/MemberIcon";
-import { pageBox, pageHeading } from "~/components/styles";
-import { getAllMediaMetadata } from "~/features/media/metadata";
-import { AllMembers, findMemberDescription } from "~/features/profile/members";
-import { includesMember } from "~/features/profile/profile";
-import { AllMembersProfile, TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko";
-import { isGroupId } from "~/features/profile/types";
-import { displayDate } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { formatTitle } from "~/utils/htmlHeader";
+import { MemberIcon } from "~/components/MemberIcon.tsx";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { getAllMediaMetadata } from "~/features/media/metadata.ts";
+import { AllMembers, findMemberDescription } from "~/features/profile/members.ts";
+import { includesMember } from "~/features/profile/profile.ts";
+import { AllMembersProfile, TakanenoNadeshiko } from "~/features/profile/takaneno-nadeshiko.ts";
+import { isGroupId } from "~/features/profile/types.ts";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 
 export const meta: MetaFunction = () => {
   return [

@@ -1,4 +1,4 @@
-import type { ExtractionProfile } from "../imageRegionExtraction/types";
+import type { ExtractionProfile } from "../imageRegionExtraction/types.ts";
 
 export const photoExtractionProfile: ExtractionProfile = {
   aspectRatio: {

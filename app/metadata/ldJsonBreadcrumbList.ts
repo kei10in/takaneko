@@ -1,5 +1,5 @@
 import type { BreadcrumbList } from "schema-dts";
-import { DomainName, SiteName } from "~/constants";
+import { DomainName, SiteName } from "~/constants.ts";
 
 export type LdJsonBreadcrumbList = BreadcrumbList & {
   "@id": string;

@@ -1,5 +1,5 @@
-import { average, chooseRepresentativeSize, groupByIndex, median } from "./geometry";
-import { rectangleBoundaryScore, verticalLineSum } from "./imageEdges";
+import { average, chooseRepresentativeSize, groupByIndex, median } from "./geometry.ts";
+import { rectangleBoundaryScore, verticalLineSum } from "./imageEdges.ts";
 import type {
   ClusteredRect,
   EdgeMap,
@@ -8,7 +8,7 @@ import type {
   NormalizeMode,
   PixelImage,
   RectCandidate,
-} from "./types";
+} from "./types.ts";
 
 export const refinePositions = (
   rects: ClusteredRect[],

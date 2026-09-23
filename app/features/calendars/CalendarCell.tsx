@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
-import { eventTypeBackgroundColor } from "../events/EventType";
-import { CalendarEvent, uniqueEventRegions } from "./calendarEvents";
+import { eventTypeBackgroundColor } from "../events/EventType.ts";
+import { CalendarEvent, uniqueEventRegions } from "./calendarEvents.ts";
 
 interface Props {
   date: number;

@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 大青春祭2024_メッセージカード: RandomGoods = {
   id: "大青春祭 2024 限定販売 メッセージカード",

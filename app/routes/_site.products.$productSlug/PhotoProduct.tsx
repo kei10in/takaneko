@@ -1,6 +1,6 @@
 import { Link } from "react-router";
-import { pageColumnBox, pageHeading } from "~/components/styles";
-import { RandomGoods } from "~/features/products/product";
+import { pageColumnBox, pageHeading } from "~/components/styles.ts";
+import { RandomGoods } from "~/features/products/product.ts";
 
 interface Props {
   product: RandomGoods;

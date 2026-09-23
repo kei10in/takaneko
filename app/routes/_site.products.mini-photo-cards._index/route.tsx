@@ -1,8 +1,8 @@
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles";
-import { MINI_PHOTO_CARDS } from "~/features/products/photos";
-import { formatTitle } from "~/utils/htmlHeader";
-import { ProductCard } from "../../components/ProductCard";
+import { pageBox, pageHeading } from "~/components/styles.ts";
+import { MINI_PHOTO_CARDS } from "~/features/products/photos.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { ProductCard } from "../../components/ProductCard.tsx";
 
 export const meta: MetaFunction = () => {
   return [

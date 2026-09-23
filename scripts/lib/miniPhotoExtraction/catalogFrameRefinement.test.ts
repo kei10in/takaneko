@@ -4,7 +4,7 @@ import {
   bestScaleAwareFrame,
   bestScaleAwarePosition,
   createScaleAwareSearchPlan,
-} from "./catalogFrameRefinement";
+} from "./catalogFrameRefinement.ts";
 
 describe("createScaleAwareSearchPlan", () => {
   it("keeps the candidate count bounded as resolution increases", () => {

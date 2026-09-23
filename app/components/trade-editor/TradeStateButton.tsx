@@ -1,7 +1,7 @@
 import { Switch } from "@headlessui/react";
 import { clsx } from "clsx";
 import equal from "fast-deep-equal";
-import { TradeStatus } from "~/features/trade/TradeStatus";
+import { TradeStatus } from "~/features/trade/TradeStatus.ts";
 
 type Props = Omit<React.ComponentProps<"button">, "value" | "onClick"> & {
   value: TradeStatus | undefined;

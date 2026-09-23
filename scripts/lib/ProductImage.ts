@@ -1,8 +1,8 @@
 import { Transformer } from "@napi-rs/image";
 import { createCanvas, loadImage } from "canvas";
 import fs from "node:fs";
-import type { ImagePosition } from "~/features/products/product";
-import { Size } from "~/utils/types/Size";
+import type { ImagePosition } from "~/features/products/product.ts";
+import { Size } from "~/utils/types/Size.ts";
 
 export class ProductImage {
   readonly frame: Size;

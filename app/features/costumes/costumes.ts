@@ -1,8 +1,8 @@
-import { AllMvCostumes } from "./costumesMv";
-import { AllSpecialCostumes } from "./costumesSpecial";
-import { AllStageCostumes } from "./costumesStage";
-import { AllTShirtCostumes } from "./costumesTshirt";
-import { Costume } from "./types";
+import { AllMvCostumes } from "./costumesMv.ts";
+import { AllSpecialCostumes } from "./costumesSpecial.ts";
+import { AllStageCostumes } from "./costumesStage.ts";
+import { AllTShirtCostumes } from "./costumesTshirt.ts";
+import { Costume } from "./types.ts";
 
 export const AllCostumes: Costume[] = [
   ...AllStageCostumes,

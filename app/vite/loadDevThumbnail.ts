@@ -1,7 +1,7 @@
 import { ResizeFilterType, ResizeFit, Transformer } from "@napi-rs/image";
 // Vite 設定の読み込み時はアプリ用の ~ エイリアスがまだ使えない。
-import { Err, Ok, type Result } from "../utils/result";
-import type { DevThumbnailOptions } from "./parseDevThumbnailRequest";
+import { Err, Ok, type Result } from "../utils/result.ts";
+import type { DevThumbnailOptions } from "./parseDevThumbnailRequest.ts";
 
 type ThumbnailError = "invalid-source" | "not-found" | "fetch-failed" | "conversion-failed";
 

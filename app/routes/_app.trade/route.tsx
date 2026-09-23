@@ -2,12 +2,12 @@ import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { HiBars3 } from "react-icons/hi2";
 import { Link, MetaFunction, Outlet } from "react-router";
-import { SecondaryTopbar } from "~/components/SecondaryTopbar";
-import { iconButtonPrimary } from "~/components/styles/buttons";
-import { XMarkButton } from "~/components/XMarkButton";
-import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages";
-import { formatTitle } from "~/utils/htmlHeader";
-import { MenuContents } from "./MenuContents";
+import { SecondaryTopbar } from "~/components/SecondaryTopbar.tsx";
+import { iconButtonPrimary } from "~/components/styles/buttons.ts";
+import { XMarkButton } from "~/components/XMarkButton.tsx";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import { MenuContents } from "./MenuContents.tsx";
 
 export const meta: MetaFunction = () => {
   return [

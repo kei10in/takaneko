@@ -1,7 +1,7 @@
 import { MetaFunction } from "react-router";
-import { Mdx } from "~/components/Mdx";
-import { SiteName } from "~/constants";
-import { formatTitle } from "~/utils/htmlHeader";
+import { Mdx } from "~/components/Mdx.tsx";
+import { SiteName } from "~/constants.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import Terms from "./terms.mdx";
 
 export const meta: MetaFunction = () => {

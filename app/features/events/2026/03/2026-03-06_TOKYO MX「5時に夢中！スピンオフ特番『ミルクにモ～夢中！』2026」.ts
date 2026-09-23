@@ -1,4 +1,4 @@
-import { EventMetaDescriptor } from "../../eventMeta";
+import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
   summary: "TOKYO MX「5時に夢中！スピンオフ特番『ミルクにモ～夢中！』2026」",

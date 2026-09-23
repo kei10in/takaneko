@@ -1,4 +1,4 @@
-import { NaiveMonth } from "./NaiveMonth";
+import { NaiveMonth } from "./NaiveMonth.ts";
 
 export interface MonthRange {
   start: NaiveMonth;

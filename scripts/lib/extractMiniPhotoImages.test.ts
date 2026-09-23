@@ -3,7 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
 import { afterEach, describe, expect, it } from "vitest";
-import { extractMiniPhotoImages } from "./extractMiniPhotoImages";
+import { extractMiniPhotoImages } from "./extractMiniPhotoImages.ts";
 
 const temporaryDirectories: string[] = [];
 

@@ -1,4 +1,4 @@
-import { LiveGoodsCollection } from "../product";
+import { LiveGoodsCollection } from "../product.ts";
 
 export const LiveAround2025SpringRide: LiveGoodsCollection = {
   slug: "LIVE AROUND 2025 – Spring Ride –",

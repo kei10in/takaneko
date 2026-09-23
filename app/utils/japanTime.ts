@@ -1,4 +1,4 @@
-import { NaiveDate } from "./datetime/NaiveDate";
+import { NaiveDate } from "./datetime/NaiveDate.ts";
 
 /**
  * 日本時間で 4:00 以降ならその日の日付を返します。

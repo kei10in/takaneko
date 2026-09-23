@@ -1,5 +1,5 @@
-import { Limited } from "../tags";
-import { SongMetaDescriptor } from "../types";
+import { Limited } from "../tags.ts";
+import { SongMetaDescriptor } from "../types.ts";
 
 export const シス_ラブ: SongMetaDescriptor = {
   slug: "シス×ラブ",

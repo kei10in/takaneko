@@ -1,4 +1,4 @@
-import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product";
+import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ワンピース2026_ミニフォト: RandomGoods = {
   id: "ミニフォトカード「秋服 2026」",

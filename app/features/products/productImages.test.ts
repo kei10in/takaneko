@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { allAssetFiles } from "~/utils/tests/asset";
-import { croppedImagePath } from "./croppedProductImage";
-import { TAKANEKO_PHOTOS } from "./productImages";
+import { allAssetFiles } from "~/utils/tests/asset.ts";
+import { croppedImagePath } from "./croppedProductImage.ts";
+import { TAKANEKO_PHOTOS } from "./productImages.ts";
 
 describe("TAKANEKO_PHOTOS", () => {
   const AllAssets = allAssetFiles();

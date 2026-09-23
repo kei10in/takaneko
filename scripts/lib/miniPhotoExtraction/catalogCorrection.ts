@@ -3,10 +3,10 @@ import {
   chooseRepresentativeSize,
   groupByIndex,
   median,
-} from "../imageRegionExtraction/geometry";
-import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges";
-import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types";
-import { refineMiniPhotoCatalogFrames } from "./catalogFrameRefinement";
+} from "../imageRegionExtraction/geometry.ts";
+import { rectangleBoundaryScore } from "../imageRegionExtraction/imageEdges.ts";
+import type { ClusteredRect, EdgeMap, PixelImage } from "../imageRegionExtraction/types.ts";
+import { refineMiniPhotoCatalogFrames } from "./catalogFrameRefinement.ts";
 
 const CATALOG_COLUMNS = 6;
 const CATALOG_INNER_FRAME_MAX_FILL = 0.78;

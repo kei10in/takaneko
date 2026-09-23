@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import { croppedImagePath } from "~/features/products/croppedProductImage";
-import { RandomGoods } from "~/features/products/product";
-import { TradeListImage } from "~/features/products/productImages";
-import type { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails";
+import { croppedImagePath } from "~/features/products/croppedProductImage.ts";
+import { RandomGoods } from "~/features/products/product.ts";
+import { TradeListImage } from "~/features/products/productImages.ts";
+import type { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails.ts";
 
 type TradingItemListProps = {
   productImage: RandomGoods;

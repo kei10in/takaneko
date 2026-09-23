@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const コージー本舗第2弾アイラッシュカーラー_フォトカード: RandomGoods = {
   id: "コージー本舗コラボレーション第2弾 フォトカード (アイラッシュカーラー)",

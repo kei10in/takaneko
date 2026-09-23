@@ -1,8 +1,8 @@
 import Konva from "konva";
-import { ImageSource } from "~/utils/html/types";
-import { loadImage } from "~/utils/loadImage";
-import { Size } from "~/utils/types/Size";
-import { TradingItem, TradingItemRenderProps } from "./types";
+import { ImageSource } from "~/utils/html/types.ts";
+import { loadImage } from "~/utils/loadImage.ts";
+import { Size } from "~/utils/types/Size.ts";
+import { TradingItem, TradingItemRenderProps } from "./types.ts";
 
 interface Rect {
   x: number;

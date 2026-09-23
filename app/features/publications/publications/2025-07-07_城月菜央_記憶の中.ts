@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 城月菜央_記憶の中: Publication = {
   slug: "2025-07-07_城月菜央_記憶の中",

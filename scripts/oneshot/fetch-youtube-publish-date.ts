@@ -2,10 +2,10 @@ import { youtube_v3 } from "@googleapis/youtube";
 import { globSync } from "glob";
 import path from "node:path";
 import { Project, SyntaxKind } from "ts-morph";
-import { ALL_SONGS } from "~/features/songs/songs";
-import { SongMetaDescriptor } from "~/features/songs/types";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
-import { extractYouTubeVideoId } from "~/utils/youtube/videoId";
+import { ALL_SONGS } from "~/features/songs/songs.ts";
+import { SongMetaDescriptor } from "~/features/songs/types.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
 
 const main = async () => {
   await processSong(ALL_SONGS);

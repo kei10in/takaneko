@@ -1,16 +1,16 @@
-import type { Result } from "~/utils/result";
-import { decodePixelImage } from "./imageRegionExtraction/decodeImage";
-import { extractPositionsFromPixels } from "./imageRegionExtraction/extractPositionsFromPixels";
+import type { Result } from "~/utils/result.ts";
+import { decodePixelImage } from "./imageRegionExtraction/decodeImage.ts";
+import { extractPositionsFromPixels } from "./imageRegionExtraction/extractPositionsFromPixels.ts";
 import type {
   ExtractedPositions,
   ExtractPositionsError,
   ExtractPositionsOptions,
   PixelImage,
-} from "./imageRegionExtraction/types";
-import { completeCatalogLayout } from "./miniPhotoExtraction/catalogCorrection";
-import { miniPhotoExtractionProfile } from "./miniPhotoExtraction/profile";
+} from "./imageRegionExtraction/types.ts";
+import { completeCatalogLayout } from "./miniPhotoExtraction/catalogCorrection.ts";
+import { miniPhotoExtractionProfile } from "./miniPhotoExtraction/profile.ts";
 
-export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types";
+export type { NormalizeMode, PixelImage } from "./imageRegionExtraction/types.ts";
 
 export type ExtractMiniPhotoPositionsOptions = ExtractPositionsOptions;
 export type ExtractedMiniPhotoPositions = ExtractedPositions;

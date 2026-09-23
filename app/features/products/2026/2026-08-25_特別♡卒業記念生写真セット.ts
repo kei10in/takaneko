@@ -1,4 +1,4 @@
-import { RandomGoods, TradeTextType } from "~/features/products/product";
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const 星谷美来_特別卒業記念生写真セット_生写真: RandomGoods = {
   id: "特別♡卒業記念生写真セット",

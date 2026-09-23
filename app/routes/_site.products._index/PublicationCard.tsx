@@ -1,5 +1,5 @@
-import { displayDate } from "~/utils/dateDisplay";
-import { NaiveDate } from "~/utils/datetime/NaiveDate";
+import { displayDate } from "~/utils/dateDisplay.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 interface Props {
   name: string;

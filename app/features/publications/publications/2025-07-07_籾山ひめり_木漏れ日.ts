@@ -1,4 +1,4 @@
-import { Publication } from "../types";
+import { Publication } from "../types.ts";
 
 export const 籾山ひめり_木漏れ日: Publication = {
   slug: "2025-07-07_籾山ひめり_木漏れ日",
