@@ -10,7 +10,7 @@ interface Props {
 }
 
 export const SharableUrl: React.FC<Props> = (props: Props) => {
-  const { url, title, shareButton: shareButton, className } = props;
+  const { url, title, shareButton, className } = props;
 
   return (
     <div className={clsx(`flex items-center gap-1 text-gray-600`, className)}>

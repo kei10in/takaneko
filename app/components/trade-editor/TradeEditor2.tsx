@@ -131,6 +131,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                 return (
                   <button
                     key={pos.id}
+                    aria-label={`${i + 1}番目の画像のトレード設定を変更`}
                     style={{
                       left: pos.x * scale,
                       top: pos.y * scale,
