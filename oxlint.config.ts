@@ -4,7 +4,7 @@ import { version } from "react";
 export default defineConfig({
   categories: {
     correctness: "error",
-    // suspicious: "error",
+    suspicious: "error",
     // pedantic: "warn",
   },
   plugins: ["react", "jsx-a11y", "typescript", "import"],
