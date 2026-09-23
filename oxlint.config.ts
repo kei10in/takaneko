@@ -26,6 +26,8 @@ export default defineConfig({
     "**/*-template.tsx",
   ],
   rules: {
+    // JSX は react-jsx で自動変換するため、React の import は不要です。
+    "react/react-in-jsx-scope": "off",
     "no-case-declarations": "error",
     "no-empty": "error",
     "no-fallthrough": "error",
