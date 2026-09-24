@@ -100,9 +100,10 @@ export const optimizeCatalogLayout = (
   );
   const detailedSearch = !baseline.valid || detailedSeeds.length > 0;
   const detailedEvaluations = detailedSearch
-    ? uniqueLayouts([baseline.frames, ...detailedSeeds.map(({ frames }) => frames)]).map((seed) =>
-        evaluate(optimizeCandidate(seed, evaluate, profile, thresholds)),
-      )
+    ? uniqueLayouts([
+        baseline.frames,
+        ...detailedSeeds.map(({ frames: seedFrames }) => seedFrames),
+      ]).map((seed) => evaluate(optimizeCandidate(seed, evaluate, profile, thresholds)))
     : [];
   const candidates = [...initialEvaluations, ...detailedEvaluations];
   const selected = chooseParetoImprovement(

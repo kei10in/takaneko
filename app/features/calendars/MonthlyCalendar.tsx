@@ -47,7 +47,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
       <tbody>
         {calendarMonth.map((week, i) => (
           <tr key={i}>
-            {week.map(({ date, events }, j) => {
+            {week.map(({ date, events: dayEvents }, j) => {
               const dateString = date.toString();
               // カレンダーの始まりや終わりに含まれる、前や次の月の日付かどうか
               const currentMonth = date.naiveMonth().equals(month);
@@ -59,12 +59,12 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                     "landscape:h-(--calendar-landscape-cell-height) landscape:max-h-(--calendar-landscape-cell-height)",
                   )}
                 >
-                  {disabled || events.length == 0 || !currentMonth ? (
+                  {disabled || dayEvents.length == 0 || !currentMonth ? (
                     <div className="h-full w-full">
                       <CalendarCell
                         date={date.day}
                         day={date.dayOfWeek}
-                        events={events}
+                        events={dayEvents}
                         currentMonth={currentMonth}
                         today={date.equals(NaiveDate.todayInJapan())}
                       />
@@ -82,7 +82,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                       <CalendarCell
                         date={date.day}
                         day={date.dayOfWeek}
-                        events={events}
+                        events={dayEvents}
                         currentMonth={currentMonth}
                         today={date.equals(NaiveDate.todayInJapan())}
                       />

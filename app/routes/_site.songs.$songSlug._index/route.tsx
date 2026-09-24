@@ -75,6 +75,8 @@ export default function Component({ loaderData }: Route.ComponentProps) {
       <div className="bg-zinc-900">
         <div className="container mx-auto lg:max-w-5xl">
           {youtubeEmbedUrl == undefined ? null : (
+            // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
+            // oxlint-disable-next-line react/iframe-missing-sandbox
             <iframe
               className="aspect-video w-full"
               src={youtubeEmbedUrl}

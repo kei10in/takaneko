@@ -9,7 +9,7 @@ describe("position refinement", () => {
     const height = 24;
     const data = new Uint8Array(width * height * 3);
     Array.from({ length: height }, (_, y) =>
-      Array.from({ length: width }, (_, x) => {
+      Array.from({ length: width }, (_pixel, x) => {
         const value = x >= 6 && x < 12 && y >= 5 && y < 15 ? 255 : 0;
         const index = (y * width + x) * 3;
         data[index] = value;

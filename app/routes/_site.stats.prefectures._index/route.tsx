@@ -1,5 +1,4 @@
-import { Chart } from "chart.js";
-import "chart.js/auto";
+import Chart from "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { BsBarChartLineFill, BsXCircleFill } from "react-icons/bs";
 import { MetaFunction } from "react-router";
@@ -30,9 +29,12 @@ export default function Component() {
 
     const concertCountsByPrefecture = aggregatePrefectureStats(modules);
 
-    const data = concertCountsByPrefecture.map((pref) => ({ key: pref.name, value: pref.count }));
+    const prefectureData = concertCountsByPrefecture.map((pref) => ({
+      key: pref.name,
+      value: pref.count,
+    }));
 
-    return data;
+    return prefectureData;
   });
 
   return (

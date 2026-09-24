@@ -100,9 +100,12 @@ export const MemberProfile: React.FC<Props> = (props: Props) => {
                 <dt className="text-gray-400">メンバーからの告知</dt>
                 <dd className="col-span-2">
                   <ul>
-                    {hashTagsForAnnouncement.map((hashTag) => (
-                      <li key={hashTag}>
-                        <TwitterHashTag className="text-nadeshiko-800" hashTag={hashTag} />
+                    {hashTagsForAnnouncement.map((announcementHashTag) => (
+                      <li key={announcementHashTag}>
+                        <TwitterHashTag
+                          className="text-nadeshiko-800"
+                          hashTag={announcementHashTag}
+                        />
                       </li>
                     ))}
                   </ul>

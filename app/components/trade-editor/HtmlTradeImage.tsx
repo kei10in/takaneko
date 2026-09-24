@@ -62,7 +62,7 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
 
       {stamps.map((pos) => {
         const trade = tradeDescriptions[pos.id];
-        const { x, y, width, height } = pos;
+        const { x, y, width: itemWidth, height: itemHeight } = pos;
 
         return (
           <TradeStatusStamp
@@ -70,8 +70,8 @@ export const HtmlTradeImage = forwardRef((props: Props, ref: Ref<HTMLDivElement>
             status={trade?.status}
             x={x * scaleX}
             y={y * scaleY}
-            width={width * scaleX}
-            height={height * scaleY}
+            width={itemWidth * scaleX}
+            height={itemHeight * scaleY}
           />
         );
       })}

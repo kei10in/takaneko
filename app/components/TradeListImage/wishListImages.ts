@@ -28,13 +28,13 @@ export const usePhotoWishListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformWishToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`/wishlist/photos`, items], async ([_, items]) => {
-    return await drawWishList(items, "ほしい 生写真");
+  const { data, isLoading } = useSWR([`/wishlist/photos`, items], async ([_, itemChunks]) => {
+    return await drawWishList(itemChunks, "ほしい 生写真");
   });
 
   useAutoRevokeImageSource(data);
@@ -54,14 +54,17 @@ export const useMiniPhotoCardWishListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformWishToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`/wishlist/mini-photo-cards`, items], async ([_, items]) => {
-    return await drawWishList(items, "ほしい ミニフォトカード");
-  });
+  const { data, isLoading } = useSWR(
+    [`/wishlist/mini-photo-cards`, items],
+    async ([_, itemChunks]) => {
+      return await drawWishList(itemChunks, "ほしい ミニフォトカード");
+    },
+  );
 
   useAutoRevokeImageSource(data);
 
@@ -80,13 +83,13 @@ export const useOtherGoodsWishListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformWishToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformWishToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`/wishlist/other-goods`, items], async ([_, items]) => {
-    return await drawWishList(items, "ほしい その他のランダムグッズ");
+  const { data, isLoading } = useSWR([`/wishlist/other-goods`, items], async ([_, itemChunks]) => {
+    return await drawWishList(itemChunks, "ほしい その他のランダムグッズ");
   });
 
   useAutoRevokeImageSource(data);

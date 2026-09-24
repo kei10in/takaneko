@@ -30,10 +30,10 @@ export const shortlink = async (url: string): Promise<ShortLinkResult> => {
 
   const $ = cheerio.load(body);
 
-  const shortlink = $("link[rel=shortlink]").attr("href");
-  if (shortlink == undefined) {
+  const shortlinkUrl = $("link[rel=shortlink]").attr("href");
+  if (shortlinkUrl == undefined) {
     return { error: "Shortlink Not Found" };
   }
 
-  return { url: shortlink };
+  return { url: shortlinkUrl };
 };

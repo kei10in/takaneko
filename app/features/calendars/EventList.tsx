@@ -35,15 +35,15 @@ export const EventList: React.FC<Props> = (props: Props) => {
     const result = dates.map((date) => {
       const dateString = date.toString();
       const i = xs.findIndex((e) => e.date != dateString);
-      const events = xs.slice(0, i == -1 ? xs.length : i);
+      const dayEvents = xs.slice(0, i == -1 ? xs.length : i);
       xs = xs.slice(i);
-      return { date, events };
+      return { date, events: dayEvents };
     });
 
     return result;
   }, [events, month]);
 
-  if (eventsByDate.every(({ events }) => events.length === 0)) {
+  if (eventsByDate.every(({ events: dayEvents }) => dayEvents.length === 0)) {
     return (
       <div className="flex flex-1 flex-col justify-center pb-12">
         <p className="text-center text-gray-500">イベントが予定されていません。</p>

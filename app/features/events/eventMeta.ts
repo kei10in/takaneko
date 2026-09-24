@@ -75,7 +75,7 @@ const EventMeta = z
 
     streamings: z
       .union([LinkDescription, z.array(LinkDescription)])
-      .transform((x) => (Array.isArray(x) ? x : [x]).filter((x) => x.url != ""))
+      .transform((x) => (Array.isArray(x) ? x : [x]).filter((link) => link.url != ""))
       .optional()
       .default([]),
 

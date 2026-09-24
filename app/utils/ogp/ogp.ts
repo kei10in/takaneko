@@ -17,10 +17,10 @@ export const ogp = async (url: string): Promise<SocialCards> => {
 };
 
 const convertOgObjectToSocialCards = (metadata: urlMetadata.Result): SocialCards => {
-  const ogp = convertMetadataToOgp(metadata);
+  const openGraph = convertMetadataToOgp(metadata);
   const twitter = convertMetadataToTwitterCard(metadata);
 
-  return { ogp, twitter };
+  return { ogp: openGraph, twitter };
 };
 
 const convertMetadataToOgp = (metadata: urlMetadata.Result): OpenGraph | undefined => {

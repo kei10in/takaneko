@@ -76,10 +76,5 @@ describe("event module", async () => {
 });
 
 const isAbsoluteURL = (url: string): boolean => {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
+  return URL.canParse(url);
 };

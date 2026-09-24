@@ -6,7 +6,6 @@ import {
   MetaFunction,
   useLoaderData,
   useLocation,
-  useNavigate,
 } from "react-router";
 import { DomainName } from "~/constants.ts";
 import { Calendar } from "~/features/calendars/Calendar.tsx";
@@ -75,8 +74,8 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
   const events = (
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
-      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        Events.importEventModulesByMonth(m),
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((eventMonth) =>
+        Events.importEventModulesByMonth(eventMonth),
       ),
     )
   )
@@ -118,8 +117,8 @@ export const clientLoader = async ({ params, request }: ClientLoaderFunctionArgs
   const events = (
     await Promise.all(
       // スライドすることを考慮すると 5 ヶ月分のイベントを取得する必要がある。
-      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((m) =>
-        Events.importEventModulesByMonth(m),
+      [m.advance(-2), m.advance(-1), m, m.advance(1), m.advance(2)].map((eventMonth) =>
+        Events.importEventModulesByMonth(eventMonth),
       ),
     )
   )
@@ -140,7 +139,6 @@ export default function Index() {
   const m = new NaiveMonth(year, month);
 
   const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (day == undefined) {
@@ -154,7 +152,7 @@ export default function Index() {
       const elem = document.getElementById(anchor);
       elem?.scrollIntoView({ behavior: "smooth" });
     }
-  }, [day, location.hash, location.search, month, navigate, year]);
+  }, [day, location.hash, month, year]);
 
   return <Calendar events={events} month={m} today={today} filter={filterName} />;
 }

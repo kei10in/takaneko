@@ -81,6 +81,6 @@ const sha1Hash = async (s: string): Promise<string> => {
 
   const b = await crypto.subtle.digest("SHA-1", data);
   const hashArray = Array.from(new Uint8Array(b));
-  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+  const hashHex = hashArray.map((byte) => byte.toString(16).padStart(2, "0")).join("");
   return hashHex;
 };

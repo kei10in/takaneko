@@ -77,10 +77,10 @@ export default function Component() {
                       "focus-none w-34 rounded border border-gray-100 bg-white py-1 shadow",
                     )}
                   >
-                    {Terms.map((term) => (
+                    {Terms.map((option) => (
                       <ListboxOption
-                        key={term.value}
-                        value={term.value}
+                        key={option.value}
+                        value={option.value}
                         className={clsx(
                           "block w-full px-2.5 py-1 text-start text-sm text-gray-600",
                           "data-focus:bg-nadeshiko-200 data-focus:text-nadeshiko-900",
@@ -94,7 +94,7 @@ export default function Component() {
                                   <BsCheck2 className="inline-block text-lg text-nadeshiko-900" />
                                 )}
                               </div>
-                              <div className="px-2">{term.label}</div>
+                              <div className="px-2">{option.label}</div>
                             </div>
                           );
                         }}

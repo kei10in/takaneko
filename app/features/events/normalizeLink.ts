@@ -10,11 +10,8 @@ export const normalizeLink = (link: string | LinkDescription): LinkDescription |
     return link;
   }
 
-  try {
-    new URL(link);
+  if (URL.canParse(link)) {
     return { text: link, url: link };
-  } catch {
-    // ignore
   }
 
   const match = link.match(/\[([^\]]+)\]\(([^)]+)\)/);
@@ -25,9 +22,7 @@ export const normalizeLink = (link: string | LinkDescription): LinkDescription |
   const text = match[1];
   const url = match[2];
 
-  try {
-    new URL(url);
-  } catch {
+  if (!URL.canParse(url)) {
     return undefined;
   }
 

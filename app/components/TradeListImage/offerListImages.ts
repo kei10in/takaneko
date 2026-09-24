@@ -28,13 +28,13 @@ export const usePhotoOfferListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformOfferToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
-  const { data, isLoading } = useSWR([`/offer-list/photos`, items], async ([_, items]) => {
-    return await drawOfferList(items, "出せる 生写真");
+  const { data, isLoading } = useSWR([`/offer-list/photos`, items], async ([_, itemChunks]) => {
+    return await drawOfferList(itemChunks, "出せる 生写真");
   });
 
   useAutoRevokeImageSource(data);
@@ -54,15 +54,15 @@ export const useMiniPhotoCardOfferListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformOfferToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
   const { data, isLoading } = useSWR(
     [`/offer-list/mini-photo-cards`, items],
-    async ([_, items]) => {
-      return await drawOfferList(items, "出せる ミニフォトカード");
+    async ([_, itemChunks]) => {
+      return await drawOfferList(itemChunks, "出せる ミニフォトカード");
     },
   );
 
@@ -83,15 +83,15 @@ export const useOtherGoodsOfferListImages = (
 ): (ImageSource | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
-      x.tradingItemDetails.map((x) => transformOfferToRenderProps(x)),
+      x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
     );
     return ArrayUtils.chunks(xs, 30);
   }, [wishList]);
 
   const { data, isLoading } = useSWR(
     [`/offer-list/mini-photo-cards`, items],
-    async ([_, items]) => {
-      return await drawOfferList(items, "出せる その他のランダムグッズ");
+    async ([_, itemChunks]) => {
+      return await drawOfferList(itemChunks, "出せる その他のランダムグッズ");
     },
   );
 

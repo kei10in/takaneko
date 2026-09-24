@@ -45,24 +45,24 @@ import { makePageDescription } from "./makePageDescription.ts";
 import { MeetAndGreetTimeSchedule } from "./TimeScheduleForMeetAndGreet.tsx";
 
 export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
-  const meta = loaderData?.eventMeta;
+  const eventMeta = loaderData?.eventMeta;
 
-  const title = meta?.title ?? meta?.summary ?? "スケジュール";
+  const title = eventMeta?.title ?? eventMeta?.summary ?? "スケジュール";
   const description =
-    meta == undefined
+    eventMeta == undefined
       ? "高嶺のなでしこの非公式スケジュールです。"
-      : (meta.description ?? makePageDescription(meta));
+      : (eventMeta.description ?? makePageDescription(eventMeta));
   const formattedTitle = formatTitle(title);
   const canonical =
     loaderData == undefined
       ? undefined
       : canonicalUrl(href("/events/:eventSlug", { eventSlug: loaderData.slug }));
   const jsonLd =
-    meta == undefined || canonical == undefined
+    eventMeta == undefined || canonical == undefined
       ? undefined
       : LdJsonMeta(
           ldJsonEventDocument({
-            event: meta,
+            event: eventMeta,
             canonicalUrl: canonical,
             name: formattedTitle,
             description,
@@ -72,7 +72,7 @@ export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
   return [
     { title: formattedTitle },
     { name: "description", content: description },
-    ...(meta == undefined ? [] : twitterCard(meta)),
+    ...(eventMeta == undefined ? [] : twitterCard(eventMeta)),
     ...(jsonLd == undefined ? [] : [jsonLd]),
   ];
 };
@@ -95,8 +95,8 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 };
 
 export default function EventPage() {
-  const { slug, ics, eventMeta: meta } = useLoaderData<typeof loader>();
-  const d = NaiveDate.parseUnsafe(meta.date);
+  const { slug, ics, eventMeta } = useLoaderData<typeof loader>();
+  const d = NaiveDate.parseUnsafe(eventMeta.date);
   const m = d.naiveMonth();
 
   const location = useLocation();
@@ -123,9 +123,9 @@ export default function EventPage() {
       </div>
 
       <div>
-        {meta.images.length > 0 && (
+        {eventMeta.images.length > 0 && (
           <ImageCarousel
-            images={meta.images.map((img, i) => ({
+            images={eventMeta.images.map((img, i) => ({
               src: img.path,
               alt: `アイキャッチ ${i + 1}`,
               to: `#photo-${i}`,
@@ -138,11 +138,11 @@ export default function EventPage() {
         <div className="my-8 space-y-4">
           <div className="space-y-1">
             <div className="px-4">
-              <EventTypeLabel category={meta.category} />
+              <EventTypeLabel category={eventMeta.category} />
             </div>
 
             <h1 className="px-4 pb-1.5 text-3xl font-bold">
-              <span>{meta.title ?? meta.summary}</span>
+              <span>{eventMeta.title ?? eventMeta.summary}</span>
             </h1>
           </div>
           <div className="space-y-3">
@@ -150,84 +150,90 @@ export default function EventPage() {
               <p>{displayDateWithDayOfWeek(d)}</p>
             </FieldWithIcon>
 
-            {(meta.category == EventType.LIVE || meta.category == EventType.FASHION) &&
-              (meta.open || meta.start) && (
+            {(eventMeta.category == EventType.LIVE || eventMeta.category == EventType.FASHION) &&
+              (eventMeta.open || eventMeta.start) && (
                 <FieldWithIcon className="px-5" icon={HiOutlineClock}>
-                  {meta.open && meta.start && (
+                  {eventMeta.open && eventMeta.start && (
                     <p>
-                      開場: {meta.open} / 開演: {meta.start}
+                      開場: {eventMeta.open} / 開演: {eventMeta.start}
                     </p>
                   )}
-                  {meta.open && !meta.start && <p>開場: {meta.open}</p>}
-                  {!meta.open && meta.start && <p>開演: {meta.start}</p>}
+                  {eventMeta.open && !eventMeta.start && <p>開場: {eventMeta.open}</p>}
+                  {!eventMeta.open && eventMeta.start && <p>開演: {eventMeta.start}</p>}
 
-                  {meta.end && <p className="text-sm">終演: {meta.end}</p>}
+                  {eventMeta.end && <p className="text-sm">終演: {eventMeta.end}</p>}
                 </FieldWithIcon>
               )}
 
             {/* EventType.OTHER は何が来るかわからないため、一旦 LIVE とは別実装にしておく */}
-            {meta.category == EventType.OTHER && (meta.open || meta.start) && (
+            {eventMeta.category == EventType.OTHER && (eventMeta.open || eventMeta.start) && (
               <FieldWithIcon className="px-5" icon={HiOutlineClock}>
-                {meta.open && meta.start && (
+                {eventMeta.open && eventMeta.start && (
                   <p>
-                    開場: {meta.open} / 開演: {meta.start}
+                    開場: {eventMeta.open} / 開演: {eventMeta.start}
                   </p>
                 )}
-                {meta.open && !meta.start && <p>開場: {meta.open}</p>}
-                {!meta.open && meta.start && <p>開演: {meta.start}</p>}
+                {eventMeta.open && !eventMeta.start && <p>開場: {eventMeta.open}</p>}
+                {!eventMeta.open && eventMeta.start && <p>開演: {eventMeta.start}</p>}
 
-                {meta.end && <p className="text-sm">終演: {meta.end}</p>}
+                {eventMeta.end && <p className="text-sm">終演: {eventMeta.end}</p>}
               </FieldWithIcon>
             )}
 
-            {(meta.category == EventType.TV || meta.category == EventType.RADIO) && meta.start && (
-              <FieldWithIcon className="px-5" icon={HiOutlineClock}>
-                <p>
-                  {meta.start} 〜 {meta.end}
-                </p>
-              </FieldWithIcon>
-            )}
+            {(eventMeta.category == EventType.TV || eventMeta.category == EventType.RADIO) &&
+              eventMeta.start && (
+                <FieldWithIcon className="px-5" icon={HiOutlineClock}>
+                  <p>
+                    {eventMeta.start} 〜 {eventMeta.end}
+                  </p>
+                </FieldWithIcon>
+              )}
 
-            {meta.location && (
+            {eventMeta.location && (
               <FieldWithIcon className="px-5" icon={HiOutlineMapPin}>
                 <Link
                   className="block space-x-1"
-                  to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(meta.location)}`}
+                  to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(eventMeta.location)}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="underline">{meta.location}</span>
+                  <span className="underline">{eventMeta.location}</span>
                   <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
                 </Link>
               </FieldWithIcon>
             )}
 
-            {meta.link && (
+            {eventMeta.link && (
               <FieldWithIcon className="px-5" icon={HiOutlineLink}>
                 <Link
                   className="block space-x-1"
-                  to={meta.link.url}
+                  to={eventMeta.link.url}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span className="underline">{meta.link.text}</span>
+                  <span className="underline">{eventMeta.link.text}</span>
                   <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
                 </Link>
               </FieldWithIcon>
             )}
 
-            {meta.ticket && (
+            {eventMeta.ticket && (
               <FieldWithIcon className="px-5" icon={HiOutlineTicket}>
-                <Link className="block space-x-1" to={meta.ticket} target="_blank" rel="noreferrer">
+                <Link
+                  className="block space-x-1"
+                  to={eventMeta.ticket}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span className="underline">チケット</span>
                   <HiOutlineArrowTopRightOnSquare className="inline-block size-4" />
                 </Link>
               </FieldWithIcon>
             )}
 
-            {meta.streamings.length > 0 && (
+            {eventMeta.streamings.length > 0 && (
               <FieldWithIcon className="px-5" icon={HiOutlineSignal}>
-                {meta.streamings.map((streaming, i) => (
+                {eventMeta.streamings.map((streaming, i) => (
                   <Link
                     key={i}
                     className="block space-x-1"
@@ -242,50 +248,50 @@ export default function EventPage() {
               </FieldWithIcon>
             )}
 
-            {meta.present != undefined && meta.present.length != 0 && (
+            {eventMeta.present != undefined && eventMeta.present.length != 0 && (
               <FieldWithIcon className="px-5" icon={BsPerson}>
-                {meta.present.map((n) => findMemberOrGroupDescription(n).name).join(" / ")}
+                {eventMeta.present.map((n) => findMemberOrGroupDescription(n).name).join(" / ")}
               </FieldWithIcon>
             )}
 
-            {meta.absent != undefined && meta.absent.length != 0 && (
+            {eventMeta.absent != undefined && eventMeta.absent.length != 0 && (
               <FieldWithIcon className="px-5" icon={BsPersonSlash}>
-                {meta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
+                {eventMeta.absent.map((n) => findMemberDescription(n).name).join(" / ")}
               </FieldWithIcon>
             )}
           </div>
 
           <EventMetaChips
             className="px-5"
-            category={meta.category}
-            liveType={meta.liveType}
-            meetAndGreetTypes={meta.meetAndGreetTypes}
+            category={eventMeta.category}
+            liveType={eventMeta.liveType}
+            meetAndGreetTypes={eventMeta.meetAndGreetTypes}
           />
         </div>
       </div>
 
       <article className="mb-4 max-w-none px-4">
-        <EventDetails acts={meta.acts} />
+        <EventDetails acts={eventMeta.acts} />
 
-        <EventOverview timetables={meta.timetables} goods={meta.goods} />
+        <EventOverview timetables={eventMeta.timetables} goods={eventMeta.goods} />
 
-        {meta.meetAndGreet != undefined && (
+        {eventMeta.meetAndGreet != undefined && (
           <MeetAndGreetTimeSchedule
             date={d}
-            title={meta.meetAndGreet?.title}
-            sessions={meta.meetAndGreet.sessions}
+            title={eventMeta.meetAndGreet?.title}
+            sessions={eventMeta.meetAndGreet.sessions}
           />
         )}
 
         {Content != undefined && <Mdx Content={Content} />}
 
-        {meta.links.length > 0 && (
+        {eventMeta.links.length > 0 && (
           <section>
             <h2 className="mt-6 mb-4 border-b border-gray-200 pb-1 text-2xl leading-tight font-semibold">
               リンク
             </h2>
             <ul className="mt-1 mb-3 list-disc space-y-1 pl-8 text-base leading-snug">
-              {meta.links.map((link, i) => (
+              {eventMeta.links.map((link, i) => (
                 <li key={i} className="my-0 marker:text-gray-400">
                   <Link
                     className="text-nadeshiko-950"
@@ -318,7 +324,7 @@ export default function EventPage() {
         </Link>
       )}
 
-      {meta.images.map((img, i) => (
+      {eventMeta.images.map((img, i) => (
         <ImagePreviewDialog
           key={i}
           open={location.hash == `#photo-${i}`}
@@ -329,7 +335,7 @@ export default function EventPage() {
         />
       ))}
 
-      {meta.timetables.map((tt, i) => {
+      {eventMeta.timetables.map((tt, i) => {
         return (
           <ImagePreviewDialog
             key={i}

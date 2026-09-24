@@ -156,7 +156,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
 });
 
 const eventByFilename = (events: EventModule[], filename: string): EventModule => {
-  const event = events.find((event) => event.filename.endsWith(filename));
+  const event = events.find((candidate) => candidate.filename.endsWith(filename));
   assert(event != undefined, `Event not found: ${filename}`);
   assert(
     event.meta.liveType != undefined,

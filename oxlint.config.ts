@@ -4,7 +4,7 @@ import { version } from "react";
 export default defineConfig({
   categories: {
     correctness: "error",
-    // suspicious: "error",
+    suspicious: "error",
     // pedantic: "warn",
   },
   plugins: ["react", "jsx-a11y", "typescript", "import"],
@@ -26,6 +26,12 @@ export default defineConfig({
     "**/*-template.tsx",
   ],
   rules: {
+    // JSX は react-jsx で自動変換するため、React の import は不要です。
+    "react/react-in-jsx-scope": "off",
+    // 数字で始まる作品名・商品名には識別子の先頭に _ を付けます。
+    "no-underscore-dangle": "off",
+    // スタイルの読み込みと Canvas バックエンドの初期化は副作用を利用します。
+    "import/no-unassigned-import": ["error", { allow: ["**/*.css", "konva/canvas-backend"] }],
     "no-case-declarations": "error",
     "no-empty": "error",
     "no-fallthrough": "error",

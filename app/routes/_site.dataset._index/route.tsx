@@ -64,7 +64,7 @@ export const loader = async ({ request, context }: Route.LoaderArgs) => {
 };
 
 export default function Index() {
-  const { meta } = useLoaderData<typeof loader>();
+  const { meta: datasetMeta } = useLoaderData<typeof loader>();
 
   const schema = [
     {
@@ -169,7 +169,7 @@ export default function Index() {
             <h3 className="text-lg font-semibold text-gray-500">ダウンロード</h3>
             <ul className="mt-1 divide-y divide-gray-200 rounded-lg border border-gray-200">
               {TAKANEKO_DATA_FILES.map((item) => {
-                const size = meta[item.url]?.size;
+                const size = datasetMeta[item.url]?.size;
 
                 return (
                   <li key={item.url}>

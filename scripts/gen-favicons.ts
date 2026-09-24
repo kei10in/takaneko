@@ -24,29 +24,29 @@ const main = async () => {
   await genAppleTouchIcon(imageBuffer, dest);
 };
 
-const genFavicon = async (src: string, dest: string) => {
-  iconGen(src, dest, {
+const genFavicon = async (source: string, destination: string) => {
+  iconGen(source, destination, {
     report: false,
     ico: { name: "favicon", sizes: [16, 32, 48] },
   });
 };
 
-const genFaviconPng = async (src: Buffer, dest: string) => {
+const genFaviconPng = async (source: Buffer, destination: string) => {
   const sizes = [48, 192, 512];
 
   for (const size of sizes) {
-    await sharp(src)
+    await sharp(source)
       .resize(size, size)
-      .toFile(path.join(dest, `icon-${size}.png`));
+      .toFile(path.join(destination, `icon-${size}.png`));
   }
 };
 
-const genAppleTouchIcon = async (src: Buffer, dest: string) => {
-  await sharp(src)
+const genAppleTouchIcon = async (source: Buffer, destination: string) => {
+  await sharp(source)
     .resize(180, 180)
     // 透過の部分がグレーで埋められる。白背景の方が望ましい。
     .flatten({ background: { r: 255, g: 255, b: 255 } })
-    .toFile(path.join(dest, "apple-touch-icon.png"));
+    .toFile(path.join(destination, "apple-touch-icon.png"));
 };
 
 main();
