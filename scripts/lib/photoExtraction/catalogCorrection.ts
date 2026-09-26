@@ -68,11 +68,15 @@ export const correctCatalogLayout = (
   const grid = inferCatalogGrid(rects);
   if (grid == undefined) {
     const sparseGrid = reconstructSparseCatalogGrid(context.layouts, image.width, image.height);
-    if (sparseGrid == undefined) return rects;
+    if (sparseGrid == undefined) {
+      return rects;
+    }
 
     const representative = chooseRepresentativeSize(sparseGrid.rects);
     const firstCardY = Math.min(...sparseGrid.rects.map(({ y }) => y));
-    if (!hasCatalogHeader(image, firstCardY, representative.height)) return rects;
+    if (!hasCatalogHeader(image, firstCardY, representative.height)) {
+      return rects;
+    }
 
     const fitted =
       fitCatalogFrames(sparseGrid.rects, edges, image, photoExtractionProfile.aspectRatio) ??
@@ -194,7 +198,9 @@ export const correctCatalogLayout = (
       : bannerGaps.filter((gap) => Math.abs(gap - targetBannerGap) <= 2).length /
         detectedCards.length;
   const alignedRowTops = groupByIndex(detectedCards, ({ row }) => row).map((cards) => {
-    if (reliableBannerRatio >= MINIMUM_RELIABLE_BANNER_RATIO) return undefined;
+    if (reliableBannerRatio >= MINIMUM_RELIABLE_BANNER_RATIO) {
+      return undefined;
+    }
     const rowTop = Math.round(median(cards.map(({ edgeY }) => edgeY)));
     return cards.every(({ edgeY }) => Math.abs(edgeY - rowTop) <= ALIGNED_ROW_TOP_TOLERANCE)
       ? rowTop
@@ -243,7 +249,9 @@ const findBannerAlignedRowTops = (
 ): number[] => {
   const rows = groupByIndex(frames, ({ row }) => row);
   const initial = rows.map((row) => Math.round(median(row.map(({ y }) => y))));
-  if (initial.length < MINIMUM_CATALOG_ROWS) return initial;
+  if (initial.length < MINIMUM_CATALOG_ROWS) {
+    return initial;
+  }
 
   const initialStep = Math.round(
     median(initial.slice(1).map((position, index) => position - initial[index])),
@@ -400,7 +408,9 @@ const createNeutralMask = (image: PixelImage): Uint8Array => {
 const projectRows = (mask: Uint8Array, width: number, height: number): number[] =>
   Array.from({ length: height }, (_, y) => {
     let support = 0;
-    for (let x = 0; x < width; x += 1) support += mask[y * width + x] ?? 0;
+    for (let x = 0; x < width; x += 1) {
+      support += mask[y * width + x] ?? 0;
+    }
     return support / width;
   });
 
@@ -434,7 +444,9 @@ const findCardColumns = (
 ): number[] => {
   const top = Math.min(image.height, y + 8);
   const bottom = Math.min(image.height, y + cardHeight - 16);
-  if (bottom <= top) return [];
+  if (bottom <= top) {
+    return [];
+  }
 
   const projection = Array.from({ length: image.width }, (_, x) => {
     let support = 0;
@@ -454,15 +466,23 @@ const findCardColumns = (
     .map(({ end }) => end + 1)
     .filter((x) => x + cardWidth <= image.width);
   const first = candidates.find((x) => x <= image.width * 0.15);
-  if (first == undefined) return [];
+  if (first == undefined) {
+    return [];
+  }
 
   const initialColumns = candidates.slice(candidates.indexOf(first) + 1).reduce<number[]>(
     (columns, candidate) => {
-      if (columns.length >= maximumColumns) return columns;
+      if (columns.length >= maximumColumns) {
+        return columns;
+      }
       const previous = columns.at(-1) ?? first;
       const difference = candidate - previous;
-      if (difference < cardWidth * 0.9) return columns;
-      if (difference > cardWidth * 1.6) return columns;
+      if (difference < cardWidth * 0.9) {
+        return columns;
+      }
+      if (difference > cardWidth * 1.6) {
+        return columns;
+      }
       return [...columns, candidate];
     },
     [first],
@@ -484,7 +504,9 @@ const findCardColumns = (
 const findRuns = (matches: boolean[], minimumLength: number): AxisRun[] => {
   const runs = matches.reduce<AxisRun[]>((found, match, index) => {
     const current = found.at(-1);
-    if (!match) return found;
+    if (!match) {
+      return found;
+    }
     if (current == undefined || current.end !== index - 1) {
       return [...found, { start: index, end: index }];
     }

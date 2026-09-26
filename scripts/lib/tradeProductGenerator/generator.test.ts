@@ -47,7 +47,9 @@ describe("generateTradeProduct", { timeout: 15_000 }, () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(confirmOverwrite).not.toHaveBeenCalled();
     const definition = await readFile(result.value.definitionPath, "utf8");
     const registration = await readFile(result.value.productImagesPath, "utf8");
@@ -84,7 +86,9 @@ describe("generateTradeProduct", { timeout: 15_000 }, () => {
     });
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("overwrite-declined");
     expect(confirmOverwrite).toHaveBeenCalledOnce();
     expect(await readFile(definitionPath, "utf8")).toBe("existing");

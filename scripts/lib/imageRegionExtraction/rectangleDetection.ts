@@ -7,7 +7,9 @@ export const findProjectionPeaks = (projection: number[], limit: number): number
   return projection
     .map((value, index) => ({ index, value }))
     .filter(({ index, value }) => {
-      if (index === 0 || index === projection.length - 1 || value < threshold) return false;
+      if (index === 0 || index === projection.length - 1 || value < threshold) {
+        return false;
+      }
       const from = Math.max(0, index - 2);
       const to = Math.min(projection.length - 1, index + 2);
       return projection.slice(from, to + 1).every((other) => value >= other);

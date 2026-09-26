@@ -71,7 +71,9 @@ describe("resolveTradeProductInput", () => {
     const resolved = await resolveTradeProductInput({ inputPath: "/tmp/catalog.jpg" }, prompt);
 
     expect(resolved.ok).toBe(true);
-    if (resolved.err) return;
+    if (resolved.err) {
+      return;
+    }
     expect(resolved.value).toEqual({
       inputPath: "/tmp/catalog.jpg",
       type: "mini-photo-original",
@@ -96,7 +98,9 @@ describe("resolveTradeProductInput", () => {
     );
 
     expect(resolved.ok).toBe(true);
-    if (resolved.err) return;
+    if (resolved.err) {
+      return;
+    }
     expect(resolved.value).toEqual({
       inputPath: "/tmp/catalog.jpg",
       type: "photo-grid",

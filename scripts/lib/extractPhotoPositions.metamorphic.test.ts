@@ -57,7 +57,9 @@ const transformations: Transformation[] = [
     name: "same-color padding",
     apply: async (input) => {
       const decoded = await decodePixelImage(input);
-      if (decoded.err) throw decoded.error;
+      if (decoded.err) {
+        throw decoded.error;
+      }
       const background = estimateBackgroundColor(decoded.value);
       const left = 17;
       const top = 13;
@@ -99,20 +101,22 @@ describe("catalog layout optimization metamorphic properties", { timeout: 15_000
     const source = await readFile(sourcePath);
     const baseline = await extractPhotoPositions(source);
     expect(baseline.ok).toBe(true);
-    if (baseline.err) return;
+    if (baseline.err) {
+      return;
+    }
     const transformed = await apply(source);
     const decoded = await decodePixelImage(transformed.input);
     expect(decoded.ok).toBe(true);
-    if (decoded.err) return;
+    if (decoded.err) {
+      return;
+    }
     const columns = baseline.value.diagnostics.columns;
-    const frames = baseline.value.positions.map(
-      (position, index): ClusteredRect => ({
-        ...transformed.project(position),
-        boundaryScore: 0,
-        row: Math.floor(index / columns),
-        column: index % columns,
-      }),
-    );
+    const frames = baseline.value.positions.map((position, index): ClusteredRect => ({
+      ...transformed.project(position),
+      boundaryScore: 0,
+      row: Math.floor(index / columns),
+      column: index % columns,
+    }));
 
     const optimized = optimizeLowConfidenceCatalogLayout(
       frames,
@@ -122,7 +126,9 @@ describe("catalog layout optimization metamorphic properties", { timeout: 15_000
     );
     const failures = baseline.value.positions.flatMap((expected, index) => {
       const received = optimized[index];
-      if (received == undefined) return [{ id: expected.id, iou: 0 }];
+      if (received == undefined) {
+        return [{ id: expected.id, iou: 0 }];
+      }
       const iou = intersectionOverUnion(
         expected,
         transformed.restore({ ...received, id: expected.id }),

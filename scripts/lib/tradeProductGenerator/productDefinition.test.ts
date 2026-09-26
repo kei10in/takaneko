@@ -18,7 +18,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value).toMatchObject({
       year: 2026,
       itemCount: 27,
@@ -39,7 +41,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.exportName).toBe("_2024年振袖_生写真");
     expect(result.value.lineupConstant).toBe("REGULAR_PHOTO_SET");
     expect(result.value.itemCount).toBe(30);
@@ -54,7 +58,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.itemCount).toBeUndefined();
     expect(result.value.lineupConstant).toBeUndefined();
   });
@@ -69,7 +75,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("invalid-date");
   });
 
@@ -83,7 +91,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("invalid-series");
   });
 });
@@ -97,7 +107,9 @@ describe("renderProductDefinition", () => {
       series: "テスト衣装",
       lineup: "regular-27",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const source = await renderProductDefinition(descriptor.value, {
       extension: ".jpg",
@@ -128,7 +140,9 @@ describe("renderProductDefinition", () => {
       date: "2026-07-31",
       series: "TIF2026限定ライブフォト 1",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const source = await renderProductDefinition(descriptor.value, {
       extension: ".jpg",

@@ -326,7 +326,9 @@ const detectForegroundLayoutFromMask = (
     row.map((rect, column) => ({ ...rect, row: rowIndex, column })),
   );
 
-  if (nonEmptyRows.length < 2 || rects.length < 4) return undefined;
+  if (nonEmptyRows.length < 2 || rects.length < 4) {
+    return undefined;
+  }
   const horizontalPairs = nonEmptyRows.flatMap((row) =>
     row.slice(1).map((rect, index) => rect.x < row[index].x + row[index].width - 1),
   );
@@ -334,7 +336,9 @@ const detectForegroundLayoutFromMask = (
     horizontalPairs.length === 0
       ? 0
       : horizontalPairs.filter(Boolean).length / horizontalPairs.length;
-  if (horizontalOverlapRatio > 0.1) return undefined;
+  if (horizontalOverlapRatio > 0.1) {
+    return undefined;
+  }
 
   const representative = chooseRepresentativeSize(rects);
   const sizeConsistency = average(
@@ -359,7 +363,9 @@ const detectForegroundLayoutFromMask = (
   const score =
     sizeConsistency * 0.35 + aspect * 0.25 + horizontalSpacing * 0.25 + verticalSpacing * 0.15;
 
-  if (sizeConsistency < 0.88 || aspect < 0.75 || horizontalSpacing < 0.75) return undefined;
+  if (sizeConsistency < 0.88 || aspect < 0.75 || horizontalSpacing < 0.75) {
+    return undefined;
+  }
 
   return {
     rects,

@@ -27,7 +27,9 @@ export const expectCatalogPositions = async (
     ({ expected, received, iou }) =>
       received == undefined || received.id !== expected.id || iou < MINIMUM_IOU,
   );
-  if (actual.length === approved.length && failures.length === 0) return;
+  if (actual.length === approved.length && failures.length === 0) {
+    return;
+  }
 
   const artifact = await writeComparisonSheet(input, actual, approved);
   const details = failures
@@ -105,7 +107,9 @@ const createThumbnail = async (
   imageWidth: number,
   imageHeight: number,
 ): Promise<Buffer | undefined> => {
-  if (position == undefined) return undefined;
+  if (position == undefined) {
+    return undefined;
+  }
   const left = Math.max(0, Math.min(imageWidth - 1, position.x));
   const top = Math.max(0, Math.min(imageHeight - 1, position.y));
   const width = Math.max(1, Math.min(position.width, imageWidth - left));

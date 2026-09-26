@@ -23,7 +23,9 @@ describe("extractMiniPhotoImages", () => {
     const result = await extractMiniPhotoImages(inputPath);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.outputDirectory).toBe(path.join(temporaryDirectory, "sample.input"));
     expect(result.value.outputPaths).toEqual([
       path.join(temporaryDirectory, "sample.input/001.webp"),

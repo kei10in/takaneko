@@ -59,7 +59,9 @@ interface InnerProps {
 const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
   const { to, displayUrl, data, error, isLoading } = props;
 
-  if (error) return <div>failed to load</div>;
+  if (error) {
+    return <div>failed to load</div>;
+  }
   if (isLoading) {
     return (
       <div className="flex h-28 bg-white p-4 shadow-sm">
@@ -74,7 +76,9 @@ const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
       </div>
     );
   }
-  if (data?.ogp == undefined) return <div>no data</div>;
+  if (data?.ogp == undefined) {
+    return <div>no data</div>;
+  }
 
   return (
     <Link className="inline-block" to={to}>
@@ -103,9 +107,15 @@ const SmallLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
 const LargeLinkCard: React.FC<InnerProps> = (props: InnerProps) => {
   const { to, displayUrl, data, error, isLoading } = props;
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
-  if (data?.ogp == undefined) return <div>no data</div>;
+  if (error) {
+    return <div>failed to load</div>;
+  }
+  if (isLoading) {
+    return <div>loading...</div>;
+  }
+  if (data?.ogp == undefined) {
+    return <div>no data</div>;
+  }
 
   return (
     <Link className="inline-block" to={to}>

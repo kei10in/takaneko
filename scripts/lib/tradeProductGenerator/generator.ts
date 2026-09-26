@@ -39,7 +39,9 @@ export const generateTradeProduct = async (
   request: GenerateTradeProductRequest,
 ): Promise<Result<GeneratedTradeProductFiles, GenerateTradeProductError>> => {
   const descriptor = buildProductDescriptor(request.input);
-  if (descriptor.err) return descriptor;
+  if (descriptor.err) {
+    return descriptor;
+  }
 
   const extension = productTypeUsesOriginalImage(descriptor.value.type)
     ? path.extname(descriptor.value.inputPath).toLowerCase()
@@ -82,7 +84,9 @@ export const generateTradeProduct = async (
   }
 
   const image = await generateTradeProductImage(descriptor.value);
-  if (image.err) return image;
+  if (image.err) {
+    return image;
+  }
 
   const repositoryFiles = await Promise.all([
     readOptional(productImagesPath),
@@ -123,7 +127,9 @@ export const generateTradeProduct = async (
     [releaseNotesPath, updatedReleaseNotes],
   ]);
   const committed = await commitWithRollback(outputs);
-  if (committed.err) return committed;
+  if (committed.err) {
+    return committed;
+  }
 
   return Ok({ definitionPath, imagePath, productImagesPath, releaseNotesPath });
 };
@@ -151,7 +157,9 @@ const commitWithRollback = async (
     await Promise.all(
       [...outputs.keys()].map(async (outputPath) => {
         const original = await readOptional(outputPath);
-        if (original.err) throw new Error(original.error.message);
+        if (original.err) {
+          throw new Error(original.error.message);
+        }
         originals.set(outputPath, original.value);
       }),
     );

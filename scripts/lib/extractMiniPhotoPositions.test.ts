@@ -61,7 +61,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 38, y: 26, width: 87, height: 137 },
       { id: 2, x: 130, y: 26, width: 87, height: 137 },
@@ -102,7 +104,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 37, y: 57, width: 81, height: 128 },
       { id: 2, x: 123, y: 57, width: 81, height: 128 },
@@ -143,7 +147,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 166, y: 14, width: 79, height: 125 },
       { id: 2, x: 256, y: 14, width: 79, height: 125 },
@@ -187,7 +193,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 18, y: 13, width: 28, height: 44 },
       { id: 2, x: 49, y: 13, width: 28, height: 44 },
@@ -228,7 +236,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 130, y: 40, width: 61, height: 96 },
       { id: 2, x: 209, y: 40, width: 61, height: 96 },
@@ -272,7 +282,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 9, y: 7, width: 26, height: 41 },
       { id: 2, x: 39, y: 7, width: 26, height: 41 },
@@ -316,7 +328,9 @@ describe("extractMiniPhotoPositions", () => {
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 16, y: 6, width: 29, height: 46 },
       { id: 2, x: 47, y: 6, width: 29, height: 46 },
@@ -370,7 +384,9 @@ describe("extractMiniPhotoPositionsFromPixels", () => {
     const result = extractMiniPhotoPositionsFromPixels(image);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expectPositionsCloseTo(result.value.positions, cards);
     expect(result.value.diagnostics.rows).toBe(2);
     expect(result.value.diagnostics.columns).toBe(3);
@@ -389,7 +405,9 @@ describe("extractMiniPhotoPositionsFromPixels", () => {
     const result = extractMiniPhotoPositionsFromPixels(image);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expectPositionsCloseTo(result.value.positions, cards);
     expect(result.value.diagnostics.rows).toBe(2);
     expect(result.value.diagnostics.columns).toBe(3);
@@ -407,7 +425,9 @@ describe("extractMiniPhotoPositionsFromPixels", () => {
     const result = extractMiniPhotoPositionsFromPixels(image, { normalizeMode: "grid" });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions[0]?.x).toBe(result.value.positions[2]?.x);
     expect(result.value.positions[1]?.x).toBe(result.value.positions[3]?.x);
     expect(result.value.positions[0]?.y).toBe(result.value.positions[1]?.y);
@@ -431,7 +451,9 @@ describe("extractMiniPhotoPositionsFromPixels", () => {
     const result = await extractMiniPhotoPositions(encoded);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expectPositionsCloseTo(result.value.positions, cards);
   });
 
@@ -441,7 +463,9 @@ describe("extractMiniPhotoPositionsFromPixels", () => {
     const result = extractMiniPhotoPositionsFromPixels(image);
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("layout-not-found");
   });
 });

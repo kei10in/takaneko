@@ -30,12 +30,16 @@ export const recoverPhotoOuterFrames = (
   edges: EdgeMap,
   image: PixelImage,
 ): ClusteredRect[] => {
-  if (frames.length < 4) return frames;
+  if (frames.length < 4) {
+    return frames;
+  }
 
   const representative = chooseRepresentativeSize(frames);
   // At larger sizes the regular catalog refinement can distinguish decoration from the card edge.
   // This guard only recovers the one- or two-pixel fringe lost to low-resolution antialiasing.
-  if (representative.width > LOW_RESOLUTION_MAXIMUM_FRAME_WIDTH) return frames;
+  if (representative.width > LOW_RESOLUTION_MAXIMUM_FRAME_WIDTH) {
+    return frames;
+  }
   const mask = createForegroundMask(
     image,
     estimateBackgroundColor(image),
@@ -48,8 +52,12 @@ export const recoverPhotoOuterFrames = (
     bottom: outerFringeDepth(frames, "bottom", MAXIMUM_SEARCH_DEPTH, mask, image),
   };
 
-  if (expansion.left === 0 || expansion.right === 0) return frames;
-  if (expansion.top === 0 && expansion.bottom === 0) return frames;
+  if (expansion.left === 0 || expansion.right === 0) {
+    return frames;
+  }
+  if (expansion.top === 0 && expansion.bottom === 0) {
+    return frames;
+  }
 
   const expanded = frames.map((frame) => {
     const candidate = {
@@ -102,7 +110,9 @@ const stripSupport = (
   const inBounds = pixels.filter(
     ({ x, y }) => x >= 0 && y >= 0 && x < image.width && y < image.height,
   );
-  if (inBounds.length !== pixels.length || inBounds.length === 0) return 0;
+  if (inBounds.length !== pixels.length || inBounds.length === 0) {
+    return 0;
+  }
   return (
     inBounds.reduce((support, { x, y }) => support + (mask[y * image.width + x] ?? 0), 0) /
     inBounds.length

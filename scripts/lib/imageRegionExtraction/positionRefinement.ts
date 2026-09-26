@@ -20,7 +20,9 @@ export const refinePositions = (
   image: PixelImage,
   profile: ExtractionProfile,
 ): ClusteredRect[] => {
-  if (mode === "none" || mode === "grid") return rects;
+  if (mode === "none" || mode === "grid") {
+    return rects;
+  }
   if (alignment !== "global-grid") {
     return refineRowWisePositions(
       rects,
@@ -32,7 +34,9 @@ export const refinePositions = (
       profile,
     );
   }
-  if (rects.every((rect) => rect.width < 40)) return rects;
+  if (rects.every((rect) => rect.width < 40)) {
+    return rects;
+  }
 
   return rects.map((rect) => {
     const alternatives = [-2, -1, 0, 1, 2].flatMap((offsetX) =>
@@ -118,7 +122,9 @@ const refineRowWisePositions = (
           )[0]
       : scoredSizes.sort((a, b) => b.boundaryScore - a.boundaryScore)[0];
 
-  if (bestSize == undefined) return rects;
+  if (bestSize == undefined) {
+    return rects;
+  }
 
   const refined = rects.map(
     (rect) => bestPositionForSize(rect, bestSize, edges, imageWidth, imageHeight).rect,
@@ -160,7 +166,9 @@ const regularizeRowPositions = (rects: ClusteredRect[]): ClusteredRect[] =>
 const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
   groupByIndex(rects, (rect) => rect.row).flatMap((row) => {
     const sorted = [...row].sort((a, b) => a.x - b.x);
-    if (sorted.length < 3) return sorted;
+    if (sorted.length < 3) {
+      return sorted;
+    }
 
     const step = Math.round(median(sorted.slice(1).map((rect, index) => rect.x - sorted[index].x)));
     const origin = Math.round(median(sorted.map((rect, index) => rect.x - step * index)));
@@ -253,11 +261,15 @@ const verticalChromaFrameScore = (
   rect: Pick<RectCandidate, "x" | "y" | "width" | "height">,
 ): number => {
   const lineScore = (x: number): number => {
-    if (x < 0 || x >= image.width) return 0;
+    if (x < 0 || x >= image.width) {
+      return 0;
+    }
     return average(
       Array.from({ length: rect.height }, (_, offset) => {
         const y = rect.y + offset;
-        if (y < 0 || y >= image.height) return 0;
+        if (y < 0 || y >= image.height) {
+          return 0;
+        }
         const index = (y * image.width + x) * image.channels;
         const red = image.data[index];
         const green = image.data[index + 1];

@@ -63,10 +63,14 @@ export const scoreAlignment = (
 };
 
 export const scoreRegularDifferences = (values: number[]): number => {
-  if (values.length <= 2) return 1;
+  if (values.length <= 2) {
+    return 1;
+  }
   const differences = values.slice(1).map((value, index) => value - values[index]);
   const center = median(differences);
-  if (center <= 0) return 0;
+  if (center <= 0) {
+    return 0;
+  }
   return average(
     differences.map(
       (difference) => 1 - clamp(Math.abs(difference - center) / (center * 0.08), 0, 1),
@@ -76,7 +80,9 @@ export const scoreRegularDifferences = (values: number[]): number => {
 
 export const scoreAspectRatio = (ratio: number, profile: ExtractionProfile): number => {
   const { minimum, target, maximum } = profile.aspectRatio;
-  if (ratio >= minimum && ratio <= maximum) return 1;
+  if (ratio >= minimum && ratio <= maximum) {
+    return 1;
+  }
   const distance = ratio < minimum ? minimum - ratio : ratio - maximum;
   const referenceDistance = Math.abs(ratio - target);
   return clamp(1 - distance / Math.max(0.12, referenceDistance), 0, 1);

@@ -48,7 +48,9 @@ export const bestScaleAwareAxisPosition = (
   const scoreCache = new Map<number, number>();
   const score = (position: number): number => {
     const cached = scoreCache.get(position);
-    if (cached != undefined) return cached;
+    if (cached != undefined) {
+      return cached;
+    }
     const value = scoreAt(position);
     scoreCache.set(position, value);
     return value;
@@ -156,7 +158,9 @@ export const refineMiniPhotoCatalogFrames = (
   edges: EdgeMap,
   image: PixelImage,
 ): ClusteredRect[] => {
-  if (frames.length === 0) return frames;
+  if (frames.length === 0) {
+    return frames;
+  }
 
   const representative = chooseRepresentativeSize(frames);
   const independentlyRefined = frames.map((frame) => {
@@ -203,7 +207,9 @@ export const refineMiniPhotoCatalogFrames = (
       heightSpread <= representative.height * MAXIMUM_SIZE_SPREAD_RATIO &&
       maximumOffset >= Math.ceil(representative.width * MINIMUM_POSITION_OFFSET_RATIO) &&
       proposedScore > baselineScore);
-  if (!shouldRefine) return frames;
+  if (!shouldRefine) {
+    return frames;
+  }
 
   return proposed.map((frame) => {
     const refined = frame;

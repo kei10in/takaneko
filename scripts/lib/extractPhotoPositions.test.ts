@@ -11,7 +11,9 @@ describe("extractPhotoPositions", () => {
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 58, y: 32, width: 96, height: 137 },
       { id: 2, x: 157, y: 32, width: 96, height: 137 },
@@ -51,7 +53,9 @@ describe("extractPhotoPositions", () => {
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 29, y: 24, width: 82, height: 116 },
       { id: 2, x: 115, y: 24, width: 82, height: 116 },
@@ -91,7 +95,9 @@ describe("extractPhotoPositions", () => {
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 48, y: 26, width: 83, height: 118 },
       { id: 2, x: 137, y: 26, width: 83, height: 118 },
@@ -131,7 +137,9 @@ describe("extractPhotoPositions", () => {
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 7, y: 8, width: 34, height: 48 },
       { id: 2, x: 41, y: 8, width: 34, height: 48 },
@@ -171,7 +179,9 @@ describe("extractPhotoPositions", () => {
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     const columnsByRow = [
       [7, 58, 108, 159, 210, 260, 311, 361, 412],
       [7, 58, 108, 159, 209, 260, 311, 361, 412],
@@ -214,7 +224,9 @@ describe("extractPhotoPositionsFromPixels", () => {
     const result = extractPhotoPositionsFromPixels(image, { normalizeMode: "none" });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 4, y: 3, width: 14, height: 20 },
       { id: 2, x: 18, y: 3, width: 14, height: 20 },

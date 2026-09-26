@@ -12,7 +12,9 @@ export const scoreLocalizedFrameBoundary = (
 ): number => {
   const right = frame.x + frame.width;
   const bottom = frame.y + frame.height;
-  if (frame.x < 0 || frame.y < 0 || right >= imageWidth || bottom >= imageHeight) return 0;
+  if (frame.x < 0 || frame.y < 0 || right >= imageWidth || bottom >= imageHeight) {
+    return 0;
+  }
   const radius = Math.max(1, Math.round(Math.min(frame.width, frame.height) * LOCAL_SEARCH_RATIO));
 
   const leftScore = scoreLocalBoundary(frame.x, radius, 0, imageWidth - 1, (x) =>

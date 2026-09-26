@@ -13,7 +13,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 98, y: 292, width: 192, height: 274 },
       { id: 2, x: 316, y: 290, width: 192, height: 274 },
@@ -55,7 +57,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 81, y: 288, width: 188, height: 268 },
       { id: 2, x: 312, y: 288, width: 188, height: 268 },
@@ -95,7 +99,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 45, y: 238, width: 176, height: 251 },
       { id: 2, x: 232, y: 238, width: 176, height: 251 },
@@ -135,7 +141,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 239, width: 235, height: 335 },
       { id: 2, x: 315, y: 239, width: 235, height: 335 },
@@ -173,7 +181,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 20, y: 154, width: 161, height: 230 },
       { id: 2, x: 215, y: 154, width: 161, height: 230 },
@@ -216,7 +226,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 23, y: 157, width: 158, height: 228 },
       { id: 2, x: 218, y: 157, width: 158, height: 228 },
@@ -259,7 +271,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 240, width: 235, height: 335 },
       { id: 2, x: 316, y: 240, width: 235, height: 335 },
@@ -302,7 +316,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 42, y: 226, width: 220, height: 315 },
       { id: 2, x: 297, y: 226, width: 220, height: 315 },
@@ -345,7 +361,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 44, y: 240, width: 233, height: 332 },
       { id: 2, x: 316, y: 240, width: 233, height: 332 },
@@ -388,7 +406,9 @@ describe("extractPhotoPositions for catalog images", { timeout: 30_000 }, () => 
     const result = await extractPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     await expectCatalogPositions(input, result.value.positions, [
       { id: 1, x: 45, y: 240, width: 234, height: 335 },
       { id: 2, x: 317, y: 240, width: 234, height: 335 },

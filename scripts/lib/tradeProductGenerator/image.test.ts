@@ -13,12 +13,16 @@ describe("generateTradeProductImage", { timeout: 15_000 }, () => {
       series: "4th Anniversary",
       lineup: "regular-27",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const result = await generateTradeProductImage(descriptor.value);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toHaveLength(27);
     expect(result.value.positions[0]).toEqual({
       id: 1,
@@ -44,12 +48,16 @@ describe("generateTradeProductImage", { timeout: 15_000 }, () => {
       series: "再構成テスト",
       lineup: "regular-27",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const result = await generateTradeProductImage(descriptor.value);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.extension).toBe(".webp");
     expect(result.value.positions).toHaveLength(27);
     expect(result.value.positions[0]).toEqual({
@@ -76,12 +84,16 @@ describe("generateTradeProductImage", { timeout: 15_000 }, () => {
       series: "ヒント不一致テスト",
       lineup: "regular-30",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const result = await generateTradeProductImage(descriptor.value);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toHaveLength(27);
   });
 });

@@ -70,8 +70,12 @@ export const dominates = (
   metrics: CatalogQualityMetric[] = catalogQualityMetrics,
   requiredImprovementMetrics: CatalogQualityMetric[] = metrics,
 ): boolean => {
-  if (!candidate.valid) return false;
-  if (!reference.valid) return true;
+  if (!candidate.valid) {
+    return false;
+  }
+  if (!reference.valid) {
+    return true;
+  }
 
   const doesNotDegrade = metrics.every(
     (metric) =>

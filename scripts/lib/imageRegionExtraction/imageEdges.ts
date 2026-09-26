@@ -9,7 +9,9 @@ export const createEdgeMap = (image: PixelImage): EdgeMap => {
     for (let x = 0; x < width; x += 1) {
       const index = (y * width + x) * channels;
       const pixelIndex = y * width + x;
-      if (x > 0) vertical[pixelIndex] = colorDistance(data, index, index - channels) / 765;
+      if (x > 0) {
+        vertical[pixelIndex] = colorDistance(data, index, index - channels) / 765;
+      }
       if (y > 0) {
         horizontal[pixelIndex] = colorDistance(data, index, index - width * channels) / 765;
       }
@@ -48,7 +50,9 @@ export const rectangleBoundaryScore = (
 ): number => {
   const right = rect.x + rect.width;
   const bottom = rect.y + rect.height;
-  if (rect.x < 0 || rect.y < 0 || right >= imageWidth || bottom >= imageHeight) return 0;
+  if (rect.x < 0 || rect.y < 0 || right >= imageWidth || bottom >= imageHeight) {
+    return 0;
+  }
   const vertical =
     verticalLineSum(edges, imageHeight, rect.x, rect.y, bottom) +
     verticalLineSum(edges, imageHeight, right, rect.y, bottom);
