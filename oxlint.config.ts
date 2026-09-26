@@ -2,6 +2,9 @@ import { defineConfig } from "oxlint";
 import { version } from "react";
 
 export default defineConfig({
+  options: {
+    typeAware: true,
+  },
   categories: {
     correctness: "error",
     suspicious: "error",
