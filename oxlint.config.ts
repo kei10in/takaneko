@@ -5,7 +5,6 @@ export default defineConfig({
   categories: {
     correctness: "error",
     suspicious: "error",
-    // pedantic: "warn",
   },
   plugins: ["react", "jsx-a11y", "typescript", "import"],
   env: {
@@ -26,6 +25,22 @@ export default defineConfig({
     "**/*-template.tsx",
   ],
   rules: {
+    curly: ["error", "all"],
+    "array-callback-return": "error",
+    "no-promise-executor-return": "error",
+    "no-constructor-return": "error",
+    "no-loop-func": "error",
+    "no-new-wrappers": "error",
+    "no-self-compare": "error",
+    "no-throw-literal": "error",
+    "prefer-promise-reject-errors": "error",
+    "radix": "error",
+    "require-unicode-regexp": "error",
+    "no-array-constructor": "error",
+    "no-object-constructor": "error",
+    "no-useless-return": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/checked-requires-onchange-or-readonly": "error",
     // JSX は react-jsx で自動変換するため、React の import は不要です。
     "react/react-in-jsx-scope": "off",
     // 数字で始まる作品名・商品名には識別子の先頭に _ を付けます。
