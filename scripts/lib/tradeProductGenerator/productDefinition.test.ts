@@ -182,8 +182,8 @@ describe("repository source updates", () => {
       importPath: "./2026/2026-07-20_生写真「テスト衣装」.ts",
     });
 
-    expect(second.match(/import \{ テスト衣装_生写真 \}/g)).toHaveLength(1);
-    expect(second.match(/テスト衣装_生写真/g)).toHaveLength(2);
+    expect(second.match(/import \{ テスト衣装_生写真 \}/gu)).toHaveLength(1);
+    expect(second.match(/テスト衣装_生写真/gu)).toHaveLength(2);
     const photos = second.slice(second.indexOf("export const TAKANEKO_PHOTOS:"));
     expect(photos.indexOf("テスト衣装_生写真")).toBeLessThan(photos.indexOf("Existing"));
   });
@@ -208,7 +208,7 @@ describe("repository source updates", () => {
     const first = updateReleaseNotes(original, "2026-07-20", "生写真「テスト衣装」");
     const second = updateReleaseNotes(first, "2026-07-20", "生写真「テスト衣装」");
 
-    expect(second.match(/生写真「テスト衣装」を追加しました。/g)).toHaveLength(1);
+    expect(second.match(/生写真「テスト衣装」を追加しました。/gu)).toHaveLength(1);
     expect(second).toContain(
       "## 2026-07-20\n\n- トレード画像をつくるやつに、生写真「テスト衣装」を追加しました。\n- 既存の変更です。",
     );

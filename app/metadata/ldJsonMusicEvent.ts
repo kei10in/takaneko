@@ -114,7 +114,7 @@ const schemaDateTime = (date: string, time: string | undefined): string => {
 };
 
 const normalizeDateTime = (date: string, time: string): string => {
-  const match = /^(\d{1,2}):([0-5]\d)$/.exec(time);
+  const match = /^(\d{1,2}):([0-5]\d)$/u.exec(time);
   if (match == undefined) {
     return date;
   }

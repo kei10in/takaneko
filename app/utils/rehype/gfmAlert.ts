@@ -53,7 +53,7 @@ const alertLabels: Record<string, string> = {
   "[!DANGER]": "danger",
 };
 
-const alertRegex = /^\[!(NOTE|TIP|WARNING|DANGER)\](?:\r\n|\r|\n)/i;
+const alertRegex = /^\[!(NOTE|TIP|WARNING|DANGER)\](?:\r\n|\r|\n)/iu;
 
 const parseAlertType = (
   child: ElementContent,

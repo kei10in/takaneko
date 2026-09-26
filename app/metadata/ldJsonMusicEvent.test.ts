@@ -63,7 +63,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     it("has a Google-compatible startDate", () => {
       expect(document?.startDate).toEqual(expect.any(String));
       expect(document?.startDate).toMatch(
-        /^(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z))$/,
+        /^(\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?([+-]\d{2}:\d{2}|Z))$/u,
       );
     });
 
@@ -79,7 +79,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     it("has a non-empty venue name", () => {
       assert(document.location != undefined);
       expect(document.location).toMatchObject({
-        name: expect.stringMatching(/\S/),
+        name: expect.stringMatching(/\S/u),
       });
     });
 
@@ -94,7 +94,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     it("has addressRegion as recognizable address information", () => {
       expect(document.location).toMatchObject({
         address: expect.objectContaining({
-          addressRegion: expect.stringMatching(/\S/),
+          addressRegion: expect.stringMatching(/\S/u),
         }),
       });
     });
@@ -102,16 +102,16 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
     it("has addressCountry", () => {
       expect(document.location).toMatchObject({
         address: expect.objectContaining({
-          addressCountry: expect.stringMatching(/\S/),
+          addressCountry: expect.stringMatching(/\S/u),
         }),
       });
     });
 
     it("emits only absolute HTTP image URLs in Google-supported formats", () => {
       assert(typeof document.image === "string");
-      expect(document).toMatchObject({
-        image: expect.stringMatching(/^https?:\/\/.*\.(jpe?g|png|webp)$/i),
-      });
+      const imageUrl = new URL(document.image);
+      expect(["http:", "https:"]).toContain(imageUrl.protocol);
+      expect(imageUrl.pathname.toLowerCase()).toMatch(/\.(jpe?g|png|webp)$/u);
     });
 
     it("does not emit offers", () => {
@@ -122,7 +122,7 @@ describe("MusicEvent JSON-LD for Google Event structured data", async () => {
       expect(document.performer).toBeDefined();
       expect(document.performer).toMatchObject({
         "@type": "MusicGroup",
-        name: expect.stringMatching(/\S/),
+        name: expect.stringMatching(/\S/u),
       });
     });
   });

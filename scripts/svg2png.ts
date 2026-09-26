@@ -15,7 +15,7 @@ const main = async () => {
   }
 
   for (const svgFile of args) {
-    const pngFile = svgFile.replace(/\.svg$/, ".png");
+    const pngFile = svgFile.replace(/\.svg$/u, ".png");
     await convertSvgToPng(svgFile, pngFile);
   }
 };

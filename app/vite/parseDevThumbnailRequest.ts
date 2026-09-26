@@ -15,7 +15,7 @@ interface DevThumbnailRequest {
 }
 
 const positiveInteger = (value: string | undefined): number | undefined => {
-  if (value === undefined || !/^\d+$/.test(value)) {
+  if (value === undefined || !/^\d+$/u.test(value)) {
     return undefined;
   }
   const number = Number(value);

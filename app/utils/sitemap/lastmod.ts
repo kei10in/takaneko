@@ -33,7 +33,7 @@ const validateLastmodConfig = (config: LastmodConfig[]) => {
 };
 
 const isIsoDateString = (str: string): boolean => {
-  const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/u;
   return isoDateRegex.test(str);
 };
 

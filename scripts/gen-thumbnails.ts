@@ -57,7 +57,7 @@ const resizeImage = async (
 
 const processFile = async (filepath: string) => {
   // サムネイルの配置場所は Web のパスで計算する
-  filepath = filepath.replace(/\\/g, "/");
+  filepath = filepath.replace(/\\/gu, "/");
   const imagePath = filepath.replace("public", "");
 
   const thumbnailPaths = thumbnails(imagePath);
@@ -134,7 +134,7 @@ const main = async () => {
   if (rebuild) {
     const thumbnailDirs = new Set(
       matchFiles.map((filepath) => {
-        return thumbnailDir(filepath.replace(/\\/g, "/"));
+        return thumbnailDir(filepath.replace(/\\/gu, "/"));
       }),
     );
     thumbnailDirs.forEach((dir) => {

@@ -104,7 +104,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
 
           {track.digitalRelease && (
             <p className="mt-1 text-sm text-nadeshiko-700">
-              {track.digitalRelease.replace(/-/g, ".")} <span className="">release</span>
+              {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
             </p>
           )}
 

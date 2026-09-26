@@ -5,7 +5,7 @@ export const extractYouTubeVideoId = (input: string | undefined): string | undef
   }
 
   // YouTube 動画ID の正規表現 (11文字, 英数字, -, _)
-  const videoIdPattern = /^[a-zA-Z0-9_-]{11}$/;
+  const videoIdPattern = /^[a-zA-Z0-9_-]{11}$/u;
 
   // 1. videoId 単体
   if (videoIdPattern.test(input)) {

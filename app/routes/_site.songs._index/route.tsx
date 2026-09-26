@@ -75,7 +75,7 @@ export default function Component() {
                         <p className="text-xs text-gray-400">
                           {track.digitalRelease == undefined
                             ? `No digital release`
-                            : `${track.digitalRelease.replace(/-/g, ".")} release`}
+                            : `${track.digitalRelease.replace(/-/gu, ".")} release`}
                         </p>
                       </div>
                     </li>

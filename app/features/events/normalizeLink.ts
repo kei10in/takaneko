@@ -14,7 +14,7 @@ export const normalizeLink = (link: string | LinkDescription): LinkDescription |
     return { text: link, url: link };
   }
 
-  const match = link.match(/\[([^\]]+)\]\(([^)]+)\)/);
+  const match = link.match(/\[([^\]]+)\]\(([^)]+)\)/u);
   if (match == null) {
     return undefined;
   }

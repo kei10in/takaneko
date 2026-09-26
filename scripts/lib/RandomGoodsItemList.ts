@@ -107,7 +107,7 @@ export class RandomGoodsItemList {
     const dataUrl = await stage.toDataURL({ mimeType: "image/webp", quality: 0.95 });
 
     // Write Data URL to file
-    const base64Data = dataUrl.replace(/^data:image\/\w+;base64,/, "");
+    const base64Data = dataUrl.replace(/^data:image\/\w+;base64,/u, "");
     const buffer = Buffer.from(base64Data, "base64");
 
     return { buffer, positions };

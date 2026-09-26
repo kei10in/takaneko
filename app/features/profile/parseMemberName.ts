@@ -2,7 +2,7 @@ import { MemberId } from "./types.ts";
 
 export const parseMemberName = (name: string): MemberId | undefined => {
   // Remove any trailing numbers or special characters
-  const cleanedName = name.replace(/\s+$/, "").trim();
+  const cleanedName = name.replace(/\s+$/u, "").trim();
 
   // Handle specific cases for member names
   switch (cleanedName) {

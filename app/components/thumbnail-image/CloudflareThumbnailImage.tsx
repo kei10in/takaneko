@@ -8,7 +8,7 @@ type Props = Omit<React.ComponentProps<"img">, "src" | "srcSet" | "alt"> & {
 };
 
 const thumbnailUrl = (origin: string, src: string, size: number): string => {
-  const source = encodeURI(src.replace(/^\//, ""));
+  const source = encodeURI(src.replace(/^\//u, ""));
   return `https://${DomainName}/cdn-cgi/image/width=${size},height=${size},fit=contain,format=webp,quality=80/${origin}/${source}`;
 };
 

@@ -1,5 +1,5 @@
 export const normalizeSearchText = (text: string): string => {
-  return text.normalize("NFKC").toLocaleLowerCase("ja-JP").replace(/\s+/g, " ").trim();
+  return text.normalize("NFKC").toLocaleLowerCase("ja-JP").replace(/\s+/gu, " ").trim();
 };
 
 export const searchTokens = (q: string): string[] => {
@@ -16,16 +16,16 @@ export const containsAllTokens = (text: string, tokens: string[]): boolean => {
 };
 
 const containsToken = (text: string, token: string): boolean => {
-  if (!/^[a-z0-9]+$/.test(token)) {
+  if (!/^[a-z0-9]+$/u.test(token)) {
     return text.includes(token);
   }
 
   const escaped = escapeRegExp(token);
-  return new RegExp(`(^|[^a-z0-9])${escaped}(?=$|[^a-z0-9])`).test(text);
+  return new RegExp(`(^|[^a-z0-9])${escaped}(?=$|[^a-z0-9])`, "u").test(text);
 };
 
 const escapeRegExp = (value: string): string => {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return value.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&");
 };
 
 export const withSearchVariants = (values: (string | undefined)[]): string[] => {
@@ -37,7 +37,7 @@ export const isNonEmptyString = (value: string | undefined): value is string => 
 };
 
 const englishAcronym = (value: string): string => {
-  const words = value.match(/[A-Za-z0-9]+/g) ?? [];
+  const words = value.match(/[A-Za-z0-9]+/gu) ?? [];
   if (words.length < 2) {
     return "";
   }

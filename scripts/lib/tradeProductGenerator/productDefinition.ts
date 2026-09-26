@@ -145,7 +145,7 @@ export const productTypeIsPhoto = (type: TradeProductType): boolean =>
   type === "photo-original" || type === "photo-grid";
 
 const validDateYear = (value: string): number | undefined => {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/u.exec(value);
   if (match == undefined) {
     return undefined;
   }

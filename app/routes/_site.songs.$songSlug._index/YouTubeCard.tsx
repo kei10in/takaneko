@@ -195,7 +195,7 @@ export const YouTubeCard: React.FC<Props> = (props: Props) => {
           </Link>
 
           <p className="line-clamp-1 block w-fit text-xs text-gray-400">
-            {publishedAt.replace(/-/g, ".")}
+            {publishedAt.replace(/-/gu, ".")}
           </p>
         </div>
       </div>
