@@ -150,7 +150,7 @@ const axisGroupsDoNotOverlap = (
   size: (frame: ClusteredRect) => number,
 ): boolean =>
   groups.every((group) => {
-    const sorted = [...group].sort((first, second) => position(first) - position(second));
+    const sorted = group.toSorted((first, second) => position(first) - position(second));
     return sorted
       .slice(1)
       .every((frame, index) => position(frame) >= position(sorted[index]) + size(sorted[index]));

@@ -69,7 +69,7 @@ export const extractPositionsFromPixels = (
   const edgeLayouts = createLayoutCandidates(rawCandidates, profile);
   const baselineLayouts = [foregroundLayout, ...edgeLayouts]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
-    .sort((a, b) => b.score - a.score);
+    .toSorted((a, b) => b.score - a.score);
   const bestBaselineLayout = baselineLayouts[0];
   const usefulHighContrastLayout =
     highContrastForegroundLayout != undefined &&
@@ -92,7 +92,7 @@ export const extractPositionsFromPixels = (
     ...baselineLayouts,
   ]
     .filter((layout): layout is LayoutCandidate => layout != undefined)
-    .sort((a, b) => b.score - a.score);
+    .toSorted((a, b) => b.score - a.score);
   const best = layouts[0];
 
   if (best == undefined || best.score < profile.layout.minimumScore) {
@@ -223,7 +223,7 @@ const detectRectCandidates = (
     });
   });
 
-  const sorted = candidates.sort((a, b) => b.boundaryScore - a.boundaryScore).slice(0, 2500);
+  const sorted = candidates.toSorted((a, b) => b.boundaryScore - a.boundaryScore).slice(0, 2500);
   return suppressDuplicateRectangles(sorted).slice(0, 500);
 };
 

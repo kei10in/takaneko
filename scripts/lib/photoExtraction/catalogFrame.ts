@@ -140,7 +140,7 @@ const chooseFrameLayout = (
   const scoredCandidates = candidates.map((candidate) =>
     scoreFrameCandidate(candidate, maximumBoundaryScore),
   );
-  const best = scoredCandidates.sort((first, second) => second.score - first.score)[0];
+  const best = scoredCandidates.toSorted((first, second) => second.score - first.score)[0];
   if (best == undefined) {
     return representativeIsValid ? baseline : undefined;
   }

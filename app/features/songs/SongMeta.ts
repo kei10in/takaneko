@@ -14,7 +14,7 @@ export const SongMeta = {
       { type: "live", date: track.liveDebut },
     ];
 
-    const filtered = candidates.sort((a, b) => {
+    const filtered = candidates.toSorted((a, b) => {
       if (b.date == undefined) {
         return -1;
       }

@@ -128,7 +128,7 @@ export const correctCatalogLayout = (
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length > 0)
-    .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
+    .toSorted((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
 
   const baseWidth = chooseCatalogFrameWidth(grid.rects);
   const baseHeight = Math.round(baseWidth / photoExtractionProfile.aspectRatio.target);
@@ -312,7 +312,7 @@ const findBannerAlignedRowTops = (
           (maximumEdgeScore === 0 ? 0 : candidate.edgeScore / maximumEdgeScore) *
             SPARSE_GRID_EDGE_SCORE_WEIGHT,
       }))
-      .sort(
+      .toSorted(
         (first, second) => second.score - first.score || first.adjustment - second.adjustment,
       )[0]?.positions ?? initial
   );
@@ -336,7 +336,7 @@ const findStrongestCardTop = (
         position,
         score: cardTopEdgeScore(edges, image.width, x, position, cardWidth, cornerWidth),
       }))
-      .sort((first, second) => second.score - first.score)[0] ?? { position: initial, score: 0 }
+      .toSorted((first, second) => second.score - first.score)[0] ?? { position: initial, score: 0 }
   );
 };
 
@@ -369,7 +369,7 @@ const bestCardTopPosition = (
             bannerScore * BANNER_SCORE_WEIGHT,
         };
       })
-      .sort((first, second) => second.score - first.score)[0]?.position ?? edgeY
+      .toSorted((first, second) => second.score - first.score)[0]?.position ?? edgeY
   );
 };
 
@@ -428,7 +428,7 @@ const findCardRowTop = (
       increase: (projection[position] ?? 0) - (projection[position - 1] ?? 0),
     }))
     .filter(({ support }) => support >= 0.15)
-    .sort((first, second) => second.increase - first.increase)[0];
+    .toSorted((first, second) => second.increase - first.increase)[0];
 
   return best != undefined && best.increase >= 0.08 ? best.position : undefined;
 };
@@ -496,7 +496,7 @@ const findCardColumns = (
           candidate,
           score: verticalLineSum(edges, image.height, candidate, y, y + cardHeight),
         }))
-        .sort((firstCandidate, secondCandidate) => secondCandidate.score - firstCandidate.score)[0]
+        .toSorted((firstCandidate, secondCandidate) => secondCandidate.score - firstCandidate.score)[0]
         ?.candidate ?? x,
   );
 };

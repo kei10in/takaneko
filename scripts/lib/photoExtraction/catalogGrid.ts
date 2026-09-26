@@ -38,8 +38,8 @@ interface AxisGrid {
 export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefined => {
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length >= MINIMUM_COLUMNS)
-    .map((row) => [...row].sort((first, second) => first.x - second.x))
-    .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
+    .map((row) => row.toSorted((first, second) => first.x - second.x))
+    .toSorted((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
   const columns = dominantColumnCount(sourceRows);
   if (columns == undefined) {
     return undefined;
@@ -100,7 +100,7 @@ export const regularizeCatalogColumns = <T extends { columns: number[] }>(
 };
 
 export const chooseCatalogFrameWidth = <T extends { width: number }>(rects: T[]): number => {
-  const sortedWidths = rects.map(({ width }) => width).sort((first, second) => first - second);
+  const sortedWidths = rects.map(({ width }) => width).toSorted((first, second) => first - second);
   const representative = Math.round(median(sortedWidths));
   const lowerQuartile =
     sortedWidths[Math.floor((sortedWidths.length - 1) * INNER_FRAME_WIDTH_QUANTILE)];
@@ -166,7 +166,7 @@ export const reconstructSparseCatalogGrid = (
         },
       ];
     })
-    .sort((first, second) => second.score - first.score)[0]?.grid;
+    .toSorted((first, second) => second.score - first.score)[0]?.grid;
 
 const inferRegularAxis = (
   values: number[],
@@ -192,7 +192,7 @@ const inferRegularAxis = (
               positionIndex,
               distance: Math.abs(candidate - position),
             }))
-            .sort((first, second) => first.distance - second.distance)[0];
+            .toSorted((first, second) => first.distance - second.distance)[0];
           return nearest != undefined && nearest.distance <= tolerance ? [nearest] : [];
         });
         const distinctMatches = new Set(matches.map(({ positionIndex }) => positionIndex)).size;
@@ -203,7 +203,7 @@ const inferRegularAxis = (
         };
       }),
     )
-    .sort((first, second) => second.score - first.score)[0];
+    .toSorted((first, second) => second.score - first.score)[0];
 };
 
 const dominantColumnCount = (rows: ClusteredRect[][]): number | undefined => {
@@ -214,7 +214,7 @@ const dominantColumnCount = (rows: ClusteredRect[][]): number | undefined => {
 
   return [...frequencies.entries()]
     .filter(([columns]) => columns >= MINIMUM_COLUMNS)
-    .sort(
+    .toSorted(
       ([firstColumns, firstCount], [secondColumns, secondCount]) =>
         secondCount - firstCount || secondColumns - firstColumns,
     )[0]?.[0];
@@ -229,7 +229,7 @@ const matchRowToColumns = (
     .map((rect) => {
       const column = referenceColumns
         .map((x, index) => ({ index, distance: Math.abs(rect.x - x) }))
-        .sort((first, second) => first.distance - second.distance)[0];
+        .toSorted((first, second) => first.distance - second.distance)[0];
       return column != undefined && column.distance <= tolerance
         ? { rect, column: column.index }
         : undefined;
@@ -245,7 +245,7 @@ const matchRowToColumns = (
   return {
     y: Math.round(median(matched.map(({ rect }) => rect.y))),
     rects: matched
-      .sort((first, second) => first.column - second.column)
+      .toSorted((first, second) => first.column - second.column)
       .map(({ rect, column }) => ({ ...rect, column })),
   };
 };
@@ -260,4 +260,4 @@ const chooseContentRows = (rows: MatchedRow[]): MatchedRow[] | undefined =>
         scoreRegularDifferences(candidate.map(({ y }) => y)) * 0.5 +
         (candidate.length / rows.length) * 0.5,
     }))
-    .sort((first, second) => second.score - first.score)[0]?.rows;
+    .toSorted((first, second) => second.score - first.score)[0]?.rows;
