@@ -48,7 +48,7 @@ export const chooseParetoImprovement = (
 ): CatalogLayoutEvaluation => {
   const validCandidates = candidates.filter(({ valid }) => valid);
   if (!baseline.valid) {
-    return [...validCandidates].sort(compareAdjustment)[0] ?? baseline;
+    return validCandidates.toSorted(compareAdjustment)[0] ?? baseline;
   }
 
   const improvements = validCandidates.filter((candidate) =>
@@ -60,7 +60,7 @@ export const chooseParetoImprovement = (
         (other) => other !== candidate && dominates(other, candidate, thresholds, metrics),
       ),
   );
-  return [...frontier].sort(compareAdjustment)[0] ?? baseline;
+  return frontier.toSorted(compareAdjustment)[0] ?? baseline;
 };
 
 export const dominates = (

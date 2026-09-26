@@ -146,7 +146,7 @@ const fitGridModel = (
           scoreAspectRatio(columns.size / rows.size, profile) * 0.35,
       })),
   );
-  const best = combinations.sort((a, b) => b.score - a.score)[0];
+  const best = combinations.toSorted((a, b) => b.score - a.score)[0];
 
   return best ?? { columns: columnModels[0], rows: rowModels[0] };
 };
@@ -174,7 +174,7 @@ const createAxisModels = (
             position,
             score: scorePosition(position, size, positionIndex),
           }));
-        return alternatives.sort((a, b) => b.score - a.score)[0]?.position ?? expected;
+        return alternatives.toSorted((a, b) => b.score - a.score)[0]?.position ?? expected;
       });
       const overlaps = positions
         .slice(1)
@@ -184,5 +184,5 @@ const createAxisModels = (
         : average(positions.map((position, index) => scorePosition(position, size, index)));
       return { positions, size, score };
     })
-    .sort((a, b) => b.score - a.score);
+    .toSorted((a, b) => b.score - a.score);
 };

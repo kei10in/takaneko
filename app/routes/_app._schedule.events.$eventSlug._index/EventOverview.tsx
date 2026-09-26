@@ -73,7 +73,7 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
             </div>
           )}
 
-          {goods?.lineup instanceof Array && (
+          {Array.isArray(goods?.lineup) && (
             <div>
               <div className="mt-0 mb-2 flex items-center gap-2 px-1">
                 <BsCart3 className="text-gray-400" />

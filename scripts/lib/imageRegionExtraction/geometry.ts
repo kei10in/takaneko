@@ -32,8 +32,8 @@ export const chooseRepresentativeSize = (
 };
 
 export const clusterValues = (values: number[], tolerance: number): number[] =>
-  [...values]
-    .sort((a, b) => a - b)
+  values
+    .toSorted((a, b) => a - b)
     .reduce<number[][]>((clusters, value) => {
       const current = clusters.at(-1);
       if (current == undefined || Math.abs(value - average(current)) > tolerance) {
@@ -60,10 +60,10 @@ export const groupByIndex = <T>(values: T[], getIndex: (value: T) => number): T[
 };
 
 export const sortPositions = <T extends Pick<ClusteredRect, "row" | "column">>(rects: T[]): T[] =>
-  [...rects].sort((a, b) => a.row - b.row || a.column - b.column);
+  rects.toSorted((a, b) => a.row - b.row || a.column - b.column);
 
 export const median = (values: number[]): number => {
-  const sorted = [...values].sort((a, b) => a - b);
+  const sorted = values.toSorted((a, b) => a - b);
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 === 0
     ? ((sorted[middle - 1] ?? 0) + (sorted[middle] ?? 0)) / 2

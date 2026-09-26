@@ -33,7 +33,7 @@ export const createScaleAwareSearchPlan = (
       ...positiveOffsets,
       ...positiveOffsets.map((offset) => -offset),
     ]),
-  ].sort((first, second) => first - second);
+  ].toSorted((first, second) => first - second);
 
   return { radius, stride, coarseOffsets };
 };
@@ -56,7 +56,7 @@ export const bestScaleAwareAxisPosition = (
     return value;
   };
   const best = (positions: number[]): number =>
-    [...positions].sort(
+    positions.toSorted(
       (first, second) =>
         score(second) - score(first) || Math.abs(first - initial) - Math.abs(second - initial),
     )[0] ?? initial;
@@ -111,7 +111,7 @@ export const bestScaleAwarePosition = (
   const horizontalPlan = createScaleAwareSearchPlan(initial.width, REFERENCE_CARD_WIDTH);
   const verticalPlan = createScaleAwareSearchPlan(initial.height, REFERENCE_CARD_HEIGHT);
   const best = (candidates: Frame[]): Frame =>
-    [...candidates].sort(
+    candidates.toSorted(
       (first, second) =>
         scoreAt(second) -
           (Math.abs(second.x - initial.x) + Math.abs(second.y - initial.y)) * 0.004 -

@@ -6,7 +6,7 @@ export default defineConfig({
     correctness: "error",
     suspicious: "error",
   },
-  plugins: ["react", "jsx-a11y", "typescript", "import"],
+  plugins: ["react", "jsx-a11y", "typescript", "import", "unicorn"],
   env: {
     builtin: true,
     es2018: true,

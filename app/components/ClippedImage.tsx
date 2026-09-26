@@ -16,21 +16,25 @@ export const ClippedImage: React.FC<Props> = (props: Props) => {
 
     const img = new Image();
     img.src = src;
-    img.onload = () => {
-      const canvas = document.createElement("canvas");
-      const ctx = canvas.getContext("2d");
-      if (ctx == undefined) {
-        return;
-      }
+    img.addEventListener(
+      "load",
+      () => {
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        if (ctx == undefined) {
+          return;
+        }
 
-      canvas.width = clip.width;
-      canvas.height = clip.height;
+        canvas.width = clip.width;
+        canvas.height = clip.height;
 
-      ctx.drawImage(img, clip.x, clip.y, clip.width, clip.height, 0, 0, clip.width, clip.height);
+        ctx.drawImage(img, clip.x, clip.y, clip.width, clip.height, 0, 0, clip.width, clip.height);
 
-      const dataUrl = canvas.toDataURL();
-      setClippedSrc(dataUrl);
-    };
+        const dataUrl = canvas.toDataURL();
+        setClippedSrc(dataUrl);
+      },
+      { once: true },
+    );
   }, [clip.height, clip.width, clip.x, clip.y, src]);
 
   // oxlint-disable-next-line jsx-a11y/alt-text

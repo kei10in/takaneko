@@ -2,7 +2,7 @@ import { intersectionOverUnion } from "./geometry.ts";
 import type { RectCandidate } from "./types.ts";
 
 export const findProjectionPeaks = (projection: number[], limit: number): number[] => {
-  const sortedValues = [...projection].sort((a, b) => a - b);
+  const sortedValues = projection.toSorted((a, b) => a - b);
   const threshold = sortedValues[Math.floor(sortedValues.length * 0.62)] ?? 0;
   return projection
     .map((value, index) => ({ index, value }))
@@ -14,10 +14,10 @@ export const findProjectionPeaks = (projection: number[], limit: number): number
       const to = Math.min(projection.length - 1, index + 2);
       return projection.slice(from, to + 1).every((other) => value >= other);
     })
-    .sort((a, b) => b.value - a.value)
+    .toSorted((a, b) => b.value - a.value)
     .slice(0, limit)
     .map(({ index }) => index)
-    .sort((a, b) => a - b);
+    .toSorted((a, b) => a - b);
 };
 
 export const createBoundaryPairs = (

@@ -107,15 +107,6 @@ describe("chooseCatalogFrameWidth", () => {
 
 describe("reconstructSparseCatalogGrid", () => {
   it("reconstructs missing rows and columns from a partial grid spread across the catalog", () => {
-    const createRect = (x: number, y: number, width: number, height: number) => ({
-      x,
-      y,
-      width,
-      height,
-      boundaryScore: 0.5,
-      row: 0,
-      column: 0,
-    });
     const partial: LayoutCandidate = {
       rects: [
         createRect(40, 180, 160, 220),
@@ -147,4 +138,14 @@ describe("reconstructSparseCatalogGrid", () => {
     expect([...new Set(grid?.rects.map(({ x }) => x))]).toEqual([40, 230, 420, 610, 800]);
     expect([...new Set(grid?.rects.map(({ y }) => y))]).toEqual([180, 430, 680, 930]);
   });
+});
+
+const createRect = (x: number, y: number, width: number, height: number) => ({
+  x,
+  y,
+  width,
+  height,
+  boundaryScore: 0.5,
+  row: 0,
+  column: 0,
 });

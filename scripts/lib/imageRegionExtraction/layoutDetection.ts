@@ -22,7 +22,7 @@ export const createLayoutCandidates = (
         ? unique
         : [...unique, layout];
     }, [])
-    .sort((a, b) => b.score - a.score);
+    .toSorted((a, b) => b.score - a.score);
 
   return layouts;
 };
@@ -41,7 +41,7 @@ const createLayoutFromSize = (
         Math.abs(candidate.height - seed.height) <= heightTolerance &&
         candidate.boundaryScore >= Math.max(0.13, seed.boundaryScore * 0.56),
     )
-    .sort((a, b) => b.boundaryScore - a.boundaryScore)
+    .toSorted((a, b) => b.boundaryScore - a.boundaryScore)
     .reduce<RectCandidate[]>((selected, candidate) => {
       const overlaps = selected.some(
         (existing) => intersectionOverUnion(existing, candidate) > 0.22,
@@ -66,8 +66,8 @@ const createLayoutFromSize = (
     row: nearestIndex(rowCenters, rect.y + rect.height / 2),
     column: nearestIndex(columnCenters, rect.x + rect.width / 2),
   }));
-  const cellBest = [...assigned]
-    .sort((a, b) => b.boundaryScore - a.boundaryScore)
+  const cellBest = assigned
+    .toSorted((a, b) => b.boundaryScore - a.boundaryScore)
     .reduce<ClusteredRect[]>((selected, rect) => {
       const occupied = selected.some(
         (existing) => existing.row === rect.row && existing.column === rect.column,
@@ -90,8 +90,8 @@ const createLayoutFromSize = (
     return undefined;
   }
 
-  const usedRows = [...new Set(retained.map((rect) => rect.row))].sort((a, b) => a - b);
-  const usedColumns = [...new Set(retained.map((rect) => rect.column))].sort((a, b) => a - b);
+  const usedRows = [...new Set(retained.map((rect) => rect.row))].toSorted((a, b) => a - b);
+  const usedColumns = [...new Set(retained.map((rect) => rect.column))].toSorted((a, b) => a - b);
   const rowIndex = new Map(usedRows.map((value, index) => [value, index]));
   const columnIndex = new Map(usedColumns.map((value, index) => [value, index]));
   const rects = retained.map((rect) => ({
@@ -123,11 +123,13 @@ export const layoutOccupancy = (layout: LayoutCandidate): number =>
 
 const overlapRatio = (rects: ClusteredRect[], rows: number, columns: number): number => {
   const horizontalPairs = Array.from({ length: rows }).flatMap((_, row) => {
-    const inRow = rects.filter((rect) => rect.row === row).sort((a, b) => a.column - b.column);
+    const inRow = rects.filter((rect) => rect.row === row).toSorted((a, b) => a.column - b.column);
     return inRow.slice(1).map((rect, index) => rect.x < inRow[index].x + inRow[index].width - 1);
   });
   const verticalPairs = Array.from({ length: columns }).flatMap((_, column) => {
-    const inColumn = rects.filter((rect) => rect.column === column).sort((a, b) => a.row - b.row);
+    const inColumn = rects
+      .filter((rect) => rect.column === column)
+      .toSorted((a, b) => a.row - b.row);
     return inColumn
       .slice(1)
       .map((rect, index) => rect.y < inColumn[index].y + inColumn[index].height - 1);

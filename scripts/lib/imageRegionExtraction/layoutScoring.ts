@@ -105,11 +105,13 @@ const scoreSeparation = (
   representative: { width: number; height: number },
 ): number => {
   const horizontalGaps = Array.from({ length: rows }).flatMap((_, row) => {
-    const inRow = rects.filter((rect) => rect.row === row).sort((a, b) => a.column - b.column);
+    const inRow = rects.filter((rect) => rect.row === row).toSorted((a, b) => a.column - b.column);
     return inRow.slice(1).map((rect, index) => rect.x - (inRow[index].x + inRow[index].width));
   });
   const verticalGaps = Array.from({ length: columns }).flatMap((_, column) => {
-    const inColumn = rects.filter((rect) => rect.column === column).sort((a, b) => a.row - b.row);
+    const inColumn = rects
+      .filter((rect) => rect.column === column)
+      .toSorted((a, b) => a.row - b.row);
     return inColumn
       .slice(1)
       .map((rect, index) => rect.y - (inColumn[index].y + inColumn[index].height));

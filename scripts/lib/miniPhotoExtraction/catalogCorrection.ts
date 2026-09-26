@@ -31,8 +31,8 @@ export const completeCatalogLayout = (
   }
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
-    .map((row) => [...row].sort((a, b) => a.x - b.x))
-    .sort((a, b) => median(a.map((rect) => rect.y)) - median(b.map((rect) => rect.y)));
+    .map((row) => row.toSorted((a, b) => a.x - b.x))
+    .toSorted((a, b) => median(a.map((rect) => rect.y)) - median(b.map((rect) => rect.y)));
   const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
   if (maximumColumns !== CATALOG_COLUMNS) {
     return removeConsistentBottomDropShadow(rects);
@@ -149,7 +149,7 @@ export const completeCatalogLayout = (
     (_, index) => firstPosition - verticalStep * (index + 1),
   )
     .filter((position) => position >= image.height * 0.1)
-    .reverse();
+    .toReversed();
   const existingLast = modeledExistingRows.at(-1) ?? firstPosition;
   const rowsBelowCount = Math.max(
     0,
@@ -256,7 +256,7 @@ const bestCatalogAxisPosition = (
       position,
       score: score(position) - Math.abs(position - initial) * 0.004,
     }))
-    .sort((a, b) => b.score - a.score)[0]?.position ?? initial;
+    .toSorted((a, b) => b.score - a.score)[0]?.position ?? initial;
 
 const centeredCatalogColumns = (
   imageWidth: number,

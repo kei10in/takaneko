@@ -50,7 +50,7 @@ const main = async () => {
         } satisfies RenameCandidate,
       ];
     })
-    .sort((a, b) => b.sourcePath.length - a.sourcePath.length);
+    .toSorted((a, b) => b.sourcePath.length - a.sourcePath.length);
 
   if (candidates.length === 0) {
     console.log("NFC ではないファイル名・ディレクトリ名は見つかりませんでした。");

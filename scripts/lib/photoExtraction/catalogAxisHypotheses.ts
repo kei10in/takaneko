@@ -63,7 +63,7 @@ export const inferAxisHypotheses = (
   );
   const distinct = [
     ...new Map(candidates.map((candidate) => [axisModelKey(candidate), candidate])).values(),
-  ].sort(
+  ].toSorted(
     (first, second) =>
       second.support - first.support ||
       first.residual - second.residual ||

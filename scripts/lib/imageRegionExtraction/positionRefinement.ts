@@ -61,7 +61,7 @@ export const refinePositions = (
         candidate.x + candidate.width < imageWidth &&
         candidate.y + candidate.height < imageHeight,
     );
-    const best = valid.sort((a, b) => {
+    const best = valid.toSorted((a, b) => {
       const aScore =
         rectangleBoundaryScore(edges, imageWidth, imageHeight, a) -
         a.adjustment * 0.004 -
@@ -111,7 +111,7 @@ const refineRowWisePositions = (
     maximumBoundaryScore > 0.15
       ? scoredSizes
           .filter((size) => size.boundaryScore >= maximumBoundaryScore * 0.75)
-          .sort(
+          .toSorted(
             (a, b) =>
               b.boundaryScore -
               Math.abs(b.width / b.height - profile.aspectRatio.target) *
@@ -120,7 +120,7 @@ const refineRowWisePositions = (
                 Math.abs(a.width / a.height - profile.aspectRatio.target) *
                   profile.refinement.sizeAspectRatioWeight),
           )[0]
-      : scoredSizes.sort((a, b) => b.boundaryScore - a.boundaryScore)[0];
+      : scoredSizes.toSorted((a, b) => b.boundaryScore - a.boundaryScore)[0];
 
   if (bestSize == undefined) {
     return rects;
@@ -165,7 +165,7 @@ const regularizeRowPositions = (rects: ClusteredRect[]): ClusteredRect[] =>
 
 const regularizeRowPositionOutliers = (rects: ClusteredRect[]): ClusteredRect[] =>
   groupByIndex(rects, (rect) => rect.row).flatMap((row) => {
-    const sorted = [...row].sort((a, b) => a.x - b.x);
+    const sorted = row.toSorted((a, b) => a.x - b.x);
     if (sorted.length < 3) {
       return sorted;
     }
@@ -187,10 +187,10 @@ const regularizeLowResolutionLayout = (
   refineColumnFrames: boolean,
 ): ClusteredRect[] => {
   const sourceRows = groupByIndex(sourceRects, (rect) => rect.row).map((row) =>
-    [...row].sort((a, b) => a.x - b.x),
+    row.toSorted((a, b) => a.x - b.x),
   );
   const refinedRows = groupByIndex(refinedRects, (rect) => rect.row).map((row) =>
-    [...row].sort((a, b) => a.x - b.x),
+    row.toSorted((a, b) => a.x - b.x),
   );
   const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
   const referenceRows = sourceRows.filter((row) => row.length === maximumColumns);
@@ -211,7 +211,8 @@ const regularizeLowResolutionLayout = (
         ),
       }),
     );
-    const columnOffset = possibleOffsets.sort((a, b) => a.distance - b.distance)[0]?.offset ?? 0;
+    const columnOffset =
+      possibleOffsets.toSorted((a, b) => a.distance - b.distance)[0]?.offset ?? 0;
 
     return row.map((rect, index) => {
       const expectedX = referenceColumns[columnOffset + index];
@@ -313,7 +314,7 @@ export const bestPositionForSize = (
         rectangleBoundaryScore(edges, imageWidth, imageHeight, candidate) -
         candidate.adjustment * 0.008,
     }))
-    .sort((a, b) => b.score - a.score)[0];
+    .toSorted((a, b) => b.score - a.score)[0];
 
   return best ?? { rect, score: 0 };
 };

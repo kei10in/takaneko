@@ -25,8 +25,6 @@ export const mapProductToTradingItemDetails = (
 export const groupTradingItemDetailsByMember = (
   tradingItemDetails: TradingItemDetail[],
 ): TradingItemDetail[][] => {
-  const getMemberName = (tradingItemDetail: TradingItemDetail) => tradingItemDetail.item.name;
-
   const result: TradingItemDetail[][] = [];
 
   tradingItemDetails.forEach((item) => {
@@ -40,3 +38,5 @@ export const groupTradingItemDetailsByMember = (
 
   return result;
 };
+
+const getMemberName = (tradingItemDetail: TradingItemDetail) => tradingItemDetail.item.name;
