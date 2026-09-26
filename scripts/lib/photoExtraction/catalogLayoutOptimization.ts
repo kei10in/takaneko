@@ -192,7 +192,9 @@ const optimizeAxis = (
   const modeled = optimizeAxisModel(frames, axis, coordinate, radius, evaluate, thresholds);
   return Array.from({ length: groupCount }, (_, index) => index).reduce((current, groupIndex) => {
     const group = current.filter((frame) => frame[axis] === groupIndex);
-    if (group.length === 0) return current;
+    if (group.length === 0) {
+      return current;
+    }
     const center = Math.round(median(group.map((frame) => frame[coordinate])));
     const candidates = Array.from(
       { length: radius * 2 + 1 },
@@ -225,7 +227,9 @@ const optimizeAxisModel = (
   thresholds: ReturnType<typeof estimateMetricThresholds>,
 ): ClusteredRect[] => {
   const hypothesis = inferAxisHypotheses(frames, axis, coordinate)[0];
-  if (hypothesis == undefined) return frames;
+  if (hypothesis == undefined) {
+    return frames;
+  }
 
   const stepRadius = Math.max(1, Math.round(hypothesis.step * 0.03));
   // Frame edges are often one-pixel peaks, so the origin axis cannot be coarsened safely.
@@ -250,7 +254,9 @@ const optimizeAxisModel = (
     ({ evaluation }) =>
       layoutSignature(evaluation.frames) === layoutSignature(coarseSelected.frames),
   )?.hypothesis;
-  if (selectedModel == undefined) return coarseSelected.frames;
+  if (selectedModel == undefined) {
+    return coarseSelected.frames;
+  }
 
   const refined = evaluateAxisModels(
     frames,

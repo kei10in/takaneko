@@ -5,10 +5,7 @@ import type { ImagePosition } from "~/features/products/product.ts";
 import { Err, Ok, type Result } from "~/utils/result.ts";
 
 export type TradeProductType =
-  | "photo-original"
-  | "photo-grid"
-  | "mini-photo-original"
-  | "mini-photo-grid";
+  "photo-original" | "photo-grid" | "mini-photo-original" | "mini-photo-grid";
 export type TradeProductLineup = "regular-27" | "regular-30";
 
 export interface TradeProductInput {
@@ -148,8 +145,10 @@ export const productTypeIsPhoto = (type: TradeProductType): boolean =>
   type === "photo-original" || type === "photo-grid";
 
 const validDateYear = (value: string): number | undefined => {
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
-  if (match == undefined) return undefined;
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/u.exec(value);
+  if (match == undefined) {
+    return undefined;
+  }
   const [year, month, day] = match.slice(1).map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
   return date.getUTCFullYear() === year &&
@@ -163,7 +162,9 @@ const sanitizeIdentifier = (value: string): string => {
   const body = [...value.normalize("NFKC")]
     .filter((character) => /[$_\p{ID_Continue}]/u.test(character))
     .join("");
-  if (body === "") return "";
+  if (body === "") {
+    return "";
+  }
   return /[$_\p{ID_Start}]/u.test(body[0]) ? body : `_${body}`;
 };
 
@@ -257,7 +258,9 @@ export const updateReleaseNotes = (
   productLabel: string,
 ): string => {
   const bullet = `- トレード画像をつくるやつに、${productLabel}を追加しました。`;
-  if (source.includes(bullet)) return source;
+  if (source.includes(bullet)) {
+    return source;
+  }
 
   const heading = `## ${releaseDate}`;
   const headingIndex = source.indexOf(heading);

@@ -71,7 +71,9 @@ describe("extractPhotoPositionsFromPixels with generated catalogs", () => {
     const result = extractPhotoPositionsFromPixels(image, { normalizeMode: "none" });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toHaveLength(positions.length);
     const comparisons = positions.map((expected, index) => {
       const actual = result.value.positions[index];

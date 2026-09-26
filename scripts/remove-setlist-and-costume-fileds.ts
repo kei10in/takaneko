@@ -43,7 +43,7 @@ const processFile = async (file: string): Promise<boolean> => {
   const result: string[] = [];
 
   f.split("\n").forEach((line) => {
-    const indent = line.match(/^\s*/)?.[0] ?? "";
+    const indent = line.match(/^\s*/u)?.[0] ?? "";
     const trimmedLine = line.trim();
 
     if (state == undefined) {

@@ -18,7 +18,9 @@ export const normalizeLayout = (
   imageHeight: number,
   profile: ExtractionProfile,
 ): ClusteredRect[] => {
-  if (mode === "none") return layout.rects;
+  if (mode === "none") {
+    return layout.rects;
+  }
   if (layout.alignment !== "global-grid") {
     const representative = chooseRepresentativeSize(layout.rects);
     const rowPositions = groupByIndex(layout.rects, (rect) => rect.row).map((row) =>
@@ -53,7 +55,9 @@ export const normalizeLayout = (
         height: model.rows.size,
       };
       const boundaryScore = rectangleBoundaryScore(edges, imageWidth, imageHeight, modeled);
-      if (existing == undefined && boundaryScore < averageBoundary * 0.58) return [];
+      if (existing == undefined && boundaryScore < averageBoundary * 0.58) {
+        return [];
+      }
 
       return [
         {
@@ -66,10 +70,14 @@ export const normalizeLayout = (
 };
 
 const regularizeSmallAxis = (model: AxisModel): number[] => {
-  if (model.size >= 40 || model.positions.length < 5) return model.positions;
+  if (model.size >= 40 || model.positions.length < 5) {
+    return model.positions;
+  }
   const first = model.positions[0];
   const last = model.positions.at(-1);
-  if (first == undefined || last == undefined) return model.positions;
+  if (first == undefined || last == undefined) {
+    return model.positions;
+  }
   const step = (last - first) / (model.positions.length - 1);
   return model.positions.map((_, index) => Math.round(first + step * index));
 };

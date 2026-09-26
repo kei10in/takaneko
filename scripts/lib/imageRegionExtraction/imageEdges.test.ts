@@ -5,16 +5,11 @@ import type { PixelImage } from "./types.ts";
 const createFramedImage = (): PixelImage => {
   const width = 8;
   const height = 8;
-  const data = new Uint8Array(width * height * 3);
-  Array.from({ length: height }, (_, y) =>
-    Array.from({ length: width }, (_pixel, x) => {
-      const value = x >= 2 && x < 6 && y >= 2 && y < 6 ? 255 : 0;
-      const index = (y * width + x) * 3;
-      data[index] = value;
-      data[index + 1] = value;
-      data[index + 2] = value;
-    }),
-  );
+  const data = Uint8Array.from({ length: width * height * 3 }, (_, index) => {
+    const x = Math.floor(index / 3) % width;
+    const y = Math.floor(index / (width * 3));
+    return x >= 2 && x < 6 && y >= 2 && y < 6 ? 255 : 0;
+  });
   return { width, height, channels: 3, data };
 };
 

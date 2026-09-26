@@ -63,7 +63,9 @@ export const chooseCatalogFrameSize = (
 ): FrameSize => {
   const baseline = createScoredFrameSize(frames, baseWidth, targetAspectRatio, edges, image);
   const radius = Math.floor(baseWidth * SIZE_SEARCH_RADIUS_RATIO);
-  if (radius === 0) return toFrameSize(baseline);
+  if (radius === 0) {
+    return toFrameSize(baseline);
+  }
 
   const best = Array.from({ length: radius * 2 + 1 }, (_, index) => baseWidth - radius + index)
     .map((width) => createScoredFrameSize(frames, width, targetAspectRatio, edges, image))
@@ -80,7 +82,9 @@ export const chooseCatalogFrameSize = (
         first.innerDiscontinuity - second.innerDiscontinuity ||
         first.width - second.width,
     )[0];
-  if (best == undefined) return toFrameSize(baseline);
+  if (best == undefined) {
+    return toFrameSize(baseline);
+  }
 
   return toFrameSize(best);
 };
@@ -172,10 +176,14 @@ const createBannerEvidence = (
   baseSize: FrameSize,
   image: PixelImage,
 ): BannerEvidence | undefined => {
-  if (frames.length === 0) return undefined;
+  if (frames.length === 0) {
+    return undefined;
+  }
   const bottoms = frames.map((frame) => findPhotoBannerBottom(image, { ...frame, ...baseSize }));
   const detectedCount = bottoms.filter((bottom) => bottom != undefined).length;
-  if (detectedCount === 0) return undefined;
+  if (detectedCount === 0) {
+    return undefined;
+  }
 
   return {
     bottoms,
@@ -188,11 +196,15 @@ const findBannerGaps = (
   insets: FrameInsets,
   evidence: BannerEvidence | undefined,
 ): number[] => {
-  if (evidence == undefined) return [];
+  if (evidence == undefined) {
+    return [];
+  }
 
   return frames.flatMap((frame, index) => {
     const bannerBottom = evidence.bottoms[index];
-    if (bannerBottom == undefined) return [];
+    if (bannerBottom == undefined) {
+      return [];
+    }
     const gap = frame.y + insets.offsetY + insets.height - (bannerBottom + 1);
     return [gap];
   });
@@ -273,7 +285,9 @@ const scoreFrameInsets = (
     const top = frame.y + insets.offsetY;
     const right = left + insets.width;
     const bottom = top + insets.height;
-    if (left < 1 || top < 1 || right >= image.width || bottom >= image.height) return [];
+    if (left < 1 || top < 1 || right >= image.width || bottom >= image.height) {
+      return [];
+    }
 
     const bottomInner = Math.max(
       ...Array.from(

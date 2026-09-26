@@ -189,18 +189,26 @@ const createOnePixelPerturbations = (frames: ClusteredRect[]): ClusteredRect[][]
   );
 
 const scoreAxisRegularity = (positions: number[]): number => {
-  if (positions.length <= 2) return 1;
+  if (positions.length <= 2) {
+    return 1;
+  }
   const differences = positions.slice(1).map((position, index) => position - positions[index]);
   const step = median(differences);
-  if (step <= 0) return 0;
+  if (step <= 0) {
+    return 0;
+  }
   return 1 - clamp(medianAbsoluteDeviation(differences) / step, 0, 1);
 };
 
 const scoreBannerClearance = (gap: number, frameHeight: number): number => {
   const minimum = Math.max(1, frameHeight * 0.01);
   const maximum = Math.max(minimum, frameHeight * 0.025);
-  if (gap < minimum) return clamp(gap / minimum, 0, 1);
-  if (gap <= maximum) return 1;
+  if (gap < minimum) {
+    return clamp(gap / minimum, 0, 1);
+  }
+  if (gap <= maximum) {
+    return 1;
+  }
   return 1 - clamp((gap - maximum) / maximum, 0, 1);
 };
 
@@ -212,7 +220,9 @@ const getFrameEvidence = (
 ): FrameEvidence => {
   const key = `${frame.x}:${frame.y}:${frame.width}:${frame.height}`;
   const cached = cache.get(key);
-  if (cached != undefined) return cached;
+  if (cached != undefined) {
+    return cached;
+  }
 
   const evidence = {
     boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, frame),

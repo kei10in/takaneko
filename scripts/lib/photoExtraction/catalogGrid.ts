@@ -41,10 +41,14 @@ export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefine
     .map((row) => [...row].sort((first, second) => first.x - second.x))
     .sort((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
   const columns = dominantColumnCount(sourceRows);
-  if (columns == undefined) return undefined;
+  if (columns == undefined) {
+    return undefined;
+  }
 
   const referenceRows = sourceRows.filter((row) => row.length === columns);
-  if (referenceRows.length < MINIMUM_REFERENCE_ROWS) return undefined;
+  if (referenceRows.length < MINIMUM_REFERENCE_ROWS) {
+    return undefined;
+  }
 
   const referenceColumns = Array.from({ length: columns }, (_, column) =>
     Math.round(median(referenceRows.map((row) => row[column].x))),
@@ -56,7 +60,9 @@ export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefine
     .map((row) => matchRowToColumns(row, referenceColumns, tolerance))
     .filter((row): row is MatchedRow => row != undefined);
   const selectedRows = chooseContentRows(matchedRows);
-  if (selectedRows == undefined) return undefined;
+  if (selectedRows == undefined) {
+    return undefined;
+  }
 
   return {
     rects: selectedRows.flatMap((row, rowIndex) =>
@@ -73,7 +79,9 @@ export const regularizeCatalogColumns = <T extends { columns: number[] }>(
   cardWidth: number,
 ): T[] => {
   const fullRows = rows.filter(({ columns }) => columns.length === columnCount);
-  if (fullRows.length < MINIMUM_CATALOG_ROWS) return rows;
+  if (fullRows.length < MINIMUM_CATALOG_ROWS) {
+    return rows;
+  }
 
   const referenceColumns = Array.from({ length: columnCount }, (_, column) =>
     Math.round(median(fullRows.map(({ columns }) => columns[column]))),

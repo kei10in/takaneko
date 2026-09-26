@@ -74,7 +74,7 @@ export class EventRepository {
 
   selectEventModuleBySlug = (slug: string): ImportingModule | undefined => {
     // Validate slug format: YYYY-MM-DD_title
-    const match = /^(\d{4})-(\d{2})-\d{2}_.+/.exec(slug);
+    const match = /^(\d{4})-(\d{2})-\d{2}_.+/u.exec(slug);
     if (!match) {
       return undefined;
     }

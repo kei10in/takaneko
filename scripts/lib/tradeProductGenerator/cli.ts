@@ -65,7 +65,9 @@ export const resolveTradeProductInput = async (
   const lineup = partial.lineup;
 
   const validated = validatePartial({ inputPath, type, date, series, lineup });
-  if (validated.err) return validated;
+  if (validated.err) {
+    return validated;
+  }
   if (
     validated.value.inputPath == undefined ||
     validated.value.type == undefined ||

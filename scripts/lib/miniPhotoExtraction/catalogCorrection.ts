@@ -26,14 +26,20 @@ export const completeCatalogLayout = (
   image: PixelImage,
 ): ClusteredRect[] => {
   // Catalog images can expose the inner photo frame more strongly than the decorated card edge.
-  if (image.width < 1000 || image.height < 1400 || rects.length < 10) return rects;
+  if (image.width < 1000 || image.height < 1400 || rects.length < 10) {
+    return rects;
+  }
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .map((row) => [...row].sort((a, b) => a.x - b.x))
     .sort((a, b) => median(a.map((rect) => rect.y)) - median(b.map((rect) => rect.y)));
   const maximumColumns = Math.max(...sourceRows.map((row) => row.length));
-  if (maximumColumns !== CATALOG_COLUMNS) return removeConsistentBottomDropShadow(rects);
-  if (sourceRows.length < 3) return rects;
+  if (maximumColumns !== CATALOG_COLUMNS) {
+    return removeConsistentBottomDropShadow(rects);
+  }
+  if (sourceRows.length < 3) {
+    return rects;
+  }
 
   const representative = chooseRepresentativeSize(rects);
   const horizontalDifferences = sourceRows.flatMap((row) =>
@@ -51,7 +57,9 @@ export const completeCatalogLayout = (
     .map((position, index) => position - sourceRowPositions[index]);
   const horizontalStep = Math.round(median(horizontalDifferences));
   const verticalStep = Math.round(median(verticalDifferences));
-  if (horizontalStep <= representative.width || verticalStep <= representative.height) return rects;
+  if (horizontalStep <= representative.width || verticalStep <= representative.height) {
+    return rects;
+  }
 
   const detectedCenteredInnerFrame =
     representative.width / horizontalStep < CATALOG_INNER_FRAME_MAX_FILL &&
@@ -112,7 +120,9 @@ export const completeCatalogLayout = (
     })),
   );
   const fullRows = transformedRows.filter((row) => row.length === maximumColumns);
-  if (fullRows.length === 0) return rects;
+  if (fullRows.length === 0) {
+    return rects;
+  }
 
   const initialColumns = Array.from({ length: maximumColumns }, (_, column) =>
     Math.round(median(fullRows.map((row) => row[column].x))),
@@ -199,38 +209,37 @@ export const completeCatalogLayout = (
         ? centeredCatalogColumns(image.width, horizontalStep, width, 3)
         : refinedColumns;
 
-    return rowColumns.map(
-      (x, column): ClusteredRect => ({
+    return rowColumns.map((x, column): ClusteredRect => ({
+      x,
+      y,
+      width,
+      height,
+      row,
+      column,
+      boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
         x,
         y,
         width,
         height,
-        row,
-        column,
-        boundaryScore: rectangleBoundaryScore(edges, image.width, image.height, {
-          x,
-          y,
-          width,
-          height,
-        }),
       }),
-    );
+    }));
   });
   return refineMiniPhotoCatalogFrames(completed, edges, image);
 };
 
 const removeConsistentBottomDropShadow = (rects: ClusteredRect[]): ClusteredRect[] => {
-  if (rects.length < 10) return rects;
+  if (rects.length < 10) {
+    return rects;
+  }
 
   const representative = chooseRepresentativeSize(rects);
-  if (representative.width / representative.height >= DROP_SHADOW_MAX_ASPECT_RATIO) return rects;
+  if (representative.width / representative.height >= DROP_SHADOW_MAX_ASPECT_RATIO) {
+    return rects;
+  }
 
   const cardHeight = Math.round(representative.width / CATALOG_CARD_PIXEL_ASPECT_RATIO);
   const removedHeight = representative.height - cardHeight;
-  if (
-    removedHeight <= 0 ||
-    removedHeight > representative.height * DROP_SHADOW_MAX_HEIGHT_RATIO
-  ) {
+  if (removedHeight <= 0 || removedHeight > representative.height * DROP_SHADOW_MAX_HEIGHT_RATIO) {
     return rects;
   }
 

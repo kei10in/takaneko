@@ -23,7 +23,9 @@ export const findPhotoBannerBottom = (
   );
   const runs = supportedRows.reduce<{ start: number; end: number }[]>((found, supported, index) => {
     const current = found.at(-1);
-    if (!supported) return found;
+    if (!supported) {
+      return found;
+    }
     if (current == undefined || current.end !== index - 1) {
       return [...found, { start: index, end: index }];
     }
@@ -41,7 +43,9 @@ export const scorePhotoBannerGaps = (
   frameCount: number,
   frameHeight: number,
 ): number => {
-  if (gaps.length === 0 || frameCount === 0) return 0;
+  if (gaps.length === 0 || frameCount === 0) {
+    return 0;
+  }
 
   const target = median(gaps);
   const tolerance = Math.max(1, Math.round(frameHeight * MARGIN_CONSISTENCY_TOLERANCE_RATIO));
@@ -70,7 +74,9 @@ const rowSupport = (image: PixelImage, x: number, y: number, width: number): num
     const blue = image.data[index + 2] ?? 0;
     const brightness = (red + green + blue) / 3;
     const chroma = Math.max(red, green, blue) - Math.min(red, green, blue);
-    if (brightness >= MINIMUM_BRIGHTNESS && chroma <= MAXIMUM_CHROMA) support += 1;
+    if (brightness >= MINIMUM_BRIGHTNESS && chroma <= MAXIMUM_CHROMA) {
+      support += 1;
+    }
   }
   return support / width;
 };

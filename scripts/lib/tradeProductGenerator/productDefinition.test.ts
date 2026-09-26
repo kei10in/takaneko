@@ -18,7 +18,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value).toMatchObject({
       year: 2026,
       itemCount: 27,
@@ -39,7 +41,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.exportName).toBe("_2024年振袖_生写真");
     expect(result.value.lineupConstant).toBe("REGULAR_PHOTO_SET");
     expect(result.value.itemCount).toBe(30);
@@ -54,7 +58,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.itemCount).toBeUndefined();
     expect(result.value.lineupConstant).toBeUndefined();
   });
@@ -69,7 +75,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("invalid-date");
   });
 
@@ -83,7 +91,9 @@ describe("buildProductDescriptor", () => {
     });
 
     expect(result.err).toBe(true);
-    if (result.ok) return;
+    if (result.ok) {
+      return;
+    }
     expect(result.error.kind).toBe("invalid-series");
   });
 });
@@ -97,7 +107,9 @@ describe("renderProductDefinition", () => {
       series: "テスト衣装",
       lineup: "regular-27",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const source = await renderProductDefinition(descriptor.value, {
       extension: ".jpg",
@@ -128,7 +140,9 @@ describe("renderProductDefinition", () => {
       date: "2026-07-31",
       series: "TIF2026限定ライブフォト 1",
     });
-    if (descriptor.err) throw new Error(descriptor.error.message);
+    if (descriptor.err) {
+      throw new Error(descriptor.error.message);
+    }
 
     const source = await renderProductDefinition(descriptor.value, {
       extension: ".jpg",
@@ -168,8 +182,8 @@ describe("repository source updates", () => {
       importPath: "./2026/2026-07-20_生写真「テスト衣装」.ts",
     });
 
-    expect(second.match(/import \{ テスト衣装_生写真 \}/g)).toHaveLength(1);
-    expect(second.match(/テスト衣装_生写真/g)).toHaveLength(2);
+    expect(second.match(/import \{ テスト衣装_生写真 \}/gu)).toHaveLength(1);
+    expect(second.match(/テスト衣装_生写真/gu)).toHaveLength(2);
     const photos = second.slice(second.indexOf("export const TAKANEKO_PHOTOS:"));
     expect(photos.indexOf("テスト衣装_生写真")).toBeLessThan(photos.indexOf("Existing"));
   });
@@ -194,7 +208,7 @@ describe("repository source updates", () => {
     const first = updateReleaseNotes(original, "2026-07-20", "生写真「テスト衣装」");
     const second = updateReleaseNotes(first, "2026-07-20", "生写真「テスト衣装」");
 
-    expect(second.match(/生写真「テスト衣装」を追加しました。/g)).toHaveLength(1);
+    expect(second.match(/生写真「テスト衣装」を追加しました。/gu)).toHaveLength(1);
     expect(second).toContain(
       "## 2026-07-20\n\n- トレード画像をつくるやつに、生写真「テスト衣装」を追加しました。\n- 既存の変更です。",
     );

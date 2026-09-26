@@ -31,7 +31,9 @@ export const inferAxisHypotheses = (
         ? []
         : [{ index, position: Math.round(median(group.map((frame) => frame[coordinate]))) }],
   );
-  if (positions.length <= 1) return [];
+  if (positions.length <= 1) {
+    return [];
+  }
   const representative = chooseRepresentativeSize(frames);
   const itemSize = coordinate === "x" ? representative.width : representative.height;
   const supportTolerance = Math.max(1, Math.round(itemSize * 0.01));
@@ -40,7 +42,9 @@ export const inferAxisHypotheses = (
     positions.slice(firstIndex + 1).flatMap((second) => {
       const indexDistance = second.index - first.index;
       const step = (second.position - first.position) / indexDistance;
-      if (step <= 0) return [];
+      if (step <= 0) {
+        return [];
+      }
       const origin = median(positions.map(({ index, position }) => position - step * index));
       const residuals = positions.map(({ index, position }) =>
         Math.abs(position - (origin + step * index)),

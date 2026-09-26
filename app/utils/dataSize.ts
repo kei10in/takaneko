@@ -27,12 +27,12 @@ const toSignificant3 = (num: number): string => {
     return String(Math.round(num));
   } else if (num >= 10) {
     // 10以上100未満は小数点1桁
-    return num.toFixed(1).replace(/\.0$/, "");
+    return num.toFixed(1).replace(/\.0$/u, "");
   } else if (num >= 1) {
     // 1以上10未満は小数点2桁
-    return num.toFixed(2).replace(/\.00?$/, "");
+    return num.toFixed(2).replace(/\.00?$/u, "");
   } else {
     // 1未満は小数点3桁
-    return num.toFixed(3).replace(/\.000?$/, "");
+    return num.toFixed(3).replace(/\.000?$/u, "");
   }
 };

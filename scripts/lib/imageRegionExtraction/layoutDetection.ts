@@ -49,7 +49,9 @@ const createLayoutFromSize = (
       return overlaps ? selected : [...selected, candidate];
     }, []);
 
-  if (similar.length < 4) return undefined;
+  if (similar.length < 4) {
+    return undefined;
+  }
 
   const rowCenters = clusterValues(
     similar.map((rect) => rect.y + rect.height / 2),
@@ -84,7 +86,9 @@ const createLayoutFromSize = (
     (rect) => rowCounts[rect.row] >= 2 && columnCounts[rect.column] >= 1,
   );
 
-  if (retained.length < 4) return undefined;
+  if (retained.length < 4) {
+    return undefined;
+  }
 
   const usedRows = [...new Set(retained.map((rect) => rect.row))].sort((a, b) => a - b);
   const usedColumns = [...new Set(retained.map((rect) => rect.column))].sort((a, b) => a - b);
@@ -98,8 +102,12 @@ const createLayoutFromSize = (
   const rows = usedRows.length;
   const columns = usedColumns.length;
 
-  if (rows < 2 && columns < 4) return undefined;
-  if (overlapRatio(rects, rows, columns) > 0.1) return undefined;
+  if (rows < 2 && columns < 4) {
+    return undefined;
+  }
+  if (overlapRatio(rects, rows, columns) > 0.1) {
+    return undefined;
+  }
 
   return {
     rects,

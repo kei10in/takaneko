@@ -20,13 +20,13 @@ interface RenameCandidate {
 
 const eventFilePattern = path
   .resolve(import.meta.dirname, "..", "app", "features", "events", "*", "**", "*.{ts,tsx,mdx}")
-  .replace(/\\/g, "/");
+  .replace(/\\/gu, "/");
 const eventDirectoryPattern = path
   .resolve(import.meta.dirname, "..", "app", "features", "events", "*", "**")
-  .replace(/\\/g, "/");
+  .replace(/\\/gu, "/");
 const publicPattern = path
   .resolve(import.meta.dirname, "..", "public", "**", "*")
-  .replace(/\\/g, "/");
+  .replace(/\\/gu, "/");
 
 const main = async () => {
   const dryRun = process.argv.includes("--dry-run");

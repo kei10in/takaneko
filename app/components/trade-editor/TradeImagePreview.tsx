@@ -28,8 +28,6 @@ export const TradeImagePreview: React.FC<Props> = (props: Props) => {
       const previewUrl = canvas.toDataURL("image/webp", 0.95);
       setDataUrl(previewUrl);
     });
-
-    return;
   }, [productImage, tradeDescriptions]);
 
   const descForIOS = '画像を長押しして「"写真" に保存」を選択します。';

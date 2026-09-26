@@ -41,11 +41,15 @@ export const fitCatalogFrames = (
   aspectRatio: ExtractionProfile["aspectRatio"],
 ): ClusteredRect[] | undefined => {
   const grid = inferCatalogGrid(rects);
-  if (grid == undefined) return undefined;
+  if (grid == undefined) {
+    return undefined;
+  }
 
   const representative = chooseRepresentativeSize(grid.rects);
   const fitted = chooseFrameLayout(grid.rects, representative.width, edges, image, aspectRatio);
-  if (fitted == undefined) return undefined;
+  if (fitted == undefined) {
+    return undefined;
+  }
   const completed = completeGridCells(
     fitted.rects,
     grid.rows,
@@ -137,8 +141,12 @@ const chooseFrameLayout = (
     scoreFrameCandidate(candidate, maximumBoundaryScore),
   );
   const best = scoredCandidates.sort((first, second) => second.score - first.score)[0];
-  if (best == undefined) return representativeIsValid ? baseline : undefined;
-  if (!representativeIsValid) return best;
+  if (best == undefined) {
+    return representativeIsValid ? baseline : undefined;
+  }
+  if (!representativeIsValid) {
+    return best;
+  }
 
   const baselineScore = scoreFrameCandidate(baseline, maximumBoundaryScore).score;
   return best.score >= baselineScore + LAYOUT_CHANGE_SCORE_MARGIN ? best : baseline;
@@ -196,13 +204,17 @@ const completeGridCells = (
   const rowPositions = groupByIndex(rects, (rect) => rect.row).map((row) =>
     Math.round(median(row.map(({ y }) => y))),
   );
-  if (columnPositions.length !== columns || rowPositions.length !== rows) return rects;
+  if (columnPositions.length !== columns || rowPositions.length !== rows) {
+    return rects;
+  }
 
   const bannerGaps = rects.flatMap((rect) => {
     const bottom = findPhotoBannerBottom(image, rect);
     return bottom == undefined ? [] : [rect.y + rect.height - (bottom + 1)];
   });
-  if (bannerGaps.length < rects.length * 0.5) return rects;
+  if (bannerGaps.length < rects.length * 0.5) {
+    return rects;
+  }
 
   const targetBannerGap = median(bannerGaps);
   const bannerGapTolerance = Math.max(2, Math.round(frameSize.height * 0.01));
@@ -210,7 +222,9 @@ const completeGridCells = (
   const occupied = new Set(rects.map(({ row, column }) => `${row}:${column}`));
   const missing = Array.from({ length: rows }).flatMap((_, row) =>
     Array.from({ length: columns }).flatMap((__, column) => {
-      if (occupied.has(`${row}:${column}`)) return [];
+      if (occupied.has(`${row}:${column}`)) {
+        return [];
+      }
       const frame = createFrame(
         {
           x: columnPositions[column],
@@ -227,7 +241,9 @@ const completeGridCells = (
         image,
       );
       const bannerBottom = findPhotoBannerBottom(image, frame);
-      if (bannerBottom == undefined || frame.boundaryScore < minimumBoundaryScore) return [];
+      if (bannerBottom == undefined || frame.boundaryScore < minimumBoundaryScore) {
+        return [];
+      }
       const bannerGap = frame.y + frame.height - (bannerBottom + 1);
       return Math.abs(bannerGap - targetBannerGap) <= bannerGapTolerance ? [frame] : [];
     }),
@@ -273,7 +289,9 @@ const scoreBannerAlignment = (image: PixelImage, rects: ClusteredRect[]): number
     const bottom = findPhotoBannerBottom(image, rect);
     return bottom == undefined ? [] : [rect.y + rect.height - (bottom + 1)];
   });
-  if (gaps.length === 0) return 0;
+  if (gaps.length === 0) {
+    return 0;
+  }
 
   const target = median(gaps);
   const consistency = average(gaps.map((gap) => 1 - clamp(Math.abs(gap - target) / 2, 0, 1)));

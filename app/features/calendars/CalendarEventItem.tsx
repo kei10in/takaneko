@@ -54,9 +54,7 @@ export const CalendarEventItem: React.FC<Props> = (props: Props) => {
             <SimpleEvent event={event} />
           ) : category == EventType.OTHER ? (
             <OfflineEvent event={event} />
-          ) : (
-            <></>
-          )}
+          ) : null}
         </div>
         {thumbnail && (
           <div className="relative my-2 min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">

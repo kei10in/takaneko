@@ -4,7 +4,7 @@ import { map } from "unist-util-map";
 export const allowBrTags = () => {
   return (tree: Nodes) => {
     return map(tree, (node) => {
-      if (node.type === "html" && /<br\s*\/?>/.test(node.value)) {
+      if (node.type === "html" && /<br\s*\/?>/u.test(node.value)) {
         const newNode: Break = { type: "break" };
         return newNode;
       }

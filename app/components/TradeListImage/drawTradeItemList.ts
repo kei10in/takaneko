@@ -310,7 +310,7 @@ class TradingItemListImage {
 
     const positions = this.tradingItemRects();
 
-    this.items.map((item, i) => {
+    this.items.forEach((item, i) => {
       const pos = positions[i];
 
       // Shadow 1

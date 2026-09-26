@@ -14,7 +14,9 @@ export const hasCatalogHeader = (
   firstCardY: number,
   cardHeight: number,
 ): boolean => {
-  if (firstCardY <= 0) return false;
+  if (firstCardY <= 0) {
+    return false;
+  }
 
   const background = estimateBackgroundColor(image);
   const minimumRowSupport = Math.max(3, Math.round(image.width * MINIMUM_ROW_SUPPORT_RATIO));
@@ -23,7 +25,9 @@ export const hasCatalogHeader = (
     const mask = createForegroundMask(image, background, threshold);
     const projection = Array.from({ length: firstCardY }, (_, y) => {
       let support = 0;
-      for (let x = 0; x < image.width; x += 1) support += mask[y * image.width + x] ?? 0;
+      for (let x = 0; x < image.width; x += 1) {
+        support += mask[y * image.width + x] ?? 0;
+      }
       return support;
     });
     return findProjectionRuns(projection, minimumRowSupport, minimumRunHeight).length > 0;

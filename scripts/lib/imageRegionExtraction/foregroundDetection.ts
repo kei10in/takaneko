@@ -81,7 +81,9 @@ export const findProjectionRuns = (
       start = index;
     }
     if ((index === projection.length || projection[index] < threshold) && start != undefined) {
-      if (index - start >= minimumLength) runs.push([start, index - 1]);
+      if (index - start >= minimumLength) {
+        runs.push([start, index - 1]);
+      }
       start = undefined;
     }
   }
@@ -96,7 +98,9 @@ export const splitOversizedRuns = (
   runs.flatMap(([start, end]) => {
     const length = end - start + 1;
     const parts = Math.max(1, Math.round(length / targetLength));
-    if (parts === 1) return [[start, end]];
+    if (parts === 1) {
+      return [[start, end]];
+    }
 
     return Array.from({ length: parts }, (_, index): [number, number] => [
       Math.round(start + (length * index) / parts),

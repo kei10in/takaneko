@@ -55,14 +55,14 @@ const generateParameters = (date: NaiveDate): Parameters => {
   );
   const broadcastDate = date.toString();
   const updatedAt = NaiveDate.today().toString();
-  const radikoTimestamp = `${date.addDays(1).toString().replace(/-/g, "")}030000`;
+  const radikoTimestamp = `${date.addDays(1).toString().replace(/-/gu, "")}030000`;
 
   return { outputFilePath, vars: { broadcastDate, updatedAt, radikoTimestamp } };
 };
 
 async function main() {
   const arg = process.argv[2];
-  if (!arg || !/^\d{4}-\d{2}$/.test(arg)) {
+  if (!arg || !/^\d{4}-\d{2}$/u.test(arg)) {
     console.error("Usage: tsx scripts/generate-takaneko-night.ts YYYY-MM");
     process.exit(1);
   }

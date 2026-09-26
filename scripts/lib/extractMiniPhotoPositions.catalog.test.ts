@@ -12,7 +12,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 54, y: 165, width: 154, height: 250 },
       { id: 2, x: 222, y: 165, width: 154, height: 250 },
@@ -55,7 +57,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 43, y: 228, width: 189, height: 298 },
       { id: 2, x: 289, y: 228, width: 189, height: 298 },
@@ -98,7 +102,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 33, y: 192, width: 159, height: 250 },
       { id: 2, x: 241, y: 192, width: 159, height: 250 },
@@ -141,7 +147,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 82, y: 422, width: 223, height: 341 },
       { id: 2, x: 323, y: 422, width: 223, height: 341 },
@@ -183,7 +191,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 51, y: 234, width: 164, height: 259 },
       { id: 2, x: 238, y: 234, width: 164, height: 259 },
@@ -225,7 +235,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 51, y: 248, width: 164, height: 260 },
       { id: 2, x: 238, y: 248, width: 164, height: 260 },
@@ -265,7 +277,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 61, y: 305, width: 200, height: 316 },
       { id: 2, x: 289, y: 305, width: 200, height: 316 },
@@ -307,7 +321,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 70, y: 379, width: 203, height: 319 },
       { id: 2, x: 291, y: 379, width: 203, height: 319 },
@@ -347,7 +363,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 70, y: 380, width: 202, height: 318 },
       { id: 2, x: 291, y: 380, width: 202, height: 318 },
@@ -387,7 +405,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     expect(result.value.positions).toEqual([
       { id: 1, x: 51, y: 249, width: 164, height: 260 },
       { id: 2, x: 238, y: 249, width: 164, height: 260 },
@@ -429,7 +449,9 @@ describe("extractMiniPhotoPositions for catalog images", { timeout: 15_000 }, ()
     const result = await extractMiniPhotoPositions(input);
 
     expect(result.ok).toBe(true);
-    if (result.err) return;
+    if (result.err) {
+      return;
+    }
     const origins = [
       [84, 409],
       [324, 409],
