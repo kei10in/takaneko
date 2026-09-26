@@ -202,7 +202,7 @@ export const formatSetlist = (
         break;
       case "song":
         if (copyWithOrder) {
-          const mark = `${segment.section == "main" ? "M" : "EN"}`;
+          const mark = segment.section == "main" ? "M" : "EN";
           const order = `${segment.index + 1}`;
           items.push(`${mark}${order} ${segment.songTitle}`);
         } else {
