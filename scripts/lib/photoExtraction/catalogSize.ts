@@ -166,7 +166,9 @@ export const chooseCatalogFrameInsets = (
         bannerEvidenceRatio: bannerEvidence?.detectionRatio ?? 0,
       }),
     }))
-    .toSorted((first, second) => second.score - first.score || first.adjustment - second.adjustment)[0];
+    .toSorted(
+      (first, second) => second.score - first.score || first.adjustment - second.adjustment,
+    )[0];
 
   return best == undefined ? { offsetX: 0, offsetY: 0, ...baseSize } : toFrameInsets(best);
 };

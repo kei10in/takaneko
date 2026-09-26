@@ -39,7 +39,9 @@ export const inferCatalogGrid = (rects: ClusteredRect[]): CatalogGrid | undefine
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length >= MINIMUM_COLUMNS)
     .map((row) => row.toSorted((first, second) => first.x - second.x))
-    .toSorted((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
+    .toSorted(
+      (first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)),
+    );
   const columns = dominantColumnCount(sourceRows);
   if (columns == undefined) {
     return undefined;

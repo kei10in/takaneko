@@ -211,7 +211,8 @@ const regularizeLowResolutionLayout = (
         ),
       }),
     );
-    const columnOffset = possibleOffsets.toSorted((a, b) => a.distance - b.distance)[0]?.offset ?? 0;
+    const columnOffset =
+      possibleOffsets.toSorted((a, b) => a.distance - b.distance)[0]?.offset ?? 0;
 
     return row.map((rect, index) => {
       const expectedX = referenceColumns[columnOffset + index];

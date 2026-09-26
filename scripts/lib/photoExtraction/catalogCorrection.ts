@@ -128,7 +128,9 @@ export const correctCatalogLayout = (
 
   const sourceRows = groupByIndex(rects, (rect) => rect.row)
     .filter((row) => row.length > 0)
-    .toSorted((first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)));
+    .toSorted(
+      (first, second) => median(first.map(({ y }) => y)) - median(second.map(({ y }) => y)),
+    );
 
   const baseWidth = chooseCatalogFrameWidth(grid.rects);
   const baseHeight = Math.round(baseWidth / photoExtractionProfile.aspectRatio.target);
@@ -496,8 +498,9 @@ const findCardColumns = (
           candidate,
           score: verticalLineSum(edges, image.height, candidate, y, y + cardHeight),
         }))
-        .toSorted((firstCandidate, secondCandidate) => secondCandidate.score - firstCandidate.score)[0]
-        ?.candidate ?? x,
+        .toSorted(
+          (firstCandidate, secondCandidate) => secondCandidate.score - firstCandidate.score,
+        )[0]?.candidate ?? x,
   );
 };
 

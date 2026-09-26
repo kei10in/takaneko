@@ -127,7 +127,9 @@ const overlapRatio = (rects: ClusteredRect[], rows: number, columns: number): nu
     return inRow.slice(1).map((rect, index) => rect.x < inRow[index].x + inRow[index].width - 1);
   });
   const verticalPairs = Array.from({ length: columns }).flatMap((_, column) => {
-    const inColumn = rects.filter((rect) => rect.column === column).toSorted((a, b) => a.row - b.row);
+    const inColumn = rects
+      .filter((rect) => rect.column === column)
+      .toSorted((a, b) => a.row - b.row);
     return inColumn
       .slice(1)
       .map((rect, index) => rect.y < inColumn[index].y + inColumn[index].height - 1);
