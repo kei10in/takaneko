@@ -7,16 +7,6 @@ import { describe, expect, it } from "vitest";
 import { gfmAlert } from "./gfmAlert.ts";
 
 describe("gfmAlert", () => {
-  const processMarkdown = async (markdown: string) => {
-    const result = await unified()
-      .use(remarkParse)
-      .use(remarkRehype)
-      .use(gfmAlert)
-      .use(rehypeStringify)
-      .process(markdown);
-    return result.toString();
-  };
-
   it("should transform blockquote with [!NOTE] into alert div", async () => {
     const markdown = dedent`
       > [!NOTE]
@@ -156,3 +146,13 @@ describe("gfmAlert", () => {
     `);
   });
 });
+
+const processMarkdown = async (markdown: string) => {
+  const result = await unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(gfmAlert)
+    .use(rehypeStringify)
+    .process(markdown);
+  return result.toString();
+};

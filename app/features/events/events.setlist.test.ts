@@ -79,13 +79,6 @@ describe("all events with setlist", async () => {
   });
 
   it("should classify every act with a setlist as LIVE or MUSIC SESSION", () => {
-    const isValidAct = (act: Act) => {
-      if (act.setlist.length == 0) {
-        return true;
-      }
-      return [ActType.LIVE, ActType["MUSIC SESSION"]].some((type) => act.types.includes(type));
-    };
-
     const eventsWithBadActs = allEvents.flatMap((event) =>
       event.meta.acts.filter((act) => !isValidAct(act)).map(() => path.basename(event.slug)),
     );
@@ -93,3 +86,10 @@ describe("all events with setlist", async () => {
     expect(eventsWithBadActs).toEqual([]);
   });
 });
+
+const isValidAct = (act: Act) => {
+  if (act.setlist.length == 0) {
+    return true;
+  }
+  return [ActType.LIVE, ActType["MUSIC SESSION"]].some((type) => act.types.includes(type));
+};

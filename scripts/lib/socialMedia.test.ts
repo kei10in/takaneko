@@ -5,14 +5,6 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { createAnnouncePost, formatEventForSocialMedia } from "./socialMedia.ts";
 
 describe("formatEventForSocialMedia", () => {
-  const importEvent = async (slug: string) => {
-    const em = await Events.importEventModuleBySlug(slug);
-    if (em == undefined) {
-      expect.fail("event module not found");
-    }
-    return em;
-  };
-
   it("should format fes. with location", async () => {
     const em = await importEvent("2025-08-31_@JAM EXPO 2025");
     const s = formatEventForSocialMedia(em.meta);
@@ -92,3 +84,11 @@ describe("createAnnouncePost", () => {
       `);
   });
 });
+
+const importEvent = async (slug: string) => {
+  const em = await Events.importEventModuleBySlug(slug);
+  if (em == undefined) {
+    expect.fail("event module not found");
+  }
+  return em;
+};
