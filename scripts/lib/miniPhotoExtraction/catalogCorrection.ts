@@ -149,7 +149,7 @@ export const completeCatalogLayout = (
     (_, index) => firstPosition - verticalStep * (index + 1),
   )
     .filter((position) => position >= image.height * 0.1)
-    .reverse();
+    .toReversed();
   const existingLast = modeledExistingRows.at(-1) ?? firstPosition;
   const rowsBelowCount = Math.max(
     0,
