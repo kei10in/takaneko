@@ -104,8 +104,8 @@ export default function Index() {
                     nd.year,
                     nd.month - 1,
                     nd.day,
-                    startHour ? parseInt(startHour) - 9 : 0,
-                    startMinute ? parseInt(startMinute) : 0,
+                    startHour ? parseInt(startHour, 10) - 9 : 0,
+                    startMinute ? parseInt(startMinute, 10) : 0,
                   );
 
                   const withIn30Minutes =

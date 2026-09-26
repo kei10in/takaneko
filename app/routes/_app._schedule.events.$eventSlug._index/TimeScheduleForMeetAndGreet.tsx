@@ -101,15 +101,15 @@ const sessionStatus = (args: {
     date.year,
     date.month - 1,
     date.day,
-    startHour ? parseInt(startHour) - 9 : 0,
-    startMinute ? parseInt(startMinute) : 0,
+    startHour ? parseInt(startHour, 10) - 9 : 0,
+    startMinute ? parseInt(startMinute, 10) : 0,
   );
   const endTime = Date.UTC(
     date.year,
     date.month - 1,
     date.day,
-    endHour ? parseInt(endHour) - 9 : 0,
-    endMinute ? parseInt(endMinute) : 0,
+    endHour ? parseInt(endHour, 10) - 9 : 0,
+    endMinute ? parseInt(endMinute, 10) : 0,
   );
 
   if (currentTime < startTime) {
