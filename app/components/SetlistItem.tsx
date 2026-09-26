@@ -9,7 +9,6 @@ import {
 } from "react-icons/bs";
 import { HiMusicalNote } from "react-icons/hi2";
 import { Link } from "react-router";
-import { Fragment } from "react/jsx-runtime";
 import { CoverBadge, FirstPerformanceBadge } from "~/components/IconChip.tsx";
 import { Segment } from "~/features/events/setlist.ts";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
@@ -88,11 +87,9 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
             </div>
           )}
           {part.isCover && (
-            <Fragment>
-              <div className="absolute top-0 left-0 rounded-br-lg bg-zinc-500 px-1 text-xs text-white">
-                Cover
-              </div>
-            </Fragment>
+            <div className="absolute top-0 left-0 rounded-br-lg bg-zinc-500 px-1 text-xs text-white">
+              Cover
+            </div>
           )}
         </div>
       </div>

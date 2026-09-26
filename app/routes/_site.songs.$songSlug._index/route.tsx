@@ -243,11 +243,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                               <span className="line-clamp-1">
                                 {segment.costumeNames?.join("、") || "衣装不明"}
                               </span>
-                              {members != "" && (
-                                <Fragment>
-                                  <span className="line-clamp-1">by {members}</span>
-                                </Fragment>
-                              )}
+                              {members != "" && <span className="line-clamp-1">by {members}</span>}
                             </p>
                           </div>
                         </div>
