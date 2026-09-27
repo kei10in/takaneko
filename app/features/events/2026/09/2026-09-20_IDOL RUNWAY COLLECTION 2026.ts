@@ -65,11 +65,16 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2101559483365535961"],
     },
   ],
-  updatedAt: "2026-09-20",
+  updatedAt: "2026-09-27",
 };
 
 export const content = /* md */ `
   ## レポート
+
+  ## ライブタイムズ エンタメ
+
+  - [IRC 2026 A/W 松本ももな - ライブタイムズ エンタメ X](https://x.com/LIVETIMES_ENTA/status/2102184755240538606)
+  - [高嶺のなでしこ・松本ももな、可憐な和の装いで圧倒的な存在感。ライブでは笑顔弾けるパフォーマンス【IRC 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/64300/)
 
   ### シネマライフ
 
@@ -89,6 +94,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [LIVE PERFORMANCE 紹介 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2102931019599163867)
   - [ライブ出演報告 (セットリスト・動画あり) - 公式 X](https://x.com/takanenofficial/status/2101559483365535961)
   - [ファッションステージ出演報告 - 公式 X](https://x.com/takanenofficial/status/2101524249794003151)
   - [#きょうのたかねこ](https://x.com/takanenofficial/status/2101446242085847393)
