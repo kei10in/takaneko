@@ -168,7 +168,7 @@ export const MeetAndGreetChip: React.FC<MeetAndGreetChipProps> = ({
         return { icon: HiBuildingStorefront, text: "1日店長" };
 
       default:
-        return assertNever(meetAndGreetType);
+        assertNever(meetAndGreetType);
     }
   })();
 

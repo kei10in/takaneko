@@ -104,7 +104,7 @@ const schemaEventStatus = (status: EventMeta["status"]): EventStatusType | undef
     case "RESCHEDULED":
       return "https://schema.org/EventPostponed";
     case "WITHDRAWN":
-    default:
+    case undefined:
       return undefined;
   }
 };

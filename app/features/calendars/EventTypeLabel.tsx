@@ -55,7 +55,7 @@ export const EventTypeLabel: React.FC<Props> = (props: Props) => {
     case EventType.OTHER:
       return <IconLabel icon={HiBeaker} text="その他" colors={colors} />;
     default:
-      return assertNever(category);
+      assertNever(category);
   }
 };
 

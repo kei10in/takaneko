@@ -50,7 +50,7 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
       const viewPort = viewPortRef.current;
       const content = contentRef.current;
       if (!viewPort || !content) {
-        return undefined;
+        return;
       }
 
       const onPointerDown = (e: PointerEvent) => {
