@@ -21,6 +21,14 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/entaparkfes/status/2100918186145358075",
       tags: ["timetable"],
     },
+    {
+      path: "/events/2026/2026-09-27_エンタパークフェス2026_物販タイムテーブル.webp",
+      ref: "https://x.com/takanenofficial/status/2103850830789218717",
+    },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2103850830789218717",
+    },
   ],
   link: {
     text: "エンタパークフェス2026",
@@ -29,9 +37,9 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://tiget.net/events/521207",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["18:25", "19:35"],
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2103850830789218717",
   },
   acts: [
     {
@@ -41,12 +49,13 @@ export const meta: EventMetaDescriptor = {
       end: "17:55",
     },
   ],
-  updatedAt: "2026-09-20",
+  updatedAt: "2026-09-27",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2103850830789218717)
   - [タイムテーブル公開 - エンタパークフェス2026 X](https://x.com/entaparkfes/status/2100918186145358075)
   - [チケット先行販売告知 - エンタパークフェス2026 X](https://x.com/entaparkfes/status/2098362196065735167)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2095829445781406169)
