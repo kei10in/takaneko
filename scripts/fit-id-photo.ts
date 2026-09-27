@@ -20,4 +20,4 @@ const genProfileImage = async (src: Buffer, dest: string) => {
   await sharp(src).resize({ width: 384, height: 512 }).toFile(dest);
 };
 
-main();
+await main();

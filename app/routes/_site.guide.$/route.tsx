@@ -9,15 +9,9 @@ import { SecondaryTopbar } from "~/components/SecondaryTopbar.tsx";
 import { iconButtonPrimary } from "~/components/styles/buttons.ts";
 import { Route } from "./+types/route.ts";
 
-const mdxModules = import.meta.glob("../../features/guide/**/*.(mdx|md)");
+const mdxModules = import.meta.glob<{ default: MDXContent }>("../../features/guide/**/*.(mdx|md)");
 const MdxDocs: Record<string, React.LazyExoticComponent<MDXContent>> = Object.fromEntries(
-  Object.entries(mdxModules).map(([k, importer]) => [
-    k,
-    lazy(async () => {
-      const mod = await importer();
-      return mod as { default: MDXContent };
-    }),
-  ]),
+  Object.entries(mdxModules).map(([k, importer]) => [k, lazy(importer)]),
 );
 
 export const loader = async (args: Route.LoaderArgs) => {

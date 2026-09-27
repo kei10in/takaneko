@@ -101,7 +101,7 @@ export const regularizeCatalogColumns = <T extends { columns: number[] }>(
   );
 };
 
-export const chooseCatalogFrameWidth = <T extends { width: number }>(rects: T[]): number => {
+export const chooseCatalogFrameWidth = (rects: { width: number }[]): number => {
   const sortedWidths = rects.map(({ width }) => width).toSorted((first, second) => first - second);
   const representative = Math.round(median(sortedWidths));
   const lowerQuartile =

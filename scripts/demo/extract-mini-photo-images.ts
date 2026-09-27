@@ -20,4 +20,4 @@ const main = async (): Promise<void> => {
   );
 };
 
-main();
+await main();

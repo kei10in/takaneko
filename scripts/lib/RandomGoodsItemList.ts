@@ -96,6 +96,8 @@ export class RandomGoodsItemList {
 
       layer.add(
         new Konva.Image({
+          // canvas-backend は node-canvas の Image を扱えますが、Konva の型は DOM 用です。
+          // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           image: image as unknown as CanvasImageSource,
           ...pos,
         }),
@@ -104,7 +106,7 @@ export class RandomGoodsItemList {
       positions.push({ id: index + 1, ...pos });
     }
 
-    const dataUrl = await stage.toDataURL({ mimeType: "image/webp", quality: 0.95 });
+    const dataUrl = stage.toDataURL({ mimeType: "image/webp", quality: 0.95 });
 
     // Write Data URL to file
     const base64Data = dataUrl.replace(/^data:image\/\w+;base64,/u, "");

@@ -65,4 +65,4 @@ const findEventFiles = async (date: NaiveDate) => {
   return files;
 };
 
-main();
+await main();

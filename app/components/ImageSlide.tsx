@@ -35,7 +35,7 @@ export const ImageSlide: React.FC<Props> = (props: Props) => {
         observer={true}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => {
-          const li = listRef.current?.children[swiper.realIndex] as HTMLLIElement | undefined;
+          const li = listRef.current?.children[swiper.realIndex];
           const liRect = li?.getBoundingClientRect();
           const ulRect = listRef.current?.getBoundingClientRect();
           const scrollRect = scrollRef.current?.getBoundingClientRect();

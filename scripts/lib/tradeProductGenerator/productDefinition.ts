@@ -102,7 +102,7 @@ export const buildProductDescriptor = (
     return Err({ kind: "empty-series", message: "シリーズ名を入力してください。" });
   }
   if (
-    [...series].some((character) => {
+    Array.from(series).some((character) => {
       const codePoint = character.codePointAt(0);
       return character === "/" || character === "\\" || (codePoint != undefined && codePoint < 32);
     })
@@ -159,7 +159,7 @@ const validDateYear = (value: string): number | undefined => {
 };
 
 const sanitizeIdentifier = (value: string): string => {
-  const body = [...value.normalize("NFKC")]
+  const body = Array.from(value.normalize("NFKC"))
     .filter((character) => /[$_\p{ID_Continue}]/u.test(character))
     .join("");
   if (body === "") {

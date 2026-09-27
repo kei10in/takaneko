@@ -75,7 +75,7 @@ export const MonthlyCalendar: React.FC<Props> = (props: Props) => {
                       to={`#${dateString}`}
                       onClick={(e) => {
                         e.preventDefault();
-                        const elem = document.getElementById(`${dateString}`);
+                        const elem = document.getElementById(dateString);
                         elem?.scrollIntoView({ behavior: "smooth" });
                       }}
                     >

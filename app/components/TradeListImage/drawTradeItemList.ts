@@ -388,9 +388,7 @@ class TradingItemListImage {
       );
     });
 
-    // toBlob の実装上は Promise<Blob> が返ってくるはずなのに、
-    // 型が unknown になっているのでキャストしています。
-    const blob = (await layer.toBlob({ mimeType: "image/webp", quality: 0.95 })) as Blob;
+    const blob = await layer.toBlob({ mimeType: "image/webp", quality: 0.95 });
     stage.destroy();
 
     return blob;

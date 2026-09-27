@@ -80,4 +80,4 @@ const todayInJapan = (): string => {
   return `${part("year")}-${part("month")}-${part("day")}`;
 };
 
-main();
+await main();

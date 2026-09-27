@@ -25,7 +25,7 @@ const main = async () => {
 };
 
 const genFavicon = async (source: string, destination: string) => {
-  iconGen(source, destination, {
+  await iconGen(source, destination, {
     report: false,
     ico: { name: "favicon", sizes: [16, 32, 48] },
   });
@@ -49,4 +49,4 @@ const genAppleTouchIcon = async (source: Buffer, destination: string) => {
     .toFile(path.join(destination, "apple-touch-icon.png"));
 };
 
-main();
+await main();

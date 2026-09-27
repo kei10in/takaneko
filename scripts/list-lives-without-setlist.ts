@@ -49,4 +49,4 @@ const allSetListHasAnySongs = (act: Act): boolean => {
   return act.setlist.filter((p) => p.kind == "song").length > 0;
 };
 
-main();
+await main();

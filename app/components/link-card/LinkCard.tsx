@@ -52,7 +52,7 @@ interface InnerProps {
   to: string;
   displayUrl: string;
   data: SocialCards | undefined;
-  error: unknown | undefined;
+  error: unknown;
   isLoading: boolean;
 }
 

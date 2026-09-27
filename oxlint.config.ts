@@ -2,6 +2,9 @@ import { defineConfig } from "oxlint";
 import { version } from "react";
 
 export default defineConfig({
+  options: {
+    typeAware: true,
+  },
   categories: {
     correctness: "error",
     suspicious: "error",
@@ -45,6 +48,8 @@ export default defineConfig({
     "react/jsx-no-comment-textnodes": "error",
     "react/no-unknown-property": "error",
     "import/extensions": "error",
+    // never による分岐の終端や、条件付きの Effect クリーンアップを許容します。
+    "typescript/consistent-return": "off",
     "typescript/no-empty-object-type": "error",
     "typescript/no-explicit-any": "error",
     "typescript/no-require-imports": "error",

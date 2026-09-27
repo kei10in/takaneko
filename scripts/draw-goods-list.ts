@@ -20,4 +20,4 @@ const main = async () => {
   fs.writeFileSync(outputJson, JSON.stringify(positions, null, 2));
 };
 
-main();
+await main();

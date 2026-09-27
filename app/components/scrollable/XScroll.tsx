@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { forwardRef, ReactNode, useEffect, useImperativeHandle, useRef } from "react";
+import { forwardRef, ReactNode, useEffect, useRef } from "react";
 import { ScrollCalculator } from "./compute.ts";
 
 /**
@@ -33,8 +33,6 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
   ({ children, className = "", momentum = true, momentumDecay, stopVelocity }: Props, ref) => {
     const viewPortRef = useRef<HTMLDivElement | null>(null);
     const contentRef = useRef<HTMLDivElement | null>(null);
-
-    useImperativeHandle(ref, () => viewPortRef.current as HTMLDivElement);
 
     const stateRef = useRef<{
       dragging: boolean;
@@ -213,7 +211,16 @@ export const XScroll = forwardRef<HTMLDivElement, Props>(
 
     return (
       <div
-        ref={viewPortRef}
+        ref={(node) => {
+          viewPortRef.current = node;
+          if (typeof ref === "function") {
+            return ref(node);
+          }
+          if (ref != undefined) {
+            ref.current = node;
+          }
+          return undefined;
+        }}
         className={clsx("overscroll-contain", className)}
         style={{ cursor: "auto" }}
         tabIndex={-1}

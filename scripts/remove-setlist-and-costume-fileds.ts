@@ -78,4 +78,4 @@ const processFile = async (file: string): Promise<boolean> => {
   return modified;
 };
 
-main();
+await main();

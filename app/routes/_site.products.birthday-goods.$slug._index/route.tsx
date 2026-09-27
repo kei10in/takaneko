@@ -11,7 +11,7 @@ export const meta: MetaFunction = ({ params }) => {
   const collection = findBirthdayGoods(slug);
 
   return [
-    { title: formatTitle(`${collection.name}`) },
+    { title: formatTitle(collection.name) },
     {
       name: "description",
       content: "高嶺のなでしこのグッズの詳細を紹介します。",

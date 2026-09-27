@@ -46,10 +46,9 @@ export const eventBreadcrumbListDocument = ({
     },
   ];
 
-  // schema-dts does not model the URL-string form of ListItem.item used by Google examples.
   return {
     "@id": id,
     "@type": "BreadcrumbList",
     itemListElement,
-  } as LdJsonBreadcrumbList;
+  };
 };
