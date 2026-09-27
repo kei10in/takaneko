@@ -47,12 +47,11 @@ export const loader = async ({ request, context }: Route.LoaderArgs) => {
     throw new Response("Setlist index is not found.", { status: 500 });
   }
 
-  const json = await response.json();
   // Worker が CPU time exceeded になるのを防止するために、Zod による validation
-  // は行わず、型アサーションで SetlistEvents 型に変換します。
+  // は行わず、生成元と同じ SetlistEvents 型で読み込みます。
   // `/data/setlists/lives.json` は SetlistEvents をそのまま JSON に変換しているため、
   // Zod による validation は必須ではありません。
-  const events = json as SetlistEvents;
+  const events = await response.json<SetlistEvents>();
 
   return { events };
 };

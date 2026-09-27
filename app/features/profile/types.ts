@@ -14,7 +14,7 @@ export const GroupId = GroupIdEnum.enum;
 export type GroupId = z.infer<typeof GroupIdEnum>;
 
 export const isGroupId = (id: string): id is GroupId => {
-  return GroupIdEnum.options.includes(id as GroupId);
+  return GroupIdEnum.options.some((option) => option === id);
 };
 
 export interface GroupDescription {
@@ -55,7 +55,7 @@ export const MemberId = MemberIdEnum.enum;
 export type MemberId = z.infer<typeof MemberIdEnum>;
 
 export const isMemberId = (id: string): id is MemberId => {
-  return MemberIdEnum.options.includes(id as MemberId);
+  return MemberIdEnum.options.some((option) => option === id);
 };
 
 export interface MemberDescription {
@@ -95,7 +95,7 @@ export const MemberCollectionId = MemberCollectionIdEnum.enum;
 export type MemberCollectionId = z.infer<typeof MemberCollectionIdEnum>;
 
 export const isMemberCollectionId = (id: string): id is MemberCollectionId => {
-  return MemberCollectionIdEnum.options.includes(id as MemberCollectionId);
+  return MemberCollectionIdEnum.options.some((option) => option === id);
 };
 
 export interface MemberCollectionDescription {

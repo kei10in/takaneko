@@ -11,13 +11,19 @@ export interface EventModule {
   Content: MDXContent;
 }
 
+export interface EventModuleExports {
+  meta?: unknown;
+  content?: string | MDXContent;
+  default?: MDXContent;
+}
+
 export interface ImportingModule {
   filename: string;
-  module: () => Promise<unknown>;
+  module: () => Promise<EventModuleExports>;
 }
 
 export const importEventModule = async (im: ImportingModule): Promise<EventModule | undefined> => {
-  const loaded = (await im.module()) as Record<string, unknown>;
+  const loaded = await im.module();
   const meta = validateEventMeta(loaded.meta);
   if (meta == undefined) {
     return undefined;
@@ -25,9 +31,11 @@ export const importEventModule = async (im: ImportingModule): Promise<EventModul
 
   // Event Module を .ts や .tsx でかく場合は、`default export` 意外も受け入れる。
   const content = loaded.content ?? loaded.default;
+  if (content == undefined) {
+    return undefined;
+  }
 
-  const Content =
-    typeof content === "string" ? makeMarkdownComponent(dedent(content)) : (content as MDXContent);
+  const Content = typeof content === "string" ? makeMarkdownComponent(dedent(content)) : content;
 
   return { slug: stem(im.filename), filename: im.filename, meta, Content };
 };

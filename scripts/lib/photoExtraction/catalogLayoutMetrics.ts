@@ -14,8 +14,9 @@ import type {
 } from "../imageRegionExtraction/types.ts";
 import { scoreLocalizedFrameBoundary } from "./catalogBoundary.ts";
 import {
-  catalogQualityMetrics,
   type CatalogLayoutEvaluation,
+  type CatalogQualityMetric,
+  type MetricThreshold,
   type MetricThresholds,
 } from "./catalogCandidateSelection.ts";
 import { findPhotoBannerBottom, photoBannerIsClipped } from "./photoBanner.ts";
@@ -145,22 +146,28 @@ export const estimateMetricThresholds = (
   const resolutionDelta = 1 / Math.max(representative.width, representative.height);
   const detectionDelta = 1 / baseline.frames.length;
 
-  return Object.fromEntries(
-    catalogQualityMetrics.map((metric) => {
-      const noise = medianAbsoluteDeviation(
-        perturbations.map(({ metrics }) => metrics[metric] - baseline.metrics[metric]),
-      );
-      const minimumDelta =
-        metric === "bannerDetection" || metric === "occupancy" ? detectionDelta : resolutionDelta;
-      return [
-        metric,
-        {
-          degradation: Math.max(minimumDelta, noise * 2),
-          improvement: Math.max(minimumDelta, noise * 3),
-        },
-      ];
-    }),
-  ) as MetricThresholds;
+  const threshold = (metric: CatalogQualityMetric): MetricThreshold => {
+    const noise = medianAbsoluteDeviation(
+      perturbations.map(({ metrics }) => metrics[metric] - baseline.metrics[metric]),
+    );
+    const minimumDelta =
+      metric === "bannerDetection" || metric === "occupancy" ? detectionDelta : resolutionDelta;
+    return {
+      degradation: Math.max(minimumDelta, noise * 2),
+      improvement: Math.max(minimumDelta, noise * 3),
+    };
+  };
+
+  return {
+    boundarySupport: threshold("boundarySupport"),
+    bannerDetection: threshold("bannerDetection"),
+    bannerConsistency: threshold("bannerConsistency"),
+    bannerClearance: threshold("bannerClearance"),
+    rowRegularity: threshold("rowRegularity"),
+    columnRegularity: threshold("columnRegularity"),
+    sizeConsistency: threshold("sizeConsistency"),
+    occupancy: threshold("occupancy"),
+  };
 };
 
 export const medianAbsoluteDeviation = (values: number[]): number => {

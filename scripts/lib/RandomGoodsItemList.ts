@@ -96,6 +96,8 @@ export class RandomGoodsItemList {
 
       layer.add(
         new Konva.Image({
+          // canvas-backend は node-canvas の Image を扱えますが、Konva の型は DOM 用です。
+          // oxlint-disable-next-line typescript/no-unsafe-type-assertion
           image: image as unknown as CanvasImageSource,
           ...pos,
         }),
