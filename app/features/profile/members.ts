@@ -457,5 +457,5 @@ export const findMemberDescription = (name: MemberId): MemberDescription => {
     return HimeriMomiyama;
   }
 
-  throw new Error(`Member not found: ${name}`);
+  throw new Error(`Member not found: ${String(name)}`);
 };

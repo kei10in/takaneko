@@ -122,7 +122,7 @@ const editToAddPublishedDateToSong = async (
 
     obj.addPropertyAssignment({
       name: "publishedAt",
-      initializer: `"${publishedAt}"`,
+      initializer: `"${publishedAt.toString()}"`,
     });
   });
 
