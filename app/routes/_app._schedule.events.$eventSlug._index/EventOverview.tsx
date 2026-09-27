@@ -110,13 +110,11 @@ export const EventOverview: React.FC<Props> = (props: Props) => {
 };
 
 const showMerchandise = (
-  goods?:
-    | {
-        time?: [string] | [string, string] | undefined;
-        lineup?: string | string[] | undefined;
-        url?: string | undefined;
-      }
-    | undefined,
+  goods?: {
+    time?: [string] | [string, string] | undefined;
+    lineup?: string | string[] | undefined;
+    url?: string | undefined;
+  },
 ): boolean => {
   if (goods == undefined) {
     return false;
