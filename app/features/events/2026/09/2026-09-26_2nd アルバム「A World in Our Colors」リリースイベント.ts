@@ -98,8 +98,8 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2103767782936715512)
-  - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2103707385076338869)
+  - [2部 開催報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2103767782936715512)
+  - [1部 開催報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2103707385076338869)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2103492221261476222)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5592)
   - [イベント詳細 - ビクターエンタテインメント](https://www.jvcmusic.co.jp/-/News/A028511/193.html)

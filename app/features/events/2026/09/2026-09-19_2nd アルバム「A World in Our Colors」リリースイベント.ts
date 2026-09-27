@@ -100,8 +100,8 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [2部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2101242843113357539)
-  - [1部 開催報告 - 公式 X](https://x.com/takanenofficial/status/2101187871977975910)
+  - [2部 開催報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2101242843113357539)
+  - [1部 開催報告 (ダイジェスト動画あり) - 公式 X](https://x.com/takanenofficial/status/2101187871977975910)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2100966828600152423)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5547)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2097250147088662976)
