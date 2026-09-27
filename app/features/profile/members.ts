@@ -1,3 +1,4 @@
+import { assertNever } from "~/utils/assertNever.ts";
 import { MemberDescription, MemberId } from "./types.ts";
 
 export const NaoKizuki: MemberDescription = {
@@ -457,5 +458,5 @@ export const findMemberDescription = (name: MemberId): MemberDescription => {
     return HimeriMomiyama;
   }
 
-  throw new Error(`Member not found: ${String(name)}`);
+  assertNever(name);
 };
