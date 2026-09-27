@@ -1,10 +1,9 @@
 import { glob } from "glob";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import type { EventModuleExports } from "~/features/events/eventModule.ts";
 import { EventRepository } from "~/features/events/EventRepository.ts";
 
-const importGlob = (): Record<string, () => Promise<EventModuleExports>> => {
+const importGlob = (): Record<string, () => Promise<unknown>> => {
   const scriptDir = import.meta.dirname;
   const eventsDir = path.resolve(scriptDir, "..", "..", "app", "features", "events");
 

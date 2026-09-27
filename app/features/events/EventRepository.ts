@@ -2,16 +2,15 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
 import {
   EventModule,
-  EventModuleExports,
   importEventModule,
   importEventModules,
   ImportingModule,
 } from "./eventModule.ts";
 
 export class EventRepository {
-  private readonly modules: Record<string, () => Promise<EventModuleExports>>;
+  private readonly modules: Record<string, () => Promise<unknown>>;
 
-  constructor(modules: Record<string, () => Promise<EventModuleExports>>) {
+  constructor(modules: Record<string, () => Promise<unknown>>) {
     this.modules = modules;
   }
 
