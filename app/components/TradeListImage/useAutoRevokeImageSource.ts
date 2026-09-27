@@ -5,7 +5,7 @@ export const useAutoRevokeImageSource = (data: { blob: Blob; objectURL: string }
 
   useEffect(() => {
     if (ref.current == data) {
-      return;
+      return undefined;
     }
 
     ref.current.forEach((v) => URL.revokeObjectURL(v.objectURL));
