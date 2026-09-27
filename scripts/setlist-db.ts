@@ -90,13 +90,7 @@ const writeAsCsvUtf8WithBOM = async (filepath: string, records: Record[]) => {
 };
 
 const writeCsv = async (records: Record[]): Promise<Buffer> => {
-  const p = new Promise<Buffer>((resolve) => {
-    csv.writeToBuffer(records, { headers: true }).then((buffer) => {
-      resolve(buffer);
-    });
-  });
-
-  return await p;
+  return await csv.writeToBuffer(records, { headers: true });
 };
 
 const writeAsJson = async (filepath: string, records: Record[]): Promise<number> => {
@@ -107,4 +101,4 @@ const writeAsJson = async (filepath: string, records: Record[]): Promise<number>
   return size;
 };
 
-main();
+await main();

@@ -14,4 +14,4 @@ const main = async () => {
   await productImage.draw(outputImage);
 };
 
-main();
+await main();

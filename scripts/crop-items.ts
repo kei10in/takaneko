@@ -46,4 +46,4 @@ const cropOtherRandomGoods = async (options: CroppingOptions) => {
   await Promise.all(tasks);
 };
 
-main();
+await main();

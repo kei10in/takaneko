@@ -148,4 +148,4 @@ const main = async () => {
   await processWithConcurrency(matchFiles, concurrency, processFile);
 };
 
-main();
+await main();

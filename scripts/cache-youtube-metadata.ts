@@ -43,4 +43,4 @@ const main = async () => {
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(map, null, 2));
 };
 
-main();
+await main();

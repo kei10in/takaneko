@@ -64,4 +64,4 @@ const buildSetlistEventIndex = (events: EventModule[]) => {
   writeFileSync(outputPath, json);
 };
 
-main();
+await main();

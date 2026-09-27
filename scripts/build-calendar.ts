@@ -68,4 +68,4 @@ const buildCalendar = async (
   return ics.value;
 };
 
-main();
+await main();

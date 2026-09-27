@@ -101,7 +101,7 @@ export const Calendar: React.FC<Props> = (props: Props) => {
               return;
             }
             const href = calendarMonthHref(months[swiper.realIndex]);
-            navigate({ pathname: href, search: location.search }, { replace: true });
+            void navigate({ pathname: href, search: location.search }, { replace: true });
           }}
           className={clsx(
             "transition-all landscape:h-auto",

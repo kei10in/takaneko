@@ -130,4 +130,4 @@ const editToAddPublishedDateToSong = async (
   await sourceFile.save();
 };
 
-main();
+await main();
