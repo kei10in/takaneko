@@ -1,5 +1,6 @@
-import { CloseButton, Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { clsx } from "clsx";
+import { useRef } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import {
   HiChevronDown,
@@ -29,6 +30,25 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
   matchedActIndexes,
   showMatchedAct,
 }: SetlistEventCardProps) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const footerRef = useRef<HTMLDivElement>(null);
+
+  const closeCard = (close: () => void) => {
+    const button = buttonRef.current;
+    const buttonRect = button?.getBoundingClientRect();
+    // Disclosure のフォーカス復帰による即時スクロールを防ぐ。
+    buttonRef.current?.focus({ preventScroll: true });
+    close();
+    if (button != null && buttonRect != undefined && footerRef.current != null) {
+      // 閉じた後はボタン直下に下部の行が来るため、行の現在位置からボタンの高さを引く。
+      const targetTop = footerRef.current.getBoundingClientRect().top - buttonRect.height;
+      const previousMargin = button.style.scrollMarginTop;
+      button.style.scrollMarginTop = `${targetTop}px`;
+      button.scrollIntoView({ behavior: "smooth", block: "start" });
+      button.style.scrollMarginTop = previousMargin;
+    }
+  };
+
   const date = NaiveDate.parseUnsafe(event.date);
   const matchedActIndexSet = new Set(matchedActIndexes);
   const eventUrl = `/events/${event.slug}`;
@@ -41,9 +61,12 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
       )}
     >
       <Disclosure>
-        {({ open }) => (
+        {({ open, close }) => (
           <div>
-            <DisclosureButton className="block w-full p-2 text-left focus-visible:outline-none">
+            <DisclosureButton
+              ref={buttonRef}
+              className="block w-full p-2 text-left focus-visible:outline-none"
+            >
               <div className="flex items-start gap-2">
                 {/* Image */}
                 <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
@@ -142,16 +165,20 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                     ))}
                   </div>
                   <div className="my-1 text-right">
-                    <CloseButton className="inline-flex items-center justify-center gap-1 rounded-full text-sm text-zinc-500">
+                    <button
+                      type="button"
+                      onClick={() => closeCard(close)}
+                      className="inline-flex items-center justify-center gap-1 rounded-full text-sm text-zinc-500"
+                    >
                       <HiXMark className="size-4" />
                       <span>閉じる</span>
-                    </CloseButton>
+                    </button>
                   </div>
                 </div>
               </div>
             </DisclosurePanel>
 
-            <div className="flex items-center px-2 pb-2 text-sm">
+            <div ref={footerRef} className="flex items-center px-2 pb-2 text-sm">
               <div className="flex min-w-0 flex-1 items-center">
                 <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
                   <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
