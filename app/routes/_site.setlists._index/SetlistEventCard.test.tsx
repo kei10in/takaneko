@@ -65,6 +65,7 @@ describe("SetlistEventCard", () => {
     // スクロール完了通知を待たずに折りたたみを開始する。
     expect(heading.getAttribute("aria-expanded")).toBe("false");
     if (control === "閉じる") {
+      expect(screen.queryByRole("button", { name: "閉じる", hidden: true })).toBeNull();
       expect(focus).toHaveBeenCalledWith({ preventScroll: true });
       expect(document.activeElement).toBe(heading);
     } else {
@@ -75,7 +76,7 @@ describe("SetlistEventCard", () => {
     });
     if (control === "閉じる") {
       expect(scrollIntoView).toHaveBeenCalledExactlyOnceWith({
-        behavior: "smooth",
+        behavior: "instant",
         block: "start",
       });
       expect(heading.style.scrollMarginTop).toBe("");

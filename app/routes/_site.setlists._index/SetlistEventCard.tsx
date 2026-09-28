@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import {
   HiChevronDown,
@@ -32,19 +32,21 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
 }: SetlistEventCardProps) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
 
   const closeCard = (close: () => void) => {
     const button = buttonRef.current;
     const buttonRect = button?.getBoundingClientRect();
     // Disclosure のフォーカス復帰による即時スクロールを防ぐ。
     buttonRef.current?.focus({ preventScroll: true });
+    setTransitionEnabled(false);
     close();
     if (button != null && buttonRect != undefined && footerRef.current != null) {
       // 閉じた後はボタン直下に下部の行が来るため、行の現在位置からボタンの高さを引く。
       const targetTop = footerRef.current.getBoundingClientRect().top - buttonRect.height;
       const previousMargin = button.style.scrollMarginTop;
       button.style.scrollMarginTop = `${targetTop}px`;
-      button.scrollIntoView({ behavior: "smooth", block: "start" });
+      button.scrollIntoView({ behavior: "instant", block: "start" });
       button.style.scrollMarginTop = previousMargin;
     }
   };
@@ -66,6 +68,12 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
             <DisclosureButton
               ref={buttonRef}
               className="block w-full p-2 text-left focus-visible:outline-none"
+              onClick={() => setTransitionEnabled(true)}
+              onKeyDown={(keyEvent) => {
+                if (keyEvent.key === "Enter" || keyEvent.key === " ") {
+                  setTransitionEnabled(true);
+                }
+              }}
             >
               <div className="flex items-start gap-2">
                 {/* Image */}
@@ -119,7 +127,8 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
                 <div className="flex size-8 flex-none items-center justify-center rounded-full transition-colors group-hover:bg-zinc-500/5">
                   <HiChevronDown
                     className={clsx(
-                      "size-5 text-zinc-500 transition-transform",
+                      "size-5 text-zinc-500",
+                      transitionEnabled && "transition-transform",
                       open && "-rotate-180",
                     )}
                   />
@@ -128,7 +137,7 @@ export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
             </DisclosureButton>
 
             <DisclosurePanel
-              transition
+              transition={transitionEnabled}
               className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-200 ease-in-out data-closed:grid-rows-[0fr]"
             >
               <div className="min-h-0 overflow-hidden">
