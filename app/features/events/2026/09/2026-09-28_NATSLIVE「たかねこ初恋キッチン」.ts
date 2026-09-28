@@ -13,6 +13,14 @@ export const meta: EventMetaDescriptor = {
   present: ["城月菜央", "東山恵里沙", "松本ももな"],
   images: [
     {
+      path: "/events/2026/2026-09-28_NATSLIVE「たかねこ初恋キッチン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2104515310288314753",
+    },
+    {
+      path: "/events/2026/2026-09-28_NATSLIVE「たかねこ初恋キッチン」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2104534082772218114",
+    },
+    {
       path: "/events/2026/2026-09-28_NATSLIVE「たかねこ初恋キッチン」.jpg",
       ref: "https://x.com/NATSLIVE_app/status/2099377607431352805",
     },
@@ -29,14 +37,14 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「カード A タイプ」",
-      // "レシピカード「カード B タイプ」",
-      // "レシピカード「カード C タイプ」",
+      "レシピカード「初恋カオマンガイ。カード A タイプ」 660 円 (税込)",
+      "レシピカード「初恋カオマンガイ。カード B タイプ」 660 円 (税込)",
+      "レシピカード「初恋カオマンガイ。カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-09-18",
+  updatedAt: "2026-09-28",
 };
 
 export const content = /* md */ `
@@ -52,14 +60,15 @@ export const content = /* md */ `
 
   ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-  <!--
   ## グッズの販売期間
 
-  2026年09月28日 19:00 〜 2026年09月29日 19:00
-  -->
+  2026年09月28日 19:00 〜 2026年09月29日 18:59
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2104534082772218114)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2104515310288314753)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2104205668379246776)
   - [一般抽選の告知 - 公式 X](https://x.com/takanenofficial/status/2100494970469646483)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2099430454658998744)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2099377607431352805)
