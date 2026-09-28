@@ -13,8 +13,17 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ3"],
   images: [
     {
+      path: "/events/2026/2026-09-29_BEEEEM FES Vol.11 DX SP_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2104541634189005130",
+      tags: ["timetable"],
+    },
+    {
       path: "/events/2026/2026-09-29_BEEEEM FES Vol.11 DX SP.jpg",
       ref: "https://x.com/takanenofficial/status/2096917646302138657",
+    },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2104541634189005130",
     },
   ],
   link: {
@@ -24,16 +33,23 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://w.pia.jp/t/beeeemfes/",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["終演後"],
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2104541634189005130",
   },
-  acts: [],
-  updatedAt: "2026-09-08",
+  acts: [
+    {
+      types: ["LIVE"],
+      start: "17:50",
+      end: "18:20",
+    },
+  ],
+  updatedAt: "2026-09-28",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2104541634189005130)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2096917646302138657)
 `;
