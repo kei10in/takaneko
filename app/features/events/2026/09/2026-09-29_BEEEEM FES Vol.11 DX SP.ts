@@ -25,6 +25,10 @@ export const meta: EventMetaDescriptor = {
       path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
       ref: "https://x.com/takanenofficial/status/2104541634189005130",
     },
+    {
+      path: "/events/2026/2026-09-29_BEEEEM FES Vol.11 DX SP_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2104891497250517426",
+    },
   ],
   link: {
     text: "",
@@ -42,14 +46,26 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "17:50",
       end: "18:20",
+      setlist: [
+        "衣装: 2026 秋衣装",
+        "アンチファン",
+        "我武者羅",
+        "初恋のひと。",
+        "恋を知った世界",
+        "ファンサ",
+        "I’M YOUR IDOL",
+      ],
+      links: ["https://x.com/takanenofficial/status/2104866272848859195"],
     },
   ],
-  updatedAt: "2026-09-28",
+  updatedAt: "2026-09-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2104891497250517426)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2104866272848859195)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2104541634189005130)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2096917646302138657)
 `;
