@@ -16,6 +16,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3.jpg",
       ref: "https://x.com/takanenofficial/status/2087106979621974348",
     },
+    {
+      path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3_バックダンサー募集.jpg",
+      ref: "https://x.com/newage_tokyo/status/2104888931800306026",
+    },
+    {
+      path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3_バックダンサー募集詳細.jpg",
+      ref: "https://x.com/newage_tokyo/status/2104888931800306026",
+    },
   ],
   link: {
     text: "イベント サイト",
@@ -42,12 +50,13 @@ export const meta: EventMetaDescriptor = {
       start: "18:00",
     },
   ],
-  updatedAt: "2026-08-11",
+  updatedAt: "2026-09-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
   - [イベント サイト](https://zombiefes.jp/)
+  - [バックダンサー募集 - NEWAGE X](https://x.com/newage_tokyo/status/2104888931800306026)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2087106979621974348)
 `;
