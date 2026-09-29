@@ -77,6 +77,16 @@ pnpm vitest run app/features/events/events.test.tsx app/features/events/EventRep
 
 必要なら `app/features/events/eventMeta.test.ts` も実行する。
 
+## 記載内容について
+
+### リンク セクション
+
+`content` にはリンクセクションがあります。
+リンクセクションには、公式 X や関係者 X の投稿へのリンク、公式ニュースへのリンクを配置します。
+
+- 動画付きの X 投稿へのリンクには動画の種類とともに動画がある旨カッコ書きします。
+- セットリストについては言及してはいけません。
+
 ## References
 
 - 実例ベースの詳細: `references/event-patterns.md`
