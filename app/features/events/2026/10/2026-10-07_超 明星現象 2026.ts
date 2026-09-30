@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-10-07",
-  open: undefined,
-  start: undefined,
+  open: "12:40",
+  start: "13:00",
   end: undefined,
   region: "東京",
   location: "Shibuya LOVEZ",
@@ -20,6 +20,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-10-07_超 明星現象 2026_第4弾出演者.jpg",
       ref: "https://x.com/takanenofficial/status/2084249385421221917",
     },
+    {
+      path: "/events/2026/2026-10-07_超 明星現象 2026_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2105179585633472796",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "イベント公式 X",
@@ -32,13 +37,20 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-08-10",
+  acts: [
+    {
+      types: ["LIVE"],
+      start: "20:10",
+      end: "20:35",
+    },
+  ],
+  updatedAt: "2026-09-30",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2105179585633472796)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2084249385421221917)
   - [開催告知 - イベント X](https://x.com/cho_myojo/status/2081333861221609767)
 `;
