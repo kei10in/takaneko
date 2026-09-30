@@ -8,7 +8,13 @@ import {
   HiOutlineCalendarDays,
   HiXMark,
 } from "react-icons/hi2";
-import { Link, MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
+import {
+  Link,
+  MetaFunction,
+  ShouldRevalidateFunctionArgs,
+  useLoaderData,
+  useSearchParams,
+} from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
 import { dialogBackdropStyle, pageBox } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
@@ -21,6 +27,10 @@ import {
   SetlistSelectedLiveFilterType,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters.ts";
+import {
+  readSetlistSearchParams,
+  writeSetlistSearchParams,
+} from "~/features/setlists/searchParams.ts";
 import { SetlistEvents } from "~/features/setlists/types.ts";
 import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
@@ -70,10 +80,17 @@ export const shouldRevalidate = ({
 
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
-  const [query, setQuery] = useState("");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filters = useMemo(() => readSetlistSearchParams(searchParams), [searchParams]);
+  const [query, setQuery] = useState(filters.q);
+  const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
-  const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
+  // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
+  if (previousQuery !== filters.q) {
+    setPreviousQuery(filters.q);
+    setQuery(filters.q);
+  }
   const deferredQuery = useDeferredValue(filters.q);
   const searchFilters = useMemo<SetlistSearchFilters>(
     () => ({
@@ -108,12 +125,22 @@ export default function Component() {
     key: K,
     value: SetlistSearchFilters[K],
   ) => {
-    setFilters((previousFilters) => ({ ...previousFilters, [key]: value }));
+    setSearchParams(
+      (previousParams) =>
+        writeSetlistSearchParams(previousParams, {
+          ...readSetlistSearchParams(previousParams),
+          [key]: value,
+        }),
+      { replace: true, preventScrollReset: true },
+    );
   };
 
   const resetFilters = () => {
     setQuery("");
-    setFilters(defaultSetlistSearchFilters());
+    setSearchParams(
+      (previousParams) => writeSetlistSearchParams(previousParams, defaultSetlistSearchFilters()),
+      { replace: true, preventScrollReset: true },
+    );
   };
 
   return (
