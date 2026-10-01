@@ -45,7 +45,7 @@ export const meta: EventMetaDescriptor = {
       url: "https://live.nicovideo.jp/watch/lv351393366",
     },
     {
-      text: "ニコニコ生放送 (再放送)",
+      text: "ニコニコ生放送 (再放送 / アーカイブあり)",
       url: "https://live.nicovideo.jp/watch/lv351455243",
     },
   ],
