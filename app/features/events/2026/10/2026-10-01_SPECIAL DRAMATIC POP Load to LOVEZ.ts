@@ -22,6 +22,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-10-01_SPECIAL DRAMATIC POP Load to LOVEZ.jpg",
       ref: "https://x.com/takanenofficial/status/2101529282937766324",
     },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2105307931587805186",
+    },
+    {
+      path: "/events/2026/2026-10-01_SPECIAL DRAMATIC POP Load to LOVEZ_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2105626545364824186",
+    },
   ],
   link: {
     text: "",
@@ -31,22 +39,36 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["20:50", "22:00"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2105307931587805186",
   },
   acts: [
     {
       types: ["LIVE"],
       start: "19:30",
       end: "20:00",
+      setlist: [
+        "衣装: 見上げるたびに、恋をする。衣装",
+        "初恋のこたえ。",
+        "僕は君になれない",
+        "女の子は強い",
+        "ハートブーケ",
+        "美しく生きろ",
+        "ファンサ",
+        "恋を知った世界",
+      ],
+      links: ["https://x.com/takanenofficial/status/2105626462489600360"],
     },
   ],
-  updatedAt: "2026-09-30",
+  updatedAt: "2026-10-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2105626462489600360)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2105626545364824186)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2105307931587805186)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2104820974625399081)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2101529282937766324)
 `;
