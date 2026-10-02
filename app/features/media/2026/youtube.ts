@@ -2,6 +2,28 @@ import { YouTubeVideoDescriptor } from "../types.ts";
 
 export const YouTube2026 = [
   {
+    videoId: "dkx0IewiLQ8",
+    publishedAt: "2026-10-01",
+    presents: ["涼海すう"],
+    officialTwitter: "https://x.com/takanenofficial/status/2105855305007632838",
+  },
+  {
+    videoId: "v_AR_pf2DDE",
+    publishedAt: "2026-09-30",
+    presents: ["涼海すう"],
+  },
+  {
+    videoId: "c2GdNgnUbqU",
+    publishedAt: "2026-09-25",
+    presents: ["涼海すう"],
+    officialTwitter: "https://x.com/takanenofficial/status/2104828530009743379",
+  },
+  {
+    videoId: "QkI-ad9Lo_0",
+    publishedAt: "2026-09-11",
+    presents: ["涼海すう"],
+  },
+  {
     videoId: "6wIjksbhkmY",
     publishedAt: "2026-09-04",
     presents: ["涼海すう"],

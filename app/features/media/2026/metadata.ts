@@ -2,6 +2,42 @@ import { MediaDetails } from "~/features/media/types.ts";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "dkx0IewiLQ8",
+    title:
+      "【涙の最終回】「ピン表紙を勝ち取るのは私」次世代スターの頂点が決定！【バトル#12】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-10-01",
+    mediaUrl: "https://youtu.be/dkx0IewiLQ8",
+    imageUrl: "https://i.ytimg.com/vi/dkx0IewiLQ8/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    key: "v_AR_pf2DDE",
+    title:
+      "【ついに決着】「最後まで何が起こるかわからない」すべてを懸けた戦い、ついに最終章へ！【バトル#11】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-09-30",
+    mediaUrl: "https://youtu.be/v_AR_pf2DDE",
+    imageUrl: "https://i.ytimg.com/vi/v_AR_pf2DDE/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "youtube",
+    key: "c2GdNgnUbqU",
+    title:
+      "【モデルが大暴れ!?】バラエティの実力が試されるタレント力バトル開幕！！【バトル#8】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-09-25",
+    mediaUrl: "https://youtu.be/c2GdNgnUbqU",
+    imageUrl: "https://i.ytimg.com/vi/c2GdNgnUbqU/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
+  },
+  {
     kind: "ogp",
     key: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
     title:
@@ -13,6 +49,18 @@ export const metadata2026: MediaDetails[] = [
       "https://assets.locipo.jp/creatives/179229/original-05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94-20260918022820.jpg",
     category: "video",
     presents: ["高嶺のなでしこ3"],
+  },
+  {
+    kind: "youtube",
+    key: "QkI-ad9Lo_0",
+    title:
+      "【モデル以前の問題？】「礼儀がなければ、芸能界では戦えない」OGなちょすが突きつけた厳しい評価【バトル#7】【Popteen】",
+    authorName: "PopteenTV",
+    publishedAt: "2026-09-11",
+    mediaUrl: "https://youtu.be/QkI-ad9Lo_0",
+    imageUrl: "https://i.ytimg.com/vi/QkI-ad9Lo_0/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう"],
   },
   {
     kind: "youtube",
