@@ -65,7 +65,7 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2101559483365535961"],
     },
   ],
-  updatedAt: "2026-09-27",
+  updatedAt: "2026-10-02",
 };
 
 export const content = /* md */ `
@@ -94,6 +94,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [AFTER INTERVIEW - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2105945885276529013)
   - [LIVE PERFORMANCE 紹介 - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2102931019599163867)
   - [ライブ出演報告 (セットリスト・動画あり) - 公式 X](https://x.com/takanenofficial/status/2101559483365535961)
   - [ファッションステージ出演報告 - 公式 X](https://x.com/takanenofficial/status/2101524249794003151)
