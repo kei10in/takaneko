@@ -26,6 +26,17 @@ export const metadata2026: MediaDetails[] = [
     presents: ["涼海すう"],
   },
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/815412",
+    title: "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第16回『関心領域』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-09-30",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/815412",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/09/815412_02.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "c2GdNgnUbqU",
     title:
