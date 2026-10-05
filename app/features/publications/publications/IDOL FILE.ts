@@ -1,5 +1,26 @@
 import { Publication } from "../types.ts";
 
+export const IDOL_FILE_Vol43: Publication = {
+  slug: "IDOL FILE Vol.43",
+  name: "IDOL FILE Vol.43",
+  date: "2026-10-30",
+  kind: "magazines",
+  publisher: "ロックスエンタテインメント",
+  listPrice: 2000,
+  priceWithTax: 2200,
+  code: [],
+  url: "",
+  coverImages: [],
+  featuredMembers: ["日向端ひな"],
+  officialTwitter: "https://x.com/takanenofficial/status/2106946227027771457",
+  links: [
+    {
+      text: "日向端ひな 動画コメント",
+      url: "https://x.com/idolfile_jp/status/2106942214228295821",
+    },
+  ],
+};
+
 export const IDOL_FILE_Vol40: Publication = {
   slug: "IDOL FILE Vol.40",
   name: "IDOL FILE Vol.40",
