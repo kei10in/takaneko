@@ -25,6 +25,10 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/Girls_Girlsinfo/status/2099831693264011295",
       tags: ["timetable"],
     },
+    {
+      path: "/takaneko/goods/2026/2026-09-09_ミニフォトカード「ワンピース 2026」.jpg",
+      ref: "https://x.com/takanenofficial/status/2107100997395112171",
+    },
   ],
   link: {
     text: "",
@@ -34,8 +38,8 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["終演後"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「ワンピース 2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2107100997395112171",
   },
   acts: [
     {
@@ -44,12 +48,13 @@ export const meta: EventMetaDescriptor = {
       end: "20:35",
     },
   ],
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-10-05",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2107100997395112171)
   - [タイムテーブル修正版 - GIRLS GIRLS X](https://x.com/Girls_Girlsinfo/status/2099831693264011295)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2099823039886299266)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2087157080797155564)
