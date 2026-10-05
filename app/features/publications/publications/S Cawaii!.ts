@@ -24,6 +24,10 @@ export const SCawaii_2026年11月号: Publication = {
       ref: "https://pbs.twimg.com/media/HSjPNvAaIAAODfG.jpg",
     },
     {
+      path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_サイン入りチェキプレゼント.jpg",
+      ref: "https://x.com/mag_scawaii/status/2106670671161881044",
+    },
+    {
       path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_掲載カット1.jpg",
       ref: "https://x.com/mag_scawaii/status/2101236050589020204",
     },
@@ -46,6 +50,10 @@ export const SCawaii_2026年11月号: Publication = {
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2091802759964004849",
   links: [
+    {
+      text: "高嶺のなでしこ サイン入りチェキプレゼント - S Cawaii! 編集部 X",
+      url: "https://x.com/mag_scawaii/status/2106670671161881044",
+    },
     {
       text: "本日発売 - 公式 X",
       url: "https://x.com/takanenofficial/status/2100132588321185934",
