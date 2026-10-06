@@ -30,11 +30,12 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-10-06",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/2107384112290161103)
   - [第3弾出演者発表 - IDOL HALLOWEEN JAPAN X](https://x.com/IDOLHJ_official/status/2099075624216244675)
 `;
