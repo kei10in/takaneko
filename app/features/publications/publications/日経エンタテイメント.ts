@@ -1,5 +1,31 @@
 import { Publication } from "../types.ts";
 
+export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VELOCITY: Publication = {
+  slug: "日経エンタテインメント！ アイドル Special GIRL POP VELOCITY",
+  name: "日経エンタテインメント！ アイドル Special GIRL POP VELOCITY",
+  date: "2026-10-30",
+  kind: "mooks",
+  publisher: "日経BP",
+  listPrice: 1800,
+  priceWithTax: 1980,
+  code: [{ kind: "ISBN", value: "9784296221387" }],
+  url: "https://www.amazon.co.jp/dp/4296221388",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_告知.jpg",
+      ref: "https://x.com/nikkei_ent/status/2107277613593178439",
+    },
+  ],
+  featuredMembers: ["高嶺のなでしこ3"],
+  officialTwitter: "https://x.com/takanenofficial/status/2107297291337920932",
+  links: [
+    {
+      text: "予約開始 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2107277613593178439",
+    },
+  ],
+};
+
 export const 日経エンタテインメント_2025年10月号: Publication = {
   slug: "日経エンタテインメント！ 2025年10月号",
   name: "日経エンタテインメント！ 2025年10月号",
