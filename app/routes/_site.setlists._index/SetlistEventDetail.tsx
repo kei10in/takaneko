@@ -29,7 +29,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
             <p className="text-sm text-zinc-500">
               {displayDateWithDayOfWeek(NaiveDate.parseUnsafe(event.date))}
             </p>
-            <h2 className="line-clamp-2 h-14 text-lg leading-7 font-semibold" title={event.title}>
+            <h2 className="line-clamp-2 text-lg leading-tight font-semibold" title={event.title}>
               {event.title}
             </h2>
             {event.location != undefined && (

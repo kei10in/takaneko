@@ -1,6 +1,6 @@
 import type { EmblaEventCallbackType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface SlideRange {
   first: number;
@@ -68,8 +68,5 @@ export const useSetlistCarousel = (initialSlideIndex: number, slideCount: number
     };
   }, [carouselApi, slideCount]);
 
-  const scrollPrev = useCallback(() => carouselApi?.goToPrev(), [carouselApi]);
-  const scrollNext = useCallback(() => carouselApi?.goToNext(), [carouselApi]);
-
-  return { carouselRef, selectedSlideIndex, renderedSlideRange, scrollPrev, scrollNext };
+  return { carouselRef, selectedSlideIndex, renderedSlideRange };
 };

@@ -46,8 +46,29 @@ class TestIntersectionObserver implements IntersectionObserver {
 const showSlides = (...indexes: number[]) =>
   act(() => {
     TestIntersectionObserver.instances
-      .filter((observer) => observer.targets[0]?.classList.contains("flex-[0_0_100%]"))
+      .filter((observer) => observer.targets[0]?.classList.contains("basis-full"))
       .forEach((observer) => observer.show(indexes));
+  });
+
+const drag = (target: Element, direction: "next" | "previous" = "next") => {
+  const startX = direction == "next" ? 500 : 100;
+  const endX = direction == "next" ? 100 : 500;
+  fireEvent.mouseDown(target, { clientX: startX, clientY: 300, button: 0, buttons: 1 });
+  fireEvent.mouseMove(document, { clientX: 300, clientY: 300, buttons: 1 });
+  fireEvent.mouseMove(document, { clientX: endX, clientY: 300, buttons: 1 });
+  fireEvent.mouseUp(document, { clientX: endX, clientY: 300, button: 0 });
+};
+const swipeDialog = (direction: "next" | "previous" = "next") => {
+  const target = screen.getByRole("link", { name: /イベント詳細/u });
+  drag(target, direction);
+  // ブラウザがドラッグ後に発火するクリックを補い、Emblaのクリック抑止を消化する。
+  fireEvent.click(target);
+};
+
+const getSelectedEventHeading = (title: string) =>
+  within(screen.getByRole("dialog", { name: "セットリスト" })).getByRole("heading", {
+    name: title,
+    level: 2,
   });
 
 beforeEach(() => {
@@ -65,7 +86,7 @@ beforeEach(() => {
   vi.spyOn(HTMLElement.prototype, "offsetLeft", "get").mockImplementation(function (
     this: HTMLElement,
   ) {
-    if (!this.classList.contains("flex-[0_0_100%]") || this.parentElement == null) {
+    if (!this.classList.contains("basis-full") || this.parentElement == null) {
       return 0;
     }
     return Array.from(this.parentElement.children).indexOf(this) * 648;
@@ -121,7 +142,8 @@ describe("セットリストのモーダル", () => {
     const card = screen.getByRole("button", { name: /ライブ A/u });
     card.focus();
     fireEvent.click(card);
-    const dialog = await screen.findByRole("dialog", { name: "ライブ A" });
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
     expect(within(dialog).getAllByText("テスト会場")[0]).toBeTruthy();
     expect(
       within(dialog)
@@ -129,32 +151,38 @@ describe("セットリストのモーダル", () => {
         .getAttribute("href"),
     ).toBe("/events/2026-09-27_test0");
     expect(within(dialog).getByText("セットリスト未登録")).toBeTruthy();
+    expect(within(dialog).queryByRole("button", { name: "前のライブ" })).toBeNull();
+    expect(within(dialog).queryByRole("button", { name: "次のライブ" })).toBeNull();
+    expect(within(dialog).queryByText("1 / 2")).toBeNull();
     expect(within(dialog).getAllByText("該当")[0]).toBeTruthy();
     fireEvent.click(within(dialog).getByRole("button", { name: "閉じる" }));
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
     await waitFor(() => expect(document.activeElement).toBe(card));
   });
 
-  it("一覧の端では前後への移動を無効にする", async () => {
+  it("一覧の端を越える方向へスワイプしても移動しない", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
-    await screen.findByRole("dialog");
-    expect(screen.getByRole("button", { name: "前のライブ" }).hasAttribute("disabled")).toBe(true);
-    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
-    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
-    expect(screen.getByRole("button", { name: "次のライブ" }).hasAttribute("disabled")).toBe(true);
+    await screen.findByRole("dialog", { name: "セットリスト" });
+    swipeDialog("previous");
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
   });
 
   it("ライブを切り替えて閉じても、次に選んだカードのライブから開く", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
-    await screen.findByRole("dialog", { name: "ライブ A" });
-    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
-    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+    await screen.findByRole("dialog", { name: "セットリスト" });
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
-    expect(await screen.findByRole("dialog", { name: "ライブ A" })).toBeTruthy();
+    await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
   });
 
   it("表示領域の前後8件だけを描画し、範囲外の詳細は破棄して戻ると再描画する", async () => {
@@ -212,10 +240,10 @@ describe("セットリストのモーダル", () => {
     }));
     await setup(items);
     fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
-    const details = within(await screen.findByRole("dialog", { name: "ライブ 20" }));
+    const details = within(await screen.findByRole("dialog", { name: "セットリスト" }));
     showSlides();
-    fireEvent.click(details.getByRole("button", { name: "次のライブ" }));
-    expect(screen.getByRole("dialog", { name: "ライブ 21" })).toBeTruthy();
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ 21")).toBeTruthy();
     expect(details.getByText("会場 12")).toBeTruthy();
     expect(details.queryByText("会場 29")).toBeNull();
     showSlides(21);
@@ -235,10 +263,10 @@ describe("セットリストのモーダル", () => {
     const details = within(await screen.findByRole("dialog"));
     Array.from({ length: 121 }, (_, index) => index).forEach((index) => {
       if (index > 0) {
-        fireEvent.click(details.getByRole("button", { name: "次のライブ" }));
+        swipeDialog();
       }
       showSlides(index);
-      expect(screen.getByRole("dialog", { name: `ライブ ${index}` })).toBeTruthy();
+      expect(getSelectedEventHeading(`ライブ ${index}`)).toBeTruthy();
       expect(details.getByText(`会場 ${index}`)).toBeTruthy();
       expect(details.getAllByText(/^会場 /u).length).toBeLessThanOrEqual(17);
       if (index > 8) {
@@ -254,36 +282,28 @@ describe("セットリストのモーダル", () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
     const dialog = await screen.findByRole("dialog");
-    const target = within(dialog).getByText("セットリスト未登録");
-    fireEvent.mouseDown(target, { clientX: 500, clientY: 300, button: 0, buttons: 1 });
-    fireEvent.mouseMove(document, { clientX: 400, clientY: 300, buttons: 1 });
-    fireEvent.mouseMove(document, { clientX: 100, clientY: 300, buttons: 1 });
-    fireEvent.mouseUp(document, { clientX: 100, clientY: 300, button: 0 });
-    await waitFor(() => expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy());
+    drag(within(dialog).getByText("セットリスト未登録"));
+    await waitFor(() => expect(getSelectedEventHeading("ライブ B")).toBeTruthy());
   });
 
-  it("ボタン内のアイコンからドラッグしても移動せず、クリックでは移動する", async () => {
+  it("閉じるボタン内のアイコンからドラッグしても移動せず、クリックで閉じる", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
-    const dialog = await screen.findByRole("dialog", { name: "ライブ A" });
-    const nextButton = within(dialog).getByRole("button", { name: "次のライブ" });
-    const target = nextButton.querySelector("svg") ?? nextButton;
-    fireEvent.mouseDown(target, { clientX: 500, clientY: 300, button: 0, buttons: 1 });
-    fireEvent.mouseMove(document, { clientX: 400, clientY: 300, buttons: 1 });
-    fireEvent.mouseMove(document, { clientX: 100, clientY: 300, buttons: 1 });
-    fireEvent.mouseUp(document, { clientX: 100, clientY: 300, button: 0 });
-    expect(screen.getByRole("dialog", { name: "ライブ A" })).toBeTruthy();
-    fireEvent.click(nextButton);
-    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const closeButton = within(dialog).getByRole("button", { name: "閉じる" });
+    drag(closeButton.querySelector("svg") ?? closeButton);
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    fireEvent.click(closeButton);
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
   });
 
-  it("前後ボタンでも移動できる", async () => {
+  it("左右のスワイプで前後のライブへ移動できる", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ B/u }));
     await screen.findByRole("dialog");
-    fireEvent.click(screen.getByRole("button", { name: "前のライブ" }));
-    expect(screen.getByRole("dialog", { name: "ライブ A" })).toBeTruthy();
-    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
-    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+    swipeDialog("previous");
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
   });
 });
