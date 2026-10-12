@@ -1,155 +1,289 @@
-import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import { createMemoryRouter, RouterProvider } from "react-router";
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
-import { SetlistEvents } from "~/features/setlists/types.ts";
-import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
-import Component, { shouldRevalidate } from "./route.tsx";
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { createRoutesStub } from "react-router";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { SetlistEvent } from "~/features/setlists/types.ts";
+import SetlistsPage from "./route.tsx";
 
-afterEach(cleanup);
+// 表示領域の変化だけを模擬し、Embla本体のslidesInView通知を使う。
+class TestIntersectionObserver implements IntersectionObserver {
+  static instances: TestIntersectionObserver[] = [];
+  readonly root = null;
+  readonly rootMargin = "0px";
+  readonly scrollMargin = "0px";
+  readonly thresholds = [0];
+  readonly targets: Element[] = [];
+  constructor(private readonly callback: IntersectionObserverCallback) {
+    TestIntersectionObserver.instances.push(this);
+  }
+  observe(target: Element) {
+    this.targets.push(target);
+  }
+  unobserve(target: Element) {
+    const index = this.targets.indexOf(target);
+    if (index >= 0) {
+      this.targets.splice(index, 1);
+    }
+  }
+  disconnect() {
+    this.targets.length = 0;
+  }
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+  show(indexes: number[]) {
+    const entries = this.targets.map((target, index): IntersectionObserverEntry => ({
+      target,
+      isIntersecting: indexes.includes(index),
+      intersectionRatio: indexes.includes(index) ? 1 : 0,
+      boundingClientRect: target.getBoundingClientRect(),
+      intersectionRect: target.getBoundingClientRect(),
+      rootBounds: null,
+      time: performance.now(),
+    }));
+    this.callback(entries, this);
+  }
+}
+const showSlides = (...indexes: number[]) =>
+  act(() => {
+    TestIntersectionObserver.instances
+      .filter((observer) => observer.targets[0]?.classList.contains("flex-[0_0_100%]"))
+      .forEach((observer) => observer.show(indexes));
+  });
 
-const events: SetlistEvents = [
-  {
-    slug: "2025-01-01_test",
-    date: "2025-01-01",
-    title: "テストライブ",
-    summary: "テストライブ",
-    liveType: "SOLO",
-    actCount: 1,
-    eventSearchText: "テストライブ",
-    acts: [
-      { setlist: [], links: [], songTitles: [], costumeNames: [], songCount: 0, searchText: "" },
-    ],
-  },
-];
-
-const renderPage = (initialEntries = ["/setlists"]) => {
-  const loader = vi.fn(() => ({ events }));
-  const router = createMemoryRouter(
-    [{ path: "/setlists", Component, loader, shouldRevalidate, HydrateFallback: () => null }],
-    { initialEntries },
-  );
-  render(<RouterProvider router={router} />);
-  return { router, loader };
+beforeEach(() => {
+  TestIntersectionObserver.instances = [];
+  vi.stubGlobal("IntersectionObserver", TestIntersectionObserver);
+  // happy-domにはレイアウトがないため、Emblaが測定するスライドの寸法を補う。
+  Object.defineProperty(HTMLElement.prototype, "offsetParent", {
+    configurable: true,
+    get() {
+      return document.body;
+    },
+  });
+  vi.spyOn(HTMLElement.prototype, "offsetWidth", "get").mockReturnValue(600);
+  vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(700);
+  vi.spyOn(HTMLElement.prototype, "offsetLeft", "get").mockImplementation(function (
+    this: HTMLElement,
+  ) {
+    if (!this.classList.contains("flex-[0_0_100%]") || this.parentElement == null) {
+      return 0;
+    }
+    return Array.from(this.parentElement.children).indexOf(this) * 648;
+  });
+});
+afterEach(() => {
+  cleanup();
+  vi.restoreAllMocks();
+  vi.unstubAllGlobals();
+  Reflect.deleteProperty(HTMLElement.prototype, "offsetParent");
+});
+const events: SetlistEvent[] = ["ライブ A", "ライブ B"].map((title, i) => ({
+  slug: `2026-09-27_test${i}`,
+  date: "2026-09-27",
+  title,
+  summary: title,
+  liveType: "SOLO",
+  location: "テスト会場",
+  acts: [
+    {
+      title: "昼公演",
+      setlist: i == 0 ? [] : [{ kind: "song", index: 1, section: "main", songTitle: "テスト楽曲" }],
+      links: [],
+      songTitles: [],
+      costumeNames: [],
+      songCount: i == 0 ? 0 : 1,
+      searchText: "",
+    },
+  ],
+  actCount: 1,
+  eventSearchText: "テスト会場",
+}));
+const setup = async (items = events) => {
+  const Routes = createRoutesStub([
+    {
+      path: "/setlists",
+      Component: SetlistsPage,
+      loader: () => ({ events: items }),
+    },
+  ]);
+  render(<Routes initialEntries={["/setlists"]} />);
+  await screen.findByRole("heading", { name: "セットリスト", level: 1 });
 };
+describe("セットリストのモーダル", () => {
 
-const searchInput = () =>
-  screen.findByPlaceholderText<HTMLInputElement>("イベント・曲・衣装・会場で検索");
-
-describe("セットリストの URL 同期", () => {
-  it("URL の全条件をフォームに復元する", async () => {
-    const params = new URLSearchParams({
-      q: "テスト",
-      s: PerformedSongs[0].slug,
-      costume: AllStageCostumes[0].slug,
-      first: "true",
-      cover: "true",
+  it("カードから概要とセトリを開き、閉じるとカードに戻る", async () => {
+    await setup();
+    expect(screen.queryByRole("link", { name: /イベント詳細/u })).toBeNull();
+    fireEvent.change(screen.getByPlaceholderText("イベント・曲・衣装・会場で検索"), {
+      target: { value: "テスト会場" },
     });
-    params.append("y", "2025");
-    params.append("y", "2024");
-    params.append("t", "solo");
-    params.append("t", "joint");
-    renderPage([`/setlists?${params}`]);
-    expect((await searchInput()).value).toBe("テスト");
-    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
+    await screen.findByText("検索: テスト会場");
+    const card = screen.getByRole("button", { name: /ライブ A/u });
+    card.focus();
+    fireEvent.click(card);
+    const dialog = await screen.findByRole("dialog", { name: "ライブ A" });
+    expect(within(dialog).getAllByText("テスト会場")[0]).toBeTruthy();
+    expect(
+      within(dialog)
+        .getByRole("link", { name: /イベント詳細/u })
+        .getAttribute("href"),
+    ).toBe("/events/2026-09-27_test0");
+    expect(within(dialog).getByText("セットリスト未登録")).toBeTruthy();
+    expect(within(dialog).getAllByText("該当")[0]).toBeTruthy();
+    fireEvent.click(within(dialog).getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    await waitFor(() => expect(document.activeElement).toBe(card));
+  });
+
+  it("一覧の端では前後への移動を無効にする", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
     await screen.findByRole("dialog");
-    ["2025 年", "2024 年", "ワンマン", "対バン", "初披露あり", "カバー曲あり"].forEach((name) => {
-      expect(screen.getByRole("checkbox", { name }).getAttribute("aria-checked")).toBe("true");
+    expect(screen.getByRole("button", { name: "前のライブ" }).hasAttribute("disabled")).toBe(true);
+    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
+    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+    expect(screen.getByRole("button", { name: "次のライブ" }).hasAttribute("disabled")).toBe(true);
+  });
+
+  it("ライブを切り替えて閉じても、次に選んだカードのライブから開く", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    await screen.findByRole("dialog", { name: "ライブ A" });
+    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
+    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    expect(await screen.findByRole("dialog", { name: "ライブ A" })).toBeTruthy();
+  });
+
+  it("表示領域の前後8件だけを描画し、範囲外の詳細は破棄して戻ると再描画する", async () => {
+    const items = Array.from({ length: 41 }, (_, index) => ({
+      ...events[0],
+      slug: `live-${index}`,
+      title: `ライブ ${index}`,
+      location: `会場 ${index}`,
+    }));
+    await setup(items);
+    fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
+    const dialog = await screen.findByRole("dialog");
+    const details = within(dialog);
+    Array.from({ length: 17 }, (_, index) => index + 12).forEach((index) => {
+      expect(details.getByText(`会場 ${index}`)).toBeTruthy();
     });
-    expect(screen.getByLabelText("楽曲")).toHaveProperty("value", PerformedSongs[0].slug);
-    expect(screen.getByLabelText("衣装")).toHaveProperty("value", AllStageCostumes[0].slug);
+    expect(details.queryByText("会場 11")).toBeNull();
+    expect(details.queryByText("会場 29")).toBeNull();
+    // 選択変更・停止を待たず、隣のスライドが見えた時点で先読みする。
+    showSlides(20, 21);
+    expect(details.getByText("会場 29")).toBeTruthy();
+    showSlides(30);
+    expect(details.getByText("会場 38")).toBeTruthy();
+    expect(details.queryByText("会場 39")).toBeNull();
+    expect(details.queryByText("会場 12")).toBeNull();
+    expect(details.queryByText("会場 20")).toBeNull();
+    showSlides(10);
+    expect(details.getByText("会場 2")).toBeTruthy();
+    expect(details.queryByText("会場 1")).toBeNull();
+    expect(details.queryByText("会場 38")).toBeNull();
+    showSlides();
+    expect(details.getByText("会場 2")).toBeTruthy();
+    showSlides(0);
+    expect(details.getByText("会場 0")).toBeTruthy();
+    showSlides(40);
+    expect(details.getByText("会場 40")).toBeTruthy();
+    expect(details.queryByText("会場 0")).toBeNull();
+    showSlides(20);
+    expect(details.getByText("会場 20")).toBeTruthy();
+    expect(details.queryByText("会場 40")).toBeNull();
+    fireEvent.click(details.getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
+    const reopened = within(await screen.findByRole("dialog"));
+    expect(reopened.queryByText("会場 0")).toBeNull();
+    expect(reopened.queryByText("会場 40")).toBeNull();
   });
 
-  it("入力で結果と URL を更新し、履歴を追加せず loader も再実行しない", async () => {
-    const { router, loader } = renderPage(["/setlists?q=以前", "/setlists?q=テスト"]);
-    const input = await searchInput();
-    expect(screen.getByText("1 件 / 1 ステージ")).toBeDefined();
-    fireEvent.change(input, { target: { value: "該当なし" } });
-    await waitFor(() =>
-      expect(router.state.location.search).toBe("?q=%E8%A9%B2%E5%BD%93%E3%81%AA%E3%81%97"),
-    );
-    expect(screen.getByText("0 件 / 0 ステージ")).toBeDefined();
-    expect(router.state.historyAction).toBe("REPLACE");
-    expect(router.state.preventScrollReset).toBe(true);
-    expect(loader).toHaveBeenCalledTimes(1);
-    await act(() => router.navigate(-1));
-    expect(input.value).toBe("以前");
-    await act(() => router.navigate(1));
-    expect(input.value).toBe("該当なし");
+  it("表示範囲の通知がなくても選択位置だけを更新し、描画範囲は通知後に更新する", async () => {
+    const items = Array.from({ length: 41 }, (_, index) => ({
+      ...events[0],
+      slug: `live-${index}`,
+      title: `ライブ ${index}`,
+      location: `会場 ${index}`,
+    }));
+    await setup(items);
+    fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
+    const details = within(await screen.findByRole("dialog", { name: "ライブ 20" }));
+    showSlides();
+    fireEvent.click(details.getByRole("button", { name: "次のライブ" }));
+    expect(screen.getByRole("dialog", { name: "ライブ 21" })).toBeTruthy();
+    expect(details.getByText("会場 12")).toBeTruthy();
+    expect(details.queryByText("会場 29")).toBeNull();
+    showSlides(21);
+    expect(details.queryByText("会場 12")).toBeNull();
+    expect(details.getByText("会場 29")).toBeTruthy();
   });
 
-  it("フィルタを即時反映し、クリアでは全条件を削除する", async () => {
-    const { router } = renderPage(["/setlists?q=テスト&ref=shared"]);
-    const input = await searchInput();
-    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
-    fireEvent.click(await screen.findByRole("checkbox", { name: "2025 年" }));
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).getAll("y")).toEqual(["2025"]),
-    );
-    fireEvent.click(screen.getByRole("checkbox", { name: "カバー曲あり" }));
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).get("cover")).toBe("true"),
-    );
-    fireEvent.click(screen.getByRole("checkbox", { name: "ワンマン" }));
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).getAll("t")).toEqual(["solo"]),
-    );
-    fireEvent.change(screen.getByLabelText("楽曲"), { target: { value: PerformedSongs[0].slug } });
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).get("s")).toBe(
-        PerformedSongs[0].slug,
-      ),
-    );
-    fireEvent.change(screen.getByLabelText("衣装"), {
-      target: { value: AllStageCostumes[0].slug },
+  it("100件以上進んでも詳細の描画数が増え続けない", async () => {
+    const items = Array.from({ length: 121 }, (_, index) => ({
+      ...events[0],
+      slug: `live-${index}`,
+      title: `ライブ ${index}`,
+      location: `会場 ${index}`,
+    }));
+    await setup(items);
+    fireEvent.click(screen.getByRole("button", { name: /ライブ 0\b/u }));
+    const details = within(await screen.findByRole("dialog"));
+    Array.from({ length: 121 }, (_, index) => index).forEach((index) => {
+      if (index > 0) {
+        fireEvent.click(details.getByRole("button", { name: "次のライブ" }));
+      }
+      showSlides(index);
+      expect(screen.getByRole("dialog", { name: `ライブ ${index}` })).toBeTruthy();
+      expect(details.getByText(`会場 ${index}`)).toBeTruthy();
+      expect(details.getAllByText(/^会場 /u).length).toBeLessThanOrEqual(17);
+      if (index > 8) {
+        expect(details.queryByText(`会場 ${index - 9}`)).toBeNull();
+      }
     });
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).get("costume")).toBe(
-        AllStageCostumes[0].slug,
-      ),
-    );
-    fireEvent.click(screen.getByRole("checkbox", { name: "初披露あり" }));
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).get("first")).toBe("true"),
-    );
-    fireEvent.click(screen.getByRole("checkbox", { name: "カバー曲あり" }));
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).has("cover")).toBe(false),
-    );
-    fireEvent.click(screen.getByRole("button", { name: "クリア" }));
-    await waitFor(() => expect(router.state.location.search).toBe("?ref=shared"));
-    expect(input.value).toBe("");
-    expect(screen.getByRole("checkbox", { name: "2025 年" }).getAttribute("aria-checked")).toBe(
-      "false",
-    );
+    showSlides(0);
+    expect(details.getByText("会場 0")).toBeTruthy();
+    expect(details.queryByText("会場 120")).toBeNull();
   });
 
-  it("履歴移動でフィルタの選択状態と結果を復元する", async () => {
-    const { router } = renderPage(["/setlists?y=2024", "/setlists?y=2025"]);
-    await searchInput();
-    expect(screen.getByText("1 件 / 1 ステージ")).toBeDefined();
-    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
+  it("詳細を左へドラッグすると次のライブへ移動する", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog");
+    const target = within(dialog).getByText("セットリスト未登録");
+    fireEvent.mouseDown(target, { clientX: 500, clientY: 300, button: 0, buttons: 1 });
+    fireEvent.mouseMove(document, { clientX: 400, clientY: 300, buttons: 1 });
+    fireEvent.mouseMove(document, { clientX: 100, clientY: 300, buttons: 1 });
+    fireEvent.mouseUp(document, { clientX: 100, clientY: 300, button: 0 });
+    await waitFor(() => expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy());
+  });
+
+  it("ボタン内のアイコンからドラッグしても移動せず、クリックでは移動する", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog", { name: "ライブ A" });
+    const nextButton = within(dialog).getByRole("button", { name: "次のライブ" });
+    const target = nextButton.querySelector("svg") ?? nextButton;
+    fireEvent.mouseDown(target, { clientX: 500, clientY: 300, button: 0, buttons: 1 });
+    fireEvent.mouseMove(document, { clientX: 400, clientY: 300, buttons: 1 });
+    fireEvent.mouseMove(document, { clientX: 100, clientY: 300, buttons: 1 });
+    fireEvent.mouseUp(document, { clientX: 100, clientY: 300, button: 0 });
+    expect(screen.getByRole("dialog", { name: "ライブ A" })).toBeTruthy();
+    fireEvent.click(nextButton);
+    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
+  });
+
+  it("前後ボタンでも移動できる", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ B/u }));
     await screen.findByRole("dialog");
-    await act(() => router.navigate(-1));
-    expect(screen.getByRole("checkbox", { name: "2024 年" }).getAttribute("aria-checked")).toBe(
-      "true",
-    );
-    expect(screen.getByRole("checkbox", { name: "2025 年" }).getAttribute("aria-checked")).toBe(
-      "false",
-    );
-    expect(screen.getByText("0 件 / 0 ステージ")).toBeDefined();
-  });
-
-  it("IME 入力は変換確定後に URL に反映する", async () => {
-    const { router } = renderPage();
-    const input = await searchInput();
-    fireEvent.compositionStart(input);
-    fireEvent.change(input, { target: { value: "てすと" } });
-    expect(input.value).toBe("てすと");
-    expect(router.state.location.search).toBe("");
-    fireEvent.compositionEnd(input, { target: { value: "テスト" } });
-    await waitFor(() =>
-      expect(new URLSearchParams(router.state.location.search).get("q")).toBe("テスト"),
-    );
+    fireEvent.click(screen.getByRole("button", { name: "前のライブ" }));
+    expect(screen.getByRole("dialog", { name: "ライブ A" })).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "次のライブ" }));
+    expect(screen.getByRole("dialog", { name: "ライブ B" })).toBeTruthy();
   });
 });

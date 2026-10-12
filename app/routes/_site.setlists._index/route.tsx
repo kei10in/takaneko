@@ -36,6 +36,7 @@ import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { SetlistEventCard } from "./SetlistEventCard.tsx";
+import { SetlistEventDialog } from "./SetlistEventDialog.tsx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -86,6 +87,7 @@ export default function Component() {
   const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
+  const [openedSlideIndex, setOpenedSlideIndex] = useState<number>();
   // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
   if (previousQuery !== filters.q) {
     setPreviousQuery(filters.q);
@@ -276,22 +278,26 @@ export default function Component() {
           </div>
         ) : (
           <ul className="mt-4 space-y-4">
-            {results.map(({ event, matchedActIndexes }) => (
+            {results.map(({ event }, index) => (
               <li key={event.slug}>
-                <SetlistEventCard
-                  event={event}
-                  matchedActIndexes={matchedActIndexes}
-                  showMatchedAct={
-                    searchFilters.q != "" ||
-                    searchFilters.song != "" ||
-                    searchFilters.costume != "" ||
-                    searchFilters.isFirstPerformance ||
-                    searchFilters.isCover
-                  }
-                />
+                <SetlistEventCard event={event} onClick={() => setOpenedSlideIndex(index)} />
               </li>
             ))}
           </ul>
+        )}
+        {openedSlideIndex != undefined && results.length > 0 && (
+          <SetlistEventDialog
+            results={results}
+            initialSlideIndex={openedSlideIndex}
+            onClose={() => setOpenedSlideIndex(undefined)}
+            showMatchedAct={
+              searchFilters.q != "" ||
+              searchFilters.song != "" ||
+              searchFilters.costume != "" ||
+              searchFilters.isFirstPerformance ||
+              searchFilters.isCover
+            }
+          />
         )}
       </section>
     </div>
