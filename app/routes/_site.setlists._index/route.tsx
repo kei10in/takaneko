@@ -87,7 +87,7 @@ export default function Component() {
   const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
-  const [openedSlideIndex, setOpenedSlideIndex] = useState<number>();
+  const [setlistDialog, setSetlistDialog] = useState({ slideIndex: 0, open: false });
   // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
   if (previousQuery !== filters.q) {
     setPreviousQuery(filters.q);
@@ -280,16 +280,20 @@ export default function Component() {
           <ul className="mt-4 space-y-4">
             {results.map(({ event }, index) => (
               <li key={event.slug}>
-                <SetlistEventCard event={event} onClick={() => setOpenedSlideIndex(index)} />
+                <SetlistEventCard
+                  event={event}
+                  onClick={() => setSetlistDialog({ slideIndex: index, open: true })}
+                />
               </li>
             ))}
           </ul>
         )}
-        {openedSlideIndex != undefined && results.length > 0 && (
+        {results.length > 0 && (
           <SetlistEventDialog
+            open={setlistDialog.open}
             results={results}
-            initialSlideIndex={openedSlideIndex}
-            onClose={() => setOpenedSlideIndex(undefined)}
+            initialSlideIndex={setlistDialog.slideIndex}
+            onClose={() => setSetlistDialog({ ...setlistDialog, open: false })}
             showMatchedAct={
               searchFilters.q != "" ||
               searchFilters.song != "" ||

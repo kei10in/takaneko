@@ -138,6 +138,7 @@ describe("セットリストのモーダル", () => {
       events[1],
     ]);
     expect(screen.queryByRole("link", { name: /イベント詳細/u })).toBeNull();
+    expect(screen.queryByRole("dialog", { name: "セットリスト" })).toBeNull();
     fireEvent.change(screen.getByPlaceholderText("イベント・曲・衣装・会場で検索"), {
       target: { value: "テスト会場" },
     });
