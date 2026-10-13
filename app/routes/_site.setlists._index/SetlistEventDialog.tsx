@@ -1,5 +1,6 @@
-import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { dialogBackdropStyle } from "~/components/styles.ts";
+import { XMarkButton } from "~/components/XMarkButton.tsx";
 import { SetlistSearchResult } from "~/features/setlists/types.ts";
 import { SetlistEventDetail } from "./SetlistEventDetail.tsx";
 import { useSetlistCarousel } from "./useSetlistCarousel.ts";
@@ -23,12 +24,24 @@ export const SetlistEventDialog = ({
   );
 
   return (
-    <Dialog open onClose={onClose} aria-label="セットリスト" className="relative z-50">
+    <Dialog open onClose={onClose} className="relative z-50">
       <DialogBackdrop className={dialogBackdropStyle()} />
-      <div className="fixed inset-0 flex items-center justify-center overflow-hidden p-2 sm:p-6">
-        <DialogPanel className="h-[min(90dvh,64rem)] w-[calc(100%-3rem)] max-w-2xl sm:w-[calc(100%-6rem)] lg:max-w-4xl">
-          <div ref={carouselRef} className="h-full w-full">
-            <div className="flex h-full touch-pan-y touch-pinch-zoom gap-x-4 sm:gap-x-8">
+      <div className="fixed inset-0 flex justify-center overflow-hidden">
+        <DialogPanel className="flex h-full w-full flex-col bg-white lg:max-w-5xl">
+          <fieldset
+            aria-label="カルーセルの操作"
+            className="flex min-w-0 flex-none items-center border-0 p-0"
+          >
+            <div className="flex min-w-0 flex-1 items-center">
+              <div className="flex-none p-1 lg:p-3">
+                <XMarkButton aria-label="閉じる" onClick={onClose} />
+              </div>
+            </div>
+            <DialogTitle className="flex-none text-lg font-bold">セットリスト</DialogTitle>
+            <div className="min-w-0 flex-1" />
+          </fieldset>
+          <div ref={carouselRef} className="min-h-0 w-full flex-1 overflow-hidden">
+            <div className="flex h-full touch-pan-y touch-pinch-zoom gap-x-2 sm:gap-x-8">
               {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
               {results.map((result, index) => (
                 <div
@@ -37,15 +50,11 @@ export const SetlistEventDialog = ({
                 >
                   {index >= renderedSlideRange.first && index <= renderedSlideRange.last && (
                     <div
-                      className="flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-xl"
+                      className="flex h-full flex-col overflow-hidden bg-white"
                       inert={index != selectedSlideIndex}
                       aria-hidden={index != selectedSlideIndex}
                     >
-                      <SetlistEventDetail
-                        result={result}
-                        showMatchedAct={showMatchedAct}
-                        onClose={onClose}
-                      />
+                      <SetlistEventDetail result={result} showMatchedAct={showMatchedAct} />
                     </div>
                   )}
                 </div>

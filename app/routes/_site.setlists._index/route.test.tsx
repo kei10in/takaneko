@@ -133,7 +133,10 @@ const setup = async (items = events) => {
 describe("セットリストのモーダル", () => {
 
   it("カードから概要とセトリを開き、閉じるとカードに戻る", async () => {
-    await setup();
+    await setup([
+      { ...events[0], image: { path: "/events/test.jpg", ref: "https://example.com" } },
+      events[1],
+    ]);
     expect(screen.queryByRole("link", { name: /イベント詳細/u })).toBeNull();
     fireEvent.change(screen.getByPlaceholderText("イベント・曲・衣装・会場で検索"), {
       target: { value: "テスト会場" },
@@ -144,6 +147,7 @@ describe("セットリストのモーダル", () => {
     fireEvent.click(card);
     const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    expect(within(dialog).getByRole("img", { name: "ライブ A" })).toBeTruthy();
     expect(within(dialog).getAllByText("テスト会場")[0]).toBeTruthy();
     expect(
       within(dialog)
@@ -154,7 +158,11 @@ describe("セットリストのモーダル", () => {
     expect(within(dialog).queryByRole("button", { name: "前のライブ" })).toBeNull();
     expect(within(dialog).queryByRole("button", { name: "次のライブ" })).toBeNull();
     expect(within(dialog).queryByText("1 / 2")).toBeNull();
+    expect(within(dialog).queryByText("初披露")).toBeNull();
     expect(within(dialog).getAllByText("該当")[0]).toBeTruthy();
+    expect(within(dialog).queryAllByText("スワイプで移動")).toHaveLength(0);
+    expect(within(dialog).getByRole("heading", { name: "セットリスト", level: 2 })).toBeTruthy();
+    expect(within(dialog).queryByRole("button", { name: "セットリストを閉じる" })).toBeNull();
     fireEvent.click(within(dialog).getByRole("button", { name: "閉じる" }));
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
     await waitFor(() => expect(document.activeElement).toBe(card));
@@ -172,10 +180,16 @@ describe("セットリストのモーダル", () => {
     expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
   });
 
-  it("ライブを切り替えて閉じても、次に選んだカードのライブから開く", async () => {
+  it("スワイプで切り替えて閉じても、次に選んだカードのライブから開く", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
     await screen.findByRole("dialog", { name: "セットリスト" });
+    swipeDialog();
+    expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "次のライブ" })).toBeNull();
+    swipeDialog("previous");
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    expect(screen.queryByRole("button", { name: "前のライブ" })).toBeNull();
     swipeDialog();
     expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
     fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
@@ -297,13 +311,40 @@ describe("セットリストのモーダル", () => {
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
   });
 
-  it("左右のスワイプで前後のライブへ移動できる", async () => {
+  it("操作領域を下へスワイプしても閉じない", async () => {
     await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const controls = within(dialog).getByRole("group", { name: "カルーセルの操作" });
+    const pointer = { pointerId: 1, pointerType: "touch", isPrimary: true, button: 0 };
+    fireEvent.pointerDown(controls, { ...pointer, clientX: 100, clientY: 20 });
+    fireEvent.pointerMove(controls, { ...pointer, clientX: 100, clientY: 120 });
+    fireEvent.pointerUp(controls, { ...pointer, clientX: 100, clientY: 120 });
+    expect(screen.getByRole("dialog", { name: "セットリスト" })).toBe(dialog);
+    expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+  });
+
+  it("左右のスワイプで前後のライブへ移動できる", async () => {
+    await setup([
+      events[0],
+      {
+        ...events[1],
+        acts: events[1].acts.map((stage) => ({
+          ...stage,
+          setlist: stage.setlist.map((segment) =>
+            segment.kind == "song" ? { ...segment, isFirstPerformance: true } : segment,
+          ),
+        })),
+      },
+    ]);
     fireEvent.click(screen.getByRole("button", { name: /ライブ B/u }));
-    await screen.findByRole("dialog");
+    const dialog = await screen.findByRole("dialog");
+    // 概要と楽曲の両方に初披露を表示する。
+    expect(within(dialog).getAllByText("初披露")).toHaveLength(2);
     swipeDialog("previous");
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
     swipeDialog();
     expect(getSelectedEventHeading("ライブ B")).toBeTruthy();
+    expect(within(dialog).getAllByText("初披露")).toHaveLength(2);
   });
 });
