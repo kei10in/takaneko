@@ -84,7 +84,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
 
       <div
         key={event.slug}
-        className="min-h-0 flex-1 space-y-7 overflow-y-auto overscroll-contain px-2 py-4 sm:py-6 lg:px-4"
+        className="min-h-0 flex-1 space-y-7 overflow-y-auto overscroll-contain px-2 py-4 inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)] inset-shadow-black/5 sm:py-6 lg:px-4"
       >
         {event.acts.map((act, index) => (
           <section key={index} className="space-y-2">
