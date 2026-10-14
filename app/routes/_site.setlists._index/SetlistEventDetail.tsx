@@ -1,3 +1,4 @@
+import { clsx } from "clsx";
 import { memo } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import { HiChevronRight, HiOutlineCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
@@ -26,8 +27,8 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
   );
   return (
     <>
-      <div className="h-44 flex-none border-b border-zinc-100">
-        <div className="flex h-full items-stretch gap-2 p-2 lg:p-4">
+      <div className="h-48 flex-none border-b border-zinc-100">
+        <div className="flex h-full items-stretch gap-2 p-4">
           <div className="relative min-h-24 w-24 min-w-0 flex-none overflow-hidden rounded-2xl">
             {event.image != undefined ? (
               <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
@@ -79,7 +80,10 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
 
       <div
         key={event.slug}
-        className="min-h-0 flex-1 space-y-7 overflow-y-auto overscroll-contain px-2 py-4 inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)] inset-shadow-black/5 sm:py-6 lg:px-4"
+        className={clsx(
+          "min-h-0 flex-1 space-y-7 overflow-y-auto overscroll-contain p-4",
+          "inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)] inset-shadow-black/5",
+        )}
       >
         {event.acts.map((act, index) => (
           <section key={index} className="space-y-2">

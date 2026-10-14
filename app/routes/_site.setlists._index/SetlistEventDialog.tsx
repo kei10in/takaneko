@@ -54,7 +54,7 @@ const SetlistEventDialogContent = ({
           <div className="min-w-0 flex-1" />
         </fieldset>
         <div ref={carouselRef} className="min-h-0 w-full flex-1 overflow-hidden">
-          <div className="flex h-full touch-pan-y touch-pinch-zoom gap-x-2 sm:gap-x-8">
+          <div className="flex h-full touch-pan-y touch-pinch-zoom">
             {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
             {results.map((result, index) => (
               <div key={result.event.slug} className="relative h-full min-w-0 flex-none basis-full">
