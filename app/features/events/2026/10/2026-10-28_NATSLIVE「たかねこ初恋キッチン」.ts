@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
-  summary: "NATSLIVE「たかねこ初恋キッチン。#10」",
+  summary: "NATSLIVE「たかねこ初恋キッチン。#10 初恋豚キムチ。」",
   category: "VARIETY",
   liveType: undefined,
   date: "2026-10-28",
@@ -21,10 +21,10 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  ticket: "",
+  ticket: "https://fortune-cookie.natslive.jp/lotteries/jrjrz3/entry_sessions/new",
   streamings: {
     text: "NATSLIVE",
-    url: "",
+    url: "https://natslive.jp/episodes/18194",
   },
   goods: {
     time: undefined,
@@ -36,7 +36,7 @@ export const meta: EventMetaDescriptor = {
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-10-10",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
@@ -58,6 +58,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [一般抽選の告知 - 公式 X](https://x.com/takanenofficial/status/2109904468892668319)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2108807240564273532)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2108799689651056812)
 `;
