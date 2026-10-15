@@ -21,5 +21,16 @@ export const 我武者羅: SongMetaDescriptor = {
   coverArt: "",
 
   officialSite: "",
-  youtube: [],
+  youtube: [
+    {
+      text: "Official MV",
+      videoId: "https://www.youtube.com/watch?v=iw557YNs6g0",
+      publishedAt: "2021-10-09",
+    },
+    {
+      text: "Off Vocal",
+      videoId: "https://www.youtube.com/watch?v=tQVvfLlG7Rk",
+      publishedAt: "2021-10-12",
+    },
+  ],
 };
