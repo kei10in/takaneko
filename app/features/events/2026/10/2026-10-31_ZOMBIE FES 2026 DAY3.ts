@@ -90,13 +90,13 @@ export const meta: EventMetaDescriptor = {
       start: "18:00",
     },
   ],
-  updatedAt: "2026-10-02",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
-  - [イベント サイト](https://zombiefes.jp/)
+  - [映画『ゾンビフェス』出演決定 - 公式 X](https://x.com/takanenofficial/status/2110313680613286126)
   - [チケット一般販売 - 公式 X](https://x.com/takanenofficial/status/2105946505815482759)
   - [ビジュアル公開 - 公式 X](https://x.com/takanenofficial/status/2105946698245894277)
   - [城月菜央 ビジュアル - 公式 X](https://x.com/takanenofficial/status/2105946892437754055)
@@ -109,4 +109,5 @@ export const content = /* md */ `
   - [籾山ひめり ビジュアル - 公式 X](https://x.com/takanenofficial/status/2105948689261002810)
   - [バックダンサー募集 - NEWAGE X](https://x.com/newage_tokyo/status/2104888931800306026)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2087106979621974348)
+  - [イベント サイト](https://zombiefes.jp/)
 `;
