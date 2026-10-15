@@ -58,12 +58,13 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2104866272848859195"],
     },
   ],
-  updatedAt: "2026-09-29",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ライブレポート公開 - BEEEEM ニュース X](https://x.com/BEEEEM_NEWS/status/2109599976112464308)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2104891497250517426)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2104866272848859195)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2104541634189005130)

@@ -3,6 +3,30 @@ import { MediaDetails } from "~/features/media/types.ts";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "j3R6ev0jt5E",
+    title: "MusicPocket VOICES｜TIF2026 アイドルインタビュー｜高嶺のなでしこ",
+    authorName: "Musicpocket",
+    publishedAt: "2026-10-13",
+    mediaUrl: "https://youtu.be/j3R6ev0jt5E",
+    imageUrl: "https://i.ytimg.com/vi/j3R6ev0jt5E/hqdefault.jpg",
+    category: "youtube",
+    presents: ["高嶺のなでしこ2"],
+  },
+  {
+    kind: "ogp",
+    key: "https://beeeem.com/article/beeeefes11-takaneko",
+    title:
+      "高嶺のなでしこ【BEEEEM FES Vol.11 DX SP ライブレポート】気高く、美しく。唯一無二の魅力を体現した30分-BEEEEM",
+    authorName: "BEEEM",
+    publishedAt: "2026-10-12",
+    mediaUrl: "https://beeeem.com/article/beeeefes11-takaneko",
+    imageUrl:
+      "https://imagedelivery.net/GAZ6B7nYxar6-1ZqFjo_3w/aafbb47a-7112-474d-2aa0-1ea4e72e4c00/medium",
+    category: "article",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
+    kind: "youtube",
     key: "dkx0IewiLQ8",
     title:
       "【涙の最終回】「ピン表紙を勝ち取るのは私」次世代スターの頂点が決定！【バトル#12】【Popteen】",

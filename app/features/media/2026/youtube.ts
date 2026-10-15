@@ -2,6 +2,12 @@ import { YouTubeVideoDescriptor } from "../types.ts";
 
 export const YouTube2026 = [
   {
+    videoId: "j3R6ev0jt5E",
+    publishedAt: "2026-10-13",
+    presents: ["高嶺のなでしこ2"],
+    officialTwitter: "https://x.com/takanenofficial/status/2109871759151468903",
+  },
+  {
     videoId: "dkx0IewiLQ8",
     publishedAt: "2026-10-01",
     presents: ["涼海すう"],
