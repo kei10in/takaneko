@@ -50,6 +50,7 @@ import { 東京サニーパーティー } from "./2025/東京サニーパーテ�
 import { 東京サマーセッション } from "./2025/東京サマーセッション.ts";
 import { 病名恋ワズライ } from "./2025/病名恋ワズライ.ts";
 import { 花は誓いを忘れない } from "./2025/花は誓いを忘れない.ts";
+import { かわいいは常識 } from "./2026/かわいいは常識.ts";
 import { ハートブーケ } from "./2026/ハートブーケ.ts";
 import { 僕らの青 } from "./2026/僕らの青.ts";
 import { 我武者羅 } from "./2026/我武者羅.ts";
@@ -60,6 +61,7 @@ import { SongMetaDescriptor } from "./types.ts";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2026
+  かわいいは常識,
   我武者羅,
   約束,
   僕らの青,
