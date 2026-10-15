@@ -19,7 +19,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2109630161604022584",
     },
   ],
-  updatedAt: "2026-10-14",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
@@ -27,6 +27,11 @@ export const content = /* md */ `
 
   - [🎀松本ももな X 1](https://x.com/momonamatsumoto/status/2109298041262067899)
   - [🎀松本ももな X 2](https://x.com/momonamatsumoto/status/2109627602419978362)
+  - [🎀松本ももな X 3](https://x.com/momonamatsumoto/status/2109647364302458941)
+  - [🎀松本ももな X 4](https://x.com/momonamatsumoto/status/2109892042352689167)
+  - [🎀松本ももな X 5](https://x.com/momonamatsumoto/status/2110135036523741448)
+  - [🎀松本ももな Instagram 1](https://www.instagram.com/p/DeY6T4-E4bU/)
+  - [🎀松本ももな Instagram 2](https://www.instagram.com/p/DebRKDxkzcG/)
 
   ## 公式 X
 
