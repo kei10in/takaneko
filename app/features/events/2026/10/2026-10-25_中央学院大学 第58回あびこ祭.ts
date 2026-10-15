@@ -36,12 +36,13 @@ export const meta: EventMetaDescriptor = {
       end: "16:30",
     },
   ],
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アリーナ券配布のお知らせ - 中央学院大学 X](https://x.com/chuogakuinuniv/status/2110580514193313821)
   - [出演時間のお知らせ - 中央学院大学 X](https://x.com/chuogakuinuniv/status/2105568398247895042)
   - [中央学院大学](https://www.cgu.ac.jp/)
   - [あびこ祭（大学祭） | 中央学院大学](https://www.cgu.ac.jp/campuslife/abiko-fes.html)
