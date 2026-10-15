@@ -118,12 +118,13 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-10-15",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ダイジェスト動画公開 - 公式 X](https://x.com/takanenofficial/status/2109977461496910201)
   - [高嶺のなでしこ、結成5年目の新たな一歩！新体制初ワンマンで新衣装＆「我武者羅」を初披露 クリスマスイベント開催も発表 | ACTRESS PRESS](https://actresspress.com/takanenonadeshiko20260913/) - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000966.000025517.html)
   - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000000966.000025517.html)
   - [CROWNED IN BLOOM Digest - 公式 X](https://x.com/takanenofficial/status/2099152371477811365)
