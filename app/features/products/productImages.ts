@@ -181,9 +181,13 @@ import { ワンピース2026_ミニフォト } from "./2026/2026-09-09_ミニフ
 import { CROWNED_IN_BLOOM_ステッカー } from "./2026/2026-09-13_ステッカー「CROWNED IN BLOOM」.ts";
 import { ワンピース2026_生写真 } from "./2026/2026-09-13_生写真「ワンピース 2026」.ts";
 import { CROWNED_IN_BLOOM_目印チャーム } from "./2026/2026-09-13_目印チャーム「CROWNED IN BLOOM」.ts";
+import { ハロウィン2026_ミニフォト } from "./2026/2026-10-18_ミニフォトカード「ハロウィン2026」.ts";
+import { ハロウィン2026_生写真 } from "./2026/2026-10-18_生写真「ハロウィン2026」.ts";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product.ts";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  ハロウィン2026_生写真,
+  ハロウィン2026_ミニフォト,
   CROWNED_IN_BLOOM_ステッカー,
   CROWNED_IN_BLOOM_目印チャーム,
   ワンピース2026_生写真,
@@ -191,6 +195,8 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  ハロウィン2026_生写真,
+  ハロウィン2026_ミニフォト,
   CROWNED_IN_BLOOM_ステッカー,
   CROWNED_IN_BLOOM_目印チャーム,
   ワンピース2026_生写真,
