@@ -90,12 +90,13 @@ export const meta: EventMetaDescriptor = {
       start: "18:00",
     },
   ],
-  updatedAt: "2026-10-15",
+  updatedAt: "2026-10-16",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ゾンビになって会場でお会いしましょう 動画 - ZOMBIE FES 2026 X](https://x.com/ZOMBIEFES2026/status/2111026864873750743)
   - [映画『ゾンビフェス』出演決定 - 公式 X](https://x.com/takanenofficial/status/2110313680613286126)
   - [チケット一般販売 - 公式 X](https://x.com/takanenofficial/status/2105946505815482759)
   - [ビジュアル公開 - 公式 X](https://x.com/takanenofficial/status/2105946698245894277)
