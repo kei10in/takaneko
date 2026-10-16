@@ -1,5 +1,66 @@
 import { SpecialCostume } from "./types.ts";
 
+export const たかねこハロウィン2026囚人衣装 = {
+  kind: "special",
+  name: "たかねこハロウィン2026 囚人衣装",
+  slug: "たかねこハロウィン2026囚人衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2110387578646282385",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2110490159926157436",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2110386081598448072",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2110376433986252992",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2110380532236484979",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_城月菜央_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110370048674242880",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_涼海すう_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110370289334780087",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_橋本桃呼_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110372678876139921",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_葉月紗蘭_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110372865174650930",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_東山恵里沙_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110373220490580456",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_日向端ひな_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110373485788938277",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_松本ももな_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110373906133749765",
+    },
+    {
+      path: "/takaneko/costumes/specials/たかねこハロウィン2026囚人衣装/たかねこハロウィン2026囚人衣装_籾山ひめり_ビジュアル.jpg",
+      ref: "https://x.com/takanenofficial/status/2110374250393841990",
+    },
+  ],
+} satisfies SpecialCostume;
+
 export const 高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ = {
   kind: "special",
   name: "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2026 Tシャツ",
@@ -381,6 +442,7 @@ export const ハロウィンコスプレ = {
 } satisfies SpecialCostume;
 
 export const AllSpecialCostumes = [
+  たかねこハロウィン2026囚人衣装,
   高嶺のなでしこ2024衣装_24時間テレビ2026Tシャツ,
   _2026浴衣,
   アクロトーキョーツーショット撮影会衣装,

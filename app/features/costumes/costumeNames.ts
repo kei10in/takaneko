@@ -120,6 +120,7 @@ export type TShirtCostumeName = z.infer<typeof TShirtCostumeName>;
 export const TShirtCostumeNames: string[] = TShirtCostumeName.options;
 
 export const SpecialCostumeName = z.enum([
+  "たかねこハロウィン2026 囚人衣装",
   "高嶺のなでしこ 2024 衣装 + 24時間テレビ 2026 Tシャツ",
   "星谷美来 卒業公演 黒ドレス",
   "星谷美来 卒業公演 ピンクドレス",
