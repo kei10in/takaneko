@@ -46,7 +46,7 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.56.0",
+    "@cloudflare/vite-plugin": "^1.63.1",
     "@fast-csv/format": "^5.0.7",
     "@googleapis/youtube": "^39.0.0",
     "@mdx-js/node-loader": "^3.1.1",
@@ -94,7 +94,7 @@
     "vite": "^8.3.0",
     "vite-plugin-inspect": "^11.4.1",
     "vitest": "^4.1.11",
-    "wrangler": "^4.135.0"
+    "wrangler": "^4.149.0"
   },
   "packageManager": "pnpm@11.25.0",
   "devEngines": {
