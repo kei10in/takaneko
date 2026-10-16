@@ -1,17 +1,3 @@
-import { globSync } from "glob";
-import "konva/canvas-backend";
-import { ProductImage } from "./lib/ProductImage.ts";
+import { runDrawPhotoSet } from "./lib/drawPhotoSet.ts";
 
-const main = async () => {
-  const files = globSync("public/takaneko/goods/work/*.png").toSorted();
-
-  const outputImage = "public/takaneko/goods/generated.webp";
-  const outputJson = "public/takaneko/goods/positions.json";
-
-  const productImage = new ProductImage(files, { size: { width: 138, height: 220 } });
-
-  productImage.writePositions(outputJson);
-  await productImage.draw(outputImage);
-};
-
-await main();
+await runDrawPhotoSet({ width: 138, height: 220 });

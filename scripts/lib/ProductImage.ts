@@ -19,10 +19,11 @@ export class ProductImage {
 
   // 全体の画像サイズ
   readonly size: Size;
+  readonly columns: number;
 
   constructor(
     private files: string[],
-    option: { size?: Size },
+    option: { size?: Size; photosPerMember?: number },
   ) {
     this.frame = { width: 33, height: 33 };
     this.xMargin = 18;
@@ -36,16 +37,23 @@ export class ProductImage {
       height: 220,
     };
 
+    // 商品生成側の既存レイアウトは、枚数指定がない場合に維持する。
+    this.columns = (option.photosPerMember ?? 3) * 2;
+    const rows = option.photosPerMember == undefined ? 5 : Math.ceil(files.length / this.columns);
     this.size = {
-      width: this.frame.width * 2 + this.box.width * 6 + this.xSpace * 4 + this.xMargin,
-      height: this.frame.height * 2 + this.box.height * 5 + this.yMargin * 4,
+      width:
+        this.frame.width * 2 +
+        this.box.width * this.columns +
+        this.xSpace * (this.columns - 2) +
+        this.xMargin,
+      height: this.frame.height * 2 + this.box.height * rows + this.yMargin * Math.max(0, rows - 1),
     };
   }
 
   photoRects(): ImagePosition[] {
     return this.files.map((_, index) => {
-      const row = Math.floor(index / 6);
-      const col = index % 6;
+      const row = Math.floor(index / this.columns);
+      const col = index % this.columns;
 
       const width = Math.min(this.image.width, this.box.width);
       const height = Math.min(this.image.height, this.box.height);
@@ -53,7 +61,7 @@ export class ProductImage {
       const boxX =
         this.frame.width +
         col * (this.box.width + this.xSpace) +
-        (col >= 3 ? this.xMargin - this.xSpace : 0);
+        (col >= this.columns / 2 ? this.xMargin - this.xSpace : 0);
       const boxY = this.frame.height + row * (this.box.height + this.yMargin);
 
       // この画像生成では必ず格子点に配置しないといけない。
