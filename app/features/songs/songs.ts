@@ -57,10 +57,12 @@ import { 我武者羅 } from "./2026/我武者羅.ts";
 import { 生きてりゃいい } from "./2026/生きてりゃいい.ts";
 import { 私はわたしの事が好き } from "./2026/私は、わたしの事が好き。.ts";
 import { 約束 } from "./2026/約束.ts";
+import { 純情乙女のイタズラ宣言 } from "./2026/純情乙女のイタズラ宣言.ts";
 import { SongMetaDescriptor } from "./types.ts";
 
 export const ALL_SONGS: SongMetaDescriptor[] = [
   // 2026
+  純情乙女のイタズラ宣言,
   かわいいは常識,
   我武者羅,
   約束,
