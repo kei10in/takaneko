@@ -1,5 +1,50 @@
 import { MvCostume } from "./types.ts";
 
+export const 純情乙女のイタズラ宣言MV衣装 = {
+  kind: "mv",
+  name: "「純情乙女のイタズラ宣言」MV 衣装",
+  slug: "純情乙女のイタズラ宣言MV衣装",
+
+  images: [
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2110717340404928891",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_城月菜央.jpg",
+      ref: "https://x.com/nao_kizuki/status/2110692917274894840",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2110700135621779634",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_橋本桃呼.jpg",
+      ref: "https://x.com/MomokoHashimoto/status/2110690834115186730",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_葉月紗蘭.jpg",
+      ref: "https://www.instagram.com/saara_hazuki/p/DejS6IpCamz/",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2110692391116218453",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2110728076649001212",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_松本ももな.jpg",
+      ref: "https://x.com/momonamatsumoto/status/2110717340404928891",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2110690656754807088",
+    },
+  ],
+} satisfies MvCostume;
+
 export const 僕らの青MV衣装 = {
   kind: "mv",
   name: "「僕らの青」MV 衣装",
@@ -747,6 +792,7 @@ export const ユメムスビMV衣装 = {
 } satisfies MvCostume;
 
 export const AllMvCostumes: MvCostume[] = [
+  純情乙女のイタズラ宣言MV衣装,
   僕らの青MV衣装,
   ハートブーケDPV衣装,
   生きてりゃいいMV衣装,
