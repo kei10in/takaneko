@@ -8,7 +8,10 @@ export const SCawaii_2026年11月号: Publication = {
   publisher: "主婦の友社",
   listPrice: 1091,
   priceWithTax: 1200,
-  code: [{ kind: "雑誌コード", value: "01904-11" }],
+  code: [
+    { kind: "雑誌コード", value: "01903-11" },
+    { kind: "雑誌コード", value: "01904-11" },
+  ],
   url: "https://scawaiiweb.com/magazines/detail/71976",
   coverImages: [
     {
@@ -21,7 +24,7 @@ export const SCawaii_2026年11月号: Publication = {
     },
     {
       path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号増刊 特別版_限定ミニフォトカード.jpg",
-      ref: "https://pbs.twimg.com/media/HSjPNvAaIAAODfG.jpg",
+      ref: "https://x.com/mag_scawaii/status/2098337139612434738",
     },
     {
       path: "/publications/2026/2026-09-16_S Cawaii! 2026年11月号_サイン入りチェキプレゼント.jpg",
@@ -51,12 +54,24 @@ export const SCawaii_2026年11月号: Publication = {
   officialTwitter: "https://x.com/takanenofficial/status/2091802759964004849",
   links: [
     {
+      text: "高嶺のなでしこ コメント動画 - S Cawaii! 編集部 X",
+      url: "https://x.com/mag_scawaii/status/2099086898681807201",
+    },
+    {
       text: "高嶺のなでしこ サイン入りチェキプレゼント - S Cawaii! 編集部 X",
       url: "https://x.com/mag_scawaii/status/2106670671161881044",
     },
     {
+      text: "S Cawaii!11月号好評発売中",
+      url: "https://x.com/mag_scawaii/status/2101235765816836177",
+    },
+    {
       text: "本日発売 - 公式 X",
       url: "https://x.com/takanenofficial/status/2100132588321185934",
+    },
+    {
+      text: "高嶺のなでしこ 特典絵柄イメージ解禁 - S Cawaii! 編集部 X",
+      url: "https://x.com/mag_scawaii/status/2098337139612434738",
     },
     {
       text: "S Cawaii! 2026年11月号 (特別版)",
