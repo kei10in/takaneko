@@ -196,10 +196,6 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
   ハニフェス2026_ハコニワリリィ_缶バッジ,
   ハロウィン2026_生写真,
   ハロウィン2026_ミニフォト,
-  CROWNED_IN_BLOOM_ステッカー,
-  CROWNED_IN_BLOOM_目印チャーム,
-  ワンピース2026_生写真,
-  ワンピース2026_ミニフォト,
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
