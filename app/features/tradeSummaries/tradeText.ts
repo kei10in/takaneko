@@ -7,26 +7,27 @@ export const convertToTradeText = (
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
 ): string | undefined => {
+  const group = productImage.tradeGroupName ?? "高嶺のなでしこ たかねこ";
   const title = TradeText.title(productImage);
 
   if (productImage.tradeText === "numbering") {
-    return generateNumberingTradeText(title, productImage, tradeDescriptions);
+    return generateNumberingTradeText(group, title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "nameOnly") {
-    return generateNameOnlyTradeText(title, productImage, tradeDescriptions);
+    return generateNameOnlyTradeText(group, title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "description") {
-    return generateDescriptionTradeText(title, productImage, tradeDescriptions);
+    return generateDescriptionTradeText(group, title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === TradeTextType.NameAndDescription) {
-    return generateNameAndDescriptionTradeText(title, productImage, tradeDescriptions);
+    return generateNameAndDescriptionTradeText(group, title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "groupByDescription") {
-    return generateGroupByDescriptionTradeText(title, productImage, tradeDescriptions);
+    return generateGroupByDescriptionTradeText(group, title, productImage, tradeDescriptions);
   }
 
   return undefined;
@@ -36,6 +37,7 @@ export const convertToTradeText = (
  * `TradeTextType.Numbering` 用のトレード用テキストを生成します。
  */
 const generateNumberingTradeText = (
+  group: string,
   title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -84,13 +86,14 @@ const generateNumberingTradeText = (
     })
     .join("\n");
 
-  return concatenateTradeText({ title, have, wants });
+  return concatenateTradeText({ group, title, have, wants });
 };
 
 /**
  * `TradeTextType.NameOnly` 用のトレード用テキストを生成します。
  */
 const generateNameOnlyTradeText = (
+  group: string,
   title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -115,13 +118,14 @@ const generateNameOnlyTradeText = (
     })
     .join("、");
 
-  return concatenateTradeText({ title, have, wants });
+  return concatenateTradeText({ group, title, have, wants });
 };
 
 /**
  * `TradeTextType.Description` 用のトレード用テキストを生成します。
  */
 const generateDescriptionTradeText = (
+  group: string,
   title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -170,13 +174,14 @@ const generateDescriptionTradeText = (
     })
     .join("\n");
 
-  return concatenateTradeText({ title, have, wants });
+  return concatenateTradeText({ group, title, have, wants });
 };
 
 /**
  * `TradeTextType.Description` 用のトレード用テキストを生成します。
  */
 const generateNameAndDescriptionTradeText = (
+  group: string,
   title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -217,7 +222,7 @@ const generateNameAndDescriptionTradeText = (
     })
     .join("\n");
 
-  return concatenateTradeText({ title, have, wants });
+  return concatenateTradeText({ group, title, have, wants });
 };
 
 /**
@@ -232,6 +237,7 @@ const generateNameAndDescriptionTradeText = (
  *   F賞 葉月, 春野
  */
 const generateGroupByDescriptionTradeText = (
+  group: string,
   title: string,
   productImage: RandomGoods,
   tradeDescriptions: Record<number, TradeDescription>,
@@ -290,15 +296,25 @@ const generateGroupByDescriptionTradeText = (
     })
     .join("\n");
 
-  return concatenateTradeText({ title, have, wants });
+  return concatenateTradeText({
+    group,
+    title,
+    have,
+    wants,
+  });
 };
 
-const concatenateTradeText = (args: { title: string; have: string; wants: string }) => {
-  const { title, have, wants } = args;
+const concatenateTradeText = (args: {
+  group: string;
+  title: string;
+  have: string;
+  wants: string;
+}) => {
+  const { group, title, have, wants } = args;
   const haveText = have.length > 0 ? `\n🎁譲\n${have}\n` : "";
   const wantsText = wants.length > 0 ? `\n💖求\n${wants}\n` : "";
 
-  return `高嶺のなでしこ たかねこ トレード 交換\n${title}\n${haveText}${wantsText}`;
+  return `${group} トレード 交換\n${title}\n${haveText}${wantsText}`;
 };
 
 const extractFamilyName = (name: string): string | undefined => {

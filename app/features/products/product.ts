@@ -72,6 +72,9 @@ export interface RandomGoods {
   series: string;
   category: string;
 
+  /** トレード テキスト用のグループ名です。デフォルトは「高嶺のなでしこ たかねこ」です。 */
+  tradeGroupName?: string;
+  /** トレード テキストで `name` の代わりに表示させたい名前です。 */
   tradeTitle?: string;
   tradeText?: TradeTextType;
 
