@@ -12,7 +12,7 @@ export const datasetBuilder = (): Plugin => {
 };
 
 const buildSetlistData = () => {
-  const buildSetlistDataScript = path.resolve(__dirname, "..", "..", "scripts", "setlist-db.ts");
+  const buildSetlistDataScript = path.resolve(import.meta.dirname, "..", "..", "scripts", "setlist-db.ts");
 
   const result = spawnSync("pnpm", ["tsx", buildSetlistDataScript], {
     shell: true,

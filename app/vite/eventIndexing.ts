@@ -12,7 +12,7 @@ export const eventIndexing = (): Plugin => {
 };
 
 const buildEventIndex = () => {
-  const script = path.resolve(__dirname, "..", "..", "scripts", "build-event-index.ts");
+  const script = path.resolve(import.meta.dirname, "..", "..", "scripts", "build-event-index.ts");
 
   const result = spawnSync("pnpm", ["tsx", script], { shell: true, stdio: "inherit" });
   if (result.error) {
