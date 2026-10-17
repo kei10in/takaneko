@@ -292,8 +292,8 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
       url-metadata:
-        specifier: ^5.12.0
-        version: 5.12.0
+        specifier: ^6.3.0
+        version: 6.3.0
       zod:
         specifier: ^4.6.5
         version: 4.6.5
@@ -3407,8 +3407,9 @@ packages:
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
-  request-filtering-agent@2.0.1:
-    resolution: {integrity: sha512-QvD3qwthEt9J+2hCdQ3wTn3Z/ZsgyiMECjY9yVJ0F8FtnGfNQG+dRz65eKayYRHIRQ6OGjH8Zuqr1lw7G6pz1Q==}
+  request-filtering-agent@3.2.1:
+    resolution: {integrity: sha512-NUz5G9n6GRSgB9JNurHCeeJX60s+qxL/DKTPjC6+fXrQ20w7iQy+ST6h4hKjeu1AjfH7FtIV+uw5eOq4CqWe8Q==}
+    engines: {node: '>=20.0.0'}
 
   rolldown@1.2.13:
     resolution: {integrity: sha512-/5apOkwWxtACcQtZ5WlrAsKS4JwXVThQPJZ3RqIruRY9UG9M8e0VlXN068xum/JRKA4aIUoJ13ghe/kGCvidiQ==}
@@ -3735,9 +3736,9 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  url-metadata@5.12.0:
-    resolution: {integrity: sha512-ObGwA+3kHA4AW5lywhJnGn0TNas9fqSfHyaJPuk4NRv/rDqbkI9LGC0TpUFMDjPeq9UNZRszczq2DgeUeo9Beg==}
-    engines: {node: '>=18.17'}
+  url-metadata@6.3.0:
+    resolution: {integrity: sha512-QWE3mcYYXJMG+O8+b0sj5Vxe6a8wyQ66AhkHsKZaHtXh8OU5ZxwxXnEpr18JmiiKkgZv3lCZjOj0Z5gGPIm78A==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   url-template@2.0.8:
     resolution: {integrity: sha512-XdVKMF4SJ0nP/O7XIPB0JwAEuT9lDIYnNsK8yGVe43y0AWoKeJNdv3ZNWh7ksJ6KqQFjOO6ox/VEitLnaVNufw==}
@@ -6894,7 +6895,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.2
       unified: 11.0.5
 
-  request-filtering-agent@2.0.1:
+  request-filtering-agent@3.2.1:
     dependencies:
       ipaddr.js: 2.5.0
 
@@ -7301,11 +7302,11 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  url-metadata@5.12.0:
+  url-metadata@6.3.0:
     dependencies:
       cheerio: 1.2.0
       node-fetch: 2.7.0
-      request-filtering-agent: 2.0.1
+      request-filtering-agent: 3.2.1
     transitivePeerDependencies:
       - encoding
 
