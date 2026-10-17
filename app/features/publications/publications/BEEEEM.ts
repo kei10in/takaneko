@@ -15,6 +15,22 @@ export const BEEEEM_vol3: Publication = {
       ref: "https://x.com/BEEEEM_NEWS/status/2090011193540804630",
     },
     {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_サイン入りチェキプレゼント_集合.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2101990069850579330",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_サイン入りチェキプレゼント_東山恵里沙.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2101997368455401537",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_サイン入りチェキプレゼント_松本ももな.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2101997369219014889",
+    },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_サイン入りチェキプレゼント_籾山ひめり.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2101997372213809282",
+    },
+    {
       path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_集合.jpg",
       ref: "https://x.com/BEEEEM_NEWS/status/2095089356075631031",
     },
@@ -30,9 +46,39 @@ export const BEEEEM_vol3: Publication = {
       path: "/publications/2026/2026-09-14_BEEEEM vol.3_先行カット_籾山ひめり.jpg",
       ref: "https://x.com/BEEEEM_NEWS/status/2095089361557876843",
     },
+    {
+      path: "/publications/2026/2026-09-14_BEEEEM vol.3_オフショット_集合.jpg",
+      ref: "https://x.com/BEEEEM_NEWS/status/2105855292042842619",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ2"],
   officialTwitter: "",
+  links: [
+    {
+      text: "高嶺のなでしこ コメント動画 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2099830590761791996",
+    },
+    {
+      text: "高嶺のなでしこ サイン入りチェキプレゼント企画 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2101990069850579330",
+    },
+    {
+      text: "東山恵里沙 サイン入りチェキプレゼント企画 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2101997368455401537",
+    },
+    {
+      text: "松本ももな サイン入りチェキプレゼント企画 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2101997369219014889",
+    },
+    {
+      text: "籾山ひめり サイン入りチェキプレゼント企画 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2101997372213809282",
+    },
+    {
+      text: "高嶺のなでしこ レコーディング記事紹介 - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2105855292042842619",
+    },
+  ],
 };
 
 export const BEEEEM_vol2: Publication = {
