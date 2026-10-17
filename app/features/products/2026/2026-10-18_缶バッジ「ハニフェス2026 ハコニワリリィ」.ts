@@ -7,6 +7,7 @@ export const ハニフェス2026_ハコニワリリィ_缶バッジ: RandomGoods
   year: 2026,
   series: "ハニフェス2026",
   category: "缶バッジ",
+  tradeGroupName: "ハコニワリリィ Kotoha Hanon",
   tradeText: TradeTextType.Description,
   url: "/takaneko/goods/2026/2026-10-18_缶バッジ「ハニフェス2026 ハコニワリリィ」.webp",
   width: 179,

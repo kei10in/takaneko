@@ -7,6 +7,7 @@ export const ハニフェス2026_可憐なアイボリー_缶バッジ: RandomGo
   year: 2026,
   series: "ハニフェス2026",
   category: "缶バッジ",
+  tradeGroupName: "可憐なアイボリー カレアイ",
   tradeText: TradeTextType.NameOnly,
   url: "/takaneko/goods/2026/2026-10-18_缶バッジ「ハニフェス2026 可憐なアイボリー」.webp",
   width: 251,

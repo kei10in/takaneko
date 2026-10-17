@@ -7,6 +7,7 @@ export const ハニフェス2026_生写真: RandomGoods = {
   year: 2026,
   series: "ハニフェス2026",
   category: "生写真",
+  tradeGroupName: "ハコニワリリィ 可憐なアイボリー カレアイ 高嶺のなでしこ たかねこ",
   tradeText: TradeTextType.NameAndDescription,
   url: "/takaneko/goods/2026/2026-10-18_生写真「ハニフェス2026」.webp",
   width: 1520,
