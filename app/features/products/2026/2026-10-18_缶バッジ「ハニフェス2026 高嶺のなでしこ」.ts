@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
+
+export const ハニフェス2026_高嶺のなでしこ_缶バッジ: RandomGoods = {
+  id: "缶バッジ「ハニフェス2026 高嶺のなでしこ」",
+  slug: "缶バッジ「ハニフェス2026 高嶺のなでしこ」",
+  name: "ハニフェスらんだむ缶バッジ 高嶺のなでしこ",
+  year: 2026,
+  series: "ハニフェス2026",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-10-18_缶バッジ「ハニフェス2026 高嶺のなでしこ」.webp",
+  width: 178,
+  height: 88,
+  variants: [
+    { id: 1, name: "橋本桃呼", description: "" },
+    { id: 2, name: "葉月紗蘭", description: "" },
+    { id: 3, name: "東山恵里沙", description: "" },
+    { id: 4, name: "城月菜央", description: "" },
+    { id: 5, name: "松本ももな", description: "" },
+    { id: 6, name: "涼海すう", description: "" },
+    { id: 7, name: "籾山ひめり", description: "" },
+    { id: 8, name: "日向端ひな", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 5, y: 3, width: 40, height: 40 },
+    { id: 2, x: 47, y: 3, width: 40, height: 40 },
+    { id: 3, x: 89, y: 3, width: 40, height: 40 },
+    { id: 4, x: 131, y: 3, width: 40, height: 40 },
+    { id: 5, x: 5, y: 44, width: 40, height: 40 },
+    { id: 6, x: 47, y: 44, width: 40, height: 40 },
+    { id: 7, x: 89, y: 44, width: 40, height: 40 },
+    { id: 8, x: 131, y: 44, width: 40, height: 40 },
+  ],
+};

@@ -183,9 +183,15 @@ import { ワンピース2026_生写真 } from "./2026/2026-09-13_生写真「ワ
 import { CROWNED_IN_BLOOM_目印チャーム } from "./2026/2026-09-13_目印チャーム「CROWNED IN BLOOM」.ts";
 import { ハロウィン2026_ミニフォト } from "./2026/2026-10-18_ミニフォトカード「ハロウィン2026」.ts";
 import { ハロウィン2026_生写真 } from "./2026/2026-10-18_生写真「ハロウィン2026」.ts";
+import { ハニフェス2026_ハコニワリリィ_缶バッジ } from "./2026/2026-10-18_缶バッジ「ハニフェス2026 ハコニワリリィ」.ts";
+import { ハニフェス2026_可憐なアイボリー_缶バッジ } from "./2026/2026-10-18_缶バッジ「ハニフェス2026 可憐なアイボリー」.ts";
+import { ハニフェス2026_高嶺のなでしこ_缶バッジ } from "./2026/2026-10-18_缶バッジ「ハニフェス2026 高嶺のなでしこ」.ts";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product.ts";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  ハニフェス2026_高嶺のなでしこ_缶バッジ,
+  ハニフェス2026_可憐なアイボリー_缶バッジ,
+  ハニフェス2026_ハコニワリリィ_缶バッジ,
   ハロウィン2026_生写真,
   ハロウィン2026_ミニフォト,
   CROWNED_IN_BLOOM_ステッカー,
@@ -195,6 +201,9 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  ハニフェス2026_高嶺のなでしこ_缶バッジ,
+  ハニフェス2026_可憐なアイボリー_缶バッジ,
+  ハニフェス2026_ハコニワリリィ_缶バッジ,
   ハロウィン2026_生写真,
   ハロウィン2026_ミニフォト,
   CROWNED_IN_BLOOM_ステッカー,

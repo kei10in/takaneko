@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
+
+export const ハニフェス2026_ハコニワリリィ_缶バッジ: RandomGoods = {
+  id: "缶バッジ「ハニフェス2026 ハコニワリリィ」",
+  slug: "缶バッジ「ハニフェス2026 ハコニワリリィ」",
+  name: "ハニフェスらんだむ缶バッジ ハコニワリリィ",
+  year: 2026,
+  series: "ハニフェス2026",
+  category: "缶バッジ",
+  tradeText: TradeTextType.Description,
+  url: "/takaneko/goods/2026/2026-10-18_缶バッジ「ハニフェス2026 ハコニワリリィ」.webp",
+  width: 179,
+  height: 84,
+  variants: [
+    { id: 1, name: "Hanon", description: "イラスト 1" },
+    { id: 2, name: "Hanon", description: "実写" },
+    { id: 3, name: "Hanon", description: "イラスト 2" },
+    { id: 4, name: "Hanon", description: "イラスト 3" },
+    { id: 5, name: "Kotoha", description: "実写" },
+    { id: 6, name: "Kotoha", description: "イラスト 1" },
+    { id: 7, name: "Kotoha", description: "イラスト 2" },
+    { id: 8, name: "Kotoha", description: "イラスト 3" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 5, y: 1, width: 40, height: 40 },
+    { id: 2, x: 48, y: 1, width: 40, height: 40 },
+    { id: 5, x: 91, y: 1, width: 40, height: 40 },
+    { id: 6, x: 134, y: 1, width: 40, height: 40 },
+    { id: 3, x: 5, y: 42, width: 40, height: 40 },
+    { id: 4, x: 48, y: 42, width: 40, height: 40 },
+    { id: 7, x: 91, y: 42, width: 40, height: 40 },
+    { id: 8, x: 134, y: 42, width: 40, height: 40 },
+  ],
+};
