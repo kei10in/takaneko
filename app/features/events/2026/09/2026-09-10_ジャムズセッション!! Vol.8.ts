@@ -51,12 +51,13 @@ export const meta: EventMetaDescriptor = {
     ],
     links: ["https://x.com/takanenofficial/status/2098008584269250651"],
   },
-  updatedAt: "2026-09-10",
+  updatedAt: "2026-10-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演者紹介 - Jams Collection X](https://x.com/JamsCollection/status/2098049030849015964)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2098012663897071966)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2098008584269250651)
   - [#あしたのたかねこ](https://x.com/takanenofficial/status/2097694012807262457)
