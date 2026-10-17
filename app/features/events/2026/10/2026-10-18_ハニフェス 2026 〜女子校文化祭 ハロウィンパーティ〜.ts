@@ -44,12 +44,13 @@ export const meta: EventMetaDescriptor = {
     url: "https://x.com/takanenofficial/status/2110354950127776163",
   },
   acts: [],
-  updatedAt: "2026-10-16",
+  updatedAt: "2026-10-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アルバム会場予約特典の案内 - 公式 X](https://x.com/takanenofficial/status/2110981587873722811)
   - [アルバム会場予約特典の案内 - ビクターエンタテインメント X](https://x.com/VictorMusic/status/2110974560942293178)
   - [グッズ情報 - 公式 X](https://x.com/takanenofficial/status/2110354950127776163)
   - [HoneyWorks 公式ニュース](https://honeyworks.jp/news/11619/)
