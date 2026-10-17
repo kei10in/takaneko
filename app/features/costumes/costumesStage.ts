@@ -4,7 +4,7 @@ export const _2026秋衣装 = {
   kind: "stage",
   name: "2026 秋衣装",
   slug: "2026 秋衣装",
-  photoType: "none",
+  photoType: "press",
 
   liveDebut: "2026-09-13",
 
