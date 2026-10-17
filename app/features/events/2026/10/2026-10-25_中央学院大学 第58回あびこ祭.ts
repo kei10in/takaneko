@@ -36,12 +36,14 @@ export const meta: EventMetaDescriptor = {
       end: "16:30",
     },
   ],
-  updatedAt: "2026-10-15",
+  updatedAt: "2026-10-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [アリーナ券の配布について - 中央学院大学](https://www.cgu.ac.jp/news/nid00001497.html)
+  - [アリーナ券配布のお知らせ- 第58回あびこ祭実行委員会 X](https://x.com/abikosai_iinkai/status/2110925197977202722)
   - [アリーナ券配布のお知らせ - 中央学院大学 X](https://x.com/chuogakuinuniv/status/2110580514193313821)
   - [出演時間のお知らせ - 中央学院大学 X](https://x.com/chuogakuinuniv/status/2105568398247895042)
   - [中央学院大学](https://www.cgu.ac.jp/)
