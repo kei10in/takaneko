@@ -28,6 +28,10 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-11-07_LARME FES'26_チケット.jpg",
       ref: "https://x.com/takanenofficial/status/2103711161103646777",
     },
+    {
+      path: "/events/2026/2026-11-07_LARME FES'26_グッズメニュー.jpg",
+      ref: "https://x.com/larmemagazine/status/2111075170492510503",
+    },
   ],
   link: {
     text: "",
@@ -38,15 +42,16 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: undefined,
-    url: undefined,
+    url: "https://x.com/larmemagazine/status/2111075170492510503",
   },
   acts: [],
-  updatedAt: "2026-09-27",
+  updatedAt: "2026-10-17",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [グッズ・チケット情報 - LARME X](https://x.com/larmemagazine/status/2111075170492510503)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2103711161103646777)
   - [モデル出演者紹介画像 - LARME X](https://x.com/larmemagazine/status/2103693675905810639)
   - [モデル出演者告知 - LARME X](https://x.com/larmemagazine/status/2103693371168682314)
