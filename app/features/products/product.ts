@@ -30,9 +30,15 @@ export const ProductLine = {
 export type ProductLine = (typeof ProductLine)[keyof typeof ProductLine];
 
 export const TradeTextType = {
+  /** メンバーでグルーピングして、苗字と説明を表示します。 */
   Description: "description",
+  /** メンバーでグルーピングして、名前と説明を表示します。 */
+  NameAndDescription: "nameAndDescription",
+  /** Description でグルーピングして表示します。 */
   GroupByDescription: "groupByDescription",
+  /** 名前のみを表示します。 */
   NameOnly: "nameOnly",
+  /** 苗字でグルーピングして、番号を表示します。 */
   Numbering: "numbering",
 } as const;
 

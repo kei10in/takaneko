@@ -1,5 +1,5 @@
 import { AllMembers } from "~/features/profile/members.ts";
-import { ItemDescription, RandomGoods } from "../products/product.ts";
+import { ItemDescription, RandomGoods, TradeTextType } from "../products/product.ts";
 import { TradeText } from "../products/productImages.ts";
 import { TradeDescription } from "../trade/TradeStatus.ts";
 
@@ -19,6 +19,10 @@ export const convertToTradeText = (
 
   if (productImage.tradeText === "description") {
     return generateDescriptionTradeText(title, productImage, tradeDescriptions);
+  }
+
+  if (productImage.tradeText === TradeTextType.NameAndDescription) {
+    return generateNameAndDescriptionTradeText(title, productImage, tradeDescriptions);
   }
 
   if (productImage.tradeText === "groupByDescription") {
@@ -163,6 +167,53 @@ const generateDescriptionTradeText = (
       }
 
       return [`${familyName} ${memberWants.join(", ")}`];
+    })
+    .join("\n");
+
+  return concatenateTradeText({ title, have, wants });
+};
+
+/**
+ * `TradeTextType.Description` 用のトレード用テキストを生成します。
+ */
+const generateNameAndDescriptionTradeText = (
+  title: string,
+  productImage: RandomGoods,
+  tradeDescriptions: Record<number, TradeDescription>,
+): string => {
+  const members: { name: string; items: ItemDescription[] }[] = [];
+  productImage.variants.forEach((item) => {
+    const member = members.find((m) => m.name === item.name);
+    if (member) {
+      member.items.push(item);
+    } else {
+      members.push({ name: item.name, items: [item] });
+    }
+  });
+
+  const have = members
+    .flatMap((member) => {
+      const memberHave = member.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "have")
+        .map((i) => i.description);
+      if (memberHave.length === 0) {
+        return [];
+      }
+
+      return [`${member.name} ${memberHave.join(", ")}`.trim()];
+    })
+    .join("\n");
+
+  const wants = members
+    .flatMap((member) => {
+      const memberWants = member.items
+        .filter((i) => tradeDescriptions[i.id]?.status.tag === "want")
+        .map((i) => i.description);
+      if (memberWants.length === 0) {
+        return [];
+      }
+
+      return [`${member.name} ${memberWants.join(", ")}`.trim()];
     })
     .join("\n");
 
