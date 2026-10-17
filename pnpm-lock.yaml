@@ -308,8 +308,8 @@ importers:
         specifier: ^5.0.8
         version: 5.0.8
       '@googleapis/youtube':
-        specifier: ^39.0.0
-        version: 39.0.0(supports-color@10.2.2)
+        specifier: ^40.0.0
+        version: 40.0.0(supports-color@10.2.2)
       '@mdx-js/node-loader':
         specifier: ^3.1.1
         version: 3.1.1(supports-color@10.2.2)
@@ -759,8 +759,8 @@ packages:
   '@floating-ui/utils@0.2.12':
     resolution: {integrity: sha512-HpCo8tmWzLVad5s2d19EhAz5zqrrQ6s69qd6moPMQvkOuSwDT1YgRfWSVuc4ennqrgv3OHppiOGMQ7oC13yIww==}
 
-  '@googleapis/youtube@39.0.0':
-    resolution: {integrity: sha512-ROGXvKLwOWOS4dSEexWS4ZF061ZGaTmGzkdOiTB6OvpimzmbnVyMioRRi0q+/sZ6C1CwffOb8+WYo5SPiZlTag==}
+  '@googleapis/youtube@40.0.0':
+    resolution: {integrity: sha512-t6arIbY75ZxbryTCMkKiV2jCcRzHaUk/dS1RjR6HAewkbI3HobnlaSWqaxiQKRCxqswXq02aeBS8/I+dW10qvw==}
     engines: {node: '>=22.0.0'}
 
   '@headlessui/react@2.2.10':
@@ -4148,7 +4148,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.12': {}
 
-  '@googleapis/youtube@39.0.0(supports-color@10.2.2)':
+  '@googleapis/youtube@40.0.0(supports-color@10.2.2)':
     dependencies:
       googleapis-common: 9.1.0(supports-color@10.2.2)
     transitivePeerDependencies:
