@@ -27,7 +27,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
   );
   return (
     <>
-      <div className="h-48 flex-none border-b border-zinc-100">
+      <div className="h-40 flex-none border-b border-zinc-100">
         <div className="flex h-full items-stretch gap-2 p-4">
           <div className="relative min-h-24 w-24 min-w-0 flex-none overflow-hidden rounded-2xl">
             {event.image != undefined ? (
