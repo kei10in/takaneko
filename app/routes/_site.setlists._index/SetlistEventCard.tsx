@@ -1,5 +1,5 @@
 import { GiMicrophone } from "react-icons/gi";
-import { HiChevronRight, HiOutlineMapPin, HiOutlineMusicalNote } from "react-icons/hi2";
+import { HiOutlineMapPin } from "react-icons/hi2";
 import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
 import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
@@ -20,9 +20,9 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
       type="button"
       onClick={onClick}
       aria-haspopup="dialog"
-      className="group block w-full overflow-hidden rounded-3xl border border-zinc-500/10 bg-white p-2 text-left shadow-xl shadow-black/2 focus-visible:outline-2 focus-visible:outline-nadeshiko-600"
+      className="group block h-36 w-full overflow-hidden rounded-3xl border border-zinc-500/10 bg-white p-2 text-left shadow-xl shadow-black/2 focus-visible:outline-2 focus-visible:outline-nadeshiko-600"
     >
-      <div className="flex items-start gap-2">
+      <div className="flex h-full items-start gap-2">
         {/* Image */}
         <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
           {event.image != undefined ? (
@@ -41,7 +41,7 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
         </div>
 
         {/* Event Summary */}
-        <div className="min-w-0 flex-1 space-y-1 py-0.5 pl-2">
+        <div className="min-w-0 flex-1 space-y-1 px-2 py-0.5">
           <div className="line-clamp-1 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
             {displayDateWithDayOfWeek(date)}
           </div>
@@ -67,23 +67,6 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
             {!noSetlist && event.acts.some((act) => act.songCount == 0) && (
               <TextBadge text="未登録あり" />
             )}
-          </div>
-        </div>
-
-        <HiChevronRight className="m-1 size-5 flex-none text-zinc-500" />
-      </div>
-      <div className="flex min-w-0 flex-1 items-center">
-        <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
-          <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
-          <div>
-            {event.acts.map((act, i) => {
-              return (
-                <span key={i}>
-                  {i != 0 && " / "}
-                  {act.songCount} 曲
-                </span>
-              );
-            })}
           </div>
         </div>
       </div>
