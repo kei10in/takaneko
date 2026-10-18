@@ -1,7 +1,7 @@
 import { ProductLine, RandomGoods, TradeTextType } from "~/features/products/product.ts";
 
 export const ハロウィン2026_ミニフォト: RandomGoods = {
-  id: "ミニフォトカード「ハロウィン2026」",
+  id: "ミニフォトカード「ハロウィン2026」rev.2",
   slug: "ミニフォトカード「ハロウィン2026」",
   name: "ミニフォトカードセット「ハロウィン2026」",
   year: 2026,
