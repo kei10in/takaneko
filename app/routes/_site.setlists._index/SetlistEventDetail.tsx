@@ -104,11 +104,11 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
         </section>
         <Link
           to={`/events/${event.slug}`}
-          className="absolute right-4 bottom-4 z-10 inline-flex h-10 items-center gap-1 rounded-full bg-white/30 px-3 text-sm shadow-md ring-1 ring-zinc-200/50 backdrop-blur-xs hover:bg-white/70"
+          className="absolute right-4 bottom-4 z-10 inline-flex h-11 items-center gap-1 rounded-full bg-white/30 px-4 text-base shadow-md ring-1 ring-zinc-200/50 backdrop-blur-xs hover:bg-white/70"
         >
-          <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
+          <HiOutlineCalendarDays className="size-5 text-nadeshiko-600" />
           <span>イベント詳細</span>
-          <HiChevronRight className="text-nadeshiko-600" />
+          <HiChevronRight className="size-5 text-nadeshiko-600" />
         </Link>
       </div>
     </>
