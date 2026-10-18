@@ -1,4 +1,4 @@
-import { act, cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
+import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
@@ -23,10 +23,14 @@ const events: SetlistEvents = [
   },
 ];
 
-const renderPage = (initialEntries = ["/setlists"]) => {
-  const loader = vi.fn(() => ({ events }));
+const renderPage = (initialEntries = ["/setlists"], items: SetlistEvents = events) => {
+  const loader = vi.fn(() => ({ events: items }));
   const router = createMemoryRouter(
-    [{ path: "/setlists", Component, loader, shouldRevalidate, HydrateFallback: () => null }],
+    [
+      { path: "/setlists", Component, loader, shouldRevalidate, HydrateFallback: () => null },
+      { path: "/events/:slug", Component: () => <h1>イベントページ</h1> },
+      { path: "/songs/:slug", Component: () => <h1>楽曲ページ</h1> },
+    ],
     { initialEntries },
   );
   render(<RouterProvider router={router} />);
@@ -37,6 +41,65 @@ const searchInput = () =>
   screen.findByPlaceholderText<HTMLInputElement>("イベント・曲・衣装・会場で検索");
 
 describe("セットリストの URL 同期", () => {
+  it("マウント後の location.state の変更ではダイアログの開閉状態を変えない", async () => {
+    const { router } = renderPage();
+    await searchInput();
+    await act(() =>
+      router.navigate("/setlists", {
+        replace: true,
+        state: { setlistEventSlug: events[0].slug },
+      }),
+    );
+    expect(screen.queryByRole("dialog", { name: "セットリスト" })).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    await screen.findByRole("dialog", { name: "セットリスト" });
+    await act(() => router.navigate("/setlists", { replace: true, state: null }));
+    expect(screen.getByRole("dialog", { name: "セットリスト" })).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+  });
+
+  it("ダイアログ内のイベントリンクから戻ると、同じダイアログが開く", async () => {
+    const { router } = renderPage();
+    await searchInput();
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    fireEvent.click(within(dialog).getByRole("link", { name: /イベント詳細/u }));
+    await screen.findByRole("heading", { name: "イベントページ" });
+    await act(() => router.navigate(-1));
+    expect(await screen.findByRole("dialog", { name: "セットリスト" })).toBeTruthy();
+    expect(within(screen.getByRole("dialog")).getByText("テストライブ")).toBeTruthy();
+    fireEvent.click(screen.getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    expect(router.state.location.state).toBeNull();
+  });
+
+  it("ダイアログ内の楽曲リンクから戻ると、同じダイアログが開く", async () => {
+    const song = PerformedSongs[0];
+    const songEvent: SetlistEvents = [
+      {
+        ...events[0],
+        acts: [
+          {
+            ...events[0].acts[0],
+            setlist: [{ kind: "song", index: 0, section: "main", songTitle: song.name }],
+            songCount: 1,
+          },
+        ],
+      },
+    ];
+    const { router } = renderPage(["/setlists"], songEvent);
+    await searchInput();
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    fireEvent.click(within(dialog).getByRole("link", { name: new RegExp(song.name, "u") }));
+    await screen.findByRole("heading", { name: "楽曲ページ" });
+    await act(() => router.navigate(-1));
+    expect(
+      within(await screen.findByRole("dialog", { name: "セットリスト" })).getByText(song.name),
+    ).toBeTruthy();
+  });
 
   it("URL の全条件をフォームに復元する", async () => {
     const params = new URLSearchParams({

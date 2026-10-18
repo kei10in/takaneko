@@ -9,6 +9,7 @@ interface SetlistEventDialogContentProps {
   results: SetlistSearchResult[];
   showMatchedAct: boolean;
   initialSlideIndex: number;
+  onSelectedEventChange: (slug: string) => void;
   onClose: () => void;
 }
 
@@ -19,7 +20,7 @@ interface SetlistEventDialogProps extends SetlistEventDialogContentProps {
 export const SetlistEventDialog = ({ open, ...props }: SetlistEventDialogProps) => (
   <Dialog open={open} onClose={props.onClose} transition className="relative z-50">
     <DialogBackdrop className={dialogBackdropStyle()} transition />
-    <SetlistEventDialogContent {...props} />
+    <SetlistEventDialogContent open={open} {...props} />
   </Dialog>
 );
 
@@ -28,11 +29,21 @@ const SetlistEventDialogContent = ({
   results,
   showMatchedAct,
   initialSlideIndex,
+  open,
+  onSelectedEventChange,
   onClose,
-}: SetlistEventDialogContentProps) => {
+}: SetlistEventDialogProps) => {
   const { carouselRef, selectedSlideIndex, renderedSlideRange } = useSetlistCarousel(
     initialSlideIndex,
     results.length,
+    (index) => {
+      if (open) {
+        const selectedEvent = results[index];
+        if (selectedEvent != undefined) {
+          onSelectedEventChange(selectedEvent.event.slug);
+        }
+      }
+    },
   );
 
   return (

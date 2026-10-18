@@ -13,6 +13,8 @@ import {
   MetaFunction,
   ShouldRevalidateFunctionArgs,
   useLoaderData,
+  useLocation,
+  useNavigate,
   useSearchParams,
 } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
@@ -79,15 +81,23 @@ export const shouldRevalidate = ({
   return defaultShouldRevalidate;
 };
 
+const selectedEventSlugFromState = (state: unknown): string | undefined => {
+  if (typeof state != "object" || state == null || !("setlistEventSlug" in state)) {
+    return undefined;
+  }
+  return typeof state.setlistEventSlug == "string" ? state.setlistEventSlug : undefined;
+};
+
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = useMemo(() => readSetlistSearchParams(searchParams), [searchParams]);
   const [query, setQuery] = useState(filters.q);
   const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
-  const [setlistDialog, setSetlistDialog] = useState({ slideIndex: 0, open: false });
   // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
   if (previousQuery !== filters.q) {
     setPreviousQuery(filters.q);
@@ -118,6 +128,21 @@ export default function Component() {
     () => filterSetlistEvents(events, searchFilters),
     [events, searchFilters],
   );
+  const [setlistDialog, setSetlistDialog] = useState(() => {
+    const selectedEventSlug = selectedEventSlugFromState(location.state);
+    const index = results.findIndex(({ event }) => event.slug == selectedEventSlug);
+    return { slideIndex: Math.max(0, index), open: index >= 0 };
+  });
+  const setSelectedEvent = (slug: string | undefined) => {
+    void navigate(
+      { pathname: location.pathname, search: location.search, hash: location.hash },
+      {
+        replace: true,
+        preventScrollReset: true,
+        state: slug == undefined ? null : { setlistEventSlug: slug },
+      },
+    );
+  };
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
@@ -282,7 +307,10 @@ export default function Component() {
               <li key={event.slug}>
                 <SetlistEventCard
                   event={event}
-                  onClick={() => setSetlistDialog({ slideIndex: index, open: true })}
+                  onClick={() => {
+                    setSetlistDialog({ slideIndex: index, open: true });
+                    setSelectedEvent(event.slug);
+                  }}
                 />
               </li>
             ))}
@@ -293,7 +321,11 @@ export default function Component() {
             open={setlistDialog.open}
             results={results}
             initialSlideIndex={setlistDialog.slideIndex}
-            onClose={() => setSetlistDialog({ ...setlistDialog, open: false })}
+            onSelectedEventChange={setSelectedEvent}
+            onClose={() => {
+              setSetlistDialog((previous) => ({ ...previous, open: false }));
+              setSelectedEvent(undefined);
+            }}
             showMatchedAct={
               searchFilters.q != "" ||
               searchFilters.song != "" ||

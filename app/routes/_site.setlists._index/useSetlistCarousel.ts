@@ -16,7 +16,11 @@ const getPreloadRange = (
   last: Math.min(slideCount - 1, Math.max(...slideIndexes) + preloadSlideRadius),
 });
 
-export const useSetlistCarousel = (initialSlideIndex: number, slideCount: number) => {
+export const useSetlistCarousel = (
+  initialSlideIndex: number,
+  slideCount: number,
+  onSelect: (index: number) => void,
+) => {
   const preloadSlideRadius = 8;
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(initialSlideIndex);
   const [renderedSlideRange, setRenderedSlideRange] = useState(() =>
@@ -38,6 +42,11 @@ export const useSetlistCarousel = (initialSlideIndex: number, slideCount: number
       return !(target instanceof Element && target.closest("button, input, select, textarea"));
     };
     const syncSelectedSlide = () => setSelectedSlideIndex(carouselApi.selectedSnap());
+    const selectSlide = () => {
+      const index = carouselApi.selectedSnap();
+      setSelectedSlideIndex(index);
+      onSelect(index);
+    };
     const syncRenderedSlideRange = () => {
       const visibleSlideIndexes = carouselApi.slidesInView();
       // IntersectionObserverの初回通知や切り替わりで表示対象が空でも、詳細を消さない。
@@ -55,18 +64,18 @@ export const useSetlistCarousel = (initialSlideIndex: number, slideCount: number
     };
     carouselApi
       .on("pointerdown", allowDrag)
-      .on("select", syncSelectedSlide)
+      .on("select", selectSlide)
       .on("slidesinview", syncRenderedSlideRange)
       .on("reinit", syncAfterReInit);
     syncAfterReInit();
     return () => {
       carouselApi
         .off("pointerdown", allowDrag)
-        .off("select", syncSelectedSlide)
+        .off("select", selectSlide)
         .off("slidesinview", syncRenderedSlideRange)
         .off("reinit", syncAfterReInit);
     };
-  }, [carouselApi, slideCount]);
+  }, [carouselApi, onSelect, slideCount]);
 
   return { carouselRef, selectedSlideIndex, renderedSlideRange };
 };
