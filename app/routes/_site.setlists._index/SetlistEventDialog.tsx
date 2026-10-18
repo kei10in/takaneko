@@ -57,7 +57,7 @@ const SetlistEventDialogContent = ({
           <div className="flex h-full touch-pan-y touch-pinch-zoom">
             {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
             {results.map((result, index) => (
-              <div key={result.event.slug} className="relative h-full min-w-0 flex-none basis-full">
+              <div key={result.event.slug} className="h-full min-w-0 flex-none basis-full">
                 {index >= renderedSlideRange.first && index <= renderedSlideRange.last && (
                   <div
                     className="flex h-full flex-col overflow-hidden bg-white"

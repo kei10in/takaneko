@@ -64,51 +64,52 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
               <LiveTypeBadge liveType={event.liveType} />
               {hasFirstPerformance && <FirstPerformanceBadge />}
             </div>
-            <div className="ml-auto flex flex-1 items-end">
-              <Link
-                to={`/events/${event.slug}`}
-                className="inline-flex h-8 flex-none items-center gap-1 rounded-full px-2 text-sm hover:bg-zinc-100"
-              >
-                <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
-                <span>イベント詳細</span>
-                <HiChevronRight className="text-nadeshiko-600" />
-              </Link>
-            </div>
           </div>
         </div>
       </div>
 
-      <div
-        key={event.slug}
-        className={clsx(
-          "min-h-0 flex-1 space-y-7 overflow-y-auto overscroll-contain p-4",
-          "inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)] inset-shadow-black/5",
-        )}
-      >
-        {event.acts.map((act, index) => (
-          <section key={index} className="space-y-2">
-            {(event.acts.length > 1 || act.title != undefined) && (
-              <div className="flex items-center gap-2">
-                <h3 className="line-clamp-1 min-w-0 flex-1 text-base font-semibold text-gray-700">
-                  {act.title ?? `ステージ ${index + 1}`}
-                </h3>
-                {showMatchedAct && matchedActIndexSet.has(index) && (
-                  <span className="flex-none rounded-full bg-nadeshiko-100 px-2 py-0.5 text-xs text-nadeshiko-800">
-                    該当
-                  </span>
-                )}
-              </div>
-            )}
+      <div className="relative min-h-0 flex-1">
+        <section
+          key={event.slug}
+          aria-label="曲のリスト"
+          className={clsx(
+            "h-full space-y-7 overflow-y-auto overscroll-contain px-4 pt-4 pb-20",
+            "inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)] inset-shadow-black/5",
+          )}
+        >
+          {event.acts.map((act, index) => (
+            <section key={index} className="space-y-2">
+              {(event.acts.length > 1 || act.title != undefined) && (
+                <div className="flex items-center gap-2">
+                  <h3 className="line-clamp-1 min-w-0 flex-1 text-base font-semibold text-gray-700">
+                    {act.title ?? `ステージ ${index + 1}`}
+                  </h3>
+                  {showMatchedAct && matchedActIndexSet.has(index) && (
+                    <span className="flex-none rounded-full bg-nadeshiko-100 px-2 py-0.5 text-xs text-nadeshiko-800">
+                      該当
+                    </span>
+                  )}
+                </div>
+              )}
 
-            {act.songCount == 0 ? (
-              <div className="z-50 rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
-                セットリスト未登録
-              </div>
-            ) : (
-              <Setlist setlist={act.setlist} links={act.links} />
-            )}
-          </section>
-        ))}
+              {act.songCount == 0 ? (
+                <div className="z-50 rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
+                  セットリスト未登録
+                </div>
+              ) : (
+                <Setlist setlist={act.setlist} links={act.links} />
+              )}
+            </section>
+          ))}
+        </section>
+        <Link
+          to={`/events/${event.slug}`}
+          className="absolute right-4 bottom-4 z-10 inline-flex h-10 items-center gap-1 rounded-full bg-white/30 px-3 text-sm shadow-md ring-1 ring-zinc-200/50 backdrop-blur-xs hover:bg-white/70"
+        >
+          <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
+          <span>イベント詳細</span>
+          <HiChevronRight className="text-nadeshiko-600" />
+        </Link>
       </div>
     </>
   );

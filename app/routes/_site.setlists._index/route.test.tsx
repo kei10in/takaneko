@@ -131,7 +131,6 @@ const setup = async (items = events) => {
   await screen.findByRole("heading", { name: "セットリスト", level: 1 });
 };
 describe("セットリストのモーダル", () => {
-
   it("カードから概要とセトリを開き、閉じるとカードに戻る", async () => {
     await setup([
       { ...events[0], image: { path: "/events/test.jpg", ref: "https://example.com" } },
@@ -155,6 +154,11 @@ describe("セットリストのモーダル", () => {
         .getByRole("link", { name: /イベント詳細/u })
         .getAttribute("href"),
     ).toBe("/events/2026-09-27_test0");
+    const songList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    const eventLink = within(dialog).getByRole("link", { name: /イベント詳細/u });
+    expect(songList.contains(eventLink)).toBe(false);
+    expect(songList.parentElement?.contains(eventLink)).toBe(true);
+    expect(songList.parentElement?.contains(getSelectedEventHeading("ライブ A"))).toBe(false);
     expect(within(dialog).getByText("セットリスト未登録")).toBeTruthy();
     expect(within(dialog).queryByRole("button", { name: "前のライブ" })).toBeNull();
     expect(within(dialog).queryByRole("button", { name: "次のライブ" })).toBeNull();
