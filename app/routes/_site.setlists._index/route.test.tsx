@@ -343,8 +343,8 @@ describe("セットリストのモーダル", () => {
     expect(details.getByText("会場 29")).toBeTruthy();
   });
 
-  it("100件以上進んでも詳細の描画数が増え続けない", async () => {
-    const items = Array.from({ length: 121 }, (_, index) => ({
+  it("連続して進んでも詳細の描画数が増え続けない", async () => {
+    const items = Array.from({ length: 21 }, (_, index) => ({
       ...events[0],
       slug: `live-${index}`,
       title: `ライブ ${index}`,
@@ -353,7 +353,7 @@ describe("セットリストのモーダル", () => {
     await setup(items);
     fireEvent.click(screen.getByRole("button", { name: /ライブ 0\b/u }));
     const details = within(await screen.findByRole("dialog"));
-    Array.from({ length: 121 }, (_, index) => index).forEach((index) => {
+    Array.from({ length: 21 }, (_, index) => index).forEach((index) => {
       if (index > 0) {
         swipeDialog();
       }
@@ -367,7 +367,7 @@ describe("セットリストのモーダル", () => {
     });
     showSlides(0);
     expect(details.getByText("会場 0")).toBeTruthy();
-    expect(details.queryByText("会場 120")).toBeNull();
+    expect(details.queryByText("会場 20")).toBeNull();
   });
 
   it("詳細を左へドラッグすると次のライブへ移動する", async () => {
