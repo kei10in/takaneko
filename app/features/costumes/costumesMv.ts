@@ -42,6 +42,38 @@ export const 純情乙女のイタズラ宣言MV衣装 = {
       path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_籾山ひめり.jpg",
       ref: "https://x.com/himeri_momiyama/status/2110690656754807088",
     },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_城月菜央_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112121579261805043",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_涼海すう_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112121579261805043",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_橋本桃呼_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112121579261805043",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_葉月紗蘭_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112121579261805043",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_東山恵里沙_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112122081987150057",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_日向端ひな_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112122081987150057",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_松本ももな_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112122081987150057",
+    },
+    {
+      path: "/takaneko/costumes/mv/純情乙女のイタズラ宣言/純情乙女のイタズラ宣言MV衣装_籾山ひめり_ハニフェス2026.jpg",
+      ref: "https://x.com/takanenofficial/status/2112122081987150057",
+    },
   ],
 } satisfies MvCostume;
 
