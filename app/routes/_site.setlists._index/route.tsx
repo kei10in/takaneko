@@ -1,6 +1,6 @@
 import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useDeferredValue, useMemo, useState } from "react";
+import { useCallback, useDeferredValue, useMemo, useState } from "react";
 import {
   HiAdjustmentsHorizontal,
   HiChevronRight,
@@ -8,7 +8,13 @@ import {
   HiOutlineCalendarDays,
   HiXMark,
 } from "react-icons/hi2";
-import { Link, MetaFunction, ShouldRevalidateFunctionArgs, useLoaderData } from "react-router";
+import {
+  Link,
+  MetaFunction,
+  ShouldRevalidateFunctionArgs,
+  useLoaderData,
+  useSearchParams,
+} from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
 import { dialogBackdropStyle, pageBox } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
@@ -21,11 +27,17 @@ import {
   SetlistSelectedLiveFilterType,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters.ts";
+import {
+  readSetlistSearchParams,
+  writeSetlistSearchParams,
+} from "~/features/setlists/searchParams.ts";
 import { SetlistEvents } from "~/features/setlists/types.ts";
 import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
+import { useLocationState } from "~/hooks/useLocationState.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { SetlistEventCard } from "./SetlistEventCard.tsx";
+import { SetlistEventDialog } from "./SetlistEventDialog.tsx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -68,12 +80,43 @@ export const shouldRevalidate = ({
   return defaultShouldRevalidate;
 };
 
+const isScrollTopsBySlug = (value: unknown): value is Record<string, number> =>
+  typeof value == "object" &&
+  value != null &&
+  Object.values(value).every(
+    (scrollTop) => typeof scrollTop == "number" && Number.isFinite(scrollTop) && scrollTop >= 0,
+  );
+
+const setlistDialogStateFromLocation = (
+  state: unknown,
+): { slug: string; scrollTopsBySlug: Record<string, number> } | undefined => {
+  if (typeof state != "object" || state == null || !("setlistEventSlug" in state)) {
+    return undefined;
+  }
+  if (typeof state.setlistEventSlug != "string") {
+    return undefined;
+  }
+  const scrollTopsBySlug =
+    "scrollTopsBySlug" in state && isScrollTopsBySlug(state.scrollTopsBySlug)
+      ? state.scrollTopsBySlug
+      : {};
+  return { slug: state.setlistEventSlug, scrollTopsBySlug };
+};
+
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
-  const [query, setQuery] = useState("");
+  const [locationState, setLocationState] = useLocationState();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filters = useMemo(() => readSetlistSearchParams(searchParams), [searchParams]);
+  const [query, setQuery] = useState(filters.q);
+  const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
-  const [filters, setFilters] = useState(defaultSetlistSearchFilters);
   const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
+  // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
+  if (previousQuery !== filters.q) {
+    setPreviousQuery(filters.q);
+    setQuery(filters.q);
+  }
   const deferredQuery = useDeferredValue(filters.q);
   const searchFilters = useMemo<SetlistSearchFilters>(
     () => ({
@@ -99,6 +142,55 @@ export default function Component() {
     () => filterSetlistEvents(events, searchFilters),
     [events, searchFilters],
   );
+  const [setlistDialog, setSetlistDialog] = useState(() => {
+    const savedDialog = setlistDialogStateFromLocation(locationState);
+    const index = results.findIndex(({ event }) => event.slug == savedDialog?.slug);
+    return {
+      slideIndex: Math.max(0, index),
+      open: index >= 0,
+    };
+  });
+  const setSelectedEvent = useCallback(
+    (slug: string | undefined) => {
+      setLocationState(() =>
+        slug == undefined ? null : { setlistEventSlug: slug, scrollTopsBySlug: {} },
+      );
+    },
+    [setLocationState],
+  );
+  const onSelectedEventChange = useCallback(
+    (slug: string) => {
+      if (!setlistDialog.open) {
+        return;
+      }
+      setLocationState((previous) => {
+        const savedDialog = setlistDialogStateFromLocation(previous);
+        if (savedDialog == undefined || savedDialog.slug == slug) {
+          return previous;
+        }
+        return { setlistEventSlug: slug, scrollTopsBySlug: savedDialog.scrollTopsBySlug };
+      });
+    },
+    [setLocationState, setlistDialog.open],
+  );
+  const onScrollPositionChange = useCallback(
+    (slug: string, scrollTop: number) => {
+      if (!setlistDialog.open) {
+        return;
+      }
+      setLocationState((previous) => {
+        const savedDialog = setlistDialogStateFromLocation(previous);
+        if (savedDialog == undefined || savedDialog.scrollTopsBySlug[slug] == scrollTop) {
+          return previous;
+        }
+        return {
+          setlistEventSlug: savedDialog.slug,
+          scrollTopsBySlug: { ...savedDialog.scrollTopsBySlug, [slug]: scrollTop },
+        };
+      });
+    },
+    [setLocationState, setlistDialog.open],
+  );
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
@@ -108,12 +200,22 @@ export default function Component() {
     key: K,
     value: SetlistSearchFilters[K],
   ) => {
-    setFilters((previousFilters) => ({ ...previousFilters, [key]: value }));
+    setSearchParams(
+      (previousParams) =>
+        writeSetlistSearchParams(previousParams, {
+          ...readSetlistSearchParams(previousParams),
+          [key]: value,
+        }),
+      { replace: true, preventScrollReset: true },
+    );
   };
 
   const resetFilters = () => {
     setQuery("");
-    setFilters(defaultSetlistSearchFilters());
+    setSearchParams(
+      (previousParams) => writeSetlistSearchParams(previousParams, defaultSetlistSearchFilters()),
+      { replace: true, preventScrollReset: true },
+    );
   };
 
   return (
@@ -249,22 +351,42 @@ export default function Component() {
           </div>
         ) : (
           <ul className="mt-4 space-y-4">
-            {results.map(({ event, matchedActIndexes }) => (
+            {results.map(({ event }, index) => (
               <li key={event.slug}>
                 <SetlistEventCard
                   event={event}
-                  matchedActIndexes={matchedActIndexes}
-                  showMatchedAct={
-                    searchFilters.q != "" ||
-                    searchFilters.song != "" ||
-                    searchFilters.costume != "" ||
-                    searchFilters.isFirstPerformance ||
-                    searchFilters.isCover
-                  }
+                  onClick={() => {
+                    setSetlistDialog({ slideIndex: index, open: true });
+                    setSelectedEvent(event.slug);
+                  }}
                 />
               </li>
             ))}
           </ul>
+        )}
+        {results.length > 0 && (
+          <SetlistEventDialog
+            open={setlistDialog.open}
+            results={results}
+            initialSlideIndex={setlistDialog.slideIndex}
+            scrollTopsBySlug={setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {}}
+            onScrollPositionChange={onScrollPositionChange}
+            onSelectedEventChange={onSelectedEventChange}
+            onClose={() => {
+              setSetlistDialog((previous) => ({
+                ...previous,
+                open: false,
+              }));
+              setSelectedEvent(undefined);
+            }}
+            showMatchedAct={
+              searchFilters.q != "" ||
+              searchFilters.song != "" ||
+              searchFilters.costume != "" ||
+              searchFilters.isFirstPerformance ||
+              searchFilters.isCover
+            }
+          />
         )}
       </section>
     </div>

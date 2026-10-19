@@ -1,6 +1,7 @@
 import { Field, Label, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { Fragment, useMemo } from "react";
 import { BsGear } from "react-icons/bs";
+import { HiOutlineMusicalNote } from "react-icons/hi2";
 import { Link } from "react-router";
 import { CopyButton } from "~/components/CopyButton.tsx";
 import { Switch } from "~/components/Switch.tsx";
@@ -16,6 +17,7 @@ interface Props {
 
 export const Setlist: React.FC<Props> = (props: Props) => {
   const { setlist, links } = props;
+  const songCount = setlist.filter((segment) => segment.kind == "song").length;
 
   const copyWithMC = useEventCalendarStore((state) => state.copyWithMC);
   const copyWithOrder = useEventCalendarStore((state) => state.copyWithOrder);
@@ -27,15 +29,49 @@ export const Setlist: React.FC<Props> = (props: Props) => {
 
   return (
     <div>
-      <ul className="mt-1 divide-y divide-gray-100 pb-4">
+      <ul className="mt-1 divide-y divide-gray-100 border-b border-gray-100">
         {setlist.map((part, i) => {
           return <SetlistItem key={i} part={part} />;
         })}
       </ul>
 
-      <div className="flex justify-end gap-1">
+      <div className="px-0.5 pt-2">
+        <div className="flex items-center justify-between gap-1">
+          <p className="flex items-center gap-1 text-base text-zinc-500">
+            <HiOutlineMusicalNote aria-hidden="true" className="size-4 text-nadeshiko-600" />
+            {songCount} 曲
+          </p>
+          <div className="flex items-center gap-1">
+            <Popover>
+              <PopoverButton className="h-8 w-8 rounded-md p-2 text-gray-600 hover:bg-gray-100">
+                <BsGear />
+              </PopoverButton>
+              <PopoverPanel anchor={{ to: "bottom" }} className="w-60 p-4">
+                <div className="rounded-lg border border-gray-100 bg-white shadow-lg">
+                  <div className="divide-y divide-gray-100 px-2">
+                    <Field className="flex items-center gap-1 px-2 py-2 select-none">
+                      <Label className="flex-1 text-sm text-gray-600">曲順を含める</Label>
+                      <Switch
+                        checked={copyWithOrder}
+                        onChange={(checked) => updateCopySettings({ copyWithOrder: checked })}
+                      />
+                    </Field>
+                    <Field className="flex items-center gap-1 px-2 py-2 select-none">
+                      <Label className="flex-1 text-sm text-gray-600">MC を含める</Label>
+                      <Switch
+                        checked={copyWithMC}
+                        onChange={(checked) => updateCopySettings({ copyWithMC: checked })}
+                      />
+                    </Field>
+                  </div>
+                </div>
+              </PopoverPanel>
+            </Popover>
+            <CopyButton data={setlistText} />
+          </div>
+        </div>
         {links.length > 0 && (
-          <p className="flex-1 truncate pb-4 pl-6 text-xs text-nowrap text-gray-400">
+          <p className="truncate pt-2 pb-4 text-xs text-nowrap text-gray-400">
             出典:{" "}
             <Link
               className="text-nadeshiko-600"
@@ -60,37 +96,6 @@ export const Setlist: React.FC<Props> = (props: Props) => {
             ))}
           </p>
         )}
-
-        <div className="flex-none">
-          <Popover>
-            <PopoverButton className="h-8 w-8 rounded-md p-2 text-gray-600 hover:bg-gray-100">
-              <BsGear />
-            </PopoverButton>
-            <PopoverPanel anchor={{ to: "bottom" }} className="w-60 p-4">
-              <div className="rounded-lg border border-gray-100 bg-white shadow-lg">
-                <div className="divide-y divide-gray-100 px-2">
-                  <Field className="flex items-center gap-1 px-2 py-2 select-none">
-                    <Label className="flex-1 text-sm text-gray-600">曲順を含める</Label>
-                    <Switch
-                      checked={copyWithOrder}
-                      onChange={(checked) => updateCopySettings({ copyWithOrder: checked })}
-                    />
-                  </Field>
-                  <Field className="flex items-center gap-1 px-2 py-2 select-none">
-                    <Label className="flex-1 text-sm text-gray-600">MC を含める</Label>
-                    <Switch
-                      checked={copyWithMC}
-                      onChange={(checked) => updateCopySettings({ copyWithMC: checked })}
-                    />
-                  </Field>
-                </div>
-              </div>
-            </PopoverPanel>
-          </Popover>
-        </div>
-        <div className="flex-none">
-          <CopyButton data={setlistText} />
-        </div>
       </div>
     </div>
   );

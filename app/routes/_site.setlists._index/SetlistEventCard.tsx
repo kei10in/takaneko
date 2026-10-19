@@ -1,18 +1,6 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
-import { clsx } from "clsx";
-import { useRef, useState } from "react";
 import { GiMicrophone } from "react-icons/gi";
-import {
-  HiChevronDown,
-  HiChevronRight,
-  HiOutlineCalendarDays,
-  HiOutlineMapPin,
-  HiOutlineMusicalNote,
-  HiXMark,
-} from "react-icons/hi2";
-import { Link } from "react-router";
+import { HiOutlineMapPin } from "react-icons/hi2";
 import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
-import { Setlist } from "~/components/Setlist.tsx";
 import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 import { SetlistEvent } from "~/features/setlists/types.ts";
@@ -21,207 +9,70 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 
 interface SetlistEventCardProps {
   event: SetlistEvent;
-  matchedActIndexes: number[];
-  showMatchedAct: boolean;
+  onClick: () => void;
 }
 
-export const SetlistEventCard: React.FC<SetlistEventCardProps> = ({
-  event,
-  matchedActIndexes,
-  showMatchedAct,
-}: SetlistEventCardProps) => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const footerRef = useRef<HTMLDivElement>(null);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
-
-  const closeCard = (close: () => void) => {
-    const button = buttonRef.current;
-    const buttonRect = button?.getBoundingClientRect();
-    // Disclosure のフォーカス復帰による即時スクロールを防ぐ。
-    buttonRef.current?.focus({ preventScroll: true });
-    setTransitionEnabled(false);
-    close();
-    if (button != null && buttonRect != undefined && footerRef.current != null) {
-      // 閉じた後はボタン直下に下部の行が来るため、行の現在位置からボタンの高さを引く。
-      const targetTop = footerRef.current.getBoundingClientRect().top - buttonRect.height;
-      const previousMargin = button.style.scrollMarginTop;
-      button.style.scrollMarginTop = `${targetTop}px`;
-      button.scrollIntoView({ behavior: "instant", block: "start" });
-      button.style.scrollMarginTop = previousMargin;
-    }
-  };
-
+export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
   const date = NaiveDate.parseUnsafe(event.date);
-  const matchedActIndexSet = new Set(matchedActIndexes);
-  const eventUrl = `/events/${event.slug}`;
   const noSetlist = event.acts.every((act) => act.songCount == 0);
-
   return (
-    <div
-      className={clsx(
-        "group box-border overflow-hidden rounded-3xl border border-zinc-500/10 bg-white shadow-xl shadow-black/2",
-      )}
+    <button
+      type="button"
+      onClick={onClick}
+      aria-haspopup="dialog"
+      className="group block h-36 w-full overflow-hidden rounded-3xl border border-zinc-500/10 bg-white p-2 text-left shadow-xl shadow-black/2 focus-visible:outline-2 focus-visible:outline-nadeshiko-600"
     >
-      <Disclosure>
-        {({ open, close }) => (
-          <div>
-            <DisclosureButton
-              ref={buttonRef}
-              className="block w-full p-2 text-left focus-visible:outline-none"
-              onClick={() => setTransitionEnabled(true)}
-              onKeyDown={(keyEvent) => {
-                if (keyEvent.key === "Enter" || keyEvent.key === " ") {
-                  setTransitionEnabled(true);
-                }
-              }}
-            >
-              <div className="flex items-start gap-2">
-                {/* Image */}
-                <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
-                  {event.image != undefined ? (
-                    <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
-                      <ThumbnailImage
-                        src={event.image?.path}
-                        className="h-full w-full object-contain text-xs"
-                        alt={event.title}
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex h-full w-full items-center justify-center bg-nadeshiko-100 text-nadeshiko-800">
-                      <GiMicrophone className="text-3xl" />
-                    </div>
-                  )}
-                </div>
-
-                {/* Event Summary */}
-                <div className="min-w-0 flex-1 space-y-1 py-0.5 pl-2">
-                  <div className="line-clamp-1 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
-                    {displayDateWithDayOfWeek(date)}
-                  </div>
-
-                  <h2 className="line-clamp-2 leading-snug font-semibold transition-colors group-hover:text-nadeshiko-800">
-                    {event.title}
-                  </h2>
-
-                  <div className="line-clamp-1 flex items-center text-sm text-zinc-500">
-                    {event.location != undefined && (
-                      <span className="inline-flex min-w-0 items-center gap-1">
-                        <HiOutlineMapPin className="size-4 flex-none" />
-                        <span className="line-clamp-1">{event.location}</span>
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex flex-wrap items-center gap-1 pt-0.5">
-                    <LiveTypeBadge liveType={event.liveType} />
-
-                    {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
-                    {noSetlist && <TextBadge text="未登録" />}
-                    {!noSetlist && event.acts.some((act) => act.songCount == 0) && (
-                      <TextBadge text="未登録あり" />
-                    )}
-                  </div>
-                </div>
-
-                {/* Chevron */}
-                <div className="flex size-8 flex-none items-center justify-center rounded-full transition-colors group-hover:bg-zinc-500/5">
-                  <HiChevronDown
-                    className={clsx(
-                      "size-5 text-zinc-500",
-                      transitionEnabled && "transition-transform",
-                      open && "-rotate-180",
-                    )}
-                  />
-                </div>
-              </div>
-            </DisclosureButton>
-
-            <DisclosurePanel
-              transition={transitionEnabled}
-              className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-200 ease-in-out data-closed:grid-rows-[0fr]"
-            >
-              <div className="min-h-0 overflow-hidden">
-                <div
-                  className={clsx(
-                    "mb-2 border-y border-zinc-100 px-4 inset-shadow-black/5",
-                    "inset-shadow-[0_3rem_3rem_-3rem_var(--tw-inset-shadow-color),0_-3rem_3rem_-3rem_var(--tw-inset-shadow-color)]",
-                  )}
-                >
-                  <div className="my-6 space-y-7">
-                    {event.acts.map((act, index) => (
-                      <section key={index} className="space-y-2">
-                        {(event.acts.length > 1 || act.title != undefined) && (
-                          <div className="flex items-center gap-2">
-                            <h3 className="line-clamp-1 min-w-0 flex-1 text-base font-semibold text-gray-700">
-                              {act.title ?? `ステージ ${index + 1}`}
-                            </h3>
-                            {showMatchedAct && matchedActIndexSet.has(index) && (
-                              <span className="flex-none rounded-full bg-nadeshiko-100 px-2 py-0.5 text-xs text-nadeshiko-800">
-                                該当
-                              </span>
-                            )}
-                          </div>
-                        )}
-
-                        {act.songCount == 0 ? (
-                          <div className="z-50 rounded-md bg-gray-50 px-4 py-3 text-sm text-gray-500">
-                            セットリスト未登録
-                          </div>
-                        ) : (
-                          <Setlist setlist={act.setlist} links={act.links} />
-                        )}
-                      </section>
-                    ))}
-                  </div>
-                  <div className="my-1 text-right">
-                    <button
-                      type="button"
-                      onClick={() => closeCard(close)}
-                      className="inline-flex items-center justify-center gap-1 rounded-full text-sm text-zinc-500"
-                    >
-                      <HiXMark className="size-4" />
-                      <span>閉じる</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </DisclosurePanel>
-
-            <div ref={footerRef} className="flex items-center px-2 pb-2 text-sm">
-              <div className="flex min-w-0 flex-1 items-center">
-                <div className="flex h-8 items-center gap-1 rounded-full px-2 text-zinc-600">
-                  <HiOutlineMusicalNote className="size-4 text-nadeshiko-600" />
-                  <div>
-                    {event.acts.map((act, i) => {
-                      return (
-                        <span key={i}>
-                          {i != 0 && " / "}
-                          {act.songCount} 曲
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-none justify-end">
-                <Link
-                  className="flex h-8 items-center gap-1 rounded-full px-2 hover:bg-zinc-100"
-                  to={eventUrl}
-                >
-                  <HiOutlineCalendarDays className="size-4.5 text-nadeshiko-600" />
-                  <span>イベント詳細</span>
-                  <HiChevronRight className="text-nadeshiko-600" />
-                </Link>
-              </div>
+      <div className="flex h-full items-start gap-2">
+        {/* Image */}
+        <div className="relative min-h-24 w-24 flex-none self-stretch overflow-hidden rounded-2xl">
+          {event.image != undefined ? (
+            <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
+              <ThumbnailImage
+                src={event.image?.path}
+                className="h-full w-full object-contain text-xs"
+                alt={event.title}
+              />
             </div>
+          ) : (
+            <div className="flex h-full w-full items-center justify-center bg-nadeshiko-100 text-nadeshiko-800">
+              <GiMicrophone className="text-3xl" />
+            </div>
+          )}
+        </div>
+
+        {/* Event Summary */}
+        <div className="min-w-0 flex-1 space-y-1 px-2 py-0.5">
+          <div className="line-clamp-1 flex flex-wrap items-center gap-2 text-sm text-zinc-500">
+            {displayDateWithDayOfWeek(date)}
           </div>
-        )}
-      </Disclosure>
-    </div>
+
+          <h2 className="line-clamp-2 leading-snug font-semibold transition-colors group-hover:text-nadeshiko-800">
+            {event.title}
+          </h2>
+
+          <div className="line-clamp-1 flex items-center text-sm text-zinc-500">
+            {event.location != undefined && (
+              <span className="inline-flex min-w-0 items-center gap-1">
+                <HiOutlineMapPin className="size-4 flex-none" />
+                <span className="line-clamp-1">{event.location}</span>
+              </span>
+            )}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-1 pt-0.5">
+            <LiveTypeBadge liveType={event.liveType} />
+
+            {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
+            {noSetlist && <TextBadge text="未登録" />}
+            {!noSetlist && event.acts.some((act) => act.songCount == 0) && (
+              <TextBadge text="未登録あり" />
+            )}
+          </div>
+        </div>
+      </div>
+    </button>
   );
 };
-
 const containsFirstPerformanceSong = (event: SetlistEvent): boolean => {
   return event.acts.some((act) =>
     act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance),
