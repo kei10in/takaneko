@@ -47,7 +47,7 @@ export const meta: EventMetaDescriptor = {
     {
       title: "全員",
       types: ["LIVE"],
-      setlist: ["衣装:「「純情乙女のイタズラ宣言」MV 衣装」", "純情乙女のイタズラ宣言"],
+      setlist: ["衣装:「純情乙女のイタズラ宣言」MV 衣装", "純情乙女のイタズラ宣言"],
       links: [
         "https://x.com/LlwQyyn/status/2111817552427168033",
         "https://x.com/LlwQyyn/status/2111817552427168033",
