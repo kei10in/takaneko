@@ -43,13 +43,63 @@ export const meta: EventMetaDescriptor = {
     ],
     url: "https://x.com/takanenofficial/status/2110354950127776163",
   },
-  acts: [],
-  updatedAt: "2026-10-17",
+  acts: [
+    {
+      title: "全員",
+      types: ["LIVE"],
+      setlist: ["衣装:「「純情乙女のイタズラ宣言」MV 衣装」", "純情乙女のイタズラ宣言"],
+      links: [
+        "https://x.com/LlwQyyn/status/2111817552427168033",
+        "https://x.com/LlwQyyn/status/2111817552427168033",
+      ],
+    },
+    {
+      title: "高嶺のなでしこ",
+      types: ["LIVE"],
+      setlist: [
+        "Overture",
+        "衣装: 「純情乙女のイタズラ宣言」MV 衣装",
+        "初恋のひと。",
+        "僕らの青",
+        "約束",
+        "I’M YOUR IDOL",
+        "我武者羅",
+        "花は誓いを忘れない",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2111800714024595468"],
+    },
+    {
+      title: "アンコール コラボ",
+      types: ["LIVE"],
+      setlist: [
+        "衣装: T シャツ (HoneyWorks ハロウィンロゴ)",
+        "世界一可愛い私 (Kotoha、一ノ瀬直緒、 橘美空、波左間美晴、城月菜央、涼海すう、松本ももな)",
+        "HALLOWEEN KISS (Hanon、小田桐ななさ、西原悠桜、福田ひなた、橋本桃呼、東山恵里沙)",
+        "ハートブーケ (河合ここゆ、高澤百合愛、土屋玲実、寺本理絵、永尾梨央、葉月紗蘭、日向端ひな、籾山ひめり)",
+        "可愛くてごめん (全員)",
+      ],
+      links: [
+        "https://x.com/LlwQyyn/status/2111817552427168033",
+        "https://x.com/LlwQyyn/status/2111817552427168033",
+      ],
+    },
+  ],
+  updatedAt: "2026-10-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ハコニワリリィと - 公式 X](https://x.com/takanenofficial/status/2112174427492450351)
+  - [可憐なアイボリーと - 公式 X](https://x.com/takanenofficial/status/2112163102481391856)
+  - [ハニワバンドメンバーと - 公式 X](https://x.com/takanenofficial/status/2112144232760922438)
+  - [オフショット (東山恵里沙・日向端ひな・松本ももな・籾山ひめり) - 公式 X](https://x.com/takanenofficial/status/2112122081987150057)
+  - [オフショット (城月菜央・涼海すう・橋本桃呼・葉月紗蘭) - 公式 X](https://x.com/takanenofficial/status/2112121579261805043)
+  - [終演後の写真 - 公式 X](https://x.com/takanenofficial/status/2111812039987572924)
+  - [ダイジェスト動画 - 公式 X](https://x.com/takanenofficial/status/2111800714024595468)
+  - [当日券情報 - 公式 X](https://x.com/takanenofficial/status/2111608201355411582)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2111474816989491222)
   - [アルバム会場予約特典の案内 - 公式 X](https://x.com/takanenofficial/status/2110981587873722811)
   - [アルバム会場予約特典の案内 - ビクターエンタテインメント X](https://x.com/VictorMusic/status/2110974560942293178)
   - [グッズ情報 - 公式 X](https://x.com/takanenofficial/status/2110354950127776163)
