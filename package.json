@@ -43,7 +43,7 @@
     "unist-util-map": "^4.0.0",
     "unist-util-visit": "^5.1.0",
     "url-metadata": "^6.3.0",
-    "zod": "^4.6.5",
+    "zod": "^4.6.6",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
@@ -79,7 +79,7 @@
     "oxlint": "^1.87.0",
     "oxlint-tsgolint": "^7.0.2004",
     "prettier": "^3.9.10",
-    "prettier-plugin-embed": "^0.5.1",
+    "prettier-plugin-embed": "^0.7.1",
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "rehype-stringify": "^10.0.1",
