@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { memo } from "react";
+import { memo, useLayoutEffect, useRef, useState } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import { HiChevronRight, HiOutlineCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Link } from "react-router";
@@ -14,13 +14,36 @@ import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 interface SetlistEventDetailProps {
   result: SetlistSearchResult;
   showMatchedAct: boolean;
+  scrollTop: number | undefined;
+  onScrollPositionChange: (slug: string, scrollTop: number) => void;
 }
 
 export const SetlistEventDetail = memo(function SetlistEventDetail({
   result,
   showMatchedAct,
+  scrollTop,
+  onScrollPositionChange,
 }: SetlistEventDetailProps) {
   const { event, matchedActIndexes } = result;
+  const scrollContainerRef = useRef<HTMLElement>(null);
+  // 保存位置の変更で再描画されても、マウント中のスクロールを巻き戻さない。
+  const [initialScrollTop] = useState(() => scrollTop);
+
+  useLayoutEffect(() => {
+    if (scrollContainerRef.current != null && initialScrollTop != undefined) {
+      scrollContainerRef.current.scrollTop = initialScrollTop;
+    }
+  }, [initialScrollTop]);
+
+  useLayoutEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (scrollContainer == null) {
+      return;
+    }
+    const handleScroll = () => onScrollPositionChange(event.slug, scrollContainer.scrollTop);
+    scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
+    return () => scrollContainer.removeEventListener("scroll", handleScroll);
+  }, [event.slug, onScrollPositionChange]);
   const matchedActIndexSet = new Set(matchedActIndexes);
   const hasFirstPerformance = event.acts.some((act) =>
     act.setlist.some((segment) => segment.kind == "song" && segment.isFirstPerformance),
@@ -70,6 +93,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
 
       <div className="relative min-h-0 flex-1">
         <section
+          ref={scrollContainerRef}
           key={event.slug}
           aria-label="曲のリスト"
           className={clsx(

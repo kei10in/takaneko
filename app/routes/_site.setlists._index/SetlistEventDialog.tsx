@@ -9,6 +9,8 @@ interface SetlistEventDialogContentProps {
   results: SetlistSearchResult[];
   showMatchedAct: boolean;
   initialSlideIndex: number;
+  scrollTopsBySlug: Record<string, number>;
+  onScrollPositionChange: (slug: string, scrollTop: number) => void;
   onSelectedEventChange: (slug: string) => void;
   onClose: () => void;
 }
@@ -20,7 +22,7 @@ interface SetlistEventDialogProps extends SetlistEventDialogContentProps {
 export const SetlistEventDialog = ({ open, ...props }: SetlistEventDialogProps) => (
   <Dialog open={open} onClose={props.onClose} transition className="relative z-50">
     <DialogBackdrop className={dialogBackdropStyle()} transition />
-    <SetlistEventDialogContent open={open} {...props} />
+    <SetlistEventDialogContent {...props} />
   </Dialog>
 );
 
@@ -29,19 +31,18 @@ const SetlistEventDialogContent = ({
   results,
   showMatchedAct,
   initialSlideIndex,
-  open,
+  scrollTopsBySlug,
+  onScrollPositionChange,
   onSelectedEventChange,
   onClose,
-}: SetlistEventDialogProps) => {
+}: SetlistEventDialogContentProps) => {
   const { carouselRef, selectedSlideIndex, renderedSlideRange } = useSetlistCarousel(
     initialSlideIndex,
     results.length,
     (index) => {
-      if (open) {
-        const selectedEvent = results[index];
-        if (selectedEvent != undefined) {
-          onSelectedEventChange(selectedEvent.event.slug);
-        }
+      const slug = results[index]?.event.slug;
+      if (slug != undefined) {
+        onSelectedEventChange(slug);
       }
     },
   );
@@ -75,7 +76,12 @@ const SetlistEventDialogContent = ({
                     inert={index != selectedSlideIndex}
                     aria-hidden={index != selectedSlideIndex}
                   >
-                    <SetlistEventDetail result={result} showMatchedAct={showMatchedAct} />
+                    <SetlistEventDetail
+                      result={result}
+                      showMatchedAct={showMatchedAct}
+                      scrollTop={scrollTopsBySlug[result.event.slug]}
+                      onScrollPositionChange={onScrollPositionChange}
+                    />
                   </div>
                 )}
               </div>

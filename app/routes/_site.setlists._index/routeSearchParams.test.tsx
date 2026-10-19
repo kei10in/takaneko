@@ -75,6 +75,40 @@ describe("セットリストの URL 同期", () => {
     expect(router.state.location.state).toBeNull();
   });
 
+  it("イベントページから戻ると曲のリストのスクロール位置を復元する", async () => {
+    const { router } = renderPage();
+    await searchInput();
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    songList.scrollTop = 180;
+    fireEvent.scroll(songList);
+    await waitFor(() =>
+      expect(router.state.location.state).toEqual({
+        setlistEventSlug: events[0].slug,
+        scrollTopsBySlug: { [events[0].slug]: 180 },
+      }),
+    );
+
+    fireEvent.click(within(dialog).getByRole("link", { name: /イベント詳細/u }));
+    await screen.findByRole("heading", { name: "イベントページ" });
+    await act(() => router.navigate(-1));
+    const restoredDialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(within(restoredDialog).getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(180);
+
+    fireEvent.click(within(restoredDialog).getByRole("button", { name: "閉じる" }));
+    const closingSongList = within(restoredDialog).getByRole("region", {
+      name: "曲のリスト",
+    });
+    closingSongList.scrollTop = 240;
+    fireEvent.scroll(closingSongList);
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    expect(router.state.location.state).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    const reopenedDialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(within(reopenedDialog).getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(0);
+  });
+
   it("ダイアログ内の楽曲リンクから戻ると、同じダイアログが開く", async () => {
     const song = PerformedSongs[0];
     const songEvent: SetlistEvents = [
@@ -93,12 +127,15 @@ describe("セットリストの URL 同期", () => {
     await searchInput();
     fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
     const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    songList.scrollTop = 120;
+    fireEvent.scroll(songList);
     fireEvent.click(within(dialog).getByRole("link", { name: new RegExp(song.name, "u") }));
     await screen.findByRole("heading", { name: "楽曲ページ" });
     await act(() => router.navigate(-1));
-    expect(
-      within(await screen.findByRole("dialog", { name: "セットリスト" })).getByText(song.name),
-    ).toBeTruthy();
+    const restoredDialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(within(restoredDialog).getByText(song.name)).toBeTruthy();
+    expect(within(restoredDialog).getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(120);
   });
 
   it("URL の全条件をフォームに復元する", async () => {

@@ -1,5 +1,5 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
-import { createRoutesStub } from "react-router";
+import { createMemoryRouter, createRoutesStub, RouterProvider, useNavigate } from "react-router";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { SetlistEvent } from "~/features/setlists/types.ts";
 import SetlistsPage from "./route.tsx";
@@ -130,7 +130,65 @@ const setup = async (items = events) => {
   render(<Routes initialEntries={["/setlists"]} />);
   await screen.findByRole("heading", { name: "セットリスト", level: 1 });
 };
+const EventPage = () => {
+  const navigate = useNavigate();
+  return <button onClick={() => void navigate(-1)}>一覧へ戻る</button>;
+};
 describe("セットリストのモーダル", () => {
+  it("別のライブへスワイプした後に戻ると、そのライブの曲リストの位置を復元する", async () => {
+    const router = createMemoryRouter(
+      [
+        { path: "/setlists", Component: SetlistsPage, loader: () => ({ events }) },
+        { path: "/events/:slug", Component: EventPage },
+      ],
+      { initialEntries: ["/setlists"] },
+    );
+    render(<RouterProvider router={router} />);
+    await screen.findByRole("heading", { name: "セットリスト", level: 1 });
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const firstSongList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    firstSongList.scrollTop = 90;
+    fireEvent.scroll(firstSongList);
+    drag(firstSongList);
+    await waitFor(() =>
+      expect(router.state.location.state).toEqual({
+        setlistEventSlug: events[1].slug,
+        scrollTopsBySlug: { [events[0].slug]: 90 },
+      }),
+    );
+    expect(firstSongList.scrollTop).toBe(90);
+    await waitFor(() => expect(getSelectedEventHeading("ライブ B")).toBeTruthy());
+    const secondSongList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    expect(secondSongList.scrollTop).toBe(0);
+    await waitFor(() =>
+      expect(router.state.location.state).toEqual({
+        setlistEventSlug: events[1].slug,
+        scrollTopsBySlug: { [events[0].slug]: 90 },
+      }),
+    );
+    secondSongList.scrollTop = 160;
+    fireEvent.scroll(secondSongList);
+    await waitFor(() =>
+      expect(router.state.location.state).toEqual({
+        setlistEventSlug: events[1].slug,
+        scrollTopsBySlug: { [events[0].slug]: 90, [events[1].slug]: 160 },
+      }),
+    );
+    // ドラッグ直後のクリック抑止を消化してからリンクを開く。
+    fireEvent.click(secondSongList);
+    fireEvent.click(within(dialog).getByRole("link", { name: /イベント詳細/u }));
+    fireEvent.click(await screen.findByRole("button", { name: "一覧へ戻る" }));
+    const restoredDialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(
+      within(restoredDialog).getByRole("heading", { name: "ライブ B", level: 2 }),
+    ).toBeTruthy();
+    expect(within(restoredDialog).getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(160);
+    drag(within(restoredDialog).getByRole("region", { name: "曲のリスト" }), "previous");
+    await waitFor(() => expect(getSelectedEventHeading("ライブ A")).toBeTruthy());
+    expect(within(restoredDialog).getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(90);
+  });
+
   it("カードから概要とセトリを開き、閉じるとカードに戻る", async () => {
     await setup([
       { ...events[0], image: { path: "/events/test.jpg", ref: "https://example.com" } },
@@ -211,10 +269,24 @@ describe("セットリストのモーダル", () => {
       title: `ライブ ${index}`,
       location: `会場 ${index}`,
     }));
-    await setup(items);
+    const router = createMemoryRouter(
+      [{ path: "/setlists", Component: SetlistsPage, loader: () => ({ events: items }) }],
+      { initialEntries: ["/setlists"] },
+    );
+    render(<RouterProvider router={router} />);
+    await screen.findByRole("heading", { name: "セットリスト", level: 1 });
     fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
     const dialog = await screen.findByRole("dialog");
     const details = within(dialog);
+    const songList = details.getByRole("region", { name: "曲のリスト" });
+    songList.scrollTop = 75;
+    fireEvent.scroll(songList);
+    await waitFor(() =>
+      expect(router.state.location.state).toEqual({
+        setlistEventSlug: "live-20",
+        scrollTopsBySlug: { "live-20": 75 },
+      }),
+    );
     Array.from({ length: 17 }, (_, index) => index + 12).forEach((index) => {
       expect(details.getByText(`会場 ${index}`)).toBeTruthy();
     });
@@ -242,6 +314,7 @@ describe("セットリストのモーダル", () => {
     showSlides(20);
     expect(details.getByText("会場 20")).toBeTruthy();
     expect(details.queryByText("会場 40")).toBeNull();
+    expect(details.getByRole("region", { name: "曲のリスト" }).scrollTop).toBe(75);
     fireEvent.click(details.getByRole("button", { name: "閉じる" }));
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
     fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));

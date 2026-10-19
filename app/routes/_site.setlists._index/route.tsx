@@ -1,6 +1,6 @@
 import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useDeferredValue, useMemo, useState } from "react";
+import { useCallback, useDeferredValue, useMemo, useState } from "react";
 import {
   HiAdjustmentsHorizontal,
   HiChevronRight,
@@ -13,8 +13,6 @@ import {
   MetaFunction,
   ShouldRevalidateFunctionArgs,
   useLoaderData,
-  useLocation,
-  useNavigate,
   useSearchParams,
 } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
@@ -35,6 +33,7 @@ import {
 } from "~/features/setlists/searchParams.ts";
 import { SetlistEvents } from "~/features/setlists/types.ts";
 import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
+import { useLocationState } from "~/hooks/useLocationState.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { SetlistEventCard } from "./SetlistEventCard.tsx";
@@ -81,17 +80,32 @@ export const shouldRevalidate = ({
   return defaultShouldRevalidate;
 };
 
-const selectedEventSlugFromState = (state: unknown): string | undefined => {
+const isScrollTopsBySlug = (value: unknown): value is Record<string, number> =>
+  typeof value == "object" &&
+  value != null &&
+  Object.values(value).every(
+    (scrollTop) => typeof scrollTop == "number" && Number.isFinite(scrollTop) && scrollTop >= 0,
+  );
+
+const setlistDialogStateFromLocation = (
+  state: unknown,
+): { slug: string; scrollTopsBySlug: Record<string, number> } | undefined => {
   if (typeof state != "object" || state == null || !("setlistEventSlug" in state)) {
     return undefined;
   }
-  return typeof state.setlistEventSlug == "string" ? state.setlistEventSlug : undefined;
+  if (typeof state.setlistEventSlug != "string") {
+    return undefined;
+  }
+  const scrollTopsBySlug =
+    "scrollTopsBySlug" in state && isScrollTopsBySlug(state.scrollTopsBySlug)
+      ? state.scrollTopsBySlug
+      : {};
+  return { slug: state.setlistEventSlug, scrollTopsBySlug };
 };
 
 export default function Component() {
   const { events } = useLoaderData<typeof loader>();
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [locationState, setLocationState] = useLocationState();
   const [searchParams, setSearchParams] = useSearchParams();
   const filters = useMemo(() => readSetlistSearchParams(searchParams), [searchParams]);
   const [query, setQuery] = useState(filters.q);
@@ -129,20 +143,54 @@ export default function Component() {
     [events, searchFilters],
   );
   const [setlistDialog, setSetlistDialog] = useState(() => {
-    const selectedEventSlug = selectedEventSlugFromState(location.state);
-    const index = results.findIndex(({ event }) => event.slug == selectedEventSlug);
-    return { slideIndex: Math.max(0, index), open: index >= 0 };
+    const savedDialog = setlistDialogStateFromLocation(locationState);
+    const index = results.findIndex(({ event }) => event.slug == savedDialog?.slug);
+    return {
+      slideIndex: Math.max(0, index),
+      open: index >= 0,
+    };
   });
-  const setSelectedEvent = (slug: string | undefined) => {
-    void navigate(
-      { pathname: location.pathname, search: location.search, hash: location.hash },
-      {
-        replace: true,
-        preventScrollReset: true,
-        state: slug == undefined ? null : { setlistEventSlug: slug },
-      },
-    );
-  };
+  const setSelectedEvent = useCallback(
+    (slug: string | undefined) => {
+      setLocationState(() =>
+        slug == undefined ? null : { setlistEventSlug: slug, scrollTopsBySlug: {} },
+      );
+    },
+    [setLocationState],
+  );
+  const onSelectedEventChange = useCallback(
+    (slug: string) => {
+      if (!setlistDialog.open) {
+        return;
+      }
+      setLocationState((previous) => {
+        const savedDialog = setlistDialogStateFromLocation(previous);
+        if (savedDialog == undefined || savedDialog.slug == slug) {
+          return previous;
+        }
+        return { setlistEventSlug: slug, scrollTopsBySlug: savedDialog.scrollTopsBySlug };
+      });
+    },
+    [setLocationState, setlistDialog.open],
+  );
+  const onScrollPositionChange = useCallback(
+    (slug: string, scrollTop: number) => {
+      if (!setlistDialog.open) {
+        return;
+      }
+      setLocationState((previous) => {
+        const savedDialog = setlistDialogStateFromLocation(previous);
+        if (savedDialog == undefined || savedDialog.scrollTopsBySlug[slug] == scrollTop) {
+          return previous;
+        }
+        return {
+          setlistEventSlug: savedDialog.slug,
+          scrollTopsBySlug: { ...savedDialog.scrollTopsBySlug, [slug]: scrollTop },
+        };
+      });
+    },
+    [setLocationState, setlistDialog.open],
+  );
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
     [results],
@@ -321,9 +369,14 @@ export default function Component() {
             open={setlistDialog.open}
             results={results}
             initialSlideIndex={setlistDialog.slideIndex}
-            onSelectedEventChange={setSelectedEvent}
+            scrollTopsBySlug={setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {}}
+            onScrollPositionChange={onScrollPositionChange}
+            onSelectedEventChange={onSelectedEventChange}
             onClose={() => {
-              setSetlistDialog((previous) => ({ ...previous, open: false }));
+              setSetlistDialog((previous) => ({
+                ...previous,
+                open: false,
+              }));
               setSelectedEvent(undefined);
             }}
             showMatchedAct={

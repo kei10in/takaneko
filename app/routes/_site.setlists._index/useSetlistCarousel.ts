@@ -1,6 +1,6 @@
 import type { EmblaEventCallbackType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { useEffect, useState } from "react";
+import { useEffect, useEffectEvent, useState } from "react";
 
 interface SlideRange {
   first: number;
@@ -19,7 +19,7 @@ const getPreloadRange = (
 export const useSetlistCarousel = (
   initialSlideIndex: number,
   slideCount: number,
-  onSelect: (index: number) => void,
+  onSelectedEventChange: (index: number) => void,
 ) => {
   const preloadSlideRadius = 8;
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(initialSlideIndex);
@@ -32,6 +32,7 @@ export const useSetlistCarousel = (
     containScroll: false,
     loop: false,
   });
+  const notifySelectedEventChange = useEffectEvent(onSelectedEventChange);
 
   useEffect(() => {
     if (carouselApi == undefined) {
@@ -41,11 +42,10 @@ export const useSetlistCarousel = (
       const target = event.detail.target;
       return !(target instanceof Element && target.closest("button, input, select, textarea"));
     };
-    const syncSelectedSlide = () => setSelectedSlideIndex(carouselApi.selectedSnap());
-    const selectSlide = () => {
+    const syncSelectedSlide = () => {
       const index = carouselApi.selectedSnap();
       setSelectedSlideIndex(index);
-      onSelect(index);
+      notifySelectedEventChange(index);
     };
     const syncRenderedSlideRange = () => {
       const visibleSlideIndexes = carouselApi.slidesInView();
@@ -59,23 +59,23 @@ export const useSetlistCarousel = (
       );
     };
     const syncAfterReInit = () => {
-      syncSelectedSlide();
+      setSelectedSlideIndex(carouselApi.selectedSnap());
       syncRenderedSlideRange();
     };
     carouselApi
       .on("pointerdown", allowDrag)
-      .on("select", selectSlide)
+      .on("select", syncSelectedSlide)
       .on("slidesinview", syncRenderedSlideRange)
       .on("reinit", syncAfterReInit);
     syncAfterReInit();
     return () => {
       carouselApi
         .off("pointerdown", allowDrag)
-        .off("select", selectSlide)
+        .off("select", syncSelectedSlide)
         .off("slidesinview", syncRenderedSlideRange)
         .off("reinit", syncAfterReInit);
     };
-  }, [carouselApi, onSelect, slideCount]);
+  }, [carouselApi, slideCount]);
 
   return { carouselRef, selectedSlideIndex, renderedSlideRange };
 };
