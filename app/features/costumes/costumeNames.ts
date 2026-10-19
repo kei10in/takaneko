@@ -87,6 +87,7 @@ export type MvCostumeName = z.infer<typeof MvCostumeName>;
 export const MvCostumeNames: string[] = MvCostumeName.options;
 
 export const TShirtCostumeName = z.enum([
+  "T シャツ (HoneyWorks ハロウィンロゴ)",
   "T シャツ (CROWNED IN BLOOM ver.)",
   "ワッペンポロシャツ",
   "T シャツ (4th ファンミ ver.)",
