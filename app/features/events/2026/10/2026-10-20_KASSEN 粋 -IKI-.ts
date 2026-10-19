@@ -5,8 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2026-10-20",
-  open: undefined,
-  start: undefined,
+  open: "12:00",
+  start: "12:30",
   end: undefined,
   region: "東京",
   location: "Zepp Shinjuku (TOKYO)",
@@ -16,6 +16,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-10-20_KASSEN 粋 -IKI-.jpg",
       ref: "https://x.com/takanenofficial/status/2107380345788379562",
     },
+    {
+      path: "/events/2026/2026-10-20_KASSEN 粋 -IKI-_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2111472308401611237",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "",
@@ -24,16 +29,23 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketdive.com/event/kassen-2026-10-20",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["19:55", "21:05"],
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-10-06",
+  acts: [
+    {
+      types: ["LIVE"],
+      start: "19:20",
+      end: "19:45",
+    },
+  ],
+  updatedAt: "2026-10-20",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2111472308401611237)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2107380345788379562)
 `;
