@@ -1,5 +1,34 @@
 import { TShirtCostume } from "./types.ts";
 
+export const Tシャツ_HoneyWorksハロウィンロゴ = {
+  kind: "tshirt",
+  name: "T シャツ (HoneyWorks ハロウィンロゴ)",
+  slug: "Tシャツ-HoneyWorksハロウィンロゴ",
+
+  images: [
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-HoneyWorksハロウィンロゴ/Tシャツ-HoneyWorksハロウィンロゴ.jpg",
+      ref: "https://x.com/hina_hinahata/status/2111808078492610690",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-HoneyWorksハロウィンロゴ/Tシャツ-HoneyWorksハロウィンロゴ_涼海すう.jpg",
+      ref: "https://x.com/su_suzumi_/status/2112346868252590381",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-HoneyWorksハロウィンロゴ/Tシャツ-HoneyWorksハロウィンロゴ_東山恵里沙.jpg",
+      ref: "https://x.com/erisahigasiyama/status/2111805107641680318",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-HoneyWorksハロウィンロゴ/Tシャツ-HoneyWorksハロウィンロゴ_日向端ひな.jpg",
+      ref: "https://x.com/hina_hinahata/status/2111808078492610690",
+    },
+    {
+      path: "/takaneko/costumes/tshirts/Tシャツ-HoneyWorksハロウィンロゴ/Tシャツ-HoneyWorksハロウィンロゴ_籾山ひめり.jpg",
+      ref: "https://x.com/himeri_momiyama/status/2111799360203960683",
+    },
+  ],
+} satisfies TShirtCostume;
+
 export const Tシャツ_BouquetOf9Flowers台湾限定 = {
   kind: "tshirt",
   name: "T シャツ (Bouquet of 9 Flowers 台北限定 ver.)",
@@ -161,6 +190,7 @@ export const Tシャツ_メンバー個別名前入り = {
 } satisfies TShirtCostume;
 
 export const AllTShirtCostumes = [
+  Tシャツ_HoneyWorksハロウィンロゴ,
   Tシャツ_BouquetOf9Flowers台湾限定,
   Tシャツ_BouquetOf9Flowers韓国限定,
   Tシャツ_BouquetOf9Flowers,
