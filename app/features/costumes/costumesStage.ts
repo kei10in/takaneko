@@ -46,6 +46,17 @@ export const _2026秋衣装 = {
       ref: "https://x.com/himeri_momiyama/status/2099114593968885790",
     },
   ],
+
+  links: [
+    {
+      text: "New Visual Off Shot 1",
+      url: "https://x.com/takanenofficial/status/2101114048431706537",
+    },
+    {
+      text: "New Visual Off Shot 2",
+      url: "https://x.com/takanenofficial/status/2101114299137802289",
+    },
+  ],
 } satisfies StageCostume;
 
 export const _2026夏衣装 = {

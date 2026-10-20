@@ -31,6 +31,8 @@ export interface StageCostume {
   stylist?: string;
 
   images?: ImageDescriptionWithOffset[];
+
+  links?: LinkDescription[];
 }
 
 export interface MvCostume {
