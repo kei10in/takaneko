@@ -3,10 +3,10 @@ import { OgpMediaDescriptor } from "../types.ts";
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
     mediaUrl: "https://beeeem.com/article/beeeefes11-takaneko",
+    siteName: "BEEEEM",
     publishedAt: "2026-10-12",
     category: "article",
     presents: ["高嶺のなでしこ3"],
-    siteName: "BEEEM",
   },
   {
     mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/815412",
