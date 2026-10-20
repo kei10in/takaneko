@@ -29,13 +29,11 @@ export const MeetAngGreetLanesList = z.union([
         member: z.string(),
         costume: EventCostume.optional(),
       })
-      .transform(
-        (obj): MeetAndGreetLane => ({
-          label: obj.label,
-          members: [obj.member],
-          costume: obj.costume,
-        }),
-      ),
+      .transform((obj): MeetAndGreetLane => ({
+        label: obj.label,
+        members: [obj.member],
+        costume: obj.costume,
+      })),
   ),
   z.array(MeetAndGreetLane),
 ]);

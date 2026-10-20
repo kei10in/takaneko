@@ -70,7 +70,7 @@ export const content = /* md */ `
   ## リンク
 
   - [公式ニュース - リリース記念イベント一覧](https://takanenonadeshiko.jp/2ndsgreleaseevent_all/)
-  - [公式 X - イベント詳細告知]()
+  - [公式 X - イベント詳細告知](<>)
   - [公式スケジュール](https://takanenonadeshiko.jp/events/event/2ndシングル「タイトル未定」リリースイベント/)
   - [ビクター エンターテイメント ニュース](https://www.jvcmusic.co.jp/-/News/A028511/16.html)
 `;

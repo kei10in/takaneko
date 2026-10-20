@@ -69,6 +69,6 @@ export const content = /* md */ `
   ## リンク
 
   - [番組放送回ページ](https://www.tv-asahi.co.jp/pr/sphone/20250423_05915.html)
-  - [公式 X 告知]()
+  - [公式 X 告知](<>)
   - [番組 X 告知](https://x.com/pakupakutomnana/status/1914958070276612322)
 `;

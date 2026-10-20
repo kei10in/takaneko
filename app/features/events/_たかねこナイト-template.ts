@@ -28,8 +28,8 @@ export const content = /* md */ `
   - TOKYO FM 毎週火曜日 27:00 〜 27:30
   - [Radiko 放送回](https://radiko.jp/share?sid=FMT&t={{radikoTimestamp}})
 
-  {/_ - [Podcasts Membership]() _/}
-  {/_ - [メンバーシップ限定 アンコール]() _/}
+  {/_ - [Podcasts Membership](<>) _/}
+  {/_ - [メンバーシップ限定 アンコール](<>) _/}
 
   ## 番組説明
 

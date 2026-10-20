@@ -14,7 +14,13 @@ export const calendarBuilder = (): Plugin => {
 };
 
 const buildCalendar = (kind: string, filename: string) => {
-  const buildCalendarScript = path.resolve(import.meta.dirname, "..", "..", "scripts", "build-calendar.ts");
+  const buildCalendarScript = path.resolve(
+    import.meta.dirname,
+    "..",
+    "..",
+    "scripts",
+    "build-calendar.ts",
+  );
   const output = path.resolve(import.meta.dirname, "..", "..", path.join("public", filename));
 
   const result = spawnSync("pnpm", ["tsx", buildCalendarScript, kind, output], { shell: true });

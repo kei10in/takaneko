@@ -63,5 +63,5 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
-  - [公式スケジュール]()
+  - [公式スケジュール](<>)
 `;

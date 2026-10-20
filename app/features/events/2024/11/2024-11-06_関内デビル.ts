@@ -25,8 +25,8 @@ export const content = /* md */ `
 
   ## リンク
 
-  - [公式 X 告知]()
-  - [番組 X 告知]()
+  - [公式 X 告知](<>)
+  - [番組 X 告知](<>)
   - [番組サイト](https://www.tvk-yokohama.com/kannaidevil/)
   - [TVer](https://tver.jp/series/srehapgls0)
 `;

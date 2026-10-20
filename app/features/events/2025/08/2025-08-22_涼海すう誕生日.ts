@@ -35,7 +35,9 @@ export const content = /* md */ `
   ## お祝いメッセージ
 
   - [城月菜央](https://x.com/nao_kizuki/status/1958869576042656226)
+
   <!-- - [涼海すう]() -->
+
   - [橋本桃呼](https://x.com/MomokoHashimoto/status/1958691893862441382)
   - [葉月紗蘭](https://x.com/saara_hazuki/status/1958696266659139743)
   - [東山恵里沙 1](https://x.com/erisahigasiyama/status/1958544892608881018)

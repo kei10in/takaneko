@@ -12,7 +12,13 @@ export const sitemapBuilder = (): Plugin => {
 };
 
 const buildSitemap = () => {
-  const buildSitemapScript = path.resolve(import.meta.dirname, "..", "..", "scripts", "build-sitemap.ts");
+  const buildSitemapScript = path.resolve(
+    import.meta.dirname,
+    "..",
+    "..",
+    "scripts",
+    "build-sitemap.ts",
+  );
 
   const result = spawnSync("pnpm", ["tsx", buildSitemapScript], { shell: true });
   if (result.error) {

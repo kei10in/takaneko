@@ -36,5 +36,5 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
-  - []()
+  - [](<>)
 `;
