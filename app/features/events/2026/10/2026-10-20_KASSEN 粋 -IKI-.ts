@@ -71,9 +71,9 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
-  - [終演後の写真 - 公式 X](https://x.com/takanenofficial/status/2112496549263450187)
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2112496549263450187)
   - [本日のおチェキ](https://x.com/takanekomanager/status/2112496606545432917)
-  - [きょうのたかねこ・無料生配信と物販の案内 - 公式 X](https://x.com/takanenofficial/status/2112382044890382493)
+  - [きょうのたかねこ](https://x.com/takanenofficial/status/2112382044890382493)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2111472308401611237)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2107380345788379562)
 `;
