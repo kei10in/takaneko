@@ -79,6 +79,24 @@ export const 純情乙女のイタズラ宣言MV衣装 = {
       ref: "https://x.com/takanenofficial/status/2112122081987150057",
     },
   ],
+  links: [
+    {
+      text: "城月菜央、東山恵里沙 - 公式 X",
+      url: "https://x.com/takanenofficial/status/2111427006931869723",
+    },
+    {
+      text: "橋本桃呼、松本ももな - 公式 X",
+      url: "https://x.com/takanenofficial/status/2111427505555194112",
+    },
+    {
+      text: "葉月紗蘭、日向端ひな - 公式 X",
+      url: "https://x.com/takanenofficial/status/2111427757314040319",
+    },
+    {
+      text: "涼海すう、籾山ひめり - 公式 X",
+      url: "https://x.com/takanenofficial/status/2111433017726300382",
+    },
+  ],
 } satisfies MvCostume;
 
 export const 僕らの青MV衣装 = {

@@ -1,5 +1,6 @@
 import { z } from "zod/v4";
 import { ImageDescriptionWithOffset } from "~/utils/types/ImageDescription.ts";
+import { LinkDescription } from "~/utils/types/LinkDescription.ts";
 import { EventTypeEnum, LiveTypeEnum } from "../events/EventType.ts";
 import {
   MvCostumeName,
@@ -38,6 +39,8 @@ export interface MvCostume {
   slug: string;
 
   images?: ImageDescriptionWithOffset[];
+
+  links?: LinkDescription[];
 }
 
 /**
