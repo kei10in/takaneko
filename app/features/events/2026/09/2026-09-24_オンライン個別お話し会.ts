@@ -19,7 +19,6 @@ export const meta: EventMetaDescriptor = {
     text: "開催詳細",
     url: "https://takanenonadeshiko.jp/?p=5601",
   },
-  ticket: "https://lin.ee/rzRnDRP",
   updatedAt: "2026-09-20",
 };
 
