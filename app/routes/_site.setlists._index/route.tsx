@@ -222,7 +222,7 @@ export default function Component() {
     <div className="container mx-auto lg:max-w-5xl">
       <section className={pageBox("my-8 px-4")}>
         <div>
-          <h1 className="mb-6 text-5xl">セットリスト</h1>
+          <h1 className="page-heading">セットリスト</h1>
 
           <p className="mx-2 mb-2">
             過去のライブのセットリストを、イベント名・曲名・衣装名・会場名から探せます。

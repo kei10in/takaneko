@@ -102,6 +102,10 @@
 }
 
 @layer components {
+  .page-heading {
+    @apply mb-6 text-5xl;
+  }
+
   .main-viewport {
     @apply min-h-[calc(100svh-var(--header-height))];
   }
