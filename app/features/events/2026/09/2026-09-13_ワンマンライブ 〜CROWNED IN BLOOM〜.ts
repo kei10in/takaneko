@@ -56,7 +56,7 @@ export const meta: EventMetaDescriptor = {
     types: ["LIVE"],
     setlist: [
       "影ナレ: 松本ももな, 籾山ひめり",
-      "衣装: 2026 秋衣装",
+      "衣装: A World in Our Colors 衣装",
       "約束",
       "Overture",
       "美しく生きろ",

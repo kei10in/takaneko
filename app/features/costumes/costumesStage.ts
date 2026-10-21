@@ -1,48 +1,48 @@
 import { StageCostume } from "./types.ts";
 
-export const _2026秋衣装 = {
+export const AWorldInOurColors衣装 = {
   kind: "stage",
-  name: "2026 秋衣装",
-  slug: "2026 秋衣装",
+  name: "A World in Our Colors 衣装",
+  slug: "A World in Our Colors 衣装",
   photoType: "press",
 
   liveDebut: "2026-09-13",
 
   images: [
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装.jpg",
       ref: "https://x.com/takanenofficial/status/2099121045219475653",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_城月菜央.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_城月菜央.jpg",
       ref: "https://x.com/nao_kizuki/status/2099131704527229045",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_涼海すう.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_涼海すう.jpg",
       ref: "https://x.com/su_suzumi_/status/2099108339875803400",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_橋本桃呼.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_橋本桃呼.jpg",
       ref: "https://x.com/MomokoHashimoto/status/2099117263563714570",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_葉月紗蘭.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_葉月紗蘭.jpg",
       ref: "https://x.com/saara_hazuki/status/2099120096518303781",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_東山恵里沙.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_東山恵里沙.jpg",
       ref: "https://x.com/erisahigasiyama/status/2099106831536890079",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_日向端ひな.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_日向端ひな.jpg",
       ref: "https://x.com/hina_hinahata/status/2099129421093621956",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_松本ももな.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_松本ももな.jpg",
       ref: "https://x.com/momonamatsumoto/status/2099115688686395838",
     },
     {
-      path: "/takaneko/costumes/stage/2026秋衣装/2026秋衣装_籾山ひめり.jpg",
+      path: "/takaneko/costumes/stage/A World in Our Colors 衣装/A World in Our Colors 衣装_籾山ひめり.jpg",
       ref: "https://x.com/himeri_momiyama/status/2099114593968885790",
     },
   ],
@@ -346,7 +346,7 @@ export const アンチファン衣装 = {
 } satisfies StageCostume;
 
 export const AllStageCostumes = [
-  _2026秋衣装,
+  AWorldInOurColors衣装,
   _2026夏衣装,
   BouquetOf9Flowers衣装,
   見上げるたびに恋をする衣装,

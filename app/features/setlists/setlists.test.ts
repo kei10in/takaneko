@@ -5,6 +5,7 @@ import { LiveType } from "~/features/events/EventType.ts";
 import { parseSetlist } from "~/features/events/setlist.ts";
 import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { Events } from "../../../scripts/lib/events.ts";
 import { buildSetlistEvents } from "./buildSetlistEvents.ts";
 import { filterSetlistEvents } from "./filterSetlistEvents.ts";
 import { SetlistSearchFilters } from "./searchFilters.ts";
@@ -197,6 +198,15 @@ describe("buildSetlistEvents", () => {
 });
 
 describe("filterSetlistEvents", () => {
+  it("finds the performances wearing the A World in Our Colors costume", async () => {
+    const sourceEvents = await Events.importAllEventModules();
+    const events = buildSetlistEvents(sourceEvents, new NaiveDate(2026, 10, 21));
+    const result = filterSetlistEvents(events, filters({ costume: "A World in Our Colors 衣装" }));
+
+    expect(result).toHaveLength(9);
+    expect(result.reduce((count, event) => count + event.matchedActIndexes.length, 0)).toBe(13);
+  });
+
   const events = buildSetlistEvents(
     [
       sourceEvent({

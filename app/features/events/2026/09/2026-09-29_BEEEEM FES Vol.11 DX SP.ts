@@ -47,7 +47,7 @@ export const meta: EventMetaDescriptor = {
       start: "17:50",
       end: "18:20",
       setlist: [
-        "衣装: 2026 秋衣装",
+        "衣装: A World in Our Colors 衣装",
         "アンチファン",
         "我武者羅",
         "初恋のひと。",

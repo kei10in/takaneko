@@ -40,7 +40,7 @@ export const meta: EventMetaDescriptor = {
       open: "12:10",
       start: "12:30",
       setlist: [
-        "衣装: 2026 秋衣装",
+        "衣装: A World in Our Colors 衣装",
         "初恋のひと。",
         "小悪魔だってかまわない！",
         "可愛くてごめん", // 撮影可能
@@ -53,7 +53,7 @@ export const meta: EventMetaDescriptor = {
       title: "1部 グループショット撮影会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "2026 秋衣装",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "東山恵里沙", "松本ももな"] },
           { label: "B グループ", members: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "籾山ひめり"] },
@@ -66,7 +66,7 @@ export const meta: EventMetaDescriptor = {
       open: "15:40",
       start: "16:00",
       setlist: [
-        "衣装: 2026 秋衣装",
+        "衣装: A World in Our Colors 衣装",
         "乙女どもよ。",
         "ハートブーケ",
         "ヒロインは平均以下。", // 撮影可能
@@ -79,7 +79,7 @@ export const meta: EventMetaDescriptor = {
       title: "2部 グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "2026 秋衣装",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "涼海すう", "東山恵里沙", "松本ももな"] },
           { label: "B グループ", members: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "籾山ひめり"] },

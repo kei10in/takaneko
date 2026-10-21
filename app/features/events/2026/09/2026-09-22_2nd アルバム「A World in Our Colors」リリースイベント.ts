@@ -37,7 +37,7 @@ export const meta: EventMetaDescriptor = {
       open: "14:40",
       start: "15:00",
       setlist: [
-        "衣装: 2026 秋衣装",
+        "衣装: A World in Our Colors 衣装",
         "初恋のひと。",
         "初恋のこたえ。",
         "可愛くてごめん", // 撮影可能
@@ -50,7 +50,7 @@ export const meta: EventMetaDescriptor = {
       title: "グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "2026 秋衣装",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "葉月紗蘭", "東山恵里沙", "松本ももな"] },
           { label: "B グループ", members: ["涼海すう", "橋本桃呼", "日向端ひな", "籾山ひめり"] },
