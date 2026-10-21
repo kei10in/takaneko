@@ -1,5 +1,5 @@
 import { MetaFunction } from "react-router";
-import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
+import { sectionHeading } from "~/components/styles.ts";
 import { AllMvCostumes } from "~/features/costumes/costumesMv.ts";
 import { AllSpecialCostumes } from "~/features/costumes/costumesSpecial.ts";
 import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
@@ -27,8 +27,8 @@ const COSTUME_CATEGORIES: { title: string; costumes: Costume[] }[] = [
 export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox("space-y-8 px-4")}>
-        <h1 className={pageHeading()}>衣装</h1>
+      <section className="my-8 space-y-8 px-4 py-12">
+        <h1 className="page-heading">衣装</h1>
 
         {COSTUME_CATEGORIES.map((category) => (
           <section className="mt-8" key={category.title}>

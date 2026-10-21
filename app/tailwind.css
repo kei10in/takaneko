@@ -103,7 +103,11 @@
 
 @layer components {
   .page-heading {
-    @apply mb-6 text-5xl;
+    @apply mb-6 text-4xl;
+  }
+
+  .section-heading {
+    @apply text-2xl;
   }
 
   .main-viewport {

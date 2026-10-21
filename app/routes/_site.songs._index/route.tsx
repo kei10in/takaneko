@@ -1,6 +1,5 @@
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import {
   Limited,
@@ -37,8 +36,8 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox()}>
-        <h1 className={pageHeading("px-4")}>楽曲</h1>
+      <section className="my-8 py-12">
+        <h1 className="page-heading px-4">楽曲</h1>
 
         <p className="mt-8 px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 

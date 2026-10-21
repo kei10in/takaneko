@@ -20,7 +20,7 @@ export default function Index() {
   return (
     <div className="container mx-auto my-8 lg:max-w-5xl">
       <section className={pageBox("space-y-16 px-4")}>
-        <h1 className="text-5xl">メンバー</h1>
+        <h1 className="page-heading">メンバー</h1>
 
         <ul className="flex flex-wrap justify-center gap-4">
           {CurrentMembers.map((member) => (

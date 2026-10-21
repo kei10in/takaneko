@@ -70,11 +70,11 @@ export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className={pageBox("my-8 px-4")}>
-        <h1 className={"text-5xl"}>プロフィール</h1>
+        <h1 className={"page-heading"}>プロフィール</h1>
 
         <div className="mt-12 space-y-24">
           <section className="space-y-8">
-            <h2 className={"text-3xl"}>高嶺のなでしこ</h2>
+            <h2 className="section-heading">高嶺のなでしこ</h2>
 
             <ul className="mb-4 flex gap-4 px-2">
               {SocialMedia.map((media) => (
@@ -135,7 +135,7 @@ export default function Index() {
           </section>
 
           <section className="space-y-8">
-            <h2 className={"text-3xl"}>メンバー</h2>
+            <h2 className="section-heading">メンバー</h2>
 
             <ul className="flex flex-wrap justify-center gap-4">
               {CurrentMembers.map((member) => (
@@ -147,7 +147,7 @@ export default function Index() {
           </section>
 
           <section className="space-y-8">
-            <h2 className={"text-3xl"}>マネージャー</h2>
+            <h2 className="section-heading">マネージャー</h2>
 
             <ul className="flex flex-wrap justify-center gap-4">
               <li className="flex-none">

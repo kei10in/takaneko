@@ -12,7 +12,7 @@ import { Fragment } from "react/jsx-runtime";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { ImagePreviewDialog } from "~/components/ImagePreviewDialog.tsx";
-import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { sectionHeading } from "~/components/styles.ts";
 import { AllCostumes } from "~/features/costumes/costumes.ts";
 import { LivesForCostume } from "~/features/costumes/types.ts";
 import { liveTypeColor } from "~/features/events/EventType.ts";
@@ -97,8 +97,8 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           />
         </div>
 
-        <section className="space-y-8 px-4 py-8">
-          <h1 className={pageHeading()}>{costume.name}</h1>
+        <section className="my-8 space-y-8 px-4 py-12">
+          <h1 className="page-heading">{costume.name}</h1>
 
           <section className="mt-8">
             <h2

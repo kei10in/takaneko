@@ -12,7 +12,7 @@ import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
-import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { sectionHeading } from "~/components/styles.ts";
 import { liveTypeColor } from "~/features/events/EventType.ts";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
@@ -99,8 +99,8 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           />
         </div>
 
-        <section className="px-4 py-8">
-          <h1 className={pageHeading()}>{track.name}</h1>
+        <section className="px-4 py-20">
+          <h1 className="page-heading">{track.name}</h1>
 
           {track.digitalRelease && (
             <p className="mt-1 text-sm text-nadeshiko-700">
