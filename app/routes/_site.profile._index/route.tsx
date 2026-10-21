@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => {
 
 const SocialMedia = [
   {
-    url: "https://www.youtube.com/@official6743",
+    url: "https://www.youtube.com/@official_takaneko",
     icon: BsYoutube,
   },
   {
