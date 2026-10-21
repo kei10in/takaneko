@@ -50,7 +50,7 @@ export const Footer: React.FC<Props> = (props: Props) => {
                   <p className="font-serif text-xl text-gray-600">{SiteName}</p>
                 </h3>
                 <div className="space-y-1">
-                  <p>「{SiteName}」は非公式のファンコンテンツです。</p>
+                  <p>「{SiteName}」は非公式のファンサイトです。</p>
                   <p>使用されている高嶺のなでしこの画像は INCS・TP に帰属します。©INCS・TP</p>
                   <p>使用されているイベントの画像は各イベントの主催者などの第三者に帰属します。</p>
                 </div>
