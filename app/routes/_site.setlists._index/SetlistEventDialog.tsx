@@ -55,10 +55,10 @@ const SetlistEventDialogContent = ({
       >
         <fieldset
           aria-label="カルーセルの操作"
-          className="flex min-w-0 flex-none items-center border-0 p-0"
+          className="flex h-14 min-w-0 flex-none items-center border-0 p-0"
         >
           <div className="flex min-w-0 flex-1 items-center">
-            <div className="flex-none p-1 lg:p-3">
+            <div className="flex-none px-4">
               <XMarkButton aria-label="閉じる" onClick={onClose} />
             </div>
           </div>
