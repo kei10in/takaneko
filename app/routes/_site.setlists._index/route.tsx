@@ -1,6 +1,6 @@
 import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useCallback, useDeferredValue, useMemo, useState } from "react";
+import { useCallback, useDeferredValue, useMemo, useRef, useState } from "react";
 import {
   HiAdjustmentsHorizontal,
   HiChevronRight,
@@ -150,6 +150,12 @@ export default function Component() {
       open: index >= 0,
     };
   });
+  // 閉じる途中の通知で履歴を更新せず、詳細に渡すコールバックも維持する。
+  const isClosingSetlistDialog = useRef(false);
+  const scrollTopsBySlug = useMemo(
+    () => setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {},
+    [locationState],
+  );
   const setSelectedEvent = useCallback(
     (slug: string | undefined) => {
       setLocationState(() =>
@@ -160,7 +166,7 @@ export default function Component() {
   );
   const onSelectedEventChange = useCallback(
     (slug: string) => {
-      if (!setlistDialog.open) {
+      if (isClosingSetlistDialog.current) {
         return;
       }
       setLocationState((previous) => {
@@ -171,11 +177,11 @@ export default function Component() {
         return { setlistEventSlug: slug, scrollTopsBySlug: savedDialog.scrollTopsBySlug };
       });
     },
-    [setLocationState, setlistDialog.open],
+    [setLocationState],
   );
   const onScrollPositionChange = useCallback(
     (slug: string, scrollTop: number) => {
-      if (!setlistDialog.open) {
+      if (isClosingSetlistDialog.current) {
         return;
       }
       setLocationState((previous) => {
@@ -189,7 +195,23 @@ export default function Component() {
         };
       });
     },
-    [setLocationState, setlistDialog.open],
+    [setLocationState],
+  );
+  const eventCards = useMemo(
+    () =>
+      results.map(({ event }, index) => (
+        <li key={event.slug}>
+          <SetlistEventCard
+            event={event}
+            onClick={() => {
+              isClosingSetlistDialog.current = false;
+              setSetlistDialog({ slideIndex: index, open: true });
+              setSelectedEvent(event.slug);
+            }}
+          />
+        </li>
+      )),
+    [results, setSelectedEvent],
   );
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
@@ -350,34 +372,27 @@ export default function Component() {
             条件に一致するセットリストはありません。
           </div>
         ) : (
-          <ul className="mt-4 space-y-4">
-            {results.map(({ event }, index) => (
-              <li key={event.slug}>
-                <SetlistEventCard
-                  event={event}
-                  onClick={() => {
-                    setSetlistDialog({ slideIndex: index, open: true });
-                    setSelectedEvent(event.slug);
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
+          <ul className="mt-4 space-y-4">{eventCards}</ul>
         )}
         {results.length > 0 && (
           <SetlistEventDialog
             open={setlistDialog.open}
             results={results}
             initialSlideIndex={setlistDialog.slideIndex}
-            scrollTopsBySlug={setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {}}
+            scrollTopsBySlug={scrollTopsBySlug}
             onScrollPositionChange={onScrollPositionChange}
             onSelectedEventChange={onSelectedEventChange}
             onClose={() => {
+              isClosingSetlistDialog.current = true;
               setSetlistDialog((previous) => ({
                 ...previous,
                 open: false,
               }));
-              setSelectedEvent(undefined);
+            }}
+            onCloseComplete={() => {
+              if (isClosingSetlistDialog.current) {
+                setSelectedEvent(undefined);
+              }
             }}
             showMatchedAct={
               searchFilters.q != "" ||

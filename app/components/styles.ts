@@ -21,6 +21,8 @@ export const dialogBackdropStyle = () => {
     "fixed inset-0 bg-black/50 backdrop-blur-xs",
     "transition duration-300 ease-in-out",
     "data-closed:opacity-0 data-closed:backdrop-blur-none",
+    "data-starting-style:opacity-0 data-starting-style:backdrop-blur-none",
+    "data-ending-style:opacity-0 data-ending-style:backdrop-blur-none",
   );
 };
 

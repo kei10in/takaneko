@@ -6,7 +6,10 @@ import { SetlistEvents } from "~/features/setlists/types.ts";
 import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
 import Component, { shouldRevalidate } from "./route.tsx";
 
-afterEach(cleanup);
+afterEach(() => {
+  cleanup();
+  vi.restoreAllMocks();
+});
 
 const events: SetlistEvents = [
   {
@@ -41,6 +44,35 @@ const searchInput = () =>
   screen.findByPlaceholderText<HTMLInputElement>("イベント・曲・衣装・会場で検索");
 
 describe("セットリストの URL 同期", () => {
+  it("閉じるアニメーション中は保存状態を維持し、終了してから履歴をクリアする", async () => {
+    const { router } = renderPage();
+    await searchInput();
+    fireEvent.click(screen.getByRole("button", { name: /テストライブ/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    songList.scrollTop = 180;
+    fireEvent.scroll(songList);
+    const savedState = {
+      setlistEventSlug: events[0].slug,
+      scrollTopsBySlug: { [events[0].slug]: 180 },
+    };
+    await waitFor(() => expect(router.state.location.state).toEqual(savedState));
+
+    // happy-domではCSSのトランジションが動かないため、完了を手動で通知する。
+    const closingAnimation = new Animation();
+    const getAnimations = vi.spyOn(dialog, "getAnimations").mockReturnValue([closingAnimation]);
+    fireEvent.click(within(dialog).getByRole("button", { name: "閉じる" }));
+    await waitFor(() => expect(getAnimations).toHaveBeenCalled());
+    expect(router.state.location.state).toEqual(savedState);
+    songList.scrollTop = 240;
+    fireEvent.scroll(songList);
+    expect(router.state.location.state).toEqual(savedState);
+
+    await act(async () => closingAnimation.finish());
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    await waitFor(() => expect(router.state.location.state).toBeNull());
+  });
+
   it("マウント後の location.state の変更ではダイアログの開閉状態を変えない", async () => {
     const { router } = renderPage();
     await searchInput();

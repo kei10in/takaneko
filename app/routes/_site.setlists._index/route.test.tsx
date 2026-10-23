@@ -54,15 +54,27 @@ const drag = (target: Element, direction: "next" | "previous" = "next") => {
   const startX = direction == "next" ? 500 : 100;
   const endX = direction == "next" ? 100 : 500;
   fireEvent.mouseDown(target, { clientX: startX, clientY: 300, button: 0, buttons: 1 });
-  fireEvent.mouseMove(document, { clientX: 300, clientY: 300, buttons: 1 });
-  fireEvent.mouseMove(document, { clientX: endX, clientY: 300, buttons: 1 });
-  fireEvent.mouseUp(document, { clientX: endX, clientY: 300, button: 0 });
+  fireEvent.mouseMove(target, { clientX: 300, clientY: 300, buttons: 1 });
+  fireEvent.mouseMove(target, { clientX: endX, clientY: 300, buttons: 1 });
+  fireEvent.mouseUp(target, { clientX: endX, clientY: 300, button: 0 });
 };
 const swipeDialog = (direction: "next" | "previous" = "next") => {
   const target = screen.getByRole("link", { name: /イベント詳細/u });
   drag(target, direction);
   // ブラウザがドラッグ後に発火するクリックを補い、Emblaのクリック抑止を消化する。
   fireEvent.click(target);
+};
+
+const swipeDown = (target: Element) => {
+  // happy-domには座標から要素を探すレイアウト処理がないため、指の下の要素を補う。
+  vi.spyOn(document, "elementFromPoint").mockReturnValue(target);
+  const touch = { identifier: 1, target, clientX: 100, clientY: 20 };
+  fireEvent.touchStart(target, { touches: [touch], changedTouches: [touch] });
+  const firstMoveTouch = { ...touch, clientY: 60 };
+  fireEvent.touchMove(target, { touches: [firstMoveTouch], changedTouches: [firstMoveTouch] });
+  const movedTouch = { ...touch, clientY: 520 };
+  fireEvent.touchMove(target, { touches: [movedTouch], changedTouches: [movedTouch] });
+  fireEvent.touchEnd(target, { touches: [], changedTouches: [movedTouch] });
 };
 
 const getSelectedEventHeading = (title: string) =>
@@ -231,6 +243,19 @@ describe("セットリストのモーダル", () => {
     await waitFor(() => expect(document.activeElement).toBe(card));
   });
 
+  it("Escape で詳細を閉じると、開いたカードにフォーカスを戻す", async () => {
+    await setup();
+    const card = screen.getByRole("button", { name: /ライブ A/u });
+    card.focus();
+    fireEvent.click(card);
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const closeButton = within(dialog).getByRole("button", { name: "閉じる" });
+    closeButton.focus();
+    fireEvent.keyDown(closeButton, { key: "Escape", code: "Escape" });
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+    await waitFor(() => expect(document.activeElement).toBe(card));
+  });
+
   it("一覧の端を越える方向へスワイプしても移動しない", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
@@ -389,18 +414,61 @@ describe("セットリストのモーダル", () => {
     await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
   });
 
-  it("操作領域を下へスワイプしても閉じない", async () => {
+  it("操作領域を下へスワイプすると詳細を閉じる", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
     const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
     const controls = within(dialog).getByRole("group", { name: "カルーセルの操作" });
-    const pointer = { pointerId: 1, pointerType: "touch", isPrimary: true, button: 0 };
-    fireEvent.pointerDown(controls, { ...pointer, clientX: 100, clientY: 20 });
-    fireEvent.pointerMove(controls, { ...pointer, clientX: 100, clientY: 120 });
-    fireEvent.pointerUp(controls, { ...pointer, clientX: 100, clientY: 120 });
+    swipeDown(controls);
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+  });
+
+  it("曲のリストのスクロール途中では下へスワイプしても詳細を閉じない", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songList = within(dialog).getByRole("region", { name: "曲のリスト" });
+    songList.style.overflowY = "auto";
+    Object.defineProperties(songList, {
+      clientHeight: { configurable: true, value: 200 },
+      scrollHeight: { configurable: true, value: 1200 },
+    });
+    songList.scrollTop = 180;
+    await act(async () => swipeDown(songList));
     expect(screen.getByRole("dialog", { name: "セットリスト" })).toBe(dialog);
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
   });
+
+  it.each(["画像", "タイトル"])("メタデータの%s を下へスワイプすると詳細を閉じる", async (area) => {
+    await setup([
+      { ...events[0], image: { path: "/events/test.jpg", ref: "https://example.com" } },
+      events[1],
+    ]);
+    fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    const target =
+      area == "画像"
+        ? within(dialog).getByRole("img", { name: "ライブ A" })
+        : getSelectedEventHeading("ライブ A");
+    swipeDown(target);
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+  });
+
+  it.each(["曲のリスト", "イベント詳細リンク"])(
+    "%s を下へスワイプしても詳細を閉じない",
+    async (area) => {
+      await setup();
+      fireEvent.click(screen.getByRole("button", { name: /ライブ A/u }));
+      const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+      const target =
+        area == "曲のリスト"
+          ? within(dialog).getByRole("region", { name: "曲のリスト" })
+          : within(dialog).getByRole("link", { name: /イベント詳細/u });
+      await act(async () => swipeDown(target));
+      expect(screen.getByRole("dialog", { name: "セットリスト" })).toBe(dialog);
+      expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
+    },
+  );
 
   it("左右のスワイプで前後のライブへ移動できる", async () => {
     await setup([
