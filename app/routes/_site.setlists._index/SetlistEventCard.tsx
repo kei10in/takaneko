@@ -29,6 +29,7 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
             <div className="absolute inset-0 h-full w-full bg-zinc-100 p-2">
               <ThumbnailImage
                 src={event.image?.path}
+                loading="lazy"
                 className="h-full w-full object-contain text-xs"
                 alt={event.title}
               />
