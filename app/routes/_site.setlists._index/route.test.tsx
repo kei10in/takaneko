@@ -341,7 +341,7 @@ describe("セットリストのモーダル", () => {
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
   });
 
-  it("表示領域の前後8件だけを描画し、範囲外の詳細は破棄して戻ると再描画する", async () => {
+  it("表示領域の前後3件だけを描画し、範囲外の詳細は破棄して戻ると再描画する", async () => {
     const items = Array.from({ length: 41 }, (_, index) => ({
       ...events[0],
       slug: `live-${index}`,
@@ -366,25 +366,25 @@ describe("セットリストのモーダル", () => {
         scrollTopsBySlug: { "live-20": 75 },
       }),
     );
-    Array.from({ length: 17 }, (_, index) => index + 12).forEach((index) => {
+    Array.from({ length: 7 }, (_, index) => index + 17).forEach((index) => {
       expect(details.getByText(`会場 ${index}`)).toBeTruthy();
     });
-    expect(details.queryByText("会場 11")).toBeNull();
-    expect(details.queryByText("会場 29")).toBeNull();
+    expect(details.queryByText("会場 16")).toBeNull();
+    expect(details.queryByText("会場 24")).toBeNull();
     // 選択変更・停止を待たず、隣のスライドが見えた時点で先読みする。
     showSlides(20, 21);
-    expect(details.getByText("会場 29")).toBeTruthy();
+    expect(details.getByText("会場 24")).toBeTruthy();
     showSlides(30);
-    expect(details.getByText("会場 38")).toBeTruthy();
-    expect(details.queryByText("会場 39")).toBeNull();
-    expect(details.queryByText("会場 12")).toBeNull();
+    expect(details.getByText("会場 33")).toBeTruthy();
+    expect(details.queryByText("会場 34")).toBeNull();
+    expect(details.queryByText("会場 17")).toBeNull();
     expect(details.queryByText("会場 20")).toBeNull();
     showSlides(10);
-    expect(details.getByText("会場 2")).toBeTruthy();
-    expect(details.queryByText("会場 1")).toBeNull();
-    expect(details.queryByText("会場 38")).toBeNull();
+    expect(details.getByText("会場 7")).toBeTruthy();
+    expect(details.queryByText("会場 6")).toBeNull();
+    expect(details.queryByText("会場 33")).toBeNull();
     showSlides();
-    expect(details.getByText("会場 2")).toBeTruthy();
+    expect(details.getByText("会場 7")).toBeTruthy();
     showSlides(0);
     expect(details.getByText("会場 0")).toBeTruthy();
     showSlides(40);
@@ -415,11 +415,11 @@ describe("セットリストのモーダル", () => {
     showSlides();
     swipeDialog();
     expect(getSelectedEventHeading("ライブ 21")).toBeTruthy();
-    expect(details.getByText("会場 12")).toBeTruthy();
-    expect(details.queryByText("会場 29")).toBeNull();
+    expect(details.getByText("会場 17")).toBeTruthy();
+    expect(details.queryByText("会場 24")).toBeNull();
     showSlides(21);
-    expect(details.queryByText("会場 12")).toBeNull();
-    expect(details.getByText("会場 29")).toBeTruthy();
+    expect(details.queryByText("会場 17")).toBeNull();
+    expect(details.getByText("会場 24")).toBeTruthy();
   });
 
   it("連続して進んでも詳細の描画数が増え続けない", async () => {
@@ -439,9 +439,9 @@ describe("セットリストのモーダル", () => {
       showSlides(index);
       expect(getSelectedEventHeading(`ライブ ${index}`)).toBeTruthy();
       expect(details.getByText(`会場 ${index}`)).toBeTruthy();
-      expect(details.getAllByText(/^会場 /u).length).toBeLessThanOrEqual(17);
-      if (index > 8) {
-        expect(details.queryByText(`会場 ${index - 9}`)).toBeNull();
+      expect(details.getAllByText(/^会場 /u).length).toBeLessThanOrEqual(7);
+      if (index > 3) {
+        expect(details.queryByText(`会場 ${index - 4}`)).toBeNull();
       }
     });
     showSlides(0);

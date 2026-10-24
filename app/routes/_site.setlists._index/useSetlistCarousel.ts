@@ -21,7 +21,7 @@ export const useSetlistCarousel = (
   slideCount: number,
   onSelectedEventChange: (index: number) => void,
 ) => {
-  const preloadSlideRadius = 8;
+  const preloadSlideRadius = 3;
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(initialSlideIndex);
   const [renderedSlideRange, setRenderedSlideRange] = useState(() =>
     getPreloadRange([initialSlideIndex], slideCount, preloadSlideRadius),
