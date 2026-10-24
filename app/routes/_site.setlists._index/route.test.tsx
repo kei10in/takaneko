@@ -146,6 +146,60 @@ const EventPage = () => {
   const navigate = useNavigate();
   return <button onClick={() => void navigate(-1)}>一覧へ戻る</button>;
 };
+describe("セットリストのフィルタ", () => {
+  it.each(["閉じる", "検索する", "Escape"])(
+    "%s で閉じるとフィルタボタンにフォーカスを戻し、選択を保持する",
+    async (action) => {
+      await setup();
+      const trigger = screen.getByRole("button", { name: "フィルタ" });
+      fireEvent.click(trigger);
+      const dialog = await screen.findByRole("dialog", { name: "フィルタ" });
+      fireEvent.click(within(dialog).getByRole("checkbox", { name: "2025 年" }));
+      if (action == "Escape") {
+        fireEvent.keyDown(within(dialog).getByRole("button", { name: "閉じる" }), {
+          key: "Escape",
+          code: "Escape",
+        });
+      } else {
+        fireEvent.click(within(dialog).getByRole("button", { name: new RegExp(action, "u") }));
+      }
+      await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+      await waitFor(() => expect(document.activeElement).toBe(trigger));
+      fireEvent.click(trigger);
+      const reopenedDialog = await screen.findByRole("dialog", { name: "フィルタ" });
+      expect(
+        within(reopenedDialog)
+          .getByRole("checkbox", { name: "2025 年" })
+          .getAttribute("aria-checked"),
+      ).toBe("true");
+    },
+  );
+
+  it("右へのスワイプで閉じる", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
+    const dialog = await screen.findByRole("dialog", { name: "フィルタ" });
+    const target = within(dialog).getByRole("heading", { name: "フィルタ" });
+    vi.spyOn(document, "elementFromPoint").mockReturnValue(target);
+    const touch = { identifier: 1, target, clientX: 20, clientY: 100 };
+    fireEvent.touchStart(target, { touches: [touch], changedTouches: [touch] });
+    const firstMove = { ...touch, clientX: 60 };
+    fireEvent.touchMove(target, { touches: [firstMove], changedTouches: [firstMove] });
+    const moved = { ...touch, clientX: 520 };
+    fireEvent.touchMove(target, { touches: [moved], changedTouches: [moved] });
+    fireEvent.touchEnd(target, { touches: [], changedTouches: [moved] });
+    await waitFor(() => expect(screen.queryByRole("dialog")).toBeNull());
+  });
+
+  it("縦へのスワイプでは閉じない", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
+    const dialog = await screen.findByRole("dialog", { name: "フィルタ" });
+    await act(async () => swipeDown(within(dialog).getByRole("heading", { name: "フィルタ" })));
+    expect(screen.getByRole("dialog", { name: "フィルタ" })).toBe(dialog);
+  });
+});
+
 describe("セットリストのモーダル", () => {
   it("別のライブへスワイプした後に戻ると、そのライブの曲リストの位置を復元する", async () => {
     const router = createMemoryRouter(
