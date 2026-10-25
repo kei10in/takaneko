@@ -13,6 +13,10 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ3"],
   images: [
     {
+      path: "/events/2026/2026-12-24_たかねこクリスマスパーティ2026_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2113797623719014512",
+    },
+    {
       path: "/events/2026/2026-12-24_たかねこクリスマスパーティ2026.jpg",
       ref: "https://x.com/takanenofficial/status/2099031644103668121",
     },
@@ -42,12 +46,13 @@ export const meta: EventMetaDescriptor = {
       start: "19:30",
     },
   ],
-  updatedAt: "2026-09-15",
+  updatedAt: "2026-10-26",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [チケット一般販売開始告知 - 公式 X](https://x.com/takanenofficial/status/2113797623719014512)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5557)
   - [FC 先行チケット](https://takanekofc.com/blogs/news/2MpW4XsiYW1wD2eccQFjK)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2099031644103668121)
