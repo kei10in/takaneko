@@ -98,7 +98,9 @@ const SetlistEventDialogContent = memo(function SetlistEventDialogContent({
             <Drawer.Close render={<XMarkButton aria-label="閉じる" />} />
           </div>
         </div>
-        <Drawer.Title className="flex-none text-lg font-bold">セットリスト</Drawer.Title>
+        <Drawer.Title className="flex-none text-lg font-bold select-none">
+          セットリスト
+        </Drawer.Title>
         <div className="min-w-0 flex-1" />
       </fieldset>
       <Drawer.Content
