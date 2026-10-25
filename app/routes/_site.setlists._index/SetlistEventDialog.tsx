@@ -1,6 +1,7 @@
 import { Drawer } from "@base-ui/react/drawer";
+import { Portal } from "@headlessui/react";
 import { clsx } from "clsx";
-import { memo } from "react";
+import { memo, useRef } from "react";
 import { dialogBackdropStyle } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
 import { SetlistSearchResult } from "~/features/setlists/types.ts";
@@ -66,6 +67,7 @@ const SetlistEventDialogContent = memo(function SetlistEventDialogContent({
   onScrollPositionChange,
   onSelectedEventChange,
 }: SetlistEventDialogContentProps) {
+  const popupRef = useRef<HTMLDivElement>(null);
   const { carouselRef, selectedSlideIndex, renderedSlideRange } = useSetlistCarousel(
     initialSlideIndex,
     results.length,
@@ -77,59 +79,63 @@ const SetlistEventDialogContent = memo(function SetlistEventDialogContent({
     },
   );
 
+  // Headless UIのポータルをDrawerの重なり順とフォーカス範囲に含める。
   return (
-    <Drawer.Popup
-      className={clsx(
-        "flex h-full w-full flex-col bg-white lg:max-w-5xl",
-        "transform-[translateY(var(--drawer-swipe-movement-y,0px))]",
-        "transition-transform duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]",
-        "data-ending-style:transform-[translateY(100%)] data-starting-style:transform-[translateY(100%)]",
-        // 指を離した速度と残りの距離を反映し、速いフリックでも一瞬で消えない長さを確保する。
-        "data-swipe-dismiss:duration-[max(120ms,calc(var(--drawer-swipe-strength,1)*400ms))]",
-        "data-swiping:duration-0",
-      )}
-    >
-      <fieldset
-        aria-label="カルーセルの操作"
-        className="flex h-14 min-w-0 flex-none touch-none items-center border-0 p-0"
+    <Portal.Group target={popupRef}>
+      <Drawer.Popup
+        ref={popupRef}
+        className={clsx(
+          "flex h-full w-full flex-col bg-white lg:max-w-5xl",
+          "transform-[translateY(var(--drawer-swipe-movement-y,0px))]",
+          "transition-transform duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]",
+          "data-ending-style:transform-[translateY(100%)] data-starting-style:transform-[translateY(100%)]",
+          // 指を離した速度と残りの距離を反映し、速いフリックでも一瞬で消えない長さを確保する。
+          "data-swipe-dismiss:duration-[max(120ms,calc(var(--drawer-swipe-strength,1)*400ms))]",
+          "data-swiping:duration-0",
+        )}
       >
-        <div className="flex min-w-0 flex-1 items-center">
-          <div className="flex-none px-4">
-            <Drawer.Close render={<XMarkButton aria-label="閉じる" />} />
-          </div>
-        </div>
-        <Drawer.Title className="flex-none text-lg font-bold select-none">
-          セットリスト
-        </Drawer.Title>
-        <div className="min-w-0 flex-1" />
-      </fieldset>
-      <Drawer.Content
-        ref={carouselRef}
-        data-base-ui-swipe-ignore="x"
-        className="min-h-0 w-full flex-1 overflow-hidden"
-      >
-        <div className="flex h-full touch-pan-y touch-pinch-zoom">
-          {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
-          {results.map((result, index) => (
-            <div key={result.event.slug} className="h-full min-w-0 flex-none basis-full">
-              {index >= renderedSlideRange.first && index <= renderedSlideRange.last && (
-                <div
-                  className="flex h-full flex-col overflow-hidden bg-white"
-                  inert={index != selectedSlideIndex}
-                  aria-hidden={index != selectedSlideIndex}
-                >
-                  <SetlistEventDetail
-                    result={result}
-                    showMatchedAct={showMatchedAct}
-                    scrollTop={scrollTopsBySlug[result.event.slug]}
-                    onScrollPositionChange={onScrollPositionChange}
-                  />
-                </div>
-              )}
+        <fieldset
+          aria-label="カルーセルの操作"
+          className="flex h-14 min-w-0 flex-none touch-none items-center border-0 p-0"
+        >
+          <div className="flex min-w-0 flex-1 items-center">
+            <div className="flex-none px-4">
+              <Drawer.Close render={<XMarkButton aria-label="閉じる" />} />
             </div>
-          ))}
-        </div>
-      </Drawer.Content>
-    </Drawer.Popup>
+          </div>
+          <Drawer.Title className="flex-none text-lg font-bold select-none">
+            セットリスト
+          </Drawer.Title>
+          <div className="min-w-0 flex-1" />
+        </fieldset>
+        <Drawer.Content
+          ref={carouselRef}
+          data-base-ui-swipe-ignore="x"
+          className="min-h-0 w-full flex-1 overflow-hidden"
+        >
+          <div className="flex h-full touch-pan-y touch-pinch-zoom">
+            {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
+            {results.map((result, index) => (
+              <div key={result.event.slug} className="h-full min-w-0 flex-none basis-full">
+                {index >= renderedSlideRange.first && index <= renderedSlideRange.last && (
+                  <div
+                    className="flex h-full flex-col overflow-hidden bg-white"
+                    inert={index != selectedSlideIndex}
+                    aria-hidden={index != selectedSlideIndex}
+                  >
+                    <SetlistEventDetail
+                      result={result}
+                      showMatchedAct={showMatchedAct}
+                      scrollTop={scrollTopsBySlug[result.event.slug]}
+                      onScrollPositionChange={onScrollPositionChange}
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </Drawer.Content>
+      </Drawer.Popup>
+    </Portal.Group>
   );
 });

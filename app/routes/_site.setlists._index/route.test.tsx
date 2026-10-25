@@ -202,6 +202,35 @@ describe("セットリストのフィルタ", () => {
 });
 
 describe("セットリストのモーダル", () => {
+  it("Drawerの上でコピー設定を操作し、Escapeでは設定だけを閉じる", async () => {
+    await setup();
+    fireEvent.click(screen.getByRole("button", { name: /ライブ B/u }));
+    const drawer = await screen.findByRole("dialog", { name: "セットリスト" });
+    const settingsButton = within(drawer).getByRole("button", { expanded: false });
+    fireEvent.click(settingsButton);
+
+    const details = within(drawer);
+    const orderSwitch = await details.findByRole("switch", { name: "曲順を含める" });
+    const mcSwitch = details.getByRole("switch", { name: "MC を含める" });
+    expect(details.getByRole("region", { name: "曲のリスト" }).contains(orderSwitch)).toBe(false);
+    const initialOrder = orderSwitch.getAttribute("aria-checked");
+    const initialMC = mcSwitch.getAttribute("aria-checked");
+
+    orderSwitch.focus();
+    expect(document.activeElement).toBe(orderSwitch);
+    fireEvent.click(details.getByText("曲順を含める"));
+    expect(orderSwitch.getAttribute("aria-checked")).not.toBe(initialOrder);
+    fireEvent.click(details.getByText("MC を含める"));
+    expect(mcSwitch.getAttribute("aria-checked")).not.toBe(initialMC);
+    fireEvent.click(orderSwitch);
+    fireEvent.click(mcSwitch);
+
+    fireEvent.keyDown(mcSwitch, { key: "Escape", code: "Escape" });
+    await waitFor(() => expect(details.queryByRole("switch")).toBeNull());
+    expect(screen.getByRole("dialog", { name: "セットリスト" })).toBe(drawer);
+    await waitFor(() => expect(document.activeElement).toBe(settingsButton));
+  });
+
   it("別のライブへスワイプした後に戻ると、そのライブの曲リストの位置を復元する", async () => {
     const router = createMemoryRouter(
       [
