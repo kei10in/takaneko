@@ -1,4 +1,7 @@
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Drawer } from "@base-ui/react/drawer";
+import { Portal } from "@headlessui/react";
+import { clsx } from "clsx";
+import { memo, useRef } from "react";
 import { dialogBackdropStyle } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
 import { SetlistSearchResult } from "~/features/setlists/types.ts";
@@ -12,30 +15,59 @@ interface SetlistEventDialogContentProps {
   scrollTopsBySlug: Record<string, number>;
   onScrollPositionChange: (slug: string, scrollTop: number) => void;
   onSelectedEventChange: (slug: string) => void;
-  onClose: () => void;
 }
 
 interface SetlistEventDialogProps extends SetlistEventDialogContentProps {
   open: boolean;
+  onClose: () => void;
+  onCloseComplete: () => void;
 }
 
-export const SetlistEventDialog = ({ open, ...props }: SetlistEventDialogProps) => (
-  <Dialog open={open} onClose={props.onClose} transition className="relative z-50">
-    <DialogBackdrop className={dialogBackdropStyle()} transition />
-    <SetlistEventDialogContent {...props} />
-  </Dialog>
+export const SetlistEventDialog = ({
+  open,
+  onClose,
+  onCloseComplete,
+  ...props
+}: SetlistEventDialogProps) => (
+  <Drawer.Root
+    open={open}
+    swipeDirection="down"
+    onOpenChange={(nextOpen) => {
+      if (!nextOpen) {
+        onClose();
+      }
+    }}
+    onOpenChangeComplete={(nextOpen) => {
+      if (!nextOpen) {
+        onCloseComplete();
+      }
+    }}
+  >
+    <Drawer.Portal className="relative z-50">
+      <Drawer.Backdrop
+        className={clsx(
+          dialogBackdropStyle(),
+          "opacity-[calc(1-var(--drawer-swipe-progress,0))] data-swiping:duration-0",
+          "data-swipe-dismiss:duration-150 data-swipe-dismiss:ease-out",
+        )}
+      />
+      <Drawer.Viewport className="fixed inset-0 flex justify-center overflow-hidden">
+        <SetlistEventDialogContent {...props} />
+      </Drawer.Viewport>
+    </Drawer.Portal>
+  </Drawer.Root>
 );
 
-// Dialogが閉じ終わると内容もアンマウントされ、次回は選んだカードから初期化する。
-const SetlistEventDialogContent = ({
+// Drawerが閉じ終わると内容もアンマウントされ、次回は選んだカードから初期化する。
+const SetlistEventDialogContent = memo(function SetlistEventDialogContent({
   results,
   showMatchedAct,
   initialSlideIndex,
   scrollTopsBySlug,
   onScrollPositionChange,
   onSelectedEventChange,
-  onClose,
-}: SetlistEventDialogContentProps) => {
+}: SetlistEventDialogContentProps) {
+  const popupRef = useRef<HTMLDivElement>(null);
   const { carouselRef, selectedSlideIndex, renderedSlideRange } = useSetlistCarousel(
     initialSlideIndex,
     results.length,
@@ -47,25 +79,40 @@ const SetlistEventDialogContent = ({
     },
   );
 
+  // Headless UIのポータルをDrawerの重なり順とフォーカス範囲に含める。
   return (
-    <div className="fixed inset-0 flex justify-center overflow-hidden">
-      <DialogPanel
-        transition
-        className="flex h-full w-full flex-col bg-white transition-all duration-300 ease-in-out data-closed:translate-y-full lg:max-w-5xl"
+    <Portal.Group target={popupRef}>
+      <Drawer.Popup
+        ref={popupRef}
+        className={clsx(
+          "flex h-full w-full flex-col bg-white lg:max-w-5xl",
+          "transform-[translateY(var(--drawer-swipe-movement-y,0px))]",
+          "transition-transform duration-400 ease-[cubic-bezier(0.32,0.72,0,1)]",
+          "data-ending-style:transform-[translateY(100%)] data-starting-style:transform-[translateY(100%)]",
+          // 指を離した速度と残りの距離を反映し、速いフリックでも一瞬で消えない長さを確保する。
+          "data-swipe-dismiss:duration-[max(120ms,calc(var(--drawer-swipe-strength,1)*400ms))]",
+          "data-swiping:duration-0",
+        )}
       >
         <fieldset
           aria-label="カルーセルの操作"
-          className="flex h-14 min-w-0 flex-none items-center border-0 p-0"
+          className="flex h-14 min-w-0 flex-none touch-none items-center border-0 p-0"
         >
           <div className="flex min-w-0 flex-1 items-center">
             <div className="flex-none px-4">
-              <XMarkButton aria-label="閉じる" onClick={onClose} />
+              <Drawer.Close render={<XMarkButton aria-label="閉じる" />} />
             </div>
           </div>
-          <DialogTitle className="flex-none text-lg font-bold">セットリスト</DialogTitle>
+          <Drawer.Title className="flex-none text-lg font-bold select-none">
+            セットリスト
+          </Drawer.Title>
           <div className="min-w-0 flex-1" />
         </fieldset>
-        <div ref={carouselRef} className="min-h-0 w-full flex-1 overflow-hidden">
+        <Drawer.Content
+          ref={carouselRef}
+          data-base-ui-swipe-ignore="x"
+          className="min-h-0 w-full flex-1 overflow-hidden"
+        >
           <div className="flex h-full touch-pan-y touch-pinch-zoom">
             {/* Emblaが測定する枠は維持し、範囲外の画像付き詳細だけを破棄する。 */}
             {results.map((result, index) => (
@@ -87,8 +134,8 @@ const SetlistEventDialogContent = ({
               </div>
             ))}
           </div>
-        </div>
-      </DialogPanel>
-    </div>
+        </Drawer.Content>
+      </Drawer.Popup>
+    </Portal.Group>
   );
-};
+});

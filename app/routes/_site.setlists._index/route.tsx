@@ -1,6 +1,7 @@
-import { Checkbox, CloseButton, Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
+import { Drawer } from "@base-ui/react/drawer";
+import { Checkbox } from "@headlessui/react";
 import { clsx } from "clsx";
-import { useCallback, useDeferredValue, useMemo, useState } from "react";
+import { useCallback, useDeferredValue, useMemo, useRef, useState } from "react";
 import {
   HiAdjustmentsHorizontal,
   HiChevronRight,
@@ -111,7 +112,6 @@ export default function Component() {
   const [query, setQuery] = useState(filters.q);
   const [previousQuery, setPreviousQuery] = useState(filters.q);
   const [isComposing, setIsComposing] = useState(false);
-  const [isFilterDialogOpen, setIsFilterDialogOpen] = useState(false);
   // IME の未確定文字列はローカルに保持し、URL からの復元時には入力欄も更新する。
   if (previousQuery !== filters.q) {
     setPreviousQuery(filters.q);
@@ -150,6 +150,12 @@ export default function Component() {
       open: index >= 0,
     };
   });
+  // 閉じる途中の通知で履歴を更新せず、詳細に渡すコールバックも維持する。
+  const isClosingSetlistDialog = useRef(false);
+  const scrollTopsBySlug = useMemo(
+    () => setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {},
+    [locationState],
+  );
   const setSelectedEvent = useCallback(
     (slug: string | undefined) => {
       setLocationState(() =>
@@ -160,7 +166,7 @@ export default function Component() {
   );
   const onSelectedEventChange = useCallback(
     (slug: string) => {
-      if (!setlistDialog.open) {
+      if (isClosingSetlistDialog.current) {
         return;
       }
       setLocationState((previous) => {
@@ -171,11 +177,11 @@ export default function Component() {
         return { setlistEventSlug: slug, scrollTopsBySlug: savedDialog.scrollTopsBySlug };
       });
     },
-    [setLocationState, setlistDialog.open],
+    [setLocationState],
   );
   const onScrollPositionChange = useCallback(
     (slug: string, scrollTop: number) => {
-      if (!setlistDialog.open) {
+      if (isClosingSetlistDialog.current) {
         return;
       }
       setLocationState((previous) => {
@@ -189,7 +195,23 @@ export default function Component() {
         };
       });
     },
-    [setLocationState, setlistDialog.open],
+    [setLocationState],
+  );
+  const eventCards = useMemo(
+    () =>
+      results.map(({ event }, index) => (
+        <li key={event.slug}>
+          <SetlistEventCard
+            event={event}
+            onClick={() => {
+              isClosingSetlistDialog.current = false;
+              setSetlistDialog({ slideIndex: index, open: true });
+              setSelectedEvent(event.slug);
+            }}
+          />
+        </li>
+      )),
+    [results, setSelectedEvent],
   );
   const totalActCount = useMemo(
     () => results.reduce((sum, result) => sum + result.event.actCount, 0),
@@ -280,63 +302,63 @@ export default function Component() {
           </div>
 
           <div>
-            <button
-              type="button"
-              className="ml-auto flex h-10 graceful-button items-center justify-center gap-1 rounded-xl px-4"
-              onClick={() => setIsFilterDialogOpen(true)}
-            >
-              <HiAdjustmentsHorizontal className="size-5" />
-              <span>フィルタ</span>
-            </button>
+            <Drawer.Root swipeDirection="right">
+              <Drawer.Trigger className="ml-auto flex h-10 graceful-button items-center justify-center gap-1 rounded-xl px-4">
+                <HiAdjustmentsHorizontal className="size-5" />
+                <span>フィルタ</span>
+              </Drawer.Trigger>
+
+              <Drawer.Portal className="relative z-50">
+                <Drawer.Backdrop
+                  className={clsx(
+                    dialogBackdropStyle(),
+                    "opacity-[calc(1-var(--drawer-swipe-progress,0))] data-swiping:duration-0",
+                    "data-swipe-dismiss:duration-150 data-swipe-dismiss:ease-out",
+                  )}
+                />
+                <Drawer.Viewport className="fixed inset-0 flex items-end justify-end overflow-hidden">
+                  <Drawer.Popup
+                    className={clsx(
+                      "h-dvh w-10/12 max-w-lg overflow-y-auto bg-white shadow-xl",
+                      "transform-[translateX(var(--drawer-swipe-movement-x,0px))]",
+                      "transition-transform duration-300 ease-in-out",
+                      "data-ending-style:transform-[translateX(100%)] data-starting-style:transform-[translateX(100%)]",
+                      "data-swipe-dismiss:duration-[max(120ms,calc(var(--drawer-swipe-strength,1)*300ms))]",
+                      "data-swiping:duration-0",
+                    )}
+                  >
+                    <Drawer.Content className="space-y-8 p-4">
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <Drawer.Title className="text-base font-semibold text-gray-800">
+                          フィルタ
+                        </Drawer.Title>
+                        <Drawer.Close render={<XMarkButton aria-label="閉じる" />} />
+                      </div>
+
+                      <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
+
+                      <div className="flex flex-wrap justify-stretch gap-2 pt-4">
+                        <button
+                          type="button"
+                          className="h-10 flex-1 rounded-xl border border-zinc-300 px-4 text-nowrap text-zinc-600 hover:bg-zinc-100"
+                          onClick={resetFilters}
+                        >
+                          クリア
+                        </button>
+                        <Drawer.Close className="flex graceful-button w-auto flex-1 items-center justify-center gap-2 rounded-xl px-4">
+                          <span className="block text-nowrap">検索する</span>
+                          <span className="block rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
+                            {results.length}
+                          </span>
+                        </Drawer.Close>
+                      </div>
+                    </Drawer.Content>
+                  </Drawer.Popup>
+                </Drawer.Viewport>
+              </Drawer.Portal>
+            </Drawer.Root>
           </div>
         </div>
-
-        <Dialog
-          open={isFilterDialogOpen}
-          onClose={() => setIsFilterDialogOpen(false)}
-          className="relative z-50"
-        >
-          <DialogBackdrop className={dialogBackdropStyle()} transition />
-          <div className="fixed inset-0 flex items-end justify-end">
-            <DialogPanel
-              className={clsx(
-                "h-dvh w-10/12 max-w-lg overflow-y-auto bg-white shadow-xl",
-                "data-closed:translate-x-full",
-                "transition-all duration-300 ease-in-out",
-              )}
-              transition
-            >
-              <div className="space-y-8 p-4">
-                <div className="mb-4 flex items-center justify-between gap-3">
-                  <h2 className="text-base font-semibold text-gray-800">フィルタ</h2>
-                  <CloseButton
-                    as={XMarkButton}
-                    onClick={() => setIsFilterDialogOpen(false)}
-                    aria-label="閉じる"
-                  />
-                </div>
-
-                <SetlistFilterForm filters={filters} onFilterChange={updateFilter} />
-
-                <div className="flex flex-wrap justify-stretch gap-2 pt-4">
-                  <button
-                    type="button"
-                    className="h-10 flex-1 rounded-xl border border-zinc-300 px-4 text-nowrap text-zinc-600 hover:bg-zinc-100"
-                    onClick={resetFilters}
-                  >
-                    クリア
-                  </button>
-                  <CloseButton className="flex graceful-button w-auto flex-1 items-center justify-center gap-2 rounded-xl px-4">
-                    <span className="block text-nowrap">検索する</span>
-                    <span className="block rounded-full bg-white px-2 py-0.5 text-xs text-nadeshiko-800">
-                      {results.length}
-                    </span>
-                  </CloseButton>
-                </div>
-              </div>
-            </DialogPanel>
-          </div>
-        </Dialog>
 
         <div className="mt-6 ml-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-zinc-600">
           <p>
@@ -350,18 +372,8 @@ export default function Component() {
             条件に一致するセットリストはありません。
           </div>
         ) : (
-          <ul className="mt-4 space-y-4">
-            {results.map(({ event }, index) => (
-              <li key={event.slug}>
-                <SetlistEventCard
-                  event={event}
-                  onClick={() => {
-                    setSetlistDialog({ slideIndex: index, open: true });
-                    setSelectedEvent(event.slug);
-                  }}
-                />
-              </li>
-            ))}
+          <ul className="mt-4 space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0">
+            {eventCards}
           </ul>
         )}
         {results.length > 0 && (
@@ -369,15 +381,20 @@ export default function Component() {
             open={setlistDialog.open}
             results={results}
             initialSlideIndex={setlistDialog.slideIndex}
-            scrollTopsBySlug={setlistDialogStateFromLocation(locationState)?.scrollTopsBySlug ?? {}}
+            scrollTopsBySlug={scrollTopsBySlug}
             onScrollPositionChange={onScrollPositionChange}
             onSelectedEventChange={onSelectedEventChange}
             onClose={() => {
+              isClosingSetlistDialog.current = true;
               setSetlistDialog((previous) => ({
                 ...previous,
                 open: false,
               }));
-              setSelectedEvent(undefined);
+            }}
+            onCloseComplete={() => {
+              if (isClosingSetlistDialog.current) {
+                setSelectedEvent(undefined);
+              }
             }}
             showMatchedAct={
               searchFilters.q != "" ||

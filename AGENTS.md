@@ -107,6 +107,8 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 
 ### Testing
 
+表示確認はユーザーが担当します。明示的に依頼された場合を除き、エージェントはブラウザでの表示確認を行いません。
+
 1. t-wada's TDD を実行すること
 2. Behavior-Oriented Testing - 振る舞いに対してテストをする。実装に対するテストはしない。
 3. Fast Feedback Loop

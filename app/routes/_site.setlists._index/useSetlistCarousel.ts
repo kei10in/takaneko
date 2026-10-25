@@ -21,10 +21,10 @@ export const useSetlistCarousel = (
   slideCount: number,
   onSelectedEventChange: (index: number) => void,
 ) => {
-  const preloadSlideRadius = 8;
+  const preloadSlideRadius = 3;
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(initialSlideIndex);
   const [renderedSlideRange, setRenderedSlideRange] = useState(() =>
-    getPreloadRange([initialSlideIndex], slideCount, preloadSlideRadius),
+    getPreloadRange([initialSlideIndex], slideCount, 0),
   );
   const [carouselRef, carouselApi] = useEmblaCarousel({
     startSnap: initialSlideIndex,
@@ -38,6 +38,7 @@ export const useSetlistCarousel = (
     if (carouselApi == undefined) {
       return;
     }
+    let isPreloadReady = false;
     const allowDrag: EmblaEventCallbackType<"pointerdown"> = (_api, event) => {
       const target = event.detail.target;
       return !(target instanceof Element && target.closest("button, input, select, textarea"));
@@ -45,9 +46,18 @@ export const useSetlistCarousel = (
     const syncSelectedSlide = () => {
       const index = carouselApi.selectedSnap();
       setSelectedSlideIndex(index);
+      // 先読み前に操作された場合も、選択した詳細はすぐ表示する。
+      setRenderedSlideRange((previous) =>
+        index >= previous.first && index <= previous.last
+          ? previous
+          : getPreloadRange([index], slideCount, isPreloadReady ? preloadSlideRadius : 0),
+      );
       notifySelectedEventChange(index);
     };
     const syncRenderedSlideRange = () => {
+      if (!isPreloadReady) {
+        return;
+      }
       const visibleSlideIndexes = carouselApi.slidesInView();
       // IntersectionObserverの初回通知や切り替わりで表示対象が空でも、詳細を消さない。
       if (visibleSlideIndexes.length == 0) {
@@ -68,7 +78,18 @@ export const useSetlistCarousel = (
       .on("slidesinview", syncRenderedSlideRange)
       .on("reinit", syncAfterReInit);
     syncAfterReInit();
+    // Effectが描画前に実行されても、選択中の詳細を描画するフレームを先に確保する。
+    let preloadFrame = requestAnimationFrame(() => {
+      preloadFrame = requestAnimationFrame(() => {
+        isPreloadReady = true;
+        setRenderedSlideRange(
+          getPreloadRange([carouselApi.selectedSnap()], slideCount, preloadSlideRadius),
+        );
+        syncRenderedSlideRange();
+      });
+    });
     return () => {
+      cancelAnimationFrame(preloadFrame);
       carouselApi
         .off("pointerdown", allowDrag)
         .off("select", syncSelectedSlide)

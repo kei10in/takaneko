@@ -91,7 +91,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
         </div>
       </div>
 
-      <div className="relative min-h-0 flex-1">
+      <div data-base-ui-swipe-ignore="" className="relative min-h-0 flex-1">
         <section
           ref={scrollContainerRef}
           key={event.slug}
