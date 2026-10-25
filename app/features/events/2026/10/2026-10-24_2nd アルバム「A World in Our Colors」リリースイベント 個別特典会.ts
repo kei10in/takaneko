@@ -92,7 +92,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-10-22",
+  updatedAt: "2026-10-26",
 };
 
 export const content = /* md */ `
@@ -119,6 +119,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 (お礼挨拶動画) - 公式 X](https://x.com/takanenofficial/status/2113946100511936737)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2113650402222854345)
   - [当日販売告知 - 公式 X](https://x.com/takanenofficial/status/2113201194046992667)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5691)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2108482852337689044)
