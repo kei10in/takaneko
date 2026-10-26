@@ -75,7 +75,7 @@
     "embla-carousel": "9.0.0-rc04",
     "glob": "^13.0.6",
     "handlebars": "^4.7.10",
-    "happy-dom": "^20.14.6",
+    "happy-dom": "^21.0.1",
     "icon-gen": "^5.0.0",
     "oxlint": "^1.87.0",
     "oxlint-tsgolint": "^7.0.2004",
