@@ -19,7 +19,7 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2109630161604022584",
     },
   ],
-  updatedAt: "2026-10-15",
+  updatedAt: "2026-10-26",
 };
 
 export const content = /* md */ `
@@ -30,8 +30,14 @@ export const content = /* md */ `
   - [🎀松本ももな X 3](https://x.com/momonamatsumoto/status/2109647364302458941)
   - [🎀松本ももな X 4](https://x.com/momonamatsumoto/status/2109892042352689167)
   - [🎀松本ももな X 5](https://x.com/momonamatsumoto/status/2110135036523741448)
+  - [🎀松本ももな X 6](https://x.com/momonamatsumoto/status/2114155792475759006)
+  - [🎀松本ももな X 7](https://x.com/momonamatsumoto/status/2114340259362439594)
   - [🎀松本ももな Instagram 1](https://www.instagram.com/p/DeY6T4-E4bU/)
   - [🎀松本ももな Instagram 2](https://www.instagram.com/p/DebRKDxkzcG/)
+  - [🎀松本ももな Instagram 3](https://www.instagram.com/p/DeraoW3G3hI/)
+  - [🎀松本ももな Instagram 4](https://www.instagram.com/reel/Des9RU2T8Zt/)
+  - [🎀松本ももな Instagram 5](https://www.instagram.com/p/De1w15bk4Ul/)
+  - [🎀松本ももな Instagram 6](https://www.instagram.com/p/De5dWswkxqk/)
 
   ## 公式 X
 
