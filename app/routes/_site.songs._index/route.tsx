@@ -1,4 +1,4 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { Tabs } from "@base-ui/react/tabs";
 import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import {
@@ -41,23 +41,25 @@ export default function Component() {
 
         <p className="mt-8 px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
 
-        <TabGroup className="mt-2">
-          <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">
+        <Tabs.Root defaultValue="all" className="mt-2">
+          <Tabs.List
+            activateOnFocus
+            className="flex items-center gap-2 overflow-x-scroll px-4 py-4"
+          >
             {tabs.map((tab) => (
-              <li key={tab.key} className="flex-none">
-                <Tab
-                  as="button"
-                  className="rounded-lg bg-gray-100 px-4 py-2 outline-none data-selected:bg-nadeshiko-800 data-selected:text-white"
-                >
-                  <span className="text-center text-sm select-none">{tab.name}</span>
-                </Tab>
-              </li>
+              <Tabs.Tab
+                key={tab.key}
+                value={tab.key}
+                className="flex-none rounded-lg bg-gray-100 px-4 py-2 outline-none data-active:bg-nadeshiko-800 data-active:text-white"
+              >
+                <span className="text-center text-sm select-none">{tab.name}</span>
+              </Tabs.Tab>
             ))}
-          </TabList>
+          </Tabs.List>
 
-          <TabPanels>
+          <div>
             {tabs.map((tab) => (
-              <TabPanel key={tab.key} tabIndex={-1}>
+              <Tabs.Panel key={tab.key} value={tab.key} tabIndex={-1}>
                 <ul className="mt-2 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
                   {tab.content.map((track) => (
                     <li key={track.slug}>
@@ -80,10 +82,10 @@ export default function Component() {
                     </li>
                   ))}
                 </ul>
-              </TabPanel>
+              </Tabs.Panel>
             ))}
-          </TabPanels>
-        </TabGroup>
+          </div>
+        </Tabs.Root>
       </section>
     </div>
   );
