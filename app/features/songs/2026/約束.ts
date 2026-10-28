@@ -12,12 +12,12 @@ export const 約束: SongMetaDescriptor = {
   choreographedBy: undefined,
 
   videoRelease: undefined,
-  digitalRelease: undefined,
+  digitalRelease: "2026-10-28",
   liveDebut: "2026-08-06",
 
   tags: [Original, Repertoire],
 
-  coverArt: "",
+  coverArt: "/takaneko/songs/2026/約束.jpg",
 
   officialSite: "",
   youtube: [],
