@@ -3,6 +3,18 @@ import { MediaDetails } from "~/features/media/types.ts";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "youtube",
+    key: "UBg-8Nz5XMk",
+    title:
+      "【高嶺のなでしこ】春休みの合宿免許は！｜涼海すう・橋本桃呼・籾山ひめり【運転免許トロッカ！】",
+    authorName: "運転免許トロッカ!",
+    publishedAt: "2026-10-22",
+    mediaUrl: "https://youtu.be/UBg-8Nz5XMk",
+    imageUrl: "https://i.ytimg.com/vi/UBg-8Nz5XMk/hqdefault.jpg",
+    category: "youtube",
+    presents: ["涼海すう", "橋本桃呼", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     key: "j3R6ev0jt5E",
     title: "MusicPocket VOICES｜TIF2026 アイドルインタビュー｜高嶺のなでしこ",
     authorName: "Musicpocket",
