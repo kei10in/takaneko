@@ -13,6 +13,14 @@ export const meta: EventMetaDescriptor = {
   present: ["涼海すう", "葉月紗蘭", "日向端ひな"],
   images: [
     {
+      path: "/events/2026/2026-10-28_NATSLIVE「たかねこ初恋キッチン」_1.jpg",
+      ref: "https://x.com/takanenofficial/status/2115380552543219896",
+    },
+    {
+      path: "/events/2026/2026-10-28_NATSLIVE「たかねこ初恋キッチン」_2.jpg",
+      ref: "https://x.com/takanenofficial/status/2115400848641802568",
+    },
+    {
       path: "/events/2026/2026-10-28_NATSLIVE「たかねこ初恋キッチン」.jpg",
       ref: "https://x.com/takanenofficial/status/2108807240564273532",
     },
@@ -29,14 +37,14 @@ export const meta: EventMetaDescriptor = {
   goods: {
     time: undefined,
     lineup: [
-      // "レシピカード「カード A タイプ」 660 円 (税込)",
-      // "レシピカード「カード B タイプ」 660 円 (税込)",
-      // "レシピカード「カード C タイプ」 660 円 (税込)",
+      "レシピカード「カード A タイプ」 660 円 (税込)",
+      "レシピカード「カード B タイプ」 660 円 (税込)",
+      "レシピカード「カード C タイプ」 660 円 (税込)",
     ],
     url: undefined,
   },
   acts: [],
-  updatedAt: "2026-10-15",
+  updatedAt: "2026-10-28",
 };
 
 export const content = /* md */ `
@@ -52,12 +60,14 @@ export const content = /* md */ `
 
   ゴールド会員は配信後 1 年間アーカイブ視聴可能。
 
-  <!-- ## グッズの販売期間
+  ## グッズの販売期間
 
-  2026年10月28日 19:00 〜 2026年10月29日 18:59 -->
+  2026年10月28日 19:00 〜 2026年10月29日 18:59
 
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2115400848641802568)
+  - [直前告知 - 公式 X](https://x.com/takanenofficial/status/2115380552543219896)
   - [一般抽選の告知 - 公式 X](https://x.com/takanenofficial/status/2109904468892668319)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2108807240564273532)
   - [告知 - NATSLIVE X](https://x.com/NATSLIVE_app/status/2108799689651056812)
