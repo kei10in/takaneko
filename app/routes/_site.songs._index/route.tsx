@@ -1,4 +1,5 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { Tabs } from "@base-ui/react/tabs";
+import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import {
@@ -38,27 +39,33 @@ export default function Component() {
     <div className="container mx-auto lg:max-w-5xl">
       <section className="my-8 py-12">
         <h1 className="page-heading px-4">楽曲</h1>
+        <p className="page-description px-4">
+          楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。
+        </p>
 
-        <p className="mt-8 px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
-
-        <TabGroup className="mt-2">
-          <TabList as="ul" className="flex items-center gap-2 overflow-x-scroll px-4 py-4">
+        <Tabs.Root defaultValue="all">
+          <Tabs.List
+            activateOnFocus
+            className={clsx(
+              "hidden-scrollbar mt-2 flex items-center gap-2 overflow-x-scroll px-4 py-4",
+              "mask-x-from-[calc(100%-1rem)]",
+            )}
+          >
             {tabs.map((tab) => (
-              <li key={tab.key} className="flex-none">
-                <Tab
-                  as="button"
-                  className="rounded-lg bg-gray-100 px-4 py-2 outline-none data-selected:bg-nadeshiko-800 data-selected:text-white"
-                >
-                  <span className="text-center text-sm select-none">{tab.name}</span>
-                </Tab>
-              </li>
+              <Tabs.Tab
+                key={tab.key}
+                value={tab.key}
+                className="flex-none rounded-full bg-white px-4 py-2 text-zinc-700 outline-none hover:bg-zinc-100/50 data-active:bg-zinc-100"
+              >
+                <span className="text-center text-base select-none">{tab.name}</span>
+              </Tabs.Tab>
             ))}
-          </TabList>
+          </Tabs.List>
 
-          <TabPanels>
+          <div>
             {tabs.map((tab) => (
-              <TabPanel key={tab.key} tabIndex={-1}>
-                <ul className="mt-2 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
+              <Tabs.Panel key={tab.key} value={tab.key} tabIndex={-1}>
+                <ul className="mt-4 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
                   {tab.content.map((track) => (
                     <li key={track.slug}>
                       <div className="w-full">
@@ -80,10 +87,10 @@ export default function Component() {
                     </li>
                   ))}
                 </ul>
-              </TabPanel>
+              </Tabs.Panel>
             ))}
-          </TabPanels>
-        </TabGroup>
+          </div>
+        </Tabs.Root>
       </section>
     </div>
   );
