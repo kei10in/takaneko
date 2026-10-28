@@ -29,7 +29,7 @@ export const metadata2026: MediaDetails[] = [
     key: "https://beeeem.com/article/beeeefes11-takaneko",
     title:
       "高嶺のなでしこ【BEEEEM FES Vol.11 DX SP ライブレポート】気高く、美しく。唯一無二の魅力を体現した30分-BEEEEM",
-    authorName: "BEEEM",
+    authorName: "BEEEEM",
     publishedAt: "2026-10-12",
     mediaUrl: "https://beeeem.com/article/beeeefes11-takaneko",
     imageUrl:
