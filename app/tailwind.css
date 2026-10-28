@@ -106,6 +106,10 @@
     @apply mb-6 text-4xl;
   }
 
+  .page-description {
+    @apply text-zinc-500;
+  }
+
   .section-heading {
     @apply text-2xl;
   }
@@ -125,6 +129,15 @@
     &:focus,
     &:focus-visible {
       @apply outline-none;
+    }
+  }
+
+  .hidden-scrollbar {
+    -ms-overflow-style: none; /* for IE and Edge */
+    scrollbar-width: none; /* for Firefox */
+
+    ::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari */
     }
   }
 }

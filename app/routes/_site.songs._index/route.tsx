@@ -38,21 +38,22 @@ export default function Component() {
     <div className="container mx-auto lg:max-w-5xl">
       <section className="my-8 py-12">
         <h1 className="page-heading px-4">楽曲</h1>
+        <p className="page-description px-4">
+          楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。
+        </p>
 
-        <p className="mt-8 px-4">楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。</p>
-
-        <Tabs.Root defaultValue="all" className="mt-2">
+        <Tabs.Root defaultValue="all">
           <Tabs.List
             activateOnFocus
-            className="flex items-center gap-2 overflow-x-scroll px-4 py-4"
+            className="hidden-scrollbar mt-2 flex items-center gap-2 overflow-x-scroll px-4 py-4"
           >
             {tabs.map((tab) => (
               <Tabs.Tab
                 key={tab.key}
                 value={tab.key}
-                className="flex-none rounded-lg bg-gray-100 px-4 py-2 outline-none data-active:bg-nadeshiko-800 data-active:text-white"
+                className="flex-none rounded-full bg-white px-4 py-2 text-zinc-700 outline-none hover:bg-zinc-100/50 data-active:bg-zinc-100"
               >
-                <span className="text-center text-sm select-none">{tab.name}</span>
+                <span className="text-center text-base select-none">{tab.name}</span>
               </Tabs.Tab>
             ))}
           </Tabs.List>
@@ -60,7 +61,7 @@ export default function Component() {
           <div>
             {tabs.map((tab) => (
               <Tabs.Panel key={tab.key} value={tab.key} tabIndex={-1}>
-                <ul className="mt-2 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
+                <ul className="mt-4 grid grid-cols-2 justify-center gap-x-4 gap-y-8 px-4 sm:grid-cols-3 lg:grid-cols-5">
                   {tab.content.map((track) => (
                     <li key={track.slug}>
                       <div className="w-full">
