@@ -1,4 +1,5 @@
 import { Tabs } from "@base-ui/react/tabs";
+import { clsx } from "clsx";
 import { Link, MetaFunction } from "react-router";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import {
@@ -45,7 +46,10 @@ export default function Component() {
         <Tabs.Root defaultValue="all">
           <Tabs.List
             activateOnFocus
-            className="hidden-scrollbar mt-2 flex items-center gap-2 overflow-x-scroll px-4 py-4"
+            className={clsx(
+              "hidden-scrollbar mt-2 flex items-center gap-2 overflow-x-scroll px-4 py-4",
+              "mask-x-from-[calc(100%-1rem)]",
+            )}
           >
             {tabs.map((tab) => (
               <Tabs.Tab
