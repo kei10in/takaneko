@@ -25,6 +25,14 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-10-29_ONE AND ONLY Vol.46 SP.jpg",
       ref: "https://x.com/takanenofficial/status/2105253825003360692",
     },
+    {
+      path: "/takaneko/goods/2026/2026-10-18_ミニフォトカード「ハロウィン2026」.webp",
+      ref: "https://x.com/takanenofficial/status/2115624663480967352",
+    },
+    {
+      path: "/events/2026/2026-10-29_ONE AND ONLY Vol.46 SP_本日のおチェキ.jpg",
+      ref: "https://x.com/takanekomanager/status/2115768605006770677",
+    },
   ],
   link: {
     text: "",
@@ -34,22 +42,34 @@ export const meta: EventMetaDescriptor = {
   streamings: undefined,
   goods: {
     time: ["20:30", "21:30"],
-    lineup: undefined,
-    url: undefined,
+    lineup: ["ミニフォトカード「ハロウィン2026」 / チェキ"],
+    url: "https://x.com/takanenofficial/status/2115624663480967352",
   },
   acts: [
     {
       types: ["LIVE"],
       start: "19:50",
       end: "20:15",
+      setlist: [
+        "衣装: Bouquet of 9 Flowers 衣装",
+        "恋を知った世界",
+        "初恋のこたえ。",
+        "僕は君になれない",
+        "ハートブーケ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2115771013296529768"],
     },
   ],
-  updatedAt: "2026-10-05",
+  updatedAt: "2026-10-29",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2115771013296529768)
+  - [本日のおチェキ](https://x.com/takanekomanager/status/2115768605006770677)
+  - [#きょうのたかねこ](https://x.com/takanenofficial/status/2115624663480967352)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2106610263646450092)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2105253825003360692)
 `;
