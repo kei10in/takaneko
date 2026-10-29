@@ -97,7 +97,7 @@
     "vite": "^8.3.4",
     "vite-plugin-inspect": "^12.1.0",
     "vitest": "^5.0.5",
-    "wrangler": "^4.151.2"
+    "wrangler": "^4.151.3"
   },
   "packageManager": "pnpm@11.25.0",
   "devEngines": {
