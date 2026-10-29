@@ -9,9 +9,9 @@ export const 約束: SongMetaDescriptor = {
   composedBy: "shito",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "NaNa",
 
-  videoRelease: undefined,
+  videoRelease: "2026-10-29",
   digitalRelease: "2026-10-28",
   liveDebut: "2026-08-06",
 
@@ -20,5 +20,11 @@ export const 約束: SongMetaDescriptor = {
   coverArt: "/takaneko/songs/2026/約束.jpg",
 
   officialSite: "",
-  youtube: [],
+  youtube: [
+    {
+      text: "MV",
+      videoId: "https://www.youtube.com/watch?v=2FBXN92lJtA",
+      publishedAt: "2026-10-29",
+    },
+  ],
 };
