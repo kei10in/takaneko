@@ -10,7 +10,16 @@ export const IDOL_FILE_Vol43: Publication = {
   priceWithTax: 2200,
   code: [],
   url: "",
-  coverImages: [],
+  coverImages: [
+    {
+      path: "/publications/2026/2026-10-30_IDOL FILE Vol.43_表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2113586628979785827",
+    },
+    {
+      path: "/publications/2026/2026-10-30_IDOL FILE Vol.43_裏表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2113586628979785827",
+    },
+  ],
   featuredMembers: ["日向端ひな"],
   officialTwitter: "https://x.com/takanenofficial/status/2106946227027771457",
   links: [
