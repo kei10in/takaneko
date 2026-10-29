@@ -9,8 +9,16 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
   listPrice: 1800,
   priceWithTax: 1980,
   code: [{ kind: "ISBN", value: "9784296221387" }],
-  url: "https://www.amazon.co.jp/dp/4296221388",
+  url: "https://bookplus.nikkei.com/atcl/catalog/26/10/23/02872/",
   coverImages: [
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_表紙.jpg",
+      ref: "https://x.com/nikkei_ent/status/2113466718446326079",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_裏表紙.jpg",
+      ref: "https://x.com/nikkei_ent/status/2115399544074903949",
+    },
     {
       path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_告知.jpg",
       ref: "https://x.com/nikkei_ent/status/2107277613593178439",
