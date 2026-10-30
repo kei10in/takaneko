@@ -55,6 +55,8 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
 
   const result = Object.values(songToLiveMap).map((activitySummary) => {
     const performedLives: SimpleSongActivity[] = activitySummary.events.map((e) => {
+      const image = e.event.meta.images[0];
+
       return {
         event: {
           slug: e.event.slug,
@@ -64,6 +66,7 @@ export const makeLivesForSongMap = (events: EventModule[]): LivesForSong[] => {
           date: e.event.meta.date,
           region: e.event.meta.region,
           location: e.event.meta.location,
+          image: image == undefined ? undefined : { path: image.path, ref: image.ref },
         },
 
         segments: e.segments.map(({ act, segment }) => ({

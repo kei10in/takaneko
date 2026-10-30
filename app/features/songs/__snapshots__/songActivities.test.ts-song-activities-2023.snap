@@ -35,6 +35,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -57,6 +58,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -79,6 +81,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -101,6 +104,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -123,6 +127,7 @@
       {
         "event": {
           "date": "2023-11-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -145,6 +150,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -167,6 +173,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -189,6 +196,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -211,6 +219,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -233,6 +242,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -255,6 +265,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -277,6 +288,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -299,6 +311,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -321,6 +334,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -343,6 +357,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -365,6 +380,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -387,6 +403,7 @@
       {
         "event": {
           "date": "2023-08-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -409,6 +426,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -431,6 +449,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -462,6 +481,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -484,6 +504,7 @@
       {
         "event": {
           "date": "2023-07-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -506,6 +527,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -528,6 +550,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -550,6 +573,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -572,6 +596,7 @@
       {
         "event": {
           "date": "2023-07-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -594,6 +619,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -616,6 +642,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -638,6 +665,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -660,6 +688,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -682,6 +711,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -704,6 +734,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -726,6 +757,7 @@
       {
         "event": {
           "date": "2023-05-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -748,6 +780,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -779,6 +812,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -810,6 +844,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -841,6 +876,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -893,6 +929,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -915,6 +952,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -937,6 +975,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -959,6 +998,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -981,6 +1021,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -1003,6 +1044,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -1025,6 +1067,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1047,6 +1090,7 @@
       {
         "event": {
           "date": "2023-09-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1069,6 +1113,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -1116,6 +1161,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -1138,6 +1184,7 @@
       {
         "event": {
           "date": "2023-12-16",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "中野 ZERO 大ホール",
           "region": "東京",
@@ -1160,6 +1207,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -1182,6 +1230,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -1204,6 +1253,7 @@
       {
         "event": {
           "date": "2023-10-26",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "ホテルメトロポリタン エドモント",
           "region": "東京",
@@ -1259,6 +1309,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1281,6 +1332,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -1303,6 +1355,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -1325,6 +1378,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -1347,6 +1401,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -1369,6 +1424,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -1391,6 +1447,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -1413,6 +1470,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -1435,6 +1493,7 @@
       {
         "event": {
           "date": "2023-11-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -1457,6 +1516,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -1479,6 +1539,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -1501,6 +1562,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -1523,6 +1585,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -1545,6 +1608,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -1567,6 +1631,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -1589,6 +1654,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -1611,6 +1677,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -1633,6 +1700,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -1655,6 +1723,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -1677,6 +1746,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -1699,6 +1769,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -1721,6 +1792,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1743,6 +1815,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -1790,6 +1863,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -1812,6 +1886,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -1834,6 +1909,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -1856,6 +1932,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -1878,6 +1955,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -1900,6 +1978,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1922,6 +2004,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -1944,6 +2027,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -1966,6 +2050,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -1988,6 +2073,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -2010,6 +2096,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -2041,6 +2128,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -2072,6 +2160,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -2103,6 +2192,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -2134,6 +2224,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -2156,6 +2247,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -2178,6 +2270,7 @@
       {
         "event": {
           "date": "2023-03-24",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
@@ -2200,6 +2293,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -2222,6 +2316,7 @@
       {
         "event": {
           "date": "2023-03-20",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿住友ビル 新宿住友ホール",
           "region": "東京",
@@ -2244,6 +2339,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -2266,6 +2362,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -2288,6 +2385,7 @@
       {
         "event": {
           "date": "2023-03-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -2310,6 +2408,7 @@
       {
         "event": {
           "date": "2023-02-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
@@ -2332,6 +2431,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -2363,6 +2463,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -2385,6 +2486,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -2407,6 +2509,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -2429,6 +2532,7 @@
       {
         "event": {
           "date": "2023-02-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -2451,6 +2555,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -2473,6 +2578,7 @@
       {
         "event": {
           "date": "2023-01-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
@@ -2495,6 +2601,7 @@
       {
         "event": {
           "date": "2023-01-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "LIQUIDROOM",
           "region": "東京",
@@ -2517,6 +2624,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -2539,6 +2647,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -2570,6 +2679,7 @@
       {
         "event": {
           "date": "2023-01-07",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EXシアター六本木",
           "region": "東京",
@@ -2592,6 +2702,7 @@
       {
         "event": {
           "date": "2023-01-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
@@ -2627,6 +2738,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -2665,6 +2777,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -2723,6 +2836,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -2745,6 +2859,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -2767,6 +2882,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -2789,6 +2905,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -2811,6 +2928,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -2833,6 +2951,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -2855,6 +2974,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -2877,6 +2997,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -2899,6 +3020,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -2921,6 +3043,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -2943,6 +3066,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -2965,6 +3089,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -2987,6 +3112,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -3009,6 +3135,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -3031,6 +3158,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3053,6 +3181,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -3075,6 +3204,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -3097,6 +3227,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -3119,6 +3250,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -3141,6 +3273,7 @@
       {
         "event": {
           "date": "2023-07-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -3163,6 +3296,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -3185,6 +3319,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -3252,6 +3387,7 @@
       {
         "event": {
           "date": "2023-12-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -3274,6 +3410,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3296,6 +3433,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -3327,6 +3465,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -3349,6 +3488,7 @@
       {
         "event": {
           "date": "2023-12-16",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "中野 ZERO 大ホール",
           "region": "東京",
@@ -3371,6 +3511,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -3393,6 +3534,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -3415,6 +3557,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
@@ -3437,6 +3580,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -3459,6 +3603,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -3481,6 +3626,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -3503,6 +3649,7 @@
       {
         "event": {
           "date": "2023-11-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3525,6 +3672,7 @@
       {
         "event": {
           "date": "2023-11-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -3547,6 +3695,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -3569,6 +3718,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -3591,6 +3741,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -3613,6 +3764,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -3635,6 +3787,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -3657,6 +3810,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -3679,6 +3833,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -3701,6 +3856,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -3723,6 +3879,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -3745,6 +3902,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -3767,6 +3925,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -3789,6 +3948,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -3811,6 +3971,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3833,6 +3994,7 @@
       {
         "event": {
           "date": "2023-09-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3855,6 +4017,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -3877,6 +4040,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -3899,6 +4063,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3921,6 +4086,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -3943,6 +4109,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3965,6 +4135,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -3987,6 +4158,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -4009,6 +4181,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -4031,6 +4204,7 @@
       {
         "event": {
           "date": "2023-08-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -4053,6 +4227,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -4075,6 +4250,7 @@
       {
         "event": {
           "date": "2023-08-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -4097,6 +4273,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -4128,6 +4305,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -4159,6 +4337,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4181,6 +4360,7 @@
       {
         "event": {
           "date": "2023-07-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -4203,6 +4383,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -4225,6 +4406,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -4256,6 +4438,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -4278,6 +4461,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -4309,6 +4493,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -4331,6 +4516,7 @@
       {
         "event": {
           "date": "2023-07-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -4353,6 +4539,7 @@
       {
         "event": {
           "date": "2023-07-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -4375,6 +4562,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -4397,6 +4585,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -4419,6 +4608,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -4441,6 +4631,7 @@
       {
         "event": {
           "date": "2023-06-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4463,6 +4654,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -4485,6 +4677,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -4507,6 +4700,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -4529,6 +4723,7 @@
       {
         "event": {
           "date": "2023-05-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4551,6 +4746,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -4582,6 +4778,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -4613,6 +4810,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -4644,6 +4842,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -4675,6 +4874,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -4697,6 +4897,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4719,6 +4920,7 @@
       {
         "event": {
           "date": "2023-03-24",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
@@ -4741,6 +4943,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4763,6 +4966,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -4785,6 +4989,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4807,6 +5012,7 @@
       {
         "event": {
           "date": "2023-03-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -4829,6 +5035,7 @@
       {
         "event": {
           "date": "2023-02-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -4851,6 +5058,7 @@
       {
         "event": {
           "date": "2023-02-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
@@ -4873,6 +5081,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -4904,6 +5113,7 @@
       {
         "event": {
           "date": "2023-02-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -4926,6 +5136,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -4948,6 +5159,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -4970,6 +5182,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -4992,6 +5205,7 @@
       {
         "event": {
           "date": "2023-02-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -5014,6 +5228,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -5036,6 +5251,7 @@
       {
         "event": {
           "date": "2023-01-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
@@ -5058,6 +5274,7 @@
       {
         "event": {
           "date": "2023-01-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "LIQUIDROOM",
           "region": "東京",
@@ -5080,6 +5297,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -5102,6 +5320,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -5133,6 +5352,7 @@
       {
         "event": {
           "date": "2023-01-07",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EXシアター六本木",
           "region": "東京",
@@ -5155,6 +5375,7 @@
       {
         "event": {
           "date": "2023-01-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
@@ -5214,6 +5435,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -5236,6 +5458,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -5258,6 +5481,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -5280,6 +5504,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -5302,6 +5527,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -5324,6 +5550,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -5346,6 +5573,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -5368,6 +5596,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -5390,6 +5619,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -5412,6 +5642,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -5434,6 +5665,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -5456,6 +5688,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -5478,6 +5711,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -5500,6 +5734,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -5522,6 +5757,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -5544,6 +5780,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -5575,6 +5812,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -5597,6 +5835,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -5619,6 +5858,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -5641,6 +5881,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -5676,6 +5917,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -5727,6 +5969,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -5749,6 +5992,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -5771,6 +6015,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -5793,6 +6038,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -5815,6 +6061,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -5837,6 +6084,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -5859,6 +6107,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -5881,6 +6133,7 @@
       {
         "event": {
           "date": "2023-08-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -5903,6 +6156,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -5925,6 +6179,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -5947,6 +6202,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -5969,6 +6225,7 @@
       {
         "event": {
           "date": "2023-06-03",
+          "image": undefined,
           "liveType": "GUEST",
           "location": "品川ステラボール",
           "region": "東京",
@@ -5991,6 +6248,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -6013,6 +6271,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -6035,6 +6294,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -6057,6 +6317,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -6079,6 +6340,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -6101,6 +6363,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -6123,6 +6386,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -6145,6 +6409,7 @@
       {
         "event": {
           "date": "2023-02-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -6167,6 +6432,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -6189,6 +6455,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -6211,6 +6478,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -6233,6 +6501,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -6255,6 +6524,7 @@
       {
         "event": {
           "date": "2023-02-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -6277,6 +6547,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -6299,6 +6570,7 @@
       {
         "event": {
           "date": "2023-01-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
@@ -6321,6 +6593,7 @@
       {
         "event": {
           "date": "2023-01-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "LIQUIDROOM",
           "region": "東京",
@@ -6343,6 +6616,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -6387,6 +6661,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -6432,6 +6707,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -6454,6 +6730,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -6476,6 +6753,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -6498,6 +6776,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -6520,6 +6799,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -6542,6 +6822,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -6564,6 +6845,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -6586,6 +6868,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -6608,6 +6891,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -6630,6 +6914,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -6652,6 +6937,7 @@
       {
         "event": {
           "date": "2023-06-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -6674,6 +6960,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -6696,6 +6983,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -6718,6 +7006,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -6749,6 +7038,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -6780,6 +7070,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -6811,6 +7102,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -6879,6 +7171,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -6901,6 +7194,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -6932,6 +7226,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -6954,6 +7249,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -6976,6 +7272,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -6998,6 +7295,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
@@ -7020,6 +7318,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -7042,6 +7341,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -7064,6 +7364,7 @@
       {
         "event": {
           "date": "2023-11-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -7086,6 +7387,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -7108,6 +7410,7 @@
       {
         "event": {
           "date": "2023-11-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
@@ -7130,6 +7433,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -7152,6 +7456,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -7174,6 +7479,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -7196,6 +7502,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -7218,6 +7525,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -7240,6 +7548,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -7262,6 +7571,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -7284,6 +7594,7 @@
       {
         "event": {
           "date": "2023-09-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -7306,6 +7617,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -7328,6 +7640,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -7350,6 +7663,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -7372,6 +7686,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -7394,6 +7709,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -7416,6 +7732,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -7438,6 +7755,7 @@
       {
         "event": {
           "date": "2023-08-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -7460,6 +7778,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -7482,6 +7801,7 @@
       {
         "event": {
           "date": "2023-08-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -7504,6 +7824,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -7535,6 +7856,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -7566,6 +7888,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -7588,6 +7911,7 @@
       {
         "event": {
           "date": "2023-07-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -7610,6 +7934,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -7632,6 +7957,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -7654,6 +7980,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -7676,6 +8003,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -7707,6 +8035,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -7729,6 +8058,7 @@
       {
         "event": {
           "date": "2023-07-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -7751,6 +8081,7 @@
       {
         "event": {
           "date": "2023-07-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -7773,6 +8104,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -7795,6 +8127,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -7838,6 +8171,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -7866,6 +8200,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -7894,6 +8229,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -7959,6 +8295,7 @@
       {
         "event": {
           "date": "2023-12-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -7981,6 +8318,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -8003,6 +8341,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -8034,6 +8373,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -8056,6 +8396,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -8078,6 +8419,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -8100,6 +8442,7 @@
       {
         "event": {
           "date": "2023-12-16",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "中野 ZERO 大ホール",
           "region": "東京",
@@ -8122,6 +8465,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -8144,6 +8488,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -8166,6 +8511,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -8188,6 +8534,7 @@
       {
         "event": {
           "date": "2023-11-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "東武動物公園イベントステージHOLA!",
           "region": "埼玉",
@@ -8210,6 +8557,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -8232,6 +8580,7 @@
       {
         "event": {
           "date": "2023-11-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -8254,6 +8603,7 @@
       {
         "event": {
           "date": "2023-11-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -8276,6 +8626,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -8298,6 +8649,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -8320,6 +8672,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -8342,6 +8695,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -8364,6 +8718,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -8386,6 +8741,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -8408,6 +8764,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -8430,6 +8787,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -8452,6 +8810,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -8474,6 +8833,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -8496,6 +8856,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -8518,6 +8879,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -8540,6 +8902,7 @@
       {
         "event": {
           "date": "2023-09-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -8562,6 +8925,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -8584,6 +8948,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜赤レンガ倉庫イベント広場B",
           "region": "神奈川",
@@ -8606,6 +8971,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -8628,6 +8994,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -8659,6 +9026,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -8681,6 +9049,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -8703,6 +9072,7 @@
       {
         "event": {
           "date": "2023-08-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -8725,6 +9095,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -8747,6 +9118,7 @@
       {
         "event": {
           "date": "2023-08-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -8769,6 +9141,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -8800,6 +9173,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -8822,6 +9196,7 @@
       {
         "event": {
           "date": "2023-07-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -8844,6 +9219,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -8866,6 +9242,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -8888,6 +9265,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -8919,6 +9297,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -8941,6 +9320,7 @@
       {
         "event": {
           "date": "2023-07-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -8972,6 +9352,7 @@
       {
         "event": {
           "date": "2023-07-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -8994,6 +9375,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -9016,6 +9398,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -9038,6 +9421,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -9060,6 +9444,7 @@
       {
         "event": {
           "date": "2023-06-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9082,6 +9467,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -9104,6 +9490,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -9126,6 +9513,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -9148,6 +9536,7 @@
       {
         "event": {
           "date": "2023-05-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9170,6 +9559,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -9201,6 +9591,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -9232,6 +9623,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -9263,6 +9655,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -9294,6 +9687,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -9316,6 +9710,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9338,6 +9733,7 @@
       {
         "event": {
           "date": "2023-03-24",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
@@ -9360,6 +9756,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9382,6 +9779,7 @@
       {
         "event": {
           "date": "2023-03-20",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿住友ビル 新宿住友ホール",
           "region": "東京",
@@ -9404,6 +9802,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -9426,6 +9825,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9448,6 +9848,7 @@
       {
         "event": {
           "date": "2023-03-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -9470,6 +9871,7 @@
       {
         "event": {
           "date": "2023-02-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -9492,6 +9894,7 @@
       {
         "event": {
           "date": "2023-02-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
@@ -9514,6 +9917,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -9545,6 +9949,7 @@
       {
         "event": {
           "date": "2023-02-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -9567,6 +9972,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -9589,6 +9995,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -9611,6 +10018,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -9633,6 +10041,7 @@
       {
         "event": {
           "date": "2023-02-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -9655,6 +10064,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -9677,6 +10087,7 @@
       {
         "event": {
           "date": "2023-01-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
@@ -9699,6 +10110,7 @@
       {
         "event": {
           "date": "2023-01-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "LIQUIDROOM",
           "region": "東京",
@@ -9721,6 +10133,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -9743,6 +10156,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -9774,6 +10188,7 @@
       {
         "event": {
           "date": "2023-01-07",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EXシアター六本木",
           "region": "東京",
@@ -9796,6 +10211,7 @@
       {
         "event": {
           "date": "2023-01-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
@@ -9851,6 +10267,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -9873,6 +10290,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -9895,6 +10313,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -9917,6 +10336,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -9939,6 +10359,7 @@
       {
         "event": {
           "date": "2023-10-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -9961,6 +10382,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -9983,6 +10405,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -10005,6 +10428,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -10027,6 +10451,7 @@
       {
         "event": {
           "date": "2023-09-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10049,6 +10474,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -10071,6 +10497,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -10093,6 +10520,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -10115,6 +10543,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -10137,6 +10566,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -10159,6 +10589,7 @@
       {
         "event": {
           "date": "2023-07-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -10181,6 +10612,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -10203,6 +10635,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -10225,6 +10658,7 @@
       {
         "event": {
           "date": "2023-06-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10247,6 +10681,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -10269,6 +10704,7 @@
       {
         "event": {
           "date": "2023-06-03",
+          "image": undefined,
           "liveType": "GUEST",
           "location": "品川ステラボール",
           "region": "東京",
@@ -10291,6 +10727,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -10313,6 +10750,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -10335,6 +10773,7 @@
       {
         "event": {
           "date": "2023-05-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10357,6 +10796,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -10388,6 +10828,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -10419,6 +10860,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -10450,6 +10892,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -10481,6 +10924,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -10503,6 +10947,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10525,6 +10970,7 @@
       {
         "event": {
           "date": "2023-03-24",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
@@ -10547,6 +10993,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10569,6 +11016,7 @@
       {
         "event": {
           "date": "2023-03-20",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿住友ビル 新宿住友ホール",
           "region": "東京",
@@ -10591,6 +11039,7 @@
       {
         "event": {
           "date": "2023-03-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田スクエアホール",
           "region": "東京",
@@ -10613,6 +11062,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10635,6 +11085,7 @@
       {
         "event": {
           "date": "2023-03-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -10657,6 +11108,7 @@
       {
         "event": {
           "date": "2023-02-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -10679,6 +11131,7 @@
       {
         "event": {
           "date": "2023-02-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
@@ -10701,6 +11154,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -10723,6 +11177,7 @@
       {
         "event": {
           "date": "2023-02-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -10745,6 +11200,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -10767,6 +11223,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -10789,6 +11246,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -10811,6 +11269,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -10833,6 +11292,7 @@
       {
         "event": {
           "date": "2023-01-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KeyStudio",
           "region": "東京",
@@ -10855,6 +11315,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -10877,6 +11338,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -10908,6 +11370,7 @@
       {
         "event": {
           "date": "2023-01-07",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EXシアター六本木",
           "region": "東京",
@@ -10930,6 +11393,7 @@
       {
         "event": {
           "date": "2023-01-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp DiverCity",
           "region": "東京",
@@ -10965,6 +11429,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -11017,6 +11482,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
@@ -11039,6 +11505,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -11061,6 +11528,7 @@
       {
         "event": {
           "date": "2023-11-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11083,6 +11551,7 @@
       {
         "event": {
           "date": "2023-10-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "GARDEN新木場FACTORY",
           "region": "東京",
@@ -11105,6 +11574,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -11127,6 +11597,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -11149,6 +11620,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -11171,6 +11643,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -11193,6 +11666,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11215,6 +11689,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -11237,6 +11712,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -11259,6 +11735,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -11306,6 +11783,7 @@
       {
         "event": {
           "date": "2023-12-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -11328,6 +11806,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11350,6 +11829,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -11372,6 +11852,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
@@ -11394,6 +11875,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -11416,6 +11898,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -11438,6 +11921,7 @@
       {
         "event": {
           "date": "2023-11-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11460,6 +11944,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -11482,6 +11967,7 @@
       {
         "event": {
           "date": "2023-11-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
@@ -11504,6 +11990,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -11526,6 +12013,7 @@
       {
         "event": {
           "date": "2023-10-22",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "つくばFC万博グラウンド",
           "region": "茨城",
@@ -11548,6 +12036,7 @@
       {
         "event": {
           "date": "2023-10-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Namba",
           "region": "大阪",
@@ -11570,6 +12059,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -11592,6 +12082,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -11614,6 +12105,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -11636,6 +12128,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -11658,6 +12151,7 @@
       {
         "event": {
           "date": "2023-09-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11680,6 +12174,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -11702,6 +12197,7 @@
       {
         "event": {
           "date": "2023-08-31",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11724,6 +12220,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11746,6 +12246,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -11768,6 +12269,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -11790,6 +12292,7 @@
       {
         "event": {
           "date": "2023-08-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "六本木ヒルズアリーナ",
           "region": "東京",
@@ -11812,6 +12315,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -11834,6 +12338,7 @@
       {
         "event": {
           "date": "2023-08-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -11856,6 +12361,7 @@
       {
         "event": {
           "date": "2023-08-06",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -11878,6 +12384,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -11900,6 +12407,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -11922,6 +12430,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -11944,6 +12453,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -11966,6 +12476,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -11988,6 +12499,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -12010,6 +12522,7 @@
       {
         "event": {
           "date": "2023-07-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -12032,6 +12545,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -12054,6 +12568,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -12113,6 +12628,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -12135,6 +12651,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -12157,6 +12674,7 @@
       {
         "event": {
           "date": "2023-12-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KANDA SQUARE HALL",
           "region": "東京",
@@ -12179,6 +12697,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "品川ステラボール",
           "region": "東京",
@@ -12201,6 +12720,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -12223,6 +12743,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -12245,6 +12766,7 @@
       {
         "event": {
           "date": "2023-10-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -12267,6 +12789,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -12289,6 +12812,7 @@
       {
         "event": {
           "date": "2023-09-24",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -12311,6 +12835,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -12333,6 +12858,7 @@
       {
         "event": {
           "date": "2023-08-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -12355,6 +12881,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -12377,6 +12904,7 @@
       {
         "event": {
           "date": "2023-08-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "豊洲PIT",
           "region": "東京",
@@ -12399,6 +12927,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -12421,6 +12950,7 @@
       {
         "event": {
           "date": "2023-07-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -12443,6 +12973,7 @@
       {
         "event": {
           "date": "2023-06-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "栃木県総合文化センター",
           "region": "栃木",
@@ -12465,6 +12996,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -12487,6 +13019,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -12509,6 +13042,7 @@
       {
         "event": {
           "date": "2023-05-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -12531,6 +13065,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -12553,6 +13088,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -12575,6 +13111,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -12597,6 +13134,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -12619,6 +13157,7 @@
       {
         "event": {
           "date": "2023-03-21",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -12641,6 +13180,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -12663,6 +13203,7 @@
       {
         "event": {
           "date": "2023-02-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -12685,6 +13226,7 @@
       {
         "event": {
           "date": "2023-02-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Livehouse Output",
           "region": "沖縄",
@@ -12716,6 +13258,7 @@
       {
         "event": {
           "date": "2023-02-25",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -12738,6 +13281,7 @@
       {
         "event": {
           "date": "2023-02-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "仙台Rensa",
           "region": "宮城",
@@ -12760,6 +13304,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -12795,6 +13340,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -12840,6 +13386,7 @@
       {
         "event": {
           "date": "2023-12-24",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "横浜 Bay Hall",
           "region": "神奈川",
@@ -12868,6 +13415,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -12896,6 +13444,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -12957,6 +13506,7 @@
       {
         "event": {
           "date": "2023-12-29",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "国立代々木競技場 第二体育館",
           "region": "東京",
@@ -12979,6 +13529,7 @@
       {
         "event": {
           "date": "2023-12-18",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -13001,6 +13552,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -13032,6 +13584,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -13054,6 +13607,7 @@
       {
         "event": {
           "date": "2023-12-16",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "中野 ZERO 大ホール",
           "region": "東京",
@@ -13076,6 +13630,7 @@
       {
         "event": {
           "date": "2023-12-08",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -13098,6 +13653,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -13120,6 +13676,7 @@
       {
         "event": {
           "date": "2023-09-18",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "EX THEATER ROPPONGI",
           "region": "東京",
@@ -13142,6 +13699,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -13164,6 +13722,7 @@
       {
         "event": {
           "date": "2023-08-14",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -13186,6 +13745,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -13208,6 +13768,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -13230,6 +13791,7 @@
       {
         "event": {
           "date": "2023-06-03",
+          "image": undefined,
           "liveType": "GUEST",
           "location": "品川ステラボール",
           "region": "東京",
@@ -13252,6 +13814,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -13283,6 +13846,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -13314,6 +13878,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -13345,6 +13910,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -13376,6 +13942,7 @@
       {
         "event": {
           "date": "2023-03-05",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -13398,6 +13965,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -13445,6 +14013,7 @@
       {
         "event": {
           "date": "2023-12-17",
+          "image": undefined,
           "liveType": "RELEASE_EVENT",
           "location": "カメイドクロック",
           "region": "東京",
@@ -13467,6 +14036,7 @@
       {
         "event": {
           "date": "2023-12-10",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "ヒューリックホール東京",
           "region": "東京",
@@ -13489,6 +14059,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -13511,6 +14082,7 @@
       {
         "event": {
           "date": "2023-11-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
@@ -13533,6 +14105,7 @@
       {
         "event": {
           "date": "2023-10-09",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "宗像ユリックス 芝生広場",
           "region": "福岡",
@@ -13555,6 +14128,7 @@
       {
         "event": {
           "date": "2023-10-07",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "獨協医科大学 関湊記念ホール",
           "region": "栃木",
@@ -13577,6 +14151,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -13599,6 +14174,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -13621,6 +14200,7 @@
       {
         "event": {
           "date": "2023-08-04",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "お台場・青海周辺エリア",
           "region": "東京",
@@ -13643,6 +14223,7 @@
       {
         "event": {
           "date": "2023-07-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -13665,6 +14246,7 @@
       {
         "event": {
           "date": "2023-07-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "幕張海浜公園Gブロック",
           "region": "千葉",
@@ -13687,6 +14269,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -13709,6 +14292,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -13731,6 +14315,7 @@
       {
         "event": {
           "date": "2023-06-05",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -13753,6 +14338,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -13775,6 +14361,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -13806,6 +14393,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -13837,6 +14425,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -13868,6 +14457,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",
@@ -13899,6 +14489,7 @@
       {
         "event": {
           "date": "2023-04-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷WWW X",
           "region": "東京",
@@ -13921,6 +14512,7 @@
       {
         "event": {
           "date": "2023-03-26",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -13943,6 +14535,7 @@
       {
         "event": {
           "date": "2023-03-24",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "TOKYO DOME CITY HALL",
           "region": "東京",
@@ -13965,6 +14558,7 @@
       {
         "event": {
           "date": "2023-03-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -13987,6 +14581,7 @@
       {
         "event": {
           "date": "2023-02-27",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "渋谷 CLUB QUATTRO",
           "region": "東京",
@@ -14009,6 +14604,7 @@
       {
         "event": {
           "date": "2023-02-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "新宿BLAZE",
           "region": "東京",
@@ -14031,6 +14627,7 @@
       {
         "event": {
           "date": "2023-02-14",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -14053,6 +14650,7 @@
       {
         "event": {
           "date": "2023-02-02",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify  O-EAST",
           "region": "東京",
@@ -14075,6 +14673,7 @@
       {
         "event": {
           "date": "2023-01-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "Spotify O-WEST",
           "region": "東京",
@@ -14097,6 +14696,7 @@
       {
         "event": {
           "date": "2023-01-08",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "横浜 MM ブロンテ",
           "region": "神奈川",
@@ -14132,6 +14732,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -14176,6 +14777,7 @@
       {
         "event": {
           "date": "2023-12-28",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14198,6 +14800,7 @@
       {
         "event": {
           "date": "2023-11-19",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "梅田TRAD",
           "region": "大阪",
@@ -14220,6 +14823,7 @@
       {
         "event": {
           "date": "2023-11-13",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14242,6 +14846,7 @@
       {
         "event": {
           "date": "2023-11-04",
+          "image": undefined,
           "liveType": "EVENT_LIVE",
           "location": "清泉女子大学",
           "region": "東京",
@@ -14264,6 +14869,7 @@
       {
         "event": {
           "date": "2023-11-03",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "神田明神ホール",
           "region": "東京",
@@ -14286,6 +14892,7 @@
       {
         "event": {
           "date": "2023-10-15",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "品川グランドホール",
           "region": "東京",
@@ -14308,6 +14915,7 @@
       {
         "event": {
           "date": "2023-09-23",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -14330,6 +14938,7 @@
       {
         "event": {
           "date": "2023-09-03",
+          "image": undefined,
           "liveType": "SOLO",
           "location": "豊洲PIT",
           "region": "東京",
@@ -14352,6 +14961,10 @@
       {
         "event": {
           "date": "2023-08-17",
+          "image": {
+            "path": "/events/2023/2023-08-17_NEO KASSEN 2023_タイムテーブル.jpg",
+            "ref": "https://x.com/NEOJAPONISMinfo/status/1687452336590110720",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14374,6 +14987,7 @@
       {
         "event": {
           "date": "2023-08-15",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "KT Zepp Yokohama",
           "region": "神奈川",
@@ -14396,6 +15010,7 @@
       {
         "event": {
           "date": "2023-08-01",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14418,6 +15033,7 @@
       {
         "event": {
           "date": "2023-07-23",
+          "image": undefined,
           "liveType": "JOINT",
           "location": "恵比寿LIQUIDROOM",
           "region": "東京",
@@ -14440,6 +15056,7 @@
       {
         "event": {
           "date": "2023-07-16",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "山中湖交流プラザきらら",
           "region": "山梨",
@@ -14462,6 +15079,7 @@
       {
         "event": {
           "date": "2023-06-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "Zepp Shinjuku",
           "region": "東京",
@@ -14484,6 +15102,7 @@
       {
         "event": {
           "date": "2023-06-18",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "THE BOTTOM LINE",
           "region": "愛知",
@@ -14506,6 +15125,7 @@
       {
         "event": {
           "date": "2023-06-12",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14528,6 +15148,7 @@
       {
         "event": {
           "date": "2023-05-21",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "新宿KeyStudio",
           "region": "東京",
@@ -14550,6 +15171,7 @@
       {
         "event": {
           "date": "2023-05-17",
+          "image": undefined,
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -14572,6 +15194,7 @@
       {
         "event": {
           "date": "2023-05-06",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "LIVE VANQUISH",
           "region": "広島",
@@ -14603,6 +15226,7 @@
       {
         "event": {
           "date": "2023-05-05",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "福岡 BEAT STATION",
           "region": "福岡",
@@ -14634,6 +15258,7 @@
       {
         "event": {
           "date": "2023-04-30",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "バナナホール",
           "region": "大阪",
@@ -14665,6 +15290,7 @@
       {
         "event": {
           "date": "2023-04-23",
+          "image": undefined,
           "liveType": "HOSTED",
           "location": "仙台 darwin",
           "region": "宮城",

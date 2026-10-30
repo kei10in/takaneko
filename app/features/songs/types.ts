@@ -1,4 +1,5 @@
 import { z } from "zod/v4";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 import { LiveTypeEnum } from "../events/EventType.ts";
 import { MemberId } from "../profile/types.ts";
 
@@ -50,6 +51,7 @@ export const SimpleSongActivity = z.object({
     date: z.string(),
     region: z.string().optional(),
     location: z.string().optional(),
+    image: ImageDescription.optional(),
   }),
   segments: z.array(
     z.object({
