@@ -1,28 +1,23 @@
-import { clsx } from "clsx";
 import { Fragment } from "react";
 import {
   BsBarChartLineFill,
-  BsCalendar,
-  BsGeo,
   BsMicFill,
   BsPersonStandingDress,
   BsPlayBtnFill,
 } from "react-icons/bs";
-import { Link, LoaderFunctionArgs, MetaFunction } from "react-router";
+import { LoaderFunctionArgs, MetaFunction } from "react-router";
 import useSWR from "swr";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
-import { liveTypeColor } from "~/features/events/EventType.ts";
-import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { LivesForSong } from "~/features/songs/types.ts";
-import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
 import type { Route } from "./+types/route.ts";
 import { Credit } from "./Credit.tsx";
+import { LiveCard } from "./LiveCard.tsx";
 import { LiveSkeleton } from "./LiveSkeleton.tsx";
 import { YouTubeCard } from "./YouTubeCard.tsx";
 
@@ -198,58 +193,11 @@ export default function Component({ loaderData }: Route.ComponentProps) {
               )}
               {lives.map(({ segments, event: e }, i) => (
                 <Fragment key={i}>
-                  {segments.map((segment, j) => {
-                    const members =
-                      segment.members
-                        ?.flatMap((m) => {
-                          const s = memberNameToEmoji(m);
-                          return s == "" ? [] : [s];
-                        })
-                        .join("") ?? "";
-
-                    return (
-                      <li key={j}>
-                        <div className="flex items-stretch gap-2 p-1">
-                          <div
-                            className={clsx(
-                              "w-1 flex-none rounded-full",
-                              liveTypeColor(e.liveType),
-                            )}
-                          />
-                          <div className="text-xs">
-                            <p className="text-sm">
-                              <Link to={`/events/${e.slug}`}>
-                                {segment.actTitle ? `${e.title} - ${segment.actTitle}` : e.title}
-                              </Link>
-                            </p>
-                            <p className="flex items-center gap-1 text-gray-400">
-                              <BsCalendar className="inline flex-none text-xs" />
-                              <span className="line-clamp-1">
-                                {displayDateWithDayOfWeek(e.date)}
-                              </span>
-                            </p>
-                            <p className="flex items-center gap-1 text-gray-400">
-                              <BsGeo className="inline flex-none text-xs" />
-                              <span className="line-clamp-1">
-                                {e.region} {e.location}
-                              </span>
-                            </p>
-                            <p className="flex items-center gap-1 text-gray-400">
-                              <span>
-                                {segment.section == "main" ? "M" : "EN"}
-                                {(segment.index + 1).toString().padStart(2, "0")}
-                              </span>
-                              <span> / </span>
-                              <span className="line-clamp-1">
-                                {segment.costumeNames?.join("、") || "衣装不明"}
-                              </span>
-                              {members != "" && <span className="line-clamp-1">by {members}</span>}
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
+                  {segments.map((segment, j) => (
+                    <li key={j}>
+                      <LiveCard event={e} segment={segment} />
+                    </li>
+                  ))}
                 </Fragment>
               ))}
             </ul>
