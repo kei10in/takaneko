@@ -16,7 +16,7 @@
   "dependencies": {
     "@base-ui/react": "^1.9.0",
     "@headlessui/react": "^2.2.10",
-    "chart.js": "^4.5.1",
+    "chart.js": "^4.6.1",
     "chartjs-plugin-datalabels": "^2.2.0",
     "cheerio": "^1.2.0",
     "clsx": "^2.1.1",
@@ -45,12 +45,12 @@
     "unist-util-visit": "^5.1.0",
     "url-metadata": "^6.3.0",
     "zod": "^4.6.7",
-    "zustand": "^5.0.15"
+    "zustand": "^5.0.16"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.64.0",
     "@fast-csv/format": "^5.0.8",
-    "@googleapis/youtube": "^40.0.1",
+    "@googleapis/youtube": "^40.0.2",
     "@mdx-js/node-loader": "^3.1.1",
     "@mdx-js/rollup": "^3.1.1",
     "@napi-rs/image": "^1.15.0",
@@ -78,7 +78,7 @@
     "happy-dom": "^21.0.4",
     "icon-gen": "^5.0.0",
     "oxlint": "^1.89.0",
-    "oxlint-tsgolint": "^7.0.2004",
+    "oxlint-tsgolint": "^7.0.2005",
     "prettier": "^3.9.10",
     "prettier-plugin-embed": "^0.8.1",
     "prettier-plugin-organize-imports": "^4.3.0",
@@ -94,7 +94,7 @@
     "tsx": "^4.23.15",
     "twitter-text": "^3.1.0",
     "typescript": "^6.0.3",
-    "vite": "^8.3.4",
+    "vite": "^8.3.5",
     "vite-plugin-inspect": "^12.1.0",
     "vitest": "^5.0.5",
     "wrangler": "^4.151.2"
