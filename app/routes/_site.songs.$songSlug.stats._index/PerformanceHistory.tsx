@@ -62,7 +62,7 @@ export const PerformanceHistory = ({
         </ToggleGroup>
         {period === "monthly" && (
           <label className="flex items-center gap-2 text-sm text-zinc-600">
-            <span>表示する年</span>
+            <span className="sr-only">表示する年</span>
             <select
               value={year}
               onChange={(event) => setSelectedYear(Number(event.target.value))}

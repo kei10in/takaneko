@@ -18,7 +18,6 @@ interface Props {
 
 export const StatisticsBarChart = ({ data, name, labelName }: Props) => (
   <figure aria-label={name} className="w-full min-w-0">
-    <p className="mb-2 text-right text-xs text-zinc-500">単位：回</p>
     <ResponsiveContainer width="100%" minWidth={0} height={256}>
       <BarChart data={data} margin={{ top: 20, right: 12, bottom: 0, left: 0 }} accessibilityLayer>
         <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="var(--color-zinc-200)" />
