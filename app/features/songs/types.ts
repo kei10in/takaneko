@@ -77,6 +77,13 @@ export const LivesForSong = z.object({
     }),
   ),
   lives: z.array(SimpleSongActivity),
+  // キャッシュ済みの旧 JSON も読み込めるよう、追加の集計値は任意にします。
+  recentPerformanceRate: z
+    .object({
+      performedCount: z.int().min(0).max(20),
+      eventCount: z.int().min(0).max(20),
+    })
+    .optional(),
 });
 
 export type LivesForSong = z.output<typeof LivesForSong>;

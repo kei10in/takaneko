@@ -4,7 +4,7 @@ import { dirname } from "node:path";
 import { makeLivesForCostumes } from "~/features/costumes/costumeActivities.ts";
 import { EventModule } from "~/features/events/eventModule.ts";
 import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents.ts";
-import { makeLivesForSongMap } from "~/features/songs/songActivities.ts";
+import { buildLivesForSongs } from "~/features/songs/buildLivesForSongs.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { makeSongPerformedList } from "~/features/stats/performanceCount.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -21,7 +21,7 @@ const main = async () => {
 };
 
 const buildSongToLiveMap = (events: EventModule[]) => {
-  const livesForSongs = makeLivesForSongMap(events);
+  const livesForSongs = buildLivesForSongs(events, NaiveDate.todayInJapan());
 
   livesForSongs.forEach((livesToSong) => {
     const slug = livesToSong.slug;
