@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
-import { BsArrowUpRight, BsBarChartLineFill } from "react-icons/bs";
+import { BsBarChartLineFill } from "react-icons/bs";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
@@ -215,7 +216,7 @@ const Statistic = ({
           className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-nadeshiko-600"
         >
           {label}
-          <BsArrowUpRight
+          <HiArrowUpRight
             className="absolute top-4 right-4 size-4 text-zinc-400"
             aria-hidden="true"
           />
