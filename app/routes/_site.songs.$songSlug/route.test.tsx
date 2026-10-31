@@ -61,9 +61,7 @@ const renderPage = (path = songPath, performances?: LivesForSong) => {
 };
 
 const expectTabContent = (tab: string) => {
-  ["ビデオ", "衣装"].forEach((name) => {
-    expect(screen.queryByRole("heading", { name }) !== null).toBe(tab === "概要");
-  });
+  expect(screen.queryByRole("heading", { name: "ビデオ" }) !== null).toBe(tab === "概要");
   expect(screen.queryByRole("heading", { name: "ライブ" }) !== null).toBe(tab === "ライブ");
 };
 
@@ -150,7 +148,7 @@ describe("楽曲詳細のタブ", () => {
     ).toBeTruthy();
   });
 
-  it("概要タブでは衣装の使用回数を引き続き表示する", async () => {
+  it("概要タブではビデオを表示し、衣装の集計データがあっても衣装は表示しない", async () => {
     renderPage(songPath, {
       slug: track.slug,
       name: track.name,
@@ -159,8 +157,9 @@ describe("楽曲詳細のタブ", () => {
       lives: [],
     });
 
-    expect(await screen.findByText("テスト衣装")).toBeTruthy();
-    expect(screen.getByText("3")).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(screen.queryByRole("heading", { name: "衣装" })).toBeNull();
+    expect(screen.queryByText("テスト衣装")).toBeNull();
     expectTabContent("概要");
   });
 });
