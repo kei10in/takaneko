@@ -2,6 +2,7 @@ import { Toggle } from "@base-ui/react/toggle";
 import { ToggleGroup } from "@base-ui/react/toggle-group";
 import { clsx } from "clsx";
 import { useState } from "react";
+import { HiChevronDown } from "react-icons/hi2";
 import { monthlyPerformanceCounts, yearlyPerformanceCounts } from "~/features/songs/statistics.ts";
 import { SimpleSongActivity } from "~/features/songs/types.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -23,7 +24,7 @@ export const PerformanceHistory = ({
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <ToggleGroup
           aria-label="集計単位"
           value={[period]}
@@ -32,7 +33,7 @@ export const PerformanceHistory = ({
               setPeriod(nextPeriod);
             }
           }}
-          className="relative isolate grid grid-cols-2 rounded-full bg-zinc-100 p-1"
+          className="relative isolate grid h-10 shrink-0 grid-cols-2 rounded-full bg-zinc-100 p-1"
         >
           <span
             aria-hidden="true"
@@ -61,12 +62,12 @@ export const PerformanceHistory = ({
           </Toggle>
         </ToggleGroup>
         {period === "monthly" && (
-          <label className="flex items-center gap-2 text-sm text-zinc-600">
+          <label className="relative block shrink-0">
             <span className="sr-only">表示する年</span>
             <select
               value={year}
               onChange={(event) => setSelectedYear(Number(event.target.value))}
-              className="rounded-full border border-zinc-300 bg-white px-3 py-2 text-zinc-700"
+              className="h-10 w-28 appearance-none rounded-full bg-zinc-100 pr-10 pl-4 text-sm font-medium text-zinc-800 tabular-nums transition-colors hover:bg-zinc-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none forced-colors:appearance-auto"
             >
               {years.toReversed().map((value) => (
                 <option key={value} value={value}>
@@ -74,6 +75,10 @@ export const PerformanceHistory = ({
                 </option>
               ))}
             </select>
+            <HiChevronDown
+              className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-zinc-500 forced-colors:hidden"
+              aria-hidden="true"
+            />
           </label>
         )}
       </div>
