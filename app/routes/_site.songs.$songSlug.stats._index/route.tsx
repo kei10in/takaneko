@@ -151,7 +151,7 @@ export default function Component() {
       <section aria-label="ライブ種別">
         <h2 className={sectionHeading("mb-4")}>ライブ種別</h2>
         {statistics.liveTypes.length === 0 ? (
-          <p className="text-sm text-zinc-500">披露履歴がありません。</p>
+          <p className="text-sm text-zinc-500">この楽曲を披露したライブが見つかりませんでした。</p>
         ) : (
           <table className="w-full text-sm tabular-nums">
             <caption className="sr-only">ライブ種別ごとの披露回数と割合</caption>
@@ -188,7 +188,7 @@ export default function Component() {
       <section aria-label="衣装">
         <h2 className={sectionHeading("mb-4")}>衣装</h2>
         {statistics.costumes.length === 0 ? (
-          <p className="text-sm text-zinc-500">披露履歴がありません。</p>
+          <p className="text-sm text-zinc-500">この楽曲を披露したライブが見つかりませんでした。</p>
         ) : (
           <CostumeBarChart costume={statistics.costumes} />
         )}
@@ -196,12 +196,11 @@ export default function Component() {
 
       <section aria-label="披露間隔">
         <h2 className={sectionHeading("mb-2")}>披露間隔</h2>
-        <p className="mb-4 text-sm text-zinc-500">
-          同じ日の披露をまとめ、隣り合う披露日の間隔を集計しています。
-        </p>
-        {intervals == undefined ? (
+        {statistics.costumes.length === 0 ? (
+          <p className="text-sm text-zinc-500">この楽曲を披露したライブが見つかりませんでした。</p>
+        ) : intervals == undefined ? (
           <p className="text-sm text-zinc-500">
-            異なる披露日が2日以上あると、披露間隔を計算できます。
+            この楽曲を披露したライブがひとつしか見つかりませんでした。
           </p>
         ) : (
           <dl className="grid gap-3 sm:grid-cols-2">
