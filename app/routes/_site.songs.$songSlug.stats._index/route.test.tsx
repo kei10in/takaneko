@@ -28,6 +28,7 @@ const performances: LivesForSong = {
   name: "テスト楽曲",
   count: 5,
   costumeStats: [],
+  performanceRanking: { rank: 2, songCount: 60 },
   recentPerformanceRate: { performedCount: 1, eventCount: 2 },
   lives: [
     activity("2026-01-10", "last", "最新公演"),
@@ -59,6 +60,9 @@ describe("楽曲の統計ページ", () => {
     renderPage();
     const summary = within(screen.getByRole("region", { name: "披露サマリー" }));
     expect(summary.getByText("5回")).toBeTruthy();
+    expect(summary.getByText("披露回数順位")).toBeTruthy();
+    expect(summary.getByText("2位")).toBeTruthy();
+    expect(summary.getByText("全60曲中")).toBeTruthy();
     expect(summary.getByText("4公演")).toBeTruthy();
     expect(summary.getByText("2026.01.01")).toBeTruthy();
     expect(summary.queryByText("2022.08.07")).toBeNull();
@@ -73,6 +77,15 @@ describe("楽曲の統計ページ", () => {
     expect(summary.queryByText(/昼公演|夜公演|最新公演/u)).toBeNull();
     expect(summary.getByText("50.0%")).toBeTruthy();
     expect(summary.getByText("1 / 2公演")).toBeTruthy();
+  });
+
+  it("順位を含まない旧データでもサマリーを表示する", () => {
+    renderPage({ performances: { ...performances, performanceRanking: undefined } });
+    const summary = within(screen.getByRole("region", { name: "披露サマリー" }));
+    expect(summary.getByText("披露回数順位")).toBeTruthy();
+    expect(summary.getByText("—")).toBeTruthy();
+    expect(summary.getByText("集計データがありません。")).toBeTruthy();
+    expect(summary.getByText("5回")).toBeTruthy();
   });
 
   it("初披露日が未設定なら記録上の初日を表示する", () => {

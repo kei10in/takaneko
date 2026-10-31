@@ -29,9 +29,14 @@ export const buildLivesForSongs = (events: EventModule[], buildDate: NaiveDate) 
         ),
     );
 
-  return makeLivesForSongMap(events).map((song) => {
+  const livesForSongs = makeLivesForSongMap(events);
+  return livesForSongs.map((song) => {
     return {
       ...song,
+      performanceRanking: {
+        rank: livesForSongs.filter((other) => other.count > song.count).length + 1,
+        songCount: livesForSongs.length,
+      },
       recentPerformanceRate: {
         performedCount: recentSetlists.filter((songs) => songs.has(song.name)).length,
         eventCount: recentSetlists.length,

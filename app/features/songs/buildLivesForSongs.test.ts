@@ -5,6 +5,7 @@ import { parseSetlist } from "~/features/events/setlist.ts";
 import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { buildLivesForSongs } from "./buildLivesForSongs.ts";
+import { ALL_SONGS } from "./songs.ts";
 import { LivesForSong } from "./types.ts";
 
 const liveAct = (songs: string[], overrides: Partial<Act> = {}): Act => ({
@@ -30,6 +31,48 @@ const event = (slug: string, date: string, acts: Act[], canceled = false): Event
 const rateFor = (events: EventModule[]) =>
   buildLivesForSongs(events, new NaiveDate(2026, 2, 1)).find((song) => song.name === "ファンサ")
     ?.recentPerformanceRate;
+
+describe("楽曲別ライブデータの披露回数順位", () => {
+  it("累計披露回数で順位を付け、同数は同順位として次の順位を飛ばす", () => {
+    const songs = buildLivesForSongs(
+      [
+        event("first", "2026-01-01", [
+          liveAct(["ファンサ", "ファンサ", "ユメムスビ", "可愛くてごめん"]),
+        ]),
+        event("second", "2026-01-02", [
+          liveAct(["ファンサ", "ユメムスビ", "可愛くてごめん", "誇り高きアイドル"]),
+        ]),
+      ],
+      new NaiveDate(2026, 2, 1),
+    );
+
+    expect(songs.find((song) => song.name === "ファンサ")?.performanceRanking).toEqual({
+      rank: 1,
+      songCount: ALL_SONGS.length,
+    });
+    ["ユメムスビ", "可愛くてごめん"].forEach((name) => {
+      expect(songs.find((song) => song.name === name)?.performanceRanking).toEqual({
+        rank: 2,
+        songCount: ALL_SONGS.length,
+      });
+    });
+    expect(songs.find((song) => song.name === "誇り高きアイドル")?.performanceRanking.rank).toBe(4);
+    expect(
+      songs.filter((song) => song.count === 0).every((song) => song.performanceRanking.rank === 5),
+    ).toBe(true);
+    songs.forEach((song) => {
+      expect(LivesForSong.parse(song).performanceRanking).toEqual(song.performanceRanking);
+    });
+  });
+
+  it("披露履歴がない場合も登録された全楽曲を同率1位として集計する", () => {
+    const songs = buildLivesForSongs([], new NaiveDate(2026, 2, 1));
+    expect(songs).toHaveLength(ALL_SONGS.length);
+    songs.forEach((song) => {
+      expect(song.performanceRanking).toEqual({ rank: 1, songCount: ALL_SONGS.length });
+    });
+  });
+});
 
 describe("楽曲別ライブデータの披露率", () => {
   it("全 LIVE 枠に曲があり、ビルド日より前の公演を対象にする", () => {

@@ -78,6 +78,12 @@ export const LivesForSong = z.object({
   ),
   lives: z.array(SimpleSongActivity),
   // キャッシュ済みの旧 JSON も読み込めるよう、追加の集計値は任意にします。
+  performanceRanking: z
+    .object({
+      rank: z.int().min(1),
+      songCount: z.int().min(1),
+    })
+    .optional(),
   recentPerformanceRate: z
     .object({
       performedCount: z.int().min(0).max(20),

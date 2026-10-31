@@ -39,6 +39,7 @@ export default function Component() {
   const firstEvent = first?.events.at(0);
   const latestEvent = latest?.events.at(0);
   const rate = performances.recentPerformanceRate;
+  const ranking = performances.performanceRanking;
   const intervals = statistics.intervals;
 
   return (
@@ -55,6 +56,15 @@ export default function Component() {
             label="披露した公演数"
             value={`${number(statistics.eventCount)}公演`}
             detail="同じイベントでの披露は1公演として集計"
+          />
+          <Statistic
+            label="披露回数順位"
+            value={ranking == undefined ? "—" : `${number(ranking.rank)}位`}
+            detail={
+              ranking == undefined
+                ? "集計データがありません。"
+                : `全${number(ranking.songCount)}曲中`
+            }
           />
           <Statistic
             label="直近の披露率"
