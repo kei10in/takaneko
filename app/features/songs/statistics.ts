@@ -7,6 +7,21 @@ export interface PerformanceDay {
   events: SimpleSongActivity["event"][];
 }
 
+export interface SongStatistics {
+  performanceCount: number;
+  eventCount: number;
+  first: PerformanceDay | undefined;
+  latest: PerformanceDay | undefined;
+  intervals:
+    | {
+        average: number;
+        longest: number;
+      }
+    | undefined;
+  liveTypes: { name: string; count: number; percentage: number }[];
+  costumes: { costumeName: string; value: number }[];
+}
+
 export interface PerformanceCount {
   label: string;
   count: number | null;
@@ -19,7 +34,7 @@ const typeName = (type: LiveType | undefined) => {
   return liveTypeLabel(type);
 };
 
-export const calculateSongStatistics = (data: LivesForSong) => {
+export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
   const lives = data.lives.filter((live) => live.segments.length > 0);
   const performanceCount = lives.reduce((sum, live) => sum + live.segments.length, 0);
   const dates = [...new Set(lives.map((live) => live.event.date))].toSorted();
@@ -62,7 +77,6 @@ export const calculateSongStatistics = (data: LivesForSong) => {
       gaps.length === 0
         ? undefined
         : {
-            recent: gaps[gaps.length - 1],
             average: gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length,
             longest: Math.max(...gaps),
           },

@@ -98,8 +98,9 @@ describe("楽曲の統計ページ", () => {
   it("披露間隔は今日を使わず、同日の披露をまとめて計算した日数を表示する", () => {
     renderPage();
     const intervals = within(screen.getByRole("region", { name: "披露間隔" }));
-    expect(intervals.getAllByText("6").map((value) => value.textContent)).toEqual(["6日", "6日"]);
+    expect(intervals.getByText("6").textContent).toBe("6日");
     expect(intervals.getByText("4.5").textContent).toBe("4.5日");
+    expect(intervals.queryByText(/直近.*披露間隔/u)).toBeNull();
     expect(intervals.queryByRole("link")).toBeNull();
   });
 

@@ -62,7 +62,7 @@ describe("楽曲の統計", () => {
         activity("2026-01-01", "day"),
       ]),
     );
-    expect(statistics.intervals).toEqual({ recent: 6, average: 4.5, longest: 6 });
+    expect(statistics.intervals).toEqual({ average: 4.5, longest: 6 });
   });
 
   it.each([

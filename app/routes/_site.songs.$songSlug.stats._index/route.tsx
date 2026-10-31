@@ -170,8 +170,7 @@ export default function Component() {
             異なる披露日が2日以上あると、披露間隔を計算できます。
           </p>
         ) : (
-          <dl className="grid gap-3 sm:grid-cols-3">
-            <Statistic label="直近 2 回の披露間隔" value={number(intervals.recent)} unit="日" />
+          <dl className="grid gap-3 sm:grid-cols-2">
             <Statistic label="平均の披露間隔" value={intervals.average.toFixed(1)} unit="日" />
             <Statistic label="最長の披露間隔" value={number(intervals.longest)} unit="日" />
           </dl>
