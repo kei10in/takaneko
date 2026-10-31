@@ -4,7 +4,6 @@ import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { useSongLives } from "~/features/songs/useSongLives.ts";
 import type { Route } from "./+types/route.ts";
-import { Credit } from "./Credit.tsx";
 import { SongOutletContext } from "./useSongOutletContext.ts";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
@@ -71,10 +70,6 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
               {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
             </p>
           )}
-
-          <div className="mt-8">
-            <Credit song={track} />
-          </div>
 
           <nav
             aria-label="楽曲詳細"

@@ -61,7 +61,10 @@ const renderPage = (path = songPath, performances?: LivesForSong) => {
 };
 
 const expectTabContent = (tab: string) => {
-  expect(screen.queryByRole("heading", { name: "ビデオ" }) !== null).toBe(tab === "概要");
+  ["情報", "ビデオ"].forEach((name) => {
+    expect(screen.queryByRole("heading", { name }) !== null).toBe(tab === "概要");
+  });
+  expect(screen.queryByText("作詞", { selector: "dt" }) !== null).toBe(tab === "概要");
   expect(screen.queryByRole("heading", { name: "ライブ" }) !== null).toBe(tab === "ライブ");
 };
 
@@ -76,7 +79,23 @@ describe("楽曲詳細のタブ", () => {
       expect(link.getAttribute("aria-current")).toBe(item.name === tab.name ? "page" : null);
     });
     expect(screen.getByRole("heading", { level: 1, name: track.name })).toBeTruthy();
-    expect(screen.getByText(`作詞: ${track.lyricsBy}`)).toBeTruthy();
+    if (tab.name === "概要") {
+      const information = within(screen.getByRole("region", { name: "情報" }));
+      expect(
+        information.getByText("作詞", { selector: "dt" }).nextElementSibling?.textContent,
+      ).toBe(track.lyricsBy);
+      expect(
+        information.getByText("作曲", { selector: "dt" }).nextElementSibling?.textContent,
+      ).toBe(track.composedBy);
+      expect(
+        information.getByText("編曲", { selector: "dt" }).nextElementSibling?.textContent,
+      ).toBe(track.arrangedBy);
+      if (track.choreographedBy != undefined) {
+        expect(
+          information.getByText("振付", { selector: "dt" }).nextElementSibling?.textContent,
+        ).toBe(track.choreographedBy);
+      }
+    }
     expectTabContent(tab.name);
   });
 
