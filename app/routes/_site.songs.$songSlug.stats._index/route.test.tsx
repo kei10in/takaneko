@@ -134,6 +134,32 @@ describe("楽曲の統計ページ", () => {
     ).toHaveLength(3);
   });
 
+  it("集計単位は常に1つ選択され、矢印キーでフォーカスを移動できる", async () => {
+    renderPage();
+    const group = within(screen.getByRole("group", { name: "集計単位" }));
+    const monthly = group.getByRole("button", { name: "月別", pressed: true });
+    const yearly = group.getByRole("button", { name: "年別", pressed: false });
+
+    fireEvent.click(monthly);
+    expect(monthly.getAttribute("aria-pressed")).toBe("true");
+
+    act(() => monthly.focus());
+    fireEvent.keyDown(monthly, { key: "ArrowRight" });
+    await waitFor(() => expect(document.activeElement).toBe(yearly));
+
+    fireEvent.click(yearly);
+    expect(yearly.getAttribute("aria-pressed")).toBe("true");
+    expect(monthly.getAttribute("aria-pressed")).toBe("false");
+    fireEvent.click(yearly);
+    expect(yearly.getAttribute("aria-pressed")).toBe("true");
+    expect(screen.getByRole("figure", { name: "年別披露回数" })).toBeTruthy();
+
+    fireEvent.click(monthly);
+    expect(monthly.getAttribute("aria-pressed")).toBe("true");
+    expect(yearly.getAttribute("aria-pressed")).toBe("false");
+    expect(screen.getByRole("figure", { name: "2026年の月別披露回数" })).toBeTruthy();
+  });
+
   it.each([
     { today: new Date(2026, 0, 31, 12), expected: "データなし" },
     { today: new Date(2026, 9, 31, 12), expected: "0回" },

@@ -1,3 +1,5 @@
+import { Toggle } from "@base-ui/react/toggle";
+import { ToggleGroup } from "@base-ui/react/toggle-group";
 import { clsx } from "clsx";
 import { useState } from "react";
 import { monthlyPerformanceCounts, yearlyPerformanceCounts } from "~/features/songs/statistics.ts";
@@ -22,30 +24,42 @@ export const PerformanceHistory = ({
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <fieldset aria-label="集計単位" className="flex gap-2">
-          <button
-            type="button"
-            aria-pressed={period === "monthly"}
-            onClick={() => setPeriod("monthly")}
+        <ToggleGroup
+          aria-label="集計単位"
+          value={[period]}
+          onValueChange={([nextPeriod]) => {
+            if (nextPeriod != undefined) {
+              setPeriod(nextPeriod);
+            }
+          }}
+          className="relative isolate grid grid-cols-2 rounded-full bg-zinc-100 p-1"
+        >
+          <span
+            aria-hidden="true"
             className={clsx(
-              "rounded-full px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100/50",
-              period === "monthly" && "bg-zinc-100",
+              "absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out motion-reduce:transition-none",
+              period === "yearly" && "translate-x-full",
+            )}
+          />
+          <Toggle
+            value="monthly"
+            className={clsx(
+              "relative rounded-full px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none",
+              period === "monthly" ? "text-zinc-800" : "text-zinc-500 hover:text-zinc-700",
             )}
           >
             月別
-          </button>
-          <button
-            type="button"
-            aria-pressed={period === "yearly"}
-            onClick={() => setPeriod("yearly")}
+          </Toggle>
+          <Toggle
+            value="yearly"
             className={clsx(
-              "rounded-full px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100/50",
-              period === "yearly" && "bg-zinc-100",
+              "relative rounded-full px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none",
+              period === "yearly" ? "text-zinc-800" : "text-zinc-500 hover:text-zinc-700",
             )}
           >
             年別
-          </button>
-        </fieldset>
+          </Toggle>
+        </ToggleGroup>
         {period === "monthly" && (
           <label className="flex items-center gap-2 text-sm text-zinc-600">
             <span>表示する年</span>
