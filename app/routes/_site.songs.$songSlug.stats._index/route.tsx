@@ -14,7 +14,7 @@ const number = (value: number) => value.toLocaleString("ja-JP");
 const dateLabel = (date: string) => date.replaceAll("-", ".");
 const relativeDay = (date: string, today: NaiveDate) => {
   const days = today.differenceInDays(NaiveDate.parseUnsafe(date));
-  return days === 0 ? "今日" : days > 0 ? `${number(days)}日前` : `${number(-days)}日後`;
+  return days === 0 ? "今日" : days > 0 ? `${number(days)} 日前` : `${number(-days)} 日後`;
 };
 
 export default function Component() {
@@ -45,26 +45,19 @@ export default function Component() {
 
   return (
     <div className="mt-8 space-y-12">
-      <section aria-label="披露サマリー">
-        <h2 className={sectionHeading("mb-4")}>披露サマリー</h2>
+      <section aria-label="サマリー">
+        <h2 className={sectionHeading("mb-4")}>サマリー</h2>
         <dl className="grid grid-cols-2 gap-3 lg:grid-cols-3">
-          <Statistic
-            label="累計披露回数"
-            value={`${number(statistics.performanceCount)}回`}
-            detail="登録されたセットリストから集計"
-          />
-          <Statistic
-            label="披露した公演数"
-            value={`${number(statistics.eventCount)}公演`}
-            detail="同じイベントでの披露は1公演として集計"
-          />
+          <Statistic label="累計披露回数" value={number(statistics.performanceCount)} unit="回" />
+          <Statistic label="累計披露公演数" value={number(statistics.eventCount)} unit="公演" />
           <Statistic
             label="披露回数順位"
-            value={ranking == undefined ? "—" : `${number(ranking.rank)}位`}
+            value={ranking == undefined ? "—" : number(ranking.rank)}
+            unit={ranking == undefined ? undefined : "位"}
             detail={
               ranking == undefined
                 ? "集計データがありません。"
-                : `全${number(ranking.songCount)}曲中`
+                : `全 ${number(ranking.songCount)} 曲`
             }
           />
           <Statistic
@@ -72,25 +65,19 @@ export default function Component() {
             value={
               rate == undefined || rate.eventCount === 0
                 ? "—"
-                : `${((rate.performedCount / rate.eventCount) * 100).toFixed(1)}%`
+                : ((rate.performedCount / rate.eventCount) * 100).toFixed(1)
             }
+            unit={rate == undefined || rate.eventCount === 0 ? undefined : "%"}
             detail={
-              rate == undefined ? (
-                "集計データがありません。"
-              ) : rate.eventCount === 0 ? (
-                "集計対象の公演がありません。"
-              ) : (
-                <>
-                  <p>
-                    {rate.performedCount} / {rate.eventCount}公演
-                  </p>
-                  <p className="mt-1">セットリストの登録が揃った直近{rate.eventCount}公演</p>
-                </>
-              )
+              rate == undefined
+                ? "集計データがありません。"
+                : rate.eventCount === 0
+                  ? "集計対象の公演がありません。"
+                  : `${rate.performedCount} / ${rate.eventCount} 公演`
             }
           />
           <Statistic
-            label="直近の披露"
+            label="最近の披露"
             to={latestEvent == undefined ? undefined : `/events/${latestEvent.slug}`}
             value={
               latest == undefined ? (
@@ -116,7 +103,7 @@ export default function Component() {
                 ? undefined
                 : elapsed.totalDays < 0
                   ? `初披露まであと${number(-elapsed.totalDays)}日`
-                  : `${elapsed.years}年${elapsed.days}日（通算${number(elapsed.totalDays)}日）`
+                  : `${elapsed.years} 年 ${elapsed.days} 日前 / ${number(elapsed.totalDays)}日前`
             }
           />
         </dl>
@@ -184,9 +171,9 @@ export default function Component() {
           </p>
         ) : (
           <dl className="grid gap-3 sm:grid-cols-3">
-            <Statistic label="直近2回の披露間隔" value={`${number(intervals.recent)}日`} />
-            <Statistic label="平均の披露間隔" value={`${intervals.average.toFixed(1)}日`} />
-            <Statistic label="最長の披露間隔" value={`${number(intervals.longest)}日`} />
+            <Statistic label="直近 2 回の披露間隔" value={number(intervals.recent)} unit="日" />
+            <Statistic label="平均の披露間隔" value={intervals.average.toFixed(1)} unit="日" />
+            <Statistic label="最長の披露間隔" value={number(intervals.longest)} unit="日" />
           </dl>
         )}
       </section>
@@ -197,35 +184,35 @@ export default function Component() {
 const Statistic = ({
   label,
   value,
+  unit,
   detail,
   to,
 }: {
   label: string;
   value: ReactNode;
+  unit?: string;
   detail?: ReactNode;
   to?: string;
-}) => (
-  <div className="relative rounded-2xl bg-zinc-50 p-4 has-[a]:hover:bg-zinc-100">
-    <dt className="mb-2 text-xs text-zinc-500">
-      {to == undefined ? (
-        label
-      ) : (
-        <Link
-          to={to}
-          aria-label={`${label}の公演を見る`}
-          className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-nadeshiko-600"
-        >
-          {label}
-          <HiArrowUpRight
-            className="absolute top-4 right-4 size-4 text-zinc-400"
-            aria-hidden="true"
-          />
-        </Link>
-      )}
-    </dt>
-    <dd className="text-xl font-semibold text-zinc-800 tabular-nums">{value}</dd>
-    {detail == undefined ? null : (
-      <dd className="mt-2 text-xs leading-relaxed text-zinc-500">{detail}</dd>
-    )}
-  </div>
-);
+}) => {
+  const card = (
+    <div className="relative h-26 rounded-2xl bg-zinc-50 p-4 in-[a:hover]:bg-zinc-100">
+      <dt className="text-xs text-zinc-500">{label}</dt>
+      <dd className="mt-1.5 text-xl leading-7 font-semibold text-zinc-800 tabular-nums">
+        {value}
+        {unit == undefined ? null : (
+          <span className="ml-1 text-sm font-normal text-zinc-500">{unit}</span>
+        )}
+      </dd>
+      <dd className="mt-1 line-clamp-1 text-xs text-zinc-500">{detail}</dd>
+    </div>
+  );
+
+  return to == undefined ? (
+    card
+  ) : (
+    <Link to={to} className="relative block">
+      {card}
+      <HiArrowUpRight className="absolute top-4 right-4 size-4 text-zinc-400" aria-hidden="true" />
+    </Link>
+  );
+};

@@ -58,48 +58,48 @@ const renderPage = (overrides: Partial<SongOutletContext> = {}) => {
 describe("楽曲の統計ページ", () => {
   it("累計回数と公演数、最初の披露公演とブラウザの今日からの経過日数を表示する", () => {
     renderPage();
-    const summary = within(screen.getByRole("region", { name: "披露サマリー" }));
-    expect(summary.getByText("5回")).toBeTruthy();
+    const summary = within(screen.getByRole("region", { name: "サマリー" }));
+    expect(summary.getByText("5").textContent).toBe("5回");
     expect(summary.getByText("披露回数順位")).toBeTruthy();
-    expect(summary.getByText("2位")).toBeTruthy();
-    expect(summary.getByText("全60曲中")).toBeTruthy();
-    expect(summary.getByText("4公演")).toBeTruthy();
+    expect(summary.getByText("2").textContent).toBe("2位");
+    expect(summary.getByText("全 60 曲")).toBeTruthy();
+    expect(summary.getByText("4").textContent).toBe("4公演");
     expect(summary.getByText("2026.01.01")).toBeTruthy();
     expect(summary.queryByText("2022.08.07")).toBeNull();
-    expect(summary.getByText("0年303日（通算303日）")).toBeTruthy();
-    const firstLink = summary.getByRole("link", { name: "初披露の公演を見る" });
+    expect(summary.getByText("0 年 303 日前 / 303日前")).toBeTruthy();
+    const firstLink = summary.getByRole("link", { name: /初披露/u });
     expect(firstLink.getAttribute("href")).toBe("/events/day");
     expect(summary.getAllByRole("link")).toHaveLength(2);
-    expect(summary.getByText("294日前")).toBeTruthy();
-    expect(summary.getByRole("link", { name: "直近の披露の公演を見る" }).getAttribute("href")).toBe(
+    expect(summary.getByText("294 日前")).toBeTruthy();
+    expect(summary.getByRole("link", { name: /最近の披露/u }).getAttribute("href")).toBe(
       "/events/last",
     );
     expect(summary.queryByText(/昼公演|夜公演|最新公演/u)).toBeNull();
-    expect(summary.getByText("50.0%")).toBeTruthy();
-    expect(summary.getByText("1 / 2公演")).toBeTruthy();
+    expect(summary.getByText("50.0").textContent).toBe("50.0%");
+    expect(summary.getByText("1 / 2 公演")).toBeTruthy();
   });
 
   it("順位を含まない旧データでもサマリーを表示する", () => {
     renderPage({ performances: { ...performances, performanceRanking: undefined } });
-    const summary = within(screen.getByRole("region", { name: "披露サマリー" }));
+    const summary = within(screen.getByRole("region", { name: "サマリー" }));
     expect(summary.getByText("披露回数順位")).toBeTruthy();
     expect(summary.getByText("—")).toBeTruthy();
     expect(summary.getByText("集計データがありません。")).toBeTruthy();
-    expect(summary.getByText("5回")).toBeTruthy();
+    expect(summary.getByText("5").textContent).toBe("5回");
   });
 
   it("初披露日が未設定なら記録上の初日を表示する", () => {
     renderPage({ track: { ...ALL_SONGS[0], liveDebut: undefined } });
     expect(
-      within(screen.getByRole("region", { name: "披露サマリー" })).getByText("2026.01.01"),
+      within(screen.getByRole("region", { name: "サマリー" })).getByText("2026.01.01"),
     ).toBeTruthy();
   });
 
   it("披露間隔は今日を使わず、同日の披露をまとめて計算した日数を表示する", () => {
     renderPage();
     const intervals = within(screen.getByRole("region", { name: "披露間隔" }));
-    expect(intervals.getAllByText("6日")).toHaveLength(2);
-    expect(intervals.getByText("4.5日")).toBeTruthy();
+    expect(intervals.getAllByText("6").map((value) => value.textContent)).toEqual(["6日", "6日"]);
+    expect(intervals.getByText("4.5").textContent).toBe("4.5日");
     expect(intervals.queryByRole("link")).toBeNull();
   });
 
@@ -183,12 +183,10 @@ describe("楽曲の統計ページ", () => {
         recentPerformanceRate: { performedCount: 0, eventCount: 0 },
       },
     });
-    expect(screen.getByText("0回")).toBeTruthy();
-    expect(screen.getByText("0公演")).toBeTruthy();
+    const summary = within(screen.getByRole("region", { name: "サマリー" }));
+    expect(summary.getAllByText("0").map((value) => value.textContent)).toEqual(["0回", "0公演"]);
     expect(screen.getAllByText("記録なし")).toHaveLength(2);
-    expect(
-      within(screen.getByRole("region", { name: "披露サマリー" })).queryByRole("link"),
-    ).toBeNull();
+    expect(within(screen.getByRole("region", { name: "サマリー" })).queryByRole("link")).toBeNull();
     expect(screen.getByText("異なる披露日が2日以上あると、披露間隔を計算できます。")).toBeTruthy();
     expect(screen.getByText("集計対象の公演がありません。")).toBeTruthy();
     expect(screen.queryByText(/NaN|Infinity/u)).toBeNull();
@@ -210,7 +208,7 @@ describe("楽曲の統計ページ", () => {
 
     await act(async () => vi.advanceTimersByTime(60_000));
 
-    expect(screen.getByText("356日前")).toBeTruthy();
+    expect(screen.getByText("356 日前")).toBeTruthy();
     expect(
       within(
         within(screen.getByRole("figure", { name: "2027年の月別披露回数" })).getByRole("table"),
