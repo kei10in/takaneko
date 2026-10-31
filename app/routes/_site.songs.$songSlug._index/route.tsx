@@ -1,38 +1,17 @@
-import { Fragment } from "react";
-import {
-  BsBarChartLineFill,
-  BsMicFill,
-  BsPersonStandingDress,
-  BsPlayBtnFill,
-} from "react-icons/bs";
+import { BsBarChartLineFill, BsPersonStandingDress, BsPlayBtnFill } from "react-icons/bs";
 import { useOutletContext } from "react-router";
-import useSWR from "swr";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
-import { LivesForSong, SongMetaDescriptor } from "~/features/songs/types.ts";
+import { SongMetaDescriptor } from "~/features/songs/types.ts";
+import { useSongLives } from "~/features/songs/useSongLives.ts";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
-import { LiveCard } from "./LiveCard.tsx";
-import { LiveSkeleton } from "./LiveSkeleton.tsx";
 import { YouTubeCard } from "./YouTubeCard.tsx";
 
 export default function Component() {
   const track = useOutletContext<SongMetaDescriptor>();
 
-  const { data: performances, isLoading } = useSWR(`songs/${track.slug}/lives.json`, async () => {
-    const response = await fetch(`/data/songs/${track.slug}/lives.json`);
-    if (!response.ok) {
-      return undefined;
-    }
+  const { data: performances, isLoading } = useSongLives(track.slug);
 
-    const json = await response.json();
-    const result = LivesForSong.safeParse(json);
-    if (result.error) {
-      return undefined;
-    }
-    return result.data;
-  });
-
-  const lives = performances?.lives ?? [];
   const costumeStats = performances?.costumeStats ?? [];
 
   return (
@@ -89,40 +68,6 @@ export default function Component() {
             />
           )}
         </div>
-      </section>
-
-      <section className="mt-8">
-        <h2
-          className={sectionHeading("sticky top-0 z-10 bg-white/90 py-2 lg:top-(--header-height)")}
-        >
-          <span className="flex items-center gap-2">
-            <BsMicFill className="inline-block text-gray-400" />
-            <span>ライブ</span>
-          </span>
-        </h2>
-
-        <ul className="mt-4 space-y-2">
-          {isLoading &&
-            [1, 2, 3].map((x) => (
-              <li key={x}>
-                <LiveSkeleton />
-              </li>
-            ))}
-          {!isLoading && lives.length == 0 && (
-            <li>
-              <p className="p-1 text-gray-500">この楽曲を披露したライブが見つかりませんでした。</p>
-            </li>
-          )}
-          {lives.map(({ segments, event: e }, i) => (
-            <Fragment key={i}>
-              {segments.map((segment, j) => (
-                <li key={j}>
-                  <LiveCard event={e} segment={segment} />
-                </li>
-              ))}
-            </Fragment>
-          ))}
-        </ul>
       </section>
     </>
   );

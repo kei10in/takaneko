@@ -4,6 +4,7 @@ import { SWRConfig } from "swr";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
+import { LivesForSong } from "~/features/songs/types.ts";
 import Overview from "../_site.songs.$songSlug._index/route.tsx";
 import Lives from "../_site.songs.$songSlug.lives._index/route.tsx";
 import Stats from "../_site.songs.$songSlug.stats._index/route.tsx";
@@ -27,7 +28,7 @@ const tabs = [
   { name: "ライブ", path: `${songPath}/lives` },
 ];
 
-const renderPage = (path = songPath) => {
+const renderPage = (path = songPath, performances?: LivesForSong) => {
   const router = createMemoryRouter(
     [
       {
@@ -46,17 +47,24 @@ const renderPage = (path = songPath) => {
   );
 
   render(
-    <SWRConfig value={{ provider: () => new Map(), isPaused: () => true }}>
+    <SWRConfig
+      value={{
+        provider: () => new Map(),
+        isPaused: () => true,
+        fallback: { [`songs/${track.slug}/lives.json`]: performances },
+      }}
+    >
       <RouterProvider router={router} />
     </SWRConfig>,
   );
   return router;
 };
 
-const expectOverview = (visible: boolean) => {
-  ["ビデオ", "衣装", "ライブ"].forEach((name) => {
-    expect(screen.queryByRole("heading", { name }) !== null).toBe(visible);
+const expectTabContent = (tab: string) => {
+  ["ビデオ", "衣装"].forEach((name) => {
+    expect(screen.queryByRole("heading", { name }) !== null).toBe(tab === "概要");
   });
+  expect(screen.queryByRole("heading", { name: "ライブ" }) !== null).toBe(tab === "ライブ");
 };
 
 describe("楽曲詳細のタブ", () => {
@@ -71,7 +79,7 @@ describe("楽曲詳細のタブ", () => {
     });
     expect(screen.getByRole("heading", { level: 1, name: track.name })).toBeTruthy();
     expect(screen.getByText(`作詞: ${track.lyricsBy}`)).toBeTruthy();
-    expectOverview(tab.name === "概要");
+    expectTabContent(tab.name);
   });
 
   it("タブでページを切り替え、履歴を戻ると URL と選択状態と内容を復元する", async () => {
@@ -85,7 +93,7 @@ describe("楽曲詳細のタブ", () => {
     expect(
       within(navigation).getByRole("link", { name: "統計" }).getAttribute("aria-current"),
     ).toBe("page");
-    expectOverview(false);
+    expectTabContent("統計");
 
     fireEvent.click(within(navigation).getByRole("link", { name: "ライブ" }));
     await waitFor(() =>
@@ -94,18 +102,65 @@ describe("楽曲詳細のタブ", () => {
     expect(
       within(navigation).getByRole("link", { name: "ライブ" }).getAttribute("aria-current"),
     ).toBe("page");
-    expectOverview(false);
+    expectTabContent("ライブ");
 
     fireEvent.click(within(navigation).getByRole("link", { name: "概要" }));
     await screen.findByRole("heading", { name: "ビデオ" });
     expect(decodeURI(router.state.location.pathname)).toBe(songPath);
-    expectOverview(true);
+    expectTabContent("概要");
 
     await act(() => router.navigate(-1));
     expect(decodeURI(router.state.location.pathname)).toBe(`${songPath}/lives`);
     expect(
       within(navigation).getByRole("link", { name: "ライブ" }).getAttribute("aria-current"),
     ).toBe("page");
-    expectOverview(false);
+    expectTabContent("ライブ");
+  });
+
+  it("ライブタブで披露した公演の各出演セグメントを表示する", async () => {
+    renderPage(`${songPath}/lives`, {
+      slug: track.slug,
+      name: track.name,
+      count: 2,
+      costumeStats: [],
+      lives: [
+        {
+          event: { slug: "2026-10-30_test", title: "テストライブ", date: "2026-10-30" },
+          segments: [
+            { index: 2, section: "main" },
+            { index: 0, section: "encore" },
+          ],
+        },
+      ],
+    });
+
+    const links = await screen.findAllByRole("link", { name: /テストライブ/u });
+    expect(links).toHaveLength(2);
+    links.forEach((link) => expect(link.getAttribute("href")).toBe("/events/2026-10-30_test"));
+    expect(screen.getByText("M03")).toBeTruthy();
+    expect(screen.getByText("EN01")).toBeTruthy();
+    expectTabContent("ライブ");
+  });
+
+  it("ライブタブで公演がない場合は案内を表示する", async () => {
+    renderPage(`${songPath}/lives`);
+
+    expect(
+      await screen.findByText("この楽曲を披露したライブが見つかりませんでした。"),
+    ).toBeTruthy();
+  });
+
+  it("概要タブでは衣装の使用回数を引き続き表示する", async () => {
+    renderPage(songPath, {
+      slug: track.slug,
+      name: track.name,
+      count: 3,
+      costumeStats: [{ costumeName: "テスト衣装", count: 3 }],
+      lives: [],
+    });
+
+    expect(await screen.findByText("テスト衣装")).toBeTruthy();
+    expect(screen.getByText("3")).toBeTruthy();
+    expectTabContent("概要");
   });
 });
