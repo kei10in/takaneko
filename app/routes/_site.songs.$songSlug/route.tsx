@@ -1,4 +1,4 @@
-import { LoaderFunctionArgs, MetaFunction, Outlet } from "react-router";
+import { LoaderFunctionArgs, MetaFunction, NavLink, Outlet } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
@@ -28,9 +28,14 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
   return { track };
 };
 
-export default function Component({ loaderData }: Route.ComponentProps) {
+export default function Component({ loaderData }: Pick<Route.ComponentProps, "loaderData">) {
   const { track } = loaderData;
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
+  const tabs = [
+    { name: "概要", to: `/songs/${track.slug}` },
+    { name: "統計", to: `/songs/${track.slug}/stats` },
+    { name: "ライブ", to: `/songs/${track.slug}/lives` },
+  ];
 
   return (
     <div>
@@ -73,6 +78,23 @@ export default function Component({ loaderData }: Route.ComponentProps) {
           <div className="mt-8">
             <Credit song={track} />
           </div>
+
+          <nav
+            aria-label="楽曲詳細"
+            className="hidden-scrollbar -mx-4 mt-2 flex items-center gap-2 overflow-x-scroll mask-x-from-[calc(100%-1rem)] px-4 py-4"
+          >
+            {tabs.map((tab) => (
+              <NavLink
+                key={tab.to}
+                to={tab.to}
+                end
+                preventScrollReset
+                className="flex-none rounded-full bg-white px-4 py-2 text-zinc-700 outline-none hover:bg-zinc-100/50 aria-[current=page]:bg-zinc-100"
+              >
+                <span className="text-center text-base select-none">{tab.name}</span>
+              </NavLink>
+            ))}
+          </nav>
 
           <Outlet context={track} />
         </section>
