@@ -2,8 +2,21 @@ import { BsBarChartLineFill, BsPersonStandingDress, BsPlayBtnFill } from "react-
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
+import type { Route } from "./+types/route.ts";
 import { YouTubeCard } from "./YouTubeCard.tsx";
+
+export const meta: Route.MetaFunction = ({ matches }) => {
+  const track = matches[2].loaderData?.track;
+  const title = formatTitle(track?.name ?? "楽曲が見つかりません");
+  const description =
+    track == undefined
+      ? "高嶺のなでしこの楽曲情報。"
+      : `高嶺のなでしこ『${track.name}』の楽曲情報。MV・ダンスプラクティスなどの動画、制作クレジット、リリース情報や衣装を掲載しています。`;
+
+  return [{ title }, { name: "description", content: description }];
+};
 
 export default function Component() {
   const { track, performances, isLoading } = useSongOutletContext();

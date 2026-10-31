@@ -4,11 +4,45 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from "react-router";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
+import { OgpSiteName } from "~/constants.ts";
 import { calculateSongStatistics, elapsedSince } from "~/features/songs/statistics.ts";
+import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { formatTitle } from "~/utils/htmlHeader.ts";
+import type { Route } from "./+types/route.ts";
 import { PerformanceHistory } from "./PerformanceHistory.tsx";
 import { useBrowserToday } from "./useBrowserToday.ts";
+
+export const meta: Route.MetaFunction = ({ matches, location }) => {
+  const track = matches[2].loaderData?.track;
+  if (track == undefined) {
+    return [{ title: formatTitle("楽曲が見つかりません") }];
+  }
+
+  const title = formatTitle(`${track.name} - 楽曲統計`);
+  const description = `高嶺のなでしこ「${track.name}」の楽曲統計。登録セットリストから集計した累計披露回数・順位・披露率、月別・年別の推移、ライブ種別・衣装・披露間隔を掲載しています。`;
+  const canonical = canonicalUrl(location.pathname);
+  const image = canonicalUrl("/takanekono-card.png");
+
+  return [
+    { title },
+    { name: "description", content: description },
+    { tagName: "link", rel: "canonical", href: canonical },
+    { property: "og:site_name", content: OgpSiteName },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:url", content: canonical },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+    { property: "og:image", content: image },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: image },
+  ];
+};
 
 const number = (value: number) => value.toLocaleString("ja-JP");
 const dateLabel = (date: string) => date.replaceAll("-", ".");

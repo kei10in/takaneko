@@ -1,18 +1,11 @@
-import { LoaderFunctionArgs, MetaFunction, NavLink, Outlet } from "react-router";
+import { LoaderFunctionArgs, NavLink, Outlet } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { useSongLives } from "~/features/songs/useSongLives.ts";
-import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { Credit } from "./Credit.tsx";
 import { SongOutletContext } from "./useSongOutletContext.ts";
-
-export const meta: MetaFunction<typeof loader> = ({ loaderData }) => {
-  const title = formatTitle(loaderData?.track.name ?? "楽曲が見つかりません");
-
-  return [{ title }, { name: "description", content: "高嶺のなでしこの楽曲" }];
-};
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {
   const { songSlug } = params;
