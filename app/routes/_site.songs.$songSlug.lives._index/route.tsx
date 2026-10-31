@@ -1,15 +1,12 @@
 import { Fragment } from "react";
 import { BsMicFill } from "react-icons/bs";
-import { useOutletContext } from "react-router";
 import { sectionHeading } from "~/components/styles.ts";
-import { SongMetaDescriptor } from "~/features/songs/types.ts";
-import { useSongLives } from "~/features/songs/useSongLives.ts";
+import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { LiveCard } from "./LiveCard.tsx";
 import { LiveSkeleton } from "./LiveSkeleton.tsx";
 
 export default function Component() {
-  const track = useOutletContext<SongMetaDescriptor>();
-  const { data: performances, isLoading } = useSongLives(track.slug);
+  const { performances, isLoading } = useSongOutletContext();
   const lives = performances?.lives ?? [];
 
   return (

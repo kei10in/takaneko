@@ -1,16 +1,12 @@
 import { BsBarChartLineFill, BsPersonStandingDress, BsPlayBtnFill } from "react-icons/bs";
-import { useOutletContext } from "react-router";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
-import { SongMetaDescriptor } from "~/features/songs/types.ts";
-import { useSongLives } from "~/features/songs/useSongLives.ts";
+import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
 import { YouTubeCard } from "./YouTubeCard.tsx";
 
 export default function Component() {
-  const track = useOutletContext<SongMetaDescriptor>();
-
-  const { data: performances, isLoading } = useSongLives(track.slug);
+  const { track, performances, isLoading } = useSongOutletContext();
 
   const costumeStats = performances?.costumeStats ?? [];
 
