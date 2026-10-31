@@ -28,7 +28,7 @@ export const StatisticsBarChart = ({ data, name, labelName }: Props) => (
           angle={-45}
           textAnchor="end"
           height={48}
-          tickMargin={8}
+          tickMargin={2}
           tick={{ fontSize: 12 }}
           tickLine={false}
         />
