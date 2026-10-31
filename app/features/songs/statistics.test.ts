@@ -31,16 +31,26 @@ describe("楽曲の統計", () => {
     );
     expect(statistics.performanceCount).toBe(4);
     expect(statistics.eventCount).toBe(2);
-    expect(statistics.firstDate).toBe("2026-01-01");
+    expect(statistics.first?.date).toBe("2026-01-01");
+    expect(statistics.first?.events.map((event) => event.slug)).toEqual(["first"]);
     expect(statistics.latest?.date).toBe("2026-01-10");
     expect(statistics.latest?.events.map((event) => event.slug)).toEqual(["latest"]);
   });
 
-  it("初披露日は楽曲情報を優先する", () => {
-    expect(
-      calculateSongStatistics(data([activity("2026-01-10", "record")]), "2025-12-01").firstDate,
-    ).toBe("2025-12-01");
-    expect(calculateSongStatistics(data([]), "2025-12-01").firstDate).toBe("2025-12-01");
+  it("最初の披露日の公演をまとめ、披露がない公演は含めない", () => {
+    const statistics = calculateSongStatistics(
+      data([
+        activity("2025-12-01", "empty", 0),
+        activity("2026-01-01", "night"),
+        activity("2026-01-01", "day", 2),
+        activity("2026-01-01", "day"),
+      ]),
+    );
+    expect(statistics.first).toEqual({
+      date: "2026-01-01",
+      events: [activity("2026-01-01", "day").event, activity("2026-01-01", "night").event],
+    });
+    expect(calculateSongStatistics(data([])).first).toBeUndefined();
   });
 
   it("同日の昼夜・別会場・複数回の披露を1日にまとめて間隔を計算する", () => {

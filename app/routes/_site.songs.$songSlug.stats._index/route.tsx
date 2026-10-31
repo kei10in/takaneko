@@ -1,13 +1,9 @@
 import { ReactNode } from "react";
-import { BsBarChartLineFill } from "react-icons/bs";
+import { BsArrowUpRight, BsBarChartLineFill } from "react-icons/bs";
 import { Link } from "react-router";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
-import {
-  calculateSongStatistics,
-  elapsedSince,
-  PerformanceDay,
-} from "~/features/songs/statistics.ts";
+import { calculateSongStatistics, elapsedSince } from "~/features/songs/statistics.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { PerformanceHistory } from "./PerformanceHistory.tsx";
@@ -21,7 +17,7 @@ const relativeDay = (date: string, today: NaiveDate) => {
 };
 
 export default function Component() {
-  const { track, performances, isLoading } = useSongOutletContext();
+  const { performances, isLoading } = useSongOutletContext();
   const today = useBrowserToday();
 
   if (isLoading || today == undefined) {
@@ -36,10 +32,12 @@ export default function Component() {
     return <p className="py-12 text-center text-zinc-500">統計データを読み込めませんでした。</p>;
   }
 
-  const statistics = calculateSongStatistics(performances, track.liveDebut);
-  const firstDate = statistics.firstDate;
-  const elapsed = firstDate == undefined ? undefined : elapsedSince(firstDate, today);
+  const statistics = calculateSongStatistics(performances);
+  const first = statistics.first;
+  const elapsed = first == undefined ? undefined : elapsedSince(first.date, today);
   const latest = statistics.latest;
+  const firstEvent = first?.events.at(0);
+  const latestEvent = latest?.events.at(0);
   const rate = performances.recentPerformanceRate;
   const intervals = statistics.intervals;
 
@@ -81,31 +79,8 @@ export default function Component() {
             }
           />
           <Statistic
-            label="初披露"
-            value={
-              firstDate == undefined ? (
-                "記録なし"
-              ) : (
-                <time dateTime={firstDate}>{dateLabel(firstDate)}</time>
-              )
-            }
-            detail={
-              elapsed == undefined ? undefined : (
-                <>
-                  <p>
-                    {elapsed.totalDays < 0
-                      ? `初披露まであと${number(-elapsed.totalDays)}日`
-                      : `${elapsed.years}年${elapsed.days}日（通算${number(elapsed.totalDays)}日）`}
-                  </p>
-                  <p className="mt-1">
-                    {track.liveDebut == undefined ? "記録上の初披露日" : "楽曲情報の初披露日"}
-                  </p>
-                </>
-              )
-            }
-          />
-          <Statistic
             label="直近の披露"
+            to={latestEvent == undefined ? undefined : `/events/${latestEvent.slug}`}
             value={
               latest == undefined ? (
                 "記録なし"
@@ -113,13 +88,24 @@ export default function Component() {
                 <time dateTime={latest.date}>{dateLabel(latest.date)}</time>
               )
             }
-            detail={
-              latest == undefined ? undefined : (
-                <>
-                  <p className="mb-1">{relativeDay(latest.date, today)}</p>
-                  <EventLinks day={latest} />
-                </>
+            detail={latest == undefined ? undefined : relativeDay(latest.date, today)}
+          />
+          <Statistic
+            label="初披露"
+            to={firstEvent == undefined ? undefined : `/events/${firstEvent.slug}`}
+            value={
+              first == undefined ? (
+                "記録なし"
+              ) : (
+                <time dateTime={first.date}>{dateLabel(first.date)}</time>
               )
+            }
+            detail={
+              elapsed == undefined
+                ? undefined
+                : elapsed.totalDays < 0
+                  ? `初披露まであと${number(-elapsed.totalDays)}日`
+                  : `${elapsed.years}年${elapsed.days}日（通算${number(elapsed.totalDays)}日）`
             }
           />
         </dl>
@@ -201,28 +187,34 @@ const Statistic = ({
   label,
   value,
   detail,
+  to,
 }: {
   label: string;
   value: ReactNode;
   detail?: ReactNode;
+  to?: string;
 }) => (
-  <div className="rounded-2xl bg-zinc-50 p-4">
-    <dt className="mb-2 text-xs text-zinc-500">{label}</dt>
+  <div className="relative rounded-2xl bg-zinc-50 p-4 has-[a]:hover:bg-zinc-100">
+    <dt className="mb-2 text-xs text-zinc-500">
+      {to == undefined ? (
+        label
+      ) : (
+        <Link
+          to={to}
+          aria-label={`${label}の公演を見る`}
+          className="after:absolute after:inset-0 after:rounded-2xl focus-visible:outline-none focus-visible:after:outline-2 focus-visible:after:outline-nadeshiko-600"
+        >
+          {label}
+          <BsArrowUpRight
+            className="absolute top-4 right-4 size-4 text-zinc-400"
+            aria-hidden="true"
+          />
+        </Link>
+      )}
+    </dt>
     <dd className="text-xl font-semibold text-zinc-800 tabular-nums">{value}</dd>
     {detail == undefined ? null : (
       <dd className="mt-2 text-xs leading-relaxed text-zinc-500">{detail}</dd>
     )}
   </div>
-);
-
-const EventLinks = ({ day }: { day: PerformanceDay }) => (
-  <ul className="space-y-1 text-sm">
-    {day.events.map((event) => (
-      <li key={event.slug}>
-        <Link to={`/events/${event.slug}`} className="text-nadeshiko-800 hover:underline">
-          {event.title}
-        </Link>
-      </li>
-    ))}
-  </ul>
 );

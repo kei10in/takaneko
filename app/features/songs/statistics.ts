@@ -19,7 +19,7 @@ const typeName = (type: LiveType | undefined) => {
   return liveTypeLabel(type);
 };
 
-export const calculateSongStatistics = (data: LivesForSong, liveDebut?: string) => {
+export const calculateSongStatistics = (data: LivesForSong) => {
   const lives = data.lives.filter((live) => live.segments.length > 0);
   const performanceCount = lives.reduce((sum, live) => sum + live.segments.length, 0);
   const dates = [...new Set(lives.map((live) => live.event.date))].toSorted();
@@ -56,7 +56,7 @@ export const calculateSongStatistics = (data: LivesForSong, liveDebut?: string) 
   return {
     performanceCount,
     eventCount: new Set(lives.map((live) => live.event.slug)).size,
-    firstDate: liveDebut ?? dates[0],
+    first: days.at(0),
     latest: days.at(-1),
     intervals:
       gaps.length === 0

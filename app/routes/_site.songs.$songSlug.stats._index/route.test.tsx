@@ -55,17 +55,22 @@ const renderPage = (overrides: Partial<SongOutletContext> = {}) => {
 };
 
 describe("楽曲の統計ページ", () => {
-  it("累計回数と公演数、公式の初披露日、ブラウザの今日からの経過日数を表示する", () => {
+  it("累計回数と公演数、最初の披露公演とブラウザの今日からの経過日数を表示する", () => {
     renderPage();
     const summary = within(screen.getByRole("region", { name: "披露サマリー" }));
     expect(summary.getByText("5回")).toBeTruthy();
     expect(summary.getByText("4公演")).toBeTruthy();
-    expect(summary.getByText("2022.08.07")).toBeTruthy();
-    expect(summary.getByText("4年85日（通算1,546日）")).toBeTruthy();
+    expect(summary.getByText("2026.01.01")).toBeTruthy();
+    expect(summary.queryByText("2022.08.07")).toBeNull();
+    expect(summary.getByText("0年303日（通算303日）")).toBeTruthy();
+    const firstLink = summary.getByRole("link", { name: "初披露の公演を見る" });
+    expect(firstLink.getAttribute("href")).toBe("/events/day");
+    expect(summary.getAllByRole("link")).toHaveLength(2);
     expect(summary.getByText("294日前")).toBeTruthy();
-    expect(summary.getByRole("link", { name: "最新公演" }).getAttribute("href")).toBe(
+    expect(summary.getByRole("link", { name: "直近の披露の公演を見る" }).getAttribute("href")).toBe(
       "/events/last",
     );
+    expect(summary.queryByText(/昼公演|夜公演|最新公演/u)).toBeNull();
     expect(summary.getByText("50.0%")).toBeTruthy();
     expect(summary.getByText("1 / 2公演")).toBeTruthy();
   });
@@ -141,6 +146,10 @@ describe("楽曲の統計ページ", () => {
     });
     expect(screen.getByText("0回")).toBeTruthy();
     expect(screen.getByText("0公演")).toBeTruthy();
+    expect(screen.getAllByText("記録なし")).toHaveLength(2);
+    expect(
+      within(screen.getByRole("region", { name: "披露サマリー" })).queryByRole("link"),
+    ).toBeNull();
     expect(screen.getByText("異なる披露日が2日以上あると、披露間隔を計算できます。")).toBeTruthy();
     expect(screen.getByText("集計対象の公演がありません。")).toBeTruthy();
     expect(screen.queryByText(/NaN|Infinity/u)).toBeNull();
