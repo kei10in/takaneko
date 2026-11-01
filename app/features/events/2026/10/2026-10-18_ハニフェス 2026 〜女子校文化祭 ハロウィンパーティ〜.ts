@@ -85,12 +85,13 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
-  updatedAt: "2026-10-20",
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [ダイジェスト動画告知 - 公式 X](https://x.com/takanenofficial/status/2116545805406679337)
   - [振付情報 - 佐藤マリン X](https://x.com/middddddorim/status/2111801297292927453)
   - [ハコニワリリィと - 公式 X](https://x.com/takanenofficial/status/2112174427492450351)
   - [可憐なアイボリーと - 公式 X](https://x.com/takanenofficial/status/2112163102481391856)
