@@ -2,6 +2,13 @@ import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/818320",
+    publishedAt: "2026-10-31",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "https://x.com/tv_life/status/2116523333219164580",
+  },
+  {
     mediaUrl: "https://beeeem.com/article/beeeefes11-takaneko",
     siteName: "BEEEEM",
     publishedAt: "2026-10-12",

@@ -2,6 +2,18 @@ import { MediaDetails } from "~/features/media/types.ts";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://www.tvlife.jp/pickup/kizukinao/818320",
+    title:
+      "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第17回『ブライアン・シンガーのトリック・オア・トリート』 | TV LIFE web",
+    authorName: "TV LIFE web",
+    publishedAt: "2026-10-31",
+    mediaUrl: "https://www.tvlife.jp/pickup/kizukinao/818320",
+    imageUrl: "https://www.tvlife.jp/wps/wp-content/uploads/2026/10/818320_01.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
     kind: "youtube",
     key: "UBg-8Nz5XMk",
     title:
