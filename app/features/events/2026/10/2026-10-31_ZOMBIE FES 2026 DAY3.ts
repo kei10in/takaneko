@@ -53,6 +53,18 @@ export const meta: EventMetaDescriptor = {
       ref: "https://x.com/takanenofficial/status/2105948689261002810",
     },
     {
+      path: "/takaneko/goods/2026/2026-10-18_ミニフォトカード「ハロウィン2026」.webp",
+      ref: "https://x.com/takanenofficial/status/2116190893141327924",
+    },
+    {
+      path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3_本日のおチェキ1.jpg",
+      ref: "https://x.com/takanekomanager/status/2116417100575281605",
+    },
+    {
+      path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3_本日のおチェキ2.jpg",
+      ref: "https://x.com/takanekomanager/status/2116476198134145228",
+    },
+    {
       path: "/events/2026/2026-10-31_ZOMBIE FES 2026 DAY3.jpg",
       ref: "https://x.com/takanenofficial/status/2087106979621974348",
     },
@@ -72,9 +84,9 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://l-tike.com/zombiefes/",
   streamings: undefined,
   goods: {
-    time: undefined,
-    lineup: undefined,
-    url: undefined,
+    time: ["各部終演後"],
+    lineup: ["ミニフォトカード「ハロウィン2026」 / チェキ"],
+    url: "https://x.com/takanekomanager/status/2116417100575281605",
   },
   acts: [
     {
@@ -82,20 +94,62 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       open: "13:00",
       start: "14:00",
+      setlist: [
+        "衣装: アンチファン衣装",
+        "アンチファン",
+        "花は誓いを忘れない",
+        "誇り高きアイドル",
+        "初恋のひと。",
+        "ヒロインは平均以下。",
+        "小悪魔だってかまわない！",
+        "私は、わたしの事が好き。",
+        "アイのウイルス",
+        "この世界は嘘でできている",
+        "乙女どもよ。",
+        "I’M YOUR IDOL",
+        "美しく生きろ",
+        "革命の女王",
+        "愛AM ZOMBIE",
+      ],
+      links: ["https://x.com/takanenofficial/status/2116437517222212049"],
     },
     {
       title: "2部",
       types: ["LIVE"],
       open: "17:00",
       start: "18:00",
+      setlist: [
+        "衣装: アンチファン衣装",
+        "初恋のこたえ。",
+        "決戦スピリット",
+        "ハートブーケ",
+        "初恋のひと。",
+        "ヒロインは平均以下。",
+        "小悪魔だってかまわない！",
+        "私は、わたしの事が好き。",
+        "我武者羅",
+        "花は誓いを忘れない",
+        "僕は君になれない",
+        "ファンサ",
+        "美しく生きろ",
+        "革命の女王",
+        "愛AM ZOMBIE",
+      ],
+      links: ["https://x.com/takanenofficial/status/2116477786600902749"],
     },
   ],
-  updatedAt: "2026-10-21",
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - ZOMBIE FES 2026 X](https://x.com/ZOMBIEFES2026/status/2116488332826038369)
+  - [2 部 出演報告 - 公式 X](https://x.com/takanenofficial/status/2116477786600902749)
+  - [本日のおチェキ #2](https://x.com/takanekomanager/status/2116476198134145228)
+  - [1 部 出演報告 - 公式 X](https://x.com/takanenofficial/status/2116437517222212049)
+  - [本日のおチェキ #1](https://x.com/takanekomanager/status/2116417100575281605)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2116190893141327924)
   - [ゾンビフェスって、ライブなの？映画なの？ 動画 - ZOMBIE FES 2026 X](https://x.com/ZOMBIEFES2026/status/2112785962514477525)
   - [ゾンビのドレスコード動画 - ZOMBIE FES 2026 X](https://x.com/ZOMBIEFES2026/status/2111706343090667732)
   - [ゾンビになって会場でお会いしましょう 動画 - ZOMBIE FES 2026 X](https://x.com/ZOMBIEFES2026/status/2111026864873750743)
