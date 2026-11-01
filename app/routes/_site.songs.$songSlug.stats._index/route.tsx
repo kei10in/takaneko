@@ -8,6 +8,7 @@ import { OgpSiteName } from "~/constants.ts";
 import { calculateSongStatistics, elapsedSince } from "~/features/songs/statistics.ts";
 import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
+import { displayDate } from "~/utils/dateDisplay.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
@@ -45,7 +46,6 @@ export const meta: Route.MetaFunction = ({ matches, location }) => {
 };
 
 const number = (value: number) => value.toLocaleString("ja-JP");
-const dateLabel = (date: string) => date.replaceAll("-", ".");
 const relativeDay = (date: string, today: NaiveDate) => {
   const days = today.differenceInDays(NaiveDate.parseUnsafe(date));
   return days === 0 ? "今日" : days > 0 ? `${number(days)} 日前` : `${number(-days)} 日後`;
@@ -82,6 +82,40 @@ export default function Component() {
       <section aria-label="サマリー">
         <h2 className={sectionHeading("mb-4")}>サマリー</h2>
         <dl className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+          <div className="col-span-2 sm:col-span-1">
+            <Statistic
+              label="最近の披露"
+              to={latestEvent == undefined ? undefined : `/events/${latestEvent.slug}`}
+              value={
+                latest == undefined ? (
+                  "記録なし"
+                ) : (
+                  <time dateTime={latest.date}>{displayDate(latest.date)}</time>
+                )
+              }
+              detail={latest == undefined ? undefined : relativeDay(latest.date, today)}
+            />
+          </div>
+          <div className="col-span-2 sm:col-span-1">
+            <Statistic
+              label="初披露"
+              to={firstEvent == undefined ? undefined : `/events/${firstEvent.slug}`}
+              value={
+                first == undefined ? (
+                  "記録なし"
+                ) : (
+                  <time dateTime={first.date}>{displayDate(first.date)}</time>
+                )
+              }
+              detail={
+                elapsed == undefined
+                  ? undefined
+                  : elapsed.totalDays < 0
+                    ? `初披露まであと${number(-elapsed.totalDays)}日`
+                    : `${elapsed.years} 年 ${elapsed.days} 日前 / ${number(elapsed.totalDays)}日前`
+              }
+            />
+          </div>
           <Statistic label="累計披露回数" value={number(statistics.performanceCount)} unit="回" />
           <Statistic label="累計披露公演数" value={number(statistics.eventCount)} unit="公演" />
           <Statistic
@@ -108,36 +142,6 @@ export default function Component() {
                 : rate.eventCount === 0
                   ? "集計対象の公演がありません。"
                   : `${rate.performedCount} / ${rate.eventCount} 公演`
-            }
-          />
-          <Statistic
-            label="最近の披露"
-            to={latestEvent == undefined ? undefined : `/events/${latestEvent.slug}`}
-            value={
-              latest == undefined ? (
-                "記録なし"
-              ) : (
-                <time dateTime={latest.date}>{dateLabel(latest.date)}</time>
-              )
-            }
-            detail={latest == undefined ? undefined : relativeDay(latest.date, today)}
-          />
-          <Statistic
-            label="初披露"
-            to={firstEvent == undefined ? undefined : `/events/${firstEvent.slug}`}
-            value={
-              first == undefined ? (
-                "記録なし"
-              ) : (
-                <time dateTime={first.date}>{dateLabel(first.date)}</time>
-              )
-            }
-            detail={
-              elapsed == undefined
-                ? undefined
-                : elapsed.totalDays < 0
-                  ? `初披露まであと${number(-elapsed.totalDays)}日`
-                  : `${elapsed.years} 年 ${elapsed.days} 日前 / ${number(elapsed.totalDays)}日前`
             }
           />
         </dl>

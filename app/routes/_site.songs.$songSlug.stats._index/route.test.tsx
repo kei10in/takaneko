@@ -59,13 +59,22 @@ describe("楽曲の統計ページ", () => {
   it("累計回数と公演数、最初の披露公演とブラウザの今日からの経過日数を表示する", () => {
     renderPage();
     const summary = within(screen.getByRole("region", { name: "サマリー" }));
+    expect(summary.getAllByRole("term").map((term) => term.textContent)).toEqual([
+      "最近の披露",
+      "初披露",
+      "累計披露回数",
+      "累計披露公演数",
+      "披露回数順位",
+      "直近の披露率",
+    ]);
     expect(summary.getByText("5").textContent).toBe("5回");
     expect(summary.getByText("披露回数順位")).toBeTruthy();
     expect(summary.getByText("2").textContent).toBe("2位");
     expect(summary.getByText("全 60 曲")).toBeTruthy();
     expect(summary.getByText("4").textContent).toBe("4公演");
-    expect(summary.getByText("2026.01.01")).toBeTruthy();
-    expect(summary.queryByText("2022.08.07")).toBeNull();
+    expect(summary.getByText("2026年01月01日")).toBeTruthy();
+    expect(summary.getByText("2026年01月10日")).toBeTruthy();
+    expect(summary.queryByText("2022年08月07日")).toBeNull();
     expect(summary.getByText("0 年 303 日前 / 303日前")).toBeTruthy();
     const firstLink = summary.getByRole("link", { name: /初披露/u });
     expect(firstLink.getAttribute("href")).toBe("/events/day");
@@ -91,7 +100,7 @@ describe("楽曲の統計ページ", () => {
   it("初披露日が未設定なら記録上の初日を表示する", () => {
     renderPage({ track: { ...ALL_SONGS[0], liveDebut: undefined } });
     expect(
-      within(screen.getByRole("region", { name: "サマリー" })).getByText("2026.01.01"),
+      within(screen.getByRole("region", { name: "サマリー" })).getByText("2026年01月01日"),
     ).toBeTruthy();
   });
 
@@ -188,7 +197,11 @@ describe("楽曲の統計ページ", () => {
     expect(summary.getAllByText("0").map((value) => value.textContent)).toEqual(["0回", "0公演"]);
     expect(screen.getAllByText("記録なし")).toHaveLength(2);
     expect(within(screen.getByRole("region", { name: "サマリー" })).queryByRole("link")).toBeNull();
-    expect(screen.getByText("異なる披露日が2日以上あると、披露間隔を計算できます。")).toBeTruthy();
+    expect(
+      within(screen.getByRole("region", { name: "披露間隔" })).getByText(
+        "この楽曲を披露したライブが見つかりませんでした。",
+      ),
+    ).toBeTruthy();
     expect(screen.getByText("集計対象の公演がありません。")).toBeTruthy();
     expect(screen.queryByText(/NaN|Infinity/u)).toBeNull();
   });
