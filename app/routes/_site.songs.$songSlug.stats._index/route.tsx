@@ -207,7 +207,7 @@ export default function Component() {
             この楽曲を披露したライブがひとつしか見つかりませんでした。
           </p>
         ) : (
-          <dl className="grid gap-3 sm:grid-cols-2">
+          <dl className="grid grid-cols-2 gap-3 lg:grid-cols-3">
             <Statistic label="平均の披露間隔" value={intervals.average.toFixed(1)} unit="日" />
             <Statistic label="最長の披露間隔" value={number(intervals.longest)} unit="日" />
           </dl>
