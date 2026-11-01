@@ -70,7 +70,7 @@ export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className={pageBox("my-8 px-4")}>
-        <h1 className={"page-heading"}>プロフィール</h1>
+        <h1 className={"page-heading mb-6"}>プロフィール</h1>
 
         <div className="mt-12 space-y-24">
           <section className="space-y-8">

@@ -98,7 +98,7 @@ export default function Component({ loaderData }: Route.ComponentProps) {
         </div>
 
         <section className="my-8 space-y-8 px-4 py-12">
-          <h1 className="page-heading">{costume.name}</h1>
+          <h1 className="page-heading mb-6">{costume.name}</h1>
 
           <section className="mt-8">
             <h2

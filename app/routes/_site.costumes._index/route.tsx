@@ -28,7 +28,7 @@ export default function Index() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="my-8 space-y-8 px-4 py-12">
-        <h1 className="page-heading">衣装</h1>
+        <h1 className="page-heading mb-6">衣装</h1>
 
         {COSTUME_CATEGORIES.map((category) => (
           <section className="mt-8" key={category.title}>

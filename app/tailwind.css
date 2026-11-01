@@ -103,7 +103,7 @@
 
 @layer components {
   .page-heading {
-    @apply mb-6 text-4xl;
+    @apply text-4xl;
   }
 
   .page-description {

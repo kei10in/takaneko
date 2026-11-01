@@ -66,7 +66,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
         <section className="px-4 py-20">
           <div className={"mb-8 flex justify-between gap-4"}>
             <div>
-              <h1 className="page-heading">{track.name}</h1>
+              <h1 className="page-heading mb-6">{track.name}</h1>
 
               {track.digitalRelease && (
                 <p className="mt-1 text-sm text-nadeshiko-700">
