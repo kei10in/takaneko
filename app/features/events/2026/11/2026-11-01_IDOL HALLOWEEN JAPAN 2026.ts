@@ -32,9 +32,12 @@ export const meta: EventMetaDescriptor = {
     url: "https://idolhalloweenjapan.com/",
   },
   ticket: "https://t-dv.com/IHJ2026",
-  streamings: undefined,
+  streamings: {
+    text: "ABEMA",
+    url: "https://abema.tv/live-event/62531b14-622f-4883-b3f3-61daadf09e66",
+  },
   goods: {
-    time: ["18:10", "19:20"],
+    time: undefined,
     lineup: undefined,
     url: undefined,
   },
@@ -46,12 +49,13 @@ export const meta: EventMetaDescriptor = {
       end: "17:50",
     },
   ],
-  updatedAt: "2026-10-25",
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [#きょうのたかねこ](https://x.com/takanenofficial/status/2116749575394611531)
   - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2114318555693080594)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2107384112290161103)
   - [第3弾出演者発表 - IDOL HALLOWEEN JAPAN X](https://x.com/IDOLHJ_official/status/2099075624216244675)
