@@ -63,13 +63,13 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
           />
         </div>
 
-        <section className="px-4 py-20">
-          <div className={"mb-8 flex justify-between gap-4"}>
-            <div>
-              <h1 className="page-heading mb-6">{track.name}</h1>
+        <section className="px-4 py-12">
+          <div className={"mb-4 flex justify-between gap-4"}>
+            <div className="space-y-1">
+              <h1 className="page-heading">{track.name}</h1>
 
               {track.digitalRelease && (
-                <p className="mt-1 text-sm text-nadeshiko-700">
+                <p className="page-description">
                   {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
                 </p>
               )}

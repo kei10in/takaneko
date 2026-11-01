@@ -37,11 +37,13 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="my-8 py-12">
-        <h1 className="page-heading mb-6 px-4">楽曲</h1>
-        <p className="page-description px-4">
-          楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。
-        </p>
+      <section className="space-y-12 py-12">
+        <div className="space-y-1 px-4">
+          <h1 className="page-heading">楽曲</h1>
+          <p className="page-description">
+            楽曲の詳細と各楽曲がどのライブで披露されたのかを確認できます。
+          </p>
+        </div>
 
         <Tabs.Root defaultValue="all">
           <Tabs.List
