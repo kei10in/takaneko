@@ -17,6 +17,11 @@ export const meta: EventMetaDescriptor = {
       path: "/events/2026/2026-11-05_でびぱっぱ 〜Road to 幕張イベントホール〜.jpg",
       ref: "https://x.com/takanenofficial/status/2095836861600244214",
     },
+    {
+      path: "/events/2026/2026-11-05_でびぱっぱ 〜Road to 幕張イベントホール〜_タイムテーブル.jpg",
+      ref: "https://x.com/takanenofficial/status/2115971956919185449",
+      tags: ["timetable"],
+    },
   ],
   link: {
     text: "",
@@ -25,16 +30,23 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://ticketvillage.jp/events/13876",
   streamings: undefined,
   goods: {
-    time: undefined,
+    time: ["17:00", "18:20"],
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-09-04",
+  acts: [
+    {
+      types: ["LIVE"],
+      start: "16:25",
+      end: "16:50",
+    },
+  ],
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [タイムテーブル公開 - 公式 X](https://x.com/takanenofficial/status/2115971956919185449)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2095836861600244214)
 `;
