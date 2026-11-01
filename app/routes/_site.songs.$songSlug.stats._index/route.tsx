@@ -159,7 +159,7 @@ export default function Component() {
         ) : (
           <table className="w-full text-sm tabular-nums">
             <caption className="sr-only">ライブ種別ごとの披露回数と割合</caption>
-            <thead className="border-b border-zinc-200 text-zinc-500">
+            <thead className="border-b border-zinc-200 text-zinc-400">
               <tr>
                 <th scope="col" className="py-2 text-left font-normal">
                   種別
@@ -178,8 +178,8 @@ export default function Component() {
                   <th scope="row" className="py-3 text-left font-normal text-zinc-700">
                     {item.name}
                   </th>
-                  <td className="py-3 text-right text-zinc-700">{number(item.count)}回</td>
-                  <td className="py-3 text-right text-nadeshiko-800">
+                  <td className="py-3 text-right text-zinc-900">{number(item.count)}回</td>
+                  <td className="py-3 text-right text-nadeshiko-900">
                     {item.percentage.toFixed(1)}%
                   </td>
                 </tr>

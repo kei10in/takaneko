@@ -49,17 +49,12 @@ export const StatisticsBarChart = ({ data, name, labelName }: Props) => (
         <Bar
           dataKey="count"
           name="披露回数"
-          fill="var(--color-nadeshiko-700)"
+          fill="var(--color-nadeshiko-900)"
           maxBarSize={48}
           radius={[4, 4, 0, 0]}
           isAnimationActive={false}
         >
-          <LabelList
-            dataKey="count"
-            position="top"
-            fontSize={12}
-            fill="var(--color-nadeshiko-800)"
-          />
+          <LabelList dataKey="count" position="top" fontSize={12} fill="var(--color-zinc-900)" />
         </Bar>
       </BarChart>
     </ResponsiveContainer>
