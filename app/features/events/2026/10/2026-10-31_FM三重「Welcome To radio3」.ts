@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
-  summary: "FM三重「Welcome to Radio CUBE」",
+  summary: "FM三重「Welcome To radio3」",
   category: "RADIO",
   date: "2026-10-31",
   start: "13:55",
@@ -18,7 +18,7 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
