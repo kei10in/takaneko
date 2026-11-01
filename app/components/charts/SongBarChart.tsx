@@ -21,7 +21,7 @@ export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
     <div className="w-full space-y-2.5">
       {songs.map((item) => {
         const { value, title, slug, coverArt } = item;
-        const to = `/songs/${slug}`;
+        const to = `/songs/${slug}/stats`;
 
         return (
           <Link to={to} key={slug} className="group block rounded">
@@ -29,7 +29,7 @@ export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
               <div className="flex flex-none items-center justify-center overflow-hidden rounded shadow">
                 {coverArt ? (
                   <img
-                    className="h-8 w-8 bg-gray-100 object-cover text-xs text-gray-500"
+                    className="h-8 w-8 bg-zinc-100 object-cover text-xs text-zinc-500"
                     src={coverArt}
                     alt={title}
                   />
@@ -38,7 +38,7 @@ export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
                     className={clsx(
                       "flex h-8 w-8 items-center justify-center",
                       slug && "bg-nadeshiko-200 text-nadeshiko-600",
-                      !slug && "bg-gray-100 text-gray-500",
+                      !slug && "bg-zinc-100 text-zinc-500",
                     )}
                   >
                     <BsMusicNoteBeamed className="h-4 w-4 flex-none" />
@@ -46,20 +46,20 @@ export const SongBarChart: React.FC<Props> = ({ songs }: Props) => {
                 )}
               </div>
               <div className="min-w-0 flex-auto space-y-0.5">
-                <p className="flex justify-between text-gray-500">
-                  <span className="line-clamp-1">{title}</span>
-                  <span className="font-semibold text-nadeshiko-800">{value}</span>
+                <p className="flex justify-between">
+                  <span className="line-clamp-1 text-zinc-500">{title}</span>
+                  <span className="text-zinc-900">{value}</span>
                 </p>
-                <div className="h-3 overflow-hidden rounded-xs bg-gray-100">
+                <div className="h-3 overflow-hidden rounded-xs bg-zinc-100">
                   <div
-                    className="h-full rounded-xs bg-nadeshiko-800"
+                    className="h-full rounded-xs bg-nadeshiko-900"
                     style={{ width: `${(value / limit) * 100}%` }}
                   />
                 </div>
               </div>
               <div className="flex-none">
-                <div className="flex items-center rounded-full p-1.5 text-gray-500 group-hover:bg-gray-100">
-                  <BsChevronRight className="text-gray-500" />
+                <div className="flex items-center rounded-full p-1.5 text-zinc-500 group-hover:bg-zinc-100">
+                  <BsChevronRight className="text-zinc-500" />
                 </div>
               </div>
             </div>
