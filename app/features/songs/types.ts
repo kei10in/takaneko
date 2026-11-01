@@ -1,4 +1,5 @@
 import { z } from "zod/v4";
+import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 import { LiveTypeEnum } from "../events/EventType.ts";
 import { MemberId } from "../profile/types.ts";
 
@@ -50,6 +51,7 @@ export const SimpleSongActivity = z.object({
     date: z.string(),
     region: z.string().optional(),
     location: z.string().optional(),
+    image: ImageDescription.optional(),
   }),
   segments: z.array(
     z.object({
@@ -75,6 +77,19 @@ export const LivesForSong = z.object({
     }),
   ),
   lives: z.array(SimpleSongActivity),
+  // キャッシュ済みの旧 JSON も読み込めるよう、追加の集計値は任意にします。
+  performanceRanking: z
+    .object({
+      rank: z.int().min(1),
+      songCount: z.int().min(1),
+    })
+    .optional(),
+  recentPerformanceRate: z
+    .object({
+      performedCount: z.int().min(0).max(20),
+      eventCount: z.int().min(0).max(20),
+    })
+    .optional(),
 });
 
 export type LivesForSong = z.output<typeof LivesForSong>;

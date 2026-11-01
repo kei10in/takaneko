@@ -63,13 +63,13 @@ const Bar: React.FC<BarProps> = (props: BarProps) => {
     <div key={costumeName} className="group rounded">
       <div className="flex w-full items-center gap-2 text-sm leading-4.5">
         <div className="min-w-0 flex-auto space-y-0.5">
-          <p className="flex justify-between text-gray-500">
+          <p className="flex justify-between text-zinc-500">
             <span className="line-clamp-1">{costumeName}</span>
-            <span className="font-semibold text-nadeshiko-800">{value}</span>
+            <span className="text-zinc-900">{value}</span>
           </p>
           <div className="h-3 overflow-hidden rounded-xs bg-gray-100">
             <div
-              className="h-full rounded-xs bg-nadeshiko-800"
+              className="h-full rounded-xs bg-nadeshiko-900"
               style={{ width: `${(value / limit) * 100}%` }}
             />
           </div>
