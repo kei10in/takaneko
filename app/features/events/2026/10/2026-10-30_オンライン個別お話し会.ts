@@ -19,7 +19,7 @@ export const meta: EventMetaDescriptor = {
     text: "開催詳細",
     url: "https://takanenonadeshiko.jp/?p=5743",
   },
-  updatedAt: "2026-10-20",
+  updatedAt: "2026-11-01",
 };
 
 export const content = /* md */ `
@@ -49,6 +49,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2115815921126346901)
   - [公式ニュース](https://takanenonadeshiko.jp/?p=5743)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2112166887391916182)
 `;
