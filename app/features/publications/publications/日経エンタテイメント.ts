@@ -25,11 +25,15 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
     },
   ],
   featuredMembers: ["高嶺のなでしこ3"],
-  officialTwitter: "https://x.com/takanenofficial/status/2107297291337920932",
+  officialTwitter: "https://x.com/takanenofficial/status/2116002163994640431",
   links: [
     {
       text: "予約開始 - 日経エンタテインメント！ X",
       url: "https://x.com/nikkei_ent/status/2107277613593178439",
+    },
+    {
+      text: "掲載情報 - 公式 X",
+      url: "https://x.com/takanenofficial/status/2107297291337920932",
     },
   ],
 };
