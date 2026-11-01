@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseSetlist } from "./setlist.ts";
+import { formatSetlist, parseSetlist } from "./setlist.ts";
 
 describe("parseSetlist", () => {
   it("parses a simple stage plan with songs and MCs", () => {
@@ -37,6 +37,37 @@ describe("parseSetlist", () => {
       },
     ]);
   });
+
+  it.each(["main", "encore"])(
+    "セクションの見出しを挟んでも %s の曲番と衣装を引き継ぐ",
+    (section) => {
+      const input = [
+        "衣装: アンチファン衣装",
+        ...(section == "encore" ? ["アンコール"] : []),
+        "Song A",
+        "  セクション: 映画: ゾンビフェス  ",
+        "Song B",
+      ];
+
+      expect(parseSetlist(input).slice(-3)).toEqual([
+        {
+          kind: "song",
+          section,
+          index: 0,
+          songTitle: "Song A",
+          costumeNames: ["アンチファン衣装"],
+        },
+        { kind: "section", title: "映画: ゾンビフェス" },
+        {
+          kind: "song",
+          section,
+          index: 1,
+          songTitle: "Song B",
+          costumeNames: ["アンチファン衣装"],
+        },
+      ]);
+    },
+  );
 
   it("parses MC with colon and encore in English", () => {
     const input = ["MC: intro", "encore", "Song D"];
@@ -102,5 +133,28 @@ describe("parseSetlist", () => {
         isCover: true,
       },
     ]);
+  });
+});
+
+describe("formatSetlist", () => {
+  it.each([
+    {
+      copyWithOrder: false,
+      expected: "Song A\n(スペシャルパート)\nSong B\n(アンコール)\nSong C",
+    },
+    {
+      copyWithOrder: true,
+      expected: "M1 Song A\n(スペシャルパート)\nM2 Song B\n(アンコール)\nEN1 Song C",
+    },
+  ])("セクションの見出しを含めてコピーする: 曲番 $copyWithOrder", ({ copyWithOrder, expected }) => {
+    const setlist = parseSetlist([
+      "Song A",
+      "セクション: スペシャルパート",
+      "Song B",
+      "アンコール",
+      "Song C",
+    ]);
+
+    expect(formatSetlist(setlist, { copyWithMC: false, copyWithOrder })).toBe(expected);
   });
 });

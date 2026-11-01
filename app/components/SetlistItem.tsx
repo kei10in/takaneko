@@ -53,6 +53,9 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
     const text = "アンコール";
     return <SectionListItem text={text} />;
   }
+  if (part.kind == "section") {
+    return <SectionListItem text={part.title} />;
+  }
 
   const n = `${part.index + 1}`;
   const name = part.songTitle;

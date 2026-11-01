@@ -30,6 +30,10 @@ export const Segment = z.discriminatedUnion("kind", [
     kind: z.literal("encore"),
   }),
   z.object({
+    kind: z.literal("section"),
+    title: z.string(),
+  }),
+  z.object({
     kind: z.literal("special"),
     title: z.string().optional(),
     costumeNames: z.array(z.string()).optional(),
@@ -105,6 +109,13 @@ const parseSegment = (
     return {
       nextState: { section: "encore", index: 0, costumeNames: state.costumeNames },
       segment: { kind: "encore" },
+    };
+  }
+
+  if (p.startsWith("セクション:")) {
+    return {
+      nextState: state,
+      segment: { kind: "section", title: p.slice("セクション:".length).trim() },
     };
   }
 
@@ -211,6 +222,9 @@ export const formatSetlist = (
         break;
       case "encore":
         items.push("(アンコール)");
+        break;
+      case "section":
+        items.push(`(${segment.title})`);
         break;
       case "announce":
       case "overture":
