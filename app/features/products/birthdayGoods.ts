@@ -19,9 +19,11 @@ import { 東山恵里沙誕生日記念_2026年05月28日 } from "./birthday/202
 import { 橋本桃呼誕生日記念_2026年06月28日 } from "./birthday/2026-06-28_橋本桃呼誕生日記念.ts";
 import { 涼海すう誕生日記念_2026年08月22日 } from "./birthday/2026-08-22_涼海すう誕生日記念.ts";
 import { 松本ももな誕生日記念_2026年10月12日 } from "./birthday/2026-10-12_松本ももな誕生日記念.ts";
+import { 日向端ひな誕生日記念_2026年10月30日 } from "./birthday/2026-10-30_日向端ひな誕生日記念.ts";
 import { BirthdayGoodsCollection } from "./product.ts";
 
 export const BirthdayGoods: BirthdayGoodsCollection[] = [
+  日向端ひな誕生日記念_2026年10月30日,
   松本ももな誕生日記念_2026年10月12日,
   涼海すう誕生日記念_2026年08月22日,
   橋本桃呼誕生日記念_2026年06月28日,
