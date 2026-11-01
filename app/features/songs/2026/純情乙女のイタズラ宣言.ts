@@ -17,7 +17,7 @@ export const 純情乙女のイタズラ宣言: SongMetaDescriptor = {
 
   tags: [],
 
-  // coverArt: "/takaneko/songs/2026/純情乙女のイタズラ宣言.webp",
+  coverArt: "/takaneko/songs/2026/純情乙女のイタズラ宣言.webp",
 
   officialSite: "",
   youtube: [
