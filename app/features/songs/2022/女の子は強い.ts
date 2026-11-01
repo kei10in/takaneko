@@ -41,6 +41,8 @@ export const 女の子は強い: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/gPX4UU3S",
 
+  isrcs: ["TCJPU2217173"],
+
   appleMusic: "https://music.apple.com/jp/album/1661087176?i=1661087190",
   spotify: "https://open.spotify.com/track/3NTphr08yO8j6XrNmIOTAT",
   youtubeMusic: "https://music.youtube.com/watch?v=kyw64mHwPHw",

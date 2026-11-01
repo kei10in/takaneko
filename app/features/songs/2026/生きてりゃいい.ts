@@ -43,6 +43,8 @@ export const 生きてりゃいい: SongMetaDescriptor = {
     },
   ],
 
+  isrcs: ["JPVI02601263"],
+
   appleMusic: "https://music.apple.com/jp/album/1895573558?i=6763956968",
   spotify: "https://open.spotify.com/track/2pS7NYRgLP8QYSugawP7eM",
   youtubeMusic: "https://music.youtube.com/watch?v=BJguST0LjyI",

@@ -53,6 +53,8 @@ export const _17歳: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/Nzfyynp7",
 
+  isrcs: ["TCJPX2336387"],
+
   appleMusic: "https://music.apple.com/jp/album/1706216658?i=1706216685",
   spotify: "https://open.spotify.com/track/4awTxtoQDzFxbIiwspWgAD",
   youtubeMusic: "https://music.youtube.com/watch?v=I1jqCpv2y7A",

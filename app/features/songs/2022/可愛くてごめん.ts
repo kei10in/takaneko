@@ -86,6 +86,8 @@ export const 可愛くてごめん: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/XE8p1qrA",
 
+  isrcs: ["TCJPU2356172"],
+
   appleMusic: "https://music.apple.com/jp/album/1667404083?i=1667404366",
   spotify: "https://open.spotify.com/track/3DJGNfkXVGO0JhIKZppseU",
   youtubeMusic: "https://music.youtube.com/watch?v=rnRop25tby4",

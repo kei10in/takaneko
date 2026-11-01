@@ -35,6 +35,8 @@ export const CuteForLife: SongMetaDescriptor = {
     },
   ],
 
+  isrcs: ["JPVI02500252"],
+
   appleMusic: "https://music.apple.com/jp/album/1802144137?i=1802144139",
   spotify: "https://open.spotify.com/track/54mtiOKg1Z5jrdLRyVWMDA",
   youtubeMusic: "https://music.youtube.com/watch?v=NbKhAEbzziQ",

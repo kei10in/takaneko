@@ -36,6 +36,8 @@ export const 私より好きでいて: SongMetaDescriptor = {
   ],
   linkfire: "https://jvcmusic.lnk.to/lovememorethanido",
 
+  isrcs: ["JPVI02401584"],
+
   appleMusic: "https://music.apple.com/jp/album/1746893828?i=1746893831",
   spotify: "https://open.spotify.com/track/1QnUlxp1C2K4Zo96rETlfs",
   youtubeMusic: "https://music.youtube.com/watch?v=KGb7TDtQ928",

@@ -45,6 +45,8 @@ export interface SongMetaDescriptor {
 
   youtube?: SongVideo[] | undefined;
 
+  isrcs?: string[] | undefined;
+
   // URL for Music Streaming Services
   appleMusic?: string | undefined;
   spotify?: string | undefined;

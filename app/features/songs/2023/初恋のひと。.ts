@@ -59,6 +59,8 @@ export const 初恋のひと: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/sVvChtxX",
 
+  isrcs: ["JPZ922305486"],
+
   appleMusic: "https://music.apple.com/jp/album/1695224561?i=1695224661",
   spotify: "https://open.spotify.com/track/5EfFFlUTHUG3Zkb2G0Tqfx",
   youtubeMusic: "https://music.youtube.com/watch?v=XNiVOuUNqKA",

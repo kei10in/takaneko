@@ -51,6 +51,8 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
     },
   ],
 
+  isrcs: ["QT66L2604879"],
+
   appleMusic: "https://music.apple.com/jp/album/1882023535?i=1882023724",
   spotify: "https://open.spotify.com/track/35SzWMaz4XCSghs1YzFCas",
   youtubeMusic: "https://music.youtube.com/watch?v=sa4cre-R7Bs",
