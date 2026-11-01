@@ -12,8 +12,8 @@ export const 純情乙女のイタズラ宣言: SongMetaDescriptor = {
   choreographedBy: "佐藤マリン",
 
   videoRelease: "2026-10-15",
-  digitalRelease: undefined,
-  liveDebut: undefined,
+  digitalRelease: "2026-10-31",
+  liveDebut: "2026-10-18",
 
   tags: [],
 
