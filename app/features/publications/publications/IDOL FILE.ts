@@ -21,11 +21,15 @@ export const IDOL_FILE_Vol43: Publication = {
     },
   ],
   featuredMembers: ["日向端ひな"],
-  officialTwitter: "https://x.com/takanenofficial/status/2106946227027771457",
+  officialTwitter: "https://x.com/takanenofficial/status/2116070097395597799",
   links: [
     {
       text: "日向端ひな 動画コメント",
       url: "https://x.com/idolfile_jp/status/2106942214228295821",
+    },
+    {
+      text: "掲載情報 - 公式 X",
+      url: "https://x.com/takanenofficial/status/2106946227027771457",
     },
   ],
 };
