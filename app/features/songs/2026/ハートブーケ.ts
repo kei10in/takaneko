@@ -50,4 +50,8 @@ export const ハートブーケ: SongMetaDescriptor = {
       publishedAt: "2026-06-04",
     },
   ],
+
+  appleMusic: "https://music.apple.com/jp/album/6776566362?i=6776566370",
+  spotify: "https://open.spotify.com/track/1xwc78VjYxZYnYf1Rzz7T3",
+  youtubeMusic: "https://music.youtube.com/watch?v=UQYR7olAOyA",
 };

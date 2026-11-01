@@ -41,4 +41,8 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/imyouridol",
+
+  appleMusic: "https://music.apple.com/jp/album/1778995740?i=1778995741",
+  spotify: "https://open.spotify.com/track/5iZ3PG8bNGWaAuY4OqpsJS",
+  youtubeMusic: "https://music.youtube.com/watch?v=27-wRzBHGQE",
 };

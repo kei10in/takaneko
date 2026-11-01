@@ -41,4 +41,8 @@ export const 乙女どもよ: SongMetaDescriptor = {
     },
   ],
   linkcore: "https://linkco.re/XBZc4csE",
+
+  appleMusic: "https://music.apple.com/jp/album/1669131593?i=1669131603",
+  spotify: "https://open.spotify.com/track/3i2MJdaHfFSzkODGhhjFY1",
+  youtubeMusic: "https://music.youtube.com/watch?v=NucrKe0tMyk",
 };

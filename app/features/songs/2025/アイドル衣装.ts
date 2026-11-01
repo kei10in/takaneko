@@ -41,4 +41,8 @@ export const アイドル衣装: SongMetaDescriptor = {
       publishedAt: "2025-09-03",
     },
   ],
+
+  appleMusic: "https://music.apple.com/jp/album/1813335324?i=1813335325",
+  spotify: "https://open.spotify.com/track/08rX0Cds4ojQy6ZGdehBYM",
+  youtubeMusic: "https://music.youtube.com/watch?v=AMO4-UTPmpY",
 };

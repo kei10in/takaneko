@@ -69,4 +69,8 @@ export const 決戦スピリット: SongMetaDescriptor = {
     },
   ],
   linkcore: "https://linkco.re/FDn2BX2a",
+
+  appleMusic: "https://music.apple.com/jp/album/1696230654?i=1696230665",
+  spotify: "https://open.spotify.com/track/7g1geaoydhd1rpGkqMfDm6",
+  youtubeMusic: "https://music.youtube.com/watch?v=86iCy5q4dLM",
 };

@@ -45,4 +45,8 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
       publishedAt: "2021-05-20",
     },
   ],
+
+  appleMusic: "https://music.apple.com/jp/album/1794891294?i=1794891299",
+  spotify: "https://open.spotify.com/track/7GD3NSDL8e1mNfVzhDYuXN",
+  youtubeMusic: "https://music.youtube.com/watch?v=wbq-4-LJEik",
 };

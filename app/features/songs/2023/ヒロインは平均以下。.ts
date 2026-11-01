@@ -46,4 +46,8 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
     },
   ],
   linkcore: "https://linkco.re/d9zs5rbD",
+
+  appleMusic: "https://music.apple.com/jp/album/1695636301?i=1695636305",
+  spotify: "https://open.spotify.com/track/4348C79ySjlt0nCIDrtUVa",
+  youtubeMusic: "https://music.youtube.com/watch?v=QPrQwcZpOgE",
 };

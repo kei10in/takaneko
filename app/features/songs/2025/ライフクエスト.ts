@@ -40,4 +40,8 @@ export const ライフクエスト: SongMetaDescriptor = {
       publishedAt: "2026-07-27",
     },
   ],
+
+  appleMusic: "https://music.apple.com/jp/album/1822180221?i=1822180222",
+  spotify: "https://open.spotify.com/track/2IlNGmXpHY5SUiImQUkrrN",
+  youtubeMusic: "https://music.youtube.com/watch?v=KydIQ9bXIeI",
 };

@@ -30,4 +30,8 @@ export const ユメムスビ: SongMetaDescriptor = {
     },
   ],
   linkcore: "https://linkco.re/8NCaQgFT",
+
+  appleMusic: "https://music.apple.com/jp/album/1647497771?i=1647498359",
+  spotify: "https://open.spotify.com/track/5qQKiRYTj8mZUAh2b14cEl",
+  youtubeMusic: "https://music.youtube.com/watch?v=i1j3RB8tl3A",
 };

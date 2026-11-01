@@ -41,4 +41,8 @@ export const モテチェン: SongMetaDescriptor = {
     },
   ],
   linkfire: "https://jvcmusic.lnk.to/motechen",
+
+  appleMusic: "https://music.apple.com/jp/album/1753635356?i=1753635357",
+  spotify: "https://open.spotify.com/track/7qOfUlJUdTJC334HvszwNk",
+  youtubeMusic: "https://music.youtube.com/watch?v=pKI78wkhuSw",
 };

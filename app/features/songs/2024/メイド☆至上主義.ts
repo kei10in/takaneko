@@ -52,4 +52,8 @@ export const メイド至上主義: SongMetaDescriptor = {
     },
   ],
   linkcore: "https://linkco.re/PrATe6tS",
+
+  appleMusic: "https://music.apple.com/jp/album/1745898906?i=1745898907",
+  spotify: "https://open.spotify.com/track/5p98YzvJyJKWghRstA0DTO",
+  youtubeMusic: "https://music.youtube.com/watch?v=fhYXw05UNUo",
 };
