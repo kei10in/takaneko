@@ -76,7 +76,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
             </div>
             <div>
               {track.coverArt && (
-                <div className="relative isolate my-1 size-20">
+                <div className="relative isolate my-1 size-20 sm:size-24 lg:size-32">
                   <ThumbnailImage
                     src={track.coverArt}
                     alt={`${track.name}のアートワーク`}
