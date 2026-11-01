@@ -42,7 +42,15 @@ export interface SongMetaDescriptor {
 
   featuredMembers?: MemberId[] | undefined;
   officialSite?: string | undefined;
+
   youtube?: SongVideo[] | undefined;
+
+  // URL for Music Streaming Services
+  appleMusic?: string | undefined;
+  spotify?: string | undefined;
+  youtubeMusic?: string | undefined;
+
+  // URL Music Distributors
   linkcore?: string;
   linkfire?: string;
 }
