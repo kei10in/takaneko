@@ -1,7 +1,7 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider, useLoaderData } from "react-router";
 import { SWRConfig } from "swr";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, assert, beforeEach, describe, expect, it, vi } from "vitest";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { LivesForSong } from "~/features/songs/types.ts";
@@ -69,6 +69,28 @@ const expectTabContent = (tab: string) => {
 };
 
 describe("楽曲詳細のタブ", () => {
+  it.each(["", "/stats", "/lives"])(
+    "アートワークがある楽曲は%sでも共通ヘッダーに表示する",
+    async (suffix) => {
+      const song = ALL_SONGS.find((candidate) => candidate.coverArt);
+      assert(song?.coverArt);
+      renderPage(`/songs/${song.slug}${suffix}`);
+
+      const image = await screen.findByRole("img", { name: `${song.name}のアートワーク` });
+      expect(image.getAttribute("src")).toContain(encodeURI(song.coverArt));
+      expect(screen.getByRole("heading", { level: 1, name: song.name })).toBeTruthy();
+    },
+  );
+
+  it.each([undefined, ""])("アートワークが %s の楽曲では画像を表示しない", async (coverArt) => {
+    const song = ALL_SONGS.find((candidate) => candidate.coverArt === coverArt);
+    assert(song != undefined);
+    renderPage(`/songs/${song.slug}`);
+
+    await screen.findByRole("heading", { level: 1, name: song.name });
+    expect(screen.queryByRole("img", { name: /のアートワーク/u })).toBeNull();
+  });
+
   it.each(tabs)("$name の URL を直接開くと、そのタブだけが選択される", async (tab) => {
     renderPage(tab.path);
     const navigation = await screen.findByRole("navigation", { name: "楽曲詳細" });

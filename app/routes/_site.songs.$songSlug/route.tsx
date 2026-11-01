@@ -1,5 +1,6 @@
 import { LoaderFunctionArgs, NavLink, Outlet } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
+import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { useSongLives } from "~/features/songs/useSongLives.ts";
@@ -63,13 +64,28 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
         </div>
 
         <section className="px-4 py-20">
-          <h1 className="page-heading">{track.name}</h1>
+          <div className={"mb-8 flex justify-between gap-4"}>
+            <div>
+              <h1 className="page-heading">{track.name}</h1>
 
-          {track.digitalRelease && (
-            <p className="mt-1 text-sm text-nadeshiko-700">
-              {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
-            </p>
-          )}
+              {track.digitalRelease && (
+                <p className="mt-1 text-sm text-nadeshiko-700">
+                  {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
+                </p>
+              )}
+            </div>
+            <div>
+              {track.coverArt && (
+                <div className="relative isolate my-1 size-20">
+                  <ThumbnailImage
+                    src={track.coverArt}
+                    alt={`${track.name}のアートワーク`}
+                    className="size-full rounded-2xl bg-white object-contain shadow-xl shadow-zinc-100"
+                  />
+                </div>
+              )}
+            </div>
+          </div>
 
           <nav
             aria-label="楽曲詳細"
