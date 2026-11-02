@@ -40,9 +40,12 @@ export const 僕らの青: SongMetaDescriptor = {
     },
   ],
 
-  isrcs: ["JPVI02602144"],
-
-  appleMusic: "https://music.apple.com/jp/album/6794980465?i=6794980467",
-  spotify: "https://open.spotify.com/track/0lRPQLHtH5yWLLV2O2tJ5m",
-  youtubeMusic: "https://music.youtube.com/watch?v=05c7BQF56nM",
+  recordings: [
+    {
+      isrc: "JPVI02602144",
+      appleMusic: ["https://music.apple.com/jp/album/6794980465?i=6794980467"],
+      spotify: ["https://open.spotify.com/track/0lRPQLHtH5yWLLV2O2tJ5m"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=05c7BQF56nM"],
+    },
+  ],
 };

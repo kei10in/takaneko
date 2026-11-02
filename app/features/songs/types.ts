@@ -22,6 +22,13 @@ export interface SongVideo {
   publishedAt: string;
 }
 
+export interface SongRecording {
+  isrc: string;
+  appleMusic?: string[];
+  spotify?: string[];
+  youtubeMusic?: string[];
+}
+
 export interface SongMetaDescriptor {
   slug: string;
   name: string;
@@ -45,12 +52,7 @@ export interface SongMetaDescriptor {
 
   youtube?: SongVideo[] | undefined;
 
-  isrcs?: string[] | undefined;
-
-  // URL for Music Streaming Services
-  appleMusic?: string | undefined;
-  spotify?: string | undefined;
-  youtubeMusic?: string | undefined;
+  recordings?: SongRecording[];
 
   // URL Music Distributors
   linkcore?: string;

@@ -36,9 +36,12 @@ export const 可愛いって言われたい: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/A2UVFyTy",
 
-  isrcs: ["JPVI02305430"],
-
-  appleMusic: "https://music.apple.com/jp/album/1728867737?i=1728867746",
-  spotify: "https://open.spotify.com/track/1Bc7ROZUw8DKgK3CuR1UG8",
-  youtubeMusic: "https://music.youtube.com/watch?v=V0qbPWbS9u8",
+  recordings: [
+    {
+      isrc: "JPVI02305430",
+      appleMusic: ["https://music.apple.com/jp/album/1728867737?i=1728867746"],
+      spotify: ["https://open.spotify.com/track/1Bc7ROZUw8DKgK3CuR1UG8"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=V0qbPWbS9u8"],
+    },
+  ],
 };

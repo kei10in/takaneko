@@ -41,9 +41,12 @@ export const メランコリックハニー: SongMetaDescriptor = {
     },
   ],
 
-  isrcs: ["JPVI02501018"],
-
-  appleMusic: "https://music.apple.com/jp/album/1807941432?i=1807941433",
-  spotify: "https://open.spotify.com/track/3mKaMYrmcrNpfeyiA2KW3r",
-  youtubeMusic: "https://music.youtube.com/watch?v=R4D4FyRKmBQ",
+  recordings: [
+    {
+      isrc: "JPVI02501018",
+      appleMusic: ["https://music.apple.com/jp/album/1807941432?i=1807941433"],
+      spotify: ["https://open.spotify.com/track/3mKaMYrmcrNpfeyiA2KW3r"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=R4D4FyRKmBQ"],
+    },
+  ],
 };

@@ -36,9 +36,12 @@ export const いつか私がママになったら: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/RVByAaqA",
 
-  isrcs: ["TCJPX2377023"],
-
-  appleMusic: "https://music.apple.com/jp/album/1711888102?i=1711888107",
-  spotify: "https://open.spotify.com/track/1uCxubVa81xsXiNyBhYiv3",
-  youtubeMusic: "https://music.youtube.com/watch?v=GbJr89VDwiU",
+  recordings: [
+    {
+      isrc: "TCJPX2377023",
+      appleMusic: ["https://music.apple.com/jp/album/1711888102?i=1711888107"],
+      spotify: ["https://open.spotify.com/track/1uCxubVa81xsXiNyBhYiv3"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=GbJr89VDwiU"],
+    },
+  ],
 };

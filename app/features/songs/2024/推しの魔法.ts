@@ -53,9 +53,12 @@ export const 推しの魔法: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/Mur9Um2Z",
 
-  isrcs: ["TCJPZ2475196"],
-
-  appleMusic: "https://music.apple.com/jp/album/1737457463?i=1737457668",
-  spotify: "https://open.spotify.com/track/7EmNXzzOCDbUKmjVrad6ZI",
-  youtubeMusic: "https://music.youtube.com/watch?v=xUiMUHz6PIQ",
+  recordings: [
+    {
+      isrc: "TCJPZ2475196",
+      appleMusic: ["https://music.apple.com/jp/album/1737457463?i=1737457668"],
+      spotify: ["https://open.spotify.com/track/7EmNXzzOCDbUKmjVrad6ZI"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=xUiMUHz6PIQ"],
+    },
+  ],
 };

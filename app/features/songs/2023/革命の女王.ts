@@ -48,9 +48,12 @@ export const 革命の女王: SongMetaDescriptor = {
   ],
   linkcore: "https://linkco.re/SMRG5Z34",
 
-  isrcs: ["TCJPV2345562"],
-
-  appleMusic: "https://music.apple.com/jp/album/1680375970?i=1680376037",
-  spotify: "https://open.spotify.com/track/3GNN6lwTwBXsiY2Gsx4Ixi",
-  youtubeMusic: "https://music.youtube.com/watch?v=S59tm2KWf78",
+  recordings: [
+    {
+      isrc: "TCJPV2345562",
+      appleMusic: ["https://music.apple.com/jp/album/1680375970?i=1680376037"],
+      spotify: ["https://open.spotify.com/track/3GNN6lwTwBXsiY2Gsx4Ixi"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=S59tm2KWf78"],
+    },
+  ],
 };
