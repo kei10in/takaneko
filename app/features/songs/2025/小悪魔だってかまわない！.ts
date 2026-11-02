@@ -52,6 +52,7 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1794891294?i=1794891299"],
       spotify: ["https://open.spotify.com/track/7GD3NSDL8e1mNfVzhDYuXN"],
       youtubeMusic: ["https://music.youtube.com/watch?v=wbq-4-LJEik"],
+      tunecore: ["https://linkco.re/a3cn0pa6"],
     },
   ],
 };

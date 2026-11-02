@@ -59,6 +59,7 @@ export const センパイ: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1741952076?i=1741952338"],
       spotify: ["https://open.spotify.com/track/2pAA76jcxbcG3l9UietjcZ"],
       youtubeMusic: ["https://music.youtube.com/watch?v=HwSVyD1Vs8M"],
+      tunecore: ["https://linkco.re/NzQuheNq"],
     },
   ],
 };

@@ -45,7 +45,6 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
       publishedAt: "2021-04-17",
     },
   ],
-  linkcore: "https://linkco.re/sRbfD0uy",
 
   recordings: [
     {
@@ -53,6 +52,7 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1766718641?i=1766719009"],
       spotify: ["https://open.spotify.com/track/5Ic4MD6YLGAU9rRJkIqlMt"],
       youtubeMusic: ["https://music.youtube.com/watch?v=i4b7Dj2AoJ0"],
+      tunecore: ["https://linkco.re/sRbfD0uy"],
     },
   ],
 };

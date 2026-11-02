@@ -39,7 +39,6 @@ export const 女の子は強い: SongMetaDescriptor = {
       publishedAt: "2022-12-26",
     },
   ],
-  linkcore: "https://linkco.re/gPX4UU3S",
 
   recordings: [
     {
@@ -47,6 +46,7 @@ export const 女の子は強い: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1661087176?i=1661087190"],
       spotify: ["https://open.spotify.com/track/3NTphr08yO8j6XrNmIOTAT"],
       youtubeMusic: ["https://music.youtube.com/watch?v=kyw64mHwPHw"],
+      tunecore: ["https://linkco.re/gPX4UU3S"],
     },
   ],
 };

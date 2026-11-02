@@ -51,6 +51,7 @@ export const 私はわたしの事が好き: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1893073069?i=1893073077"],
       spotify: ["https://open.spotify.com/track/1ioMEMvO9GwwW2MDBj7OBO"],
       youtubeMusic: ["https://music.youtube.com/watch?v=wNzUGwQ30ho"],
+      tunecore: ["https://linkco.re/xnSSpSgt"],
     },
   ],
 };

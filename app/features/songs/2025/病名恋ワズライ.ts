@@ -56,6 +56,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1854121492?i=1854121495"],
       spotify: ["https://open.spotify.com/track/7MsTz8vBFBM8A9tznxgNcb"],
       youtubeMusic: ["https://music.youtube.com/watch?v=zl54YyQNhTg"],
+      tunecore: ["https://linkco.re/T9SQ46Gb"],
     },
   ],
 };

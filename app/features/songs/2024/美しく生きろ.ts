@@ -46,7 +46,6 @@ export const 美しく生きろ: SongMetaDescriptor = {
       publishedAt: "2025-09-06",
     },
   ],
-  linkfire: "https://jvcmusic.lnk.to/utsukushikuikiro",
 
   recordings: [
     {
@@ -54,6 +53,7 @@ export const 美しく生きろ: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1724876631?i=1724876632"],
       spotify: ["https://open.spotify.com/track/3kgoVNMig4ppO217cpbXda"],
       youtubeMusic: ["https://music.youtube.com/watch?v=UXLlIXV7YUc"],
+      linkfire: ["https://jvcmusic.lnk.to/utsukushikuikiro"],
     },
   ],
 };

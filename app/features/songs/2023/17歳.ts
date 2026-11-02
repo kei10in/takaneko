@@ -51,7 +51,6 @@ export const _17歳: SongMetaDescriptor = {
       publishedAt: "2021-08-22",
     },
   ],
-  linkcore: "https://linkco.re/Nzfyynp7",
 
   recordings: [
     {
@@ -59,6 +58,7 @@ export const _17歳: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1706216658?i=1706216685"],
       spotify: ["https://open.spotify.com/track/4awTxtoQDzFxbIiwspWgAD"],
       youtubeMusic: ["https://music.youtube.com/watch?v=I1jqCpv2y7A"],
+      tunecore: ["https://linkco.re/Nzfyynp7"],
     },
   ],
 };

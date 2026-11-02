@@ -45,7 +45,6 @@ export const 男の子の目的は何: SongMetaDescriptor = {
       publishedAt: "2023-01-23",
     },
   ],
-  linkcore: "https://linkco.re/ghHaAQp9",
 
   recordings: [
     {
@@ -53,6 +52,7 @@ export const 男の子の目的は何: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1677900041?i=1677900318"],
       spotify: ["https://open.spotify.com/track/6cqTbPWl0EgbMHMRlbLdwM"],
       youtubeMusic: ["https://music.youtube.com/watch?v=pRxr6HmMB6s"],
+      tunecore: ["https://linkco.re/ghHaAQp9"],
     },
   ],
 };

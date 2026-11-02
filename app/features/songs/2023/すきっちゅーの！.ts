@@ -51,7 +51,6 @@ export const すきっちゅーの: SongMetaDescriptor = {
       publishedAt: "2023-09-02",
     },
   ],
-  linkcore: "https://linkco.re/hTG3R04a",
 
   recordings: [
     {
@@ -59,6 +58,7 @@ export const すきっちゅーの: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1705498358?i=1705498361"],
       spotify: ["https://open.spotify.com/track/3VjixNBavJgpvLKgl2qa1a"],
       youtubeMusic: ["https://music.youtube.com/watch?v=4_iM5TgtZHk"],
+      tunecore: ["https://linkco.re/QvfehNZq"],
     },
   ],
 };

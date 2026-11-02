@@ -53,6 +53,7 @@ export const 初恋のこたえ: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1818962659?i=1818962660"],
       spotify: ["https://open.spotify.com/track/6p875TK1jTunTIYpK0nYAE"],
       youtubeMusic: ["https://music.youtube.com/watch?v=TBDaDTPk6wc"],
+      linkfire: ["https://jvcmusic.lnk.to/HatsukoinoKotae"],
     },
   ],
 };

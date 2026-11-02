@@ -34,7 +34,6 @@ export const 私は怪物: SongMetaDescriptor = {
       publishedAt: "2024-06-08",
     },
   ],
-  linkcore: "https://linkco.re/eUmuFaRt",
 
   recordings: [
     {
@@ -42,6 +41,7 @@ export const 私は怪物: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1729279516?i=1729279669"],
       spotify: ["https://open.spotify.com/track/67cCizdkpid80qqiJT8a9q"],
       youtubeMusic: ["https://music.youtube.com/watch?v=kCF5Ohp7PM8"],
+      tunecore: ["https://linkco.re/eUmuFaRt"],
     },
   ],
 };

@@ -35,6 +35,7 @@ export const 純情乙女のイタズラ宣言: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/6827917264?i=6827917511"],
       spotify: ["https://open.spotify.com/track/6BO6ShuS2HxzuKHVGrllp9"],
       youtubeMusic: ["https://music.youtube.com/watch?v=v9m855hTPmY"],
+      tunecore: ["https://linkco.re/5vx29PcR"],
     },
   ],
 };

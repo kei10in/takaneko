@@ -57,7 +57,6 @@ export const 初恋のひと: SongMetaDescriptor = {
       publishedAt: "2023-08-10",
     },
   ],
-  linkcore: "https://linkco.re/sVvChtxX",
 
   recordings: [
     {
@@ -65,6 +64,7 @@ export const 初恋のひと: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1695224561?i=1695224661"],
       spotify: ["https://open.spotify.com/track/5EfFFlUTHUG3Zkb2G0Tqfx"],
       youtubeMusic: ["https://music.youtube.com/watch?v=XNiVOuUNqKA"],
+      tunecore: ["https://linkco.re/sVvChtxX"],
     },
   ],
 };

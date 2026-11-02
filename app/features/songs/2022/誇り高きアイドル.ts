@@ -36,5 +36,4 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
       publishedAt: "2021-03-21",
     },
   ],
-  linkcore: undefined,
 };

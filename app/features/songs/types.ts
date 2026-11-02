@@ -27,6 +27,8 @@ export interface SongRecording {
   appleMusic?: string[];
   spotify?: string[];
   youtubeMusic?: string[];
+  tunecore?: string[];
+  linkfire?: string[];
 }
 
 export interface SongMetaDescriptor {
@@ -53,10 +55,6 @@ export interface SongMetaDescriptor {
   youtube?: SongVideo[] | undefined;
 
   recordings?: SongRecording[];
-
-  // URL Music Distributors
-  linkcore?: string;
-  linkfire?: string;
 }
 
 export interface SongTag {

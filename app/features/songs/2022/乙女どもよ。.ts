@@ -40,7 +40,6 @@ export const 乙女どもよ: SongMetaDescriptor = {
       publishedAt: "2019-07-26",
     },
   ],
-  linkcore: "https://linkco.re/XBZc4csE",
 
   recordings: [
     {
@@ -48,6 +47,7 @@ export const 乙女どもよ: SongMetaDescriptor = {
       appleMusic: ["https://music.apple.com/jp/album/1669131593?i=1669131603"],
       spotify: ["https://open.spotify.com/track/3i2MJdaHfFSzkODGhhjFY1"],
       youtubeMusic: ["https://music.youtube.com/watch?v=NucrKe0tMyk"],
+      tunecore: ["https://linkco.re/XBZc4csE"],
     },
   ],
 };
