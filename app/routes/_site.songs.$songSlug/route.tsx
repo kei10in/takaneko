@@ -56,15 +56,13 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
                 </p>
               )}
             </div>
-            <div>
+            <div className="my-1 size-20 shrink-0 sm:size-24 lg:size-32">
               {track.coverArt && (
-                <div className="relative isolate my-1 size-20 sm:size-24 lg:size-32">
-                  <ThumbnailImage
-                    src={track.coverArt}
-                    alt={`${track.name}のアートワーク`}
-                    className="size-full rounded-2xl bg-white object-contain shadow-xl shadow-zinc-100"
-                  />
-                </div>
+                <ThumbnailImage
+                  src={track.coverArt}
+                  alt={`${track.name}のアートワーク`}
+                  className="size-full rounded-2xl bg-white object-contain shadow-xl shadow-zinc-100"
+                />
               )}
             </div>
           </div>
