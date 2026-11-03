@@ -22,6 +22,7 @@ export const 私より好きでいて: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "vo0f9AoWFLg",
       publishedAt: "2024-06-29",

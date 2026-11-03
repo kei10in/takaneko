@@ -20,6 +20,7 @@ export const 死ぬまでダーリン: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "SB-r8BmlMhI",
       publishedAt: "2024-10-19",

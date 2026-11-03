@@ -22,7 +22,8 @@ export const 乙女どもよ: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1147",
   youtube: [
     {
-      text: "Dance Practice Video",
+      type: "dance-performance",
+      text: "Dance Performance Video",
       videoId: "JAA4CaJdXc8",
       publishedAt: "2022-10-24",
     },

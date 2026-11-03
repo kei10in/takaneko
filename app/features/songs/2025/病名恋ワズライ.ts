@@ -21,6 +21,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "rYlY5-Wv_xA",
       publishedAt: "2025-11-20",

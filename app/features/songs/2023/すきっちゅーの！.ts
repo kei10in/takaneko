@@ -22,6 +22,7 @@ export const すきっちゅーの: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1370",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "mBmSMIVrw1o",
       publishedAt: "2023-09-01",

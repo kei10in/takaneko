@@ -22,6 +22,7 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "8wwTjwjqQR0",
       publishedAt: "2023-06-21",

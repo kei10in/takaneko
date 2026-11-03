@@ -22,6 +22,7 @@ export const 生きてりゃいい: SongMetaDescriptor = {
 
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=957yJCyB-tk",
       publishedAt: "2026-05-13",

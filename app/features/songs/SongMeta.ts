@@ -53,8 +53,18 @@ export const SongMeta = {
     return youtubeImage(videoId);
   },
 
+  youtubeVideo: (track: SongMetaDescriptor) => {
+    return track.youtube?.find(
+      (candidate) =>
+        candidate.type === "mv" ||
+        candidate.type === "dance-performance" ||
+        candidate.type === "singing",
+    );
+  },
+
   youtubeEmbedUrl: (track: SongMetaDescriptor): string | undefined => {
-    const videoId = extractYouTubeVideoId(track.youtube?.[0]?.videoId);
+    const video = SongMeta.youtubeVideo(track);
+    const videoId = extractYouTubeVideoId(video?.videoId);
     if (videoId == undefined) {
       return undefined;
     }

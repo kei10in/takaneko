@@ -22,6 +22,7 @@ export const 私は怪物: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "LG3Kho_3ZOA",
       publishedAt: "2024-02-06",

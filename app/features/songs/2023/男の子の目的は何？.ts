@@ -22,6 +22,7 @@ export const 男の子の目的は何: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1150",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "-hTyIuPim5o",
       publishedAt: "2023-03-20",

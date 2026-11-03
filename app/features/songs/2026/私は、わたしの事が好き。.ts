@@ -21,6 +21,7 @@ export const 私はわたしの事が好き: SongMetaDescriptor = {
 
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "IoCC9aOnX-E",
       publishedAt: "2026-04-14",

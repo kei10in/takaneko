@@ -20,6 +20,7 @@ export const No1: SongMetaDescriptor = {
   officialSite: "https://example.com", // Added official site
   youtube: [
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "jDQKzMDsu5A",
       publishedAt: "2024-01-04",

@@ -22,6 +22,7 @@ export const 推しの魔法: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "pDC1ZgUDLZQ",
       publishedAt: "2024-03-22",

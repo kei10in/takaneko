@@ -23,6 +23,7 @@ export const アイドル衣装: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=3841",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "a7CAn_FIfSk",
       publishedAt: "2025-05-28",

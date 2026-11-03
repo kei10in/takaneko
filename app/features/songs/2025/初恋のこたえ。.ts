@@ -22,6 +22,7 @@ export const 初恋のこたえ: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=3887",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=MdzIkBvRMC0",
       publishedAt: "2025-06-18",

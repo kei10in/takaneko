@@ -20,6 +20,7 @@ export const 今好きになる: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "sM9Lowgbjww",
       publishedAt: "2023-10-13",

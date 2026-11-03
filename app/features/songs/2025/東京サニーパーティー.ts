@@ -20,6 +20,7 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "FqiedUpRQco",
       publishedAt: "2025-03-28",

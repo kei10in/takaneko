@@ -22,6 +22,7 @@ export const 初恋のひと: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1160",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "KgcjPd8n2Es",
       publishedAt: "2023-07-01",

@@ -4,6 +4,7 @@ import { LiveTypeEnum } from "../events/EventType.ts";
 import { MemberId } from "../profile/types.ts";
 
 export interface SongVideo {
+  type?: "mv" | "dance-performance" | "singing";
   text: string;
   videoId: string;
   publishedAt: string;

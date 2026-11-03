@@ -22,6 +22,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "https://www.youtube.com/watch?v=RayWMQMSkeI",
       publishedAt: "2026-03-15",

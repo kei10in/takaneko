@@ -22,11 +22,13 @@ export const 決戦スピリット: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1365",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "B2S-jwfs6Ic",
       publishedAt: "2023-06-22",
     },
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "aeLMEitzNgo",
       publishedAt: "2023-06-15",

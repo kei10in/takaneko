@@ -22,6 +22,7 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "OZycs0TBwKY",
       publishedAt: "2025-02-08",

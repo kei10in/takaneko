@@ -22,11 +22,13 @@ export const _17歳: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1373",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "puTujCvaRjA",
       publishedAt: "2023-09-03",
     },
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "w4aDnfJ_tKU",
       publishedAt: "2023-08-28",

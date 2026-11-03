@@ -22,6 +22,7 @@ export const 美しく生きろ: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "IPZi16uFCqs",
       publishedAt: "2024-01-19",

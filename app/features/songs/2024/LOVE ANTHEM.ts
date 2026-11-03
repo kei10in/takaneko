@@ -22,6 +22,7 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "OItN_8OUBko",
       publishedAt: "2024-09-07",

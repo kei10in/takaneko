@@ -22,6 +22,7 @@ export const 可愛いって言われたい: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "SLMwsq7IoWU",
       publishedAt: "2024-02-03",

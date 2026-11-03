@@ -21,6 +21,7 @@ export const ハートブーケ: SongMetaDescriptor = {
 
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "https://www.youtube.com/watch?v=Vlpqp4QA61Y",
       publishedAt: "2026-06-07",

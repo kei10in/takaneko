@@ -22,6 +22,7 @@ export const 可愛くてごめん: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1138",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "MPywGQPLJPo",
       publishedAt: "2022-11-18",

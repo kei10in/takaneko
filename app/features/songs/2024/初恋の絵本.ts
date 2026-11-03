@@ -20,6 +20,7 @@ export const 初恋の絵本: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "eA307eJBSrY",
       publishedAt: "2024-12-21",

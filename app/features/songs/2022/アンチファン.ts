@@ -22,6 +22,7 @@ export const アンチファン: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1127",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "dzOGNlmCi7Y",
       publishedAt: "2022-08-27",

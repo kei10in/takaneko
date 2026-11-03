@@ -22,6 +22,7 @@ export const メイド至上主義: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "6QuCebi6vuU",
       publishedAt: "2024-05-11",

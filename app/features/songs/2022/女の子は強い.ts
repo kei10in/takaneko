@@ -22,6 +22,7 @@ export const 女の子は強い: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1133",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "edid66UmfiQ",
       publishedAt: "2022-12-25",

@@ -1,7 +1,6 @@
 import { LoaderFunctionArgs, NavLink, Outlet } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
-import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { useSongLives } from "~/features/songs/useSongLives.ts";
 import type { Route } from "./+types/route.ts";
@@ -27,32 +26,15 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
   const { track } = loaderData;
   const { data: performances, isLoading } = useSongLives(track.slug);
   const outletContext: SongOutletContext = { track, performances, isLoading };
-  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
   const tabs = [
     { name: "概要", to: `/songs/${track.slug}` },
+    { name: "ビデオ", to: `/songs/${track.slug}/videos` },
     { name: "統計", to: `/songs/${track.slug}/stats` },
     { name: "ライブ", to: `/songs/${track.slug}/lives` },
   ];
 
   return (
     <div>
-      <div className="bg-zinc-900">
-        <div className="container mx-auto lg:max-w-5xl">
-          {youtubeEmbedUrl == undefined ? null : (
-            // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
-            // oxlint-disable-next-line react/iframe-missing-sandbox
-            <iframe
-              className="aspect-video w-full"
-              src={youtubeEmbedUrl}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          )}
-        </div>
-      </div>
-
       <div className="container mx-auto lg:max-w-5xl">
         <div className="px-4 py-4">
           <Breadcrumb

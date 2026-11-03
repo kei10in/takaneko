@@ -22,6 +22,7 @@ export const 革命の女王: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1154",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "WcJbDYD9u94",
       publishedAt: "2023-04-21",

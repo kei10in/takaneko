@@ -22,6 +22,7 @@ export const 純情乙女のイタズラ宣言: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "ハコニワリリィ, 可憐なアイボリー & 高嶺のなでしこ",
       videoId: "https://www.youtube.com/watch?v=lccNiTOj6t0",
       publishedAt: "2026-10-15",

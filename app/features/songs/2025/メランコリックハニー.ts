@@ -22,6 +22,7 @@ export const メランコリックハニー: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=3690",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "645TOVz8on8",
       publishedAt: "2025-04-30",
