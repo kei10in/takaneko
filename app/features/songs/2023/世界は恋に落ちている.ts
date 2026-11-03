@@ -28,6 +28,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
       publishedAt: "2026-03-15",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=40lUsRoj5xs",
       publishedAt: "2026-07-05",
@@ -38,6 +39,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
       publishedAt: "2023-11-18",
     },
     {
+      type: "original",
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=wM4laths4-Y",
       publishedAt: "2014-07-25",

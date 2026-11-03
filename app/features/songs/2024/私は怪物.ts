@@ -28,6 +28,7 @@ export const 私は怪物: SongMetaDescriptor = {
       publishedAt: "2024-02-06",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "EokERvrVY6k",
       publishedAt: "2024-06-08",

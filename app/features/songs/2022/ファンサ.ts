@@ -20,6 +20,7 @@ export const ファンサ: SongMetaDescriptor = {
   officialSite: undefined,
   youtube: [
     {
+      type: "original",
       text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
       videoId: "https://www.youtube.com/watch?v=lzyDD8bMDKs",
       publishedAt: "2019-06-22",

@@ -28,16 +28,19 @@ export const 初恋のこたえ: SongMetaDescriptor = {
       publishedAt: "2025-06-18",
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=QrmbhDL-FMI",
       publishedAt: "2025-07-04",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=y_0O87GC6WQ",
       publishedAt: "2025-12-19",
     },
     {
+      type: "live",
       text: "LIVE (A Wonderful Encounter)",
       videoId: "https://www.youtube.com/watch?v=gXPTUUR0dDc",
       publishedAt: "2026-01-08",

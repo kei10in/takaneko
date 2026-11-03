@@ -28,6 +28,7 @@ export const 私より好きでいて: SongMetaDescriptor = {
       publishedAt: "2024-06-29",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "aXYuSaZqkCM",
       publishedAt: "2024-08-10",

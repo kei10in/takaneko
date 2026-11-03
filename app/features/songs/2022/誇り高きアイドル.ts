@@ -20,6 +20,7 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
   officialSite: undefined,
   youtube: [
     {
+      type: "original",
       text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
       videoId: "https://www.youtube.com/watch?v=yMABvUMzBEQ",
       publishedAt: "2021-06-30",

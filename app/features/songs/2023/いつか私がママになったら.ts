@@ -28,6 +28,7 @@ export const いつか私がママになったら: SongMetaDescriptor = {
       publishedAt: "2023-12-16",
     },
     {
+      type: "pv",
       text: "PV",
       videoId: "IcnEOGUTv7I",
       publishedAt: "2023-10-16",

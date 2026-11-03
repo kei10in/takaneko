@@ -20,11 +20,13 @@ export const ラブホイッスル: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "original",
       text: "CHiCO with HoneyWorks リリック MV",
       videoId: "https://www.youtube.com/watch?v=rN_oURyTblA",
       publishedAt: "2026-01-09",
     },
     {
+      type: "original",
       text: "CHiCO with HoneyWorks 音源",
       videoId: "H36kjGG1dsI",
       publishedAt: "2018-08-26",

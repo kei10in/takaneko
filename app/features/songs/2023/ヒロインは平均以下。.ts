@@ -28,11 +28,13 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
       publishedAt: "2023-06-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "SnMxkXlE0VQ",
       publishedAt: "2023-07-14",
     },
     {
+      type: "original",
       text: "涼海ひより",
       videoId: "https://www.youtube.com/watch?v=yl8cdZMXefI",
       publishedAt: "2023-04-09",

@@ -28,11 +28,13 @@ export const 男の子の目的は何: SongMetaDescriptor = {
       publishedAt: "2023-03-20",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "KGWrZ9tnT4c",
       publishedAt: "2023-02-17",
     },
     {
+      type: "original",
       text: "高見沢アリサ",
       videoId: "https://www.youtube.com/watch?v=W9ZQd_aaC5Q",
       publishedAt: "2023-01-22",

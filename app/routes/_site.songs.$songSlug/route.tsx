@@ -29,8 +29,8 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
   const tabs = [
     { name: "概要", to: `/songs/${track.slug}` },
     { name: "ビデオ", to: `/songs/${track.slug}/videos` },
-    { name: "統計", to: `/songs/${track.slug}/stats` },
     { name: "ライブ", to: `/songs/${track.slug}/lives` },
+    { name: "統計", to: `/songs/${track.slug}/stats` },
   ];
 
   return (

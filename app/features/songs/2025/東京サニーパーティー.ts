@@ -26,6 +26,7 @@ export const 東京サニーパーティー: SongMetaDescriptor = {
       publishedAt: "2025-03-28",
     },
     {
+      type: "original",
       text: "涼海ひより / 服部樹里 / 中村千鶴",
       videoId: "https://www.youtube.com/watch?v=oLrA0ZvlSgQ",
       publishedAt: "2023-03-17",

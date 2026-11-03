@@ -28,11 +28,13 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
       publishedAt: "2025-12-05",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=A9JbEdiICfo",
       publishedAt: "2025-12-17",
     },
     {
+      type: "live",
       text: "LIVE (A Wonderful Encounter)",
       videoId: "https://www.youtube.com/watch?v=cg5bcITxD20",
       publishedAt: "2025-12-25",

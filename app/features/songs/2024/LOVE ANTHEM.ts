@@ -28,11 +28,13 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
       publishedAt: "2024-09-07",
     },
     {
+      type: "original",
       text: "Full Throttle 4",
       videoId: "https://www.youtube.com/watch?v=jscwyShB9ao",
       publishedAt: "2022-01-21",
     },
     {
+      type: "original",
       text: "めいちゃん & Gero",
       videoId: "https://www.youtube.com/watch?v=hG-Wq7-qnTc",
       publishedAt: "2021-04-16",

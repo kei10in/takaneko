@@ -28,11 +28,13 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
       publishedAt: "2023-07-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "FXX0gckKnQA",
       publishedAt: "2023-08-21",
     },
     {
+      type: "original",
       text: "天月",
       videoId: "https://www.youtube.com/watch?v=E5Jy_h1eHzY",
       publishedAt: "2019-07-08",

@@ -28,21 +28,25 @@ export const 初恋のひと: SongMetaDescriptor = {
       publishedAt: "2023-07-01",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Moving ver.",
       videoId: "OKKk62chd7w",
       publishedAt: "2023-08-14",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "f7kbw7_dWEA",
       publishedAt: "2023-08-19",
     },
     {
+      type: "live",
       text: "Live (Cute for life)",
       videoId: "https://www.youtube.com/watch?v=o5DsmYP5WA8",
       publishedAt: "2025-06-14",
     },
     {
+      type: "live",
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 松本ももな ver",
       videoId: "https://www.youtube.com/watch?v=tJwVdQgVaTE",
       publishedAt: "2025-08-29",

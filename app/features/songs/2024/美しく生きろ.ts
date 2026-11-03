@@ -28,16 +28,19 @@ export const 美しく生きろ: SongMetaDescriptor = {
       publishedAt: "2024-01-19",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "hW-28vtqdek",
       publishedAt: "2024-04-26",
     },
     {
+      type: "live",
       text: "Live (Cute for life)",
       videoId: "https://www.youtube.com/watch?v=2n04nAnKI3Y",
       publishedAt: "2025-06-28",
     },
     {
+      type: "live",
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 涼海すう ver",
       videoId: "https://www.youtube.com/watch?v=_nfm0Ky9UhE",
       publishedAt: "2025-09-06",

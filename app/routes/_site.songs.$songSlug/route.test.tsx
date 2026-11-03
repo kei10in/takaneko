@@ -58,7 +58,7 @@ const renderPage = (path = songPath, performances?: LivesForSong) => {
 
 const expectTabContent = (tab: string) => {
   expect(screen.queryByRole("heading", { name: "情報" }) !== null).toBe(tab === "概要");
-  expect(screen.queryByRole("heading", { name: "ビデオ" }) !== null).toBe(tab === "ビデオ");
+  expect(screen.queryByRole("region", { name: "ビデオ" }) !== null).toBe(tab === "ビデオ");
   expect(screen.queryByText("作詞", { selector: "dt" }) !== null).toBe(tab === "概要");
   expect(screen.queryByRole("heading", { name: "ライブ" }) !== null).toBe(tab === "ライブ");
 };
@@ -210,9 +210,9 @@ describe("楽曲詳細のタブ", () => {
     expect(screen.queryByRole("list")).toBeNull();
 
     fireEvent.click(screen.getByRole("link", { name: "ビデオ" }));
-    await screen.findByRole("heading", { name: "ビデオ" });
+    await screen.findByRole("region", { name: "ビデオ" });
     expect(screen.queryByTitle("YouTube video player")).toBeNull();
-    const list = within(screen.getByRole("list"));
+    const list = within(screen.getByRole("region", { name: "ビデオ" }));
     expect(list.getAllByRole("listitem")).toHaveLength(song.youtube.length);
 
     fireEvent.click(screen.getByRole("link", { name: "概要" }));

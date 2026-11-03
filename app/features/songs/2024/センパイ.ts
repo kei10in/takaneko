@@ -29,16 +29,19 @@ export const センパイ: SongMetaDescriptor = {
       publishedAt: "2024-04-20",
     },
     {
+      type: "original",
       text: "TrySail",
       videoId: "https://www.youtube.com/watch?v=RF_Lc6gMuI0",
       publishedAt: "2016-12-13",
     },
     {
+      type: "original",
       text: "TrySail フルコーラス",
       videoId: "https://www.youtube.com/watch?v=QpKIuhvl98Q",
       publishedAt: "2018-08-26",
     },
     {
+      type: "original",
       text: "TrySail フルコーラス 2",
       videoId: "https://www.youtube.com/watch?v=AhKFbx6ADGE",
       publishedAt: "2018-08-26",

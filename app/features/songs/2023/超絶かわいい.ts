@@ -20,6 +20,7 @@ export const 超絶かわいい: SongMetaDescriptor = {
   officialSite: undefined,
   youtube: [
     {
+      type: "original",
       text: "キャラクター バージョン / mona (CV: 夏川椎菜)",
       videoId: "https://www.youtube.com/watch?v=nxBjyiqVQa4",
       publishedAt: "2023-01-17",

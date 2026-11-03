@@ -28,11 +28,13 @@ export const アンチファン: SongMetaDescriptor = {
       publishedAt: "2022-08-27",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Moving ver.",
       videoId: "i6KUZQ243ls",
       publishedAt: "2023-12-01",
     },
     {
+      type: "mv-making",
       text: "Making Video",
       videoId: "https://www.youtube.com/watch?v=YX6Ejr99T78",
       publishedAt: "2022-08-28",

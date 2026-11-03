@@ -20,11 +20,13 @@ export const ハッピークリスマスパーティ: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "original",
       text: "キャラクター バージョン / mona（CV：夏川椎菜）",
       videoId: "https://www.youtube.com/watch?v=3GSmmtJ9prs",
       publishedAt: "2023-12-22",
     },
     {
+      type: "original",
       text: "ハコニワリリィ バージョン",
       videoId: "https://www.youtube.com/watch?v=snFzxdWiO_k",
       publishedAt: "2022-12-21",

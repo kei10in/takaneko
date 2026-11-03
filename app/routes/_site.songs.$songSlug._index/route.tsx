@@ -2,12 +2,13 @@ import { BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle } from "react-icons/hi2";
 import { sectionHeading } from "~/components/styles.ts";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
+import { SongVideoType } from "~/features/songs/types.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { displayDate } from "~/utils/dateDisplay.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 
-const videoTitles = {
+const videoTitles: Partial<Record<SongVideoType, string>> = {
   mv: "MV",
   "dance-performance": "Dance Performance Video",
   singing: "歌ってみた",
@@ -29,7 +30,9 @@ export default function Component() {
   const video = SongMeta.youtubeVideo(track);
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
   const videoTitle =
-    youtubeEmbedUrl == undefined || video?.type == undefined ? "MV" : videoTitles[video.type];
+    youtubeEmbedUrl == undefined || video?.type == undefined
+      ? "MV"
+      : (videoTitles[video.type] ?? "MV");
 
   return (
     <>

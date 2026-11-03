@@ -28,16 +28,19 @@ export const すきっちゅーの: SongMetaDescriptor = {
       publishedAt: "2023-09-01",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "GYCWpEiidF4",
       publishedAt: "2023-09-23",
     },
     {
+      type: "original",
       text: "ちゅーたん",
       videoId: "https://www.youtube.com/watch?v=jOZSjMKuE1g",
       publishedAt: "2023-09-01",
     },
     {
+      type: "original",
       text: "かぴ",
       videoId: "https://www.youtube.com/watch?v=aHPvIGmgF_k",
       publishedAt: "2023-09-01",

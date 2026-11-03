@@ -3,8 +3,20 @@ import { ImageDescription } from "~/utils/types/ImageDescription.ts";
 import { LiveTypeEnum } from "../events/EventType.ts";
 import { MemberId } from "../profile/types.ts";
 
+export type SongVideoType =
+  | "mv"
+  | "mv-making"
+  | "dance-performance"
+  | "dance-performance-making"
+  | "pv"
+  | "singing"
+  | "dancing"
+  | "dance-practice"
+  | "live"
+  | "original";
+
 export interface SongVideo {
-  type?: "mv" | "dance-performance" | "singing";
+  type?: SongVideoType;
   text: string;
   videoId: string;
   publishedAt: string;

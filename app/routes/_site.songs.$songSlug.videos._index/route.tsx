@@ -1,10 +1,24 @@
-import { BsPlayBtnFill } from "react-icons/bs";
 import { sectionHeading } from "~/components/styles.ts";
+import { SongVideoType } from "~/features/songs/types.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { extractYouTubeVideoId } from "~/utils/youtube/videoId.ts";
 import type { Route } from "./+types/route.ts";
 import { YouTubeCard } from "./YouTubeCard.tsx";
+
+const videoSections: { type?: SongVideoType; title: string }[] = [
+  { type: "mv", title: "MV" },
+  { type: "mv-making", title: "MV Making" },
+  { type: "dance-performance", title: "Dance Performance Video" },
+  { type: "dance-performance-making", title: "DPV Making" },
+  { type: "pv", title: "Promotion Video" },
+  { type: "singing", title: "歌ってみた" },
+  { type: "dancing", title: "踊ってみた" },
+  { type: "dance-practice", title: "Dance Practice Video" },
+  { type: "live", title: "ライブ動画" },
+  { type: "original", title: "オリジナル曲" },
+  { title: "関連動画" },
+];
 
 export const meta: Route.MetaFunction = ({ matches }) => {
   const track = matches[2].loaderData?.track;
@@ -19,30 +33,35 @@ export const meta: Route.MetaFunction = ({ matches }) => {
 
 export default function Component() {
   const { track } = useSongOutletContext();
+  const videos =
+    track.youtube?.flatMap((video) => {
+      const videoId = extractYouTubeVideoId(video.videoId);
+      return videoId == undefined ? [] : [{ ...video, videoId }];
+    }) ?? [];
+  const sections = videoSections
+    .map((section) => ({
+      ...section,
+      videos: videos.filter((video) => video.type === section.type),
+    }))
+    .filter((section) => section.videos.length > 0);
 
   return (
-    <section className="mt-8">
-      <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
-        <span className="flex items-center gap-2">
-          <BsPlayBtnFill className="inline-block text-gray-400" />
-          <span>ビデオ</span>
-        </span>
-      </h2>
+    <section aria-label="ビデオ">
+      {sections.map((section) => (
+        <section key={section.title} aria-label={section.title} className="mt-8">
+          <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
+            {section.title}
+          </h2>
 
-      <ul className="mt-4 grid grid-cols-1 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
-        {track.youtube?.map((yt) => {
-          const videoId = extractYouTubeVideoId(yt.videoId);
-          if (videoId == undefined) {
-            return null;
-          }
-
-          return (
-            <li key={videoId}>
-              <YouTubeCard videoId={videoId} publishedAt={yt.publishedAt} />
-            </li>
-          );
-        }) ?? null}
-      </ul>
+          <ul className="mt-4 grid grid-cols-1 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
+            {section.videos.map((video) => (
+              <li key={video.videoId}>
+                <YouTubeCard videoId={video.videoId} publishedAt={video.publishedAt} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </section>
   );
 }

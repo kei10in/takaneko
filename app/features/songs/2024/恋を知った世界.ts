@@ -28,6 +28,7 @@ export const 恋を知った世界: SongMetaDescriptor = {
       publishedAt: "2024-02-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "07kCyxvrY1U",
       publishedAt: "2024-06-01",

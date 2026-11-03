@@ -26,6 +26,7 @@ export const No1: SongMetaDescriptor = {
       publishedAt: "2024-01-04",
     },
     {
+      type: "original",
       text: "mona",
       videoId: "https://www.youtube.com/watch?v=Zs1sHB6DNR4",
       publishedAt: "2019-12-28",

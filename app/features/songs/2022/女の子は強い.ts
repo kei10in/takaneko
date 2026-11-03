@@ -28,6 +28,7 @@ export const 女の子は強い: SongMetaDescriptor = {
       publishedAt: "2022-12-25",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "PDxThh-XaQk",
       publishedAt: "2023-02-04",

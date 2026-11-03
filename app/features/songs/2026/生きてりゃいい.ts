@@ -30,11 +30,13 @@ export const 生きてりゃいい: SongMetaDescriptor = {
       // kk https://x.com/illust_kk_draw/status/2054566407778840841
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=NRlC2jMQtMk",
       publishedAt: "2026-05-30",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=cge46ow_P3s",
       publishedAt: "2026-05-31",
