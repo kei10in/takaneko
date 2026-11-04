@@ -232,14 +232,14 @@ describe("楽曲詳細のタブ", () => {
     expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
       `https://www.youtube-nocookie.com/embed/${videoId}`,
     );
-    expect(screen.getByRole("heading", { name: "Dance Performance Video" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
     expect(document.querySelectorAll("iframe")).toHaveLength(1);
   });
 
-  it("概要の対象がない楽曲では MV の見出しと動画がない旨を表示する", async () => {
+  it("概要の対象がない楽曲ではビデオの見出しと動画がない旨を表示する", async () => {
     renderPage("/songs/ファンサ");
     await screen.findByRole("heading", { name: "情報" });
-    expect(screen.getByRole("heading", { name: "MV" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
     expect(screen.getByText("ミュージックビデオは公開されていません。")).toBeTruthy();
     expect(screen.queryByTitle("YouTube video player")).toBeNull();
   });
@@ -249,7 +249,7 @@ describe("楽曲詳細のタブ", () => {
     expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
       "https://www.youtube-nocookie.com/embed/jDQKzMDsu5A",
     );
-    expect(screen.getByRole("heading", { name: "歌ってみた" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
     expect(document.querySelectorAll("iframe")).toHaveLength(1);
   });
 
@@ -258,7 +258,7 @@ describe("楽曲詳細のタブ", () => {
     expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
       "https://www.youtube-nocookie.com/embed/puTujCvaRjA",
     );
-    expect(screen.getByRole("heading", { name: "Dance Performance Video" })).toBeTruthy();
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
     expect(document.querySelectorAll("iframe")).toHaveLength(1);
   });
 });

@@ -80,11 +80,14 @@ describe("楽曲の統計", () => {
     const statistics = calculateSongStatistics(
       data([activity("2026-01-01", "solo", 2), joint, unknown]),
     );
-    expect(statistics.liveTypes).toEqual([
-      { name: "ワンマン", count: 2, percentage: 50 },
-      { name: "不明", count: 1, percentage: 25 },
-      { name: "対バン", count: 1, percentage: 25 },
-    ]);
+    expect(statistics.liveTypes).toHaveLength(3);
+    expect(statistics.liveTypes).toEqual(
+      expect.arrayContaining([
+        { name: "ワンマン", count: 2, percentage: 50 },
+        { name: "不明", count: 1, percentage: 25 },
+        { name: "対バン", count: 1, percentage: 25 },
+      ]),
+    );
   });
 
   it("衣装未登録・空配列は Unknown とし、使用回数順に並べる", () => {

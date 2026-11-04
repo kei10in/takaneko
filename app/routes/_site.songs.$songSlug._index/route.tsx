@@ -1,18 +1,12 @@
 import { BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle } from "react-icons/hi2";
+import { Fragment } from "react/jsx-runtime";
 import { sectionHeading } from "~/components/styles.ts";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
-import { SongVideoType } from "~/features/songs/types.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { displayDate } from "~/utils/dateDisplay.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
-
-const videoTitles: Partial<Record<SongVideoType, string>> = {
-  mv: "MV",
-  "dance-performance": "Dance Performance Video",
-  singing: "歌ってみた",
-};
 
 export const meta: Route.MetaFunction = ({ matches }) => {
   const track = matches[2].loaderData?.track;
@@ -27,20 +21,15 @@ export const meta: Route.MetaFunction = ({ matches }) => {
 
 export default function Component() {
   const { track } = useSongOutletContext();
-  const video = SongMeta.youtubeVideo(track);
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
-  const videoTitle =
-    youtubeEmbedUrl == undefined || video?.type == undefined
-      ? "MV"
-      : (videoTitles[video.type] ?? "MV");
 
   return (
-    <>
-      <section className="mt-8">
+    <Fragment>
+      <section>
         <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
           <span className="flex items-center gap-2">
             <BsPlayBtnFill className="inline-block text-gray-400" aria-hidden="true" />
-            <span>{videoTitle}</span>
+            <span>ビデオ</span>
           </span>
         </h2>
         {youtubeEmbedUrl == undefined ? (
@@ -61,7 +50,7 @@ export default function Component() {
         )}
       </section>
 
-      <section aria-label="情報" className="mt-8">
+      <section aria-label="情報" className="mt-12">
         <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
           <span className="flex items-center gap-2">
             <HiInformationCircle className="inline-block text-gray-400" aria-hidden="true" />
@@ -98,6 +87,6 @@ export default function Component() {
           )}
         </dl>
       </section>
-    </>
+    </Fragment>
   );
 }

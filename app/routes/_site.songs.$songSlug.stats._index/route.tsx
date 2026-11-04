@@ -78,7 +78,7 @@ export default function Component() {
   const intervals = statistics.intervals;
 
   return (
-    <div className="mt-8 space-y-12">
+    <div className="space-y-12">
       <section aria-label="サマリー">
         <h2 className={sectionHeading("mb-4 py-2")}>サマリー</h2>
         <dl className="grid grid-cols-2 gap-3 lg:grid-cols-3">

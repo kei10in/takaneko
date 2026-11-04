@@ -46,14 +46,14 @@ export default function Component() {
     .filter((section) => section.videos.length > 0);
 
   return (
-    <section aria-label="ビデオ">
+    <section aria-label="ビデオ" className="space-y-4">
       {sections.map((section) => (
-        <section key={section.title} aria-label={section.title} className="mt-8">
+        <section key={section.title} aria-label={section.title}>
           <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
             {section.title}
           </h2>
 
-          <ul className="mt-4 grid grid-cols-1 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 space-y-1 sm:grid-cols-2 lg:grid-cols-3">
             {section.videos.map((video) => (
               <li key={video.videoId}>
                 <YouTubeCard videoId={video.videoId} publishedAt={video.publishedAt} />
