@@ -22,11 +22,13 @@ export const 僕らの青: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=dtBq4Yo57rk",
       publishedAt: "2026-08-24",
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=mRP1pqoIZQM",
       publishedAt: "2026-08-30",

@@ -22,21 +22,25 @@ export const メイド至上主義: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "6QuCebi6vuU",
       publishedAt: "2024-05-11",
     },
     {
+      type: "original",
       text: "ちゅーたん",
       videoId: "https://www.youtube.com/watch?v=UVtovmeUS_I",
       publishedAt: "2024-09-06",
     },
     {
+      type: "original",
       text: "かぴ / Hanon / Kotoha",
       videoId: "https://www.youtube.com/watch?v=d8hDuDBGfXk",
       publishedAt: "2023-11-03",
     },
     {
+      type: "original",
       text: "かぴ",
       videoId: "https://www.youtube.com/watch?v=QvYuh4zhmWw",
       publishedAt: "2023-11-04",

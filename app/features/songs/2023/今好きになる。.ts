@@ -20,16 +20,19 @@ export const 今好きになる: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "sM9Lowgbjww",
       publishedAt: "2023-10-13",
     },
     {
+      type: "original",
       text: "麻倉もも",
       videoId: "https://www.youtube.com/watch?v=gVjXu_d5kcY",
       publishedAt: "2021-11-03",
     },
     {
+      type: "original",
       text: "初音ミク",
       videoId: "https://www.youtube.com/watch?v=WqlpuarOvq8",
       publishedAt: "2014-11-25",

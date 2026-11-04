@@ -22,6 +22,7 @@ export const 約束: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=2FBXN92lJtA",
       publishedAt: "2026-10-29",

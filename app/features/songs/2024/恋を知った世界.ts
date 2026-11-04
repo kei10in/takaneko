@@ -22,11 +22,13 @@ export const 恋を知った世界: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1748",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "iSvx1zS-zSs",
       publishedAt: "2024-02-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "07kCyxvrY1U",
       publishedAt: "2024-06-01",

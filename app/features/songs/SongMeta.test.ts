@@ -11,6 +11,42 @@ const song: SongMetaDescriptor = {
 };
 
 describe("SongMeta", () => {
+  describe("youtubeEmbedUrl", () => {
+    it.each<"mv" | "dance-performance" | "singing">(["mv", "dance-performance", "singing"])(
+      "%s の動画を概要用に選び、配列の先頭や説明文には依存しない",
+      (type) => {
+        const track: SongMetaDescriptor = {
+          ...song,
+          youtube: [
+            { text: "MV", videoId: "K4xLi8IF1FM", publishedAt: "2022-11-18" },
+            {
+              type,
+              text: "自由な説明文",
+              videoId: "https://www.youtube.com/watch?v=MPywGQPLJPo",
+              publishedAt: "2022-11-18",
+            },
+          ],
+        };
+
+        expect(SongMeta.youtubeEmbedUrl(track)).toBe(
+          "https://www.youtube-nocookie.com/embed/MPywGQPLJPo",
+        );
+      },
+    );
+
+    it("概要の対象がない場合は、他の動画を埋め込まない", () => {
+      expect(
+        SongMeta.youtubeEmbedUrl({
+          ...song,
+          youtube: [
+            { text: "Dance Practice Video", videoId: "oB12TDu4dVE", publishedAt: "2022-12-07" },
+          ],
+        }),
+      ).toBeUndefined();
+      expect(SongMeta.youtubeEmbedUrl(song)).toBeUndefined();
+    });
+  });
+
   describe("firstAppearance", () => {
     it("should return video appearance when videoRelease is earliest", () => {
       const track: SongMetaDescriptor = {

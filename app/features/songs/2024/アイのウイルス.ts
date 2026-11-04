@@ -22,6 +22,7 @@ export const アイのウイルス: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "Bsq2ZKelIqQ",
       publishedAt: "2024-12-11",

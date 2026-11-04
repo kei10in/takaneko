@@ -1,29 +1,24 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, RouterProvider, useLoaderData } from "react-router";
 import { SWRConfig } from "swr";
-import { afterEach, assert, beforeEach, describe, expect, it, vi } from "vitest";
-import { SongMeta } from "~/features/songs/SongMeta.ts";
+import { afterEach, assert, describe, expect, it } from "vitest";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { LivesForSong } from "~/features/songs/types.ts";
 import Overview from "../_site.songs.$songSlug._index/route.tsx";
 import Lives from "../_site.songs.$songSlug.lives._index/route.tsx";
 import Stats from "../_site.songs.$songSlug.stats._index/route.tsx";
+import Videos from "../_site.songs.$songSlug.videos._index/route.tsx";
 import Component, { loader } from "./route.tsx";
-
-beforeEach(() => {
-  // タブのテストでは外部の YouTube プレイヤーを読み込まない。
-  vi.spyOn(SongMeta, "youtubeEmbedUrl").mockReturnValue(undefined);
-});
 
 afterEach(() => {
   cleanup();
-  vi.restoreAllMocks();
 });
 
 const track = ALL_SONGS[0];
 const songPath = `/songs/${track.slug}`;
 const tabs = [
   { name: "概要", path: songPath },
+  { name: "ビデオ", path: `${songPath}/videos` },
   { name: "統計", path: `${songPath}/stats` },
   { name: "ライブ", path: `${songPath}/lives` },
 ];
@@ -38,6 +33,7 @@ const renderPage = (path = songPath, performances?: LivesForSong) => {
         HydrateFallback: () => null,
         children: [
           { index: true, Component: Overview },
+          { path: "videos", Component: Videos },
           { path: "stats", Component: Stats },
           { path: "lives", Component: Lives },
         ],
@@ -61,15 +57,54 @@ const renderPage = (path = songPath, performances?: LivesForSong) => {
 };
 
 const expectTabContent = (tab: string) => {
-  ["情報", "ビデオ"].forEach((name) => {
-    expect(screen.queryByRole("heading", { name }) !== null).toBe(tab === "概要");
-  });
+  expect(screen.queryByRole("heading", { name: "情報" }) !== null).toBe(tab === "概要");
+  expect(screen.queryByRole("region", { name: "ビデオ" }) !== null).toBe(tab === "ビデオ");
   expect(screen.queryByText("作詞", { selector: "dt" }) !== null).toBe(tab === "概要");
   expect(screen.queryByRole("heading", { name: "ライブ" }) !== null).toBe(tab === "ライブ");
 };
 
 describe("楽曲詳細のタブ", () => {
-  it.each(["", "/stats", "/lives"])(
+  it.each(tabs)("$name のパンくずに現在の階層と各ページへのリンクを表示する", async (tab) => {
+    renderPage(tab.path);
+    const breadcrumbElement = (await screen.findByRole("link", { name: "楽曲" })).closest("p");
+    assert(breadcrumbElement !== null);
+    const breadcrumb = within(breadcrumbElement);
+    const expectedLabels =
+      tab.name === "概要" ? ["楽曲", track.name] : ["楽曲", track.name, tab.name];
+
+    expect(breadcrumb.getByRole("link", { name: "楽曲" }).getAttribute("href")).toBe("/songs");
+    expect(breadcrumb.queryByRole("link", { name: "たかねこの" })).toBeNull();
+    expect(breadcrumb.getAllByRole("link").map((link) => link.textContent)).toEqual(expectedLabels);
+    const currentLabel = tab.name === "概要" ? track.name : tab.name;
+    expect(breadcrumb.getByRole("link", { name: currentLabel }).getAttribute("href")).toBe(
+      tab.path,
+    );
+    expect(breadcrumb.getByRole("link", { name: track.name }).getAttribute("href")).toBe(songPath);
+  });
+
+  it("パンくずの曲名から概要へ戻り、履歴を戻ると子ページの階層を復元する", async () => {
+    const router = renderPage(`${songPath}/lives`);
+    const breadcrumb = (await screen.findByRole("link", { name: "楽曲" })).closest("p");
+    assert(breadcrumb !== null);
+
+    fireEvent.click(within(breadcrumb).getByRole("link", { name: track.name }));
+    await screen.findByRole("heading", { name: "情報" });
+    expect(decodeURI(router.state.location.pathname)).toBe(songPath);
+    expect(
+      within(breadcrumb)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual(["楽曲", track.name]);
+    expect(within(breadcrumb).queryByText("ライブ")).toBeNull();
+
+    await act(() => router.navigate(-1));
+    expect(within(breadcrumb).getByRole("link", { name: track.name })).toBeTruthy();
+    expect(within(breadcrumb).getByRole("link", { name: "ライブ" }).getAttribute("href")).toBe(
+      `${songPath}/lives`,
+    );
+  });
+
+  it.each(["", "/videos", "/stats", "/lives"])(
     "アートワークがある楽曲は%sでも共通ヘッダーに表示する",
     async (suffix) => {
       const song = ALL_SONGS.find((candidate) => candidate.coverArt);
@@ -144,7 +179,7 @@ describe("楽曲詳細のタブ", () => {
     expectTabContent("ライブ");
 
     fireEvent.click(within(navigation).getByRole("link", { name: "概要" }));
-    await screen.findByRole("heading", { name: "ビデオ" });
+    await screen.findByRole("heading", { name: "情報" });
     expect(decodeURI(router.state.location.pathname)).toBe(songPath);
     expectTabContent("概要");
 
@@ -189,7 +224,7 @@ describe("楽曲詳細のタブ", () => {
     ).toBeTruthy();
   });
 
-  it("概要タブではビデオを表示し、衣装の集計データがあっても衣装は表示しない", async () => {
+  it("概要タブでは楽曲情報を表示し、衣装の集計データがあっても衣装は表示しない", async () => {
     renderPage(songPath, {
       slug: track.slug,
       name: track.name,
@@ -198,9 +233,72 @@ describe("楽曲詳細のタブ", () => {
       lives: [],
     });
 
-    expect(await screen.findByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(await screen.findByRole("heading", { name: "情報" })).toBeTruthy();
     expect(screen.queryByRole("heading", { name: "衣装" })).toBeNull();
     expect(screen.queryByText("テスト衣装")).toBeNull();
     expectTabContent("概要");
+  });
+
+  it("概要では MV を1本だけ埋め込み、タブを切り替えると一覧を表示する", async () => {
+    const song = ALL_SONGS.find((candidate) => candidate.slug === "可愛くてごめん");
+    assert(song?.youtube);
+    renderPage(`/songs/${song.slug}`);
+
+    const player = await screen.findByTitle("YouTube video player");
+    expect(player.getAttribute("src")).toBe("https://www.youtube-nocookie.com/embed/MPywGQPLJPo");
+    expect(document.querySelectorAll("iframe")).toHaveLength(1);
+    expect(screen.queryByRole("list")).toBeNull();
+
+    fireEvent.click(screen.getByRole("link", { name: "ビデオ" }));
+    await screen.findByRole("region", { name: "ビデオ" });
+    expect(screen.queryByTitle("YouTube video player")).toBeNull();
+    const list = within(screen.getByRole("region", { name: "ビデオ" }));
+    expect(list.getAllByRole("listitem")).toHaveLength(song.youtube.length);
+
+    fireEvent.click(screen.getByRole("link", { name: "概要" }));
+    expect(await screen.findByTitle("YouTube video player")).toBeTruthy();
+    fireEvent.click(screen.getByRole("link", { name: "統計" }));
+    await waitFor(() => expect(screen.queryByTitle("YouTube video player")).toBeNull());
+    fireEvent.click(screen.getByRole("link", { name: "ライブ" }));
+    await screen.findByRole("heading", { name: "ライブ" });
+    expect(screen.queryByTitle("YouTube video player")).toBeNull();
+  });
+
+  it.each([
+    { slug: "ハートブーケ", videoId: "Vlpqp4QA61Y" },
+    { slug: "乙女どもよ", videoId: "JAA4CaJdXc8" },
+  ])("$slug の概要では Dance Performance を埋め込む", async ({ slug, videoId }) => {
+    renderPage(`/songs/${slug}`);
+    expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
+      `https://www.youtube-nocookie.com/embed/${videoId}`,
+    );
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(document.querySelectorAll("iframe")).toHaveLength(1);
+  });
+
+  it("概要の対象がない楽曲ではビデオの見出しと動画がない旨を表示する", async () => {
+    renderPage("/songs/ファンサ");
+    await screen.findByRole("heading", { name: "情報" });
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(screen.getByText("ミュージックビデオは公開されていません。")).toBeTruthy();
+    expect(screen.queryByTitle("YouTube video player")).toBeNull();
+  });
+
+  it("歌ってみたを概要に埋め込み、見出しを表示する", async () => {
+    renderPage("/songs/No.1");
+    expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
+      "https://www.youtube-nocookie.com/embed/jDQKzMDsu5A",
+    );
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(document.querySelectorAll("iframe")).toHaveLength(1);
+  });
+
+  it("Dance Performance と歌ってみたがある場合も、概要の動画は1本だけ表示する", async () => {
+    renderPage("/songs/17歳");
+    expect((await screen.findByTitle("YouTube video player")).getAttribute("src")).toBe(
+      "https://www.youtube-nocookie.com/embed/puTujCvaRjA",
+    );
+    expect(screen.getByRole("heading", { name: "ビデオ" })).toBeTruthy();
+    expect(document.querySelectorAll("iframe")).toHaveLength(1);
   });
 });

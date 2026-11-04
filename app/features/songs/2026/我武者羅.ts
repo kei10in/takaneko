@@ -23,6 +23,7 @@ export const 我武者羅: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "original",
       text: "Official MV",
       videoId: "https://www.youtube.com/watch?v=iw557YNs6g0",
       publishedAt: "2021-10-09",

@@ -23,6 +23,7 @@ export const ユメムスビ: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1127",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "qgYnKvdcMJQ",
       publishedAt: "2022-10-01",

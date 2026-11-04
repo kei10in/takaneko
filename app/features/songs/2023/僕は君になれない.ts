@@ -22,16 +22,19 @@ export const 僕は君になれない: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1157",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "-Mm3QGGxg1k",
       publishedAt: "2023-04-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "IU_tFAq0Q4E",
       publishedAt: "2023-04-12",
     },
     {
+      type: "live",
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 東山恵里沙 ver",
       videoId: "https://www.youtube.com/watch?v=PuS7Lf1AQ7A",
       publishedAt: "2025-09-03",

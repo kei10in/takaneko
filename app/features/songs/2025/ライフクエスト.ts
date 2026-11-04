@@ -22,16 +22,19 @@ export const ライフクエスト: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=3887",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "https://www.youtube.com/watch?v=5ezn2DJbK7s",
       publishedAt: "2025-07-02",
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=sW19jLLfPq4",
       publishedAt: "2025-07-25",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=mmbcf8unzfw",
       publishedAt: "2026-07-27",

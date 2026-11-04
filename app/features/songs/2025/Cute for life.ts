@@ -22,11 +22,13 @@ export const CuteForLife: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=3693",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "9tN1esSj2Tg",
       publishedAt: "2025-04-07",
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=xAiS9F-_Avk",
       publishedAt: "2025-04-11",

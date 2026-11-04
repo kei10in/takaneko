@@ -22,16 +22,19 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1367",
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "lXhue1Chv6c",
       publishedAt: "2023-07-21",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "FXX0gckKnQA",
       publishedAt: "2023-08-21",
     },
     {
+      type: "original",
       text: "天月",
       videoId: "https://www.youtube.com/watch?v=E5Jy_h1eHzY",
       publishedAt: "2019-07-08",

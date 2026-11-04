@@ -22,6 +22,7 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "n_8LTS92LXE",
       publishedAt: "2024-11-06",
@@ -32,6 +33,7 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
       publishedAt: "2024-10-07",
     },
     {
+      type: "live",
       text: "LIVE",
       videoId: "Bn6rTXTooXg",
       publishedAt: "2024-11-09",

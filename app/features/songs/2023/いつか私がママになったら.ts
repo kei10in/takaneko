@@ -22,11 +22,13 @@ export const いつか私がママになったら: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1432",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "B6ibZx9KcH4",
       publishedAt: "2023-12-16",
     },
     {
+      type: "pv",
       text: "PV",
       videoId: "IcnEOGUTv7I",
       publishedAt: "2023-10-16",

@@ -22,16 +22,19 @@ export const 乙女どもよ: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1147",
   youtube: [
     {
-      text: "Dance Practice Video",
+      type: "dance-performance",
+      text: "Dance Performance Video",
       videoId: "JAA4CaJdXc8",
       publishedAt: "2022-10-24",
     },
     {
+      type: "live",
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 葉月紗蘭 ver",
       videoId: "https://www.youtube.com/watch?v=gqZcYKVXK1Q",
       publishedAt: "2025-09-01",
     },
     {
+      type: "original",
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=FqCw7gCTZQs",
       publishedAt: "2019-07-26",

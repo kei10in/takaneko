@@ -22,16 +22,19 @@ export const IM_YOUR_IDOL: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "iz6KQup9Uys",
       publishedAt: "2024-11-27",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "https://www.youtube.com/watch?v=1SakX8WpzZc",
       publishedAt: "2026-08-03",
     },
     {
+      type: "live",
       text: "LIVE",
       videoId: "7NK49pi5BFQ",
       publishedAt: "2024-11-30",

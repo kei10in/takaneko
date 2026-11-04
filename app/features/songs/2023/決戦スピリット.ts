@@ -22,26 +22,31 @@ export const 決戦スピリット: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1365",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "B2S-jwfs6Ic",
       publishedAt: "2023-06-22",
     },
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "aeLMEitzNgo",
       publishedAt: "2023-06-15",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "QXfgneto5wM",
       publishedAt: "2023-07-07",
     },
     {
+      type: "live",
       text: "LIVE (3rd ANNIVERSARY CONCERT 「A Wonderful Encounter」)",
       videoId: "https://www.youtube.com/watch?v=__rgL3hLhkI",
       publishedAt: "2026-01-17",
     },
     {
+      type: "live",
       text: "Live (東名阪ツアー 2025 - Spring Ride -) 籾山ひめり ver",
       videoId: "https://www.youtube.com/watch?v=MX-zMJE4Tug",
       publishedAt: "2025-09-04",
@@ -52,6 +57,7 @@ export const 決戦スピリット: SongMetaDescriptor = {
       publishedAt: "2025-12-03",
     },
     {
+      type: "original",
       text: "CHiCO with HoneyWorks",
       videoId: "https://www.youtube.com/watch?v=ErqUUYWfOBo",
       publishedAt: "2020-02-27",

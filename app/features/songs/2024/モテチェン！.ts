@@ -22,16 +22,19 @@ export const モテチェン: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "ivfMBjNqLZE",
       publishedAt: "2024-07-14",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "frT2NgaVlrc",
       publishedAt: "2024-08-01",
     },
     {
+      type: "mv-making",
       text: "Making",
       videoId: "https://www.youtube.com/watch?v=hkcCpIJgta8",
       publishedAt: "2024-08-19",

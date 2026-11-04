@@ -21,11 +21,13 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
 
   youtube: [
     {
+      type: "dance-performance",
       text: "Dance Performance Video",
       videoId: "rYlY5-Wv_xA",
       publishedAt: "2025-11-20",
     },
     {
+      type: "live",
       text: "Live (Live Tour - Bouquet of 9 Flowers - FINAL",
       videoId: "https://www.youtube.com/watch?v=q2dqKruOPsw",
       publishedAt: "2026-08-23",
@@ -36,6 +38,7 @@ export const 病名恋ワズライ: SongMetaDescriptor = {
       publishedAt: "2013-12-17",
     },
     {
+      type: "original",
       text: "病名恋ワズライ (feat. 榎本夏樹 (CV:戸松遥)) / 音源",
       videoId: "xRyMTtCUOwE",
       publishedAt: "2021-11-03",

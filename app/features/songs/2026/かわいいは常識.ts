@@ -22,6 +22,7 @@ export const かわいいは常識: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "original",
       text: "Official MV feat. 綾瀬クロエ (CV: 伊藤美来)",
       videoId: "https://www.youtube.com/watch?v=k7h-bGKWOeY",
       publishedAt: "2026-08-27",

@@ -20,11 +20,13 @@ export const 初恋の絵本: SongMetaDescriptor = {
   officialSite: "",
   youtube: [
     {
+      type: "singing",
       text: "歌ってみた",
       videoId: "eA307eJBSrY",
       publishedAt: "2024-12-21",
     },
     {
+      type: "original",
       text: "合田美桜",
       videoId: "https://www.youtube.com/watch?v=bSUBiMCZAoo",
       publishedAt: "2014-11-10",
@@ -35,6 +37,7 @@ export const 初恋の絵本: SongMetaDescriptor = {
       publishedAt: "2012-08-01",
     },
     {
+      type: "original",
       text: "鎖那",
       videoId: "https://www.youtube.com/watch?v=dCTg-IbL-6c",
       publishedAt: "2023-11-17",

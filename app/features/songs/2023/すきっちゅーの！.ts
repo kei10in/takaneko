@@ -22,21 +22,25 @@ export const すきっちゅーの: SongMetaDescriptor = {
   officialSite: "https://takanenonadeshiko.jp/?p=1370",
   youtube: [
     {
+      type: "mv",
       text: "MV",
       videoId: "mBmSMIVrw1o",
       publishedAt: "2023-09-01",
     },
     {
+      type: "dance-practice",
       text: "Dance Practice Video",
       videoId: "GYCWpEiidF4",
       publishedAt: "2023-09-23",
     },
     {
+      type: "original",
       text: "ちゅーたん",
       videoId: "https://www.youtube.com/watch?v=jOZSjMKuE1g",
       publishedAt: "2023-09-01",
     },
     {
+      type: "original",
       text: "かぴ",
       videoId: "https://www.youtube.com/watch?v=aHPvIGmgF_k",
       publishedAt: "2023-09-01",
