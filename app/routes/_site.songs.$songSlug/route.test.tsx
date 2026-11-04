@@ -64,6 +64,46 @@ const expectTabContent = (tab: string) => {
 };
 
 describe("楽曲詳細のタブ", () => {
+  it.each(tabs)("$name のパンくずに現在の階層と各ページへのリンクを表示する", async (tab) => {
+    renderPage(tab.path);
+    const breadcrumbElement = (await screen.findByRole("link", { name: "楽曲" })).closest("p");
+    assert(breadcrumbElement !== null);
+    const breadcrumb = within(breadcrumbElement);
+    const expectedLabels =
+      tab.name === "概要" ? ["楽曲", track.name] : ["楽曲", track.name, tab.name];
+
+    expect(breadcrumb.getByRole("link", { name: "楽曲" }).getAttribute("href")).toBe("/songs");
+    expect(breadcrumb.queryByRole("link", { name: "たかねこの" })).toBeNull();
+    expect(breadcrumb.getAllByRole("link").map((link) => link.textContent)).toEqual(expectedLabels);
+    const currentLabel = tab.name === "概要" ? track.name : tab.name;
+    expect(breadcrumb.getByRole("link", { name: currentLabel }).getAttribute("href")).toBe(
+      tab.path,
+    );
+    expect(breadcrumb.getByRole("link", { name: track.name }).getAttribute("href")).toBe(songPath);
+  });
+
+  it("パンくずの曲名から概要へ戻り、履歴を戻ると子ページの階層を復元する", async () => {
+    const router = renderPage(`${songPath}/lives`);
+    const breadcrumb = (await screen.findByRole("link", { name: "楽曲" })).closest("p");
+    assert(breadcrumb !== null);
+
+    fireEvent.click(within(breadcrumb).getByRole("link", { name: track.name }));
+    await screen.findByRole("heading", { name: "情報" });
+    expect(decodeURI(router.state.location.pathname)).toBe(songPath);
+    expect(
+      within(breadcrumb)
+        .getAllByRole("link")
+        .map((link) => link.textContent),
+    ).toEqual(["楽曲", track.name]);
+    expect(within(breadcrumb).queryByText("ライブ")).toBeNull();
+
+    await act(() => router.navigate(-1));
+    expect(within(breadcrumb).getByRole("link", { name: track.name })).toBeTruthy();
+    expect(within(breadcrumb).getByRole("link", { name: "ライブ" }).getAttribute("href")).toBe(
+      `${songPath}/lives`,
+    );
+  });
+
   it.each(["", "/videos", "/stats", "/lives"])(
     "アートワークがある楽曲は%sでも共通ヘッダーに表示する",
     async (suffix) => {

@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 import { HiMusicalNote } from "react-icons/hi2";
-import { LoaderFunctionArgs, NavLink, Outlet } from "react-router";
+import { LoaderFunctionArgs, NavLink, Outlet, useMatch } from "react-router";
 import { Breadcrumb } from "~/components/Breadcrumb.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
@@ -35,6 +35,9 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
     { name: "ライブ", to: `/songs/${track.slug}/lives` },
     { name: "統計", to: `/songs/${track.slug}/stats` },
   ];
+  const page = useMatch("/songs/:songSlug/:page")?.params.page;
+  const currentTab =
+    page == undefined ? undefined : tabs.find((tab) => tab.to === `/songs/${track.slug}/${page}`);
 
   const thumbnail = SongMeta.youtubeImage(track);
 
@@ -57,8 +60,11 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
             <div className="px-4 py-2 drop-shadow-[0_0_0.25rem_white]">
               <Breadcrumb
                 items={[
-                  { label: "たかねこの", to: "/" },
                   { label: "楽曲", to: "/songs" },
+                  { label: track.name, to: `/songs/${track.slug}` },
+                  ...(currentTab == undefined
+                    ? []
+                    : [{ label: currentTab.name, to: currentTab.to }]),
                 ]}
               />
             </div>
