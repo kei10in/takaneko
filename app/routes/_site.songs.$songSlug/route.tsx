@@ -79,7 +79,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
                   />
                 ) : (
                   <div className="flex size-full items-center justify-center rounded-[20%] bg-nadeshiko-200">
-                    <HiMusicalNote className="size-2/3 text-nadeshiko-700" />
+                    <HiMusicalNote className="size-1/2 text-nadeshiko-700" />
                   </div>
                 )}
               </div>
