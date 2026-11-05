@@ -13,8 +13,10 @@ describe("extractYouTubeVideoId", () => {
     ["https://youtu.be/ABCDEFGHIJK", "ABCDEFGHIJK"],
     ["https://youtu.be/ABCDEFGHIJK?t=10", "ABCDEFGHIJK"],
     ["https://www.youtube.com/embed/ABCDEFGHIJK", "ABCDEFGHIJK"],
+    ["https://www.youtube-nocookie.com/embed/ABCDEFGHIJK?start=30", "ABCDEFGHIJK"],
     ["https://www.youtube.com/shorts/ABCDEFGHIJK", "ABCDEFGHIJK"],
     ["ABCDEFGHIJK", "ABCDEFGHIJK"],
+    ["ABCDEFGHIJK?start=30&autoplay=1#t=45", "ABCDEFGHIJK"],
   ])('should extract videoId from "%s"', (input, expected) => {
     expect(extractYouTubeVideoId(input)).toBe(expected);
   });

@@ -1,6 +1,7 @@
 import { BsHeadphones, BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle, HiLink } from "react-icons/hi2";
 import { Link } from "react-router";
+import { YouTubeEmbedPlayer } from "~/components/YouTubeEmbedPlayer.tsx";
 import { AppleMusicIcon } from "~/features/components/logos/AppleMusicIcon.tsx";
 import { SpotifyIcon } from "~/features/components/logos/SpotifyIcon.tsx";
 import { YouTubeMusicIcon } from "~/features/components/logos/YouTubeMusicIcon.tsx";
@@ -23,7 +24,7 @@ export const meta: Route.MetaFunction = ({ matches }) => {
 
 export default function Component() {
   const { track } = useSongOutletContext();
-  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
+  const video = SongMeta.youtubeVideo(track);
 
   const streamings = [
     { Icon: SpotifyIcon, url: track?.recordings?.[0]?.spotify?.[0], name: "Spotify" },
@@ -84,21 +85,12 @@ export default function Component() {
           </span>
         </h2>
         <div className="pt-4 pb-8">
-          {youtubeEmbedUrl == undefined ? (
+          {video == undefined ? (
             <div className="mt-4 flex aspect-video w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
               <p>ミュージックビデオは公開されていません。</p>
             </div>
           ) : (
-            // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
-            // oxlint-disable-next-line react/iframe-missing-sandbox
-            <iframe
-              className="aspect-video w-full"
-              src={youtubeEmbedUrl}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+            <YouTubeEmbedPlayer videoId={video.videoId} />
           )}
         </div>
       </section>
