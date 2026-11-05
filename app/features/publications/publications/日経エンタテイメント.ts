@@ -20,6 +20,10 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
       ref: "https://x.com/nikkei_ent/status/2115399544074903949",
     },
     {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_裏表紙_2.jpg",
+      ref: "https://x.com/nikkei_ent/status/2116362055972446369",
+    },
+    {
       path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_告知.jpg",
       ref: "https://x.com/nikkei_ent/status/2107277613593178439",
     },
