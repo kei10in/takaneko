@@ -109,6 +109,7 @@ export const TShirtCostumeName = z.enum([
   "T シャツ (瞬きさえ忘れる。 ver.)",
   "T シャツ (2nd ファンミ ver.)",
   "T シャツ (わたし色に染まれ ver.)",
+  "T シャツ (ハニフェス)",
   "T シャツ (Beginning ver.)",
   "T シャツ (CONTEMPO ver.)",
   "T シャツ (たかねこちゃん個別デザイン)",

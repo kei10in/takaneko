@@ -38,39 +38,20 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
-      title: "全員",
-      types: ["LIVE"],
-      setlist: ["衣装:「ハニフェス 2025」制服衣装", "今、恋がはじまれ。"],
-      links: [
-        {
-          text: "https://x.com/yurity_naniwa/status/1967553503737639379",
-          url: "https://x.com/yurity_naniwa/status/1967553503737639379",
-        },
-      ],
-    },
-    {
-      title: "高嶺のなでしこブロック",
       types: ["LIVE"],
       setlist: [
+        "セクション: 全員",
+        "衣装:「ハニフェス 2025」制服衣装",
+        "今、恋がはじまれ。 (ハコニワリリィ、可憐なアイボリー、高嶺のなでしこ)",
+        "セクション: 高嶺のなでしこ",
         "衣装: 「ハニフェス 2025」制服衣装",
         "初恋のひと。",
         "ヒロインは平均以下。",
-        "ツインテール魔法少女",
+        "ツインテール魔法少女 (ハコニワリリィ cover)",
         "小悪魔だってかまわない！",
         "美しく生きろ",
         "この世界は嘘でできている",
-      ],
-      links: [
-        {
-          text: "https://x.com/yurity_naniwa/status/1967554641392218462",
-          url: "https://x.com/yurity_naniwa/status/1967554641392218462",
-        },
-      ],
-    },
-    {
-      title: "アンコール コラボ",
-      types: ["LIVE"],
-      setlist: [
+        "アンコール: コラボ",
         "衣装: T シャツ (ハニフェス 2025)",
         "めおと (Hanon、小田桐ななさ、柴咲あかり、土屋玲実、橘美空、橋本桃呼、葉月紗蘭)",
         "わたしに花束 (CHiCO、永尾梨央、寺本理絵、西原悠桜、東山恵里沙、日向端ひな、籾山ひめり)",
@@ -78,10 +59,9 @@ export const meta: EventMetaDescriptor = {
         "ファンサ (全員)",
       ],
       links: [
-        {
-          text: "https://x.com/yurity_naniwa/status/1967557877629067456",
-          url: "https://x.com/yurity_naniwa/status/1967557877629067456",
-        },
+        "https://x.com/yurity_naniwa/status/1967553503737639379",
+        "https://x.com/yurity_naniwa/status/1967554641392218462",
+        "https://x.com/yurity_naniwa/status/1967557877629067456",
       ],
     },
   ],

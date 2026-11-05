@@ -45,18 +45,12 @@ export const meta: EventMetaDescriptor = {
   },
   acts: [
     {
-      title: "全員",
-      types: ["LIVE"],
-      setlist: ["衣装:「純情乙女のイタズラ宣言」MV 衣装", "純情乙女のイタズラ宣言"],
-      links: [
-        "https://x.com/LlwQyyn/status/2111817552427168033",
-        "https://x.com/LlwQyyn/status/2111817552427168033",
-      ],
-    },
-    {
-      title: "高嶺のなでしこ",
       types: ["LIVE"],
       setlist: [
+        "セクション: 全員",
+        "衣装:「純情乙女のイタズラ宣言」MV 衣装",
+        "純情乙女のイタズラ宣言",
+        "セクション: 高嶺のなでしこ",
         "Overture",
         "衣装: 「純情乙女のイタズラ宣言」MV 衣装",
         "初恋のひと。",
@@ -66,13 +60,7 @@ export const meta: EventMetaDescriptor = {
         "我武者羅",
         "花は誓いを忘れない",
         "美しく生きろ",
-      ],
-      links: ["https://x.com/takanenofficial/status/2111800714024595468"],
-    },
-    {
-      title: "アンコール コラボ",
-      types: ["LIVE"],
-      setlist: [
+        "アンコール: コラボ",
         "衣装: T シャツ (HoneyWorks ハロウィンロゴ)",
         "世界一可愛い私 (Kotoha、一ノ瀬直緒、 橘美空、波左間美晴、城月菜央、涼海すう、松本ももな)",
         "HALLOWEEN KISS (Hanon、小田桐ななさ、西原悠桜、福田ひなた、橋本桃呼、東山恵里沙)",
@@ -80,7 +68,7 @@ export const meta: EventMetaDescriptor = {
         "可愛くてごめん (全員)",
       ],
       links: [
-        "https://x.com/LlwQyyn/status/2111817552427168033",
+        "https://x.com/takanenofficial/status/2111800714024595468",
         "https://x.com/LlwQyyn/status/2111817552427168033",
       ],
     },
