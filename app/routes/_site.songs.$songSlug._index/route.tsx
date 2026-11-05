@@ -1,7 +1,11 @@
-import { BsPlayBtnFill } from "react-icons/bs";
-import { HiInformationCircle } from "react-icons/hi2";
+import { BsHeadphones, BsPlayBtnFill } from "react-icons/bs";
+import { HiInformationCircle, HiLink } from "react-icons/hi2";
+import { Link } from "react-router";
 import { Fragment } from "react/jsx-runtime";
 import { sectionHeading } from "~/components/styles.ts";
+import { AppleMusicIcon } from "~/features/components/logos/AppleMusicIcon.tsx";
+import { SpotifyIcon } from "~/features/components/logos/SpotifyIcon.tsx";
+import { YouTubeMusicIcon } from "~/features/components/logos/YouTubeMusicIcon.tsx";
 import { SongMeta } from "~/features/songs/SongMeta.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
 import { displayDate } from "~/utils/dateDisplay.ts";
@@ -23,31 +27,82 @@ export default function Component() {
   const { track } = useSongOutletContext();
   const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
 
+  const streamings = [
+    { Icon: SpotifyIcon, url: track?.recordings?.[0]?.spotify?.[0], name: "Spotify" },
+    { Icon: AppleMusicIcon, url: track?.recordings?.[0]?.appleMusic?.[0], name: "Apple Music" },
+    {
+      Icon: YouTubeMusicIcon,
+      url: track?.recordings?.[0]?.youtubeMusic?.[0],
+      name: "YouTube Music",
+    },
+    {
+      Icon: DistributorIcon,
+      url: track?.recordings?.[0]?.tunecore?.[0] ?? track?.recordings?.[0]?.linkfire?.[0],
+      name: "その他",
+    },
+  ];
+
   return (
     <Fragment>
       <section>
+        <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
+          <span className="flex items-center gap-2">
+            <BsHeadphones className="inline-block text-gray-400" aria-hidden="true" />
+            <span>ストリーミング</span>
+          </span>
+        </h2>
+        {streamings.every(({ url }) => url == undefined) ? (
+          <div className="mt-4 flex aspect-video h-32 w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
+            <p>ストリーミングサービスでの配信はありません。</p>
+          </div>
+        ) : (
+          <ul className="mt-2 grid grid-cols-4 items-stretch gap-1">
+            {streamings.map(({ Icon, url, name }) =>
+              url == undefined ? null : (
+                <li key={name}>
+                  <Link
+                    className="block h-full space-y-2 rounded-3xl bg-white px-2 py-6 transition-[scale] hover:scale-110"
+                    to={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon className="mx-auto block size-10 lg:size-12" aria-hidden="true" />
+                    <p className="mx-auto line-clamp-2 w-fit text-center text-sm lg:text-base">
+                      {name}
+                    </p>
+                  </Link>
+                </li>
+              ),
+            )}
+          </ul>
+        )}
+      </section>
+
+      <section className="mt-12">
         <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
           <span className="flex items-center gap-2">
             <BsPlayBtnFill className="inline-block text-gray-400" aria-hidden="true" />
             <span>ビデオ</span>
           </span>
         </h2>
-        {youtubeEmbedUrl == undefined ? (
-          <div className="mt-4 flex aspect-video w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
-            <p>ミュージックビデオは公開されていません。</p>
-          </div>
-        ) : (
-          // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
-          // oxlint-disable-next-line react/iframe-missing-sandbox
-          <iframe
-            className="mt-4 aspect-video w-full"
-            src={youtubeEmbedUrl}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
-        )}
+        <div className="py-4">
+          {youtubeEmbedUrl == undefined ? (
+            <div className="mt-4 flex aspect-video w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
+              <p>ミュージックビデオは公開されていません。</p>
+            </div>
+          ) : (
+            // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
+            // oxlint-disable-next-line react/iframe-missing-sandbox
+            <iframe
+              className="aspect-video w-full"
+              src={youtubeEmbedUrl}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          )}
+        </div>
       </section>
 
       <section aria-label="情報" className="mt-12">
@@ -90,3 +145,11 @@ export default function Component() {
     </Fragment>
   );
 }
+
+const DistributorIcon = ({ className }: { className?: string }) => {
+  return (
+    <div className={`flex items-center justify-center ${className}`}>
+      <HiLink className="size-80/100 text-zinc-500" />
+    </div>
+  );
+};
