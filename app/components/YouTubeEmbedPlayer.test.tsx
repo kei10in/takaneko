@@ -2,15 +2,46 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { assert, describe, expect, it } from "vitest";
 import { YouTubeEmbedPlayer } from "./YouTubeEmbedPlayer.tsx";
 
-const playerUrl = (element: React.ReactElement): URL => {
+const playerElement = (element: React.ReactElement) => {
   const template = document.createElement("template");
   template.innerHTML = renderToStaticMarkup(element);
-  const src = template.content.querySelector("iframe")?.getAttribute("src");
+  const player = template.content.querySelector("iframe");
+  assert(player);
+  return player;
+};
+
+const playerUrl = (element: React.ReactElement): URL => {
+  const src = playerElement(element).getAttribute("src");
   assert(src);
   return new URL(src);
 };
 
 describe("YouTubeEmbedPlayer", () => {
+  it.each([
+    { autoplay: true, allowed: true },
+    { autoplay: false, allowed: false },
+    { autoplay: undefined, allowed: false },
+  ])("autoplay=$autoplay では自動再生の権限を $allowed にする", ({ autoplay, allowed }) => {
+    const player = playerElement(
+      <YouTubeEmbedPlayer videoId="https://youtu.be/ABCDEFGHIJK?autoplay=1" autoplay={autoplay} />,
+    );
+
+    expect(player.getAttribute("allow")?.split("; ").includes("autoplay")).toBe(allowed);
+  });
+
+  it.each([
+    { fs: true, allowed: true, directive: "fullscreen" },
+    { fs: false, allowed: false, directive: "fullscreen 'none'" },
+    { fs: undefined, allowed: true, directive: "fullscreen" },
+  ])("fs=$fs では全画面表示の権限を $allowed にする", ({ fs, allowed, directive }) => {
+    const player = playerElement(
+      <YouTubeEmbedPlayer videoId="https://youtu.be/ABCDEFGHIJK?fs=0" fs={fs} />,
+    );
+
+    expect(player.getAttribute("allow")?.split("; ")).toContain(directive);
+    expect(player.hasAttribute("allowfullscreen")).toBe(allowed);
+  });
+
   it.each([
     "ABCDEFGHIJK",
     "ABCDEFGHIJK?start=30&autoplay=1#t=45",

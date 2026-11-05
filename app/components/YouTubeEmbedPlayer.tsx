@@ -39,6 +39,20 @@ export const YouTubeEmbedPlayer: React.FC<Props> = ({ videoId, ...parameters }: 
     ),
   ).toString();
 
+  const fullscreen = parameters.fs !== false;
+  const allow = [
+    "accelerometer",
+    parameters.autoplay === true ? "autoplay" : undefined,
+    "clipboard-write",
+    "encrypted-media",
+    fullscreen ? "fullscreen" : "fullscreen 'none'",
+    "gyroscope",
+    "picture-in-picture",
+    "web-share",
+  ]
+    .filter((value) => value != undefined)
+    .join("; ");
+
   return (
     // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
     // oxlint-disable-next-line react/iframe-missing-sandbox
@@ -46,9 +60,9 @@ export const YouTubeEmbedPlayer: React.FC<Props> = ({ videoId, ...parameters }: 
       className="aspect-video w-full"
       src={src.href}
       title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow={allow}
       referrerPolicy="strict-origin-when-cross-origin"
-      allowFullScreen
+      allowFullScreen={fullscreen}
     />
   );
 };
