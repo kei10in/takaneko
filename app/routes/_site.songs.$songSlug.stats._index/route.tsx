@@ -235,7 +235,7 @@ const Statistic = ({
   const card = (
     <div className="relative space-y-1 rounded-2xl bg-zinc-50 p-4 in-[a:hover]:bg-zinc-100">
       <dt className="text-xs text-zinc-500">{label}</dt>
-      <dd className="mt-2 text-3xl leading-7 font-semibold text-zinc-800 tabular-nums">
+      <dd className="mt-2 line-clamp-1 text-2xl font-semibold text-zinc-800 tabular-nums">
         {value}
         {unit == undefined ? null : (
           <span className="ml-1 text-sm font-normal text-zinc-500">{unit}</span>
