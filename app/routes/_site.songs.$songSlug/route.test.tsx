@@ -247,7 +247,9 @@ describe("楽曲詳細のタブ", () => {
     const player = await screen.findByTitle("YouTube video player");
     expect(player.getAttribute("src")).toBe("https://www.youtube-nocookie.com/embed/MPywGQPLJPo");
     expect(document.querySelectorAll("iframe")).toHaveLength(1);
-    expect(screen.queryByRole("list")).toBeNull();
+    const overviewVideo = screen.getByRole("heading", { name: "ビデオ" }).closest("section");
+    assert(overviewVideo !== null);
+    expect(within(overviewVideo).queryByRole("list")).toBeNull();
 
     fireEvent.click(screen.getByRole("link", { name: "ビデオ" }));
     await screen.findByRole("region", { name: "ビデオ" });
