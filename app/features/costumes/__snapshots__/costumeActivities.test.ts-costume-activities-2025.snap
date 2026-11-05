@@ -2478,7 +2478,7 @@
       {
         "acts": [
           {
-            "actTitle": "アンコール コラボ",
+            "actTitle": undefined,
           },
         ],
         "event": {
@@ -2668,10 +2668,10 @@
       {
         "acts": [
           {
-            "actTitle": "全員",
+            "actTitle": undefined,
           },
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
           },
         ],
         "event": {

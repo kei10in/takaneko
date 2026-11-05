@@ -4656,7 +4656,7 @@
         },
         "segments": [
           {
-            "actTitle": "全員",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -4711,7 +4711,7 @@
         },
         "segments": [
           {
-            "actTitle": "全員",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -5706,10 +5706,6 @@
         "count": 1,
       },
       {
-        "costumeName": "「センパイ。」制服衣装",
-        "count": 1,
-      },
-      {
         "costumeName": "T シャツ (Beginning ver.)",
         "count": 1,
       },
@@ -5718,7 +5714,7 @@
         "count": 1,
       },
     ],
-    "count": 121,
+    "count": 120,
     "lives": [
       {
         "event": {
@@ -7755,29 +7751,6 @@
       },
       {
         "event": {
-          "date": "2024-04-29",
-          "image": undefined,
-          "liveType": "FESTIVAL",
-          "location": "日比谷野外音楽堂",
-          "region": "東京",
-          "slug": "2024-04-29_ハニフェス 〜女子校文化祭 日比谷〜",
-          "summary": "ハニフェス 〜女子校文化祭 日比谷〜",
-          "title": "HoneyWorks Presents ハニフェス 〜女子校文化祭 日比谷〜",
-        },
-        "segments": [
-          {
-            "actTitle": "アンコール 全員",
-            "costumeNames": [
-              "「センパイ。」制服衣装",
-            ],
-            "index": 3,
-            "members": undefined,
-            "section": "encore",
-          },
-        ],
-      },
-      {
-        "event": {
           "date": "2024-04-28",
           "image": undefined,
           "liveType": "FESTIVAL",
@@ -8958,7 +8931,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -16175,7 +16148,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -16322,7 +16295,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -19340,7 +19313,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -20564,7 +20537,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -20711,7 +20684,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -23293,7 +23266,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -25172,7 +25145,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -26941,7 +26914,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],
@@ -27114,7 +27087,7 @@
         },
         "segments": [
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
             "costumeNames": [
               "「センパイ。」制服衣装",
             ],

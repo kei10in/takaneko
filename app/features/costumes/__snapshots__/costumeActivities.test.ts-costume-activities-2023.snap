@@ -993,10 +993,10 @@
       {
         "acts": [
           {
-            "actTitle": "コラボパフォーマンス",
+            "actTitle": undefined,
           },
           {
-            "actTitle": "本編",
+            "actTitle": undefined,
           },
         ],
         "event": {
@@ -1115,13 +1115,13 @@
       {
         "acts": [
           {
-            "actTitle": "第一部 楽曲交換",
+            "actTitle": "第一部",
           },
           {
             "actTitle": "第一部",
           },
           {
-            "actTitle": "第二部 楽曲交換",
+            "actTitle": "第二部",
           },
           {
             "actTitle": "第二部",
@@ -1141,13 +1141,13 @@
       {
         "acts": [
           {
-            "actTitle": "第一部 楽曲交換",
+            "actTitle": "第一部",
           },
           {
             "actTitle": "第一部",
           },
           {
-            "actTitle": "第二部 楽曲交換",
+            "actTitle": "第二部",
           },
           {
             "actTitle": "第二部",
@@ -1167,13 +1167,13 @@
       {
         "acts": [
           {
-            "actTitle": "第一部 コラボパフォーマンス",
+            "actTitle": "第一部",
           },
           {
             "actTitle": "第一部",
           },
           {
-            "actTitle": "第二部 コラボパフォーマンス",
+            "actTitle": "第二部",
           },
           {
             "actTitle": "第二部",
@@ -1193,13 +1193,13 @@
       {
         "acts": [
           {
-            "actTitle": "第一部 楽曲交換",
+            "actTitle": "第一部",
           },
           {
             "actTitle": "第一部",
           },
           {
-            "actTitle": "第二部 楽曲交換",
+            "actTitle": "第二部",
           },
           {
             "actTitle": "第二部",

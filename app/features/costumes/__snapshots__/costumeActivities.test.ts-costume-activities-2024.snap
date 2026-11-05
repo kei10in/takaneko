@@ -3023,18 +3023,18 @@
   {
     "costumeName": "「センパイ。」制服衣装",
     "costumeSlug": "センパイ制服衣装",
-    "count": 6,
+    "count": 5,
     "lives": [
       {
         "acts": [
           {
-            "actTitle": "全員",
+            "actTitle": undefined,
           },
           {
-            "actTitle": "高嶺のなでしこブロック",
+            "actTitle": undefined,
           },
           {
-            "actTitle": "アンコール 全員",
+            "actTitle": undefined,
           },
         ],
         "event": {
@@ -3051,13 +3051,10 @@
       {
         "acts": [
           {
-            "actTitle": "全員",
+            "actTitle": undefined,
           },
           {
-            "actTitle": "高嶺のなでしこブロック",
-          },
-          {
-            "actTitle": "アンコール 全員",
+            "actTitle": undefined,
           },
         ],
         "event": {
