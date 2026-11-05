@@ -1,6 +1,7 @@
 import { BsHeadphones, BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle, HiLink } from "react-icons/hi2";
 import { Link } from "react-router";
+import { YouTubeEmbedPlayer } from "~/components/YouTubeEmbedPlayer.tsx";
 import { AppleMusicIcon } from "~/features/components/logos/AppleMusicIcon.tsx";
 import { SpotifyIcon } from "~/features/components/logos/SpotifyIcon.tsx";
 import { YouTubeMusicIcon } from "~/features/components/logos/YouTubeMusicIcon.tsx";
@@ -89,16 +90,7 @@ export default function Component() {
               <p>ミュージックビデオは公開されていません。</p>
             </div>
           ) : (
-            // YouTube の公式プレイヤーの再生・認証機能を維持するため sandbox は指定しません。
-            // oxlint-disable-next-line react/iframe-missing-sandbox
-            <iframe
-              className="aspect-video w-full"
-              src={youtubeEmbedUrl}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
+            <YouTubeEmbedPlayer src={youtubeEmbedUrl} />
           )}
         </div>
       </section>
