@@ -44,7 +44,7 @@ export default function Component() {
   const lives = performances?.lives ?? [];
 
   return (
-    <section>
+    <section className="px-4">
       <h2 className={sectionHeading("sticky top-0 z-10 bg-white/90 py-2 lg:top-(--header-height)")}>
         <span className="flex items-center gap-2">
           <BsMicFill className="inline-block text-gray-400" />

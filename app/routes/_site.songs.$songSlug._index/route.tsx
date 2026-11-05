@@ -1,7 +1,6 @@
 import { BsHeadphones, BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle, HiLink } from "react-icons/hi2";
 import { Link } from "react-router";
-import { Fragment } from "react/jsx-runtime";
 import { sectionHeading } from "~/components/styles.ts";
 import { AppleMusicIcon } from "~/features/components/logos/AppleMusicIcon.tsx";
 import { SpotifyIcon } from "~/features/components/logos/SpotifyIcon.tsx";
@@ -43,7 +42,7 @@ export default function Component() {
   ];
 
   return (
-    <Fragment>
+    <div className="px-4">
       <section>
         <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
           <span className="flex items-center gap-2">
@@ -142,7 +141,7 @@ export default function Component() {
           )}
         </dl>
       </section>
-    </Fragment>
+    </div>
   );
 }
 

@@ -115,9 +115,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
           ))}
         </nav>
 
-        <div className="px-4">
-          <Outlet context={outletContext} />
-        </div>
+        <Outlet context={outletContext} />
       </div>
     </section>
   );

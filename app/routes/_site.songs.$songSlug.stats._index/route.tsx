@@ -57,14 +57,16 @@ export default function Component() {
 
   if (isLoading || today == undefined) {
     return (
-      <output className="flex flex-col items-center gap-3 py-20 text-sm text-zinc-500">
+      <output className="flex flex-col items-center gap-3 px-4 py-20 text-sm text-zinc-500">
         <BsBarChartLineFill className="size-10 animate-pulse text-zinc-300" aria-hidden="true" />
         <span>統計データを読み込んでいます…</span>
       </output>
     );
   }
   if (performances == undefined) {
-    return <p className="py-12 text-center text-zinc-500">統計データを読み込めませんでした。</p>;
+    return (
+      <p className="px-4 py-12 text-center text-zinc-500">統計データを読み込めませんでした。</p>
+    );
   }
 
   const statistics = calculateSongStatistics(performances);
@@ -78,7 +80,7 @@ export default function Component() {
   const intervals = statistics.intervals;
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 px-4">
       <section aria-label="サマリー">
         <h2 className={sectionHeading("mb-4 py-2")}>サマリー</h2>
         <dl className="grid grid-cols-2 gap-3 lg:grid-cols-3">

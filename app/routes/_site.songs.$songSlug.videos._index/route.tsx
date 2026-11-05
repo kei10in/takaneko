@@ -46,7 +46,7 @@ export default function Component() {
     .filter((section) => section.videos.length > 0);
 
   return (
-    <section aria-label="ビデオ" className="space-y-4">
+    <section aria-label="ビデオ" className="space-y-4 px-4">
       {sections.map((section) => (
         <section key={section.title} aria-label={section.title}>
           <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
