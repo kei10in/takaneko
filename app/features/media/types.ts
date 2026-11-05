@@ -19,6 +19,8 @@ export interface OgpMediaDescriptor {
   category: "video" | "article" | "audio";
   presents: MemberIdOrGroupId[];
   officialTwitter?: string;
+  links?: string[];
+  paid?: boolean;
 }
 
 export interface StaticMediaDescriptor {

@@ -3,6 +3,95 @@ import { MediaDetails } from "~/features/media/types.ts";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73686",
+    title:
+      "高嶺のなでしこ・橋本桃呼 「ファンの方の人生に私の名前を刻みたい」自分らしい美学を貫く覚悟【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73686",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/66b85987e1473018b852d73f0115d6a3.jpg",
+    category: "article",
+    presents: ["橋本桃呼"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73682",
+    title:
+      "高嶺のなでしこ・葉月紗蘭「歌が好き」を武器に！　夢にも満たなかった憧れが原点【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73682",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/6168305e10cb1255f6e2b5b2f5ad3573-1.jpg",
+    category: "article",
+    presents: ["葉月紗蘭"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73659",
+    title:
+      "高嶺のなでしこ・東山恵里沙　起動音は「ニャー」!?　猫好きアイドルの愛用品とマイペースな素顔【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73659",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/f5bb6c3948b3d3ef65fa0565f9d51417-1.jpg",
+    category: "article",
+    presents: ["東山恵里沙"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73624",
+    title:
+      "高嶺のなでしこ・日向端ひな「ロングスカートの動きにも注目して！」HoneyWorksの楽曲がライブでさらに輝く理由【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73624",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/235add74c2ee8f237fd4b6d094ce64e8.jpg",
+    category: "article",
+    presents: ["日向端ひな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73619",
+    title:
+      "高嶺のなでしこ・松本ももな　「お揃いが着たい♡ 」ファンと叶えたいお洋服プロデュースの夢【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73619",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/28258d1d2a2f5e1424fe0c91f2eac851.jpg",
+    category: "article",
+    presents: ["松本ももな"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73588",
+    title:
+      "高嶺のなでしこ・籾山ひめり「マイクを持つことに憧れて」約10年の活動で見つけた自分らしさ【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73588",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/a559abe0786d43f574fd3ce026a38e1f.jpg",
+    category: "article",
+    presents: ["籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://xtrend.nikkei.com/atcl/contents/18/01397/00013/",
+    title: "高嶺のなでしこ　変化を乗り越え歴史をつなぐ　新体制で踏み出す一歩",
+    authorName: "日経クロストレンド",
+    publishedAt: "2026-11-04",
+    mediaUrl: "https://xtrend.nikkei.com/atcl/contents/18/01397/00013/",
+    imageUrl: "https://xtrend.nikkei.com/atcl/contents/18/01397/00013/nxr_m.jpg",
+    category: "article",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
+    kind: "ogp",
     key: "https://www.tvlife.jp/pickup/kizukinao/818320",
     title:
       "ホラー大好き城月菜央の「ホラー、ほら、おもろい」第17回『ブライアン・シンガーのトリック・オア・トリート』 | TV LIFE web",
@@ -99,13 +188,11 @@ export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
     key: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
-    title:
-      "SKE48研究生が高嶺のなでしこ、Jams Collectionとトークコラボ！ - Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス",
+    title: "Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス",
     authorName: "Locipo（ロキポ） 無料テレビ動画・見逃しネット配信サービス",
     publishedAt: "2026-09-18",
     mediaUrl: "https://locipo.jp/creative/05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94",
-    imageUrl:
-      "https://assets.locipo.jp/creatives/179229/original-05c1bb42-9a72-4ff2-8dcb-4ae90e13ad94-20260918022820.jpg",
+    imageUrl: "https://locipo.jp/og.png",
     category: "video",
     presents: ["高嶺のなでしこ3"],
   },
