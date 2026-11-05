@@ -7,7 +7,7 @@ import { Setlist } from "./Setlist.tsx";
 afterEach(cleanup);
 
 describe("Setlist", () => {
-  it("セクションを曲番のない見出しとして表示し、後続の曲番と曲数を維持する", () => {
+  it("セクションを曲番のない見出しとして表示し、後続の曲番をリセットして曲数を維持する", () => {
     render(
       <MemoryRouter>
         <Setlist
@@ -28,12 +28,25 @@ describe("Setlist", () => {
     expect(items).toHaveLength(5);
     expect(within(items[0]).getByText("1")).toBeTruthy();
     expect(items[1].textContent).toBe("スペシャルパート");
-    expect(within(items[2]).getByText("2")).toBeTruthy();
+    expect(within(items[2]).getByText("1")).toBeTruthy();
     expect(within(items[2]).getByText("テスト楽曲 B")).toBeTruthy();
     expect(within(items[2]).getByText("アンチファン衣装")).toBeTruthy();
     expect(items[3].textContent).toBe("アンコール");
     expect(within(items[4]).getByText("1")).toBeTruthy();
     expect(screen.getByText("3 曲")).toBeTruthy();
+  });
+
+  it("タイトル付きのアンコールは接頭辞を含めて表示する", () => {
+    render(
+      <MemoryRouter>
+        <Setlist setlist={parseSetlist(["アンコール: コラボ", "テスト楽曲"])} links={[]} />
+      </MemoryRouter>,
+    );
+
+    const items = within(screen.getByRole("list")).getAllByRole("listitem");
+    expect(items[0].textContent).toBe("アンコール: コラボ");
+    expect(within(items[1]).getByText("1")).toBeTruthy();
+    expect(screen.getByText("1 曲")).toBeTruthy();
   });
 
   it("曲だけを数え、曲一覧の後に曲数と出典を表示する", () => {

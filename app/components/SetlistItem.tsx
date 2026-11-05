@@ -50,7 +50,7 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
     return <SimpleListItem icon="interlude" text={text} subtext={subtext} />;
   }
   if (part.kind == "encore") {
-    const text = "アンコール";
+    const text = part.title ? `アンコール: ${part.title}` : "アンコール";
     return <SectionListItem text={text} />;
   }
   if (part.kind == "section") {

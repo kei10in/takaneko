@@ -39,7 +39,7 @@ describe("parseSetlist", () => {
   });
 
   it.each(["main", "encore"])(
-    "セクションの見出しを挟んでも %s の曲番と衣装を引き継ぐ",
+    "セクションの見出しで %s の曲番をリセットし、衣装を引き継ぐ",
     (section) => {
       const input = [
         "衣装: アンチファン衣装",
@@ -61,7 +61,7 @@ describe("parseSetlist", () => {
         {
           kind: "song",
           section,
-          index: 1,
+          index: 0,
           songTitle: "Song B",
           costumeNames: ["アンチファン衣装"],
         },
@@ -78,6 +78,18 @@ describe("parseSetlist", () => {
       { kind: "song", section: "encore", index: 0, songTitle: "Song D" },
     ]);
   });
+
+  it.each(["アンコール: コラボ", "Encore: コラボ"])(
+    "%s のコロン以降をタイトルとしてアンコールと認識する",
+    (title) => {
+      expect(parseSetlist(["Song A", title, "Song B", "Song C"])).toEqual([
+        { kind: "song", section: "main", index: 0, songTitle: "Song A" },
+        { kind: "encore", title: "コラボ" },
+        { kind: "song", section: "encore", index: 0, songTitle: "Song B" },
+        { kind: "song", section: "encore", index: 1, songTitle: "Song C" },
+      ]);
+    },
+  );
 
   it("parse announcement with members", () => {
     const input = ["影ナレ: 葉月紗蘭、東山恵里沙", "Song E"];
@@ -137,6 +149,13 @@ describe("parseSetlist", () => {
 });
 
 describe("formatSetlist", () => {
+  it("タイトル付きのアンコールは接頭辞を含めてコピーする", () => {
+    const setlist = parseSetlist(["アンコール: コラボ", "Song A"]);
+    expect(formatSetlist(setlist, { copyWithMC: false, copyWithOrder: true })).toBe(
+      "(アンコール: コラボ)\nEN1 Song A",
+    );
+  });
+
   it.each([
     {
       copyWithOrder: false,
@@ -144,7 +163,7 @@ describe("formatSetlist", () => {
     },
     {
       copyWithOrder: true,
-      expected: "M1 Song A\n(スペシャルパート)\nM2 Song B\n(アンコール)\nEN1 Song C",
+      expected: "M1 Song A\n(スペシャルパート)\nM1 Song B\n(アンコール)\nEN1 Song C",
     },
   ])("セクションの見出しを含めてコピーする: 曲番 $copyWithOrder", ({ copyWithOrder, expected }) => {
     const setlist = parseSetlist([
