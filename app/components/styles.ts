@@ -13,7 +13,7 @@ export const pageHeading = (...args: ClassValue[]) => {
 };
 
 export const sectionHeading = (...args: ClassValue[]) => {
-  return clsx("text-2xl text-gray-600", ...args);
+  return clsx("text-2xl text-zinc-600", ...args);
 };
 
 export const dialogBackdropStyle = () => {

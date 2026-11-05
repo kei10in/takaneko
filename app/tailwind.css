@@ -111,7 +111,7 @@
   }
 
   .section-heading {
-    @apply text-2xl;
+    @apply text-2xl text-zinc-600;
   }
 
   .main-viewport {

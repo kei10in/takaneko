@@ -1,7 +1,6 @@
 import { BsHeadphones, BsPlayBtnFill } from "react-icons/bs";
 import { HiInformationCircle, HiLink } from "react-icons/hi2";
 import { Link } from "react-router";
-import { sectionHeading } from "~/components/styles.ts";
 import { AppleMusicIcon } from "~/features/components/logos/AppleMusicIcon.tsx";
 import { SpotifyIcon } from "~/features/components/logos/SpotifyIcon.tsx";
 import { YouTubeMusicIcon } from "~/features/components/logos/YouTubeMusicIcon.tsx";
@@ -42,9 +41,9 @@ export default function Component() {
   ];
 
   return (
-    <div className="mt-8 px-4">
+    <div className="mt-8 space-y-8 px-4">
       <section>
-        <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
+        <h2 className="section-heading">
           <span className="flex items-center gap-2">
             <BsHeadphones className="inline-block text-gray-400" aria-hidden="true" />
             <span>ストリーミング</span>
@@ -77,14 +76,14 @@ export default function Component() {
         )}
       </section>
 
-      <section className="mt-12">
-        <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
+      <section>
+        <h2 className="section-heading">
           <span className="flex items-center gap-2">
             <BsPlayBtnFill className="inline-block text-gray-400" aria-hidden="true" />
             <span>ビデオ</span>
           </span>
         </h2>
-        <div className="py-4">
+        <div className="pt-4 pb-8">
           {youtubeEmbedUrl == undefined ? (
             <div className="mt-4 flex aspect-video w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
               <p>ミュージックビデオは公開されていません。</p>
@@ -104,8 +103,8 @@ export default function Component() {
         </div>
       </section>
 
-      <section aria-label="情報" className="mt-12">
-        <h2 className={sectionHeading("sticky top-0 bg-white/90 py-2 lg:top-(--header-height)")}>
+      <section aria-label="情報" className="mb-16">
+        <h2 className="section-heading">
           <span className="flex items-center gap-2">
             <HiInformationCircle className="inline-block text-gray-400" aria-hidden="true" />
             <span>情報</span>
