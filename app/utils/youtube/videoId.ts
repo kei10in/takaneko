@@ -8,8 +8,9 @@ export const extractYouTubeVideoId = (input: string | undefined): string | undef
   const videoIdPattern = /^[a-zA-Z0-9_-]{11}$/u;
 
   // 1. videoId 単体
-  if (videoIdPattern.test(input)) {
-    return input;
+  const videoId = input.split(/[?#]/u)[0];
+  if (videoIdPattern.test(videoId)) {
+    return videoId;
   }
 
   // 2. URL として parse できる場合
@@ -52,7 +53,9 @@ export const extractYouTubeVideoId = (input: string | undefined): string | undef
   if (
     (url.hostname === "www.youtube.com" ||
       url.hostname === "youtube.com" ||
-      url.hostname.endsWith(".youtube.com")) &&
+      url.hostname.endsWith(".youtube.com") ||
+      url.hostname === "www.youtube-nocookie.com" ||
+      url.hostname === "youtube-nocookie.com") &&
     url.pathname.startsWith("/embed/")
   ) {
     const id = url.pathname.split("/")[2];

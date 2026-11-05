@@ -24,7 +24,7 @@ export const meta: Route.MetaFunction = ({ matches }) => {
 
 export default function Component() {
   const { track } = useSongOutletContext();
-  const youtubeEmbedUrl = SongMeta.youtubeEmbedUrl(track);
+  const video = SongMeta.youtubeVideo(track);
 
   const streamings = [
     { Icon: SpotifyIcon, url: track?.recordings?.[0]?.spotify?.[0], name: "Spotify" },
@@ -85,12 +85,12 @@ export default function Component() {
           </span>
         </h2>
         <div className="pt-4 pb-8">
-          {youtubeEmbedUrl == undefined ? (
+          {video == undefined ? (
             <div className="mt-4 flex aspect-video w-full items-center justify-center rounded-3xl bg-zinc-100 text-zinc-700">
               <p>ミュージックビデオは公開されていません。</p>
             </div>
           ) : (
-            <YouTubeEmbedPlayer src={youtubeEmbedUrl} />
+            <YouTubeEmbedPlayer videoId={video.videoId} />
           )}
         </div>
       </section>
