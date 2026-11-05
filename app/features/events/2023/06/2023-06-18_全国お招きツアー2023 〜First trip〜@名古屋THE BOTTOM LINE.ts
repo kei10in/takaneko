@@ -16,18 +16,13 @@ export const meta: EventMetaDescriptor = {
   ],
   acts: [
     {
-      title: "コラボパフォーマンス",
       types: ["LIVE"],
       setlist: [
+        "セクション: コラボパフォーマンス",
         "衣装:全国お招きツアー衣装",
         "可愛くてごめん (TEAM SHACHI コラボ)",
         "抱きしめてアンセム (TEAM SHACHI コラボ)",
-      ],
-    },
-    {
-      title: "本編",
-      types: ["LIVE"],
-      setlist: [
+        "セクション: 高嶺のなでしこ",
         "衣装:全国お招きツアー衣装",
         "Overture",
         "革命の女王",
