@@ -28,5 +28,14 @@ export const アイのウイルス: SongMetaDescriptor = {
       publishedAt: "2024-12-11",
     },
   ],
-  linkfire: "https://jvcmusic.lnk.to/takaneko_2ndsingle",
+
+  recordings: [
+    {
+      isrc: "JPVI02403452",
+      appleMusic: ["https://music.apple.com/jp/album/1781576207?i=1781576391"],
+      spotify: ["https://open.spotify.com/track/1tH2rsK2nlbsp32iPLRfWS"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=8wCCjuPhQ9M"],
+      linkfire: ["https://jvcmusic.lnk.to/takaneko_2ndsingle"],
+    },
+  ],
 };

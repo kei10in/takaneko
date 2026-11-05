@@ -41,5 +41,4 @@ export const 超絶かわいい: SongMetaDescriptor = {
       publishedAt: "2023-01-18",
     },
   ],
-  linkcore: undefined,
 };

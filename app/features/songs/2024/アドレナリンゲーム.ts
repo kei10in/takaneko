@@ -44,5 +44,14 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
       publishedAt: "2024-10-06",
     },
   ],
-  linkfire: "https://jvcmusic.lnk.to/adrenalinegame",
+
+  recordings: [
+    {
+      isrc: "JPVI02402963",
+      appleMusic: ["https://music.apple.com/jp/album/1775348611?i=1775348612"],
+      spotify: ["https://open.spotify.com/track/1Lyhz0tWjtBRb3mLiwiIlQ"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=Ik_H0g-Qps8"],
+      linkfire: ["https://jvcmusic.lnk.to/adrenalinegame"],
+    },
+  ],
 };

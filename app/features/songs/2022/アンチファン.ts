@@ -40,5 +40,14 @@ export const アンチファン: SongMetaDescriptor = {
       publishedAt: "2022-08-28",
     },
   ],
-  linkcore: "https://linkco.re/8NCaQgFT",
+
+  recordings: [
+    {
+      isrc: "JPZ922209406",
+      appleMusic: ["https://music.apple.com/jp/album/1647497771?i=1647498354"],
+      spotify: ["https://open.spotify.com/track/3RW6TgCDRv1nNthG1AIjiF"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=BCO8Cfa-eV8"],
+      tunecore: ["https://linkco.re/8NCaQgFT"],
+    },
+  ],
 };

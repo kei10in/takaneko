@@ -28,4 +28,14 @@ export const 約束: SongMetaDescriptor = {
       publishedAt: "2026-10-29",
     },
   ],
+
+  recordings: [
+    {
+      isrc: "JPVI02602821",
+      appleMusic: ["https://music.apple.com/jp/album/6820802797?i=6820802798"],
+      spotify: ["https://open.spotify.com/track/7evuwF8PwnhFT2T9dFH4cM"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=XtVfZh_6mv0"],
+      linkfire: ["https://jvcmusic.lnk.to/Yakusoku"],
+    },
+  ],
 };

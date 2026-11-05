@@ -31,5 +31,4 @@ export const ファンサ: SongMetaDescriptor = {
       publishedAt: "2020-05-28",
     },
   ],
-  linkcore: undefined,
 };

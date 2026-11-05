@@ -69,16 +69,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
               />
             </div>
 
-            <div className={"flex flex-row-reverse items-center justify-end gap-4 px-4 py-4"}>
-              <div>
-                <h1 className={clsx("page-heading")}>{track.name}</h1>
-
-                {track.digitalRelease && (
-                  <p className="page-description text-shadow-lg text-shadow-white">
-                    {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
-                  </p>
-                )}
-              </div>
+            <div className={"flex items-center justify-start gap-4 px-4 py-4"}>
               <div className="my-1 size-26 shrink-0 lg:size-32">
                 {track.coverArt ? (
                   <ThumbnailImage
@@ -88,8 +79,17 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
                   />
                 ) : (
                   <div className="flex size-full items-center justify-center rounded-[20%] bg-nadeshiko-200">
-                    <HiMusicalNote className="size-2/3 text-nadeshiko-700" />
+                    <HiMusicalNote className="size-1/2 text-nadeshiko-700" />
                   </div>
+                )}
+              </div>
+              <div>
+                <h1 className={clsx("page-heading line-clamp-2")}>{track.name}</h1>
+
+                {track.digitalRelease && (
+                  <p className="page-description line-clamp-1 text-shadow-lg text-shadow-white">
+                    {track.digitalRelease.replace(/-/gu, ".")} <span className="">release</span>
+                  </p>
                 )}
               </div>
             </div>
@@ -97,10 +97,10 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
         </div>
       </div>
 
-      <div className="container mx-auto pb-8 lg:max-w-5xl">
+      <div className="container mx-auto mt-6 pb-8 lg:max-w-5xl">
         <nav
           aria-label="楽曲詳細"
-          className="hidden-scrollbar flex items-center gap-2 overflow-x-scroll mask-x-from-[calc(100%-1rem)] px-4 py-4"
+          className="hidden-scrollbar flex items-center gap-2 overflow-x-scroll mask-x-from-[calc(100%-1rem)] px-4"
         >
           {tabs.map((tab) => (
             <NavLink
@@ -115,9 +115,7 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
           ))}
         </nav>
 
-        <div className="px-4">
-          <Outlet context={outletContext} />
-        </div>
+        <Outlet context={outletContext} />
       </div>
     </section>
   );

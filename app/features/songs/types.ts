@@ -22,6 +22,15 @@ export interface SongVideo {
   publishedAt: string;
 }
 
+export interface SongRecording {
+  isrc: string;
+  appleMusic?: string[];
+  spotify?: string[];
+  youtubeMusic?: string[];
+  tunecore?: string[];
+  linkfire?: string[];
+}
+
 export interface SongMetaDescriptor {
   slug: string;
   name: string;
@@ -42,9 +51,10 @@ export interface SongMetaDescriptor {
 
   featuredMembers?: MemberId[] | undefined;
   officialSite?: string | undefined;
+
   youtube?: SongVideo[] | undefined;
-  linkcore?: string;
-  linkfire?: string;
+
+  recordings?: SongRecording[];
 }
 
 export interface SongTag {

@@ -40,4 +40,14 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
       publishedAt: "2025-12-25",
     },
   ],
+
+  recordings: [
+    {
+      isrc: "JPVI02502853",
+      appleMusic: ["https://music.apple.com/jp/album/1853466151?i=1853466167"],
+      spotify: ["https://open.spotify.com/track/1nhlS4r8SMczi5ZXjHLFbN"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=N2WAUvn4z6s"],
+      linkfire: ["https://jvcmusic.lnk.to/HanawaChikaioWasurenai"],
+    },
+  ],
 };

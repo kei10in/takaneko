@@ -40,5 +40,14 @@ export const 僕は君になれない: SongMetaDescriptor = {
       publishedAt: "2025-09-03",
     },
   ],
-  linkcore: "https://linkco.re/mmANYVTN",
+
+  recordings: [
+    {
+      isrc: "TCJPV2345590",
+      appleMusic: ["https://music.apple.com/jp/album/1680375821?i=1680375825"],
+      spotify: ["https://open.spotify.com/track/4Z8vhVupeXiEcg8NNhlD9M"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=MjEqy2FNPl0"],
+      tunecore: ["https://linkco.re/mmANYVTN"],
+    },
+  ],
 };

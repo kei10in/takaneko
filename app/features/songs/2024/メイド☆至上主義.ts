@@ -51,5 +51,14 @@ export const メイド至上主義: SongMetaDescriptor = {
       publishedAt: "2023-11-04",
     },
   ],
-  linkcore: "https://linkco.re/PrATe6tS",
+
+  recordings: [
+    {
+      isrc: "TCJPA2441797",
+      appleMusic: ["https://music.apple.com/jp/album/1745898906?i=1745898907"],
+      spotify: ["https://open.spotify.com/track/5p98YzvJyJKWghRstA0DTO"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=fhYXw05UNUo"],
+      tunecore: ["https://linkco.re/PrATe6tS"],
+    },
+  ],
 };

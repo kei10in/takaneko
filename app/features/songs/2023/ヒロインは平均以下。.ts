@@ -45,5 +45,14 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
       publishedAt: "2023-04-10",
     },
   ],
-  linkcore: "https://linkco.re/d9zs5rbD",
+
+  recordings: [
+    {
+      isrc: "JPZ922305484",
+      appleMusic: ["https://music.apple.com/jp/album/1695636301?i=1695636305"],
+      spotify: ["https://open.spotify.com/track/4348C79ySjlt0nCIDrtUVa"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=QPrQwcZpOgE"],
+      tunecore: ["https://linkco.re/d9zs5rbD"],
+    },
+  ],
 };

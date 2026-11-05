@@ -40,5 +40,14 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
       publishedAt: "2019-07-08",
     },
   ],
-  linkcore: "https://linkco.re/vPangYRN",
+
+  recordings: [
+    {
+      isrc: "JPZ922305487",
+      appleMusic: ["https://music.apple.com/jp/album/1698657379?i=1698657404"],
+      spotify: ["https://open.spotify.com/track/31s4K7QAmxO4WeT8uc2fke"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=ZHkv7i93KSI"],
+      tunecore: ["https://linkco.re/vPangYRN"],
+    },
+  ],
 };
