@@ -105,6 +105,7 @@ import { モデルプレスカウントダウンマガジン_vol10 } from "./pub
 import {
   日経エンタテインメント_2024年2月号,
   日経エンタテインメント_2025年10月号,
+  日経エンタテインメント_2026年12月号,
   日経エンタテインメント_アイドル_Special_GIRL_POP_VELOCITY,
 } from "./publications/日経エンタテイメント.ts";
 import { 月刊ENTAME_2023年3_4月合併号, 月刊ENTAME_2024年8月号 } from "./publications/月刊ENTAME.ts";
@@ -206,6 +207,7 @@ const publications: Publication[] = [
   週刊少年チャンピオン_2025年No32,
   日経エンタテインメント_2024年2月号,
   日経エンタテインメント_2025年10月号,
+  日経エンタテインメント_2026年12月号,
   日経エンタテインメント_アイドル_Special_GIRL_POP_VELOCITY,
   月刊ENTAME_2023年3_4月合併号,
   月刊ENTAME_2024年8月号,

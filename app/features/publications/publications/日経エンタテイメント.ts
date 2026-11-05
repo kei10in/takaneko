@@ -1,5 +1,29 @@
 import { Publication } from "../types.ts";
 
+export const 日経エンタテインメント_2026年12月号: Publication = {
+  slug: "日経エンタテインメント！ 2026年12月号",
+  name: "日経エンタテインメント！ 2026年12月号",
+  date: "2026-11-04",
+  kind: "magazines",
+  publisher: "日経BP",
+  listPrice: 872,
+  priceWithTax: 960,
+  code: [],
+  url: "https://project.nikkeibp.co.jp/ent/monthly/2026/12/",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-11-04_日経エンタテインメント！_2026年12月号.jpg",
+      ref: "https://x.com/nikkei_ent/status/2117809878232420560",
+    },
+    {
+      path: "/publications/2026/2026-11-04_日経エンタテインメント！_2026年12月号_特装版.jpg",
+      ref: "https://x.com/nikkei_ent/status/2117934932328878315",
+    },
+  ],
+  featuredMembers: ["高嶺のなでしこ3"],
+  officialTwitter: "",
+};
+
 export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VELOCITY: Publication = {
   slug: "日経エンタテインメント！ アイドル Special GIRL POP VELOCITY",
   name: "日経エンタテインメント！ アイドル Special GIRL POP VELOCITY",
