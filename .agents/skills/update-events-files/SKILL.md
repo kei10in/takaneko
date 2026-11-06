@@ -17,7 +17,8 @@ description: Update or create event files under app/features/events in the takan
 編集前に `references/event-patterns.md` を読み、対象に近い実ファイルを最低 1 件選ぶ。  
 テンプレートを優先し、実ファイルは差分確認に使う。現在の主要運用は `.ts` / `.tsx`。
 
-テンプレートにあるフィールドは全てを残すこと。
+新規に追加するイベントについてはテンプレートにあるフィールドは全てを残すこと。
+既存のイベントについては、必要な項目のみを更新し、既存の構造や書き方を崩さないようにする。
 
 ## Workflow
 
