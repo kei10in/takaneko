@@ -18,12 +18,13 @@ export const meta: EventMetaDescriptor = {
     text: "番組ホームページ",
     url: "https://www.fmgifu.com/blog/index_0_37_0.html",
   },
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-06",
 };
 
 export const content = /* md */ `
   ## リンク
 
-  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20261105073000)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMGIFU&t=20261105091615)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=FMGIFU&t=20261105081900)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2115058433632399449)
 `;
