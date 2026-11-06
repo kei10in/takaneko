@@ -49,11 +49,12 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2024-11-04",
+  updatedAt: "2026-11-07",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1557305769883623425)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=352)
 `;

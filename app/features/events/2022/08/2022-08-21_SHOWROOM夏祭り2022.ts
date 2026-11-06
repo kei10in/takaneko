@@ -20,7 +20,7 @@ export const meta: EventMetaDescriptor = {
     url: "https://award.showroom-live.com/summer2022/",
   },
   acts: [],
-  updatedAt: "2026-06-28",
+  updatedAt: "2026-11-07",
 };
 
 export const content = /* md */ `
@@ -42,5 +42,6 @@ export const content = /* md */ `
   ## リンク
 
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1557323393392713728)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=346)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=351)
 `;

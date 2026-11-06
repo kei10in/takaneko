@@ -4,6 +4,8 @@ export const meta: EventMetaDescriptor = {
   summary: "ニッポン放送「高嶺のなでしこのオールナイトニッポン X (クロス)」",
   category: "RADIO",
   date: "2022-08-18",
+  start: "24:00",
+  end: "24:58",
   region: "ラジオ",
   present: ["城月菜央", "星谷美来", "松本ももな", "籾山ひめり"],
   images: [
@@ -13,7 +15,7 @@ export const meta: EventMetaDescriptor = {
     },
   ],
   acts: [],
-  updatedAt: "2026-11-06",
+  updatedAt: "2026-11-07",
 };
 
 export const content = /* md */ `
@@ -25,5 +27,7 @@ export const content = /* md */ `
   - [放送中の投稿 (とんでもなく緊張してます) - 公式 X](https://x.com/takanenofficial/status/1560282600245121025)
   - [放送直前告知 - 番組 X](https://x.com/ANN_Xross/status/1560278339532689408)
   - [ニッポン放送 X 告知](https://x.com/1242_PR/status/1560277852125560832)
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1557654309218619392)
+  - [公式ニュース](https://takanenonadeshiko.jp/?p=354)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=359)
 `;
