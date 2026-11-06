@@ -12,8 +12,8 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2022/2022-08-07_TOKYO IDOL FESTIVAL 2022.jpg",
+      ref: "https://official.idolfes.com/s/tif2022/",
     },
   ],
   link: {
@@ -46,6 +46,7 @@ export const meta: EventMetaDescriptor = {
       ],
     },
   ],
+  updatedAt: "2026-11-06",
 };
 
 export const content = /* md */ `
