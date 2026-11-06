@@ -86,6 +86,7 @@ pnpm vitest run app/features/events/events.test.tsx app/features/events/EventRep
 
 - 動画付きの X 投稿へのリンクには動画の種類とともに動画がある旨カッコ書きします。
 - セットリストについては言及してはいけません。
+- X のポストへのリンクは原則新しいものを上に配置します。
 
 ## References
 
