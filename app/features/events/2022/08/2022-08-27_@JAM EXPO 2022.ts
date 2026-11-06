@@ -10,8 +10,8 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2022/2022-08-27_@JAM EXPO 2022.jpg",
+      ref: "https://atjam.jp/expo2022",
     },
   ],
   acts: [
@@ -33,11 +33,13 @@ export const meta: EventMetaDescriptor = {
       url: "https://x.com/Mikuru_hositani/status/1563481016219471874",
     },
   ],
-  updatedAt: "2024-11-03",
+  updatedAt: "2026-11-07",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [@JAM ガシャ参加告知 - 公式 X](https://x.com/takanenofficial/status/1559117716341919745)
+  - [告知 (メンバー発表の瞬間動画) - 公式 X](https://x.com/takanenofficial/status/1556478400281264130)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=313)
 `;
