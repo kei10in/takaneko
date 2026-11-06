@@ -19,7 +19,11 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [放送後報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/1560302829272649728)
   - [放送後報告 - 番組 X](https://x.com/ANN_Xross/status/1560302810201083904)
+  - [放送中の投稿 (一旦ホッと) - 公式 X](https://x.com/takanenofficial/status/1560289303531380736)
+  - [放送中の投稿 (とんでもなく緊張してます) - 公式 X](https://x.com/takanenofficial/status/1560282600245121025)
+  - [放送直前告知 - 番組 X](https://x.com/ANN_Xross/status/1560278339532689408)
   - [ニッポン放送 X 告知](https://x.com/1242_PR/status/1560277852125560832)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=359)
 `;
