@@ -9,6 +9,7 @@ export const アンチファン: SongMetaDescriptor = {
   composedBy: "shito",
   arrangedBy: "HoneyWorks",
 
+  // https://x.com/enoki_zzz0112/status/1556291349011238913
   choreographedBy: "日下このみ",
 
   videoRelease: "2022-08-27",
