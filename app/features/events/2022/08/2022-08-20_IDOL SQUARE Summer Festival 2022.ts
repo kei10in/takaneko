@@ -42,6 +42,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [“推し”のステージに雨にも負けず大熱狂！人気アイドル10組が出演の夏フェス『IDOL SQUARE Summer Festival 2022 in日比谷野音 ～推しは推せる時に推せ～』の模様をレポート – ニッポン放送 NEWS ONLINE](https://news.1242.com/article/381482)
+  - [レポート記事告知 - ニッポン放送 ただいま営業中 X](https://x.com/jolf_sales/status/1561705129682010117)
   - [出演後ポスト - 公式 X](https://x.com/takanenofficial/status/1560922262961721344)
   - [出演直前ポスト (円陣動画あり) - 公式 X](https://x.com/takanenofficial/status/1560878231724519425)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1556583532566179840)
