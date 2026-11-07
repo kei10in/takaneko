@@ -468,7 +468,10 @@
       {
         "event": {
           "date": "2022-09-18",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール.jpg",
+            "ref": "https://tiget.net/events/198618",
+          },
           "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
@@ -514,7 +517,10 @@
       {
         "event": {
           "date": "2022-09-15",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-15_IDOL SQUARE NEXT.jpg",
+            "ref": "https://x.com/takanenofficial/status/1567492984744345600",
+          },
           "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
@@ -546,7 +552,10 @@
       {
         "event": {
           "date": "2022-09-13",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-13_MARQUEE Fes. -day 1-.jpg",
+            "ref": "https://x.com/MARQUEE_matsuri/status/1569499194645413889",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -569,7 +578,10 @@
       {
         "event": {
           "date": "2022-08-31",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-31_エンドレスサマー2022.jpg",
+            "ref": "https://x.com/takanenofficial/status/1560592455237390338",
+          },
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -601,7 +613,10 @@
       {
         "event": {
           "date": "2022-08-27",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-27_@JAM EXPO 2022.jpg",
+            "ref": "https://atjam.jp/expo2022",
+          },
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -633,7 +648,10 @@
       {
         "event": {
           "date": "2022-08-20",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-20_IDOL SQUARE Summer Festival 2022_タイムテーブル.jpg",
+            "ref": "https://idolsquare.com/index_2nd.html",
+          },
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -643,7 +661,7 @@
         },
         "segments": [
           {
-            "actTitle": undefined,
+            "actTitle": "Opening Act",
             "costumeNames": [
               "アンチファン衣装",
             ],
@@ -656,7 +674,10 @@
       {
         "event": {
           "date": "2022-08-07",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-07_TOKYO IDOL FESTIVAL 2022.jpg",
+            "ref": "https://official.idolfes.com/s/tif2022/",
+          },
           "liveType": "FESTIVAL",
           "location": "フジテレビ 湾岸スタジオ 横 公園",
           "region": "東京",
@@ -1194,7 +1215,10 @@
       {
         "event": {
           "date": "2022-09-18",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール.jpg",
+            "ref": "https://tiget.net/events/198618",
+          },
           "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
@@ -1240,7 +1264,10 @@
       {
         "event": {
           "date": "2022-09-15",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-15_IDOL SQUARE NEXT.jpg",
+            "ref": "https://x.com/takanenofficial/status/1567492984744345600",
+          },
           "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
@@ -1263,7 +1290,10 @@
       {
         "event": {
           "date": "2022-09-13",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-13_MARQUEE Fes. -day 1-.jpg",
+            "ref": "https://x.com/MARQUEE_matsuri/status/1569499194645413889",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1295,7 +1325,10 @@
       {
         "event": {
           "date": "2022-08-31",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-31_エンドレスサマー2022.jpg",
+            "ref": "https://x.com/takanenofficial/status/1560592455237390338",
+          },
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -1318,7 +1351,10 @@
       {
         "event": {
           "date": "2022-08-27",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-27_@JAM EXPO 2022.jpg",
+            "ref": "https://atjam.jp/expo2022",
+          },
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -1688,7 +1724,10 @@
       {
         "event": {
           "date": "2022-09-18",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール.jpg",
+            "ref": "https://tiget.net/events/198618",
+          },
           "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
@@ -1734,7 +1773,10 @@
       {
         "event": {
           "date": "2022-09-15",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-15_IDOL SQUARE NEXT.jpg",
+            "ref": "https://x.com/takanenofficial/status/1567492984744345600",
+          },
           "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
@@ -1757,7 +1799,10 @@
       {
         "event": {
           "date": "2022-09-13",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-13_MARQUEE Fes. -day 1-.jpg",
+            "ref": "https://x.com/MARQUEE_matsuri/status/1569499194645413889",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -1780,7 +1825,10 @@
       {
         "event": {
           "date": "2022-08-31",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-31_エンドレスサマー2022.jpg",
+            "ref": "https://x.com/takanenofficial/status/1560592455237390338",
+          },
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -1803,7 +1851,10 @@
       {
         "event": {
           "date": "2022-08-27",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-27_@JAM EXPO 2022.jpg",
+            "ref": "https://atjam.jp/expo2022",
+          },
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -1826,7 +1877,10 @@
       {
         "event": {
           "date": "2022-08-07",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-07_TOKYO IDOL FESTIVAL 2022.jpg",
+            "ref": "https://official.idolfes.com/s/tif2022/",
+          },
           "liveType": "FESTIVAL",
           "location": "フジテレビ 湾岸スタジオ 横 公園",
           "region": "東京",
@@ -2209,7 +2263,10 @@
       {
         "event": {
           "date": "2022-09-18",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール.jpg",
+            "ref": "https://tiget.net/events/198618",
+          },
           "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
@@ -3253,7 +3310,10 @@
       {
         "event": {
           "date": "2022-09-18",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-18_YUMENOHANASHI Premium LIVE 0918@KBSホール.jpg",
+            "ref": "https://tiget.net/events/198618",
+          },
           "liveType": "FESTIVAL",
           "location": "KBSホール",
           "region": "京都",
@@ -3276,7 +3336,10 @@
       {
         "event": {
           "date": "2022-09-15",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-15_IDOL SQUARE NEXT.jpg",
+            "ref": "https://x.com/takanenofficial/status/1567492984744345600",
+          },
           "liveType": "FESTIVAL",
           "location": "有楽町オルタナティブシアター",
           "region": "東京",
@@ -3299,7 +3362,10 @@
       {
         "event": {
           "date": "2022-09-13",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-09-13_MARQUEE Fes. -day 1-.jpg",
+            "ref": "https://x.com/MARQUEE_matsuri/status/1569499194645413889",
+          },
           "liveType": "FESTIVAL",
           "location": "Spotify O-EAST",
           "region": "東京",
@@ -3322,7 +3388,10 @@
       {
         "event": {
           "date": "2022-08-31",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-31_エンドレスサマー2022.jpg",
+            "ref": "https://x.com/takanenofficial/status/1560592455237390338",
+          },
           "liveType": "FESTIVAL",
           "location": "duo MUSIC EXCHANGE",
           "region": "東京",
@@ -3345,7 +3414,10 @@
       {
         "event": {
           "date": "2022-08-27",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-27_@JAM EXPO 2022.jpg",
+            "ref": "https://atjam.jp/expo2022",
+          },
           "liveType": "FESTIVAL",
           "location": "横浜アリーナ",
           "region": "神奈川",
@@ -3368,7 +3440,10 @@
       {
         "event": {
           "date": "2022-08-20",
-          "image": undefined,
+          "image": {
+            "path": "/events/2022/2022-08-20_IDOL SQUARE Summer Festival 2022_タイムテーブル.jpg",
+            "ref": "https://idolsquare.com/index_2nd.html",
+          },
           "liveType": "FESTIVAL",
           "location": "日比谷野外大音楽堂",
           "region": "東京",
@@ -3378,7 +3453,7 @@
         },
         "segments": [
           {
-            "actTitle": undefined,
+            "actTitle": "Opening Act",
             "costumeNames": [
               "アンチファン衣装",
             ],
