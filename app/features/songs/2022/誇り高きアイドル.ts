@@ -9,6 +9,7 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
   composedBy: "shito",
   arrangedBy: "HoneyWorks",
 
+  // https://x.com/Naaaa_7/status/1561262577811726338
   choreographedBy: "NaNa",
 
   videoRelease: undefined,
