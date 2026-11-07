@@ -46,6 +46,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演後報告 (動画あり) - 公式 X](https://x.com/takanenofficial/status/1561285783629180928)
   - [出演直前告知 - 公式 X](https://x.com/takanenofficial/status/1561196787586572289)
   - [タイムテーブル - SHOWROOM X](https://x.com/SHOWROOM_jp/status/1561182682029371393)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1557323393392713728)
