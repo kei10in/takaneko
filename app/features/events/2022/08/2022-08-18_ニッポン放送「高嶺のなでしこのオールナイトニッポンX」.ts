@@ -21,6 +21,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [アーカイブ・アフタートーク公開 - smash. X](https://x.com/smash_media_jp/status/1562734024963006464)
   - [放送後報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/1560302829272649728)
   - [放送後報告 - 番組 X](https://x.com/ANN_Xross/status/1560302810201083904)
   - [放送中の投稿 (一旦ホッと) - 公式 X](https://x.com/takanenofficial/status/1560289303531380736)

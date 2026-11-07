@@ -42,6 +42,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [終演後報告 - 公式 X](https://x.com/takanenofficial/status/1564925980476522496)
+  - [出演直前ポスト (円陣動画あり) - 公式 X](https://x.com/takanenofficial/status/1564907943413174274)
   - [タイムテーブル - Appare! X](https://x.com/official_appare/status/1564226663294324736)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1560592455237390338)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=381)
