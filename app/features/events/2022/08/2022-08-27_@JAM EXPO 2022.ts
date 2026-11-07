@@ -43,6 +43,8 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [ライブレポート - ACTRESS PRESS](https://actresspress.com/takanenonadeshiko-tif202208/)
+  - [ライブレポート紹介 - ACTRESS PRESS X](https://x.com/actresspress/status/1569866410993811456)
   - [終演後報告 (コメント動画あり) - 公式 X](https://x.com/takanenofficial/status/1563479937125797891)
   - [ブルーベリーステージ出演直前ポスト (円陣動画あり) - 公式 X](https://x.com/takanenofficial/status/1563469125787103235)
   - [リアルガシャブース (ガシャ動画あり) - @JAM シリーズ X](https://x.com/at_jam/status/1563436511747788802)

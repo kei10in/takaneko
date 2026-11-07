@@ -5,6 +5,7 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "FESTIVAL",
   date: "2022-10-05",
+  start: "17:00",
   region: "東京",
   location: "LINE CUBE SHIBUYA",
   present: ["高嶺のなでしこ"],
@@ -30,11 +31,14 @@ export const meta: EventMetaDescriptor = {
     ],
     url: "https://x.com/Mikuru_hositani/status/1577582751854649344",
   },
-  updatedAt: "2025-06-21",
+  updatedAt: "2026-11-07",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [告知 - 公式 X](https://x.com/takanenofficial/status/1568466910895013890)
+  - [告知 - アイドルガーデン X](https://x.com/IDOLGARDEN0319/status/1568465380448043009)
+  - [出演告知 - 公式サイト](https://takanenonadeshiko.jp/?p=432)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=434)
 `;

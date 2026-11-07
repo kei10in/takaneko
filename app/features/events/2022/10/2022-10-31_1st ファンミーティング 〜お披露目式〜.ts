@@ -5,6 +5,8 @@ export const meta: EventMetaDescriptor = {
   category: "LIVE",
   liveType: "SOLO",
   date: "2022-10-31",
+  open: "17:00",
+  start: "18:00",
   region: "東京",
   location: "豊洲PIT",
   present: ["高嶺のなでしこ"],
@@ -55,6 +57,7 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [橋本桃呼からファンミの見どころ発表 (動画) - 公式 X](https://x.com/takanenofficial/status/1569281019651706883)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1557305769883623425)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=352)
 `;
