@@ -7,12 +7,17 @@ export const meta: EventMetaDescriptor = {
   start: "15:15",
   end: "15:45",
   region: "東京",
-  location: "MIYASHITA PARK",
+  location: "MIYASHITA PARK 渋谷区宮下公園屋上",
   present: ["高嶺のなでしこ"],
   images: [
     {
-      path: "",
-      ref: "",
+      path: "/events/2022/2022-08-21_SHOWROOM夏祭り2022.png",
+      ref: "https://award.showroom-live.com/summer2022/",
+    },
+    {
+      path: "/events/2022/2022-08-21_SHOWROOM夏祭り2022_タイムテーブル.jpg",
+      ref: "https://x.com/SHOWROOM_jp/status/1561182682029371393",
+      tags: ["timetable"],
     },
   ],
   link: {
@@ -41,6 +46,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演直前告知 - 公式 X](https://x.com/takanenofficial/status/1561196787586572289)
+  - [タイムテーブル - SHOWROOM X](https://x.com/SHOWROOM_jp/status/1561182682029371393)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/1557323393392713728)
   - [公式ニュース](https://takanenonadeshiko.jp/?p=346)
   - [公式スケジュール](https://takanenonadeshiko.jp/?p=351)
