@@ -33,13 +33,36 @@ export const meta: EventMetaDescriptor = {
     lineup: undefined,
     url: undefined,
   },
-  acts: [],
-  updatedAt: "2026-10-15",
+  acts: [
+    {
+      types: ["LIVE"],
+      setlist: [
+        "衣装: A World in Our Colors 衣装",
+        "初恋のこたえ。",
+        "センパイ。",
+        "ハートブーケ",
+        "初恋のひと。", // 撮影可能
+        "可愛くてごめん",
+        "月曜日の憂鬱",
+        "女の子は強い",
+        "恋を知った世界",
+        "I’M YOUR IDOL",
+        "乙女どもよ。",
+        "誇り高きアイドル",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2118927675393765404"],
+    },
+  ],
+  updatedAt: "2026-11-09",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2118927675393765404)
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2118689863377592676)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2109992563616968821)
   - [ライブ詳細 - 第61回産能祭実行委員会 X](https://x.com/sanno_fes2026/status/2109929752064844053)
   - [告知 - 第61回産能祭実行委員会 X](https://x.com/sanno_fes2026/status/2109929748428431408)
