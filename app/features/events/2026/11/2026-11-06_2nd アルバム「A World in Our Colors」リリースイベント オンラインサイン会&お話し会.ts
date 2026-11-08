@@ -59,7 +59,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-10-29",
+  updatedAt: "2026-11-09",
 };
 
 export const content = /* md */ `
@@ -74,6 +74,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2118338795388944462)
   - [オンラインサイン会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5773)
   - [オンラインお話し会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5776)
   - [詳細告知 - 公式 X](https://x.com/takanenofficial/status/2115805858626208110)
