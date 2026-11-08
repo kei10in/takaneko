@@ -39,12 +39,21 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       open: "11:40",
       start: "12:00",
+      setlist: [
+        "衣装: A World in Our Colors 衣装",
+        "私は、わたしの事が好き。",
+        "小悪魔だってかまわない！",
+        "生きてりゃいい", // 撮影可能
+        "ヒロインは平均以下。",
+        "ファンサ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2119290063309660468"],
     },
     {
       title: "1部 グループショット撮影会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "橋本桃呼", "葉月紗蘭", "東山恵里沙"] },
           { label: "B グループ", members: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"] },
@@ -56,12 +65,21 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       open: "15:10",
       start: "15:30",
+      setlist: [
+        "衣装: A World in Our Colors 衣装",
+        "可愛くてごめん",
+        "花は誓いを忘れない",
+        "世界は恋に落ちている", // 撮影可能
+        "かわいいは常識♡",
+        "初恋のひと。",
+      ],
+      links: ["https://x.com/takanenofficial/status/2119355849097593156"],
     },
     {
       title: "2部 グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "橋本桃呼", "葉月紗蘭", "東山恵里沙"] },
           { label: "B グループ", members: ["涼海すう", "日向端ひな", "松本ももな", "籾山ひめり"] },
@@ -69,7 +87,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-10-15",
+  updatedAt: "2026-11-09",
 };
 
 export const content = /* md */ `
@@ -87,6 +105,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [2部 開催報告 (ダイジェスト動画) - 公式 X](https://x.com/takanenofficial/status/2119355849097593156)
+  - [1部 開催報告 (ダイジェスト動画) - 公式 X](https://x.com/takanenofficial/status/2119290063309660468)
+  - [#きょうのたかねこ](https://x.com/takanenofficial/status/2119220857327296732)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5708)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2110566338511225041)
 `;
