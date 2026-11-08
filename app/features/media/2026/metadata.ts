@@ -3,11 +3,37 @@ import { MediaDetails } from "~/features/media/types.ts";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73725",
+    title:
+      "高嶺のなでしこ・城月菜央「夢はホラー界のアイドル(!?)」個性を武器に広げたい未来とは？【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-06",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73725",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/661c71acc45d7c04ebefcb0c5ff3ce02.jpg",
+    category: "article",
+    presents: ["城月菜央"],
+  },
+  {
+    kind: "ogp",
+    key: "https://scawaiiweb.com/articles/detail/73728",
+    title:
+      "高嶺のなでしこ・涼海すう「monaみたいになりたかった！」小学1年生から続く憧れに向かって【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+    authorName: "S Cawaii!(エスカワイイ)",
+    publishedAt: "2026-11-06",
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73728",
+    imageUrl:
+      "https://scawaiiweb.com/wp-content/uploads/2026/11/6157b88c6d6cf77df4ae387a5d0d3810.jpg",
+    category: "article",
+    presents: ["涼海すう"],
+  },
+  {
+    kind: "ogp",
     key: "https://scawaiiweb.com/articles/detail/73686",
     title:
       "高嶺のなでしこ・橋本桃呼 「ファンの方の人生に私の名前を刻みたい」自分らしい美学を貫く覚悟【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
     authorName: "S Cawaii!(エスカワイイ)",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     mediaUrl: "https://scawaiiweb.com/articles/detail/73686",
     imageUrl:
       "https://scawaiiweb.com/wp-content/uploads/2026/11/66b85987e1473018b852d73f0115d6a3.jpg",
@@ -20,7 +46,7 @@ export const metadata2026: MediaDetails[] = [
     title:
       "高嶺のなでしこ・葉月紗蘭「歌が好き」を武器に！　夢にも満たなかった憧れが原点【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
     authorName: "S Cawaii!(エスカワイイ)",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     mediaUrl: "https://scawaiiweb.com/articles/detail/73682",
     imageUrl:
       "https://scawaiiweb.com/wp-content/uploads/2026/11/6168305e10cb1255f6e2b5b2f5ad3573-1.jpg",
@@ -33,7 +59,7 @@ export const metadata2026: MediaDetails[] = [
     title:
       "高嶺のなでしこ・東山恵里沙　起動音は「ニャー」!?　猫好きアイドルの愛用品とマイペースな素顔【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
     authorName: "S Cawaii!(エスカワイイ)",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     mediaUrl: "https://scawaiiweb.com/articles/detail/73659",
     imageUrl:
       "https://scawaiiweb.com/wp-content/uploads/2026/11/f5bb6c3948b3d3ef65fa0565f9d51417-1.jpg",

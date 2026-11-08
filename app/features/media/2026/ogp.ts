@@ -1,25 +1,25 @@
 import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
-  // {
-  //   mediaUrl: "",
-  //   publishedAt: "2026-11-04",
-  //   category: "article",
-  //   presents: ["城月菜央"],
-  //   officialTwitter: "",
-  //   links: [""],
-  // },
-  // {
-  //   mediaUrl: "",
-  //   publishedAt: "2026-11-04",
-  //   category: "article",
-  //   presents: ["涼海すう"],
-  //   officialTwitter: "",
-  //   links: [""],
-  // },
+  {
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73725",
+    publishedAt: "2026-11-06",
+    category: "article",
+    presents: ["城月菜央"],
+    officialTwitter: "",
+    links: ["https://x.com/mag_scawaii/status/2118653081491767757"],
+  },
+  {
+    mediaUrl: "https://scawaiiweb.com/articles/detail/73728",
+    publishedAt: "2026-11-06",
+    category: "article",
+    presents: ["涼海すう"],
+    officialTwitter: "",
+    links: ["https://x.com/mag_scawaii/status/2118630249152070082"],
+  },
   {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73686",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     category: "article",
     presents: ["橋本桃呼"],
     officialTwitter: "",
@@ -27,7 +27,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
   },
   {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73682",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     category: "article",
     presents: ["葉月紗蘭"],
     officialTwitter: "",
@@ -35,7 +35,7 @@ export const Ogp2026: OgpMediaDescriptor[] = [
   },
   {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73659",
-    publishedAt: "2026-11-04",
+    publishedAt: "2026-11-05",
     category: "article",
     presents: ["東山恵里沙"],
     officialTwitter: "",
