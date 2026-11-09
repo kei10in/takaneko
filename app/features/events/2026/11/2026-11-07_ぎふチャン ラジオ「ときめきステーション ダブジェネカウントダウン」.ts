@@ -22,8 +22,14 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
   ## リンク
 
-  - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20261107120000)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20261107133910)
+  - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20261107130000)
+  - [ゲスト紹介 - ダブジェネカウントダウン X](https://x.com/wgcd1431/status/2118596928011424037)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2115058433632399449)
 `;
