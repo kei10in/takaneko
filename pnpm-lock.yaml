@@ -247,8 +247,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
       konva:
-        specifier: ^10.9.0
-        version: 10.9.0(canvas@3.2.3)
+        specifier: ^10.9.1
+        version: 10.9.1(canvas@3.2.3)
       react:
         specifier: ^19.3.1
         version: 19.3.1
@@ -283,8 +283,8 @@ importers:
         specifier: ^3.10.1
         version: 3.10.1(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react-is@19.3.1)(react@19.3.1)(redux@5.0.1)
       swiper:
-        specifier: ^14.3.0
-        version: 14.3.0
+        specifier: ^14.4.0
+        version: 14.4.0
       swr:
         specifier: ^2.5.1
         version: 2.5.1(react@19.3.1)
@@ -410,8 +410,8 @@ importers:
         specifier: ^3.9.10
         version: 3.9.10
       prettier-plugin-embed:
-        specifier: ^0.8.1
-        version: 0.8.1
+        specifier: ^0.8.2
+        version: 0.8.2
       prettier-plugin-organize-imports:
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.9.10)(typescript@6.0.3)
@@ -2761,8 +2761,8 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  konva@10.9.0:
-    resolution: {integrity: sha512-3NOOlcbimFDp4+/DfXGTBkfn3cn3VP1BESPySQ6ayCzgMA9JSMGJNNxeIKw5jpHL6SAl6gHsrv10DUEjNRL0Qg==}
+  konva@10.9.1:
+    resolution: {integrity: sha512-m49x+GatSxEUSvqahYhxpTjgKbtrLtw4P4o4B4iux953ZFpceaK52Ea+CFsAsd7W4I0Y5u6mMoRUsY/eltNZmw==}
     peerDependencies:
       canvas: ^3.0.0
       skia-canvas: ^3.0.0
@@ -3314,8 +3314,8 @@ packages:
     deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
-  prettier-plugin-embed@0.8.1:
-    resolution: {integrity: sha512-iQdZAAnd7J4B+xzamBEEm6latWYmmKFuoo3KMdq4fi4w1KL//T+vf/5uHTIdcGFe1XtdpGKW+FgsMdOWhDCfXg==}
+  prettier-plugin-embed@0.8.2:
+    resolution: {integrity: sha512-ctzFzw8PWLgv5umnSbaouB+/qTZkR/tyjZX26LsDlTGdmu9CCh4idMOJJt9dv/8clDfuFD9p2Y3AUQ8iWHNUJA==}
 
   prettier-plugin-organize-imports@4.3.0:
     resolution: {integrity: sha512-FxFz0qFhyBsGdIsb697f/EkvHzi5SZOhWAjxcx2dLt+Q532bAlhswcXGYB1yzjZ69kW8UoadFBw7TyNwlq96Iw==}
@@ -3742,8 +3742,8 @@ packages:
     resolution: {integrity: sha512-VL+lNrEoIXww1coLPOmiEmK/0sGigko5COxI09KzHc2VJXJsQ37UaQ+8quuxjDeA7+KnLGTWRyOXSLLR2Wb4jw==}
     engines: {node: '>=12'}
 
-  swiper@14.3.0:
-    resolution: {integrity: sha512-qw0Xv1+sylM8KCQxWxV2iYAK2G6XjFGPZ/8F1baEsY8DK4A3sTnLx6jUJ0G71rDbVQ05JHMWkcWmJ5NvlxZO0w==}
+  swiper@14.4.0:
+    resolution: {integrity: sha512-6axnAuBsttFJe0gwsM5tT203/Bts0vcI+FwIX6dqFE4pUFVW6qrdRprNFQVxOYMW7V0S6A/KIqJ6JaPpNN2MCw==}
     engines: {node: '>= 4.7.0'}
 
   swr@2.5.1:
@@ -6138,7 +6138,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  konva@10.9.0(canvas@3.2.3):
+  konva@10.9.1(canvas@3.2.3):
     optionalDependencies:
       canvas: 3.2.3
 
@@ -6916,7 +6916,7 @@ snapshots:
       tar-fs: 2.1.5
       tunnel-agent: 0.6.0
 
-  prettier-plugin-embed@0.8.1:
+  prettier-plugin-embed@0.8.2:
     dependencies:
       '@types/estree': 1.0.9
       tiny-jsonc: 1.0.2
@@ -7438,7 +7438,7 @@ snapshots:
 
   supports-color@9.4.0: {}
 
-  swiper@14.3.0: {}
+  swiper@14.4.0: {}
 
   swr@2.5.1(react@19.3.1):
     dependencies:
