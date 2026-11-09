@@ -31,6 +31,7 @@ import {
   IDOL_FILE_Vol39,
   IDOL_FILE_Vol40,
   IDOL_FILE_Vol43,
+  IDOL_FILE_Vol44,
 } from "./publications/IDOL FILE.ts";
 import { KIDDY_LAND_FAN_BOOK } from "./publications/KIDDY LAND FAN BOOK.ts";
 import {
@@ -143,6 +144,7 @@ const publications: Publication[] = [
   IDOL_FILE_Vol39,
   IDOL_FILE_Vol40,
   IDOL_FILE_Vol43,
+  IDOL_FILE_Vol44,
   KIDDY_LAND_FAN_BOOK,
   LARME_054,
   LARME_056,

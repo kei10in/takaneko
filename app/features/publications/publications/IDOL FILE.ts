@@ -1,5 +1,35 @@
 import { Publication } from "../types.ts";
 
+export const IDOL_FILE_Vol44: Publication = {
+  slug: "IDOL FILE Vol.44",
+  name: "IDOL FILE Vol.44",
+  date: "2026-11-13",
+  kind: "magazines",
+  publisher: "ロックスエンタテインメント",
+  listPrice: 2000,
+  priceWithTax: 2200,
+  code: [{ kind: "ISBN", value: "978-4-401-76338-2" }],
+  url: "",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-11-13_IDOL FILE Vol.44_表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2118659522101494188",
+    },
+    {
+      path: "/publications/2026/2026-11-13_IDOL FILE Vol.44_裏表紙.jpg",
+      ref: "https://x.com/idolfile_jp/status/2118659522101494188",
+    },
+  ],
+  featuredMembers: ["東山恵里沙"],
+  officialTwitter: "https://x.com/takanenofficial/status/2118670983930274286",
+  links: [
+    {
+      text: "発売情報 - シンコーミュージック・エンタテイメント",
+      url: "https://prtimes.jp/main/html/rd/p/000000043.000157078.html",
+    },
+  ],
+};
+
 export const IDOL_FILE_Vol43: Publication = {
   slug: "IDOL FILE Vol.43",
   name: "IDOL FILE Vol.43",
