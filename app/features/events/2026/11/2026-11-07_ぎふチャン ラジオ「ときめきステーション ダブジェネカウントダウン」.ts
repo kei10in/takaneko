@@ -30,6 +30,7 @@ export const content = /* md */ `
 
   - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20261107133910)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20261107130000)
+  - [明日オンエア - 公式 X](https://x.com/takanenofficial/status/2118697409928999107)
   - [ゲスト紹介 - ダブジェネカウントダウン X](https://x.com/wgcd1431/status/2118596928011424037)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2115058433632399449)
 `;

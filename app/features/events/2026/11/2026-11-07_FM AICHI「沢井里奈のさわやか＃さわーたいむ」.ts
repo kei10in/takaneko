@@ -38,6 +38,7 @@ export const content = /* md */ `
 
   - [radiko 出演時間](https://radiko.jp/share/?sid=FMAICHI&t=20261107093125)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=FMAICHI&t=20261107093000)
+  - [明日オンエア - 公式 X](https://x.com/takanenofficial/status/2118697409928999107)
   - [出演告知 - ビクターナゴヤ X](https://x.com/victor_nagoya/status/2118674765854425426)
   - [出演告知 - 沢井里奈 X](https://x.com/sawai_rina/status/2117928571889168490)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2115058433632399449)
