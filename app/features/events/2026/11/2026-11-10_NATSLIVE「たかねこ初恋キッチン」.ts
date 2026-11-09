@@ -1,7 +1,7 @@
 import { EventMetaDescriptor } from "../../eventMeta.ts";
 
 export const meta: EventMetaDescriptor = {
-  summary: "NATSLIVE「たかねこ初恋キッチン。」",
+  summary: "NATSLIVE「たかねこ初恋キッチン。#11 初恋ルーロー飯。",
   category: "VARIETY",
   liveType: undefined,
   date: "2026-11-10",
@@ -24,7 +24,7 @@ export const meta: EventMetaDescriptor = {
   ticket: "https://fortune-cookie.natslive.jp/lotteries/cCdv1j/entry_sessions/new",
   streamings: {
     text: "NATSLIVE",
-    url: "",
+    url: "https://natslive.jp/episodes/18220",
   },
   goods: {
     time: undefined,
