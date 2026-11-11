@@ -1,0 +1,40 @@
+import { cleanup, render, screen, within } from "@testing-library/react";
+import { createRoutesStub } from "react-router";
+import { afterEach, describe, expect, it } from "vitest";
+import Component from "./route.tsx";
+
+afterEach(cleanup);
+
+describe("ライブ統計", () => {
+  it("累計サマリーの5項目を単位付きで表示する", async () => {
+    const Stub = createRoutesStub([
+      {
+        path: "/stats/live",
+        Component,
+        loader: () => ({
+          data: {
+            aggregatedOn: "2026-11-12",
+            summary: { stages: 1234, events: 800, days: 600, soloStages: 234, jointStages: 900 },
+          },
+        }),
+      },
+    ]);
+    render(<Stub initialEntries={["/stats/live"]} />);
+
+    expect(await screen.findByRole("heading", { name: "サマリー", level: 2 })).toBeTruthy();
+    const summary = screen.getByRole("region", { name: "累計の概要" });
+    const metrics = within(summary)
+      .getAllByRole("term")
+      .map((term) => ({
+        label: term.textContent,
+        value: term.parentElement?.querySelector("dd")?.textContent,
+      }));
+    expect(metrics).toEqual([
+      { label: "ステージ数", value: "1,234ステージ" },
+      { label: "出演イベント数", value: "800件" },
+      { label: "出演日数", value: "600日" },
+      { label: "ワンマン", value: "234ステージ" },
+      { label: "対バン", value: "900ステージ" },
+    ]);
+  });
+});
