@@ -18,6 +18,12 @@ export const meta: MetaFunction = () => {
 
 const items = [
   {
+    title: "ライブ統計",
+    description:
+      "ライブのイベント数・開催日数・ステージ数と、年別・月別のステージ数の推移を確認できます。",
+    url: "/stats/live",
+  },
+  {
     title: "楽曲別パフォーマンス回数",
     description:
       "わかっているすべてのライブのセットリストをもとに楽曲パフォーマンス回数を集計したグラフです。",
