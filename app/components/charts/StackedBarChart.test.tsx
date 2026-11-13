@@ -14,6 +14,94 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
+it("仮想スタックを挟んでも値を正しく積み上げ、凡例・チップ・表には実スタックだけ表示する", async () => {
+  const data = [
+    { label: "期間1", values: [10, 20] },
+    { label: "期間2", values: [0, 0] },
+    { label: "期間3", values: undefined },
+  ];
+  const { rerender } = render(
+    <StackedBarChart
+      name="件数"
+      xAxisLabel="期間"
+      yAxisLabel="合計"
+      unit="件"
+      stacks={[
+        { color: "pink" },
+        { label: "A", color: "red" },
+        { color: "green" },
+        { label: "B", color: "blue" },
+        { color: "orange" },
+      ]}
+      data={data}
+    />,
+  );
+  const chart = screen.getByRole("application");
+  expect(await within(chart).findByText("30")).toBeTruthy();
+  expect(
+    screen.getAllByLabelText(/legend icon$/u).map((icon) => icon.getAttribute("aria-label")),
+  ).toEqual(["A legend icon", "B legend icon"]);
+  const table = screen.getByRole("table", { name: "件数のデータ" });
+  expect(
+    within(table)
+      .getAllByRole("columnheader")
+      .map((cell) => cell.textContent),
+  ).toEqual(["期間", "合計", "A", "B"]);
+  expect(within(table).getByRole("row", { name: "期間1 30 10 20" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "期間2 0 0 0" })).toBeTruthy();
+  expect(
+    within(table).getByRole("row", { name: "期間3 データなし データなし データなし" }),
+  ).toBeTruthy();
+  const tap = (clientX: number) => {
+    fireEvent.pointerDown(chart, { pointerType: "touch", clientX, clientY: 100 });
+    fireEvent.click(chart, { clientX, clientY: 100 });
+  };
+  tap(130);
+  const tooltip = await screen.findByRole("tooltip");
+  expect(
+    within(tooltip)
+      .getAllByRole("term")
+      .map((item) => item.textContent),
+  ).toEqual(["A", "B"]);
+  expect(
+    within(tooltip)
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["10 件", "20 件"]);
+  tap(330);
+  await waitFor(() =>
+    expect(
+      within(tooltip)
+        .getAllByRole("definition")
+        .map((item) => item.textContent),
+    ).toEqual(["0 件", "0 件"]),
+  );
+  tap(530);
+  await waitFor(() =>
+    expect(
+      within(tooltip)
+        .getAllByRole("definition")
+        .map((item) => item.textContent),
+    ).toEqual(["データなし", "データなし"]),
+  );
+  rerender(
+    <StackedBarChart
+      name="件数"
+      xAxisLabel="期間"
+      yAxisLabel="合計"
+      unit="件"
+      stacks={[{ label: "A", color: "red" }, { label: "B", color: "blue" }, { color: "orange" }]}
+      data={data}
+    />,
+  );
+  tap(130);
+  expect(
+    within(await screen.findByRole("tooltip"))
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["10 件", "20 件"]);
+});
+
 it.each(["touch", "pen"])(
   "%s で初回表示・切り替え後の最初のタップで表示し、再タップで閉じる",
   async (pointerType) => {

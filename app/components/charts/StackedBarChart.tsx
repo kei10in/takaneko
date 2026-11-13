@@ -5,6 +5,7 @@ import {
   CartesianGrid,
   LabelList,
   Legend,
+  Rectangle,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -12,10 +13,14 @@ import {
   type RenderableText,
 } from "recharts";
 import { StackedBarChartTooltip } from "./StackedBarChartTooltip.tsx";
-import { sumChartValues, type ChartRow, type ChartStack } from "./stackedBarChartData.ts";
+import {
+  fillVirtualStackValues,
+  sumChartValues,
+  type ChartRow,
+  type ChartStack,
+} from "./stackedBarChartData.ts";
 
 interface Props {
-  /** 集計済みの行では values の長さを stacks と一致させ、同じ位置の系列へ対応付ける。 */
   data: ChartRow[];
   stacks: ChartStack[];
   name: string;
@@ -26,6 +31,9 @@ interface Props {
 
 const formatLabel = (value: RenderableText) =>
   typeof value === "number" ? value.toLocaleString("ja-JP") : value;
+
+// shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
+const barShape = <Rectangle />;
 
 export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, unit }: Props) => {
   // 最初のタップで入力モードの更新を待たなくて済むよう、ホバーはマウス移動時に有効にする。
@@ -40,7 +48,16 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
     setTappedIndex(undefined);
     setTrigger("click");
   }
-  const chartData = useMemo(() => data.map((row, position) => ({ ...row, position })), [data]);
+  const chartData = useMemo(
+    () =>
+      data.map((row, position) => ({
+        ...row,
+        position,
+        values: fillVirtualStackValues(row.values, stacks),
+      })),
+    [data, stacks],
+  );
+  const realStacks = stacks.filter((stack) => stack.label != undefined);
 
   return (
     <figure
@@ -114,7 +131,8 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
               dataKey={`values[${index}]`}
               name={stack.label}
               fill={stack.color}
-              legendType="circle"
+              shape={barShape}
+              legendType={stack.label == undefined ? "none" : "circle"}
               maxBarSize={48}
               isAnimationActive
             >
@@ -153,7 +171,7 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
           <tr>
             <th scope="col">{xAxisLabel}</th>
             <th scope="col">{yAxisLabel}</th>
-            {stacks.map((stack, index) => (
+            {realStacks.map((stack, index) => (
               <th key={index} scope="col">
                 {stack.label}
               </th>
@@ -165,7 +183,7 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
             <tr key={rowIndex}>
               <th scope="row">{item.label}</th>
               <td>{sumChartValues(item.values) ?? "データなし"}</td>
-              {stacks.map((_, index) => (
+              {realStacks.map((_, index) => (
                 <td key={index}>{item.values?.[index] ?? "データなし"}</td>
               ))}
             </tr>

@@ -22,6 +22,9 @@ export const StackedBarChartTooltip = ({
       </p>
       <dl className="space-y-1.5">
         {stacks.map((stack, index) => {
+          if (stack.label == undefined) {
+            return undefined;
+          }
           const entry = payload.find((item) => item.dataKey === `values[${index}]`);
           const value = entry?.value;
           return (
