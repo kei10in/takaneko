@@ -6,6 +6,7 @@ import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { LiveStatsSummary } from "./LiveStatsSummary.tsx";
+import { StageHistory } from "./StageHistory.tsx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -44,6 +45,12 @@ export default function Component() {
             サマリー
           </h2>
           <LiveStatsSummary name="累計の概要" summary={summary} />
+        </section>
+        <section aria-labelledby="stage-history-heading" className="mt-12">
+          <h2 id="stage-history-heading" className={sectionHeading("mb-4")}>
+            ステージ数の推移
+          </h2>
+          <StageHistory data={data} />
         </section>
       </section>
     </div>
