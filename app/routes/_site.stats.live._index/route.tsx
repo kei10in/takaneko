@@ -2,6 +2,7 @@ import { MetaFunction, useLoaderData } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
 import { pageBox, pageHeading, sectionHeading } from "~/components/styles.ts";
 import { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
+import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { LiveStatsSummary } from "./LiveStatsSummary.tsx";
@@ -32,6 +33,7 @@ export const loader = async ({ request, context }: Route.LoaderArgs) => {
 
 export default function Component() {
   const { data } = useLoaderData<typeof loader>();
+  const summary = buildLiveStatsSummary(data.monthly);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -41,7 +43,7 @@ export default function Component() {
           <h2 id="overview-heading" className={sectionHeading()}>
             サマリー
           </h2>
-          <LiveStatsSummary name="累計の概要" summary={data.summary} />
+          <LiveStatsSummary name="累計の概要" summary={summary} />
         </section>
       </section>
     </div>

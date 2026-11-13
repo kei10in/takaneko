@@ -3,7 +3,7 @@ import { register } from "node:module";
 import { dirname } from "node:path";
 import { makeLivesForCostumes } from "~/features/costumes/costumeActivities.ts";
 import { EventModule } from "~/features/events/eventModule.ts";
-import { aggregateLiveStats } from "~/features/live-stats/liveStats.ts";
+import { aggregateStageHistory } from "~/features/live-stats/liveStats.ts";
 import type { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
 import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents.ts";
 import { buildLivesForSongs } from "~/features/songs/buildLivesForSongs.ts";
@@ -71,7 +71,7 @@ const buildLiveStats = (events: EventModule[]) => {
   const aggregatedOn = NaiveDate.todayInJapan().toString();
   const stats: LiveStatsData = {
     aggregatedOn,
-    summary: aggregateLiveStats(
+    ...aggregateStageHistory(
       events.map((event) => event.meta),
       aggregatedOn,
     ),

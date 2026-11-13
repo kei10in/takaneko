@@ -1,5 +1,5 @@
 import { Statistic } from "~/components/Statistic.tsx";
-import type { LiveStatsSummary as SummaryData } from "~/features/live-stats/liveStatsData.ts";
+import type { LiveStatsSummary as SummaryData } from "~/features/live-stats/liveStatsSummary.ts";
 
 export const LiveStatsSummary = ({
   summary,

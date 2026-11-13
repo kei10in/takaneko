@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { validateEventMeta, type EventMetaDescriptor } from "~/features/events/eventMeta.ts";
-import { aggregateLiveStats } from "./liveStats.ts";
+import {
+  validateEventMeta,
+  type EventMeta,
+  type EventMetaDescriptor,
+} from "~/features/events/eventMeta.ts";
+import { aggregateStageHistory } from "./liveStats.ts";
+import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
 
 const event = (overrides: Partial<EventMetaDescriptor> = {}) => {
   const meta = validateEventMeta({
@@ -17,10 +22,13 @@ const event = (overrides: Partial<EventMetaDescriptor> = {}) => {
   return meta;
 };
 
-describe("aggregateLiveStats", () => {
+const summarizeEvents = (events: EventMeta[], today: string) =>
+  buildLiveStatsSummary(aggregateStageHistory(events, today).monthly);
+
+describe("月別集計からの累計サマリー", () => {
   it("イベント数・重複を除いた出演日数・各ステージ数を集計する", () => {
     expect(
-      aggregateLiveStats(
+      summarizeEvents(
         [
           event({
             acts: [
@@ -42,7 +50,7 @@ describe("aggregateLiveStats", () => {
 
   it("当日以降・中止・延期・出演辞退と、ライブ出演のないイベントを除外する", () => {
     expect(
-      aggregateLiveStats(
+      summarizeEvents(
         [
           event({ status: "CANCELED" }),
           event({ status: "RESCHEDULED" }),
@@ -66,12 +74,156 @@ describe("aggregateLiveStats", () => {
   });
 
   it("対象がなければすべて0を返す", () => {
-    expect(aggregateLiveStats([], "2026-11-07")).toEqual({
+    expect(summarizeEvents([], "2026-11-07")).toEqual({
       events: 0,
       days: 0,
       stages: 0,
       soloStages: 0,
       jointStages: 0,
     });
+  });
+});
+
+describe("aggregateStageHistory", () => {
+  it("リリースイベントをその他から分け、中止ステージは含めない", () => {
+    const history = aggregateStageHistory(
+      [
+        event({
+          liveType: "RELEASE_EVENT",
+          acts: [
+            { title: "昼", types: ["LIVE"] },
+            { title: "夜", types: ["LIVE"] },
+            { title: "中止", types: ["LIVE"], status: "CANCELED" },
+          ],
+        }),
+        event({ liveType: "GUEST" }),
+      ],
+      "2026-11-12",
+    );
+    expect(history.monthly).toEqual([
+      {
+        month: "2026-10",
+        events: 2,
+        days: 1,
+        count: 3,
+        soloStages: 0,
+        jointStages: 0,
+        releaseEventStages: 2,
+        otherStages: 1,
+      },
+    ]);
+    expect(history.careerYearly.at(-1)).toEqual({
+      year: 5,
+      events: 2,
+      days: 1,
+      count: 3,
+      soloStages: 0,
+      jointStages: 0,
+      releaseEventStages: 2,
+      otherStages: 1,
+    });
+  });
+  it("月単位のステージ数と内訳を生成し、活動年は8月7日で区切る", () => {
+    const history = aggregateStageHistory(
+      [
+        event({ date: "2023-08-06", liveType: "SOLO" }),
+        event({ date: "2023-08-07", liveType: "FESTIVAL" }),
+        event({ date: "2023-08-07", liveType: "HOSTED" }),
+        event({ date: "2023-09-01", liveType: "GUEST" }),
+        event({ date: "2023-09-02", status: "CANCELED" }),
+        event({ date: "2023-09-03" }),
+        event({ date: "2023-09-04" }),
+      ],
+      "2023-09-03",
+    );
+    expect(history.monthly).toEqual([
+      {
+        month: "2023-08",
+        events: 3,
+        days: 2,
+        count: 3,
+        soloStages: 1,
+        jointStages: 2,
+        releaseEventStages: 0,
+        otherStages: 0,
+      },
+      {
+        month: "2023-09",
+        events: 1,
+        days: 1,
+        count: 1,
+        soloStages: 0,
+        jointStages: 0,
+        releaseEventStages: 0,
+        otherStages: 1,
+      },
+    ]);
+    expect(history.careerYearly).toEqual([
+      {
+        year: 1,
+        events: 1,
+        days: 1,
+        count: 1,
+        soloStages: 1,
+        jointStages: 0,
+        releaseEventStages: 0,
+        otherStages: 0,
+      },
+      {
+        year: 2,
+        events: 3,
+        days: 2,
+        count: 3,
+        soloStages: 0,
+        jointStages: 2,
+        releaseEventStages: 0,
+        otherStages: 1,
+      },
+    ]);
+  });
+
+  it("デビュー前の出演は月別にのみ含め、対象のない活動年は0件にする", () => {
+    const history = aggregateStageHistory(
+      [event({ date: "2022-08-06" }), event({ date: "2022-08-07" })],
+      "2023-08-07",
+    );
+    expect(history.monthly).toEqual([
+      {
+        month: "2022-08",
+        events: 2,
+        days: 2,
+        count: 2,
+        soloStages: 2,
+        jointStages: 0,
+        releaseEventStages: 0,
+        otherStages: 0,
+      },
+    ]);
+    expect(history.careerYearly).toEqual([
+      {
+        year: 1,
+        events: 1,
+        days: 1,
+        count: 1,
+        soloStages: 1,
+        jointStages: 0,
+        releaseEventStages: 0,
+        otherStages: 0,
+      },
+      {
+        year: 2,
+        events: 0,
+        days: 0,
+        count: 0,
+        soloStages: 0,
+        jointStages: 0,
+        releaseEventStages: 0,
+        otherStages: 0,
+      },
+    ]);
+  });
+
+  it("デビュー前で出演がなければ空の配列を返す", () => {
+    expect(aggregateStageHistory([], "2022-08-06")).toEqual({ monthly: [], careerYearly: [] });
   });
 });

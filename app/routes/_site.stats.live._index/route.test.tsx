@@ -14,7 +14,29 @@ describe("ライブ統計", () => {
         loader: () => ({
           data: {
             aggregatedOn: "2026-11-12",
-            summary: { stages: 1234, events: 800, days: 600, soloStages: 234, jointStages: 900 },
+            monthly: [
+              {
+                month: "2025-12",
+                events: 400,
+                days: 300,
+                count: 600,
+                soloStages: 100,
+                jointStages: 450,
+                releaseEventStages: 25,
+                otherStages: 25,
+              },
+              {
+                month: "2026-01",
+                events: 400,
+                days: 300,
+                count: 634,
+                soloStages: 134,
+                jointStages: 450,
+                releaseEventStages: 25,
+                otherStages: 25,
+              },
+            ],
+            careerYearly: [],
           },
         }),
       },
