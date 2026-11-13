@@ -116,7 +116,7 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
               fill={stack.color}
               legendType="circle"
               maxBarSize={48}
-              isAnimationActive={false}
+              isAnimationActive
             >
               <LabelList
                 dataKey={(row: ChartRow) =>
