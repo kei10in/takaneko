@@ -1,6 +1,8 @@
 export type StageHistorySeriesKey =
   "soloStages" | "jointStages" | "releaseEventStages" | "otherStages";
 
+export type StageHistoryFilter = "all" | StageHistorySeriesKey;
+
 export interface StageHistorySeries {
   key: StageHistorySeriesKey;
   label: string;

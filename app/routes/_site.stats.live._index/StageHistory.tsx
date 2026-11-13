@@ -2,14 +2,20 @@ import { Toggle } from "@base-ui/react/toggle";
 import { ToggleGroup } from "@base-ui/react/toggle-group";
 import { clsx } from "clsx";
 import { useMemo, useState } from "react";
+import { HiChevronDown } from "react-icons/hi2";
 import { StackedBarChart } from "~/components/charts/StackedBarChart.tsx";
 import { buildStageHistory, type StageHistoryData } from "~/features/live-stats/stageHistory.ts";
 import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
+import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
 export const StageHistory = ({ data }: { data: StageHistoryData }) => {
   const [basis, setBasis] = useState<"career" | "calendar">("career");
+  const [filter, setFilter] = useState<StageHistoryFilter>("all");
   const history = useMemo(() => buildStageHistory(data), [data]);
-  const chart = useMemo(() => buildStageHistoryChartData(history[basis]), [history, basis]);
+  const chart = useMemo(
+    () => buildStageHistoryChartData(history[basis], filter),
+    [history, basis, filter],
+  );
   if (history[basis].length === 0) {
     return <p>集計対象のライブはありません。</p>;
   }
@@ -53,6 +59,30 @@ export const StageHistory = ({ data }: { data: StageHistoryData }) => {
             西暦
           </Toggle>
         </ToggleGroup>
+        <label className="relative block shrink-0">
+          <span className="sr-only">表示する種別</span>
+          <select
+            value={filter}
+            onChange={(event) => {
+              const selected = stageHistorySeries.find(
+                (series) => series.key === event.target.value,
+              );
+              setFilter(selected?.key ?? "all");
+            }}
+            className="h-10 appearance-none rounded-full bg-zinc-100 pr-10 pl-4 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 forced-colors:appearance-auto"
+          >
+            <option value="all">すべて</option>
+            {stageHistorySeries.map((series) => (
+              <option key={series.key} value={series.key}>
+                {series.label}
+              </option>
+            ))}
+          </select>
+          <HiChevronDown
+            aria-hidden="true"
+            className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-zinc-500 forced-colors:hidden"
+          />
+        </label>
       </div>
       <StackedBarChart
         name={basis === "career" ? "活動年ごとのステージ数の推移" : "年ごとのステージ数の推移"}
