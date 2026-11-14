@@ -9,6 +9,10 @@ export interface ChartSeries {
   color: string;
 }
 
+export interface PercentChartSeries extends ChartSeries {
+  labelColor: string;
+}
+
 export interface ChartStack {
   /** 省略すると、値を持たない仮想スタックとして扱う。 */
   label?: string;
