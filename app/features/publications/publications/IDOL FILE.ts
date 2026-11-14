@@ -9,7 +9,7 @@ export const IDOL_FILE_Vol44: Publication = {
   listPrice: 2000,
   priceWithTax: 2200,
   code: [{ kind: "ISBN", value: "978-4-401-76338-2" }],
-  url: "",
+  url: "https://www.shinko-music.co.jp/item/pid0763386/",
   coverImages: [
     {
       path: "/publications/2026/2026-11-13_IDOL FILE Vol.44_表紙.jpg",
@@ -21,7 +21,10 @@ export const IDOL_FILE_Vol44: Publication = {
     },
   ],
   featuredMembers: ["東山恵里沙"],
-  officialTwitter: "https://x.com/takanenofficial/status/2118670983930274286",
+  officialTwitter: [
+    "https://x.com/takanenofficial/status/2118670983930274286",
+    "https://x.com/takanenofficial/status/2121219029951987966",
+  ],
   links: [
     {
       text: "発売情報 - シンコーミュージック・エンタテイメント",
@@ -38,8 +41,8 @@ export const IDOL_FILE_Vol43: Publication = {
   publisher: "ロックスエンタテインメント",
   listPrice: 2000,
   priceWithTax: 2200,
-  code: [],
-  url: "",
+  code: [{ kind: "ISBN", value: "978-4-401-76337-5" }],
+  url: "https://www.shinko-music.co.jp/item/pid0763378/",
   coverImages: [
     {
       path: "/publications/2026/2026-10-30_IDOL FILE Vol.43_表紙.jpg",
