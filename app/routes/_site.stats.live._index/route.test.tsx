@@ -18,6 +18,10 @@ describe("ライブ統計", () => {
               {
                 month: "2025-12",
                 events: 400,
+                soloEvents: 0,
+                jointEvents: 0,
+                releaseEvents: 0,
+                otherEvents: 400,
                 days: 300,
                 count: 600,
                 soloStages: 100,
@@ -28,6 +32,10 @@ describe("ライブ統計", () => {
               {
                 month: "2026-01",
                 events: 400,
+                soloEvents: 0,
+                jointEvents: 0,
+                releaseEvents: 0,
+                otherEvents: 400,
                 days: 300,
                 count: 634,
                 soloStages: 134,
@@ -60,6 +68,12 @@ describe("ライブ統計", () => {
     ]);
     expect(
       screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
-    ).toEqual(["サマリー", "イベント数・ステージ数の推移", "出演イベントの種類別割合", "集計方法"]);
+    ).toEqual([
+      "サマリー",
+      "ステージ数・イベント数の推移",
+      "内訳",
+      "月ごとの推移",
+      "集計方法について",
+    ]);
   });
 });

@@ -9,6 +9,7 @@ import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { LiveStatsSummary } from "./LiveStatsSummary.tsx";
 import { LiveTypeBreakdown } from "./LiveTypeBreakdown.tsx";
+import { MonthlyHistory } from "./MonthlyHistory.tsx";
 import { StageHistory } from "./StageHistory.tsx";
 
 export const meta: Route.MetaFunction = ({ location }) => {
@@ -79,6 +80,12 @@ export default function Component() {
             内訳
           </h2>
           <LiveTypeBreakdown data={data} />
+        </section>
+        <section aria-labelledby="monthly-history-heading" className="mt-12 px-4">
+          <h2 id="monthly-history-heading" className="section-heading mb-4">
+            月ごとの推移
+          </h2>
+          <MonthlyHistory data={data} />
         </section>
         <section aria-labelledby="aggregation-method-heading" className="mt-18 px-4">
           <div
