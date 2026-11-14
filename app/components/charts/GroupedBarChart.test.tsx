@@ -1,4 +1,5 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { AnimationControllerProvider, type AnimationController } from "recharts";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { GroupedBarChart } from "./GroupedBarChart.tsx";
 
@@ -183,4 +184,80 @@ it("キーボードでも横軸の各位置の値を確認できる", async () =
   expect(within(await screen.findByRole("tooltip")).getByText("10 回")).toBeTruthy();
   fireEvent.keyDown(chart, { key: "ArrowRight" });
   expect(within(await screen.findByRole("tooltip")).getByText("20 回")).toBeTruthy();
+});
+
+it("先頭の未集計行が増減しても、バーは同じ横軸位置で高さだけ変化する", () => {
+  const frames = new Set<(progress: number) => void>();
+  const controller: AnimationController = (_, animation, listener) => {
+    const frame = (progress: number) => {
+      animation.tick(0);
+      animation.tick(animation.getAnimationDuration() * progress);
+      listener(progress);
+      if (progress === 1) {
+        animation.complete();
+      }
+    };
+    frames.add(frame);
+    return () => frames.delete(frame);
+  };
+  const { rerender } = render(
+    <GroupedBarChart
+      {...props}
+      data={[
+        { label: "1月", values: [17, 9] },
+        { label: "2月", values: [0, 0] },
+        { label: "3月", values: [8, 4] },
+      ]}
+    />,
+    {
+      wrapper: ({ children }) => (
+        <AnimationControllerProvider value={controller}>{children}</AnimationControllerProvider>
+      ),
+    },
+  );
+  act(() => frames.forEach((frame) => frame(1)));
+  const chart = screen.getByRole("application");
+  const firstSeries = chart.querySelector(".recharts-bar");
+  const initialX = Array.from(
+    firstSeries?.querySelectorAll(".recharts-bar-rectangle path") ?? [],
+  ).map((bar) => Number(bar.getAttribute("x")));
+  expect(initialX).toHaveLength(2);
+  rerender(
+    <GroupedBarChart
+      {...props}
+      data={[
+        { label: "1月", values: undefined },
+        { label: "2月", values: [0, 0] },
+        { label: "3月", values: [8, 4] },
+      ]}
+    />,
+  );
+  act(() => frames.forEach((frame) => frame(0.5)));
+  const animatedX = Array.from(
+    firstSeries?.querySelectorAll(".recharts-bar-rectangle path") ?? [],
+  ).map((bar) => Number(bar.getAttribute("x")));
+  expect(animatedX.length).toBeGreaterThan(0);
+  animatedX.forEach((x) => expect(initialX).toContain(x));
+  expect(
+    within(screen.getByRole("table")).getByRole("row", {
+      name: "1月 データなし データなし",
+    }),
+  ).toBeTruthy();
+  act(() => frames.forEach((frame) => frame(1)));
+  rerender(
+    <GroupedBarChart
+      {...props}
+      data={[
+        { label: "1月", values: [17, 9] },
+        { label: "2月", values: [0, 0] },
+        { label: "3月", values: [8, 4] },
+      ]}
+    />,
+  );
+  act(() => frames.forEach((frame) => frame(0.5)));
+  const restoredX = Array.from(
+    firstSeries?.querySelectorAll(".recharts-bar-rectangle path") ?? [],
+  ).map((bar) => Number(bar.getAttribute("x")));
+  expect(restoredX).toHaveLength(2);
+  restoredX.forEach((x) => expect(initialX).toContain(x));
 });

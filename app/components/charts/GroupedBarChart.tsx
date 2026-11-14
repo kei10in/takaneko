@@ -120,6 +120,7 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
               legendType="circle"
               maxBarSize={48}
               isAnimationActive
+              animationMatchBy={(bar) => bar.originalDataIndex}
             >
               <LabelList
                 dataKey={`values[${index}]`}
