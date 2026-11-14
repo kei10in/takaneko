@@ -30,10 +30,16 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
   ## リンク
 
-  - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
+  - [radiko 出演時間](https://radiko.jp/share/?sid=GBS&t=20261114083030)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=GBS&t=20261114080000)
-  - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2119399536548299110)
+  - [明日オンエア](https://x.com/takanenofficial/status/2121236639762813107)
+  - [出演スケジュール更新 2 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
+  - [出演スケジュール更新 1 - 公式 X](https://x.com/takanenofficial/status/2119399536548299110)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2115058433632399449)
 `;
