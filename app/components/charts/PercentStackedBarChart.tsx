@@ -52,7 +52,7 @@ const RowTooltip = ({
           ? { x: plotArea.x + plotArea.width, y: coordinate.y + maxBarSize / 2 + 8 }
           : undefined
       }
-      wrapperStyle={{ translate: "-100% 0" }}
+      wrapperStyle={{ translate: "-100% 0", zIndex: 10 }}
       trigger={trigger}
       active={active}
       filterNull={false}
