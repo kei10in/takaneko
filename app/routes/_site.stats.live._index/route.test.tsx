@@ -58,5 +58,8 @@ describe("ライブ統計", () => {
       { label: "ワンマン", value: "234ステージ" },
       { label: "対バン", value: "900ステージ" },
     ]);
+    expect(
+      screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
+    ).toEqual(["サマリー", "イベント数・ステージ数の推移"]);
   });
 });

@@ -14,7 +14,7 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-it("年セレクターを表示せず、活動年と西暦を横軸にした積み上げグラフを切り替える", async () => {
+it("イベント数を左、ステージ数を右に並べ、集計基準と種別を切り替える", async () => {
   render(
     <StageHistory
       data={{
@@ -100,47 +100,79 @@ it("年セレクターを表示せず、活動年と西暦を横軸にした積�
   const filter = screen.getByRole("combobox", { name: "表示する種別" });
   expect(within(filter).getByRole("option", { name: "すべて", selected: true })).toBeTruthy();
   expect(screen.getByRole("button", { name: "活動年" }).getAttribute("aria-pressed")).toBe("true");
-  const career = screen.getByRole("table", { name: "活動年ごとのステージ数の推移のデータ" });
-  expect(within(career).getByRole("row", { name: "1年目 6 2 4 0 0" })).toBeTruthy();
-  expect(within(career).getByRole("row", { name: "2年目 4 0 3 0 1" })).toBeTruthy();
+  const career = screen.getByRole("table", {
+    name: "活動年ごとのイベント数・ステージ数の推移のデータ",
+  });
+  expect(within(career).getByRole("row", { name: "1年目 1 6" })).toBeTruthy();
+  expect(within(career).getByRole("row", { name: "2年目 1 4" })).toBeTruthy();
 
+  expect(
+    screen.getAllByLabelText(/legend icon$/u).map((icon) => icon.getAttribute("aria-label")),
+  ).toEqual(["イベント数 legend icon", "ステージ数 legend icon"]);
   const chart = screen.getByRole("application");
   fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 180, clientY: 100 });
   fireEvent.click(chart, { clientX: 180, clientY: 100 });
-  expect(await screen.findByRole("tooltip")).toBeTruthy();
+  const tooltip = await screen.findByRole("tooltip");
+  expect(
+    within(tooltip)
+      .getAllByRole("term")
+      .map((item) => item.textContent),
+  ).toEqual(["イベント数", "ステージ数"]);
+  expect(
+    within(tooltip)
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["1 回", "6 回"]);
 
   fireEvent.click(screen.getByRole("button", { name: "西暦" }));
   expect(screen.queryByRole("tooltip")).toBeNull();
-  const calendar = screen.getByRole("table", { name: "年ごとのステージ数の推移のデータ" });
-  expect(within(calendar).getByRole("row", { name: "2022年 2 2 0 0 0" })).toBeTruthy();
-  expect(within(calendar).getByRole("row", { name: "2023年 8 0 7 0 1" })).toBeTruthy();
+  const calendar = screen.getByRole("table", {
+    name: "年ごとのイベント数・ステージ数の推移のデータ",
+  });
+  expect(within(calendar).getByRole("row", { name: "2022年 1 2" })).toBeTruthy();
+  expect(within(calendar).getByRole("row", { name: "2023年 2 8" })).toBeTruthy();
+  fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 180, clientY: 100 });
+  fireEvent.click(chart, { clientX: 180, clientY: 100 });
+  expect(
+    within(await screen.findByRole("tooltip"))
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["1 回", "2 回"]);
   expect(screen.queryByRole("combobox", { name: "表示する年" })).toBeNull();
   fireEvent.click(screen.getByRole("button", { name: "活動年" }));
   expect(screen.queryByRole("tooltip")).toBeNull();
-  expect(screen.getByRole("figure", { name: "活動年ごとのステージ数の推移" })).toBeTruthy();
+  expect(
+    screen.getByRole("figure", { name: "活動年ごとのイベント数・ステージ数の推移" }),
+  ).toBeTruthy();
 
   [
-    { value: "soloStages", label: "ワンマン", count: 2 },
-    { value: "jointStages", label: "対バン", count: 4 },
-    { value: "releaseEventStages", label: "リリイベ", count: 0 },
-    { value: "otherStages", label: "その他", count: 0 },
-  ].forEach(({ value, label, count }) => {
+    { value: "soloStages", label: "ワンマン", count: 2, events: 1 },
+    { value: "jointStages", label: "対バン", count: 4, events: 0 },
+    { value: "releaseEventStages", label: "リリイベ", count: 0, events: 0 },
+    { value: "otherStages", label: "その他", count: 0, events: 0 },
+  ].forEach(({ value, count, events }) => {
     fireEvent.change(filter, { target: { value } });
-    const table = screen.getByRole("table", { name: "活動年ごとのステージ数の推移のデータ" });
+    const table = screen.getByRole("table", {
+      name: "活動年ごとのイベント数・ステージ数の推移のデータ",
+    });
     expect(
       within(table)
         .getAllByRole("columnheader")
         .map((header) => header.textContent),
-    ).toEqual(["活動年", "ステージ数", label]);
-    expect(within(table).getByRole("row", { name: `1年目 ${count} ${count}` })).toBeTruthy();
+    ).toEqual(["活動年", "イベント数", "ステージ数"]);
+    expect(within(table).getByRole("row", { name: `1年目 ${events} ${count}` })).toBeTruthy();
   });
 
   fireEvent.change(filter, { target: { value: "jointStages" } });
   fireEvent.click(screen.getByRole("button", { name: "西暦" }));
   expect(within(filter).getByRole("option", { name: "対バン", selected: true })).toBeTruthy();
-  const filteredCalendar = screen.getByRole("table", { name: "年ごとのステージ数の推移のデータ" });
-  expect(within(filteredCalendar).getByRole("row", { name: "2023年 7 7" })).toBeTruthy();
+  const filteredCalendar = screen.getByRole("table", {
+    name: "年ごとのイベント数・ステージ数の推移のデータ",
+  });
+  expect(within(filteredCalendar).getByRole("row", { name: "2023年 2 7" })).toBeTruthy();
   fireEvent.change(filter, { target: { value: "all" } });
-  const all = screen.getByRole("table", { name: "年ごとのステージ数の推移のデータ" });
-  expect(within(all).getByRole("row", { name: "2023年 8 0 7 0 1" })).toBeTruthy();
+  const all = screen.getByRole("table", {
+    name: "年ごとのイベント数・ステージ数の推移のデータ",
+  });
+  expect(within(all).getByRole("row", { name: "2023年 2 8" })).toBeTruthy();
 });

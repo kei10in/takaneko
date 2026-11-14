@@ -1,29 +1,37 @@
-import type { ChartRow, ChartStack } from "~/components/charts/types.ts";
+import type { ChartRow, ChartSeries } from "~/components/charts/types.ts";
+import type { EventHistoryPeriod } from "~/features/live-stats/eventHistory.ts";
+import type { EventCounts } from "~/features/live-stats/liveStatsData.ts";
 import type { StageHistoryPeriod } from "~/features/live-stats/stageHistory.ts";
-import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
+import type { StageHistoryFilter } from "./stageHistorySeries.ts";
+
+const series: ChartSeries[] = [
+  { label: "イベント数", color: "var(--color-nadeshiko-900)" },
+  { label: "ステージ数", color: "var(--color-nadeshiko-500)" },
+];
+
+const eventKeys: Record<StageHistoryFilter, keyof EventCounts> = {
+  all: "events",
+  soloStages: "soloEvents",
+  jointStages: "jointEvents",
+  releaseEventStages: "releaseEvents",
+  otherStages: "otherEvents",
+};
 
 export const buildStageHistoryChartData = (
-  rows: StageHistoryPeriod[],
+  stages: StageHistoryPeriod[],
+  events: EventHistoryPeriod[],
   filter: StageHistoryFilter,
-): { stacks: ChartStack[]; data: ChartRow[] } => {
-  const series = stageHistorySeries.filter((item) => filter === "all" || item.key === filter);
-  return {
-    stacks: stageHistorySeries.map((item, index) => {
-      const selected = series[index];
-      if (selected == undefined) {
-        return { color: item.color };
-      }
-      return {
-        label: selected.label,
-        color: item.color,
-      };
-    }),
-    data: rows.map((row) => {
-      const counts = row.counts;
-      return {
-        label: row.label,
-        values: counts == undefined ? undefined : series.map((item) => counts[item.key]),
-      };
-    }),
-  };
-};
+): { series: ChartSeries[]; data: ChartRow[] } => ({
+  series,
+  data: stages.map((row, index) => {
+    const stageCounts = row.counts;
+    const eventCounts = events[index]?.counts;
+    return {
+      label: row.label,
+      values:
+        stageCounts == undefined || eventCounts == undefined
+          ? undefined
+          : [eventCounts[eventKeys[filter]], stageCounts[filter === "all" ? "count" : filter]],
+    };
+  }),
+});

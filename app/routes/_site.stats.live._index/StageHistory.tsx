@@ -3,7 +3,8 @@ import { ToggleGroup } from "@base-ui/react/toggle-group";
 import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
-import { StackedBarChart } from "~/components/charts/StackedBarChart.tsx";
+import { GroupedBarChart } from "~/components/charts/GroupedBarChart.tsx";
+import { buildEventHistory } from "~/features/live-stats/eventHistory.ts";
 import { buildStageHistory, type StageHistoryData } from "~/features/live-stats/stageHistory.ts";
 import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
@@ -11,12 +12,15 @@ import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySerie
 export const StageHistory = ({ data }: { data: StageHistoryData }) => {
   const [basis, setBasis] = useState<"career" | "calendar">("career");
   const [filter, setFilter] = useState<StageHistoryFilter>("all");
-  const history = useMemo(() => buildStageHistory(data), [data]);
+  const history = useMemo(
+    () => ({ stages: buildStageHistory(data), events: buildEventHistory(data) }),
+    [data],
+  );
   const chart = useMemo(
-    () => buildStageHistoryChartData(history[basis], filter),
+    () => buildStageHistoryChartData(history.stages[basis], history.events[basis], filter),
     [history, basis, filter],
   );
-  if (history[basis].length === 0) {
+  if (history.stages[basis].length === 0) {
     return <p>集計対象のライブはありません。</p>;
   }
 
@@ -84,12 +88,16 @@ export const StageHistory = ({ data }: { data: StageHistoryData }) => {
           />
         </label>
       </div>
-      <StackedBarChart
-        name={basis === "career" ? "活動年ごとのステージ数の推移" : "年ごとのステージ数の推移"}
+      <GroupedBarChart
+        name={
+          basis === "career"
+            ? "活動年ごとのイベント数・ステージ数の推移"
+            : "年ごとのイベント数・ステージ数の推移"
+        }
         xAxisLabel={basis === "career" ? "活動年" : "年"}
-        yAxisLabel="ステージ数"
+        yAxisLabel="回数"
         unit="回"
-        stacks={chart.stacks}
+        series={chart.series}
         data={chart.data}
       />
     </div>
