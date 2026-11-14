@@ -1,21 +1,39 @@
 import { HiOutlineInformationCircle } from "react-icons/hi2";
-import { MetaFunction, useLoaderData } from "react-router";
+import { useLoaderData } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
+import { OgpSiteName } from "~/constants.ts";
 import { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
 import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts";
+import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { LiveStatsSummary } from "./LiveStatsSummary.tsx";
 import { LiveTypeBreakdown } from "./LiveTypeBreakdown.tsx";
 import { StageHistory } from "./StageHistory.tsx";
 
-export const meta: MetaFunction = () => {
+export const meta: Route.MetaFunction = ({ location }) => {
+  const title = formatTitle("ライブ統計");
+  const description =
+    "高嶺のなでしこのライブ統計。累計のステージ数・イベント数・出演日数、活動年別・西暦別の推移、ワンマン・対バン・リリイベなどのイベントの種類別内訳を掲載しています。";
+  const canonical = canonicalUrl(location.pathname);
+  const image = canonicalUrl("/takanekono-card.png");
+
   return [
-    { title: formatTitle("ライブ統計") },
-    {
-      name: "description",
-      content: "高嶺のなでしこのライブ開催実績と、年別・月別のステージ数の推移をまとめています。",
-    },
+    { title },
+    { name: "description", content: description },
+    { tagName: "link", rel: "canonical", href: canonical },
+    { property: "og:site_name", content: OgpSiteName },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:url", content: canonical },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+    { property: "og:image", content: image },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: image },
   ];
 };
 
