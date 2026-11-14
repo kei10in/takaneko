@@ -10,7 +10,10 @@ const performedLiveEvents = (events: EventMeta[], today: string) =>
   // 当日は公演が終了しているとは限らないため、前日までの出演を集計する。
   events.filter(
     (event) =>
-      event.date < today && event.status == undefined && event.acts.some(isPerformedLiveAct),
+      event.date < today &&
+      event.liveType != undefined &&
+      event.status == undefined &&
+      event.acts.some(isPerformedLiveAct),
   );
 
 const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
@@ -19,19 +22,20 @@ const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
     count: event.acts.filter(isPerformedLiveAct).length,
   }));
   const count = stages.reduce((sum, stage) => sum + stage.count, 0);
-  const soloStages = stages
-    .filter((stage) => stage.type === "SOLO")
-    .reduce((sum, stage) => sum + stage.count, 0);
-  const jointStages = stages
-    .filter(
-      (stage) => stage.type === "JOINT" || stage.type === "HOSTED" || stage.type === "FESTIVAL",
-    )
-    .reduce((sum, stage) => sum + stage.count, 0);
-  const releaseEventStages = stages
-    .filter((stage) => stage.type === "RELEASE_EVENT")
-    .reduce((sum, stage) => sum + stage.count, 0);
+  const solo = stages.filter((stage) => stage.type === "SOLO");
+  const joint = stages.filter(
+    (stage) => stage.type === "JOINT" || stage.type === "HOSTED" || stage.type === "FESTIVAL",
+  );
+  const release = stages.filter((stage) => stage.type === "RELEASE_EVENT");
+  const soloStages = solo.reduce((sum, stage) => sum + stage.count, 0);
+  const jointStages = joint.reduce((sum, stage) => sum + stage.count, 0);
+  const releaseEventStages = release.reduce((sum, stage) => sum + stage.count, 0);
   return {
     events: events.length,
+    soloEvents: solo.length,
+    jointEvents: joint.length,
+    releaseEvents: release.length,
+    otherEvents: events.length - solo.length - joint.length - release.length,
     days: new Set(events.map((event) => event.date)).size,
     count,
     soloStages,

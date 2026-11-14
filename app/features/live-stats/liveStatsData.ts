@@ -12,8 +12,18 @@ const StageCounts = z.object({
 
 export type StageCounts = z.infer<typeof StageCounts>;
 
-const LiveStatsMetrics = StageCounts.extend({
+const EventCounts = z.object({
   events: Count,
+  soloEvents: Count,
+  jointEvents: Count,
+  releaseEvents: Count,
+  otherEvents: Count,
+});
+
+export type EventCounts = z.infer<typeof EventCounts>;
+
+const LiveStatsMetrics = StageCounts.extend({
+  ...EventCounts.shape,
   days: Count,
 });
 
