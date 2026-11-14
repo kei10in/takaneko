@@ -1,5 +1,6 @@
 import { expect, it } from "vitest";
-import { fillVirtualStackValues, type ChartStack } from "./stackedBarChartData.ts";
+import { fillVirtualStackValues } from "./stackedBarChartData.ts";
+import type { ChartStack } from "./types.ts";
 
 const stacks: ChartStack[] = [
   { color: "pink" },

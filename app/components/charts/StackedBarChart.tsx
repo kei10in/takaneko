@@ -13,12 +13,8 @@ import {
   type RenderableText,
 } from "recharts";
 import { StackedBarChartTooltip } from "./StackedBarChartTooltip.tsx";
-import {
-  fillVirtualStackValues,
-  sumChartValues,
-  type ChartRow,
-  type ChartStack,
-} from "./stackedBarChartData.ts";
+import { fillVirtualStackValues, sumChartValues } from "./stackedBarChartData.ts";
+import type { ChartRow, ChartStack } from "./types.ts";
 
 interface Props {
   data: ChartRow[];

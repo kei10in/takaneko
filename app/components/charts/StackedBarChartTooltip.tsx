@@ -1,5 +1,5 @@
 import type { TooltipContentProps } from "recharts";
-import type { ChartRow, ChartStack } from "./stackedBarChartData.ts";
+import type { ChartRow, ChartStack } from "./types.ts";
 
 export const StackedBarChartTooltip = ({
   active,

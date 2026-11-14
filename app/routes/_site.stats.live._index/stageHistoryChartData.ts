@@ -1,4 +1,4 @@
-import type { ChartRow, ChartStack } from "~/components/charts/stackedBarChartData.ts";
+import type { ChartRow, ChartStack } from "~/components/charts/types.ts";
 import type { StageHistoryPeriod } from "~/features/live-stats/stageHistory.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
