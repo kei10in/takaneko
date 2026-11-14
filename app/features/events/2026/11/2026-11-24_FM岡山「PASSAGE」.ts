@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["城月菜央", "日向端ひな"],
   images: [
     {
+      path: "/events/2026/2026-11-14_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
+      ref: "https://x.com/takanenofficial/status/2120890609619615842",
+    },
+    {
       path: "/events/2026/2026-11-08_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
       ref: "https://x.com/takanenofficial/status/2119399536548299110",
     },
@@ -18,12 +22,13 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  updatedAt: "2026-11-09",
+  updatedAt: "2026-11-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=FM-OKAYAMA&t=20261124170000)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2119399536548299110)
 `;

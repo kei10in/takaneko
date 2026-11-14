@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["葉月紗蘭", "東山恵里沙"],
   images: [
     {
+      path: "/events/2026/2026-11-14_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
+      ref: "https://x.com/takanenofficial/status/2120890609619615842",
+    },
+    {
       path: "/events/2026/2026-11-08_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
       ref: "https://x.com/takanenofficial/status/2119399536548299110",
     },
@@ -18,11 +22,12 @@ export const meta: EventMetaDescriptor = {
     text: "番組ホームページ",
     url: "https://www.zf-web.com/tv/news/hidamino/post.html",
   },
-  updatedAt: "2026-11-09",
+  updatedAt: "2026-11-14",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2119399536548299110)
 `;

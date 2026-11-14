@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["高嶺のなでしこ3"],
   images: [
     {
+      path: "/events/2026/2026-11-14_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
+      ref: "https://x.com/takanenofficial/status/2120890609619615842",
+    },
+    {
       path: "/events/2026/2026-11-13_メ〜テレ「ドデスカ！」.jpg",
       ref: "https://x.com/takanenofficial/status/2120894397591978395",
     },
@@ -28,6 +32,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2120894397591978395)
   - [出演告知 - ドデスカ！ X](https://x.com/dodesuka_6ch/status/2120788769423102152)
 `;
