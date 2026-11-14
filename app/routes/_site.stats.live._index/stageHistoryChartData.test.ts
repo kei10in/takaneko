@@ -35,15 +35,26 @@ it.each<{ filter: StageHistorySeriesKey; label: string; value: number }>([
   { filter: "jointStages", label: "対バン", value: 3 },
   { filter: "releaseEventStages", label: "リリイベ", value: 2 },
   { filter: "otherStages", label: "その他", value: 1 },
-])("$label の単独表示は1系列だけを渡す", ({ filter, label, value }) => {
-  const chart = buildStageHistoryChartData(data, filter);
-  expect(chart.data).toEqual([{ label: "1年目", values: [value] }]);
-  expect(
-    chart.data.every((row) => row.values == undefined || row.values.length === chart.stacks.length),
-  ).toBe(true);
-  expect(chart.stacks.map((stack) => stack.label)).toEqual([label]);
-  expect(chart.stacks.map((stack) => stack.color)).toEqual(["var(--color-nadeshiko-900)"]);
-});
+])(
+  "$label の単独表示は先頭のスタックを使い、残り3枠は色を維持した仮想スタックにする",
+  ({ filter, label, value }) => {
+    const chart = buildStageHistoryChartData(data, filter);
+    expect(chart.data).toEqual([{ label: "1年目", values: [value] }]);
+    expect(chart.stacks).toEqual([
+      { label, color: "var(--color-nadeshiko-900)" },
+      { color: "var(--color-nadeshiko-700)" },
+      { color: "var(--color-nadeshiko-500)" },
+      { color: "var(--color-nadeshiko-300)" },
+    ]);
+    expect(
+      chart.data.every(
+        (row) =>
+          row.values == undefined ||
+          row.values.length === chart.stacks.filter((stack) => stack.label != undefined).length,
+      ),
+    ).toBe(true);
+  },
+);
 
 it("0件と未集計を区別してチャートへ渡す", () => {
   const chart = buildStageHistoryChartData(

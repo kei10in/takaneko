@@ -8,10 +8,16 @@ export const buildStageHistoryChartData = (
 ): { stacks: ChartStack[]; data: ChartRow[] } => {
   const series = stageHistorySeries.filter((item) => filter === "all" || item.key === filter);
   return {
-    stacks: series.map((item) => ({
-      label: item.label,
-      color: filter === "all" ? item.color : "var(--color-nadeshiko-900)",
-    })),
+    stacks: stageHistorySeries.map((item, index) => {
+      const selected = series[index];
+      if (selected == undefined) {
+        return { color: item.color };
+      }
+      return {
+        label: selected.label,
+        color: item.color,
+      };
+    }),
     data: rows.map((row) => {
       const counts = row.counts;
       return {
