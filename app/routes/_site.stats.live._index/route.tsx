@@ -59,6 +59,42 @@ export default function Component() {
           </h2>
           <LiveTypeBreakdown data={data} />
         </section>
+        <section aria-labelledby="aggregation-method-heading" className="mt-12">
+          <h2 id="aggregation-method-heading" className={sectionHeading("mb-4")}>
+            集計方法
+          </h2>
+          <dl className="space-y-3">
+            <dt className="font-semibold">ステージ数</dt>
+            <dd>
+              出演したステージごとにカウントしています。
+              同じのイベントで複数ステージに出演した場合や2部制のワンマンライブなどはそれぞれのステージを数えます。
+            </dd>
+
+            <dt className="font-semibold">イベント数</dt>
+            <dd>
+              ひとつのイベントの中で複数のステージに出演していたとしても 1
+              イベントとしてカウントします。
+              複数の日にわたるイベントは、それぞれにカウントしています。
+            </dd>
+
+            <dt className="font-semibold">ワンマン</dt>
+            <dd>主催のワンマンライブ・ファンミーティングをカウントしています。</dd>
+            <dt className="font-semibold">対バン</dt>
+            <dd>
+              対バンライブやフェス、主催対バンをカウントしています。
+              「全国お招きツアー」のファイナル以外の公演や「たかねこフェス」も対バンとしてカウントしています。
+              イベントの名称ではなく、実際の開催形態に基づいて分類しています。
+            </dd>
+
+            <dt className="font-semibold">リリイベ</dt>
+            <dd>高嶺のなでしこの CD のリリースイベントをカウントしています。</dd>
+
+            <dt className="font-semibold">その他</dt>
+            <dd>
+              ファッションショーでのライブステージや外部主催のワンマンライブ、学園祭などをカウントしています。
+            </dd>
+          </dl>
+        </section>
       </section>
     </div>
   );
