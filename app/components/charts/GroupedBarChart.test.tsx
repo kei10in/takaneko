@@ -22,7 +22,7 @@ const series = [
 ];
 const props = { name: "出演回数", xAxisLabel: "年", yAxisLabel: "回数", unit: "回", series };
 
-it("各年の系列を共通スケールの横並びの棒で示し、合計せずに個別の値を表示する", async () => {
+it("各年の系列を共通スケールで重ね、先頭の系列を手前にして個別の値を表示する", async () => {
   render(
     <GroupedBarChart
       {...props}
@@ -34,17 +34,23 @@ it("各年の系列を共通スケールの横並びの棒で示し、合計せ�
     />,
   );
   const chart = screen.getByRole("application");
-  expect(await within(chart).findByText("17")).toBeTruthy();
-  expect(await within(chart).findByText("9")).toBeTruthy();
-  expect(within(chart).queryByText("26")).toBeNull();
-  const bars = chart.querySelectorAll(".recharts-bar");
-  const rectangle = (index: number) => bars[index]?.querySelector(".recharts-bar-rectangle path");
+  await waitFor(() =>
+    expect(chart.querySelectorAll(".recharts-bar-rectangle path")).toHaveLength(2),
+  );
+  expect(chart.querySelector(".recharts-label-list")).toBeNull();
+  const rectangle = (index: number) =>
+    chart.querySelector(`.recharts-bar-rectangle path[fill="${series[index]?.color}"]`);
   const height = (index: number) => Number(rectangle(index)?.getAttribute("height"));
   const y = (index: number) => Number(rectangle(index)?.getAttribute("y"));
-  expect(Number(rectangle(0)?.getAttribute("x"))).toBeLessThan(
-    Number(rectangle(1)?.getAttribute("x")),
-  );
-  expect(height(0) / height(1)).toBeCloseTo(17 / 9, 2);
+  const x = (index: number) => Number(rectangle(index)?.getAttribute("x"));
+  const right = (index: number) => x(index) + Number(rectangle(index)?.getAttribute("width"));
+  expect(Math.min(right(0), right(1)) - Math.max(x(0), x(1))).toBeGreaterThan(0);
+  expect(
+    Array.from(chart.querySelectorAll(".recharts-bar-rectangle path")).map((bar) =>
+      bar.getAttribute("fill"),
+    ),
+  ).toEqual(["blue", "red"]);
+  await waitFor(() => expect(height(0) / height(1)).toBeCloseTo(17 / 9, 2));
   expect(y(0) + height(0)).toBeCloseTo(y(1) + height(1), 2);
   expect(
     screen.getAllByLabelText(/legend icon$/u).map((icon) => icon.getAttribute("aria-label")),
@@ -261,3 +267,60 @@ it("先頭の未集計行が増減しても、バーは同じ横軸位置で高�
   expect(restoredX).toHaveLength(2);
   restoredX.forEach((x) => expect(initialX).toContain(x));
 });
+
+it("バーには数値ラベルを表示せず、チップで各系列の値を確認できる", async () => {
+  const { rerender } = render(
+    <GroupedBarChart {...props} data={[{ label: "同数", values: [5, 5] }]} />,
+  );
+  const chart = screen.getByRole("application");
+  expect(chart.querySelector(".recharts-label-list")).toBeNull();
+  fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY: 100 });
+  fireEvent.click(chart, { clientX: 300, clientY: 100 });
+  expect(within(await screen.findByRole("tooltip")).getAllByText("5 回")).toHaveLength(2);
+  expect(within(screen.getByRole("table")).getByRole("row", { name: "同数 5 5" })).toBeTruthy();
+  rerender(<GroupedBarChart {...props} data={[{ label: "異なる値", values: [3, 5] }]} />);
+  expect(chart.querySelector(".recharts-label-list")).toBeNull();
+  fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY: 100 });
+  fireEvent.click(chart, { clientX: 300, clientY: 100 });
+  const tooltip = await screen.findByRole("tooltip");
+  expect(within(tooltip).getByText("3 回")).toBeTruthy();
+  expect(within(tooltip).getByText("5 回")).toBeTruthy();
+});
+
+it.each([320, 640, 1200])(
+  "画面幅 %i pxでも、バーの60%%を重ねて左右順と最大幅を維持する",
+  async (width) => {
+    vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
+      this: HTMLElement,
+    ) {
+      return new DOMRect(
+        0,
+        0,
+        width,
+        this.classList.contains("recharts-legend-wrapper") ? 24 : 256,
+      );
+    });
+    render(
+      <GroupedBarChart
+        {...props}
+        data={Array.from({ length: 5 }, (_, index) => ({
+          label: `${index + 1}年目`,
+          values: [6, 10],
+        }))}
+      />,
+    );
+    const chart = screen.getByRole("application");
+    await waitFor(() =>
+      expect(chart.querySelectorAll(".recharts-bar-rectangle path")).toHaveLength(10),
+    );
+    const first = chart.querySelector('.recharts-bar-rectangle path[fill="red"]');
+    const second = chart.querySelector('.recharts-bar-rectangle path[fill="blue"]');
+    const firstX = Number(first?.getAttribute("x"));
+    const secondX = Number(second?.getAttribute("x"));
+    const barWidth = Number(first?.getAttribute("width"));
+    expect(firstX).toBeLessThan(secondX);
+    expect(barWidth).toBeLessThanOrEqual(48);
+    expect(Number(second?.getAttribute("width"))).toBeCloseTo(barWidth);
+    expect((firstX + barWidth - secondX) / barWidth).toBeCloseTo(0.6);
+  },
+);

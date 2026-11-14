@@ -1,8 +1,8 @@
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import {
   Bar,
   CartesianGrid,
-  LabelList,
+  DefaultZIndexes,
   Legend,
   BarChart as RechartsBarChart,
   Rectangle,
@@ -10,9 +10,9 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-  type RenderableText,
 } from "recharts";
 import { GroupedBarChartTooltip } from "./GroupedBarChartTooltip.tsx";
+import { calculateGroupedBarLayout } from "./groupedBarChartLayout.ts";
 import type { ChartRow, ChartSeries } from "./types.ts";
 
 interface Props {
@@ -24,13 +24,23 @@ interface Props {
   unit: string;
 }
 
-const formatLabel = (value: RenderableText) =>
-  typeof value === "number" ? value.toLocaleString("ja-JP") : value;
-
 // shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
 const barShape = <Rectangle />;
+const chartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
+const yAxisWidth = 40;
 
 export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, unit }: Props) => {
+  const [containerWidth, setContainerWidth] = useState(0);
+  const measureContainer = useCallback((element: HTMLElement | null) => {
+    if (element != undefined) {
+      setContainerWidth(element.getBoundingClientRect().width);
+    }
+  }, []);
+  const { barSize, barGap } = calculateGroupedBarLayout(
+    containerWidth - yAxisWidth - chartMargin.left - chartMargin.right,
+    data.length,
+    series.length,
+  );
   // 最初のタップで入力モードの更新を待たなくて済むよう、ホバーはマウス移動時に有効にする。
   const [trigger, setTrigger] = useState<"hover" | "click">("click");
   // 再描画のタイミングに依存せず、クリックがタッチ・ペン由来かを判定する。
@@ -47,6 +57,7 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
 
   return (
     <figure
+      ref={measureContainer}
       aria-label={name}
       className="w-full min-w-0"
       onPointerDownCapture={(event) => {
@@ -66,10 +77,12 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
         setTappedIndex(undefined);
       }}
     >
-      <ResponsiveContainer width="100%" minWidth={0} height={320}>
+      <ResponsiveContainer width="100%" minWidth={0} height={320} onResize={setContainerWidth}>
         <RechartsBarChart
           data={chartData}
-          margin={{ top: 20, right: 12, bottom: 0, left: 0 }}
+          barSize={barSize}
+          barGap={barGap}
+          margin={chartMargin}
           accessibilityLayer
           onClick={({ activeTooltipIndex }) => {
             if (isTapInput.current && trigger === "click") {
@@ -95,7 +108,7 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
           <YAxis
             type="number"
             allowDecimals={false}
-            width={40}
+            width={yAxisWidth}
             tickMargin={2}
             tick={{ fontSize: 12 }}
             tickLine={false}
@@ -116,20 +129,12 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
               dataKey={`values[${index}]`}
               name={item.label}
               fill={item.color}
+              zIndex={DefaultZIndexes.bar + series.length - index}
               shape={barShape}
               legendType="circle"
-              maxBarSize={48}
               isAnimationActive
               animationMatchBy={(bar) => bar.originalDataIndex}
-            >
-              <LabelList
-                dataKey={`values[${index}]`}
-                formatter={formatLabel}
-                position="top"
-                fontSize={12}
-                fill="var(--color-zinc-900)"
-              />
-            </Bar>
+            />
           ))}
           <Legend
             align="left"
