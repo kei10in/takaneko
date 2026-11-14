@@ -70,13 +70,13 @@ export default function Component() {
         </section>
         <section aria-labelledby="stage-history-heading" className="mt-12 px-4">
           <h2 id="stage-history-heading" className="section-heading mb-4">
-            イベント数・ステージ数の推移
+            ステージ数・イベント数の推移
           </h2>
           <StageHistory data={data} />
         </section>
         <section aria-labelledby="live-type-breakdown-heading" className="mt-12 px-4">
           <h2 id="live-type-breakdown-heading" className="section-heading mb-4">
-            出演イベントの種類別割合
+            内訳
           </h2>
           <LiveTypeBreakdown data={data} />
         </section>
