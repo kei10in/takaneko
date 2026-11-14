@@ -24,6 +24,10 @@ export const 日経エンタテインメント_2026年12月号: Publication = {
   officialTwitter: "",
   links: [
     {
+      text: "Web 記事紹介 (オフショット動画) - 公式 X",
+      url: "https://x.com/takanenofficial/status/2117965092998492250",
+    },
+    {
       text: "高嶺のなでしこ　変化を乗り越え歴史をつなぐ　新体制で踏み出す一歩 | 日経エンタテインメント！ | 日経クロストレンド (記事を再構成、有料)",
       url: "https://xtrend.nikkei.com/atcl/contents/18/01397/00013/",
     },
