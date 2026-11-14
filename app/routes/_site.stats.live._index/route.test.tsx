@@ -60,6 +60,6 @@ describe("ライブ統計", () => {
     ]);
     expect(
       screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
-    ).toEqual(["サマリー", "イベント数・ステージ数の推移"]);
+    ).toEqual(["サマリー", "イベント数・ステージ数の推移", "出演イベントの種類別割合"]);
   });
 });

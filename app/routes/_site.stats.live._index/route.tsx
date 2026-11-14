@@ -6,6 +6,7 @@ import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
 import { LiveStatsSummary } from "./LiveStatsSummary.tsx";
+import { LiveTypeBreakdown } from "./LiveTypeBreakdown.tsx";
 import { StageHistory } from "./StageHistory.tsx";
 
 export const meta: MetaFunction = () => {
@@ -51,6 +52,12 @@ export default function Component() {
             イベント数・ステージ数の推移
           </h2>
           <StageHistory data={data} />
+        </section>
+        <section aria-labelledby="live-type-breakdown-heading" className="mt-12">
+          <h2 id="live-type-breakdown-heading" className={sectionHeading("mb-4")}>
+            出演イベントの種類別割合
+          </h2>
+          <LiveTypeBreakdown data={data} />
         </section>
       </section>
     </div>
