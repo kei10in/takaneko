@@ -78,6 +78,10 @@ export const BEEEEM_vol3: Publication = {
       text: "高嶺のなでしこ レコーディング記事紹介 - BEEEEMニュース X",
       url: "https://x.com/BEEEEM_NEWS/status/2105855292042842619",
     },
+    {
+      text: "宣伝ポスト (オフショット動画あり) - BEEEEMニュース X",
+      url: "https://x.com/BEEEEM_NEWS/status/2120109225477083303",
+    },
   ],
 };
 
