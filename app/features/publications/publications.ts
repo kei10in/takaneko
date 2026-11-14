@@ -98,6 +98,7 @@ import {
   オシグラフVol2,
   オシグラフVol3,
   オシグラフVol4,
+  オシグラフVol5,
 } from "./publications/オシグラフ.ts";
 import { グラビアプレスVol12 } from "./publications/グラビアプレス.ts";
 import { グラビアンエイジ_VOL2 } from "./publications/グラビアンエイジ.ts";
@@ -223,6 +224,7 @@ const publications: Publication[] = [
   オシグラフVol2,
   オシグラフVol3,
   オシグラフVol4,
+  オシグラフVol5,
   グラビアプレスVol12,
   グラビアンエイジ_VOL2,
   シティ情報Fukuoka_2025年8月号,

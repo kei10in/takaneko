@@ -1,5 +1,69 @@
 import { Publication } from "../types.ts";
 
+export const オシグラフVol5: Publication = {
+  slug: "オシグラフ Vol.5",
+  name: "オシグラフ Vol.5",
+  date: "2026-12-03",
+  kind: "magazines",
+  publisher: "st-YOLO",
+  listPrice: 1800,
+  priceWithTax: 1980,
+  code: undefined,
+  url: "https://styolo0307.official.ec/items/165559584",
+  coverImages: [
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_表紙.jpg",
+      ref: "https://x.com/oshigraph/status/2120094178046845195",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_裏表紙.jpg",
+      ref: "https://x.com/oshigraph/status/2120094178046845195",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_虹羽みにプレミアム版_表紙.jpg",
+      ref: "https://x.com/oshigraph/status/2120094178046845195",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_HKT48プレミアム版_表紙.jpg",
+      ref: "https://x.com/oshigraph/status/2120094178046845195",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_橋本桃呼1.jpg",
+      ref: "https://x.com/oshigraph/status/2120100724982063484",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_橋本桃呼2.jpg",
+      ref: "https://x.com/oshigraph/status/2120840977833398555",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_橋本桃呼_限定特典.jpg",
+      ref: "https://x.com/oshigraph/status/2120100724982063484",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_日向端ひな1.jpg",
+      ref: "https://x.com/oshigraph/status/2120100536766926963",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_日向端ひな2.jpg",
+      ref: "https://x.com/oshigraph/status/2120840948297146569",
+    },
+    {
+      path: "/publications/2026/2026-12-03_オシグラフ Vol.5_日向端ひな_限定特典.jpg",
+      ref: "https://x.com/oshigraph/status/2120100536766926963",
+    },
+  ],
+  bonuses: [
+    {
+      name: "プリントサイン付き推しの切り抜きチェキ風カード（全3種のうち1種ランダム）",
+      category: "ヨーロストア限定特典",
+      store: "https://styolo0307.official.ec/items/165559584",
+    },
+  ],
+  featuredMembers: ["橋本桃呼", "日向端ひな"],
+  officialTwitter: "https://x.com/takanenofficial/status/2120358355700977981",
+  links: [],
+};
+
 export const オシグラフVol4: Publication = {
   slug: "オシグラフ Vol.4",
   name: "オシグラフ Vol.4",
