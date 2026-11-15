@@ -50,12 +50,6 @@ describe("ライブ統計", () => {
     ]);
     expect(
       screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent),
-    ).toEqual([
-      "サマリー",
-      "ステージ数・イベント数の推移",
-      "内訳",
-      "月ごとの推移",
-      "集計方法について",
-    ]);
+    ).toEqual(["サマリー", "年ごとの推移", "内訳", "月ごとの推移", "集計方法について"]);
   });
 });

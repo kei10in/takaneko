@@ -70,7 +70,7 @@ export default function Component() {
         </section>
         <section aria-labelledby="stage-history-heading" className="mt-12 px-4">
           <h2 id="stage-history-heading" className="section-heading mb-4">
-            ステージ数・イベント数の推移
+            年ごとの推移
           </h2>
           <StageHistory data={data} />
         </section>
