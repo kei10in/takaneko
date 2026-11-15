@@ -45,11 +45,13 @@ export const buildMonthlyHistory = (
           : {
               events: aggregate("events"),
               soloEvents: aggregate("soloEvents"),
+              hostedEvents: aggregate("hostedEvents"),
               jointEvents: aggregate("jointEvents"),
               releaseEvents: aggregate("releaseEvents"),
               otherEvents: aggregate("otherEvents"),
               count: aggregate("count"),
               soloStages: aggregate("soloStages"),
+              hostedStages: aggregate("hostedStages"),
               jointStages: aggregate("jointStages"),
               releaseEventStages: aggregate("releaseEventStages"),
               otherStages: aggregate("otherStages"),

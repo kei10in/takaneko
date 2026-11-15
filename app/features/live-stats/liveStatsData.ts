@@ -5,6 +5,7 @@ const Count = z.number().int().nonnegative();
 const StageCounts = z.object({
   count: Count,
   soloStages: Count,
+  hostedStages: Count,
   jointStages: Count,
   releaseEventStages: Count,
   otherStages: Count,
@@ -15,6 +16,7 @@ export type StageCounts = z.infer<typeof StageCounts>;
 const EventCounts = z.object({
   events: Count,
   soloEvents: Count,
+  hostedEvents: Count,
   jointEvents: Count,
   releaseEvents: Count,
   otherEvents: Count,

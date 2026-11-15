@@ -13,5 +13,5 @@ export const buildLiveStatsSummary = (monthly: LiveStatsData["monthly"]): LiveSt
   days: monthly.reduce((sum, month) => sum + month.days, 0),
   stages: monthly.reduce((sum, month) => sum + month.count, 0),
   soloStages: monthly.reduce((sum, month) => sum + month.soloStages, 0),
-  jointStages: monthly.reduce((sum, month) => sum + month.jointStages, 0),
+  jointStages: monthly.reduce((sum, month) => sum + month.hostedStages + month.jointStages, 0),
 });

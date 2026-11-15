@@ -5,11 +5,13 @@ import { buildMonthlyHistory } from "./monthlyHistory.ts";
 const zero: LiveStatsMetrics = {
   events: 0,
   soloEvents: 0,
+  hostedEvents: 0,
   jointEvents: 0,
   releaseEvents: 0,
   otherEvents: 0,
   count: 0,
   soloStages: 0,
+  hostedStages: 0,
   jointStages: 0,
   releaseEventStages: 0,
   otherStages: 0,

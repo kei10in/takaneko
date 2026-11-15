@@ -12,6 +12,7 @@ export type EventHistoryData = Pick<LiveStatsData, "aggregatedOn" | "monthly" | 
 const sumCounts = (rows: EventCounts[]): EventCounts => ({
   events: rows.reduce((sum, row) => sum + row.events, 0),
   soloEvents: rows.reduce((sum, row) => sum + row.soloEvents, 0),
+  hostedEvents: rows.reduce((sum, row) => sum + row.hostedEvents, 0),
   jointEvents: rows.reduce((sum, row) => sum + row.jointEvents, 0),
   releaseEvents: rows.reduce((sum, row) => sum + row.releaseEvents, 0),
   otherEvents: rows.reduce((sum, row) => sum + row.otherEvents, 0),
@@ -34,9 +35,9 @@ export const buildEventHistory = (data: EventHistoryData) => {
     },
   );
   const career: EventHistoryPeriod[] = data.careerYearly.map(
-    ({ year, events, soloEvents, jointEvents, releaseEvents, otherEvents }) => ({
+    ({ year, events, soloEvents, hostedEvents, jointEvents, releaseEvents, otherEvents }) => ({
       label: `${year}年目`,
-      counts: { events, soloEvents, jointEvents, releaseEvents, otherEvents },
+      counts: { events, soloEvents, hostedEvents, jointEvents, releaseEvents, otherEvents },
     }),
   );
   return { calendar, career };

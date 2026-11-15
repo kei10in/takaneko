@@ -7,14 +7,14 @@ import type { LiveStatsData, LiveStatsMetrics } from "./liveStatsData.ts";
 
 const liveTypeGroups = {
   SOLO: "solo",
-  HOSTED: "joint",
+  HOSTED: "hosted",
   JOINT: "joint",
   GUEST: "other",
   FESTIVAL: "joint",
   INVITED_SOLO: "other",
   EVENT_LIVE: "other",
   RELEASE_EVENT: "release",
-} satisfies Record<LiveType, "solo" | "joint" | "release" | "other">;
+} satisfies Record<LiveType, "solo" | "hosted" | "joint" | "release" | "other">;
 
 const isPerformedLiveAct = (act: Act) => act.types.includes("LIVE") && act.status == undefined;
 
@@ -35,23 +35,27 @@ const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
   }));
   const count = stages.reduce((sum, stage) => sum + stage.count, 0);
   const solo = stages.filter((stage) => stage.type === "solo");
+  const hosted = stages.filter((stage) => stage.type === "hosted");
   const joint = stages.filter((stage) => stage.type === "joint");
   const release = stages.filter((stage) => stage.type === "release");
   const soloStages = solo.reduce((sum, stage) => sum + stage.count, 0);
+  const hostedStages = hosted.reduce((sum, stage) => sum + stage.count, 0);
   const jointStages = joint.reduce((sum, stage) => sum + stage.count, 0);
   const releaseEventStages = release.reduce((sum, stage) => sum + stage.count, 0);
   return {
     events: events.length,
     soloEvents: solo.length,
+    hostedEvents: hosted.length,
     jointEvents: joint.length,
     releaseEvents: release.length,
-    otherEvents: events.length - solo.length - joint.length - release.length,
+    otherEvents: events.length - solo.length - hosted.length - joint.length - release.length,
     days: new Set(events.map((event) => event.date)).size,
     count,
     soloStages,
+    hostedStages,
     jointStages,
     releaseEventStages,
-    otherStages: count - soloStages - jointStages - releaseEventStages,
+    otherStages: count - soloStages - hostedStages - jointStages - releaseEventStages,
   };
 };
 

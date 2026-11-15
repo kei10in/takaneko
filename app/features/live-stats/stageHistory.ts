@@ -12,6 +12,7 @@ export type StageHistoryData = Pick<LiveStatsData, "aggregatedOn" | "monthly" | 
 const sumCounts = (rows: StageCounts[]): StageCounts => ({
   count: rows.reduce((sum, row) => sum + row.count, 0),
   soloStages: rows.reduce((sum, row) => sum + row.soloStages, 0),
+  hostedStages: rows.reduce((sum, row) => sum + row.hostedStages, 0),
   jointStages: rows.reduce((sum, row) => sum + row.jointStages, 0),
   releaseEventStages: rows.reduce((sum, row) => sum + row.releaseEventStages, 0),
   otherStages: rows.reduce((sum, row) => sum + row.otherStages, 0),
@@ -38,6 +39,7 @@ export const buildStageHistory = (data: StageHistoryData) => {
     counts: {
       count: counts.count,
       soloStages: counts.soloStages,
+      hostedStages: counts.hostedStages,
       jointStages: counts.jointStages,
       releaseEventStages: counts.releaseEventStages,
       otherStages: counts.otherStages,

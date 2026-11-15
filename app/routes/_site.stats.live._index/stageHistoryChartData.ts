@@ -12,6 +12,7 @@ const series: ChartSeries[] = [
 const eventKeys: Record<StageHistoryFilter, keyof EventCounts> = {
   all: "events",
   soloStages: "soloEvents",
+  hostedStages: "hostedEvents",
   jointStages: "jointEvents",
   releaseEventStages: "releaseEvents",
   otherStages: "otherEvents",

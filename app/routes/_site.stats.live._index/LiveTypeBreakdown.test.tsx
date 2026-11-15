@@ -7,6 +7,7 @@ const metrics = {
   days: 1,
   count: 200,
   soloStages: 20,
+  hostedStages: 0,
   jointStages: 40,
   releaseEventStages: 60,
   otherStages: 80,
@@ -20,7 +21,8 @@ const data: EventHistoryData = {
       month: "2022-08",
       events: 40,
       soloEvents: 10,
-      jointEvents: 20,
+      hostedEvents: 5,
+      jointEvents: 15,
       releaseEvents: 10,
       otherEvents: 0,
     },
@@ -29,6 +31,7 @@ const data: EventHistoryData = {
       month: "2023-01",
       events: 60,
       soloEvents: 0,
+      hostedEvents: 0,
       jointEvents: 0,
       releaseEvents: 20,
       otherEvents: 40,
@@ -38,6 +41,7 @@ const data: EventHistoryData = {
       month: "2023-08",
       events: 20,
       soloEvents: 5,
+      hostedEvents: 0,
       jointEvents: 5,
       releaseEvents: 5,
       otherEvents: 5,
@@ -49,7 +53,8 @@ const data: EventHistoryData = {
       year: 1,
       events: 100,
       soloEvents: 10,
-      jointEvents: 20,
+      hostedEvents: 5,
+      jointEvents: 15,
       releaseEvents: 30,
       otherEvents: 40,
     },
@@ -58,6 +63,7 @@ const data: EventHistoryData = {
       year: 2,
       events: 20,
       soloEvents: 5,
+      hostedEvents: 0,
       jointEvents: 5,
       releaseEvents: 5,
       otherEvents: 5,
@@ -67,6 +73,7 @@ const data: EventHistoryData = {
       year: 3,
       events: 0,
       soloEvents: 0,
+      hostedEvents: 0,
       jointEvents: 0,
       releaseEvents: 0,
       otherEvents: 0,
@@ -89,6 +96,15 @@ afterEach(() => {
 
 it("活動年と西暦で切り替え、チップに件数と割合を表示する", async () => {
   render(<LiveTypeBreakdown data={data} />);
+  expect(screen.getAllByRole("columnheader").map((cell) => cell.textContent)).toEqual([
+    "活動年",
+    "合計",
+    "ワンマン",
+    "主催対バン",
+    "対バン",
+    "リリイベ",
+    "その他",
+  ]);
   const chart = screen.getByRole("application");
   const tap = () => {
     fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY: 72 });
@@ -99,22 +115,22 @@ it("活動年と西暦で切り替え、チップに件数と割合を表示す�
     within(await screen.findByRole("tooltip"))
       .getAllByRole("definition")
       .map((item) => item.textContent),
-  ).toEqual(["10 件 10%", "20 件 20%", "30 件 30%", "40 件 40%"]);
+  ).toEqual(["10 件 10%", "5 件 5%", "15 件 15%", "30 件 30%", "40 件 40%"]);
   tap();
   await waitFor(() => expect(screen.queryByRole("tooltip")).toBeNull());
   tap();
   fireEvent.click(screen.getByRole("button", { name: "西暦" }));
   expect(screen.queryByRole("tooltip")).toBeNull();
   const table = screen.getByRole("table", { name: "年ごとの出演イベントの種類別割合のデータ" });
-  expect(within(table).getByRole("row", { name: "2022年 40 10 20 10 0" })).toBeTruthy();
-  expect(within(table).getByRole("row", { name: "2023年 80 5 5 25 45" })).toBeTruthy();
-  expect(within(table).getByRole("row", { name: "2024年 0 0 0 0 0" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "2022年 40 10 5 15 10 0" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "2023年 80 5 0 5 25 45" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "2024年 0 0 0 0 0 0" })).toBeTruthy();
   tap();
   expect(
     within(await screen.findByRole("tooltip"))
       .getAllByRole("definition")
       .map((item) => item.textContent),
-  ).toEqual(["10 件 25%", "20 件 50%", "10 件 25%", "0 件 0%"]);
+  ).toEqual(["10 件 25%", "5 件 12.5%", "15 件 37.5%", "10 件 25%", "0 件 0%"]);
 });
 
 it("集計対象がない場合は案内を表示する", () => {

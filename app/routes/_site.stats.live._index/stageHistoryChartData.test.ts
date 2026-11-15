@@ -7,13 +7,27 @@ import type { StageHistorySeriesKey } from "./stageHistorySeries.ts";
 const stages: StageHistoryPeriod[] = [
   {
     label: "1年目",
-    counts: { count: 11, soloStages: 5, jointStages: 3, releaseEventStages: 2, otherStages: 1 },
+    counts: {
+      count: 11,
+      soloStages: 5,
+      hostedStages: 1,
+      jointStages: 2,
+      releaseEventStages: 2,
+      otherStages: 1,
+    },
   },
 ];
 const events: EventHistoryPeriod[] = [
   {
     label: "1年目",
-    counts: { events: 7, soloEvents: 2, jointEvents: 3, releaseEvents: 1, otherEvents: 1 },
+    counts: {
+      events: 7,
+      soloEvents: 2,
+      hostedEvents: 1,
+      jointEvents: 2,
+      releaseEvents: 1,
+      otherEvents: 1,
+    },
   },
 ];
 
@@ -28,7 +42,8 @@ it("左にイベント数、右にステージ数を渡す", () => {
 
 it.each<{ filter: StageHistorySeriesKey; events: number; stages: number }>([
   { filter: "soloStages", events: 2, stages: 5 },
-  { filter: "jointStages", events: 3, stages: 3 },
+  { filter: "hostedStages", events: 1, stages: 1 },
+  { filter: "jointStages", events: 2, stages: 2 },
   { filter: "releaseEventStages", events: 1, stages: 2 },
   { filter: "otherStages", events: 1, stages: 1 },
 ])(
@@ -44,11 +59,19 @@ it("0件とデータなしを区別し、片方が未集計なら行全体をデ
   const zeroStages = {
     count: 0,
     soloStages: 0,
+    hostedStages: 0,
     jointStages: 0,
     releaseEventStages: 0,
     otherStages: 0,
   };
-  const zeroEvents = { events: 0, soloEvents: 0, jointEvents: 0, releaseEvents: 0, otherEvents: 0 };
+  const zeroEvents = {
+    events: 0,
+    soloEvents: 0,
+    hostedEvents: 0,
+    jointEvents: 0,
+    releaseEvents: 0,
+    otherEvents: 0,
+  };
   const chart = buildStageHistoryChartData(
     [
       { label: "2024年", counts: zeroStages },

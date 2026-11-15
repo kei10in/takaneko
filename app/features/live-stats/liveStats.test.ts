@@ -4,8 +4,11 @@ import {
   type EventMeta,
   type EventMetaDescriptor,
 } from "~/features/events/eventMeta.ts";
+import { buildEventHistory } from "./eventHistory.ts";
 import { aggregateStageHistory } from "./liveStats.ts";
 import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
+import { buildMonthlyHistory } from "./monthlyHistory.ts";
+import { buildStageHistory } from "./stageHistory.ts";
 
 const event = (overrides: Partial<EventMetaDescriptor> = {}) => {
   const meta = validateEventMeta({
@@ -85,6 +88,35 @@ describe("月別集計からの累計サマリー", () => {
 });
 
 describe("aggregateStageHistory", () => {
+  it("主催対バンを対バンと分けてイベント数・ステージ数を集計する", () => {
+    const history = aggregateStageHistory(
+      [
+        event({
+          liveType: "HOSTED",
+          acts: [
+            { title: "昼", types: ["LIVE"] },
+            { title: "夜", types: ["LIVE"] },
+          ],
+        }),
+        event({ liveType: "JOINT" }),
+        event({ liveType: "FESTIVAL" }),
+      ],
+      "2026-11-12",
+    );
+    const counts = {
+      events: 3,
+      count: 4,
+      hostedEvents: 1,
+      hostedStages: 2,
+      jointEvents: 2,
+      jointStages: 2,
+      otherEvents: 0,
+      otherStages: 0,
+    };
+    expect(history.monthly[0]).toMatchObject(counts);
+    expect(history.careerYearly.at(-1)).toMatchObject(counts);
+  });
+
   it("liveType がないイベントは有効なLIVE actがあっても集計しない", () => {
     const history = aggregateStageHistory(
       [
@@ -129,7 +161,14 @@ describe("aggregateStageHistory", () => {
       ],
       "2026-11-12",
     );
-    const counts = { events: 6, soloEvents: 1, jointEvents: 3, releaseEvents: 1, otherEvents: 1 };
+    const counts = {
+      events: 6,
+      soloEvents: 1,
+      hostedEvents: 1,
+      jointEvents: 2,
+      releaseEvents: 1,
+      otherEvents: 1,
+    };
     expect(history.monthly[0]).toMatchObject(counts);
     expect(history.careerYearly.at(-1)).toMatchObject(counts);
   });
@@ -153,12 +192,14 @@ describe("aggregateStageHistory", () => {
         month: "2026-10",
         events: 2,
         soloEvents: 0,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 1,
         otherEvents: 1,
         days: 1,
         count: 3,
         soloStages: 0,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 2,
         otherStages: 1,
@@ -168,12 +209,14 @@ describe("aggregateStageHistory", () => {
       year: 5,
       events: 2,
       soloEvents: 0,
+      hostedEvents: 0,
       jointEvents: 0,
       releaseEvents: 1,
       otherEvents: 1,
       days: 1,
       count: 3,
       soloStages: 0,
+      hostedStages: 0,
       jointStages: 0,
       releaseEventStages: 2,
       otherStages: 1,
@@ -197,13 +240,15 @@ describe("aggregateStageHistory", () => {
         month: "2023-08",
         events: 3,
         soloEvents: 1,
-        jointEvents: 2,
+        hostedEvents: 1,
+        jointEvents: 1,
         releaseEvents: 0,
         otherEvents: 0,
         days: 2,
         count: 3,
         soloStages: 1,
-        jointStages: 2,
+        hostedStages: 1,
+        jointStages: 1,
         releaseEventStages: 0,
         otherStages: 0,
       },
@@ -211,12 +256,14 @@ describe("aggregateStageHistory", () => {
         month: "2023-09",
         events: 1,
         soloEvents: 0,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 0,
         otherEvents: 1,
         days: 1,
         count: 1,
         soloStages: 0,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 0,
         otherStages: 1,
@@ -227,12 +274,14 @@ describe("aggregateStageHistory", () => {
         year: 1,
         events: 1,
         soloEvents: 1,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 0,
         otherEvents: 0,
         days: 1,
         count: 1,
         soloStages: 1,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 0,
         otherStages: 0,
@@ -241,13 +290,15 @@ describe("aggregateStageHistory", () => {
         year: 2,
         events: 3,
         soloEvents: 0,
-        jointEvents: 2,
+        hostedEvents: 1,
+        jointEvents: 1,
         releaseEvents: 0,
         otherEvents: 1,
         days: 2,
         count: 3,
         soloStages: 0,
-        jointStages: 2,
+        hostedStages: 1,
+        jointStages: 1,
         releaseEventStages: 0,
         otherStages: 1,
       },
@@ -264,12 +315,14 @@ describe("aggregateStageHistory", () => {
         month: "2022-08",
         events: 2,
         soloEvents: 2,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 0,
         otherEvents: 0,
         days: 2,
         count: 2,
         soloStages: 2,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 0,
         otherStages: 0,
@@ -280,12 +333,14 @@ describe("aggregateStageHistory", () => {
         year: 1,
         events: 1,
         soloEvents: 1,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 0,
         otherEvents: 0,
         days: 1,
         count: 1,
         soloStages: 1,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 0,
         otherStages: 0,
@@ -294,12 +349,14 @@ describe("aggregateStageHistory", () => {
         year: 2,
         events: 0,
         soloEvents: 0,
+        hostedEvents: 0,
         jointEvents: 0,
         releaseEvents: 0,
         otherEvents: 0,
         days: 0,
         count: 0,
         soloStages: 0,
+        hostedStages: 0,
         jointStages: 0,
         releaseEventStages: 0,
         otherStages: 0,
@@ -331,7 +388,9 @@ it("外部主催のワンマンはその他としてイベント数・ステー�
     count: 2,
     soloEvents: 0,
     soloStages: 0,
+    hostedEvents: 0,
     jointEvents: 0,
+    hostedStages: 0,
     jointStages: 0,
     releaseEvents: 0,
     releaseEventStages: 0,
@@ -340,4 +399,43 @@ it("外部主催のワンマンはその他としてイベント数・ステー�
   };
   expect(history.monthly[0]).toMatchObject(counts);
   expect(history.careerYearly.at(-1)).toMatchObject(counts);
+});
+
+it("主催対バンを西暦・活動年・月別の合計と平均でも独立して集計する", () => {
+  const data = {
+    aggregatedOn: "2024-11-12",
+    ...aggregateStageHistory(
+      [
+        event({ date: "2023-10-01", liveType: "HOSTED" }),
+        event({
+          date: "2024-10-01",
+          liveType: "HOSTED",
+          acts: [
+            { title: "昼", types: ["LIVE"] },
+            { title: "夜", types: ["LIVE"] },
+          ],
+        }),
+        event({ date: "2024-10-02", liveType: "JOINT" }),
+      ],
+      "2024-11-12",
+    ),
+  };
+  const stages = buildStageHistory(data);
+  const events = buildEventHistory(data);
+  expect(stages.calendar.at(-1)?.counts).toMatchObject({ hostedStages: 2, jointStages: 1 });
+  expect(events.calendar.at(-1)?.counts).toMatchObject({ hostedEvents: 1, jointEvents: 1 });
+  expect(stages.career.at(-1)?.counts).toMatchObject({ hostedStages: 2, jointStages: 1 });
+  expect(events.career.at(-1)?.counts).toMatchObject({ hostedEvents: 1, jointEvents: 1 });
+  expect(buildMonthlyHistory(data, "total")[9]?.counts).toMatchObject({
+    hostedEvents: 2,
+    hostedStages: 3,
+    jointEvents: 1,
+    jointStages: 1,
+  });
+  expect(buildMonthlyHistory(data, "average")[9]?.counts).toMatchObject({
+    hostedEvents: 2 / 3,
+    hostedStages: 1,
+    jointEvents: 1 / 3,
+    jointStages: 1 / 3,
+  });
 });

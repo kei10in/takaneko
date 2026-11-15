@@ -18,17 +18,28 @@ const series: LiveTypeSeries[] = [
     color: "var(--color-nadeshiko-900)",
     labelColor: "white",
   },
-  { key: "jointEvents", label: "対バン", color: "var(--color-nadeshiko-700)", labelColor: "white" },
+  {
+    key: "hostedEvents",
+    label: "主催対バン",
+    color: "var(--color-nadeshiko-700)",
+    labelColor: "white",
+  },
+  {
+    key: "jointEvents",
+    label: "対バン",
+    color: "var(--color-nadeshiko-500)",
+    labelColor: "var(--color-zinc-900)",
+  },
   {
     key: "releaseEvents",
     label: "リリイベ",
-    color: "var(--color-nadeshiko-500)",
+    color: "var(--color-nadeshiko-300)",
     labelColor: "var(--color-zinc-900)",
   },
   {
     key: "otherEvents",
     label: "その他",
-    color: "var(--color-nadeshiko-300)",
+    color: "var(--color-nadeshiko-100)",
     labelColor: "var(--color-zinc-900)",
   },
 ];

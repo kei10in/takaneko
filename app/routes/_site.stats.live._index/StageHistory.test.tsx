@@ -24,12 +24,14 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             month: "2022-08",
             events: 1,
             soloEvents: 1,
+            hostedEvents: 0,
             jointEvents: 0,
             releaseEvents: 0,
             otherEvents: 0,
             days: 1,
             count: 2,
             soloStages: 2,
+            hostedStages: 0,
             jointStages: 0,
             releaseEventStages: 0,
             otherStages: 0,
@@ -38,12 +40,14 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             month: "2023-07",
             events: 1,
             soloEvents: 0,
+            hostedEvents: 0,
             jointEvents: 1,
             releaseEvents: 0,
             otherEvents: 0,
             days: 1,
             count: 3,
             soloStages: 0,
+            hostedStages: 0,
             jointStages: 3,
             releaseEventStages: 0,
             otherStages: 0,
@@ -52,13 +56,15 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             month: "2023-08",
             events: 1,
             soloEvents: 0,
+            hostedEvents: 0,
             jointEvents: 1,
             releaseEvents: 0,
             otherEvents: 0,
             days: 1,
             count: 5,
             soloStages: 0,
-            jointStages: 4,
+            hostedStages: 1,
+            jointStages: 3,
             releaseEventStages: 0,
             otherStages: 1,
           },
@@ -68,13 +74,15 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             year: 1,
             events: 1,
             soloEvents: 1,
+            hostedEvents: 0,
             jointEvents: 0,
             releaseEvents: 0,
             otherEvents: 0,
             days: 1,
             count: 6,
             soloStages: 2,
-            jointStages: 4,
+            hostedStages: 1,
+            jointStages: 3,
             releaseEventStages: 0,
             otherStages: 0,
           },
@@ -82,12 +90,14 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             year: 2,
             events: 1,
             soloEvents: 0,
+            hostedEvents: 0,
             jointEvents: 1,
             releaseEvents: 0,
             otherEvents: 0,
             days: 1,
             count: 4,
             soloStages: 0,
+            hostedStages: 0,
             jointStages: 3,
             releaseEventStages: 0,
             otherStages: 1,
@@ -99,6 +109,11 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
   expect(screen.queryByRole("combobox", { name: "表示する年" })).toBeNull();
   const filter = screen.getByRole("combobox", { name: "表示する種別" });
   expect(within(filter).getByRole("option", { name: "すべて", selected: true })).toBeTruthy();
+  expect(
+    within(filter)
+      .getAllByRole("option")
+      .map((item) => item.textContent),
+  ).toEqual(["すべて", "ワンマン", "主催対バン", "対バン", "リリイベ", "その他"]);
   expect(screen.getByRole("button", { name: "活動年" }).getAttribute("aria-pressed")).toBe("true");
   const career = screen.getByRole("table", {
     name: "活動年ごとのイベント数・ステージ数の推移のデータ",
@@ -147,7 +162,8 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
 
   [
     { value: "soloStages", label: "ワンマン", count: 2, events: 1 },
-    { value: "jointStages", label: "対バン", count: 4, events: 0 },
+    { value: "hostedStages", label: "主催対バン", count: 1, events: 0 },
+    { value: "jointStages", label: "対バン", count: 3, events: 0 },
     { value: "releaseEventStages", label: "リリイベ", count: 0, events: 0 },
     { value: "otherStages", label: "その他", count: 0, events: 0 },
   ].forEach(({ value, count, events }) => {
@@ -169,7 +185,7 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
   const filteredCalendar = screen.getByRole("table", {
     name: "年ごとのイベント数・ステージ数の推移のデータ",
   });
-  expect(within(filteredCalendar).getByRole("row", { name: "2023年 2 7" })).toBeTruthy();
+  expect(within(filteredCalendar).getByRole("row", { name: "2023年 2 6" })).toBeTruthy();
   fireEvent.change(filter, { target: { value: "all" } });
   const all = screen.getByRole("table", {
     name: "年ごとのイベント数・ステージ数の推移のデータ",
