@@ -143,56 +143,19 @@ export const LiveTypeEnum = z.enum([
 export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
 
-type LiveTypeMetadata = {
-  label: string;
-  color: string;
-};
-
-const unknownLiveTypeMetadata = {
-  label: "不明",
-  color: "bg-gray-300",
-} satisfies LiveTypeMetadata;
-
-export const liveTypeMetadata = {
-  [LiveType.SOLO]: {
-    label: "ワンマン",
-    color: "bg-nadeshiko-700",
-  },
-  [LiveType.HOSTED]: {
-    label: "主催対バン",
-    color: "bg-blue-300",
-  },
-  [LiveType.JOINT]: {
-    label: "対バン",
-    color: "bg-amber-300",
-  },
-  [LiveType.GUEST]: {
-    label: "対バン",
-    color: "bg-amber-300",
-  },
-  [LiveType.FESTIVAL]: {
-    label: "対バン",
-    color: "bg-amber-400",
-  },
-  [LiveType.INVITED_SOLO]: {
-    label: "イベント出演",
-    color: "bg-amber-400",
-  },
-  [LiveType.EVENT_LIVE]: {
-    label: "イベント出演",
-    color: "bg-amber-400",
-  },
-  [LiveType.RELEASE_EVENT]: {
-    label: "リリースイベント",
-    color: "bg-violet-400",
-  },
-} satisfies Record<LiveType, LiveTypeMetadata>;
-
-export const liveTypeLabel = (liveType: LiveType | undefined): string =>
-  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).label;
+const liveTypeColors = {
+  [LiveType.SOLO]: "bg-nadeshiko-700",
+  [LiveType.HOSTED]: "bg-blue-300",
+  [LiveType.JOINT]: "bg-amber-300",
+  [LiveType.GUEST]: "bg-amber-300",
+  [LiveType.FESTIVAL]: "bg-amber-400",
+  [LiveType.INVITED_SOLO]: "bg-amber-400",
+  [LiveType.EVENT_LIVE]: "bg-amber-400",
+  [LiveType.RELEASE_EVENT]: "bg-violet-400",
+} satisfies Record<LiveType, string>;
 
 export const liveTypeColor = (liveType: LiveType | undefined): string =>
-  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).color;
+  liveType == undefined ? "bg-gray-300" : liveTypeColors[liveType];
 
 export const MeetAndGreetTypeEnum = z.enum([
   "握手会",
