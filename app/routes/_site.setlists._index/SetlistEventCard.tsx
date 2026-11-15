@@ -1,8 +1,9 @@
 import { GiMicrophone } from "react-icons/gi";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
-import { LiveTypeBadge, TextBadge } from "~/components/SmallBadges.tsx";
+import { LiveCategoryBadge, TextBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { SetlistEvent } from "~/features/setlists/types.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -13,6 +14,7 @@ interface SetlistEventCardProps {
 }
 
 export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
+  const liveCategory = getLiveCategory(event.liveType);
   const date = NaiveDate.parseUnsafe(event.date);
   const noSetlist = event.acts.every((act) => act.songCount == 0);
   return (
@@ -61,7 +63,7 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
           </div>
 
           <div className="flex flex-wrap items-center gap-1 pt-0.5">
-            <LiveTypeBadge liveType={event.liveType} />
+            {liveCategory != undefined && <LiveCategoryBadge liveCategory={liveCategory} />}
 
             {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
             {noSetlist && <TextBadge text="未登録" />}

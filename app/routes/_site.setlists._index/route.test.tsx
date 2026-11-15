@@ -202,6 +202,16 @@ describe("セットリストのフィルタ", () => {
 });
 
 describe("セットリストのモーダル", () => {
+  it("ゲスト出演を一覧と詳細の両方でイベント出演と表示する", async () => {
+    await setup([{ ...events[0], liveType: "GUEST" }]);
+    const card = screen.getByRole("button", { name: /ライブ A/u });
+    expect(within(card).getByText("イベント出演")).toBeTruthy();
+
+    fireEvent.click(card);
+    const dialog = await screen.findByRole("dialog", { name: "セットリスト" });
+    expect(within(dialog).getByText("イベント出演")).toBeTruthy();
+  });
+
   it("Drawerの上でコピー設定を操作し、Escapeでは設定だけを閉じる", async () => {
     await setup();
     fireEvent.click(screen.getByRole("button", { name: /ライブ B/u }));

@@ -1,8 +1,9 @@
 import { GiMicrophone } from "react-icons/gi";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import { Link } from "react-router";
-import { LiveTypeBadge } from "~/components/SmallBadges.tsx";
+import { LiveCategoryBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
 import { SimpleSongActivity } from "~/features/songs/types.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export const LiveCard: React.FC<Props> = ({ event, segment }: Props) => {
+  const liveCategory = event.liveType == undefined ? undefined : getLiveCategory(event.liveType);
   const members =
     segment.members
       ?.flatMap((m) => {
@@ -68,9 +70,9 @@ export const LiveCard: React.FC<Props> = ({ event, segment }: Props) => {
             {members != "" && <span>by {members}</span>}
           </p>
 
-          {event.liveType != undefined && (
+          {liveCategory != undefined && (
             <div className="flex flex-wrap items-center gap-1 pt-0.5">
-              <LiveTypeBadge liveType={event.liveType} />
+              <LiveCategoryBadge liveCategory={liveCategory} />
             </div>
           )}
         </div>
