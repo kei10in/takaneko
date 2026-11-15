@@ -39,7 +39,7 @@ const series: LiveTypeSeries[] = [
   {
     key: "event-live",
     label: liveCategories["event-live"].abbrevName,
-    color: "var(--color-nadeshiko-100)",
+    color: "var(--color-nadeshiko-200)",
     labelColor: "var(--color-zinc-900)",
   },
 ];
