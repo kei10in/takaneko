@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { LiveTypeEnum, type LiveType } from "~/features/events/EventType.ts";
 import {
   validateEventMeta,
   type EventMeta,
@@ -6,6 +7,7 @@ import {
 } from "~/features/events/eventMeta.ts";
 import { buildEventHistory } from "./eventHistory.ts";
 import { aggregateStageHistory } from "./liveStats.ts";
+import type { EventCounts, StageCounts } from "./liveStatsData.ts";
 import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
 import { buildMonthlyHistory } from "./monthlyHistory.ts";
 import { buildStageHistory } from "./stageHistory.ts";
@@ -88,6 +90,55 @@ describe("月別集計からの累計サマリー", () => {
 });
 
 describe("aggregateStageHistory", () => {
+  const expectedCountKeys = {
+    SOLO: ["soloEvents", "soloStages"],
+    HOSTED: ["hostedEvents", "hostedStages"],
+    JOINT: ["jointEvents", "jointStages"],
+    FESTIVAL: ["jointEvents", "jointStages"],
+    GUEST: ["otherEvents", "otherStages"],
+    INVITED_SOLO: ["otherEvents", "otherStages"],
+    EVENT_LIVE: ["otherEvents", "otherStages"],
+    RELEASE_EVENT: ["releaseEvents", "releaseEventStages"],
+  } satisfies Record<LiveType, [keyof EventCounts, keyof StageCounts]>;
+
+  it.each(LiveTypeEnum.options)(
+    "%s のイベント数とステージ数を対応する内訳に集計する",
+    (liveType) => {
+      const history = aggregateStageHistory(
+        [
+          event({
+            liveType,
+            acts: [
+              { title: "昼", types: ["LIVE"] },
+              { title: "夜", types: ["LIVE"] },
+            ],
+          }),
+        ],
+        "2026-11-12",
+      );
+      const [eventKey, stageKey] = expectedCountKeys[liveType];
+      const expected = {
+        events: 1,
+        days: 1,
+        count: 2,
+        soloEvents: 0,
+        soloStages: 0,
+        hostedEvents: 0,
+        hostedStages: 0,
+        jointEvents: 0,
+        jointStages: 0,
+        releaseEvents: 0,
+        releaseEventStages: 0,
+        otherEvents: 0,
+        otherStages: 0,
+        [eventKey]: 1,
+        [stageKey]: 2,
+      };
+      expect(history.monthly).toEqual([{ month: "2026-10", ...expected }]);
+      expect(history.careerYearly.at(-1)).toEqual({ year: 5, ...expected });
+    },
+  );
+
   it("主催対バンを対バンと分けてイベント数・ステージ数を集計する", () => {
     const history = aggregateStageHistory(
       [
