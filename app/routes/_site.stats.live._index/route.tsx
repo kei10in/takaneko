@@ -4,7 +4,6 @@ import { cloudflareContext } from "~/cloudflare-context.ts";
 import { OgpSiteName } from "~/constants.ts";
 import { liveCategories } from "~/features/events/LiveCategory.ts";
 import { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
-import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts";
 import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
@@ -55,7 +54,6 @@ export const loader = async ({ request, context }: Route.LoaderArgs) => {
 
 export default function Component() {
   const { data } = useLoaderData<typeof loader>();
-  const summary = buildLiveStatsSummary(data.monthly);
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -68,7 +66,7 @@ export default function Component() {
           <h2 id="overview-heading" className="section-heading">
             サマリー
           </h2>
-          <LiveStatsSummary name="累計の概要" summary={summary} />
+          <LiveStatsSummary name="累計の概要" summary={data.summary} />
         </section>
         <section aria-labelledby="stage-history-heading" className="mt-12 px-4">
           <h2 id="stage-history-heading" className="section-heading mb-4">

@@ -6,9 +6,8 @@ import {
   type EventMetaDescriptor,
 } from "~/features/events/eventMeta.ts";
 import { buildEventHistory } from "./eventHistory.ts";
-import { aggregateStageHistory } from "./liveStats.ts";
-import type { EventCounts, StageCounts } from "./liveStatsData.ts";
-import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
+import { aggregateStageHistory, buildLiveStatsData } from "./liveStats.ts";
+import { LiveStatsData, type EventCounts, type StageCounts } from "./liveStatsData.ts";
 import { buildMonthlyHistory } from "./monthlyHistory.ts";
 import { buildStageHistory } from "./stageHistory.ts";
 
@@ -28,9 +27,23 @@ const event = (overrides: Partial<EventMetaDescriptor> = {}) => {
 };
 
 const summarizeEvents = (events: EventMeta[], today: string) =>
-  buildLiveStatsSummary(aggregateStageHistory(events, today).monthly);
+  buildLiveStatsData(events, today).summary;
 
-describe("月別集計からの累計サマリー", () => {
+describe("生成データの累計サマリー", () => {
+  it("集計日とサマリーを含む生成データをJSONとして検証できる", () => {
+    const data = buildLiveStatsData([event()], "2026-11-15");
+    const json: unknown = JSON.parse(JSON.stringify(data));
+    expect(LiveStatsData.parse(json)).toEqual(data);
+    expect(data.aggregatedOn).toBe("2026-11-15");
+    expect(data.summary).toEqual({
+      events: 1,
+      stages: 1,
+      days: 1,
+      soloStages: 1,
+      jointStages: 0,
+    });
+  });
+
   it("イベント数・重複を除いた出演日数・各ステージ数を集計する", () => {
     expect(
       summarizeEvents(

@@ -33,6 +33,13 @@ export type LiveStatsMetrics = z.infer<typeof LiveStatsMetrics>;
 
 export const LiveStatsData = z.object({
   aggregatedOn: z.iso.date(),
+  summary: z.object({
+    events: Count,
+    stages: Count,
+    days: Count,
+    soloStages: Count,
+    jointStages: Count,
+  }),
   monthly: z.array(
     LiveStatsMetrics.extend({ month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u) }),
   ),

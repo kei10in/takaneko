@@ -4,6 +4,7 @@ import type { EventMeta } from "~/features/events/eventMeta.ts";
 import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import type { LiveStatsData, LiveStatsMetrics } from "./liveStatsData.ts";
+import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
 
 const isPerformedLiveAct = (act: Act) => act.types.includes("LIVE") && act.status == undefined;
 
@@ -80,4 +81,13 @@ export const aggregateStageHistory = (
     };
   });
   return { monthly, careerYearly };
+};
+
+export const buildLiveStatsData = (events: EventMeta[], today: string): LiveStatsData => {
+  const history = aggregateStageHistory(events, today);
+  return {
+    aggregatedOn: today,
+    summary: buildLiveStatsSummary(history.monthly),
+    ...history,
+  };
 };

@@ -6,7 +6,7 @@ import Component from "./route.tsx";
 afterEach(cleanup);
 
 describe("ライブ統計", () => {
-  it("累計サマリーの5項目を単位付きで表示する", async () => {
+  it("生成済みサマリーの5項目を月別データから再計算せずに表示する", async () => {
     const Stub = createRoutesStub([
       {
         path: "/stats/live",
@@ -14,40 +14,14 @@ describe("ライブ統計", () => {
         loader: () => ({
           data: {
             aggregatedOn: "2026-11-12",
-            monthly: [
-              {
-                month: "2025-12",
-                events: 400,
-                soloEvents: 0,
-                hostedEvents: 0,
-                jointEvents: 0,
-                releaseEvents: 0,
-                otherEvents: 400,
-                days: 300,
-                count: 600,
-                soloStages: 100,
-                hostedStages: 0,
-                jointStages: 450,
-                releaseEventStages: 25,
-                otherStages: 25,
-              },
-              {
-                month: "2026-01",
-                events: 400,
-                soloEvents: 0,
-                hostedEvents: 0,
-                jointEvents: 0,
-                releaseEvents: 0,
-                otherEvents: 400,
-                days: 300,
-                count: 634,
-                soloStages: 134,
-                hostedStages: 0,
-                jointStages: 450,
-                releaseEventStages: 25,
-                otherStages: 25,
-              },
-            ],
+            summary: {
+              events: 800,
+              stages: 1234,
+              days: 600,
+              soloStages: 234,
+              jointStages: 900,
+            },
+            monthly: [],
             careerYearly: [],
           },
         }),

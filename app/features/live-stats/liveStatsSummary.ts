@@ -1,12 +1,6 @@
 import type { LiveStatsData } from "./liveStatsData.ts";
 
-export interface LiveStatsSummary {
-  events: number;
-  days: number;
-  stages: number;
-  soloStages: number;
-  jointStages: number;
-}
+export type LiveStatsSummary = LiveStatsData["summary"];
 
 export const buildLiveStatsSummary = (monthly: LiveStatsData["monthly"]): LiveStatsSummary => ({
   events: monthly.reduce((sum, month) => sum + month.events, 0),
