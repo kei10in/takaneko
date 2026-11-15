@@ -26,11 +26,11 @@ export interface SetlistLiveFilter {
 
 export const SetlistLiveFilters: SetlistLiveFilter[] = [
   { display: "すべて", name: "all" },
-  { display: liveCategories.solo.label, name: "solo" },
-  { display: liveCategories.hosted.label, name: "hosted" },
-  { display: liveCategories.joint.label, name: "joint" },
-  { display: liveCategories["event-live"].label, name: "event-live" },
-  { display: liveCategories["release-event"].label, name: "release-event" },
+  { display: liveCategories.solo.name, name: "solo" },
+  { display: liveCategories.hosted.name, name: "hosted" },
+  { display: liveCategories.joint.name, name: "joint" },
+  { display: liveCategories["event-live"].name, name: "event-live" },
+  { display: liveCategories["release-event"].name, name: "release-event" },
 ];
 
 export interface SetlistSearchFilters {
