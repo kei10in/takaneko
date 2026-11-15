@@ -130,11 +130,12 @@ export const eventTypeColors = (category: EventType): UiColors =>
   eventTypeMetadata[category].colors;
 
 export const LiveTypeEnum = z.enum([
-  "SOLO", // ソロライブ
+  "SOLO", // ワンマン
   "HOSTED", // 主催ライブ
   "JOINT", // 対バン・少数組の共同ライブ
   "GUEST", // 他者の単独公演・ツアーへのゲスト出演
   "FESTIVAL", // 音楽・アイドルライブを主目的にしたフェス・サーキット・多数組イベント
+  "INVITED_SOLO", // 招待されたワンマン
   "EVENT_LIVE", // ファッションショーなど、ライブイベント以外の催しでのライブ出演
   "RELEASE_EVENT", // リリースイベント
 ]);
@@ -171,6 +172,10 @@ export const liveTypeMetadata = {
   },
   [LiveType.FESTIVAL]: {
     label: "対バン",
+    color: "bg-amber-400",
+  },
+  [LiveType.INVITED_SOLO]: {
+    label: "イベント出演",
     color: "bg-amber-400",
   },
   [LiveType.EVENT_LIVE]: {

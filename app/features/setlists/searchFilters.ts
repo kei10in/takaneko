@@ -54,7 +54,7 @@ export const SetlistLiveFilters: SetlistLiveFilter[] = [
   {
     display: "イベント出演",
     name: "event-live",
-    predicate: (liveType) => liveType === LiveType.EVENT_LIVE,
+    predicate: (liveType) => liveType === LiveType.EVENT_LIVE || liveType === LiveType.INVITED_SOLO,
   },
   {
     display: "リリース イベント",

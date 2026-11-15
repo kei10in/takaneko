@@ -311,3 +311,33 @@ describe("aggregateStageHistory", () => {
     expect(aggregateStageHistory([], "2022-08-06")).toEqual({ monthly: [], careerYearly: [] });
   });
 });
+
+it("外部主催のワンマンはその他としてイベント数・ステージ数を月別と活動年別に集計する", () => {
+  const history = aggregateStageHistory(
+    [
+      event({
+        liveType: "INVITED_SOLO",
+        acts: [
+          { title: "昼", types: ["LIVE"] },
+          { title: "夜", types: ["LIVE"] },
+          { title: "特典会", types: ["MEET_AND_GREET"] },
+        ],
+      }),
+    ],
+    "2026-11-12",
+  );
+  const counts = {
+    events: 1,
+    count: 2,
+    soloEvents: 0,
+    soloStages: 0,
+    jointEvents: 0,
+    jointStages: 0,
+    releaseEvents: 0,
+    releaseEventStages: 0,
+    otherEvents: 1,
+    otherStages: 2,
+  };
+  expect(history.monthly[0]).toMatchObject(counts);
+  expect(history.careerYearly.at(-1)).toMatchObject(counts);
+});

@@ -1,8 +1,20 @@
 import { DebutDate } from "~/constants.ts";
 import type { Act } from "~/features/events/act.ts";
 import type { EventMeta } from "~/features/events/eventMeta.ts";
+import type { LiveType } from "~/features/events/EventType.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import type { LiveStatsData, LiveStatsMetrics } from "./liveStatsData.ts";
+
+const liveTypeGroups = {
+  SOLO: "solo",
+  HOSTED: "joint",
+  JOINT: "joint",
+  GUEST: "other",
+  FESTIVAL: "joint",
+  INVITED_SOLO: "other",
+  EVENT_LIVE: "other",
+  RELEASE_EVENT: "release",
+} satisfies Record<LiveType, "solo" | "joint" | "release" | "other">;
 
 const isPerformedLiveAct = (act: Act) => act.types.includes("LIVE") && act.status == undefined;
 
@@ -18,15 +30,13 @@ const performedLiveEvents = (events: EventMeta[], today: string) =>
 
 const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
   const stages = events.map((event) => ({
-    type: event.liveType,
+    type: event.liveType == undefined ? undefined : liveTypeGroups[event.liveType],
     count: event.acts.filter(isPerformedLiveAct).length,
   }));
   const count = stages.reduce((sum, stage) => sum + stage.count, 0);
-  const solo = stages.filter((stage) => stage.type === "SOLO");
-  const joint = stages.filter(
-    (stage) => stage.type === "JOINT" || stage.type === "HOSTED" || stage.type === "FESTIVAL",
-  );
-  const release = stages.filter((stage) => stage.type === "RELEASE_EVENT");
+  const solo = stages.filter((stage) => stage.type === "solo");
+  const joint = stages.filter((stage) => stage.type === "joint");
+  const release = stages.filter((stage) => stage.type === "release");
   const soloStages = solo.reduce((sum, stage) => sum + stage.count, 0);
   const jointStages = joint.reduce((sum, stage) => sum + stage.count, 0);
   const releaseEventStages = release.reduce((sum, stage) => sum + stage.count, 0);

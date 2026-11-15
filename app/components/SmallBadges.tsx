@@ -4,7 +4,7 @@ import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType.ts";
+import { LiveType, liveTypeLabel } from "~/features/events/EventType.ts";
 
 interface BadgeProps {
   icon: IconType;
@@ -20,6 +20,17 @@ const Nadeshiko = "text-nadeshiko-800";
 const Amber = "text-amber-500";
 
 const Violet = "text-violet-400";
+
+const liveTypeBadgeStyles = {
+  [LiveType.SOLO]: { icon: FaCrown, color: Nadeshiko },
+  [LiveType.HOSTED]: { icon: FaPenNib, color: LightBlue },
+  [LiveType.JOINT]: { icon: HiUsers, color: Amber },
+  [LiveType.GUEST]: { icon: HiUsers, color: Amber },
+  [LiveType.FESTIVAL]: { icon: HiUsers, color: Amber },
+  [LiveType.INVITED_SOLO]: { icon: IoDiamond, color: Amber },
+  [LiveType.EVENT_LIVE]: { icon: IoDiamond, color: Amber },
+  [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, color: Violet },
+} satisfies Record<LiveType, { icon: IconType; color: string }>;
 
 const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
   const { icon: Icon, text, color, large = false } = props;
@@ -51,33 +62,14 @@ export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({
   large,
   color,
 }: LiveTypeBadgeProps) => {
-  if (liveType === LiveType.SOLO) {
-    return <Badge icon={FaCrown} text="ワンマン" color={color ?? Nadeshiko} large={large} />;
-  }
-  if (liveType === LiveType.HOSTED) {
-    return <Badge icon={FaPenNib} text="主催対バン" color={color ?? LightBlue} large={large} />;
-  }
-  if (liveType == LiveType.FESTIVAL || liveType == LiveType.JOINT || liveType == LiveType.GUEST) {
-    return <Badge icon={HiUsers} text="対バン" color={color ?? Amber} large={large} />;
-  }
-  if (liveType == LiveType.EVENT_LIVE) {
-    return <Badge icon={IoDiamond} text="イベント出演" color={color ?? Amber} large={large} />;
-  }
-  if (liveType == LiveType.RELEASE_EVENT) {
-    return (
-      <Badge icon={GiCompactDisc} text="リリースイベント" color={color ?? Violet} large={large} />
-    );
-  }
-
+  const style = liveTypeBadgeStyles[liveType];
   return (
-    <div
-      className={clsx(
-        "flex items-center rounded-full px-2 text-xs text-white",
-        liveTypeColor(liveType),
-      )}
-    >
-      {liveTypeLabel(liveType)}
-    </div>
+    <Badge
+      icon={style.icon}
+      text={liveTypeLabel(liveType)}
+      color={color ?? style.color}
+      large={large}
+    />
   );
 };
 

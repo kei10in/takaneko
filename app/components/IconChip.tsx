@@ -81,14 +81,12 @@ export const LiveTypeChip: React.FC<{ liveType: LiveType; large?: boolean }> = (
     [LiveType.FESTIVAL]: { icon: HiUsers, text: "対バン" },
     [LiveType.JOINT]: { icon: HiUsers, text: "対バン" },
     [LiveType.GUEST]: { icon: HiUsers, text: "対バン" },
+    [LiveType.INVITED_SOLO]: { icon: IoDiamond, text: "イベント出演" },
     [LiveType.EVENT_LIVE]: { icon: IoDiamond, text: "イベント出演" },
     [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, text: "リリースイベント" },
-  } as const;
+  } satisfies Record<LiveType, { icon: IconType; text: string }>;
 
   const liveTypeProps = LIVE_TYPE_METADATA[liveType];
-  if (!liveTypeProps) {
-    return null;
-  }
 
   return (
     <IconChip
