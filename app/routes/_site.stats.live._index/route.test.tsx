@@ -25,8 +25,6 @@ describe("ライブ統計", () => {
             careerYearlyEvents: [],
             monthlyStages: [],
             careerYearlyStages: [],
-            monthly: [],
-            careerYearly: [],
           },
         }),
       },
