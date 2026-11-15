@@ -1,10 +1,7 @@
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 import { AllStageCostumes } from "../costumes/costumesStage.ts";
 import { ALL_SONGS } from "../songs/songs.ts";
-import {
-  SetlistLiveFilters,
-  SetlistSearchFilters,
-  SetlistSelectedLiveFilterType,
-} from "./searchFilters.ts";
+import type { SetlistSearchFilters } from "./searchFilters.ts";
 import { containsAllTokens, searchTokens } from "./searchText.ts";
 import { SetlistAct, SetlistEvent, SetlistSearchResult } from "./types.ts";
 
@@ -57,17 +54,8 @@ export const filterSetlistEvents = (
   });
 };
 
-const matchesLiveTypeFilter = (
-  filter: SetlistSelectedLiveFilterType,
-  event: SetlistEvent,
-): boolean => {
-  const f = SetlistLiveFilters.find((liveFilter) => liveFilter.name == filter);
-  if (f == undefined) {
-    return true;
-  }
-
-  return f.predicate(event.liveType);
-};
+const matchesLiveTypeFilter = (category: LiveCategory, event: SetlistEvent): boolean =>
+  liveCategories[category].liveTypes.includes(event.liveType);
 
 const matchesSongAndCostumeFilters = (
   songSlug: string,

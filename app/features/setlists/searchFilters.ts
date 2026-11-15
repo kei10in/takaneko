@@ -1,5 +1,9 @@
 import { z } from "zod/v4";
-import { LiveType } from "~/features/events/EventType.ts";
+import {
+  liveCategories,
+  LiveCategoryEnum,
+  type LiveCategory,
+} from "~/features/events/LiveCategory.ts";
 
 export const SetlistYearFilterStart = 2022;
 export const SetlistYearFilterEnd = new Date().getFullYear();
@@ -11,62 +15,28 @@ export const SetlistYearFilters = Array.from(
   .toReversed()
   .map((x) => ({ value: x, label: `${x} 年` }));
 
-export const SetlistLiveFilterTypeEnum = z.enum([
-  "all",
-  "solo",
-  "hosted",
-  "joint",
-  "event-live",
-  "release-event",
-]);
+export const SetlistLiveFilterTypeEnum = z.enum(["all", ...LiveCategoryEnum.options]);
 export const SetlistLiveFilterType = SetlistLiveFilterTypeEnum.enum;
 export type SetlistLiveFilterType = z.infer<typeof SetlistLiveFilterTypeEnum>;
-export type SetlistSelectedLiveFilterType = Exclude<SetlistLiveFilterType, "all">;
 
 export interface SetlistLiveFilter {
   display: string;
   name: SetlistLiveFilterType;
-  predicate: (liveType: LiveType | undefined) => boolean;
 }
 
 export const SetlistLiveFilters: SetlistLiveFilter[] = [
-  {
-    display: "すべて",
-    name: "all",
-    predicate: () => true,
-  },
-  {
-    display: "ワンマン",
-    name: "solo",
-    predicate: (liveType) => liveType === LiveType.SOLO,
-  },
-  {
-    display: "主催対バン",
-    name: "hosted",
-    predicate: (liveType) => liveType === LiveType.HOSTED,
-  },
-  {
-    display: "対バン",
-    name: "joint",
-    predicate: (liveType) =>
-      liveType === LiveType.JOINT || liveType === LiveType.GUEST || liveType === LiveType.FESTIVAL,
-  },
-  {
-    display: "イベント出演",
-    name: "event-live",
-    predicate: (liveType) => liveType === LiveType.EVENT_LIVE || liveType === LiveType.INVITED_SOLO,
-  },
-  {
-    display: "リリース イベント",
-    name: "release-event",
-    predicate: (liveType) => liveType === LiveType.RELEASE_EVENT,
-  },
+  { display: "すべて", name: "all" },
+  { display: liveCategories.solo.label, name: "solo" },
+  { display: liveCategories.hosted.label, name: "hosted" },
+  { display: liveCategories.joint.label, name: "joint" },
+  { display: liveCategories["event-live"].label, name: "event-live" },
+  { display: liveCategories["release-event"].label, name: "release-event" },
 ];
 
 export interface SetlistSearchFilters {
   q: string;
   year: string[];
-  type: SetlistSelectedLiveFilterType[];
+  type: LiveCategory[];
   song: string;
   costume: string;
   isFirstPerformance: boolean;

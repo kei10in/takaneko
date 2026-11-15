@@ -20,12 +20,12 @@ import { cloudflareContext } from "~/cloudflare-context.ts";
 import { dialogBackdropStyle, pageBox } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
 import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
+import type { LiveCategory } from "~/features/events/LiveCategory.ts";
 import { filterSetlistEvents } from "~/features/setlists/filterSetlistEvents.ts";
 import {
   defaultSetlistSearchFilters,
   SetlistLiveFilters,
   SetlistSearchFilters,
-  SetlistSelectedLiveFilterType,
   SetlistYearFilters,
 } from "~/features/setlists/searchFilters.ts";
 import {
@@ -635,6 +635,6 @@ const StageCostumeFilterOptionGroups: SelectFilterOptionGroup[] = AllStageCostum
 
 const isSelectedLiveFilter = (
   filter: (typeof SetlistLiveFilters)[number],
-): filter is (typeof SetlistLiveFilters)[number] & { name: SetlistSelectedLiveFilterType } => {
+): filter is (typeof SetlistLiveFilters)[number] & { name: LiveCategory } => {
   return filter.name != "all";
 };
