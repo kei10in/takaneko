@@ -14,12 +14,26 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-it("平均・年とライブ種類を選び、1〜12月のイベント数とステージ数を並べる", () => {
+it("平均・合計・年とライブ種類を選び、1〜12月のイベント数とステージ数を表示する", () => {
   render(
     <MonthlyHistory
       data={{
         aggregatedOn: "2026-10-15",
         monthly: [
+          {
+            month: "2025-01",
+            events: 4,
+            count: 8,
+            days: 2,
+            soloEvents: 0,
+            soloStages: 0,
+            jointEvents: 0,
+            jointStages: 0,
+            releaseEvents: 0,
+            releaseEventStages: 0,
+            otherEvents: 4,
+            otherStages: 8,
+          },
           {
             month: "2026-01",
             events: 10,
@@ -43,20 +57,28 @@ it("平均・年とライブ種類を選び、1〜12月のイベント数とス�
     within(year)
       .getAllByRole("option")
       .map((item) => item.textContent),
-  ).toEqual(["平均", "2026年", "2025年", "2024年", "2023年", "2022年"]);
-  expect(within(year).getByRole("option", { name: "平均", selected: true })).toBeTruthy();
+  ).toEqual(["2026年", "2025年", "2024年", "2023年", "2022年", "合計", "平均"]);
+  expect(within(year).getByRole("option", { name: "2026年", selected: true })).toBeTruthy();
   const table = screen.getByRole("table");
-  expect(within(table).getByRole("row", { name: "1月 2.5 5" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "1月 10 20" })).toBeTruthy();
   expect(
     within(table)
       .getAllByRole("columnheader")
       .map((cell) => cell.textContent),
   ).toEqual(["月", "イベント数", "ステージ数"]);
   expect(within(table).getAllByRole("row")).toHaveLength(13);
+  fireEvent.change(year, { target: { value: "average" } });
+  expect(within(table).getByRole("row", { name: "1月 3.5 7" })).toBeTruthy();
+  fireEvent.change(year, { target: { value: "total" } });
+  expect(screen.getByRole("figure", { name: "月ごとのイベント数・ステージ数の合計" })).toBeTruthy();
+  expect(within(table).getByRole("row", { name: "1月 14 28" })).toBeTruthy();
+  const filter = screen.getByRole("combobox", { name: "表示する種別" });
+  fireEvent.change(filter, { target: { value: "otherStages" } });
+  expect(within(table).getByRole("row", { name: "1月 5 10" })).toBeTruthy();
+  fireEvent.change(filter, { target: { value: "all" } });
   fireEvent.change(year, { target: { value: "2026" } });
   expect(within(table).getByRole("row", { name: "1月 10 20" })).toBeTruthy();
   expect(within(table).getByRole("row", { name: "11月 データなし データなし" })).toBeTruthy();
-  const filter = screen.getByRole("combobox", { name: "表示する種別" });
   [
     { value: "soloStages", events: 2, stages: 4 },
     { value: "jointStages", events: 3, stages: 6 },

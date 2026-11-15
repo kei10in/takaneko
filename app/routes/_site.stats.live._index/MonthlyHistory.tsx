@@ -11,9 +11,9 @@ import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
 export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
-  const [selection, setSelection] = useState<MonthlyHistorySelection>("average");
-  const [filter, setFilter] = useState<StageHistoryFilter>("all");
   const currentYear = Number(data.aggregatedOn.slice(0, 4));
+  const [selection, setSelection] = useState<MonthlyHistorySelection>(currentYear);
+  const [filter, setFilter] = useState<StageHistoryFilter>("all");
   const years = Array.from(
     { length: Math.max(0, currentYear - DebutDate.year + 1) },
     (_, index) => currentYear - index,
@@ -34,17 +34,22 @@ export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
           <select
             value={selection}
             onChange={(event) => {
+              if (event.target.value === "average" || event.target.value === "total") {
+                setSelection(event.target.value);
+                return;
+              }
               const year = years.find((value) => String(value) === event.target.value);
               setSelection(year ?? "average");
             }}
             className="h-10 appearance-none rounded-full bg-zinc-100 pr-10 pl-4 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 forced-colors:appearance-auto"
           >
-            <option value="average">平均</option>
             {years.map((year) => (
               <option key={year} value={year}>
                 {year}年
               </option>
             ))}
+            <option value="total">合計</option>
+            <option value="average">平均</option>
           </select>
           <HiChevronDown
             aria-hidden="true"
@@ -80,7 +85,9 @@ export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
         name={
           selection === "average"
             ? "月ごとのイベント数・ステージ数の平均"
-            : `${selection}年の月ごとのイベント数・ステージ数の推移`
+            : selection === "total"
+              ? "月ごとのイベント数・ステージ数の合計"
+              : `${selection}年の月ごとのイベント数・ステージ数の推移`
         }
         xAxisLabel="月"
         yAxisLabel="回数"
