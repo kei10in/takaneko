@@ -5,6 +5,7 @@ import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
 import { LiveType, liveTypeLabel } from "~/features/events/EventType.ts";
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 
 interface BadgeProps {
   icon: IconType;
@@ -48,6 +49,36 @@ const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
       <Icon />
       <span className="text-nowrap">{text}</span>
     </div>
+  );
+};
+
+interface LiveCategoryBadgeProps {
+  liveCategory: LiveCategory;
+  large?: boolean;
+  color?: string;
+}
+
+export const LiveCategoryBadge: React.FC<LiveCategoryBadgeProps> = ({
+  liveCategory,
+  large,
+  color,
+}) => {
+  const styles = {
+    solo: { icon: FaCrown, color: Nadeshiko },
+    hosted: { icon: FaPenNib, color: LightBlue },
+    joint: { icon: HiUsers, color: Amber },
+    "event-live": { icon: IoDiamond, color: Amber },
+    "release-event": { icon: GiCompactDisc, color: Violet },
+  } satisfies Record<LiveCategory, { icon: IconType; color: string }>;
+  const style = styles[liveCategory];
+
+  return (
+    <Badge
+      icon={style.icon}
+      text={liveCategories[liveCategory].name}
+      color={color ?? style.color}
+      large={large}
+    />
   );
 };
 
