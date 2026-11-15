@@ -13,6 +13,7 @@ import {
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
 import { LiveType, MeetAndGreetType } from "~/features/events/EventType.ts";
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 import { assertNever } from "~/utils/assertNever.ts";
 
 interface IconChipProps {
@@ -59,6 +60,35 @@ export const LiveChip: React.FC<LiveChipProps> = ({ iconColor, large = false }: 
       backgroundColor={backgroundColor}
       iconColor={iconColor}
       textColor={textColor}
+      large={large}
+    />
+  );
+};
+
+interface LiveCategoryChipProps {
+  liveCategory: LiveCategory;
+  large?: boolean;
+}
+
+export const LiveCategoryChip: React.FC<LiveCategoryChipProps> = ({
+  liveCategory,
+  large = false,
+}) => {
+  const icons = {
+    solo: FaCrown,
+    hosted: FaPenNib,
+    joint: HiUsers,
+    "event-live": IoDiamond,
+    "release-event": GiCompactDisc,
+  } satisfies Record<LiveCategory, IconType>;
+
+  return (
+    <IconChip
+      icon={icons[liveCategory]}
+      text={liveCategories[liveCategory].name}
+      backgroundColor="bg-zinc-100"
+      iconColor="text-nadeshiko-800"
+      textColor="text-zinc-600"
       large={large}
     />
   );
