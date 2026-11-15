@@ -87,7 +87,7 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-it("活動年と西暦で切り替え、チップも割合ではなく件数を表示する", async () => {
+it("活動年と西暦で切り替え、チップに件数と割合を表示する", async () => {
   render(<LiveTypeBreakdown data={data} />);
   const chart = screen.getByRole("application");
   const tap = () => {
@@ -99,7 +99,7 @@ it("活動年と西暦で切り替え、チップも割合ではなく件数を�
     within(await screen.findByRole("tooltip"))
       .getAllByRole("definition")
       .map((item) => item.textContent),
-  ).toEqual(["10 件", "20 件", "30 件", "40 件"]);
+  ).toEqual(["10 件 10%", "20 件 20%", "30 件 30%", "40 件 40%"]);
   tap();
   await waitFor(() => expect(screen.queryByRole("tooltip")).toBeNull());
   tap();
@@ -114,7 +114,7 @@ it("活動年と西暦で切り替え、チップも割合ではなく件数を�
     within(await screen.findByRole("tooltip"))
       .getAllByRole("definition")
       .map((item) => item.textContent),
-  ).toEqual(["10 件", "20 件", "10 件", "0 件"]);
+  ).toEqual(["10 件 25%", "20 件 50%", "10 件 25%", "0 件 0%"]);
 });
 
 it("集計対象がない場合は案内を表示する", () => {

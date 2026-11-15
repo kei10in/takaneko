@@ -13,7 +13,7 @@ import {
   usePlotArea,
   type RenderableText,
 } from "recharts";
-import { StackedBarChartTooltip } from "./StackedBarChartTooltip.tsx";
+import { PercentStackedBarChartTooltip } from "./PercentStackedBarChartTooltip.tsx";
 import { sumChartValues } from "./stackedBarChartData.ts";
 import type { ChartRow, PercentChartSeries } from "./types.ts";
 
@@ -57,7 +57,7 @@ const RowTooltip = ({
       active={active}
       filterNull={false}
       cursor={{ fill: "var(--color-zinc-100)" }}
-      content={<StackedBarChartTooltip stacks={series} data={data} unit={unit} />}
+      content={<PercentStackedBarChartTooltip series={series} data={data} unit={unit} />}
       isAnimationActive={false}
     />
   );

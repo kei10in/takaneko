@@ -62,7 +62,7 @@ it("チップを選択したバーの下に置き、右端を揃えて表示す�
     within(updatedTooltip)
       .getAllByRole("definition")
       .map((item) => item.textContent),
-  ).toEqual(["5 個", "5 個", "5 個", "5 個"]);
+  ).toEqual(["5 個 25%", "5 個 25%", "5 個 25%", "5 個 25%"]);
   tap(212);
   const lastWrapper = screen.getByRole("tooltip").closest<HTMLElement>(".recharts-tooltip-wrapper");
   const lastY = Number(lastWrapper?.style.transform.match(/,\s*([\d.]+)px/u)?.[1]);
@@ -152,4 +152,32 @@ it("狭い区分でも数字を表示し、チップでも件数を確認でき�
   fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY: 90 });
   fireEvent.click(chart, { clientX: 300, clientY: 90 });
   expect(within(await screen.findByRole("tooltip")).getByText("1 個")).toBeTruthy();
+  expect(within(screen.getByRole("tooltip")).getByText("0.1%")).toBeTruthy();
+});
+
+it("チップには件数と割合を示し、0件と未集計を区別する", async () => {
+  render(<PercentStackedBarChart {...props} data={data} />);
+  const chart = screen.getByRole("application");
+  const tap = (clientY: number) => {
+    fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY });
+    fireEvent.click(chart, { clientX: 300, clientY });
+  };
+  tap(72);
+  expect(
+    within(await screen.findByRole("tooltip"))
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["10 個 10%", "20 個 20%", "30 個 30%", "40 個 40%"]);
+  tap(168);
+  expect(
+    within(screen.getByRole("tooltip"))
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["0 個 0%", "0 個 0%", "0 個 0%", "0 個 0%"]);
+  tap(212);
+  expect(
+    within(screen.getByRole("tooltip"))
+      .getAllByRole("definition")
+      .map((item) => item.textContent),
+  ).toEqual(["データなし", "データなし", "データなし", "データなし"]);
 });
