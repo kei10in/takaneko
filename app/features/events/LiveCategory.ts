@@ -31,3 +31,8 @@ export const liveCategories: Record<LiveCategory, LiveCategoryDefinition> = {
     liveTypes: [LiveType.RELEASE_EVENT],
   },
 };
+
+export const getLiveCategory = (liveType: LiveType): LiveCategory | undefined =>
+  LiveCategoryEnum.options.find((category) =>
+    liveCategories[category].liveTypes.includes(liveType),
+  );
