@@ -1,77 +1,68 @@
 import { expect, it } from "vitest";
-import type { LiveStatsMetrics } from "./liveStatsData.ts";
-import { buildMonthlyEventHistory, buildMonthlyHistory } from "./monthlyHistory.ts";
+import type { LiveCounts } from "./liveCounts.ts";
+import { buildMonthlyHistory } from "./monthlyHistory.ts";
 
-const zero: LiveStatsMetrics = {
-  events: 0,
-  soloEvents: 0,
-  hostedEvents: 0,
-  jointEvents: 0,
-  releaseEvents: 0,
-  otherEvents: 0,
-  count: 0,
-  soloStages: 0,
-  hostedStages: 0,
-  jointStages: 0,
-  releaseEventStages: 0,
-  otherStages: 0,
-  days: 0,
+const zero: LiveCounts = {
+  total: 0,
+  solo: 0,
+  hosted: 0,
+  joint: 0,
+  "release-event": 0,
+  "event-live": 0,
 };
 const data = {
   aggregatedOn: "2024-10-15",
-  monthly: [
-    { ...zero, month: "2022-08", events: 2, count: 4 },
-    { ...zero, month: "2023-01", events: 2, count: 3 },
-    { ...zero, month: "2024-01", events: 3, count: 6 },
-    { ...zero, month: "2024-10", events: 2, count: 5 },
-    { ...zero, month: "2023-12", events: 4, count: 8 },
+  monthlyStages: [
+    { ...zero, month: "2022-08", total: 4 },
+    { ...zero, month: "2023-01", total: 3 },
+    { ...zero, month: "2024-01", total: 6 },
+    { ...zero, month: "2024-10", total: 5 },
+    { ...zero, month: "2023-12", total: 8 },
   ],
 };
 
 it("1〜12月を維持し、出演のない月は0、未来やデビュー前の月は未集計にする", () => {
-  const history = buildMonthlyHistory(data, 2024);
+  const history = buildMonthlyHistory(data.monthlyStages, data.aggregatedOn, 2024);
   expect(history.map((row) => row.label)).toEqual(
     Array.from({ length: 12 }, (_, i) => `${i + 1}月`),
   );
-  expect(history[0]?.counts).toMatchObject({ events: 3, count: 6 });
+  expect(history[0]?.counts).toMatchObject({ total: 6 });
   expect(history[1]?.counts).toEqual(zero);
-  expect(history[9]?.counts).toMatchObject({ events: 2, count: 5 });
+  expect(history[9]?.counts).toMatchObject({ total: 5 });
   expect(history[10]?.counts).toBeUndefined();
   expect(history[11]?.counts).toBeUndefined();
-  const debut = buildMonthlyHistory(data, 2022);
+  const debut = buildMonthlyHistory(data.monthlyStages, data.aggregatedOn, 2022);
   expect(debut[6]?.counts).toBeUndefined();
-  expect(debut[7]?.counts).toMatchObject({ events: 2, count: 4 });
+  expect(debut[7]?.counts).toMatchObject({ total: 4 });
 });
 
 it("平均は各月の集計対象年で割り、出演0の年は含め、デビュー前や未来は除外する", () => {
-  const history = buildMonthlyHistory(data, "average");
-  expect(history[0]?.counts).toMatchObject({ events: 2.5, count: 4.5 });
+  const history = buildMonthlyHistory(data.monthlyStages, data.aggregatedOn, "average");
+  expect(history[0]?.counts).toMatchObject({ total: 4.5 });
   expect(history[1]?.counts).toEqual(zero);
-  expect(history[7]?.counts?.events).toBeCloseTo(2 / 3);
-  expect(history[11]?.counts).toMatchObject({ events: 2, count: 4 });
+  expect(history[7]?.counts?.total).toBeCloseTo(4 / 3);
+  expect(history[11]?.counts).toMatchObject({ total: 4 });
 });
 
 it("デビュー前は集計対象がない", () => {
-  expect(buildMonthlyHistory({ aggregatedOn: "2022-08-06", monthly: [] }, "average")).toEqual([]);
+  expect(buildMonthlyHistory([], "2022-08-06", "average")).toEqual([]);
 });
 
 it("合計は同じ月の全年度の件数を足し、デビュー前と未来の月は除外する", () => {
   const history = buildMonthlyHistory(
-    {
-      ...data,
-      monthly: [
-        ...data.monthly,
-        { ...zero, month: "2022-01", events: 100, count: 200 },
-        { ...zero, month: "2024-12", events: 100, count: 200 },
-      ],
-    },
+    [
+      ...data.monthlyStages,
+      { ...zero, month: "2022-01", total: 200 },
+      { ...zero, month: "2024-12", total: 200 },
+    ],
+    data.aggregatedOn,
     "total",
   );
   expect(history).toHaveLength(12);
-  expect(history[0]?.counts).toMatchObject({ events: 5, count: 9 });
+  expect(history[0]?.counts).toMatchObject({ total: 9 });
   expect(history[1]?.counts).toEqual(zero);
-  expect(history[7]?.counts).toMatchObject({ events: 2, count: 4 });
-  expect(history[11]?.counts).toMatchObject({ events: 4, count: 8 });
+  expect(history[7]?.counts).toMatchObject({ total: 4 });
+  expect(history[11]?.counts).toMatchObject({ total: 8 });
 });
 
 const monthlyEvents = [
@@ -100,7 +91,7 @@ const monthlyEvents = [
 const zeroEvents = { total: 0, solo: 0, hosted: 0, joint: 0, "event-live": 0, "release-event": 0 };
 
 it("イベント数は月別イベントデータだけを使い、0件と未集計の月を区別する", () => {
-  const history = buildMonthlyEventHistory(monthlyEvents, "2024-10-15", 2024);
+  const history = buildMonthlyHistory(monthlyEvents, "2024-10-15", 2024);
   expect(history).toHaveLength(12);
   expect(history[0]?.counts).toEqual({
     total: 6,
@@ -112,12 +103,12 @@ it("イベント数は月別イベントデータだけを使い、0件と未集
   });
   expect(history[1]?.counts).toEqual(zeroEvents);
   expect(history[10]?.counts).toBeUndefined();
-  expect(buildMonthlyEventHistory(monthlyEvents, "2024-10-15", 2022)[6]?.counts).toBeUndefined();
-  expect(buildMonthlyEventHistory([], "2022-08-06", "average")).toEqual([]);
+  expect(buildMonthlyHistory(monthlyEvents, "2024-10-15", 2022)[6]?.counts).toBeUndefined();
+  expect(buildMonthlyHistory([], "2022-08-06", "average")).toEqual([]);
 });
 
 it("イベント数の合計・平均は対象月だけで計算し、出演0件の年も平均の分母に含める", () => {
-  const total = buildMonthlyEventHistory(monthlyEvents, "2024-10-15", "total");
+  const total = buildMonthlyHistory(monthlyEvents, "2024-10-15", "total");
   expect(total[0]?.counts).toEqual({
     total: 10,
     solo: 1,
@@ -128,7 +119,7 @@ it("イベント数の合計・平均は対象月だけで計算し、出演0件
   });
   expect(total[7]?.counts?.total).toBe(2);
   expect(total[11]?.counts).toEqual(zeroEvents);
-  const average = buildMonthlyEventHistory(monthlyEvents, "2024-10-15", "average");
+  const average = buildMonthlyHistory(monthlyEvents, "2024-10-15", "average");
   expect(average[0]?.counts).toEqual({
     total: 5,
     solo: 0.5,

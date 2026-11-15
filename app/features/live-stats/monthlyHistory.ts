@@ -1,15 +1,17 @@
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
-import type { EventHistoryPeriod } from "./eventHistory.ts";
-import { aggregateLiveCounts } from "./liveCounts.ts";
-import type { LiveStatsData, LiveStatsMetrics } from "./liveStatsData.ts";
+import { aggregateLiveCounts, type LiveCounts } from "./liveCounts.ts";
+import type { LiveStatsData, MonthlyLiveCounts } from "./liveStatsData.ts";
 
-export type MonthlyHistoryData = Pick<LiveStatsData, "aggregatedOn" | "monthly">;
+export type MonthlyHistoryData = Pick<
+  LiveStatsData,
+  "aggregatedOn" | "monthlyEvents" | "monthlyStages"
+>;
 export type MonthlyHistorySelection = "average" | "total" | number;
 
 interface MonthlyHistoryPeriod {
   label: string;
-  counts: LiveStatsMetrics | undefined;
+  counts: LiveCounts | undefined;
 }
 
 const monthlyPeriods = (aggregatedOn: string, selection: MonthlyHistorySelection) => {
@@ -36,11 +38,11 @@ const monthlyPeriods = (aggregatedOn: string, selection: MonthlyHistorySelection
   });
 };
 
-export const buildMonthlyEventHistory = (
-  monthlyEvents: LiveStatsData["monthlyEvents"],
+export const buildMonthlyHistory = (
+  monthlyCounts: MonthlyLiveCounts[],
   aggregatedOn: string,
   selection: MonthlyHistorySelection,
-): EventHistoryPeriod[] =>
+): MonthlyHistoryPeriod[] =>
   // 出演0件の年も平均の分母に含める。
   monthlyPeriods(aggregatedOn, selection).map(({ label, months }) => ({
     label,
@@ -48,40 +50,7 @@ export const buildMonthlyEventHistory = (
       months.length === 0
         ? undefined
         : aggregateLiveCounts(
-            monthlyEvents.filter((row) => months.includes(row.month)),
+            monthlyCounts.filter((row) => months.includes(row.month)),
             selection === "average" ? months.length : 1,
           ),
   }));
-
-export const buildMonthlyHistory = (
-  data: MonthlyHistoryData,
-  selection: MonthlyHistorySelection,
-): MonthlyHistoryPeriod[] => {
-  return monthlyPeriods(data.aggregatedOn, selection).map(({ label, months }) => {
-    const rows = data.monthly.filter((row) => months.includes(row.month));
-    // 集計対象月のデータがない場合は出演0件として、平均の分母にも含める。
-    const aggregate = (key: keyof LiveStatsMetrics) =>
-      rows.reduce((sum, row) => sum + row[key], 0) / (selection === "average" ? months.length : 1);
-    return {
-      label,
-      counts:
-        months.length === 0
-          ? undefined
-          : {
-              events: aggregate("events"),
-              soloEvents: aggregate("soloEvents"),
-              hostedEvents: aggregate("hostedEvents"),
-              jointEvents: aggregate("jointEvents"),
-              releaseEvents: aggregate("releaseEvents"),
-              otherEvents: aggregate("otherEvents"),
-              count: aggregate("count"),
-              soloStages: aggregate("soloStages"),
-              hostedStages: aggregate("hostedStages"),
-              jointStages: aggregate("jointStages"),
-              releaseEventStages: aggregate("releaseEventStages"),
-              otherStages: aggregate("otherStages"),
-              days: aggregate("days"),
-            },
-    };
-  });
-};

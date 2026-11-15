@@ -19,12 +19,13 @@ const performedLiveEvents = (events: EventMeta[], today: string) =>
       event.acts.some(isPerformedLiveAct),
   );
 
-const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics & { eventCounts: LiveCounts } => {
+const aggregatePeriod = (
+  events: EventMeta[],
+): LiveStatsMetrics & { eventCounts: LiveCounts; stageCounts: LiveCounts } => {
   const stages = events.map((event) => ({
     category: event.liveType == undefined ? undefined : getLiveCategory(event.liveType),
     count: event.acts.filter(isPerformedLiveAct).length,
   }));
-  const count = stages.reduce((sum, stage) => sum + stage.count, 0);
   const eventCounts = stages.reduce(
     (counts, stage) =>
       stage.category == undefined
@@ -32,17 +33,20 @@ const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics & { eventCounts:
         : { ...counts, total: counts.total + 1, [stage.category]: counts[stage.category] + 1 },
     emptyLiveCounts(),
   );
-  const solo = stages.filter((stage) => stage.category === "solo");
-  const hosted = stages.filter((stage) => stage.category === "hosted");
-  const joint = stages.filter((stage) => stage.category === "joint");
-  const release = stages.filter((stage) => stage.category === "release-event");
-  const eventLive = stages.filter((stage) => stage.category === "event-live");
-  const soloStages = solo.reduce((sum, stage) => sum + stage.count, 0);
-  const hostedStages = hosted.reduce((sum, stage) => sum + stage.count, 0);
-  const jointStages = joint.reduce((sum, stage) => sum + stage.count, 0);
-  const releaseEventStages = release.reduce((sum, stage) => sum + stage.count, 0);
+  const stageCounts = stages.reduce(
+    (counts, stage) =>
+      stage.category == undefined
+        ? counts
+        : {
+            ...counts,
+            total: counts.total + stage.count,
+            [stage.category]: counts[stage.category] + stage.count,
+          },
+    emptyLiveCounts(),
+  );
   return {
     eventCounts,
+    stageCounts,
     events: eventCounts.total,
     soloEvents: eventCounts.solo,
     hostedEvents: eventCounts.hosted,
@@ -50,19 +54,27 @@ const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics & { eventCounts:
     releaseEvents: eventCounts["release-event"],
     otherEvents: eventCounts["event-live"],
     days: new Set(events.map((event) => event.date)).size,
-    count,
-    soloStages,
-    hostedStages,
-    jointStages,
-    releaseEventStages,
-    otherStages: eventLive.reduce((sum, stage) => sum + stage.count, 0),
+    count: stageCounts.total,
+    soloStages: stageCounts.solo,
+    hostedStages: stageCounts.hosted,
+    jointStages: stageCounts.joint,
+    releaseEventStages: stageCounts["release-event"],
+    otherStages: stageCounts["event-live"],
   };
 };
 
 export const aggregateStageHistory = (
   events: EventMeta[],
   today: string,
-): Pick<LiveStatsData, "monthly" | "careerYearly" | "monthlyEvents" | "careerYearlyEvents"> => {
+): Pick<
+  LiveStatsData,
+  | "monthly"
+  | "careerYearly"
+  | "monthlyEvents"
+  | "careerYearlyEvents"
+  | "monthlyStages"
+  | "careerYearlyStages"
+> => {
   const liveEvents = performedLiveEvents(events, today);
   const monthly = [...new Set(liveEvents.map((event) => event.date.slice(0, 7)))]
     .toSorted()
@@ -92,8 +104,10 @@ export const aggregateStageHistory = (
   return {
     monthlyEvents: monthly.map(({ month, eventCounts }) => ({ month, ...eventCounts })),
     careerYearlyEvents: careerYearly.map(({ year, eventCounts }) => ({ year, ...eventCounts })),
-    monthly: monthly.map(({ eventCounts: _, ...row }) => row),
-    careerYearly: careerYearly.map(({ eventCounts: _, ...row }) => row),
+    monthlyStages: monthly.map(({ month, stageCounts }) => ({ month, ...stageCounts })),
+    careerYearlyStages: careerYearly.map(({ year, stageCounts }) => ({ year, ...stageCounts })),
+    monthly: monthly.map(({ eventCounts: _, stageCounts: __, ...row }) => row),
+    careerYearly: careerYearly.map(({ eventCounts: _, stageCounts: __, ...row }) => row),
   };
 };
 

@@ -23,6 +23,8 @@ describe("ライブ統計", () => {
             },
             monthlyEvents: [],
             careerYearlyEvents: [],
+            monthlyStages: [],
+            careerYearlyStages: [],
             monthly: [],
             careerYearly: [],
           },

@@ -48,93 +48,42 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
             "event-live": 0,
           },
         ],
-        monthly: [
+        monthlyStages: [
           {
             month: "2022-08",
-            events: 0,
-            soloEvents: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            releaseEvents: 0,
-            otherEvents: 0,
-            days: 1,
-            count: 2,
-            soloStages: 2,
-            hostedStages: 0,
-            jointStages: 0,
-            releaseEventStages: 0,
-            otherStages: 0,
+            total: 2,
+            solo: 2,
+            hosted: 0,
+            joint: 0,
+            "release-event": 0,
+            "event-live": 0,
           },
           {
             month: "2023-07",
-            events: 0,
-            soloEvents: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            releaseEvents: 0,
-            otherEvents: 0,
-            days: 1,
-            count: 3,
-            soloStages: 0,
-            hostedStages: 0,
-            jointStages: 3,
-            releaseEventStages: 0,
-            otherStages: 0,
+            total: 3,
+            solo: 0,
+            hosted: 0,
+            joint: 3,
+            "release-event": 0,
+            "event-live": 0,
           },
           {
             month: "2023-08",
-            events: 0,
-            soloEvents: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            releaseEvents: 0,
-            otherEvents: 0,
-            days: 1,
-            count: 5,
-            soloStages: 0,
-            hostedStages: 1,
-            jointStages: 3,
-            releaseEventStages: 0,
-            otherStages: 1,
+            total: 5,
+            solo: 0,
+            hosted: 1,
+            joint: 3,
+            "release-event": 0,
+            "event-live": 1,
           },
         ],
         careerYearlyEvents: [
           { year: 1, total: 1, solo: 1, hosted: 0, joint: 0, "release-event": 0, "event-live": 0 },
           { year: 2, total: 1, solo: 0, hosted: 0, joint: 1, "release-event": 0, "event-live": 0 },
         ],
-        careerYearly: [
-          {
-            year: 1,
-            events: 0,
-            soloEvents: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            releaseEvents: 0,
-            otherEvents: 0,
-            days: 1,
-            count: 6,
-            soloStages: 2,
-            hostedStages: 1,
-            jointStages: 3,
-            releaseEventStages: 0,
-            otherStages: 0,
-          },
-          {
-            year: 2,
-            events: 0,
-            soloEvents: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            releaseEvents: 0,
-            otherEvents: 0,
-            days: 1,
-            count: 4,
-            soloStages: 0,
-            hostedStages: 0,
-            jointStages: 3,
-            releaseEventStages: 0,
-            otherStages: 1,
-          },
+        careerYearlyStages: [
+          { year: 1, total: 6, solo: 2, hosted: 1, joint: 3, "release-event": 0, "event-live": 0 },
+          { year: 2, total: 4, solo: 0, hosted: 0, joint: 3, "release-event": 0, "event-live": 1 },
         ],
       }}
     />,
@@ -194,11 +143,11 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
   ).toBeTruthy();
 
   [
-    { value: "soloStages", label: "ワンマン", count: 2, events: 1 },
-    { value: "hostedStages", label: "主催対バン", count: 1, events: 0 },
-    { value: "jointStages", label: "対バン", count: 3, events: 0 },
-    { value: "releaseEventStages", label: "リリイベ", count: 0, events: 0 },
-    { value: "otherStages", label: "イベント出演", count: 0, events: 0 },
+    { value: "solo", label: "ワンマン", count: 2, events: 1 },
+    { value: "hosted", label: "主催対バン", count: 1, events: 0 },
+    { value: "joint", label: "対バン", count: 3, events: 0 },
+    { value: "release-event", label: "リリイベ", count: 0, events: 0 },
+    { value: "event-live", label: "イベント出演", count: 0, events: 0 },
   ].forEach(({ value, count, events }) => {
     fireEvent.change(filter, { target: { value } });
     const table = screen.getByRole("table", {
@@ -212,7 +161,7 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
     expect(within(table).getByRole("row", { name: `1年目 ${events} ${count}` })).toBeTruthy();
   });
 
-  fireEvent.change(filter, { target: { value: "jointStages" } });
+  fireEvent.change(filter, { target: { value: "joint" } });
   fireEvent.click(screen.getByRole("button", { name: "西暦" }));
   expect(within(filter).getByRole("option", { name: "対バン", selected: true })).toBeTruthy();
   const filteredCalendar = screen.getByRole("table", {

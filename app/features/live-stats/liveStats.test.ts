@@ -115,31 +115,37 @@ describe("aggregateStageHistory", () => {
     RELEASE_EVENT: "release-event",
   } satisfies Record<LiveType, LiveCategory>;
 
-  it.each(LiveTypeEnum.options)("%s のイベント数を共通カテゴリのキーで生成する", (liveType) => {
-    const data = buildLiveStatsData(
-      [
-        event({
-          liveType,
-          acts: [
-            { title: "昼", types: ["LIVE"] },
-            { title: "夜", types: ["LIVE"] },
-          ],
-        }),
-      ],
-      "2026-11-12",
-    );
-    const expected = {
-      total: 1,
-      solo: 0,
-      hosted: 0,
-      joint: 0,
-      "event-live": 0,
-      "release-event": 0,
-      [expectedCategories[liveType]]: 1,
-    };
-    expect(data.monthlyEvents).toEqual([{ month: "2026-10", ...expected }]);
-    expect(data.careerYearlyEvents.at(-1)).toEqual({ year: 5, ...expected });
-  });
+  it.each(LiveTypeEnum.options)(
+    "%s のイベント数とステージ数を共通カテゴリのキーで生成する",
+    (liveType) => {
+      const data = buildLiveStatsData(
+        [
+          event({
+            liveType,
+            acts: [
+              { title: "昼", types: ["LIVE"] },
+              { title: "夜", types: ["LIVE"] },
+            ],
+          }),
+        ],
+        "2026-11-12",
+      );
+      const expected = {
+        total: 1,
+        solo: 0,
+        hosted: 0,
+        joint: 0,
+        "event-live": 0,
+        "release-event": 0,
+        [expectedCategories[liveType]]: 1,
+      };
+      expect(data.monthlyEvents).toEqual([{ month: "2026-10", ...expected }]);
+      expect(data.careerYearlyEvents.at(-1)).toEqual({ year: 5, ...expected });
+      const expectedStages = { ...expected, total: 2, [expectedCategories[liveType]]: 2 };
+      expect(data.monthlyStages).toEqual([{ month: "2026-10", ...expectedStages }]);
+      expect(data.careerYearlyStages.at(-1)).toEqual({ year: 5, ...expectedStages });
+    },
+  );
 
   it("主催対バンを対バンと分けてイベント数・ステージ数を集計する", () => {
     const history = aggregateStageHistory(
@@ -449,6 +455,8 @@ describe("aggregateStageHistory", () => {
       careerYearly: [],
       monthlyEvents: [],
       careerYearlyEvents: [],
+      monthlyStages: [],
+      careerYearlyStages: [],
     });
   });
 });
@@ -506,20 +514,32 @@ it("主催対バンを西暦・活動年・月別の合計と平均でも独立�
   };
   const stages = buildStageHistory(data);
   const events = buildEventHistory(data);
-  expect(stages.calendar.at(-1)?.counts).toMatchObject({ hostedStages: 2, jointStages: 1 });
+  expect(stages.calendar.at(-1)?.counts).toMatchObject({ hosted: 2, joint: 1 });
   expect(events.calendar.at(-1)?.counts).toMatchObject({ hosted: 1, joint: 1 });
-  expect(stages.career.at(-1)?.counts).toMatchObject({ hostedStages: 2, jointStages: 1 });
+  expect(stages.career.at(-1)?.counts).toMatchObject({ hosted: 2, joint: 1 });
   expect(events.career.at(-1)?.counts).toMatchObject({ hosted: 1, joint: 1 });
-  expect(buildMonthlyHistory(data, "total")[9]?.counts).toMatchObject({
-    hostedEvents: 2,
-    hostedStages: 3,
-    jointEvents: 1,
-    jointStages: 1,
+  expect(
+    buildMonthlyHistory(data.monthlyStages, data.aggregatedOn, "total")[9]?.counts,
+  ).toMatchObject({
+    hosted: 3,
+    joint: 1,
   });
-  expect(buildMonthlyHistory(data, "average")[9]?.counts).toMatchObject({
-    hostedEvents: 2 / 3,
-    hostedStages: 1,
-    jointEvents: 1 / 3,
-    jointStages: 1 / 3,
+  expect(
+    buildMonthlyHistory(data.monthlyEvents, data.aggregatedOn, "total")[9]?.counts,
+  ).toMatchObject({
+    hosted: 2,
+    joint: 1,
+  });
+  expect(
+    buildMonthlyHistory(data.monthlyStages, data.aggregatedOn, "average")[9]?.counts,
+  ).toMatchObject({
+    hosted: 1,
+    joint: 1 / 3,
+  });
+  expect(
+    buildMonthlyHistory(data.monthlyEvents, data.aggregatedOn, "average")[9]?.counts,
+  ).toMatchObject({
+    hosted: 2 / 3,
+    joint: 1 / 3,
   });
 });

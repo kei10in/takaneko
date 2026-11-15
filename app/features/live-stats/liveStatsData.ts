@@ -32,6 +32,13 @@ const LiveStatsMetrics = StageCounts.extend({
 
 export type LiveStatsMetrics = z.infer<typeof LiveStatsMetrics>;
 
+const MonthlyLiveCounts = LiveCounts.extend({
+  month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u),
+});
+export type MonthlyLiveCounts = z.infer<typeof MonthlyLiveCounts>;
+
+const CareerYearlyLiveCounts = LiveCounts.extend({ year: z.number().int().positive() });
+
 export const LiveStatsData = z.object({
   aggregatedOn: z.iso.date(),
   summary: z.object({
@@ -41,10 +48,10 @@ export const LiveStatsData = z.object({
     soloStages: Count,
     jointStages: Count,
   }),
-  monthlyEvents: z.array(
-    LiveCounts.extend({ month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u) }),
-  ),
-  careerYearlyEvents: z.array(LiveCounts.extend({ year: z.number().int().positive() })),
+  monthlyEvents: z.array(MonthlyLiveCounts),
+  careerYearlyEvents: z.array(CareerYearlyLiveCounts),
+  monthlyStages: z.array(MonthlyLiveCounts),
+  careerYearlyStages: z.array(CareerYearlyLiveCounts),
   monthly: z.array(
     LiveStatsMetrics.extend({ month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u) }),
   ),

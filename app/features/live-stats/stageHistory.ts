@@ -1,22 +1,17 @@
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
-import type { LiveStatsData, StageCounts } from "./liveStatsData.ts";
+import { aggregateLiveCounts, type LiveCounts } from "./liveCounts.ts";
+import type { LiveStatsData } from "./liveStatsData.ts";
 
 export interface StageHistoryPeriod {
   label: string;
-  counts: StageCounts | undefined;
+  counts: LiveCounts | undefined;
 }
 
-export type StageHistoryData = Pick<LiveStatsData, "aggregatedOn" | "monthly" | "careerYearly">;
-
-const sumCounts = (rows: StageCounts[]): StageCounts => ({
-  count: rows.reduce((sum, row) => sum + row.count, 0),
-  soloStages: rows.reduce((sum, row) => sum + row.soloStages, 0),
-  hostedStages: rows.reduce((sum, row) => sum + row.hostedStages, 0),
-  jointStages: rows.reduce((sum, row) => sum + row.jointStages, 0),
-  releaseEventStages: rows.reduce((sum, row) => sum + row.releaseEventStages, 0),
-  otherStages: rows.reduce((sum, row) => sum + row.otherStages, 0),
-});
+export type StageHistoryData = Pick<
+  LiveStatsData,
+  "aggregatedOn" | "monthlyStages" | "careerYearlyStages"
+>;
 
 export const buildStageHistory = (data: StageHistoryData) => {
   const today = NaiveDate.parseUnsafe(data.aggregatedOn);
@@ -30,20 +25,15 @@ export const buildStageHistory = (data: StageHistoryData) => {
       const year = DebutDate.year + index;
       return {
         label: `${year}年`,
-        counts: sumCounts(data.monthly.filter((row) => row.month.startsWith(`${year}-`))),
+        counts: aggregateLiveCounts(
+          data.monthlyStages.filter((row) => row.month.startsWith(`${year}-`)),
+        ),
       };
     },
   );
-  const career: StageHistoryPeriod[] = data.careerYearly.map(({ year, ...counts }) => ({
+  const career: StageHistoryPeriod[] = data.careerYearlyStages.map(({ year, ...counts }) => ({
     label: `${year}年目`,
-    counts: {
-      count: counts.count,
-      soloStages: counts.soloStages,
-      hostedStages: counts.hostedStages,
-      jointStages: counts.jointStages,
-      releaseEventStages: counts.releaseEventStages,
-      otherStages: counts.otherStages,
-    },
+    counts,
   }));
   return { calendar, career };
 };

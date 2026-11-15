@@ -39,38 +39,24 @@ it("平均・合計・年とライブ種類を選び、1〜12月のイベント�
             "event-live": 1,
           },
         ],
-        monthly: [
+        monthlyStages: [
           {
             month: "2025-01",
-            events: 0,
-            count: 8,
-            days: 2,
-            soloEvents: 0,
-            soloStages: 0,
-            hostedEvents: 0,
-            jointEvents: 0,
-            hostedStages: 0,
-            jointStages: 0,
-            releaseEvents: 0,
-            releaseEventStages: 0,
-            otherEvents: 0,
-            otherStages: 8,
+            total: 8,
+            solo: 0,
+            hosted: 0,
+            joint: 0,
+            "release-event": 0,
+            "event-live": 8,
           },
           {
             month: "2026-01",
-            events: 0,
-            count: 20,
-            days: 5,
-            soloEvents: 0,
-            soloStages: 4,
-            hostedEvents: 0,
-            jointEvents: 0,
-            hostedStages: 2,
-            jointStages: 4,
-            releaseEvents: 0,
-            releaseEventStages: 8,
-            otherEvents: 0,
-            otherStages: 2,
+            total: 20,
+            solo: 4,
+            hosted: 2,
+            joint: 4,
+            "release-event": 8,
+            "event-live": 2,
           },
         ],
       }}
@@ -97,18 +83,18 @@ it("平均・合計・年とライブ種類を選び、1〜12月のイベント�
   expect(screen.getByRole("figure", { name: "月ごとのイベント数・ステージ数の合計" })).toBeTruthy();
   expect(within(table).getByRole("row", { name: "1月 14 28" })).toBeTruthy();
   const filter = screen.getByRole("combobox", { name: "表示する種別" });
-  fireEvent.change(filter, { target: { value: "otherStages" } });
+  fireEvent.change(filter, { target: { value: "event-live" } });
   expect(within(table).getByRole("row", { name: "1月 5 10" })).toBeTruthy();
   fireEvent.change(filter, { target: { value: "all" } });
   fireEvent.change(year, { target: { value: "2026" } });
   expect(within(table).getByRole("row", { name: "1月 10 20" })).toBeTruthy();
   expect(within(table).getByRole("row", { name: "11月 データなし データなし" })).toBeTruthy();
   [
-    { value: "soloStages", events: 2, stages: 4 },
-    { value: "hostedStages", events: 1, stages: 2 },
-    { value: "jointStages", events: 2, stages: 4 },
-    { value: "releaseEventStages", events: 4, stages: 8 },
-    { value: "otherStages", events: 1, stages: 2 },
+    { value: "solo", events: 2, stages: 4 },
+    { value: "hosted", events: 1, stages: 2 },
+    { value: "joint", events: 2, stages: 4 },
+    { value: "release-event", events: 4, stages: 8 },
+    { value: "event-live", events: 1, stages: 2 },
     { value: "all", events: 10, stages: 20 },
   ].forEach(({ value, events, stages }) => {
     fireEvent.change(filter, { target: { value } });

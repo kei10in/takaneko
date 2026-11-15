@@ -1,18 +1,15 @@
-import { liveCategories } from "~/features/events/LiveCategory.ts";
-export type StageHistorySeriesKey =
-  "soloStages" | "hostedStages" | "jointStages" | "releaseEventStages" | "otherStages";
-
-export type StageHistoryFilter = "all" | StageHistorySeriesKey;
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
+export type StageHistoryFilter = "all" | LiveCategory;
 
 export interface StageHistorySeries {
-  key: StageHistorySeriesKey;
+  key: LiveCategory;
   label: string;
 }
 
 export const stageHistorySeries: StageHistorySeries[] = [
-  { key: "soloStages", label: liveCategories["solo"].abbrevName },
-  { key: "hostedStages", label: liveCategories["hosted"].abbrevName },
-  { key: "jointStages", label: liveCategories["joint"].abbrevName },
-  { key: "releaseEventStages", label: liveCategories["release-event"].abbrevName },
-  { key: "otherStages", label: liveCategories["event-live"].abbrevName },
+  { key: "solo", label: liveCategories["solo"].abbrevName },
+  { key: "hosted", label: liveCategories["hosted"].abbrevName },
+  { key: "joint", label: liveCategories["joint"].abbrevName },
+  { key: "release-event", label: liveCategories["release-event"].abbrevName },
+  { key: "event-live", label: liveCategories["event-live"].abbrevName },
 ];
