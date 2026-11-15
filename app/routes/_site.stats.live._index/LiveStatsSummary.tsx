@@ -5,11 +5,9 @@ import type { LiveStatsSummary as SummaryData } from "~/features/live-stats/live
 export const LiveStatsSummary = ({
   summary,
   name = "期間の概要",
-  comparison,
 }: {
   summary: SummaryData;
   name?: string;
-  comparison?: { label: string; difference: number };
 }) => {
   const metrics = [
     { label: "出演イベント数", value: summary.events, unit: "件" },
@@ -38,12 +36,6 @@ export const LiveStatsSummary = ({
           ))}
         </div>
       </dl>
-      {comparison != undefined && (
-        <p className="mt-3 text-sm text-zinc-500">
-          {comparison.label}より {comparison.difference > 0 ? "+" : ""}
-          {comparison.difference.toLocaleString("ja-JP")}ステージ
-        </p>
-      )}
     </section>
   );
 };
