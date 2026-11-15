@@ -12,7 +12,7 @@ import {
 } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, MeetAndGreetType } from "~/features/events/EventType.ts";
+import { MeetAndGreetType } from "~/features/events/EventType.ts";
 import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 import { assertNever } from "~/utils/assertNever.ts";
 
@@ -89,42 +89,6 @@ export const LiveCategoryChip: React.FC<LiveCategoryChipProps> = ({
       backgroundColor="bg-zinc-100"
       iconColor="text-nadeshiko-800"
       textColor="text-zinc-600"
-      large={large}
-    />
-  );
-};
-
-export const LiveTypeChip: React.FC<{ liveType: LiveType; large?: boolean }> = ({
-  liveType,
-  large = false,
-}: {
-  liveType: LiveType;
-  large?: boolean;
-}) => {
-  const backgroundColor = "bg-zinc-100";
-  const iconColor = "text-nadeshiko-800";
-  const textColor = "text-zinc-600";
-
-  const LIVE_TYPE_METADATA = {
-    [LiveType.SOLO]: { icon: FaCrown, text: "ワンマン" },
-    [LiveType.HOSTED]: { icon: FaPenNib, text: "主催対バン" },
-    [LiveType.FESTIVAL]: { icon: HiUsers, text: "対バン" },
-    [LiveType.JOINT]: { icon: HiUsers, text: "対バン" },
-    [LiveType.GUEST]: { icon: HiUsers, text: "対バン" },
-    [LiveType.INVITED_SOLO]: { icon: IoDiamond, text: "イベント出演" },
-    [LiveType.EVENT_LIVE]: { icon: IoDiamond, text: "イベント出演" },
-    [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, text: "リリースイベント" },
-  } satisfies Record<LiveType, { icon: IconType; text: string }>;
-
-  const liveTypeProps = LIVE_TYPE_METADATA[liveType];
-
-  return (
-    <IconChip
-      icon={liveTypeProps.icon}
-      text={liveTypeProps.text}
-      backgroundColor={backgroundColor}
-      iconColor={iconColor}
-      textColor={textColor}
       large={large}
     />
   );
