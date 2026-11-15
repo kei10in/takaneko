@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta.ts";
 export const meta: EventMetaDescriptor = {
   summary: "テレビ朝日・六本木ヒルズ SUMMER FES",
   category: "LIVE",
-  liveType: "SOLO",
+  liveType: "INVITED_SOLO",
   date: "2025-08-10",
   open: "11:00",
   start: "12:00",

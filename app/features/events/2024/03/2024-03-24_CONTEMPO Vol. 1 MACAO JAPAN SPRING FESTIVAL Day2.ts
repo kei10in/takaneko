@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta.ts";
 export const meta: EventMetaDescriptor = {
   summary: "CONTEMPO Vol. 1 MACAO JAPAN SPRING FESTIVAL Day2",
   category: "LIVE",
-  liveType: "SOLO",
+  liveType: "INVITED_SOLO",
   date: "2024-03-24",
   region: "マカオ",
   location: "The Londoner Theatre",
