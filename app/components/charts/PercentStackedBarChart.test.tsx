@@ -98,8 +98,7 @@ it("系列の変更でチップを閉じ、次のタップで新しい系列名�
 it("行の順に横向きに積み上げ、幅は割合、数字は入力値で表示する", async () => {
   render(<PercentStackedBarChart {...props} data={data} />);
   const chart = screen.getByRole("application");
-  expect(await within(chart).findByText("10")).toBeTruthy();
-  expect(within(chart).getByText("40")).toBeTruthy();
+  await Promise.all(["10", "20", "30", "40"].map((value) => within(chart).findByText(value)));
   expect(within(chart).queryByText(/%/u)).toBeNull();
   expect(
     screen.getAllByLabelText(/legend icon$/u).map((item) => item.getAttribute("aria-label")),
@@ -147,8 +146,7 @@ it("狭い区分でも数字を表示し、チップでも件数を確認でき�
     <PercentStackedBarChart {...props} data={[{ label: "小さい区分", values: [1, 999, 0, 0] }]} />,
   );
   const chart = screen.getByRole("application");
-  expect(await within(chart).findByText("999")).toBeTruthy();
-  expect(within(chart).getByText("1")).toBeTruthy();
+  await Promise.all(["1", "999"].map((value) => within(chart).findByText(value)));
   fireEvent.pointerDown(chart, { pointerType: "touch", clientX: 300, clientY: 90 });
   fireEvent.click(chart, { clientX: 300, clientY: 90 });
   expect(within(await screen.findByRole("tooltip")).getByText("1 個")).toBeTruthy();
