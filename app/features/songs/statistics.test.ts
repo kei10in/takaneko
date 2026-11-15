@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import type { LiveType } from "~/features/events/EventType.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import {
   calculateSongStatistics,
@@ -116,6 +117,77 @@ describe("楽曲の統計", () => {
       { name: "対バン", count: 6, percentage: 60 },
       { name: "主催対バン", count: 3, percentage: 30 },
       { name: "ゲスト出演", count: 1, percentage: 10 },
+    ]);
+  });
+});
+
+describe("ライブカテゴリごとの披露回数", () => {
+  it("全種別をカテゴリにまとめ、披露回数と総披露回数に対する割合を返す", () => {
+    const performances: { liveType: LiveType; count: number }[] = [
+      { liveType: "SOLO", count: 2 },
+      { liveType: "HOSTED", count: 3 },
+      { liveType: "JOINT", count: 2 },
+      { liveType: "FESTIVAL", count: 4 },
+      { liveType: "GUEST", count: 2 },
+      { liveType: "INVITED_SOLO", count: 3 },
+      { liveType: "EVENT_LIVE", count: 1 },
+      { liveType: "RELEASE_EVENT", count: 3 },
+    ];
+    const lives = performances.map(({ liveType, count }) => {
+      const live = activity("2026-01-01", liveType, count);
+      live.event.liveType = liveType;
+      return live;
+    });
+    const statistics = calculateSongStatistics(data(lives));
+
+    expect(statistics.liveCategories).toHaveLength(5);
+    expect(statistics.liveCategories).toEqual(
+      expect.arrayContaining([
+        { category: "solo", count: 2, percentage: 10 },
+        { category: "hosted", count: 3, percentage: 15 },
+        { category: "joint", count: 6, percentage: 30 },
+        { category: "event-live", count: 6, percentage: 30 },
+        { category: "release-event", count: 3, percentage: 15 },
+      ]),
+    );
+  });
+
+  it("ライブ種別が未設定の披露をまとめ、割合の分母にも含める", () => {
+    const unknown = activity("2026-01-02", "unknown");
+    unknown.event.liveType = undefined;
+    const statistics = calculateSongStatistics(
+      data([activity("2026-01-01", "solo", 2), unknown, unknown]),
+    );
+
+    expect(statistics.liveCategories).toHaveLength(2);
+    expect(statistics.liveCategories).toEqual(
+      expect.arrayContaining([
+        { category: "solo", count: 2, percentage: 50 },
+        { category: undefined, count: 2, percentage: 50 },
+      ]),
+    );
+  });
+
+  it.each([{ lives: [] }, { lives: [activity("2026-01-01", "empty", 0)] }])(
+    "披露がなければカテゴリの集計結果は空配列になる",
+    ({ lives }) => {
+      expect(calculateSongStatistics(data(lives)).liveCategories).toEqual([]);
+    },
+  );
+
+  it("披露回数の降順、同数なら表示名順に並べる", () => {
+    const hosted = activity("2026-01-01", "hosted", 2);
+    hosted.event.liveType = "HOSTED";
+    const release = activity("2026-01-02", "release");
+    release.event.liveType = "RELEASE_EVENT";
+
+    expect(
+      calculateSongStatistics(data([release, hosted, activity("2026-01-03", "solo", 2)]))
+        .liveCategories,
+    ).toEqual([
+      { category: "solo", count: 2, percentage: 40 },
+      { category: "hosted", count: 2, percentage: 40 },
+      { category: "release-event", count: 1, percentage: 20 },
     ]);
   });
 });

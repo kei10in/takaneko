@@ -1,4 +1,9 @@
 import { LiveType, liveTypeLabel } from "~/features/events/EventType.ts";
+import {
+  getLiveCategory,
+  liveCategories,
+  type LiveCategory,
+} from "~/features/events/LiveCategory.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { LivesForSong, SimpleSongActivity } from "./types.ts";
 
@@ -19,6 +24,7 @@ export interface SongStatistics {
       }
     | undefined;
   liveTypes: { name: string; count: number; percentage: number }[];
+  liveCategories: { category: LiveCategory | undefined; count: number; percentage: number }[];
   costumes: { costumeName: string; value: number }[];
 }
 
@@ -33,6 +39,9 @@ const typeName = (type: LiveType | undefined) => {
   }
   return liveTypeLabel(type);
 };
+
+const categoryName = (category: LiveCategory | undefined) =>
+  category == undefined ? "不明" : liveCategories[category].name;
 
 export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
   const lives = data.lives.filter((live) => live.segments.length > 0);
@@ -55,10 +64,17 @@ export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
     );
 
   const liveTypeCounts = new Map<string, number>();
+  const liveCategoryCounts = new Map<LiveCategory | undefined, number>();
   const costumeCounts = new Map<string, number>();
   lives.forEach((live) => {
     const label = typeName(live.event.liveType);
     liveTypeCounts.set(label, (liveTypeCounts.get(label) ?? 0) + live.segments.length);
+    const category =
+      live.event.liveType == undefined ? undefined : getLiveCategory(live.event.liveType);
+    liveCategoryCounts.set(
+      category,
+      (liveCategoryCounts.get(category) ?? 0) + live.segments.length,
+    );
     live.segments.forEach((segment) => {
       const names =
         segment.costumeNames?.map((name) => name.trim()).filter((name) => name !== "") ?? [];
@@ -83,6 +99,16 @@ export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
     liveTypes: [...liveTypeCounts.entries()]
       .map(([name, count]) => ({ name, count, percentage: (count / performanceCount) * 100 }))
       .toSorted((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
+    liveCategories: [...liveCategoryCounts.entries()]
+      .map(([category, count]) => ({
+        category,
+        count,
+        percentage: (count / performanceCount) * 100,
+      }))
+      .toSorted(
+        (a, b) =>
+          b.count - a.count || categoryName(a.category).localeCompare(categoryName(b.category)),
+      ),
     costumes: [...costumeCounts.entries()]
       .map(([costumeName, value]) => ({ costumeName, value }))
       .toSorted((a, b) => b.value - a.value || a.costumeName.localeCompare(b.costumeName)),
