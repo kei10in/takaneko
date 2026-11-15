@@ -1,6 +1,6 @@
 import type { ChartRow, ChartSeries } from "~/components/charts/types.ts";
 import type { EventHistoryPeriod } from "~/features/live-stats/eventHistory.ts";
-import type { EventCounts } from "~/features/live-stats/liveStatsData.ts";
+import type { LiveCounts } from "~/features/live-stats/liveCounts.ts";
 import type { StageHistoryPeriod } from "~/features/live-stats/stageHistory.ts";
 import type { StageHistoryFilter } from "./stageHistorySeries.ts";
 
@@ -9,13 +9,13 @@ const series: ChartSeries[] = [
   { label: "ステージ数", color: "var(--color-nadeshiko-500)" },
 ];
 
-const eventKeys: Record<StageHistoryFilter, keyof EventCounts> = {
-  all: "events",
-  soloStages: "soloEvents",
-  hostedStages: "hostedEvents",
-  jointStages: "jointEvents",
-  releaseEventStages: "releaseEvents",
-  otherStages: "otherEvents",
+const eventKeys: Record<StageHistoryFilter, keyof LiveCounts> = {
+  all: "total",
+  soloStages: "solo",
+  hostedStages: "hosted",
+  jointStages: "joint",
+  releaseEventStages: "release-event",
+  otherStages: "event-live",
 };
 
 export const buildStageHistoryChartData = (

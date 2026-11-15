@@ -1,85 +1,72 @@
 import { expect, it } from "vitest";
 import { buildEventHistory } from "./eventHistory.ts";
 
-const metrics = {
-  days: 1,
-  count: 10,
-  soloStages: 0,
-  hostedStages: 0,
-  jointStages: 0,
-  releaseEventStages: 0,
-  otherStages: 10,
-};
-
 it("西暦では月別の出演イベント数を合算し、出演のない年も0件で表示する", () => {
   const history = buildEventHistory({
     aggregatedOn: "2024-01-01",
-    monthly: [
+    monthlyEvents: [
       {
-        ...metrics,
         month: "2022-08",
-        events: 2,
-        soloEvents: 1,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 0,
-        otherEvents: 0,
+        total: 2,
+        solo: 1,
+        hosted: 0,
+        joint: 1,
+        "release-event": 0,
+        "event-live": 0,
       },
       {
-        ...metrics,
         month: "2023-01",
-        events: 3,
-        soloEvents: 1,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 1,
-        otherEvents: 0,
+        total: 3,
+        solo: 1,
+        hosted: 0,
+        joint: 1,
+        "release-event": 1,
+        "event-live": 0,
       },
       {
-        ...metrics,
         month: "2023-08",
-        events: 4,
-        soloEvents: 0,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 0,
-        otherEvents: 3,
+        total: 4,
+        solo: 0,
+        hosted: 0,
+        joint: 1,
+        "release-event": 0,
+        "event-live": 3,
       },
     ],
-    careerYearly: [],
+    careerYearlyEvents: [],
   });
   expect(history.calendar).toEqual([
     {
       label: "2022年",
       counts: {
-        events: 2,
-        soloEvents: 1,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 0,
-        otherEvents: 0,
+        total: 2,
+        solo: 1,
+        hosted: 0,
+        joint: 1,
+        "release-event": 0,
+        "event-live": 0,
       },
     },
     {
       label: "2023年",
       counts: {
-        events: 7,
-        soloEvents: 1,
-        hostedEvents: 0,
-        jointEvents: 2,
-        releaseEvents: 1,
-        otherEvents: 3,
+        total: 7,
+        solo: 1,
+        hosted: 0,
+        joint: 2,
+        "release-event": 1,
+        "event-live": 3,
       },
     },
     {
       label: "2024年",
       counts: {
-        events: 0,
-        soloEvents: 0,
-        hostedEvents: 0,
-        jointEvents: 0,
-        releaseEvents: 0,
-        otherEvents: 0,
+        total: 0,
+        solo: 0,
+        hosted: 0,
+        joint: 0,
+        "release-event": 0,
+        "event-live": 0,
       },
     },
   ]);
@@ -88,38 +75,35 @@ it("西暦では月別の出演イベント数を合算し、出演のない年�
 it("活動年ではビルド時の出演イベント数を使う", () => {
   const history = buildEventHistory({
     aggregatedOn: "2023-09-01",
-    monthly: [
+    monthlyEvents: [
       {
-        ...metrics,
         month: "2023-08",
-        events: 9,
-        soloEvents: 1,
-        hostedEvents: 0,
-        jointEvents: 2,
-        releaseEvents: 3,
-        otherEvents: 3,
+        total: 9,
+        solo: 1,
+        hosted: 0,
+        joint: 2,
+        "release-event": 3,
+        "event-live": 3,
       },
     ],
-    careerYearly: [
+    careerYearlyEvents: [
       {
-        ...metrics,
         year: 1,
-        events: 5,
-        soloEvents: 2,
-        hostedEvents: 0,
-        jointEvents: 2,
-        releaseEvents: 1,
-        otherEvents: 0,
+        total: 5,
+        solo: 2,
+        hosted: 0,
+        joint: 2,
+        "release-event": 1,
+        "event-live": 0,
       },
       {
-        ...metrics,
         year: 2,
-        events: 4,
-        soloEvents: 0,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 1,
-        otherEvents: 2,
+        total: 4,
+        solo: 0,
+        hosted: 0,
+        joint: 1,
+        "release-event": 1,
+        "event-live": 2,
       },
     ],
   });
@@ -127,30 +111,32 @@ it("活動年ではビルド時の出演イベント数を使う", () => {
     {
       label: "1年目",
       counts: {
-        events: 5,
-        soloEvents: 2,
-        hostedEvents: 0,
-        jointEvents: 2,
-        releaseEvents: 1,
-        otherEvents: 0,
+        total: 5,
+        solo: 2,
+        hosted: 0,
+        joint: 2,
+        "release-event": 1,
+        "event-live": 0,
       },
     },
     {
       label: "2年目",
       counts: {
-        events: 4,
-        soloEvents: 0,
-        hostedEvents: 0,
-        jointEvents: 1,
-        releaseEvents: 1,
-        otherEvents: 2,
+        total: 4,
+        solo: 0,
+        hosted: 0,
+        joint: 1,
+        "release-event": 1,
+        "event-live": 2,
       },
     },
   ]);
 });
 
 it("デビュー前は推移を表示しない", () => {
-  expect(buildEventHistory({ aggregatedOn: "2022-08-06", monthly: [], careerYearly: [] })).toEqual({
+  expect(
+    buildEventHistory({ aggregatedOn: "2022-08-06", monthlyEvents: [], careerYearlyEvents: [] }),
+  ).toEqual({
     calendar: [],
     career: [],
   });

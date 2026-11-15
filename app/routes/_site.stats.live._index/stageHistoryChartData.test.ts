@@ -21,12 +21,12 @@ const events: EventHistoryPeriod[] = [
   {
     label: "1年目",
     counts: {
-      events: 7,
-      soloEvents: 2,
-      hostedEvents: 1,
-      jointEvents: 2,
-      releaseEvents: 1,
-      otherEvents: 1,
+      total: 7,
+      solo: 2,
+      hosted: 1,
+      joint: 2,
+      "release-event": 1,
+      "event-live": 1,
     },
   },
 ];
@@ -65,12 +65,12 @@ it("0件とデータなしを区別し、片方が未集計なら行全体をデ
     otherStages: 0,
   };
   const zeroEvents = {
-    events: 0,
-    soloEvents: 0,
-    hostedEvents: 0,
-    jointEvents: 0,
-    releaseEvents: 0,
-    otherEvents: 0,
+    total: 0,
+    solo: 0,
+    hosted: 0,
+    joint: 0,
+    "release-event": 0,
+    "event-live": 0,
   };
   const chart = buildStageHistoryChartData(
     [

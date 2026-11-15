@@ -1,4 +1,5 @@
 import { z } from "zod/v4";
+import { LiveCounts } from "./liveCounts.ts";
 
 const Count = z.number().int().nonnegative();
 
@@ -40,6 +41,10 @@ export const LiveStatsData = z.object({
     soloStages: Count,
     jointStages: Count,
   }),
+  monthlyEvents: z.array(
+    LiveCounts.extend({ month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u) }),
+  ),
+  careerYearlyEvents: z.array(LiveCounts.extend({ year: z.number().int().positive() })),
   monthly: z.array(
     LiveStatsMetrics.extend({ month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u) }),
   ),

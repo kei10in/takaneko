@@ -3,80 +3,64 @@ import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import type { EventHistoryData } from "~/features/live-stats/eventHistory.ts";
 import { LiveTypeBreakdown } from "./LiveTypeBreakdown.tsx";
 
-const metrics = {
-  days: 1,
-  count: 200,
-  soloStages: 20,
-  hostedStages: 0,
-  jointStages: 40,
-  releaseEventStages: 60,
-  otherStages: 80,
-};
-
 const data: EventHistoryData = {
   aggregatedOn: "2024-09-01",
-  monthly: [
+  monthlyEvents: [
     {
-      ...metrics,
       month: "2022-08",
-      events: 40,
-      soloEvents: 10,
-      hostedEvents: 5,
-      jointEvents: 15,
-      releaseEvents: 10,
-      otherEvents: 0,
+      total: 40,
+      solo: 10,
+      hosted: 5,
+      joint: 15,
+      "release-event": 10,
+      "event-live": 0,
     },
     {
-      ...metrics,
       month: "2023-01",
-      events: 60,
-      soloEvents: 0,
-      hostedEvents: 0,
-      jointEvents: 0,
-      releaseEvents: 20,
-      otherEvents: 40,
+      total: 60,
+      solo: 0,
+      hosted: 0,
+      joint: 0,
+      "release-event": 20,
+      "event-live": 40,
     },
     {
-      ...metrics,
       month: "2023-08",
-      events: 20,
-      soloEvents: 5,
-      hostedEvents: 0,
-      jointEvents: 5,
-      releaseEvents: 5,
-      otherEvents: 5,
+      total: 20,
+      solo: 5,
+      hosted: 0,
+      joint: 5,
+      "release-event": 5,
+      "event-live": 5,
     },
   ],
-  careerYearly: [
+  careerYearlyEvents: [
     {
-      ...metrics,
       year: 1,
-      events: 100,
-      soloEvents: 10,
-      hostedEvents: 5,
-      jointEvents: 15,
-      releaseEvents: 30,
-      otherEvents: 40,
+      total: 100,
+      solo: 10,
+      hosted: 5,
+      joint: 15,
+      "release-event": 30,
+      "event-live": 40,
     },
     {
-      ...metrics,
       year: 2,
-      events: 20,
-      soloEvents: 5,
-      hostedEvents: 0,
-      jointEvents: 5,
-      releaseEvents: 5,
-      otherEvents: 5,
+      total: 20,
+      solo: 5,
+      hosted: 0,
+      joint: 5,
+      "release-event": 5,
+      "event-live": 5,
     },
     {
-      ...metrics,
       year: 3,
-      events: 0,
-      soloEvents: 0,
-      hostedEvents: 0,
-      jointEvents: 0,
-      releaseEvents: 0,
-      otherEvents: 0,
+      total: 0,
+      solo: 0,
+      hosted: 0,
+      joint: 0,
+      "release-event": 0,
+      "event-live": 0,
     },
   ],
 };
@@ -135,7 +119,9 @@ it("活動年と西暦で切り替え、チップに件数と割合を表示す�
 
 it("集計対象がない場合は案内を表示する", () => {
   render(
-    <LiveTypeBreakdown data={{ aggregatedOn: "2022-08-06", monthly: [], careerYearly: [] }} />,
+    <LiveTypeBreakdown
+      data={{ aggregatedOn: "2022-08-06", monthlyEvents: [], careerYearlyEvents: [] }}
+    />,
   );
   expect(screen.getByText("集計対象のライブはありません。")).toBeTruthy();
   expect(screen.queryByRole("application")).toBeNull();

@@ -4,12 +4,12 @@ import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
 import { GroupedBarChart } from "~/components/charts/GroupedBarChart.tsx";
-import { buildEventHistory } from "~/features/live-stats/eventHistory.ts";
+import { buildEventHistory, type EventHistoryData } from "~/features/live-stats/eventHistory.ts";
 import { buildStageHistory, type StageHistoryData } from "~/features/live-stats/stageHistory.ts";
 import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
-export const StageHistory = ({ data }: { data: StageHistoryData }) => {
+export const StageHistory = ({ data }: { data: StageHistoryData & EventHistoryData }) => {
   const [basis, setBasis] = useState<"career" | "calendar">("career");
   const [filter, setFilter] = useState<StageHistoryFilter>("all");
   const history = useMemo(

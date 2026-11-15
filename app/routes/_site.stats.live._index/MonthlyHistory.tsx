@@ -2,7 +2,9 @@ import { useMemo, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
 import { GroupedBarChart } from "~/components/charts/GroupedBarChart.tsx";
 import { DebutDate } from "~/constants.ts";
+import type { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
 import {
+  buildMonthlyEventHistory,
   buildMonthlyHistory,
   type MonthlyHistoryData,
   type MonthlyHistorySelection,
@@ -10,7 +12,11 @@ import {
 import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
-export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
+export const MonthlyHistory = ({
+  data,
+}: {
+  data: MonthlyHistoryData & Pick<LiveStatsData, "monthlyEvents">;
+}) => {
   const currentYear = Number(data.aggregatedOn.slice(0, 4));
   const [selection, setSelection] = useState<MonthlyHistorySelection>(currentYear);
   const [filter, setFilter] = useState<StageHistoryFilter>("all");
@@ -20,7 +26,8 @@ export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
   );
   const chart = useMemo(() => {
     const history = buildMonthlyHistory(data, selection);
-    return buildStageHistoryChartData(history, history, filter);
+    const events = buildMonthlyEventHistory(data.monthlyEvents, data.aggregatedOn, selection);
+    return buildStageHistoryChartData(history, events, filter);
   }, [data, selection, filter]);
   if (chart.data.length === 0) {
     return <p>集計対象のライブはありません。</p>;

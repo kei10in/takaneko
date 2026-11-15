@@ -21,6 +21,8 @@ describe("ライブ統計", () => {
               soloStages: 234,
               jointStages: 900,
             },
+            monthlyEvents: [],
+            careerYearlyEvents: [],
             monthly: [],
             careerYearly: [],
           },
