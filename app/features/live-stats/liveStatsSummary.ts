@@ -15,6 +15,6 @@ export const buildLiveStatsSummary = (
     stages: stages.total,
     days,
     soloStages: stages.solo,
-    jointStages: stages.hosted + stages.joint,
+    jointStages: stages.joint,
   };
 };

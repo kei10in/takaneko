@@ -72,7 +72,24 @@ describe("生成データの累計サマリー", () => {
         ],
         "2026-11-07",
       ),
-    ).toEqual({ events: 5, days: 4, stages: 6, soloStages: 2, jointStages: 3 });
+    ).toEqual({ events: 5, days: 4, stages: 6, soloStages: 2, jointStages: 2 });
+  });
+
+  it("主催対バンは累計に含めるが、サマリーの対バンには含めない", () => {
+    expect(
+      summarizeEvents(
+        [
+          event({
+            liveType: "HOSTED",
+            acts: [
+              { title: "昼", types: ["LIVE"] },
+              { title: "夜", types: ["LIVE"] },
+            ],
+          }),
+        ],
+        "2026-11-07",
+      ),
+    ).toEqual({ events: 1, days: 1, stages: 2, soloStages: 0, jointStages: 0 });
   });
 
   it("当日以降・中止・延期・出演辞退と、ライブ出演のないイベントを除外する", () => {
