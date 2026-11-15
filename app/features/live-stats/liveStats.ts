@@ -1,20 +1,9 @@
 import { DebutDate } from "~/constants.ts";
 import type { Act } from "~/features/events/act.ts";
 import type { EventMeta } from "~/features/events/eventMeta.ts";
-import type { LiveType } from "~/features/events/EventType.ts";
+import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import type { LiveStatsData, LiveStatsMetrics } from "./liveStatsData.ts";
-
-const liveTypeGroups = {
-  SOLO: "solo",
-  HOSTED: "hosted",
-  JOINT: "joint",
-  GUEST: "other",
-  FESTIVAL: "joint",
-  INVITED_SOLO: "other",
-  EVENT_LIVE: "other",
-  RELEASE_EVENT: "release",
-} satisfies Record<LiveType, "solo" | "hosted" | "joint" | "release" | "other">;
 
 const isPerformedLiveAct = (act: Act) => act.types.includes("LIVE") && act.status == undefined;
 
@@ -30,14 +19,15 @@ const performedLiveEvents = (events: EventMeta[], today: string) =>
 
 const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
   const stages = events.map((event) => ({
-    type: event.liveType == undefined ? undefined : liveTypeGroups[event.liveType],
+    category: event.liveType == undefined ? undefined : getLiveCategory(event.liveType),
     count: event.acts.filter(isPerformedLiveAct).length,
   }));
   const count = stages.reduce((sum, stage) => sum + stage.count, 0);
-  const solo = stages.filter((stage) => stage.type === "solo");
-  const hosted = stages.filter((stage) => stage.type === "hosted");
-  const joint = stages.filter((stage) => stage.type === "joint");
-  const release = stages.filter((stage) => stage.type === "release");
+  const solo = stages.filter((stage) => stage.category === "solo");
+  const hosted = stages.filter((stage) => stage.category === "hosted");
+  const joint = stages.filter((stage) => stage.category === "joint");
+  const release = stages.filter((stage) => stage.category === "release-event");
+  const eventLive = stages.filter((stage) => stage.category === "event-live");
   const soloStages = solo.reduce((sum, stage) => sum + stage.count, 0);
   const hostedStages = hosted.reduce((sum, stage) => sum + stage.count, 0);
   const jointStages = joint.reduce((sum, stage) => sum + stage.count, 0);
@@ -48,14 +38,14 @@ const aggregatePeriod = (events: EventMeta[]): LiveStatsMetrics => {
     hostedEvents: hosted.length,
     jointEvents: joint.length,
     releaseEvents: release.length,
-    otherEvents: events.length - solo.length - hosted.length - joint.length - release.length,
+    otherEvents: eventLive.length,
     days: new Set(events.map((event) => event.date)).size,
     count,
     soloStages,
     hostedStages,
     jointStages,
     releaseEventStages,
-    otherStages: count - soloStages - hostedStages - jointStages - releaseEventStages,
+    otherStages: eventLive.reduce((sum, stage) => sum + stage.count, 0),
   };
 };
 
