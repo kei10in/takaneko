@@ -1,7 +1,7 @@
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
-import { aggregateLiveCounts, type LiveCounts } from "./liveCounts.ts";
-import type { LiveStatsData } from "./liveStatsData.ts";
+import { aggregateLiveCounts } from "./liveCounts.ts";
+import type { LiveCounts, LiveStatsData } from "./liveStatsData.ts";
 
 export interface EventHistoryPeriod {
   label: string;

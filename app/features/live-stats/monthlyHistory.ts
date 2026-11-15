@@ -1,7 +1,7 @@
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
-import { aggregateLiveCounts, type LiveCounts } from "./liveCounts.ts";
-import type { LiveStatsData, MonthlyLiveCounts } from "./liveStatsData.ts";
+import { aggregateLiveCounts } from "./liveCounts.ts";
+import type { LiveCounts, LiveStatsData, MonthlyLiveCounts } from "./liveStatsData.ts";
 
 export type MonthlyHistoryData = Pick<
   LiveStatsData,

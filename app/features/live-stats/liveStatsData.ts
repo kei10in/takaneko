@@ -1,7 +1,18 @@
 import { z } from "zod/v4";
-import { LiveCounts } from "./liveCounts.ts";
+import type { LiveCategory } from "~/features/events/LiveCategory.ts";
 
 const Count = z.number().int().nonnegative();
+
+const LiveCounts = z.object({
+  total: Count,
+  solo: Count,
+  hosted: Count,
+  joint: Count,
+  "event-live": Count,
+  "release-event": Count,
+}) satisfies z.ZodType<Record<"total" | LiveCategory, number>>;
+
+export type LiveCounts = z.infer<typeof LiveCounts>;
 
 const MonthlyLiveCounts = LiveCounts.extend({
   month: z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/u),

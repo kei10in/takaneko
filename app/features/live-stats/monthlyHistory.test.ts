@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import type { LiveCounts } from "./liveCounts.ts";
+import type { LiveCounts } from "./liveStatsData.ts";
 import { buildMonthlyHistory } from "./monthlyHistory.ts";
 
 const zero: LiveCounts = {

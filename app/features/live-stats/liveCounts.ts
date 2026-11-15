@@ -1,18 +1,5 @@
-import { z } from "zod/v4";
-import { LiveCategoryEnum, type LiveCategory } from "~/features/events/LiveCategory.ts";
-
-const Count = z.number().int().nonnegative();
-
-export const LiveCounts = z.object({
-  total: Count,
-  solo: Count,
-  hosted: Count,
-  joint: Count,
-  "event-live": Count,
-  "release-event": Count,
-}) satisfies z.ZodType<Record<"total" | LiveCategory, number>>;
-
-export type LiveCounts = z.infer<typeof LiveCounts>;
+import { LiveCategoryEnum } from "~/features/events/LiveCategory.ts";
+import type { LiveCounts } from "./liveStatsData.ts";
 
 export const emptyLiveCounts = (): LiveCounts => ({
   total: 0,

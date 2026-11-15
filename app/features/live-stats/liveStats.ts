@@ -3,8 +3,8 @@ import type { Act } from "~/features/events/act.ts";
 import type { EventMeta } from "~/features/events/eventMeta.ts";
 import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
-import { emptyLiveCounts, type LiveCounts } from "./liveCounts.ts";
-import type { LiveStatsData } from "./liveStatsData.ts";
+import { emptyLiveCounts } from "./liveCounts.ts";
+import type { LiveCounts, LiveStatsData } from "./liveStatsData.ts";
 import { buildLiveStatsSummary } from "./liveStatsSummary.ts";
 
 const isPerformedLiveAct = (act: Act) => act.types.includes("LIVE") && act.status == undefined;
