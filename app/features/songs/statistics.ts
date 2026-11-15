@@ -1,4 +1,3 @@
-import { LiveType, liveTypeLabel } from "~/features/events/EventType.ts";
 import {
   getLiveCategory,
   liveCategories,
@@ -23,7 +22,6 @@ export interface SongStatistics {
         longest: number;
       }
     | undefined;
-  liveTypes: { name: string; count: number; percentage: number }[];
   liveCategories: { category: LiveCategory | undefined; count: number; percentage: number }[];
   costumes: { costumeName: string; value: number }[];
 }
@@ -32,13 +30,6 @@ export interface PerformanceCount {
   label: string;
   count: number | null;
 }
-
-const typeName = (type: LiveType | undefined) => {
-  if (type === "GUEST") {
-    return "ゲスト出演";
-  }
-  return liveTypeLabel(type);
-};
 
 const categoryName = (category: LiveCategory | undefined) =>
   category == undefined ? "不明" : liveCategories[category].name;
@@ -63,12 +54,9 @@ export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
       NaiveDate.parseUnsafe(date).differenceInDays(NaiveDate.parseUnsafe(dates[index])),
     );
 
-  const liveTypeCounts = new Map<string, number>();
   const liveCategoryCounts = new Map<LiveCategory | undefined, number>();
   const costumeCounts = new Map<string, number>();
   lives.forEach((live) => {
-    const label = typeName(live.event.liveType);
-    liveTypeCounts.set(label, (liveTypeCounts.get(label) ?? 0) + live.segments.length);
     const category =
       live.event.liveType == undefined ? undefined : getLiveCategory(live.event.liveType);
     liveCategoryCounts.set(
@@ -96,9 +84,6 @@ export const calculateSongStatistics = (data: LivesForSong): SongStatistics => {
             average: gaps.reduce((sum, gap) => sum + gap, 0) / gaps.length,
             longest: Math.max(...gaps),
           },
-    liveTypes: [...liveTypeCounts.entries()]
-      .map(([name, count]) => ({ name, count, percentage: (count / performanceCount) * 100 }))
-      .toSorted((a, b) => b.count - a.count || a.name.localeCompare(b.name)),
     liveCategories: [...liveCategoryCounts.entries()]
       .map(([category, count]) => ({
         category,

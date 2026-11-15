@@ -73,24 +73,6 @@ describe("楽曲の統計", () => {
     expect(calculateSongStatistics(data(lives)).intervals).toBeUndefined();
   });
 
-  it("ライブ種別は披露回数で集計し、割合の分母も披露回数にする", () => {
-    const joint = activity("2026-01-04", "joint");
-    joint.event.liveType = "JOINT";
-    const unknown = activity("2026-01-10", "unknown");
-    unknown.event.liveType = undefined;
-    const statistics = calculateSongStatistics(
-      data([activity("2026-01-01", "solo", 2), joint, unknown]),
-    );
-    expect(statistics.liveTypes).toHaveLength(3);
-    expect(statistics.liveTypes).toEqual(
-      expect.arrayContaining([
-        { name: "ワンマン", count: 2, percentage: 50 },
-        { name: "不明", count: 1, percentage: 25 },
-        { name: "対バン", count: 1, percentage: 25 },
-      ]),
-    );
-  });
-
   it("衣装未登録・空配列は Unknown とし、使用回数順に並べる", () => {
     const live = activity("2026-01-01", "costumes", 4);
     live.segments[0].costumeNames = ["衣装 A", "衣装 B"];
@@ -100,23 +82,6 @@ describe("楽曲の統計", () => {
       { costumeName: "Unknown", value: 2 },
       { costumeName: "衣装 A", value: 2 },
       { costumeName: "衣装 B", value: 1 },
-    ]);
-  });
-
-  it("フェスと対バンの披露回数・割合を合算し、主催対バンは別に集計する", () => {
-    const joint = activity("2026-01-01", "joint", 2);
-    joint.event.liveType = "JOINT";
-    const festival = activity("2026-01-02", "festival", 4);
-    festival.event.liveType = "FESTIVAL";
-    const hosted = activity("2026-01-03", "hosted", 3);
-    hosted.event.liveType = "HOSTED";
-    const guest = activity("2026-01-04", "guest");
-    guest.event.liveType = "GUEST";
-
-    expect(calculateSongStatistics(data([joint, festival, hosted, guest])).liveTypes).toEqual([
-      { name: "対バン", count: 6, percentage: 60 },
-      { name: "主催対バン", count: 3, percentage: 30 },
-      { name: "ゲスト出演", count: 1, percentage: 10 },
     ]);
   });
 });
