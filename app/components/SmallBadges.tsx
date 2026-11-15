@@ -4,7 +4,6 @@ import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, liveTypeLabel } from "~/features/events/EventType.ts";
 import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 
 interface BadgeProps {
@@ -21,17 +20,6 @@ const Nadeshiko = "text-nadeshiko-800";
 const Amber = "text-amber-500";
 
 const Violet = "text-violet-400";
-
-const liveTypeBadgeStyles = {
-  [LiveType.SOLO]: { icon: FaCrown, color: Nadeshiko },
-  [LiveType.HOSTED]: { icon: FaPenNib, color: LightBlue },
-  [LiveType.JOINT]: { icon: HiUsers, color: Amber },
-  [LiveType.GUEST]: { icon: HiUsers, color: Amber },
-  [LiveType.FESTIVAL]: { icon: HiUsers, color: Amber },
-  [LiveType.INVITED_SOLO]: { icon: IoDiamond, color: Amber },
-  [LiveType.EVENT_LIVE]: { icon: IoDiamond, color: Amber },
-  [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, color: Violet },
-} satisfies Record<LiveType, { icon: IconType; color: string }>;
 
 const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
   const { icon: Icon, text, color, large = false } = props;
@@ -76,28 +64,6 @@ export const LiveCategoryBadge: React.FC<LiveCategoryBadgeProps> = ({
     <Badge
       icon={style.icon}
       text={liveCategories[liveCategory].name}
-      color={color ?? style.color}
-      large={large}
-    />
-  );
-};
-
-interface LiveTypeBadgeProps {
-  liveType: LiveType;
-  large?: boolean;
-  color?: string;
-}
-
-export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({
-  liveType,
-  large,
-  color,
-}: LiveTypeBadgeProps) => {
-  const style = liveTypeBadgeStyles[liveType];
-  return (
-    <Badge
-      icon={style.icon}
-      text={liveTypeLabel(liveType)}
       color={color ?? style.color}
       large={large}
     />
