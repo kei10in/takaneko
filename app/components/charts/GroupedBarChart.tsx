@@ -7,7 +7,6 @@ import {
   BarChart as RechartsBarChart,
   Rectangle,
   ResponsiveContainer,
-  Tooltip,
   XAxis,
   YAxis,
 } from "recharts";
@@ -30,8 +29,10 @@ const chartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
 const yAxisWidth = 40;
 
 export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, unit }: Props) => {
+  const containerRef = useRef<HTMLElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const measureContainer = useCallback((element: HTMLElement | null) => {
+    containerRef.current = element;
     if (element != undefined) {
       setContainerWidth(element.getBoundingClientRect().width);
     }
@@ -114,14 +115,14 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
             tickLine={false}
             domain={[0, "auto"]}
           />
-          <Tooltip
+          <GroupedBarChartTooltip
+            groupWidth={barSize * series.length + barGap * Math.max(0, series.length - 1)}
+            containerRef={containerRef}
+            data={data}
+            series={series}
+            unit={unit}
             trigger={trigger}
             active={trigger === "click" ? tappedIndex != undefined : undefined}
-            filterNull={false}
-            cursor={{ fill: "var(--color-zinc-100)" }}
-            content={<GroupedBarChartTooltip series={series} data={data} unit={unit} />}
-            offset={{ x: 36, y: 12 }}
-            isAnimationActive={false}
           />
           {series.map((item, index) => (
             <Bar

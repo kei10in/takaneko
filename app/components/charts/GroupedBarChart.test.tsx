@@ -7,6 +7,9 @@ beforeEach(() => {
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
     this: HTMLElement,
   ) {
+    if (this.getAttribute("role") === "tooltip") {
+      return new DOMRect(0, 0, 180, 64);
+    }
     return new DOMRect(0, 0, 640, this.classList.contains("recharts-legend-wrapper") ? 24 : 256);
   });
 });
@@ -14,6 +17,7 @@ beforeEach(() => {
 afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
+  vi.unstubAllGlobals();
 });
 
 const series = [
@@ -324,3 +328,47 @@ it.each([320, 640, 1200])(
     expect((firstX + barWidth - secondX) / barWidth).toBeCloseTo(0.6);
   },
 );
+
+it("チップはカーソルの高さによらず、下端を高いバーの上端に16px重ねる", async () => {
+  vi.stubGlobal("innerWidth", 640);
+  render(
+    <GroupedBarChart
+      {...props}
+      data={[
+        { label: "前半", values: [17, 9] },
+        { label: "後半", values: [8, 4] },
+      ]}
+    />,
+  );
+  const chart = screen.getByRole("application");
+  const hover = (clientX: number, clientY: number) => {
+    fireEvent.pointerMove(chart, { pointerType: "mouse", clientX, clientY });
+    fireEvent.mouseMove(chart, { clientX, clientY });
+  };
+  hover(180, 80);
+  const tooltip = await screen.findByRole("tooltip");
+  const wrapper = tooltip.closest<HTMLElement>(".recharts-tooltip-wrapper");
+  expect(wrapper?.style.translate).toBe("0 -100%");
+  const firstTransform = wrapper?.style.transform;
+  hover(180, 180);
+  expect(wrapper?.style.transform).toBe(firstTransform);
+  const firstY = Number(firstTransform?.match(/,\s*([\d.]+)px/u)?.[1]);
+  await waitFor(() => {
+    const bar = chart.querySelector('.recharts-bar-rectangle path[fill="red"]');
+    expect(Number(bar?.getAttribute("y")) + 16).toBeCloseTo(firstY, 2);
+  });
+  const firstGroupRight = chart.querySelector('.recharts-bar-rectangle path[fill="blue"]');
+  const firstX = Number(firstTransform?.match(/translate\(([\d.]+)px/u)?.[1]);
+  expect(firstX).toBeCloseTo(
+    Number(firstGroupRight?.getAttribute("x")) + Number(firstGroupRight?.getAttribute("width")) + 8,
+    2,
+  );
+  hover(460, 180);
+  await waitFor(() => expect(within(screen.getByRole("tooltip")).getByText("後半")).toBeTruthy());
+  const nextWrapper = screen.getByRole("tooltip").closest<HTMLElement>(".recharts-tooltip-wrapper");
+  const nextY = Number(nextWrapper?.style.transform.match(/,\s*([\d.]+)px/u)?.[1]);
+  expect(nextY).toBeGreaterThan(firstY);
+  const nextX = Number(nextWrapper?.style.transform.match(/translate\(([\d.]+)px/u)?.[1]);
+  const nextGroupLeft = chart.querySelectorAll('.recharts-bar-rectangle path[fill="red"]')[1];
+  expect(nextX + 180).toBeCloseTo(Number(nextGroupLeft?.getAttribute("x")) - 8, 2);
+});
