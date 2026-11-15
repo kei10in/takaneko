@@ -143,20 +143,6 @@ export const LiveTypeEnum = z.enum([
 export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
 
-const liveTypeColors = {
-  [LiveType.SOLO]: "bg-nadeshiko-700",
-  [LiveType.HOSTED]: "bg-blue-300",
-  [LiveType.JOINT]: "bg-amber-300",
-  [LiveType.GUEST]: "bg-amber-300",
-  [LiveType.FESTIVAL]: "bg-amber-400",
-  [LiveType.INVITED_SOLO]: "bg-amber-400",
-  [LiveType.EVENT_LIVE]: "bg-amber-400",
-  [LiveType.RELEASE_EVENT]: "bg-violet-400",
-} satisfies Record<LiveType, string>;
-
-export const liveTypeColor = (liveType: LiveType | undefined): string =>
-  liveType == undefined ? "bg-gray-300" : liveTypeColors[liveType];
-
 export const MeetAndGreetTypeEnum = z.enum([
   "握手会",
   "撮影会",
