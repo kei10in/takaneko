@@ -103,7 +103,7 @@ it("活動年と西暦で切り替え、チップに件数と割合を表示す�
     "主催対バン",
     "対バン",
     "リリイベ",
-    "その他",
+    "イベント出演",
   ]);
   const chart = screen.getByRole("application");
   const tap = () => {

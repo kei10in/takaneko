@@ -1,3 +1,4 @@
+import { liveCategories } from "~/features/events/LiveCategory.ts";
 export type StageHistorySeriesKey =
   "soloStages" | "hostedStages" | "jointStages" | "releaseEventStages" | "otherStages";
 
@@ -9,9 +10,9 @@ export interface StageHistorySeries {
 }
 
 export const stageHistorySeries: StageHistorySeries[] = [
-  { key: "soloStages", label: "ワンマン" },
-  { key: "hostedStages", label: "主催対バン" },
-  { key: "jointStages", label: "対バン" },
-  { key: "releaseEventStages", label: "リリイベ" },
-  { key: "otherStages", label: "その他" },
+  { key: "soloStages", label: liveCategories["solo"].abbrevName },
+  { key: "hostedStages", label: liveCategories["hosted"].abbrevName },
+  { key: "jointStages", label: liveCategories["joint"].abbrevName },
+  { key: "releaseEventStages", label: liveCategories["release-event"].abbrevName },
+  { key: "otherStages", label: liveCategories["event-live"].abbrevName },
 ];

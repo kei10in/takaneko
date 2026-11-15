@@ -56,6 +56,8 @@ describe("ライブ統計", () => {
     render(<Stub initialEntries={["/stats/live"]} />);
 
     expect(await screen.findByRole("heading", { name: "サマリー", level: 2 })).toBeTruthy();
+    expect(screen.getAllByRole("term").map((term) => term.textContent)).toContain("イベント出演");
+    expect(screen.queryByText("その他")).toBeNull();
     const summary = screen.getByRole("region", { name: "累計の概要" });
     const metrics = within(summary)
       .getAllByRole("term")

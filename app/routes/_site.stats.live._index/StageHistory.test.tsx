@@ -113,7 +113,7 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
     within(filter)
       .getAllByRole("option")
       .map((item) => item.textContent),
-  ).toEqual(["すべて", "ワンマン", "主催対バン", "対バン", "リリイベ", "その他"]);
+  ).toEqual(["すべて", "ワンマン", "主催対バン", "対バン", "リリイベ", "イベント出演"]);
   expect(screen.getByRole("button", { name: "活動年" }).getAttribute("aria-pressed")).toBe("true");
   const career = screen.getByRole("table", {
     name: "活動年ごとのイベント数・ステージ数の推移のデータ",
@@ -165,7 +165,7 @@ it("イベント数を左、ステージ数を右に並べ、集計基準と種�
     { value: "hostedStages", label: "主催対バン", count: 1, events: 0 },
     { value: "jointStages", label: "対バン", count: 3, events: 0 },
     { value: "releaseEventStages", label: "リリイベ", count: 0, events: 0 },
-    { value: "otherStages", label: "その他", count: 0, events: 0 },
+    { value: "otherStages", label: "イベント出演", count: 0, events: 0 },
   ].forEach(({ value, count, events }) => {
     fireEvent.change(filter, { target: { value } });
     const table = screen.getByRole("table", {

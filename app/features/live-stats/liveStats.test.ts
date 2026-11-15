@@ -223,7 +223,7 @@ describe("aggregateStageHistory", () => {
     expect(history.monthly[0]).toMatchObject(counts);
     expect(history.careerYearly.at(-1)).toMatchObject(counts);
   });
-  it("リリースイベントをその他から分け、中止ステージは含めない", () => {
+  it("リリースイベントをイベント出演から分け、中止ステージは含めない", () => {
     const history = aggregateStageHistory(
       [
         event({
@@ -420,7 +420,7 @@ describe("aggregateStageHistory", () => {
   });
 });
 
-it("外部主催のワンマンはその他としてイベント数・ステージ数を月別と活動年別に集計する", () => {
+it("外部主催のワンマンはイベント出演としてイベント数・ステージ数を月別と活動年別に集計する", () => {
   const history = aggregateStageHistory(
     [
       event({

@@ -1,4 +1,5 @@
 import { Statistic } from "~/components/Statistic.tsx";
+import { liveCategories } from "~/features/events/LiveCategory.ts";
 import type { LiveStatsSummary as SummaryData } from "~/features/live-stats/liveStatsSummary.ts";
 
 export const LiveStatsSummary = ({
@@ -13,8 +14,8 @@ export const LiveStatsSummary = ({
   const metrics = [
     { label: "出演イベント数", value: summary.events, unit: "件" },
     { label: "出演日数", value: summary.days, unit: "日" },
-    { label: "ワンマン", value: summary.soloStages, unit: "ステージ" },
-    { label: "対バン", value: summary.jointStages, unit: "ステージ" },
+    { label: liveCategories["solo"].abbrevName, value: summary.soloStages, unit: "ステージ" },
+    { label: liveCategories["joint"].abbrevName, value: summary.jointStages, unit: "ステージ" },
   ];
   return (
     <section aria-label={name}>

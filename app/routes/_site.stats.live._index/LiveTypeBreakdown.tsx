@@ -4,6 +4,7 @@ import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import { PercentStackedBarChart } from "~/components/charts/PercentStackedBarChart.tsx";
 import type { PercentChartSeries } from "~/components/charts/types.ts";
+import { liveCategories } from "~/features/events/LiveCategory.ts";
 import { buildEventHistory, type EventHistoryData } from "~/features/live-stats/eventHistory.ts";
 import type { EventCounts } from "~/features/live-stats/liveStatsData.ts";
 
@@ -14,31 +15,31 @@ interface LiveTypeSeries extends PercentChartSeries {
 const series: LiveTypeSeries[] = [
   {
     key: "soloEvents",
-    label: "ワンマン",
+    label: liveCategories["solo"].abbrevName,
     color: "var(--color-nadeshiko-900)",
     labelColor: "white",
   },
   {
     key: "hostedEvents",
-    label: "主催対バン",
+    label: liveCategories["hosted"].abbrevName,
     color: "var(--color-nadeshiko-700)",
     labelColor: "white",
   },
   {
     key: "jointEvents",
-    label: "対バン",
+    label: liveCategories["joint"].abbrevName,
     color: "var(--color-nadeshiko-500)",
     labelColor: "var(--color-zinc-900)",
   },
   {
     key: "releaseEvents",
-    label: "リリイベ",
+    label: liveCategories["release-event"].abbrevName,
     color: "var(--color-nadeshiko-300)",
     labelColor: "var(--color-zinc-900)",
   },
   {
     key: "otherEvents",
-    label: "その他",
+    label: liveCategories["event-live"].abbrevName,
     color: "var(--color-nadeshiko-100)",
     labelColor: "var(--color-zinc-900)",
   },

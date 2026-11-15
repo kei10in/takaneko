@@ -2,6 +2,7 @@ import { HiOutlineInformationCircle } from "react-icons/hi2";
 import { useLoaderData } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
 import { OgpSiteName } from "~/constants.ts";
+import { liveCategories } from "~/features/events/LiveCategory.ts";
 import { LiveStatsData } from "~/features/live-stats/liveStatsData.ts";
 import { buildLiveStatsSummary } from "~/features/live-stats/liveStatsSummary.ts";
 import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
@@ -119,23 +120,23 @@ export default function Component() {
                 複数の日にわたるイベントは、それぞれにカウントしています。
               </dd>
 
-              <dt className="font-semibold">ワンマン</dt>
+              <dt className="font-semibold">{liveCategories["solo"].abbrevName}</dt>
               <dd>主催のワンマンライブ・ファンミーティングをカウントしています。</dd>
-              <dt className="font-semibold">主催対バン</dt>
+              <dt className="font-semibold">{liveCategories["hosted"].abbrevName}</dt>
               <dd>
                 主催する対バンライブをカウントしています。
                 「全国お招きツアー」のファイナル以外の公演や「たかねこフェス」が含まれます。
               </dd>
-              <dt className="font-semibold">対バン</dt>
+              <dt className="font-semibold">{liveCategories["joint"].abbrevName}</dt>
               <dd>
                 主催以外の対バンライブやフェスをカウントしています。
                 イベントの名称ではなく、実際の開催形態に基づいて分類しています。
               </dd>
 
-              <dt className="font-semibold">リリイベ</dt>
+              <dt className="font-semibold">{liveCategories["release-event"].abbrevName}</dt>
               <dd>高嶺のなでしこの CD のリリースイベントをカウントしています。</dd>
 
-              <dt className="font-semibold">その他</dt>
+              <dt className="font-semibold">{liveCategories["event-live"].abbrevName}</dt>
               <dd>
                 ファッションショーでのライブステージや外部主催のワンマンライブ、学園祭などをカウントしています。
               </dd>
