@@ -1,6 +1,7 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { MemoryRouter, Outlet, Route, Routes } from "react-router";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import type { LiveType } from "~/features/events/EventType.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { LivesForSong, SimpleSongActivity } from "~/features/songs/types.ts";
 import { SongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
@@ -56,6 +57,31 @@ const renderPage = (overrides: Partial<SongOutletContext> = {}) => {
 };
 
 describe("楽曲の統計ページ", () => {
+  it("ライブカテゴリごとの回数と割合を表示し、ゲスト出演もイベント出演に合算する", () => {
+    const entries: { liveType: LiveType | undefined; count: number }[] = [
+      { liveType: "GUEST", count: 2 },
+      { liveType: "INVITED_SOLO", count: 3 },
+      { liveType: "EVENT_LIVE", count: 1 },
+      { liveType: undefined, count: 2 },
+      { liveType: "SOLO", count: 2 },
+    ];
+    const lives = entries.map(({ liveType, count }, index) => {
+      const live = activity("2026-01-01", `live-${index}`, `公演 ${index}`, count);
+      live.event.liveType = liveType;
+      return live;
+    });
+    renderPage({ performances: { ...performances, count: 10, lives } });
+
+    const section = within(screen.getByRole("region", { name: "ライブ種別" }));
+    expect(
+      section
+        .getAllByRole("row")
+        .slice(1)
+        .map((row) => row.textContent),
+    ).toEqual(["イベント出演6回60.0%", "ワンマン2回20.0%", "不明2回20.0%"]);
+    expect(section.queryByText("ゲスト出演")).toBeNull();
+  });
+
   it("累計回数と公演数、最初の披露公演とブラウザの今日からの経過日数を表示する", () => {
     renderPage();
     const summary = within(screen.getByRole("region", { name: "サマリー" }));
@@ -204,6 +230,9 @@ describe("楽曲の統計ページ", () => {
     ).toBeTruthy();
     expect(screen.getByText("集計対象の公演がありません。")).toBeTruthy();
     expect(screen.queryByText(/NaN|Infinity/u)).toBeNull();
+    const categories = within(screen.getByRole("region", { name: "ライブ種別" }));
+    expect(categories.queryByRole("table")).toBeNull();
+    expect(categories.getByText("この楽曲を披露したライブが見つかりませんでした。")).toBeTruthy();
   });
 
   it("読み込み中と読み込み失敗を表示する", () => {
