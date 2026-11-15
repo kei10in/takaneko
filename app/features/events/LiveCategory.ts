@@ -1,5 +1,6 @@
 import { z } from "zod/v4";
 import { LiveType } from "~/features/events/EventType.ts";
+import { assertNever } from "~/utils/assertNever.ts";
 
 export const LiveCategoryEnum = z.enum(["solo", "hosted", "joint", "event-live", "release-event"]);
 export type LiveCategory = z.infer<typeof LiveCategoryEnum>;
@@ -38,7 +39,22 @@ export const liveCategories: Record<LiveCategory, LiveCategoryDefinition> = {
   },
 };
 
-export const getLiveCategory = (liveType: LiveType): LiveCategory | undefined =>
-  LiveCategoryEnum.options.find((category) =>
-    liveCategories[category].liveTypes.includes(liveType),
-  );
+export const getLiveCategory = (liveType: LiveType): LiveCategory => {
+  switch (liveType) {
+    case LiveType.SOLO:
+      return "solo";
+    case LiveType.HOSTED:
+      return "hosted";
+    case LiveType.JOINT:
+    case LiveType.FESTIVAL:
+      return "joint";
+    case LiveType.GUEST:
+    case LiveType.INVITED_SOLO:
+    case LiveType.EVENT_LIVE:
+      return "event-live";
+    case LiveType.RELEASE_EVENT:
+      return "release-event";
+    default:
+      return assertNever(liveType);
+  }
+};

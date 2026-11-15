@@ -63,7 +63,7 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
           </div>
 
           <div className="flex flex-wrap items-center gap-1 pt-0.5">
-            {liveCategory != undefined && <LiveCategoryBadge liveCategory={liveCategory} />}
+            <LiveCategoryBadge liveCategory={liveCategory} />
 
             {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
             {noSetlist && <TextBadge text="未登録" />}

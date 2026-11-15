@@ -86,7 +86,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
               </p>
             )}
             <div className="flex flex-none flex-wrap items-center gap-1 pt-0.5 lg:pr-4">
-              {liveCategory != undefined && <LiveCategoryBadge liveCategory={liveCategory} />}
+              <LiveCategoryBadge liveCategory={liveCategory} />
               {hasFirstPerformance && <FirstPerformanceBadge />}
             </div>
           </div>
