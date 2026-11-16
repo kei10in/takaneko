@@ -15,7 +15,7 @@ import { ImagePreviewDialog } from "~/components/ImagePreviewDialog.tsx";
 import { sectionHeading } from "~/components/styles.ts";
 import { AllCostumes } from "~/features/costumes/costumes.ts";
 import { LivesForCostume } from "~/features/costumes/types.ts";
-import { liveTypeColor } from "~/features/events/EventType.ts";
+import { getLiveCategory, liveCategoryColor } from "~/features/events/LiveCategory.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import type { Route } from "./+types/route.ts";
@@ -133,7 +133,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                           <div
                             className={clsx(
                               "w-1 flex-none rounded-full",
-                              liveTypeColor(e.liveType),
+                              e.liveType == undefined
+                                ? "bg-gray-300"
+                                : liveCategoryColor(getLiveCategory(e.liveType)),
                             )}
                           />
                           <div className="text-xs">
@@ -195,7 +197,9 @@ export default function Component({ loaderData }: Route.ComponentProps) {
                       <div
                         className={clsx(
                           "w-1 flex-none rounded-full",
-                          liveTypeColor(event.liveType),
+                          event.liveType == undefined
+                            ? "bg-gray-300"
+                            : liveCategoryColor(getLiveCategory(event.liveType)),
                         )}
                       />
                       <div className="text-xs">

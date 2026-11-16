@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import { CostumeBarChart } from "~/components/charts/CostumeBarChart.tsx";
 import { sectionHeading } from "~/components/styles.ts";
 import { OgpSiteName } from "~/constants.ts";
+import { liveCategories } from "~/features/events/LiveCategory.ts";
 import { calculateSongStatistics, elapsedSince } from "~/features/songs/statistics.ts";
 import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { useSongOutletContext } from "~/routes/_site.songs.$songSlug/useSongOutletContext.ts";
@@ -156,7 +157,7 @@ export default function Component() {
 
       <section aria-label="ライブ種別">
         <h2 className={sectionHeading("mb-4")}>ライブ種別</h2>
-        {statistics.liveTypes.length === 0 ? (
+        {statistics.liveCategories.length === 0 ? (
           <p className="text-sm text-zinc-500">この楽曲を披露したライブが見つかりませんでした。</p>
         ) : (
           <table className="w-full text-sm tabular-nums">
@@ -175,10 +176,10 @@ export default function Component() {
               </tr>
             </thead>
             <tbody>
-              {statistics.liveTypes.map((item) => (
-                <tr key={item.name} className="border-b border-zinc-100">
+              {statistics.liveCategories.map((item) => (
+                <tr key={item.category ?? "unknown"} className="border-b border-zinc-100">
                   <th scope="row" className="py-3 text-left font-normal text-zinc-700">
-                    {item.name}
+                    {item.category == undefined ? "不明" : liveCategories[item.category].name}
                   </th>
                   <td className="py-3 text-right text-zinc-900">{number(item.count)}回</td>
                   <td className="py-3 text-right text-nadeshiko-900">

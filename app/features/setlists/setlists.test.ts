@@ -1,14 +1,16 @@
 import { describe, expect, it } from "vitest";
 import { Act } from "~/features/events/act.ts";
 import { EventModule } from "~/features/events/eventModule.ts";
-import { LiveType } from "~/features/events/EventType.ts";
+import { LiveType, LiveTypeEnum } from "~/features/events/EventType.ts";
+import type { LiveCategory } from "~/features/events/LiveCategory.ts";
 import { parseSetlist } from "~/features/events/setlist.ts";
 import { makeEventMetaForTest } from "~/features/events/testUtils.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { Events } from "../../../scripts/lib/events.ts";
 import { buildSetlistEvents } from "./buildSetlistEvents.ts";
 import { filterSetlistEvents } from "./filterSetlistEvents.ts";
-import { SetlistSearchFilters } from "./searchFilters.ts";
+import { SetlistLiveFilters, SetlistSearchFilters } from "./searchFilters.ts";
+import { readSetlistSearchParams } from "./searchParams.ts";
 
 const today = new NaiveDate(2026, 1, 10);
 
@@ -198,6 +200,40 @@ describe("buildSetlistEvents", () => {
 });
 
 describe("filterSetlistEvents", () => {
+  // 種類を追加した際は分類の判断を必須にし、実際の検索結果との一致をテストする。
+  const expectedFilters = {
+    [LiveType.SOLO]: "solo",
+    [LiveType.HOSTED]: "hosted",
+    [LiveType.JOINT]: "joint",
+    [LiveType.GUEST]: "event-live",
+    [LiveType.FESTIVAL]: "joint",
+    [LiveType.INVITED_SOLO]: "event-live",
+    [LiveType.EVENT_LIVE]: "event-live",
+    [LiveType.RELEASE_EVENT]: "release-event",
+  } satisfies Record<LiveType, LiveCategory>;
+
+  it.each(LiveTypeEnum.options)("%s は「すべて」と対応する種類で検索できる", (liveType) => {
+    const items = buildSetlistEvents(
+      [
+        sourceEvent({
+          slug: `2026-01-01_${liveType}`,
+          date: "2026-01-01",
+          liveType,
+          acts: [act(["Song A"])],
+        }),
+      ],
+      today,
+    );
+    const matchingFilters = SetlistLiveFilters.filter(({ name }) => {
+      const selected = readSetlistSearchParams(new URLSearchParams({ t: name }));
+      return filterSetlistEvents(items, selected).length === 1;
+    });
+    expect(matchingFilters.map((filter) => filter.name)).toEqual([
+      "all",
+      expectedFilters[liveType],
+    ]);
+  });
+
   it("finds the performances wearing the A World in Our Colors costume", async () => {
     const sourceEvents = await Events.importAllEventModules();
     const events = buildSetlistEvents(sourceEvents, new NaiveDate(2026, 10, 21));

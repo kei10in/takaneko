@@ -5,8 +5,9 @@ import { HiChevronRight, HiOutlineCalendarDays, HiOutlineMapPin } from "react-ic
 import { Link } from "react-router";
 import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
 import { Setlist } from "~/components/Setlist.tsx";
-import { LiveTypeBadge } from "~/components/SmallBadges.tsx";
+import { LiveCategoryBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { SetlistSearchResult } from "~/features/setlists/types.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -25,6 +26,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
   onScrollPositionChange,
 }: SetlistEventDetailProps) {
   const { event, matchedActIndexes } = result;
+  const liveCategory = getLiveCategory(event.liveType);
   const scrollContainerRef = useRef<HTMLElement>(null);
   // 保存位置の変更で再描画されても、マウント中のスクロールを巻き戻さない。
   const [initialScrollTop] = useState(() => scrollTop);
@@ -84,7 +86,7 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
               </p>
             )}
             <div className="flex flex-none flex-wrap items-center gap-1 pt-0.5 lg:pr-4">
-              <LiveTypeBadge liveType={event.liveType} />
+              <LiveCategoryBadge liveCategory={liveCategory} />
               {hasFirstPerformance && <FirstPerformanceBadge />}
             </div>
           </div>

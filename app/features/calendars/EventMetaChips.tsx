@@ -1,4 +1,5 @@
-import { LiveChip, LiveTypeChip, MeetAndGreetChip } from "~/components/IconChip.tsx";
+import { LiveCategoryChip, LiveChip, MeetAndGreetChip } from "~/components/IconChip.tsx";
+import { getLiveCategory } from "~/features/events/LiveCategory.ts";
 import { EventType, eventTypeColors, LiveType, MeetAndGreetType } from "../events/EventType.ts";
 
 interface Props {
@@ -12,9 +13,11 @@ export const EventMetaChips: React.FC<Props> = (props: Props) => {
   const { className, category, liveType, meetAndGreetTypes } = props;
 
   if (category == EventType.LIVE) {
+    const liveCategory = liveType == undefined ? undefined : getLiveCategory(liveType);
+
     return (
       <div className={`flex flex-wrap items-center gap-1 ${className ?? ""}`}>
-        {liveType != undefined && <LiveTypeChip liveType={liveType} large />}
+        {liveCategory != undefined && <LiveCategoryChip liveCategory={liveCategory} large />}
       </div>
     );
   }

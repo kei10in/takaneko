@@ -65,11 +65,23 @@ describe("LiveCard", () => {
   it.each([
     { liveType: LiveType.SOLO, label: "ワンマン" },
     { liveType: LiveType.JOINT, label: "対バン" },
+    { liveType: LiveType.HOSTED, label: "主催対バン" },
+    { liveType: LiveType.FESTIVAL, label: "対バン" },
+    { liveType: LiveType.GUEST, label: "イベント出演" },
+    { liveType: LiveType.INVITED_SOLO, label: "イベント出演" },
+    { liveType: LiveType.EVENT_LIVE, label: "イベント出演" },
     { liveType: LiveType.RELEASE_EVENT, label: "リリースイベント" },
   ])("$label の種別を表示する", ({ liveType, label }) => {
     setup({ ...event, liveType });
 
     expect(screen.getByText(label)).toBeTruthy();
+  });
+
+  it("ライブ種別が未設定ならカテゴリのバッジを表示しない", () => {
+    setup();
+    ["ワンマン", "主催対バン", "対バン", "イベント出演", "リリースイベント"].forEach((label) =>
+      expect(screen.queryByText(label)).toBeNull(),
+    );
   });
 
   it("衣装と参加メンバーが未登録のアンコールも表示できる", () => {

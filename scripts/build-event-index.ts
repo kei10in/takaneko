@@ -3,6 +3,7 @@ import { register } from "node:module";
 import { dirname } from "node:path";
 import { makeLivesForCostumes } from "~/features/costumes/costumeActivities.ts";
 import { EventModule } from "~/features/events/eventModule.ts";
+import { buildLiveStatsData } from "~/features/live-stats/liveStats.ts";
 import { buildSetlistEvents } from "~/features/setlists/buildSetlistEvents.ts";
 import { buildLivesForSongs } from "~/features/songs/buildLivesForSongs.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
@@ -18,6 +19,7 @@ const main = async () => {
   buildSongPerformedList(events);
   buildCostumeToLiveIndex(events);
   buildSetlistEventIndex(events);
+  buildLiveStats(events);
 };
 
 const buildSongToLiveMap = (events: EventModule[]) => {
@@ -62,6 +64,17 @@ const buildSetlistEventIndex = (events: EventModule[]) => {
   const json = JSON.stringify(setlistEvents);
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, json);
+};
+
+const buildLiveStats = (events: EventModule[]) => {
+  const aggregatedOn = NaiveDate.todayInJapan().toString();
+  const stats = buildLiveStatsData(
+    events.map((event) => event.meta),
+    aggregatedOn,
+  );
+  const outputPath = "./public/data/stats/lives.json";
+  mkdirSync(dirname(outputPath), { recursive: true });
+  writeFileSync(outputPath, JSON.stringify(stats));
 };
 
 await main();

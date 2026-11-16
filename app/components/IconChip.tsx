@@ -12,7 +12,8 @@ import {
 } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, MeetAndGreetType } from "~/features/events/EventType.ts";
+import { MeetAndGreetType } from "~/features/events/EventType.ts";
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 import { assertNever } from "~/utils/assertNever.ts";
 
 interface IconChipProps {
@@ -64,39 +65,30 @@ export const LiveChip: React.FC<LiveChipProps> = ({ iconColor, large = false }: 
   );
 };
 
-export const LiveTypeChip: React.FC<{ liveType: LiveType; large?: boolean }> = ({
-  liveType,
-  large = false,
-}: {
-  liveType: LiveType;
+interface LiveCategoryChipProps {
+  liveCategory: LiveCategory;
   large?: boolean;
+}
+
+export const LiveCategoryChip: React.FC<LiveCategoryChipProps> = ({
+  liveCategory,
+  large = false,
 }) => {
-  const backgroundColor = "bg-zinc-100";
-  const iconColor = "text-nadeshiko-800";
-  const textColor = "text-zinc-600";
-
-  const LIVE_TYPE_METADATA = {
-    [LiveType.SOLO]: { icon: FaCrown, text: "ワンマン" },
-    [LiveType.HOSTED]: { icon: FaPenNib, text: "主催対バン" },
-    [LiveType.FESTIVAL]: { icon: HiUsers, text: "対バン" },
-    [LiveType.JOINT]: { icon: HiUsers, text: "対バン" },
-    [LiveType.GUEST]: { icon: HiUsers, text: "対バン" },
-    [LiveType.EVENT_LIVE]: { icon: IoDiamond, text: "イベント出演" },
-    [LiveType.RELEASE_EVENT]: { icon: GiCompactDisc, text: "リリースイベント" },
-  } as const;
-
-  const liveTypeProps = LIVE_TYPE_METADATA[liveType];
-  if (!liveTypeProps) {
-    return null;
-  }
+  const icons = {
+    solo: FaCrown,
+    hosted: FaPenNib,
+    joint: HiUsers,
+    "event-live": IoDiamond,
+    "release-event": GiCompactDisc,
+  } satisfies Record<LiveCategory, IconType>;
 
   return (
     <IconChip
-      icon={liveTypeProps.icon}
-      text={liveTypeProps.text}
-      backgroundColor={backgroundColor}
-      iconColor={iconColor}
-      textColor={textColor}
+      icon={icons[liveCategory]}
+      text={liveCategories[liveCategory].name}
+      backgroundColor="bg-zinc-100"
+      iconColor="text-nadeshiko-800"
+      textColor="text-zinc-600"
       large={large}
     />
   );

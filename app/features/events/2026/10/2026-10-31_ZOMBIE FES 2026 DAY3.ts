@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta.ts";
 export const meta: EventMetaDescriptor = {
   summary: "ZOMBIE FES 2026 DAY3",
   category: "LIVE",
-  liveType: "FESTIVAL",
+  liveType: "INVITED_SOLO",
   date: "2026-10-31",
   open: "13:00",
   start: "14:00",

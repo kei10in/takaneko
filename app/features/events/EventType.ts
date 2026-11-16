@@ -130,64 +130,18 @@ export const eventTypeColors = (category: EventType): UiColors =>
   eventTypeMetadata[category].colors;
 
 export const LiveTypeEnum = z.enum([
-  "SOLO", // ソロライブ
+  "SOLO", // ワンマン
   "HOSTED", // 主催ライブ
   "JOINT", // 対バン・少数組の共同ライブ
   "GUEST", // 他者の単独公演・ツアーへのゲスト出演
   "FESTIVAL", // 音楽・アイドルライブを主目的にしたフェス・サーキット・多数組イベント
+  "INVITED_SOLO", // 招待されたワンマン
   "EVENT_LIVE", // ファッションショーなど、ライブイベント以外の催しでのライブ出演
   "RELEASE_EVENT", // リリースイベント
 ]);
 
 export const LiveType = LiveTypeEnum.enum;
 export type LiveType = z.infer<typeof LiveTypeEnum>;
-
-type LiveTypeMetadata = {
-  label: string;
-  color: string;
-};
-
-const unknownLiveTypeMetadata = {
-  label: "不明",
-  color: "bg-gray-300",
-} satisfies LiveTypeMetadata;
-
-export const liveTypeMetadata = {
-  [LiveType.SOLO]: {
-    label: "ワンマン",
-    color: "bg-nadeshiko-700",
-  },
-  [LiveType.HOSTED]: {
-    label: "主催対バン",
-    color: "bg-blue-300",
-  },
-  [LiveType.JOINT]: {
-    label: "対バン",
-    color: "bg-amber-300",
-  },
-  [LiveType.GUEST]: {
-    label: "対バン",
-    color: "bg-amber-300",
-  },
-  [LiveType.FESTIVAL]: {
-    label: "対バン",
-    color: "bg-amber-400",
-  },
-  [LiveType.EVENT_LIVE]: {
-    label: "イベント出演",
-    color: "bg-amber-400",
-  },
-  [LiveType.RELEASE_EVENT]: {
-    label: "リリースイベント",
-    color: "bg-violet-400",
-  },
-} satisfies Record<LiveType, LiveTypeMetadata>;
-
-export const liveTypeLabel = (liveType: LiveType | undefined): string =>
-  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).label;
-
-export const liveTypeColor = (liveType: LiveType | undefined): string =>
-  (liveType == undefined ? unknownLiveTypeMetadata : liveTypeMetadata[liveType]).color;
 
 export const MeetAndGreetTypeEnum = z.enum([
   "握手会",

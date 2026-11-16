@@ -4,7 +4,7 @@ import { GiCompactDisc, GiMicrophone } from "react-icons/gi";
 import { HiUsers } from "react-icons/hi2";
 import { IoDiamond } from "react-icons/io5";
 import { IconType } from "react-icons/lib";
-import { LiveType, liveTypeColor, liveTypeLabel } from "~/features/events/EventType.ts";
+import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
 
 interface BadgeProps {
   icon: IconType;
@@ -40,44 +40,33 @@ const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
   );
 };
 
-interface LiveTypeBadgeProps {
-  liveType: LiveType;
+interface LiveCategoryBadgeProps {
+  liveCategory: LiveCategory;
   large?: boolean;
   color?: string;
 }
 
-export const LiveTypeBadge: React.FC<LiveTypeBadgeProps> = ({
-  liveType,
+export const LiveCategoryBadge: React.FC<LiveCategoryBadgeProps> = ({
+  liveCategory,
   large,
   color,
-}: LiveTypeBadgeProps) => {
-  if (liveType === LiveType.SOLO) {
-    return <Badge icon={FaCrown} text="ワンマン" color={color ?? Nadeshiko} large={large} />;
-  }
-  if (liveType === LiveType.HOSTED) {
-    return <Badge icon={FaPenNib} text="主催対バン" color={color ?? LightBlue} large={large} />;
-  }
-  if (liveType == LiveType.FESTIVAL || liveType == LiveType.JOINT || liveType == LiveType.GUEST) {
-    return <Badge icon={HiUsers} text="対バン" color={color ?? Amber} large={large} />;
-  }
-  if (liveType == LiveType.EVENT_LIVE) {
-    return <Badge icon={IoDiamond} text="イベント出演" color={color ?? Amber} large={large} />;
-  }
-  if (liveType == LiveType.RELEASE_EVENT) {
-    return (
-      <Badge icon={GiCompactDisc} text="リリースイベント" color={color ?? Violet} large={large} />
-    );
-  }
+}) => {
+  const styles = {
+    solo: { icon: FaCrown, color: Nadeshiko },
+    hosted: { icon: FaPenNib, color: LightBlue },
+    joint: { icon: HiUsers, color: Amber },
+    "event-live": { icon: IoDiamond, color: Amber },
+    "release-event": { icon: GiCompactDisc, color: Violet },
+  } satisfies Record<LiveCategory, { icon: IconType; color: string }>;
+  const style = styles[liveCategory];
 
   return (
-    <div
-      className={clsx(
-        "flex items-center rounded-full px-2 text-xs text-white",
-        liveTypeColor(liveType),
-      )}
-    >
-      {liveTypeLabel(liveType)}
-    </div>
+    <Badge
+      icon={style.icon}
+      text={liveCategories[liveCategory].name}
+      color={color ?? style.color}
+      large={large}
+    />
   );
 };
 
