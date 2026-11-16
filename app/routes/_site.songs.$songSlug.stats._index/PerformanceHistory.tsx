@@ -3,22 +3,33 @@ import { ToggleGroup } from "@base-ui/react/toggle-group";
 import { clsx } from "clsx";
 import { useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
-import { monthlyPerformanceCounts, yearlyPerformanceCounts } from "~/features/songs/statistics.ts";
+import {
+  careerYearlyPerformanceCounts,
+  monthlyPerformanceCounts,
+  yearlyPerformanceCounts,
+} from "~/features/songs/statistics.ts";
 import { SimpleSongActivity } from "~/features/songs/types.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import {
+  monthlyPerformanceChartData,
+  yearlyPerformanceChartData,
+} from "./performanceHistoryChartData.ts";
 import { StatisticsBarChart } from "./StatisticsBarChart.tsx";
 
 export const PerformanceHistory = ({
   lives,
   today,
+  firstYear,
 }: {
   lives: SimpleSongActivity[];
   today: NaiveDate;
+  firstYear: number | undefined;
 }) => {
-  const [period, setPeriod] = useState<"monthly" | "yearly">("monthly");
+  const [period, setPeriod] = useState<"monthly" | "yearly" | "career">("monthly");
   const [selectedYear, setSelectedYear] = useState<number>();
-  const yearly = yearlyPerformanceCounts(lives, today);
-  const years = yearly.map((item) => Number.parseInt(item.label, 10));
+  const yearly = yearlyPerformanceChartData(yearlyPerformanceCounts(lives, today), today);
+  const startYear = firstYear ?? 2022;
+  const years = Array.from({ length: today.year - startYear + 1 }, (_, index) => startYear + index);
   const year =
     selectedYear != undefined && years.includes(selectedYear) ? selectedYear : today.year;
 
@@ -33,13 +44,14 @@ export const PerformanceHistory = ({
               setPeriod(nextPeriod);
             }
           }}
-          className="relative isolate grid h-10 shrink-0 grid-cols-2 rounded-full bg-zinc-100 p-1"
+          className="relative isolate grid h-10 shrink-0 grid-cols-3 rounded-full bg-zinc-100 p-1"
         >
           <span
             aria-hidden="true"
             className={clsx(
-              "absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out motion-reduce:transition-none",
+              "absolute inset-y-1 left-1 w-[calc((100%-0.5rem)/3)] rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out motion-reduce:transition-none",
               period === "yearly" && "translate-x-full",
+              period === "career" && "translate-x-[200%]",
             )}
           />
           <Toggle
@@ -59,6 +71,15 @@ export const PerformanceHistory = ({
             )}
           >
             年別
+          </Toggle>
+          <Toggle
+            value="career"
+            className={clsx(
+              "relative rounded-full px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none",
+              period === "career" ? "text-zinc-800" : "text-zinc-500 hover:text-zinc-700",
+            )}
+          >
+            活動年
           </Toggle>
         </ToggleGroup>
         {period === "monthly" && (
@@ -83,9 +104,21 @@ export const PerformanceHistory = ({
         )}
       </div>
       <StatisticsBarChart
-        name={period === "monthly" ? `${year}年の月別披露回数` : "年別披露回数"}
-        labelName={period === "monthly" ? "月" : "年"}
-        data={period === "monthly" ? monthlyPerformanceCounts(lives, year, today) : yearly}
+        name={
+          period === "monthly"
+            ? `${year}年の月別披露回数`
+            : period === "yearly"
+              ? "年別披露回数"
+              : "活動年別披露回数"
+        }
+        labelName={period === "monthly" ? "月" : period === "yearly" ? "年" : "活動年"}
+        data={
+          period === "monthly"
+            ? monthlyPerformanceChartData(monthlyPerformanceCounts(lives, year, today), year, today)
+            : period === "yearly"
+              ? yearly
+              : careerYearlyPerformanceCounts(lives, today)
+        }
       />
     </div>
   );

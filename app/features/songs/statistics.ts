@@ -1,3 +1,4 @@
+import { DebutDate } from "~/constants.ts";
 import {
   getLiveCategory,
   liveCategories,
@@ -149,6 +150,27 @@ export const yearlyPerformanceCounts = (
       label: `${year}年`,
       count: lives
         .filter((live) => live.event.date.startsWith(`${year}-`))
+        .reduce((sum, live) => sum + live.segments.length, 0),
+    };
+  });
+};
+
+export const careerYearlyPerformanceCounts = (lives: SimpleSongActivity[], today: NaiveDate) => {
+  if (today.compareTo(DebutDate) < 0) {
+    return [];
+  }
+  const currentYear = elapsedSince(DebutDate.toString(), today).years + 1;
+  return Array.from({ length: currentYear }, (_, index) => {
+    const start = new NaiveDate(DebutDate.year + index, DebutDate.month, DebutDate.day).toString();
+    const end = new NaiveDate(
+      DebutDate.year + index + 1,
+      DebutDate.month,
+      DebutDate.day,
+    ).toString();
+    return {
+      label: `${index + 1}年目`,
+      count: lives
+        .filter((live) => start <= live.event.date && live.event.date < end)
         .reduce((sum, live) => sum + live.segments.length, 0),
     };
   });

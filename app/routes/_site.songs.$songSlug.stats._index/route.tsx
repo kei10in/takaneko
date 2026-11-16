@@ -152,7 +152,11 @@ export default function Component() {
 
       <section aria-label="披露回数の推移">
         <h2 className={sectionHeading("mb-4")}>披露回数の推移</h2>
-        <PerformanceHistory lives={performances.lives} today={today} />
+        <PerformanceHistory
+          lives={performances.lives}
+          today={today}
+          firstYear={first == undefined ? undefined : Number.parseInt(first.date, 10)}
+        />
       </section>
 
       <section aria-label="ライブ種別">

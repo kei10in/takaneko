@@ -8,17 +8,17 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { PerformanceCount } from "~/features/songs/statistics.ts";
+import type { PerformanceChartRow } from "./performanceHistoryChartData.ts";
 
 interface Props {
-  data: PerformanceCount[];
+  data: PerformanceChartRow[];
   name: string;
   labelName: string;
 }
 
 export const StatisticsBarChart = ({ data, name, labelName }: Props) => (
   <figure aria-label={name} className="w-full min-w-0">
-    <ResponsiveContainer width="100%" minWidth={0} height={256}>
+    <ResponsiveContainer width="100%" minWidth={0} height={296}>
       <BarChart data={data} margin={{ top: 20, right: 12, bottom: 0, left: 0 }} accessibilityLayer>
         <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="var(--color-zinc-200)" />
         <XAxis

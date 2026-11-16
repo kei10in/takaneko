@@ -3,6 +3,7 @@ import type { LiveType } from "~/features/events/EventType.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import {
   calculateSongStatistics,
+  careerYearlyPerformanceCounts,
   elapsedSince,
   monthlyPerformanceCounts,
   yearlyPerformanceCounts,
@@ -219,5 +220,40 @@ describe("初披露からの経過時間", () => {
       days: 0,
       totalDays: 365,
     });
+  });
+});
+
+describe("careerYearlyPerformanceCounts", () => {
+  it("8月7日を境に活動年を区切り、デビュー前の披露は含めない", () => {
+    const counts = careerYearlyPerformanceCounts(
+      [
+        activity("2023-08-07", "second-year", 4),
+        activity("2022-08-06", "before-debut", 8),
+        activity("2023-08-06", "first-year-end", 2),
+        activity("2022-08-07", "debut"),
+      ],
+      new NaiveDate(2024, 8, 7),
+    );
+
+    expect(counts).toContainEqual({ label: "1年目", count: 1 + 2 });
+    expect(counts).toContainEqual({ label: "2年目", count: 4 });
+    expect(counts).toContainEqual({ label: "3年目", count: 0 });
+  });
+
+  it.each([
+    { today: new NaiveDate(2026, 8, 6), currentYear: 4 },
+    { today: new NaiveDate(2026, 8, 7), currentYear: 5 },
+  ])("記録がなくても1年目から当日（$today）の活動年までを0で補完する", ({ today, currentYear }) => {
+    const counts = careerYearlyPerformanceCounts([], today);
+
+    expect(counts).toHaveLength(currentYear);
+    expect(counts.at(0)?.label).toBe("1年目");
+    expect(counts.at(-1)?.label).toBe(`${currentYear}年目`);
+    expect(new Set(counts.map((row) => row.label)).size).toBe(currentYear);
+    counts.forEach((row) => expect(row.count).toBe(0));
+  });
+
+  it("デビュー前なら活動年を生成しない", () => {
+    expect(careerYearlyPerformanceCounts([], new NaiveDate(2022, 8, 6))).toHaveLength(0);
   });
 });
