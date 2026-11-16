@@ -8,10 +8,10 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { PerformanceCount } from "~/features/songs/statistics.ts";
+import type { PerformanceChartRow } from "./performanceHistoryChartData.ts";
 
 interface Props {
-  data: PerformanceCount[];
+  data: PerformanceChartRow[];
   name: string;
   labelName: string;
 }

@@ -6,6 +6,10 @@ import { HiChevronDown } from "react-icons/hi2";
 import { monthlyPerformanceCounts, yearlyPerformanceCounts } from "~/features/songs/statistics.ts";
 import { SimpleSongActivity } from "~/features/songs/types.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import {
+  monthlyPerformanceChartData,
+  yearlyPerformanceChartData,
+} from "./performanceHistoryChartData.ts";
 import { StatisticsBarChart } from "./StatisticsBarChart.tsx";
 
 export const PerformanceHistory = ({
@@ -17,7 +21,7 @@ export const PerformanceHistory = ({
 }) => {
   const [period, setPeriod] = useState<"monthly" | "yearly">("monthly");
   const [selectedYear, setSelectedYear] = useState<number>();
-  const yearly = yearlyPerformanceCounts(lives, today);
+  const yearly = yearlyPerformanceChartData(yearlyPerformanceCounts(lives, today), today);
   const years = yearly.map((item) => Number.parseInt(item.label, 10));
   const year =
     selectedYear != undefined && years.includes(selectedYear) ? selectedYear : today.year;
@@ -85,7 +89,11 @@ export const PerformanceHistory = ({
       <StatisticsBarChart
         name={period === "monthly" ? `${year}年の月別披露回数` : "年別披露回数"}
         labelName={period === "monthly" ? "月" : "年"}
-        data={period === "monthly" ? monthlyPerformanceCounts(lives, year, today) : yearly}
+        data={
+          period === "monthly"
+            ? monthlyPerformanceChartData(monthlyPerformanceCounts(lives, year, today), year, today)
+            : yearly
+        }
       />
     </div>
   );

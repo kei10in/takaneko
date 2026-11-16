@@ -162,12 +162,23 @@ describe("楽曲の統計ページ", () => {
     expect(past.getAllByText("0")).toHaveLength(11);
     expect(past.queryByText("データなし")).toBeNull();
 
+    fireEvent.change(screen.getByRole("combobox", { name: "表示する年" }), {
+      target: { value: "2022" },
+    });
+    const firstYear = within(
+      within(screen.getByRole("figure", { name: "2022年の月別披露回数" })).getByRole("table"),
+    );
+    expect(firstYear.getByRole("row", { name: "7月 データなし" })).toBeTruthy();
+    expect(firstYear.getByRole("row", { name: "8月 0" })).toBeTruthy();
+
     fireEvent.click(screen.getByRole("button", { name: "年別" }));
-    expect(
-      within(
-        within(screen.getByRole("figure", { name: "年別披露回数" })).getByRole("table"),
-      ).getAllByRole("row"),
-    ).toHaveLength(3);
+    const yearly = within(
+      within(screen.getByRole("figure", { name: "年別披露回数" })).getByRole("table"),
+    );
+    expect(yearly.getAllByRole("row")).toHaveLength(6);
+    expect(yearly.getByRole("row", { name: "2022年 0" })).toBeTruthy();
+    expect(yearly.getByRole("row", { name: "2025年 1" })).toBeTruthy();
+    expect(yearly.getByRole("row", { name: "2026年 5" })).toBeTruthy();
   });
 
   it("集計単位は常に1つ選択され、矢印キーでフォーカスを移動できる", async () => {
