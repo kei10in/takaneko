@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
+
+export const AWorldInOurColors_セブンネット限定特典アクリルスタンド: RandomGoods = {
+  id: "2nd アルバム「A World in Our Colors」セブンネット限定特典アクリルスタンド",
+  slug: "2nd アルバム「A World in Our Colors」セブンネット限定特典アクリルスタンド",
+  name: "2nd アルバム「A World in Our Colors」セブンネット限定特典アクリルスタンド",
+  year: 2026,
+  series: "2nd アルバム「A World in Our Colors」",
+  category: "アクリルスタンド",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-11-18_2ndアルバム「A World in Our Colors」_セブンネット限定特典アクリルスタンド.jpg",
+  width: 1000,
+  height: 882,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "松本ももな", description: "" },
+    { id: 8, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 35, y: 55, width: 205, height: 355 },
+    { id: 2, x: 273, y: 55, width: 205, height: 355 },
+    { id: 3, x: 502, y: 55, width: 205, height: 355 },
+    { id: 4, x: 742, y: 55, width: 205, height: 355 },
+    { id: 5, x: 35, y: 450, width: 205, height: 355 },
+    { id: 6, x: 273, y: 450, width: 205, height: 355 },
+    { id: 7, x: 502, y: 450, width: 205, height: 355 },
+    { id: 8, x: 742, y: 450, width: 205, height: 355 },
+  ],
+};

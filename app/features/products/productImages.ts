@@ -190,9 +190,13 @@ import { ハニフェス2026_ハコニワリリィ_缶バッジ } from "./2026/2
 import { ハニフェス2026_可憐なアイボリー_缶バッジ } from "./2026/2026-10-18_缶バッジ「ハニフェス2026 可憐なアイボリー」.ts";
 import { ハニフェス2026_高嶺のなでしこ_缶バッジ } from "./2026/2026-10-18_缶バッジ「ハニフェス2026 高嶺のなでしこ」.ts";
 import { AWorldInOurColors_ミニフォト } from "./2026/2026-11-05_ミニフォトカード「A World in Our Colors」.ts";
+import { AWorldInOurColors_セブンネット限定特典アクリルスタンド } from "./2026/2026-11-18_2ndアルバム「A World in Our Colors」_セブンネット限定特典アクリルスタンド.ts";
+import { AWorldInOurColors_楽天ブックス限定特典缶バッジ } from "./2026/2026-11-18_2ndアルバム「A World in Our Colors」_楽天ブックス限定特典缶バッジ.ts";
 import { ItemDescription, ProductLine, RandomGoods, TradeTextType } from "./product.ts";
 
 export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
+  AWorldInOurColors_セブンネット限定特典アクリルスタンド,
+  AWorldInOurColors_楽天ブックス限定特典缶バッジ,
   AWorldInOurColors_ミニフォト,
   ミニフォトですぅ,
   ハニフェス2026_生写真,
@@ -204,6 +208,8 @@ export const TAKANEKO_PHOTOS_FEATURED: RandomGoods[] = [
 ];
 
 export const TAKANEKO_PHOTOS: RandomGoods[] = [
+  AWorldInOurColors_セブンネット限定特典アクリルスタンド,
+  AWorldInOurColors_楽天ブックス限定特典缶バッジ,
   AWorldInOurColors_ミニフォト,
   ハニフェス2026_生写真,
   ハニフェス2026_高嶺のなでしこ_缶バッジ,

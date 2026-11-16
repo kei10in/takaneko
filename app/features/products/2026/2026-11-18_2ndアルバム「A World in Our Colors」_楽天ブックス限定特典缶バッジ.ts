@@ -1,0 +1,35 @@
+import { RandomGoods, TradeTextType } from "~/features/products/product.ts";
+
+export const AWorldInOurColors_楽天ブックス限定特典缶バッジ: RandomGoods = {
+  id: "2nd アルバム「A World in Our Colors」楽天ブックス限定特典缶バッジ",
+  slug: "2nd アルバム「A World in Our Colors」楽天ブックス限定特典缶バッジ",
+  name: "2nd アルバム「A World in Our Colors」楽天ブックス限定特典缶バッジ",
+  year: 2026,
+  series: "2nd アルバム「A World in Our Colors」",
+  category: "缶バッジ",
+  tradeText: TradeTextType.NameOnly,
+  url: "/takaneko/goods/2026/2026-11-18_2ndアルバム「A World in Our Colors」_楽天ブックス限定特典缶バッジ.jpg",
+  width: 1789,
+  height: 1211,
+  variants: [
+    { id: 1, name: "城月菜央", description: "" },
+    { id: 2, name: "涼海すう", description: "" },
+    { id: 3, name: "橋本桃呼", description: "" },
+    { id: 4, name: "葉月紗蘭", description: "" },
+    { id: 5, name: "東山恵里沙", description: "" },
+    { id: 6, name: "日向端ひな", description: "" },
+    { id: 7, name: "松本ももな", description: "" },
+    { id: 8, name: "籾山ひめり", description: "" },
+  ],
+  withFrame: true,
+  positions: [
+    { id: 1, x: 140, y: 225, width: 365, height: 365 },
+    { id: 2, x: 525, y: 225, width: 365, height: 365 },
+    { id: 3, x: 910, y: 225, width: 365, height: 365 },
+    { id: 4, x: 1295, y: 225, width: 365, height: 365 },
+    { id: 5, x: 140, y: 625, width: 365, height: 365 },
+    { id: 6, x: 525, y: 625, width: 365, height: 365 },
+    { id: 7, x: 910, y: 625, width: 365, height: 365 },
+    { id: 8, x: 1295, y: 625, width: 365, height: 365 },
+  ],
+};
