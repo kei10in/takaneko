@@ -18,7 +18,7 @@ interface Props {
 
 export const StatisticsBarChart = ({ data, name, labelName }: Props) => (
   <figure aria-label={name} className="w-full min-w-0">
-    <ResponsiveContainer width="100%" minWidth={0} height={256}>
+    <ResponsiveContainer width="100%" minWidth={0} height={296}>
       <BarChart data={data} margin={{ top: 20, right: 12, bottom: 0, left: 0 }} accessibilityLayer>
         <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="var(--color-zinc-200)" />
         <XAxis

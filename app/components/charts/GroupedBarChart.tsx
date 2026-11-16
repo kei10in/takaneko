@@ -27,6 +27,7 @@ interface Props {
 const barShape = <Rectangle />;
 const chartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
 const yAxisWidth = 40;
+const legendHeight = 24;
 
 export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, unit }: Props) => {
   const containerRef = useRef<HTMLElement>(null);
@@ -78,7 +79,12 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
         setTappedIndex(undefined);
       }}
     >
-      <ResponsiveContainer width="100%" minWidth={0} height={320} onResize={setContainerWidth}>
+      <ResponsiveContainer
+        width="100%"
+        minWidth={0}
+        height={296 + legendHeight}
+        onResize={setContainerWidth}
+      >
         <RechartsBarChart
           data={chartData}
           barSize={barSize}
@@ -140,7 +146,7 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
           <Legend
             align="left"
             verticalAlign="top"
-            height={24}
+            height={legendHeight}
             wrapperStyle={{ fontSize: 12, top: 0, paddingLeft: 48 }}
             iconType="circle"
             iconSize={8}
