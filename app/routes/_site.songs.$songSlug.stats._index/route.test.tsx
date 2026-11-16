@@ -211,6 +211,35 @@ describe("楽曲の統計ページ", () => {
     expect(yearly.getByRole("row", { name: "2026年 5" })).toBeTruthy();
   });
 
+  it("活動年では8月7日で区切った披露回数を表示し、月別に戻ると選択年を維持する", () => {
+    renderPage({
+      performances: {
+        ...performances,
+        lives: [
+          activity("2023-08-06", "first-year", "1年目の公演", 2),
+          activity("2023-08-07", "second-year", "2年目の公演", 3),
+          ...performances.lives,
+        ],
+      },
+    });
+    fireEvent.change(screen.getByRole("combobox", { name: "表示する年" }), {
+      target: { value: "2025" },
+    });
+    fireEvent.click(screen.getByRole("button", { name: "活動年" }));
+
+    const chart = within(screen.getByRole("figure", { name: "活動年別披露回数" }));
+    expect(chart.getByRole("columnheader", { name: "活動年" })).toBeTruthy();
+    expect(chart.getByRole("row", { name: "1年目 2" })).toBeTruthy();
+    expect(chart.getByRole("row", { name: "2年目 3" })).toBeTruthy();
+    expect(chart.getByRole("row", { name: "3年目 0" })).toBeTruthy();
+    expect(chart.getByRole("row", { name: "4年目 5" })).toBeTruthy();
+    expect(chart.getByRole("row", { name: "5年目 0" })).toBeTruthy();
+    expect(screen.queryByRole("combobox", { name: "表示する年" })).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: "月別" }));
+    expect(screen.getByRole("figure", { name: "2025年の月別披露回数" })).toBeTruthy();
+  });
+
   it("集計単位は常に1つ選択され、矢印キーでフォーカスを移動できる", async () => {
     renderPage();
     const group = within(screen.getByRole("group", { name: "集計単位" }));
