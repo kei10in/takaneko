@@ -15,14 +15,17 @@ import { StatisticsBarChart } from "./StatisticsBarChart.tsx";
 export const PerformanceHistory = ({
   lives,
   today,
+  firstYear,
 }: {
   lives: SimpleSongActivity[];
   today: NaiveDate;
+  firstYear: number | undefined;
 }) => {
   const [period, setPeriod] = useState<"monthly" | "yearly">("monthly");
   const [selectedYear, setSelectedYear] = useState<number>();
   const yearly = yearlyPerformanceChartData(yearlyPerformanceCounts(lives, today), today);
-  const years = yearly.map((item) => Number.parseInt(item.label, 10));
+  const startYear = firstYear ?? 2022;
+  const years = Array.from({ length: today.year - startYear + 1 }, (_, index) => startYear + index);
   const year =
     selectedYear != undefined && years.includes(selectedYear) ? selectedYear : today.year;
 

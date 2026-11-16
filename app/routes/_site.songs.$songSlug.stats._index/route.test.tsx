@@ -130,6 +130,45 @@ describe("楽曲の統計ページ", () => {
     ).toBeTruthy();
   });
 
+  it.each(["2022-08-07", undefined])(
+    "年の選択肢はliveDebut（%s）によらず記録上の初披露年から今年までになる",
+    (liveDebut) => {
+      renderPage({
+        track: { ...ALL_SONGS[0], liveDebut },
+        performances: {
+          ...performances,
+          lives: [
+            ...performances.lives,
+            activity("2024-08-01", "first", "初披露公演"),
+            activity("2023-01-01", "empty", "披露のない公演", 0),
+          ],
+        },
+      });
+      const selector = within(screen.getByRole("combobox", { name: "表示する年" }));
+      const years = selector
+        .getAllByRole<HTMLOptionElement>("option")
+        .map((option) => Number(option.value));
+
+      expect(years).toHaveLength(3);
+      expect(Math.min(...years)).toBe(2024);
+      expect(Math.max(...years)).toBe(2026);
+      expect(years).toContain(2025);
+      expect(new Set(years).size).toBe(years.length);
+    },
+  );
+
+  it("披露記録がない場合は2022年から今年までを選択できる", () => {
+    renderPage({ performances: { ...performances, lives: [] } });
+    const selector = within(screen.getByRole("combobox", { name: "表示する年" }));
+    const years = selector
+      .getAllByRole<HTMLOptionElement>("option")
+      .map((option) => Number(option.value));
+
+    expect(years).toHaveLength(5);
+    expect(Math.min(...years)).toBe(2022);
+    expect(Math.max(...years)).toBe(2026);
+  });
+
   it("披露間隔は今日を使わず、同日の披露をまとめて計算した日数を表示する", () => {
     renderPage();
     const intervals = within(screen.getByRole("region", { name: "披露間隔" }));
@@ -161,15 +200,6 @@ describe("楽曲の統計ページ", () => {
     expect(past.getAllByRole("row")).toHaveLength(13);
     expect(past.getAllByText("0")).toHaveLength(11);
     expect(past.queryByText("データなし")).toBeNull();
-
-    fireEvent.change(screen.getByRole("combobox", { name: "表示する年" }), {
-      target: { value: "2022" },
-    });
-    const firstYear = within(
-      within(screen.getByRole("figure", { name: "2022年の月別披露回数" })).getByRole("table"),
-    );
-    expect(firstYear.getByRole("row", { name: "7月 データなし" })).toBeTruthy();
-    expect(firstYear.getByRole("row", { name: "8月 0" })).toBeTruthy();
 
     fireEvent.click(screen.getByRole("button", { name: "年別" }));
     const yearly = within(
