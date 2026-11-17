@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["城月菜央", "橋本桃呼"],
   images: [
     {
+      path: "/events/2026/2026-11-17_FM長崎「Colors」.jpg",
+      ref: "https://x.com/takanenofficial/status/2122532681196147005",
+    },
+    {
       path: "/events/2026/2026-11-17_2nd アルバム「A World in Our Colors」メディア出演スケジュール_1.jpg",
       ref: "https://x.com/takanenofficial/status/2122321289478382070",
     },
@@ -26,9 +30,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
   ## リンク
 
+  - [radiko 出演時間](https://radiko.jp/share/?sid=FMNAGASAKI&t=20261117162030)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=FMNAGASAKI&t=20261117160000)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2122532681196147005)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2122321289478382070)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
   - [リリースキャンペーンスケジュール - 公式サイト](https://takanenonadeshiko.jp/?p=5765)

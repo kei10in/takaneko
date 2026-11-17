@@ -22,6 +22,10 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  ウィークリーティーチャーとしてコメント出演
+
   ## リンク
 
   - [radiko 番組放送回](https://radiko.jp/share/?sid=RKB&t=20261118210000)

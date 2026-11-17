@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["涼海すう", "籾山ひめり"],
   images: [
     {
+      path: "/events/2026/2026-11-17_RKBラジオ「カリメン」.jpg",
+      ref: "https://x.com/takanenofficial/status/2122532681196147005",
+    },
+    {
       path: "/events/2026/2026-11-17_2nd アルバム「A World in Our Colors」メディア出演スケジュール_1.jpg",
       ref: "https://x.com/takanenofficial/status/2122321289478382070",
     },
@@ -22,9 +26,15 @@ export const meta: EventMetaDescriptor = {
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  ウィークリーティーチャーとしてコメント出演
+
   ## リンク
 
+  - [radiko 出演時間](https://radiko.jp/share/?sid=RKB&t=20261117223120)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=RKB&t=20261117210000)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2122532681196147005)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2122321289478382070)
   - [リリースキャンペーンスケジュール - 公式サイト](https://takanenonadeshiko.jp/?p=5765)
 `;
