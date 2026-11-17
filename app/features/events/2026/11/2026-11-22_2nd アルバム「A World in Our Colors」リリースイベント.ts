@@ -10,9 +10,21 @@ export const meta: EventMetaDescriptor = {
   start: "11:30",
   end: "19:00",
   region: "東京",
-  location: "東京都内某所",
+  location: "ベルサール飯田橋駅前",
   present: ["高嶺のなでしこ3"],
   images: [
+    {
+      path: "/events/2026/2026-11-22_2nd アルバム「A World in Our Colors」リリースイベント_当日販売.jpg",
+      ref: "https://x.com/takanenofficial/status/2122283557330780592",
+    },
+    {
+      path: "/events/2026/2026-11-22_2nd アルバム「A World in Our Colors」リリースイベント_会場限定抽選会_チェキ.jpg",
+      ref: "https://x.com/takanenofficial/status/2122283557330780592",
+    },
+    {
+      path: "/events/2026/2026-11-22_2nd アルバム「A World in Our Colors」リリースイベント_会場限定抽選会_写ルンです.jpg",
+      ref: "https://x.com/takanenofficial/status/2122283557330780592",
+    },
     {
       path: "/events/2026/2026-11-22_2nd アルバム「A World in Our Colors」リリースイベント.jpg",
       ref: "https://x.com/takanenofficial/status/2117210120924942713",
@@ -81,7 +93,7 @@ export const meta: EventMetaDescriptor = {
       },
     ],
   },
-  updatedAt: "2026-11-02",
+  updatedAt: "2026-11-17",
 };
 
 export const content = /* md */ `
@@ -89,7 +101,7 @@ export const content = /* md */ `
 
   個別握手会。
 
-  たかねこ盤 1 枚予約につき、「個別握手会参加券」を 2 枚配布。
+  たかねこ盤 1 枚購入につき、「個別握手会参加券」を 2 枚、「抽選会参加券」を 1 枚 (1 枚で 2 回くじ引き) 配布。
 
   ### 事前予約
 
@@ -100,10 +112,19 @@ export const content = /* md */ `
 
   ### 当日受付
 
+  - 当日 CD 販売: 10:30 〜
   - 事前 CD 予約販売当選者・特典券引換: 10:30 〜
+
+  ### 抽選会
+
+  - 抽選会受付時間: 10:30 〜 18:30
+  - 景品: 限定チェキ (全 32 種、各種 1 枚)、限定写ルンです (L 判サイズ、全 19 種、各種 1 枚)
+  - 参加対象: 11 月 22 日の個別握手会参加券を持っている本人のみ
 
   ## リンク
 
+  - [当日販売・会場限定抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5845)
+  - [当日販売・会場限定抽選会告知 - 公式 X](https://x.com/takanenofficial/status/2122283557330780592)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5789)
   - [詳細発表 - 公式 X](https://x.com/takanenofficial/status/2117210120924942713)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2110566338511225041)
