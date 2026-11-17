@@ -65,13 +65,18 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2101559483365535961"],
     },
   ],
-  updatedAt: "2026-10-02",
+  updatedAt: "2026-11-17",
 };
 
 export const content = /* md */ `
   ## レポート
 
-  ## ライブタイムズ エンタメ
+  ### IRC 2026 A/Wの思い出をもう一度
+
+  - [IRC 2026 A/Wの思い出をもう一度📸 6日目はIRC SPECIAL COLLECTION✨ - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2122494935765016992)
+  - [IRC 2026 A/Wの思い出をもう一度📸 4日目は高嶺のなでしこ＆Juice=Juice✨ - IDOL RUNWAY COLLECTION X](https://x.com/idolrunwaycolle/status/2121770159190798786)
+
+  ### ライブタイムズ エンタメ
 
   - [IRC 2026 A/W 松本ももな - ライブタイムズ エンタメ X](https://x.com/LIVETIMES_ENTA/status/2102184755240538606)
   - [高嶺のなでしこ・松本ももな、可憐な和の装いで圧倒的な存在感。ライブでは笑顔弾けるパフォーマンス【IRC 2026 A/W】 – ライブタイムズ](https://livetimes.jp/news/64300/)
