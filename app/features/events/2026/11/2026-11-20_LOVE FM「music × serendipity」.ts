@@ -7,7 +7,7 @@ export const meta: EventMetaDescriptor = {
   start: "15:00",
   end: "19:00",
   region: "ラジオ",
-  present: ["城月菜央", "橋本桃呼"],
+  present: ["城月菜央", "松本ももな"],
   images: [
     {
       path: "/events/2026/2026-11-17_2nd アルバム「A World in Our Colors」メディア出演スケジュール_1.jpg",
