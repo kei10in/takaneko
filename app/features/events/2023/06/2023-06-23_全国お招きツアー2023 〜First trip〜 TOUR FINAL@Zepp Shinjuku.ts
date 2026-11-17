@@ -3,7 +3,7 @@ import { EventMetaDescriptor } from "../../eventMeta.ts";
 export const meta: EventMetaDescriptor = {
   summary: "全国お招きツアー2023 〜First trip〜 TOUR FINAL@Zepp Shinjuku",
   category: "LIVE",
-  liveType: "HOSTED",
+  liveType: "SOLO",
   date: "2023-06-23",
   region: "東京",
   location: "Zepp Shinjuku",
