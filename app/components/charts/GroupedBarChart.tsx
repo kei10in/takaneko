@@ -21,6 +21,7 @@ interface Props {
   xAxisLabel: string;
   yAxisLabel: string;
   unit: string;
+  yAxisScale?: { limit: number; step: number };
 }
 
 // shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
@@ -29,7 +30,15 @@ const chartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
 const yAxisWidth = 40;
 const legendHeight = 24;
 
-export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, unit }: Props) => {
+export const GroupedBarChart = ({
+  data,
+  series,
+  name,
+  xAxisLabel,
+  yAxisLabel,
+  unit,
+  yAxisScale,
+}: Props) => {
   const containerRef = useRef<HTMLElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
   const measureContainer = useCallback((element: HTMLElement | null) => {
@@ -119,7 +128,15 @@ export const GroupedBarChart = ({ data, series, name, xAxisLabel, yAxisLabel, un
             tickMargin={2}
             tick={{ fontSize: 12 }}
             tickLine={false}
-            domain={[0, "auto"]}
+            domain={[0, yAxisScale?.limit ?? "auto"]}
+            ticks={
+              yAxisScale == undefined
+                ? undefined
+                : Array.from(
+                    { length: Math.round(yAxisScale.limit / yAxisScale.step) + 1 },
+                    (_, index) => index * yAxisScale.step,
+                  )
+            }
           />
           <GroupedBarChartTooltip
             groupWidth={barSize * series.length + barGap * Math.max(0, series.length - 1)}

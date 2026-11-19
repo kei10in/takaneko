@@ -1,11 +1,19 @@
-import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import { MonthlyHistory } from "./MonthlyHistory.tsx";
+
+const readYAxisTicks = () =>
+  Array.from(
+    document.querySelectorAll(".recharts-yAxis-tick-labels .recharts-cartesian-axis-tick-value"),
+  ).map((tick) => tick.textContent);
 
 beforeEach(() => {
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
     this: HTMLElement,
   ) {
+    if (this.tagName === "SPAN") {
+      return new DOMRect(0, 0, 24, 12);
+    }
     return new DOMRect(0, 0, 640, this.classList.contains("recharts-legend-wrapper") ? 24 : 256);
   });
 });
@@ -14,7 +22,47 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-it("平均・合計・年とライブ種類を選び、1〜12月のイベント数とステージ数を表示する", () => {
+it("過去の年の最大値も含めて種別ごとの目盛りを固定する", () => {
+  const counts = [
+    {
+      month: "2025-01",
+      total: 48,
+      solo: 8,
+      hosted: 0,
+      joint: 0,
+      "release-event": 0,
+      "event-live": 40,
+    },
+    {
+      month: "2026-01",
+      total: 10,
+      solo: 2,
+      hosted: 0,
+      joint: 0,
+      "release-event": 0,
+      "event-live": 8,
+    },
+  ];
+  render(
+    <MonthlyHistory
+      data={{ aggregatedOn: "2026-10-15", monthlyStages: counts, monthlyEvents: counts }}
+    />,
+  );
+  expect(readYAxisTicks()).toEqual(["0", "10", "20", "30", "40", "50"]);
+  const year = screen.getByRole("combobox", { name: "表示する年" });
+  fireEvent.change(year, { target: { value: "2025" } });
+  expect(readYAxisTicks()).toEqual(["0", "10", "20", "30", "40", "50"]);
+  fireEvent.change(screen.getByRole("combobox", { name: "表示する種別" }), {
+    target: { value: "solo" },
+  });
+  const soloTicks = readYAxisTicks();
+  expect(Number(soloTicks.at(-1))).toBeGreaterThanOrEqual(8);
+  expect(Number(soloTicks.at(-1))).toBeLessThan(50);
+  fireEvent.change(year, { target: { value: "2026" } });
+  expect(readYAxisTicks()).toEqual(soloTicks);
+});
+
+it("平均・合計・年とライブ種類を選び、1〜12月のイベント数とステージ数を表示する", async () => {
   render(
     <MonthlyHistory
       data={{
@@ -101,6 +149,17 @@ it("平均・合計・年とライブ種類を選び、1〜12月のイベント�
     expect(within(table).getByRole("row", { name: `1月 ${events} ${stages}` })).toBeTruthy();
   });
   const chart = screen.getByRole("application");
+  await waitFor(() => expect(readYAxisTicks().length).toBeGreaterThan(1));
+  const ticks = readYAxisTicks();
+  expect(Number(ticks.at(-1))).toBeGreaterThanOrEqual(20);
+  fireEvent.change(year, { target: { value: "2025" } });
+  expect(readYAxisTicks()).toEqual(ticks);
+  fireEvent.change(year, { target: { value: "2022" } });
+  expect(readYAxisTicks()).toEqual(ticks);
+  fireEvent.change(year, { target: { value: "average" } });
+  expect(readYAxisTicks()).toEqual(ticks);
+  fireEvent.change(year, { target: { value: "total" } });
+  expect(Number(readYAxisTicks().at(-1))).toBeGreaterThanOrEqual(28);
   fireEvent.change(year, { target: { value: "2022" } });
   expect(screen.getByRole("application")).toBe(chart);
   expect(within(table).getByRole("row", { name: "1月 データなし データなし" })).toBeTruthy();

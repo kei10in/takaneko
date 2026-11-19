@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
 import { GroupedBarChart } from "~/components/charts/GroupedBarChart.tsx";
+import { calculateChartDimensions } from "~/components/charts/scale.ts";
 import { DebutDate } from "~/constants.ts";
 import {
   buildMonthlyHistory,
@@ -23,6 +24,15 @@ export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
     const events = buildMonthlyHistory(data.monthlyEvents, data.aggregatedOn, selection);
     return buildStageHistoryChartData(stages, events, filter);
   }, [data, selection, filter]);
+  const yearlyScale = useMemo(() => {
+    const key = filter === "all" ? "total" : filter;
+    const maxValue = Math.max(
+      0,
+      ...data.monthlyStages.map((row) => row[key]),
+      ...data.monthlyEvents.map((row) => row[key]),
+    );
+    return calculateChartDimensions(maxValue);
+  }, [data, filter]);
   if (chart.data.length === 0) {
     return <p>集計対象のライブはありません。</p>;
   }
@@ -95,6 +105,7 @@ export const MonthlyHistory = ({ data }: { data: MonthlyHistoryData }) => {
         unit="回"
         series={chart.series}
         data={chart.data}
+        yAxisScale={selection === "total" ? undefined : yearlyScale}
       />
     </div>
   );
