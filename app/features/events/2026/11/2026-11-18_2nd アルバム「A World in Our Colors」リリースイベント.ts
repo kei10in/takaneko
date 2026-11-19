@@ -78,6 +78,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [オフィシャルレポート](https://prtimes.jp/main/html/rd/p/000001010.000025517.html)
   - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2123004539062116720)
   - [#きょうのたかねこ](https://x.com/takanenofficial/status/2122872421896352045)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5779)
