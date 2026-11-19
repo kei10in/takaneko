@@ -34,4 +34,14 @@ export const 我武者羅: SongMetaDescriptor = {
       publishedAt: "2021-10-12",
     },
   ],
+
+  recordings: [
+    {
+      isrc: "JPVI02602807",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699571"],
+      spotify: ["https://open.spotify.com/track/1ayIJZRwQmaiVqt9GEH5bm"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=jFFFbFLlqiM"],
+      linkfire: ["https://jvcmusic.lnk.to/aworldinourcolors"],
+    },
+  ],
 };

@@ -33,4 +33,14 @@ export const かわいいは常識: SongMetaDescriptor = {
       publishedAt: "2026-08-28",
     },
   ],
+
+  recordings: [
+    {
+      isrc: "JPVI02602809",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699575"],
+      spotify: ["https://open.spotify.com/track/1Rs5TCqLg5q3nZFl0Rop8V"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=TgKhmX-hUDA"],
+      linkfire: ["https://jvcmusic.lnk.to/aworldinourcolors"],
+    },
+  ],
 };

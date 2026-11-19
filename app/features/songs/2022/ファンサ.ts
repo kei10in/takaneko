@@ -33,4 +33,14 @@ export const ファンサ: SongMetaDescriptor = {
       publishedAt: "2020-05-28",
     },
   ],
+
+  recordings: [
+    {
+      isrc: "JPVI02602818",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699584"],
+      spotify: ["https://open.spotify.com/track/4dMzJ8ojGaC8KVxCsbWSBR"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=GXEhsLlLOes"],
+      linkfire: ["https://jvcmusic.lnk.to/aworldinourcolors"],
+    },
+  ],
 };
