@@ -10,6 +10,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     links: ["https://biz-m.oricon.co.jp/article/9590/"],
   },
   {
+    mediaUrl: "https://natalie.mu/music/pp/takaneko-2ndalbum",
+    publishedAt: "2026-11-18",
+    category: "article",
+    presents: ["城月菜央", "松本ももな", "籾山ひめり"],
+  },
+  {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73725",
     publishedAt: "2026-11-06",
     category: "article",

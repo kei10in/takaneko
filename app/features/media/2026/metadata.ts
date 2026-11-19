@@ -16,6 +16,19 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://natalie.mu/music/pp/takaneko-2ndalbum",
+    title:
+      "高嶺のなでしこ インタビュー｜夢に向け、たかねこの魅力を存分に伝えるアルバム完成 - 音楽ナタリー 特集・インタビュー",
+    authorName: "音楽ナタリー",
+    publishedAt: "2026-11-18",
+    mediaUrl: "https://natalie.mu/music/pp/takaneko-2ndalbum",
+    imageUrl:
+      "https://ogre.natalie.mu/media/pp/takaneko-2ndalbum/takaneko-2ndalbum_ogp.jpg?imwidth=1280&imdensity=1",
+    category: "article",
+    presents: ["城月菜央", "松本ももな", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://scawaiiweb.com/articles/detail/73725",
     title:
       "高嶺のなでしこ・城月菜央「夢はホラー界のアイドル(!?)」個性を武器に広げたい未来とは？【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
