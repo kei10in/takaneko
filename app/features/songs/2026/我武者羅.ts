@@ -13,12 +13,12 @@ export const 我武者羅: SongMetaDescriptor = {
   choreographedBy: "NAOKI",
 
   videoRelease: undefined,
-  digitalRelease: undefined,
+  digitalRelease: "2026-11-18",
   liveDebut: "2026-09-13",
 
   tags: [TakanekoVersion, Repertoire],
 
-  coverArt: "",
+  coverArt: "/takaneko/songs/2026/A World in Our Colors.jpg",
 
   officialSite: "",
   youtube: [

@@ -9,15 +9,15 @@ export const かわいいは常識: SongMetaDescriptor = {
   composedBy: "shito",
   arrangedBy: "HoneyWorks",
 
-  choreographedBy: undefined,
+  choreographedBy: "らん先生",
 
   videoRelease: undefined,
-  digitalRelease: undefined,
+  digitalRelease: "2026-11-18",
   liveDebut: "2026-10-11",
 
   tags: [TakanekoVersion, Repertoire],
 
-  coverArt: "",
+  coverArt: "/takaneko/songs/2026/A World in Our Colors.jpg",
 
   officialSite: "",
   youtube: [

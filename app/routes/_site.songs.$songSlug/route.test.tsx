@@ -3,7 +3,7 @@ import { createMemoryRouter, RouterProvider, useLoaderData } from "react-router"
 import { SWRConfig } from "swr";
 import { afterEach, assert, describe, expect, it } from "vitest";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
-import { LivesForSong } from "~/features/songs/types.ts";
+import { LivesForSong, SongMetaDescriptor } from "~/features/songs/types.ts";
 import Overview from "../_site.songs.$songSlug._index/route.tsx";
 import Lives from "../_site.songs.$songSlug.lives._index/route.tsx";
 import Stats from "../_site.songs.$songSlug.stats._index/route.tsx";
@@ -23,13 +23,21 @@ const tabs = [
   { name: "ライブ", path: `${songPath}/lives` },
 ];
 
-const renderPage = (path = songPath, performances?: LivesForSong) => {
+const artworkTestSong: SongMetaDescriptor = {
+  slug: "artwork-test-song",
+  name: "アートワーク確認用楽曲",
+  lyricsBy: "作詞者",
+  composedBy: "作曲者",
+  arrangedBy: "編曲者",
+};
+
+const renderPage = (path = songPath, performances?: LivesForSong, song?: SongMetaDescriptor) => {
   const router = createMemoryRouter(
     [
       {
         path: "/songs/:songSlug",
         Component: () => <Component loaderData={useLoaderData<typeof loader>()} />,
-        loader,
+        loader: song == undefined ? loader : () => ({ track: song }),
         HydrateFallback: () => null,
         children: [
           { index: true, Component: Overview },
@@ -107,9 +115,8 @@ describe("楽曲詳細のタブ", () => {
   it.each(["", "/videos", "/stats", "/lives"])(
     "アートワークがある楽曲は%sでも共通ヘッダーに表示する",
     async (suffix) => {
-      const song = ALL_SONGS.find((candidate) => candidate.coverArt);
-      assert(song?.coverArt);
-      renderPage(`/songs/${song.slug}${suffix}`);
+      const song = { ...artworkTestSong, coverArt: "/test/アートワーク.jpg" };
+      renderPage(`/songs/${song.slug}${suffix}`, undefined, song);
 
       const image = await screen.findByRole("img", { name: `${song.name}のアートワーク` });
       expect(image.getAttribute("src")).toContain(encodeURI(song.coverArt));
@@ -118,9 +125,8 @@ describe("楽曲詳細のタブ", () => {
   );
 
   it.each([undefined, ""])("アートワークが %s の楽曲では画像を表示しない", async (coverArt) => {
-    const song = ALL_SONGS.find((candidate) => candidate.coverArt === coverArt);
-    assert(song != undefined);
-    renderPage(`/songs/${song.slug}`);
+    const song = { ...artworkTestSong, coverArt };
+    renderPage(`/songs/${song.slug}`, undefined, song);
 
     await screen.findByRole("heading", { level: 1, name: song.name });
     expect(screen.queryByRole("img", { name: /のアートワーク/u })).toBeNull();

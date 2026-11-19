@@ -12,10 +12,12 @@ export const ファンサ: SongMetaDescriptor = {
   choreographedBy: "NaNa",
 
   videoRelease: undefined,
-  digitalRelease: undefined,
+  digitalRelease: "2026-11-18",
   liveDebut: "2022-08-27",
 
   tags: [TakanekoVersion, Repertoire],
+
+  coverArt: "/takaneko/songs/2026/A World in Our Colors.jpg",
 
   officialSite: undefined,
   youtube: [
