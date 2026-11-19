@@ -14,6 +14,7 @@ export const 私は怪物: SongMetaDescriptor = {
   videoRelease: "2024-02-06",
   digitalRelease: "2024-02-07",
   liveDebut: "2022-10-31",
+  repertoireSince: "2022-10-31",
 
   tags: [Original, Repertoire, UnitSong],
 

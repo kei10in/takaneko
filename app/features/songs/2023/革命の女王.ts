@@ -14,6 +14,7 @@ export const 革命の女王: SongMetaDescriptor = {
   videoRelease: "2023-04-21",
   digitalRelease: "2023-04-04",
   liveDebut: "2023-04-23",
+  repertoireSince: "2023-04-04",
 
   tags: [Original, Repertoire],
 

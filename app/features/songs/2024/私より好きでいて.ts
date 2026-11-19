@@ -14,6 +14,7 @@ export const 私より好きでいて: SongMetaDescriptor = {
   videoRelease: "2024-06-29",
   digitalRelease: "2024-06-05",
   liveDebut: "2024-04-18",
+  repertoireSince: "2024-04-18",
 
   tags: [Original, Repertoire],
 

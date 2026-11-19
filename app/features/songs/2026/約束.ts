@@ -14,6 +14,7 @@ export const 約束: SongMetaDescriptor = {
   videoRelease: "2026-10-29",
   digitalRelease: "2026-10-28",
   liveDebut: "2026-08-06",
+  repertoireSince: "2026-08-06",
 
   tags: [Original, Repertoire],
 

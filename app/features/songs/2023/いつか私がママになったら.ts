@@ -14,6 +14,7 @@ export const いつか私がママになったら: SongMetaDescriptor = {
   videoRelease: "2023-12-16",
   digitalRelease: "2023-10-16",
   liveDebut: "2023-10-26",
+  repertoireSince: "2023-10-16",
 
   tags: [Original, Repertoire],
 

@@ -14,6 +14,7 @@ export const アイのウイルス: SongMetaDescriptor = {
   videoRelease: "2024-12-11",
   digitalRelease: "2024-12-11",
   liveDebut: "2024-11-08",
+  repertoireSince: "2024-11-08",
 
   tags: [Original, Repertoire],
 

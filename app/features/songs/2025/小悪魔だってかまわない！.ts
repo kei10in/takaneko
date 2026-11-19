@@ -14,6 +14,7 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
   videoRelease: "2025-02-08",
   digitalRelease: "2025-02-09",
   liveDebut: "2024-09-15",
+  repertoireSince: "2025-02-14",
 
   tags: [TakanekoVersion, Repertoire],
 

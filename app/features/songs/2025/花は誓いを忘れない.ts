@@ -14,6 +14,7 @@ export const 花は誓いを忘れない: SongMetaDescriptor = {
   videoRelease: "2025-12-05",
   digitalRelease: "2025-12-05",
   liveDebut: "2025-09-07",
+  repertoireSince: "2025-09-07",
 
   tags: [Original, Repertoire],
 

@@ -14,6 +14,7 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
   videoRelease: "2024-09-07",
   digitalRelease: "2024-09-08",
   liveDebut: "2024-07-13",
+  repertoireSince: "2024-07-13",
 
   tags: [TakanekoVersion, Repertoire],
 

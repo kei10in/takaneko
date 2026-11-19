@@ -14,6 +14,7 @@ export const 美しく生きろ: SongMetaDescriptor = {
   videoRelease: "2024-01-19",
   digitalRelease: "2024-01-19",
   liveDebut: "2022-10-31",
+  repertoireSince: "2022-10-31",
 
   tags: [Original, Repertoire],
 

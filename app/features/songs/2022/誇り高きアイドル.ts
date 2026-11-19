@@ -15,6 +15,7 @@ export const 誇り高きアイドル: SongMetaDescriptor = {
   videoRelease: undefined,
   digitalRelease: undefined,
   liveDebut: "2022-08-20",
+  repertoireSince: "2022-08-20",
 
   tags: [TakanekoVersion, Repertoire],
 

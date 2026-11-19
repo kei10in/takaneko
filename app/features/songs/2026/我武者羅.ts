@@ -15,6 +15,7 @@ export const 我武者羅: SongMetaDescriptor = {
   videoRelease: undefined,
   digitalRelease: "2026-11-18",
   liveDebut: "2026-09-13",
+  repertoireSince: "2026-09-13",
 
   tags: [TakanekoVersion, Repertoire],
 

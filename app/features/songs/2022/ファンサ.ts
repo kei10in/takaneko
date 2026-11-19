@@ -14,6 +14,7 @@ export const ファンサ: SongMetaDescriptor = {
   videoRelease: undefined,
   digitalRelease: "2026-11-18",
   liveDebut: "2022-08-27",
+  repertoireSince: "2022-08-27",
 
   tags: [TakanekoVersion, Repertoire],
 

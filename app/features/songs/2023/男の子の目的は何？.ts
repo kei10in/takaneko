@@ -13,7 +13,8 @@ export const 男の子の目的は何: SongMetaDescriptor = {
 
   videoRelease: "2023-03-20",
   digitalRelease: "2023-03-20",
-  liveDebut: "2022-02-14",
+  liveDebut: "2023-02-14",
+  repertoireSince: "2023-02-14",
 
   tags: [TakanekoVersion, Repertoire],
 

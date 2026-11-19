@@ -14,6 +14,7 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
   videoRelease: "2024-11-06",
   digitalRelease: "2024-11-06",
   liveDebut: "2024-10-06",
+  repertoireSince: "2024-10-06",
 
   tags: [Original, Repertoire],
 

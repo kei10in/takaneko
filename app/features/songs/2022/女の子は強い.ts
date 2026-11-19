@@ -14,6 +14,7 @@ export const 女の子は強い: SongMetaDescriptor = {
   videoRelease: "2022-12-25",
   digitalRelease: "2022-12-26",
   liveDebut: "2022-10-05",
+  repertoireSince: "2022-10-05",
 
   tags: [Original, Repertoire],
 

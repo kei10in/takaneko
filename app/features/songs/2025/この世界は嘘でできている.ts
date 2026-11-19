@@ -14,6 +14,7 @@ export const この世界は嘘でできている: SongMetaDescriptor = {
   videoRelease: "2025-08-20",
   digitalRelease: "2025-08-20",
   liveDebut: "2025-08-07",
+  repertoireSince: "2025-08-07",
 
   tags: [Original, Repertoire],
 

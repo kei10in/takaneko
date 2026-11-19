@@ -14,6 +14,7 @@ export const ライフクエスト: SongMetaDescriptor = {
   videoRelease: "2025-07-02",
   digitalRelease: "2025-07-02",
   liveDebut: "2025-07-26",
+  repertoireSince: "2025-07-02",
 
   tags: [Original, Repertoire],
 

@@ -14,6 +14,7 @@ export const アイドル衣装: SongMetaDescriptor = {
   videoRelease: "2025-05-28",
   digitalRelease: "2025-05-28",
   liveDebut: "2025-05-06",
+  repertoireSince: "2025-05-06",
 
   tags: [Original, Repertoire],
 

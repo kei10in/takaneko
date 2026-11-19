@@ -14,6 +14,7 @@ export const CuteForLife: SongMetaDescriptor = {
   videoRelease: "2025-04-07",
   digitalRelease: "2025-04-07",
   liveDebut: "2025-02-14",
+  repertoireSince: "2025-02-14",
 
   tags: [Original, Repertoire],
 

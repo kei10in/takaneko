@@ -14,6 +14,7 @@ export const 僕らの青: SongMetaDescriptor = {
   videoRelease: "2026-08-24",
   digitalRelease: "2026-08-12",
   liveDebut: "2026-07-31",
+  repertoireSince: "2026-07-31",
 
   tags: [Original, Repertoire],
 

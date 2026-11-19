@@ -15,6 +15,7 @@ export const アンチファン: SongMetaDescriptor = {
   videoRelease: "2022-08-27",
   digitalRelease: "2022-10-01",
   liveDebut: "2022-08-07",
+  repertoireSince: "2022-08-07",
 
   tags: [Original, Repertoire],
 

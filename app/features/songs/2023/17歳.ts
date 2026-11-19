@@ -14,6 +14,7 @@ export const _17歳: SongMetaDescriptor = {
   videoRelease: "2023-09-03",
   digitalRelease: "2023-09-09",
   liveDebut: "2023-09-03",
+  repertoireSince: "2023-09-03",
 
   tags: [TakanekoVersion, Repertoire],
 

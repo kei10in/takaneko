@@ -14,6 +14,7 @@ export const 決戦スピリット: SongMetaDescriptor = {
   videoRelease: "2023-06-22",
   digitalRelease: "2023-07-09",
   liveDebut: "2023-06-23",
+  repertoireSince: "2023-06-22",
 
   tags: [TakanekoVersion, Repertoire],
 

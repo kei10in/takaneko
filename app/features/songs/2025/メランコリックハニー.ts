@@ -14,6 +14,7 @@ export const メランコリックハニー: SongMetaDescriptor = {
   videoRelease: "2025-04-30",
   digitalRelease: "2025-04-30",
   liveDebut: "2025-04-06",
+  repertoireSince: "2025-04-06",
 
   tags: [Original, Repertoire],
 

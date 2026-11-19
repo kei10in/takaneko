@@ -45,6 +45,7 @@ export interface SongMetaDescriptor {
   videoRelease?: string | undefined;
   digitalRelease?: string | undefined;
   liveDebut?: string | undefined;
+  repertoireSince?: string | undefined;
 
   tags?: SongTag[] | undefined;
 

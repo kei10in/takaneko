@@ -14,6 +14,7 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
   videoRelease: "2023-06-21",
   digitalRelease: "2023-07-15",
   liveDebut: "2023-06-23",
+  repertoireSince: "2023-06-21",
 
   tags: [TakanekoVersion, Repertoire],
 

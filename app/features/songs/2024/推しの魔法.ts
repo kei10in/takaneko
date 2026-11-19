@@ -14,6 +14,7 @@ export const 推しの魔法: SongMetaDescriptor = {
   videoRelease: "2024-03-22",
   digitalRelease: "2024-03-25",
   liveDebut: "2024-03-23",
+  repertoireSince: "2024-03-22",
 
   tags: [TakanekoVersion, Repertoire],
 

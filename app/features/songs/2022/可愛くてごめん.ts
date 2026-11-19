@@ -14,6 +14,7 @@ export const 可愛くてごめん: SongMetaDescriptor = {
   videoRelease: "2022-11-18",
   digitalRelease: "2023-01-27",
   liveDebut: "2022-11-19",
+  repertoireSince: "2022-11-18",
 
   tags: [TakanekoVersion, Repertoire],
 

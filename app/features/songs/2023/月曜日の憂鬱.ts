@@ -14,6 +14,7 @@ export const 月曜日の憂鬱: SongMetaDescriptor = {
   videoRelease: "2023-07-21",
   digitalRelease: "2023-07-23",
   liveDebut: "2023-06-23",
+  repertoireSince: "2023-06-23",
 
   tags: [TakanekoVersion, Repertoire],
 

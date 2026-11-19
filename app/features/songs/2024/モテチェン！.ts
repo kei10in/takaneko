@@ -14,6 +14,7 @@ export const モテチェン: SongMetaDescriptor = {
   videoRelease: "2024-07-14",
   digitalRelease: "2024-07-14",
   liveDebut: "2024-07-13",
+  repertoireSince: "2024-07-13",
 
   tags: [Original, Repertoire],
 

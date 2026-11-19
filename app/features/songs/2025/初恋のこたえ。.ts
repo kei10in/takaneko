@@ -14,6 +14,7 @@ export const 初恋のこたえ: SongMetaDescriptor = {
   videoRelease: "2025-06-18",
   digitalRelease: "2025-06-18",
   liveDebut: "2025-06-20",
+  repertoireSince: "2025-06-18",
 
   tags: [Original, Repertoire],
 

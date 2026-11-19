@@ -14,6 +14,7 @@ export const ハートブーケ: SongMetaDescriptor = {
   videoRelease: "2026-06-07",
   digitalRelease: "2026-06-07",
   liveDebut: undefined,
+  repertoireSince: "2026-06-07",
 
   tags: [TakanekoVersion, Repertoire],
 

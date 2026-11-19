@@ -14,6 +14,7 @@ export const 乙女どもよ: SongMetaDescriptor = {
   videoRelease: "2022-10-24",
   digitalRelease: "2023-02-04",
   liveDebut: "2022-09-18",
+  repertoireSince: "2022-09-18",
 
   tags: [TakanekoVersion, Repertoire],
 

@@ -14,6 +14,7 @@ export const すきっちゅーの: SongMetaDescriptor = {
   videoRelease: "2023-09-01",
   digitalRelease: "2023-09-03",
   liveDebut: "2023-09-03",
+  repertoireSince: "2023-09-01",
 
   tags: [TakanekoVersion, Repertoire],
 

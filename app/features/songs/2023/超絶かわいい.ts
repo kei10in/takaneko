@@ -14,6 +14,7 @@ export const 超絶かわいい: SongMetaDescriptor = {
   videoRelease: undefined,
   digitalRelease: undefined,
   liveDebut: "2023-04-23",
+  repertoireSince: "2023-04-23",
 
   tags: [TakanekoVersion, Repertoire],
 

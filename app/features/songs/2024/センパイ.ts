@@ -15,6 +15,7 @@ export const センパイ: SongMetaDescriptor = {
   videoRelease: "2024-04-20",
   digitalRelease: "2024-04-21",
   liveDebut: "2024-04-29",
+  repertoireSince: "2024-04-20",
 
   tags: [TakanekoVersion, Repertoire],
 
