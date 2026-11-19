@@ -1,5 +1,5 @@
 const maxBarSize = 48;
-const overlapRatio = 0.6;
+const overlapRatio = 0.75;
 const categoryPaddingRatio = 0.1;
 
 export const calculateGroupedBarLayout = (
