@@ -1,0 +1,4 @@
+interface:
+  display_name: "Update Media"
+  short_description: "YouTube や記事などのメディア情報を更新する"
+  default_prompt: "Use $update-media to add or update media information such as YouTube videos or articles."
