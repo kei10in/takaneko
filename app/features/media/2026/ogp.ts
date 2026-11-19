@@ -2,6 +2,14 @@ import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://www.oricon.co.jp/news/2493767/",
+    publishedAt: "2026-11-19",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2123363156311642203",
+    links: ["https://biz-m.oricon.co.jp/article/9590/"],
+  },
+  {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73725",
     publishedAt: "2026-11-06",
     category: "article",

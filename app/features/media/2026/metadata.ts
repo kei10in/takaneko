@@ -3,6 +3,19 @@ import { MediaDetails } from "~/features/media/types.ts";
 export const metadata2026: MediaDetails[] = [
   {
     kind: "ogp",
+    key: "https://www.oricon.co.jp/news/2493767/",
+    title:
+      "高嶺のなでしこ、結成4周年で広がる表現の世界　4年間で磨いた“たかねこらしさ”【インタビュー】 ",
+    authorName: "オリコンニュース（ORICON NEWS）",
+    publishedAt: "2026-11-19",
+    mediaUrl: "https://www.oricon.co.jp/news/2493767/",
+    imageUrl:
+      "https://contents.oricon.co.jp/upimg/news/2494000/2493767/20261118_174241_p_o_63379424.jpg",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
     key: "https://scawaiiweb.com/articles/detail/73725",
     title:
       "高嶺のなでしこ・城月菜央「夢はホラー界のアイドル(!?)」個性を武器に広げたい未来とは？【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
