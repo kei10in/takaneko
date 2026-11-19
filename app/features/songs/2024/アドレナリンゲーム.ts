@@ -49,7 +49,10 @@ export const アドレナリンゲーム: SongMetaDescriptor = {
     {
       isrc: "JPVI02402963",
       appleMusic: ["https://music.apple.com/jp/album/1775348611?i=1775348612"],
-      spotify: ["https://open.spotify.com/track/1Lyhz0tWjtBRb3mLiwiIlQ"],
+      spotify: [
+        "https://open.spotify.com/track/1Lyhz0tWjtBRb3mLiwiIlQ",
+        "https://open.spotify.com/track/74zcZC2vaRbevyQ0KOqfN9",
+      ],
       youtubeMusic: ["https://music.youtube.com/watch?v=Ik_H0g-Qps8"],
       linkfire: ["https://jvcmusic.lnk.to/adrenalinegame"],
     },

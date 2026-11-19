@@ -45,7 +45,10 @@ export const この世界は嘘でできている: SongMetaDescriptor = {
     {
       isrc: "JPVI02502216",
       appleMusic: ["https://music.apple.com/jp/album/1830953021?i=1830953022"],
-      spotify: ["https://open.spotify.com/track/1LO1XW5OGO3vMOxqvMkb77"],
+      spotify: [
+        "https://open.spotify.com/track/6ZKai2MzqGETXIEq2ZrIhp",
+        "https://open.spotify.com/track/1LO1XW5OGO3vMOxqvMkb77",
+      ],
       youtubeMusic: ["https://music.youtube.com/watch?v=AvJLHtnGiWA"],
       linkfire: ["https://jvcmusic.lnk.to/KonoSekaiwaUsodeDekiteiru"],
     },

@@ -39,7 +39,10 @@ export const 恋を知った世界: SongMetaDescriptor = {
     {
       isrc: "JPVI02305428",
       appleMusic: ["https://music.apple.com/jp/album/1729107061?i=1729107063"],
-      spotify: ["https://open.spotify.com/track/6QFNvurOfP8xEBvsPff6XO"],
+      spotify: [
+        "https://open.spotify.com/track/6QFNvurOfP8xEBvsPff6XO",
+        "https://open.spotify.com/track/4tqhlHinPBg02XKRCG4KtN",
+      ],
       youtubeMusic: ["https://music.youtube.com/watch?v=hIX41f5isL0"],
       linkfire: ["https://jvcmusic.lnk.to/koiwoshittasekai"],
     },

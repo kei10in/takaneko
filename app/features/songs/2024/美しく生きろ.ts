@@ -51,7 +51,10 @@ export const 美しく生きろ: SongMetaDescriptor = {
     {
       isrc: "JPVI02305162",
       appleMusic: ["https://music.apple.com/jp/album/1724876631?i=1724876632"],
-      spotify: ["https://open.spotify.com/track/3kgoVNMig4ppO217cpbXda"],
+      spotify: [
+        "https://open.spotify.com/track/3kgoVNMig4ppO217cpbXda",
+        "https://open.spotify.com/track/4iwT5ApAjmrOYXBTtsnjrG",
+      ],
       youtubeMusic: ["https://music.youtube.com/watch?v=UXLlIXV7YUc"],
       linkfire: ["https://jvcmusic.lnk.to/utsukushikuikiro"],
     },
