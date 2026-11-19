@@ -74,6 +74,7 @@ import { NYLON_JAPAN_2025年01月号 } from "./publications/NYLON JAPAN.ts";
 import { OutOfMusic_86, OutOfMusic_87, OutOfMusic_88 } from "./publications/Out of Music.ts";
 import { Ray_2024年11月号 } from "./publications/Ray.ts";
 import { SCawaii_2026年11月号, SCawaii_2026年2月号 } from "./publications/S Cawaii!.ts";
+import { Skream_2026年11月号 } from "./publications/Skream!.ts";
 import { SmartGirlsNextGenerations } from "./publications/smart girls next-generations.ts";
 import { TOKYO_RESIDENT_Issue002, TOKYO_RESIDENT_Issue003 } from "./publications/TOKYO RESIDENT.ts";
 import {
@@ -188,6 +189,7 @@ const publications: Publication[] = [
   Ray_2024年11月号,
   SCawaii_2026年2月号,
   SCawaii_2026年11月号,
+  Skream_2026年11月号,
   SmartGirlsNextGenerations,
   TOKYO_RESIDENT_Issue002,
   TOKYO_RESIDENT_Issue003,
