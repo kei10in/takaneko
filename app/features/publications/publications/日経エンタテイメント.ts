@@ -61,6 +61,22 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
       path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_告知.jpg",
       ref: "https://x.com/nikkei_ent/status/2107277613593178439",
     },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_城月菜央.jpg",
+      ref: "https://x.com/nikkei_ent/status/2122160253014040940",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_涼海すう.jpg",
+      ref: "https://x.com/nikkei_ent/status/2122522643324961065",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_橋本桃呼.jpg",
+      ref: "https://x.com/nikkei_ent/status/2122885043320443247",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_葉月紗蘭.jpg",
+      ref: "https://x.com/nikkei_ent/status/2123247417839759384",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2116002163994640431",
@@ -72,6 +88,22 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
     {
       text: "掲載情報 - 公式 X",
       url: "https://x.com/takanenofficial/status/2107297291337920932",
+    },
+    {
+      text: "城月菜央 インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2122160253014040940",
+    },
+    {
+      text: "涼海すう インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2122522643324961065",
+    },
+    {
+      text: "橋本桃呼 インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2122885043320443247",
+    },
+    {
+      text: "葉月紗蘭 インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2123247417839759384",
     },
   ],
 };
