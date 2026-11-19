@@ -49,5 +49,13 @@ export const 乙女どもよ: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=NucrKe0tMyk"],
       tunecore: ["https://linkco.re/XBZc4csE"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602814",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699580"],
+      spotify: ["https://open.spotify.com/track/3bbceTnmh6ZdA42JoDuA2b"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=ICV6fkyTjNo"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

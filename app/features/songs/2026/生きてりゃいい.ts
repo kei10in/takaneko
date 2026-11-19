@@ -51,5 +51,13 @@ export const 生きてりゃいい: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=BJguST0LjyI"],
       linkfire: ["https://jvcmusic.lnk.to/Ikiteryaii"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602820",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699586"],
+      spotify: ["https://open.spotify.com/track/7wfjExWWWgzM98L1XVAeCL"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=xXB-9XXw_6o"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

@@ -48,5 +48,13 @@ export const 僕らの青: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=05c7BQF56nM"],
       linkfire: ["https://jvcmusic.lnk.to/Bokuranoao"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602819",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699585"],
+      spotify: ["https://open.spotify.com/track/2IQhx1clGnMr1xe1lC8Zm9"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=qC8JUTWK2B4"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

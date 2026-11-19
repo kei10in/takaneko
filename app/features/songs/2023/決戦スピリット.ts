@@ -77,5 +77,13 @@ export const 決戦スピリット: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=86iCy5q4dLM"],
       tunecore: ["https://linkco.re/FDn2BX2a"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602817",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699583"],
+      spotify: ["https://open.spotify.com/track/5wdfRAeM71UQRIaYgQPEiN"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=R0FF_nuGtdY"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

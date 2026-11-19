@@ -59,5 +59,13 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=sa4cre-R7Bs"],
       tunecore: ["https://linkco.re/uhZHR0h3"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602813",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699579"],
+      spotify: ["https://open.spotify.com/track/1doTFcbdUgXkyg0wLMbdc1"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=ZFBqlSKNoRw"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

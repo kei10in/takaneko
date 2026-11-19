@@ -60,5 +60,13 @@ export const 推しの魔法: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=xUiMUHz6PIQ"],
       tunecore: ["https://linkco.re/Mur9Um2Z"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602811",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699577"],
+      spotify: ["https://open.spotify.com/track/4kfgHy77Zv6mZVKh0rIozR"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=gUxAsliYGIY"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

@@ -54,5 +54,13 @@ export const LOVE_ANTHEM: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=i4b7Dj2AoJ0"],
       tunecore: ["https://linkco.re/sRbfD0uy"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602810",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699576"],
+      spotify: ["https://open.spotify.com/track/2FziRdNWUoUezDY2wuOnAH"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=bF8eJ8VfBkc"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

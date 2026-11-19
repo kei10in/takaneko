@@ -93,5 +93,13 @@ export const 可愛くてごめん: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=rnRop25tby4"],
       tunecore: ["https://linkco.re/XE8p1qrA"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602689",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699572"],
+      spotify: ["https://open.spotify.com/track/2Muy157ug5sobObvrlxvmy"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=dvfteSge0L8"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

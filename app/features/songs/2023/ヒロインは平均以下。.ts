@@ -54,5 +54,13 @@ export const ヒロインは平均以下: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=QPrQwcZpOgE"],
       tunecore: ["https://linkco.re/d9zs5rbD"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602812",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699578"],
+      spotify: ["https://open.spotify.com/track/5gnedO7F5BThH5PKcz4AWP"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=8TFcLlt8Rrg"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

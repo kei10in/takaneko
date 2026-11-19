@@ -54,5 +54,13 @@ export const 小悪魔だってかまわない: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=wbq-4-LJEik"],
       tunecore: ["https://linkco.re/a3cn0pa6"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602815",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699581"],
+      spotify: ["https://open.spotify.com/track/1MLAaZqEMEPJXUdVgTq4Fe"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=dTPt3pWz55o"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };

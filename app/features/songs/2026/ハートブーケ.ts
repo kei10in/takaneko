@@ -59,5 +59,13 @@ export const ハートブーケ: SongMetaDescriptor = {
       youtubeMusic: ["https://music.youtube.com/watch?v=UQYR7olAOyA"],
       tunecore: ["https://linkco.re/C4FRRyrc"],
     },
+    {
+      name: "2026 Album Ver.",
+      isrc: "JPVI02602816",
+      appleMusic: ["https://music.apple.com/jp/album/6828699570?i=6828699582"],
+      spotify: ["https://open.spotify.com/track/5l195fegit3LAxA4CuDim8"],
+      youtubeMusic: ["https://music.youtube.com/watch?v=OVboNKt4yDw"],
+      linkfire: ["https://jvcmusic.lnk.to/AWorldinOurColors"],
+    },
   ],
 };
