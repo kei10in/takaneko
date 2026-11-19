@@ -23,6 +23,7 @@ export interface SongVideo {
 }
 
 export interface SongRecording {
+  name?: string | undefined;
   isrc: string;
   appleMusic?: string[];
   spotify?: string[];
