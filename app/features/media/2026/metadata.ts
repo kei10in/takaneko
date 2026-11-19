@@ -96,7 +96,7 @@ export const metadata2026: MediaDetails[] = [
     kind: "ogp",
     key: "https://scawaiiweb.com/articles/detail/73619",
     title:
-      "高嶺のなでしこ・松本ももな　「お揃いが着たい♡ 」ファンと叶えたいお洋服プロデュースの夢【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
+      "高嶺のなでしこ・松本ももな「お揃いが着たい♡ 」ファンと叶えたいお洋服プロデュースの夢【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
     authorName: "S Cawaii!(エスカワイイ)",
     publishedAt: "2026-11-04",
     mediaUrl: "https://scawaiiweb.com/articles/detail/73619",

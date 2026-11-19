@@ -102,10 +102,10 @@ export const metadata2024: MediaDetails[] = [
     key: "https://recochoku.jp/ch/recolog/takanenonadeshiko/",
     title:
       "高嶺のなでしこ（城月菜央・松本ももな・籾山ひめり）が2ndシングルで描いた新境地を語る「ずっとそばにいてくださると嬉しいです」",
-    authorName: "レコログ",
+    authorName: "レコログ - レコチョクと音楽の今を伝える",
     publishedAt: "2024-12-11",
     mediaUrl: "https://recochoku.jp/ch/recolog/takanenonadeshiko/",
-    imageUrl: "https://recochoku.jp/ch/recolog/wp-content/uploads/2024/12/THP_0042-700x467.jpg",
+    imageUrl: "https://recochoku.jp/ch/recolog/wp-content/uploads/2024/12/THP_0042.jpg",
     category: "article",
     presents: ["城月菜央", "松本ももな", "籾山ひめり"],
   },
