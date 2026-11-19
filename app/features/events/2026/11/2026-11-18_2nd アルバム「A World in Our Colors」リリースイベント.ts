@@ -39,12 +39,23 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       open: "16:40",
       start: "17:00",
+      setlist: [
+        "衣装: A World in Our Colors 衣装",
+        "約束",
+        "I’M YOUR IDOL",
+        "かわいいは常識♡", // 撮影可能
+        "我武者羅",
+        "花は誓いを忘れない",
+        "ファンサ",
+        "美しく生きろ",
+      ],
+      links: ["https://x.com/takanenofficial/status/2123004539062116720"],
     },
     {
       title: "グループ握手会",
       types: ["MEET_AND_GREET"],
       meetAndGreet: {
-        costume: "",
+        costume: "A World in Our Colors 衣装",
         lanes: [
           { label: "A グループ", members: ["城月菜央", "橋本桃呼", "葉月紗蘭", "日向端ひな"] },
           { label: "B グループ", members: ["涼海すう", "東山恵里沙", "松本ももな", "籾山ひめり"] },
@@ -52,7 +63,7 @@ export const meta: EventMetaDescriptor = {
       },
     },
   ],
-  updatedAt: "2026-11-02",
+  updatedAt: "2026-11-19",
 };
 
 export const content = /* md */ `
@@ -67,6 +78,8 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [開催報告 - 公式 X](https://x.com/takanenofficial/status/2123004539062116720)
+  - [#きょうのたかねこ](https://x.com/takanenofficial/status/2122872421896352045)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5779)
   - [詳細発表 - 公式 X](https://x.com/takanenofficial/status/2117210120924942713)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2110566338511225041)
