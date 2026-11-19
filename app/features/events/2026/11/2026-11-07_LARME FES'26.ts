@@ -99,12 +99,14 @@ export const meta: EventMetaDescriptor = {
       links: ["https://x.com/takanenofficial/status/2119044701701419363"],
     },
   ],
-  updatedAt: "2026-11-09",
+  updatedAt: "2026-11-19",
 };
 
 export const content = /* md */ `
   ## リンク
 
+  - [michellMacaron STAGE レポート - michellMacaron](https://mycolor.jp/michellmacaron/larmefes26)
+  - [ステージレポート公開告知 - michellMacaron X](https://x.com/michellMacar0n/status/2123340514514571479)
   - [出演報告 - 公式 X](https://x.com/takanenofficial/status/2119044701701419363)
   - [Angelic Pretty STAGE 出演報告 - 公式 X](https://x.com/takanenofficial/status/2119025822778720548)
   - [michellMacaron STAGE 出演報告 - 公式 X](https://x.com/takanenofficial/status/2119014789024489759)
