@@ -292,7 +292,7 @@ it("バーには数値ラベルを表示せず、チップで各系列の値を�
 });
 
 it.each([320, 640, 1200])(
-  "画面幅 %i pxでも、バーの60%%を重ねて左右順と最大幅を維持する",
+  "画面幅 %i pxでも、バーの75％を重ねて左右順と最大幅を維持する",
   async (width) => {
     vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
       this: HTMLElement,
@@ -325,7 +325,7 @@ it.each([320, 640, 1200])(
     expect(firstX).toBeLessThan(secondX);
     expect(barWidth).toBeLessThanOrEqual(48);
     expect(Number(second?.getAttribute("width"))).toBeCloseTo(barWidth);
-    expect((firstX + barWidth - secondX) / barWidth).toBeCloseTo(0.6);
+    expect((firstX + barWidth - secondX) / barWidth).toBeCloseTo(0.75);
   },
 );
 

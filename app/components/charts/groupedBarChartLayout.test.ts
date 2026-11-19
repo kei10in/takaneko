@@ -2,13 +2,13 @@ import { expect, it } from "vitest";
 import { calculateGroupedBarLayout } from "./groupedBarChartLayout.ts";
 
 it.each([240, 600, 1200, 2400])(
-  "描画幅 %i pxでも、バー幅の60%%を重ね、左右を逆転させない",
+  "描画幅 %i pxでも、バー幅の75％を重ね、左右を逆転させない",
   (width) => {
     [2, 5, 12].forEach((categories) => {
       const { barSize, barGap } = calculateGroupedBarLayout(width, categories, 2);
       expect(barSize).toBeGreaterThan(0);
       expect(barSize).toBeLessThanOrEqual(48);
-      expect(-barGap / barSize).toBeCloseTo(0.6);
+      expect(-barGap / barSize).toBeCloseTo(0.75);
       expect(barSize + barGap).toBeGreaterThan(0);
       expect(barSize * 2 + barGap).toBeLessThanOrEqual((width / categories) * 0.8 + 0.000001);
     });
