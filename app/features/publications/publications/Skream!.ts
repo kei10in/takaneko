@@ -15,6 +15,10 @@ export const Skream_2026年11月号: Publication = {
       path: "/publications/2026/2026-11-13_Skream! 2026年11月号_表紙.jpg",
       ref: "https://skream.jp/news/2026/11/skream_magazine_news.php",
     },
+    {
+      path: "/publications/2026/2026-11-13_Skream! 2026年11月号_サイン色紙プレゼント.jpg",
+      ref: "https://x.com/skream_japan/status/2123733212317000148",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2120407425656217940",
