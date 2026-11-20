@@ -5,20 +5,24 @@ export const meta: EventMetaDescriptor = {
   category: "RADIO",
   date: "2026-11-19",
   start: "21:00",
-  end: "23:00",
+  end: "22:50",
   region: "ラジオ",
   present: ["涼海すう", "籾山ひめり"],
   images: [
+    {
+      path: "/events/2026/2026-11-19_RKBラジオ「カリメン」.jpg",
+      ref: "https://x.com/takanenofficial/status/2123219714939949238",
+    },
     {
       path: "/events/2026/2026-11-17_2nd アルバム「A World in Our Colors」メディア出演スケジュール_1.jpg",
       ref: "https://x.com/takanenofficial/status/2122321289478382070",
     },
   ],
   link: {
-    text: "",
-    url: "",
+    text: "番組ホームページ",
+    url: "https://rkb.jp/radio/kari/",
   },
-  updatedAt: "2026-11-17",
+  updatedAt: "2026-11-20",
 };
 
 export const content = /* md */ `
@@ -28,7 +32,9 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [radiko 出演時間](https://radiko.jp/share/?sid=RKB&t=20261119223400)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=RKB&t=20261119210000)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2123219714939949238)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2122321289478382070)
   - [リリースキャンペーンスケジュール - 公式サイト](https://takanenonadeshiko.jp/?p=5765)
 `;
