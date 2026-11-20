@@ -77,6 +77,10 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
       path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_葉月紗蘭.jpg",
       ref: "https://x.com/nikkei_ent/status/2123247417839759384",
     },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_東山恵里沙.jpg",
+      ref: "https://x.com/nikkei_ent/status/2123609807093686421",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2116002163994640431",
@@ -104,6 +108,10 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
     {
       text: "葉月紗蘭 インタビュー紹介 - 日経エンタテインメント！ X",
       url: "https://x.com/nikkei_ent/status/2123247417839759384",
+    },
+    {
+      text: "東山恵里沙 インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2123609807093686421",
     },
   ],
 };
