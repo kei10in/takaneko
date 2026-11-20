@@ -34,6 +34,12 @@ export const 僕らの青: SongMetaDescriptor = {
       publishedAt: "2026-08-30",
     },
     {
+      type: "dance-practice",
+      text: "Dance Practice Video",
+      videoId: "https://www.youtube.com/watch?v=LannuU5rkAQ",
+      publishedAt: "2026-11-20",
+    },
+    {
       text: "Jacket Photo Shoot Making Movie",
       videoId: "https://www.youtube.com/watch?v=IsXhzPQX_nQ",
       publishedAt: "2026-08-12",
