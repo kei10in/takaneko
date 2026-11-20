@@ -2,6 +2,43 @@ import { MediaDetails } from "~/features/media/types.ts";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "youtube",
+    key: "elcAUfX7lzM",
+    title:
+      "高嶺のなでしこ、”現在の高嶺のなでしこならではの世界観を形に”ニュー・アルバム『A World in Our Colors』リリース―Skream!動画メッセージ",
+    authorName: "skreamjapan",
+    publishedAt: "2026-11-20",
+    mediaUrl: "https://youtu.be/elcAUfX7lzM",
+    imageUrl: "https://i.ytimg.com/vi/elcAUfX7lzM/hqdefault.jpg",
+    category: "youtube",
+    presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://skream.jp/news/2026/11/takanenonadeshiko_interview.php",
+    title:
+      "高嶺のなでしこのインタビュー＆動画メッセージ公開。型にはまった正解だけがアイドルの道ではない――HoneyWorks公式カバー曲も収録したニュー・アルバム『A World in Our Colors』をリリース | Skream! 邦楽ロック・洋楽ロック ポータルサイト",
+    authorName: "Skream! 邦楽ロック・洋楽ロック ポータルサイト",
+    publishedAt: "2026-11-20",
+    mediaUrl: "https://skream.jp/news/2026/11/takanenonadeshiko_interview.php",
+    imageUrl: "https://skream.jp/news/2026/11/19/images/takaneno_interview_web_top.jpg",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],
+  },
+  {
+    kind: "ogp",
+    key: "https://hirto.net/2026/11/50622/",
+    title:
+      "「高嶺のなでしこ」新アルバム発売！『可愛くてごめん』公式カバー収録＆立川リリイベ熱狂、籾山ひめりコメントも公開 | HiRTo（ヒルト）あなたのヒーローを応援する芸能メディア",
+    authorName: "ヒルト-HiRTo",
+    publishedAt: "2026-11-20",
+    mediaUrl: "https://hirto.net/2026/11/50622/",
+    imageUrl:
+      "https://hirto.net/wp-content/uploads/2026/11/※要クレジット：Photo-by-林晋介※-リリースイベント集合写真.jpg",
+    category: "article",
+    presents: ["高嶺のなでしこ2"],
+  },
+  {
     kind: "ogp",
     key: "https://www.oricon.co.jp/news/2493767/",
     title:

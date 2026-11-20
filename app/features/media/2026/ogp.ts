@@ -2,6 +2,20 @@ import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://skream.jp/news/2026/11/takanenonadeshiko_interview.php",
+    publishedAt: "2026-11-20",
+    category: "article",
+    presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2123773354801062155",
+    links: ["https://skream.jp/interview/2026/11/takanenonadeshiko.php"],
+  },
+  {
+    mediaUrl: "https://hirto.net/2026/11/50622/",
+    publishedAt: "2026-11-20",
+    category: "article",
+    presents: ["高嶺のなでしこ2"],
+  },
+  {
     mediaUrl: "https://www.oricon.co.jp/news/2493767/",
     publishedAt: "2026-11-19",
     category: "article",
