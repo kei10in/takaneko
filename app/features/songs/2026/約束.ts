@@ -27,6 +27,12 @@ export const 約束: SongMetaDescriptor = {
       videoId: "https://www.youtube.com/watch?v=2FBXN92lJtA",
       publishedAt: "2026-10-29",
     },
+    {
+      type: "mv-making",
+      text: "Making",
+      videoId: "https://www.youtube.com/watch?v=wt0-O6UJlnQ",
+      publishedAt: "2026-11-18",
+    },
   ],
 
   recordings: [
