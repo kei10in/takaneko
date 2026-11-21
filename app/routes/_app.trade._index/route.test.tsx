@@ -16,6 +16,23 @@ const renderRandomGoods = () => {
   return within(screen.getByRole("region", { name: "ランダムグッズ" }));
 };
 
+it("ランダムグッズを発売年ごとに新しい順で表示する", () => {
+  const goods = renderRandomGoods();
+  const releaseYears = [...new Set(TAKANEKO_PHOTOS.map((item) => item.year))].toSorted(
+    (a, b) => b - a,
+  );
+
+  expect(
+    goods.queryAllByRole("heading", { level: 3 }).map((heading) => heading.textContent),
+  ).toEqual(releaseYears.map((year) => `${year}年`));
+  releaseYears.forEach((year) => {
+    const section = within(goods.getByRole("region", { name: `${year}年` }));
+    const cards = section.getAllByRole("link");
+    expect(cards).toHaveLength(TAKANEKO_PHOTOS.filter((item) => item.year === year).length);
+    expect(cards.every((card) => within(card).queryByText(`${year}`))).toBe(true);
+  });
+});
+
 it("すべての商品を初期表示し、一つのポップアップで種類と発売年を選べる", async () => {
   const goods = renderRandomGoods();
   const filter = goods.getByRole("button", { name: "フィルタ", expanded: false });
@@ -51,6 +68,9 @@ it("同じグループの選択肢は複数選べて、種類と発売年の両�
 
   fireEvent.click(year2022);
   fireEvent.click(photo);
+  expect(goods.getAllByRole("heading", { level: 3 }).map((heading) => heading.textContent)).toEqual(
+    ["2022年"],
+  );
   expect(goods.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
   expect(goods.queryByRole("link", { name: /缶バッジ/u })).toBeNull();
   expect(goods.getAllByRole("link").every((link) => within(link).queryByText("2022"))).toBe(true);
@@ -61,8 +81,9 @@ it("同じグループの選択肢は複数選べて、種類と発売年の両�
 
   fireEvent.click(year2023);
   expect(goods.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
-  expect(goods.getAllByText("2023").length).toBeGreaterThan(0);
-  expect(goods.queryAllByText("2024")).toHaveLength(0);
+  expect(goods.getAllByRole("heading", { level: 3 }).map((heading) => heading.textContent)).toEqual(
+    ["2023年", "2022年"],
+  );
 
   fireEvent.click(filter);
   await waitFor(() => expect(screen.queryByRole("dialog", { name: "フィルタ" })).toBeNull());
@@ -75,6 +96,7 @@ it("同じグループの選択肢は複数選べて、種類と発売年の両�
   fireEvent.click(screen.getByRole("checkbox", { name: "その他" }));
   fireEvent.click(screen.getByRole("checkbox", { name: "ミニフォト" }));
   expect(goods.queryAllByRole("link")).toHaveLength(0);
+  expect(goods.queryAllByRole("heading", { level: 3 })).toHaveLength(0);
   expect(goods.getByRole("status").textContent).toBe("条件に一致するグッズはありません。");
 
   fireEvent.click(screen.getByRole("checkbox", { name: "2022年" }));

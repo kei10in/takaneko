@@ -159,7 +159,24 @@ function FilterableRandomGoods() {
         </Popover.Root>
       </div>
       {items.length > 0 ? (
-        <RandomGoodsList items={items} />
+        <div className="space-y-10">
+          {yearOptions.map(({ value: year, label }) => {
+            const yearItems = items.filter((item) => item.year === year);
+            if (yearItems.length === 0) {
+              return null;
+            }
+
+            const headingId = `random-goods-${year}-heading`;
+            return (
+              <section key={year} aria-labelledby={headingId}>
+                <h3 id={headingId} className="mb-4 px-4 text-lg font-semibold text-zinc-700">
+                  {label}
+                </h3>
+                <RandomGoodsList items={yearItems} />
+              </section>
+            );
+          })}
+        </div>
       ) : (
         <output className="block px-4 py-4 text-sm text-zinc-600">
           条件に一致するグッズはありません。
