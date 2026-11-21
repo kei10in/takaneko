@@ -107,12 +107,12 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
   return (
     <div className="w-full">
       {/* 
-        アートボード 
+        アートボード
         パネルが画面の一番下に固定されるように最小の高さを指定しています。
-        画面全体 (100svh) からヘッダーとパネル を引いた高さです。
-        ヘッダーやパネルはモバイルとデスクトップで異なります。
+        画面全体からヘッダーとパネル を引いた高さです。
+        パネルの高さはモバイルとデスクトップで異なります。
       */}
-      <div className="min-h-[calc(100lvh-3rem-3.5rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4rem)]">
+      <div className="min-h-[calc(100lvh-var(--header-height)-3.5rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4rem)]">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
             <div className={clsx("relative mx-auto select-none")}>
