@@ -118,6 +118,18 @@
     @apply text-2xl text-zinc-600;
   }
 
+  .pill-tab-list {
+    @apply mt-2 flex items-center gap-2 overflow-x-scroll mask-x-from-[calc(100%-1rem)] px-4 py-4;
+  }
+
+  .pill-tab {
+    @apply flex-none rounded-full bg-white px-4 py-2 text-zinc-700 outline-none hover:bg-zinc-100/50 data-active:bg-zinc-100;
+  }
+
+  .pill-tab-label {
+    @apply text-center text-base select-none;
+  }
+
   .main-viewport {
     @apply min-h-[calc(100svh-var(--header-height))];
   }
