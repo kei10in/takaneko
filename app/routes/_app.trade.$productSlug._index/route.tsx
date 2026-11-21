@@ -1,4 +1,5 @@
-import { ClientLoaderFunctionArgs, LoaderFunctionArgs, useLoaderData } from "react-router";
+import { BsChevronLeft } from "react-icons/bs";
+import { ClientLoaderFunctionArgs, Link, LoaderFunctionArgs, useLoaderData } from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2.tsx";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
@@ -82,6 +83,15 @@ export default function TradeImageEditor() {
 
   return (
     <div className="overflow-x-clip">
+      <div className="mx-auto max-w-lg px-4 pt-2">
+        <Link
+          to="/trade"
+          className="inline-flex min-h-8 items-center gap-1 text-base text-zinc-600 hover:underline"
+        >
+          <BsChevronLeft aria-hidden="true" />
+          グッズ一覧
+        </Link>
+      </div>
       <TradeEditor2
         productImage={selectedProduct}
         tradeDescriptions={tradeDescriptionsInLineup}
