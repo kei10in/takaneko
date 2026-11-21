@@ -43,7 +43,10 @@ it("商品ページを直接開いても一覧に戻れる", async () => {
 it("商品ページだけにサイドメニューがあり、セカンダリトップバーは表示しない", async () => {
   const router = renderPage(productPath);
   const sidebar = await screen.findByRole("complementary");
-  expect(within(sidebar).getByRole("link", { name: "欲しいやつ" })).toBeTruthy();
+  expect(within(sidebar).getByRole("heading", { name: "グッズ" })).toBeTruthy();
+  expect(within(sidebar).getByRole("button", { name: "フィルタ" }).textContent).toBe("フィルタ");
+  expect(within(sidebar).queryByRole("link", { name: "欲しいやつ" })).toBeNull();
+  expect(within(sidebar).queryByRole("link", { name: "譲れるやつ" })).toBeNull();
   expect(screen.queryByRole("link", { name: "トレード画像をつくるやつ" })).toBeNull();
 
   await act(() => router.navigate("/trade/wishlist"));
@@ -54,4 +57,32 @@ it("商品ページだけにサイドメニューがあり、セカンダリト�
 
   await act(() => router.navigate("/trade"));
   expect(screen.queryByRole("complementary")).toBeNull();
+});
+
+it("サイドバーでは各年のグッズを初期表示し、種類と発売年で絞り込める", async () => {
+  renderPage(productPath);
+  const sidebar = within(await screen.findByRole("complementary"));
+  expect(sidebar.queryByRole("heading", { name: "ホットなやつ" })).toBeNull();
+  expect(sidebar.getAllByRole("link")).toHaveLength(TAKANEKO_PHOTOS.length);
+  expect(sidebar.getByRole("heading", { name: "2022年" })).toBeTruthy();
+  expect(sidebar.getByRole("heading", { name: "2023年" })).toBeTruthy();
+  expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
+  fireEvent.click(sidebar.getByRole("button", { name: "フィルタ" }));
+
+  const filter = within(await screen.findByRole("dialog", { name: "フィルタ" }));
+  expect(filter.queryAllByRole("checkbox", { checked: true })).toHaveLength(0);
+
+  fireEvent.click(filter.getByRole("checkbox", { name: "2022年" }));
+  fireEvent.click(filter.getByRole("checkbox", { name: "生写真" }));
+  expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
+  expect(sidebar.queryByRole("link", { name: /缶バッジ/u })).toBeNull();
+  expect(sidebar.queryByRole("heading", { name: "2023年" })).toBeNull();
+
+  fireEvent.click(filter.getByRole("checkbox", { name: "その他" }));
+  expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
+  expect(sidebar.getByRole("link", { name: /缶バッジ/u })).toBeTruthy();
+
+  fireEvent.click(filter.getByRole("checkbox", { name: "2023年" }));
+  expect(sidebar.getByRole("heading", { name: "2023年" })).toBeTruthy();
+  expect(sidebar.getByRole("heading", { name: "2022年" })).toBeTruthy();
 });

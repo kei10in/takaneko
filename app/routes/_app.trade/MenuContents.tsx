@@ -1,128 +1,40 @@
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Field,
-  Radio,
-  RadioGroup,
-} from "@headlessui/react";
-import { clsx } from "clsx";
-import { useState } from "react";
-import { BsCardChecklist, BsGift } from "react-icons/bs";
-import { HiChevronRight } from "react-icons/hi2";
-import { Link, useLocation } from "react-router";
-import {
-  isOtherTakanekoRandomGoods,
-  isRegularTakanekoMiniPhotoCard,
-  isRegularTakanekoPhoto,
-} from "~/features/products/productImages.ts";
-import { RandomGoods } from "../../features/products/product.ts";
+import { RandomGoods } from "~/features/products/product.ts";
+import { RandomGoodsFilter, useRandomGoodsFilter } from "./RandomGoodsFilter.tsx";
 import { RandomGoodsList } from "./RandomGoodsList.tsx";
 
 interface Props {
-  allPhotos: {
-    name: string;
-    photos: RandomGoods[];
-  }[];
-  onClickMenuItem?: () => void;
+  items: readonly RandomGoods[];
 }
 
-const filters = [
-  { id: "all", label: "All" },
-  { id: "photo", label: "生写真セット" },
-  { id: "mini-photo", label: "ミニフォトセット" },
-  { id: "other", label: "その他" },
-];
-
-export const MenuContents: React.FC<Props> = (props: Props) => {
-  const { allPhotos, onClickMenuItem } = props;
-
-  const [filter, setFilter] = useState(filters[0].id);
-
-  const location = useLocation();
-  const filteredAllPhotos = allPhotos.map((item) => {
-    if (filter == "photo") {
-      return { ...item, photos: item.photos.filter(isRegularTakanekoPhoto) };
-    } else if (filter == "mini-photo") {
-      return { ...item, photos: item.photos.filter(isRegularTakanekoMiniPhotoCard) };
-    } else if (filter == "other") {
-      return { ...item, photos: item.photos.filter(isOtherTakanekoRandomGoods) };
-    } else {
-      return item;
-    }
-  });
+export function MenuContents({ items }: Props) {
+  const { filterProps, matches } = useRandomGoodsFilter(items);
+  const filteredItems = items.filter(matches);
+  const groups = filterProps.yearOptions
+    .map(({ value: year, label }) => ({
+      name: label,
+      photos: filteredItems.filter((item) => item.year === year),
+    }))
+    .filter(({ photos }) => photos.length > 0);
 
   return (
     <div className="pb-8">
-      <div className="sticky top-0 z-10 bg-white px-4 py-4">
-        <RadioGroup
-          className="flex items-center gap-2 select-none"
-          value={filter}
-          onChange={setFilter}
-        >
-          {filters.map((item) => (
-            <Field key={item.id}>
-              <Radio
-                className={clsx(
-                  "rounded-sm bg-gray-100 px-2 py-px",
-                  "text-center text-sm text-gray-500",
-                  "data-checked:bg-nadeshiko-800 data-checked:text-white",
-                )}
-                as="button"
-                value={item.id}
-              >
-                {item.label}
-              </Radio>
-            </Field>
-          ))}
-        </RadioGroup>
+      <div className="sticky top-0 z-10 flex items-center gap-2 bg-white px-4 py-2">
+        <h2 className="text-lg font-semibold text-zinc-700">ランダムグッズ</h2>
+        <RandomGoodsFilter {...filterProps} />
       </div>
 
-      <ul className="mt-2">
-        <li className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
-          <Link to="/trade/wishlist" onClick={onClickMenuItem}>
-            <p className="flex items-center gap-2 py-2 text-lg font-bold">
-              <BsCardChecklist className="inline-block text-nadeshiko-900" />
-              <span>欲しいやつ</span>
-            </p>
-          </Link>
-        </li>
+      {groups.length === 0 && (
+        <output className="block px-4 py-4 text-sm text-zinc-600">
+          条件に一致するグッズはありません。
+        </output>
+      )}
 
-        <li className="group flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
-          <Link to="/trade/tradelist" onClick={onClickMenuItem}>
-            <p className="flex items-center gap-2 py-2 text-lg font-bold">
-              <BsGift className="inline-block text-nadeshiko-900" />
-              <span>譲れるやつ</span>
-            </p>
-          </Link>
-        </li>
-      </ul>
-
-      {filteredAllPhotos.map((item) => {
-        if (item.photos.length == 0) {
-          return null;
-        }
-
-        const open = item.photos.some(
-          (photo) =>
-            "/trade" == location.pathname ||
-            `/trade/${encodeURIComponent(photo.slug)}` == location.pathname,
-        );
-
-        return (
-          <Disclosure key={item.name} defaultOpen={open}>
-            <DisclosureButton className="group inset-focus flex h-12 w-full items-center justify-between gap-1 px-4 text-gray-900 hover:text-nadeshiko-900">
-              <h3 className="text-lg font-bold">{item.name}</h3>
-              <div>
-                <HiChevronRight className="transition-transform group-data-open:rotate-90" />
-              </div>
-            </DisclosureButton>
-            <DisclosurePanel className="pb-8">
-              <RandomGoodsList items={item.photos} onClickLink={onClickMenuItem} />
-            </DisclosurePanel>
-          </Disclosure>
-        );
-      })}
+      {groups.map(({ name, photos }) => (
+        <section key={name} className="pb-8">
+          <h3 className="mb-4 px-4 text-lg font-bold text-gray-900">{name}</h3>
+          <RandomGoodsList items={photos} />
+        </section>
+      ))}
     </div>
   );
-};
+}

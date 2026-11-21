@@ -1,19 +1,10 @@
-import { Popover } from "@base-ui/react/popover";
-import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
-import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { Link } from "react-router";
-import { CheckboxFilter } from "~/components/CheckboxFilter.tsx";
 import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
-import {
-  isOtherTakanekoRandomGoods,
-  isRegularTakanekoMiniPhotoCard,
-  isRegularTakanekoPhoto,
-  TAKANEKO_PHOTOS,
-  TAKANEKO_PHOTOS_FEATURED,
-} from "~/features/products/productImages.ts";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RandomGoodsFilter, useRandomGoodsFilter } from "../_app.trade/RandomGoodsFilter.tsx";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
 import { Route } from "./+types/route.ts";
 import { TradeInstructions } from "./TradeInstructions.tsx";
@@ -104,25 +95,9 @@ export default function Index() {
   );
 }
 
-const categoryOptions = [
-  { value: "photo", label: "生写真", matches: isRegularTakanekoPhoto },
-  { value: "mini-photo", label: "ミニフォト", matches: isRegularTakanekoMiniPhotoCard },
-  { value: "other", label: "その他", matches: isOtherTakanekoRandomGoods },
-];
-const yearOptions = [...new Set(TAKANEKO_PHOTOS.map((item) => item.year))]
-  .toSorted((a, b) => b - a)
-  .map((year) => ({ value: year, label: `${year}年` }));
-
 function FilterableRandomGoods() {
-  const [categories, setCategories] = useState<string[]>([]);
-  const [years, setYears] = useState<number[]>([]);
-  const selectedCategories = categoryOptions.filter((option) => categories.includes(option.value));
-  const items = TAKANEKO_PHOTOS.filter(
-    (item) =>
-      (years.length === 0 || years.includes(item.year)) &&
-      (selectedCategories.length === 0 ||
-        selectedCategories.some((option) => option.matches(item))),
-  );
+  const { filterProps, matches } = useRandomGoodsFilter(TAKANEKO_PHOTOS);
+  const items = TAKANEKO_PHOTOS.filter(matches);
 
   return (
     <section className="mt-12" aria-labelledby="random-goods-heading">
@@ -130,37 +105,11 @@ function FilterableRandomGoods() {
         <h2 id="random-goods-heading" className={sectionHeading()}>
           ランダムグッズ
         </h2>
-        <Popover.Root>
-          <Popover.Trigger className="ml-auto flex h-10 graceful-button items-center justify-center gap-1 rounded-xl px-4">
-            <HiAdjustmentsHorizontal aria-hidden="true" className="size-5" />
-            <span>フィルタ</span>
-          </Popover.Trigger>
-          <Popover.Portal>
-            <Popover.Positioner align="end" sideOffset={8} collisionPadding={16} className="z-30">
-              <Popover.Popup
-                aria-label="フィルタ"
-                className="max-h-(--available-height) w-84 max-w-(--available-width) space-y-4 overflow-y-auto rounded-lg border border-zinc-200 bg-white p-4 shadow-md"
-              >
-                <CheckboxFilter
-                  label="種類"
-                  options={categoryOptions}
-                  values={categories}
-                  onChange={setCategories}
-                />
-                <CheckboxFilter
-                  label="発売年"
-                  options={yearOptions}
-                  values={years}
-                  onChange={setYears}
-                />
-              </Popover.Popup>
-            </Popover.Positioner>
-          </Popover.Portal>
-        </Popover.Root>
+        <RandomGoodsFilter {...filterProps} />
       </div>
       {items.length > 0 ? (
         <div className="space-y-10">
-          {yearOptions.map(({ value: year, label }) => {
+          {filterProps.yearOptions.map(({ value: year, label }) => {
             const yearItems = items.filter((item) => item.year === year);
             if (yearItems.length === 0) {
               return null;
