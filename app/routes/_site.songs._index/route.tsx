@@ -45,7 +45,7 @@ export default function Component() {
         </div>
 
         <Tabs.Root defaultValue="all">
-          <Tabs.List activateOnFocus className="hidden-scrollbar pill-tab-list">
+          <Tabs.List activateOnFocus className="hidden-scrollbar pill-tab-list mt-2 py-4">
             {tabs.map((tab) => (
               <Tabs.Tab key={tab.key} value={tab.key} className="pill-tab">
                 <span className="pill-tab-label">{tab.name}</span>

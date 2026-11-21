@@ -98,19 +98,10 @@ export default function Component({ loaderData }: Pick<Route.ComponentProps, "lo
       </div>
 
       <div className="container mx-auto mt-6 pb-8 lg:max-w-5xl">
-        <nav
-          aria-label="楽曲詳細"
-          className="hidden-scrollbar flex items-center gap-2 overflow-x-scroll mask-x-from-[calc(100%-1rem)] px-4"
-        >
+        <nav aria-label="楽曲詳細" className="hidden-scrollbar pill-tab-list">
           {tabs.map((tab) => (
-            <NavLink
-              key={tab.to}
-              to={tab.to}
-              end
-              preventScrollReset
-              className="flex-none rounded-full bg-white px-4 py-2 text-zinc-700 outline-none hover:bg-zinc-100/50 aria-[current=page]:bg-zinc-100"
-            >
-              <span className="text-center text-base select-none">{tab.name}</span>
+            <NavLink key={tab.to} to={tab.to} end preventScrollReset className="pill-tab">
+              <span className="pill-tab-label">{tab.name}</span>
             </NavLink>
           ))}
         </nav>
