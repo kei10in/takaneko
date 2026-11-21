@@ -1,5 +1,4 @@
 import Konva from "konva";
-import { ImageSource } from "~/utils/html/types.ts";
 import { loadImage } from "~/utils/loadImage.ts";
 import { Size } from "~/utils/types/Size.ts";
 import { TradingItem, TradingItemRenderProps } from "./types.ts";
@@ -412,8 +411,8 @@ const drawTradeItemList = async (
 export const drawWishList = async (
   items: TradingItemRenderProps[][],
   bannerTitle: string,
-): Promise<ImageSource[]> => {
-  const result: ImageSource[] = [];
+): Promise<Blob[]> => {
+  const result: Blob[] = [];
 
   for (const chunk of items) {
     const blob = await drawTradeItemList(chunk, {
@@ -423,10 +422,7 @@ export const drawWishList = async (
       backgroundColor: "#fffcfd",
     });
 
-    result.push({
-      blob,
-      objectURL: URL.createObjectURL(blob),
-    });
+    result.push(blob);
   }
 
   return result;
@@ -435,8 +431,8 @@ export const drawWishList = async (
 export const drawOfferList = async (
   items: TradingItemRenderProps[][],
   bannerTitle: string,
-): Promise<ImageSource[]> => {
-  const result: ImageSource[] = [];
+): Promise<Blob[]> => {
+  const result: Blob[] = [];
 
   for (const chunk of items) {
     const blob = await drawTradeItemList(chunk, {
@@ -446,10 +442,7 @@ export const drawOfferList = async (
       backgroundColor: "oklch(96.7% 0.001 286.375)",
     });
 
-    result.push({
-      blob,
-      objectURL: URL.createObjectURL(blob),
-    });
+    result.push(blob);
   }
 
   return result;

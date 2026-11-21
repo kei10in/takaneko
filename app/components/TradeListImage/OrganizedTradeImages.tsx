@@ -1,14 +1,31 @@
 import { clsx } from "clsx";
+import { useCallback } from "react";
 import { BsBoxArrowUp } from "react-icons/bs";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { shouldUseWebShareApi } from "~/utils/browser/webShareApi.ts";
-import { ImageSource } from "~/utils/html/types.ts";
 
 interface Props {
   title: string;
-  images: (ImageSource | undefined)[];
+  images: (Blob | undefined)[];
 }
+
+const TradeListPreview = ({ blob, alt }: { blob: Blob; alt: string }) => {
+  const setImageSource = useCallback(
+    (image: HTMLImageElement | null) => {
+      if (image == null) {
+        return;
+      }
+
+      const url = URL.createObjectURL(blob);
+      image.src = url;
+      return () => URL.revokeObjectURL(url);
+    },
+    [blob],
+  );
+
+  return <img ref={setImageSource} alt={alt} className="block text-xs text-gray-100" />;
+};
 
 export const OrganizedTradeImages: React.FC<Props> = (props: Props) => {
   const { title, images } = props;
@@ -42,11 +59,7 @@ export const OrganizedTradeImages: React.FC<Props> = (props: Props) => {
                   </div>
                 ) : (
                   <div className="aspect-3/4 bg-gray-50">
-                    <img
-                      src={image.objectURL}
-                      alt={`まとめ画像 ${i}`}
-                      className="block text-xs text-gray-100"
-                    />
+                    <TradeListPreview blob={image} alt={`まとめ画像 ${i}`} />
                   </div>
                 )}
               </div>
@@ -65,7 +78,7 @@ export const OrganizedTradeImages: React.FC<Props> = (props: Props) => {
               title,
               description,
               prefix,
-              images.filter((x): x is ImageSource => x != undefined),
+              images.filter((x): x is Blob => x != undefined),
             );
           }}
         >
@@ -81,7 +94,7 @@ export const shareOrganizedTradeImages = async (
   title: string,
   description: string,
   prefix: string,
-  images: ImageSource[],
+  images: Blob[],
 ) => {
   if (window?.navigator?.share == undefined) {
     return;
@@ -90,7 +103,7 @@ export const shareOrganizedTradeImages = async (
   const date = Date.now();
 
   const files = images.map(
-    (img, i) => new File([img.blob], `${prefix}-${date}-${i + 1}.webp`, { type: "image/webp" }),
+    (blob, i) => new File([blob], `${prefix}-${date}-${i + 1}.webp`, { type: "image/webp" }),
   );
 
   await window.navigator.share({

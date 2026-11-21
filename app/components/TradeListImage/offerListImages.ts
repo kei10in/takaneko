@@ -1,14 +1,12 @@
 import { useMemo } from "react";
 import useSWR from "swr";
 import { drawOfferList } from "~/components/TradeListImage/drawTradeItemList.ts";
-import { useAutoRevokeImageSource } from "~/components/TradeListImage/useAutoRevokeImageSource.ts";
 import { croppedImagePath } from "~/features/products/croppedProductImage.ts";
 import { RandomGoods } from "~/features/products/product.ts";
 import { TradeListImage } from "~/features/products/productImages.ts";
 import { tradeStateToImageSrc } from "~/features/trade/TradeStatus.ts";
 import { TradingItemDetail } from "~/features/tradeSummaries/tradingItemDetails.ts";
 import { ArrayUtils } from "~/utils/array/index.ts";
-import { ImageSource } from "~/utils/html/types.ts";
 import { TradingItemRenderProps } from "./types.ts";
 
 const transformOfferToRenderProps = (details: TradingItemDetail): TradingItemRenderProps => {
@@ -25,7 +23,7 @@ export const usePhotoOfferListImages = (
     productImage: RandomGoods;
     tradingItemDetails: TradingItemDetail[];
   }[],
-): (ImageSource | undefined)[] => {
+): (Blob | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
       x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
@@ -36,8 +34,6 @@ export const usePhotoOfferListImages = (
   const { data, isLoading } = useSWR([`/offer-list/photos`, items], async ([_, itemChunks]) => {
     return await drawOfferList(itemChunks, "出せる 生写真");
   });
-
-  useAutoRevokeImageSource(data);
 
   if (isLoading || data == undefined) {
     return Array.from({ length: items.length }, () => undefined);
@@ -51,7 +47,7 @@ export const useMiniPhotoCardOfferListImages = (
     productImage: RandomGoods;
     tradingItemDetails: TradingItemDetail[];
   }[],
-): (ImageSource | undefined)[] => {
+): (Blob | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
       x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
@@ -66,8 +62,6 @@ export const useMiniPhotoCardOfferListImages = (
     },
   );
 
-  useAutoRevokeImageSource(data);
-
   if (isLoading || data == undefined) {
     return Array.from({ length: items.length }, () => undefined);
   }
@@ -80,7 +74,7 @@ export const useOtherGoodsOfferListImages = (
     productImage: RandomGoods;
     tradingItemDetails: TradingItemDetail[];
   }[],
-): (ImageSource | undefined)[] => {
+): (Blob | undefined)[] => {
   const items = useMemo(() => {
     const xs = wishList.flatMap((x) =>
       x.tradingItemDetails.map((detail) => transformOfferToRenderProps(detail)),
@@ -94,8 +88,6 @@ export const useOtherGoodsOfferListImages = (
       return await drawOfferList(itemChunks, "出せる その他のランダムグッズ");
     },
   );
-
-  useAutoRevokeImageSource(data);
 
   if (isLoading || data == undefined) {
     return Array.from({ length: items.length }, () => undefined);
