@@ -17,6 +17,7 @@ import {
   useSearchParams,
 } from "react-router";
 import { cloudflareContext } from "~/cloudflare-context.ts";
+import { CheckboxFilter } from "~/components/CheckboxFilter.tsx";
 import { dialogBackdropStyle, pageBox } from "~/components/styles.ts";
 import { XMarkButton } from "~/components/XMarkButton.tsx";
 import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
@@ -507,51 +508,6 @@ const BooleanFilterGroup: React.FC<BooleanFilterGroupProps> = ({
             )}
           >
             {option.text}
-          </Checkbox>
-        ))}
-      </div>
-    </fieldset>
-  );
-};
-
-interface CheckboxFilterProps<T extends string> {
-  label: string;
-  values: T[];
-  onChange: (values: T[]) => void;
-  options: { value: T; label: string }[];
-}
-
-const CheckboxFilter = <T extends string>({
-  label,
-  values,
-  onChange,
-  options,
-}: CheckboxFilterProps<T>) => {
-  const updateValue = (value: T, checked: boolean) => {
-    if (checked) {
-      onChange(values.includes(value) ? values : [...values, value]);
-      return;
-    }
-
-    onChange(values.filter((x) => x != value));
-  };
-
-  return (
-    <fieldset className="space-y-2">
-      <legend className="block font-semibold text-gray-600">{label}</legend>
-      <div className="flex flex-wrap gap-2">
-        {options.map((option) => (
-          <Checkbox
-            key={option.value}
-            checked={values.includes(option.value)}
-            onChange={(checked) => updateValue(option.value, checked)}
-            className={clsx(
-              "group flex h-8 items-center justify-center rounded-full px-3 text-sm select-none",
-              "bg-zinc-100 font-semibold text-zinc-500 hover:bg-zinc-200 hover:text-zinc-600",
-              "data-checked:box-content data-checked:border-0 data-checked:graceful-selected-item",
-            )}
-          >
-            {option.label}
           </Checkbox>
         ))}
       </div>

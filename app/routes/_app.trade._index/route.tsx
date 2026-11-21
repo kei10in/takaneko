@@ -1,8 +1,18 @@
+import { Popover } from "@base-ui/react/popover";
+import { useState } from "react";
 import { BsCardChecklist, BsGift } from "react-icons/bs";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { Link } from "react-router";
+import { CheckboxFilter } from "~/components/CheckboxFilter.tsx";
 import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
-import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
+import {
+  isOtherTakanekoRandomGoods,
+  isRegularTakanekoMiniPhotoCard,
+  isRegularTakanekoPhoto,
+  TAKANEKO_PHOTOS,
+  TAKANEKO_PHOTOS_FEATURED,
+} from "~/features/products/productImages.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
 import { Route } from "./+types/route.ts";
@@ -87,12 +97,74 @@ export default function Index() {
         </section>
       )}
 
-      <section className="mt-12">
-        <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
-        <RandomGoodsList items={TAKANEKO_PHOTOS} />
-      </section>
+      <FilterableRandomGoods />
 
       <TradeInstructions />
+    </section>
+  );
+}
+
+const categoryOptions = [
+  { value: "photo", label: "生写真", matches: isRegularTakanekoPhoto },
+  { value: "mini-photo", label: "ミニフォト", matches: isRegularTakanekoMiniPhotoCard },
+  { value: "other", label: "その他", matches: isOtherTakanekoRandomGoods },
+];
+const yearOptions = [...new Set(TAKANEKO_PHOTOS.map((item) => item.year))]
+  .toSorted((a, b) => b - a)
+  .map((year) => ({ value: year, label: `${year}年` }));
+
+function FilterableRandomGoods() {
+  const [categories, setCategories] = useState<string[]>([]);
+  const [years, setYears] = useState<number[]>([]);
+  const selectedCategories = categoryOptions.filter((option) => categories.includes(option.value));
+  const items = TAKANEKO_PHOTOS.filter(
+    (item) =>
+      (years.length === 0 || years.includes(item.year)) &&
+      (selectedCategories.length === 0 ||
+        selectedCategories.some((option) => option.matches(item))),
+  );
+
+  return (
+    <section className="mt-12" aria-labelledby="random-goods-heading">
+      <div className="my-4 flex flex-wrap items-center gap-2 px-4">
+        <h2 id="random-goods-heading" className={sectionHeading()}>
+          ランダムグッズ
+        </h2>
+        <Popover.Root>
+          <Popover.Trigger className="ml-auto flex h-10 graceful-button items-center justify-center gap-1 rounded-xl px-4">
+            <HiAdjustmentsHorizontal aria-hidden="true" className="size-5" />
+            <span>フィルタ</span>
+          </Popover.Trigger>
+          <Popover.Portal>
+            <Popover.Positioner align="end" sideOffset={8} collisionPadding={16} className="z-30">
+              <Popover.Popup
+                aria-label="フィルタ"
+                className="max-h-(--available-height) w-84 max-w-(--available-width) space-y-4 overflow-y-auto rounded-lg border border-zinc-200 bg-white p-4 shadow-md"
+              >
+                <CheckboxFilter
+                  label="種類"
+                  options={categoryOptions}
+                  values={categories}
+                  onChange={setCategories}
+                />
+                <CheckboxFilter
+                  label="発売年"
+                  options={yearOptions}
+                  values={years}
+                  onChange={setYears}
+                />
+              </Popover.Popup>
+            </Popover.Positioner>
+          </Popover.Portal>
+        </Popover.Root>
+      </div>
+      {items.length > 0 ? (
+        <RandomGoodsList items={items} />
+      ) : (
+        <output className="block px-4 py-4 text-sm text-zinc-600">
+          条件に一致するグッズはありません。
+        </output>
+      )}
     </section>
   );
 }
