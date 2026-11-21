@@ -1,9 +1,9 @@
 import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { clsx } from "clsx";
-import { BsCheck, BsChevronDown, BsGift } from "react-icons/bs";
+import { BsCheck, BsChevronDown } from "react-icons/bs";
 import { useSearchParams } from "react-router";
 import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages.tsx";
-import { pageHeading, sectionHeading } from "~/components/styles.ts";
+import { sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import {
   otherTakanekoRandomGoods,
@@ -119,10 +119,6 @@ export default function Index() {
 
   return (
     <>
-      <h1 className={pageHeading("flex items-center gap-3 px-4")}>
-        <BsGift className="inline-block" />
-        <span>譲れるやつ</span>
-      </h1>
       <div className="flex justify-end px-4">
         <Popover className="w-28">
           <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
