@@ -35,9 +35,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="text-zinc-800">
-        <Topbar />
-
-        {children}
+        {/* for Base UI. see: https://base-ui.com/react/overview/quick-start */}
+        <div className="isolate">
+          <Topbar />
+          {children}
+        </div>
 
         <ScrollRestoration />
         <Scripts />
