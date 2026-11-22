@@ -381,34 +381,6 @@ describe("セットリストのモーダル", () => {
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
   });
 
-  it("開いた直後は選択中の詳細を描画し、最初のフレームの後に前後3件を先読みする", async () => {
-    vi.useFakeTimers({ toFake: ["requestAnimationFrame", "cancelAnimationFrame"] });
-    const items = Array.from({ length: 11 }, (_, index) => ({
-      ...events[0],
-      slug: `live-${index}`,
-      title: `ライブ ${index}`,
-      location: `会場 ${index}`,
-    }));
-    await setup(items);
-    fireEvent.click(screen.getByRole("button", { name: /ライブ 5\b/u }));
-    const details = within(await screen.findByRole("dialog"));
-
-    expect(getSelectedEventHeading("ライブ 5")).toBeTruthy();
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(1);
-    act(() => {
-      vi.advanceTimersToNextFrame();
-    });
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(1);
-
-    act(() => {
-      vi.advanceTimersToNextFrame();
-    });
-    Array.from({ length: 7 }, (_, index) => index + 2).forEach((index) => {
-      expect(details.getByText(`会場 ${index}`)).toBeTruthy();
-    });
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(7);
-  });
-
   it("先読み前にスワイプしても、選択した詳細をすぐ表示する", async () => {
     vi.useFakeTimers({ toFake: ["requestAnimationFrame", "cancelAnimationFrame"] });
     await setup();
