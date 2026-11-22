@@ -2,6 +2,12 @@ import { YouTubeVideoDescriptor } from "../types.ts";
 
 export const YouTube2026 = [
   {
+    videoId: "U61MHiku1kI",
+    publishedAt: "2026-11-21",
+    presents: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2123927751954747700",
+  },
+  {
     videoId: "elcAUfX7lzM",
     publishedAt: "2026-11-20",
     presents: ["城月菜央", "葉月紗蘭", "籾山ひめり"],

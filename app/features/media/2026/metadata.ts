@@ -16,6 +16,18 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "youtube",
+    key: "U61MHiku1kI",
+    title:
+      "【ゲスト：高嶺のなでしこ、奥土居美可】なでしこドリーマーズ#3　HoneyWorksがサウンドプロデュースするアイドル高嶺のなでしこ、歌手の奥土居美可さんが登場！",
+    authorName: "Vdoing Channel",
+    publishedAt: "2026-11-21",
+    mediaUrl: "https://youtu.be/U61MHiku1kI",
+    imageUrl: "https://i.ytimg.com/vi/U61MHiku1kI/hqdefault.jpg",
+    category: "youtube",
+    presents: ["橋本桃呼", "葉月紗蘭", "日向端ひな", "籾山ひめり"],
+  },
+  {
+    kind: "youtube",
     key: "elcAUfX7lzM",
     title:
       "高嶺のなでしこ、”現在の高嶺のなでしこならではの世界観を形に”ニュー・アルバム『A World in Our Colors』リリース―Skream!動画メッセージ",
