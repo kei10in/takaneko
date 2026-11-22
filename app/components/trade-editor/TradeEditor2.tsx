@@ -162,7 +162,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
           </div>
         ) : null}
 
-        <div className="mx-auto mt-8 max-w-lg px-4">
+        <div className="mx-auto mt-8 max-w-3xl px-4">
           <section className="px-1 py-2">
             <h1>
               <span className="block text-2xl text-gray-800">{productImage.name}</span>
@@ -188,7 +188,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
       </div>
 
       {relativeItems.length > 0 && (
-        <section className="mx-auto mt-8 mb-8 max-w-lg">
+        <section className="mx-auto mt-8 mb-8 max-w-3xl">
           <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
           <div className="mt-4 px-2">
             <RandomGoodsList items={relativeItems} />

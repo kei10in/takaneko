@@ -94,7 +94,7 @@ export default function TradeImageEditor() {
       </aside>
 
       <div className="min-w-0 flex-1 overflow-x-clip">
-        <div className="mx-auto max-w-lg px-4 pt-2">
+        <div className="mx-auto max-w-3xl px-4 pt-2">
           <Link
             to="/trade"
             className="inline-flex min-h-8 items-center gap-1 text-base text-zinc-600 hover:underline"
