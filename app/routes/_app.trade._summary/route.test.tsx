@@ -44,10 +44,12 @@ const expectSelectedList = (label: string) => {
   expect(within(panel).getAllByText(`${label}がありません`)).toHaveLength(3);
 };
 
-describe("サマリーのタブ", () => {
+describe("まとめのタブ", () => {
   it("欲しいやつから譲れるやつへ切り替えてもメンバーの絞り込みを引き継ぎ、履歴で戻れる", async () => {
     const search = new URLSearchParams({ m: MomokoHashimoto.id }).toString();
     const router = renderPage(`/trade/wishlist?${search}`);
+    expect(screen.getByRole("heading", { name: "まとめ", level: 1 })).toBeTruthy();
+    expect(screen.getByRole("tablist", { name: "まとめ" })).toBeTruthy();
     expectSelectedList("欲しいやつ");
 
     fireEvent.click(screen.getByRole("tab", { name: "譲れるやつ" }));

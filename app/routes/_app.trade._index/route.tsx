@@ -54,7 +54,7 @@ export default function Index() {
       </div>
 
       <section className="mt-12">
-        <h2 className={sectionHeading("mb-2 px-4")}>サマリー</h2>
+        <h2 className={sectionHeading("mb-2 px-4")}>まとめ</h2>
 
         <ul className="space-y-4 px-4">
           <li>

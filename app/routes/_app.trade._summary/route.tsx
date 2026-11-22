@@ -24,7 +24,7 @@ export default function TradeLists() {
 
   return (
     <section className={pageBox("mx-auto w-full max-w-lg lg:max-w-3xl")}>
-      <h1 className={pageHeading("px-4")}>サマリー</h1>
+      <h1 className={pageHeading("px-4")}>まとめ</h1>
       <Tabs.Root
         value={activePath}
         onValueChange={(pathname) => {
@@ -34,7 +34,7 @@ export default function TradeLists() {
         <div className="mt-2 flex items-center">
           <Tabs.List
             activateOnFocus
-            aria-label="サマリー"
+            aria-label="まとめ"
             className="hidden-scrollbar pill-tab-list min-w-0 flex-1 py-4"
           >
             {tabs.map(({ path, label }) => (
