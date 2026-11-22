@@ -137,9 +137,9 @@ export const Topbar: React.FC = () => {
       <div className="h-full px-4 @lg:px-6">
         <div className="flex h-full items-center">
           <TopbarMobileMenu />
-          <div className="text-base text-gray-900">
-            <Link className="flex items-center gap-0" to="/">
-              <div className="flex w-10 items-center justify-center">
+          <div className="ml-1 text-base text-gray-900">
+            <Link className="flex items-center gap-2" to="/">
+              <div className="flex items-center justify-center">
                 <img
                   className="size-6 text-xs text-nadeshiko-500"
                   src="/icon.svg"
