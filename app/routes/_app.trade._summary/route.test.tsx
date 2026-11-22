@@ -50,6 +50,10 @@ describe("まとめのタブ", () => {
     const router = renderPage(`/trade/wishlist?${search}`);
     expect(screen.getByRole("heading", { name: "まとめ", level: 1 })).toBeTruthy();
     expect(screen.getByRole("tablist", { name: "まとめ" })).toBeTruthy();
+    const selector = screen.getByRole("button", { name: "橋本 桃呼", expanded: false });
+    expect(within(selector).getByAltText("").getAttribute("src")).toBe(
+      MomokoHashimoto.idPhoto.path,
+    );
     expectSelectedList("欲しいやつ");
 
     fireEvent.click(screen.getByRole("tab", { name: "譲れるやつ" }));
@@ -88,24 +92,36 @@ describe("まとめのタブ", () => {
     });
     renderPage("/trade/wishlist");
 
-    const selector = screen.getByRole("button", { name: "メンバー" });
+    const selector = screen.getByRole("button", { name: "全メンバー", expanded: false });
+    expect(within(selector).getByAltText("").getAttribute("src")).toBe("/takaneko/tennya.png");
     const wishList = within(screen.getByRole("tabpanel", { name: "欲しいやつ" }));
-    expect(wishList.queryByRole("button", { name: "メンバー" })).toBeNull();
+    expect(wishList.queryByRole("button", { name: "全メンバー", expanded: false })).toBeNull();
     expect(wishList.getByRole("img", { name: "城月菜央 1" })).toBeTruthy();
 
     fireEvent.click(selector);
-    fireEvent.click(await screen.findByRole("button", { name: /橋本 桃呼/u }));
+    const choices = await screen.findByRole("dialog", { name: "メンバー" });
+    fireEvent.click(within(choices).getByRole("button", { name: "橋本 桃呼" }));
+    const selected = screen.getByRole("button", { name: "橋本 桃呼", expanded: false });
+    expect(within(selected).getByAltText("").getAttribute("src")).toBe(
+      MomokoHashimoto.idPhoto.path,
+    );
     expect(wishList.getByRole("img", { name: "橋本桃呼 9" })).toBeTruthy();
     expect(wishList.queryByRole("img", { name: "城月菜央 1" })).toBeNull();
 
     fireEvent.click(screen.getByRole("tab", { name: "譲れるやつ" }));
-    expect(screen.getByRole("button", { name: "メンバー" })).toBe(selector);
+    const tradeSelector = screen.getByRole("button", {
+      name: "橋本 桃呼",
+      expanded: false,
+    });
     const tradeList = within(screen.getByRole("tabpanel", { name: "譲れるやつ" }));
     expect(tradeList.getByRole("img", { name: "橋本桃呼 10" })).toBeTruthy();
     expect(tradeList.queryByRole("img", { name: "城月菜央 2" })).toBeNull();
 
-    fireEvent.click(selector);
-    fireEvent.click(await screen.findByRole("button", { name: /全員/u }));
+    fireEvent.click(tradeSelector);
+    const reopenedChoices = await screen.findByRole("dialog", { name: "メンバー" });
+    fireEvent.click(within(reopenedChoices).getByRole("button", { name: "全メンバー" }));
+    const reset = screen.getByRole("button", { name: "全メンバー", expanded: false });
+    expect(within(reset).getByAltText("").getAttribute("src")).toBe("/takaneko/tennya.png");
     expect(tradeList.getByRole("img", { name: "城月菜央 2" })).toBeTruthy();
   });
 });

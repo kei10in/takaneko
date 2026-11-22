@@ -57,14 +57,16 @@ export default function TradeLists() {
                 </Tabs.Tab>
               ))}
             </Tabs.List>
-            <MemberSelector
-              selectedMember={selectedMember}
-              onSelect={(member) =>
-                setSearchParams(member == undefined ? undefined : { m: member.id }, {
-                  preventScrollReset: true,
-                })
-              }
-            />
+            <div className="pr-4">
+              <MemberSelector
+                selectedMember={selectedMember}
+                onSelect={(member) =>
+                  setSearchParams(member == undefined ? undefined : { m: member.id }, {
+                    preventScrollReset: true,
+                  })
+                }
+              />
+            </div>
           </div>
           {tabs.map(({ path }) => (
             <Tabs.Panel key={path} value={path} tabIndex={-1}>

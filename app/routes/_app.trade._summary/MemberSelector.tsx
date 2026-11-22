@@ -1,6 +1,5 @@
-import { CloseButton, Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { clsx } from "clsx";
-import { BsCheck, BsChevronDown } from "react-icons/bs";
+import { Popover } from "@base-ui/react/popover";
+import { HiCheck, HiChevronDown } from "react-icons/hi2";
 import { AllMembers } from "~/features/profile/members.ts";
 import { MemberDescription } from "~/features/profile/types.ts";
 
@@ -10,69 +9,79 @@ interface Props {
 }
 
 export function MemberSelector({ selectedMember, onSelect }: Props) {
+  const items = [
+    {
+      displayName: "全メンバー",
+      image: "/takaneko/tennya.png",
+      value: undefined,
+    },
+    ...AllMembers.map((member) => ({
+      displayName: member.name,
+      image: member.idPhoto.path,
+      value: member,
+    })),
+  ];
+
+  const selected = items.find((item) => item.value?.id === selectedMember?.id) ?? items[0];
+
   return (
-    <div className="shrink-0 pr-4">
-      <Popover className="w-28">
-        <PopoverButton className="flex w-full items-center justify-between text-sm text-gray-600">
-          <div className="mx-auto flex-1 pl-2">メンバー</div>
-          <div className="flex-none px-1">
-            <BsChevronDown className="text-xs" />
-          </div>
-        </PopoverButton>
-        <PopoverPanel
-          anchor={{ to: "bottom end", gap: "0.5rem" }}
-          className="overflow-hidden rounded-sm border border-nadeshiko-100 bg-nadeshiko-50 py-2 shadow-md"
+    <Popover.Root>
+      <Popover.Trigger
+        aria-label={selected.displayName}
+        aria-description="メンバーで絞り込む"
+        className="box-border flex h-10 items-center gap-1 rounded-full pr-2 pl-1 text-left text-gray-600 hover:bg-zinc-100"
+      >
+        <img src={selected.image} alt="" className="size-8 flex-none rounded-full object-cover" />
+        <span className="flex size-6 flex-none items-center justify-center">
+          <HiChevronDown aria-hidden="true" className="text-sm" />
+        </span>
+      </Popover.Trigger>
+      <Popover.Portal>
+        <Popover.Positioner
+          side="bottom"
+          align="end"
+          sideOffset={8}
+          collisionPadding={16}
+          collisionAvoidance={{
+            side: "none",
+            align: "none",
+            fallbackAxisSide: "none",
+          }}
+          className="z-30"
         >
-          <ul className="min-w-60">
-            <li>
-              <CloseButton
-                className={clsx(
-                  "flex items-center gap-2",
-                  "w-full px-6 py-1 text-base text-gray-600 hover:bg-nadeshiko-300",
-                  "data-current:bg-nadeshiko-700 data-current:text-white",
-                )}
-                onClick={() => onSelect(undefined)}
-              >
-                <div className="h-6 w-6 text-nadeshiko-800">
-                  {selectedMember == undefined ? <BsCheck className="h-full w-full" /> : null}
-                </div>
-                <div className="flex items-center gap-2">
-                  <img
-                    src="/takaneko/tennya.png"
-                    alt="全員"
-                    className="h-8 w-8 rounded-full bg-white object-cover object-top"
-                  />
-                  <p>全員</p>
-                </div>
-              </CloseButton>
-            </li>
-            {AllMembers.map((c) => (
-              <li key={c.id}>
-                <CloseButton
-                  className={clsx(
-                    "flex items-center gap-2",
-                    "w-full px-6 py-1 text-base text-gray-600 hover:bg-nadeshiko-300",
-                    "data-current:bg-nadeshiko-700 data-current:text-white",
-                  )}
-                  onClick={() => onSelect(c)}
-                >
-                  <div className="h-6 w-6 text-nadeshiko-800">
-                    {c.id == selectedMember?.id ? <BsCheck className="h-full w-full" /> : null}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={c.idPhoto.path}
-                      alt={c.name}
-                      className="h-8 w-8 rounded-full object-cover"
-                    />
-                    <p>{c.name}</p>
-                  </div>
-                </CloseButton>
-              </li>
-            ))}
-          </ul>
-        </PopoverPanel>
-      </Popover>
-    </div>
+          <Popover.Popup
+            aria-label="メンバー"
+            className="max-h-(--available-height) max-w-(--available-width) overflow-y-auto rounded-xl border border-zinc-200 bg-white py-3 shadow-md"
+          >
+            <ul>
+              {items.map((item) => {
+                const isSelected = item.value?.id === selectedMember?.id;
+                return (
+                  <li key={item.displayName}>
+                    <Popover.Close
+                      aria-current={isSelected}
+                      className="flex w-full items-center gap-2 py-1 pr-6 pl-2 text-base text-gray-600 hover:bg-zinc-100 focus-visible:bg-zinc-100"
+                      onClick={() => onSelect(item.value)}
+                    >
+                      <span aria-hidden="true" className="size-6 shrink-0 text-nadeshiko-900">
+                        {isSelected && <HiCheck className="size-full" />}
+                      </span>
+                      <span className="flex items-center gap-2">
+                        <img
+                          src={item.image}
+                          alt=""
+                          className="size-8 shrink-0 rounded-full object-cover"
+                        />
+                        <span className="text-left">{item.displayName}</span>
+                      </span>
+                    </Popover.Close>
+                  </li>
+                );
+              })}
+            </ul>
+          </Popover.Popup>
+        </Popover.Positioner>
+      </Popover.Portal>
+    </Popover.Root>
   );
 }
