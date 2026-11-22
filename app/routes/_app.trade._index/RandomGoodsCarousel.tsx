@@ -29,7 +29,7 @@ export function RandomGoodsCarousel({ items }: Props) {
       >
         <ul ref={trackRef} className="flex w-max gap-4 px-4 pt-1 pb-4 select-none">
           {items.map((item) => (
-            <li key={item.slug} className="w-40 flex-none sm:w-48">
+            <li key={item.slug} className="w-48 flex-none">
               <RandomGoodsCardLink item={item} />
             </li>
           ))}
