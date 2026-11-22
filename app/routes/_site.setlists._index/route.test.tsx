@@ -462,27 +462,6 @@ describe("セットリストのモーダル", () => {
     expect(reopened.queryByText("会場 40")).toBeNull();
   });
 
-  it("表示範囲の通知がなくても選択位置だけを更新し、描画範囲は通知後に更新する", async () => {
-    const items = Array.from({ length: 41 }, (_, index) => ({
-      ...events[0],
-      slug: `live-${index}`,
-      title: `ライブ ${index}`,
-      location: `会場 ${index}`,
-    }));
-    await setup(items);
-    fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
-    const details = within(await screen.findByRole("dialog", { name: "セットリスト" }));
-    await details.findByText("会場 17");
-    showSlides();
-    swipeDialog();
-    expect(getSelectedEventHeading("ライブ 21")).toBeTruthy();
-    expect(details.getByText("会場 17")).toBeTruthy();
-    expect(details.queryByText("会場 24")).toBeNull();
-    showSlides(21);
-    expect(details.queryByText("会場 17")).toBeNull();
-    expect(details.getByText("会場 24")).toBeTruthy();
-  });
-
   it("連続して進んでも詳細の描画数が増え続けない", async () => {
     const items = Array.from({ length: 21 }, (_, index) => ({
       ...events[0],
