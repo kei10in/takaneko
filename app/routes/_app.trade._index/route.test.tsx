@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { afterEach, expect, it } from "vitest";
-import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
+import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
 import Index from "./route.tsx";
 
 afterEach(cleanup);
@@ -15,6 +15,16 @@ const renderRandomGoods = () => {
 
   return within(screen.getByRole("region", { name: "ランダムグッズ" }));
 };
+
+it("ホットなやつのカルーセルに商品ページへのリンクが掲載順に並ぶ", () => {
+  renderRandomGoods();
+  const links = screen
+    .queryAllByRole("region", { name: "ホットなやつ" })
+    .flatMap((region) => within(region).getAllByRole("link"));
+  expect(links.map((link) => link.getAttribute("href"))).toEqual(
+    TAKANEKO_PHOTOS_FEATURED.map((item) => `/trade/${item.slug}`),
+  );
+});
 
 it("ランダムグッズを発売年ごとに新しい順で表示する", () => {
   const goods = renderRandomGoods();

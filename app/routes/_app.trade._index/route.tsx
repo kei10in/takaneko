@@ -7,6 +7,7 @@ import { formatTitle } from "~/utils/htmlHeader.ts";
 import { RandomGoodsFilter, useRandomGoodsFilter } from "../_app.trade/RandomGoodsFilter.tsx";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
 import { Route } from "./+types/route.ts";
+import { RandomGoodsCarousel } from "./RandomGoodsCarousel.tsx";
 import { TradeInstructions } from "./TradeInstructions.tsx";
 
 export const meta: Route.MetaFunction = ({ location }) => {
@@ -82,9 +83,11 @@ export default function Index() {
       </section>
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
-        <section className="mt-12">
-          <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
-          <RandomGoodsList items={TAKANEKO_PHOTOS_FEATURED} />
+        <section className="mt-12" aria-labelledby="featured-goods-heading">
+          <h2 id="featured-goods-heading" className={sectionHeading("my-4 px-4")}>
+            ホットなやつ
+          </h2>
+          <RandomGoodsCarousel items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
 
