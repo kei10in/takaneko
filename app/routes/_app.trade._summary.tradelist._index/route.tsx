@@ -1,5 +1,4 @@
 import { OrganizedTradeImages } from "~/components/TradeListImage/OrganizedTradeImages.tsx";
-import { sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import {
   otherTakanekoRandomGoods,
@@ -115,7 +114,7 @@ export default function Index() {
   return (
     <>
       <section className="my-12">
-        <h2 className={sectionHeading("px-4")}>
+        <h2 className="section-heading px-4">
           <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> 生写真セット
         </h2>
 
@@ -144,7 +143,7 @@ export default function Index() {
       </section>
 
       <section className="my-12">
-        <h2 className={sectionHeading("px-4")}>
+        <h2 className="section-heading px-4">
           <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> ミニフォトカードセット
         </h2>
 
@@ -176,7 +175,7 @@ export default function Index() {
       </section>
 
       <section className="my-12">
-        <h2 className={sectionHeading("px-4")}>
+        <h2 className="section-heading px-4">
           <img className="mb-1 inline h-8" src="/譲.svg" alt="譲" /> その他
         </h2>
 

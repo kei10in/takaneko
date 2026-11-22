@@ -1,7 +1,6 @@
 import { Tabs } from "@base-ui/react/tabs";
 import { BsChevronLeft } from "react-icons/bs";
 import { Link, Outlet, useLocation, useMatch, useNavigate, useSearchParams } from "react-router";
-import { pageHeading } from "~/components/styles.ts";
 import { AllMembers } from "~/features/profile/members.ts";
 import { MemberSelector } from "./MemberSelector.tsx";
 import { TradeSummaryOutletContext } from "./useTradeSummaryOutletContext.ts";
@@ -24,7 +23,7 @@ export default function TradeLists() {
   const outletContext: TradeSummaryOutletContext = { selectedMember };
 
   return (
-    <div className="mx-auto w-full max-w-lg pt-2 pb-12 lg:max-w-3xl">
+    <div className="mx-auto w-full max-w-lg pb-12 lg:max-w-5xl">
       <div className="px-4">
         <Link
           to="/trade"
@@ -35,7 +34,11 @@ export default function TradeLists() {
         </Link>
       </div>
       <section className="mt-12">
-        <h1 className={pageHeading("px-4")}>まとめ</h1>
+        <h1 className="page-heading px-4">まとめ</h1>
+        <p className="page-description mt-1 px-4">
+          トレード用画像を作ったついでにリストの確認やまとめ画像のダウンロードができます。
+        </p>
+
         <Tabs.Root
           value={activePath}
           onValueChange={(pathname) => {

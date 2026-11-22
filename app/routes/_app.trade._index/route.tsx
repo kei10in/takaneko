@@ -1,7 +1,6 @@
 import { clsx } from "clsx";
 import { BsCardChecklist, BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router";
-import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
@@ -40,9 +39,9 @@ export const meta: Route.MetaFunction = ({ location }) => {
 
 export default function Index() {
   return (
-    <section className="mx-auto py-12 lg:max-w-4xl">
-      <h1 className={pageHeading("px-4")}>トレード画像をつくるやつ</h1>
-      <p className="page-description mt-2 px-4">ランダムグッズのトレード画像が作成できます。</p>
+    <section className="mx-auto py-12 lg:max-w-5xl">
+      <h1 className="page-heading mt-8 px-4">トレード画像をつくるやつ</h1>
+      <p className="page-description mt-1 px-4">ランダムグッズのトレード画像が作成できます。</p>
 
       <div className="mt-4 px-4" aria-labelledby="trade-lists-heading">
         <Link
@@ -60,7 +59,7 @@ export default function Index() {
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12" aria-labelledby="featured-goods-heading">
           <div className="my-4 flex flex-wrap items-center justify-between gap-2 px-4">
-            <h2 id="featured-goods-heading" className={sectionHeading()}>
+            <h2 id="featured-goods-heading" className="section-heading">
               ホットなやつ
             </h2>
             <a
@@ -93,7 +92,7 @@ function FilterableRandomGoods() {
       aria-labelledby="random-goods-heading"
     >
       <div className="my-4 flex flex-wrap items-center gap-2 px-4">
-        <h2 id="random-goods-heading" className={sectionHeading()}>
+        <h2 id="random-goods-heading" className="section-heading">
           ランダムグッズ
         </h2>
         <RandomGoodsFilter {...filterProps} />
