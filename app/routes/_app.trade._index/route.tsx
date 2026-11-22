@@ -1,4 +1,5 @@
-import { BsCardChecklist, BsGift } from "react-icons/bs";
+import { clsx } from "clsx";
+import { BsCardChecklist } from "react-icons/bs";
 import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
@@ -41,46 +42,20 @@ export default function Index() {
   return (
     <section className="mx-auto py-12 lg:max-w-4xl">
       <h1 className={pageHeading("px-4")}>トレード画像をつくるやつ</h1>
+      <p className="page-description mt-2 px-4">ランダムグッズのトレード画像が作成できます。</p>
 
-      <div className="my-4 flex justify-between px-4">
-        <p>ランダムグッズのトレード画像が作成できます。</p>
-        <figure className="mx-4 flex flex-none justify-center">
-          <img
-            src="/takaneko/sample.webp"
-            alt="トレード画像のサンプル"
-            className="h-36 text-center shadow-md lg:h-64"
-          />
-        </figure>
+      <div className="mt-4 px-4" aria-labelledby="trade-lists-heading">
+        <Link
+          className={clsx(
+            "ml-auto box-border flex h-10 w-fit items-center gap-2 rounded-xl border border-zinc-300 px-3 text-zinc-500",
+            "bg-zinc-50 transition-colors",
+          )}
+          to="/trade/wishlist"
+        >
+          <BsCardChecklist className="size-4" />
+          <span>求・譲 まとめ</span>
+        </Link>
       </div>
-
-      <section className="mt-12">
-        <h2 className={sectionHeading("mb-2 px-4")}>まとめ</h2>
-
-        <ul className="space-y-4 px-4">
-          <li>
-            <Link className="group block" to="/trade/wishlist">
-              <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsCardChecklist className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
-                <span className="text-gray-600 group-hover:text-gray-800">欲しいやつ</span>
-              </h3>
-              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
-                トレード用画像を作ったついでに欲しいやつをリストアップできます。
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link className="group block" to="/trade/tradelist">
-              <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsGift className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
-                <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
-              </h3>
-              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
-                トレード用画像を作ったついでに譲れるやつをリストアップできます。
-              </p>
-            </Link>
-          </li>
-        </ul>
-      </section>
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12" aria-labelledby="featured-goods-heading">
