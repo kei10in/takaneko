@@ -40,20 +40,63 @@ export function RandomGoodsCarousel({ items }: Props) {
   );
 }
 
+const mouseDecelerationPerMs = 0.998;
+const minimumMouseVelocity = 0.02;
+const dragSampleWindowMs = 120;
 const clickDragThreshold = 5;
 
 function useMouseDragScroll() {
   const dragListeners = useRef<AbortController | null>(null);
   const suppressClick = useRef(false);
+  const momentumFrame = useRef<number | null>(null);
+
+  const stopMomentum = useCallback(() => {
+    if (momentumFrame.current !== null) {
+      cancelAnimationFrame(momentumFrame.current);
+      momentumFrame.current = null;
+    }
+  }, []);
+
   const stopDrag = useCallback(() => {
     dragListeners.current?.abort();
     dragListeners.current = null;
   }, []);
 
-  useEffect(() => stopDrag, [stopDrag]);
+  useEffect(
+    () => () => {
+      stopDrag();
+      stopMomentum();
+    },
+    [stopDrag, stopMomentum],
+  );
+
+  const startMomentum = (viewport: HTMLDivElement, velocity: number) => {
+    const start = viewport.scrollLeft;
+    const end = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    if (velocity > 0 ? start >= end : start <= 0) {
+      return;
+    }
+    const startedAt = performance.now();
+    // 解放時の速度から、減速しきるまでの移動距離を見積もる。
+    const projectedDistance = (velocity * mouseDecelerationPerMs) / (1 - mouseDecelerationPerMs);
+
+    const advance = (now: number) => {
+      // フレーム間隔に左右されないよう、解放時からの経過時間で位置を求める。
+      const remaining = mouseDecelerationPerMs ** Math.max(0, now - startedAt);
+      const position = Math.min(end, Math.max(0, start + projectedDistance * (1 - remaining)));
+      viewport.scrollLeft = position;
+      const reachedEnd = velocity > 0 ? position >= end : position <= 0;
+      const hasMomentum = Math.abs(velocity * remaining) > minimumMouseVelocity;
+      momentumFrame.current = !reachedEnd && hasMomentum ? requestAnimationFrame(advance) : null;
+    };
+
+    momentumFrame.current = requestAnimationFrame(advance);
+  };
 
   return {
     onPointerDown(event: PointerEvent<HTMLDivElement>) {
+      const grabbingMomentum = momentumFrame.current !== null;
+      stopMomentum();
       stopDrag();
       suppressClick.current = false;
       const viewport = event.currentTarget;
@@ -68,14 +111,20 @@ function useMouseDragScroll() {
       const controller = new AbortController();
       dragListeners.current = controller;
       const { pointerId } = event;
-      let lastX = event.clientX;
-      let dragged = false;
+      if (grabbingMomentum) {
+        // 慣性中の押下は一覧をつかみ直す操作なので、カードへのフォーカス移動とリンクの起動を抑える。
+        event.preventDefault();
+        suppressClick.current = true;
+      }
+      let last = { x: event.clientX, at: event.timeStamp };
+      const samples = [last];
+      let dragged = grabbingMomentum;
 
       const move = (moveEvent: globalThis.PointerEvent) => {
         if (moveEvent.pointerId !== pointerId) {
           return;
         }
-        const delta = moveEvent.clientX - lastX;
+        const delta = moveEvent.clientX - last.x;
         if (delta === 0 || (!dragged && Math.abs(delta) < clickDragThreshold)) {
           return;
         }
@@ -83,7 +132,25 @@ function useMouseDragScroll() {
         viewport.scrollLeft -= delta;
         dragged = true;
         suppressClick.current = true;
-        lastX = moveEvent.clientX;
+        last = { x: moveEvent.clientX, at: moveEvent.timeStamp };
+        samples.push(last);
+        // 解放時の速度を直近の横移動から求めるため、計測区間の開始直前の点も残す。
+        while (samples.length > 2 && samples[1].at < last.at - dragSampleWindowMs) {
+          samples.shift();
+        }
+      };
+
+      const release = (releasedAt: number) => {
+        stopDrag();
+        const first = samples[0];
+        const elapsed = releasedAt - first.at;
+        if (!dragged || elapsed <= 0 || releasedAt - last.at > dragSampleWindowMs) {
+          return;
+        }
+        const velocity = (first.x - last.x) / elapsed;
+        if (Math.abs(velocity) > minimumMouseVelocity) {
+          startMomentum(viewport, velocity);
+        }
       };
 
       const options = { capture: true, signal: controller.signal };
@@ -94,7 +161,7 @@ function useMouseDragScroll() {
         "pointerup",
         (up) => {
           if (up.pointerId === pointerId) {
-            stopDrag();
+            release(up.timeStamp);
           }
         },
         options,
@@ -104,7 +171,7 @@ function useMouseDragScroll() {
         "mouseup",
         (up) => {
           if (up.button === 0) {
-            stopDrag();
+            release(up.timeStamp);
           }
         },
         options,
@@ -122,6 +189,7 @@ function useMouseDragScroll() {
       // キャプチャを有効にすると、ページ内のフォーカス移動でも中断されてしまう。
       document.defaultView?.addEventListener("blur", stopDrag, { signal: controller.signal });
     },
+    onWheelCapture: stopMomentum,
     onClickCapture(event: MouseEvent<HTMLDivElement>) {
       if (event.detail > 0 && suppressClick.current) {
         suppressClick.current = false;
