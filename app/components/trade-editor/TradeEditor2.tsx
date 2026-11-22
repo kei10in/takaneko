@@ -12,11 +12,13 @@ import { clsx } from "clsx";
 import { useState } from "react";
 import {
   BsBoxArrowUp,
+  BsCardChecklist,
   BsEraserFill,
   BsImageFill,
   BsPencilSquare,
   BsTrashFill,
 } from "react-icons/bs";
+import { Link } from "react-router";
 import { RandomGoods } from "~/features/products/product.ts";
 import { useTradeEditorPanelStore } from "~/features/trade/store.ts";
 import {
@@ -112,7 +114,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         画面全体からヘッダーとパネル を引いた高さです。
         パネルの高さはモバイルとデスクトップで異なります。
       */}
-      <div className="min-h-[calc(100lvh-var(--header-height)-3.5rem)] w-full lg:min-h-[calc(100vh-var(--header-height)-4rem)]">
+      <div className="w-full">
         {positions.length != 0 ? (
           <div className="mx-auto w-fit py-4">
             <div className={clsx("relative mx-auto select-none")}>
@@ -163,7 +165,7 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
         ) : null}
 
         <div className="mx-auto mt-8 max-w-3xl px-4">
-          <section className="px-1 py-2">
+          <section>
             <h1>
               <span className="block text-2xl text-gray-800">{productImage.name}</span>
               <span className="block text-lg text-gray-400">{productImage.series}</span>
@@ -181,20 +183,33 @@ export const TradeEditor2: React.FC<Props> = (props: Props) => {
                   </div>
                   <pre className="px-2 pb-2 font-sans text-wrap">{tradeText}</pre>
                 </div>
+
+                <div className="mt-4">
+                  <Link
+                    className={clsx(
+                      "ml-auto box-border flex h-10 w-fit items-center gap-2 rounded-xl border border-zinc-300 px-3 text-zinc-500",
+                      "bg-zinc-50 transition-colors",
+                    )}
+                    to="/trade/wishlist"
+                  >
+                    <BsCardChecklist className="size-4" />
+                    <span>求・譲 まとめ</span>
+                  </Link>
+                </div>
+              </section>
+            )}
+
+            {relativeItems.length > 0 && (
+              <section className="mx-auto mt-8 mb-8 max-w-3xl">
+                <h2 className={sectionHeading()}>関連アイテム</h2>
+                <div className="mt-4 px-2">
+                  <RandomGoodsList items={relativeItems} />
+                </div>
               </section>
             )}
           </section>
         </div>
       </div>
-
-      {relativeItems.length > 0 && (
-        <section className="mx-auto mt-8 mb-8 max-w-3xl">
-          <h2 className={sectionHeading("px-5")}>関連アイテム</h2>
-          <div className="mt-4 px-2">
-            <RandomGoodsList items={relativeItems} />
-          </div>
-        </section>
-      )}
 
       {/* パネル */}
       <div className="sticky h-14 lg:h-16" style={{ bottom: 0 }}>
