@@ -1,13 +1,5 @@
-import { CloseButton, Dialog, DialogPanel } from "@headlessui/react";
-import { useState } from "react";
-import { HiBars3 } from "react-icons/hi2";
-import { Link, MetaFunction, Outlet } from "react-router";
-import { SecondaryTopbar } from "~/components/SecondaryTopbar.tsx";
-import { iconButtonPrimary } from "~/components/styles/buttons.ts";
-import { XMarkButton } from "~/components/XMarkButton.tsx";
-import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
+import { MetaFunction, Outlet } from "react-router";
 import { formatTitle } from "~/utils/htmlHeader.ts";
-import { MenuContents } from "./MenuContents.tsx";
 
 export const meta: MetaFunction = () => {
   return [
@@ -19,72 +11,10 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function Index() {
-  const [showMenu, setShowMenu] = useState(false);
-
-  const in2022 = TAKANEKO_PHOTOS.filter((p) => p.year == 2022);
-  const in2023 = TAKANEKO_PHOTOS.filter((p) => p.year == 2023);
-  const in2024 = TAKANEKO_PHOTOS.filter((p) => p.year == 2024);
-  const in2025 = TAKANEKO_PHOTOS.filter((p) => p.year == 2025);
-  const in2026 = TAKANEKO_PHOTOS.filter((p) => p.year == 2026);
-  const allPhotos = [
-    { name: "ホットなやつ", photos: TAKANEKO_PHOTOS_FEATURED },
-    { name: "2026 年", photos: in2026 },
-    { name: "2025 年", photos: in2025 },
-    { name: "2024 年", photos: in2024 },
-    { name: "2023 年", photos: in2023 },
-    { name: "2022 年", photos: in2022 },
-  ];
-
+export default function TradeLayout() {
   return (
-    <div>
-      {/* トレード画像を作るやつ用のトップバー。デスクトップでは非表示。 */}
-      <SecondaryTopbar className="lg:hidden">
-        <div className="flex h-full items-center justify-between">
-          <p className="text-base font-bold text-gray-800">
-            <Link to="/trade">トレード画像をつくるやつ</Link>
-          </p>
-          <div className="flex-none">
-            <button className={iconButtonPrimary()} onClick={() => setShowMenu(true)}>
-              <HiBars3 className="h-6 w-6" />
-            </button>
-          </div>
-        </div>
-      </SecondaryTopbar>
-
-      <div className="@container">
-        <div className="flex w-full">
-          {/* サイドバー。モバイルでは非表示 */}
-          <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] flex-none overflow-y-auto lg:block">
-            <nav className="w-104">
-              <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
-            </nav>
-          </aside>
-
-          <main className="min-w-0 flex-1">
-            <Outlet />
-          </main>
-        </div>
-      </div>
-
-      <Dialog open={showMenu} onClose={() => setShowMenu(false)}>
-        <div className="items-top fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-xs">
-          <DialogPanel
-            className="fix-scrollbar relative w-96 overflow-y-auto bg-white"
-            // iOS でスクロールバーが sticky な要素に隠れる問題の対応
-            // https://stackoverflow.com/questions/67076468/why-scrollbar-is-behind-sticky-elements-in-ios-safari
-            style={{ transform: "translateZ(0)" }}
-          >
-            <div className="sticky top-0 z-50 ml-auto h-14 w-fit flex-none p-2">
-              <CloseButton as={XMarkButton} />
-            </div>
-
-            <div>
-              <MenuContents allPhotos={allPhotos} onClickMenuItem={() => setShowMenu(false)} />
-            </div>
-          </DialogPanel>
-        </div>
-      </Dialog>
-    </div>
+    <main>
+      <Outlet />
+    </main>
   );
 }

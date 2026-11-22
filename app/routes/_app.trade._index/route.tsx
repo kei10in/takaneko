@@ -1,11 +1,14 @@
-import { BsCardChecklist, BsGift } from "react-icons/bs";
+import { clsx } from "clsx";
+import { BsCardChecklist, BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import { TAKANEKO_PHOTOS, TAKANEKO_PHOTOS_FEATURED } from "~/features/products/productImages.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RandomGoodsFilter, useRandomGoodsFilter } from "../_app.trade/RandomGoodsFilter.tsx";
 import { RandomGoodsList } from "../_app.trade/RandomGoodsList.tsx";
 import { Route } from "./+types/route.ts";
+import { RandomGoodsCarousel } from "./RandomGoodsCarousel.tsx";
 import { TradeInstructions } from "./TradeInstructions.tsx";
 
 export const meta: Route.MetaFunction = ({ location }) => {
@@ -39,60 +42,86 @@ export default function Index() {
   return (
     <section className="mx-auto py-12 lg:max-w-4xl">
       <h1 className={pageHeading("px-4")}>トレード画像をつくるやつ</h1>
+      <p className="page-description mt-2 px-4">ランダムグッズのトレード画像が作成できます。</p>
 
-      <div className="my-4 flex justify-between px-4">
-        <p>ランダムグッズのトレード画像が作成できます。</p>
-        <figure className="mx-4 flex flex-none justify-center">
-          <img
-            src="/takaneko/sample.webp"
-            alt="トレード画像のサンプル"
-            className="h-36 text-center shadow-md lg:h-64"
-          />
-        </figure>
+      <div className="mt-4 px-4" aria-labelledby="trade-lists-heading">
+        <Link
+          className={clsx(
+            "ml-auto box-border flex h-10 w-fit items-center gap-2 rounded-xl border border-zinc-300 px-3 text-zinc-500",
+            "bg-zinc-50 transition-colors",
+          )}
+          to="/trade/wishlist"
+        >
+          <BsCardChecklist className="size-4" />
+          <span>求・譲 まとめ</span>
+        </Link>
       </div>
 
-      <section className="mt-12">
-        <h2 className={sectionHeading("mb-2 px-4")}>サマリー</h2>
-
-        <ul className="space-y-4 px-4">
-          <li>
-            <Link className="group block" to="/trade/wishlist">
-              <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsCardChecklist className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
-                <span className="text-gray-600 group-hover:text-gray-800">欲しいやつ</span>
-              </h3>
-              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
-                トレード用画像を作ったついでに欲しいやつをリストアップできます。
-              </p>
-            </Link>
-          </li>
-          <li>
-            <Link className="group block" to="/trade/tradelist">
-              <h3 className="flex items-center gap-2 text-lg font-semibold">
-                <BsGift className="inline-block text-nadeshiko-900 group-hover:text-nadeshiko-950" />
-                <span className="text-gray-600 group-hover:text-gray-800">譲れるやつ</span>
-              </h3>
-              <p className="mt-1 text-sm text-gray-600 group-hover:text-gray-800">
-                トレード用画像を作ったついでに譲れるやつをリストアップできます。
-              </p>
-            </Link>
-          </li>
-        </ul>
-      </section>
-
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
-        <section className="mt-12">
-          <h2 className={sectionHeading("my-4 px-4")}>ホットなやつ</h2>
-          <RandomGoodsList items={TAKANEKO_PHOTOS_FEATURED} />
+        <section className="mt-12" aria-labelledby="featured-goods-heading">
+          <div className="my-4 flex flex-wrap items-center justify-between gap-2 px-4">
+            <h2 id="featured-goods-heading" className={sectionHeading()}>
+              ホットなやつ
+            </h2>
+            <a
+              href="#random-goods"
+              className="ml-auto inline-flex min-h-8 items-center gap-1 text-base text-zinc-600 underline-offset-4 hover:underline"
+            >
+              すべてのグッズ
+              <BsChevronRight aria-hidden="true" />
+            </a>
+          </div>
+          <RandomGoodsCarousel items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
 
-      <section className="mt-12">
-        <h2 className={sectionHeading("my-4 px-4")}>ランダムグッズ</h2>
-        <RandomGoodsList items={TAKANEKO_PHOTOS} />
-      </section>
+      <FilterableRandomGoods />
 
       <TradeInstructions />
+    </section>
+  );
+}
+
+function FilterableRandomGoods() {
+  const { filterProps, matches } = useRandomGoodsFilter(TAKANEKO_PHOTOS);
+  const items = TAKANEKO_PHOTOS.filter(matches);
+
+  return (
+    <section
+      id="random-goods"
+      className="mt-12 scroll-mt-(--header-height)"
+      aria-labelledby="random-goods-heading"
+    >
+      <div className="my-4 flex flex-wrap items-center gap-2 px-4">
+        <h2 id="random-goods-heading" className={sectionHeading()}>
+          ランダムグッズ
+        </h2>
+        <RandomGoodsFilter {...filterProps} />
+      </div>
+      {items.length > 0 ? (
+        <div className="space-y-10">
+          {filterProps.yearOptions.map(({ value: year, label }) => {
+            const yearItems = items.filter((item) => item.year === year);
+            if (yearItems.length === 0) {
+              return null;
+            }
+
+            const headingId = `random-goods-${year}-heading`;
+            return (
+              <section key={year} aria-labelledby={headingId}>
+                <h3 id={headingId} className="mb-4 px-4 text-lg font-semibold text-zinc-700">
+                  {label}
+                </h3>
+                <RandomGoodsList items={yearItems} />
+              </section>
+            );
+          })}
+        </div>
+      ) : (
+        <output className="block px-4 py-4 text-sm text-zinc-600">
+          条件に一致するグッズはありません。
+        </output>
+      )}
     </section>
   );
 }

@@ -1,10 +1,12 @@
-import { ClientLoaderFunctionArgs, LoaderFunctionArgs, useLoaderData } from "react-router";
+import { BsChevronLeft } from "react-icons/bs";
+import { ClientLoaderFunctionArgs, Link, LoaderFunctionArgs, useLoaderData } from "react-router";
 import { TradeEditor2 } from "~/components/trade-editor/TradeEditor2.tsx";
 import { DomainName, OgpSiteName } from "~/constants.ts";
 import { TAKANEKO_PHOTOS } from "~/features/products/productImages.ts";
 import { relativeProductImages } from "~/features/products/relativeProductImages.ts";
 import { useTradeStore } from "~/features/trade/store.ts";
 import { TradeDescription } from "~/features/trade/TradeStatus.ts";
+import { MenuContents } from "../_app.trade/MenuContents.tsx";
 import { Route } from "./+types/route.ts";
 import { descriptionForTradeImagesTool, titleForTradeImagesTool } from "./metaData.ts";
 
@@ -81,17 +83,37 @@ export default function TradeImageEditor() {
   const relativeItems = relativeProductImages(selectedProduct);
 
   return (
-    <div className="overflow-x-clip">
-      <TradeEditor2
-        productImage={selectedProduct}
-        tradeDescriptions={tradeDescriptionsInLineup}
-        relativeItems={relativeItems}
-        width={360}
-        onChangeTradeDescription={(photoId, status) =>
-          updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
-        }
-        onClearTradeDescriptions={(id) => clearTradeDescriptions(id)}
-      />
+    <div className="flex">
+      <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] w-104 shrink-0 self-start overflow-y-auto lg:block">
+        <nav aria-label="トレードメニュー">
+          <MenuContents
+            items={TAKANEKO_PHOTOS}
+            homeLink={{ to: "/trade", label: "トレード画像をつくるやつ" }}
+          />
+        </nav>
+      </aside>
+
+      <div className="min-w-0 flex-1 overflow-x-clip">
+        <div className="mx-auto max-w-3xl px-4 pt-2">
+          <Link
+            to="/trade"
+            className="inline-flex min-h-8 items-center gap-1 text-base text-zinc-600 hover:underline"
+          >
+            <BsChevronLeft aria-hidden="true" />
+            グッズ一覧
+          </Link>
+        </div>
+        <TradeEditor2
+          productImage={selectedProduct}
+          tradeDescriptions={tradeDescriptionsInLineup}
+          relativeItems={relativeItems}
+          width={360}
+          onChangeTradeDescription={(photoId, status) =>
+            updateTradeDescriptions({ id: selectedProduct.id, photoId, status })
+          }
+          onClearTradeDescriptions={(id) => clearTradeDescriptions(id)}
+        />
+      </div>
     </div>
   );
 }

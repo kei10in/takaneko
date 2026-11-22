@@ -1,5 +1,26 @@
 import { clsx } from "clsx";
+import { NavLink } from "react-router";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
+import { RandomGoods } from "~/features/products/product.ts";
+import { RandomGoodsCardTexts } from "~/features/products/productImages.ts";
+
+interface CardLinkProps {
+  item: RandomGoods;
+  onClick?: (() => void) | undefined;
+}
+
+export function RandomGoodsCardLink({ item, onClick }: CardLinkProps) {
+  return (
+    <NavLink to={`/trade/${item.slug}`} onClick={onClick} className="block">
+      <RandomGoodsCard
+        image={item.url}
+        year={item.year}
+        content={RandomGoodsCardTexts.title(item)}
+        description={RandomGoodsCardTexts.subtitle(item)}
+      />
+    </NavLink>
+  );
+}
 
 interface Props {
   image: string;
@@ -9,7 +30,7 @@ interface Props {
   selected?: boolean;
 }
 
-export const RandomGoodsCard: React.FC<Props> = (props: Props) => {
+const RandomGoodsCard: React.FC<Props> = (props: Props) => {
   const { image, year, content, description, selected = false } = props;
 
   return (

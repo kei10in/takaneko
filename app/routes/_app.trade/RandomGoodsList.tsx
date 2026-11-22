@@ -1,8 +1,6 @@
 import { clsx } from "clsx";
-import { NavLink } from "react-router";
 import { RandomGoods } from "~/features/products/product.ts";
-import { RandomGoodsCardTexts } from "~/features/products/productImages.ts";
-import { RandomGoodsCard } from "./RandomGoodsCard.tsx";
+import { RandomGoodsCardLink } from "./RandomGoodsCard.tsx";
 
 interface Props {
   items: RandomGoods[];
@@ -24,14 +22,7 @@ export const RandomGoodsList: React.FC<Props> = (props: Props) => {
       >
         {items.map((photo) => (
           <li key={photo.slug}>
-            <NavLink to={`/trade/${photo.slug}`} onClick={onClickLink} className="block">
-              <RandomGoodsCard
-                image={photo.url}
-                year={photo.year}
-                content={RandomGoodsCardTexts.title(photo)}
-                description={RandomGoodsCardTexts.subtitle(photo)}
-              />
-            </NavLink>
+            <RandomGoodsCardLink item={photo} onClick={onClickLink} />
           </li>
         ))}
       </ul>
