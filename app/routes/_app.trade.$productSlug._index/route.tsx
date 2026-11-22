@@ -86,7 +86,10 @@ export default function TradeImageEditor() {
     <div className="flex">
       <aside className="sticky top-(--header-height) hidden max-h-[calc(100svh-var(--header-height))] w-104 shrink-0 self-start overflow-y-auto lg:block">
         <nav aria-label="トレードメニュー">
-          <MenuContents items={TAKANEKO_PHOTOS} />
+          <MenuContents
+            items={TAKANEKO_PHOTOS}
+            homeLink={{ to: "/trade", label: "トレード画像をつくるやつ" }}
+          />
         </nav>
       </aside>
 

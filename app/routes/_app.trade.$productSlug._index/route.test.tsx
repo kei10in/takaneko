@@ -30,10 +30,10 @@ const renderPage = (initialEntry: string) => {
 
 const productPath = `/trade/${encodeURIComponent(TAKANEKO_PHOTOS[0].slug)}`;
 
-it("商品ページを直接開いても一覧に戻れる", async () => {
+it.each(["グッズ一覧", "トレード画像をつくるやつ"])("%s から商品一覧に戻れる", async (name) => {
   renderPage(productPath);
 
-  const link = await screen.findByRole("link", { name: "グッズ一覧" });
+  const link = await screen.findByRole("link", { name });
   expect(link.getAttribute("href")).toBe("/trade");
   fireEvent.click(link);
 
@@ -43,11 +43,11 @@ it("商品ページを直接開いても一覧に戻れる", async () => {
 it("商品ページだけにサイドメニューがあり、セカンダリトップバーは表示しない", async () => {
   const router = renderPage(productPath);
   const sidebar = await screen.findByRole("complementary");
-  expect(within(sidebar).getByRole("heading", { name: "グッズ" })).toBeTruthy();
+  const homeLink = within(sidebar).getByRole("link", { name: "トレード画像をつくるやつ" });
   expect(within(sidebar).getByRole("button", { name: "フィルタ" }).textContent).toBe("フィルタ");
   expect(within(sidebar).queryByRole("link", { name: "欲しいやつ" })).toBeNull();
   expect(within(sidebar).queryByRole("link", { name: "譲れるやつ" })).toBeNull();
-  expect(screen.queryByRole("link", { name: "トレード画像をつくるやつ" })).toBeNull();
+  expect(screen.getAllByRole("link", { name: "トレード画像をつくるやつ" })).toEqual([homeLink]);
 
   await act(() => router.navigate("/trade/wishlist"));
   expect(screen.queryByRole("complementary")).toBeNull();
@@ -63,7 +63,7 @@ it("サイドバーでは各年のグッズを初期表示し、種類と発売�
   renderPage(productPath);
   const sidebar = within(await screen.findByRole("complementary"));
   expect(sidebar.queryByRole("heading", { name: "ホットなやつ" })).toBeNull();
-  expect(sidebar.getAllByRole("link")).toHaveLength(TAKANEKO_PHOTOS.length);
+  expect(sidebar.getAllByRole("link")).toHaveLength(TAKANEKO_PHOTOS.length + 1);
   expect(sidebar.getByRole("heading", { name: "2022年" })).toBeTruthy();
   expect(sidebar.getByRole("heading", { name: "2023年" })).toBeTruthy();
   expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();

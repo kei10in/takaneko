@@ -10,14 +10,14 @@ it("渡された商品のみを表示し、発売年の選択肢もその商品�
   const items = [{ ...TAKANEKO_PHOTOS[0], year: 2099 }];
   render(
     <MemoryRouter>
-      <MenuContents items={items} />
+      <MenuContents items={items} homeLink={{ to: "/", label: "一覧" }} />
     </MemoryRouter>,
   );
 
   expect(
     screen.getAllByRole("heading", { level: 3 }).map((heading) => heading.textContent),
   ).toEqual(["2099年"]);
-  expect(screen.getAllByRole("link")).toHaveLength(1);
+  expect(screen.getAllByRole("link")).toHaveLength(2);
 
   fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
   const years = within(await screen.findByRole("group", { name: "発売年" }));

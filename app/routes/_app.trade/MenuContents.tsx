@@ -1,12 +1,14 @@
+import { Link } from "react-router";
 import { RandomGoods } from "~/features/products/product.ts";
 import { RandomGoodsFilter, useRandomGoodsFilter } from "./RandomGoodsFilter.tsx";
 import { RandomGoodsList } from "./RandomGoodsList.tsx";
 
 interface Props {
   items: readonly RandomGoods[];
+  homeLink: { to: string; label: string };
 }
 
-export function MenuContents({ items }: Props) {
+export function MenuContents({ items, homeLink }: Props) {
   const { filterProps, matches } = useRandomGoodsFilter(items);
   const filteredItems = items.filter(matches);
   const groups = filterProps.yearOptions
@@ -19,7 +21,14 @@ export function MenuContents({ items }: Props) {
   return (
     <div className="pb-8">
       <div className="sticky top-0 z-10 flex items-center gap-2 bg-white px-4 py-2">
-        <h2 className="text-lg font-semibold text-zinc-700">ランダムグッズ</h2>
+        <h2 className="text-base font-semibold text-zinc-700">
+          <Link
+            to={homeLink.to}
+            className="underline-offset-4 hover:underline focus-visible:underline"
+          >
+            {homeLink.label}
+          </Link>
+        </h2>
         <RandomGoodsFilter {...filterProps} />
       </div>
 
