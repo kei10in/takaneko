@@ -18,9 +18,8 @@ const renderRandomGoods = () => {
 
 it("ホットなやつのカルーセルに商品ページへのリンクが掲載順に並ぶ", () => {
   renderRandomGoods();
-  const links = screen
-    .queryAllByRole("region", { name: "ホットなやつ" })
-    .flatMap((region) => within(region).getAllByRole("link"));
+  const featured = within(screen.getByRole("region", { name: "ホットなやつ" }));
+  const links = within(featured.getByRole("list")).getAllByRole("link");
   expect(links.map((link) => link.getAttribute("href"))).toEqual(
     TAKANEKO_PHOTOS_FEATURED.map((item) => `/trade/${item.slug}`),
   );

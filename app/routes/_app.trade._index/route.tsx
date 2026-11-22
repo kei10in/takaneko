@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { BsCardChecklist } from "react-icons/bs";
+import { BsCardChecklist, BsChevronRight } from "react-icons/bs";
 import { Link } from "react-router";
 import { pageHeading, sectionHeading } from "~/components/styles.ts";
 import { DomainName, OgpSiteName } from "~/constants.ts";
@@ -59,9 +59,18 @@ export default function Index() {
 
       {TAKANEKO_PHOTOS_FEATURED.length > 0 && (
         <section className="mt-12" aria-labelledby="featured-goods-heading">
-          <h2 id="featured-goods-heading" className={sectionHeading("my-4 px-4")}>
-            ホットなやつ
-          </h2>
+          <div className="my-4 flex flex-wrap items-center justify-between gap-2 px-4">
+            <h2 id="featured-goods-heading" className={sectionHeading()}>
+              ホットなやつ
+            </h2>
+            <a
+              href="#random-goods"
+              className="ml-auto inline-flex min-h-8 items-center gap-1 text-base text-zinc-600 underline-offset-4 hover:underline"
+            >
+              すべてのグッズ
+              <BsChevronRight aria-hidden="true" />
+            </a>
+          </div>
           <RandomGoodsCarousel items={TAKANEKO_PHOTOS_FEATURED} />
         </section>
       )}
@@ -78,7 +87,11 @@ function FilterableRandomGoods() {
   const items = TAKANEKO_PHOTOS.filter(matches);
 
   return (
-    <section className="mt-12" aria-labelledby="random-goods-heading">
+    <section
+      id="random-goods"
+      className="mt-12 scroll-mt-(--header-height)"
+      aria-labelledby="random-goods-heading"
+    >
       <div className="my-4 flex flex-wrap items-center gap-2 px-4">
         <h2 id="random-goods-heading" className={sectionHeading()}>
           ランダムグッズ
