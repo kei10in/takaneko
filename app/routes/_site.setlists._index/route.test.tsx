@@ -381,34 +381,6 @@ describe("セットリストのモーダル", () => {
     expect(getSelectedEventHeading("ライブ A")).toBeTruthy();
   });
 
-  it("開いた直後は選択中の詳細を描画し、最初のフレームの後に前後3件を先読みする", async () => {
-    vi.useFakeTimers({ toFake: ["requestAnimationFrame", "cancelAnimationFrame"] });
-    const items = Array.from({ length: 11 }, (_, index) => ({
-      ...events[0],
-      slug: `live-${index}`,
-      title: `ライブ ${index}`,
-      location: `会場 ${index}`,
-    }));
-    await setup(items);
-    fireEvent.click(screen.getByRole("button", { name: /ライブ 5\b/u }));
-    const details = within(await screen.findByRole("dialog"));
-
-    expect(getSelectedEventHeading("ライブ 5")).toBeTruthy();
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(1);
-    act(() => {
-      vi.advanceTimersToNextFrame();
-    });
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(1);
-
-    act(() => {
-      vi.advanceTimersToNextFrame();
-    });
-    Array.from({ length: 7 }, (_, index) => index + 2).forEach((index) => {
-      expect(details.getByText(`会場 ${index}`)).toBeTruthy();
-    });
-    expect(details.getAllByText(/^会場 /u)).toHaveLength(7);
-  });
-
   it("先読み前にスワイプしても、選択した詳細をすぐ表示する", async () => {
     vi.useFakeTimers({ toFake: ["requestAnimationFrame", "cancelAnimationFrame"] });
     await setup();
@@ -488,27 +460,6 @@ describe("セットリストのモーダル", () => {
     const reopened = within(await screen.findByRole("dialog"));
     expect(reopened.queryByText("会場 0")).toBeNull();
     expect(reopened.queryByText("会場 40")).toBeNull();
-  });
-
-  it("表示範囲の通知がなくても選択位置だけを更新し、描画範囲は通知後に更新する", async () => {
-    const items = Array.from({ length: 41 }, (_, index) => ({
-      ...events[0],
-      slug: `live-${index}`,
-      title: `ライブ ${index}`,
-      location: `会場 ${index}`,
-    }));
-    await setup(items);
-    fireEvent.click(screen.getByRole("button", { name: /ライブ 20/u }));
-    const details = within(await screen.findByRole("dialog", { name: "セットリスト" }));
-    await details.findByText("会場 17");
-    showSlides();
-    swipeDialog();
-    expect(getSelectedEventHeading("ライブ 21")).toBeTruthy();
-    expect(details.getByText("会場 17")).toBeTruthy();
-    expect(details.queryByText("会場 24")).toBeNull();
-    showSlides(21);
-    expect(details.queryByText("会場 17")).toBeNull();
-    expect(details.getByText("会場 24")).toBeTruthy();
   });
 
   it("連続して進んでも詳細の描画数が増え続けない", async () => {

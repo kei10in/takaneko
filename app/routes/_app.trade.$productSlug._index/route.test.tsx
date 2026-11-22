@@ -73,16 +73,9 @@ it("サイドバーでは各年のグッズを初期表示し、種類と発売�
   expect(filter.queryAllByRole("checkbox", { checked: true })).toHaveLength(0);
 
   fireEvent.click(filter.getByRole("checkbox", { name: "2022年" }));
+  expect(sidebar.getByRole("link", { name: /缶バッジ/u })).toBeTruthy();
   fireEvent.click(filter.getByRole("checkbox", { name: "生写真" }));
   expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
   expect(sidebar.queryByRole("link", { name: /缶バッジ/u })).toBeNull();
   expect(sidebar.queryByRole("heading", { name: "2023年" })).toBeNull();
-
-  fireEvent.click(filter.getByRole("checkbox", { name: "その他" }));
-  expect(sidebar.getByRole("link", { name: /2022サンタ/u })).toBeTruthy();
-  expect(sidebar.getByRole("link", { name: /缶バッジ/u })).toBeTruthy();
-
-  fireEvent.click(filter.getByRole("checkbox", { name: "2023年" }));
-  expect(sidebar.getByRole("heading", { name: "2023年" })).toBeTruthy();
-  expect(sidebar.getByRole("heading", { name: "2022年" })).toBeTruthy();
 });

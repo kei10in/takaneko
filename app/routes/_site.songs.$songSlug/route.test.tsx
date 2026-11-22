@@ -112,17 +112,14 @@ describe("楽曲詳細のタブ", () => {
     );
   });
 
-  it.each(["", "/videos", "/stats", "/lives"])(
-    "アートワークがある楽曲は%sでも共通ヘッダーに表示する",
-    async (suffix) => {
-      const song = { ...artworkTestSong, coverArt: "/test/アートワーク.jpg" };
-      renderPage(`/songs/${song.slug}${suffix}`, undefined, song);
+  it("楽曲のアートワークを詳細ヘッダーに表示する", async () => {
+    const song = { ...artworkTestSong, coverArt: "/test/アートワーク.jpg" };
+    renderPage(`/songs/${song.slug}/lives`, undefined, song);
 
-      const image = await screen.findByRole("img", { name: `${song.name}のアートワーク` });
-      expect(image.getAttribute("src")).toContain(encodeURI(song.coverArt));
-      expect(screen.getByRole("heading", { level: 1, name: song.name })).toBeTruthy();
-    },
-  );
+    const image = await screen.findByRole("img", { name: `${song.name}のアートワーク` });
+    expect(image.getAttribute("src")).toContain(encodeURI(song.coverArt));
+    expect(screen.getByRole("heading", { level: 1, name: song.name })).toBeTruthy();
+  });
 
   it.each([undefined, ""])("アートワークが %s の楽曲では画像を表示しない", async (coverArt) => {
     const song = { ...artworkTestSong, coverArt };

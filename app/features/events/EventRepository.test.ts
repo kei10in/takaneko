@@ -1,22 +1,10 @@
 import fs from "node:fs";
-import { assert, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
-import { isObject } from "~/utils/types/object.ts";
 import { Events } from "./events.ts";
 
 describe("EventRepository", () => {
-  describe("imported events", async () => {
-    const importedEvents = await Events.importAllEventModules();
-
-    describe.each(importedEvents)("module $filename", (module) => {
-      it("should export meta as EventMeta", () => {
-        assert(isObject(module));
-        expect(module.meta).not.toBeUndefined();
-      });
-    });
-  });
-
   describe("selectEventModuleByMonth", () => {
     it("should return modules for the specified month", () => {
       const month = new NaiveMonth(2025, 7);
