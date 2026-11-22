@@ -55,6 +55,7 @@ export const meta: EventMetaDescriptor = {
         end: "12:30",
         lastEntry: "12:00",
         lanes: ["涼海すう", "橋本桃呼", "葉月紗蘭", "松本ももな"],
+        costume: "A World in Our Colors 衣装",
       },
       {
         title: "2 部",
@@ -62,6 +63,7 @@ export const meta: EventMetaDescriptor = {
         end: "13:40",
         lastEntry: "13:10",
         lanes: ["城月菜央", "東山恵里沙", "日向端ひな", "籾山ひめり"],
+        costume: "A World in Our Colors 衣装",
       },
       {
         title: "3 部",
@@ -69,6 +71,7 @@ export const meta: EventMetaDescriptor = {
         end: "15:30",
         lastEntry: "15:00",
         lanes: ["涼海すう", "橋本桃呼", "葉月紗蘭", "松本ももな"],
+        costume: "A World in Our Colors 衣装",
       },
       {
         title: "4 部",
@@ -76,6 +79,7 @@ export const meta: EventMetaDescriptor = {
         end: "16:40",
         lastEntry: "16:10",
         lanes: ["城月菜央", "東山恵里沙", "日向端ひな", "籾山ひめり"],
+        costume: "A World in Our Colors 衣装",
       },
       {
         title: "5 部",
@@ -83,6 +87,7 @@ export const meta: EventMetaDescriptor = {
         end: "17:50",
         lastEntry: "17:20",
         lanes: ["涼海すう", "橋本桃呼", "葉月紗蘭", "松本ももな"],
+        costume: "A World in Our Colors 衣装",
       },
       {
         title: "6 部",
@@ -90,10 +95,11 @@ export const meta: EventMetaDescriptor = {
         end: "19:00",
         lastEntry: "18:30",
         lanes: ["城月菜央", "東山恵里沙", "日向端ひな", "籾山ひめり"],
+        costume: "A World in Our Colors 衣装",
       },
     ],
   },
-  updatedAt: "2026-11-17",
+  updatedAt: "2026-11-22",
 };
 
 export const content = /* md */ `
@@ -123,6 +129,7 @@ export const content = /* md */ `
 
   ## リンク
 
+  - [#あしたのたかねこ](https://x.com/takanenofficial/status/2124144552147669168)
   - [当日販売・会場限定抽選会詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5845)
   - [当日販売・会場限定抽選会告知 - 公式 X](https://x.com/takanenofficial/status/2122283557330780592)
   - [イベント詳細 - 公式ニュース](https://takanenonadeshiko.jp/?p=5789)
