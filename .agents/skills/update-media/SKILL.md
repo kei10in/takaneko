@@ -9,13 +9,12 @@ description: Add or update media information in the takaneko repository, includi
 
 メディアページ `/media` で表示される情報を更新します。
 
-メディアの情報を記載したファイルを更新した後、`cache-media-metadata.ts` でキャッシュします。
+テキストと画像 (@_local ディレクトリに配置) で指示がされます。
 
-記載する記事は画像や URL などで指示をします。
-
-画像は `_local` ディレクトリに配置します。
 Twitter (X) のスクリーンショットの場合はポストに記載の URL が対象の記事です。
 高嶺のなでしこ公式 X のポストのスクリーンショットの場合はそのポストの URL を `officialTwitter` フィールドに記載します。
+
+最後に、メディアの情報を記載したファイルを更新した後、`cache-media-metadata.ts` でキャッシュします。
 
 ## 対象のファイル
 
@@ -51,6 +50,8 @@ OGP に対応していないサイトの記事を列挙します。
 
 下記のコマンドを実行してフィールドに関するエラーがないことを確認します。
 Warning や 404 などのエラーがあれば人間が判断するため内容を提示します。
+
+スクリプトの結果はすべてそのままにします。
 
 ```bash
 pnpm tsx ./scripts/cache-media-metadata.ts
