@@ -38,6 +38,12 @@ export const Ogp2026: OgpMediaDescriptor[] = [
     presents: ["城月菜央", "松本ももな", "籾山ひめり"],
   },
   {
+    mediaUrl: "https://bookplus.nikkei.com/atcl/column/102700800/110500004/",
+    publishedAt: "2026-11-11",
+    category: "article",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
     mediaUrl: "https://scawaiiweb.com/articles/detail/73725",
     publishedAt: "2026-11-06",
     category: "article",

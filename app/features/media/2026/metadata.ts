@@ -79,6 +79,17 @@ export const metadata2026: MediaDetails[] = [
   },
   {
     kind: "ogp",
+    key: "https://bookplus.nikkei.com/atcl/column/102700800/110500004/",
+    title: "高嶺のなでしこ　変化を乗り越え歴史をつなぐ　新体制で踏み出す一歩",
+    authorName: "日経BOOKプラス",
+    publishedAt: "2026-11-11",
+    mediaUrl: "https://bookplus.nikkei.com/atcl/column/102700800/110500004/",
+    imageUrl: "https://bookplus.nikkei.com/atcl/column/102700800/110500004/top_m.jpg",
+    category: "article",
+    presents: ["高嶺のなでしこ3"],
+  },
+  {
+    kind: "ogp",
     key: "https://scawaiiweb.com/articles/detail/73725",
     title:
       "高嶺のなでしこ・城月菜央「夢はホラー界のアイドル(!?)」個性を武器に広げたい未来とは？【アイドル図鑑 by S Cawaii!】 | S Cawaii!(エスカワイイ)",
