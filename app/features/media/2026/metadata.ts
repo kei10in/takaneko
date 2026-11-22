@@ -2,6 +2,19 @@ import { MediaDetails } from "~/features/media/types.ts";
 
 export const metadata2026: MediaDetails[] = [
   {
+    kind: "ogp",
+    key: "https://beeeem.com/article/takaneko11",
+    title:
+      "高嶺のなでしこ 涼海すう×日向端ひな×籾山ひめり【インタビュー】“また明日ね”が愛おしくなる——歌に託した感謝と、これからへの「約束」-BEEEEM",
+    authorName: "BEEEEM",
+    publishedAt: "2026-11-22",
+    mediaUrl: "https://beeeem.com/article/takaneko11",
+    imageUrl:
+      "https://imagedelivery.net/GAZ6B7nYxar6-1ZqFjo_3w/52aed2f6-a3f1-4672-8340-ff53b59ab400/medium",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+  },
+  {
     kind: "youtube",
     key: "elcAUfX7lzM",
     title:

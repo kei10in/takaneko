@@ -2,6 +2,14 @@ import { OgpMediaDescriptor } from "../types.ts";
 
 export const Ogp2026: OgpMediaDescriptor[] = [
   {
+    mediaUrl: "https://beeeem.com/article/takaneko11",
+    siteName: "BEEEEM",
+    publishedAt: "2026-11-22",
+    category: "article",
+    presents: ["涼海すう", "日向端ひな", "籾山ひめり"],
+    officialTwitter: "https://x.com/takanenofficial/status/2124367274123604092",
+  },
+  {
     mediaUrl: "https://skream.jp/news/2026/11/takanenonadeshiko_interview.php",
     publishedAt: "2026-11-20",
     category: "article",
