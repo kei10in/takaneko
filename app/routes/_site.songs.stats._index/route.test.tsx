@@ -27,6 +27,7 @@ beforeEach(() => {
 afterEach(() => {
   cleanup();
   vi.useRealTimers();
+  vi.restoreAllMocks();
 });
 
 const renderPage = () => {
@@ -73,4 +74,22 @@ it("持ち歌になった日をもとに活動年・西暦ごとの内訳を切�
 
   fireEvent.click(screen.getByRole("button", { name: "活動年" }));
   expect(screen.getByRole("table", { name: "活動年ごとの持ち歌の追加数のデータ" })).toBeTruthy();
+});
+
+it("60日幅で平滑化したグラフを30日あたりの単位で1つ表示する", async () => {
+  vi.setSystemTime(new Date("2024-11-23T00:30:00+09:00"));
+  vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
+    this: HTMLElement,
+  ) {
+    return new DOMRect(0, 0, 640, this.classList.contains("recharts-legend-wrapper") ? 24 : 320);
+  });
+  renderPage();
+
+  const section = await screen.findByRole("region", { name: "持ち歌追加の密度分布" });
+  const figure = within(section).getByRole("figure");
+  expect(within(figure).getByText(/平滑化幅60日/u)).toBeTruthy();
+  expect(within(figure).getByText(/30日あたりの推定追加曲数/u)).toBeTruthy();
+  expect(within(figure).getByText("2022/08/07 ～ 2024/11/23")).toBeTruthy();
+  expect(within(figure).getByText("オリジナル楽曲")).toBeTruthy();
+  expect(within(figure).getByText("たかねこ ver.")).toBeTruthy();
 });

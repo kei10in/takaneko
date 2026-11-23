@@ -4,8 +4,14 @@ import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { Repertoire } from "~/features/songs/tags.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RepertoireDensity } from "./RepertoireDensity.tsx";
+import { buildRepertoireDensityData } from "./repertoireDensityData.ts";
 import { RepertoireHistory } from "./RepertoireHistory.tsx";
-import { buildRepertoireHistoryData, repertoireSeries } from "./repertoireHistoryData.ts";
+import {
+  buildRepertoireHistoryData,
+  listRepertoireAdditions,
+  repertoireSeries,
+} from "./repertoireHistoryData.ts";
 
 export const meta: MetaFunction = () => {
   return [
@@ -25,16 +31,19 @@ export const loader = () => {
     label: category.name,
     count: repertoire.filter((song) => song.tags?.some((tag) => tag.key === category.key)).length,
   }));
+  const today = NaiveDate.todayInJapan();
+  const additions = listRepertoireAdditions(repertoire, today);
 
   return {
     total: repertoire.length,
     breakdown,
-    history: buildRepertoireHistoryData(repertoire, NaiveDate.todayInJapan()),
+    history: buildRepertoireHistoryData(additions, today),
+    density: buildRepertoireDensityData(additions, today),
   };
 };
 
 export default function Component() {
-  const { total, breakdown, history } = useLoaderData<typeof loader>();
+  const { total, breakdown, history, density } = useLoaderData<typeof loader>();
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -69,6 +78,15 @@ export default function Component() {
             持ち歌追加数
           </h2>
           <RepertoireHistory data={history} />
+        </section>
+        <section aria-labelledby="repertoire-density-heading" className="mt-12 space-y-4">
+          <h2 id="repertoire-density-heading" className="section-heading">
+            持ち歌追加の密度分布
+          </h2>
+          <p className="text-sm text-zinc-600">
+            持ち歌になった日をもとに、曲が増えるペースを推定しています。
+          </p>
+          <RepertoireDensity data={density} />
         </section>
       </section>
     </div>

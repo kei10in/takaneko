@@ -14,19 +14,30 @@ export interface RepertoireHistoryData {
   calendar: ChartRow[];
 }
 
+export interface RepertoireAddition {
+  date: string;
+  tags: SongMetaDescriptor["tags"];
+}
+
 const anniversary = (year: number) => new NaiveDate(year, DebutDate.month, DebutDate.day);
 
-export const buildRepertoireHistoryData = (
+export const listRepertoireAdditions = (
   repertoire: Pick<SongMetaDescriptor, "repertoireSince" | "tags">[],
   today: NaiveDate,
-): RepertoireHistoryData => {
+): RepertoireAddition[] => {
   const debut = DebutDate.toString();
   const cutoff = today.toString();
-  const songs = repertoire.flatMap(({ repertoireSince, tags }) =>
+  return repertoire.flatMap(({ repertoireSince, tags }) =>
     repertoireSince != undefined && debut <= repertoireSince && repertoireSince <= cutoff
       ? [{ date: repertoireSince, tags }]
       : [],
   );
+};
+
+export const buildRepertoireHistoryData = (
+  songs: RepertoireAddition[],
+  today: NaiveDate,
+): RepertoireHistoryData => {
   if (songs.length === 0) {
     return { career: [], calendar: [] };
   }
