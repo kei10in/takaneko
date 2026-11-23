@@ -23,6 +23,7 @@ interface Props {
   xAxisLabel: string;
   yAxisLabel: string;
   unit: string;
+  yAxisScale?: { limit: number; step: number };
 }
 
 const formatLabel = (value: RenderableText) =>
@@ -31,7 +32,15 @@ const formatLabel = (value: RenderableText) =>
 // shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
 const barShape = <Rectangle />;
 
-export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, unit }: Props) => {
+export const StackedBarChart = ({
+  data,
+  stacks,
+  name,
+  xAxisLabel,
+  yAxisLabel,
+  unit,
+  yAxisScale,
+}: Props) => {
   // 最初のタップで入力モードの更新を待たなくて済むよう、ホバーはマウス移動時に有効にする。
   const [trigger, setTrigger] = useState<"hover" | "click">("click");
   // 再描画のタイミングに依存せず、クリックがタッチ・ペン由来かを判定する。
@@ -109,7 +118,15 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
             tickMargin={2}
             tick={{ fontSize: 12 }}
             tickLine={false}
-            domain={[0, "auto"]}
+            domain={[0, yAxisScale?.limit ?? "auto"]}
+            ticks={
+              yAxisScale == undefined
+                ? undefined
+                : Array.from(
+                    { length: Math.round(yAxisScale.limit / yAxisScale.step) + 1 },
+                    (_, index) => index * yAxisScale.step,
+                  )
+            }
           />
           <Tooltip
             trigger={trigger}

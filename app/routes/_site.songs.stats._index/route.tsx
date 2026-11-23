@@ -1,8 +1,11 @@
 import { MetaFunction, useLoaderData } from "react-router";
 import { Statistic } from "~/components/Statistic.tsx";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
-import { Original, Repertoire, TakanekoVersion } from "~/features/songs/tags.ts";
+import { Repertoire } from "~/features/songs/tags.ts";
+import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
+import { RepertoireHistory } from "./RepertoireHistory.tsx";
+import { buildRepertoireHistoryData, repertoireSeries } from "./repertoireHistoryData.ts";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,16 +21,20 @@ export const loader = () => {
   const repertoire = ALL_SONGS.filter((song) =>
     song.tags?.some((tag) => tag.key === Repertoire.key),
   );
-  const breakdown = [Original, TakanekoVersion].map((category) => ({
+  const breakdown = repertoireSeries.map(({ category }) => ({
     label: category.name,
     count: repertoire.filter((song) => song.tags?.some((tag) => tag.key === category.key)).length,
   }));
 
-  return { total: repertoire.length, breakdown };
+  return {
+    total: repertoire.length,
+    breakdown,
+    history: buildRepertoireHistoryData(repertoire, NaiveDate.todayInJapan()),
+  };
 };
 
 export default function Component() {
-  const { total, breakdown } = useLoaderData<typeof loader>();
+  const { total, breakdown, history } = useLoaderData<typeof loader>();
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -56,6 +63,12 @@ export default function Component() {
               ))}
             </div>
           </dl>
+        </section>
+        <section aria-labelledby="repertoire-history-heading" className="mt-12 space-y-4">
+          <h2 id="repertoire-history-heading" className="section-heading">
+            持ち歌追加数
+          </h2>
+          <RepertoireHistory data={history} />
         </section>
       </section>
     </div>
