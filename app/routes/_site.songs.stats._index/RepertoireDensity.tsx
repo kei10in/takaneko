@@ -12,7 +12,17 @@ import {
   ZIndexLayer,
   usePlotArea,
   useXAxisScale,
+  type TooltipContentProps,
 } from "recharts";
+import { ChartTooltip } from "~/components/charts/ChartTooltip.tsx";
+import {
+  verticalChartGridProps,
+  verticalChartHeight,
+  verticalChartLegendProps,
+  verticalChartMargin,
+  verticalChartXAxisProps,
+  verticalChartYAxisProps,
+} from "~/components/charts/verticalChartStyle.ts";
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import {
@@ -22,14 +32,39 @@ import {
 import { listCareerYearStarts, repertoireSeries } from "./repertoireHistoryData.ts";
 
 const displayDays = 30;
-const gridLineColor = "var(--color-zinc-200)";
 const calendarTickSize = 6;
+const careerAxisHeight = 20;
 
 const formatDate = (value: number) =>
   NaiveDate.fromTimeAsUTC(value).toString().replaceAll("-", "/");
 
 const formatRate = (value: number) =>
   (value * displayDays).toLocaleString("ja-JP", { maximumFractionDigits: 2 });
+
+const RepertoireDensityTooltip = ({
+  active,
+  label,
+  payload = [],
+}: Partial<TooltipContentProps>) => {
+  if (!active || payload.length === 0 || typeof label !== "number") {
+    return undefined;
+  }
+
+  return (
+    <ChartTooltip
+      title={formatDate(label)}
+      entries={repertoireSeries.map(({ category, color }, index) => {
+        const value = payload.find((entry) => entry.dataKey === `values[${index}]`)?.value;
+        return {
+          label: category.name,
+          color,
+          value:
+            typeof value === "number" ? `${formatRate(value)} 曲 / ${displayDays}日` : "データなし",
+        };
+      })}
+    />
+  );
+};
 
 const CalendarYearMarks = ({ dates }: { dates: number[] }) => {
   const plot = usePlotArea();
@@ -71,30 +106,22 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
 
   return (
     <figure aria-label="持ち歌追加の密度グラフ" className="w-full min-w-0 space-y-2">
-      <figcaption className="text-sm text-zinc-600">
-        平滑化幅{repertoireDensityBandwidthDays}日。縦軸は{displayDays}日あたりの推定追加曲数です。
-      </figcaption>
-      <ResponsiveContainer width="100%" minWidth={0} height={320}>
-        <AreaChart
-          data={data}
-          margin={{ top: 12, right: 20, bottom: 0, left: 0 }}
-          accessibilityLayer
-        >
-          <CartesianGrid vertical={false} strokeDasharray="3 3" stroke={gridLineColor} />
+      <ResponsiveContainer
+        width="100%"
+        minWidth={0}
+        height={verticalChartHeight + careerAxisHeight}
+      >
+        <AreaChart data={data} margin={verticalChartMargin} accessibilityLayer>
+          <CartesianGrid {...verticalChartGridProps} />
           <CalendarYearMarks dates={calendarYearStarts} />
           <XAxis
+            {...verticalChartXAxisProps}
             dataKey="date"
             type="number"
             domain={[first.date, last.date]}
             ticks={[first.date, ...calendarYearStarts]}
             tickFormatter={(date: number) => `${NaiveDate.fromTimeAsUTC(date).year}年`}
-            tick={{ fontSize: 12 }}
-            angle={-45}
-            textAnchor="end"
-            height={48}
             tickSize={calendarTickSize}
-            tickMargin={2}
-            tickLine={false}
           />
           <XAxis
             xAxisId="career-year"
@@ -104,7 +131,7 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
             domain={[first.date, last.date]}
             ticks={careerYearTicks}
             tickFormatter={(date: number) => `${careerYearTicks.indexOf(date) + 1}年目`}
-            height={20}
+            height={careerAxisHeight}
             interval="preserveStartEnd"
             minTickGap={4}
             tick={{ fontSize: 11, fill: "var(--color-zinc-600)" }}
@@ -112,19 +139,15 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
             axisLine={false}
           />
           <YAxis
+            {...verticalChartYAxisProps}
             type="number"
             domain={[0, "auto"]}
-            width={40}
             tickFormatter={formatRate}
-            tick={{ fontSize: 12 }}
-            tickLine={false}
           />
           <Tooltip
-            itemSorter="dataKey"
-            labelFormatter={(date) => (typeof date === "number" ? formatDate(date) : "")}
-            formatter={(value) =>
-              typeof value === "number" ? `${formatRate(value)} 曲 / ${displayDays}日` : undefined
-            }
+            content={<RepertoireDensityTooltip />}
+            cursor={{ stroke: "var(--color-zinc-300)" }}
+            isAnimationActive={false}
           />
           {repertoireSeries.map(({ category, color }, index) => (
             <Area
@@ -146,28 +169,26 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
               key={start}
               x={start}
               zIndex={DefaultZIndexes.grid}
-              stroke={gridLineColor}
+              stroke={verticalChartGridProps.stroke}
               strokeDasharray="4 3"
             />
           ))}
-          <Legend
-            align="left"
-            verticalAlign="top"
-            height={24}
-            wrapperStyle={{ fontSize: 12, top: 0, paddingLeft: 48 }}
-            iconType="circle"
-            iconSize={8}
-            labelStyle={{ color: "var(--color-zinc-600)" }}
-            itemSorter="dataKey"
-          />
+          <Legend {...verticalChartLegendProps} itemSorter="dataKey" />
         </AreaChart>
       </ResponsiveContainer>
-      <p className="text-sm text-zinc-500">
-        {formatDate(first.date)} ～ {formatDate(last.date)}
-      </p>
-      <p className="text-sm text-zinc-500">
-        活動年は毎年{DebutDate.month}月{DebutDate.day}日が区切りです。
-      </p>
+      <figcaption className="space-y-1 text-sm text-zinc-600">
+        <p>持ち歌になった日をもとに、曲が増えるペースを推定しています。</p>
+        <p>
+          平滑化幅{repertoireDensityBandwidthDays}日。縦軸は{displayDays}
+          日あたりの推定追加曲数です。
+        </p>
+        <p>
+          {formatDate(first.date)} ～ {formatDate(last.date)}
+        </p>
+        <p>
+          活動年は毎年{DebutDate.month}月{DebutDate.day}日が区切りです。
+        </p>
+      </figcaption>
     </figure>
   );
 };

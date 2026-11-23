@@ -134,4 +134,11 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
   calendarMarks.forEach((mark) => {
     expect(topArea.compareDocumentPosition(mark)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
   });
+
+  fireEvent.keyDown(within(figure).getByRole("application"), { key: "ArrowRight" });
+  const tooltip = await within(figure).findByRole("tooltip");
+  expect(within(tooltip).getByText("2022/08/07")).toBeTruthy();
+  expect(within(tooltip).getByText("オリジナル楽曲")).toBeTruthy();
+  expect(within(tooltip).getByText("たかねこ ver.")).toBeTruthy();
+  expect(within(tooltip).getAllByText(/曲 \/ 30日/u)).toHaveLength(2);
 });

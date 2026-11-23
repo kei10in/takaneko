@@ -47,9 +47,9 @@ export default function Component() {
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className="page-box px-4">
-        <h1 className="page-heading">楽曲統計</h1>
-        <section aria-labelledby="summary-heading" className="mt-8 space-y-5">
+      <section className="page-box">
+        <h1 className="page-heading px-4">楽曲統計</h1>
+        <section aria-labelledby="summary-heading" className="mt-8 space-y-5 px-4">
           <h2 id="summary-heading" className="section-heading">
             サマリー
           </h2>
@@ -73,19 +73,16 @@ export default function Component() {
             </div>
           </dl>
         </section>
-        <section aria-labelledby="repertoire-history-heading" className="mt-12 space-y-4">
-          <h2 id="repertoire-history-heading" className="section-heading">
+        <section aria-labelledby="repertoire-history-heading" className="mt-12 px-4">
+          <h2 id="repertoire-history-heading" className="section-heading mb-4">
             持ち歌追加数
           </h2>
           <RepertoireHistory data={history} />
         </section>
-        <section aria-labelledby="repertoire-density-heading" className="mt-12 space-y-4">
-          <h2 id="repertoire-density-heading" className="section-heading">
+        <section aria-labelledby="repertoire-density-heading" className="mt-12 px-4">
+          <h2 id="repertoire-density-heading" className="section-heading mb-4">
             持ち歌追加の密度分布
           </h2>
-          <p className="text-sm text-zinc-600">
-            持ち歌になった日をもとに、曲が増えるペースを推定しています。
-          </p>
           <RepertoireDensity data={density} />
         </section>
       </section>
