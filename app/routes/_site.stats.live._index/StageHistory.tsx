@@ -1,16 +1,14 @@
-import { Toggle } from "@base-ui/react/toggle";
-import { ToggleGroup } from "@base-ui/react/toggle-group";
-import { clsx } from "clsx";
 import { useMemo, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
 import { GroupedBarChart } from "~/components/charts/GroupedBarChart.tsx";
+import { YearBasisToggle, type YearBasis } from "~/components/YearBasisToggle.tsx";
 import { buildEventHistory, type EventHistoryData } from "~/features/live-stats/eventHistory.ts";
 import { buildStageHistory, type StageHistoryData } from "~/features/live-stats/stageHistory.ts";
 import { buildStageHistoryChartData } from "./stageHistoryChartData.ts";
 import { stageHistorySeries, type StageHistoryFilter } from "./stageHistorySeries.ts";
 
 export const StageHistory = ({ data }: { data: StageHistoryData & EventHistoryData }) => {
-  const [basis, setBasis] = useState<"career" | "calendar">("career");
+  const [basis, setBasis] = useState<YearBasis>("career");
   const [filter, setFilter] = useState<StageHistoryFilter>("all");
   const history = useMemo(
     () => ({ stages: buildStageHistory(data), events: buildEventHistory(data) }),
@@ -27,42 +25,7 @@ export const StageHistory = ({ data }: { data: StageHistoryData & EventHistoryDa
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <ToggleGroup
-          aria-label="集計基準"
-          value={[basis]}
-          onValueChange={([nextBasis]) => {
-            if (nextBasis === "career" || nextBasis === "calendar") {
-              setBasis(nextBasis);
-            }
-          }}
-          className="relative isolate grid h-10 shrink-0 grid-cols-2 rounded-full bg-zinc-100 p-1"
-        >
-          <span
-            aria-hidden="true"
-            className={clsx(
-              "absolute inset-y-1 left-1 w-[calc(50%-0.25rem)] rounded-full bg-white shadow-sm transition-transform duration-200 ease-in-out motion-reduce:transition-none",
-              basis === "calendar" && "translate-x-full",
-            )}
-          />
-          <Toggle
-            value="career"
-            className={clsx(
-              "relative rounded-full px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none",
-              basis === "career" ? "text-zinc-800" : "text-zinc-500 hover:text-zinc-700",
-            )}
-          >
-            活動年
-          </Toggle>
-          <Toggle
-            value="calendar"
-            className={clsx(
-              "relative rounded-full px-4 py-1.5 text-sm transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 motion-reduce:transition-none",
-              basis === "calendar" ? "text-zinc-800" : "text-zinc-500 hover:text-zinc-700",
-            )}
-          >
-            西暦
-          </Toggle>
-        </ToggleGroup>
+        <YearBasisToggle value={basis} onChange={setBasis} />
         <label className="relative block shrink-0">
           <span className="sr-only">表示する種別</span>
           <select
