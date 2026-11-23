@@ -1,7 +1,6 @@
 import Chart from "chart.js/auto";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Link, MetaFunction } from "react-router";
-import { pageBox, pageHeading } from "~/components/styles.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 
 Chart.register(ChartDataLabels);
@@ -22,6 +21,10 @@ const items = [
     description:
       "ライブのイベント数・開催日数・ステージ数と、年別・月別のステージ数の推移を確認できます。",
     url: "/stats/live",
+  },
+  {
+    title: "楽曲統計",
+    url: "/songs/stats",
   },
   {
     title: "楽曲別パフォーマンス回数",
@@ -51,8 +54,8 @@ const items = [
 export default function Component() {
   return (
     <div className="container mx-auto lg:max-w-5xl">
-      <section className={pageBox("px-4")}>
-        <h1 className={pageHeading()}>統計</h1>
+      <section className="page-box px-4">
+        <h1 className="page-heading">統計</h1>
 
         <div className="mt-8 space-y-4">
           {items.map((item) => {
@@ -63,8 +66,10 @@ export default function Component() {
                 to={item.url}
               >
                 <div>
-                  <h2 className="mb-1 text-lg font-semibold text-gray-500">{item.title}</h2>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <h2 className="text-lg font-semibold text-gray-500">{item.title}</h2>
+                  {item.description && (
+                    <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+                  )}
                 </div>
               </Link>
             );
