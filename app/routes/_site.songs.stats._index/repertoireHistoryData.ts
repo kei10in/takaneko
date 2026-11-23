@@ -21,6 +21,12 @@ export interface RepertoireAddition {
 
 const anniversary = (year: number) => new NaiveDate(year, DebutDate.month, DebutDate.day);
 
+export const listCareerYearStarts = (today: NaiveDate): NaiveDate[] => {
+  const yearCount = today.year - DebutDate.year + 1;
+  const count = today.compareTo(anniversary(today.year)) < 0 ? yearCount - 1 : yearCount;
+  return Array.from({ length: count }, (_, index) => anniversary(DebutDate.year + index));
+};
+
 export const listRepertoireAdditions = (
   repertoire: Pick<SongMetaDescriptor, "repertoireSince" | "tags">[],
   today: NaiveDate,
@@ -52,7 +58,6 @@ export const buildRepertoireHistoryData = (
     );
   };
   const yearCount = today.year - DebutDate.year + 1;
-  const careerYearCount = today.compareTo(anniversary(today.year)) < 0 ? yearCount - 1 : yearCount;
 
   return {
     calendar: Array.from({ length: yearCount }, (_, index) => {
@@ -62,12 +67,9 @@ export const buildRepertoireHistoryData = (
         values: countSongs(new NaiveDate(year, 1, 1), new NaiveDate(year + 1, 1, 1)),
       };
     }),
-    career: Array.from({ length: careerYearCount }, (_, index) => {
-      const year = DebutDate.year + index;
-      return {
-        label: `${index + 1}年目`,
-        values: countSongs(anniversary(year), anniversary(year + 1)),
-      };
-    }),
+    career: listCareerYearStarts(today).map((start, index) => ({
+      label: `${index + 1}年目`,
+      values: countSongs(start, anniversary(start.year + 1)),
+    })),
   };
 };

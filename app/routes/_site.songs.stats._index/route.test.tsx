@@ -76,12 +76,15 @@ it("持ち歌になった日をもとに活動年・西暦ごとの内訳を切�
   expect(screen.getByRole("table", { name: "活動年ごとの持ち歌の追加数のデータ" })).toBeTruthy();
 });
 
-it("60日幅で平滑化したグラフを30日あたりの単位で1つ表示する", async () => {
-  vi.setSystemTime(new Date("2024-11-23T00:30:00+09:00"));
+it("狭い画面でも密度グラフに活動年のラベルと区切りを表示する", async () => {
+  vi.setSystemTime(new Date("2026-11-23T00:30:00+09:00"));
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
     this: HTMLElement,
   ) {
-    return new DOMRect(0, 0, 640, this.classList.contains("recharts-legend-wrapper") ? 24 : 320);
+    if (this.tagName === "SPAN") {
+      return new DOMRect(0, 0, 28, 12);
+    }
+    return new DOMRect(0, 0, 280, this.classList.contains("recharts-legend-wrapper") ? 24 : 320);
   });
   renderPage();
 
@@ -89,7 +92,46 @@ it("60日幅で平滑化したグラフを30日あたりの単位で1つ表示�
   const figure = within(section).getByRole("figure");
   expect(within(figure).getByText(/平滑化幅60日/u)).toBeTruthy();
   expect(within(figure).getByText(/30日あたりの推定追加曲数/u)).toBeTruthy();
-  expect(within(figure).getByText("2022/08/07 ～ 2024/11/23")).toBeTruthy();
+  expect(within(figure).getByText("2022/08/07 ～ 2026/11/23")).toBeTruthy();
   expect(within(figure).getByText("オリジナル楽曲")).toBeTruthy();
   expect(within(figure).getByText("たかねこ ver.")).toBeTruthy();
+  ["1年目", "2年目", "3年目", "4年目", "5年目"].forEach((label) => {
+    expect(within(figure).getByText(label)).toBeTruthy();
+  });
+  const calendarTick = within(figure).getByText("2023年").closest("text");
+  expect(calendarTick?.getAttribute("transform")).toMatch(/^rotate\(-45,/u);
+  const horizontalGridLines = figure.querySelectorAll(".recharts-cartesian-grid-horizontal line");
+  const plotBottom = Math.max(
+    ...Array.from(horizontalGridLines, (line) => Number(line.getAttribute("y1"))),
+  );
+  const calendarMarks = Array.from(figure.querySelectorAll("line")).filter(
+    (line) =>
+      line.getAttribute("x1") === line.getAttribute("x2") &&
+      Number(line.getAttribute("y1")) === plotBottom &&
+      Number(line.getAttribute("y2")) === plotBottom - 6,
+  );
+  expect(calendarMarks).toHaveLength(4);
+  expect(Number(calendarMarks[0].getAttribute("x1"))).toBeCloseTo(
+    Number(calendarTick?.getAttribute("x")),
+  );
+  const boundaries = figure.querySelectorAll(".recharts-reference-line-line");
+  expect(boundaries).toHaveLength(4);
+  const gridColor = horizontalGridLines[0]?.getAttribute("stroke");
+  expect(gridColor).toBeTruthy();
+  expect(Array.from(boundaries, (line) => line.getAttribute("stroke"))).toEqual(
+    Array(4).fill(gridColor),
+  );
+  const chartLayers = figure.querySelectorAll(".recharts-reference-line-line, .recharts-area-area");
+  expect(Array.from(chartLayers, (layer) => layer.tagName)).toEqual([
+    "line",
+    "line",
+    "line",
+    "line",
+    "path",
+    "path",
+  ]);
+  const topArea = chartLayers[chartLayers.length - 1];
+  calendarMarks.forEach((mark) => {
+    expect(topArea.compareDocumentPosition(mark)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  });
 });
