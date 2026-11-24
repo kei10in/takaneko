@@ -297,6 +297,10 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
     expect(topArea.compareDocumentPosition(mark)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
   });
 
-  fireEvent.keyDown(within(figure).getByRole("application"), { key: "ArrowRight" });
+  const chart = within(figure).getByRole("application");
+  fireEvent.mouseMove(chart, { clientX: 100, clientY: 90 });
+  expect(figure.querySelector(".recharts-active-dot")).toBeNull();
+  fireEvent.keyDown(chart, { key: "ArrowRight" });
   expect(within(figure).queryByRole("tooltip")).toBeNull();
+  expect(figure.querySelector(".recharts-active-dot")).toBeNull();
 });
