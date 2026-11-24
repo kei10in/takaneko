@@ -26,12 +26,16 @@ import {
 import { DebutDate } from "~/constants.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import {
+  repertoireDensityDisplayDays as displayDays,
   repertoireDensityBandwidthDays,
   type RepertoireDensityPoint,
 } from "./repertoireDensityData.ts";
-import { listCareerYearStarts, repertoireSeries } from "./repertoireHistoryData.ts";
+import {
+  listCareerYearStarts,
+  repertoireSeries,
+  type RepertoireDateOption,
+} from "./repertoireHistoryData.ts";
 
-const displayDays = 30;
 const calendarTickSize = 6;
 const careerAxisHeight = 20;
 
@@ -86,7 +90,15 @@ const CalendarYearMarks = ({ dates }: { dates: number[] }) => {
   );
 };
 
-export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) => {
+export const RepertoireDensity = ({
+  data,
+  dateBasis,
+  yAxisScale,
+}: {
+  data: RepertoireDensityPoint[];
+  dateBasis: RepertoireDateOption;
+  yAxisScale: { limit: number; step: number };
+}) => {
   const first = data[0];
   const last = data.at(-1);
   if (first == undefined || last == undefined) {
@@ -103,9 +115,14 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
     const periodEnd = careerYearStarts[index + 1] ?? last.date;
     return (start + periodEnd) / 2;
   });
+  const { limit, step } = yAxisScale;
+  const densityTicks = Array.from(
+    { length: Math.round(limit / step) + 1 },
+    (_, index) => (index * step) / displayDays,
+  );
 
   return (
-    <figure aria-label="持ち歌追加の密度グラフ" className="w-full min-w-0 space-y-2">
+    <figure aria-label={`${dateBasis.activity}の密度グラフ`} className="w-full min-w-0 space-y-2">
       <ResponsiveContainer
         width="100%"
         minWidth={0}
@@ -141,7 +158,9 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
           <YAxis
             {...verticalChartYAxisProps}
             type="number"
-            domain={[0, "auto"]}
+            domain={[0, limit / displayDays]}
+            ticks={densityTicks}
+            allowDataOverflow
             tickFormatter={formatRate}
           />
           <Tooltip
@@ -177,10 +196,10 @@ export const RepertoireDensity = ({ data }: { data: RepertoireDensityPoint[] }) 
         </AreaChart>
       </ResponsiveContainer>
       <figcaption className="space-y-1 text-sm text-zinc-600">
-        <p>持ち歌になった日をもとに、曲が増えるペースを推定しています。</p>
+        <p>{dateBasis.label}をもとに、曲数の変化を推定しています。</p>
         <p>
           平滑化幅{repertoireDensityBandwidthDays}日。縦軸は{displayDays}
-          日あたりの推定追加曲数です。
+          日あたりの推定{dateBasis.rate}です。
         </p>
         <p>
           {formatDate(first.date)} ～ {formatDate(last.date)}

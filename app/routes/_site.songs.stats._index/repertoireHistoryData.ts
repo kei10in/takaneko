@@ -9,6 +9,45 @@ export const repertoireSeries = [
   { category: TakanekoVersion, color: "var(--color-nadeshiko-500)" },
 ];
 
+export const repertoireDateOptions = [
+  {
+    field: "repertoireSince",
+    label: "持ち歌になった日",
+    activity: "持ち歌追加",
+    count: "持ち歌の追加数",
+    rate: "追加曲数",
+  },
+  {
+    field: "videoRelease",
+    label: "動画公開日",
+    activity: "動画公開",
+    count: "動画公開曲数",
+    rate: "公開曲数",
+  },
+  {
+    field: "digitalRelease",
+    label: "配信開始日",
+    activity: "配信開始",
+    count: "配信開始曲数",
+    rate: "配信開始曲数",
+  },
+  {
+    field: "liveDebut",
+    label: "ライブ初披露日",
+    activity: "ライブ初披露",
+    count: "ライブ初披露曲数",
+    rate: "初披露曲数",
+  },
+] satisfies {
+  field: keyof SongMetaDescriptor;
+  label: string;
+  activity: string;
+  count: string;
+  rate: string;
+}[];
+
+export type RepertoireDateOption = (typeof repertoireDateOptions)[number];
+
 export interface RepertoireHistoryData {
   career: ChartRow[];
   calendar: ChartRow[];
@@ -27,17 +66,17 @@ export const listCareerYearStarts = (today: NaiveDate): NaiveDate[] => {
   return Array.from({ length: count }, (_, index) => anniversary(DebutDate.year + index));
 };
 
-export const listRepertoireAdditions = (
-  repertoire: Pick<SongMetaDescriptor, "repertoireSince" | "tags">[],
+export const listRepertoireDates = (
+  repertoire: Pick<SongMetaDescriptor, RepertoireDateOption["field"] | "tags">[],
+  field: RepertoireDateOption["field"],
   today: NaiveDate,
 ): RepertoireAddition[] => {
   const debut = DebutDate.toString();
   const cutoff = today.toString();
-  return repertoire.flatMap(({ repertoireSince, tags }) =>
-    repertoireSince != undefined && debut <= repertoireSince && repertoireSince <= cutoff
-      ? [{ date: repertoireSince, tags }]
-      : [],
-  );
+  return repertoire.flatMap((song) => {
+    const date = song[field];
+    return date != undefined && debut <= date && date <= cutoff ? [{ date, tags: song.tags }] : [];
+  });
 };
 
 export const buildRepertoireHistoryData = (

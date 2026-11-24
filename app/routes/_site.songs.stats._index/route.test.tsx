@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createRoutesStub } from "react-router";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import * as SongStatsRoute from "./route.tsx";
@@ -9,10 +9,31 @@ vi.mock("~/features/songs/songs.ts", async () => {
 
   return {
     ALL_SONGS: [
-      { tags: [Repertoire, Original], repertoireSince: "2022-08-07" },
-      { tags: [Repertoire, Original], repertoireSince: "2023-08-06" },
-      { tags: [Repertoire, TakanekoVersion], repertoireSince: "2023-08-07" },
-      { tags: [Limited, TakanekoVersion], repertoireSince: "2023-08-07" },
+      {
+        tags: [Repertoire, Original],
+        repertoireSince: "2022-08-07",
+        videoRelease: "2023-06-01",
+        digitalRelease: "2024-02-01",
+        liveDebut: "2022-08-07",
+      },
+      {
+        tags: [Repertoire, Original],
+        repertoireSince: "2023-08-06",
+        videoRelease: "2023-06-02",
+        digitalRelease: "2025-02-01",
+        liveDebut: "2022-08-07",
+      },
+      {
+        tags: [Repertoire, TakanekoVersion],
+        repertoireSince: "2023-08-07",
+        digitalRelease: "2024-02-01",
+        liveDebut: "2022-08-07",
+      },
+      {
+        tags: [Limited, TakanekoVersion],
+        repertoireSince: "2023-08-07",
+        videoRelease: "2023-06-01",
+      },
       { tags: [Unperformed, Original] },
       {},
     ],
@@ -76,8 +97,41 @@ it("持ち歌になった日をもとに活動年・西暦ごとの内訳を切�
   expect(screen.getByRole("table", { name: "活動年ごとの持ち歌の追加数のデータ" })).toBeTruthy();
 });
 
-it("狭い画面でも密度グラフに活動年のラベルと区切りを表示する", async () => {
-  vi.setSystemTime(new Date("2026-11-23T00:30:00+09:00"));
+it.each([
+  { field: "videoRelease", name: "動画公開", row: "2023年 2 2 0" },
+  { field: "digitalRelease", name: "配信開始", row: "2024年 2 1 1" },
+  { field: "liveDebut", name: "ライブ初披露", row: "2022年 3 2 1" },
+])(
+  "$name の日付に切り替えると西暦表示のまま両方のグラフが更新される",
+  async ({ field, name, row }) => {
+    renderPage();
+
+    const select = await screen.findByRole("combobox", { name: "集計に使う日付" });
+    fireEvent.click(screen.getByRole("button", { name: "西暦" }));
+    fireEvent.change(select, { target: { value: field } });
+
+    const table = await screen.findByRole("table", { name: `西暦ごとの${name}曲数のデータ` });
+    expect(within(table).getByRole("row", { name: row })).toBeTruthy();
+    const figure = screen.getByRole("figure", { name: `${name}の密度グラフ` });
+    expect(within(figure).getByText("2022/08/07 ～ 2024/11/23")).toBeTruthy();
+  },
+);
+
+it("選択した日付に該当する曲がない場合は両方のグラフで空の状態を表示する", async () => {
+  vi.setSystemTime(new Date("2022-09-01T12:00:00+09:00"));
+  renderPage();
+
+  expect(await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" })).toBeTruthy();
+  const select = screen.getByRole("combobox", { name: "集計に使う日付" });
+  fireEvent.change(select, { target: { value: "videoRelease" } });
+
+  const history = await screen.findByRole("region", { name: "動画公開曲数" });
+  const density = screen.getByRole("region", { name: "動画公開の密度分布" });
+  expect(within(history).getByText("集計対象の楽曲はありません。")).toBeTruthy();
+  expect(within(density).getByText("集計対象の楽曲はありません。")).toBeTruthy();
+});
+
+const mockChartDimensions = () => {
   vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
     this: HTMLElement,
   ) {
@@ -86,6 +140,36 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
     }
     return new DOMRect(0, 0, 280, this.classList.contains("recharts-legend-wrapper") ? 24 : 320);
   });
+};
+
+const yAxisLabels = (figureName: string) =>
+  Array.from(
+    screen
+      .getByRole("figure", { name: figureName })
+      .querySelectorAll(".recharts-yAxis-tick-labels text"),
+    (tick) => tick.textContent,
+  );
+
+it("日付の基準を切り替えても、全件が収まる縦軸を両方のグラフで維持する", async () => {
+  mockChartDimensions();
+  renderPage();
+
+  const select = await screen.findByRole("combobox", { name: "集計に使う日付" });
+  const history = yAxisLabels("活動年ごとの持ち歌の追加数");
+  const density = yAxisLabels("持ち歌追加の密度グラフ");
+  expect(Number(history.at(-1))).toBeGreaterThanOrEqual(3);
+  expect(Number(density.at(-1))).toBeGreaterThanOrEqual(0.6);
+
+  fireEvent.change(select, { target: { value: "liveDebut" } });
+  await waitFor(() => {
+    expect(yAxisLabels("活動年ごとのライブ初披露曲数")).toEqual(history);
+    expect(yAxisLabels("ライブ初披露の密度グラフ")).toEqual(density);
+  });
+});
+
+it("狭い画面でも密度グラフに活動年のラベルと区切りを表示する", async () => {
+  vi.setSystemTime(new Date("2026-11-23T00:30:00+09:00"));
+  mockChartDimensions();
   renderPage();
 
   const section = await screen.findByRole("region", { name: "持ち歌追加の密度分布" });

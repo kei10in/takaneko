@@ -9,6 +9,7 @@ export interface RepertoireDensityPoint {
 }
 
 export const repertoireDensityBandwidthDays = 60;
+export const repertoireDensityDisplayDays = 30;
 const sampleIntervalDays = 3;
 const kernelScale = 1 / (repertoireDensityBandwidthDays * Math.sqrt(2 * Math.PI));
 

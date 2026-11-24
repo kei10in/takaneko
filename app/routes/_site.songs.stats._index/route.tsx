@@ -1,15 +1,22 @@
-import { MetaFunction, useLoaderData } from "react-router";
+import { HiChevronDown } from "react-icons/hi2";
+import { MetaFunction, useLoaderData, useSearchParams } from "react-router";
+import { calculateChartDimensions } from "~/components/charts/scale.ts";
+import { sumChartValues } from "~/components/charts/stackedBarChartData.ts";
 import { Statistic } from "~/components/Statistic.tsx";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { Repertoire } from "~/features/songs/tags.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { RepertoireDensity } from "./RepertoireDensity.tsx";
-import { buildRepertoireDensityData } from "./repertoireDensityData.ts";
+import {
+  buildRepertoireDensityData,
+  repertoireDensityDisplayDays,
+} from "./repertoireDensityData.ts";
 import { RepertoireHistory } from "./RepertoireHistory.tsx";
 import {
   buildRepertoireHistoryData,
-  listRepertoireAdditions,
+  listRepertoireDates,
+  repertoireDateOptions,
   repertoireSeries,
 } from "./repertoireHistoryData.ts";
 
@@ -23,7 +30,8 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = () => {
+export const loader = ({ request }: { request: Request }) => {
+  const field = new URL(request.url).searchParams.get("date");
   const repertoire = ALL_SONGS.filter((song) =>
     song.tags?.some((tag) => tag.key === Repertoire.key),
   );
@@ -32,18 +40,39 @@ export const loader = () => {
     count: repertoire.filter((song) => song.tags?.some((tag) => tag.key === category.key)).length,
   }));
   const today = NaiveDate.todayInJapan();
-  const additions = listRepertoireAdditions(repertoire, today);
+  const charts = repertoireDateOptions.map((dateBasis) => {
+    const dates = listRepertoireDates(repertoire, dateBasis.field, today);
+    return {
+      dateBasis,
+      history: buildRepertoireHistoryData(dates, today),
+      density: buildRepertoireDensityData(dates, today),
+    };
+  });
+  const selected = charts.find(({ dateBasis }) => dateBasis.field === field) ?? charts[0];
+  const historyMax = Math.max(
+    0,
+    ...charts.flatMap(({ history }) =>
+      [...history.career, ...history.calendar].map(({ values }) => sumChartValues(values) ?? 0),
+    ),
+  );
+  const densityMax = Math.max(
+    0,
+    ...charts.flatMap(({ density }) => density.map(({ values }) => sumChartValues(values) ?? 0)),
+  );
 
   return {
     total: repertoire.length,
     breakdown,
-    history: buildRepertoireHistoryData(additions, today),
-    density: buildRepertoireDensityData(additions, today),
+    ...selected,
+    historyScale: calculateChartDimensions(historyMax),
+    densityScale: calculateChartDimensions(densityMax * repertoireDensityDisplayDays),
   };
 };
 
 export default function Component() {
-  const { total, breakdown, history, density } = useLoaderData<typeof loader>();
+  const { total, breakdown, dateBasis, history, density, historyScale, densityScale } =
+    useLoaderData<typeof loader>();
+  const [, setSearchParams] = useSearchParams();
 
   return (
     <div className="container mx-auto lg:max-w-5xl">
@@ -73,17 +102,58 @@ export default function Component() {
             </div>
           </dl>
         </section>
-        <section aria-labelledby="repertoire-history-heading" className="mt-12 px-4">
+        <div className="mt-12 px-4">
+          <label className="flex flex-wrap items-center gap-3 text-sm text-zinc-600">
+            集計に使う日付
+            <span className="relative block shrink-0">
+              <select
+                value={dateBasis.field}
+                onChange={(event) => {
+                  const field = event.currentTarget.value;
+                  setSearchParams(
+                    (params) => {
+                      const next = new URLSearchParams(params);
+                      next.set("date", field);
+                      return next;
+                    },
+                    { preventScrollReset: true },
+                  );
+                }}
+                className="h-10 appearance-none rounded-full bg-zinc-100 pr-10 pl-4 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 forced-colors:appearance-auto"
+              >
+                {repertoireDateOptions.map(({ field, label }) => (
+                  <option key={field} value={field}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+              <HiChevronDown
+                aria-hidden="true"
+                className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-zinc-500 forced-colors:hidden"
+              />
+            </span>
+          </label>
+        </div>
+        <section aria-labelledby="repertoire-history-heading" className="mt-6 px-4">
           <h2 id="repertoire-history-heading" className="section-heading mb-4">
-            持ち歌追加数
+            {dateBasis.count}
           </h2>
-          <RepertoireHistory data={history} />
+          <RepertoireHistory
+            data={history}
+            countLabel={dateBasis.count}
+            yAxisScale={historyScale}
+          />
         </section>
         <section aria-labelledby="repertoire-density-heading" className="mt-12 px-4">
           <h2 id="repertoire-density-heading" className="section-heading mb-4">
-            持ち歌追加の密度分布
+            {dateBasis.activity}の密度分布
           </h2>
-          <RepertoireDensity data={density} />
+          <RepertoireDensity
+            key={dateBasis.field}
+            data={density}
+            dateBasis={dateBasis}
+            yAxisScale={densityScale}
+          />
         </section>
       </section>
     </div>
