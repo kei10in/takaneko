@@ -136,7 +136,7 @@ export default function Component() {
         </fieldset>
         <section aria-labelledby="repertoire-history-heading" className="mt-6 px-4">
           <h2 id="repertoire-history-heading" className="section-heading mb-4">
-            持ち歌の追加数
+            リリース数
           </h2>
           <RepertoireHistory
             data={history}
@@ -146,7 +146,7 @@ export default function Component() {
         </section>
         <section aria-labelledby="repertoire-density-heading" className="mt-12 px-4">
           <h2 id="repertoire-density-heading" className="section-heading mb-4">
-            持ち歌追加の密度分布
+            リリース密度
           </h2>
           <RepertoireDensity
             data={density}

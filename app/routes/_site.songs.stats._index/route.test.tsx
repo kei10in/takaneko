@@ -132,8 +132,8 @@ it.each([
 
     const table = await screen.findByRole("table", { name: `西暦ごとの${name}曲数のデータ` });
     expect(within(group).getByRole("radio", { name: option, checked: true })).toBeTruthy();
-    expect(screen.getByRole("heading", { level: 2, name: "持ち歌の追加数" })).toBeTruthy();
-    expect(screen.getByRole("heading", { level: 2, name: "持ち歌追加の密度分布" })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "リリース数" })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "リリース密度" })).toBeTruthy();
     expect(within(table).getByRole("row", { name: row })).toBeTruthy();
     expect(screen.getByRole("figure", { name: `${name}の密度グラフ` })).toBeTruthy();
     expect(screen.getAllByRole("figure", { name: /密度グラフ/u })).toHaveLength(1);
@@ -147,8 +147,8 @@ it("選択した日付に該当する曲がない場合は両方のグラフで�
   expect(await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" })).toBeTruthy();
   fireEvent.click(screen.getByRole("radio", { name: "動画" }));
 
-  const history = screen.getByRole("region", { name: "持ち歌の追加数" });
-  const density = screen.getByRole("region", { name: "持ち歌追加の密度分布" });
+  const history = screen.getByRole("region", { name: "リリース数" });
+  const density = screen.getByRole("region", { name: "リリース密度" });
   expect(await within(history).findByText("集計対象の楽曲はありません。")).toBeTruthy();
   expect(within(density).getByText("集計対象の楽曲はありません。")).toBeTruthy();
 });
@@ -258,7 +258,7 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
   mockChartDimensions();
   renderPage();
 
-  const section = await screen.findByRole("region", { name: "持ち歌追加の密度分布" });
+  const section = await screen.findByRole("region", { name: "リリース密度" });
   const figure = within(section).getByRole("figure");
   expect(within(figure).getByText("オリジナル楽曲")).toBeTruthy();
   expect(within(figure).getByText("たかねこ ver.")).toBeTruthy();
@@ -313,7 +313,7 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
 it("密度グラフの下に集計方法や期間の説明を表示しない", async () => {
   renderPage();
 
-  const section = await screen.findByRole("region", { name: "持ち歌追加の密度分布" });
+  const section = await screen.findByRole("region", { name: "リリース密度" });
   expect(
     within(section).queryAllByText(/を月ごとに集計|平滑化幅|年\d+月 ～ \d+年|活動年の区切りは/u),
   ).toHaveLength(0);
