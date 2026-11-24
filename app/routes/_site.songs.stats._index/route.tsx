@@ -8,10 +8,7 @@ import { Repertoire } from "~/features/songs/tags.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { RepertoireDensity } from "./RepertoireDensity.tsx";
-import {
-  buildRepertoireDensityData,
-  repertoireDensityDisplayDays,
-} from "./repertoireDensityData.ts";
+import { buildRepertoireDensityData } from "./repertoireDensityData.ts";
 import { RepertoireHistory } from "./RepertoireHistory.tsx";
 import {
   buildRepertoireHistoryData,
@@ -45,7 +42,7 @@ export const loader = ({ request }: { request: Request }) => {
     return {
       dateBasis,
       history: buildRepertoireHistoryData(dates, today),
-      density: buildRepertoireDensityData(dates, today),
+      density: buildRepertoireDensityData(dates, today.naiveMonth()),
     };
   });
   const selected = charts.find(({ dateBasis }) => dateBasis.field === field) ?? charts[0];
@@ -65,7 +62,7 @@ export const loader = ({ request }: { request: Request }) => {
     breakdown,
     ...selected,
     historyScale: calculateChartDimensions(historyMax),
-    densityScale: calculateChartDimensions(densityMax * repertoireDensityDisplayDays),
+    densityScale: calculateChartDimensions(densityMax),
   };
 };
 

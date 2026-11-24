@@ -6,15 +6,12 @@ import {
   Legend,
   ReferenceLine,
   ResponsiveContainer,
-  Tooltip,
   XAxis,
   YAxis,
   ZIndexLayer,
   usePlotArea,
   useXAxisScale,
-  type TooltipContentProps,
 } from "recharts";
-import { ChartTooltip } from "~/components/charts/ChartTooltip.tsx";
 import {
   verticalChartGridProps,
   verticalChartHeight,
@@ -23,54 +20,22 @@ import {
   verticalChartXAxisProps,
   verticalChartYAxisProps,
 } from "~/components/charts/verticalChartStyle.ts";
-import { DebutDate } from "~/constants.ts";
-import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
+import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
 import {
-  repertoireDensityDisplayDays as displayDays,
-  repertoireDensityBandwidthDays,
+  repertoireDensityBandwidthMonths,
+  repertoireDensityStartMonth,
   type RepertoireDensityPoint,
 } from "./repertoireDensityData.ts";
-import {
-  listCareerYearStarts,
-  repertoireSeries,
-  type RepertoireDateOption,
-} from "./repertoireHistoryData.ts";
+import { repertoireSeries, type RepertoireDateOption } from "./repertoireHistoryData.ts";
 
 const calendarTickSize = 6;
 const careerAxisHeight = 20;
 
-const formatDate = (value: number) =>
-  NaiveDate.fromTimeAsUTC(value).toString().replaceAll("-", "/");
+const formatMonth = ({ year, month }: NaiveMonth) => `${year}年${month}月`;
 
-const formatRate = (value: number) =>
-  (value * displayDays).toLocaleString("ja-JP", { maximumFractionDigits: 2 });
+const formatRate = (value: number) => value.toLocaleString("ja-JP", { maximumFractionDigits: 2 });
 
-const RepertoireDensityTooltip = ({
-  active,
-  label,
-  payload = [],
-}: Partial<TooltipContentProps>) => {
-  if (!active || payload.length === 0 || typeof label !== "number") {
-    return undefined;
-  }
-
-  return (
-    <ChartTooltip
-      title={formatDate(label)}
-      entries={repertoireSeries.map(({ category, color }, index) => {
-        const value = payload.find((entry) => entry.dataKey === `values[${index}]`)?.value;
-        return {
-          label: category.name,
-          color,
-          value:
-            typeof value === "number" ? `${formatRate(value)} 曲 / ${displayDays}日` : "データなし",
-        };
-      })}
-    />
-  );
-};
-
-const CalendarYearMarks = ({ dates }: { dates: number[] }) => {
+const CalendarYearMarks = ({ monthOffsets }: { monthOffsets: number[] }) => {
   const plot = usePlotArea();
   const scale = useXAxisScale();
   if (plot == undefined || scale == undefined) {
@@ -81,9 +46,9 @@ const CalendarYearMarks = ({ dates }: { dates: number[] }) => {
   return (
     <ZIndexLayer zIndex={DefaultZIndexes.axis}>
       <g aria-hidden="true" pointerEvents="none" stroke="var(--color-zinc-500)">
-        {dates.map((date) => {
-          const x = scale(date);
-          return <line key={date} x1={x} x2={x} y1={axisY} y2={axisY - calendarTickSize} />;
+        {monthOffsets.map((offset) => {
+          const x = scale(offset);
+          return <line key={offset} x1={x} x2={x} y1={axisY} y2={axisY - calendarTickSize} />;
         })}
       </g>
     </ZIndexLayer>
@@ -105,20 +70,23 @@ export const RepertoireDensity = ({
     return <p>集計対象の楽曲はありません。</p>;
   }
 
-  const startYear = NaiveDate.fromTimeAsUTC(first.date).year;
-  const end = NaiveDate.fromTimeAsUTC(last.date);
-  const calendarYearStarts = Array.from({ length: end.year - startYear }, (_, index) =>
-    Date.UTC(startYear + index + 1, 0, 1),
+  const startMonth = repertoireDensityStartMonth.advance(first.monthOffset);
+  const endMonth = repertoireDensityStartMonth.advance(last.monthOffset);
+  const calendarYearStarts = Array.from({ length: endMonth.year - startMonth.year }, (_, index) =>
+    new NaiveMonth(startMonth.year + index + 1, 1).differenceInMonths(repertoireDensityStartMonth),
   );
-  const careerYearStarts = listCareerYearStarts(end).map((start) => start.getTimeAsUTC());
-  const careerYearTicks = careerYearStarts.map((start, index) => {
-    const periodEnd = careerYearStarts[index + 1] ?? last.date;
-    return (start + periodEnd) / 2;
+  const careerYearStarts = Array.from(
+    { length: Math.floor(last.monthOffset / 12) + 1 },
+    (_, index) => index * 12,
+  );
+  const careerYearTicks = careerYearStarts.map((offset, index) => {
+    const periodEnd = careerYearStarts[index + 1] ?? last.monthOffset;
+    return (offset + periodEnd) / 2;
   });
   const { limit, step } = yAxisScale;
   const densityTicks = Array.from(
     { length: Math.round(limit / step) + 1 },
-    (_, index) => (index * step) / displayDays,
+    (_, index) => index * step,
   );
 
   return (
@@ -130,24 +98,26 @@ export const RepertoireDensity = ({
       >
         <AreaChart data={data} margin={verticalChartMargin} accessibilityLayer>
           <CartesianGrid {...verticalChartGridProps} />
-          <CalendarYearMarks dates={calendarYearStarts} />
+          <CalendarYearMarks monthOffsets={calendarYearStarts} />
           <XAxis
             {...verticalChartXAxisProps}
-            dataKey="date"
+            dataKey="monthOffset"
             type="number"
-            domain={[first.date, last.date]}
-            ticks={[first.date, ...calendarYearStarts]}
-            tickFormatter={(date: number) => `${NaiveDate.fromTimeAsUTC(date).year}年`}
+            domain={[first.monthOffset, last.monthOffset]}
+            ticks={[first.monthOffset, ...calendarYearStarts]}
+            tickFormatter={(offset: number) =>
+              `${repertoireDensityStartMonth.advance(offset).year}年`
+            }
             tickSize={calendarTickSize}
           />
           <XAxis
             xAxisId="career-year"
-            dataKey="date"
+            dataKey="monthOffset"
             type="number"
             orientation="top"
-            domain={[first.date, last.date]}
+            domain={[first.monthOffset, last.monthOffset]}
             ticks={careerYearTicks}
-            tickFormatter={(date: number) => `${careerYearTicks.indexOf(date) + 1}年目`}
+            tickFormatter={(offset: number) => `${careerYearTicks.indexOf(offset) + 1}年目`}
             height={careerAxisHeight}
             interval="preserveStartEnd"
             minTickGap={4}
@@ -158,15 +128,10 @@ export const RepertoireDensity = ({
           <YAxis
             {...verticalChartYAxisProps}
             type="number"
-            domain={[0, limit / displayDays]}
+            domain={[0, limit]}
             ticks={densityTicks}
             allowDataOverflow
             tickFormatter={formatRate}
-          />
-          <Tooltip
-            content={<RepertoireDensityTooltip />}
-            cursor={{ stroke: "var(--color-zinc-300)" }}
-            isAnimationActive={false}
           />
           {repertoireSeries.map(({ category, color }, index) => (
             <Area
@@ -195,16 +160,17 @@ export const RepertoireDensity = ({
         </AreaChart>
       </ResponsiveContainer>
       <figcaption className="space-y-1 text-sm text-zinc-600">
-        <p>{dateBasis.label}をその月の1日に丸めて、曲数の変化を推定しています。</p>
+        <p>{dateBasis.label}を月ごとに集計し、曲数の変化を推定しています。</p>
         <p>
-          平滑化幅{repertoireDensityBandwidthDays}日。縦軸は{displayDays}
-          日あたりの推定{dateBasis.rate}です。
+          平滑化幅{repertoireDensityBandwidthMonths}か月。縦軸は1か月あたりの推定{dateBasis.rate}
+          です。
         </p>
         <p>
-          {formatDate(first.date)} ～ {formatDate(last.date)}
+          {formatMonth(startMonth)} ～ {formatMonth(endMonth)}
         </p>
         <p>
-          活動年は毎年{DebutDate.month}月{DebutDate.day}日が区切りです。
+          活動年の区切りは、デビュー月と同じ毎年{repertoireDensityStartMonth.month}
+          月に表示しています。
         </p>
       </figcaption>
     </figure>

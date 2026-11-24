@@ -123,8 +123,8 @@ it.each([
     const table = await screen.findByRole("table", { name: `西暦ごとの${name}曲数のデータ` });
     expect(within(table).getByRole("row", { name: row })).toBeTruthy();
     const figure = screen.getByRole("figure", { name: `${name}の密度グラフ` });
-    expect(within(figure).getByText("2022/08/07 ～ 2024/11/23")).toBeTruthy();
-    expect(within(figure).getByText(/その月の1日に丸め/u)).toBeTruthy();
+    expect(within(figure).getByText("2022年8月 ～ 2024年11月")).toBeTruthy();
+    expect(within(figure).getByText(/を月ごとに集計/u)).toBeTruthy();
     expect(screen.getAllByRole("figure", { name: /密度グラフ/u })).toHaveLength(1);
   },
 );
@@ -252,9 +252,9 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
 
   const section = await screen.findByRole("region", { name: "持ち歌追加の密度分布" });
   const figure = within(section).getByRole("figure");
-  expect(within(figure).getByText(/平滑化幅60日/u)).toBeTruthy();
-  expect(within(figure).getByText(/30日あたりの推定追加曲数/u)).toBeTruthy();
-  expect(within(figure).getByText("2022/08/07 ～ 2026/11/23")).toBeTruthy();
+  expect(within(figure).getByText(/平滑化幅2か月/u)).toBeTruthy();
+  expect(within(figure).getByText(/1か月あたりの推定追加曲数/u)).toBeTruthy();
+  expect(within(figure).getByText("2022年8月 ～ 2026年11月")).toBeTruthy();
   expect(within(figure).getByText("オリジナル楽曲")).toBeTruthy();
   expect(within(figure).getByText("たかねこ ver.")).toBeTruthy();
   ["1年目", "2年目", "3年目", "4年目", "5年目"].forEach((label) => {
@@ -298,9 +298,5 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
   });
 
   fireEvent.keyDown(within(figure).getByRole("application"), { key: "ArrowRight" });
-  const tooltip = await within(figure).findByRole("tooltip");
-  expect(within(tooltip).getByText("2022/08/07")).toBeTruthy();
-  expect(within(tooltip).getByText("オリジナル楽曲")).toBeTruthy();
-  expect(within(tooltip).getByText("たかねこ ver.")).toBeTruthy();
-  expect(within(tooltip).getAllByText(/曲 \/ 30日/u)).toHaveLength(2);
+  expect(within(figure).queryByRole("tooltip")).toBeNull();
 });
