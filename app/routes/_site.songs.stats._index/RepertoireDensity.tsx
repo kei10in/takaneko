@@ -25,7 +25,7 @@ import {
   repertoireDensityStartMonth,
   type RepertoireDensityPoint,
 } from "./repertoireDensityData.ts";
-import { repertoireSeries, type RepertoireDateOption } from "./repertoireHistoryData.ts";
+import { repertoireSeries } from "./repertoireHistoryData.ts";
 
 const calendarTickSize = 6;
 const careerAxisHeight = 20;
@@ -54,11 +54,11 @@ const CalendarYearMarks = ({ monthOffsets }: { monthOffsets: number[] }) => {
 
 export const RepertoireDensity = ({
   data,
-  dateBasis,
+  chartName,
   yAxisScale,
 }: {
   data: RepertoireDensityPoint[];
-  dateBasis: RepertoireDateOption;
+  chartName: string;
   yAxisScale: { limit: number; step: number };
 }) => {
   const first = data[0];
@@ -87,7 +87,7 @@ export const RepertoireDensity = ({
   );
 
   return (
-    <figure aria-label={`${dateBasis.activity}の密度グラフ`} className="w-full min-w-0">
+    <figure aria-label={chartName} className="w-full min-w-0">
       <ResponsiveContainer
         width="100%"
         minWidth={0}

@@ -24,7 +24,10 @@ it("活動年と西暦の積み上げ最大値が異なっても、Y軸の目盛
   });
   render(
     <RepertoireHistory
-      countLabel="持ち歌の追加数"
+      chartNames={{
+        career: "活動年ごとの持ち歌の追加数",
+        calendar: "西暦ごとの持ち歌の追加数",
+      }}
       yAxisScale={{ limit: 30, step: 5 }}
       data={{
         career: [{ label: "1年目", values: [10, 2] }],

@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { StackedBarChart } from "~/components/charts/StackedBarChart.tsx";
 import { YearBasisToggle, type YearBasis } from "~/components/YearBasisToggle.tsx";
+import type { RepertoireHistoryChartNames } from "./repertoireDateOptions.ts";
 import { repertoireSeries, type RepertoireHistoryData } from "./repertoireHistoryData.ts";
 
 const stacks = repertoireSeries.map(({ category, color }) => ({ label: category.name, color }));
 
 export const RepertoireHistory = ({
   data,
-  countLabel,
+  chartNames,
   yAxisScale,
 }: {
   data: RepertoireHistoryData;
-  countLabel: string;
+  chartNames: RepertoireHistoryChartNames;
   yAxisScale: { limit: number; step: number };
 }) => {
   const [basis, setBasis] = useState<YearBasis>("career");
@@ -27,7 +28,7 @@ export const RepertoireHistory = ({
       <StackedBarChart
         data={data[basis]}
         stacks={stacks}
-        name={`${basis === "career" ? "活動年" : "西暦"}ごとの${countLabel}`}
+        name={chartNames[basis]}
         xAxisLabel={basis === "career" ? "活動年" : "西暦"}
         yAxisLabel="曲数"
         yAxisScale={yAxisScale}

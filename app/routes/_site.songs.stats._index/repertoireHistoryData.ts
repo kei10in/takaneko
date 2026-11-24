@@ -9,39 +9,14 @@ export const repertoireSeries = [
   { category: TakanekoVersion, color: "var(--color-nadeshiko-500)" },
 ];
 
-export const repertoireDateOptions = [
-  {
-    field: "repertoireSince",
-    shortLabel: "初出",
-    activity: "持ち歌追加",
-    count: "持ち歌の追加数",
-  },
-  {
-    field: "liveDebut",
-    shortLabel: "ライブ",
-    activity: "ライブ初披露",
-    count: "ライブ初披露曲数",
-  },
-  {
-    field: "digitalRelease",
-    shortLabel: "配信",
-    activity: "配信開始",
-    count: "配信開始曲数",
-  },
-  {
-    field: "videoRelease",
-    shortLabel: "動画",
-    activity: "動画公開",
-    count: "動画公開曲数",
-  },
-] satisfies {
-  field: keyof SongMetaDescriptor;
-  shortLabel: string;
-  activity: string;
-  count: string;
-}[];
+export const repertoireDateFields = [
+  "repertoireSince",
+  "liveDebut",
+  "digitalRelease",
+  "videoRelease",
+] as const satisfies readonly (keyof SongMetaDescriptor)[];
 
-export type RepertoireDateOption = (typeof repertoireDateOptions)[number];
+export type RepertoireDateField = (typeof repertoireDateFields)[number];
 
 export interface RepertoireHistoryData {
   career: ChartRow[];
@@ -62,8 +37,8 @@ export const listCareerYearStarts = (today: NaiveDate): NaiveDate[] => {
 };
 
 export const listRepertoireDates = (
-  repertoire: Pick<SongMetaDescriptor, RepertoireDateOption["field"] | "tags">[],
-  field: RepertoireDateOption["field"],
+  repertoire: Pick<SongMetaDescriptor, RepertoireDateField | "tags">[],
+  field: RepertoireDateField,
   today: NaiveDate,
 ): RepertoireAddition[] => {
   const debut = DebutDate.toString();

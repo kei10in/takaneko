@@ -6,14 +6,16 @@ import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { Repertoire } from "~/features/songs/tags.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
+import { repertoireDateOptions, type RepertoireDateOption } from "./repertoireDateOptions.ts";
 import { RepertoireDensity } from "./RepertoireDensity.tsx";
 import { buildRepertoireDensityData } from "./repertoireDensityData.ts";
 import { RepertoireHistory } from "./RepertoireHistory.tsx";
 import {
   buildRepertoireHistoryData,
   listRepertoireDates,
-  repertoireDateOptions,
+  repertoireDateFields,
   repertoireSeries,
+  type RepertoireDateField,
 } from "./repertoireHistoryData.ts";
 
 export const meta: MetaFunction = () => {
@@ -36,15 +38,15 @@ export const loader = ({ request }: { request: Request }) => {
     count: repertoire.filter((song) => song.tags?.some((tag) => tag.key === category.key)).length,
   }));
   const today = NaiveDate.todayInJapan();
-  const charts = repertoireDateOptions.map((dateBasis) => {
-    const dates = listRepertoireDates(repertoire, dateBasis.field, today);
+  const charts = repertoireDateFields.map((dateField: RepertoireDateField) => {
+    const dates = listRepertoireDates(repertoire, dateField, today);
     return {
-      dateBasis,
+      dateField,
       history: buildRepertoireHistoryData(dates, today),
       density: buildRepertoireDensityData(dates, today.naiveMonth()),
     };
   });
-  const selected = charts.find(({ dateBasis }) => dateBasis.field === field) ?? charts[0];
+  const selected = charts.find(({ dateField }) => dateField === field) ?? charts[0];
   const historyMax = Math.max(
     0,
     ...charts.flatMap(({ history }) =>
@@ -66,11 +68,12 @@ export const loader = ({ request }: { request: Request }) => {
 };
 
 export default function Component() {
-  const { total, breakdown, dateBasis, history, density, historyScale, densityScale } =
+  const { total, breakdown, dateField, history, density, historyScale, densityScale } =
     useLoaderData<typeof loader>();
+  const dateOption: RepertoireDateOption = repertoireDateOptions[dateField];
   const [, setSearchParams] = useSearchParams();
 
-  const selectDate = (field: typeof dateBasis.field) => {
+  const selectDate = (field: RepertoireDateField) => {
     setSearchParams(
       (params) => {
         const next = new URLSearchParams(params);
@@ -112,21 +115,21 @@ export default function Component() {
         <fieldset className="mt-10 min-w-0">
           <legend className="sr-only">集計に使う日付</legend>
           <div className="hidden-scrollbar pill-tab-list py-2">
-            {repertoireDateOptions.map(({ field, shortLabel }) => (
+            {repertoireDateFields.map((field: RepertoireDateField) => (
               <label
                 key={field}
-                data-active={dateBasis.field === field ? "" : undefined}
+                data-active={dateField === field ? "" : undefined}
                 className="pill-tab relative cursor-pointer has-focus-visible:outline-2 has-focus-visible:-outline-offset-2 has-focus-visible:outline-nadeshiko-600"
               >
                 <input
                   type="radio"
                   name="song-stats-date"
                   value={field}
-                  checked={dateBasis.field === field}
+                  checked={dateField === field}
                   onChange={() => selectDate(field)}
                   className="sr-only"
                 />
-                <span className="pill-tab-label">{shortLabel}</span>
+                <span className="pill-tab-label">{repertoireDateOptions[field].displayName}</span>
               </label>
             ))}
           </div>
@@ -137,7 +140,7 @@ export default function Component() {
           </h2>
           <RepertoireHistory
             data={history}
-            countLabel={dateBasis.count}
+            chartNames={dateOption.historyChartNames}
             yAxisScale={historyScale}
           />
         </section>
@@ -145,7 +148,11 @@ export default function Component() {
           <h2 id="repertoire-density-heading" className="section-heading mb-4">
             持ち歌追加の密度分布
           </h2>
-          <RepertoireDensity data={density} dateBasis={dateBasis} yAxisScale={densityScale} />
+          <RepertoireDensity
+            data={density}
+            chartName={dateOption.densityChartName}
+            yAxisScale={densityScale}
+          />
         </section>
       </section>
     </div>
