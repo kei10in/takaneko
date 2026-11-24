@@ -13,34 +13,39 @@ export const repertoireDateOptions = [
   {
     field: "repertoireSince",
     label: "持ち歌になった日",
+    shortLabel: "初出",
     activity: "持ち歌追加",
     count: "持ち歌の追加数",
     rate: "追加曲数",
   },
   {
-    field: "videoRelease",
-    label: "動画公開日",
-    activity: "動画公開",
-    count: "動画公開曲数",
-    rate: "公開曲数",
+    field: "liveDebut",
+    label: "ライブ初披露日",
+    shortLabel: "ライブ",
+    activity: "ライブ初披露",
+    count: "ライブ初披露曲数",
+    rate: "初披露曲数",
   },
   {
     field: "digitalRelease",
     label: "配信開始日",
+    shortLabel: "配信",
     activity: "配信開始",
     count: "配信開始曲数",
     rate: "配信開始曲数",
   },
   {
-    field: "liveDebut",
-    label: "ライブ初披露日",
-    activity: "ライブ初披露",
-    count: "ライブ初披露曲数",
-    rate: "初披露曲数",
+    field: "videoRelease",
+    label: "動画公開日",
+    shortLabel: "動画",
+    activity: "動画公開",
+    count: "動画公開曲数",
+    rate: "公開曲数",
   },
 ] satisfies {
   field: keyof SongMetaDescriptor;
   label: string;
+  shortLabel: string;
   activity: string;
   count: string;
   rate: string;

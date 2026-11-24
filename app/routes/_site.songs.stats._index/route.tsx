@@ -1,4 +1,3 @@
-import { HiChevronDown } from "react-icons/hi2";
 import { MetaFunction, useLoaderData, useSearchParams } from "react-router";
 import { calculateChartDimensions } from "~/components/charts/scale.ts";
 import { sumChartValues } from "~/components/charts/stackedBarChartData.ts";
@@ -71,6 +70,17 @@ export default function Component() {
     useLoaderData<typeof loader>();
   const [, setSearchParams] = useSearchParams();
 
+  const selectDate = (field: typeof dateBasis.field) => {
+    setSearchParams(
+      (params) => {
+        const next = new URLSearchParams(params);
+        next.set("date", field);
+        return next;
+      },
+      { preventScrollReset: true },
+    );
+  };
+
   return (
     <div className="container mx-auto lg:max-w-5xl">
       <section className="page-box">
@@ -99,38 +109,28 @@ export default function Component() {
             </div>
           </dl>
         </section>
-        <div className="mt-12 px-4">
-          <label className="flex flex-wrap items-center gap-3 text-sm text-zinc-600">
-            集計に使う日付
-            <span className="relative block shrink-0">
-              <select
-                value={dateBasis.field}
-                onChange={(event) => {
-                  const field = event.currentTarget.value;
-                  setSearchParams(
-                    (params) => {
-                      const next = new URLSearchParams(params);
-                      next.set("date", field);
-                      return next;
-                    },
-                    { preventScrollReset: true },
-                  );
-                }}
-                className="h-10 appearance-none rounded-full bg-zinc-100 pr-10 pl-4 text-sm font-medium text-zinc-800 transition-colors hover:bg-zinc-200/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nadeshiko-600 forced-colors:appearance-auto"
+        <fieldset className="mt-10 min-w-0">
+          <legend className="sr-only">集計に使う日付</legend>
+          <div className="hidden-scrollbar pill-tab-list py-2">
+            {repertoireDateOptions.map(({ field, shortLabel }) => (
+              <label
+                key={field}
+                data-active={dateBasis.field === field ? "" : undefined}
+                className="pill-tab relative cursor-pointer has-focus-visible:outline-2 has-focus-visible:-outline-offset-2 has-focus-visible:outline-nadeshiko-600"
               >
-                {repertoireDateOptions.map(({ field, label }) => (
-                  <option key={field} value={field}>
-                    {label}
-                  </option>
-                ))}
-              </select>
-              <HiChevronDown
-                aria-hidden="true"
-                className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-zinc-500 forced-colors:hidden"
-              />
-            </span>
-          </label>
-        </div>
+                <input
+                  type="radio"
+                  name="song-stats-date"
+                  value={field}
+                  checked={dateBasis.field === field}
+                  onChange={() => selectDate(field)}
+                  className="sr-only"
+                />
+                <span className="pill-tab-label">{shortLabel}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
         <section aria-labelledby="repertoire-history-heading" className="mt-6 px-4">
           <h2 id="repertoire-history-heading" className="section-heading mb-4">
             {dateBasis.count}
