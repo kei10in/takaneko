@@ -88,6 +88,9 @@ export default function Component() {
     <div className="container mx-auto lg:max-w-5xl">
       <section className="page-box">
         <h1 className="page-heading px-4">楽曲統計</h1>
+        <p className="page-description mt-2 px-4">
+          楽曲のリリース状況に関する統計を確認できます。
+        </p>{" "}
         <section aria-labelledby="summary-heading" className="mt-8 space-y-5 px-4">
           <h2 id="summary-heading" className="section-heading">
             サマリー

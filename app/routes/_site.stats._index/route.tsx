@@ -24,6 +24,7 @@ const items = [
   },
   {
     title: "楽曲統計",
+    description: "楽曲のリリース状況に関する統計を確認できます。",
     url: "/songs/stats",
   },
   {
