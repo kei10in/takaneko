@@ -148,12 +148,7 @@ export default function Component() {
           <h2 id="repertoire-density-heading" className="section-heading mb-4">
             {dateBasis.activity}の密度分布
           </h2>
-          <RepertoireDensity
-            key={dateBasis.field}
-            data={density}
-            dateBasis={dateBasis}
-            yAxisScale={densityScale}
-          />
+          <RepertoireDensity data={density} dateBasis={dateBasis} yAxisScale={densityScale} />
         </section>
       </section>
     </div>

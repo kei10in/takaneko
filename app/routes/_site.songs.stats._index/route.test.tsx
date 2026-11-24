@@ -1,5 +1,15 @@
-import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  within,
+  type RenderOptions,
+} from "@testing-library/react";
 import { createRoutesStub } from "react-router";
+import { AnimationControllerProvider, type AnimationController } from "recharts";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
 import * as SongStatsRoute from "./route.tsx";
 
@@ -51,11 +61,11 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-const renderPage = () => {
+const renderPage = (wrapper?: RenderOptions["wrapper"]) => {
   const Stub = createRoutesStub([
     { ...SongStatsRoute, path: "/songs/stats", Component: SongStatsRoute.default },
   ]);
-  render(<Stub initialEntries={["/songs/stats"]} />);
+  render(<Stub initialEntries={["/songs/stats"]} />, { wrapper });
 };
 
 it("持ち歌の総数と、オリジナル楽曲・たかねこ ver. の内訳を表示する", async () => {
@@ -149,6 +159,72 @@ const yAxisLabels = (figureName: string) =>
       .querySelectorAll(".recharts-yAxis-tick-labels text"),
     (tick) => tick.textContent,
   );
+
+const firstAreaY = (figure: HTMLElement) =>
+  Number(
+    figure
+      .querySelector(".recharts-area-area")
+      ?.getAttribute("d")
+      ?.match(/^M[^,]+,([\d.]+)/u)?.[1],
+  );
+
+it("密度グラフは初回に徐々に現れ、日付の切り替えでは描画済みの面から変形する", async () => {
+  mockChartDimensions();
+  const frames = new Set<(progress: number) => void>();
+  const controller: AnimationController = (_, animation, listener) => {
+    const frame = (progress: number) => {
+      animation.tick(0);
+      animation.tick(animation.getAnimationDuration() * progress);
+      listener(progress);
+      if (progress === 1) {
+        animation.complete();
+      }
+    };
+    frames.add(frame);
+    return () => frames.delete(frame);
+  };
+  renderPage(({ children }) => (
+    <AnimationControllerProvider value={controller}>{children}</AnimationControllerProvider>
+  ));
+
+  const expectReveal = (figure: HTMLElement) => {
+    const revealedWidth = () => {
+      const clipPath = figure
+        .querySelector(".recharts-area-area")
+        ?.parentElement?.getAttribute("clip-path");
+      const id = clipPath?.match(/^url\(#(.+)\)$/u)?.[1];
+      return Number(
+        id == undefined
+          ? undefined
+          : document.getElementById(id)?.querySelector("rect")?.getAttribute("width"),
+      );
+    };
+    expect(revealedWidth()).toBe(0);
+    act(() => frames.forEach((frame) => frame(0.5)));
+    expect(revealedWidth()).toBeGreaterThan(0);
+    act(() => frames.forEach((frame) => frame(1)));
+  };
+
+  const originalFigure = await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" });
+  expectReveal(originalFigure);
+  const originalY = firstAreaY(originalFigure);
+
+  fireEvent.change(screen.getByRole("combobox", { name: "集計に使う日付" }), {
+    target: { value: "liveDebut" },
+  });
+  const updatedFigure = await screen.findByRole("figure", { name: "ライブ初披露の密度グラフ" });
+  expect(firstAreaY(updatedFigure)).toBeCloseTo(originalY);
+  expect(
+    updatedFigure.querySelector(".recharts-area-area")?.parentElement?.hasAttribute("clip-path"),
+  ).toBe(false);
+
+  act(() => frames.forEach((frame) => frame(0.5)));
+  const intermediateY = firstAreaY(updatedFigure);
+  expect(intermediateY).toBeLessThan(originalY);
+
+  act(() => frames.forEach((frame) => frame(1)));
+  expect(firstAreaY(updatedFigure)).toBeLessThan(intermediateY);
+});
 
 it("日付の基準を切り替えても、全件が収まる縦軸を両方のグラフで維持する", async () => {
   mockChartDimensions();

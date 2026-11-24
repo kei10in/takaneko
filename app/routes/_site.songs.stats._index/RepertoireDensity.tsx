@@ -180,7 +180,6 @@ export const RepertoireDensity = ({
               fill={color}
               fillOpacity={0.6}
               dot={data.length === 1}
-              isAnimationActive={false}
             />
           ))}
           {careerYearStarts.slice(1).map((start) => (
