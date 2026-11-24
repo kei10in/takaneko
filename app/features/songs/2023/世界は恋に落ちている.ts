@@ -11,7 +11,7 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
 
   choreographedBy: "籾山ひめり",
 
-  videoRelease: undefined,
+  videoRelease: "2026-03-15",
   digitalRelease: "2026-03-05",
   liveDebut: "2023-11-19",
   repertoireSince: "2026-02-14",
