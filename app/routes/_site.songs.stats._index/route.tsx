@@ -113,7 +113,7 @@ export default function Component() {
           </dl>
         </section>
         <fieldset className="mt-10 min-w-0">
-          <legend className="sr-only">集計に使う日付</legend>
+          <legend className="sr-only">リリース日として扱う日付</legend>
           <div className="hidden-scrollbar pill-tab-list py-2">
             {repertoireDateFields.map((field: RepertoireDateField) => (
               <label
@@ -134,7 +134,8 @@ export default function Component() {
             ))}
           </div>
         </fieldset>
-        <section aria-labelledby="repertoire-history-heading" className="mt-6 px-4">
+        <p className="line-clamp-2 min-h-[2lh] px-6 text-zinc-500">{dateOption.description}</p>
+        <section aria-labelledby="repertoire-history-heading" className="mt-8 px-4">
           <h2 id="repertoire-history-heading" className="section-heading mb-4">
             リリース数
           </h2>
