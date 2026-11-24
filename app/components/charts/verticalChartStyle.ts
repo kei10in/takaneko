@@ -1,7 +1,7 @@
 import type { LegendProps, XAxisProps, YAxisProps } from "recharts";
 
 export const verticalChartHeight = 320;
-export const verticalChartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
+export const verticalChartMargin = { top: 10, right: 12, bottom: 0, left: 0 };
 
 export const verticalChartGridProps = {
   vertical: false,
