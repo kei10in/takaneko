@@ -10,8 +10,17 @@ export interface RepertoireDensityPoint {
 
 export const repertoireDensityBandwidthDays = 60;
 export const repertoireDensityDisplayDays = 30;
-const sampleIntervalDays = 3;
 const kernelScale = 1 / (repertoireDensityBandwidthDays * Math.sqrt(2 * Math.PI));
+
+const monthlySampleDays = (today: NaiveDate, duration: number): number[] => {
+  const debutMonth = DebutDate.naiveMonth();
+  const monthStarts = Array.from(
+    { length: today.naiveMonth().differenceInMonths(debutMonth) },
+    (_, index) =>
+      NaiveDate.firstDateOfMonth(debutMonth.advance(index + 1)).differenceInDays(DebutDate),
+  );
+  return [...new Set([0, ...monthStarts, duration])];
+};
 
 export const buildRepertoireDensityData = (
   additions: RepertoireAddition[],
@@ -25,10 +34,12 @@ export const buildRepertoireDensityData = (
   const offsetsByCategory = repertoireSeries.map(({ category }) =>
     additions
       .filter(({ tags }) => tags?.some((tag) => tag.key === category.key))
-      .map(({ date }) => NaiveDate.parseUnsafe(date).differenceInDays(DebutDate)),
+      .map(({ date }) => {
+        const day = NaiveDate.parseUnsafe(date);
+        return NaiveDate.firstDateOfMonth(day.naiveMonth()).differenceInDays(DebutDate);
+      }),
   );
-  return Array.from({ length: Math.ceil(duration / sampleIntervalDays) + 1 }, (_, index) => {
-    const day = Math.min(index * sampleIntervalDays, duration);
+  return monthlySampleDays(today, duration).map((day) => {
     const values = offsetsByCategory.map((offsets) =>
       offsets.reduce((sum, offset) => {
         const distance = (day - offset) / repertoireDensityBandwidthDays;

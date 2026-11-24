@@ -124,6 +124,8 @@ it.each([
     expect(within(table).getByRole("row", { name: row })).toBeTruthy();
     const figure = screen.getByRole("figure", { name: `${name}の密度グラフ` });
     expect(within(figure).getByText("2022/08/07 ～ 2024/11/23")).toBeTruthy();
+    expect(within(figure).getByText(/その月の1日に丸め/u)).toBeTruthy();
+    expect(screen.getAllByRole("figure", { name: /密度グラフ/u })).toHaveLength(1);
   },
 );
 

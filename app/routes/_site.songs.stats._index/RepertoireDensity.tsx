@@ -173,7 +173,7 @@ export const RepertoireDensity = ({
               key={category.key}
               dataKey={`values[${index}]`}
               stackId="repertoire"
-              type="monotone"
+              type="natural"
               name={category.name}
               stroke={color}
               strokeWidth={2}
@@ -195,7 +195,7 @@ export const RepertoireDensity = ({
         </AreaChart>
       </ResponsiveContainer>
       <figcaption className="space-y-1 text-sm text-zinc-600">
-        <p>{dateBasis.label}をもとに、曲数の変化を推定しています。</p>
+        <p>{dateBasis.label}をその月の1日に丸めて、曲数の変化を推定しています。</p>
         <p>
           平滑化幅{repertoireDensityBandwidthDays}日。縦軸は{displayDays}
           日あたりの推定{dateBasis.rate}です。
