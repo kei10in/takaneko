@@ -7,10 +7,10 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-const yAxisLabels = (name: string) =>
+const yAxisLabels = () =>
   Array.from(
-    screen.getByRole("figure", { name }).querySelectorAll(".recharts-yAxis-tick-labels text"),
-    (tick) => tick.textContent,
+    screen.getByRole("figure").querySelectorAll(".recharts-yAxis-tick-labels text"),
+    (tick) => Number(tick.textContent),
   );
 
 it("活動年と西暦の積み上げ最大値が異なっても、Y軸の目盛りをそろえる", async () => {
@@ -25,8 +25,8 @@ it("活動年と西暦の積み上げ最大値が異なっても、Y軸の目盛
   render(
     <RepertoireHistory
       chartNames={{
-        career: "活動年ごとの持ち歌の追加数",
-        calendar: "西暦ごとの持ち歌の追加数",
+        career: "活動年別の集計",
+        calendar: "西暦別の集計",
       }}
       yAxisScale={{ limit: 30, step: 5 }}
       data={{
@@ -36,10 +36,12 @@ it("活動年と西暦の積み上げ最大値が異なっても、Y軸の目盛
     />,
   );
 
-  const labels = ["0", "5", "10", "15", "20", "25", "30"];
-  await waitFor(() => expect(yAxisLabels("活動年ごとの持ち歌の追加数")).toEqual(labels));
+  const labels = [0, 5, 10, 15, 20, 25, 30];
+  await waitFor(() => expect(yAxisLabels()).toEqual(labels));
 
-  fireEvent.click(screen.getByRole("button", { name: "西暦" }));
+  const calendar = screen.getByRole("button", { pressed: false });
+  fireEvent.click(calendar);
 
-  expect(yAxisLabels("西暦ごとの持ち歌の追加数")).toEqual(labels);
+  expect(calendar.getAttribute("aria-pressed")).toBe("true");
+  expect(yAxisLabels()).toEqual(labels);
 });

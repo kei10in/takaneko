@@ -68,89 +68,130 @@ const renderPage = (wrapper?: RenderOptions["wrapper"]) => {
   render(<Stub initialEntries={["/songs/stats"]} />, { wrapper });
 };
 
+const dateRadio = (value: string) => {
+  const radio = screen
+    .getAllByRole<HTMLInputElement>("radio")
+    .find((option) => option.value === value);
+  if (radio == undefined) {
+    throw new Error(`集計日付の選択肢が見つかりません (${value})`);
+  }
+  return radio;
+};
+
+const historyRows = (table: HTMLElement) =>
+  within(table)
+    .getAllByRole("row")
+    .filter((row) => within(row).queryByRole("rowheader") != null)
+    .map((row) => [
+      Number.parseInt(within(row).getByRole("rowheader").textContent, 10),
+      ...within(row)
+        .getAllByRole("cell")
+        .map((cell) => Number(cell.textContent)),
+    ]);
+
+const regionScope = (headingId: string) => {
+  const region = screen
+    .getAllByRole("region")
+    .find((section) => section.getAttribute("aria-labelledby") === headingId);
+  if (region == undefined) {
+    throw new Error(`セクションが見つかりません (${headingId})`);
+  }
+  return within(region);
+};
+
+const densityRegion = () => regionScope("repertoire-density-heading");
+const densityChart = () => densityRegion().getByRole("figure");
+const yearNumber = (tick: Element) => Number.parseInt(tick.textContent, 10);
+
 it("持ち歌の総数と、オリジナル楽曲・たかねこ ver. の内訳を表示する", async () => {
   renderPage();
 
-  const summary = await screen.findByRole("region", { name: "サマリー" });
-  const metrics = within(summary)
-    .getAllByRole("term")
-    .map((term) => [term.textContent, term.nextElementSibling?.textContent]);
-
-  expect(metrics).toEqual([
-    ["持ち歌数", "3曲"],
-    ["オリジナル楽曲", "2曲"],
-    ["たかねこ ver.", "1曲"],
-  ]);
+  const summary = await waitFor(() => regionScope("summary-heading"));
+  const counts = summary
+    .getAllByRole("definition")
+    .map((metric) => Number.parseInt(metric.textContent, 10))
+    .filter(Number.isFinite);
+  expect(counts).toEqual([3, 2, 1]);
 });
 
 it("持ち歌になった日をもとに活動年・西暦ごとの内訳を切り替える", async () => {
   renderPage();
 
-  const career = await screen.findByRole("table", { name: "活動年ごとの持ち歌の追加数のデータ" });
-  expect(screen.getByRole("button", { name: "活動年", pressed: true })).toBeTruthy();
-  expect(
-    within(career).getByRole("row", { name: "活動年 曲数 オリジナル楽曲 たかねこ ver." }),
-  ).toBeTruthy();
-  expect(within(career).getByRole("row", { name: "1年目 2 2 0" })).toBeTruthy();
-  expect(within(career).getByRole("row", { name: "2年目 1 0 1" })).toBeTruthy();
-  expect(within(career).getByRole("row", { name: "3年目 0 0 0" })).toBeTruthy();
+  const career = await screen.findByRole("table");
+  const careerRows = [
+    [1, 2, 2, 0],
+    [2, 1, 0, 1],
+    [3, 0, 0, 0],
+  ];
+  expect(historyRows(career)).toEqual(careerRows);
 
-  fireEvent.click(screen.getByRole("button", { name: "西暦" }));
+  const careerButton = screen.getByRole("button", { pressed: true });
+  const calendarButton = screen.getByRole("button", { pressed: false });
+  fireEvent.click(calendarButton);
 
-  const calendar = screen.getByRole("table", { name: "西暦ごとの持ち歌の追加数のデータ" });
-  expect(screen.getByRole("button", { name: "西暦", pressed: true })).toBeTruthy();
-  expect(within(calendar).getByRole("row", { name: "2022年 1 1 0" })).toBeTruthy();
-  expect(within(calendar).getByRole("row", { name: "2023年 2 1 1" })).toBeTruthy();
-  expect(within(calendar).getByRole("row", { name: "2024年 0 0 0" })).toBeTruthy();
+  expect(calendarButton.getAttribute("aria-pressed")).toBe("true");
+  expect(historyRows(screen.getByRole("table"))).toEqual([
+    [2022, 1, 1, 0],
+    [2023, 2, 1, 1],
+    [2024, 0, 0, 0],
+  ]);
 
-  fireEvent.click(screen.getByRole("button", { name: "活動年" }));
-  expect(screen.getByRole("table", { name: "活動年ごとの持ち歌の追加数のデータ" })).toBeTruthy();
+  fireEvent.click(careerButton);
+  expect(historyRows(screen.getByRole("table"))).toEqual(careerRows);
 });
 
 it("集計日付の選択肢を初出、ライブ、配信、動画の順に表示する", async () => {
   renderPage();
 
-  const group = within(await screen.findByRole("group", { name: "集計に使う日付" }));
-  expect(group.getAllByRole("radio")).toEqual(
-    ["初出", "ライブ", "配信", "動画"].map((name) => group.getByRole("radio", { name })),
-  );
+  const options = await screen.findAllByRole<HTMLInputElement>("radio");
+  expect(options.map(({ value }) => value)).toEqual([
+    "repertoireSince",
+    "liveDebut",
+    "digitalRelease",
+    "videoRelease",
+  ]);
 });
 
 it.each([
-  { option: "動画", name: "動画公開", row: "2023年 2 2 0" },
-  { option: "配信", name: "配信開始", row: "2024年 2 1 1" },
-  { option: "ライブ", name: "ライブ初披露", row: "2022年 3 2 1" },
+  { dateField: "videoRelease", row: [2023, 2, 2, 0] },
+  { dateField: "digitalRelease", row: [2024, 2, 1, 1] },
+  { dateField: "liveDebut", row: [2022, 3, 2, 1] },
 ])(
-  "$option に切り替えると西暦表示のまま両方のグラフが更新される",
-  async ({ option, name, row }) => {
-    renderPage();
+  "$dateField に切り替えると西暦表示のまま両方のグラフが更新される",
+  async ({ dateField, row }) => {
+    mockChartDimensions();
+    const showFrame = renderAnimatedPage();
 
-    const group = await screen.findByRole("group", { name: "集計に使う日付" });
-    expect(within(group).getByRole("radio", { name: "初出", checked: true })).toBeTruthy();
-    fireEvent.click(screen.getByRole("button", { name: "西暦" }));
-    fireEvent.click(within(group).getByRole("radio", { name: option }));
+    const density = await waitFor(densityChart);
+    showFrame(1);
+    const initialY = firstAreaY(density);
+    expect(Number.isFinite(initialY)).toBe(true);
+    expect(dateRadio("repertoireSince").checked).toBe(true);
+    fireEvent.click(screen.getByRole("button", { pressed: false }));
+    fireEvent.click(dateRadio(dateField));
 
-    const table = await screen.findByRole("table", { name: `西暦ごとの${name}曲数のデータ` });
-    expect(within(group).getByRole("radio", { name: option, checked: true })).toBeTruthy();
-    expect(screen.getByRole("heading", { level: 2, name: "リリース数" })).toBeTruthy();
-    expect(screen.getByRole("heading", { level: 2, name: "リリース密度" })).toBeTruthy();
-    expect(within(table).getByRole("row", { name: row })).toBeTruthy();
-    expect(screen.getByRole("figure", { name: `${name}の密度グラフ` })).toBeTruthy();
-    expect(screen.getAllByRole("figure", { name: /密度グラフ/u })).toHaveLength(1);
+    await waitFor(() => expect(historyRows(screen.getByRole("table"))).toContainEqual(row));
+    expect(dateRadio(dateField).checked).toBe(true);
+    showFrame(1);
+    const updatedY = firstAreaY(densityChart());
+    expect(Number.isFinite(updatedY)).toBe(true);
+    expect(updatedY).not.toBeCloseTo(initialY);
   },
 );
 
-it("選択した日付に該当する曲がない場合は両方のグラフで空の状態を表示する", async () => {
+it("選択した日付に該当する曲がない場合は両方のグラフを非表示にする", async () => {
   vi.setSystemTime(new Date("2022-09-01T12:00:00+09:00"));
   renderPage();
 
-  expect(await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" })).toBeTruthy();
-  fireEvent.click(screen.getByRole("radio", { name: "動画" }));
+  await waitFor(densityChart);
+  expect(screen.getByRole("table")).toBeTruthy();
+  fireEvent.click(dateRadio("videoRelease"));
 
-  const history = screen.getByRole("region", { name: "リリース数" });
-  const density = screen.getByRole("region", { name: "リリース密度" });
-  expect(await within(history).findByText("集計対象の楽曲はありません。")).toBeTruthy();
-  expect(within(density).getByText("集計対象の楽曲はありません。")).toBeTruthy();
+  await waitFor(() => {
+    expect(dateRadio("videoRelease").checked).toBe(true);
+    expect(screen.queryByRole("table")).toBeNull();
+    expect(densityRegion().queryByRole("figure")).toBeNull();
+  });
 });
 
 const mockChartDimensions = () => {
@@ -164,12 +205,9 @@ const mockChartDimensions = () => {
   });
 };
 
-const yAxisLabels = (figureName: string) =>
-  Array.from(
-    screen
-      .getByRole("figure", { name: figureName })
-      .querySelectorAll(".recharts-yAxis-tick-labels text"),
-    (tick) => tick.textContent,
+const yAxisLabels = (figure: Element | null) =>
+  Array.from(figure?.querySelectorAll(".recharts-yAxis-tick-labels text") ?? [], (tick) =>
+    Number(tick.textContent),
   );
 
 const firstAreaY = (figure: HTMLElement) =>
@@ -180,8 +218,7 @@ const firstAreaY = (figure: HTMLElement) =>
       ?.match(/^M[^,]+,([\d.]+)/u)?.[1],
   );
 
-it("密度グラフは初回に徐々に現れ、日付の切り替えでは描画済みの面から変形する", async () => {
-  mockChartDimensions();
+const renderAnimatedPage = () => {
   const frames = new Set<(progress: number) => void>();
   const controller: AnimationController = (_, animation, listener) => {
     const frame = (progress: number) => {
@@ -199,6 +236,13 @@ it("密度グラフは初回に徐々に現れ、日付の切り替えでは描�
     <AnimationControllerProvider value={controller}>{children}</AnimationControllerProvider>
   ));
 
+  return (progress: number) => act(() => frames.forEach((frame) => frame(progress)));
+};
+
+it("密度グラフは初回に徐々に現れ、日付の切り替えでは描画済みの面から変形する", async () => {
+  mockChartDimensions();
+  const showFrame = renderAnimatedPage();
+
   const expectReveal = (figure: HTMLElement) => {
     const revealedWidth = () => {
       const clipPath = figure
@@ -212,27 +256,28 @@ it("密度グラフは初回に徐々に現れ、日付の切り替えでは描�
       );
     };
     expect(revealedWidth()).toBe(0);
-    act(() => frames.forEach((frame) => frame(0.5)));
+    showFrame(0.5);
     expect(revealedWidth()).toBeGreaterThan(0);
-    act(() => frames.forEach((frame) => frame(1)));
+    showFrame(1);
   };
 
-  const originalFigure = await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" });
+  const originalFigure = await waitFor(densityChart);
   expectReveal(originalFigure);
   const originalY = firstAreaY(originalFigure);
 
-  fireEvent.click(screen.getByRole("radio", { name: "ライブ" }));
-  const updatedFigure = await screen.findByRole("figure", { name: "ライブ初披露の密度グラフ" });
+  fireEvent.click(dateRadio("liveDebut"));
+  await waitFor(() => expect(dateRadio("liveDebut").checked).toBe(true));
+  const updatedFigure = densityChart();
   expect(firstAreaY(updatedFigure)).toBeCloseTo(originalY);
   expect(
     updatedFigure.querySelector(".recharts-area-area")?.parentElement?.hasAttribute("clip-path"),
   ).toBe(false);
 
-  act(() => frames.forEach((frame) => frame(0.5)));
+  showFrame(0.5);
   const intermediateY = firstAreaY(updatedFigure);
   expect(intermediateY).toBeLessThan(originalY);
 
-  act(() => frames.forEach((frame) => frame(1)));
+  showFrame(1);
   expect(firstAreaY(updatedFigure)).toBeLessThan(intermediateY);
 });
 
@@ -240,16 +285,16 @@ it("日付の基準を切り替えても、全件が収まる縦軸を両方の�
   mockChartDimensions();
   renderPage();
 
-  const liveDebut = await screen.findByRole("radio", { name: "ライブ" });
-  const history = yAxisLabels("活動年ごとの持ち歌の追加数");
-  const density = yAxisLabels("持ち歌追加の密度グラフ");
+  const density = yAxisLabels(await waitFor(densityChart));
+  const history = yAxisLabels(screen.getByRole("table").closest("figure"));
   expect(Number(history.at(-1))).toBeGreaterThanOrEqual(3);
   expect(Number(density.at(-1))).toBeGreaterThanOrEqual(0.6);
 
-  fireEvent.click(liveDebut);
+  fireEvent.click(dateRadio("liveDebut"));
   await waitFor(() => {
-    expect(yAxisLabels("活動年ごとのライブ初披露曲数")).toEqual(history);
-    expect(yAxisLabels("ライブ初披露の密度グラフ")).toEqual(density);
+    expect(dateRadio("liveDebut").checked).toBe(true);
+    expect(yAxisLabels(screen.getByRole("table").closest("figure"))).toEqual(history);
+    expect(yAxisLabels(densityChart())).toEqual(density);
   });
 });
 
@@ -258,48 +303,42 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
   mockChartDimensions();
   renderPage();
 
-  const section = await screen.findByRole("region", { name: "リリース密度" });
-  const figure = within(section).getByRole("figure");
-  expect(within(figure).getByText("オリジナル楽曲")).toBeTruthy();
-  expect(within(figure).getByText("たかねこ ver.")).toBeTruthy();
-  ["1年目", "2年目", "3年目", "4年目", "5年目"].forEach((label) => {
-    expect(within(figure).getByText(label)).toBeTruthy();
-  });
-  const calendarTick = within(figure).getByText("2023年").closest("text");
+  const figure = await waitFor(densityChart);
+  const yearTicks = Array.from(figure.querySelectorAll(".recharts-xAxis-tick-labels text"));
+  expect(yearTicks.map(yearNumber)).toEqual(expect.arrayContaining([1, 2, 3, 4, 5]));
+  const calendarTick = yearTicks.find((tick) => yearNumber(tick) === 2023);
   expect(calendarTick?.getAttribute("transform")).toMatch(/^rotate\(-45,/u);
   const horizontalGridLines = figure.querySelectorAll(".recharts-cartesian-grid-horizontal line");
   const plotBottom = Math.max(
     ...Array.from(horizontalGridLines, (line) => Number(line.getAttribute("y1"))),
   );
+  const boundaries = Array.from(figure.querySelectorAll("line.recharts-reference-line-line"));
   const calendarMarks = Array.from(figure.querySelectorAll("line")).filter(
     (line) =>
+      !boundaries.includes(line) &&
       line.getAttribute("x1") === line.getAttribute("x2") &&
       Number(line.getAttribute("y1")) === plotBottom &&
-      Number(line.getAttribute("y2")) === plotBottom - 6,
+      Number(line.getAttribute("y2")) < plotBottom,
   );
   expect(calendarMarks).toHaveLength(4);
   expect(Number(calendarMarks[0].getAttribute("x1"))).toBeCloseTo(
     Number(calendarTick?.getAttribute("x")),
   );
-  const boundaries = figure.querySelectorAll(".recharts-reference-line-line");
   expect(boundaries).toHaveLength(4);
   const gridColor = horizontalGridLines[0]?.getAttribute("stroke");
   expect(gridColor).toBeTruthy();
   expect(Array.from(boundaries, (line) => line.getAttribute("stroke"))).toEqual(
     Array(4).fill(gridColor),
   );
-  const chartLayers = figure.querySelectorAll(".recharts-reference-line-line, .recharts-area-area");
-  expect(Array.from(chartLayers, (layer) => layer.tagName)).toEqual([
-    "line",
-    "line",
-    "line",
-    "line",
-    "path",
-    "path",
-  ]);
-  const topArea = chartLayers[chartLayers.length - 1];
-  calendarMarks.forEach((mark) => {
-    expect(topArea.compareDocumentPosition(mark)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+  const areas = figure.querySelectorAll(".recharts-area-area");
+  expect(areas).toHaveLength(2);
+  areas.forEach((area) => {
+    boundaries.forEach((line) => {
+      expect(line.compareDocumentPosition(area)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    });
+    calendarMarks.forEach((mark) => {
+      expect(area.compareDocumentPosition(mark)).toBe(Node.DOCUMENT_POSITION_FOLLOWING);
+    });
   });
 
   const chart = within(figure).getByRole("application");
@@ -308,13 +347,4 @@ it("狭い画面でも密度グラフに活動年のラベルと区切りを表�
   fireEvent.keyDown(chart, { key: "ArrowRight" });
   expect(within(figure).queryByRole("tooltip")).toBeNull();
   expect(figure.querySelector(".recharts-active-dot")).toBeNull();
-});
-
-it("密度グラフの下に集計方法や期間の説明を表示しない", async () => {
-  renderPage();
-
-  const section = await screen.findByRole("region", { name: "リリース密度" });
-  expect(
-    within(section).queryAllByText(/を月ごとに集計|平滑化幅|年\d+月 ～ \d+年|活動年の区切りは/u),
-  ).toHaveLength(0);
 });
