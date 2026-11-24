@@ -132,6 +132,8 @@ it.each([
 
     const table = await screen.findByRole("table", { name: `西暦ごとの${name}曲数のデータ` });
     expect(within(group).getByRole("radio", { name: option, checked: true })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "持ち歌の追加数" })).toBeTruthy();
+    expect(screen.getByRole("heading", { level: 2, name: "持ち歌追加の密度分布" })).toBeTruthy();
     expect(within(table).getByRole("row", { name: row })).toBeTruthy();
     const figure = screen.getByRole("figure", { name: `${name}の密度グラフ` });
     expect(within(figure).getByText("2022年8月 ～ 2024年11月")).toBeTruthy();
@@ -147,9 +149,9 @@ it("選択した日付に該当する曲がない場合は両方のグラフで�
   expect(await screen.findByRole("figure", { name: "持ち歌追加の密度グラフ" })).toBeTruthy();
   fireEvent.click(screen.getByRole("radio", { name: "動画" }));
 
-  const history = await screen.findByRole("region", { name: "動画公開曲数" });
-  const density = screen.getByRole("region", { name: "動画公開の密度分布" });
-  expect(within(history).getByText("集計対象の楽曲はありません。")).toBeTruthy();
+  const history = screen.getByRole("region", { name: "持ち歌の追加数" });
+  const density = screen.getByRole("region", { name: "持ち歌追加の密度分布" });
+  expect(await within(history).findByText("集計対象の楽曲はありません。")).toBeTruthy();
   expect(within(density).getByText("集計対象の楽曲はありません。")).toBeTruthy();
 });
 
