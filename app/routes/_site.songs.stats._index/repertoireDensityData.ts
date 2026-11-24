@@ -9,7 +9,7 @@ export interface RepertoireDensityPoint {
   values: number[];
 }
 
-export const repertoireDensityBandwidthMonths = 2;
+const repertoireDensityBandwidthMonths = 2;
 export const repertoireDensityStartMonth = DebutDate.naiveMonth();
 const kernelScale = 1 / (repertoireDensityBandwidthMonths * Math.sqrt(2 * Math.PI));
 

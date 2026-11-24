@@ -22,7 +22,6 @@ import {
 } from "~/components/charts/verticalChartStyle.ts";
 import { NaiveMonth } from "~/utils/datetime/NaiveMonth.ts";
 import {
-  repertoireDensityBandwidthMonths,
   repertoireDensityStartMonth,
   type RepertoireDensityPoint,
 } from "./repertoireDensityData.ts";
@@ -30,8 +29,6 @@ import { repertoireSeries, type RepertoireDateOption } from "./repertoireHistory
 
 const calendarTickSize = 6;
 const careerAxisHeight = 20;
-
-const formatMonth = ({ year, month }: NaiveMonth) => `${year}年${month}月`;
 
 const formatRate = (value: number) => value.toLocaleString("ja-JP", { maximumFractionDigits: 2 });
 
@@ -90,7 +87,7 @@ export const RepertoireDensity = ({
   );
 
   return (
-    <figure aria-label={`${dateBasis.activity}の密度グラフ`} className="w-full min-w-0 space-y-2">
+    <figure aria-label={`${dateBasis.activity}の密度グラフ`} className="w-full min-w-0">
       <ResponsiveContainer
         width="100%"
         minWidth={0}
@@ -160,20 +157,6 @@ export const RepertoireDensity = ({
           <Legend {...verticalChartLegendProps} itemSorter="dataKey" />
         </AreaChart>
       </ResponsiveContainer>
-      <figcaption className="space-y-1 text-sm text-zinc-600">
-        <p>{dateBasis.label}を月ごとに集計し、曲数の変化を推定しています。</p>
-        <p>
-          平滑化幅{repertoireDensityBandwidthMonths}か月。縦軸は1か月あたりの推定{dateBasis.rate}
-          です。
-        </p>
-        <p>
-          {formatMonth(startMonth)} ～ {formatMonth(endMonth)}
-        </p>
-        <p>
-          活動年の区切りは、デビュー月と同じ毎年{repertoireDensityStartMonth.month}
-          月に表示しています。
-        </p>
-      </figcaption>
     </figure>
   );
 };
