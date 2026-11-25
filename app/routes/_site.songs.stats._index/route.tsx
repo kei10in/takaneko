@@ -1,3 +1,4 @@
+import { HiOutlineInformationCircle } from "react-icons/hi2";
 import { MetaFunction, useLoaderData, useSearchParams } from "react-router";
 import { calculateChartDimensions } from "~/components/charts/scale.ts";
 import { sumChartValues } from "~/components/charts/stackedBarChartData.ts";
@@ -157,6 +158,51 @@ export default function Component() {
             chartName={dateOption.densityChartName}
             yAxisScale={densityScale}
           />
+        </section>
+        <section aria-labelledby="aggregation-method-heading" className="mt-18 px-4">
+          <div
+            aria-labelledby="aggregation-method-heading"
+            className="rounded-3xl bg-zinc-50 px-6 py-8 text-zinc-900"
+          >
+            <h2
+              id="aggregation-method-heading"
+              className="section-heading mb-4 flex items-center gap-2"
+            >
+              <HiOutlineInformationCircle />
+              集計方法について
+            </h2>
+            <p>イベント情報の更新によって集計結果が変わることがあります。</p>
+            <p>
+              開催されたイベントに限定して集計しています。
+              中止されたイベントや辞退したイベントは集計には含まれません。
+            </p>
+
+            <dl className="mt-4 space-y-3">
+              <dt className="font-semibold">初出</dt>
+              <dd>ライブ・配信・動画のうち、最初に行われた日付を元に集計しています。</dd>
+
+              <dt className="font-semibold">ライブ</dt>
+              <dd>ライブでの初披露日を元に集計しています。</dd>
+
+              <dt className="font-semibold">配信</dt>
+              <dd>
+                デジタルリリース (各種音楽配信サイトでのリリース) された日を元に集計しています。
+              </dd>
+
+              <dt className="font-semibold">動画</dt>
+              <dd>MV または Dance Performance Video が公開された日を元に集計しています。</dd>
+
+              <dt className="font-semibold">リリース数</dt>
+              <dd>それぞれの基準を元に、西暦ごと・活動年ごとに集計しています。</dd>
+
+              <dt className="font-semibold">リリース密度</dt>
+              <dd>
+                月ごとのリリース数を使って、標準偏差 2
+                ヶ月のガウスカーネルを使ってリリース密度を推定しています。縦軸は 1
+                ヶ月あたりの推定リリース曲数です。
+              </dd>
+            </dl>
+          </div>
         </section>
       </section>
     </div>
