@@ -13,6 +13,14 @@ import {
 import { GroupedBarChartTooltip } from "./GroupedBarChartTooltip.tsx";
 import { calculateGroupedBarLayout } from "./groupedBarChartLayout.ts";
 import type { ChartRow, ChartSeries } from "./types.ts";
+import {
+  verticalChartGridProps,
+  verticalChartHeight,
+  verticalChartLegendProps,
+  verticalChartMargin,
+  verticalChartXAxisProps,
+  verticalChartYAxisProps,
+} from "./verticalChartStyle.ts";
 
 interface Props {
   series: ChartSeries[];
@@ -26,9 +34,6 @@ interface Props {
 
 // shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
 const barShape = <Rectangle />;
-const chartMargin = { top: 20, right: 12, bottom: 0, left: 0 };
-const yAxisWidth = 40;
-const legendHeight = 24;
 
 export const GroupedBarChart = ({
   data,
@@ -48,7 +53,10 @@ export const GroupedBarChart = ({
     }
   }, []);
   const { barSize, barGap } = calculateGroupedBarLayout(
-    containerWidth - yAxisWidth - chartMargin.left - chartMargin.right,
+    containerWidth -
+      verticalChartYAxisProps.width -
+      verticalChartMargin.left -
+      verticalChartMargin.right,
     data.length,
     series.length,
   );
@@ -91,14 +99,14 @@ export const GroupedBarChart = ({
       <ResponsiveContainer
         width="100%"
         minWidth={0}
-        height={296 + legendHeight}
+        height={verticalChartHeight}
         onResize={setContainerWidth}
       >
         <RechartsBarChart
           data={chartData}
           barSize={barSize}
           barGap={barGap}
-          margin={chartMargin}
+          margin={verticalChartMargin}
           accessibilityLayer
           onClick={({ activeTooltipIndex }) => {
             if (isTapInput.current && trigger === "click") {
@@ -108,26 +116,18 @@ export const GroupedBarChart = ({
             }
           }}
         >
-          <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="var(--color-zinc-200)" />
+          <CartesianGrid {...verticalChartGridProps} />
           <XAxis
+            {...verticalChartXAxisProps}
             dataKey="position"
             tickFormatter={(position: number) => data[position]?.label ?? ""}
             type="category"
-            tick={{ fontSize: 12 }}
-            angle={-45}
-            textAnchor="end"
-            height={48}
-            tickMargin={2}
-            tickLine={false}
             interval={0}
           />
           <YAxis
+            {...verticalChartYAxisProps}
             type="number"
             allowDecimals={false}
-            width={yAxisWidth}
-            tickMargin={2}
-            tick={{ fontSize: 12 }}
-            tickLine={false}
             domain={[0, yAxisScale?.limit ?? "auto"]}
             ticks={
               yAxisScale == undefined
@@ -161,13 +161,7 @@ export const GroupedBarChart = ({
             />
           ))}
           <Legend
-            align="left"
-            verticalAlign="top"
-            height={legendHeight}
-            wrapperStyle={{ fontSize: 12, top: 0, paddingLeft: 48 }}
-            iconType="circle"
-            iconSize={8}
-            labelStyle={{ color: "var(--color-zinc-600)" }}
+            {...verticalChartLegendProps}
             itemSorter={(item) =>
               series.findIndex((_, index) => item.dataKey === `values[${index}]`)
             }

@@ -1,5 +1,6 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, expect, it, vi } from "vitest";
+import { GroupedBarChart } from "./GroupedBarChart.tsx";
 import { StackedBarChart } from "./StackedBarChart.tsx";
 
 beforeEach(() => {
@@ -13,6 +14,53 @@ afterEach(() => {
   cleanup();
   vi.restoreAllMocks();
 });
+
+const barWidth = (name: string) =>
+  Number(
+    screen
+      .getByRole("figure", { name })
+      .querySelector(".recharts-bar-rectangle path")
+      ?.getAttribute("width"),
+  );
+
+it.each([320, 960])(
+  "幅 %i pxで同じ期間数と系列数のグループ棒と積み上げ棒の太さがそろう",
+  async (width) => {
+    vi.spyOn(HTMLElement.prototype, "getBoundingClientRect").mockImplementation(function (
+      this: HTMLElement,
+    ) {
+      return new DOMRect(
+        0,
+        0,
+        width,
+        this.classList.contains("recharts-legend-wrapper") ? 24 : 320,
+      );
+    });
+    const props = {
+      xAxisLabel: "年",
+      yAxisLabel: "曲数",
+      unit: "曲",
+      data: Array.from({ length: 8 }, (_, index) => ({
+        label: `${2022 + index}年`,
+        values: [4, 2],
+      })),
+    };
+    const series = [
+      { label: "A", color: "red" },
+      { label: "B", color: "blue" },
+    ];
+    render(
+      <>
+        <GroupedBarChart {...props} name="グループ棒" series={series} />
+        <StackedBarChart {...props} name="積み上げ棒" stacks={series} />
+      </>,
+    );
+    await waitFor(() => {
+      expect(barWidth("グループ棒")).toBeGreaterThan(0);
+      expect(barWidth("積み上げ棒")).toBeCloseTo(barWidth("グループ棒"));
+    });
+  },
+);
 
 it("仮想スタックを挟んでも値を正しく積み上げ、凡例・チップ・表には実スタックだけ表示する", async () => {
   const data = [

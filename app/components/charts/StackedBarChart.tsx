@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -12,9 +12,18 @@ import {
   YAxis,
   type RenderableText,
 } from "recharts";
-import { StackedBarChartTooltip } from "./StackedBarChartTooltip.tsx";
+import { calculateGroupedBarLayout } from "./groupedBarChartLayout.ts";
 import { fillVirtualStackValues, sumChartValues } from "./stackedBarChartData.ts";
+import { StackedBarChartTooltip } from "./StackedBarChartTooltip.tsx";
 import type { ChartRow, ChartStack } from "./types.ts";
+import {
+  verticalChartGridProps,
+  verticalChartHeight,
+  verticalChartLegendProps,
+  verticalChartMargin,
+  verticalChartXAxisProps,
+  verticalChartYAxisProps,
+} from "./verticalChartStyle.ts";
 
 interface Props {
   data: ChartRow[];
@@ -23,6 +32,7 @@ interface Props {
   xAxisLabel: string;
   yAxisLabel: string;
   unit: string;
+  yAxisScale?: { limit: number; step: number };
 }
 
 const formatLabel = (value: RenderableText) =>
@@ -31,7 +41,30 @@ const formatLabel = (value: RenderableText) =>
 // shape を明示し、高さ0の矩形も Recharts のアニメーション対象に残す。
 const barShape = <Rectangle />;
 
-export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, unit }: Props) => {
+export const StackedBarChart = ({
+  data,
+  stacks,
+  name,
+  xAxisLabel,
+  yAxisLabel,
+  unit,
+  yAxisScale,
+}: Props) => {
+  const [containerWidth, setContainerWidth] = useState(0);
+  const measureContainer = useCallback((element: HTMLElement | null) => {
+    if (element != undefined) {
+      setContainerWidth(element.getBoundingClientRect().width);
+    }
+  }, []);
+  // 同じ期間数・系列数なら、グループ棒の1本と積み上げ棒の幅をそろえる。
+  const { barSize } = calculateGroupedBarLayout(
+    containerWidth -
+      verticalChartYAxisProps.width -
+      verticalChartMargin.left -
+      verticalChartMargin.right,
+    data.length,
+    stacks.length,
+  );
   // 最初のタップで入力モードの更新を待たなくて済むよう、ホバーはマウス移動時に有効にする。
   const [trigger, setTrigger] = useState<"hover" | "click">("click");
   // 再描画のタイミングに依存せず、クリックがタッチ・ペン由来かを判定する。
@@ -57,6 +90,7 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
 
   return (
     <figure
+      ref={measureContainer}
       aria-label={name}
       className="w-full min-w-0"
       onPointerDownCapture={(event) => {
@@ -76,10 +110,16 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
         setTappedIndex(undefined);
       }}
     >
-      <ResponsiveContainer width="100%" minWidth={0} height={320}>
+      <ResponsiveContainer
+        width="100%"
+        minWidth={0}
+        height={verticalChartHeight}
+        onResize={setContainerWidth}
+      >
         <BarChart
           data={chartData}
-          margin={{ top: 20, right: 12, bottom: 0, left: 0 }}
+          barSize={barSize}
+          margin={verticalChartMargin}
           accessibilityLayer
           onClick={({ activeTooltipIndex }) => {
             if (isTapInput.current && trigger === "click") {
@@ -89,27 +129,27 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
             }
           }}
         >
-          <CartesianGrid vertical={false} strokeDasharray="3 3" stroke="var(--color-zinc-200)" />
+          <CartesianGrid {...verticalChartGridProps} />
           <XAxis
+            {...verticalChartXAxisProps}
             dataKey="position"
             tickFormatter={(position: number) => data[position]?.label ?? ""}
             type="category"
-            tick={{ fontSize: 12 }}
-            angle={-45}
-            textAnchor="end"
-            height={48}
-            tickMargin={2}
-            tickLine={false}
             interval={0}
           />
           <YAxis
+            {...verticalChartYAxisProps}
             type="number"
             allowDecimals={false}
-            width={40}
-            tickMargin={2}
-            tick={{ fontSize: 12 }}
-            tickLine={false}
-            domain={[0, "auto"]}
+            domain={[0, yAxisScale?.limit ?? "auto"]}
+            ticks={
+              yAxisScale == undefined
+                ? undefined
+                : Array.from(
+                    { length: Math.round(yAxisScale.limit / yAxisScale.step) + 1 },
+                    (_, index) => index * yAxisScale.step,
+                  )
+            }
           />
           <Tooltip
             trigger={trigger}
@@ -129,7 +169,6 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
               fill={stack.color}
               shape={barShape}
               legendType={stack.label == undefined ? "none" : "circle"}
-              maxBarSize={48}
               isAnimationActive
             >
               <LabelList
@@ -148,13 +187,7 @@ export const StackedBarChart = ({ data, stacks, name, xAxisLabel, yAxisLabel, un
             </Bar>
           ))}
           <Legend
-            align="left"
-            verticalAlign="top"
-            height={24}
-            wrapperStyle={{ fontSize: 12, top: 0, paddingLeft: 48 }}
-            iconType="circle"
-            iconSize={8}
-            labelStyle={{ color: "var(--color-zinc-600)" }}
+            {...verticalChartLegendProps}
             itemSorter={(item) =>
               stacks.findIndex((_, index) => item.dataKey === `values[${index}]`)
             }
