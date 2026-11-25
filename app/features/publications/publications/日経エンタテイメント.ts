@@ -81,6 +81,18 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
       path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_東山恵里沙.jpg",
       ref: "https://x.com/nikkei_ent/status/2123609807093686421",
     },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_日向端ひな.jpg",
+      ref: "https://x.com/nikkei_ent/status/2123972192669224964",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_松本ももな.jpg",
+      ref: "https://x.com/nikkei_ent/status/2124334591922319500",
+    },
+    {
+      path: "/publications/2026/2026-10-30_日経エンタテインメント！ アイドル Special GIRL POP VELOCITY_籾山ひめり.jpg",
+      ref: "https://x.com/nikkei_ent/status/2124696978638721073",
+    },
   ],
   featuredMembers: ["高嶺のなでしこ3"],
   officialTwitter: "https://x.com/takanenofficial/status/2116002163994640431",
@@ -112,6 +124,18 @@ export const 日経エンタテインメント_アイドル_Special_GIRL_POP_VEL
     {
       text: "東山恵里沙 インタビュー紹介 - 日経エンタテインメント！ X",
       url: "https://x.com/nikkei_ent/status/2123609807093686421",
+    },
+    {
+      text: "日向端ひな インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2123972192669224964",
+    },
+    {
+      text: "松本ももな インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2124334591922319500",
+    },
+    {
+      text: "籾山ひめり インタビュー紹介 - 日経エンタテインメント！ X",
+      url: "https://x.com/nikkei_ent/status/2124696978638721073",
     },
   ],
 };
