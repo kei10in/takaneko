@@ -1,10 +1,12 @@
 import { HiOutlineInformationCircle } from "react-icons/hi2";
-import { MetaFunction, useLoaderData, useSearchParams } from "react-router";
+import { useLoaderData, useSearchParams, type MetaFunction } from "react-router";
 import { calculateChartDimensions } from "~/components/charts/scale.ts";
 import { sumChartValues } from "~/components/charts/stackedBarChartData.ts";
 import { Statistic } from "~/components/Statistic.tsx";
+import { OgpSiteName } from "~/constants.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
 import { Repertoire } from "~/features/songs/tags.ts";
+import { canonicalUrl } from "~/metadata/canonicalUrl.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
 import { formatTitle } from "~/utils/htmlHeader.ts";
 import { repertoireDateOptions, type RepertoireDateOption } from "./repertoireDateOptions.ts";
@@ -19,13 +21,29 @@ import {
   type RepertoireDateField,
 } from "./repertoireHistoryData.ts";
 
-export const meta: MetaFunction = () => {
+export const meta: MetaFunction = ({ location }) => {
+  const title = formatTitle("楽曲統計");
+  const description =
+    "高嶺のなでしこの持ち歌数と、オリジナル楽曲・たかねこ ver. の内訳を掲載。初出・ライブ初披露・配信開始・動画公開を基準に、西暦別・活動年別のリリース数や、月単位のリリース密度を確認できます。";
+  const canonical = canonicalUrl(location.pathname);
+  const image = canonicalUrl("/takanekono-card.png");
+
   return [
-    { title: formatTitle("楽曲統計") },
-    {
-      name: "description",
-      content: "高嶺のなでしこの楽曲の統計情報です。",
-    },
+    { title },
+    { name: "description", content: description },
+    { tagName: "link", rel: "canonical", href: canonical },
+    { property: "og:site_name", content: OgpSiteName },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:url", content: canonical },
+    { property: "og:type", content: "website" },
+    { property: "og:locale", content: "ja_JP" },
+    { property: "og:image", content: image },
+    { name: "twitter:card", content: "summary" },
+    { name: "twitter:site", content: "@takanekofan" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: image },
   ];
 };
 
