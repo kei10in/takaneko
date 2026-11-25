@@ -13,7 +13,7 @@ it("統計一覧から楽曲統計ページを開ける", async () => {
   ]);
   render(<Stub initialEntries={["/stats"]} />);
 
-  const link = screen.getByRole("link", { name: "楽曲統計" });
+  const link = screen.getByRole("link", { name: /^楽曲統計(?:\s|$)/ });
   expect(link.getAttribute("href")).toBe("/songs/stats");
   fireEvent.click(link);
 
