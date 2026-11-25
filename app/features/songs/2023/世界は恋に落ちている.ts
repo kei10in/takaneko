@@ -14,6 +14,8 @@ export const 世界は恋に落ちている: SongMetaDescriptor = {
   videoRelease: "2026-03-15",
   digitalRelease: "2026-03-05",
   liveDebut: "2023-11-19",
+  // 特別な披露としてのライブ初披露
+  // liveDebut: "2023-11-19",
   repertoireSince: "2026-02-14",
 
   tags: [TakanekoVersion, Repertoire],
