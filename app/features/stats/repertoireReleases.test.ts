@@ -8,7 +8,7 @@ describe("repertoire release dates", () => {
 
   it("defines a valid repertoire date and exactly one category for every repertoire song", () => {
     repertoireSongs.forEach((song) => {
-      expect(song.repertoireSince, song.name).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(song.repertoireSince, song.name).toMatch(/^\d{4}-\d{2}-\d{2}$/u);
       expect(Number.isNaN(Date.parse(song.repertoireSince ?? "")), song.name).toBe(false);
 
       const categories = [Original, TakanekoVersion].filter((category) =>
