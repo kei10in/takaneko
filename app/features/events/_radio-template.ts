@@ -24,5 +24,6 @@ export const meta: EventMetaDescriptor = {
 export const content = /* md */ `
   ## リンク
 
+  - [radiko 主演時間](<>)
   - [radiko 番組放送回](<>)
 `;
