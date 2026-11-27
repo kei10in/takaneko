@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["東山恵里沙", "松本ももな"],
   images: [
     {
+      path: "/events/2026/2026-11-26_FM NORTH WAVE「RADIO GROOVE」.jpg",
+      ref: "https://x.com/takanenofficial/status/2125891980869747064",
+    },
+    {
       path: "/events/2026/2026-11-25_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
       ref: "https://x.com/takanenofficial/status/2125446882910716375",
     },
@@ -26,13 +30,19 @@ export const meta: EventMetaDescriptor = {
     text: "番組ホームページ",
     url: "https://www.fmnorth.co.jp/radiogroove/",
   },
-  updatedAt: "2026-11-25",
+  updatedAt: "2026-11-27",
 };
 
 export const content = /* md */ `
+  ## 内容
+
+  コメント出演
+
   ## リンク
 
+  - [radiko 主演時間](https://radiko.jp/share/?sid=NORTHWAVE&t=20261126193700)
   - [radiko 番組放送回](https://radiko.jp/share/?sid=NORTHWAVE&t=20261126190000)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2125891980869747064)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2125446882910716375)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2122321289478382070)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2120890609619615842)
