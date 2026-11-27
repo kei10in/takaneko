@@ -10,6 +10,10 @@ export const meta: EventMetaDescriptor = {
   present: ["涼海すう", "籾山ひめり"],
   images: [
     {
+      path: "/events/2026/2026-11-25_FM大阪「HIT STREET」.jpg",
+      ref: "https://x.com/takanenofficial/status/2125450657368801605",
+    },
+    {
       path: "/events/2026/2026-11-25_2nd アルバム「A World in Our Colors」メディア出演スケジュール.jpg",
       ref: "https://x.com/takanenofficial/status/2125446882910716375",
     },
@@ -22,13 +26,14 @@ export const meta: EventMetaDescriptor = {
     text: "",
     url: "",
   },
-  updatedAt: "2026-11-25",
+  updatedAt: "2026-11-27",
 };
 
 export const content = /* md */ `
   ## リンク
 
   - [radiko 番組放送回](https://radiko.jp/share/?sid=FMO&t=20261125235500)
+  - [本日オンエア - 公式 X](https://x.com/takanenofficial/status/2125450657368801605)
   - [出演スケジュール更新 - 公式 X](https://x.com/takanenofficial/status/2125446882910716375)
   - [告知 - 公式 X](https://x.com/takanenofficial/status/2122321289478382070)
   - [リリースキャンペーンスケジュール - 公式サイト](https://takanenonadeshiko.jp/?p=5765)
