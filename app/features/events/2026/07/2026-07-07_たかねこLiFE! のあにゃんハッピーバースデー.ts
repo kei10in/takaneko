@@ -62,8 +62,8 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       setlist: [
         "衣装: 全国お招きツアー衣装",
-        "ガールズルール (乃木坂46 カバー)",
-        "大嫌いなはずだった。 (HoneyWorks カバー)",
+        "[Cover: 乃木坂46]ガールズルール",
+        "[Cover: HoneyWorks]大嫌いなはずだった。",
       ],
       links: [
         {

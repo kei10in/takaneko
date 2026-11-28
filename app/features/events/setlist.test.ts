@@ -119,8 +119,11 @@ describe("parseSetlist", () => {
     },
   );
 
-  it("初披露の曲にカバー表記と歌唱メンバーを指定できる", () => {
-    const result = parseSetlist([" [初披露] Song F (Original Artist cover): 葉月紗蘭、東山恵里沙"]);
+  it.each([
+    " [初披露] [Cover: Original Artist] Song F: 葉月紗蘭、東山恵里沙",
+    "[カバー: Original Artist][初披露]Song F: 葉月紗蘭、東山恵里沙",
+  ])("%s から初披露、カバー、歌唱メンバーを読み取る", (input) => {
+    const result = parseSetlist([input]);
     expect(result).toEqual([
       {
         kind: "song",
@@ -135,24 +138,22 @@ describe("parseSetlist", () => {
     ]);
   });
 
-  it("parses song title with original artist", () => {
-    const input = ["Song F (Original Artist cover)"];
-    const result = parseSetlist(input);
+  it("カバー曲の曲名に含まれる括弧を保持する", () => {
+    const result = parseSetlist(["[Cover: Original Artist]Song F (Live)"]);
     expect(result).toEqual([
       {
         kind: "song",
         section: "main",
         index: 0,
-        songTitle: "Song F",
+        songTitle: "Song F (Live)",
         originalArtist: "Original Artist",
         isCover: true,
       },
     ]);
   });
 
-  it("parses song title without original artist but with cover indication", () => {
-    const input = ["Song F (cover)"];
-    const result = parseSetlist(input);
+  it.each(["[Cover]Song F", "  [カバー]  Song F  "])("%s をカバー曲として読み取る", (input) => {
+    const result = parseSetlist([input]);
     expect(result).toEqual([
       {
         kind: "song",

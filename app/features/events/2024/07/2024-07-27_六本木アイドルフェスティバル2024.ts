@@ -22,7 +22,7 @@ export const meta: EventMetaDescriptor = {
       "決戦スピリット",
       "MC",
       "モテチェン！",
-      "眩しすぎる流れ星 1half (ラストアイドル cover)",
+      "[Cover: ラストアイドル]眩しすぎる流れ星 1half",
       "ファンサ",
     ],
     url: "https://x.com/Mikuru_hositani/status/1817132203350143230",

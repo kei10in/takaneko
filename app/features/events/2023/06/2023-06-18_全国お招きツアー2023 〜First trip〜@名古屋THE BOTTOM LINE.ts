@@ -32,7 +32,7 @@ export const meta: EventMetaDescriptor = {
         "MC",
         "#超絶かわいい",
         "可愛くてごめん",
-        "START (TEAM SHACHI cover)",
+        "[Cover: TEAM SHACHI]START",
         "MC",
         "美しく生きろ",
         "ファンサ",

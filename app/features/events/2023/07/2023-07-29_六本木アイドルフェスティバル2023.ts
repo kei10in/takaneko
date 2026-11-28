@@ -21,7 +21,7 @@ export const meta: EventMetaDescriptor = {
       "初恋のひと。",
       "可愛くてごめん",
       "#超絶かわいい",
-      "愛を知る (ラストアイドル cover)",
+      "[Cover: ラストアイドル]愛を知る",
       "ファンサ",
     ],
     url: "https://x.com/Mikuru_hositani/status/1685207953610268672",

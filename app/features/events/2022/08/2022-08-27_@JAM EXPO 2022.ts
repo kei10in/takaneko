@@ -32,7 +32,7 @@ export const meta: EventMetaDescriptor = {
         "衣装:アンチファン衣装",
         "アンチファン",
         "ユメムスビ",
-        "青春トレイン (ラストアイドル cover)",
+        "[Cover: ラストアイドル]青春トレイン",
       ],
       url: "https://x.com/Mikuru_hositani/status/1563481016219471874",
     },

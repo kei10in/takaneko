@@ -257,7 +257,7 @@ describe("filterSetlistEvents", () => {
             [
               "衣装: アンチファン衣装",
               "Song A",
-              "ファンサ (mona cover)",
+              "[Cover: mona]ファンサ",
               "衣装: 見上げるたびに、恋をする。衣装",
               "Song B",
             ],

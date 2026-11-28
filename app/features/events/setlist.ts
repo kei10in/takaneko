@@ -156,10 +156,28 @@ const parseSongSegment = (
   part: string,
   state: ParsingState,
 ): { nextState: ParsingState; segment: Segment } => {
-  const firstPerformancePrefix = /^\s*\[初披露\]\s*/u.exec(part)?.[0];
-  const [title, membersStr] = part.slice(firstPerformancePrefix?.length ?? 0).split(":");
+  const metadataPattern = /^\s*\[(?:(初披露)|(?:Cover|カバー)(?::([^\]\r\n]*))?)\]/u;
+  let song = part;
+  let isFirstPerformance: true | undefined;
+  let isCover: true | undefined;
+  let originalArtist: string | undefined;
+  while (true) {
+    const metadata = metadataPattern.exec(song);
+    if (!metadata) {
+      break;
+    }
 
-  const { songTitle, originalArtist, isCover } = parseSongTitle(title);
+    const [prefix, firstPerformance, artist] = metadata;
+    if (firstPerformance) {
+      isFirstPerformance = true;
+    } else {
+      isCover = true;
+      originalArtist = artist?.trim() || originalArtist;
+    }
+    song = song.slice(prefix.length);
+  }
+
+  const [title, membersStr] = song.split(":");
 
   const members = membersStr
     ?.split("、")
@@ -179,24 +197,13 @@ const parseSongSegment = (
       section: state.section,
       costumeNames: state.costumeNames,
       index: state.index,
-      songTitle,
+      songTitle: title.trim(),
       members,
-      isFirstPerformance: firstPerformancePrefix ? true : undefined,
+      isFirstPerformance,
       isCover,
       originalArtist,
     },
   };
-};
-
-const parseSongTitle = (
-  title: string,
-): { songTitle: string; originalArtist?: string; isCover?: boolean } => {
-  const m = /^(.+?)\s+\((.*?)\s*(?:cover|カバー)\)$/u.exec(title);
-  if (m) {
-    const originalArtist = m[2]?.trim() || undefined;
-    return { songTitle: m[1].trim(), originalArtist, isCover: true };
-  }
-  return { songTitle: title.trim() };
 };
 
 export const formatSetlist = (
