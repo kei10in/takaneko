@@ -43,7 +43,7 @@ export const meta: EventMetaDescriptor = {
         "衣装: A World in Our Colors 衣装",
         "初恋のひと。",
         "小悪魔だってかまわない！",
-        "可愛くてごめん", // 撮影可能
+        "[撮影可能]可愛くてごめん",
         "[初披露]かわいいは常識♡",
         "ファンサ",
       ],
@@ -69,7 +69,7 @@ export const meta: EventMetaDescriptor = {
         "衣装: A World in Our Colors 衣装",
         "乙女どもよ。",
         "ハートブーケ",
-        "ヒロインは平均以下。", // 撮影可能
+        "[撮影可能]ヒロインは平均以下。",
         "我武者羅",
         "恋を知った世界",
       ],

@@ -86,7 +86,7 @@ export const meta: EventMetaDescriptor = {
         "[Cover: CHiCO with HoneyWorks]贈り歌: 星谷美来",
         "衣装: 星谷美来 卒業公演 ピンクドレス, メンバー カラー T シャツ 赤 (A Wonderful Encounter ver.)",
         "MC",
-        "可愛くてごめん", // 撮影可能
+        "[撮影可能]可愛くてごめん",
         "MC: 写真撮影・TikTok 撮影",
         "幕間: VTR 星谷美来 4 年間の軌跡",
         "MC",
