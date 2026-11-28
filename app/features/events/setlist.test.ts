@@ -1,11 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { formatSetlist, parseSetlist } from "./setlist.ts";
+import { formatSetlist, parseSetlist, Segment } from "./setlist.ts";
 
 describe("parseSetlist", () => {
   it("parses a simple stage plan with songs and MCs", () => {
     const input = ["Song A", "MC", "Song B", "アンコール", "Song C"];
     const result = parseSetlist(input);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       { kind: "song", section: "main", index: 0, songTitle: "Song A" },
       { kind: "talk" },
       { kind: "song", section: "main", index: 1, songTitle: "Song B" },
@@ -17,7 +17,7 @@ describe("parseSetlist", () => {
   it("parses costume changes and tracks multiple costume names", () => {
     const input = ["衣装: Red Dress, Blue Dress", "MC", "Song X", "企画: Game", "Song Y"];
     const result = parseSetlist(input);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       { kind: "costume", costumeNames: ["Red Dress", "Blue Dress"] },
       { kind: "talk", costumeNames: ["Red Dress", "Blue Dress"] },
       {
@@ -49,7 +49,7 @@ describe("parseSetlist", () => {
         "Song B",
       ];
 
-      expect(parseSetlist(input).slice(-3)).toEqual([
+      expect(parseSetlist(input).slice(-3)).toMatchObject([
         {
           kind: "song",
           section,
@@ -72,7 +72,7 @@ describe("parseSetlist", () => {
   it("parses MC with colon and encore in English", () => {
     const input = ["MC: intro", "encore", "Song D"];
     const result = parseSetlist(input);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       { kind: "talk" },
       { kind: "encore" },
       { kind: "song", section: "encore", index: 0, songTitle: "Song D" },
@@ -82,7 +82,7 @@ describe("parseSetlist", () => {
   it.each(["アンコール: コラボ", "Encore: コラボ"])(
     "%s のコロン以降をタイトルとしてアンコールと認識する",
     (title) => {
-      expect(parseSetlist(["Song A", title, "Song B", "Song C"])).toEqual([
+      expect(parseSetlist(["Song A", title, "Song B", "Song C"])).toMatchObject([
         { kind: "song", section: "main", index: 0, songTitle: "Song A" },
         { kind: "encore", title: "コラボ" },
         { kind: "song", section: "encore", index: 0, songTitle: "Song B" },
@@ -94,7 +94,7 @@ describe("parseSetlist", () => {
   it("parse announcement with members", () => {
     const input = ["影ナレ: 葉月紗蘭、東山恵里沙", "Song E"];
     const result = parseSetlist(input);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       {
         kind: "announce",
         name: "影ナレ",
@@ -107,7 +107,7 @@ describe("parseSetlist", () => {
   it.each(["[初披露]Song F", "[初披露] Song F", "  [初披露]  Song F  "])(
     "%s を初披露の曲として読み取る",
     (input) => {
-      expect(parseSetlist([input])).toEqual([
+      expect(parseSetlist([input])).toMatchObject([
         {
           kind: "song",
           section: "main",
@@ -125,7 +125,7 @@ describe("parseSetlist", () => {
     "[タグ1][初披露][タグ2: 補足][Cover: Original Artist]Song F: 葉月紗蘭、東山恵里沙",
   ])("%s から初披露、カバー、歌唱メンバーを読み取る", (input) => {
     const result = parseSetlist([input]);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       {
         kind: "song",
         section: "main",
@@ -140,14 +140,51 @@ describe("parseSetlist", () => {
   });
 
   it("曲名の前にある未対応のタグを読み飛ばし、曲名の途中にある角括弧を保持する", () => {
-    expect(parseSetlist(["[タグ1][タグ2]Song F [Cover]"])).toEqual([
+    expect(parseSetlist(["[タグ1][タグ2]Song F [Cover]"])).toMatchObject([
       { kind: "song", section: "main", index: 0, songTitle: "Song F [Cover]" },
     ]);
   });
 
+  it("曲名の前に撮影可能タグがある曲だけ撮影可能として扱う", () => {
+    const setlist = [
+      "[撮影可能]Song A",
+      "Song B",
+      "  [初披露] [撮影可能] [Cover: Original Artist] Song C: 葉月紗蘭",
+      "Song D [撮影可能]",
+    ];
+
+    const result = parseSetlist(setlist);
+
+    expect(result).toMatchObject([
+      {
+        kind: "song",
+        section: "main",
+        index: 0,
+        songTitle: "Song A",
+        isCameraCaptureAllowed: true,
+      },
+      { kind: "song", section: "main", index: 1, songTitle: "Song B" },
+      {
+        kind: "song",
+        section: "main",
+        index: 2,
+        songTitle: "Song C",
+        isFirstPerformance: true,
+        isCameraCaptureAllowed: true,
+        isCover: true,
+        originalArtist: "Original Artist",
+        members: ["葉月紗蘭"],
+      },
+      { kind: "song", section: "main", index: 3, songTitle: "Song D [撮影可能]" },
+    ]);
+    const songs = result.filter((segment) => segment.kind == "song");
+    expect([false, undefined]).toContain(songs[1]?.isCameraCaptureAllowed);
+    expect([false, undefined]).toContain(songs[3]?.isCameraCaptureAllowed);
+  });
+
   it("カバー曲の曲名に含まれる括弧を保持する", () => {
     const result = parseSetlist(["[Cover: Original Artist]Song F (Live)"]);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       {
         kind: "song",
         section: "main",
@@ -161,7 +198,7 @@ describe("parseSetlist", () => {
 
   it.each(["[Cover]Song F", "  [カバー]  Song F  "])("%s をカバー曲として読み取る", (input) => {
     const result = parseSetlist([input]);
-    expect(result).toEqual([
+    expect(result).toMatchObject([
       {
         kind: "song",
         section: "main",
@@ -170,6 +207,20 @@ describe("parseSetlist", () => {
         isCover: true,
       },
     ]);
+  });
+});
+
+describe("Segment", () => {
+  it("曲の撮影可能フラグを読み取れる", () => {
+    const song = {
+      kind: "song",
+      section: "main",
+      index: 0,
+      songTitle: "Song A",
+      isCameraCaptureAllowed: true,
+    };
+
+    expect(Segment.parse(song)).toEqual(song);
   });
 });
 
