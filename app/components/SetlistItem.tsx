@@ -9,7 +9,11 @@ import {
 } from "react-icons/bs";
 import { HiMusicalNote } from "react-icons/hi2";
 import { Link } from "react-router";
-import { CoverBadge, FirstPerformanceBadge } from "~/components/IconChip.tsx";
+import {
+  CameraCaptureAllowedBadge,
+  CoverBadge,
+  FirstPerformanceBadge,
+} from "~/components/IconChip.tsx";
 import { Segment } from "~/features/events/setlist.ts";
 import { memberNameToEmoji } from "~/features/profile/memberNameToEmoji.ts";
 import { ALL_SONGS } from "~/features/songs/songs.ts";
@@ -99,8 +103,9 @@ export const SetlistItem: React.FC<Props> = ({ part }: Props) => {
       <div className="w-full min-w-0 flex-1 space-y-1 self-center">
         <p className={clsx("line-clamp-1", slug && "leading-none text-nadeshiko-900")}>{name}</p>
         <p className="line-clamp-1 text-xs text-zinc-500">{costume}</p>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {part.isFirstPerformance && <FirstPerformanceBadge />}
+          {part.isCameraCaptureAllowed && <CameraCaptureAllowedBadge />}
           {part.isCover && part.originalArtist && (
             <CoverBadge originalArtist={part.originalArtist} />
           )}

@@ -3,11 +3,12 @@ import { memo, useLayoutEffect, useRef, useState } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import { HiChevronRight, HiOutlineCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { Link } from "react-router";
-import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
+import { CameraCaptureAllowedBadge, FirstPerformanceBadge } from "~/components/IconChip.tsx";
 import { Setlist } from "~/components/Setlist.tsx";
 import { LiveCategoryBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 import { getLiveCategory } from "~/features/events/LiveCategory.ts";
+import { hasCameraCaptureAllowedSong } from "~/features/events/setlist.ts";
 import { SetlistSearchResult } from "~/features/setlists/types.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -88,6 +89,9 @@ export const SetlistEventDetail = memo(function SetlistEventDetail({
             <div className="flex flex-none flex-wrap items-center gap-1 pt-0.5 lg:pr-4">
               <LiveCategoryBadge liveCategory={liveCategory} />
               {hasFirstPerformance && <FirstPerformanceBadge />}
+              {event.acts.some((act) => hasCameraCaptureAllowedSong(act.setlist)) && (
+                <CameraCaptureAllowedBadge />
+              )}
             </div>
           </div>
         </div>
