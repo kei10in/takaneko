@@ -18,6 +18,7 @@ export const readSetlistSearchParams = (params: URLSearchParams): SetlistSearchF
   song: PerformedSongs.find((song) => song.slug === params.get("s"))?.slug ?? "",
   costume: AllStageCostumes.find((costume) => costume.slug === params.get("costume"))?.slug ?? "",
   isFirstPerformance: params.get("first") === "true",
+  isCameraCaptureAllowed: params.get("capture") === "true",
   isCover: params.get("cover") === "true",
 });
 
@@ -33,6 +34,7 @@ export const writeSetlistSearchParams = (
     s: filters.song,
     costume: filters.costume,
     first: filters.isFirstPerformance,
+    capture: filters.isCameraCaptureAllowed,
     cover: filters.isCover,
   };
   Object.entries(values).forEach(([key, value]) => {

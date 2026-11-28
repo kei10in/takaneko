@@ -40,6 +40,7 @@ export interface SetlistSearchFilters {
   song: string;
   costume: string;
   isFirstPerformance: boolean;
+  isCameraCaptureAllowed: boolean;
   isCover: boolean;
 }
 
@@ -51,6 +52,7 @@ export const defaultSetlistSearchFilters = (): SetlistSearchFilters => {
     song: "",
     costume: "",
     isFirstPerformance: false,
+    isCameraCaptureAllowed: false,
     isCover: false,
   };
 };

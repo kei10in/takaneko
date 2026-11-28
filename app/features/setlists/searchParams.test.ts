@@ -13,6 +13,7 @@ describe("セットリストの検索パラメーター", () => {
       song: PerformedSongs[0].slug,
       costume: AllStageCostumes[0].slug,
       isFirstPerformance: true,
+      isCameraCaptureAllowed: true,
       isCover: true,
     };
     const params = writeSetlistSearchParams(new URLSearchParams(), filters);
@@ -20,6 +21,7 @@ describe("セットリストの検索パラメーター", () => {
     expect(params.getAll("t")).toEqual(["solo", "joint"]);
     expect(params.get("cover")).toBe("true");
     expect(params.get("first")).toBe("true");
+    expect(params.get("capture")).toBe("true");
     expect(params.has("isCover")).toBe(false);
     expect(params.has("isFirstPerformance")).toBe(false);
     expect(readSetlistSearchParams(new URLSearchParams(params.toString()))).toEqual(filters);
@@ -27,7 +29,7 @@ describe("セットリストの検索パラメーター", () => {
 
   it("既定値を省略し、クリアしても無関係なパラメーターを保持する", () => {
     const original = new URLSearchParams(
-      "q=test&y=2025&t=solo&s=x&costume=y&cover=true&first=true&ref=shared&ref=other",
+      "q=test&y=2025&t=solo&s=x&costume=y&cover=true&first=true&capture=true&ref=shared&ref=other",
     );
     const params = writeSetlistSearchParams(original, defaultSetlistSearchFilters());
     expect(params.toString()).toBe("ref=shared&ref=other");
@@ -37,7 +39,7 @@ describe("セットリストの検索パラメーター", () => {
 
   it("不正な選択肢と重複を無視し、true だけを有効にする", () => {
     const params = new URLSearchParams(
-      "y=2025&y=invalid&y=2025&t=solo&t=all&t=invalid&t=solo&s=missing&costume=missing&cover=1&first=false",
+      "y=2025&y=invalid&y=2025&t=solo&t=all&t=invalid&t=solo&s=missing&costume=missing&cover=1&first=false&capture=1",
     );
     expect(readSetlistSearchParams(params)).toEqual({
       ...defaultSetlistSearchFilters(),
