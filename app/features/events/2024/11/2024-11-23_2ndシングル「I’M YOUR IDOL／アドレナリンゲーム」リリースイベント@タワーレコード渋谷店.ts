@@ -9,6 +9,8 @@ export const meta: EventMetaDescriptor = {
   date: "2024-11-23",
   region: "東京",
   location: "タワーレコード渋谷店 B1F CUTUP STUDIO",
+  present: ["高嶺のなでしこ"],
+  absent: ["橋本桃呼"],
   images: [
     {
       path: "/events/2024/2024-11-23_2nd シングル「I’M YOUR IDOL／アドレナリンゲーム」リリースイベント.jpg",
@@ -25,7 +27,7 @@ export const meta: EventMetaDescriptor = {
         "美しく生きろ",
         "アドレナリンゲーム",
         "MC",
-        "可愛くてごめん",
+        "[撮影可能]可愛くてごめん",
         "MC",
         "初恋のひと。",
         "ファンサ",
