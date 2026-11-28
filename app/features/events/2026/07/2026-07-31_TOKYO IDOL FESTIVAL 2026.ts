@@ -144,7 +144,7 @@ export const meta: EventMetaDescriptor = {
 
         [ニコニコチャンネル「TIFチャンネル」]: https://live.nicovideo.jp/watch/lv351006291
       `,
-      setlist: ["衣装: 2026 夏衣装", "ハートブーケ", "アイドル衣装", "MC", "初披露: 僕らの青"],
+      setlist: ["衣装: 2026 夏衣装", "ハートブーケ", "アイドル衣装", "MC", "[初披露]僕らの青"],
       url: "https://x.com/Mikuru_hositani/status/2083181032262734112",
     },
   ],

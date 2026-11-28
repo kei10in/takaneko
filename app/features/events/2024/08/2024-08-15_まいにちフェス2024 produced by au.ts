@@ -13,7 +13,7 @@ export const meta: EventMetaDescriptor = {
     setlist: [
       "衣装: わたし色に染まれ衣装",
       "モテチェン！",
-      "青いペディキュア (Jams Collection cover)",
+      "[Cover: Jams Collection]青いペディキュア",
       "MC",
       "決戦スピリット",
       "ファンサ",

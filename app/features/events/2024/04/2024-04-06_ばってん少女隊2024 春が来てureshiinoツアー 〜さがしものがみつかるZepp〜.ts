@@ -23,7 +23,7 @@ export const meta: EventMetaDescriptor = {
       "男の子の目的は何？",
       "推しの魔法",
       "MC",
-      "Oisa (ばってん少女隊 cover)",
+      "[Cover: ばってん少女隊]Oisa",
       "乙女どもよ。",
       "決戦スピリット",
       "MC",

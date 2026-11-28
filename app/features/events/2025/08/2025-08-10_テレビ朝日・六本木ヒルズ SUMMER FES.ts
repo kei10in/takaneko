@@ -41,7 +41,7 @@ export const meta: EventMetaDescriptor = {
       "MC",
       "可愛くてごめん",
       "メランコリックハニー",
-      "眩しすぎる流れ星 (ラストアイドル cover)",
+      "[Cover: ラストアイドル]眩しすぎる流れ星",
       "MC",
       "初恋のひと。",
       "初恋のこたえ。",

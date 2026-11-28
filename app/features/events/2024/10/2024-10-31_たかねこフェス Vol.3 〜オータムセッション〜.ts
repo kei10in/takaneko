@@ -22,7 +22,7 @@ export const meta: EventMetaDescriptor = {
     types: ["LIVE"],
     setlist: [
       "衣装:高嶺のなでしこ 2024 衣装",
-      "会いにKiTE! (iLiFE! cover)",
+      "[Cover: iLiFE!]会いにKiTE!",
       "推しの魔法",
       "ヒロインは平均以下。",
       "可愛くてごめん",

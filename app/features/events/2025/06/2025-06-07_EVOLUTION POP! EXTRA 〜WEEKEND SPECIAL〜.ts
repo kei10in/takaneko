@@ -51,7 +51,7 @@ export const meta: EventMetaDescriptor = {
       "推しの魔法",
       "可愛くてごめん",
       "MC",
-      "花 (タイトル未定 cover)",
+      "[Cover: タイトル未定]花",
       "恋を知った世界",
       "MC",
       "アイドル衣装",

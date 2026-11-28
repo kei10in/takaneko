@@ -21,7 +21,7 @@ export const meta: EventMetaDescriptor = {
       "すきっちゅーの！",
       "推しの魔法",
       "MC",
-      "ペダルと車輪と来た道と (STU48 楽曲カバー)",
+      "[Cover: STU48 楽曲]ペダルと車輪と来た道と",
       "ファンサ",
       "MC",
       "美しく生きろ",
