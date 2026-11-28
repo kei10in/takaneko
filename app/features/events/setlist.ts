@@ -152,31 +152,24 @@ const parseSegment = (
   return parseSongSegment(part, state);
 };
 
+const parseSongTags = (part: string): { tags: string[]; song: string } => {
+  // y フラグで、曲名の途中にある角括弧への読み飛ばしを防ぐ。
+  const matches = [...part.matchAll(/\s*\[([^\][\r\n]*)\]/guy)];
+  const lastTag = matches.at(-1);
+  const songStart = lastTag ? lastTag.index + lastTag[0].length : 0;
+
+  return { tags: matches.map((match) => match[1]), song: part.slice(songStart) };
+};
+
 const parseSongSegment = (
   part: string,
   state: ParsingState,
 ): { nextState: ParsingState; segment: Segment } => {
-  const metadataPattern = /^\s*\[(?:(初披露)|(?:Cover|カバー)(?::([^\]\r\n]*))?)\]/u;
-  let song = part;
-  let isFirstPerformance: true | undefined;
-  let isCover: true | undefined;
-  let originalArtist: string | undefined;
-  while (true) {
-    const metadata = metadataPattern.exec(song);
-    if (!metadata) {
-      break;
-    }
-
-    const [prefix, firstPerformance, artist] = metadata;
-    if (firstPerformance) {
-      isFirstPerformance = true;
-    } else {
-      isCover = true;
-      originalArtist = artist?.trim() || originalArtist;
-    }
-    song = song.slice(prefix.length);
-  }
-
+  const { tags, song } = parseSongTags(part);
+  const coverTags = tags
+    .map((tag) => /^(?:Cover|カバー)(?::(.*))?$/su.exec(tag))
+    .filter((tag) => tag !== null);
+  const originalArtist = coverTags.map((tag) => tag[1]?.trim()).findLast(Boolean);
   const [title, membersStr] = song.split(":");
 
   const members = membersStr
@@ -199,8 +192,8 @@ const parseSongSegment = (
       index: state.index,
       songTitle: title.trim(),
       members,
-      isFirstPerformance,
-      isCover,
+      isFirstPerformance: tags.includes("初披露") ? true : undefined,
+      isCover: coverTags.length > 0 ? true : undefined,
       originalArtist,
     },
   };

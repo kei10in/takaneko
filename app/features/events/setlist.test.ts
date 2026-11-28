@@ -122,6 +122,7 @@ describe("parseSetlist", () => {
   it.each([
     " [初披露] [Cover: Original Artist] Song F: 葉月紗蘭、東山恵里沙",
     "[カバー: Original Artist][初披露]Song F: 葉月紗蘭、東山恵里沙",
+    "[タグ1][初披露][タグ2: 補足][Cover: Original Artist]Song F: 葉月紗蘭、東山恵里沙",
   ])("%s から初披露、カバー、歌唱メンバーを読み取る", (input) => {
     const result = parseSetlist([input]);
     expect(result).toEqual([
@@ -135,6 +136,12 @@ describe("parseSetlist", () => {
         originalArtist: "Original Artist",
         members: ["葉月紗蘭", "東山恵里沙"],
       },
+    ]);
+  });
+
+  it("曲名の前にある未対応のタグを読み飛ばし、曲名の途中にある角括弧を保持する", () => {
+    expect(parseSetlist(["[タグ1][タグ2]Song F [Cover]"])).toEqual([
+      { kind: "song", section: "main", index: 0, songTitle: "Song F [Cover]" },
     ]);
   });
 
