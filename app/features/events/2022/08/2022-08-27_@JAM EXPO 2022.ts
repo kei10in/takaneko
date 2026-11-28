@@ -20,7 +20,7 @@ export const meta: EventMetaDescriptor = {
       types: ["LIVE"],
       start: "14:45",
       end: "15:00",
-      setlist: ["衣装:アンチファン衣装", "アンチファン", "誇り高きアイドル", "初披露:ファンサ"],
+      setlist: ["衣装:アンチファン衣装", "アンチファン", "誇り高きアイドル", "[初披露]ファンサ"],
       url: "https://x.com/Mikuru_hositani/status/1563415251520876545",
     },
     {

@@ -44,7 +44,7 @@ export const meta: EventMetaDescriptor = {
         "初恋のひと。",
         "小悪魔だってかまわない！",
         "可愛くてごめん", // 撮影可能
-        "初披露: かわいいは常識♡",
+        "[初披露]かわいいは常識♡",
         "ファンサ",
       ],
       links: ["https://x.com/takanenofficial/status/2109162083053109567"],

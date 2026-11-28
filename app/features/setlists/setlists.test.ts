@@ -93,7 +93,7 @@ describe("buildSetlistEvents", () => {
           slug: "2026-01-01_first_performance",
           date: "2026-01-01",
           liveType: "SOLO",
-          acts: [act(["Song A", "初披露:Song B"])],
+          acts: [act(["Song A", "[初披露]Song B"])],
         }),
       ],
       today,
@@ -274,7 +274,7 @@ describe("filterSetlistEvents", () => {
         liveType: "SOLO",
         region: "大阪",
         location: "なんば",
-        acts: [act(["衣装: 見上げるたびに、恋をする。衣装", "初披露:Song D"])],
+        acts: [act(["衣装: 見上げるたびに、恋をする。衣装", "[初披露]Song D"])],
       }),
       sourceEvent({
         slug: "2025-12-01_missing",

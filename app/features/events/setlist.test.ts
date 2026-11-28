@@ -104,9 +104,23 @@ describe("parseSetlist", () => {
     ]);
   });
 
-  it("parse song title with 初披露 indication", () => {
-    const input = ["初披露: Song F"];
-    const result = parseSetlist(input);
+  it.each(["[初披露]Song F", "[初披露] Song F", "  [初披露]  Song F  "])(
+    "%s を初披露の曲として読み取る",
+    (input) => {
+      expect(parseSetlist([input])).toEqual([
+        {
+          kind: "song",
+          section: "main",
+          index: 0,
+          songTitle: "Song F",
+          isFirstPerformance: true,
+        },
+      ]);
+    },
+  );
+
+  it("初披露の曲にカバー表記と歌唱メンバーを指定できる", () => {
+    const result = parseSetlist([" [初披露] Song F (Original Artist cover): 葉月紗蘭、東山恵里沙"]);
     expect(result).toEqual([
       {
         kind: "song",
@@ -114,6 +128,9 @@ describe("parseSetlist", () => {
         index: 0,
         songTitle: "Song F",
         isFirstPerformance: true,
+        isCover: true,
+        originalArtist: "Original Artist",
+        members: ["葉月紗蘭", "東山恵里沙"],
       },
     ]);
   });

@@ -156,9 +156,8 @@ const parseSongSegment = (
   part: string,
   state: ParsingState,
 ): { nextState: ParsingState; segment: Segment } => {
-  const [isFirstPerformance, title, membersStr] = part.startsWith("初披露:")
-    ? [true, ...part.split(":").slice(1)]
-    : [undefined, ...part.split(":")];
+  const firstPerformancePrefix = /^\s*\[初披露\]\s*/u.exec(part)?.[0];
+  const [title, membersStr] = part.slice(firstPerformancePrefix?.length ?? 0).split(":");
 
   const { songTitle, originalArtist, isCover } = parseSongTitle(title);
 
@@ -182,7 +181,7 @@ const parseSongSegment = (
       index: state.index,
       songTitle,
       members,
-      isFirstPerformance,
+      isFirstPerformance: firstPerformancePrefix ? true : undefined,
       isCover,
       originalArtist,
     },
