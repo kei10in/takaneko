@@ -17,7 +17,7 @@ export const meta: EventMetaDescriptor = {
         "I’M YOUR IDOL",
         "美しく生きろ",
         "MC",
-        "男の子の目的は何？",
+        "[撮影可能]男の子の目的は何？",
         "MC",
         "LOVE ANTHEM",
         "アドレナリンゲーム",

@@ -48,7 +48,7 @@ export const meta: EventMetaDescriptor = {
         "美しく生きろ",
         "I’M YOUR IDOL",
         "MC",
-        "初恋のこたえ。",
+        "[撮影可能]初恋のこたえ。",
         "MC",
         "花は誓いを忘れない",
         "恋を知った世界",

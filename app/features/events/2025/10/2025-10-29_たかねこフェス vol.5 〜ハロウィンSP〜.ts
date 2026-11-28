@@ -52,7 +52,7 @@ export const meta: EventMetaDescriptor = {
       end: "13:35",
       setlist: [
         "衣装:たかねこハロウィン2025 探偵衣装",
-        "初恋のこたえ。",
+        "[撮影可能]初恋のこたえ。",
         "センパイ。",
         "病名恋ワズライ",
         "小悪魔だってかまわない！",
@@ -69,7 +69,7 @@ export const meta: EventMetaDescriptor = {
         "I’M YOUR IDOL",
         "花は誓いを忘れない",
         "MC",
-        "初恋のひと。",
+        "[撮影可能]初恋のひと。",
         "MC",
         "美しく生きろ",
         "決戦スピリット",

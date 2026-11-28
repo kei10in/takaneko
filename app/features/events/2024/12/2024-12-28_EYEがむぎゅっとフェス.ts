@@ -37,7 +37,7 @@ export const meta: EventMetaDescriptor = {
       "MC",
       "I’M YOUR IDOL",
       "MC",
-      "可愛くてごめん",
+      "[撮影可能]可愛くてごめん",
       "MC",
       "ファンサ",
     ],
