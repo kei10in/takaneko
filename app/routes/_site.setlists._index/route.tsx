@@ -127,11 +127,13 @@ export default function Component() {
       song: filters.song,
       costume: filters.costume,
       isFirstPerformance: filters.isFirstPerformance,
+      isCameraCaptureAllowed: filters.isCameraCaptureAllowed,
       isCover: filters.isCover,
     }),
     [
       deferredQuery,
       filters.costume,
+      filters.isCameraCaptureAllowed,
       filters.isCover,
       filters.isFirstPerformance,
       filters.song,
@@ -402,6 +404,7 @@ export default function Component() {
               searchFilters.song != "" ||
               searchFilters.costume != "" ||
               searchFilters.isFirstPerformance ||
+              searchFilters.isCameraCaptureAllowed ||
               searchFilters.isCover
             }
           />
@@ -465,6 +468,11 @@ const SetlistFilterForm: React.FC<SetlistFilterFormProps> = ({
             checked: filters.isFirstPerformance,
             onChange: (checked) => onFilterChange("isFirstPerformance", checked),
             text: "初披露あり",
+          },
+          {
+            checked: filters.isCameraCaptureAllowed,
+            onChange: (checked) => onFilterChange("isCameraCaptureAllowed", checked),
+            text: "撮影可能あり",
           },
           {
             checked: filters.isCover,

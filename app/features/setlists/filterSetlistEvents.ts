@@ -1,4 +1,5 @@
 import { liveCategories, type LiveCategory } from "~/features/events/LiveCategory.ts";
+import { hasCameraCaptureAllowedSong } from "~/features/events/setlist.ts";
 import { AllStageCostumes } from "../costumes/costumesStage.ts";
 import { ALL_SONGS } from "../songs/songs.ts";
 import type { SetlistSearchFilters } from "./searchFilters.ts";
@@ -32,6 +33,7 @@ export const filterSetlistEvents = (
       if (
         !matchesSongAndCostumeFilters(filters.song, filters.costume, act) ||
         !matchesFirstPerformanceFilter(filters.isFirstPerformance, act) ||
+        (filters.isCameraCaptureAllowed && !hasCameraCaptureAllowedSong(act.setlist)) ||
         !matchesCoverFilter(filters.isCover, act)
       ) {
         return [];

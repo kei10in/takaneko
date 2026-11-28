@@ -106,6 +106,18 @@ export const FirstPerformanceBadge: React.FC = () => {
   );
 };
 
+export const CameraCaptureAllowedBadge: React.FC = () => {
+  return (
+    <IconChip
+      icon={HiCamera}
+      text="撮影可能"
+      backgroundColor="bg-zinc-100"
+      iconColor="text-zinc-500"
+      textColor="text-zinc-700"
+    />
+  );
+};
+
 interface CoverBadgeProps {
   originalArtist: string;
 }

@@ -2,6 +2,7 @@ import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testi
 import { createMemoryRouter, RouterProvider } from "react-router";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { AllStageCostumes } from "~/features/costumes/costumesStage.ts";
+import { parseSetlist } from "~/features/events/setlist.ts";
 import { SetlistEvents } from "~/features/setlists/types.ts";
 import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
 import Component, { shouldRevalidate } from "./route.tsx";
@@ -177,6 +178,7 @@ describe("セットリストの URL 同期", () => {
       costume: AllStageCostumes[0].slug,
       first: "true",
       cover: "true",
+      capture: "true",
     });
     params.append("y", "2025");
     params.append("y", "2024");
@@ -186,7 +188,15 @@ describe("セットリストの URL 同期", () => {
     expect((await searchInput()).value).toBe("テスト");
     fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
     await screen.findByRole("dialog");
-    ["2025 年", "2024 年", "ワンマン", "対バン", "初披露あり", "カバー曲あり"].forEach((name) => {
+    [
+      "2025 年",
+      "2024 年",
+      "ワンマン",
+      "対バン",
+      "初披露あり",
+      "カバー曲あり",
+      "撮影可能あり",
+    ].forEach((name) => {
       expect(screen.getByRole("checkbox", { name }).getAttribute("aria-checked")).toBe("true");
     });
     expect(screen.getByLabelText("楽曲")).toHaveProperty("value", PerformedSongs[0].slug);
@@ -249,12 +259,66 @@ describe("セットリストの URL 同期", () => {
     await waitFor(() =>
       expect(new URLSearchParams(router.state.location.search).has("cover")).toBe(false),
     );
+    fireEvent.click(screen.getByRole("checkbox", { name: "撮影可能あり" }));
+    await waitFor(() =>
+      expect(new URLSearchParams(router.state.location.search).get("capture")).toBe("true"),
+    );
     fireEvent.click(screen.getByRole("button", { name: "クリア" }));
     await waitFor(() => expect(router.state.location.search).toBe("?ref=shared"));
     expect(input.value).toBe("");
     expect(screen.getByRole("checkbox", { name: "2025 年" }).getAttribute("aria-checked")).toBe(
       "false",
     );
+  });
+
+  it("撮影可能曲のあるライブを絞り込み、詳細で該当するステージを示す", async () => {
+    const ordinaryAct = {
+      ...events[0].acts[0],
+      title: "昼公演",
+      setlist: parseSetlist(["昼の曲"]),
+      songTitles: ["昼の曲"],
+      songCount: 1,
+    };
+    const { router } = renderPage(
+      ["/setlists"],
+      [
+        { ...events[0], acts: [ordinaryAct] },
+        {
+          ...events[0],
+          slug: "2025-01-01_camera",
+          title: "撮影ありライブ",
+          actCount: 2,
+          acts: [
+            ordinaryAct,
+            {
+              ...ordinaryAct,
+              title: "夜公演",
+              setlist: parseSetlist(["[撮影可能]夜の曲"]),
+              songTitles: ["夜の曲"],
+            },
+          ],
+        },
+      ],
+    );
+    await searchInput();
+    expect(screen.getByRole("button", { name: /テストライブ/u })).toBeTruthy();
+
+    fireEvent.click(screen.getByRole("button", { name: "フィルタ" }));
+    const filters = await screen.findByRole("dialog", { name: "フィルタ" });
+    fireEvent.click(within(filters).getByRole("checkbox", { name: "撮影可能あり" }));
+    await waitFor(() =>
+      expect(new URLSearchParams(router.state.location.search).get("capture")).toBe("true"),
+    );
+    fireEvent.click(within(filters).getByRole("button", { name: /検索する/u }));
+    await waitFor(() => expect(screen.queryByRole("dialog", { name: "フィルタ" })).toBeNull());
+    expect(screen.queryByRole("button", { name: /テストライブ/u })).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: /撮影ありライブ/u }));
+    const detail = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songs = within(detail).getByRole("region", { name: "曲のリスト" });
+    expect(within(songs).getByText("昼の曲")).toBeTruthy();
+    expect(within(songs).getByText("夜の曲")).toBeTruthy();
+    expect(within(songs).getByText("該当").closest("section")?.textContent).toContain("夜公演");
   });
 
   it("履歴移動でフィルタの選択状態と結果を復元する", async () => {

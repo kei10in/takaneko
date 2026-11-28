@@ -1,9 +1,10 @@
 import { GiMicrophone } from "react-icons/gi";
 import { HiOutlineMapPin } from "react-icons/hi2";
-import { FirstPerformanceBadge } from "~/components/IconChip.tsx";
+import { CameraCaptureAllowedBadge, FirstPerformanceBadge } from "~/components/IconChip.tsx";
 import { LiveCategoryBadge, TextBadge } from "~/components/SmallBadges.tsx";
 import { ThumbnailImage } from "~/components/thumbnail-image/ThumbnailImage.tsx";
 import { getLiveCategory } from "~/features/events/LiveCategory.ts";
+import { hasCameraCaptureAllowedSong } from "~/features/events/setlist.ts";
 import { SetlistEvent } from "~/features/setlists/types.ts";
 import { displayDateWithDayOfWeek } from "~/utils/dateDisplay.ts";
 import { NaiveDate } from "~/utils/datetime/NaiveDate.ts";
@@ -66,6 +67,9 @@ export const SetlistEventCard = ({ event, onClick }: SetlistEventCardProps) => {
             <LiveCategoryBadge liveCategory={liveCategory} />
 
             {containsFirstPerformanceSong(event) && <FirstPerformanceBadge />}
+            {event.acts.some((act) => hasCameraCaptureAllowedSong(act.setlist)) && (
+              <CameraCaptureAllowedBadge />
+            )}
             {noSetlist && <TextBadge text="未登録" />}
             {!noSetlist && event.acts.some((act) => act.songCount == 0) && (
               <TextBadge text="未登録あり" />

@@ -53,6 +53,9 @@ export const Segment = z.discriminatedUnion("kind", [
 export type Segment = z.infer<typeof Segment>;
 export type SongSegment = Extract<Segment, { kind: "song" }>;
 
+export const hasCameraCaptureAllowedSong = (setlist: Segment[]): boolean =>
+  setlist.some((segment) => segment.kind == "song" && segment.isCameraCaptureAllowed);
+
 interface ParsingState {
   section: "main" | "encore";
   costumeNames?: string[] | undefined;

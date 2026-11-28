@@ -1,7 +1,9 @@
 import { act, cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { createMemoryRouter, createRoutesStub, RouterProvider, useNavigate } from "react-router";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { parseSetlist } from "~/features/events/setlist.ts";
 import { SetlistEvent } from "~/features/setlists/types.ts";
+import { PerformedSongs } from "~/features/songs/songsFiltered.ts";
 import SetlistsPage from "./route.tsx";
 
 // 表示領域の変化だけを模擬し、Embla本体のslidesInView通知を使う。
@@ -202,6 +204,40 @@ describe("セットリストのフィルタ", () => {
 });
 
 describe("セットリストのモーダル", () => {
+  it("撮影可能のバッジを一覧カードと詳細の概要、対象曲に表示する", async () => {
+    const song = PerformedSongs[0];
+    await setup([
+      events[0],
+      {
+        ...events[1],
+        acts: [
+          {
+            ...events[1].acts[0],
+            setlist: parseSetlist(["通常の曲", `[初披露][撮影可能]${song.name}`]),
+            songTitles: ["通常の曲", song.name],
+            songCount: 2,
+            hasFirstPerformance: true,
+          },
+        ],
+      },
+    ]);
+    const ordinaryCard = screen.getByRole("button", { name: /ライブ A/u });
+    const cameraCard = screen.getByRole("button", { name: /ライブ B/u });
+    expect(within(ordinaryCard).queryByText("撮影可能")).toBeNull();
+    expect(within(cameraCard).getByText("撮影可能")).toBeTruthy();
+    fireEvent.click(cameraCard);
+
+    const detail = await screen.findByRole("dialog", { name: "セットリスト" });
+    const songs = within(detail).getByRole("region", { name: "曲のリスト" });
+    expect(within(detail).getAllByText("撮影可能")).toHaveLength(2);
+    expect(within(songs).getAllByText("撮影可能")).toHaveLength(1);
+    const cameraSong = within(songs).getByRole("link", {
+      name: (name) => name.includes(song.name),
+    });
+    expect(within(cameraSong).getByText("初披露")).toBeTruthy();
+    expect(within(cameraSong).getByText("撮影可能")).toBeTruthy();
+  });
+
   it("ゲスト出演を一覧と詳細の両方でイベント出演と表示する", async () => {
     await setup([{ ...events[0], liveType: "GUEST" }]);
     const card = screen.getByRole("button", { name: /ライブ A/u });

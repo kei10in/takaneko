@@ -414,6 +414,7 @@ const filters = (input: Partial<SetlistSearchFilters>): SetlistSearchFilters => 
     song: input.song ?? "",
     costume: input.costume ?? "",
     isFirstPerformance: input.isFirstPerformance ?? false,
+    isCameraCaptureAllowed: input.isCameraCaptureAllowed ?? false,
     isCover: input.isCover ?? false,
   };
 };
